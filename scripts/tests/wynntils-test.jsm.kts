@@ -1,13 +1,9 @@
 
-import com.squareup.wire.get
-import java.util.List
 
 import com.wynntils.core.components.Managers;
 
 import com.wynntils.features.overlays.InfoBoxFeature
 import com.wynntils.overlays.infobox.InfoBoxOverlay
-import com.wynntils.core.components.Services
-import com.wynntils.core.components.Models
 import com.wynntils.core.components.Services.Ping
 import com.wynntils.core.persisted.config.Config
 import com.wynntils.core.text.StyledText
@@ -16,15 +12,14 @@ import com.wynntils.overlays.SpellCastMessageOverlay
 import com.wynntils.models.spells.type.SpellFailureReason
 import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
 import xyz.wagyourtail.jsmacros.client.api.event.impl.player.EventHeldItemChange
-import xyz.wagyourtail.jsmacros.core.MethodWrapper
-import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.service.EventService
+import kotlin.concurrent.thread
 
 val infoBoxOverlaysField = Reflection.getDeclaredField(InfoBoxFeature::class.java, "infoBoxOverlays")
 infoBoxOverlaysField.trySetAccessible()
 
 val infoBoxFeature = Managers.Feature.getFeatureInstance(InfoBoxFeature::class.java)
-val infoBoxes = infoBoxOverlaysField.get(infoBoxFeature) as kotlin.collections.List<InfoBoxOverlay>
+val infoBoxes = infoBoxOverlaysField.get(infoBoxFeature) as List<InfoBoxOverlay>
 
 val spellCastOverlayField = Reflection.getDeclaredField(SpellCastMessageOverlayFeature::class.java, "spellCastOverlay")
 spellCastOverlayField.trySetAccessible()
@@ -63,6 +58,46 @@ class InfoBoxData {
 }
 
 val infoBox = InfoBoxData()
+
+class Globals {
+    fun putBoolean(key: String, value: Boolean) {
+        with (JsMacros.createCustomEvent("HoldAction")){
+            GlobalVars.putBoolean(key, value)
+            putBoolean(key, value)
+            trigger()
+        }
+    }
+    fun putInt(key: String, value: Int) {
+        with (JsMacros.createCustomEvent("HoldAction")){
+            GlobalVars.putInt(key, value)
+            putInt(key, value)
+            trigger()
+        }
+    }
+    var globalInterval
+        get() = GlobalVars.getInt("globalInterval") ?: 2
+        set(value) { putInt("globalInterval", value) }
+    var attackEnabled
+        get() = GlobalVars.getBoolean("attackEnabled") == true
+        set(value) { putBoolean("attackEnabled", value) }
+    var attackInterval
+        get() = GlobalVars.getInt("attackInterval") ?: 20
+        set(value) { putInt("attackInterval", value) }
+    var attackIntervalRandom
+        get() = GlobalVars.getInt("attackIntervalRandom") ?: 20
+        set(value) { putInt("attackIntervalRandom", value) }
+    var interactEnabled
+        get() = GlobalVars.getBoolean("interactEnabled") == true
+        set(value) { putBoolean("interactEnabled", value) }
+    var interactInterval
+        get() = GlobalVars.getInt("interactInterval") ?: 2
+        set(value) { putInt("interactInterval", value) }
+    var interactIntervalRandom
+        get() = GlobalVars.getInt("interactIntervalRandom") ?: 0
+        set(value) { putInt("interactIntervalRandom", value) }
+}
+
+val HoldActionConfig = Globals()
 
 object status {
     var enabled = false
@@ -268,7 +303,8 @@ fun clamp(v: Int, min: Int, max: Int): Int {
 val mc = Client.getMinecraft()
 val interactKey =  mc.field_1690.field_1904;
 val attackKey = mc.field_1690.field_1886;
-JsMacros.on("Tick", JavaWrapper.methodToJava(fun (e: BaseEvent) {
+/*
+JsMacros.on("Tick", JavaWrapper.methodToJava(fun (e: BaseEvent, _: Any) {
     val time = World.time;
     if(!status.enabled && status.quick && (time % 2) == 1L && macro.cacheIdol && status.useCharge) {
         if (attackKey.method_1434() && macro.meleeTime < time) {
@@ -283,16 +319,21 @@ JsMacros.on("Tick", JavaWrapper.methodToJava(fun (e: BaseEvent) {
         }
     }
 }))
+ */
 
-JsMacros.on("HeldItemChange", JavaWrapper.methodToJava(fun(e: EventHeldItemChange) {
-    macro.isIdol()
-}))
+fun updateHoldAction() {
+    val flag = macro.isIdol() && !status.enabled && status.quick && status.useCharge
+    HoldActionConfig.attackEnabled = flag
+    HoldActionConfig.interactEnabled = flag
+}
+
+JsMacros.on("HeldItemChange", JavaWrapper.methodToJava(fun(e: EventHeldItemChange, _: Any) {
+    updateHoldAction()
+} as Function2<*,*,*>))
 
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava(fun(){
     infoBoxFeature.setUserEnabled(false)
-})
-
-val mainloop: MethodWrapper<Any, Any, Any, *>? = JavaWrapper.methodToJavaAsync(fun(){macro.mainloop()})
+} as Function0<*>)
 
 JsMacros.on("Key", JavaWrapper.methodToJava(fun(e: EventKey) {
     if (e.action != 1)
@@ -303,11 +344,15 @@ JsMacros.on("Key", JavaWrapper.methodToJava(fun(e: EventKey) {
         status.cycleIndex = 0;
         if (status.enabled) {
             macro.reset();
-            mainloop?.run();
+            thread {
+                macro.mainloop()
+            }
         }
+        updateHoldAction()
     }
     else if (e.key === "key.keyboard.keypad.6") {
         status.useCharge = !status.useCharge;
+        updateHoldAction()
     }
     else if (e.key === "key.keyboard.keypad.5") {
         status.useOtherSpell = !status.useOtherSpell;
@@ -340,10 +385,11 @@ JsMacros.on("Key", JavaWrapper.methodToJava(fun(e: EventKey) {
     }
     else if (e.key === "key.keyboard.keypad.3") {
         status.quick = !status.quick;
+        updateHoldAction()
         infoBox.updateMessage();
     }
     else {
         return;
     }
     infoBox.updateMessage();
-}))
+} as Function2<*,*,*>))

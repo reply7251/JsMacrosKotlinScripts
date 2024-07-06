@@ -1,10 +1,8 @@
 
-import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
 import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
-import kotlin.reflect.full.memberProperties
 
 val mc = Client.getMinecraft()
 val interactKey =  mc.field_1690.field_1904;
@@ -21,7 +19,6 @@ var interactIntervalRandom = 0
 
 var nextAttackTime = 0L
 var nextInteractTime = 0L
-Chat.log("test")
 
 JsMacros.createCustomEvent("HoldAction").registerEvent()
 JsMacros.on("HoldAction", JavaWrapper.methodToJava(fun(event: EventCustom, _: EventContainer<*>){
@@ -55,6 +52,12 @@ JsMacros.on("HoldAction", JavaWrapper.methodToJava(fun(event: EventCustom, _: Ev
 fun onTick() {
     val time = World.time
     if (time.toInt() % globalInterval == 0) {
+        if(nextAttackTime > time + attackIntervalRandom + attackInterval) {
+            nextAttackTime = 0
+        }
+        if(nextInteractTime > time + interactIntervalRandom + interactInterval) {
+            nextInteractTime = 0
+        }
         if (attackEnabled && attackKey.method_1434() && time > nextAttackTime) {
             Player.interactions()!!.attack()
             nextAttackTime = time + attackInterval + (Math.random() * attackIntervalRandom).toLong()
@@ -81,3 +84,8 @@ thread {
 (event as EventService).stopListener = JavaWrapper.methodToJava(fun(){
     tickEnabled = false
 } as Function0<*>)
+
+if(!World.isWorldLoaded) {
+    JsMacros.waitForEvent("ChunkLoad")
+}
+Chat.toast("hold action enabled", "")
