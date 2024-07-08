@@ -12,25 +12,25 @@ import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.service.EventService
 
 val events = hashMapOf<Event<*>, HashMap<BaseScriptContext<*>, Any>>()
+val whitelist = hashMapOf<BaseScriptContext<*>, Long>()
 
 JsMacros.createCustomEvent("RegisterKtEvent").registerEvent()
 JsMacros.createCustomEvent("UnregisterKtEvent").registerEvent()
 
 JsMacros.on("RegisterKtEvent", JavaWrapper.methodToJava(fun(e: EventCustom, _: Any){
     val eventToRegister = e.getObject("event") as Event<*>
-    var listeners = events.get(eventToRegister)
-    if(listeners == null) {
-        listeners = hashMapOf()
-        events[eventToRegister] = listeners
-    }
     val ctx = e.getObject("context") as BaseScriptContext<*>
+    whitelist[ctx] = Time.time() + 1000L
+    val listeners = events.getOrPut(eventToRegister) { hashMapOf() }
     listeners[ctx] = e.getObject("callback") as Any
 } as Function2<*,*,*>))
 
 JsMacros.on("UnregisterKtEvent", JavaWrapper.methodToJava(fun(e: EventCustom, _: Any){
     val eventToRegister = e.getObject("event") as Event<*>
-    val listeners = events.get(eventToRegister) ?: return
-    listeners.remove(e.getObject("context") as BaseScriptContext<*>)
+    val listeners = events[eventToRegister] ?: return
+    val ctx = e.getObject("context") as BaseScriptContext<*>
+    whitelist.remove(ctx)
+    listeners.remove(ctx)
 } as Function2<*,*,*>))
 Chat.log("EventCenter init " +Time.time() % 100+" ...")
 
@@ -54,107 +54,124 @@ fun <T> unregisterEvent(event: Event<T>) {
     events.clear()
 } as Function0<*>)
 
+fun isClosed(ctx: BaseScriptContext<*>): Boolean {
+    val whitelistTime = whitelist[ctx] ?: return ctx.isContextClosed
+    if(whitelistTime < Time.time()) {
+        whitelist.remove(ctx)
+        return ctx.isContextClosed
+    }
+    return false
+}
+
 ClientTickEvents.START_CLIENT_TICK.register(fun(mc){
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(ClientTickEvents.START_CLIENT_TICK) ?.forEach { entry ->
-        if(entry.key.isContextClosed) {
+    val callbacks = events[ClientTickEvents.START_CLIENT_TICK] ?: return
+    callbacks.forEach { entry ->
+        if(isClosed(entry.key)) {
             unregisters.add(entry.key)
             return
         }
         (entry.value as ClientTickEvents.StartTick).onStartTick(mc)
     }
     unregisters.forEach {
-        events.get(ClientTickEvents.START_CLIENT_TICK)?.remove(it)
+        callbacks.remove(it)
     }
 })
 
 ClientTickEvents.END_CLIENT_TICK.register(fun(mc){
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(ClientTickEvents.END_CLIENT_TICK) ?.forEach { entry ->
-        if(entry.key.isContextClosed) {
+    val callbacks = events[ClientTickEvents.END_CLIENT_TICK] ?: return
+    callbacks.forEach { entry ->
+        if(isClosed(entry.key)) {
             unregisters.add(entry.key)
             return
         }
         (entry.value as ClientTickEvents.EndTick).onEndTick(mc)
     }
     unregisters.forEach {
-        events.get(ClientTickEvents.END_CLIENT_TICK)?.remove(it)
+        callbacks.remove(it)
     }
 })
 
 ClientEntityEvents.ENTITY_LOAD.register(fun(entity, world) {
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(ClientEntityEvents.ENTITY_LOAD) ?.forEach { entry ->
-        if(entry.key.isContextClosed) {
+    val callbacks = events[ClientEntityEvents.ENTITY_LOAD] ?: return
+    callbacks.forEach { entry ->
+        if(isClosed(entry.key)) {
             unregisters.add(entry.key)
             return
         }
         (entry.value as ClientEntityEvents.Load).onLoad(entity, world)
     }
     unregisters.forEach {
-        events.get(ClientEntityEvents.ENTITY_LOAD)?.remove(it)
+        callbacks.remove(it)
     }
 })
 
 ClientEntityEvents.ENTITY_UNLOAD.register(fun(entity, world) {
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(ClientEntityEvents.ENTITY_UNLOAD) ?.forEach { entry ->
-        if(entry.key.isContextClosed) {
+    val callbacks = events[ClientEntityEvents.ENTITY_UNLOAD] ?: return
+    callbacks.forEach { entry ->
+        if(isClosed(entry.key)) {
             unregisters.add(entry.key)
             return
         }
         (entry.value as ClientEntityEvents.Unload).onUnload(entity, world)
     }
     unregisters.forEach {
-        events.get(ClientEntityEvents.ENTITY_UNLOAD)?.remove(it)
+        callbacks.remove(it)
     }
 })
 
 ClientChunkEvents.CHUNK_LOAD.register(fun(world, chunk){
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(ClientChunkEvents.CHUNK_LOAD) ?.forEach { entry ->
-        if(entry.key.isContextClosed) {
+    val callbacks = events[ClientChunkEvents.CHUNK_LOAD] ?: return
+    callbacks.forEach { entry ->
+        if(isClosed(entry.key)) {
             unregisters.add(entry.key)
             return
         }
         (entry.value as ClientChunkEvents.Load).onChunkLoad(world, chunk)
     }
     unregisters.forEach {
-        events.get(ClientChunkEvents.CHUNK_LOAD)?.remove(it)
+        callbacks.remove(it)
     }
 })
 
 ClientChunkEvents.CHUNK_UNLOAD.register(fun(world, chunk){
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(ClientChunkEvents.CHUNK_UNLOAD) ?.forEach { entry ->
-        if(entry.key.isContextClosed) {
+    val callbacks = events[ClientChunkEvents.CHUNK_UNLOAD] ?: return
+    callbacks.forEach { entry ->
+        if(isClosed(entry.key)) {
             unregisters.add(entry.key)
             return
         }
         (entry.value as ClientChunkEvents.Unload).onChunkUnload(world, chunk)
     }
     unregisters.forEach {
-        events.get(ClientChunkEvents.CHUNK_UNLOAD)?.remove(it)
+        callbacks.remove(it)
     }
 })
 
 ClientBlockEntityEvents.BLOCK_ENTITY_LOAD.register(fun(blockEntity, world) {
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(ClientBlockEntityEvents.BLOCK_ENTITY_LOAD) ?.forEach { entry ->
-        if(entry.key.isContextClosed) {
+    val callbacks = events[ClientBlockEntityEvents.BLOCK_ENTITY_LOAD] ?: return
+    callbacks.forEach { entry ->
+        if(isClosed(entry.key)) {
             unregisters.add(entry.key)
             return
         }
         (entry.value as ClientBlockEntityEvents.Load).onLoad(blockEntity, world)
     }
     unregisters.forEach {
-        events.get(ClientBlockEntityEvents.BLOCK_ENTITY_LOAD)?.remove(it)
+        callbacks.remove(it)
     }
 })
 
 ClientBlockEntityEvents.BLOCK_ENTITY_UNLOAD.register(fun(blockEntity, world) {
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(ClientBlockEntityEvents.BLOCK_ENTITY_UNLOAD) ?.forEach { entry ->
+    val callbacks = events[ClientBlockEntityEvents.BLOCK_ENTITY_UNLOAD] ?: return
+    callbacks.forEach { entry ->
         if(entry.key.isContextClosed) {
             unregisters.add(entry.key)
             return
@@ -162,13 +179,14 @@ ClientBlockEntityEvents.BLOCK_ENTITY_UNLOAD.register(fun(blockEntity, world) {
         (entry.value as ClientBlockEntityEvents.Unload).onUnload(blockEntity, world)
     }
     unregisters.forEach {
-        events.get(ClientBlockEntityEvents.BLOCK_ENTITY_UNLOAD)?.remove(it)
+        callbacks.remove(it)
     }
 })
 
 ItemTooltipCallback.EVENT.register(fun(stack, context, type, lines) {
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(ItemTooltipCallback.EVENT) ?.forEach { entry ->
+    val callbacks = events[ItemTooltipCallback.EVENT] ?: return
+    callbacks.forEach { entry ->
         if(entry.key.isContextClosed) {
             unregisters.add(entry.key)
             return
@@ -176,13 +194,14 @@ ItemTooltipCallback.EVENT.register(fun(stack, context, type, lines) {
         (entry.value as ItemTooltipCallback).getTooltip(stack, context, type, lines)
     }
     unregisters.forEach {
-        events.get(ItemTooltipCallback.EVENT)?.remove(it)
+        callbacks.remove(it)
     }
 })
 
 HudRenderCallback.EVENT.register(fun(matrixStack, delta) {
     val unregisters = arrayListOf<BaseScriptContext<*>>()
-    events.get(HudRenderCallback.EVENT) ?.forEach { entry ->
+    val callbacks = events[HudRenderCallback.EVENT] ?: return
+    callbacks.forEach { entry ->
         if(entry.key.isContextClosed) {
             unregisters.add(entry.key)
             return
@@ -190,7 +209,7 @@ HudRenderCallback.EVENT.register(fun(matrixStack, delta) {
         (entry.value as HudRenderCallback).onHudRender(matrixStack, delta)
     }
     unregisters.forEach {
-        events.get(HudRenderCallback.EVENT)?.remove(it)
+        callbacks.remove(it)
     }
 })
 

@@ -1,5 +1,8 @@
 
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
+import net.fabricmc.fabric.api.event.Event
 import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
+import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
@@ -41,48 +44,59 @@ JsMacros.on("HoldAction", JavaWrapper.methodToJava(fun(event: EventCustom, _: Ev
             interactInterval = getInt("interactInterval") ?: interactInterval
             interactIntervalRandom = getInt("interactIntervalRandom") ?: interactIntervalRandom
         }
+        if(globalInterval == 0) {
+            globalInterval = 1
+        }
     }
 } as Function2<*, *, *>))
 
-(fun() {
-    val event = JsMacros.createCustomEvent("HoldAction")
-    event.putBoolean("loadFromGlobal", true)
-    event.trigger()
-})()
-fun onTick() {
-    val time = World.time
-    if (time.toInt() % globalInterval == 0) {
-        if(nextAttackTime > time + attackIntervalRandom + attackInterval) {
+val _event = JsMacros.createCustomEvent("HoldAction")
+_event.putBoolean("loadFromGlobal", true)
+_event.trigger()
+
+var tick = 0L
+
+fun <T> registerEvent(event: Event<T>, callback: T) {
+    val register = JsMacros.createCustomEvent("RegisterKtEvent")
+    register.putObject("event", event)
+    register.putObject("callback", callback)
+    register.putObject("context", context.ctx)
+    register.trigger()
+}
+
+fun <T> unregisterEvent(event: Event<T>) {
+    val register = JsMacros.createCustomEvent("UnregisterKtEvent")
+    register.putObject("event", event)
+    register.putObject("context", context.ctx)
+    register.trigger()
+}
+val closedField = Reflection.getDeclaredField(BaseScriptContext::class.java, "closed")
+closedField.trySetAccessible()
+
+registerEvent(ClientTickEvents.START_CLIENT_TICK, ClientTickEvents.StartTick {
+    if ((tick++).toInt() % globalInterval == 0) {
+        if(nextAttackTime > tick + attackIntervalRandom + attackInterval) {
             nextAttackTime = 0
         }
-        if(nextInteractTime > time + interactIntervalRandom + interactInterval) {
+        if(nextInteractTime > tick + interactIntervalRandom + interactInterval) {
             nextInteractTime = 0
         }
-        if (attackEnabled && attackKey.method_1434() && time > nextAttackTime) {
+        if (attackEnabled && attackKey.method_1434() && tick > nextAttackTime) {
             Player.interactions()!!.attack()
-            nextAttackTime = time + attackInterval + (Math.random() * attackIntervalRandom).toLong()
+            nextAttackTime = tick + attackInterval + (Math.random() * attackIntervalRandom).toLong()
             JsMacros.createCustomEvent("HoldActionCallback").putBoolean("attack", true)
-        } else if (interactEnabled && interactKey.method_1434() && time > nextInteractTime) {
+        } else if (interactEnabled && interactKey.method_1434() && tick > nextInteractTime) {
             Player.interactions()?.interact()
-            nextInteractTime = time + interactInterval + (Math.random() * interactIntervalRandom).toLong()
+            nextInteractTime = tick + interactInterval + (Math.random() * interactIntervalRandom).toLong()
             JsMacros.createCustomEvent("HoldActionCallback").putBoolean("attack", false)
         }
     }
-}
 
-var tickEnabled = true
-thread {
-    try {
-        while (tickEnabled) {
-            onTick()
-            Client.waitTick()
-        }
-    } catch (e: Exception) {
-        Chat.logger.error(e.stackTraceToString())
-    }
-}
+})
+
+
 (event as EventService).stopListener = JavaWrapper.methodToJava(fun(){
-    tickEnabled = false
+
 } as Function0<*>)
 
 if(!World.isWorldLoaded) {

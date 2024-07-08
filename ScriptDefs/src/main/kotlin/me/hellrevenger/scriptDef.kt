@@ -1,5 +1,6 @@
 package me.hellrevenger
 
+import net.fabricmc.fabric.api.event.Event
 import xyz.wagyourtail.jsmacros.client.api.library.impl.*
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext

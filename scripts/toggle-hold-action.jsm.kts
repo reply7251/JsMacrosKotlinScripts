@@ -48,6 +48,8 @@ class Globals {
         set(value) { putInt("interactIntervalRandom", value) }
 }
 
+val GlobalProperties = listOf("globalInterval", "attackEnabled", "attackInterval", "attackIntervalRandom", "interactEnabled", "interactInterval", "interactIntervalRandom")
+
 val HoldActionConfig = Globals()
 
 val keybinds = HashMap<String, (e: EventKey) -> Any>()
@@ -73,9 +75,9 @@ JsMacros.on("Key", JavaWrapper.methodToJava(fun(e : EventKey, _: Any) {
 } as Function2<*,*,*>))
 
 fun onTick() {
-    Globals::class.memberProperties.forEachIndexed(fun(index, property) {
-        if(index > texts.size) return
+    Globals::class.memberProperties.forEach(fun(property) {
 
+        val index = GlobalProperties.indexOf(property.name)
         val string = property.name + "-".repeat(if(property.name.length > 24) 1 else 25 - property.name.length) + property.get(HoldActionConfig)
         texts[index].setText(string).setColor(if(index == selectedConfig) 0xffff00 else 0xffffff)
     })
