@@ -43,7 +43,8 @@ abstract class SimpleScript(
     val JavaWrapper: IFWrapper<Function<*>>,
     val context: EventContainer<BaseScriptContext<*>>,
     val file: File,
-    val event: BaseEvent
+    val event: BaseEvent,
+    val SubLibraries: SubLibraries
 )
 
 object SimpleScriptConfiguration : ScriptCompilationConfiguration({
@@ -51,3 +52,9 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
         dependenciesFromCurrentContext(wholeClasspath = true, unpackJarCollections = true);
     }
 })
+
+interface SubLibraries {
+    fun <T : Any> addLibrary(name: String, clazz: Class<T>, provider: () -> T): Class<*>?
+
+    fun removeLibrary(name: String): Class<*>?
+}

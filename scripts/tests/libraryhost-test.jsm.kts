@@ -8,44 +8,31 @@ import xyz.wagyourtail.jsmacros.core.library.impl.classes.ClassBuilder
 import xyz.wagyourtail.jsmacros.core.library.impl.classes.LibraryBuilder
 import xyz.wagyourtail.jsmacros.core.service.EventService
 
-//JavaWrapper.methodToJava<Any, Any, Any>(fun(){} as Function0<*>)
 
-try {
-    Core.getInstance().libraryRegistry.addLibrary(Reflection.getClassFromClassBuilderResult("Test") as Class<out BaseLibrary>?)
-} catch (e: Exception) {
-    when (e) {
-        is ClassNotFoundException -> {
-            //e.printStackTrace()
-            val hasConstructorSetField = Reflection.getDeclaredField(LibraryBuilder::class.java, "hasConstructorSet")
-            hasConstructorSetField.trySetAccessible()
+fun <R> m2j1(func: Function0<R>): MethodWrapper<Any, Any, R, *> {
+    return (JavaWrapper as FWrapper).methodToJava(func as Function0<Any>) as MethodWrapper<Any, Any, R, *>
+}
 
-            val builder = Reflection.createLibraryBuilder("Test", true)
-            hasConstructorSetField.set(builder, true)
+fun <T, R> m2j1(func: Function1<T,R>): MethodWrapper<T, Any, R, *> {
+    return (JavaWrapper as FWrapper).methodToJava(func as Function1<Any, Any>) as MethodWrapper<T, Any, R, *>
+}
 
-            val identifier = "Test;test"
-            ClassBuilder.methodWrappers.put(identifier, JavaWrapper.methodToJava<Any, Any, Any>(fun(){
-                Chat.log("test!")
-            }))
-
-            builder
-                .addConstructor(KotlinScriptContext::class.java)
-                .makePublic()
-                .body("{super($1);}")
-                .addMethod(Void.TYPE, "test")
-                .makePublic()
-                .body("""
-                        {
-                            xyz.wagyourtail.jsmacros.core.library.impl.classes.ClassBuilder.methodWrappers.get(identifier).accept(this, new Object[]{});
-                        }
-                    """.trimIndent())
-                .finishBuildAndFreeze()
-        }
-        else -> throw e
-    }
-
+fun <A, B, R> m2j2(func: Function2<A,B,R>): MethodWrapper<A, B, R, *> {
+    return (JavaWrapper as FWrapper).methodToJava(func as Function2<Any, Any, Any>) as MethodWrapper<A, B, R, *>
 }
 
 
-(event as? EventService)?.stopListener = JavaWrapper.methodToJava<Any, Any, Any>(fun(){
+val wrapper = JavaWrapper.methodToJava<Any, Any, Any>(fun(){} as Function0<*>)
 
+class Test {
+    fun test() {
+        Chat.log("Test.test called")
+    }
+}
+
+SubLibraries.addLibrary("Test", Test::class.java, {Test()})
+
+
+(event as? EventService)?.stopListener = JavaWrapper.methodToJava<Any, Any, Any>(fun(){
+    SubLibraries.removeLibrary("Test")
 })

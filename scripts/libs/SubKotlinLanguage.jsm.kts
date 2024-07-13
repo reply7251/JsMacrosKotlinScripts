@@ -1,3 +1,5 @@
+//service name: "YYHCCTL" or any zero hashCode string
+
 import io.github.gaming32.jsmacros.kotlin.KotlinExtension
 import io.github.gaming32.jsmacros.kotlin.language.impl.KotlinLanguageDefinition
 import io.github.gaming32.jsmacros.kotlin.language.impl.KotlinScriptContext
@@ -7,19 +9,19 @@ import xyz.wagyourtail.jsmacros.core.config.ScriptTrigger
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.extensions.Extension
 import xyz.wagyourtail.jsmacros.core.language.BaseLanguage
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.language.BaseWrappedException
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import xyz.wagyourtail.jsmacros.core.library.BaseLibrary
 import xyz.wagyourtail.jsmacros.core.library.Library
-import xyz.wagyourtail.jsmacros.core.library.impl.FReflection
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.io.File
 import java.io.PrintWriter
 import java.io.StringWriter
+import java.net.URLClassLoader
 import kotlin.concurrent.thread
+import kotlin.reflect.KClass
 import kotlin.script.experimental.api.*
-import kotlin.script.experimental.host.toScriptSource
+import kotlin.script.experimental.host.*
 import kotlin.script.experimental.jvm.*
 import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 
@@ -47,47 +49,82 @@ class KotlinSubLanguageDefinition(extension: Extension, runner: Core<*, *>) : Ba
             "context" to ctx
         )
 
-        Chat.log("perExec: " + runner.libraryRegistry.perExec.values.joinToString { it.getAnnotation(Library::class.java).value })
-
         val libs = retrieveLibs(ctx.ctx)
-        Chat.log("libs: " + libs.keys.joinToString { it })
+
+        val cl = SubClassLoader(FWrapper::class.java.classLoader)
 
         val compConf = object : ScriptCompilationConfiguration({
             jvm {
                 // Extract the whole classpath from context classloader and use it as dependencies
                 dependenciesFromCurrentContext(wholeClasspath = true)
-                dependenciesFromClassloader(classLoader = FReflection::class.java.classLoader, wholeClasspath = true)
-
-                //dependenciesFromClassContext(BaseScriptContext::class, wholeClasspath = true)
-
-                /*
-                val filtered = libs.filterKeys { !(libraries!!.containsKey(it)) }
-
-                filtered.values.forEach {
-                    //Chat.log("force loading: ${it.javaClass.simpleName}")
-                    dependenciesFromClassContext(it.javaClass.kotlin)
-                }
-                */
             }
+
+            dependencies.append(JvmDependencyFromClassLoader { cl })
+            dependencies.append(subLibraries.getClassLoaders().map { cl -> JvmDependencyFromClassLoader { cl } })
 
             providedProperties.replaceOnlyDefault(mapOf(
                 "event" to KotlinType(if (event == null) BaseEvent::class else event::class, isNullable = true),
                 "file" to KotlinType(File::class, isNullable = true),
                 "context" to KotlinType(EventContainer::class)
-            ) + libs.mapValues { KotlinType(it.value::class) } + mapOf("JavaWrapper" to KotlinType(FWrapper::class)))
+            ) + libs.mapValues { KotlinType(it.value::class) } + mapOf(
+                "JavaWrapper" to KotlinType(FWrapper::class),
+                "SubLibraries" to KotlinType(SubLibraries::class),
+            ) + subLibraries.getLibraryTypes())
 
         }) {}
         val execConf = object : ScriptEvaluationConfiguration({
-            jvm {
-                //baseClassLoader.put(FReflection::class.java.classLoader)
-                baseClassLoader.put(FReflection.classLoader)
-                //baseClassLoader.put(Thread.currentThread().contextClassLoader)
-            }
 
-            providedProperties(vars + libs + mapOf("JavaWrapper" to FWrapper(ctx.ctx, KotlinLanguageDefinition::class.java)) )
+            providedProperties(vars + libs + mapOf(
+                "JavaWrapper" to FWrapper(ctx.ctx, KotlinLanguageDefinition::class.java),
+                "SubLibraries" to subLibraries
+            ) + subLibraries.getLibraryInstances())
         }) {}
 
-        ctx.ctx.context = BasicJvmScriptingHost()
+        var conf: ScriptingHostConfiguration? = null
+        conf = conf.withDefaultsFrom(defaultJvmScriptingHostConfiguration).with {
+            getScriptingClass.put(object : GetScriptingClassByClassLoader {
+                var setClassLoader: ClassLoader? = null
+                override fun invoke(
+                    classType: KotlinType,
+                    contextClassLoader: ClassLoader?,
+                    hostConfiguration: ScriptingHostConfiguration
+                ): KClass<*> {
+                    val fromClass = classType.fromClass
+                    if (fromClass != null) {
+                        if (fromClass.java.classLoader == null) return fromClass // root classloader
+                        val actualClassLoadersChain = generateSequence(contextClassLoader) { it.parent }
+                        if (actualClassLoadersChain.any { it == fromClass.java.classLoader }) return fromClass
+                    }
+                    val newDeps = hostConfiguration[configurationDependencies]
+                    if(setClassLoader == null) {
+                        val classpath = newDeps?.flatMap { dependency ->
+                            when (dependency) {
+                                is JvmDependency -> dependency.classpath.map { it.toURI().toURL() }
+                                else -> throw IllegalArgumentException("unknown dependency type $dependency")
+                            }
+                        }
+                        setClassLoader =
+                            if (classpath == null || classpath.isEmpty()) SubClassLoader(contextClassLoader!!)
+                            else SubClassLoader(URLClassLoader(classpath.toTypedArray(), contextClassLoader))
+                    }
+
+                    return try {
+                        (setClassLoader ?: ClassLoader.getSystemClassLoader()).loadClass(classType.typeName).kotlin
+                    } catch (e: Throwable) {
+                        throw IllegalArgumentException("SubKotlin: unable to load class ${classType.typeName}", e)
+                    }
+                }
+
+                override fun invoke(
+                    classType: KotlinType,
+                    contextClass: KClass<*>,
+                    hostConfiguration: ScriptingHostConfiguration
+                ) = invoke(classType, contextClass.java.classLoader, hostConfiguration)
+            })
+        }
+
+        val host = BasicJvmScriptingHost(conf)
+        ctx.ctx.context = host
 
         callback(ctx.ctx.context, compConf, execConf)
     }
@@ -184,7 +221,6 @@ class KotlinSubExtension: Extension {
     }
     /**/
     override fun getLibraries(): MutableSet<Class<out BaseLibrary>> {
-        //return mutableSetOf(BuildedProxiedFWrapper)
         return mutableSetOf() //FWrapper::class.java
     }
 
@@ -196,7 +232,7 @@ class KotlinSubExtension: Extension {
                     val sw = StringWriter()
                     val pw = PrintWriter(sw)
                     it.exception?.printStackTrace(pw)
-                    sw.toString().split("\r\n").forEach { Chat.log(it) }
+                    //sw.toString().split("\r\n").forEach { Chat.log(it) }
                 }
             }
             return BaseWrappedException(null, "KotlinSub script failed to compile", null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
@@ -215,7 +251,7 @@ class KotlinSubExtension: Extension {
     }
 
     private fun wrapReport(sd: ScriptDiagnostic, nextGetter: Iterator<ScriptDiagnostic>): BaseWrappedException<ScriptDiagnostic>? {
-        if (sd.severity == ScriptDiagnostic.Severity.DEBUG) {
+        if (sd.severity == ScriptDiagnostic.Severity.DEBUG || sd.severity == ScriptDiagnostic.Severity.WARNING) {
             return if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null
         }
         return if (sd.location != null) {
@@ -250,75 +286,52 @@ class KotlinSubExtension: Extension {
     }
 }
 
+class SubLibraries {
+    val libraries: HashMap<String, Class<*>> = hashMapOf()
+    val librarySupplier : HashMap<String, () -> Any> = hashMapOf()
+    val libraryNames: HashMap<String, Class<*>> = hashMapOf()
+    fun <T : Any> addLibrary(name: String, clazz: Class<T>, provider: () -> T): Class<*>? {
+        libraryNames[clazz.typeName] = clazz
+        librarySupplier[name] = provider
+        return libraries.put(name, clazz)
+    }
 
-/*
-val BuildedProxiedFWrapper: Class<out BaseLibrary> = try {
-    Reflection.getClassFromClassBuilderResult("ProxiedFWrapper") as Class<BaseLibrary>
-} catch (e: Exception) {
-    when(e) {
-        is NullPointerException, is ClassNotFoundException -> {
+    fun removeLibrary(name: String): Class<*>? {
+        librarySupplier.remove(name)
+        return libraryNames.remove(libraries.remove(name)?.typeName)
+    }
 
-            Reflection.createLibraryBuilder("ProxiedFWrapper", true)
-                .addAnnotation(Library::class.java)
-                .putString("value", "JavaWrapper")
-                .putArray("languages").putClass(KotlinSubLanguageDefinition::class.java)
-                .finish()
-                .finish()
-                .addField(FWrapper::class.java, "original")
-                .end()
-                .addConstructor(KotlinScriptContext::class.java, Class::class.java)
-                .makePublic()
-                .body("""
-                    {
-                        super($1, $2);
-                        this.original = new io.github.gaming32.jsmacros.kotlin.library.impl.FWrapper($1, $2);
-                    }
-                    """.trimIndent())
-                .addMethod(MethodWrapper::class.java, "methodToJava", Function::class.java)
-                .makePublic()
-                .body("""
-                    {
-                        JavaWrapper.methodToJava($1)
-                    }
-                    """.trimIndent())
-                .addMethod(MethodWrapper::class.java, "methodToJavaAsync", Function::class.java)
-                .makePublic()
-                .body("""
-                    {
-                        JavaWrapper.methodToJavaAsync($1)
-                    }
-                    """.trimIndent())
-                .addMethod(Void.TYPE, "stop")
-                .makePublic()
-                .body("""
-                    this.ctx.closeContext();
-                    """.trimIndent())
-                .finishBuildAndFreeze()
+    fun getLibraryTypes(): Map<String, KotlinType> {
+        return libraries.mapValues { KotlinType(it.value.kotlin) }
+    }
+
+    fun getLibraryInstances(): Map<String, Any?> {
+        return librarySupplier.mapValues { it.value.invoke() }
+    }
+
+    fun getClassLoaders(): Set<ClassLoader> {
+        return libraries.values.map { it.classLoader }.toSet()
+    }
+}
+
+class SubClassLoader(parent: ClassLoader) : ClassLoader(parent) {
+    override fun loadClass(name: String): Class<*> {
+        try {
+            return parent.loadClass(name)
+        } catch (e: ClassNotFoundException) {
+            if(name.startsWith(context.ctx.file!!.nameWithoutExtension.replace(".","_"))) {
+                return Class.forName(name, false, KotlinSubExtension::class.java.classLoader)
+            } else {
+                val clazz = subLibraries.libraryNames[name]
+                if(clazz != null) return clazz;
+            }
+            throw e;
         }
-
-        else -> throw e
     }
 }
-*/
-/*
-@Library(value = "JavaWrapper", languages = [KotlinSubLanguageDefinition::class])
-class ProxiedFWrapper(context: KotlinScriptContext, language: Class<out BaseLanguage<BasicJvmScriptingHost, KotlinScriptContext>>) : PerExecLanguageLibrary<BasicJvmScriptingHost, KotlinScriptContext>(context, language), IFWrapper<Function<*>> {
 
-    val original = FWrapper(context, language)
 
-    override fun <A : Any, B : Any, R : Any> methodToJava(p0: Function<*>): MethodWrapper<A, B, R, *> {
-        return original.methodToJava(p0)
-    }
-
-    override fun <A : Any, B : Any, R : Any> methodToJavaAsync(p0: Function<*>): MethodWrapper<A, B, R, *> {
-        return original.methodToJavaAsync(p0)
-    }
-
-    override fun stop() {
-        ctx.closeContext()
-    }
-}
-*/
+val subLibraries = SubLibraries()
 val extension = KotlinSubExtension()
 val core = Core.getInstance()
 core.extensions.allExtensions.add(extension)
