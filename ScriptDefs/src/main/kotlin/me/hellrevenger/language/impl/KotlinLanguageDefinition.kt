@@ -1,7 +1,5 @@
 package me.hellrevenger.language.impl
 
-
-import MinecraftClient
 import me.hellrevenger.library.impl.FWrapper
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.config.ScriptTrigger

@@ -2,10 +2,10 @@
 import me.hellrevenger.generated.player
 import me.hellrevenger.generated.sendMessage
 
-
-//val MinecraftClient.player by alias(MinecraftClient::field_1724)
+val text = Chat.createTextBuilder().append("yeah").build().raw
 try {
-    Client.minecraft.player!!.sendMessage(Chat.createTextBuilder().append("yeah").build().raw)
+    Client.minecraft.player?.sendMessage(text)
+    Client.minecraft.field_1724?.method_43496(text)
 
 } catch(e: Exception){
     Chat.log(e)

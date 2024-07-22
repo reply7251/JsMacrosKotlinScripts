@@ -1,5 +1,4 @@
 import xyz.wagyourtail.jsmacros.core.classes.Mappings
-import xyz.wagyourtail.jsmacros.core.classes.Mappings.ClassData
 import java.io.*
 import java.lang.reflect.GenericArrayType
 import java.lang.reflect.Method
@@ -27,22 +26,24 @@ class GenMapping {
     val toAlias = hashMapOf<String, String>()
     val aliasUsage = hashSetOf<String>()
     val kotlinArrays = mapOf(*listOf("Int", "Long", "Byte", "Double", "Float", "Boolean", "Char", "Short").map { "Array<$it>" to it+"Array" }.toTypedArray())
-    val blackListMethods = setOf(
-        "method_30040", "method_41996", "method_41997",
+    val blackListMethods = setOf<String>(
+        "method_41996", "method_41997", //writeJson writePacket
+        /*
+        "method_30040",
         "method_42697", "method_59807", "method_11762",
         "method_47574", "method_47575",
         "method_52207", "method_22992",
         "method_47539", "method_47538",
+
+         */
     )
-    val blackListStaticMethods = hashSetOf(
-        "canSpawn", "register", "initialize", "getTexturedModelData", "bootstrap",
-        "of", "getTemptItemPredicate", "getFacing", "create", "find", "canBeLit",
-        "getPitch", "getVolume"
+    val blackListStaticMethods = hashSetOf<String>(
     )
-    val blackListDeobfMethods = setOf(
-        "getGenerationSettings", "getSpawnSettings"
+    val blackListDeobfMethods = setOf<String>(
+        //"getGenerationSettings", "getSpawnSettings"
     )
     val blackListClasses = setOf(
+        "net.minecraft.class_4597", // VertexConsumerProvider
         "net.minecraft.class_6302", "net.minecraft.class_6300",
         "net.minecraft.class_6301"
     )
@@ -77,6 +78,12 @@ class GenMapping {
         }
         generics = if(generics == "") "" else "<$generics>"
         * */
+        if(param.parameterizedType is Class) {
+            val params = param.parameterizedType.typeParameters
+            if(params.isNotEmpty()) {
+                return getNameFromType(param.parameterizedType) + "<*>"
+            }
+        }
         return getNameFromType(param.parameterizedType)
     }
 
@@ -179,7 +186,7 @@ class GenMapping {
         }
     }
 
-    fun genMap(name: String, classData: ClassData): String {
+    fun genMap(name: String, classData: Mappings.ClassData): String {
         val builder = StringBuilder()
         val className = name.replace("/",".")
 
@@ -201,10 +208,12 @@ class GenMapping {
         if(aliasName == "Any") return builder.toString()
         if(aliasName.matches(".+PackageInfo\\d+".toRegex())) return builder.toString()
 
-        val classGenerics = if(clazz.typeParameters.isEmpty())
+        val classGenerics = if(clazz.typeParameters.isEmpty()) {
             listOf()
-        else
+        } else {
             clazz.typeParameters.map { getGenerics(it, true) }.flatten()
+        } + getGenerics(clazz.genericSuperclass)
+
 
         var simpleClassGenerics = classGenerics.joinToString { it.split(":")[0] }
         if(simpleClassGenerics.isNotEmpty()) simpleClassGenerics = "<$simpleClassGenerics>"
@@ -266,7 +275,7 @@ class GenMapping {
                 val isStatic = Modifier.isStatic(method.modifiers)
                 if(isStatic) {
                     if(to.name in blackListStaticMethods) return@forEach
-                    blackListStaticMethods.add(to.name)
+                    //blackListStaticMethods.add(to.name)
                 }
                 val host = if (isStatic) " = ${aliasName}." else " = this."
                 val genericWithBounds = hashMapOf(*classGenerics.map { it.split(":")[0] to it }.toTypedArray())
@@ -412,7 +421,6 @@ class GenMapping {
             "java.lang.Iterable",
             "java.lang.Comparable",
             "java.lang.Enum",
-            "java.util.List",
             "java.util.Set",
             "java.util.Map",
             "java.lang.String",
@@ -424,6 +432,7 @@ class GenMapping {
         ).forEach {
             toAlias[it] = it.replace("java.lang.", "").replace("java.util.", "")
         }
+        toAlias["java.util.List"] = "MutableList"
         toAlias["java.lang.Integer"] = "Int"
         toAlias["java.lang.Character"] = "Char"
         listOf(
@@ -450,7 +459,7 @@ fun main() {
 
     val mapping = Reflection.loadMappingHelper(pathToTiny)
 
-    val writer = BufferedWriter(FileWriter(File(parentFile, "Generated.jsm.kts")))
+    val writer = BufferedWriter(FileWriter(File(parentFile, "Generated.kt")))
     val genMapping = GenMapping()
     writer.append(genMapping.genPrefix())
     genMapping.genKotlinTypes()

@@ -1,4 +1,5 @@
-import io.github.gaming32.jsmacros.kotlin.library.impl.FWrapper
+
+import me.hellrevenger.library.impl.FWrapper
 import xyz.wagyourtail.jsmacros.core.MethodWrapper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 

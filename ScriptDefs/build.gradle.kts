@@ -1,5 +1,4 @@
 
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.net.URI
 
 plugins {
@@ -81,16 +80,8 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-}
-
-kotlin {
-    jvmToolchain {
-        this.languageVersion = JavaLanguageVersion.of(17)
-    }
+tasks.compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
 }
 
 tasks.jar {
@@ -99,4 +90,3 @@ tasks.jar {
         into("META-INF/jsmacrosdeps")
     }
 }
-
