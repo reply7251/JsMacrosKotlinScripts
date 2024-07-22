@@ -1,0 +1,8073 @@
+package me.hellrevenger.generated
+
+import kotlin.reflect.*
+import alias
+import aliasStatic
+import aliasEnum
+
+
+import ShulkerBoxBlockEntity
+import StructurePiecesCollector
+import WalkTowardsLandTask
+import HoneyBlock
+import VaultConfig
+import BannerBlockEntityRenderer
+import SoundExecutor
+import JigsawJunction
+import BannedPlayerEntry
+import GlyphAtlasTexture
+import CriterionConditions
+import ServerCommonNetworkHandler
+import ServerMetadataS2CPacket
+import Matrix4f
+import TabNavigationWidget
+import GameProfile
+import HoneyBottleItem
+import TridentEntity
+import GaussianGenerator
+import DamageImmunityEnchantmentEffect
+import MineshaftGenerator
+import SetItemLootFunction
+import Font
+import EntityTrackingSoundInstance
+import ServerWorld
+import Matrix3f
+import RealmsClient
+import DefaultBiomeFeatures
+import AppendLootRuleBlockEntityModifier
+import EntityRenameFix
+import FuzzyTargeting
+import CommandFunctionAction
+import RecreatedChunkStorage
+import ArmorTrim
+import FleeTask
+import RconListener
+import LootContextPredicateValidator
+import RedstoneBlock
+import EntityChangeListener
+import EndGatewayFeatureConfig
+import SmallFireballEntity
+import CopyNbtLootFunction
+import CrossbowPosing
+import FileSystem
+import EnchantmentProviderType
+import DebugPoiAddedCustomPayload
+import JukeboxPlayablePredicate
+import BipedEntityRenderer
+import MacWindowUtil
+import FieldsAreNonnullByDefault2
+import DeltaFeature
+import SpawnParticlesEnchantmentEffect
+import AmphibiousPathNodeMaker
+import EndRodBlock
+import RemoveFeatureTogglesFix
+import ConfiguredCarvers
+import ScoreHolder
+import ElementListWidget
+import MathHelper
+import TelemetryPropertyContainer
+import GustEmitterParticle
+import EnderPearlItem
+import RealmsCreateWorldScreen
+import BlockEntityRenderDispatcher
+import StriderEntityModel
+import AnyBlockUseCriterion
+import OminousBottleItem
+import BanDetails
+import ResourceTexture
+import IdListPalette
+import FT_Face
+import RealmsNewsUpdater
+import TickManager
+import PlayerHeadItem
+import LevelFlatGeneratorInfoFix
+import AmbientStandGoal
+import WalkTowardClosestAdultTask
+import HeightmapArgumentType
+import GlobalPos
+import FurnaceBlockEntity
+import ReloadableResourceManagerImpl
+import LevitationCriterion
+import LayFrogSpawnTask
+import GlBlendState
+import EnchantmentEntityEffect
+import NbtEnd
+import StringIdentifiable
+import DaylightDetectorBlockEntity
+import ChunkLevelType
+import HopperScreen
+import DebugHud
+import SchoolingFishEntity
+import CompletableFuture
+import ServerBossBar
+import ForgingSlotsManager
+import TargetedEnchantmentEffect
+import ScheduleRule
+import ExperimentsScreen
+import UpdateTickRateS2CPacket
+import DeathScreen
+import BlockAttachedEntity
+import BlendingDataFix
+import SpreadType
+import HeightContext
+import MapState
+import TickChart
+import JigsawPropertiesFix
+import BufferedReader
+import Animation
+import FindRoarTargetTask
+import EmptyEntry
+import SwampHutGenerator
+import ArmorEntityModel
+import VillagerEntity
+import EmptyGlyphRenderer
+import PlayWithVillagerBabiesTask
+import KilledByCrossbowCriterion
+import SquarePlacementModifier
+import ServerConfigEntry
+import ForgetAngryAtTargetTask
+import AngledModelEntity
+import HostileEntity
+import TutorialToast
+import AdvancementRequirements
+import Random
+import SystemDetails
+import CelebrateRaidWinTask
+import Schema1125
+import BlockStateSupplier
+import BiomeSupplier
+import DoubleInventory
+import AllayEntity
+import GameEventTags
+import GlTimer
+import RemoveGolemGossipFix
+import DataFixer
+import StonecutterScreenHandler
+import ScreenHandlerContext
+import Schema3799
+import OminousBannerBlockEntityRenameFix
+import OptionsForceVBOFix
+import StorageDataObject
+import SculkPatchFeatureConfig
+import MooshroomEntityRenderer
+import PathNodeType
+import RegistryEntryReferenceArgumentType
+import RuinedPortalStructure
+import BackupPromptScreen
+import FailureLoggingTestCompletionListener
+import ModelElement
+import Function
+import LightDebugRenderer
+import RaiderPredicate
+import TypedActionResult
+import DebugGameTestAddMarkerCustomPayload
+import LevelPropagator
+import BreatheAirGoal
+import PlayerListGui
+import DamageSource
+import WanderAroundTask
+import StructurePiece
+import VanillaEquipmentLootTableGenerator
+import ExperienceOrbEntity
+import EntityDamageS2CPacket
+import SoulFireBlock
+import ExecutorSampling
+import FireworkRocketRecipe
+import DamageTypes
+import CollectionPredicate
+import WallPiglinHeadBlock
+import CommandExecutionContext
+import PhantomSpawner
+import App
+import NearestVisibleAdultSensor
+import CreativeInventoryScreen
+import BlockEntry
+import TextureTickListener
+import NarratedMultilineTextWidget
+import PingChart
+import VillagePlacedFeatures
+import TwoLayersFeatureSize
+import BlockColorProvider
+import SequenceEntry
+import LootFunction
+import BossBarManager
+import ComplexRecipeJsonBuilder
+import GlStateManager
+import AllOfLootCondition
+import ChunkLoadingManager
+import LootableInventory
+import Arm
+import SpreadableBlock
+import WorldPresetTags
+import SaveLoader
+import GeodeFeatureConfig
+import AlwaysSelectedEntryListWidget
+import GuiResourceMetadata
+import CamelEntityRenderer
+import QuickPlay
+import RailPlacementHelper
+import CollectionContainsPredicate
+import TargetPathNode
+import SleepTask
+import BatEntity
+import SummonEntityEnchantmentEffect
+import JsonDataLoader
+import Runnable
+import ArmadilloScareDetectedSensor
+import FireballEntity
+import HeavyCoreBlock
+import RecipeCache
+import PathNode
+import ScoreboardCommand
+import PlacedAdvancement
+import DripstoneClusterFeature
+import RealmsObjectSelectionList
+import SideShapeType
+import PublicKey
+import UploadTokenCache
+import UpgradeData
+import CpuLoadSample
+import VertexFormatElement
+import ItemPlacementContext
+import FindEntityTask
+import GlowItemFrameEntity
+import SlotChangedStateC2SPacket
+import WardenFeatureRenderer
+import SignText
+import SetWorldSpawnCommand
+import Suggestable
+import IntSupplier
+import AllowedSymlinkPathMatcher
+import ChannelHandlerContext
+import ExplosionSmokeParticle
+import Scoreboard
+import NumberFormatTypes
+import AffineTransformation
+import ArmorMaterial
+import PendingInvitesList
+import AbstractPressurePlateBlock
+import RabbitEntityModel
+import CartographyTableScreen
+import CarverConfig
+import BiMapPalette
+import TelemetrySession
+import FlatChunkGeneratorLayer
+import TadpoleBrain
+import BubblePopParticle
+import CommandOutput
+import PortalForcer
+import TreeConfiguredFeatures
+import NbtElement
+import BlockLeakParticle
+import WorldDownload
+import SkeletonOverlayFeatureRenderer
+import BuiltBuffer
+import SimpleGameEventDispatcher
+import ResourcePackPosition
+import OptionsKeyTranslationFix
+import GiantEntityRenderer
+import RenameItemC2SPacket
+import AbstractSkeletonEntity
+import PlayerInteractEntityC2SPacket
+import MapColorComponent
+import ChunkCompressionFormat
+import LootFunctionType
+import ServerTransferS2CPacket
+import Object
+import EntityWolfColorFix
+import LoginKeyC2SPacket
+import MultiValueDebugSampleLogImpl
+import ChanneledLightningCriterion
+import ServerInfo
+import PolarBearEntityModel
+import ImmutableList
+import PlayerAdvancementTracker
+import ParentElement
+import RandomSequencesState
+import BreezeJumpTask
+import DimensionTypes
+import SplitterHandler
+import WolfArmorFeatureRenderer
+import LootPoolEntryType
+import StructureReferenceFix
+import HeightmapRenamingFix
+import Type
+import EightWayDirection
+import AbstractNoiseBlockStateProvider
+import EnderDragonPart
+import DedicatedServerWatchdog
+import ArmadilloAnimations
+import BeeEntityModel
+import FlyingItemEntityRenderer
+import MapDecorationsAtlasManager
+import QueryPingC2SPacket
+import FoliageColormapResourceSupplier
+import GlowstoneBlobFeature
+import EntityPositionSource
+import ItemUsageContext
+import ChunkNibbleArray
+import JsonObject
+import ProfilelessChatMessageS2CPacket
+import ModelWithHead
+import ItemStackArgumentType
+import ArmorStandEntity
+import AxolotlBrain
+import EntityRenderDispatcher
+import LayeredDrawer
+import WorldUpdater
+import LoginQueryRequestS2CPacket
+import MangroveRootsBlock
+import BuriedTreasureStructure
+import Schemas
+import ScoreboardObjectiveArgumentType
+import WorldListWidget
+import DetectorRailBlock
+import QueryableTickScheduler
+import Float2FloatFunction
+import StemBlock
+import BlockStateModelGenerator
+import Gson
+import EndIslandFeature
+import InsideWorldBoundsBlockPredicate
+import BlastFurnaceRecipeBookScreen
+import KeepAliveC2SPacket
+import FixedPlacementModifier
+import StatusEffectDurationFix
+import BlockStateParticleEffect
+import ServerSamplerSource
+import OpenToLanScreen
+import EnchantmentProvider
+import WardenBrain
+import TwistingVinesPlantBlock
+import VanillaEntityLootTableGenerator
+import Session
+import IronGolemEntityRenderer
+import BlockRenderType
+import CreativeInventoryListener
+import EnchantmentTagProvider
+import FireworkExplosionComponent
+import EntitySetHeadYawS2CPacket
+import ParsingRules
+import HuskEntityRenderer
+import WeightedBlockStateProvider
+import DimensionArgumentType
+import CalibratedSculkSensorBlockEntity
+import RealmsSelectFileToUploadScreen
+import ResourceReload
+import TickTimeTracker
+import SimpleRandomFeatureConfig
+import MapCloningRecipe
+import FloatArgumentSerializer
+import NbtTextFormatter
+import StructureAccessor
+import BiomeEffects
+import LootChoice
+import HoldTradeOffersTask
+import JsonUnbakedModel
+import BreedTask
+import AbstractChestBlock
+import TypeFilter
+import MagmaCubeEntity
+import ExplosionS2CPacket
+import ArrowStoredWeaponFix
+import TadpoleEntityRenderer
+import UniformIntProvider
+import ChunkSectionPos
+import InstanceType
+import AmphibiousSwimNavigation
+import Fertilizable
+import LootTable
+import PileConfiguredFeatures
+import SampleableExecutor
+import VariantsBlockStateSupplier
+import ZombieVillagerEntityModel
+import SingularPalette
+import LeadItem
+import NetherWartBlock
+import FeatureRenderer
+import ServerChunkLoadingManager
+import EvokerFangsEntityModel
+import Carver
+import IceBlock
+import DripstoneClusterFeatureConfig
+import EntityShapeContext
+import KickCommand
+import RotatedInfestedBlock
+import ItemPotionFix
+import GoatHornIdFix
+import item_DamagePredicate
+import AcknowledgeChunksC2SPacket
+import TimedTaskRunner
+import LightningEntityRenderer
+import BlockColors
+import ClientPlayerTickable
+import PlayerSkullBlock
+import DebugConfigCommand
+import TradeRebalanceBuiltinRegistries
+import AbstractFurnaceBlock
+import OptionsProgrammerArtFix
+import EntityDimensions
+import MoveToTargetPosGoal
+import InventoryS2CPacket
+import RedirectResolver
+import JfrJsonReport
+import FlyingItemEntity
+import LevelScreenProvider
+import WoodRecipeMapping
+import MultiplayerServerListPinger
+import RecipeAlternativesWidget
+import VerticalBlockSample
+import GlfwUtil
+import ItemSubPredicateTypes
+import LunarWorldView
+import ItemCustomNameToComponentFix
+import PlayerInfo
+import BlastFurnaceScreenHandler
+import DataPackContents
+import WolfVariants
+import RandomLookAroundTask
+import StatusPackets
+import ZombieHorseEntityRenderer
+import PointOfInterestTypes
+import DispenserBlockEntity
+import BuiltinModelItemRenderer
+import BlockNbtDataSource
+import StructureBlock
+import NoiseBlockStateProvider
+import AbstractTeam
+import SnowballEntity
+import VehicleInventory
+import RootPlacer
+import ParticleTextureData
+import ChangedDimensionCriterion
+import ListPoolElement
+import ModelTransform
+import CactusBlock
+import ByCostEnchantmentProvider
+import Smoother
+import DimensionOptions
+import BlockStateComponent
+import StonecutterBlock
+import DisconnectedRealmsScreen
+import GLFWMouseButtonCallbackI
+import ExecutionFlags
+import RealmsCreateRealmScreen
+import SetInstrumentLootFunction
+import PlayerPositionLookS2CPacket
+import ContainerWidget
+import VanillaLootTableProviders
+import CocoaBeansTreeDecorator
+import HuntFinishTask
+import TameableShoulderEntity
+import TextRenderLayerSet
+import AbuseReportReasonScreen
+import Weighting
+import FixUtil
+import ScreenshotRecorder
+import TextureMap
+import LodestoneTrackerComponent
+import RegistryKeys
+import EndermanEntityModel
+import StuckStingersFeatureRenderer
+import ResourcePack
+import InventoryProvider
+import DiveJumpingGoal
+import MovingSoundInstance
+import PlayerSkinDrawer
+import Tick
+import SocketAddress
+import PlayerListHud
+import NbtFloat
+import StorageMinecartEntity
+import Box
+import AddEnchantmentEffect
+import JoinWorldTask
+import MinecraftDedicatedServer
+import FuzzyPositions
+import Sampler
+import ChunkDeleteIgnoredLightDataFix
+import ToIntFunction
+import Enchantment
+import CheckedRandom
+import MobNavigation
+import SimpleTickScheduler
+import BreezeShootTask
+import VanillaEnchantmentTagProvider
+import LootDataType
+import SculkSpreadable
+import ChunkHeightAndBiomeFix
+import Schema3683
+import Schema3682
+import Schema3689
+import Schema1022
+import Schema3685
+import SnbtProvider
+import BannerPattern
+import OrderedTick
+import CraftingResultSlot
+import SampleEvent
+import SaveVersion
+import BundleRecipeProvider
+import ShaderStage
+import MultipliedFloatSupplier
+import ServerWorldProperties
+import JTextArea
+import SpectralArrowItem
+import NoiseThresholdBlockStateProvider
+import LookTarget
+import DebugPathCommand
+import VexEntity
+import SoundEvent
+import GameRuleCommand
+import DebugSampleType
+import MethodsReturnNonnullByDefault
+import AlterGroundTreeDecorator
+import AmbientSoundLoops
+import SocialInteractionsPlayerListEntry
+import MessageDecorator
+import ZoglinEntity
+import Inventory
+import UntamedActiveTargetGoal
+import AdmireItemTask
+import LoadingDisplay
+import LootPoolEntry
+import RconCommandOutput
+import RegistryElementCodec
+import ItemSlotArgumentType
+import Baker
+import ExperienceDroppingBlock
+import SonicBoomParticle
+import IronGolemEntity
+import AbuseReport
+import DebugHiveCustomPayload
+import ServerCommonPacketListener
+import CraftingInventory
+import EntityNbtDataSource
+import HealthUpdateS2CPacket
+import CatTypeFix
+import DataQueryHandler
+import Scaling
+import NarratorManager
+import WrittenBookContentPredicate
+import LootNumberProviderTypes
+import ItemEntry
+import Xoroshiro128PlusPlusRandom
+import IdCountsState
+import MiscConfiguredFeatures
+import FlatLevelGeneratorPresetTags
+import CommandSource
+import FloatArgumentType
+import IntProperty
+import EntryListWidget
+import CloseHandledScreenC2SPacket
+import PaintingVariant
+import ChatAbuseReport
+import MultilineTextWidget
+import SalmonEntityModel
+import AquiferSampler
+import BlockLootTableGenerator
+import Registries
+import AtlasSourceType
+import UncaughtExceptionHandler
+import AsyncTexture
+import RecipeBookDataC2SPacket
+import IntPredicate
+import tag_TagEntry
+import LightmapTextureManager
+import DamageSourcePropertiesLootCondition
+import Tilt
+import FindPointOfInterestTask
+import brigadier_ParseResults
+import AncientCityOutskirtsGenerator
+import FeatureSize
+import InventoryChangedListener
+import GiveInventoryToLookTargetTask
+import SpruceFoliagePlacer
+import DecoratedPotBlockEntityRenderer
+import Nameable
+import EntityTypeTags
+import VanillaAdventureTabAdvancementGenerator
+import CampfireBlockEntityRenderer
+import TriggerCommand
+import LandingApproachPhase
+import ScreenHandlerListener
+import AdvancementTab
+import CriterionProgress
+import ChunkHolder
+import LookTargetUtil
+import InputSlotFiller
+import ViewerCountManager
+import RealmsSettingsScreen
+import ArmorStandItem
+import ArmorFeatureRenderer
+import CommonPongC2SPacket
+import Fraction
+import CatVariant
+import BlockEntityUuidFix
+import FT_Vector
+import Tab
+import ResetChatS2CPacket
+import LargeDripstoneFeatureConfig
+import GameRenderer
+import SmithingTrimRecipe
+import CommandNode
+import BufferBuilder
+import ThreePartsLayoutWidget
+import MangroveRootPlacement
+import ItemSteerable
+import DimensionTypeRegistrar
+import CaveSurface
+import ConnectionParticle
+import Degradable
+import json_ItemModelGenerator
+import SquidInkParticle
+import LargeFireSmokeParticle
+import Resource
+import FoodComponent
+import GameTestBatch
+import AtlasLoader
+import EntityType
+import Lazy
+import SmithingTrimRecipeJsonBuilder
+import EntityArgumentType
+import ZombieVillagerXpRebuildFix
+import ServerLinksScreen
+import PointOfInterestFix
+import MapDecorationsComponent
+import NetworkPhase
+import GridWidget
+import DialogScreen
+import Source
+import UpdateCommandBlockMinecartC2SPacket
+import ChunkSentS2CPacket
+import RuntimeException
+import ModelTransformation
+import CommandTreeS2CPacket
+import PlayerSkinProvider
+import MapLike
+import FpsSmoother
+import DisconnectedScreen
+import CustomizeBuffetLevelScreen
+import RaidGoal
+import BiomeParametersProvider
+import Finishable
+import LootTables
+import DragonBreathParticle
+import WorldGenerationProgressListener
+import StyleArgumentType
+import StartSniffingTask
+import WorldGenAttemptDebugRenderer
+import EmeraldOreFeature
+import HelpCommand
+import RootSpectatorCommandGroup
+import ScheduleCommand
+import FlatLevelGeneratorPresets
+import ApiServices
+import ModelLoader
+import LargePufferfishEntityModel
+import InvalidHierarchicalFileException
+import LanguageResourceMetadata
+import NbtIntArray
+import IglooGenerator
+import Merchant
+import LookAtS2CPacket
+import ChatInputSuggestor
+import CommandBlockScreen
+import RecipeBook
+import RandomBooleanFeatureConfig
+import RandomSequence
+import CoralBlockBlock
+import UnmodifiableLevelProperties
+import TestFinder
+import MushroomPlantBlock
+import SaveLoading
+import RecipeBookWidget
+import SlabType
+import ArmorStandArmorEntityModel
+import ItemSubPredicate
+import SoundEvents
+import EndPlacedFeatures
+import CatEntityModel
+import SmokerRecipeBookScreen
+import TridentItem
+import SocialInteractionsPlayerListWidget
+import AdvancementCriteriaRenameFix
+import LidOpenable
+import CreditsScreen
+import SitGoal
+import UpdatePlayerAbilitiesC2SPacket
+import EndRodParticle
+import FixedBiomeSource
+import LockHelper
+import RealmsServiceException
+import PlayerRespawnS2CPacket
+import FireworksSparkParticle
+import PiglinBruteEntity
+import Signer
+import RealmsBrokenWorldScreen
+import ClientRecipeBook
+import DefaultBlockUseCriterion
+import ObjectArrayList
+import PacketEncryptionManager
+import PardonIpCommand
+import FileResourcePackProvider
+import GeodeFeature
+import ResourceReloader
+import StatFormatter
+import FollowParentGoal
+import PropertiesMap
+import BundleContentsComponent
+import AbstractPropertiesHandler
+import JsonHelper
+import ShieldEntityModel
+import TrappedChestBlockEntity
+import SkullBlockEntityRenderer
+import Mouse
+import SetBlockCommand
+import LandPathNodeMaker
+import BirdNavigation
+import DebugStructuresCustomPayload
+import NetworkIoStatistics
+import ModelPart
+import ResourceMetadataMap
+import BarrierBlock
+import ClickEvent
+import model_Model
+import AquaticMoveControl
+import MemoryTransferTask
+import WorldEventS2CPacket
+import DoubleList
+import VillagerProfession
+import CodEntity
+import HangingEntityFix
+import DesertWellFeature
+import BuiltinNoiseParameters
+import ChaseCommand
+import CompositeTask
+import DamageCommand
+import ChestBlockEntity
+import UnderwaterMagmaFeature
+import HorseChestIndexingFix
+import IntFunction
+import CodecHolder
+import WalkTowardsWaterTask
+import AirBlockItem
+import GameMenuScreen
+import ServerChunkManager
+import ChunkFilter
+import LootContextType
+import BastionData
+import RealmsConfigureWorldScreen
+import K1
+import AlwaysTrueRuleTest
+import ScoreboardEntry
+import ParticleS2CPacket
+import URL
+import ArmorItem
+import AbstractCookingRecipe
+import Property
+import SmokerScreen
+import StructureContext
+import ScreenRect
+import EnderDragonFight
+import UpwardsBranchingTrunkPlacer
+import LoginSuccessS2CPacket
+import ChunkGenerators
+import BlockRotStructureProcessor
+import ColumnPos
+import NavigationAxis
+import AbstractCommandBlockScreen
+import PortalManager
+import TestAttemptConfig
+import LandingPhase
+import FilledMapItem
+import UniformFloatProvider
+import TameableEntity
+import DownloadTask
+import WrapperWidget
+import HungerConstants
+import MapEncoder
+import ItemTagProvider
+import ModelRotation
+import AcaciaFoliagePlacer
+import SlimeEntityModel
+import MobEntity
+import JfrProfile
+import HeightProviderType
+import StatHandler
+import EntityLookTarget
+import MagmaCubeEntityModel
+import NbtScanQuery
+import ServerNetworkIo
+import SeagrassBlock
+import SnowflakeParticle
+import DataCache
+import EditBox
+import SpectatorMenuCommandGroup
+import AddServerScreen
+import Instrument
+import ExplodeEnchantmentEffect
+import ModifyContentsLootFunction
+import CountMultilayerPlacementModifier
+import PersistentStateManager
+import Consumer
+import ScoreboardScoreUpdateS2CPacket
+import AreaEffectCloudPotionFix
+import ChunkRegionSample
+import Cut
+import StriderEntityRenderer
+import StructureStart
+import IntegerArgumentSerializer
+import CarvingMaskPlacementModifier
+import ChestMinecartEntity
+import ResettingNormalWorldTask
+import InvalidIdentifierException
+import FurnaceScreen
+import LeashKnotEntity
+import ParsingRule
+import SculkSensorPhase
+import Vec3ArgumentType
+import AbstractPlantBlock
+import GuardianEntity
+import SleepManager
+import StickyKeyBinding
+import TntMinecartEntityRenderer
+import HangingSignItem
+import BrushItem
+import MutableWorldProperties
+import GoToSecondaryPositionTask
+import SaveOffCommand
+import SocialInteractionsManager
+import Writer
+import ParrotEntityModel
+import HandshakeC2SPacket
+import StringEncoding
+import Enchantments
+import SeedCommand
+import VanillaEndTabAdvancementGenerator
+import LockButtonWidget
+import WorldGenerationProgressTracker
+import LegacyDragonFightFix
+import ForestRockFeature
+import VillagerXpRebuildFix
+import AbuseReportType
+import PlayerActivity
+import BitSet
+import SmithingScreen
+import ControlFlowAware
+import WardenEntity
+import LlamaEntity
+import EnchantmentEffectComponentTypes
+import ChestType
+import LecternBlockEntity
+import TallBlockItem
+import RideCommand
+import Forkable
+import AbstractDustParticleEffect
+import SessionLock
+import ClearTitleS2CPacket
+import EntityVelocityUpdateS2CPacket
+import Potions
+import EntitySubPredicate
+import RemoveFilteredBookTextFix
+import GoatBrain
+import EndCrystalItem
+import SalmonEntity
+import FreeTypeUtil
+import VanillaFlatLevelGeneratorPresetTagProvider
+import SkinReportScreen
+import PigEntityModel
+import ComparatorMode
+import BookItem
+import PotionEntity
+import RedstoneLampBlock
+import TradeOffers
+import SupportingBlockDebugRenderer
+import WorkStationCompetitionTask
+import MapRenderer
+import CodEntityRenderer
+import ShortPlantBlock
+import BlueIceFeature
+import NumberFormat
+import LootContextParameter
+import WorldPreset
+import BlockFace
+import NbtTextContent
+import SmokerBlockEntity
+import RandomChanceLootCondition
+import ResourcePackInfo
+import ExperimentalRegistriesValidator
+import WouldSurviveBlockPredicate
+import FireBlock
+import WardenAngerManager
+import ChunkNoiseSampler
+import TestListener
+import StartRaidTask
+import BanIpCommand
+import ClientMethodsReturnNonnullByDefault
+import ArmadilloBrain
+import DebugVillageSectionsCustomPayload
+import CrashReportSection
+import Schema1451v5
+import IdentifierSearchableIterator
+import Schema1451v4
+import ConstructBeaconCriterion
+import Schema1451v3
+import Schema1451v2
+import RepeatingAudioStream
+import Schema1451v1
+import ComponentMap
+import SubtitleS2CPacket
+import ArgumentTypes
+import RegistryEntryPredicateArgumentType
+import EnchantmentScreenHandler
+import PacketCallbacks
+import SpyglassItem
+import ParticleType
+import RegionBasedStorage
+import AdvancementToast
+import Schema1451v6
+import BannedIpList
+import ExperienceBarUpdateS2CPacket
+import ClientRegistries
+import EntityTrackerUpdateS2CPacket
+import RegistryEntryArgumentType
+import FoxEntityModel
+import CoralFanBlock
+import PacketDeflater
+import CarrotsBlock
+import ChunkTicketManager
+import BlockBufferBuilderPool
+import FatalErrorScreen
+import Tessellator
+import RenderCallStorage
+import WanderingTraderManager
+import EntityHurtPlayerCriterion
+import EntityRidingToPassengerFix
+import WorldBorderCenterChangedS2CPacket
+import AnyIdParsingRule
+import ArrayPropertyDelegate
+import AbstractBannerBlock
+import EndCrystalEntity
+import PigEntity
+import BellBlock
+import ItemDurabilityChangedCriterion
+import ShulkerBoxBlockEntityRenderer
+import SaveOnCommand
+import SamplerFactory
+import ShulkerEntityRenderer
+import BossBarCommand
+import DeOpCommand
+import MuleEntity
+import FoliagePlacer
+import SetEnchantmentsLootFunction
+import VineLogic
+import OffsetDoubleList
+import WitchHeldItemFeatureRenderer
+import LoginDisconnectS2CPacket
+import PlayerListHeaderS2CPacket
+import DeadCoralFanBlock
+import ForgetCompletedPointOfInterestTask
+import Message
+import BrewingStandScreenHandler
+import UpdateAttackTargetTask
+import AxeItem
+import EnderPearlEntity
+import ChunkBuilderMode
+import BlendingData
+import DataStreamHelper
+import BlockMarkerParticle
+import SnowyBlock
+import ProjectileAttackGoal
+import PendingUpdateQueue
+import CommandBossBar
+import DamageRecord
+import SimpleRandomFeature
+import DropperBlock
+import EntryMissingException
+import OptimizeWorldScreen
+import CloudRenderMode
+import Vec2f
+import ChunkDataS2CPacket
+import SoundLoader
+import GoToNearbyPositionTask
+import DeathMessageS2CPacket
+import HopperBlockEntity
+import GameEvent
+import ResourcePackManager
+import Pool
+import GuardianAttackSoundInstance
+import TagMatchRuleTest
+import SeagrassFeature
+import BeeNestDestroyedCriterion
+import TestContext
+import LongSet
+import CookingRecipeCategory
+import AlternativeEntry
+import DropInvalidSignDatafixDataFix
+import BlockPatternBuilder
+import ReloadScheduler
+import SetNameLootFunction
+import WindowProvider
+import BannerPatternsComponent
+import ClearRuleBlockEntityModifier
+import JsonDeserializationContext
+import ProjectileDeflection
+import GLFWCharModsCallbackI
+import FunctionCommand
+import NarrationPart
+import NetherFortressStructure
+import MathMethodsReturnNonnullByDefault
+import PoweredRailBlock
+import BlockBreakingProgressS2CPacket
+import TextureKey
+import AbstractBeeSoundInstance
+import ProgressListener
+import BlockEventS2CPacket
+import CodEntityModel
+import SimpleResourceReload
+import EndConfiguredFeatures
+import RealmsWorldGeneratorType
+import SimplexNoiseSampler
+import PingMeasurer
+import ChoiceFix
+import BlockEntityRendererFactories
+import BlockColumnFeatureConfig
+import DamageEntityEnchantmentEffect
+import TrackOwnerAttackerGoal
+import CommandQueueEntry
+import SerializableRegistries
+import OperationArgumentType
+import WardenEntityModel
+import DispenserBehavior
+import AbstractWindChargeEntity
+import ChunkStatus
+import EnderChestInventory
+import PlayerAbilities
+import FireworkStarFadeRecipe
+import FlatChunkGeneratorConfig
+import VaultSharedData
+import ScreenPos
+import NearestVisibleLivingEntitySensor
+import GrindstoneBlock
+import GenericContainerScreen
+import BedItemColorFix
+import SoundInstance
+import BooleanConsumer
+import PacketDecoder
+import RenderPhase
+import CauldronRenameFix
+import TagProvider
+import EnchantmentEffectTarget
+import SnifferEntity
+import Advancement
+import EntityCustomNameToTextFix
+import EffectShaderProgram
+import MinecartInsideSoundInstance
+import SnowGolemPumpkinFeatureRenderer
+import MatrixUtil
+import LookAtEntityGoal
+import WoodlandMansionStructure
+import BlockStatePropertyLootCondition
+import KeyboardInput
+import ChatHud
+import PlacedFeature
+import ProfilesTooltipComponent
+import BambooLeaves
+import BlazeEntity
+import Position
+import ToolMaterial
+import Schema3818_5
+import Schema3818_4
+import ShulkerEntity
+import Schema3818_3
+import AdvancementTabC2SPacket
+import BlockListProvider
+import VillagerData
+import MapDecorationTypes
+import Literals
+import QuadrupedEntityModel
+import FireworkStarRecipe
+import RandomSpreadStructurePlacement
+import SwordItem
+import SpellParticle
+import Structure
+import StorageKey
+import BreezeWindChargeEntity
+import SinglePoolElement
+import StructurePoolAliasBinding
+import MessageCommand
+import TeleportToSpecificPlayerSpectatorCommand
+import OnKilledCriterion
+import StructureType
+import ChunkDeleteLightFix
+import WorldLoadedEvent
+import TextReorderingProcessor
+import RevengeGoal
+import HandlerNames
+import Unit
+import ChunkStatusFix
+import Backoff
+import LoginHelloC2SPacket
+import SaddleFeatureRenderer
+import Ownable
+import LocalServerHandshakeNetworkHandler
+import LanServerInfo
+import TwistingVinesFeatureConfig
+import HorseEntity
+import Fluid
+import StructureProcessor
+import FireworkStarItem
+import Range
+import GhastEntityModel
+import ArmorTrimPattern
+import FluidFillable
+import ClientSamplerSource
+import TextureStitcherCannotFitException
+import FoxHeldItemFeatureRenderer
+import LookingPosArgument
+import VillagerEntityRenderer
+import Schema3438
+import Schema2100
+import EntityRendererFactory
+import Perspective
+import ModelIdentifier
+import XmlReportingTestCompletionListener
+import FollowCustomerTask
+import Vec3i
+import TrappedChestBlock
+import LootScoreProvider
+import Schema3448
+import LookControl
+import RegistryOps
+import RemoveEmptyItemInSuspiciousBlockFix
+import Vec3d
+import BufferedAudioStream
+import DustColorTransitionParticle
+import SlimeEntityRenderer
+import BlobFoliagePlacer
+import NativeImage
+import UsedTotemCriterion
+import Object2ObjectMap
+import EnterReconfigurationS2CPacket
+import PlayerInteractBlockC2SPacket
+import LoginPackets
+import TakeJobSiteTask
+import NbtCompound
+import ListCommand
+import AdvancementDisplays
+import MushroomBlock
+import LootContextParameterSet
+import DensityFunctions
+import OceanRuinGenerator
+import EntitySpawnS2CPacket
+import WitchEntity
+import BookScreen
+import Spawner
+import NetworkSyncedItem
+import StatisticsS2CPacket
+import SmokerBlock
+import LoggerPrintStream
+import IsolatedCommandAction
+import NbtList
+import MultiTickTask
+import SnifferAnimations
+import GlyphRenderer
+import RegistryPair
+import VanillaWorldPresetTagProvider
+import DataCommandStorage
+import BedItem
+import ChunkDataAccess
+import LingeringPotionItem
+import LayoutWidget
+import DoorBlock
+import StructureDebugRenderer
+import CaveVinesHeadBlock
+import EnderDragonEntity
+import HoglinEntityModel
+import OptionalInt
+import AffineTransformations
+import StrollTask
+import AbstractRecipeScreenHandler
+import RangedWeaponItem
+import RavagerEntityModel
+import CocoaBlock
+import TimeHelper
+import BlazeEntityModel
+import RealmsBackupScreen
+import WorldChunk
+import TintableAnimalModel
+import CamelEntityModel
+import SampleSubscriptionTracker
+import OverlayResourcePack
+import RealmsBackupInfoScreen
+import StatusEffectSpriteManager
+import ButtonTextures
+import EnchantingTableBlockEntityRenderer
+import ConfirmScreen
+import SpecialSpawner
+import GameMode
+import BlockSetType
+import RealmsClientIncompatibleScreen
+import MultiNoiseBiomeSourceParameterList
+import BookContent
+import LegacyQueries
+import WaitTask
+import ServerQueryPingPacketListener
+import ServerResourcePackManager
+import WolfVariant
+import report_AbuseReport
+import EscapeSunlightGoal
+import CloudParticle
+import PlayerStatsGui
+import SimpleNbtScanner
+import EntitySelector
+import CuboidBlockIterator
+import DebugGoalSelectorCustomPayload
+import SquidEntityModel
+import SpawnerMinecartEntity
+import Registry
+import LevelLegacyWorldGenSettingsFix
+import FurnaceRecipeBookScreen
+import SimplePositioningWidget
+import StructureProcessorRule
+import LegacyBiomeMapping
+import LavaFluid
+import SnowBlock
+import PrivateKey
+import NbtScanner
+import CampfireBlock
+import ZombieEntityRenderer
+import SpectralArrowEntity
+import Bucketable
+import VanillaFishingLootTableGenerator
+import TagCommand
+import SpawnPointCommand
+import TreeDecoratorType
+import BreezeBrain
+import SimulationDistanceLevelPropagator
+import TradeOfferList
+import FluidTags
+import TagManagerLoader
+import ItemPickupParticle
+import CachedMapper
+import SetEnchantmentEffect
+import CameraSubmersionType
+import LeavesFix
+import ChunkDeltaUpdateS2CPacket
+import BrewedPotionCriterion
+import RealmsPrepareConnectionTask
+import EntityAnimationS2CPacket
+import EvokerEntity
+import ContainerPredicate
+import EvokerEntityRenderer
+import TextRenderingUtils
+import GlyphContainer
+import SendResourcePackTask
+import RemoveBinomialEnchantmentEffect
+import VersionedIdentifier
+import BlockStateProviderType
+import NetworkUtils
+import BulbBlock
+import Blocks
+import CommandAction
+import RainSplashParticle
+import StructureBlockBlockEntity
+import AdvancementWidget
+import VanillaFluidTagProvider
+import EntityScoresLootCondition
+import SynchronizeRegistriesTask
+import AshParticle
+import EnderChestBlockEntity
+import Model
+import SampleType
+import BoatItem
+import Mount
+import EnderDragonSpawnState
+import DarkOakFoliagePlacer
+import EntityS2CPacket
+import ScoreAccess
+import TextHandler
+import VerticallyAttachableBlockItem
+import Tasks
+import HandshakePackets
+import SoundListener
+import ForceLoadCommand
+import JukeboxTicksSinceSongStartedFix
+import GoToVillageGoal
+import PostEffectProcessor
+import AbstractDustParticle
+import LootNbtProviderType
+import TelemetryLogger
+import DispenserBlock
+import Int2ObjectBiMap
+import WoodType
+import PngMetadata
+import StriderEntity
+import JungleTempleStructure
+import BlastFurnaceBlockEntity
+import MoveControl
+import NbtCollector
+import ItemTags
+import BeetrootsBlock
+import ArmorMaterials
+import MultipartModelComponent
+import ModelWithArms
+import BufferHelper
+import SelectWorldScreen
+import VertexFormat
+import EndGatewayBlockEntityRenderer
+import OreFeature
+import AbstractNbtNumber
+import Recipe
+import BreezeMovementUtil
+import SignBlockEntityRenderer
+import FlyGoal
+import RawTextureDataLoader
+import SeedMixer
+import GlowInkSacItem
+import NbtInt
+import OpenWrittenBookS2CPacket
+import ClientAdvancementManager
+import RepairItemRecipe
+import SittingFlamingPhase
+import HoneycombItem
+import TooltipAppender
+import ChaseClient
+import Orientation
+import RaidCenterDebugRenderer
+import EntityPositionS2CPacket
+import SizePrepender
+import ShulkerBoxBlock
+import ChunkTaskPrioritySystem
+import TotemParticle
+import PhantomEntityModel
+import WalkTowardJobSiteTask
+import DesertTempleGenerator
+import ItemShulkerBoxColorFix
+import BaseRandom
+import DeadCoralBlock
+import WeightedListHeightProvider
+import UserCache
+import Boxes
+import BlockCollisionSpliterator
+import Weighted
+import PingResult
+import TextVisitFactory
+import LookAtDisturbanceTask
+import NbtLong
+import GlDebug
+import TagBuilder
+import ZipCompressor
+import FurnaceOutputSlot
+import TelemetryManager
+import TrapezoidHeightProvider
+import ClickSlotC2SPacket
+import LightStorage
+import CrafterScreen
+import CursorMovement
+import StrafePlayerPhase
+import AbuseReportReason
+import KeybindTextContent
+import FoliageColors
+import AdvancementObtainedStatus
+
+import InputSupplier
+import AzaleaBlock
+import BlockPositionSource
+import Optional
+import StaticSound
+import DefaultClientResourcePackProvider
+import BrewingRecipeRegistry
+import State
+import Stats
+import ItemEnchantmentsComponent
+import StatusEffectUtil
+import ReadyC2SPacket
+import WorldGenerationProgressLogger
+import ServerLoginPacketListener
+import StringBuilder
+import BitStorageAlignFix
+import PlayerListEntry
+import NoopInboundHandler
+import SetFireworkExplosionLootFunction
+import BakedModelManager
+import RealmsAcceptRejectButton
+import ShaderProgramSetupView
+import ParrotEntityRenderer
+import OptionsAmbientOcclusionFix
+import BitmapFont
+import ChangeUnlockedRecipesS2CPacket
+import DeadBushBlock
+import EmptyItemInHotbarFix
+import ChestBlockEntityRenderer
+import ElytraItem
+import ServerPlayerEntity
+import FilteredLootFunction
+import JukeboxManager
+import ServerMBean
+import UsedEnderEyeCriterion
+import SignBlock
+import CampfireCookingRecipe
+import MemoryModuleType
+import AbstractSittingPhase
+import EntityTippedArrowFix
+import MoveIntoWaterGoal
+import MultilineText
+import AdvancementProgress
+import StrongholdStructure
+import InvalidNbtException
+import JungleTempleGenerator
+import FeatureFlags
+import LecternBlock
+import ProfilerSystem
+import Colors
+import NativeImageBackedTexture
+import ExperienceOrbSpawnS2CPacket
+import RecreationStorage
+import NoWaterTargeting
+import EnderChestBlock
+import SetDamageLootFunction
+import VillagerResourceMetadataReader
+import CropBlock
+import QuickPlayLogger
+import PacketByteBuf
+import TakeoffPhase
+import ToFloatFunction
+import ClientTagLoader
+import JfrProfiler
+import ItemUsage
+import EntityStringUuidFix
+import VillagerBabiesSensor
+import JfrCommand
+import SolidBlockPredicate
+import KelpPlantBlock
+import OptionsScreen
+import SoundSystem
+import Fluids
+import AbstractFurnaceBlockEntity
+import OnAStickItem
+import MatchToolLootCondition
+import MusicSound
+import RandomOffsetPlacementModifier
+import SignedArgumentType
+import ReporterEnvironment
+import LargeDripstoneFeature
+import IdentityPairList
+import StainedGlassPaneBlock
+import WallSkullBlock
+import EntityBrushableBlockFieldsRenameFix
+import PacketCodec
+import ShipwreckStructure
+import OverlayMessageS2CPacket
+import HeightmapDebugRenderer
+import PingResultS2CPacket
+import MessageIndicator
+import PandaEntity
+import WorldBorder
+import CraftingDecoratedPotRecipe
+import Schema3326
+import Schema3325
+import LightmapCoordinatesRetriever
+import UndergroundConfiguredFeatures
+import Schema3328
+import Schema3327
+import AttackTask
+import RegistryCloner
+import LightBlock
+import SweepAttackParticle
+import TickPriority
+import LootNumberProvider
+import VexEntityModel
+import DoubleBlockProperties
+import ChorusFruitItem
+import SimpleModelSupplier
+import AttributeIdFix
+import TemptationCooldownTask
+import SnifferEggBlock
+import TranslucentBlock
+import TreeFeatureConfig
+import SlotRange
+import StructureSets
+import PersistentProjectileEntity
+import ScaffoldingItem
+import WritableBookContentPredicate
+import SetOminousBottleAmplifierLootFunction
+import WaterPathNodeMaker
+import StopAndLookAtEntityGoal
+import ThrownEntity
+import CrafterBlock
+import FallLocation
+import BubbleColumnBlock
+import EntityBucketItem
+import Angerable
+import OutlineVertexConsumerProvider
+import DolphinHeldItemFeatureRenderer
+import Vec2ArgumentType
+import GeodeLayerThicknessConfig
+import Window
+import LlamaEntityModel
+import StructurePiecesHolder
+import ReloadableRegistries
+import DoubleConsumer
+import ServerTask
+import FeatureUpdater
+import BlockStateMatchRuleTest
+import OptionsAccessibilityOnboardFix
+import EnchantmentEffectContext
+import LookAtCustomerGoal
+import PressurePlateBlock
+import Positioner
+import RegionFile
+import ArrayVoxelShape
+import BlockRenderManager
+import VanillaBlockLootTableGenerator
+import AmethystClusterBlock
+import VersionedChunkStorage
+import Decoration
+import BannerPatterns
+import LanServerPinger
+import MetadataProvider
+import BeeEntity
+import ServerStatHandler
+import property_Property
+import PublishCommand
+import PotionContentsPredicate
+import RuleTestType
+import FoodComponents
+import CommonPingS2CPacket
+import ProfilerTiming
+import EntityCodSalmonFix
+import JsonUtils
+import BoneMealItem
+import PlaySoundEnchantmentEffect
+import RetryCallException
+import GrindstoneScreen
+import BlockTypes
+import PlayerManager
+import SoundInstanceListener
+import NoiseBasedCountPlacementModifier
+import DirectoryAtlasSource
+import ShriekParticle
+import IntList
+import KilledByPlayerLootCondition
+import WorldAccess
+import ScatteredOreFeature
+import DefaultPosArgument
+import EnchantWithLevelsLootFunction
+import JigsawBlockEntity
+import GameEventDispatchManager
+import ZombieSiegeManager
+import SerializingRegionBasedStorage
+import NoneTutorialStepHandler
+import BuiltinBiomes
+import AbstractFireballEntity
+import ChainBlock
+import AnvilBlock
+import ResourcePackStatusC2SPacket
+import SpectatorTeleportC2SPacket
+import AggressiveBeeSoundInstance
+import FletchingTableBlock
+import StructureLocator
+import CuredZombieVillagerCriterion
+import FurnaceSmeltLootFunction
+import NopStructureProcessor
+import VehicleMoveC2SPacket
+import ParticleTextureSheet
+import EndermanBlockFeatureRenderer
+import ValueLists
+import NoticeScreen
+import TravelCriterion
+import Hoglin
+import ReportType
+import JScrollPane
+import SilverfishEntityRenderer
+import OperatorEntry
+import ChatMessages
+import PackOverlaysMetadata
+import BlockKeys
+import BiomePlacementModifier
+import ThrowableDeliverer
+import PostEffectPass
+import NetherCaveCarver
+import AtlasSource
+import BlockRenderView
+import ComparatorBlockEntity
+import RealmsSelectWorldTemplateScreen
+import BlockStateArgumentType
+import DisconnectS2CPacket
+import HoglinEntityRenderer
+import DistancePredicate
+import NetherPortal
+import ParticlesMode
+import ResourceManager
+import StartedRidingCriterion
+import SurfaceThresholdFilterPlacementModifier
+import BastionBridgeData
+import FontStorage
+import RemoveMessageS2CPacket
+import HugeMushroomFeature
+import BannedIpEntry
+import AbstractRailBlock
+import ChunkGenerationEvent
+import CustomReportDetailsS2CPacket
+import ChickenEntity
+import GeneratorOptions
+import ShapelessRecipe
+import ConstantHeightProvider
+import AllOfEnchantmentEffects
+import ScoreboardObjective
+import JsonWriter
+import PackFeatureSetMetadata
+import Timer
+import StructureProcessorLists
+import AbstractFireBlock
+import ActiveTargetGoal
+import SaplingGenerator
+import SculkSpreadManager
+import ServerScoreboard
+import NetworkSummaryEvent
+import VanillaDataPackProvider
+import StringArgumentSerializer
+import Stopwatch
+import StatusEffectCategory
+import SpringFeature
+import GLX
+import ChunkStatusFix2
+import CookingRecipeJsonBuilder
+import ModelIds
+import SetWritableBookPagesLootFunction
+import FallibleItemDispenserBehavior
+import ScoreboardState
+import ComponentMapImpl
+import BlockEntityBannerColorFix
+import StructureGeneratorFactory
+import StructurePoolAliasLookup
+import ProtoChunk
+import ServerMetadata
+import AdvancementProvider
+import SpecialCraftingRecipe
+import MinecartCommandBlockScreen
+import EmptyBlockView
+import SectionedEntityCache
+import EulerAngle
+import FallthroughCommandAction
+import PiglinActivity
+import TextFilterer
+import BlockWithEntity
+import RandomSeed
+import Int2IntFunction
+import PlayerRemoveS2CPacket
+import CrashReport
+import BlockLightStorage
+import VanillaShearingLootTableGenerator
+import FlatteningBiomeMapping
+import CombinedEntry
+import MinecraftClient
+import BundleTooltipData
+import ItemInstanceMapIdFix
+import IllusionerEntity
+import VaultBlockEntity
+import NetworkStateTransitionHandler
+import UpdateSignC2SPacket
+import IronGolemWanderAroundGoal
+import WitherSkullBlock
+import FeatureSet
+import LastSeenMessageList
+import PackScreen
+import util_Pair
+import EndermanEntityRenderer
+import TrapezoidFloatProvider
+import FurnaceBlock
+import PiglinHeadEntityModel
+import LimbAnimator
+import ClientConfigurationPacketListener
+import NbtParsingRule
+import ServerConfigList
+import Procedure
+import OreConfiguredFeatures
+import CaveVinesBodyBlock
+import GeodeLayerConfig
+import DisplayEntity
+import StructureBlockMode
+import ShovelItem
+import RecipeInputProvider
+import MapCodec
+import PacketBundleHandler
+import ChunkOcclusionDataBuilder
+import DebugWorldgenAttemptCustomPayload
+import SetLootTableLootFunction
+import DebugRecorder
+import ChorusPlantBlock
+import DamageTypeTags
+import Language
+import DustParticleEffect
+import DedicatedServerGui
+import MultifaceGrowthFeatureConfig
+import WorldTimeUpdateS2CPacket
+import TooltipType
+import StorageLootNbtProvider
+import SignedCommandArguments
+import EyeOfEnderEntity
+import EndCrystalEntityRenderer
+import CustomDataPredicate
+import RealmsWorldOptions
+import PiglinEntityModel
+import SingleStackInventory
+import Brightness
+import RegistryWorldView
+import ServerLightingProvider
+import ProjectilePowerS2CPacket
+import ToolComponent
+import SetContentsLootFunction
+import RealmsMainScreen
+import WindowFramebuffer
+import OceanRuinStructure
+import RemoveOffHandItemTask
+import RedstoneTorchBlock
+import SitOnOwnerShoulderGoal
+import ScheduleBuilder
+
+import UpdateBeaconC2SPacket
+import AtlasSourceManager
+import DataOutput
+import Reader
+import ClampedIntProvider
+import RealmsSubscriptionInfoScreen
+import EndSpikeFeatureConfig
+import BlockTags
+import FallAfterExplosionCriterion
+import ClearCommand
+import BrandCustomPayload
+import BillboardParticle
+import DataPool
+import MessageBody
+import FeaturesS2CPacket
+import MessageTrustStatus
+import LightningEntity
+import OpCommand
+import ResourceIndex
+import TitleScreen
+import WakeUpTask
+import SkeletonEntityModel
+import LecternScreen
+import HeightProvider
+import TimeArgumentType
+import TestClassArgumentType
+import ShortList
+import ElderGuardianEntityRenderer
+import SpriteDimensions
+import BedBlockEntity
+import EulaReader
+import CopyStateLootFunction
+import CherryTrunkPlacer
+import RecipeGridAligner
+import SpectateCommand
+import EvokerFangsEntityRenderer
+import ItemActionResult
+import TridentEntityModel
+import PointOfInterestRemoveFix
+import SequencedPacketCreator
+import MessageHandler
+import BlastFurnaceScreen
+import ExpandedMacro
+import LoginQueryRequestPayload
+import ConstantLootNumberProvider
+import MaceItem
+import SmeltingRecipe
+import ResourcePackOpener
+import ToDoubleFunction
+import Schema3204
+import WanderAroundPointOfInterestGoal
+import Schema3203
+import Schema3202
+import SetPotionLootFunction
+import WrapperProtoChunk
+import TestCompletionListener
+import Blender
+import RegistryDumpProvider
+import EnchantCommand
+import StructureTestUtil
+import EntitySkeletonSplitFix
+import StepAndDestroyBlockGoal
+import VariantHolder
+import PacketCodecs
+import IsInWaterSensor
+import MeleeAttackGoal
+import RecipeUnlocker
+import DragonEggBlock
+import GameEventRenamesFix
+import SwimAroundGoal
+import HangingSignBlock
+import DebugSampleSubscriber
+import ExecuteCommand
+import IllagerEntityRenderer
+import BlockEntityUpdateS2CPacket
+import LanguageOptionsScreen
+import FlyingEntity
+import SnowGolemEntity
+import FlightProfiler
+import LootContextAware
+import ResourcePackProfile
+import ResourceType
+import GameEventDebugRenderer
+import DamageType
+import ShapedRecipeJsonBuilder
+import RegistryByteBuf
+import SinglePartEntityModelWithChildTransform
+import EnchantRandomlyLootFunction
+import BoggedEntityModel
+import ModelBakeSettings
+import MeetVillagerTask
+import ServerPackCommand
+import PositionedSoundInstance
+import Schema135
+import OxidizableSlabBlock
+import ItemRemoveBlockEntityTagFix
+import WeightedBakedModel
+import EffectShaderStage
+import BedPart
+import Clearable
+import Suggestions
+import WaterBubbleParticle
+import IllusionerEntityRenderer
+import ClientCommandSource
+import RailShape
+import BigDripleafBlock
+import PlayerKeyPair
+import EntityRenderer
+import Schema102
+import Schema100
+import LocalDifficulty
+import Schema106
+import PacketBundler
+import Schema107
+import TrialSpawnerDetectionParticle
+import DynamicCommandExceptionType
+import RealmsLongRunningMcoTaskScreen
+import Properties
+import AbstractCountPlacementModifier
+import SimpleFramebuffer
+import LoomBlock
+import ShulkerBoxScreen
+import SkullBlockEntity
+import GameOptions
+import EntityGameEventHandler
+import EndSpikeFeature
+import BlockFamily
+import GoToIfNearbyTask
+import Pair
+import AddressResolver
+import GlException
+import NewVillageFix
+import VanillaBiomeParameters
+import ClickableWidget
+import MinecartItem
+import StorageNbtDataSource
+import HeightRangePlacementModifier
+import OptionsMenuBlurrinessFix
+import FeaturePoolElement
+import ChunkTicket
+import BrewingStandBlock
+import FontOptionsScreen
+import CamelBrain
+import ConnectScreen
+import DragonHeadEntityModel
+import BiomeAccess
+import PlayerSessionC2SPacket
+import data_Main
+import MultipartBlockStateSupplier
+import MutableFloat
+import OperatorBlock
+import Uuids
+import FeaturePlacementContext
+import ThreadedLogWriter
+import VoxelSet
+import TranslatableOption
+import PopupScreen
+import CuttingRecipe
+import WeaponsmithChestLootTableFix
+import SubscribableDebugSampleLog
+import EmotionParticle
+import PlayerHeldItemFeatureRenderer
+import RuleBlockEntityModifierType
+import PositionSource
+import StructurePoolBasedGenerator
+import AbstractSoundInstance
+import StructureProcessorList
+import Schema143
+import CustomPayloadS2CPacket
+import Multimap
+import SugarCaneBlock
+import DontObfuscate
+import SpawnHelper
+import ClientCommandC2SPacket
+import OptionsAddTextBackgroundFix
+import HasSturdyFacePredicate
+import SurvivesExplosionLootCondition
+import StonecuttingRecipe
+import SwitchMinigameTask
+import BeaconBlockEntity
+import ServerItemCooldownManager
+import PageTurnWidget
+import EntityTrackingSection
+import AbstractTexture
+import CloneCommand
+import IcebergFeature
+import ElytraSoundInstance
+import HoverPhase
+import ChestBoatEntityModel
+import Block
+import PaintingVariantTags
+import RepeatedNarrator
+import SaddledComponent
+import ParsingStateImpl
+import ChunkData
+import AbstractFurnaceRecipeBookScreen
+import VanillaBannerPatternTagProvider
+import TemptGoal
+import Backup
+import TimerCallback
+import DefaultResourcePack
+import MultiNoiseBiomeSourceParameterLists
+import BossBarS2CPacket
+import ShapelessRecipeJsonBuilder
+import SkeletonHorseEntity
+import MangroveLeavesBlock
+import SuggestionProvider
+import SpiderEntityRenderer
+import EmergeTask
+import TextureUtil
+import TintedGlassBlock
+import SimplePairList
+import Particle
+import PathContext
+import Profiler
+import ZombieVillagerEntity
+import MobSpawnerBlockEntity
+import RemovePoiValidTagFix
+import BlockPointer
+import TestFunctions
+import EntityIdFix
+import RegistryPredicateArgumentType
+import ForgingScreen
+import ModStatus
+import OminousBannerItemRenameFix
+import IglooMetadataRemovalFix
+import VillagerClothingFeatureRenderer
+import EndermiteEntity
+import ClientCookieRequestPacketListener
+import SmithingTableBlock
+import WhitelistCommand
+import MiscPlacedFeatures
+import CloseScreenS2CPacket
+import SpringFeatureConfig
+import HugeMushroomFeatureConfig
+import file_Path
+import RaiderEntity
+import TickCommand
+import BoneMealTask
+import ModelTransformationMode
+import ClientOptionsC2SPacket
+import CustomModelDataComponent
+import Path
+import GLFWKeyCallbackI
+import HorseScreen
+import RenderLayer
+import GenerationSettings
+import UndergroundPlacedFeatures
+import WorldTickScheduler
+import AttackGoal
+import TextContent
+import SilverfishEntity
+import ConfirmLinkScreen
+import GiveGiftsToHeroTask
+import ModelVariantMap
+import ClampedNormalFloatProvider
+import AttributeModifierSlot
+import PlayerInputC2SPacket
+import LocateCommand
+import SlimePredicate
+import InvertedLootCondition
+import RenameBlockEntityFix
+import RecipeInputInventory
+import Camera
+import Leashable
+import PotatoesBlock
+import PriorityIterator
+import LavaSubmergedBlockStructureProcessor
+import WitherSkullEntity
+import VillagerProfessionFix
+import OcelotEntityRenderer
+import RealmsLabel
+import FlowableFluid
+import LongRunningSample
+import FrogAnimations
+import BlockEntityShulkerBoxColorFix
+import ItemInstanceTheFlatteningFix
+import ChiseledBookshelfBlock
+import ColorResolver
+import StructureSpawns
+import NbtString
+import SplashPotionItem
+import SpiderNavigation
+import SnifferBrain
+import Component
+import SmithingTemplateItem
+import VertexConsumerProvider
+import EntityModelPartNames
+import DataResult
+import Recorder
+import FossilFeature
+import AnvilScreenHandler
+import AnimationFrameResourceMetadata
+import RecipeToast
+import CamelAnimations
+import Brain
+import CherryLeavesBlock
+import FrogEntity
+import BuiltinRegistries
+import AbstractPlantPartBlock
+import StructureBlockScreen
+import LanternBlock
+import DrownedEntityModel
+import BasaltPillarFeature
+import ModelWithWaterPatch
+import BinaryOperator
+import EntitySelectorOptions
+import ItemEntity
+import ModelPartData
+import DoublePredicate
+import WeightedSoundSet
+import ArmorTrimMaterial
+import EntityNavigation
+import DamageSourcePredicate
+import BowAttackGoal
+import SimpleStructurePiece
+import PalettedContainer
+import RealmsLongRunningTickableTaskScreen
+import CustomPayloadC2SPacket
+import Direction
+import BlockEntitySignTextStrictJsonFix
+import WolfEntityRenderer
+import ItemStackParticleEffect
+import TestableWorld
+import TintableCompositeModel
+import NbtSizeValidationException
+import StructureVoidBlock
+import IdentifierArgumentType
+import IronGolemLookGoal
+import SpitParticle
+import ChatOptionsScreen
+import OpenScreenS2CPacket
+import BlockPredicate
+import Heightmap
+import VillageSectionsDebugRenderer
+import PlayerListS2CPacket
+import ResourceMetadataReader
+import BlockMirrorArgumentType
+import NbtDataSource
+import BoatPaddleStateC2SPacket
+import BiomeCoords
+import Explosion
+import Formatting
+import ResourceFactory
+import WorldBorderInterpolateSizeS2CPacket
+import PunchTreeTutorialStepHandler
+import StopPanickingTask
+import WalkTowardsPosTask
+import OptionListWidget
+import VaultState
+import Dynamic
+import UpdateDifficultyLockC2SPacket
+import BreezeSlideTowardsTargetTask
+import SpriteAtlasHolder
+import QueryBlockNbtC2SPacket
+import NoiseConfig
+import FlatChunkGenerator
+import SculkSensorBlock
+import InstantStatusEffect
+import DamageEffects
+import EntityEffectPredicate
+import VanillaBarterLootTableGenerator
+import RestoreTask
+import VideoWarningManager
+import LocalDate
+import PassthroughRuleBlockEntityModifier
+import LegacyQueryHandler
+import GustParticle
+import ArmorStandEntityModel
+import SpawnerBlock
+import SingleCommandAction
+import VanillaBiomeTagProvider
+import MutableRegistry
+import WoodlandMansionGenerator
+import AbuseReportSender
+import CrafterOutputSlot
+import Batches
+import PropaguleBlock
+import BlankNumberFormat
+import DebugGameEventListenersCustomPayload
+import CubeFace
+import AbstractSkullBlock
+import BlockBreakingInfo
+import BooleanBiFunction
+import CommandRegistryAccess
+import ImmutableBlockBox
+import LootCondition
+import IdList
+import FeatureUniverse
+import ResourcePackCompatibility
+import PoolStructurePiece
+import ChickenEntityModel
+import StructurePool
+import PigEntityRenderer
+import YawAdjustingLookControl
+import IdentifierSuggestable
+import ServerPropertiesLoader
+import FlatteningRecipeMapping
+import StriderGravityFix
+import TestServer
+import ItemStackComponentizationFix
+import RealmsUtil
+import AxolotlEntity
+import ResourcePackSendS2CPacket
+import HungerManager
+import ToggleableFeature
+import BlockStatePredicate
+import BlockEntityTicker
+import SmallTropicalFishEntityModel
+import CheckerboardBiomeSource
+import ParticleEffectArgumentType
+import ZombieEntity
+import AbstractUuidFix
+import PlayerMoveC2SPacket
+import WitherSkeletonEntity
+import SavannaVillageData
+import ScoreHolderArgumentType
+import WindChargeEntityModel
+import ObserverBlock
+import BiasedLongJumpTask
+import NbtTypes
+import CrossbowUser
+import QueueingWorldGenerationProgressListener
+import LightningBoltPredicate
+import BeehiveFieldRenameFix
+import SpriteOpener
+import BeaconScreenHandler
+import ConduitBlockEntity
+import ParticleUnflatteningFix
+import AccessibilityOnboardingButtons
+import Flutterer
+import SensorType
+import GrassColors
+import ResourceFinder
+import AnimalModel
+import MangroveRootPlacer
+import EntityPredicate
+import LlamaSpitEntityRenderer
+import YOffset
+import UpdateSelectedSlotS2CPacket
+import ChunkGenerationStep
+import ChannelPipeline
+import ItemWaterPotionFix
+import SimpleNamedScreenHandlerFactory
+import LadderBlock
+import SaveProperties
+import PendingUpdateManager
+import ValueFirstEncoder
+import MultiNoiseUtil
+import SingleTickTask
+import ChunkStructuresTemplateRenameFix
+import MultipartBakedModel
+import RecipeMatcher
+import TransferCommand
+import MineshaftStructure
+import StructurePlacementData
+import AdmireItemTimeLimitTask
+import EntityView
+import PlayerSkinWidget
+import FlowerbedBlock
+import EntityChunkDataAccess
+import RailBlock
+import PathMinHeap
+import EntityExplosionBehavior
+import DolphinJumpGoal
+import MobSpawnerBlockEntityRenderer
+import BakedQuadFactory
+import DateTimeFormatters
+import NoRenderParticle
+import ChunkRenderingDataPreparer
+import OperatorOnlyBlockItem
+import QueryResponseHandler
+import RecordDumper
+import RootsBlock
+import ParticleGroup
+import VillagerTradeCriterion
+import HeightLimitView
+import Animator
+import CommandBlockExecutor
+import PlayerInteractedWithEntityCriterion
+import BannedPlayerList
+import CraftPlanksTutorialStepHandler
+import ConfigPackets
+import EntityInteraction
+import ScreenTexts
+import SwimGoal
+import AttackIndicator
+import ItemGroups
+import AdvancementDisplay
+import ReadableContainer
+import SpawnRestriction
+import GenerationTask
+import StatsRenameFix
+import CountConfig
+import EnterBlockCriterion
+import ZipResourcePack
+import Channel
+import LegacyCoralBlockMapping
+import RecipeUnlockedCriterion
+import AttachedStemBlock
+import NbtException
+import SpreadPlayersCommand
+import AttackWithOwnerGoal
+import EquipmentSlot
+import SmithingTransformRecipe
+import EndCombatS2CPacket
+import PistonBlock
+import NearestLivingEntitiesSensor
+import ExplosionDecayLootFunction
+import WallHangingSignBlock
+import ArmorStandEntityRenderer
+import FileUpload
+import FireworkRocketItem
+import HorseBondWithPlayerGoal
+import RecipeInput
+import TwistingVinesBlock
+import VegetationPatchFeatureConfig
+import ItemWrittenBookPagesStrictJsonFix
+import Widget
+import StatePredicate
+import AscendingParticle
+import Codec
+import EntityIndex
+import ChunkRandom
+import TurtleEntityRenderer
+import EntityEquipmentToArmorAndHandFix
+import SeaPickleFeature
+import Sound
+import LootCommand
+import SoundEntry
+import ItemStack
+import MudBlock
+import SculkChargeParticleEffect
+import MerchantScreenHandler
+import EntityArmorStandSilentFix
+import DefeatTargetTask
+import DefaultedList
+import AdvancementManager
+import Selectable
+import TellRawCommand
+import Structures
+import LongArgumentType
+import DebugRaidsCustomPayload
+import ScoreboardDisplayS2CPacket
+import BeeDebugRenderer
+import ItemInstanceSpawnEggFix
+import ContainerComponent
+import ChunkLoadingDebugRenderer
+import SpriteContents
+import VillageDebugRenderer
+import EnchantmentEffectEntry
+import LongDoorInteractGoal
+import VaultClientData
+import ChatSelectionScreen
+import ChunkUpdateState
+import SimpleOption
+import ZombieVillagerEntityRenderer
+import OptionalLong
+import ServerEntityManager
+import PounceAtTargetGoal
+import ChunkRendererRegion
+import ScreenHandlerProvider
+import PathUtil
+import MessageChain
+import WaterloggedVegetationPatchFeature
+import HashCode
+import AbstractTextWidget
+import RegistryEntryInfo
+import PiglinBruteSpecificSensor
+import FloatRangeArgument
+import ToastManager
+import StructureHolder
+import ButtonWidget
+import realms_Request
+import HashFunction
+import SaddleItem
+import VerticalSurfaceType
+import StrongholdGenerator
+import MobVisibilityCache
+import PackedIntegerArray
+import TimeSupplier
+import ChunkBorderDebugRenderer
+import GlProgramManager
+import JukeboxSongs
+import ClientPlayerEntity
+import ClientStatusC2SPacket
+import ComponentType
+import LongArgumentSerializer
+import VanillaSurfaceRules
+import ClientEntityManager
+import EmptyItemInVillagerTradeFix
+import GroupAssigningThreadFactory
+import BambooBlock
+import CommandBlock
+import LevelSummary
+import SignItem
+import AbuseReportLimits
+import QueryStates
+import ProtoChunkTickListFix
+import BlockEntityRenderer
+import HayBlock
+import QueryableServer
+import VillageGenerator
+import TimerCallbackSerializer
+import ReferenceFont
+import NbtCompoundArgumentType
+import WanderingTraderEntity
+import Urls
+import SalmonEntityRenderer
+import WaterFluid
+import EntityShulkerColorFix
+import Pointer
+import CommonPlayerSpawnInfo
+import ChunkToProtoChunkFix
+import ReorderingUtil
+import FishingHookPredicate
+import RecipeBookResults
+import GuiNavigationType
+import DirectionProperty
+import MipmapHelper
+import TemptTask
+import ConcretePowderBlock
+import RequestCommandCompletionsC2SPacket
+import PlayerPredicate
+import RenameScoreboardDisplaySlotFix
+import ServerQueryNetworkHandler
+import RidingTask
+import TextRenderer
+import StatusEffectInstance
+import LightData
+import WhiteSmokeParticle
+import AbstractSignBlock
+import UpdateJigsawC2SPacket
+import CommandFunctionManager
+import OminousSpawningParticle
+import NbtLongArray
+import Quantiles
+import LargeTropicalFishEntityModel
+import WanderAroundFarGoal
+import ShearsItem
+import WolfEntity
+import ComparatorBlock
+
+import HandshakeStates
+import RootPlacerType
+import NearestBedSensor
+import ReferenceLootCondition
+import WeightedPressurePlateBlock
+import VariantSetting
+import Palette
+import Phase
+import StructurePlacementCalculator
+import AdvancementFrame
+import SeekSkyTask
+import AdvancementCriterion
+import BlockPredicatesChecker
+import TreePlacedFeatures
+import BlockStateProvider
+import RenderSystem
+import OcelotEntity
+import TradeRebalanceStructureTagProvider
+import CamelEntity
+import GraphicsMode
+import ChunkPosDistanceLevelPropagator
+import FocusedTooltipPositioner
+import ShulkerBoxSlot
+import OpenDoorsTask
+import ComponentHolder
+import FrogVariant
+import SlicedVoxelShape
+import DoubleArgumentSerializer
+import ChunkRegion
+import EntityVariantTypeFix
+import CrafterInputSlot
+import SculkChargePopParticle
+import RecipeSerializer
+import StructureSeparationDataFix
+import BufferBuilderStorage
+import RecipeCategoryOptionsC2SPacket
+import BiomeKeys
+import ChatVisibility
+import KeybindsScreen
+import VariantSettings
+import TelemetryEventType
+import TreeFeature
+import ScoreboardScore
+import LongStream
+import ServerCommandSource
+import PhantomEntity
+import OpenInventoryTutorialStepHandler
+import SpawnLocationTypes
+import Slot
+import FindTreeTutorialStepHandler
+import StructureTemplateManager
+import ArmadilloEntityRenderer
+import BlockFallingDustParticle
+import AbuseReportTypeScreen
+import WorldEvents
+import AllayEntityRenderer
+import CartographyTableBlock
+import CaveSpiderEntity
+import JumpControl
+import SkinOptionsScreen
+import ReloadCommand
+import EntityElderGuardianSplitFix
+import CherryFoliagePlacer
+import PistonBlockEntity
+import RootSystemFeatureConfig
+import LoomScreenHandler
+import PlayDeadTask
+import EscapeDangerGoal
+import CompassAnglePredicateProvider
+import VillageGossipType
+import PaletteStorage
+import RealmsPendingInvitesScreen
+import Identifier
+import SummonCommand
+import DripstoneHelper
+import StringArgumentType
+import ModelVariant
+import MobSpawnerEntityIdentifiersFix
+import ArgumentSignatureDataMap
+import TooltipComponent
+import FrogEntityRenderer
+import FilterAtlasSource
+import FungusBlock
+import EncoderHandler
+import CountPlacementModifier
+import MatrixStack
+import LeapingChargeTask
+import TagGroupLoader
+import ChunkLoadDistanceS2CPacket
+import TrialSpawnerConfigTagFix
+import EmptyFluid
+import Proxy
+import HugeRedMushroomFeature
+import InkSacItem
+import FallingBlockEntity
+import EndCityGenerator
+import TeleportSpectatorMenu
+import EnterCombatS2CPacket
+import VaultBlock
+import OffsetPredicate
+import NoOpFeature
+import Dilation
+import GlImportProcessor
+import RunFunctionEnchantmentEffect
+import VertexSorter
+import ParticleFactory
+import ClientWorld
+import LegacyCoralFanBlockMapping
+import Downloader
+import SimpleNeighborUpdater
+import BoggedEntityRenderer
+import SizeUnit
+import RenderingChart
+import EntityAttributeInstance
+import BanCommand
+import ChunkTicketType
+import BoatEntityModel
+import ChunkLoader
+import WindChargeItem
+import ItemSpawnEggFix
+import ServerLinks
+import Schema3076
+import ServerTickTimeEvent
+import AreaEffectCloudEntity
+import Models
+import Schema3078
+import CommandFunction
+import CroppedVoxelSet
+import RenameVariantsFix
+import ChunkDataList
+import BiomeAdditionsSound
+import RealmsConfirmScreen
+import Schema3081
+import DoubleBlockHalf
+import TestManager
+import EntitySimpleTransformFix
+import ServerList
+import Schema3083
+import WanderAroundGoal
+import SummonedEntityCriterion
+import Schema3082
+import FindInteractionTargetTask
+import RecipeBookOptions
+import ClientDataPackManager
+import TelemetryInfoScreen
+import WindowEventHandler
+import SoundOptionsScreen
+import When
+import PropertyMap
+import EntityHorseSaddleFix
+import CalibratedSculkSensorBlock
+import EntityShulkerRotationFix
+import DataTracked
+import SoundContainer
+import BannerBlockEntity
+import TypeReferences
+import NetworkStateTransitions
+import InteractionObserver
+import ElytraEntityModel
+import DataTracker
+import PersistentState
+import ScheduleRuleEntry
+import MeleeAttackTask
+import BuiltinEmptyGlyph
+import PistonBehavior
+import HoglinBrain
+import CompositeEntityModel
+import LongConsumer
+import EntityRedundantChanceTagsFix
+import MoveThroughVillageGoal
+import FillBiomeCommand
+import LowercaseEnumTypeAdapterFactory
+
+import LanServerQueryManager
+import RecipeType
+import MovementPredicate
+import MessageLink
+import BodyControl
+import RenderableGlyph
+import ProjectileUtil
+import BookEditScreen
+import DataCommand
+import EnumSet
+import ChatLog
+import SideValidatingDispatchingCodecBuilder
+import StructurePoolElementType
+import LogoDrawer
+import SetBannerPatternLootFunction
+import RangedApproachTask
+import GlassBottleItem
+import TrackedDataHandler
+import TradedItem
+import Memory
+import CharPredicate
+import Spline
+import DyingPhase
+import GuardianEntityRenderer
+import TntEntity
+import CreatingSnapshotWorldTask
+import EntityAttachments
+import ClampedModelPredicateProvider
+import GuardianEntityModel
+import BoatEntity
+import TreeDecorator
+import ChunkLightRemoveFix
+import ExplosionBehavior
+import PrioritizedGoal
+import ChunkGenerating
+import StrayEntity
+import PacketSizeLogger
+import SerializableTickScheduler
+import TagKey
+import CraftingRecipeCategory
+import ArmorTrimPatterns
+import NetherrackBlock
+import PumpkinBlock
+import TrialSpawnerBlockEntity
+import ProtectedBlocksStructureProcessor
+import CoralBlock
+import VexEntityRenderer
+import FutureQueue
+import ScheduleActivityTask
+import CommandBlockBlockEntity
+import BastionTreasureData
+import RideableInventory
+import MessageType
+import HorseEntityRenderer
+import ThreadSafeRandom
+import SmithingRecipe
+import BeehiveBlock
+import KelpFeature
+import CookieRequestS2CPacket
+import GameJoinS2CPacket
+import SculkShriekerBlockEntity
+import ModelOverrideList
+import WorldBorderWarningTimeChangedS2CPacket
+import HorizontalFacingBlock
+import SpaceFont
+import MessageSignatureData
+import AnvilScreen
+import SittingScanningPhase
+import BiomeEffectSoundPlayer
+import SlotsPredicate
+import FlameParticle
+import Criterion
+import BiomeSource
+import ItemRenderer
+import ProjectileDispenserBehavior
+import BlockMatchRuleTest
+import Vibration
+import CsvWriter
+import RecordedEvent
+import SaveAllCommand
+import RegistryEntry
+import ByteBuffer
+import BlockRotationArgumentType
+import PlayerHurtEntityCriterion
+import RepeaterBlock
+import TutorialStepHandler
+import AnimatedParticle
+import AxisAlignedLinearPosRuleTest
+import DebugBeeCustomPayload
+import UpdateSignTextFormatFix
+import CheckedGson
+import FixedBufferInputStream
+import AboveRootPlacement
+import CroakTask
+import EntityAttributesS2CPacket
+import SleepingChatScreen
+import BlockHalf
+import EntityPufferfishRenameFix
+import ContextLootNbtProvider
+import GlowSquidEntity
+import Schema700
+import Schema701
+import Schema704
+import MultiTickScheduler
+import ItemPredicateArgumentType
+import Schema705
+import ServerPlayNetworkHandler
+import StackTraceElement
+import Schema702
+import Schema703
+import LazyIterationConsumer
+import NbtQueryResponseS2CPacket
+import PositionedException
+import Executor
+import FlatLevelGeneratorPreset
+import SpawnSettings
+import TestFunctionArgumentType
+import BlockEntity
+import TropicalFishColorFeatureRenderer
+import DecoratedPotPatterns
+import EntityFlagsPredicate
+import PistonType
+import TextureDimensions
+import DecoderHandler
+import PlayerEntityModel
+import DustPlumeParticle
+import VarLongs
+import ContextMessageCollector
+import PacketEncoder
+import GeneratorOptionsHolder
+import StyledNumberFormat
+import BrushableBlockEntity
+import VibrationParticle
+import ConfigurationStates
+import BitSetVoxelSet
+import ArgumentSerializer
+import TheEndBiomeCreator
+import GoToRememberedPositionTask
+import EntityZombieVillagerTypeFix
+import StatusEffect
+import WearableCarvedPumpkinBlock
+import PlayStateFactories
+import StopSoundS2CPacket
+import SculkCatalystBlock
+import ServerWorldAccess
+import WindChargeEntityRenderer
+import DynamicRegistriesProvider
+import ParseError
+import FireworksComponent
+import LoomScreen
+import ChunkToNibbleArrayMap
+import ConstantArgumentSerializer
+import BackgroundRenderer
+import ComponentFix
+import NavigationType
+import FollowMobGoal
+import ColorArgumentType
+import PlaceableOnWaterItem
+import FacingBlock
+import DynamicTexture
+import FluidRenderer
+import SoundManager
+import ChorusFlowerBlock
+import ErrorReporter
+import DirectConnectScreen
+import CarverDebugConfig
+import GridScreenTab
+import GiveCommand
+import BarrelBlock
+import RandomSpreadFoliagePlacer
+import TextStream
+import AbstractMinecartEntity
+import BlockBox
+import MerchantEntity
+import NetherPortalBlock
+import VanillaNetherTabAdvancementGenerator
+import SimpleRegistry
+import Lifecycle
+import VanillaInstrumentTagProvider
+import StartRidingTask
+import LogWriter
+import BundleItem
+import NoiseRouter
+import SignEditScreen
+import NbtSizeTracker
+import BlastFurnaceBlock
+import CampfireBlockEntity
+import PufferfishEntityRenderer
+import ChunkSerializer
+import SculkShriekerWarningManager
+import SimpleParticleType
+import TwistingVinesFeature
+import ConduitBlockEntityRenderer
+import EffectsChangedCriterion
+import DisplayEntityRenderer
+import PlaySoundS2CPacket
+import EndPortalBlock
+import Navigable
+import ClientChunkManager
+import EndPortalBlockEntityRenderer
+import RecipeManager
+import AdvancementPositioner
+import WardenEntityRenderer
+import BoundedIntUnaryOperator
+import WinNativeModuleUtil
+import VehicleEntity
+import MutableText
+import ReturnCommand
+import CraftRequestC2SPacket
+import PlayerAssociatedNetworkHandler
+import ChorusPlantFeature
+import TradeRebalanceChestLootTableGenerator
+import EnchantingPhrases
+import ItemScatterer
+import PeriodicRunnerFactory
+import AbstractDonkeyEntity
+import CookingRecipeSerializer
+import EnchantingTableBlock
+import PaintingEntityRenderer
+import NbtDouble
+import VillagerGossips
+import GlowLichenBlock
+import LinkedBlockPosHashSet
+import TropicalFishEntity
+import LightSourceView
+import RegistryLoader
+import TagFile
+import RealmsNotification
+import RegionPingResult
+import AddFlagIfNotPresentFix
+import LootTableProvider
+import Toast
+import PlayerSkinTexture
+import MapDecoder
+import OptionsKeyLwjgl3Fix
+import HorseMarking
+import CraftFailedResponseS2CPacket
+import FontManager
+import RecipeBookCategory
+import StructurePools
+import CookiePackets
+import AtomicStack
+import NbtProvider
+import DimensionType
+import BrushableBlockEntityRenderer
+import CreeperChargeFeatureRenderer
+import StairsBlock
+import ItemIdFix
+import ServerPlayPacketListener
+import BlockPosLookTarget
+import RealmsTermsScreen
+import DiscFragmentItem
+import ListOperation
+
+import LootPoolEntryTypes
+import DownloadQueuer
+import CrafterBlockEntity
+import OptionSliderWidget
+import ClientPlayPacketListener
+import TexturedButtonWidget
+import CharacterVisitor
+import GameProfileArgumentType
+import ThreadAllocationStatisticsSample
+import OcelotEntityModel
+import QueryRequestC2SPacket
+import LargeEntitySpawnHelper
+import NetworkSide
+import BanEntry
+import IglooStructure
+import NbtComponent
+import UntaggedSpawnerFix
+import TextCodecs
+import SlideDownBlockCriterion
+import ItemStringReader
+import Tameable
+import SentTelemetryEvent
+import OpenServerTask
+import EntityCatSplitFix
+import PosRuleTest
+import PlacementModifier
+import ChunkBatchSizeCalculator
+import TrackedPosition
+import SmallDripstoneFeatureConfig
+import Uniform
+import TripwireBlock
+import GivensPair
+import Input
+import ResetWorldInfo
+import FrogAttackablesSensor
+import RangedAttackMob
+import ChannelList
+import BundleS2CPacket
+import EndPortalBlockEntity
+import TntMinecartEntity
+import GameTestDebugRenderer
+import SetCustomDataLootFunction
+import RedstoneConnectionsFix
+import Vibrations
+import AbstractServerCommandSource
+import CubicSampler
+import VertexConsumer
+import VanillaPaintingVariantTagProvider
+import EquipmentHolder
+import AndLootFunction
+import Date
+import PlayerChunkWatchingManager
+import BatEntityModel
+import SpriteTexturedVertexConsumer
+import ToggleButtonWidget
+import TranslationStorage
+import ChunkBuilder
+import ObjectiveRenderTypeFix
+import CaveVines
+import SignEditorOpenS2CPacket
+import NearestPlayersSensor
+import Util
+import FurnaceScreenHandler
+import TridentRiptideFeatureRenderer
+import DustColorTransitionParticleEffect
+import PacketSizeChart
+import StateManager
+import FurnaceRecipesFix
+import RoarTask
+import TrialSpawnerLogic
+import KnowledgeBookItem
+import EntityData
+import SourcedCommandAction
+import EndRaidTask
+import StorageIoWorker
+import OverworldBiomeCreator
+import BiomeTags
+import BlockPileFeatureConfig
+import StructureValidatorProvider
+import ReturnValueConsumer
+import StringHelper
+import ShulkerBulletEntityModel
+import BoatDispenserBehavior
+import FillCommand
+import SetBookCoverLootFunction
+import EntityLike
+import StringNbtWriter
+import StringReader
+import DifficultyS2CPacket
+import FeatureRendererContext
+import RandomBlockStateMatchRuleTest
+import SharedConstants
+import PacketCodecDispatcher
+import LootTableReporter
+import IdentifiableParsingRule
+import TorchBlock
+import MonitorFactory
+import ItemStackUuidFix
+import StrayEntityRenderer
+import EmeraldOreFeatureConfig
+import RedstoneView
+import RawShapedRecipe
+import WallPropertyFix
+import SuspendParticle
+import SaplingBlock
+import TeamMsgCommand
+import RuleTest
+import DebugNeighborsUpdateCustomPayload
+import TeleportCommand
+import ItemCommand
+import ChoiceTypesFix
+import EntityModelLayer
+import DismountVehicleTask
+import SquidEntity
+import Rarity
+import SelectiveNbtCollector
+import RaidCommand
+import RealmsPopups
+import WorldSavePath
+import RuleBlockEntityModifier
+import ShapedRecipe
+import TeamTeleportSpectatorMenu
+import SetBlockPropertiesEnchantmentEffect
+import AnimalMateGoal
+import BasicTempleStructure
+import GlazedTerracottaBlock
+import SmokingRecipe
+import GrassColormapResourceSupplier
+import CustomTestProvider
+import ServerCookieResponsePacketListener
+import CurrentDownParticle
+import ModifiableTestableWorld
+import BlockFilterPlacementModifier
+import MultifaceGrowthBlock
+import DebugLoggerPrintStream
+import NeighborUpdateDebugRenderer
+import EnchantedCountIncreaseLootFunction
+import FireworkRocketEntity
+import ArgumentType
+import BlockPlacementDispenserBehavior
+import ProfileResult
+import PanicTask
+import OverlayTexture
+import AbstractPlantStemBlock
+import ThrownItemEntity
+import WhitelistEntry
+import Stainable
+import HeightmapPlacementModifier
+import StairShape
+import EntityList
+import StayAboveWaterTask
+import ConfiguredCarver
+import HoveredTooltipPositioner
+import ItemFrameEntity
+import GiantEntityModel
+import TickCriterion
+import DynamicRegistriesS2CPacket
+import RenameEnchantmentFix
+import DebugMobSpawningCommand
+import ResourceMetadataSerializer
+import DamageSources
+import EditWorldScreen
+import PlayerActionResponseS2CPacket
+import ClientPlayNetworkHandler
+import WorldSession
+import PitcherCropBlock
+import OminousItemSpawnerEntity
+import NbtOrderedStringFormatter
+import MemoryQueryResult
+import UncaughtExceptionLogger
+import RandomizedIntBlockStateProvider
+import ArrayListDeque
+import AirBlock
+import VindicatorEntity
+import TimeCheckLootCondition
+import FluidDrainable
+import Clipboard
+import SetCameraEntityS2CPacket
+import WitherRoseBlock
+import MinecartEntityRenderer
+import EntityAttachmentType
+import BuriedTreasureGenerator
+import LookAroundTask
+import PostPlacementProcessor
+import JigsawGeneratingC2SPacket
+import ColoredFallingBlock
+import AttachedToLeavesTreeDecorator
+import RandomSequenceSettingsFix
+import IronGolemFlowerFeatureRenderer
+import PlayerGeneratesContainerLootCriterion
+import PropertyDelegate
+import AdvancementUpdateS2CPacket
+import OverlayVertexConsumer
+import PacketSizeLogHandler
+import Dismounting
+import DyedCarpetBlock
+import BakedModel
+import DensityFunction
+import SimpleInventory
+import MagmaBlock
+import CoralParentBlock
+import PersistentStateUuidFix
+import AbstractHorseEntityRenderer
+import IllagerEntity
+import PlantBlock
+import Debug
+import IdentifierSearcher
+import NoopOutboundHandler
+import PlayerInventory
+import TrialSpawnerData
+import ScoreboardDisplaySlot
+import NbtElementVisitor
+import FenceBlock
+import IntegratedServer
+import SonicBoomTask
+import PowderSnowBucketItem
+import NameTagItem
+import MultiValueDebugSampleLog
+import SimpleDefaultedRegistry
+import OutputStream
+import GoToBedAndSleepGoal
+import json_ModelRotation
+import CommandBlockMinecartEntity
+import LimitCountLootFunction
+import SpriteBillboardParticle
+import MarkerEntity
+import PlayPackets
+import LootFunctionConsumingBuilder
+import SyncedClientOptions
+import predicate_BlockPredicate
+import PiglinEntity
+import SelectKnownPacksC2SPacket
+import DensityFunctionTypes
+import EntitiesDestroyS2CPacket
+import RealmsInviteScreen
+import Key
+import EntityZombieSplitFix
+import LodestoneCompassComponentFix
+import SmithingScreenHandler
+import NbtShort
+import DimensionPadding
+import ClientQueryPacketListener
+import SystemToast
+import ScreenHandler
+import LastSeenMessagesCollector
+import TadpoleEntityModel
+import ConduitBlock
+import ChunkBlockLightProvider
+import ToolMaterials
+import GameRules
+import SymlinkEntry
+import OggAudioStream
+import ConditionalLootFunction
+import MobEntityRenderer
+import HorseScreenHandler
+import RunArgs
+import TextSearchableIterator
+import RamImpactTask
+import EndCityStructure
+import LevelInfo
+import EggEntity
+import LoginCompressionS2CPacket
+import ClickType
+import HopperMinecartEntity
+import WindowSettings
+import CarvedPumpkinBlock
+import BrewingStandScreen
+import SimpleBlockStateProvider
+import UsernameAbuseReport
+import DeathMessageType
+import TntEntityRenderer
+import TexturedModelData
+import StructureSet
+import WetSpongeBlock
+import ItemStackEnchantmentFix
+import PressableTextWidget
+import Deadmau5FeatureRenderer
+import StopSoundCommand
+import IntegratedServerLoader
+import Icons
+import RealmsHttpException
+import Control
+import SpawnArmorTrimsCommand
+import SinglePreparationResourceReloader
+import ForcedChunkState
+import json_Transformation
+import DebugGameEventCustomPayload
+import Schema99
+import ChestBoatEntity
+import SmallDripstoneFeature
+import CoordinateArgument
+import HugeFungusFeature
+import ScoreboardCriterion
+import NoteParticle
+import ItemCriterion
+import ArrowPickupFix
+import GenericContainerScreenHandler
+import AlwaysTruePosRuleTest
+import SpawnGroup
+import AdvancementCommand
+import DesertVillageData
+import BlockStateArgument
+import TradeRebalanceEnchantmentProviders
+import SymlinkWarningScreen
+import TopologicalSorts
+import OrderedTextTooltipComponent
+import CoralWallFanBlock
+import CrashCallable
+import PickFromInventoryC2SPacket
+import RabbitEntity
+import ActionResult
+import AmethystBlock
+import SuggestionProviders
+import WitherEntityModel
+import RealmsText
+import RodBlock
+import RandomCommand
+import StructureTemplate
+import PillagerOutpostGenerator
+import EmptyChunk
+import Schema1904
+import Schema1906
+import BastionHoglinStableData
+import VibrationParticleEffect
+import OptionalChunk
+import IntegerArgumentType
+import Ingredient
+import Schema1909
+import EntitySubPredicateTypes
+import WitherEntity
+import MessageAcknowledgmentC2SPacket
+import ShulkerEntityModel
+import Untracker
+import FeatureFlag
+import BeeEntityRenderer
+import TranslatableTextContent
+import PredicatedStateProvider
+import RenderLayers
+import BlockModelRenderer
+import VineBlock
+import ShulkerBulletEntityRenderer
+import Codecs
+import Schema1920
+import SculkPatchFeature
+import BlockPattern
+import Schema1928
+import RandomPatchFeatureConfig
+import HeadFeatureRenderer
+import Schema1929
+import BoggedEntity
+import UnloadChunkS2CPacket
+import PointedDripstoneBlock
+import RealmsServerAddress
+import BatEntityRenderer
+import Schema1931
+import LivingEntityRenderer
+import BasaltColumnsFeature
+import HeldItemFeatureRenderer
+import RealmsServer
+import TrimPredicate
+import FireChargeItem
+import IronGolemEntityModel
+import SetStewEffectLootFunction
+import FollowGroupLeaderGoal
+import VertexConsumers
+import WalkTarget
+import ItemBannerColorFix
+import PandaEntityRenderer
+import DefaultedRegistry
+import DolphinEntityRenderer
+import RconClient
+import VillagerWalkTowardsTask
+import WorldPresets
+import TextifiedException
+import types_Type
+import BambooFeature
+import PlayerModelPart
+import TranslatableBuiltInExceptions
+import VanillaArchaeologyLootTableGenerator
+import RealmsPlayerScreen
+import WallSignBlock
+import SoundEntryDeserializer
+import ServerConfigHandler
+import EndGatewayBlock
+import TrialChamberData
+import TemptationsSensor
+import PacketType
+import ServerLinksS2CPacket
+import LootTableEntry
+import DamageParticle
+import AxisGridWidget
+import RecipeCraftedCriterion
+import WeatherCommand
+import OreFeatureConfig
+import CreditsAndAttributionScreen
+import LilyPadBlock
+import RandomFeature
+import RegistryBuilder
+import ObjectiveDisplayNameFix
+import EntityAttachS2CPacket
+import BlockEvent
+import MultipartUnbakedModel
+import AttributeModifiersComponent
+import GameLoadTimeEvent
+import DelegatingDataOutput
+import ItemListProvider
+import MyceliumBlock
+import GameTestState
+import TickDurationMonitor
+import EndermiteEntityModel
+import MerchantInventory
+import HoglinEntity
+import main_Main
+import SculkSensorBlockEntity
+import PillarBlock
+import SuspiciousStewRecipe
+import ClientCommonPacketListener
+import EndPlatformFeature
+import PolarBearEntityRenderer
+import BiFunction
+import NyliumBlock
+import BannerBlock
+import PlayerEntityRenderer
+import PlayerUuidFix
+import SwitchSlotTask
+import LazyContainer
+import VanillaGiftLootTableGenerator
+import DirectionTransformation
+import ThreadExecutor
+import DirtPathBlock
+import SwizzleArgumentType
+import LookAtMobWithIntervalTask
+import ProbabilityConfig
+import BeaconBlockEntityRenderer
+import RealmsGenericErrorScreen
+import BowItem
+import ModelPredicateProviderRegistry
+import RegistryEntryList
+import BlockModels
+import TitleS2CPacket
+import SeaPickleBlock
+import MusicTracker
+import VillagerHeldItemFeatureRenderer
+import SmithingTransformRecipeJsonBuilder
+import LlamaSpitEntityModel
+import RealmsUploadScreen
+import WolfCollarFeatureRenderer
+import BlockEntityCustomNameToTextFix
+import ChunkTickScheduler
+import WhiteAshParticle
+import AllayBrain
+import TypeFilterableList
+import ItemNameFix
+import MediumPufferfishEntityModel
+import ChatScreen
+import TextArgumentType
+import BreezeAttackablesSensor
+import GameModeList
+import CommandContext
+import KeyCodes
+import MultiNoiseBiomeSource
+import BlockLocating
+import FileDownload
+import BoatEntityRenderer
+import BundleSplitterPacket
+import SecondaryPointsOfInterestSensor
+import SignatureUpdatable
+import WeepingVinesFeature
+import SocialInteractionsScreen
+import AbstractSlowingParticle
+import PhaseType
+import OceanPlacedFeatures
+import ItemEntityRenderer
+import LoseJobOnSiteLossTask
+import NbtElementArgumentType
+import BlockStateVariantMap
+import GoToPointOfInterestTask
+import WorldIcon
+import PlayerAbilitiesS2CPacket
+import DummyRecorder
+import Style
+import BucketItem
+import SelectorTextContent
+import ValueObject
+import MerchantScreen
+import SignChangingItem
+import HandSwingC2SPacket
+import VehicleMoveS2CPacket
+import Quaternionf
+import VegetationPlacedFeatures
+import WitchEntityModel
+import ExplosionEmitterParticle
+import ItemGroup
+import BlockOutlineDebugRenderer
+import AlternativeLootCondition
+import AboveGroundTargeting
+import NamespaceResourceManager
+import ShieldItem
+import Task
+import TextCollector
+import SilverfishEntityModel
+import BossBarHud
+import ChestLidAnimator
+import SheepEntityRenderer
+import WritableBookContentComponent
+import CobwebBlock
+import MaterialRules
+import SpawnLocating
+import TickableSoundInstance
+import LootPool
+import FleeEntityGoal
+import SpawnLocation
+import HorseEntityModel
+import CatEntity
+import EntityRavagerRenameFix
+import ReadableScoreboardScore
+import MemoryModuleState
+import JukeboxSong
+import BeehiveTreeDecorator
+import RaftEntityModel
+import JigsawRotationFix
+import BannerPatternFormatFix
+import BirdPathNodeMaker
+import MapIdComponent
+import File
+import PandaEntityModel
+import TaskScreen
+import StackReference
+import DisableableFollowTargetGoal
+import Schema501
+import RealmsDescriptionDto
+import RuinedPortalStructurePiece
+import HangingSignBlockEntityRenderer
+import Shearable
+import DamageTracker
+import ChunkRendererRegionBuilder
+import RecipeBookGhostSlots
+import ServerResourcePackLoader
+import AbstractPhase
+import ContainerLock
+import MapBannerMarker
+import ChunkStatusChangeListener
+import PlainsVillageData
+import BlockEntityProvider
+import IndexedIterable
+import BossBar
+import EnchantmentLevelBasedValue
+import TameAnimalCriterion
+import Angriness
+import SimpleVoxelShape
+import AxolotlEntityRenderer
+import RecipeBookGroup
+import OxidizableStairsBlock
+import DoubleArgumentType
+import SmallDripleafBlock
+import Instant
+import SignedMessage
+import EntityModel
+import WritableByteChannel
+import BiomeColorCache
+import DyeColor
+import BinomialLootNumberProvider
+import MacroInvocation
+import AbstractFurnaceScreenHandler
+import EntityStatuses
+import PathAwareEntity
+import BiomeSources
+import CreeperEntity
+import GrindstoneScreenHandler
+import RecipeEntry
+import RegistryKeyArgumentType
+import ApplyBonusLootFunction
+import VanillaPointOfInterestTypeTagProvider
+import GlowParticle
+import ModelPartBuilder
+import RedstoneOreBlock
+import VoxelShape
+import EnchantmentsPredicate
+import CommandDispatcher
+import TypeReference
+import TrunkPlacerType
+import QueryResponseS2CPacket
+import HugeFungusFeatureConfig
+import PlaySoundFromEntityS2CPacket
+import TickStepS2CPacket
+import ChargedProjectilesComponent
+import AliasedBlockItem
+import SurfaceBuilder
+import EmitterParticle
+import PathNodeMaker
+import MapBannerBlockPosFormatFix
+import CopyNameLootFunction
+import PassiveEntity
+import ParticleManager
+import SymlinkValidationException
+import Cipher
+import SnowyVillageData
+import VideoMode
+import StraightTrunkPlacer
+import CrashException
+import SlotRangeArgumentType
+import PerfCommand
+import ChatLogEntry
+import EntityAnchorArgumentType
+import TestRunContext
+import LookAtMobTask
+import DebugSampleS2CPacket
+import Registerable
+import NeighborUpdater
+import RootSystemFeature
+import WallPlayerSkullBlock
+import VanillaStructureTagProvider
+import LockableContainerBlockEntity
+import TrapdoorBlock
+import ProfileLocationInfo
+import ClientPacketListener
+import WanderNearTargetGoal
+import ColorCode
+import FoxEntityRenderer
+import ArmadilloEntity
+import TallFlowerBlock
+import VanillaBlockTagProvider
+import WolfHealthFix
+import SkyLightStorage
+import TeamCommand
+import BookUpdateC2SPacket
+import GameTestException
+import ItemDispenserBehavior
+import VibrationSelector
+import TagPredicate
+import MessageScreen
+import EffectCommand
+import VanillaResourcePackProvider
+import PerformanceMetricsEvent
+import BigDripleafStemBlock
+import EntityAttribute
+import ReadyS2CPacket
+import InputStream
+import SymlinkFinder
+import OrMultipartModelSelector
+import ProjectileItem
+import UnihexFont
+import UnknownCustomPayload
+import BlockDustParticle
+import NoteBlockInstrument
+import StructurePresence
+import PillarBlockStateProvider
+import WallRedstoneTorchBlock
+import LightingProvider
+import WaterSuspendParticle
+import PlaySoundCommand
+import PassiveBeeSoundInstance
+import SearchManager
+import ServerTickType
+import EntityEquipmentUpdateS2CPacket
+import ChunkGenerationContext
+import GoatEntityModel
+import ForgetBellRingTask
+import LongSupplier
+import WorldTemplate
+import FreezeTopLayerFeature
+import NbtTreeNode
+import Generic3x3ContainerScreen
+import ClientPingResultPacketListener
+import ShearsDispenserBehavior
+import SynchronizeTagsS2CPacket
+import RavagerEntityRenderer
+import UnderwaterMagmaFeatureConfig
+import DefaultGameModeCommand
+import PaintingManager
+import ChunkPosKeyedStorage
+import DebugPathCustomPayload
+import HandledScreens
+import WorldView
+import Framebuffer
+import RealmsConnection
+import ModelElementTexture
+import ExplosionLargeParticle
+import FlowerPotBlock
+import AbstractParentElement
+import ParticleUtil
+import BundleDelimiterS2CPacket
+import BufferRenderer
+import IntUnaryOperator
+import ExperimentalWarningScreen
+import IntCollection
+import Targeter
+import UUID
+import DisjointPairList
+import Schema1800
+import EntityStatusEffectS2CPacket
+import Schema1801
+import ItemPredicate
+import CakeBlock
+import EntityDetector
+import PowderSnowJumpGoal
+import BlockMirror
+import ResourcePackRemoveS2CPacket
+import StatsScreen
+import BlockNameFix
+import OceanMonumentStructure
+import LevelStorageException
+import PacketReportProvider
+import StructureWeightSampler
+import GoToWorkTask
+import ChunkSkyLight
+import ShapeContext
+import WorldUnloadedEvent
+import ServerTickManager
+import LavaCauldronBlock
+import EntityItemFrameDirectionFix
+import WarningScreen
+import DefaultResourcePackBuilder
+import LogFileCompressor
+import SidedInventory
+import Entity
+import NearestItemsSensor
+import DifficultyCommand
+import ProjectileItemTypeFix
+import GameVersion
+import Narratable
+import ArmadilloEntityModel
+import FunctionLoader
+import EntityEffectParticleEffect
+import WorldRenderer
+import KeybindTranslations
+import BasicTickScheduler
+import ScrollableTextWidget
+import EmptyProfileResult
+import Thickness
+import PaintingEntity
+import ChunkSkyLightProvider
+import EntityHorseSplitFix
+import VillagerGossipFix
+import LogReader
+import BasicBakedModel
+import ReferenceLootFunction
+import GlowSquidEntityRenderer
+import OperatorList
+import BlockStateRaycastContext
+import WorldGenSettingsHeightAndBiomeFix
+import EnchantmentHelper
+import SectionBuilder
+import DragonFireballEntity
+import PlayerPublicKey
+import ProfileResultImpl
+import DebugStickStateComponent
+import CommandHistoryManager
+import ReadableProfiler
+import ParticleEffect
+import PressableWidget
+import SpawnEggItem
+import NullOps
+import ExplorationMapLootFunction
+import NoiseHelper
+import NbtPredicate
+import ListDeque
+import BlockAgeStructureProcessor
+import BlockDataObject
+import DolphinEntityModel
+import CollisionDebugRenderer
+import DeltaFeatureConfig
+import JfrListener
+import ItemStackCustomNameToItemNameFix
+import QueryEntityNbtC2SPacket
+import LightningStrikeCriterion
+import Comparator
+import Typed
+import HoglinSpecificSensor
+import PacketInflater
+import DebugStickItem
+import BiasedToBottomIntProvider
+import LootTableGenerator
+import NetworkThreadUtils
+import MovementTutorialStepHandler
+import LoginQueryResponseC2SPacket
+import AbstractRedstoneGateBlock
+import WallTorchBlock
+import ChunkLightProvider
+import RealmsNotificationsScreen
+import StatusEffects
+import ShaderProgram
+import LocationCheckLootCondition
+import Deviation
+import RandomTask
+import Sensor
+import RenderCall
+import TurtleEntityModel
+import GatherItemsVillagerTask
+import WitchEntityRenderer
+import ParsedSaveProperties
+import OreVeinSampler
+import GiantTrunkPlacer
+import CyclingButtonWidget
+import PhantomEntityRenderer
+import ClientConnection
+import ArrowItem
+import BlockPileFeature
+import FeatureManager
+import BiomeParticleConfig
+import PerlinNoiseSampler
+import UnbakedModel
+import RealmsAvailability
+import EntityModelLoader
+import DummySensor
+import RegistryWrapper
+import WanderingTraderEntityRenderer
+import BreezeEntityModel
+import ScoreboardSlotArgumentType
+import GlUniform
+import Schedule
+import UpdateSelectedSlotC2SPacket
+import ChunkGenerator
+import BlockStateVariant
+import TrackIronGolemTargetGoal
+import RealmsSerializable
+import BreezeEyesFeatureRenderer
+import Address
+import DataCommandObject
+import CraftingRecipeInput
+import Class2IntMap
+import DrownedEntity
+import CraftingScreenHandler
+import BlockIgnoreStructureProcessor
+import LootFunctionTypes
+import ConnectingBlock
+import DeadCoralWallFanBlock
+import SplashOverlay
+import BannerItem
+import PaneBlock
+import SetWrittenBookPagesLootFunction
+import LoreComponent
+import PointOfInterestRenameFix
+import DebugChunkGenerator
+import TabManager
+import MultipartModelSelector
+import TestStructurePlacer
+import WolfBegGoal
+import Callable
+import NetherConfiguredFeatures
+import WorldCreationTask
+import LlamaSpitEntity
+import KelpBlock
+import GenerationStep
+import TrueTypeFontLoader
+import ServerPropertiesHandler
+import SmokerScreenHandler
+import MapPostProcessingComponent
+import DefaultSkinHelper
+import ItemFrameItem
+import BuddingAmethystBlock
+import RandomBooleanFeature
+import ArrowEntityRenderer
+import AndMultipartModelSelector
+import ChunkProvider
+import Inventories
+import DecoratedPotBlock
+import TextureStitcher
+import PlayerSpawnPositionS2CPacket
+import FloatProvider
+import AbstractFileResourcePack
+import CrossbowItem
+import StuckObjectsFeatureRenderer
+import MooshroomEntity
+import RealmsDownloadLatestWorldScreen
+import StoreCookieS2CPacket
+import CookieStorage
+import ServerHandshakePacketListener
+import ParseErrorList
+import WalkTowardsLookTargetTask
+import FishingBobberEntityRenderer
+import SteppedCommandAction
+import TooltipPositioner
+import PendingServerCommand
+import MessageListener
+import DragonFireballEntityRenderer
+import ChatReportScreen
+import AnyOfLootCondition
+import EntityAttributes
+import PardonCommand
+import DataConfiguration
+import EmptyPoolElement
+import Generic3x3ContainerScreenHandler
+import SoundEngine
+import BlockStateStructureTemplateFix
+import MilkBucketItem
+import SimpleMultipartModelSelector
+import RealmsError
+import SuspiciousStewItem
+import FontType
+import FireworksPredicate
+import WaterCreatureEntity
+import KeyBinding
+import WorldLoadTimesEvent
+import BlockEntityIdFix
+import Divider
+import LootNbtProvider
+import SnowballItem
+import BatAnimations
+import BelowZeroRetrogen
+import AnimalEntity
+import LookAroundGoal
+import PackResourceMetadata
+import EntityModelLayers
+import PiglinBruteBrain
+import MultifaceGrowthFeature
+import RegistryEntryLookup
+import VaultServerData
+import ServerPacketListener
+import AxisCycleDirection
+import I18n
+import SweetBerryBushBlock
+import IntProvider
+import JungleFoliagePlacer
+import RotationArgumentType
+import BarrelBlockEntity
+import RemoveFilteredSignTextFix
+import ExperienceBottleEntity
+import SlotActionType
+import MegaJungleTrunkPlacer
+import BlockItem
+import ResourcePackOrganizer
+import ResourceFilter
+import SmallPufferfishEntityModel
+import EntityEquipmentPredicate
+import SynchronizeRecipesS2CPacket
+import MessageChainTaskQueue
+import ChatMessageC2SPacket
+import NoiseChunkGenerator
+import MessageArgumentType
+import ModelCuboidData
+import FrogEntityModel
+import ClientPlayerInteractionManager
+import DebugPoiTicketCountCustomPayload
+import ItemModelGenerator
+import MultiplayerServerListWidget
+import Predicate
+import AxisTransformation
+import RealmsServerFilterer
+import BlockPos
+import SetIdleTimeoutCommand
+import CommandSyntaxException
+import NbtCrashException
+import ShulkerBoxScreenHandler
+import FireworkRocketEntityRenderer
+import CloseServerTask
+import TrackTargetGoal
+import StorageLootNumberProvider
+import BannerDuplicateRecipe
+import WardenSpawnTrackerCommand
+import MiningToolItem
+import NetworkEncryptionUtils
+import DataPackFailureScreen
+import RaidManager
+import GravityField
+import CollisionView
+import MobSpawnerLogic
+import WindChargeEntity
+import JigsawBlockScreen
+import VillagerType
+import StructurePieceType
+import Bootstrap
+import EnergySwirlOverlayFeatureRenderer
+import ServerQueryPacketListener
+import RateLimitedConnection
+import FunctionTagTimerCallback
+import TippedArrowRecipe
+import FeatureSizeType
+import LocalRandom
+import StructurePiecesGenerator
+import ForgetAttackTargetTask
+import DebugChart
+import FarmerWorkTask
+import EntityTrackerEntry
+import BasaltColumnsFeatureConfig
+import RecipeDisplayListener
+import UsingItemCriterion
+import NavigationDirection
+import PacketEncoderException
+import Item
+import CacheFiles
+import JumpInBedTask
+import VanillaHusbandryTabAdvancementGenerator
+import ClientBrandRetriever
+import UniformLootNumberProvider
+import Waterloggable
+import PaintingVariants
+import EntityZombifiedPiglinRenameFix
+import ContainerLootComponent
+import PlayerActivities
+import DataGenerator
+import IntProviderType
+import MegaPineFoliagePlacer
+import WaterDebugRenderer
+import TaigaVillageData
+import StringNbtReader
+import ReplaceBlobsFeatureConfig
+import ScreenHandlerPropertyUpdateS2CPacket
+import LlamaDecorFeatureRenderer
+import ItemNbtFix
+import BlazeEntityRenderer
+import NoiseParametersKeys
+import EntityRenderers
+import ShriekParticleEffect
+import Either
+import CommandExceptionType
+import RotationCalculator
+import ChunkPalettedStorageFix
+import PackStateChangeCallback
+import AvoidSunlightGoal
+import MoveToRaidCenterGoal
+import ComposterBlock
+import EntityHealthFix
+import VertexFormats
+import ChunkCache
+import LoginStates
+import Thread
+import LecternBlockEntityRenderer
+import JsonElement
+import ReversePortalParticle
+import ModelProvider
+import RealmsSlotOptionsScreen
+import HoeItem
+import AbstractBlock
+import BrewingStandBlockEntity
+import RecipeBookProvider
+import NbtType
+import WorldGenSettings
+import SwampHutStructure
+import ClampedNormalIntProvider
+import PositionFlag
+import Stream
+import ArrayPalette
+import SpriteProvider
+import ColumnPosArgumentType
+import CryingObsidianBlock
+import LinearPosRuleTest
+import BlockSoundGroup
+import LongRunningTask
+import SittingAttackingPhase
+import JigsawStructure
+import StructureKeys
+import ClientConnectionState
+import DefaultAttributeContainer
+import FishingRodItem
+import PathNodeTypeCache
+import ItemStackArgument
+import InventoryOwner
+import BambooShootBlock
+import CoralMushroomFeature
+import BlockView
+import TaskTriggerer
+import Macro
+import EnderDragonEntityRenderer
+import LivingEntity
+import ScoreboardScoreResetS2CPacket
+import ContextLootScoreProvider
+import UpdateDifficultyC2SPacket
+import RenameEntityAttributesFix
+import MissingSprite
+import ChunkManager
+import MapDecorationType
+import SurfaceWaterDepthFilterPlacementModifier
+import WorldBorderCommand
+import RegistryEntryOwner
+import VillagerResourceMetadata
+import ArmorDyeRecipe
+import OpenHorseScreenS2CPacket
+import ChunkErrorHandler
+import PhantomEyesFeatureRenderer
+import Difficulty
+import SheepWoolEntityModel
+import RedDustParticle
+import SpiderEyesFeatureRenderer
+import PendingInvite
+import AnimationResourceMetadataReader
+import CraftingScreen
+import EndPortalFrameBlock
+import TaskRunnable
+import StonecuttingRecipeJsonBuilder
+import PlayerActionC2SPacket
+import PiglinBrain
+import NetherPlacedFeatures
+import GoatEntity
+import SpectatorMenuCloseCallback
+import ChunkOcclusionData
+import BoundedRegionArray
+import ConfiguredFeatures
+import PathfindingDebugRenderer
+import FishingBobberEntity
+import Schema2831
+import Schema2832
+import IdentifierSearchProvider
+import FeatureConfig
+import SetCountLootFunction
+import SkeletonEntity
+import Schema1510
+import Schema2842
+import AcknowledgeReconfigurationC2SPacket
+import ProfileComponent
+import LeverBlock
+import StructureUpdateEntrypoint
+import StructurePoolAliasBindings
+import WallBannerBlock
+import FallingBlock
+import DynamicEntry
+import TableBonusLootCondition
+import Keyframe
+import LeashKnotEntityRenderer
+import ServerTickTimeSample
+import ResettingWorldTemplateTask
+import CatEntityRenderer
+import CreeperIgniteGoal
+import VaultBlockEntityRenderer
+import CowEntityModel
+import RootedDirtBlock
+import YLevels
+import ChunkGenerationSteps
+import LeashKnotEntityModel
+import ChaseServer
+import ContextChain
+import FileIoSample
+import HideInHomeTask
+import NetherFossilGenerator
+import IllegalStateException
+import EnchantmentProviders
+import EndGatewayFeature
+import AttributeContainer
+import EntityTrackingStatus
+import SnifferEntityModel
+import DemoScreen
+import PlayerEntity
+import GravityStructureProcessor
+import BeaconScreen
+import BreakDoorGoal
+import ReplaceBlockEnchantmentEffect
+import ByCostWithDifficultyEnchantmentProvider
+import MovingMinecartSoundInstance
+import RecipeCategory
+import ChickenEntityRenderer
+import ItemModels
+import AbstractFurnaceScreen
+import WorldLoadingState
+import WitherArmorFeatureRenderer
+import PlayDeadTimerTask
+import TntBlock
+import NetherFortressGenerator
+import TestFunctionFinder
+import GolemEntity
+import SnifferEntityRenderer
+import AdvancementRenameFix
+import ServerPlayerConfigurationTask
+import NumberRangeArgumentType
+import AccessibilityOptionsScreen
+import BipedEntityModel
+import EntityMinecartIdentifiersFix
+import ServerLoginNetworkHandler
+import PillagerEntity
+import BlockFamilies
+import SporeBlossomBlock
+import LootContextTypes
+import BlockPredicateType
+import GoalSelector
+import DamageUtil
+import KillCommand
+import TextFieldWidget
+import VanillaGameEventTagProvider
+import HopperBlock
+import ResourceMetadata
+import ArgumentParser
+import AbstractDecorationEntity
+import CodecCache
+import LivingTargetCache
+import OxidizableTrapdoorBlock
+import FloatSupplier
+import JsonEffectShaderProgram
+import SamplerSource
+import Frustum
+import ExplosiveProjectileEntity
+import NbtPathArgumentType
+import InteractionEntity
+import GolemLastSeenSensor
+import VertexBuffer
+import PolarBearEntity
+import ScrollableWidget
+import BanReason
+import BlockPosFormatFix
+import ItemColorProvider
+import ProfileKeysImpl
+import StatType
+import Chunk
+import LongPredicate
+import SortedArraySet
+import SpectralArrowEntityRenderer
+import SkinOverlayOwner
+import RealmsServerPlayerList
+import EvokerFangsEntity
+import FluidState
+import WalkToNearestVisibleWantedItemTask
+import RealmsPeriodicCheckers
+import VinesFeature
+import AnimatedResultButton
+import OxidizableBlock
+import ExecutionControl
+import CustomPayload
+import AbstractSignEditScreen
+import TexturedModel
+import BedBlock
+import StopFollowingCustomerGoal
+import SnowGolemEntityRenderer
+import SniffTask
+import NarratorMode
+import ReplaceDiskEnchantmentEffect
+import DiskFeatureConfig
+import StructurePoolElement
+import WeatherCheckLootCondition
+import ScoreLootNumberProvider
+import AppendStaticRuleBlockEntityModifier
+import UploadInfo
+import LongJumpTask
+import ReportScreen
+import SecretKey
+import AncientCityGenerator
+import NetworkStateBuilder
+import SpectatorHud
+import ClientBossBar
+import GLFWErrorCallbackI
+import TadpoleEntity
+import EntityPaintingMotiveFix
+import ChunkLightingView
+import TippedArrowItem
+import CrossbowAttackGoal
+import MemoryExpiryDataFix
+import BooleanProperty
+import GenerationDependencies
+import GuiNavigationPath
+import ClampedEntityAttribute
+import CrafterScreenHandler
+import ScoreTextContent
+import SculkCatalystBlockEntity
+import LootContextPredicate
+import RandomBlockMatchRuleTest
+import FloatProviderType
+import DarkOakTrunkPlacer
+import SimpleEntityLookup
+import BookCloningRecipe
+import ArrayDebugSampleLog
+import ImpossibleCriterion
+import CapeFeatureRenderer
+import ReconfiguringScreen
+import FenceGateBlock
+import RenameChunkStatusFix
+import HotbarStorageEntry
+import DemoServerPlayerInteractionManager
+import SlimeOverlayFeatureRenderer
+import SeekWaterTask
+import GLFWDropCallbackI
+import DataInput
+import ElderGuardianAppearanceParticle
+import BlockColumn
+import LanguageManager
+import SuspiciousStewIngredient
+import BundleContentsPredicate
+import FollowOwnerGoal
+import DatapackCommand
+import DateTimeFormatter
+import Npc
+import TextSearchProvider
+import BlockEntityTickInvoker
+import Rect2i
+import HttpURLConnection
+import MinecartEntityModel
+import HuskEntity
+import PointOfInterestTypeTags
+import AdvancementTabGenerator
+import EndermanEyesFeatureRenderer
+import SelectMerchantTradeC2SPacket
+import SheepEntityModel
+import Equipment
+import DynamicRegistryManager
+import MessagesListAdder
+import IntStream
+import SignedArgumentList
+import EggItem
+import BiomeColors
+import BlockListChecker
+import ChatSuggestionsS2CPacket
+import Goal
+import Vector2f
+import RarityFilterPlacementModifier
+import PackratParsing
+import SetFireworksLootFunction
+import Subscription
+import CatCollarFeatureRenderer
+import CowEntityRenderer
+import BedBlockEntityFix
+import DigTask
+import DebugBrainCustomPayload
+import SectionDistanceLevelPropagator
+import GhastEntityRenderer
+import Vector3f
+import UploadResult
+import RealmsClientConfig
+import NarrationMessageBuilder
+import EntityModels
+import PingPackets
+import CollectionCountsPredicate
+import SoulParticle
+import Vector4f
+import Monster
+import BlockBufferAllocatorStorage
+import CreateWorldScreen
+import FlintAndSteelItem
+import BellBlockEntityRenderer
+import GoatMissingStateFix
+import HideWhenBellRingsTask
+import MooshroomMushroomFeatureRenderer
+import HotbarStorage
+import JsonArray
+import AcknowledgmentValidator
+import NavigationConditions
+import VindicatorEntityRenderer
+import PacketEvent
+import BannerPatternItem
+import LegacyServerPinger
+import GenerationShapeConfig
+import RealmsPersistence
+import ReceivedMessage
+import ExclusiveNbtCollector
+import AcknowledgedMessage
+import UnstitchAtlasSource
+import ScreenNarrator
+import ChunkPos
+import DungeonFeature
+import Items
+import NoiseThresholdCountPlacementModifier
+import EntityHandler
+import TorchflowerBlock
+import GameModeArgumentType
+import WanderIndoorsTask
+import EnchantmentPredicate
+import RenderTickCounter
+import ReplaceBlobsFeature
+import ChiseledBookshelfBlockEntity
+import LevelStorage
+import DonkeyEntityModel
+import DynamicOps
+import DeobfuscateClass
+import TabButtonWidget
+import StructuresToConfiguredStructuresFix
+import BastionRemnantGenerator
+import MissingDimensionFix
+import LichenGrower
+import DyedColorComponent
+import UniversalAngerGoal
+import AllowedAddressResolver
+import BuiltChunkStorage
+import Texts
+import TallSeagrassBlock
+import ZombieEntityModel
+import PlayerSaveHandler
+import SculkShriekerBlock
+import FractionalDoubleList
+import RotatingCubeMapRenderer
+import FarmlandBlock
+import RconBase
+import ProjectileEntity
+import EnumArgumentType
+import ConfiguredFeature
+import InstrumentTags
+import ItemPickupAnimationS2CPacket
+import AdvancementRewards
+import BiasedToBottomHeightProvider
+import OctavePerlinNoiseSampler
+import InetAddress
+import BlockArgumentParser
+import PistonBlockEntityRenderer
+import Schema2707
+import ChainRestrictedNeighborUpdater
+import Schema2704
+import WeightedListIntProvider
+import MobSpawnerEntry
+import WorldBorderWarningBlocksChangedS2CPacket
+import WrittenBookItem
+import ForgingScreenHandler
+import TropicalFishEntityRenderer
+import CubeMapRenderer
+import CaveSpiderEntityRenderer
+import AllayEntityModel
+import FillLayerFeature
+import NoteBlock
+import AttributeEnchantmentEffect
+import ItemConvertible
+import UnbreakableComponent
+import SingleStackRecipeInput
+import MacroException
+import BiConsumer
+import GroupEntry
+import BannerPatternTags
+import PointOfInterestType
+import WallMountedBlock
+import Attachment
+import EditBoxWidget
+import LevelProperties
+import BellBlockEntity
+import FluidPredicate
+import ArmorTrimMaterials
+import IntegratedPlayerManager
+import Instruments
+import EnchantingTableBlockEntity
+import Hand
+import Weight
+import SkinAbuseReport
+import JukeboxBlock
+import SimpleMerchant
+import MossBlock
+import SelectKnownPacksS2CPacket
+import CarverContext
+import ChunkDataSender
+import BrushableBlock
+import LootConditionConsumingBuilder
+import GoatEntityRenderer
+import DolphinEntity
+import ResourceReloadLogger
+import LifecycledResourceManager
+import ClientFieldsAreNonnullByDefault
+import SuspiciousStewEffectsComponent
+import DyeItem
+import DirectoryResourcePack
+import CopyComponentsLootFunction
+import HangingSignBlockEntity
+import TooltipState
+import BufferAllocator
+import StructureFeatureChildrenPoolElementFix
+import EndPortalFeature
+import ItemColors
+import HoldInHandsGoal
+import PillagerEntityRenderer
+import Whitelist
+import NetherFossilStructure
+import JigsawBlock
+import WorldTemplatePaginatedList
+import BlockSource
+import SetAttributesLootFunction
+import ScaffoldingBlock
+import PacketDecryptor
+import SculkBlock
+import BundleTooltipComponent
+import ServerDynamicRegistryType
+import Glyph
+import FluidModificationItem
+import UpdateCommandBlockC2SPacket
+import HuntHoglinTask
+import LightUpdateS2CPacket
+import InterpolatedNoiseSampler
+import TargetHitCriterion
+import IntConsumer
+import Schema1451
+import RecipeExporter
+import RandomFeatureEntry
+import BiomeFormatFix
+import MapDecoration
+import NbtScannable
+import BreezeWindFeatureRenderer
+import SpawnDensityCapper
+import HorseArmorFeatureRenderer
+import Schema1460
+import BlockRotation
+import Schema1466
+import ForwardingDynamicOps
+import ModelElementFace
+import RealmsParentalConsentScreen
+import DedicatedPlayerManager
+import ParrotEntity
+import TargetPredicate
+import WeightedList
+import DebugInfoSender
+import Schema1470
+import TutorialStep
+import CrackParticle
+import FishingParticle
+import GLFWScrollCallbackI
+import LayoutWidgets
+import Schema1481
+import SimpleBlockFeatureConfig
+import Schema1483
+import ModelPredicateProvider
+import SetCustomModelDataLootFunction
+import Schema1486
+import JfrProfileRecorder
+import AdvancementsScreen
+import DebugGameTestClearCustomPayload
+import FontLoader
+import CommandSyntaxProvider
+import TaskExecutor
+import LootConditionType
+import Ping
+import TippedArrowPotionToItemFix
+import ItemKeys
+import Symbol
+import CrashMemoryReserve
+import HitResult
+import GameStateChangeS2CPacket
+import Xoroshiro128PlusPlusRandomImpl
+import EmptyEntityRenderer
+import ColorlessShulkerEntityFix
+import WitherSkeletonEntityRenderer
+import HorseColor
+import ItemCooldownManager
+import HorizontalConnectingBlock
+import HugeBrownMushroomFeature
+import NumberRange
+import EntityPropertiesLootCondition
+import EmptyWidget
+import LootNbtProviderTypes
+import RemoveEntityStatusEffectS2CPacket
+import EndermanEntity
+import PlacedFeatureIndexer
+import TrialSpawnerConfig
+import Activity
+import ResourceFileSystem
+import WallShape
+import DirectionalLayoutWidget
+import DualNoiseBlockStateProvider
+import RealmsScreen
+import TextColor
+import SliderWidget
+import NbtIo
+import TradeRebalanceEnchantmentTagProvider
+import TrackedData
+import PublicPlayerSession
+import Tracer
+import BredAnimalsCriterion
+import Drawable
+import EntityStatusS2CPacket
+
+import UseAction
+import LightPredicate
+import SpongeBlock
+import OutOfMemoryScreen
+import SwimNavigation
+import ChestBlock
+import ShulkerHeadFeatureRenderer
+import SplashTextRenderer
+import TrueTypeFont
+import FogShape
+import ServerAddress
+import ArgumentHelper
+import TeamArgumentType
+import VanillaAdvancementProviders
+import TradeRebalanceLootTableProviders
+import StructureTags
+import SingleEnchantmentProvider
+import Team
+import TrunkPlacer
+import GameModeCommand
+import TripwireHookBlock
+import CompassItem
+import DonkeyEntity
+import AttributeModifiersPredicate
+import RealmsServerList
+import OrePlacedFeatures
+import EntityProjectileOwnerFix
+import AbstractPiglinEntity
+import BookModel
+import ColorHelper
+import BanListCommand
+import ItemFrameEntityRenderer
+import TestCommand
+import RandomSplitter
+import ServerRecipeBook
+import Ops
+import BuyRealmsScreen
+import AnimationHelper
+import PointOfInterestStorage
+import Packet
+import TitleFadeS2CPacket
+import EnchantmentTags
+import BlendingDataRemoveFromNetherEndFix
+import LootContext
+import UnknownLoginQueryRequestPayload
+import SpriteIdentifier
+import StructureProcessorType
+import InfestedBlock
+import SkinTextures
+import CowEntity
+import StartChunkSendS2CPacket
+import TheEndBiomeSource
+import FluidBlock
+import EndermiteEntityRenderer
+import Element
+import AbstractConditionalPlacementModifier
+import EnchantmentScreen
+import UniformHeightProvider
+import TradeOffer
+import AttributeCommand
+import TicksInWrongChunkFix
+import LevelPrioritizedQueue
+import TooltipBackgroundRenderer
+import AbuseReportContext
+import TransparentBlock
+import PrimedTntBlockStateFix
+import PacketSample
+import TrailRuinsGenerator
+import ConstantIntProvider
+import EnvironmentScanPlacementModifier
+import ConnectedClientData
+import BlockNameFlatteningFix
+import AbstractInventoryScreen
+import ParticleCommand
+import DecoratedPotFieldRenameFix
+import GoToWalkTargetGoal
+import JukeboxBlockEntity
+import TeamDisplayNameFix
+import BendingTrunkPlacer
+import ConnectionIntent
+import AxolotlEntityModel
+import ServerCrashSafePacketListener
+import EntityAttributeModifier
+import WallWitherSkullBlock
+import AmbientSoundPlayer
+import Buffer
+import PosRuleTestType
+import WitherEntityRenderer
+import ShipwreckGenerator
+import HangingSignEditScreen
+import SnifferDigSoundInstance
+import ComponentChanges
+import PacketListener
+import EntityUuidFix
+import ShieldDecorationRecipe
+import PiglinEntityRenderer
+import BlockUpdateS2CPacket
+import MessageSignatureStorage
+import BannerCustomNameToItemNameFix
+import RawFilteredPair
+import ScreenHandlerFactory
+import WeepingVinesBlock
+import SkyLightDebugRenderer
+import DaylightDetectorBlock
+import SpellcastingIllagerEntity
+import ProgressScreen
+import WorldBorderSizeChangedS2CPacket
+import ServerAdvancementLoader
+import EntityDataObject
+import EntityHitResult
+import TooltipData
+import PortalParticle
+import VoxelShapes
+import ChunkType
+import BlockColumnFeature
+import OminousItemSpawnerEntityRenderer
+import StructureTerrainAdaptation
+import UuidArgumentType
+import MapUpdateS2CPacket
+import PlayerInteractItemC2SPacket
+import CarvingMask
+import TestFailureLogger
+import IronGolemCrackFeatureRenderer
+import VanillaRecipeProvider
+import TranslationException
+import ClientConfigurationNetworkHandler
+import DisconnectionInfo
+import StructureSetKeys
+import GoatHornItem
+import AxolotlAttackablesSensor
+import ServerConfigurationNetworkHandler
+import DesertPyramidStructure
+import LevelDataGeneratorOptionsFix
+import BeaconBlock
+import StructureBlockBlockEntityRenderer
+import CauldronBlock
+import FeatureDebugLogger
+import ExperienceBottleItem
+import BubbleColumnUpParticle
+import UnknownLoginQueryResponsePayload
+import ShulkerBoxColoringRecipe
+import ClientLoginNetworkHandler
+import SingleStateFeatureConfig
+import RecipeGroupButtonWidget
+import PresetsScreen
+import PointOfInterestSet
+import VanillaChestLootTableGenerator
+import WorldGenSettingsDisallowOldCustomWorldsFix
+import HeldItemRenderer
+import WidgetTooltipPositioner
+import TitleCommand
+import TurtleEntity
+import TestFunction
+import NetherForestVegetationFeature
+import ControlsListWidget
+import EntitySelectorReader
+import DefaultAttributeRegistry
+import CommandManager
+import JsonReaderUtils
+import EnchantmentLocationBasedEffect
+import ThrownItemPickedUpByEntityCriterion
+import VillagerDataContainer
+import ClientLoginPacketListener
+import world_World
+import RecoverWorldScreen
+import BundleTutorial
+import FoxEntity
+import ZombieHorseEntity
+import TestSet
+import SubtitlesHud
+import Narration
+import EnderEyeItem
+import CreeperEntityModel
+import ByteBuf
+import FillLayerFeatureConfig
+import PotionContentsComponent
+import FrogspawnBlock
+import TurtleEggBlock
+import BlockEntityJukeboxFix
+import TeleportTarget
+import EyesFeatureRenderer
+import AbstractNbtList
+import MapIdFix
+import LanguageDefinition
+import GLFWCursorPosCallbackI
+import NetworkEncryptionException
+import MusicType
+import LevelLoadingScreen
+import MathConstants
+import EndGatewayBlockEntity
+import MouseOptionsScreen
+import ClientPlayerSession
+import FarmerVillagerTask
+import DummyProfiler
+import Schema3938
+import GrateBlock
+import SetLoreLootFunction
+import Schema3808_2
+import Schema3808_1
+import ChoiceWriteReadFix
+import FloatConsumer
+import ZombieAttackGoal
+import TickScheduler
+import BlockEntityType
+import SoundListenerTransform
+import Nullables
+import Tooltip
+import Term
+import WolfEntityModel
+import StatsCounterFix
+import ConstantFloatProvider
+import EnchantmentValueEffect
+import ConcentricRingsStructurePlacement
+import DimensionEffects
+import WorldProperties
+import ShotCrossbowCriterion
+import SkullBlock
+import ScoreboardCriterionArgumentType
+import FishingRodHookedCriterion
+import TargetBlock
+import SuffixArray
+import StructurePiecesList
+import TeleportConfirmC2SPacket
+import WorldBorderStage
+import AtlasSprite
+import io_DataOutput
+import RealmsTextureManager
+import CaveCarver
+import SynchronousResourceReloader
+import BlockEntityKeepPackedFix
+import SelectAdvancementTabS2CPacket
+import LegacyDyeItemMapping
+import AbstractCandleBlock
+import DebugSampleSubscriptionC2SPacket
+import TexturedRenderLayers
+import BushFoliagePlacer
+import CraftingRecipe
+import VanillaStoryTabAdvancementGenerator
+import BeehiveBlockEntity
+import ChestRaftEntityModel
+import BedBlockEntityRenderer
+import InventoryChangedCriterion
+import VillagerWorkTask
+import OxidizableDoorBlock
+import VegetationPatchFeature
+import InventoryScreen
+import LargeOakTrunkPlacer
+import BiPredicate
+import BakedQuad
+import ToggleTooltipsLootFunction
+import PathNodeNavigator
+import EmptyMapItem
+import CraftingTableBlock
+import NameGenerator
+import ChainedBlockSource
+import DataComponentTypes
+import DebugBreezeCustomPayload
+import EnchantedBookItem
+import ScreenHandlerType
+import AbstractChunkHolder
+import UpdateStructureBlockC2SPacket
+import EmptyPaletteStorage
+import RealmsResetNormalWorldScreen
+import WrittenBookContentComponent
+import OffThreadException
+import LargeOakFoliagePlacer
+import DamagePredicate
+import Text
+import RealmsWorldSlotButton
+import TrunkVineTreeDecorator
+import ChunkLevels
+import TagPacketSerializer
+import OrderedText
+import FlightMoveControl
+import EnchantmentActiveCheckLootCondition
+import FunctionTimerCallback
+import Hopper
+import ServerConfigurationPacketListener
+import DefaultFeatureConfig
+import Schema2688
+import Schema2684
+import Schema2686
+import ChatCommandSignedC2SPacket
+import RegistryFixedCodec
+import WriteAndReadFix
+import PistonHeadBlock
+import RedstoneWireBlock
+import FoliagePlacerType
+import PlaceCommand
+import CrossbowAttackTask
+import ServerPlayerInteractionManager
+import WordPackedArray
+import EnchantmentLevelLootNumberProvider
+import NonRepeatingAudioStream
+import BundlePacket
+import SpriteAtlasManager
+import SimulationDistanceS2CPacket
+import ApplyMobEffectEnchantmentEffect
+import JigsawReplacementStructureProcessor
+import IllagerEntityModel
+import MultiplyEnchantmentEffect
+import SetTradeOffersS2CPacket
+import LoginQueryResponsePayload
+import SnowGolemEntityModel
+import OceanConfiguredFeatures
+import VoidStartPlatformFeature
+import Monitor
+import DataPackSettings
+import TrackedDataHandlerRegistry
+import DamageTiltS2CPacket
+import ToolItem
+import DebugCommand
+import WitherSkullEntityRenderer
+import Keyboard
+import ItemStackSet
+import MapExtendingRecipe
+import PistonExtensionBlock
+import AbstractTorchBlock
+import ProjectileEntityRenderer
+import TickablePacketListener
+import GameModeSelectionScreen
+import FrogBrain
+import OceanMonumentGenerator
+import TagEntry
+import TextureResourceMetadataReader
+import Main
+import LootConditionTypes
+import InetSocketAddress
+import Feature
+import LightingView
+import FilteredMessage
+import RealmsWorldResetDto
+import WardenAnimations
+import GameEventListener
+import RotationPropertyHelper
+import TrialSpawnerBlock
+import RealmsLoadingWidget
+import SearchProvider
+import PalettedPermutationsAtlasSource
+import CommandFunctionArgumentType
+import SpectatorMenuState
+import Attackable
+import DebugSampleLog
+import ChargingPlayerPhase
+import PosArgument
+import JumpingMount
+import AbstractZombieModel
+import NetherForestVegetationFeatureConfig
+import SpecialRecipeSerializer
+import SlimeEntity
+import BlockEntityRendererFactory
+import NumberFormatType
+import VillagerFollowRangeFix
+import SingleAtlasSource
+import Stat
+import Portal
+import WaterSplashParticle
+import FixedLootScoreProvider
+import EquipmentTable
+import ExperienceOrbEntityRenderer
+import LongRunningSampleStatistics
+import BiomeMoodSound
+import Sherds
+import Bans
+import BreezeEntityRenderer
+import EnterConfigurationC2SPacket
+import BackupList
+import HorseArmorFix
+import RingBellTask
+import TextWidget
+import PackListWidget
+import ScreenHandlerSlotUpdateS2CPacket
+import SelectionManager
+import SplashTextResourceSupplier
+import VegetationConfiguredFeatures
+import HandledScreen
+import OtherClientPlayerEntity
+import DoorHinge
+import AdvancementEntry
+import ExperienceCommand
+
+import Class
+import RandomPatchFeature
+import CoralTreeFeature
+import CappedStructureProcessor
+import ForgetTask
+import DecoratedPotBlockEntity
+import DoorInteractGoal
+import Cracks
+import AnimationState
+import SaveVersionInfo
+import EntityTheRenameningBlockFix
+import BonusChestFeature
+import LootNumberProviderType
+import LootContextParameters
+import ButtonClickC2SPacket
+import ProfileKeys
+import GameOptionsScreen
+import Sprite
+import EntityTypePredicate
+import ClientCommonNetworkHandler
+import RealmsDefaultUncaughtExceptionHandler
+import UsernameReportScreen
+import Saddleable
+import MagmaCubeEntityRenderer
+import ElderGuardianEntity
+import PickaxeItem
+import TelemetryLogManager
+import EntityPaintingFieldsRenameFix
+import SpawnReason
+import PlayerHeadBlockProfileFix
+import DoublePerlinNoiseSampler
+import PlayerScreenHandler
+import AudioStream
+import MemoryQuery
+import PineFoliagePlacer
+import CaveCarverConfig
+import WorldBorderInitializeS2CPacket
+import SoundCategory
+import MinecartEntity
+import SlabBlock
+import CarpetBlock
+import TrialSpawnerState
+import GeodeCrackConfig
+import StructureWorldAccess
+import LeveledCauldronBlock
+import WeepingVinesPlantBlock
+import CandleBlock
+import CreativeInventoryActionC2SPacket
+import RabbitEntityRenderer
+import LakeFeature
+import PeriodicNotificationManager
+import Criteria
+import Biome
+import TelemetryEventProperty
+import DebugPoiRemovedCustomPayload
+import DrawContext
+import LandingBlock
+import UnaryOperator
+import CatSitOnBlockGoal
+import SmithingRecipeInput
+import Potion
+import TextureResourceMetadata
+import GcHeapSummarySample
+import DonkeyEntityRenderer
+import SheepEntity
+import InGameHud
+import GiantEntity
+import ComponentPredicate
+import NoPenaltySolidTargeting
+import MapColor
+import ChunkGenerationSample
+import PrepareRamTask
+import RaycastContext
+import PufferfishEntity
+import ElytraFeatureRenderer
+import FractionalPairList
+import EntityPassengersSetS2CPacket
+import ValueCheckLootCondition
+import ThrowablePotionItem
+import BlockHitResult
+import ChunkRegionEvent
+import ServerHandshakeNetworkHandler
+import FireworkExplosionPredicate
+import GuiNavigation
+import SignBlockEntity
+import PlacementModifierType
+import VanillaDamageTypeTagProvider
+import CooldownUpdateS2CPacket
+import TextIconButtonWidget
+import LoginHelloS2CPacket
+import AutomaticItemPlacementContext
+import DedicatedServer
+import AbstractCriterion
+import NbtOps
+import ArrowEntity
+import FindWalkTargetTask
+import WardenAttackablesSensor
+import FormCaravanGoal
+import IdentifierNormalizingSchema
+import PotionItem
+import StringVisitable
+import SinglePartEntityModel
+import BlockPredicateArgumentType
+import RecipeProvider
+import LeavesVineTreeDecorator
+import TutorialManager
+import AlUtil
+import TrialSpawnerBlockEntityRenderer
+import StructurePlacementType
+import PacketEncryptor
+import SkullBlockEntityModel
+import DownloadingTerrainScreen
+import BreezeAnimations
+import MultiplayerWarningScreen
+import ChunkGeneratorSettings
+import ChunkBiomeDataS2CPacket
+import ParseResults
+import InputUtil
+import LocationPredicate
+import BlockPosArgumentType
+import LootableContainerBlockEntity
+import CartographyTableScreenHandler
+import OptionsLowerCaseLanguageFix
+import WallBlock
+import GlDebugInfo
+import FixedCommandAction
+import DecorationItem
+import AnimationResourceMetadata
+import ChunkRenderDistanceCenterS2CPacket
+import OxidizableGrateBlock
+import RegistryKey
+import SuggestionsBuilder
+import property_EnumProperty
+import ResourcePackSource
+import UploadStatus
+import CommandExecutionC2SPacket
+import EntityTransformFix
+import OnlineOptionsScreen
+import DimensionOptionsRegistryHolder
+import RealmsConnectTask
+import Schema3807
+import Schema3808
+import AbstractHorseEntity
+import BlockStateFlattening
+import TextureManager
+import FireSmokeParticle
+import WeightedUnbakedModel
+import LightningRodBlock
+import SoulSandBlock
+import FurnaceFuelSlot
+import ChatMessageS2CPacket
+import CoralFeature
+import StructureBlockFinder
+import SculkChargeParticle
+import ChunkSectionCache
+import Schema3818
+import GhastEntity
+import NbtByteArray
+import Schema808
+import Schema3816
+import LifecycledResourceManagerImpl
+import BlockStatesLoader
+import EntityPredicates
+import NamedScreenHandlerFactory
+import GameEventDispatcher
+import FilterMask
+import GuiAtlasManager
+import SectorMap
+import RealmsNews
+import Duration
+import Schema3825
+import FurnaceMinecartEntity
+import ButtonBlock
+import Schema2501
+import Schema2502
+import EditGameRulesScreen
+import Schema2509
+import DSL_TypeReference
+import Schema2505
+import MovementType
+import OctaveSimplexNoiseSampler
+import TraderLlamaEntity
+import AdvancementsFix
+import NetworkState
+import CampfireSmokeParticle
+import PatrolEntity
+import FlowerBlock
+import BlastingRecipe
+import StatusEffectFix
+import Schema2519
+import AbstractClientPlayerEntity
+import FieldsAreNonnullByDefault
+import RandomFeatureConfig
+import ItemLoreToTextFix
+import SlimeBlock
+import ChunkSection
+import LightType
+import Schema2522
+import FontFilterType
+import RotationAxis
+import InGameOverlayRenderer
+import NbtHelper
+import ZombifiedPiglinEntity
+import StructureLiquidSettings
+import StainedGlassBlock
+import CookieResponseC2SPacket
+import CauldronBehavior
+import ModelUtil
+import ResourcePackProvider
+import MinecraftVersion
+import TallPlantBlock
+import Frame
+import ChatHudLine
+import SquidEntityRenderer
+import PointOfInterestReorganizationFix
+import FallingBlockEntityRenderer
+import Supplier
+import LecternScreenHandler
+import EntityPose
+import RegistryCodecs
+import CommandSuggestionsS2CPacket
+import Schema2551
+import ChaseBoatGoal
+import FrogEatEntityTask
+import CyclingSlotIcon
+import CreeperEntityRenderer
+import SimpleBlockFeature
+import DataWriter
+import CatVariantTags
+import Schema2568
+import VillagerBreedTask
+import ValueLookupTagProvider
+import Schema2571
+import TimeCommand
+import CheckboxWidget
+import ParticleTypes
+import NbtByte
+import ComponentSubPredicate
+import PacifyTask
+import HopperScreenHandler
+import DecoratedPotPattern
+import AnimalArmorItem
+import BlockEntityBlockStateFix
+import WorldGenerationProgressListenerFactory
+import ModelData
+import EnchantedItemCriterion
+import MapFrameMarker
+import DataProvider
+import PlainTextContent
+import BreezeDebugRenderer
+import AmbientEntity
+import MultiplayerScreen
+import GameMessageS2CPacket
+import EntityBlockStateFix
+import ShoulderParrotFeatureRenderer
+import CustomizeFlatLevelScreen
+import TeamS2CPacket
+import LootScoreProviderType
+import CachedBlockPosition
+import SproutsBlock
+import ShiftableStructurePiece
+import TradeOutputSlot
+import AddTrappedChestFix
+import BatchListener
+import SkullEntityModel
+import MinecraftServer
+import EnchantmentLevelEntry
+import Oxidizable
+import HoldingPatternPhase
+import OxidizableBulbBlock
+import KeepAliveS2CPacket
+import IceSpikeFeature
+import TextFixes
+import PhaseManager
+import EntityLookup
+import FrostedIceBlock
+import SheepWoolFeatureRenderer
+import SayCommand
+import WorldBorderListener
+import FixedNumberFormat
+import Overlay
+import LlamaEntityRenderer
+import ShulkerBulletEntity
+import DropperBlockEntity
+import PlacedFeatures
+import ProfiledResourceReload
+import VillagerHostilesSensor
+import EntityLootTableGenerator
+import OptionFix
+import StructureSettingsFlattenFix
+import HurtBySensor
+import DamageScaling
+import CraftingResultInventory
+import MeCommand
+import BlankFont
+import BreezeEntity
+import GrassBlock
+import SpectatorMenuCommand
+import ThreeLayersFeatureSize
+import LeavesBlock
+import FossilFeatureConfig
+import CatSpawner
+import SkeletonHorseTrapTriggerGoal
+import SignatureVerifier
+import BooleanSupplier
+import BreezeShootIfStuckTask
+import SetComponentsLootFunction
+import ContainerComponentModifiers
+import CombinedDynamicRegistries
+import DependencyTracker
+import WalkHomeTask
+import DamageItemEnchantmentEffect
+import NoPenaltyTargeting
+import TelemetryEventWidget
+import CherryLeavesParticle
+import BubbleColumnSoundPlayer
+import PointOfInterest
+import MessageVerifier
+import RecipeResultCollection
+import VanillaTerrainParametersCreator
+import ScreenHandlerSyncHandler
+import MatchingBlockTagPredicate
+import SpectatorMenu
+import FilledBucketCriterion
+import WorldUuidFix
+import SpiderEntity
+import VanillaEntityTypeTagProvider
+import TheNetherBiomeCreator
+import PistonHandler
+import AccessibilityOnboardingScreen
+import VanillaCatVariantTagProvider
+import WorldCreator
+import StonecutterScreen
+import PatrolSpawner
+import FillPlayerHeadLootFunction
+import SpriteAtlasTexture
+import DiffuseLighting
+import CraftingRecipeJsonBuilder
+import SpiderEntityModel
+import LegacySinglePoolElement
+import CommonPackets
+import TridentEntityRenderer
+import LeafEntry
+import PandaHeldItemFeatureRenderer
+import ModelWithHat
+import RegistryEntryListCodec
+import BlockState
+import DebugRenderer
+import EmptyTickSchedulers
+import RecipeCommand
+import ReentrantThreadExecutor
+import RespawnAnchorBlock
+import AngleArgumentType
+import PiglinSpecificSensor
+import TaskQueue
+import SpriteLoader
+import ScoreboardObjectiveUpdateS2CPacket
+import StructurePlacement
+import PacketUnbundler
+import VanillaItemTagProvider
+import CoralClawFeature
+import StuckArrowsFeatureRenderer
+import BastionUnitsData
+import RavagerEntity
+import VeryBiasedToBottomHeightProvider
+import RavineCarverConfig
+import HorseMarkingFeatureRenderer
+import ChunkLevelTagRenameFix
+import SculkVeinBlock
+import VarInts
+import ZombieBaseEntityRenderer
+import WantNewItemTask
+import JukeboxPlayableComponent
+import PowderSnowBlock
+import AdvancedExplosionBehavior
+import GoTowardsLookTargetTask
+import LootScoreProviderTypes
+import IconWidget
+import WireConnection
+import blockpredicate_BlockPredicate
+import VideoOptionsScreen
+import Transformation
+import AbstractCauldronBlock
+import RandomChanceWithEnchantedBonusLootCondition
+import VillagerTaskListProvider
+import Raid
+import RuleStructureProcessor
+import SlotRanges
+import EatGrassGoal
+import ParsingState
+import GoalSelectorDebugRenderer
+import ClientDynamicRegistryType
+import TelemetrySender
+import SentMessage
+import HoverEvent
+import DrownedEntityRenderer
+import FishEntity
+import IgniteEnchantmentEffect
+import ForkingTrunkPlacer
+import BlackstoneReplacementStructureProcessor
+import VillagerTradeFix
+import VillagerResemblingModel
+import LongJumpUtil
+import StopCommand
+import HangingRootsBlock
+import WritableBookItem
+import PositionSourceType
+import ModifiableWorld
+import Screen
+import CandleCakeBlock
+import BuiltinBakedModel
+import DrownedOverlayFeatureRenderer
+import ContainerComponentModifier
+import TickLimitExceededException
+import ConsumeItemCriterion
+import ControlsOptionsScreen
+import RavineCarver
+import ResettingWorldTask
+import ZoglinEntityRenderer
+import LavaEmberParticle
+import MonitorTracker
+import DataFixTypes
+import DiskFeature
+import FeatureContext
+import Exception
+import ModelOverride
+import SkeletonEntityRenderer
+
+val Properties.SLOT_5_OCCUPIED by aliasStatic(Properties::field_41322)
+val Properties.CRACKED by aliasStatic(Properties::field_43307)
+val Properties.SLOT_1_OCCUPIED by aliasStatic(Properties::field_41318)
+val Properties.PICKLES by aliasStatic(Properties::field_12543)
+val Properties.STRUCTURE_BLOCK_MODE by aliasStatic(Properties::field_12547)
+val Properties.AGE_15 by aliasStatic(Properties::field_12498)
+val Properties.CONDITIONAL by aliasStatic(Properties::field_12486)
+val Properties.EAST_WIRE_CONNECTION by aliasStatic(Properties::field_12523)
+val Properties.HAS_BOTTLE_2 by aliasStatic(Properties::field_12531)
+val Properties.CHARGES_MAX by aliasStatic(Properties::field_31393)
+val Properties.LEVEL_3_MAX by aliasStatic(Properties::field_31389)
+val Properties.CRAFTING by aliasStatic(Properties::field_46822)
+val Properties.RAIL_SHAPE by aliasStatic(Properties::field_12507)
+val Properties.ENABLED by aliasStatic(Properties::field_12515)
+val Properties.UNSTABLE by aliasStatic(Properties::field_12539)
+val Properties.WEST by aliasStatic(Properties::field_12527)
+val Properties.HANGING by aliasStatic(Properties::field_16561)
+val Properties.SLOT_2_OCCUPIED by aliasStatic(Properties::field_41319)
+val Properties.LEVEL_1_8 by aliasStatic(Properties::field_12490)
+val Properties.SOUTH_WIRE_CONNECTION by aliasStatic(Properties::field_12551)
+val Properties.TILT by aliasStatic(Properties::field_28717)
+val Properties.ROTATION by aliasStatic(Properties::field_12532)
+val Properties.HAS_RECORD by aliasStatic(Properties::field_12544)
+val Properties.CHARGES_MIN by aliasStatic(Properties::field_31392)
+val Properties.FACING by aliasStatic(Properties::field_12525)
+val Properties.AGE_2 by aliasStatic(Properties::field_12556)
+val Properties.EAST by aliasStatic(Properties::field_12487)
+val Properties.LEVEL_15_MAX by aliasStatic(Properties::field_33723)
+val Properties.LEVEL_1_8_MIN by aliasStatic(Properties::field_31388)
+val Properties.WEST_WALL_SHAPE by aliasStatic(Properties::field_22177)
+val Properties.OCCUPIED by aliasStatic(Properties::field_12528)
+val Properties.BOTTOM by aliasStatic(Properties::field_16562)
+val Properties.SLOT_3_OCCUPIED by aliasStatic(Properties::field_41320)
+val Properties.DISTANCE_0_7_MAX by aliasStatic(Properties::field_31391)
+val Properties.INVERTED by aliasStatic(Properties::field_12501)
+val Properties.POWERED by aliasStatic(Properties::field_12484)
+val Properties.DISTANCE_1_7 by aliasStatic(Properties::field_12541)
+val Properties.DISARMED by aliasStatic(Properties::field_12553)
+val Properties.DOUBLE_BLOCK_HALF by aliasStatic(Properties::field_12533)
+val Properties.AGE_4_MAX by aliasStatic(Properties::field_37653)
+val Properties.AGE_7_MAX by aliasStatic(Properties::field_31399)
+val Properties.EGGS by aliasStatic(Properties::field_12509)
+val Properties.HONEY_LEVEL by aliasStatic(Properties::field_20432)
+val Properties.LEVEL_3_MIN by aliasStatic(Properties::field_31387)
+val Properties.HORIZONTAL_AXIS by aliasStatic(Properties::field_12529)
+val Properties.OPEN by aliasStatic(Properties::field_12537)
+val Properties.SOUTH_WALL_SHAPE by aliasStatic(Properties::field_22176)
+val Properties.LEVEL_3 by aliasStatic(Properties::field_12513)
+val Properties.STAGE by aliasStatic(Properties::field_12549)
+val Properties.SLOT_4_OCCUPIED by aliasStatic(Properties::field_41321)
+val Properties.HAS_BOOK by aliasStatic(Properties::field_17393)
+val Properties.SLOT_0_OCCUPIED by aliasStatic(Properties::field_41317)
+val Properties.PISTON_TYPE by aliasStatic(Properties::field_12492)
+val Properties.HORIZONTAL_FACING by aliasStatic(Properties::field_12481)
+val Properties.HAS_BOTTLE_0 by aliasStatic(Properties::field_12554)
+val Properties.LOCKED by aliasStatic(Properties::field_12502)
+val Properties.LEVEL_1_8_MAX by aliasStatic(Properties::field_31390)
+val Properties.ORIENTATION by aliasStatic(Properties::field_23333)
+val Properties.AGE_3 by aliasStatic(Properties::field_12497)
+val Properties.CHARGES by aliasStatic(Properties::field_23187)
+val Properties.HATCH by aliasStatic(Properties::field_12530)
+val Properties.COMPARATOR_MODE by aliasStatic(Properties::field_12534)
+val Properties.SCULK_SENSOR_PHASE by aliasStatic(Properties::field_28120)
+val Properties.AGE_5_MAX by aliasStatic(Properties::field_31398)
+val Properties.THICKNESS by aliasStatic(Properties::field_28063)
+val Properties.BLOCK_HALF by aliasStatic(Properties::field_12518)
+val Properties.DRAG by aliasStatic(Properties::field_12526)
+val Properties.CHEST_TYPE by aliasStatic(Properties::field_12506)
+val Properties.PERSISTENT by aliasStatic(Properties::field_12514)
+val Properties.LEVEL_15 by aliasStatic(Properties::field_12538)
+val Properties.NORTH_WALL_SHAPE by aliasStatic(Properties::field_22175)
+val Properties.VAULT_STATE by aliasStatic(Properties::field_48915)
+val Properties.SLAB_TYPE by aliasStatic(Properties::field_12485)
+val Properties.ATTACHED by aliasStatic(Properties::field_12493)
+val Properties.SIGNAL_FIRE by aliasStatic(Properties::field_17394)
+val Properties.ATTACHMENT by aliasStatic(Properties::field_17104)
+val Properties.BERRIES by aliasStatic(Properties::field_28716)
+val Properties.STAIR_SHAPE by aliasStatic(Properties::field_12503)
+val Properties.SHORT by aliasStatic(Properties::field_12535)
+val Properties.POWER by aliasStatic(Properties::field_12511)
+val Properties.DELAY by aliasStatic(Properties::field_12494)
+val Properties.BLOCK_FACE by aliasStatic(Properties::field_12555)
+val Properties.UP by aliasStatic(Properties::field_12519)
+val Properties.DUSTED by aliasStatic(Properties::field_42836)
+val Properties.AGE_3_MAX by aliasStatic(Properties::field_31397)
+val Properties.EAST_WALL_SHAPE by aliasStatic(Properties::field_22174)
+val Properties.DISTANCE_1_7_MAX by aliasStatic(Properties::field_31402)
+val Properties.AGE_4 by aliasStatic(Properties::field_37654)
+val Properties.AGE_5 by aliasStatic(Properties::field_12482)
+val Properties.HAS_BOTTLE_1 by aliasStatic(Properties::field_12500)
+val Properties.BAMBOO_LEAVES by aliasStatic(Properties::field_12516)
+val Properties.WEST_WIRE_CONNECTION by aliasStatic(Properties::field_12504)
+val Properties.SNOWY by aliasStatic(Properties::field_12512)
+val Properties.SOUTH by aliasStatic(Properties::field_12540)
+val Properties.AGE_2_MAX by aliasStatic(Properties::field_31396)
+val Properties.DOOR_HINGE by aliasStatic(Properties::field_12520)
+val Properties.INSTRUMENT by aliasStatic(Properties::field_12499)
+val Properties.HOPPER_FACING by aliasStatic(Properties::field_12545)
+val Properties.EXTENDED by aliasStatic(Properties::field_12552)
+val Properties.WATERLOGGED by aliasStatic(Properties::field_12508)
+val Properties.CAN_SUMMON by aliasStatic(Properties::field_38423)
+val Properties.FLOWER_AMOUNT by aliasStatic(Properties::field_42835)
+val Properties.LAYERS by aliasStatic(Properties::field_12536)
+val Properties.LIT by aliasStatic(Properties::field_12548)
+val Properties.NOTE by aliasStatic(Properties::field_12524)
+val Properties.VERTICAL_DIRECTION by aliasStatic(Properties::field_28062)
+val Properties.AGE_25_MAX by aliasStatic(Properties::field_31401)
+val Properties.CANDLES by aliasStatic(Properties::field_27220)
+val Properties.BED_PART by aliasStatic(Properties::field_12483)
+val Properties.IN_WALL by aliasStatic(Properties::field_12491)
+val Properties.NORTH_WIRE_CONNECTION by aliasStatic(Properties::field_12495)
+val Properties.AGE_1 by aliasStatic(Properties::field_12521)
+val Properties.LEVEL_8 by aliasStatic(Properties::field_17586)
+val Properties.EYE by aliasStatic(Properties::field_12488)
+val Properties.AGE_1_MAX by aliasStatic(Properties::field_31395)
+val Properties.TRIAL_SPAWNER_STATE by aliasStatic(Properties::field_47408)
+val Properties.DISTANCE_0_7 by aliasStatic(Properties::field_16503)
+val Properties.AGE_15_MAX by aliasStatic(Properties::field_31400)
+val Properties.AGE_25 by aliasStatic(Properties::field_12517)
+val Properties.BITES by aliasStatic(Properties::field_12505)
+val Properties.OMINOUS by aliasStatic(Properties::field_50193)
+val Properties.SHRIEKING by aliasStatic(Properties::field_37652)
+val Properties.AXIS by aliasStatic(Properties::field_12496)
+val Properties.FALLING by aliasStatic(Properties::field_12480)
+val Properties.MOISTURE by aliasStatic(Properties::field_12510)
+val Properties.TRIGGERED by aliasStatic(Properties::field_12522)
+val Properties.DOWN by aliasStatic(Properties::field_12546)
+val Properties.NORTH by aliasStatic(Properties::field_12489)
+val Properties.AGE_7 by aliasStatic(Properties::field_12550)
+val Properties.STRAIGHT_RAIL_SHAPE by aliasStatic(Properties::field_12542)
+val Properties.BLOOM by aliasStatic(Properties::field_37651)
+val BedPart.HEAD by aliasEnum(BedPart::class, "field_12560")
+val BedPart.FOOT by aliasEnum(BedPart::class, "field_12557")
+fun EntityVelocityUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11817(arg0)
+fun TrackTargetGoal.setMaxTimeWithoutVisibility(arg0: Int) = this.method_6330(arg0)
+val BambooLeaves.NONE by aliasEnum(BambooLeaves::class, "field_12469")
+val BambooLeaves.SMALL by aliasEnum(BambooLeaves::class, "field_12466")
+val BambooLeaves.LARGE by aliasEnum(BambooLeaves::class, "field_12468")
+val BlockFace.CEILING by aliasEnum(BlockFace::class, "field_12473")
+val BlockFace.WALL by aliasEnum(BlockFace::class, "field_12471")
+val BlockFace.FLOOR by aliasEnum(BlockFace::class, "field_12475")
+val EntityTrackerUpdateS2CPacket.MARKER_ID by aliasStatic(EntityTrackerUpdateS2CPacket::field_40850)
+fun EntityTrackerUpdateS2CPacket.id() = this.comp_1127()
+fun EntityTrackerUpdateS2CPacket.trackedValues() = this.comp_1128()
+fun EntityTrackerUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11808(arg0)
+fun MobNavigation.setCanWalkOverFences(arg0: Boolean) = this.method_46645(arg0)
+fun MobNavigation.canEnterOpenDoors() = this.method_6366()
+fun MobNavigation.setCanEnterOpenDoors(arg0: Boolean) = this.method_35139(arg0)
+fun MobNavigation.setAvoidSunlight(arg0: Boolean) = this.method_6361(arg0)
+fun MobNavigation.setCanPathThroughDoors(arg0: Boolean) = this.method_6363(arg0)
+fun EntityNavigation.findPathTo(arg0: BlockPos, arg1: Int, arg2: Int) = this.method_35141(arg0, arg1, arg2)
+fun EntityNavigation.isNearPathStartPos() = this.method_31267()
+fun EntityNavigation.startMovingTo(arg0: Entity, arg1: Double) = this.method_6335(arg0, arg1)
+fun EntityNavigation.startMovingTo(arg0: Double, arg1: Double, arg2: Double, arg3: Double) = this.method_6337(arg0, arg1, arg2, arg3)
+fun EntityNavigation.isFollowingPath() = this.method_23966()
+fun EntityNavigation.tick() = this.method_6360()
+fun EntityNavigation.stop() = this.method_6340()
+fun EntityNavigation.findPathTo(arg0: BlockPos, arg1: Int) = this.method_6348(arg0, arg1)
+fun EntityNavigation.isValidPosition(arg0: BlockPos) = this.method_6333(arg0)
+fun EntityNavigation.startMovingAlong(arg0: Path, arg1: Double) = this.method_6334(arg0, arg1)
+fun EntityNavigation.isIdle() = this.method_6357()
+fun EntityNavigation.getTargetPos() = this.method_6355()
+fun EntityNavigation.findPathTo(arg0: Double, arg1: Double, arg2: Double, arg3: Int) = this.method_6352(arg0, arg1, arg2, arg3)
+fun EntityNavigation.setSpeed(arg0: Double) = this.method_6344(arg0)
+fun EntityNavigation.setRangeMultiplier(arg0: Float) = this.method_23964(arg0)
+fun EntityNavigation.shouldRecalculatePath(arg0: BlockPos) = this.method_18053(arg0)
+fun EntityNavigation.canSwim() = this.method_6350()
+fun EntityNavigation.setCanSwim(arg0: Boolean) = this.method_6354(arg0)
+fun EntityNavigation.startMovingTo(arg0: Double, arg1: Double, arg2: Double, arg3: Int, arg4: Double) = this.method_58160(arg0, arg1, arg2, arg3, arg4)
+fun EntityNavigation.resetRangeMultiplier() = this.method_23965()
+fun EntityNavigation.findPathTo(arg0: Entity, arg1: Int) = this.method_6349(arg0, arg1)
+fun EntityNavigation.recalculatePath() = this.method_6356()
+fun EntityNavigation.findPathToAny(arg0: Stream<BlockPos>, arg1: Int) = this.method_21643(arg0, arg1)
+fun EntityNavigation.canJumpToNext(arg0: PathNodeType) = this.method_48158(arg0)
+fun EntityNavigation.findPathTo(arg0: Set<BlockPos>, arg1: Int) = this.method_29934(arg0, arg1)
+fun SetCameraEntityS2CPacket.getEntity(arg0: world_World) = this.method_11800(arg0)
+fun SetCameraEntityS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11801(arg0)
+fun BirdNavigation.setCanEnterOpenDoors(arg0: Boolean) = this.method_6331(arg0)
+fun BirdNavigation.canEnterOpenDoors() = this.method_35128()
+fun BirdNavigation.setCanPathThroughDoors(arg0: Boolean) = this.method_6332(arg0)
+fun UpdateSelectedSlotS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11802(arg0)
+fun ScoreboardDisplayS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11805(arg0)
+val WolfVariant.ENTRY_CODEC by aliasStatic(WolfVariant::field_49980)
+val WolfVariant.ENTRY_PACKET_CODEC by aliasStatic(WolfVariant::field_51944)
+val WolfVariant.PACKET_CODEC by aliasStatic(WolfVariant::field_51943)
+val GuiNavigationType.KEYBOARD_ARROW by aliasEnum(GuiNavigationType::class, "field_43097")
+val GuiNavigationType.KEYBOARD_TAB by aliasEnum(GuiNavigationType::class, "field_41780")
+val GuiNavigationType.NONE by aliasEnum(GuiNavigationType::class, "field_41777")
+val GuiNavigationType.MOUSE by aliasEnum(GuiNavigationType::class, "field_41778")
+fun GuiNavigationType.isMouse() = this.method_48182()
+fun GuiNavigationType.isKeyboard() = this.method_48183()
+val Colors.WHITE by aliasStatic(Colors::field_42973)
+val Colors.BLACK by aliasStatic(Colors::field_42974)
+val Colors.LIGHT_RED by aliasStatic(Colors::field_46652)
+val Colors.ALTERNATE_WHITE by aliasStatic(Colors::field_49788)
+val Colors.BLUE by aliasStatic(Colors::field_52313)
+val Colors.LIGHT_GRAY by aliasStatic(Colors::field_45073)
+val Colors.GREEN by aliasStatic(Colors::field_52312)
+val Colors.RED by aliasStatic(Colors::field_41758)
+val Colors.LIGHT_YELLOW by aliasStatic(Colors::field_46768)
+val Colors.YELLOW by aliasStatic(Colors::field_46767)
+val Colors.GRAY by aliasStatic(Colors::field_44941)
+fun RotationCalculator.toRotation(arg0: Direction) = this.method_48124(arg0)
+fun RotationCalculator.areRotationsParallel(arg0: Int, arg1: Int) = this.method_48123(arg0, arg1)
+fun RotationCalculator.toWrappedDegrees(arg0: Int) = this.method_48126(arg0)
+fun RotationCalculator.clamp(arg0: Int) = this.method_48127(arg0)
+fun RotationCalculator.toDegrees(arg0: Int) = this.method_48122(arg0)
+fun RotationCalculator.toClampedRotation(arg0: Float) = this.method_48125(arg0)
+fun RotationCalculator.toRotation(arg0: Float) = this.method_48121(arg0)
+fun VanillaShearingLootTableGenerator.registries() = this.comp_2792()
+fun NarratedMultilineTextWidget.initMaxWidth(arg0: Int) = this.method_57721(arg0)
+fun KClass<SlotRanges>.streamSingleSlotNames() = SlotRanges.method_58088()
+fun KClass<SlotRanges>.streamNames() = SlotRanges.method_58078()
+fun GuiNavigationPath.setFocused(arg0: Boolean) = this.method_48195(arg0)
+fun GuiNavigationPath.component() = this.comp_1188()
+fun SlotRange.getSlotCount() = this.method_58077()
+fun SlotRange.getSlotIds() = this.method_58075()
+val WolfVariants.DEFAULT by aliasStatic(WolfVariants::field_51588)
+val WolfVariants.SPOTTED by aliasStatic(WolfVariants::field_49726)
+val WolfVariants.PALE by aliasStatic(WolfVariants::field_49725)
+val WolfVariants.BLACK by aliasStatic(WolfVariants::field_49728)
+val WolfVariants.SNOWY by aliasStatic(WolfVariants::field_49727)
+val WolfVariants.ASHEN by aliasStatic(WolfVariants::field_49729)
+val WolfVariants.WOODS by aliasStatic(WolfVariants::field_49731)
+val WolfVariants.RUSTY by aliasStatic(WolfVariants::field_49730)
+val WolfVariants.STRIPED by aliasStatic(WolfVariants::field_49733)
+val WolfVariants.CHESTNUT by aliasStatic(WolfVariants::field_49732)
+fun KClass<WolfVariants>.fromBiome(arg0: DynamicRegistryManager, arg1: RegistryEntry<Biome>) = WolfVariants.method_58067(arg0, arg1)
+fun LookAtS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11731(arg0)
+fun LookAtS2CPacket.getTargetPosition(arg0: world_World) = this.method_11732(arg0)
+fun BlockPattern.testTransform(arg0: WorldView, arg1: BlockPos, arg2: Direction, arg3: Direction) = this.method_35300(arg0, arg1, arg2, arg3)
+fun BlockPattern.searchAround(arg0: WorldView, arg1: BlockPos) = this.method_11708(arg0, arg1)
+fun KClass<BlockPattern>.makeCache(arg0: WorldView, arg1: Boolean) = BlockPattern.method_11709(arg0, arg1)
+fun PlayerListS2CPacket.getPlayerAdditionEntries() = this.method_46330()
+fun PlayerListS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11721(arg0)
+fun KClass<PlayerListS2CPacket>.entryFromPlayer(arg0: Collection<ServerPlayerEntity>) = PlayerListS2CPacket.method_43886(arg0)
+fun PlayerPositionLookS2CPacket.getY() = this.method_11735()
+fun PlayerPositionLookS2CPacket.getX() = this.method_11734()
+fun PlayerPositionLookS2CPacket.getZ() = this.method_11738()
+fun PlayerPositionLookS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11740(arg0)
+val PositionFlag.VALUES by aliasStatic(PositionFlag::field_40710)
+val PositionFlag.ROT by aliasStatic(PositionFlag::field_40711)
+val PositionFlag.X_ROT by aliasEnum(PositionFlag::class, "field_12397")
+val PositionFlag.Y by aliasEnum(PositionFlag::class, "field_12398")
+val PositionFlag.Y_ROT by aliasEnum(PositionFlag::class, "field_12401")
+val PositionFlag.Z by aliasEnum(PositionFlag::class, "field_12403")
+val PositionFlag.X by aliasEnum(PositionFlag::class, "field_12400")
+fun KClass<PositionFlag>.getBitfield(arg0: Set<PositionFlag>) = PositionFlag.method_11741(arg0)
+fun KClass<PositionFlag>.getFlags(arg0: Int) = PositionFlag.method_11744(arg0)
+fun KClass<EnchantmentsPredicate>.storedEnchantments(arg0: List<EnchantmentPredicate>) = EnchantmentsPredicate.method_58176(arg0)
+fun EnchantmentsPredicate.test(arg0: ItemStack, arg1: ItemEnchantmentsComponent) = this.method_58172(arg0, arg1)
+fun KClass<EnchantmentsPredicate>.enchantments(arg0: List<EnchantmentPredicate>) = EnchantmentsPredicate.method_58173(arg0)
+fun KClass<item_DamagePredicate>.durability(arg0: net.minecraft.class_2096.class_2100) = item_DamagePredicate.method_58165(arg0)
+fun item_DamagePredicate.test(arg0: ItemStack, arg1: Int) = this.method_58166(arg0, arg1)
+fun item_DamagePredicate.durability() = this.comp_2459()
+fun item_DamagePredicate.damage() = this.comp_2460()
+fun GuiNavigation.getDirection() = this.method_48231()
+fun KClass<CustomDataPredicate>.customData(arg0: NbtPredicate) = CustomDataPredicate.method_58162(arg0)
+fun CustomDataPredicate.value() = this.comp_2458()
+fun Widget.getNavigationFocus() = this.method_48202()
+fun Widget.setY(arg0: Int) = this.method_46419(arg0)
+fun Widget.setPosition(arg0: Int, arg1: Int) = this.method_48229(arg0, arg1)
+fun Widget.getHeight() = this.method_25364()
+fun Widget.getX() = this.method_46426()
+fun Widget.forEachChild(arg0: Consumer<ClickableWidget>) = this.method_48206(arg0)
+fun Widget.getY() = this.method_46427()
+fun Widget.getWidth() = this.method_25368()
+fun Widget.setX(arg0: Int) = this.method_46421(arg0)
+fun KClass<SlotRangeArgumentType>.slotRange() = SlotRangeArgumentType.method_58130()
+fun SlotRangeArgumentType.parse(arg0: StringReader) = this.method_58132(arg0)
+fun KClass<SlotRangeArgumentType>.getSlotRange(arg0: CommandContext<ServerCommandSource>, arg1: String) = SlotRangeArgumentType.method_58133(arg0, arg1)
+fun SlotsPredicate.matches(arg0: Entity) = this.method_58119(arg0)
+fun SlotsPredicate.slots() = this.comp_2455()
+val LogoDrawer.LOGO_REGION_WIDTH by aliasStatic(LogoDrawer::field_41807)
+val LogoDrawer.LOGO_BASE_Y by aliasStatic(LogoDrawer::field_41809)
+val LogoDrawer.LOGO_REGION_HEIGHT by aliasStatic(LogoDrawer::field_41808)
+val LogoDrawer.MINCERAFT_TEXTURE by aliasStatic(LogoDrawer::field_44540)
+val LogoDrawer.EDITION_TEXTURE by aliasStatic(LogoDrawer::field_41806)
+val LogoDrawer.LOGO_TEXTURE by aliasStatic(LogoDrawer::field_41805)
+fun LogoDrawer.draw(arg0: DrawContext, arg1: Int, arg2: Float) = this.method_48209(arg0, arg1, arg2)
+fun LogoDrawer.draw(arg0: DrawContext, arg1: Int, arg2: Float, arg3: Int) = this.method_48210(arg0, arg1, arg2, arg3)
+val ResourcePackSendS2CPacket.MAX_HASH_LENGTH by aliasStatic(ResourcePackSendS2CPacket::field_33340)
+fun ResourcePackSendS2CPacket.apply(arg0: ClientCommonPacketListener) = this.method_11774(arg0)
+fun ResourcePackSendS2CPacket.id() = this.comp_2158()
+fun ResourcePackSendS2CPacket.prompt() = this.comp_2162()
+fun ResourcePackSendS2CPacket.hash() = this.comp_2160()
+fun ResourcePackSendS2CPacket.required() = this.comp_2161()
+fun ResourcePackSendS2CPacket.url() = this.comp_2159()
+fun ScreenPos.getComponent(arg0: NavigationAxis) = this.method_48245(arg0)
+fun ScreenPos.add(arg0: NavigationDirection) = this.method_48247(arg0)
+fun ScreenPos.x() = this.comp_1193()
+fun ScreenPos.y() = this.comp_1194()
+fun PotionContentsPredicate.test(arg0: ItemStack, arg1: PotionContentsComponent) = this.method_58177(arg0, arg1)
+fun KClass<PotionContentsPredicate>.potionContents(arg0: RegistryEntryList<Potion>) = PotionContentsPredicate.method_58178(arg0)
+fun PotionContentsPredicate.potions() = this.comp_2461()
+val NavigationAxis.HORIZONTAL by aliasEnum(NavigationAxis::class, "field_41822")
+val NavigationAxis.VERTICAL by aliasEnum(NavigationAxis::class, "field_41823")
+fun NavigationAxis.getPositiveDirection() = this.method_48234()
+fun NavigationAxis.getOther() = this.method_48232()
+fun NavigationAxis.getNegativeDirection() = this.method_48235()
+fun NavigationAxis.getDirection(arg0: Boolean) = this.method_48233(arg0)
+val NavigationDirection.RIGHT by aliasEnum(NavigationDirection::class, "field_41829")
+val NavigationDirection.UP by aliasEnum(NavigationDirection::class, "field_41826")
+val NavigationDirection.DOWN by aliasEnum(NavigationDirection::class, "field_41827")
+val NavigationDirection.LEFT by aliasEnum(NavigationDirection::class, "field_41828")
+fun NavigationDirection.getOpposite() = this.method_48239()
+fun NavigationDirection.isBefore(arg0: Int, arg1: Int) = this.method_48240(arg0, arg1)
+fun NavigationDirection.getAxis() = this.method_48237()
+fun NavigationDirection.isPositive() = this.method_48241()
+fun NavigationDirection.isAfter(arg0: Int, arg1: Int) = this.method_48238(arg0, arg1)
+val BlockStatePredicate.ANY by aliasStatic(BlockStatePredicate::field_12419)
+fun BlockStatePredicate.test(arg0: BlockState) = this.method_11760(arg0)
+fun KClass<BlockStatePredicate>.forBlock(arg0: Block) = BlockStatePredicate.method_11758(arg0)
+fun EntitiesDestroyS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11764(arg0)
+fun BlockPredicate.test(arg0: BlockState) = this.method_11765(arg0)
+fun RemoveEntityStatusEffectS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11769(arg0)
+fun RemoveEntityStatusEffectS2CPacket.getEntity(arg0: world_World) = this.method_11767(arg0)
+fun RemoveEntityStatusEffectS2CPacket.effect() = this.comp_2176()
+fun RemoveEntityStatusEffectS2CPacket.entityId() = this.comp_2175()
+fun ChangeUnlockedRecipesS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11753(arg0)
+fun ComponentMap.getTypes() = this.method_57831()
+fun ComponentMap.isEmpty() = this.method_57837()
+fun KClass<ComponentMap>.createCodecFromValueMap(arg0: Codec<Map<ComponentType<*>, *>>) = ComponentMap.method_60388(arg0)
+fun ComponentMap.stream() = this.method_57833()
+fun ComponentMap.contains(arg0: ComponentType<*>) = this.method_57832(arg0)
+fun <T>ComponentMap.getOrDefault(arg0: ComponentType<out T>, arg1: T) = this.method_57830<T>(arg0, arg1)
+fun <T>ComponentMap.copy(arg0: ComponentType<T>) = this.method_57834<T>(arg0)
+fun <T>ComponentMap.get(arg0: ComponentType<out T>) = this.method_57829<T>(arg0)
+fun ComponentMap.filtered(arg0: Predicate<ComponentType<*>>) = this.method_57828(arg0)
+fun ComponentMap.size() = this.method_57835()
+fun ComponentHolder.contains(arg0: ComponentType<*>) = this.method_57826(arg0)
+fun <T>ComponentHolder.get(arg0: ComponentType<out T>) = this.method_57824<T>(arg0)
+fun <T>ComponentHolder.getOrDefault(arg0: ComponentType<out T>, arg1: T) = this.method_57825<T>(arg0, arg1)
+fun ComponentHolder.getComponents() = this.method_57353()
+fun BoggedEntityModel.animateModel(arg0: BoggedEntity, arg1: Float, arg2: Float, arg3: Float) = this.method_57792(arg0, arg1, arg2, arg3)
+val ComponentPredicate.EMPTY by aliasStatic(ComponentPredicate::field_49597)
+val ComponentPredicate.PACKET_CODEC by aliasStatic(ComponentPredicate::field_49596)
+fun ComponentPredicate.isEmpty() = this.method_57867()
+fun ComponentPredicate.test(arg0: ComponentHolder) = this.method_57864(arg0)
+fun ComponentPredicate.test(arg0: ComponentMap) = this.method_57868(arg0)
+fun ComponentPredicate.toChanges() = this.method_57870()
+val ComponentChanges.EMPTY by aliasStatic(ComponentChanges::field_49588)
+val ComponentChanges.PACKET_CODEC by aliasStatic(ComponentChanges::field_49590)
+fun ComponentChanges.withRemovedIf(arg0: Predicate<ComponentType<*>>) = this.method_58757(arg0)
+fun ComponentChanges.entrySet() = this.method_57846()
+fun ComponentChanges.isEmpty() = this.method_57848()
+fun ComponentChanges.toAddedRemovedPair() = this.method_58759()
+fun <T>ComponentChanges.get(arg0: ComponentType<out T>) = this.method_57845<T>(arg0)
+fun ComponentChanges.size() = this.method_57847()
+fun ComponentMapImpl.getChanges() = this.method_57940()
+fun <T>ComponentMapImpl.set(arg0: ComponentType<in T>, arg1: T) = this.method_57938<T>(arg0, arg1)
+fun ComponentMapImpl.copy() = this.method_57941()
+fun ComponentMapImpl.setChanges(arg0: ComponentChanges) = this.method_59772(arg0)
+fun ComponentMapImpl.setAll(arg0: ComponentMap) = this.method_57933(arg0)
+fun ComponentMapImpl.applyChanges(arg0: ComponentChanges) = this.method_57936(arg0)
+fun <T>ComponentMapImpl.remove(arg0: ComponentType<out T>) = this.method_57939<T>(arg0)
+val DataComponentTypes.DEFAULT_ITEM_COMPONENTS by aliasStatic(DataComponentTypes::field_49627)
+val DataComponentTypes.ENTITY_DATA by aliasStatic(DataComponentTypes::field_49609)
+val DataComponentTypes.DEBUG_STICK_STATE by aliasStatic(DataComponentTypes::field_49608)
+val DataComponentTypes.WRITTEN_BOOK_CONTENT by aliasStatic(DataComponentTypes::field_49606)
+val DataComponentTypes.TRIM by aliasStatic(DataComponentTypes::field_49607)
+val DataComponentTypes.PROFILE by aliasStatic(DataComponentTypes::field_49617)
+val DataComponentTypes.NOTE_BLOCK_SOUND by aliasStatic(DataComponentTypes::field_49618)
+val DataComponentTypes.FIREWORKS by aliasStatic(DataComponentTypes::field_49616)
+val DataComponentTypes.FIREWORK_EXPLOSION by aliasStatic(DataComponentTypes::field_49615)
+val DataComponentTypes.LODESTONE_TRACKER by aliasStatic(DataComponentTypes::field_49614)
+val DataComponentTypes.RECIPES by aliasStatic(DataComponentTypes::field_49613)
+val DataComponentTypes.INSTRUMENT by aliasStatic(DataComponentTypes::field_49612)
+val DataComponentTypes.BLOCK_ENTITY_DATA by aliasStatic(DataComponentTypes::field_49611)
+val DataComponentTypes.BUCKET_ENTITY_DATA by aliasStatic(DataComponentTypes::field_49610)
+val DataComponentTypes.BANNER_PATTERNS by aliasStatic(DataComponentTypes::field_49619)
+val DataComponentTypes.POT_DECORATIONS by aliasStatic(DataComponentTypes::field_49621)
+val DataComponentTypes.BASE_COLOR by aliasStatic(DataComponentTypes::field_49620)
+val DataComponentTypes.CUSTOM_DATA by aliasStatic(DataComponentTypes::field_49628)
+val DataComponentTypes.DAMAGE by aliasStatic(DataComponentTypes::field_49629)
+val DataComponentTypes.CONTAINER_LOOT by aliasStatic(DataComponentTypes::field_49626)
+val DataComponentTypes.LOCK by aliasStatic(DataComponentTypes::field_49625)
+val DataComponentTypes.BEES by aliasStatic(DataComponentTypes::field_49624)
+val DataComponentTypes.BLOCK_STATE by aliasStatic(DataComponentTypes::field_49623)
+val DataComponentTypes.CONTAINER by aliasStatic(DataComponentTypes::field_49622)
+val DataComponentTypes.ENCHANTMENTS by aliasStatic(DataComponentTypes::field_49633)
+val DataComponentTypes.LORE by aliasStatic(DataComponentTypes::field_49632)
+val DataComponentTypes.CUSTOM_NAME by aliasStatic(DataComponentTypes::field_49631)
+val DataComponentTypes.JUKEBOX_PLAYABLE by aliasStatic(DataComponentTypes::field_52175)
+val DataComponentTypes.UNBREAKABLE by aliasStatic(DataComponentTypes::field_49630)
+val DataComponentTypes.REPAIR_COST by aliasStatic(DataComponentTypes::field_49639)
+val DataComponentTypes.HIDE_ADDITIONAL_TOOLTIP by aliasStatic(DataComponentTypes::field_49638)
+val DataComponentTypes.CUSTOM_MODEL_DATA by aliasStatic(DataComponentTypes::field_49637)
+val DataComponentTypes.ATTRIBUTE_MODIFIERS by aliasStatic(DataComponentTypes::field_49636)
+val DataComponentTypes.CAN_BREAK by aliasStatic(DataComponentTypes::field_49635)
+val DataComponentTypes.CAN_PLACE_ON by aliasStatic(DataComponentTypes::field_49634)
+val DataComponentTypes.MAP_COLOR by aliasStatic(DataComponentTypes::field_49645)
+val DataComponentTypes.DYED_COLOR by aliasStatic(DataComponentTypes::field_49644)
+val DataComponentTypes.STORED_ENCHANTMENTS by aliasStatic(DataComponentTypes::field_49643)
+val DataComponentTypes.INTANGIBLE_PROJECTILE by aliasStatic(DataComponentTypes::field_49642)
+val DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE by aliasStatic(DataComponentTypes::field_49641)
+val DataComponentTypes.CREATIVE_SLOT_LOCK by aliasStatic(DataComponentTypes::field_49640)
+val DataComponentTypes.CHARGED_PROJECTILES by aliasStatic(DataComponentTypes::field_49649)
+val DataComponentTypes.MAP_POST_PROCESSING by aliasStatic(DataComponentTypes::field_49648)
+val DataComponentTypes.MAP_DECORATIONS by aliasStatic(DataComponentTypes::field_49647)
+val DataComponentTypes.MAP_ID by aliasStatic(DataComponentTypes::field_49646)
+val DataComponentTypes.OMINOUS_BOTTLE_AMPLIFIER by aliasStatic(DataComponentTypes::field_50238)
+val DataComponentTypes.ITEM_NAME by aliasStatic(DataComponentTypes::field_50239)
+val DataComponentTypes.MAX_STACK_SIZE by aliasStatic(DataComponentTypes::field_50071)
+val DataComponentTypes.MAX_DAMAGE by aliasStatic(DataComponentTypes::field_50072)
+val DataComponentTypes.RARITY by aliasStatic(DataComponentTypes::field_50073)
+val DataComponentTypes.HIDE_TOOLTIP by aliasStatic(DataComponentTypes::field_50074)
+val DataComponentTypes.FOOD by aliasStatic(DataComponentTypes::field_50075)
+val DataComponentTypes.FIRE_RESISTANT by aliasStatic(DataComponentTypes::field_50076)
+val DataComponentTypes.TOOL by aliasStatic(DataComponentTypes::field_50077)
+val DataComponentTypes.WRITABLE_BOOK_CONTENT by aliasStatic(DataComponentTypes::field_49653)
+val DataComponentTypes.SUSPICIOUS_STEW_EFFECTS by aliasStatic(DataComponentTypes::field_49652)
+val DataComponentTypes.POTION_CONTENTS by aliasStatic(DataComponentTypes::field_49651)
+val DataComponentTypes.BUNDLE_CONTENTS by aliasStatic(DataComponentTypes::field_49650)
+val HoveredTooltipPositioner.INSTANCE by aliasStatic(HoveredTooltipPositioner::field_41687)
+fun <T>ComponentType<T>.getCodec() = this.method_57875()
+fun <T>ComponentType<T>.getPacketCodec() = this.method_57878()
+fun <T>ComponentType<T>.getCodecOrThrow() = this.method_57876()
+fun <T>ComponentType<T>.shouldSkipSerialization() = this.method_57877()
+fun TooltipPositioner.getPosition(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int) = this.method_47944(arg0, arg1, arg2, arg3, arg4, arg5)
+fun KClass<AdvancementDisplays>.calculateDisplay(arg0: PlacedAdvancement, arg1: Predicate<PlacedAdvancement>, arg2: net.minecraft.class_8005.class_8006) = AdvancementDisplays.method_48031(arg0, arg1, arg2)
+val <T>Component<T>.PACKET_CODEC by aliasStatic({Component.field_49657})
+fun <T>Component<T>.apply(arg0: ComponentMapImpl) = this.method_57946(arg0)
+fun <T, D>Component<T>.encode(arg0: DynamicOps<D>) = this.method_57943<D>(arg0)
+fun <T>Component<T>.value() = this.comp_2444()
+fun <T>Component<T>.type() = this.comp_2443()
+fun ChunkSectionCache.getSection(arg0: BlockPos) = this.method_33944(arg0)
+fun ChunkSectionCache.getBlockState(arg0: BlockPos) = this.method_33946(arg0)
+fun ChunkTicketManager.toDumpString() = this.method_21683()
+fun ChunkTicketManager.update(arg0: ServerChunkLoadingManager) = this.method_15892(arg0)
+fun ChunkTicketManager.handleChunkEnter(arg0: ChunkSectionPos, arg1: ServerPlayerEntity) = this.method_14048(arg0, arg1)
+fun <T>ChunkTicketManager.addTicketWithLevel(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_17290<T>(arg0, arg1, arg2, arg3)
+fun ChunkTicketManager.shouldTickEntities(arg0: Long) = this.method_38630(arg0)
+fun ChunkTicketManager.purge() = this.method_14045()
+fun ChunkTicketManager.shouldTick(arg0: Long) = this.method_20800(arg0)
+fun ChunkTicketManager.handleChunkLeave(arg0: ChunkSectionPos, arg1: ServerPlayerEntity) = this.method_14051(arg0, arg1)
+fun ChunkTicketManager.setSimulationDistance(arg0: Int) = this.method_38629(arg0)
+fun ChunkTicketManager.shouldDelayShutdown() = this.method_39996()
+fun <T>ChunkTicketManager.removeTicket(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_17292<T>(arg0, arg1, arg2, arg3)
+fun <T>ChunkTicketManager.removeTicketWithLevel(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_20444<T>(arg0, arg1, arg2, arg3)
+fun ChunkTicketManager.shouldTickBlocks(arg0: Long) = this.method_38632(arg0)
+fun ChunkTicketManager.getTickedChunkCount() = this.method_14052()
+fun ChunkTicketManager.removePersistentTickets() = this.method_39995()
+fun <T>ChunkTicketManager.addTicket(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_17291<T>(arg0, arg1, arg2, arg3)
+fun TestFunctionArgumentType.parse(arg0: StringReader) = this.method_22302(arg0)
+fun KClass<TestFunctionArgumentType>.testFunction() = TestFunctionArgumentType.method_22371()
+fun KClass<TestFunctionArgumentType>.getFunction(arg0: CommandContext<ServerCommandSource>, arg1: String) = TestFunctionArgumentType.method_22303(arg0, arg1)
+fun <S>KClass<TestFunctionArgumentType>.suggestTestNames(arg0: CommandContext<S>, arg1: SuggestionsBuilder) = TestFunctionArgumentType.method_56325<S>(arg0, arg1)
+val FloatProvider.VALUE_CODEC by aliasStatic(FloatProvider::field_29007)
+fun FloatProvider.getType() = this.method_33923()
+fun KClass<FloatProvider>.createValidatedCodec(arg0: Float, arg1: Float) = FloatProvider.method_33916(arg0, arg1)
+fun FloatProvider.getMax() = this.method_33921()
+fun FloatProvider.getMin() = this.method_33915()
+fun TestCompletionListener.onTestPassed(arg0: GameTestState) = this.method_33322(arg0)
+fun TestCompletionListener.onStopped() = this.method_36109()
+fun TestCompletionListener.onTestFailed(arg0: GameTestState) = this.method_22304(arg0)
+val ConstantFloatProvider.ZERO by aliasStatic(ConstantFloatProvider::field_29003)
+val DemoServerPlayerInteractionManager.DEMO_DAYS by aliasStatic(DemoServerPlayerInteractionManager::field_29762)
+val DemoServerPlayerInteractionManager.DEMO_TIME by aliasStatic(DemoServerPlayerInteractionManager::field_29763)
+fun KClass<TestClassArgumentType>.getTestClass(arg0: CommandContext<ServerCommandSource>, arg1: String) = TestClassArgumentType.method_22262(arg0, arg1)
+fun KClass<TestClassArgumentType>.testClass() = TestClassArgumentType.method_22370()
+fun TestClassArgumentType.parse(arg0: StringReader) = this.method_22261(arg0)
+fun AbstractCountPlacementModifier.getCount(arg0: FeaturePlacementContext, arg1: Random, arg2: BlockPos) = this.method_14452(arg0, arg1, arg2)
+fun TestFunction.batchId() = this.comp_2218()
+fun TestFunction.templatePath() = this.comp_2219()
+fun TestFunction.starter() = this.comp_2227()
+fun TestFunction.tickLimit() = this.comp_2222()
+fun TestFunction.templateName() = this.comp_2220()
+fun TestFunction.start(arg0: TestContext) = this.method_22297(arg0)
+fun TestFunction.isFlaky() = this.method_32257()
+fun TestFunction.skyAccess() = this.comp_2362()
+fun TestFunction.rotation() = this.comp_2221()
+fun TestFunction.setupTicks() = this.comp_2223()
+fun TestFunction.requiredSuccesses() = this.comp_2226()
+fun TestFunction.maxAttempts() = this.comp_2225()
+fun TestFunction.required() = this.comp_2224()
+fun TestFunction.manualOnly() = this.comp_2445()
+fun RavineCarver.carve(arg0: CarverContext, arg1: RavineCarverConfig, arg2: Chunk, arg3: Function<BlockPos, RegistryEntry<Biome>>, arg4: Random, arg5: AquiferSampler, arg6: ChunkPos, arg7: CarvingMask) = this.method_33962(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun RavineCarver.shouldCarve(arg0: RavineCarverConfig, arg1: Random) = this.method_33959(arg0, arg1)
+fun ServerBossBar.isVisible() = this.method_14093()
+fun ServerBossBar.clearPlayers() = this.method_14094()
+fun ServerBossBar.addPlayer(arg0: ServerPlayerEntity) = this.method_14088(arg0)
+fun ServerBossBar.setVisible(arg0: Boolean) = this.method_14091(arg0)
+fun ServerBossBar.removePlayer(arg0: ServerPlayerEntity) = this.method_14089(arg0)
+val ServerChunkManager.chunkLoadingManager by alias(ServerChunkManager::field_17254)
+fun <T>ServerChunkManager.addTicket(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_17297<T>(arg0, arg1, arg2, arg3)
+fun ServerChunkManager.removePersistentTickets() = this.method_39997()
+fun ServerChunkManager.getNoiseConfig() = this.method_41248()
+fun ServerChunkManager.getPendingTasks() = this.method_21694()
+fun ServerChunkManager.applySimulationDistance(arg0: Int) = this.method_38634(arg0)
+fun ServerChunkManager.sendToNearbyPlayers(arg0: Entity, arg1: Packet<*>) = this.method_18751(arg0, arg1)
+fun ServerChunkManager.getTotalChunksLoadedCount() = this.method_17301()
+fun ServerChunkManager.getChunkFutureSyncOnMainThread(arg0: Int, arg1: Int, arg2: ChunkStatus, arg3: Boolean) = this.method_17299(arg0, arg1, arg2, arg3)
+fun ServerChunkManager.loadEntity(arg0: Entity) = this.method_18755(arg0)
+fun ServerChunkManager.updatePosition(arg0: ServerPlayerEntity) = this.method_14096(arg0)
+fun ServerChunkManager.sendToOtherNearbyPlayers(arg0: Entity, arg1: Packet<*>) = this.method_18754(arg0, arg1)
+fun ServerChunkManager.getStructurePlacementCalculator() = this.method_46642()
+fun ServerChunkManager.markForUpdate(arg0: BlockPos) = this.method_14128(arg0)
+fun ServerChunkManager.executeQueuedTasks() = this.method_19492()
+fun ServerChunkManager.getPointOfInterestStorage() = this.method_19493()
+fun ServerChunkManager.getChunkIoWorker() = this.method_39777()
+fun ServerChunkManager.applyViewDistance(arg0: Int) = this.method_14144(arg0)
+fun ServerChunkManager.getChunkLoadingDebugInfo(arg0: ChunkPos) = this.method_23273(arg0)
+fun ServerChunkManager.isTickingFutureReady(arg0: Long) = this.method_37114(arg0)
+fun ServerChunkManager.getChunkGenerator() = this.method_12129()
+fun ServerChunkManager.save(arg0: Boolean) = this.method_17298(arg0)
+fun ServerChunkManager.unloadEntity(arg0: Entity) = this.method_18753(arg0)
+fun <T>ServerChunkManager.removeTicket(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_17300<T>(arg0, arg1, arg2, arg3)
+val ParticleGroup.SPORE_BLOSSOM_AIR by aliasStatic(ParticleGroup::field_29077)
+fun BlockBufferBuilderPool.hasNoAvailableBuilder() = this.method_54645()
+fun KClass<BlockBufferBuilderPool>.allocate(arg0: Int) = BlockBufferBuilderPool.method_54643(arg0)
+fun BlockBufferBuilderPool.release(arg0: BlockBufferAllocatorStorage) = this.method_54644(arg0)
+fun BlockBufferBuilderPool.acquire() = this.method_54642()
+val CarverDebugConfig.DEFAULT by aliasStatic(CarverDebugConfig::field_29055)
+fun CarverDebugConfig.isDebugMode() = this.method_33970()
+val CarverConfig.yScale by alias(CarverConfig::field_31489)
+val CarverConfig.replaceable by alias(CarverConfig::field_38864)
+val CarverConfig.debugConfig by alias(CarverConfig::field_29053)
+val CarverConfig.y by alias(CarverConfig::field_31488)
+val CarverConfig.CONFIG_CODEC by aliasStatic(CarverConfig::field_29054)
+val CarverConfig.lavaLevel by alias(CarverConfig::field_31490)
+fun KClass<SeedMixer>.mixSeed(arg0: Long, arg1: Long) = SeedMixer.method_22372(arg0, arg1)
+fun PlayerChunkWatchingManager.isWatchInactive(arg0: ServerPlayerEntity) = this.method_21715(arg0)
+fun PlayerChunkWatchingManager.remove(arg0: ServerPlayerEntity) = this.method_14084(arg0)
+fun PlayerChunkWatchingManager.add(arg0: ServerPlayerEntity, arg1: Boolean) = this.method_14085(arg0, arg1)
+fun PlayerChunkWatchingManager.isWatchDisabled(arg0: ServerPlayerEntity) = this.method_14082(arg0)
+fun PlayerChunkWatchingManager.getPlayersWatchingChunk() = this.method_14083()
+fun PlayerChunkWatchingManager.disableWatch(arg0: ServerPlayerEntity) = this.method_14086(arg0)
+fun PlayerChunkWatchingManager.enableWatch(arg0: ServerPlayerEntity) = this.method_14087(arg0)
+val BiomeAccess.CHUNK_CENTER_OFFSET by aliasStatic(BiomeAccess::field_28106)
+fun BiomeAccess.getBiome(arg0: BlockPos) = this.method_22393(arg0)
+fun BiomeAccess.getBiomeForNoiseGen(arg0: Double, arg1: Double, arg2: Double) = this.method_24938(arg0, arg1, arg2)
+fun BiomeAccess.getBiomeForNoiseGen(arg0: BlockPos) = this.method_27344(arg0)
+fun KClass<BiomeAccess>.hashSeed(arg0: Long) = BiomeAccess.method_27984(arg0)
+fun BiomeAccess.getBiomeForNoiseGen(arg0: Int, arg1: Int, arg2: Int) = this.method_24854(arg0, arg1, arg2)
+fun BiomeAccess.withSource(arg0: net.minecraft.class_4543.class_4544) = this.method_38107(arg0)
+fun CarverContext.applyMaterialRule(arg0: Function<BlockPos, RegistryEntry<Biome>>, arg1: Chunk, arg2: BlockPos, arg3: Boolean) = this.method_39114(arg0, arg1, arg2, arg3)
+fun WorldView.isRegionLoaded(arg0: Int, arg1: Int, arg2: Int, arg3: Int) = this.method_33597(arg0, arg1, arg2, arg3)
+fun WorldView.getLightLevel(arg0: BlockPos, arg1: Int) = this.method_22346(arg0, arg1)
+fun WorldView.getDimension() = this.method_8597()
+fun WorldView.getLightLevel(arg0: BlockPos) = this.method_22339(arg0)
+fun WorldView.containsFluid(arg0: Box) = this.method_22345(arg0)
+fun WorldView.getBrightness(arg0: BlockPos) = this.method_22349(arg0)
+fun WorldView.getSeaLevel() = this.method_8615()
+fun WorldView.getChunk(arg0: Int, arg1: Int, arg2: ChunkStatus) = this.method_22342(arg0, arg1, arg2)
+fun WorldView.getPhototaxisFavor(arg0: BlockPos) = this.method_42309(arg0)
+fun WorldView.getBiome(arg0: BlockPos) = this.method_23753(arg0)
+fun WorldView.getAmbientDarkness() = this.method_8594()
+fun WorldView.isAir(arg0: BlockPos) = this.method_22347(arg0)
+fun WorldView.getBiomeAccess() = this.method_22385()
+fun WorldView.isWater(arg0: BlockPos) = this.method_22351(arg0)
+fun WorldView.getEnabledFeatures() = this.method_45162()
+fun <T>WorldView.createCommandRegistryWrapper(arg0: RegistryKey<out Registry<out T>>) = this.method_45448<T>(arg0)
+fun WorldView.isRegionLoaded(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int) = this.method_22341(arg0, arg1, arg2, arg3, arg4, arg5)
+fun WorldView.isChunkLoaded(arg0: Int, arg1: Int) = this.method_8393(arg0, arg1)
+fun WorldView.isPosLoaded(arg0: Int, arg1: Int) = this.method_33598(arg0, arg1)
+fun WorldView.getTopY(arg0: net.minecraft.class_2902.class_2903, arg1: Int, arg2: Int) = this.method_8624(arg0, arg1, arg2)
+fun WorldView.isSkyVisibleAllowingSea(arg0: BlockPos) = this.method_22348(arg0)
+fun WorldView.isRegionLoaded(arg0: BlockPos, arg1: BlockPos) = this.method_22343(arg0, arg1)
+fun WorldView.getChunk(arg0: Int, arg1: Int, arg2: ChunkStatus, arg3: Boolean) = this.method_8402(arg0, arg1, arg2, arg3)
+fun WorldView.isClient() = this.method_8608()
+fun WorldView.getGeneratorStoredBiome(arg0: Int, arg1: Int, arg2: Int) = this.method_22387(arg0, arg1, arg2)
+fun WorldView.getChunk(arg0: Int, arg1: Int) = this.method_8392(arg0, arg1)
+fun WorldView.getTopPosition(arg0: net.minecraft.class_2902.class_2903, arg1: BlockPos) = this.method_8598(arg0, arg1)
+fun WorldView.isChunkLoaded(arg0: BlockPos) = this.method_22340(arg0)
+fun WorldView.getRegistryManager() = this.method_30349()
+fun WorldView.getChunk(arg0: BlockPos) = this.method_22350(arg0)
+fun WorldView.getStatesInBoxIfLoaded(arg0: Box) = this.method_29556(arg0)
+val RavineCarverConfig.shape by alias(RavineCarverConfig::field_31480)
+val RavineCarverConfig.verticalRotation by alias(RavineCarverConfig::field_31479)
+val RavineCarverConfig.RAVINE_CODEC by aliasStatic(RavineCarverConfig::field_29041)
+val TurtleEntity.BABY_TURTLE_ON_LAND_FILTER by aliasStatic(TurtleEntity::field_6921)
+fun TurtleEntity.setHomePos(arg0: BlockPos) = this.method_6683(arg0)
+fun KClass<TurtleEntity>.createTurtleAttributes() = TurtleEntity.method_26896()
+fun TurtleEntity.isDiggingSand() = this.method_6695()
+fun TurtleEntity.hasEgg() = this.method_6679()
+fun KClass<YOffset>.fixed(arg0: Int) = YOffset.method_33841(arg0)
+fun KClass<YOffset>.getTop() = YOffset.method_33845()
+fun KClass<YOffset>.getBottom() = YOffset.method_33840()
+fun YOffset.getY(arg0: HeightContext) = this.method_33844(arg0)
+fun KClass<YOffset>.belowTop(arg0: Int) = YOffset.method_33849(arg0)
+fun KClass<YOffset>.aboveBottom(arg0: Int) = YOffset.method_33846(arg0)
+val GameTestBatch.DEFAULT_BATCH by aliasStatic(GameTestBatch::field_33145)
+fun GameTestBatch.states() = this.comp_2210()
+fun GameTestBatch.id() = this.comp_2209()
+fun GameTestBatch.beforeBatchFunction() = this.comp_2211()
+fun GameTestBatch.afterBatchFunction() = this.comp_2212()
+fun PositionedException.getDebugMessage() = this.method_22150()
+fun KClass<NoiseHelper>.appendDebugInfo(arg0: StringBuilder, arg1: Double, arg2: Double, arg3: Double, arg4: ByteArray) = NoiseHelper.method_39119(arg0, arg1, arg2, arg3, arg4)
+fun BeeEntityRenderer.getTexture(arg0: BeeEntity) = this.method_22129(arg0)
+val UnderwaterMagmaFeatureConfig.placementRadiusAroundFloor by alias(UnderwaterMagmaFeatureConfig::field_28855)
+val UnderwaterMagmaFeatureConfig.floorSearchRange by alias(UnderwaterMagmaFeatureConfig::field_28854)
+val UnderwaterMagmaFeatureConfig.placementProbabilityPerValidPosition by alias(UnderwaterMagmaFeatureConfig::field_28856)
+fun SleepManager.update(arg0: List<ServerPlayerEntity>) = this.method_33814(arg0)
+fun SleepManager.clearSleeping() = this.method_33811()
+fun SleepManager.canSkipNight(arg0: Int) = this.method_33812(arg0)
+fun SleepManager.getNightSkippingRequirement(arg0: Int) = this.method_33816(arg0)
+fun SleepManager.canResetTime(arg0: Int, arg1: List<ServerPlayerEntity>) = this.method_33813(arg0, arg1)
+fun <T, M>StuckObjectsFeatureRenderer<T, M>.render(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: T, arg4: Float, arg5: Float, arg6: Float, arg7: Float, arg8: Float, arg9: Float) where T: LivingEntity, M: PlayerEntityModel<T> = this.method_22132(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
+val FilteredMessage.EMPTY by aliasStatic(FilteredMessage::field_28863)
+fun FilteredMessage.raw() = this.comp_841()
+fun FilteredMessage.filter() = this.method_45059()
+fun FilteredMessage.isFiltered() = this.method_45063()
+fun KClass<FilteredMessage>.permitted(arg0: String) = FilteredMessage.method_45060(arg0)
+fun KClass<FilteredMessage>.censored(arg0: String) = FilteredMessage.method_45062(arg0)
+fun FilteredMessage.getString() = this.method_45061()
+fun FilteredMessage.mask() = this.comp_978()
+fun AbstractDonkeyEntity.hasChest() = this.method_6703()
+fun AbstractDonkeyEntity.setHasChest(arg0: Boolean) = this.method_6704(arg0)
+fun KClass<AbstractDonkeyEntity>.createAbstractDonkeyAttributes() = AbstractDonkeyEntity.method_26898()
+val AbstractHorseEntity.tailWagTicks by alias(AbstractHorseEntity::field_6957)
+fun AbstractHorseEntity.setInAir(arg0: Boolean) = this.method_6758(arg0)
+fun AbstractHorseEntity.bondWithPlayer(arg0: PlayerEntity) = this.method_6752(arg0)
+fun AbstractHorseEntity.getInventoryColumns() = this.method_6702()
+fun AbstractHorseEntity.setBred(arg0: Boolean) = this.method_6751(arg0)
+fun KClass<AbstractHorseEntity>.getInventorySize(arg0: Int) = AbstractHorseEntity.method_60977(arg0)
+fun AbstractHorseEntity.isTame() = this.method_6727()
+fun AbstractHorseEntity.setOwnerUuid(arg0: UUID) = this.method_6732(arg0)
+fun AbstractHorseEntity.getMaxTemper() = this.method_6755()
+fun AbstractHorseEntity.getAmbientStandSound() = this.method_45376()
+fun AbstractHorseEntity.setEatingGrass(arg0: Boolean) = this.method_6740(arg0)
+fun AbstractHorseEntity.isBred() = this.method_6744()
+fun AbstractHorseEntity.equipHorseArmor(arg0: PlayerEntity, arg1: ItemStack) = this.method_45375(arg0, arg1)
+fun AbstractHorseEntity.setAngry(arg0: Boolean) = this.method_6737(arg0)
+fun AbstractHorseEntity.playAngrySound() = this.method_6757()
+fun AbstractHorseEntity.setTemper(arg0: Int) = this.method_6749(arg0)
+fun AbstractHorseEntity.eatsGrass() = this.method_6762()
+fun AbstractHorseEntity.setTame(arg0: Boolean) = this.method_6766(arg0)
+fun AbstractHorseEntity.getInventorySize() = this.method_6750()
+fun KClass<AbstractHorseEntity>.createBaseHorseAttributes() = AbstractHorseEntity.method_26899()
+fun AbstractHorseEntity.isInAir() = this.method_6763()
+fun AbstractHorseEntity.interactHorse(arg0: PlayerEntity, arg1: ItemStack) = this.method_30009(arg0, arg1)
+fun AbstractHorseEntity.getMinAmbientStandDelay() = this.method_45377()
+fun AbstractHorseEntity.addTemper(arg0: Int) = this.method_6745(arg0)
+fun AbstractHorseEntity.isEatingGrass() = this.method_6724()
+fun AbstractHorseEntity.isAngry() = this.method_6736()
+fun AbstractHorseEntity.updateAnger() = this.method_6748()
+fun AbstractHorseEntity.areInventoriesDifferent(arg0: Inventory) = this.method_33338(arg0)
+val StructureTestUtil.TEST_STRUCTURES_DIRECTORY_NAME by aliasStatic(StructureTestUtil::field_33173)
+val StructureTestUtil.testStructuresDirectoryName by aliasStatic(StructureTestUtil::field_20579)
+fun KClass<StructureTestUtil>.getStructureBlockBox(arg0: BlockPos, arg1: Vec3i, arg2: BlockRotation) = StructureTestUtil.method_29409(arg0, arg1, arg2)
+fun KClass<StructureTestUtil>.findNearestStructureBlock(arg0: BlockPos, arg1: Int, arg2: ServerWorld) = StructureTestUtil.method_22255(arg0, arg1, arg2)
+fun KClass<StructureTestUtil>.findStructureBlocks(arg0: BlockPos, arg1: Int, arg2: ServerWorld) = StructureTestUtil.method_22258(arg0, arg1, arg2)
+fun KClass<StructureTestUtil>.findTargetedStructureBlock(arg0: BlockPos, arg1: Entity, arg2: ServerWorld) = StructureTestUtil.method_56252(arg0, arg1, arg2)
+fun KClass<StructureTestUtil>.getStructureBlockPos(arg0: StructureBlockBlockEntity) = StructureTestUtil.method_54849(arg0)
+fun KClass<StructureTestUtil>.initStructure(arg0: GameTestState, arg1: BlockPos, arg2: BlockRotation, arg3: ServerWorld) = StructureTestUtil.method_54903(arg0, arg1, arg2, arg3)
+fun KClass<StructureTestUtil>.placeBarrierBox(arg0: Box, arg1: ServerWorld, arg2: Boolean) = StructureTestUtil.method_57102(arg0, arg1, arg2)
+fun KClass<StructureTestUtil>.getStructureBlockBoxCornerPos(arg0: BlockPos, arg1: Vec3i, arg2: BlockRotation) = StructureTestUtil.method_54847(arg0, arg1, arg2)
+fun KClass<StructureTestUtil>.clearBarrierBox(arg0: Box, arg1: ServerWorld) = StructureTestUtil.method_57101(arg0, arg1)
+fun KClass<StructureTestUtil>.clearArea(arg0: BlockBox, arg1: ServerWorld) = StructureTestUtil.method_22246(arg0, arg1)
+fun KClass<StructureTestUtil>.findContainingStructureBlock(arg0: BlockPos, arg1: Int, arg2: ServerWorld) = StructureTestUtil.method_22244(arg0, arg1, arg2)
+fun KClass<StructureTestUtil>.createTestArea(arg0: String, arg1: BlockPos, arg2: Vec3i, arg3: BlockRotation, arg4: ServerWorld) = StructureTestUtil.method_22251(arg0, arg1, arg2, arg3, arg4)
+fun KClass<StructureTestUtil>.getStructureBoundingBox(arg0: StructureBlockBlockEntity) = StructureTestUtil.method_22242(arg0)
+fun KClass<StructureTestUtil>.getRotationSteps(arg0: BlockRotation) = StructureTestUtil.method_36105(arg0)
+fun KClass<StructureTestUtil>.placeStartButton(arg0: BlockPos, arg1: BlockPos, arg2: BlockRotation, arg3: ServerWorld) = StructureTestUtil.method_22248(arg0, arg1, arg2, arg3)
+fun TestSet.failed() = this.method_22236()
+fun TestSet.getTestCount() = this.method_22238()
+fun TestSet.getFailedRequiredTestCount() = this.method_22229()
+fun TestSet.addListener(arg0: Consumer<GameTestState>) = this.method_29407(arg0)
+fun TestSet.getOptionalTests() = this.method_36104()
+fun TestSet.getRequiredTests() = this.method_36103()
+fun TestSet.getResultString() = this.method_22240()
+fun TestSet.remove(arg0: GameTestState) = this.method_56243(arg0)
+fun TestSet.getFailedOptionalTestCount() = this.method_22234()
+fun TestSet.getCompletedTestCount() = this.method_22235()
+fun TestSet.hasFailedOptionalTests() = this.method_22237()
+fun TestSet.isDone() = this.method_22239()
+fun TestSet.add(arg0: GameTestState) = this.method_22230(arg0)
+fun TestSet.addListener(arg0: TestListener) = this.method_22231(arg0)
+val WolfEntity.FOLLOW_TAMED_PREDICATE by aliasStatic(WolfEntity::field_18004)
+fun WolfEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6717(arg0, arg1)
+fun WolfEntity.getShakeAnimationProgress(arg0: Float, arg1: Float) = this.method_6715(arg0, arg1)
+fun WolfEntity.getVariant() = this.method_58062()
+fun WolfEntity.setBegging(arg0: Boolean) = this.method_6712(arg0)
+fun WolfEntity.getTextureId() = this.method_58061()
+fun WolfEntity.isBegging() = this.method_6710()
+fun WolfEntity.setVariant(arg0: RegistryEntry<WolfVariant>) = this.method_58063(arg0)
+fun KClass<WolfEntity>.createWolfAttributes() = WolfEntity.method_26897()
+fun WolfEntity.getTailAngle() = this.method_6714()
+fun WolfEntity.getCollarColor() = this.method_6713()
+fun WolfEntity.getFurWetBrightnessMultiplier(arg0: Float) = this.method_6707(arg0)
+fun WolfEntity.isFurWet() = this.method_6711()
+fun WolfEntity.hasArmor() = this.method_55710()
+val TestManager.INSTANCE by aliasStatic(TestManager::field_20574)
+fun TestManager.tick() = this.method_22228()
+fun TestManager.start(arg0: GameTestState) = this.method_22227(arg0)
+fun TestManager.clear() = this.method_22226()
+fun TestManager.setRunContext(arg0: TestRunContext) = this.method_56241(arg0)
+fun HorseEntity.getVariant() = this.method_27077()
+fun HorseEntity.getMarking() = this.method_27078()
+fun HorseEntity.setVariant(arg0: HorseColor) = this.method_47873(arg0)
+val TestRunContext.DEFAULT_TESTS_PER_ROW by aliasStatic(TestRunContext::field_33151)
+fun KClass<TestRunContext>.clearDebugMarkers(arg0: ServerWorld) = TestRunContext.method_22213(arg0)
+fun TestRunContext.clear() = this.method_56229()
+fun TestRunContext.start() = this.method_56226()
+fun TestRunContext.retry(arg0: GameTestState) = this.method_56224(arg0)
+fun TestRunContext.addBatchListener(arg0: BatchListener) = this.method_56223(arg0)
+val CarvingMaskPlacementModifier.MODIFIER_CODEC by aliasStatic(CarvingMaskPlacementModifier::field_28934)
+fun KClass<TestFunctions>.testClassExists(arg0: String) = TestFunctions.method_22196(arg0)
+fun KClass<TestFunctions>.getTestFunctionOrThrow(arg0: String) = TestFunctions.method_22200(arg0)
+fun KClass<TestFunctions>.getFailedTestFunctions() = TestFunctions.method_29405()
+fun KClass<TestFunctions>.addFailedTestFunction(arg0: TestFunction) = TestFunctions.method_29404(arg0)
+fun KClass<TestFunctions>.getAfterBatchConsumer(arg0: String) = TestFunctions.method_32244(arg0)
+fun KClass<TestFunctions>.getTestFunctions() = TestFunctions.method_22191()
+fun KClass<TestFunctions>.getTestClasses() = TestFunctions.method_22195()
+fun KClass<TestFunctions>.getBeforeBatchConsumer(arg0: String) = TestFunctions.method_22198(arg0)
+fun KClass<TestFunctions>.clearFailedTestFunctions() = TestFunctions.method_29406()
+fun KClass<TestFunctions>.getTestFunction(arg0: String) = TestFunctions.method_22199(arg0)
+fun TestContext.setEntityPos(arg0: MobEntity, arg1: Float, arg2: Float, arg3: Float) = this.method_57099(arg0, arg1, arg2, arg3)
+fun TestContext.expectSameStates(arg0: BlockBox, arg1: BlockPos) = this.method_35977(arg0, arg1)
+fun <E>TestContext.expectEntity(arg0: EntityType<E>, arg1: Int, arg2: Int, arg3: Int, arg4: Double) where E: Entity = this.method_56202<E>(arg0, arg1, arg2, arg3, arg4)
+fun TestContext.expectBlock(arg0: Block, arg1: Int, arg2: Int, arg3: Int) = this.method_35971(arg0, arg1, arg2, arg3)
+fun TestContext.dontExpectEntityAtEnd(arg0: EntityType<*>, arg1: Int, arg2: Int, arg3: Int) = this.method_36042(arg0, arg1, arg2, arg3)
+fun TestContext.expectItemsAt(arg0: Item, arg1: BlockPos, arg2: Double, arg3: Int) = this.method_35970(arg0, arg1, arg2, arg3)
+fun TestContext.spawnItem(arg0: Item, arg1: Vec3d) = this.method_57100(arg0, arg1)
+fun TestContext.dontExpectEntityBetween(arg0: EntityType<*>, arg1: Vec3d, arg2: Vec3d) = this.method_59872(arg0, arg1, arg2)
+fun TestContext.runAtTick(arg0: Long, arg1: Runnable) = this.method_35951(arg0, arg1)
+fun TestContext.forEachRelativePos(arg0: Consumer<BlockPos>) = this.method_35998(arg0)
+fun TestContext.throwGameTestException(arg0: String) = this.method_35995(arg0)
+fun TestContext.expectEntityInside(arg0: EntityType<*>, arg1: Vec3d, arg2: Vec3d) = this.method_46224(arg0, arg1, arg2)
+fun TestContext.useBlock(arg0: BlockPos, arg1: PlayerEntity) = this.method_36034(arg0, arg1)
+fun TestContext.expectEntityHasEffect(arg0: LivingEntity, arg1: RegistryEntry<StatusEffect>, arg2: Int) = this.method_52889(arg0, arg1, arg2)
+fun TestContext.forceTickIceAndSnow(arg0: BlockPos) = this.method_55453(arg0)
+fun TestContext.setBlockState(arg0: BlockPos, arg1: Block) = this.method_35984(arg0, arg1)
+fun TestContext.dontExpectEntityAtEnd(arg0: EntityType<*>, arg1: BlockPos) = this.method_36043(arg0, arg1)
+fun <E>TestContext.getEntitiesAround(arg0: EntityType<E>, arg1: Int, arg2: Int, arg3: Int, arg4: Double) where E: Entity = this.method_56207<E>(arg0, arg1, arg2, arg3, arg4)
+fun TestContext.setTime(arg0: Int) = this.method_35944(arg0)
+fun TestContext.expectEntityToTouch(arg0: EntityType<*>, arg1: Double, arg2: Double, arg3: Double) = this.method_35960(arg0, arg1, arg2, arg3)
+fun <T>TestContext.getEntitiesAround(arg0: EntityType<T>, arg1: BlockPos, arg2: Double) where T: Entity = this.method_44335<T>(arg0, arg1, arg2)
+fun TestContext.setBiome(arg0: RegistryKey<Biome>) = this.method_55451(arg0)
+fun TestContext.checkBlock(arg0: BlockPos, arg1: Predicate<Block>, arg2: String) = this.method_35991(arg0, arg1, arg2)
+fun TestContext.expectEmptyContainer(arg0: BlockPos) = this.method_36047(arg0)
+fun TestContext.pushButton(arg0: Int, arg1: Int, arg2: Int) = this.method_35945(arg0, arg1, arg2)
+fun <T>TestContext.checkBlockProperty(arg0: BlockPos, arg1: property_Property<T>, arg2: Predicate<T>, arg3: String) where T: Comparable<T> = this.method_35988<T>(arg0, arg1, arg2, arg3)
+fun TestContext.createMockPlayer(arg0: GameMode) = this.method_36021(arg0)
+fun TestContext.expectEntityAtEnd(arg0: EntityType<*>, arg1: BlockPos) = this.method_36038(arg0, arg1)
+fun TestContext.expectEntityAtEnd(arg0: EntityType<*>, arg1: Int, arg2: Int, arg3: Int) = this.method_36037(arg0, arg1, arg2, arg3)
+fun TestContext.forceRandomTick(arg0: BlockPos) = this.method_36050(arg0)
+fun TestContext.expectEntityIn(arg0: Entity, arg1: Box, arg2: String) = this.method_61173(arg0, arg1, arg2)
+fun TestContext.useStackOnBlock(arg0: PlayerEntity, arg1: ItemStack, arg2: BlockPos, arg3: Direction) = this.method_47816(arg0, arg1, arg2, arg3)
+fun TestContext.setBlockState(arg0: Int, arg1: Int, arg2: Int, arg3: BlockState) = this.method_35947(arg0, arg1, arg2, arg3)
+fun <T>TestContext.getBlockEntity(arg0: BlockPos) where T: BlockEntity = this.method_36014<T>(arg0)
+fun TestContext.assertTrue(arg0: Boolean, arg1: String) = this.method_46226(arg0, arg1)
+fun TestContext.expectRedstonePower(arg0: BlockPos, arg1: Direction, arg2: IntPredicate, arg3: Supplier<String>) = this.method_52225(arg0, arg1, arg2, arg3)
+fun TestContext.spawnItem(arg0: Item, arg1: BlockPos) = this.method_46225(arg0, arg1)
+fun TestContext.throwPositionedException(arg0: String, arg1: Entity) = this.method_35996(arg0, arg1)
+fun TestContext.getRelative(arg0: Vec3d) = this.method_46227(arg0)
+fun TestContext.pushButton(arg0: BlockPos) = this.method_36026(arg0)
+fun TestContext.startMovingTowards(arg0: MobEntity, arg1: BlockPos, arg2: Float) = this.method_35967(arg0, arg1, arg2)
+fun TestContext.expectBlock(arg0: Block, arg1: BlockPos) = this.method_35972(arg0, arg1)
+fun TestContext.forEachRemainingTick(arg0: Runnable) = this.method_36040(arg0)
+fun TestContext.setHealthLow(arg0: LivingEntity) = this.method_51821(arg0)
+fun <E>TestContext.expectEntityAtOrigin(arg0: EntityType<E>) where E: Entity = this.method_56201<E>(arg0)
+fun TestContext.expectItem(arg0: Item) = this.method_54143(arg0)
+fun TestContext.complete() = this.method_36036()
+fun TestContext.expectBlockAtEnd(arg0: Block, arg1: Int, arg2: Int, arg3: Int) = this.method_36024(arg0, arg1, arg2, arg3)
+fun TestContext.getTestBox() = this.method_36051()
+fun TestContext.expectEntityAround(arg0: EntityType<*>, arg1: BlockPos, arg2: Double) = this.method_35965(arg0, arg1, arg2)
+//fun TestContext.createMockCreativeServerPlayerInWorld() = this.method_51891()
+fun TestContext.expectContainerWith(arg0: BlockPos, arg1: Item) = this.method_35983(arg0, arg1)
+fun TestContext.expectEntityAt(arg0: Entity, arg1: Int, arg2: Int, arg3: Int) = this.method_35953(arg0, arg1, arg2, arg3)
+fun TestContext.expectEntityAt(arg0: Entity, arg1: BlockPos) = this.method_35955(arg0, arg1)
+fun TestContext.dontExpectItem(arg0: Item) = this.method_54144(arg0)
+fun TestContext.createTimedTaskRunner() = this.method_36041()
+fun TestContext.dontExpectEntityToTouch(arg0: EntityType<*>, arg1: Double, arg2: Double, arg3: Double) = this.method_36005(arg0, arg1, arg2, arg3)
+fun TestContext.dontExpectEntityAt(arg0: EntityType<*>, arg1: Int, arg2: Int, arg3: Int) = this.method_36031(arg0, arg1, arg2, arg3)
+fun TestContext.assertFalse(arg0: Boolean, arg1: String) = this.method_49994(arg0, arg1)
+fun TestContext.runAtEveryTick(arg0: Runnable) = this.method_36035(arg0)
+fun TestContext.killAllEntities() = this.method_36001()
+fun <T, E>TestContext.expectEntityWithData(arg0: BlockPos, arg1: EntityType<E>, arg2: Function<in E, T>, arg3: T) where E: Entity = this.method_35982<E, T>(arg0, arg1, arg2, arg3)
+fun TestContext.addFinalTask(arg0: Runnable) = this.method_35993(arg0)
+fun TestContext.dontExpectEntityAt(arg0: EntityType<*>, arg1: BlockPos) = this.method_36032(arg0, arg1)
+fun TestContext.getRelativePos(arg0: BlockPos) = this.method_36054(arg0)
+fun TestContext.expectEntities(arg0: EntityType<*>, arg1: Int) = this.method_55323(arg0, arg1)
+fun TestContext.setBlockState(arg0: Int, arg1: Int, arg2: Int, arg3: Block) = this.method_35946(arg0, arg1, arg2, arg3)
+fun TestContext.addInstantFinalTask(arg0: Runnable) = this.method_36018(arg0)
+fun <E>TestContext.expectEntityHoldingItem(arg0: BlockPos, arg1: EntityType<E>, arg2: Item) where E: LivingEntity = this.method_48001<E>(arg0, arg1, arg2)
+fun <T>TestContext.getEntities(arg0: EntityType<T>) where T: Entity = this.method_56208<T>(arg0)
+fun <T>TestContext.expectBlockProperty(arg0: BlockPos, arg1: property_Property<T>, arg2: T) where T: Comparable<T> = this.method_35987<T>(arg0, arg1, arg2)
+fun TestContext.removeBlock(arg0: BlockPos) = this.method_36044(arg0)
+fun TestContext.expectEntityAt(arg0: EntityType<*>, arg1: Int, arg2: Int, arg3: Int) = this.method_36022(arg0, arg1, arg2, arg3)
+fun TestContext.expectBlockAtEnd(arg0: Block, arg1: BlockPos) = this.method_36025(arg0, arg1)
+fun TestContext.checkBlock(arg0: BlockPos, arg1: Predicate<Block>, arg2: Supplier<String>) = this.method_35992(arg0, arg1, arg2)
+fun <E>TestContext.spawnEntity(arg0: EntityType<E>, arg1: Float, arg2: Float, arg3: Float) where E: Entity = this.method_35961<E>(arg0, arg1, arg2, arg3)
+fun TestContext.expectSameStates(arg0: BlockPos, arg1: BlockPos) = this.method_35990(arg0, arg1)
+fun <E>TestContext.spawnEntity(arg0: EntityType<E>, arg1: BlockPos) where E: Entity = this.method_35964<E>(arg0, arg1)
+fun TestContext.useBlock(arg0: BlockPos, arg1: PlayerEntity, arg2: BlockHitResult) = this.method_47817(arg0, arg1, arg2)
+fun TestContext.waitAndRun(arg0: Long, arg1: Runnable) = this.method_36003(arg0, arg1)
+fun TestContext.useNightTime() = this.method_36030()
+fun TestContext.expectEntityAt(arg0: EntityType<*>, arg1: BlockPos) = this.method_36023(arg0, arg1)
+fun TestContext.toggleLever(arg0: Int, arg1: Int, arg2: Int) = this.method_36002(arg0, arg1, arg2)
+fun TestContext.expectEntitiesAround(arg0: EntityType<*>, arg1: BlockPos, arg2: Int, arg3: Double) = this.method_44606(arg0, arg1, arg2, arg3)
+fun TestContext.expectEntity(arg0: EntityType<*>) = this.method_35959(arg0)
+fun TestContext.getAbsolute(arg0: Vec3d) = this.method_35978(arg0)
+fun <T, E>TestContext.expectEntityWithDataEnd(arg0: BlockPos, arg1: EntityType<E>, arg2: Function<E, T>, arg3: T) where E: Entity = this.method_36015<E, T>(arg0, arg1, arg2, arg3)
+fun <E>TestContext.spawnMob(arg0: EntityType<E>, arg1: Float, arg2: Float, arg3: Float) where E: MobEntity = this.method_36006<E>(arg0, arg1, arg2, arg3)
+fun TestContext.toggleLever(arg0: BlockPos) = this.method_36039(arg0)
+fun TestContext.setBlockState(arg0: BlockPos, arg1: BlockState) = this.method_35986(arg0, arg1)
+fun <E>TestContext.spawnEntity(arg0: EntityType<E>, arg1: Vec3d) where E: Entity = this.method_35963<E>(arg0, arg1)
+fun <E>TestContext.testEntity(arg0: E, arg1: Predicate<E>, arg2: String) where E: Entity = this.method_35958<E>(arg0, arg1, arg2)
+fun TestContext.getRelativeTopY(arg0: net.minecraft.class_2902.class_2903, arg1: Int, arg2: Int) = this.method_42063(arg0, arg1, arg2)
+fun <E>TestContext.getEntitiesAround(arg0: EntityType<E>, arg1: Vec3d, arg2: Double) where E: Entity = this.method_56203<E>(arg0, arg1, arg2)
+fun TestContext.spawnItem(arg0: Item, arg1: Float, arg2: Float, arg3: Float) = this.method_35968(arg0, arg1, arg2, arg3)
+fun TestContext.expectContainerWith(arg0: Long, arg1: BlockPos, arg2: Item) = this.method_35950(arg0, arg1, arg2)
+fun TestContext.putAndRemoveRedstoneBlock(arg0: BlockPos, arg1: Long) = this.method_35981(arg0, arg1)
+fun TestContext.expectEmptyContainer(arg0: Long, arg1: BlockPos) = this.method_35949(arg0, arg1)
+fun TestContext.dontExpectBlock(arg0: Block, arg1: Int, arg2: Int, arg3: Int) = this.method_36011(arg0, arg1, arg2, arg3)
+fun TestContext.getAbsolutePos(arg0: BlockPos) = this.method_36052(arg0)
+fun <N>TestContext.assertEquals(arg0: N, arg1: N, arg2: String) = this.method_56606<N>(arg0, arg1, arg2)
+fun <E>TestContext.spawnMob(arg0: EntityType<E>, arg1: Vec3d) where E: MobEntity = this.method_36008<E>(arg0, arg1)
+fun TestContext.addTask(arg0: Runnable) = this.method_36028(arg0)
+fun <E>TestContext.expectEntityWithItem(arg0: BlockPos, arg1: EntityType<E>, arg2: Item) where E: Entity, E: InventoryOwner = this.method_48003<E>(arg0, arg1, arg2)
+fun TestContext.getTick() = this.method_36045()
+fun TestContext.throwPositionedException(arg0: String, arg1: BlockPos) = this.method_35997(arg0, arg1)
+fun TestContext.drown(arg0: LivingEntity) = this.method_35966(arg0)
+fun TestContext.useBlock(arg0: BlockPos) = this.method_46229(arg0)
+fun TestContext.checkBlockState(arg0: BlockPos, arg1: Predicate<BlockState>, arg2: Supplier<String>) = this.method_36017(arg0, arg1, arg2)
+fun <T, E>TestContext.testEntityProperty(arg0: E, arg1: Function<E, T>, arg2: String, arg3: T) where E: Entity = this.method_35957<E, T>(arg0, arg1, arg2, arg3)
+fun TestContext.dontExpectEntity(arg0: EntityType<*>) = this.method_36004(arg0)
+fun <E>TestContext.spawnMob(arg0: EntityType<E>, arg1: BlockPos) where E: MobEntity = this.method_36009<E>(arg0, arg1)
+fun TestContext.getRotation() = this.method_61093()
+fun TestContext.forceTickIceAndSnow() = this.method_55452()
+fun <T>TestContext.checkBlockEntity(arg0: BlockPos, arg1: Predicate<T>, arg2: Supplier<String>) where T: BlockEntity = this.method_60651<T>(arg0, arg1, arg2)
+fun <E>TestContext.spawnEntity(arg0: EntityType<E>, arg1: Int, arg2: Int, arg3: Int) where E: Entity = this.method_35962<E>(arg0, arg1, arg2, arg3)
+fun TestContext.expectItemAt(arg0: Item, arg1: BlockPos, arg2: Double) = this.method_35969(arg0, arg1, arg2)
+fun <E>TestContext.spawnMob(arg0: EntityType<E>, arg1: Int, arg2: Int, arg3: Int) where E: MobEntity = this.method_36007<E>(arg0, arg1, arg2, arg3)
+fun TestContext.dontExpectItemAt(arg0: Item, arg1: BlockPos, arg2: Double) = this.method_42762(arg0, arg1, arg2)
+fun TestContext.getWorld() = this.method_35943()
+fun TestContext.addFinalTaskWithDuration(arg0: Int, arg1: Runnable) = this.method_35948(arg0, arg1)
+fun TestContext.getBlockState(arg0: BlockPos) = this.method_35980(arg0)
+fun TestContext.dontExpectBlock(arg0: Block, arg1: BlockPos) = this.method_36012(arg0, arg1)
+val StructureTerrainAdaptation.BEARD_THIN by aliasEnum(StructureTerrainAdaptation::class, "field_38431")
+val StructureTerrainAdaptation.BEARD_BOX by aliasEnum(StructureTerrainAdaptation::class, "field_38432")
+val StructureTerrainAdaptation.ENCAPSULATE by aliasEnum(StructureTerrainAdaptation::class, "field_51413")
+val StructureTerrainAdaptation.BURY by aliasEnum(StructureTerrainAdaptation::class, "field_28923")
+val StructureTerrainAdaptation.NONE by aliasEnum(StructureTerrainAdaptation::class, "field_28922")
+fun TestListener.onStarted(arg0: GameTestState) = this.method_22188(arg0)
+fun TestListener.onRetry(arg0: GameTestState, arg1: GameTestState, arg2: TestRunContext) = this.method_56216(arg0, arg1, arg2)
+fun TestListener.onPassed(arg0: GameTestState, arg1: TestRunContext) = this.method_33317(arg0, arg1)
+fun TestListener.onFailed(arg0: GameTestState, arg1: TestRunContext) = this.method_22190(arg0, arg1)
+fun GameTestState.isStarted() = this.method_22179()
+fun GameTestState.startCountdown(arg0: Int) = this.method_23634(arg0)
+fun GameTestState.initializeImmediately() = this.method_56213()
+fun GameTestState.isRequired() = this.method_22183()
+fun GameTestState.completeIfSuccessful() = this.method_36064()
+fun GameTestState.isFailed() = this.method_22178()
+fun GameTestState.setBoxMinPos(arg0: BlockPos) = this.method_56214(arg0)
+fun GameTestState.getMaxAttempts() = this.method_32242()
+fun GameTestState.copy() = this.method_56210()
+fun GameTestState.isFlaky() = this.method_32241()
+fun GameTestState.runAtTick(arg0: Long, arg1: Runnable) = this.method_36060(arg0, arg1)
+fun GameTestState.getStructureBlockBlockEntity() = this.method_36059()
+fun GameTestState.getBoundingBox() = this.method_36062()
+fun GameTestState.init() = this.method_22166()
+fun GameTestState.getElapsedMilliseconds() = this.method_36063()
+fun GameTestState.getRequiredSuccesses() = this.method_32243()
+fun GameTestState.isPassed() = this.method_22177()
+fun GameTestState.addListener(arg0: TestListener) = this.method_22167(arg0)
+fun GameTestState.streamListeners() = this.method_56209()
+fun GameTestState.fail(arg0: Throwable) = this.method_22168(arg0)
+fun GameTestState.isOptional() = this.method_22184()
+fun GameTestState.isCompleted() = this.method_22180()
+fun GameTestState.getTemplatePath() = this.method_22169()
+fun GameTestState.tick(arg0: TestRunContext) = this.method_22165(arg0)
+fun GameTestState.getTemplateName() = this.method_23638()
+fun SynchronizeTagsS2CPacket.apply(arg0: ClientCommonPacketListener) = this.method_12001(arg0)
+val RabbitEntity.ESCAPE_DANGER_SPEED by aliasStatic(RabbitEntity::field_30359)
+val RabbitEntity.MELEE_ATTACK_SPEED by aliasStatic(RabbitEntity::field_30360)
+fun RabbitEntity.setVariant(arg0: net.minecraft.class_1463.class_7990) = this.method_47853(arg0)
+fun RabbitEntity.startJump() = this.method_6618()
+fun KClass<RabbitEntity>.createRabbitAttributes() = RabbitEntity.method_26892()
+fun RabbitEntity.getJumpProgress(arg0: Float) = this.method_6605(arg0)
+fun RabbitEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6620(arg0, arg1)
+fun RabbitEntity.setSpeed(arg0: Double) = this.method_6606(arg0)
+fun RabbitEntity.getVariant() = this.method_47855()
+fun QueryBlockNbtC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12095(arg0)
+val CheckedRandom.seed by alias(CheckedRandom::field_28766)
+fun ChatMessageC2SPacket.acknowledgment() = this.comp_970()
+fun ChatMessageC2SPacket.chatMessage() = this.comp_945()
+fun ChatMessageC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12115(arg0)
+fun ChatMessageC2SPacket.timestamp() = this.comp_946()
+fun ChatMessageC2SPacket.signature() = this.comp_948()
+fun ChatMessageC2SPacket.salt() = this.comp_947()
+fun InterpolatedNoiseSampler.copyWithRandom(arg0: Random) = this.method_42386(arg0)
+fun InterpolatedNoiseSampler.addDebugInfo(arg0: StringBuilder) = this.method_39117(arg0)
+fun KClass<InterpolatedNoiseSampler>.createBase3dNoiseFunction(arg0: Double, arg1: Double, arg2: Double, arg3: Double, arg4: Double) = InterpolatedNoiseSampler.method_42384(arg0, arg1, arg2, arg3, arg4)
+val Chunk.MISSING_SECTION by aliasStatic(Chunk::field_44632)
+fun Chunk.addEntity(arg0: Entity) = this.method_12002(arg0)
+fun Chunk.setStructureStarts(arg0: Map<Structure, StructureStart>) = this.method_12034(arg0)
+fun Chunk.isSectionEmpty(arg0: Int) = this.method_60791(arg0)
+fun Chunk.getPackedBlockEntityNbt(arg0: BlockPos, arg1: net.minecraft.class_7225.class_7874) = this.method_20598(arg0, arg1)
+fun Chunk.markBlockForPostProcessing(arg0: BlockPos) = this.method_12039(arg0)
+fun Chunk.getOrCreateChunkNoiseSampler(arg0: Function<Chunk, ChunkNoiseSampler>) = this.method_38255(arg0)
+fun Chunk.hasBelowZeroRetrogen() = this.method_39461()
+fun Chunk.markBlockForPostProcessing(arg0: Short, arg1: Int) = this.method_12029(arg0, arg1)
+fun Chunk.addPendingBlockEntityNbt(arg0: NbtCompound) = this.method_12042(arg0)
+fun Chunk.isLightOn() = this.method_12038()
+fun Chunk.getBelowZeroRetrogen() = this.method_39300()
+fun Chunk.getBlockEntityPositions() = this.method_12021()
+fun Chunk.setLightOn(arg0: Boolean) = this.method_12020(arg0)
+fun Chunk.needsSaving() = this.method_12044()
+fun Chunk.getMaxStatus() = this.method_51526()
+fun Chunk.setInhabitedTime(arg0: Long) = this.method_12028(arg0)
+fun Chunk.setBlockState(arg0: BlockPos, arg1: BlockState, arg2: Boolean) = this.method_12010(arg0, arg1, arg2)
+fun Chunk.getGameEventDispatcher(arg0: Int) = this.method_32914(arg0)
+fun Chunk.setBlockEntity(arg0: BlockEntity) = this.method_12007(arg0)
+fun Chunk.getHeightmap(arg0: net.minecraft.class_2902.class_2903) = this.method_12032(arg0)
+fun Chunk.hasHeightmap(arg0: net.minecraft.class_2902.class_2903) = this.method_39295(arg0)
+fun Chunk.setBlendingData(arg0: BlendingData) = this.method_39294(arg0)
+fun Chunk.hasStructureReferences() = this.method_38871()
+fun Chunk.getOrCreateGenerationSettings(arg0: Supplier<GenerationSettings>) = this.method_44214(arg0)
+fun Chunk.setHeightmap(arg0: net.minecraft.class_2902.class_2903, arg1: LongArray) = this.method_12037(arg0, arg1)
+fun Chunk.getBlockTickScheduler() = this.method_12013()
+fun Chunk.forEachBlockMatchingPredicate(arg0: Predicate<BlockState>, arg1: BiConsumer<BlockPos, BlockState>) = this.method_51525(arg0, arg1)
+fun Chunk.usesOldNoise() = this.method_39297()
+fun Chunk.sampleHeightmap(arg0: net.minecraft.class_2902.class_2903, arg1: Int, arg2: Int) = this.method_12005(arg0, arg1, arg2)
+fun Chunk.getHighestNonEmptySection() = this.method_12040()
+fun Chunk.removeBlockEntity(arg0: BlockPos) = this.method_12041(arg0)
+fun Chunk.getSection(arg0: Int) = this.method_38259(arg0)
+fun Chunk.getStatus() = this.method_12009()
+fun Chunk.setNeedsSaving(arg0: Boolean) = this.method_12008(arg0)
+fun Chunk.populateBiomes(arg0: BiomeSupplier, arg1: net.minecraft.class_6544.class_6552) = this.method_38257(arg0, arg1)
+fun Chunk.getFluidTickScheduler() = this.method_12014()
+fun Chunk.areSectionsEmptyBetween(arg0: Int, arg1: Int) = this.method_12228(arg0, arg1)
+fun Chunk.getBlockEntityNbt(arg0: BlockPos) = this.method_12024(arg0)
+fun KClass<Chunk>.getList(arg0: Array<ShortList>, arg1: Int) = Chunk.method_12026(arg0, arg1)
+//fun Chunk.getHighestNonEmptySectionYOffset() = this.method_12031()
+fun Chunk.getTickSchedulers() = this.method_39296()
+fun Chunk.refreshSurfaceY() = this.method_51522()
+fun Chunk.increaseInhabitedTime(arg0: Long) = this.method_38870(arg0)
+fun ServerPlayPacketListener.onRecipeBookData(arg0: RecipeBookDataC2SPacket) = this.method_12047(arg0)
+fun ServerPlayPacketListener.onPlayerInput(arg0: PlayerInputC2SPacket) = this.method_12067(arg0)
+fun ServerPlayPacketListener.onPlayerInteractBlock(arg0: PlayerInteractBlockC2SPacket) = this.method_12046(arg0)
+fun ServerPlayPacketListener.onUpdateCommandBlock(arg0: UpdateCommandBlockC2SPacket) = this.method_12077(arg0)
+fun ServerPlayPacketListener.onUpdateCommandBlockMinecart(arg0: UpdateCommandBlockMinecartC2SPacket) = this.method_12049(arg0)
+fun ServerPlayPacketListener.onUpdateDifficulty(arg0: UpdateDifficultyC2SPacket) = this.method_19475(arg0)
+fun ServerPlayPacketListener.onMessageAcknowledgment(arg0: MessageAcknowledgmentC2SPacket) = this.method_44898(arg0)
+fun ServerPlayPacketListener.onAcknowledgeReconfiguration(arg0: AcknowledgeReconfigurationC2SPacket) = this.method_52279(arg0)
+fun ServerPlayPacketListener.onJigsawGenerating(arg0: JigsawGeneratingC2SPacket) = this.method_27273(arg0)
+fun ServerPlayPacketListener.onQueryEntityNbt(arg0: QueryEntityNbtC2SPacket) = this.method_12074(arg0)
+fun ServerPlayPacketListener.onSelectMerchantTrade(arg0: SelectMerchantTradeC2SPacket) = this.method_12080(arg0)
+fun ServerPlayPacketListener.onUpdateSign(arg0: UpdateSignC2SPacket) = this.method_12071(arg0)
+fun ServerPlayPacketListener.onButtonClick(arg0: ButtonClickC2SPacket) = this.method_12055(arg0)
+fun ServerPlayPacketListener.onPlayerInteractEntity(arg0: PlayerInteractEntityC2SPacket) = this.method_12062(arg0)
+fun ServerPlayPacketListener.onUpdateSelectedSlot(arg0: UpdateSelectedSlotC2SPacket) = this.method_12056(arg0)
+fun ServerPlayPacketListener.onUpdateStructureBlock(arg0: UpdateStructureBlockC2SPacket) = this.method_12051(arg0)
+fun ServerPlayPacketListener.onSlotChangedState(arg0: SlotChangedStateC2SPacket) = this.method_54436(arg0)
+fun ServerPlayPacketListener.onPlayerAction(arg0: PlayerActionC2SPacket) = this.method_12066(arg0)
+fun ServerPlayPacketListener.onUpdateBeacon(arg0: UpdateBeaconC2SPacket) = this.method_12057(arg0)
+fun ServerPlayPacketListener.onChatCommandSigned(arg0: ChatCommandSignedC2SPacket) = this.method_58580(arg0)
+fun ServerPlayPacketListener.onRecipeCategoryOptions(arg0: RecipeCategoryOptionsC2SPacket) = this.method_30303(arg0)
+fun ServerPlayPacketListener.onUpdateDifficultyLock(arg0: UpdateDifficultyLockC2SPacket) = this.method_19476(arg0)
+fun ServerPlayPacketListener.onPlayerSession(arg0: PlayerSessionC2SPacket) = this.method_46367(arg0)
+fun ServerPlayPacketListener.onChatMessage(arg0: ChatMessageC2SPacket) = this.method_12048(arg0)
+fun ServerPlayPacketListener.onTeleportConfirm(arg0: TeleportConfirmC2SPacket) = this.method_12050(arg0)
+fun ServerPlayPacketListener.onAcknowledgeChunks(arg0: AcknowledgeChunksC2SPacket) = this.method_52278(arg0)
+fun ServerPlayPacketListener.onClientStatus(arg0: ClientStatusC2SPacket) = this.method_12068(arg0)
+fun ServerPlayPacketListener.onQueryBlockNbt(arg0: QueryBlockNbtC2SPacket) = this.method_12072(arg0)
+fun ServerPlayPacketListener.onPlayerMove(arg0: PlayerMoveC2SPacket) = this.method_12063(arg0)
+fun ServerPlayPacketListener.onPickFromInventory(arg0: PickFromInventoryC2SPacket) = this.method_12084(arg0)
+fun ServerPlayPacketListener.onCommandExecution(arg0: CommandExecutionC2SPacket) = this.method_43667(arg0)
+fun ServerPlayPacketListener.onHandSwing(arg0: HandSwingC2SPacket) = this.method_12052(arg0)
+fun ServerPlayPacketListener.onClientCommand(arg0: ClientCommandC2SPacket) = this.method_12045(arg0)
+fun ServerPlayPacketListener.onRequestCommandCompletions(arg0: RequestCommandCompletionsC2SPacket) = this.method_12059(arg0)
+fun ServerPlayPacketListener.onUpdatePlayerAbilities(arg0: UpdatePlayerAbilitiesC2SPacket) = this.method_12083(arg0)
+fun ServerPlayPacketListener.onRenameItem(arg0: RenameItemC2SPacket) = this.method_12060(arg0)
+fun ServerPlayPacketListener.onBoatPaddleState(arg0: BoatPaddleStateC2SPacket) = this.method_12064(arg0)
+fun ServerPlayPacketListener.onCreativeInventoryAction(arg0: CreativeInventoryActionC2SPacket) = this.method_12070(arg0)
+fun ServerPlayPacketListener.onDebugSampleSubscription(arg0: DebugSampleSubscriptionC2SPacket) = this.method_56619(arg0)
+fun ServerPlayPacketListener.onVehicleMove(arg0: VehicleMoveC2SPacket) = this.method_12078(arg0)
+fun ServerPlayPacketListener.onBookUpdate(arg0: BookUpdateC2SPacket) = this.method_12053(arg0)
+fun ServerPlayPacketListener.onCloseHandledScreen(arg0: CloseHandledScreenC2SPacket) = this.method_12054(arg0)
+fun ServerPlayPacketListener.onUpdateJigsaw(arg0: UpdateJigsawC2SPacket) = this.method_16383(arg0)
+fun ServerPlayPacketListener.onSpectatorTeleport(arg0: SpectatorTeleportC2SPacket) = this.method_12073(arg0)
+fun ServerPlayPacketListener.onAdvancementTab(arg0: AdvancementTabC2SPacket) = this.method_12058(arg0)
+fun ServerPlayPacketListener.onCraftRequest(arg0: CraftRequestC2SPacket) = this.method_12061(arg0)
+fun ServerPlayPacketListener.onPlayerInteractItem(arg0: PlayerInteractItemC2SPacket) = this.method_12065(arg0)
+fun ServerPlayPacketListener.onClickSlot(arg0: ClickSlotC2SPacket) = this.method_12076(arg0)
+fun TeleportConfirmC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12085(arg0)
+val ChunkGenerator.indexedFeaturesListSupplier by alias(ChunkGenerator::field_39412)
+fun ChunkGenerator.getHeightInGround(arg0: Int, arg1: Int, arg2: net.minecraft.class_2902.class_2903, arg3: HeightLimitView, arg4: NoiseConfig) = this.method_18028(arg0, arg1, arg2, arg3, arg4)
+fun ChunkGenerator.addStructureReferences(arg0: StructureWorldAccess, arg1: StructureAccessor, arg2: Chunk) = this.method_16130(arg0, arg1, arg2)
+fun ChunkGenerator.getColumnSample(arg0: Int, arg1: Int, arg2: HeightLimitView, arg3: NoiseConfig) = this.method_26261(arg0, arg1, arg2, arg3)
+fun ChunkGenerator.carve(arg0: ChunkRegion, arg1: Long, arg2: NoiseConfig, arg3: BiomeAccess, arg4: StructureAccessor, arg5: Chunk, arg6: net.minecraft.class_2893.class_2894) = this.method_12108(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun ChunkGenerator.getSpawnHeight(arg0: HeightLimitView) = this.method_12100(arg0)
+fun ChunkGenerator.getHeight(arg0: Int, arg1: Int, arg2: net.minecraft.class_2902.class_2903, arg3: HeightLimitView, arg4: NoiseConfig) = this.method_16397(arg0, arg1, arg2, arg3, arg4)
+fun ChunkGenerator.generateFeatures(arg0: StructureWorldAccess, arg1: Chunk, arg2: StructureAccessor) = this.method_12102(arg0, arg1, arg2)
+fun ChunkGenerator.populateEntities(arg0: ChunkRegion) = this.method_12107(arg0)
+fun ChunkGenerator.getWorldHeight() = this.method_12104()
+fun ChunkGenerator.getHeightOnGround(arg0: Int, arg1: Int, arg2: net.minecraft.class_2902.class_2903, arg3: HeightLimitView, arg4: NoiseConfig) = this.method_20402(arg0, arg1, arg2, arg3, arg4)
+fun ChunkGenerator.populateBiomes(arg0: NoiseConfig, arg1: Blender, arg2: StructureAccessor, arg3: Chunk) = this.method_38275(arg0, arg1, arg2, arg3)
+fun ChunkGenerator.getCodecKey() = this.method_39301()
+fun ChunkGenerator.initializeIndexedFeaturesList() = this.method_59825()
+fun ChunkGenerator.buildSurface(arg0: ChunkRegion, arg1: StructureAccessor, arg2: NoiseConfig, arg3: Chunk) = this.method_12110(arg0, arg1, arg2, arg3)
+fun ChunkGenerator.getEntitySpawnList(arg0: RegistryEntry<Biome>, arg1: StructureAccessor, arg2: SpawnGroup, arg3: BlockPos) = this.method_12113(arg0, arg1, arg2, arg3)
+fun ChunkGenerator.getDebugHudText(arg0: List<String>, arg1: NoiseConfig, arg2: BlockPos) = this.method_40450(arg0, arg1, arg2)
+fun ChunkGenerator.locateStructure(arg0: ServerWorld, arg1: RegistryEntryList<Structure>, arg2: BlockPos, arg3: Int, arg4: Boolean) = this.method_12103(arg0, arg1, arg2, arg3, arg4)
+fun ChunkGenerator.createStructurePlacementCalculator(arg0: RegistryWrapper<StructureSet>, arg1: NoiseConfig, arg2: Long) = this.method_46696(arg0, arg1, arg2)
+fun ChunkGenerator.setStructureStarts(arg0: DynamicRegistryManager, arg1: StructurePlacementCalculator, arg2: StructureAccessor, arg3: Chunk, arg4: StructureTemplateManager) = this.method_16129(arg0, arg1, arg2, arg3, arg4)
+fun ChunkGenerator.getMinimumY() = this.method_33730()
+fun ChunkGenerator.getSeaLevel() = this.method_16398()
+fun ChunkGenerator.populateNoise(arg0: Blender, arg1: NoiseConfig, arg2: StructureAccessor, arg3: Chunk) = this.method_12088(arg0, arg1, arg2, arg3)
+val StructureWeightSampler.INDEX_OFFSET by aliasStatic(StructureWeightSampler::field_31461)
+fun KClass<StructureWeightSampler>.createStructureWeightSampler(arg0: StructureAccessor, arg1: ChunkPos) = StructureWeightSampler.method_42695(arg0, arg1)
+fun Random.nextInt() = this.method_43054()
+fun Random.nextLong() = this.method_43055()
+fun Random.nextBetweenExclusive(arg0: Int, arg1: Int) = this.method_43051(arg0, arg1)
+fun KClass<Random>.createLocal() = Random.method_43053()
+fun Random.nextTriangular(arg0: Double, arg1: Double) = this.method_43385(arg0, arg1)
+fun Random.nextFloat() = this.method_43057()
+fun Random.skip(arg0: Int) = this.method_33650(arg0)
+fun Random.split() = this.method_38420()
+fun Random.nextInt(arg0: Int) = this.method_43048(arg0)
+fun Random.nextSplitter() = this.method_38421()
+fun Random.nextGaussian() = this.method_43059()
+fun Random.nextDouble() = this.method_43058()
+fun Random.nextBoolean() = this.method_43056()
+fun Random.nextBetween(arg0: Int, arg1: Int) = this.method_39332(arg0, arg1)
+fun KClass<Random>.createThreadSafe() = Random.method_43050()
+fun Random.setSeed(arg0: Long) = this.method_43052(arg0)
+fun OxidizableStairsBlock.getDegradationLevel() = this.method_33634()
+fun SynchronizeRecipesS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11997(arg0)
+val WorldBorderStage.STATIONARY by aliasEnum(WorldBorderStage::class, "field_12753")
+val WorldBorderStage.GROWING by aliasEnum(WorldBorderStage::class, "field_12754")
+val WorldBorderStage.SHRINKING by aliasEnum(WorldBorderStage::class, "field_12756")
+fun OxidizableSlabBlock.getDegradationLevel() = this.method_33633()
+val Tilt.PARTIAL by aliasEnum(Tilt::class, "field_28720")
+val Tilt.FULL by aliasEnum(Tilt::class, "field_28721")
+val Tilt.UNSTABLE by aliasEnum(Tilt::class, "field_28719")
+val Tilt.NONE by aliasEnum(Tilt::class, "field_28718")
+fun Tilt.isStable() = this.method_33636()
+val TropicalFishEntity.BUCKET_VARIANT_TAG_KEY by aliasStatic(TropicalFishEntity::field_30378)
+val TropicalFishEntity.COMMON_VARIANTS by aliasStatic(TropicalFishEntity::field_41573)
+fun KClass<TropicalFishEntity>.getPatternDyeColor(arg0: Int) = TropicalFishEntity.method_6651(arg0)
+fun TropicalFishEntity.getBaseColorComponents() = this.method_6658()
+fun KClass<TropicalFishEntity>.getToolTipForVariant(arg0: Int) = TropicalFishEntity.method_6649(arg0)
+fun KClass<TropicalFishEntity>.getBaseDyeColor(arg0: Int) = TropicalFishEntity.method_6652(arg0)
+fun TropicalFishEntity.setVariant(arg0: net.minecraft.class_1474.class_1475) = this.method_47860(arg0)
+fun KClass<TropicalFishEntity>.canTropicalFishSpawn(arg0: EntityType<TropicalFishEntity>, arg1: WorldAccess, arg2: SpawnReason, arg3: BlockPos, arg4: Random) = TropicalFishEntity.method_38985(arg0, arg1, arg2, arg3, arg4)
+fun TropicalFishEntity.getPatternColorComponents() = this.method_6655()
+fun KClass<TropicalFishEntity>.getVariety(arg0: Int) = TropicalFishEntity.method_47864(arg0)
+fun TropicalFishEntity.getVariant() = this.method_47862()
+fun <T>AtomicStack<T>.toList() = this.method_33720()
+fun <T>AtomicStack<T>.push(arg0: T) = this.method_33721(arg0)
+fun KClass<SnowGolemEntity>.createSnowGolemAttributes() = SnowGolemEntity.method_26894()
+fun SnowGolemEntity.setHasPumpkin(arg0: Boolean) = this.method_6642(arg0)
+fun SnowGolemEntity.hasPumpkin() = this.method_6643()
+fun SheepEntity.getColor() = this.method_6633()
+fun SheepEntity.getHeadAngle(arg0: Float) = this.method_6641(arg0)
+fun KClass<SheepEntity>.createSheepAttributes() = SheepEntity.method_26893()
+fun SheepEntity.setColor(arg0: DyeColor) = this.method_6631(arg0)
+fun SheepEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6640(arg0, arg1)
+fun SheepEntity.getNeckAngle(arg0: Float) = this.method_6628(arg0)
+fun SheepEntity.setSheared(arg0: Boolean) = this.method_6635(arg0)
+fun KClass<SheepEntity>.generateDefaultColor(arg0: Random) = SheepEntity.method_6632(arg0)
+fun SheepEntity.isSheared() = this.method_6629()
+fun KClass<SheepEntity>.getRgbColor(arg0: DyeColor) = SheepEntity.method_6634(arg0)
+fun GameTestDebugRenderer.addMarker(arg0: BlockPos, arg1: Int, arg2: String, arg3: Int) = this.method_22123(arg0, arg1, arg2, arg3)
+fun TameableShoulderEntity.isReadyToSitOnPlayer() = this.method_6626()
+fun TameableShoulderEntity.mountOnto(arg0: ServerPlayerEntity) = this.method_6627(arg0)
+val SquidEntity.prevTiltAngle by alias(SquidEntity::field_6905)
+val SquidEntity.tentacleAngle by alias(SquidEntity::field_6904)
+val SquidEntity.tiltAngle by alias(SquidEntity::field_6907)
+val SquidEntity.prevRollAngle by alias(SquidEntity::field_6906)
+val SquidEntity.thrustTimer by alias(SquidEntity::field_6908)
+val SquidEntity.prevTentacleAngle by alias(SquidEntity::field_6900)
+val SquidEntity.rollAngle by alias(SquidEntity::field_6903)
+val SquidEntity.prevThrustTimer by alias(SquidEntity::field_6902)
+fun SquidEntity.hasSwimmingVector() = this.method_6672()
+fun SquidEntity.setSwimmingVector(arg0: Float, arg1: Float, arg2: Float) = this.method_6670(arg0, arg1, arg2)
+fun KClass<SquidEntity>.createSquidAttributes() = SquidEntity.method_26895()
+fun BundleTutorial.onPickupSlotClick(arg0: ItemStack, arg1: ItemStack, arg2: ClickType) = this.method_33702(arg0, arg1, arg2)
+fun ClientStatusC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12120(arg0)
+fun SmithingTrimRecipeJsonBuilder.criterion(arg0: String, arg1: AdvancementCriterion<*>) = this.method_48541(arg0, arg1)
+fun SmithingTrimRecipeJsonBuilder.offerTo(arg0: RecipeExporter, arg1: Identifier) = this.method_48542(arg0, arg1)
+fun SmithingTransformRecipeJsonBuilder.offerTo(arg0: RecipeExporter, arg1: Identifier) = this.method_48537(arg0, arg1)
+fun SmithingTransformRecipeJsonBuilder.criterion(arg0: String, arg1: AdvancementCriterion<*>) = this.method_48536(arg0, arg1)
+fun SmithingTransformRecipeJsonBuilder.offerTo(arg0: RecipeExporter, arg1: String) = this.method_48538(arg0, arg1)
+val WireConnection.UP by aliasEnum(WireConnection::class, "field_12686")
+val WireConnection.NONE by aliasEnum(WireConnection::class, "field_12687")
+val WireConnection.SIDE by aliasEnum(WireConnection::class, "field_12689")
+fun WireConnection.isConnected() = this.method_27855()
+val PandaEntity.MAIN_GENE_MUTATION_CHANCE by aliasStatic(PandaEntity::field_30343)
+val PandaEntity.playingTicks by alias(PandaEntity::field_6767)
+fun PandaEntity.getMainGene() = this.method_6525()
+fun PandaEntity.isEating() = this.method_6527()
+fun PandaEntity.isSitting() = this.method_6535()
+fun PandaEntity.setMainGene(arg0: net.minecraft.class_1440.class_1443) = this.method_6529(arg0)
+fun PandaEntity.initGenes(arg0: PandaEntity, arg1: PandaEntity) = this.method_6515(arg0, arg1)
+fun PandaEntity.isIdle() = this.method_18442()
+fun PandaEntity.setSneezeProgress(arg0: Int) = this.method_6539(arg0)
+fun PandaEntity.setEating(arg0: Boolean) = this.method_6552(arg0)
+fun PandaEntity.isScaredByThunderstorm() = this.method_6524()
+fun PandaEntity.getProductGene() = this.method_6554()
+fun PandaEntity.getSneezeProgress() = this.method_6532()
+fun PandaEntity.setSitting(arg0: Boolean) = this.method_6513(arg0)
+fun PandaEntity.setPlaying(arg0: Boolean) = this.method_6541(arg0)
+fun PandaEntity.isLazy() = this.method_6549()
+fun PandaEntity.setLyingOnBack(arg0: Boolean) = this.method_6505(arg0)
+fun PandaEntity.isSneezing() = this.method_6545()
+fun PandaEntity.setHiddenGene(arg0: net.minecraft.class_1440.class_1443) = this.method_6547(arg0)
+fun PandaEntity.isWorried() = this.method_6509()
+fun PandaEntity.isBrown() = this.method_35173()
+fun PandaEntity.getAskForBambooTicks() = this.method_6521()
+fun PandaEntity.setAskForBambooTicks(arg0: Int) = this.method_6517(arg0)
+fun PandaEntity.isWeak() = this.method_6550()
+fun PandaEntity.setSneezing(arg0: Boolean) = this.method_6546(arg0)
+fun PandaEntity.isPlaying() = this.method_6526()
+fun PandaEntity.isLyingOnBack() = this.method_6514()
+fun PandaEntity.isPlayful() = this.method_6522()
+fun KClass<PandaEntity>.createPandaAttributes() = PandaEntity.method_26888()
+fun PandaEntity.getHiddenGene() = this.method_6508()
+fun PandaEntity.resetAttributes() = this.method_6538()
+fun NbtQueryResponseS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11909(arg0)
+fun KClass<BigDripleafBlock>.grow(arg0: WorldAccess, arg1: Random, arg2: BlockPos, arg3: Direction) = BigDripleafBlock.method_33603(arg0, arg1, arg2, arg3)
+fun ItemPickupAnimationS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11914(arg0)
+val StructureBlockMode.LOAD by aliasEnum(StructureBlockMode::class, "field_12697")
+val StructureBlockMode.CORNER by aliasEnum(StructureBlockMode::class, "field_12699")
+val StructureBlockMode.SAVE by aliasEnum(StructureBlockMode::class, "field_12695")
+val StructureBlockMode.DATA by aliasEnum(StructureBlockMode::class, "field_12696")
+fun StructureBlockMode.asText() = this.method_30844()
+fun StopSoundS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11905(arg0)
+val SlabType.DOUBLE by aliasEnum(SlabType::class, "field_12682")
+val SlabType.BOTTOM by aliasEnum(SlabType::class, "field_12681")
+val SlabType.TOP by aliasEnum(SlabType::class, "field_12679")
+fun PlayerListHeaderS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11907(arg0)
+fun PlayerListHeaderS2CPacket.header() = this.comp_2282()
+fun PlayerListHeaderS2CPacket.footer() = this.comp_2283()
+fun MooshroomEntity.getVariant() = this.method_47847()
+fun MooshroomEntity.setVariant(arg0: net.minecraft.class_1438.class_4053) = this.method_47846(arg0)
+fun MooshroomEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6495(arg0, arg1)
+val NoteBlockInstrument.SNARE by aliasEnum(NoteBlockInstrument::class, "field_12643")
+val NoteBlockInstrument.BELL by aliasEnum(NoteBlockInstrument::class, "field_12644")
+val NoteBlockInstrument.CHIME by aliasEnum(NoteBlockInstrument::class, "field_12647")
+val NoteBlockInstrument.HARP by aliasEnum(NoteBlockInstrument::class, "field_12648")
+val NoteBlockInstrument.HAT by aliasEnum(NoteBlockInstrument::class, "field_12645")
+val NoteBlockInstrument.SKELETON by aliasEnum(NoteBlockInstrument::class, "field_41325")
+val NoteBlockInstrument.CREEPER by aliasEnum(NoteBlockInstrument::class, "field_41326")
+val NoteBlockInstrument.ZOMBIE by aliasEnum(NoteBlockInstrument::class, "field_41324")
+val NoteBlockInstrument.PIGLIN by aliasEnum(NoteBlockInstrument::class, "field_41329")
+val NoteBlockInstrument.DRAGON by aliasEnum(NoteBlockInstrument::class, "field_41327")
+val NoteBlockInstrument.WITHER_SKELETON by aliasEnum(NoteBlockInstrument::class, "field_41328")
+val NoteBlockInstrument.CUSTOM_HEAD by aliasEnum(NoteBlockInstrument::class, "field_41604")
+val NoteBlockInstrument.BANJO by aliasEnum(NoteBlockInstrument::class, "field_18288")
+val NoteBlockInstrument.PLING by aliasEnum(NoteBlockInstrument::class, "field_18289")
+val NoteBlockInstrument.IRON_XYLOPHONE by aliasEnum(NoteBlockInstrument::class, "field_18284")
+val NoteBlockInstrument.COW_BELL by aliasEnum(NoteBlockInstrument::class, "field_18285")
+val NoteBlockInstrument.DIDGERIDOO by aliasEnum(NoteBlockInstrument::class, "field_18286")
+val NoteBlockInstrument.BIT by aliasEnum(NoteBlockInstrument::class, "field_18287")
+val NoteBlockInstrument.GUITAR by aliasEnum(NoteBlockInstrument::class, "field_12654")
+val NoteBlockInstrument.XYLOPHONE by aliasEnum(NoteBlockInstrument::class, "field_12655")
+val NoteBlockInstrument.BASEDRUM by aliasEnum(NoteBlockInstrument::class, "field_12653")
+val NoteBlockInstrument.FLUTE by aliasEnum(NoteBlockInstrument::class, "field_12650")
+val NoteBlockInstrument.BASS by aliasEnum(NoteBlockInstrument::class, "field_12651")
+fun NoteBlockInstrument.hasCustomSound() = this.method_47890()
+fun NoteBlockInstrument.isNotBaseBlock() = this.method_51372()
+fun NoteBlockInstrument.canBePitched() = this.method_47889()
+val PlaySoundS2CPacket.COORDINATE_SCALE by aliasStatic(PlaySoundS2CPacket::field_33353)
+fun PlaySoundS2CPacket.getX() = this.method_11890()
+fun PlaySoundS2CPacket.getZ() = this.method_11893()
+fun PlaySoundS2CPacket.getY() = this.method_11889()
+fun PlaySoundS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11895(arg0)
+val RailShape.NORTH_WEST by aliasEnum(RailShape::class, "field_12672")
+val RailShape.ASCENDING_NORTH by aliasEnum(RailShape::class, "field_12670")
+val RailShape.SOUTH_WEST by aliasEnum(RailShape::class, "field_12671")
+val RailShape.EAST_WEST by aliasEnum(RailShape::class, "field_12674")
+val RailShape.ASCENDING_EAST by aliasEnum(RailShape::class, "field_12667")
+val RailShape.ASCENDING_SOUTH by aliasEnum(RailShape::class, "field_12668")
+val RailShape.SOUTH_EAST by aliasEnum(RailShape::class, "field_12664")
+val RailShape.NORTH_SOUTH by aliasEnum(RailShape::class, "field_12665")
+val RailShape.ASCENDING_WEST by aliasEnum(RailShape::class, "field_12666")
+val RailShape.NORTH_EAST by aliasEnum(RailShape::class, "field_12663")
+fun RailShape.isAscending() = this.method_11897()
+fun IronGolemEntity.getCrackLevel() = this.method_23347()
+fun KClass<IronGolemEntity>.createIronGolemAttributes() = IronGolemEntity.method_26886()
+fun IronGolemEntity.getLookingAtVillagerTicks() = this.method_6502()
+fun IronGolemEntity.setPlayerCreated(arg0: Boolean) = this.method_6499(arg0)
+fun IronGolemEntity.isPlayerCreated() = this.method_6496()
+fun IronGolemEntity.setLookingAtVillager(arg0: Boolean) = this.method_6497(arg0)
+fun <T>property_Property<T>.computeHashCode() where T: Comparable<T> = this.method_11799()
+fun <T>property_Property<T>.getValues() where T: Comparable<T> = this.method_11898()
+fun <T>property_Property<T>.createValue(arg0: State<*, *>) where T: Comparable<T> = this.method_30041(arg0)
+fun <T>property_Property<T>.createValue(arg0: T) where T: Comparable<T> = this.method_30042(arg0)
+fun <T, U, S>property_Property<T>.parse(arg0: DynamicOps<U>, arg1: S, arg2: U) where T: Comparable<T>, S: State<*, S> = this.method_35307<U, S>(arg0, arg1, arg2)
+fun <T>property_Property<T>.stream() where T: Comparable<T> = this.method_30043()
+fun <T>property_Property<T>.parse(arg0: String) where T: Comparable<T> = this.method_11900(arg0)
+fun <T>property_Property<T>.name(arg0: T) where T: Comparable<T> = this.method_11901(arg0)
+fun TabNavigationWidget.setWidth(arg0: Int) = this.method_48618(arg0)
+fun TabNavigationWidget.init() = this.method_49613()
+fun TabNavigationWidget.trySwitchTabsWithKey(arg0: Int) = this.method_48988(arg0)
+fun TabNavigationWidget.selectTab(arg0: Int, arg1: Boolean) = this.method_48987(arg0, arg1)
+fun Tab.forEachChild(arg0: Consumer<ClickableWidget>) = this.method_48612(arg0)
+fun Tab.getTitle() = this.method_48610()
+fun Tab.refreshGrid(arg0: ScreenRect) = this.method_48611(arg0)
+fun TabManager.setTabArea(arg0: ScreenRect) = this.method_48616(arg0)
+fun TabManager.setCurrentTab(arg0: Tab, arg1: Boolean) = this.method_48615(arg0, arg1)
+val WorldBorder.STATIC_AREA_SIZE by aliasStatic(WorldBorder::field_33643)
+val WorldBorder.MAX_CENTER_COORDINATES by aliasStatic(WorldBorder::field_36191)
+val WorldBorder.DEFAULT_BORDER by aliasStatic(WorldBorder::field_24122)
+fun WorldBorder.clamp(arg0: BlockPos) = this.method_61117(arg0)
+fun WorldBorder.contains(arg0: BlockPos) = this.method_11952(arg0)
+fun WorldBorder.setWarningTime(arg0: Int) = this.method_11975(arg0)
+fun WorldBorder.contains(arg0: ChunkPos) = this.method_11951(arg0)
+fun WorldBorder.addListener(arg0: WorldBorderListener) = this.method_11983(arg0)
+fun WorldBorder.setWarningBlocks(arg0: Int) = this.method_11967(arg0)
+fun WorldBorder.contains(arg0: Vec3d) = this.method_61115(arg0)
+fun WorldBorder.getDistanceInsideBorder(arg0: Double, arg1: Double) = this.method_11961(arg0, arg1)
+fun WorldBorder.getBoundEast() = this.method_11963()
+fun WorldBorder.contains(arg0: Double, arg1: Double) = this.method_35317(arg0, arg1)
+fun WorldBorder.contains(arg0: Box) = this.method_11966(arg0)
+fun WorldBorder.load(arg0: net.minecraft.class_2784.class_5200) = this.method_17905(arg0)
+fun WorldBorder.contains(arg0: Double, arg1: Double, arg2: Double) = this.method_39458(arg0, arg1, arg2)
+fun WorldBorder.setSafeZone(arg0: Double) = this.method_11981(arg0)
+fun WorldBorder.asVoxelShape() = this.method_17903()
+fun WorldBorder.clamp(arg0: Double, arg1: Double, arg2: Double) = this.method_39538(arg0, arg1, arg2)
+fun WorldBorder.write() = this.method_27355()
+fun WorldBorder.setCenter(arg0: Double, arg1: Double) = this.method_11978(arg0, arg1)
+fun WorldBorder.setSize(arg0: Double) = this.method_11969(arg0)
+fun WorldBorder.getDistanceInsideBorder(arg0: Entity) = this.method_11979(arg0)
+fun WorldBorder.getBoundWest() = this.method_11976()
+fun WorldBorder.setMaxRadius(arg0: Int) = this.method_11973(arg0)
+fun WorldBorder.removeListener(arg0: WorldBorderListener) = this.method_35318(arg0)
+fun WorldBorder.getBoundSouth() = this.method_11977()
+fun WorldBorder.getSize() = this.method_11965()
+fun WorldBorder.tick() = this.method_11982()
+fun WorldBorder.canCollide(arg0: Entity, arg1: Box) = this.method_39459(arg0, arg1)
+fun WorldBorder.interpolateSize(arg0: Double, arg1: Double, arg2: Long) = this.method_11957(arg0, arg1, arg2)
+fun WorldBorder.setDamagePerBlock(arg0: Double) = this.method_11955(arg0)
+fun WorldBorder.getSizeLerpTime() = this.method_11962()
+fun WorldBorder.clamp(arg0: Vec3d) = this.method_61116(arg0)
+fun WorldBorder.getSizeLerpTarget() = this.method_11954()
+fun WorldBorder.getStage() = this.method_11968()
+fun WorldBorder.getShrinkingSpeed() = this.method_11974()
+fun WorldBorder.getBoundNorth() = this.method_11958()
+fun KClass<PigEntity>.createPigAttributes() = PigEntity.method_26890()
+fun PigEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6574(arg0, arg1)
+val CatEntity.NORMAL_SPEED by aliasStatic(CatEntity::field_30311)
+val CatEntity.CROUCHING_SPEED by aliasStatic(CatEntity::field_30310)
+val CatEntity.SPRINTING_SPEED by aliasStatic(CatEntity::field_30312)
+fun CatEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6573(arg0, arg1)
+fun CatEntity.setInSleepingPose(arg0: Boolean) = this.method_16088(arg0)
+fun CatEntity.isInSleepingPose() = this.method_16086()
+fun KClass<CatEntity>.createCatAttributes() = CatEntity.method_26881()
+fun CatEntity.setVariant(arg0: RegistryEntry<CatVariant>) = this.method_47842(arg0)
+fun CatEntity.getTexture() = this.method_16092()
+fun CatEntity.getCollarColor() = this.method_16096()
+fun CatEntity.getVariant() = this.method_47843()
+fun CatEntity.hiss() = this.method_16089()
+fun OxidizableBlock.getDegradationLevel() = this.method_33632()
+fun WorldBorderListener.onSafeZoneChanged(arg0: WorldBorder, arg1: Double) = this.method_11935(arg0, arg1)
+fun WorldBorderListener.onWarningTimeChanged(arg0: WorldBorder, arg1: Int) = this.method_11932(arg0, arg1)
+fun WorldBorderListener.onCenterChanged(arg0: WorldBorder, arg1: Double, arg2: Double) = this.method_11930(arg0, arg1, arg2)
+fun WorldBorderListener.onWarningBlocksChanged(arg0: WorldBorder, arg1: Int) = this.method_11933(arg0, arg1)
+fun WorldBorderListener.onDamagePerBlockChanged(arg0: WorldBorder, arg1: Double) = this.method_11929(arg0, arg1)
+fun WorldBorderListener.onInterpolateSize(arg0: WorldBorder, arg1: Double, arg2: Double, arg3: Long) = this.method_11931(arg0, arg1, arg2, arg3)
+fun WorldBorderListener.onSizeChange(arg0: WorldBorder, arg1: Double) = this.method_11934(arg0, arg1)
+fun PolarBearEntity.setWarning(arg0: Boolean) = this.method_6603(arg0)
+fun PolarBearEntity.isWarning() = this.method_6600()
+fun KClass<PolarBearEntity>.createPolarBearAttributes() = PolarBearEntity.method_26891()
+fun EntityAttributesS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11936(arg0)
+val PufferfishEntity.NOT_PUFFED by aliasStatic(PufferfishEntity::field_30353)
+val PufferfishEntity.SEMI_PUFFED by aliasStatic(PufferfishEntity::field_30354)
+val PufferfishEntity.FULLY_PUFFED by aliasStatic(PufferfishEntity::field_30355)
+fun PufferfishEntity.setPuffState(arg0: Int) = this.method_6596(arg0)
+fun PufferfishEntity.getPuffState() = this.method_6594()
+val ParrotEntity.prevMaxWingDeviation by alias(ParrotEntity::field_6827)
+val ParrotEntity.maxWingDeviation by alias(ParrotEntity::field_6819)
+val ParrotEntity.flapProgress by alias(ParrotEntity::field_6818)
+val ParrotEntity.prevFlapProgress by alias(ParrotEntity::field_6829)
+fun KClass<ParrotEntity>.createParrotAttributes() = ParrotEntity.method_26889()
+fun ParrotEntity.isSongPlaying() = this.method_6582()
+fun ParrotEntity.getVariant() = this.method_6584()
+fun KClass<ParrotEntity>.getRandomSound(arg0: world_World, arg1: Random) = ParrotEntity.method_6583(arg0, arg1)
+fun KClass<ParrotEntity>.imitateNearbyMob(arg0: world_World, arg1: Entity) = ParrotEntity.method_6587(arg0, arg1)
+fun ParrotEntity.setVariant(arg0: net.minecraft.class_1453.class_7989) = this.method_47848(arg0)
+fun KClass<ParrotEntity>.getSoundPitch(arg0: Random) = ParrotEntity.method_6580(arg0)
+fun EntityStatusEffectS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11948(arg0)
+fun EntityStatusEffectS2CPacket.isAmbient() = this.method_11950()
+fun EntityStatusEffectS2CPacket.shouldShowIcon() = this.method_11942()
+fun EntityStatusEffectS2CPacket.shouldShowParticles() = this.method_11949()
+fun EntityStatusEffectS2CPacket.keepFading() = this.method_55629()
+val SmallDripleafBlock.FACING by aliasStatic(SmallDripleafBlock::field_29563)
+fun KClass<CaveVines>.hasBerries(arg0: BlockState) = CaveVines.method_33618(arg0)
+fun KClass<CaveVines>.pickBerries(arg0: Entity, arg1: BlockState, arg2: world_World, arg3: BlockPos) = CaveVines.method_33619(arg0, arg1, arg2, arg3)
+fun EntityPositionS2CPacket.isOnGround() = this.method_11923()
+fun EntityPositionS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11922(arg0)
+fun EntityPositionS2CPacket.getY() = this.method_11919()
+fun EntityPositionS2CPacket.getZ() = this.method_11918()
+fun EntityPositionS2CPacket.getX() = this.method_11917()
+val StairShape.INNER_RIGHT by aliasEnum(StairShape::class, "field_12713")
+val StairShape.INNER_LEFT by aliasEnum(StairShape::class, "field_12712")
+val StairShape.STRAIGHT by aliasEnum(StairShape::class, "field_12710")
+val StairShape.OUTER_RIGHT by aliasEnum(StairShape::class, "field_12709")
+val StairShape.OUTER_LEFT by aliasEnum(StairShape::class, "field_12708")
+fun AdvancementUpdateS2CPacket.getAdvancementIdsToRemove() = this.method_11926()
+fun AdvancementUpdateS2CPacket.shouldClearCurrent() = this.method_11924()
+fun AdvancementUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11925(arg0)
+fun AdvancementUpdateS2CPacket.getAdvancementsToProgress() = this.method_11927()
+fun AdvancementUpdateS2CPacket.getAdvancementsToEarn() = this.method_11928()
+fun Navigable.getNavigationOrder() = this.method_48590()
+fun KClass<AccessibilityOnboardingButtons>.createLanguageButton(arg0: Int, arg1: net.minecraft.class_4185.class_4241, arg2: Boolean) = AccessibilityOnboardingButtons.method_48592(arg0, arg1, arg2)
+fun KClass<AccessibilityOnboardingButtons>.createAccessibilityButton(arg0: Int, arg1: net.minecraft.class_4185.class_4241, arg2: Boolean) = AccessibilityOnboardingButtons.method_48594(arg0, arg1, arg2)
+fun LimbAnimator.isLimbMoving() = this.method_48571()
+fun LimbAnimator.updateLimbs(arg0: Float, arg1: Float) = this.method_48568(arg0, arg1)
+fun LimbAnimator.setSpeed(arg0: Float) = this.method_48567(arg0)
+fun MessageAcknowledgmentC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_44998(arg0)
+fun MessageAcknowledgmentC2SPacket.offset() = this.comp_1114()
+val BreezeAnimations.SLIDING by aliasStatic(BreezeAnimations::field_47430)
+val BreezeAnimations.INHALING by aliasStatic(BreezeAnimations::field_47429)
+val BreezeAnimations.SHOOTING by aliasStatic(BreezeAnimations::field_47428)
+val ResourcePackManager.providers by alias(ResourcePackManager::field_14227)
+fun KClass<ResourcePackManager>.listPacks(arg0: Collection<ResourcePackProfile>) = ResourcePackManager.method_59809(arg0)
+fun ResourcePackManager.scanPacks() = this.method_14445()
+fun ResourcePackManager.getRequestedFeatures() = this.method_45278()
+fun ResourcePackManager.enable(arg0: String) = this.method_49427(arg0)
+fun ResourcePackManager.createResourcePacks() = this.method_29211()
+fun ResourcePackManager.getProfile(arg0: String) = this.method_14449(arg0)
+fun ResourcePackManager.getIds() = this.method_29206()
+fun ResourcePackManager.disable(arg0: String) = this.method_49428(arg0)
+fun ResourcePackManager.getEnabledProfiles() = this.method_14444()
+fun ResourcePackManager.setEnabledProfiles(arg0: Collection<String>) = this.method_14447(arg0)
+fun ResourcePackManager.hasProfile(arg0: String) = this.method_29207(arg0)
+fun ResourcePackManager.getEnabledIds() = this.method_29210()
+fun ResourcePackProvider.register(arg0: Consumer<ResourcePackProfile>) = this.method_14453(arg0)
+val SelectWorldScreen.DEBUG_GENERATOR_OPTIONS by aliasStatic(SelectWorldScreen::field_40457)
+fun SelectWorldScreen.worldSelected(arg0: LevelSummary) = this.method_19940(arg0)
+val CreateWorldScreen.TAB_HEADER_BACKGROUND_TEXTURE by aliasStatic(CreateWorldScreen::field_49902)
+fun CreateWorldScreen.onCloseScreen() = this.method_30297()
+fun KClass<CreateWorldScreen>.copyDataPack(arg0: file_Path, arg1: MinecraftClient) = CreateWorldScreen.method_29685(arg0, arg1)
+fun KClass<EditWorldScreen>.backupLevel(arg0: net.minecraft.class_32.class_5143) = EditWorldScreen.method_2701(arg0)
+val ResourcePackCompatibility.TOO_NEW by aliasEnum(ResourcePackCompatibility::class, "field_14220")
+val ResourcePackCompatibility.COMPATIBLE by aliasEnum(ResourcePackCompatibility::class, "field_14224")
+val ResourcePackCompatibility.TOO_OLD by aliasEnum(ResourcePackCompatibility::class, "field_14223")
+fun ResourcePackCompatibility.isCompatible() = this.method_14437()
+fun PacketCallbacks.onSuccess() = this.method_45083()
+fun PacketCallbacks.getFailurePacket() = this.method_45086()
+fun KClass<PacketCallbacks>.always(arg0: Runnable) = PacketCallbacks.method_45084(arg0)
+val FilterMask.FILTERED_STYLE by aliasStatic(FilterMask::field_40674)
+val FilterMask.PASS_THROUGH by aliasStatic(FilterMask::field_39942)
+val FilterMask.FULLY_FILTERED by aliasStatic(FilterMask::field_39941)
+fun KClass<FilterMask>.writeMask(arg0: PacketByteBuf, arg1: FilterMask) = FilterMask.method_45091(arg0, arg1)
+fun FilterMask.isFullyFiltered() = this.method_45093()
+fun FilterMask.filter(arg0: String) = this.method_45089(arg0)
+fun FilterMask.isPassThrough() = this.method_45087()
+fun KClass<FilterMask>.readMask(arg0: PacketByteBuf) = FilterMask.method_45090(arg0)
+fun FilterMask.getFilteredText(arg0: String) = this.method_46256(arg0)
+fun FilterMask.markFiltered(arg0: Int) = this.method_45088(arg0)
+fun <S>KClass<SignedArgumentList<S>>.isNotEmpty(arg0: brigadier_ParseResults<S>) = SignedArgumentList.method_58774<S>(arg0)
+fun <S>SignedArgumentList<S>.get(arg0: String) = this.method_58775(arg0)
+fun <S>SignedArgumentList<S>.arguments() = this.comp_974()
+fun KClass<VanillaDataPackProvider>.createManager(arg0: file_Path, arg1: SymlinkFinder) = VanillaDataPackProvider.method_45286(arg0, arg1)
+fun KClass<VanillaDataPackProvider>.createClientManager() = VanillaDataPackProvider.method_52443()
+fun KClass<VanillaDataPackProvider>.createDefaultPack() = VanillaDataPackProvider.method_45287()
+fun WindChargeEntityModel.setAngles(arg0: AbstractWindChargeEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_55239(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ResourcePackProfile.getInformationText(arg0: Boolean) = this.method_14461(arg0)
+fun ResourcePackProfile.createResourcePack() = this.method_14458()
+fun ResourcePackProfile.getInitialPosition() = this.method_14466()
+fun ResourcePackProfile.isPinned() = this.method_14465()
+fun ResourcePackProfile.getCompatibility() = this.method_14460()
+fun ResourcePackProfile.getRequestedFeatures() = this.method_45276()
+fun KClass<ResourcePackProfile>.loadMetadata(arg0: ResourcePackInfo, arg1: net.minecraft.class_3288.class_7680, arg2: Int) = ResourcePackProfile.method_45274(arg0, arg1, arg2)
+fun ResourcePackProfile.getSource() = this.method_29483()
+fun ResourcePackProfile.getDisplayName() = this.method_14457()
+fun ResourcePackProfile.isRequired() = this.method_14464()
+fun ResourcePackProfile.getDescription() = this.method_14459()
+fun ResourcePackProfile.getId() = this.method_14463()
+fun <T>BreezeEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: BreezeEntity = this.method_55232(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RecipeBookProvider.getRecipeBookWidget() = this.method_2659()
+fun RecipeBookProvider.refreshRecipeBook() = this.method_16891()
+val NamespaceResourceManager.type by alias(NamespaceResourceManager::field_14284)
+fun KClass<NamespaceResourceManager>.getMetadataPath(arg0: Identifier) = NamespaceResourceManager.method_14473(arg0)
+fun NamespaceResourceManager.addPack(arg0: String, arg1: Predicate<Identifier>) = this.method_41261(arg0, arg1)
+fun NamespaceResourceManager.addPack(arg0: ResourcePack) = this.method_24233(arg0)
+fun NamespaceResourceManager.addPack(arg0: ResourcePack, arg1: Predicate<Identifier>) = this.method_41256(arg0, arg1)
+val SpectatorMenu.BLANK_COMMAND by aliasStatic(SpectatorMenu::field_3260)
+fun SpectatorMenu.getCurrentState() = this.method_2772()
+fun SpectatorMenu.getSelectedCommand() = this.method_2774()
+fun SpectatorMenu.getCommand(arg0: Int) = this.method_2777(arg0)
+fun SpectatorMenu.getCommands() = this.method_2770()
+fun SpectatorMenu.selectElement(arg0: SpectatorMenuCommandGroup) = this.method_2778(arg0)
+fun SpectatorMenu.useCommand(arg0: Int) = this.method_2771(arg0)
+fun SpectatorMenu.close() = this.method_2779()
+fun SpectatorMenuCommand.use(arg0: SpectatorMenu) = this.method_2783(arg0)
+fun SpectatorMenuCommand.getName() = this.method_16892()
+fun SpectatorMenuCommand.renderIcon(arg0: DrawContext, arg1: Float, arg2: Int) = this.method_2784(arg0, arg1, arg2)
+fun SpectatorMenuCommand.isEnabled() = this.method_16893()
+fun SpectatorMenuCloseCallback.close(arg0: SpectatorMenu) = this.method_2782(arg0)
+fun SpectatorMenuCommandGroup.getPrompt() = this.method_2781()
+fun SpectatorMenuCommandGroup.getCommands() = this.method_2780()
+val ServerDynamicRegistryType.DIMENSIONS by aliasEnum(ServerDynamicRegistryType::class, "field_39973")
+val ServerDynamicRegistryType.RELOADABLE by aliasEnum(ServerDynamicRegistryType::class, "field_39974")
+val ServerDynamicRegistryType.STATIC by aliasEnum(ServerDynamicRegistryType::class, "field_39971")
+val ServerDynamicRegistryType.WORLDGEN by aliasEnum(ServerDynamicRegistryType::class, "field_39972")
+fun BreezeWindFeatureRenderer.render(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: BreezeEntity, arg4: Float, arg5: Float, arg6: Float, arg7: Float, arg8: Float, arg9: Float) = this.method_55275(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
+fun BreezeEyesFeatureRenderer.render(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: BreezeEntity, arg4: Float, arg5: Float, arg6: Float, arg7: Float, arg8: Float, arg9: Float) = this.method_55272(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
+val RegistryLoader.DYNAMIC_REGISTRIES by aliasStatic(RegistryLoader::field_39968)
+val RegistryLoader.SYNCED_REGISTRIES by aliasStatic(RegistryLoader::field_48709)
+val RegistryLoader.DIMENSION_REGISTRIES by aliasStatic(RegistryLoader::field_39969)
+fun KClass<RegistryLoader>.loadFromNetwork(arg0: Map<RegistryKey<out Registry<*>>, List<net.minecraft.class_7782.class_9176>>, arg1: ResourceFactory, arg2: DynamicRegistryManager, arg3: List<net.minecraft.class_7655.class_7657<*>>) = RegistryLoader.method_56519(arg0, arg1, arg2, arg3)
+fun KClass<RegistryLoader>.loadFromResource(arg0: ResourceManager, arg1: DynamicRegistryManager, arg2: List<net.minecraft.class_7655.class_7657<*>>) = RegistryLoader.method_56515(arg0, arg1, arg2)
+fun WindChargeEntityRenderer.render(arg0: AbstractWindChargeEntity, arg1: Float, arg2: Float, arg3: MatrixStack, arg4: VertexConsumerProvider, arg5: Int) = this.method_55270(arg0, arg1, arg2, arg3, arg4, arg5)
+fun WindChargeEntityRenderer.getTexture(arg0: AbstractWindChargeEntity) = this.method_55269(arg0)
+fun BreezeEntityRenderer.getTexture(arg0: BreezeEntity) = this.method_55267(arg0)
+fun BreezeEntityRenderer.render(arg0: BreezeEntity, arg1: Float, arg2: Float, arg3: MatrixStack, arg4: VertexConsumerProvider, arg5: Int) = this.method_55829(arg0, arg1, arg2, arg3, arg4, arg5)
+fun KClass<BreezeEntityRenderer>.updatePartVisibility(arg0: BreezeEntityModel<BreezeEntity>, arg1: Array<ModelPart>) = BreezeEntityRenderer.method_55830(arg0, *arg1)
+fun Resource.getKnownPackInfo() = this.method_56936()
+fun Resource.getInputStream() = this.method_14482()
+fun Resource.getPackId() = this.method_14480()
+fun Resource.getReader() = this.method_43039()
+fun BreezeDebugRenderer.clear() = this.method_55255()
+fun BreezeDebugRenderer.render(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Double, arg3: Double, arg4: Double) = this.method_55259(arg0, arg1, arg2, arg3, arg4)
+fun BreezeDebugRenderer.addBreezeDebugInfo(arg0: net.minecraft.class_9004.class_9005) = this.method_55266(arg0)
+fun TrialSpawnerBlockEntityRenderer.render(arg0: TrialSpawnerBlockEntity, arg1: Float, arg2: MatrixStack, arg3: VertexConsumerProvider, arg4: Int, arg5: Int) = this.method_55254(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ResourceFinder.toResourcePath(arg0: Identifier) = this.method_45112(arg0)
+fun ResourceFinder.toResourceId(arg0: Identifier) = this.method_45115(arg0)
+fun KClass<ResourceFinder>.json(arg0: String) = ResourceFinder.method_45114(arg0)
+fun ResourceFinder.findAllResources(arg0: ResourceManager) = this.method_45116(arg0)
+fun ResourceFinder.findResources(arg0: ResourceManager) = this.method_45113(arg0)
+val WorldListWidget.DATE_FORMAT by aliasStatic(WorldListWidget::field_19132)
+fun WorldListWidget.setSelected(arg0: net.minecraft.class_528.class_7414) = this.method_20157(arg0)
+fun WorldListWidget.setSearch(arg0: String) = this.method_44677(arg0)
+fun WorldListWidget.getSelectedAsOptional() = this.method_20159()
+fun <E>TintableCompositeModel<E>.setColorMultiplier(arg0: Int) where E: Entity = this.method_22956(arg0)
+val WindowSettings.fullscreenWidth by alias(WindowSettings::field_3282)
+val WindowSettings.fullscreenHeight by alias(WindowSettings::field_3286)
+val WindowSettings.width by alias(WindowSettings::field_3285)
+val WindowSettings.height by alias(WindowSettings::field_3284)
+val WindowSettings.fullscreen by alias(WindowSettings::field_3283)
+fun ResourcePack.findResources(arg0: ResourceType, arg1: String, arg2: String, arg3: net.minecraft.class_3262.class_7664) = this.method_14408(arg0, arg1, arg2, arg3)
+fun ResourcePack.openRoot(arg0: Array<String>) = this.method_14410(*arg0)
+fun ResourcePack.open(arg0: ResourceType, arg1: Identifier) = this.method_14405(arg0, arg1)
+fun ResourcePack.getInfo() = this.method_56926()
+fun ResourcePack.getId() = this.method_14409()
+fun ResourcePack.getKnownPackInfo() = this.method_56929()
+fun ResourcePack.getNamespaces(arg0: ResourceType) = this.method_14406(arg0)
+fun <T>ResourcePack.parseMetadata(arg0: ResourceMetadataReader<T>) = this.method_14407<T>(arg0)
+fun <E>TintableAnimalModel<E>.setColorMultiplier(arg0: Int) where E: Entity = this.method_22955(arg0)
+val RunArgs.network by alias(RunArgs::field_3278)
+val RunArgs.windowSettings by alias(RunArgs::field_3279)
+val RunArgs.game by alias(RunArgs::field_3280)
+val RunArgs.quickPlay by alias(RunArgs::field_44553)
+val RunArgs.directories by alias(RunArgs::field_3277)
+fun <T>HorseEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: AbstractHorseEntity = this.method_17084(arg0, arg1, arg2, arg3)
+fun <T>HorseEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: AbstractHorseEntity = this.method_17085(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ArmorStandArmorEntityModel.setAngles(arg0: ArmorStandEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_17066(arg0, arg1, arg2, arg3, arg4, arg5)
+val AffineTransformation.ANY_CODEC by aliasStatic(AffineTransformation::field_42533)
+fun AffineTransformation.multiply(arg0: AffineTransformation) = this.method_22933(arg0)
+fun AffineTransformation.invert() = this.method_22935()
+fun KClass<AffineTransformation>.identity() = AffineTransformation.method_22931()
+fun AffineTransformation.interpolate(arg0: AffineTransformation, arg1: Float) = this.method_35864(arg0, arg1)
+fun DefaultResourcePack.forEachNamespacedPath(arg0: ResourceType, arg1: Identifier, arg2: Consumer<file_Path>) = this.method_45192(arg0, arg1, arg2)
+fun DefaultResourcePack.getFactory() = this.method_43032()
+val RawShapedRecipe.PACKET_CODEC by aliasStatic(RawShapedRecipe::field_48359)
+fun RawShapedRecipe.matches(arg0: CraftingRecipeInput) = this.method_55078(arg0)
+val ResourceType.CLIENT_RESOURCES by aliasEnum(ResourceType::class, "field_14188")
+val ResourceType.SERVER_DATA by aliasEnum(ResourceType::class, "field_14190")
+fun KClass<BreezeShootTask>.isFacingTarget(arg0: BreezeEntity, arg1: LivingEntity) = BreezeShootTask.method_55038(arg0, arg1)
+fun <E>CompositeEntityModel<E>.getParts() where E: Entity = this.method_22960()
+fun KClass<BreezeJumpTask>.shouldJump(arg0: ServerWorld, arg1: BreezeEntity) = BreezeJumpTask.method_58644(arg0, arg1)
+fun KClass<VertexConsumerProvider>.immediate(arg0: BufferAllocator) = VertexConsumerProvider.method_22991(arg0)
+val BreezeEntity.inhalingAnimationState by alias(BreezeEntity::field_47280)
+val BreezeEntity.shootingAnimationState by alias(BreezeEntity::field_47281)
+val BreezeEntity.slidingAnimationState by alias(BreezeEntity::field_47277)
+fun BreezeEntity.playWhirlSound() = this.method_55747()
+fun BreezeEntity.isWithinShortRange(arg0: Vec3d) = this.method_55013(arg0)
+fun BreezeEntity.addLongJumpingParticles() = this.method_55008()
+fun BreezeEntity.addBlockParticles(arg0: Int) = this.method_55007(arg0)
+fun BreezeEntity.resetLongJumpingParticleAddCount() = this.method_55015()
+fun BreezeEntity.getChargeY() = this.method_55009()
+fun BreezeEntity.getHurtBy() = this.method_56562()
+fun KClass<BreezeEntity>.createBreezeAttributes() = BreezeEntity.method_55014()
+fun RemoveMessageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_44889(arg0)
+fun RemoveMessageS2CPacket.messageSignature() = this.comp_938()
+fun SpectatorMenuState.getCommand(arg0: Int) = this.method_2786(arg0)
+fun TrialSpawnerBlockEntity.toUpdatePacket() = this.method_55149()
+val TrialSpawnerBlock.OMINOUS by aliasStatic(TrialSpawnerBlock::field_50170)
+val TrialSpawnerBlock.TRIAL_SPAWNER_STATE by aliasStatic(TrialSpawnerBlock::field_47349)
+val PackResourceMetadata.SERIALIZER by aliasStatic(PackResourceMetadata::field_14202)
+fun PackResourceMetadata.description() = this.comp_1580()
+fun PackResourceMetadata.packFormat() = this.comp_1581()
+fun PackResourceMetadata.supportedFormats() = this.comp_1582()
+fun BoatEntityModel.setAngles(arg0: BoatEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_22952(arg0, arg1, arg2, arg3, arg4, arg5)
+fun BatEntityModel.setAngles(arg0: BatEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_17069(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>DonkeyEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: AbstractDonkeyEntity = this.method_17076(arg0, arg1, arg2, arg3, arg4, arg5)
+val <T>ChickenEntityModel<T>.RED_THING where T: Entity by aliasStatic({ChickenEntityModel.field_32471})
+fun BookModel.renderBook(arg0: MatrixStack, arg1: VertexConsumer, arg2: Int, arg3: Int, arg4: Int) = this.method_24184(arg0, arg1, arg2, arg3, arg4)
+fun BookModel.setPageAngles(arg0: Float, arg1: Float, arg2: Float, arg3: Float) = this.method_17073(arg0, arg1, arg2, arg3)
+fun <T>ResourceMetadataReader<T>.getKey() = this.method_14420()
+fun <T>ResourceMetadataReader<T>.fromJson(arg0: JsonObject) = this.method_14421(arg0)
+fun LastSeenMessagesCollector.add(arg0: MessageSignatureData, arg1: Boolean) = this.method_46265(arg0, arg1)
+fun LastSeenMessagesCollector.remove(arg0: MessageSignatureData) = this.method_46264(arg0)
+fun LastSeenMessagesCollector.collect() = this.method_46266()
+fun LastSeenMessagesCollector.resetMessageCount() = this.method_46262()
+val FileResourcePackProvider.source by alias(FileResourcePackProvider::field_25345)
+fun KClass<FileResourcePackProvider>.forEachProfile(arg0: file_Path, arg1: SymlinkFinder, arg2: BiConsumer<file_Path, net.minecraft.class_3288.class_7680>) = FileResourcePackProvider.method_45271(arg0, arg1, arg2)
+fun XmlReportingTestCompletionListener.saveReport(arg0: File) = this.method_36101(arg0)
+fun AcknowledgmentValidator.addPending(arg0: MessageSignatureData) = this.method_44989(arg0)
+fun AcknowledgmentValidator.getMessageCount() = this.method_46268()
+fun AcknowledgmentValidator.removeUntil(arg0: Int) = this.method_46269(arg0)
+fun AcknowledgmentValidator.validate(arg0: net.minecraft.class_7635.class_7636) = this.method_46270(arg0)
+val TrialSpawnerState.ACTIVE by aliasEnum(TrialSpawnerState::class, "field_47385")
+val TrialSpawnerState.WAITING_FOR_REWARD_EJECTION by aliasEnum(TrialSpawnerState::class, "field_47386")
+val TrialSpawnerState.INACTIVE by aliasEnum(TrialSpawnerState::class, "field_47383")
+val TrialSpawnerState.WAITING_FOR_PLAYERS by aliasEnum(TrialSpawnerState::class, "field_47384")
+val TrialSpawnerState.EJECTING_REWARD by aliasEnum(TrialSpawnerState::class, "field_47387")
+val TrialSpawnerState.COOLDOWN by aliasEnum(TrialSpawnerState::class, "field_47388")
+fun TrialSpawnerState.playsSound() = this.method_55217()
+fun TrialSpawnerState.emitParticles(arg0: world_World, arg1: BlockPos, arg2: Boolean) = this.method_55210(arg0, arg1, arg2)
+fun TrialSpawnerState.doesDisplayRotate() = this.method_55216()
+val LastSeenMessageList.EMPTY by aliasStatic(LastSeenMessageList::field_39883)
+val LastSeenMessageList.MAX_ENTRIES by aliasStatic(LastSeenMessageList::field_39884)
+fun LastSeenMessageList.pack(arg0: MessageSignatureStorage) = this.method_46258(arg0)
+fun LastSeenMessageList.updateSignatures(arg0: net.minecraft.class_7498.class_7499) = this.method_46257(arg0)
+fun LastSeenMessageList.entries() = this.comp_965()
+val TrialSpawnerData.SPAWN_DATA_KEY by aliasStatic(TrialSpawnerData::field_47369)
+val TrialSpawnerData.codec by aliasStatic(TrialSpawnerData::field_47370)
+fun TrialSpawnerData.canSpawnMore(arg0: ServerWorld, arg1: TrialSpawnerConfig, arg2: Int) = this.method_55185(arg0, arg1, arg2)
+fun TrialSpawnerData.isCooldownAtRepeating(arg0: ServerWorld, arg1: Float, arg2: Int) = this.method_55198(arg0, arg1, arg2)
+fun TrialSpawnerData.getAdditionalPlayers(arg0: BlockPos) = this.method_55195(arg0)
+fun TrialSpawnerData.getSpawnDataNbt(arg0: TrialSpawnerState) = this.method_55194(arg0)
+fun TrialSpawnerData.isCooldownPast(arg0: ServerWorld, arg1: Float, arg2: Int) = this.method_55184(arg0, arg1, arg2)
+fun TrialSpawnerData.resetAndClearMobs(arg0: TrialSpawnerLogic, arg1: ServerWorld) = this.method_58717(arg0, arg1)
+fun TrialSpawnerData.areMobsDead() = this.method_55200()
+fun TrialSpawnerData.setEntityType(arg0: TrialSpawnerLogic, arg1: Random, arg2: EntityType<*>) = this.method_55189(arg0, arg1, arg2)
+fun TrialSpawnerData.hasSpawnData(arg0: TrialSpawnerLogic, arg1: Random) = this.method_55197(arg0, arg1)
+fun TrialSpawnerData.setDisplayEntity(arg0: TrialSpawnerLogic, arg1: world_World, arg2: TrialSpawnerState) = this.method_55190(arg0, arg1, arg2)
+fun TrialSpawnerData.hasSpawnedAllMobs(arg0: TrialSpawnerConfig, arg1: Int) = this.method_55192(arg0, arg1)
+fun TrialSpawnerData.updatePlayers(arg0: ServerWorld, arg1: BlockPos, arg2: TrialSpawnerLogic) = this.method_55186(arg0, arg1, arg2)
+fun TrialSpawnerData.reset() = this.method_55182()
+fun TrialSpawnerData.isCooldownOver(arg0: ServerWorld) = this.method_55183(arg0)
+val NoiseBasedCountPlacementModifier.MODIFIER_CODEC by aliasStatic(NoiseBasedCountPlacementModifier::field_24987)
+val TrialSpawnerConfig.DEFAULT by aliasStatic(TrialSpawnerConfig::field_47367)
+fun TrialSpawnerConfig.getCooldownLength() = this.method_58712()
+fun TrialSpawnerConfig.spawnPotentialsDefinition() = this.comp_2110()
+fun TrialSpawnerConfig.lootTablesToEject() = this.comp_2111()
+fun TrialSpawnerConfig.spawnRange() = this.comp_2103()
+fun TrialSpawnerConfig.itemsToDropWhenOminous() = this.comp_2552()
+fun TrialSpawnerConfig.ticksBetweenSpawn() = this.comp_2108()
+fun TrialSpawnerConfig.totalMobsAddedPerPlayer() = this.comp_2106()
+fun TrialSpawnerConfig.simultaneousMobsAddedPerPlayer() = this.comp_2107()
+fun TrialSpawnerConfig.totalMobs() = this.comp_2104()
+fun TrialSpawnerConfig.simultaneousMobs() = this.comp_2105()
+fun TickablePacketListener.tick() = this.method_18784()
+fun ArmorStandEntityModel.setAngles(arg0: ArmorStandEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_17066(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ArmorStandEntityModel.animateModel(arg0: ArmorStandEntity, arg1: Float, arg2: Float, arg3: Float) = this.method_24223(arg0, arg1, arg2, arg3)
+val TrialSpawnerLogic.OMINOUS_CONFIG_NBT_KEY by aliasStatic(TrialSpawnerLogic::field_50178)
+val TrialSpawnerLogic.NORMAL_CONFIG_NBT_KEY by aliasStatic(TrialSpawnerLogic::field_50177)
+fun TrialSpawnerLogic.updateListeners() = this.method_55176()
+fun TrialSpawnerLogic.tickClient(arg0: world_World, arg1: BlockPos, arg2: Boolean) = this.method_55165(arg0, arg1, arg2)
+fun TrialSpawnerLogic.trySpawnMob(arg0: ServerWorld, arg1: BlockPos) = this.method_55158(arg0, arg1)
+fun TrialSpawnerLogic.getConfig() = this.method_55170()
+fun KClass<TrialSpawnerLogic>.addMobSpawnParticles(arg0: world_World, arg1: BlockPos, arg2: Random, arg3: SimpleParticleType) = TrialSpawnerLogic.method_55166(arg0, arg1, arg2, arg3)
+fun TrialSpawnerLogic.tickServer(arg0: ServerWorld, arg1: BlockPos, arg2: Boolean) = this.method_55171(arg0, arg1, arg2)
+fun KClass<TrialSpawnerLogic>.addTrialOmenParticles(arg0: world_World, arg1: BlockPos, arg2: Random) = TrialSpawnerLogic.method_58701(arg0, arg1, arg2)
+fun TrialSpawnerLogic.getDetectionRadius() = this.method_58707()
+fun KClass<TrialSpawnerLogic>.addDetectionParticles(arg0: world_World, arg1: BlockPos, arg2: Random, arg3: Int, arg4: ParticleEffect) = TrialSpawnerLogic.method_55167(arg0, arg1, arg2, arg3, arg4)
+fun TrialSpawnerLogic.codec() = this.method_55156()
+fun TrialSpawnerLogic.setNotOminous(arg0: ServerWorld, arg1: BlockPos) = this.method_58702(arg0, arg1)
+fun TrialSpawnerLogic.setSpawnerState(arg0: world_World, arg1: TrialSpawnerState) = this.method_55163(arg0, arg1)
+fun TrialSpawnerLogic.ejectLootTable(arg0: ServerWorld, arg1: BlockPos, arg2: RegistryKey<LootTable>) = this.method_55159(arg0, arg1, arg2)
+//fun TrialSpawnerLogic.forceActivate() = this.method_55178()
+fun KClass<TrialSpawnerLogic>.addEjectItemParticles(arg0: world_World, arg1: BlockPos, arg2: Random) = TrialSpawnerLogic.method_55173(arg0, arg1, arg2)
+fun TrialSpawnerLogic.getSpawnerState() = this.method_55175()
+fun TrialSpawnerLogic.canActivate(arg0: world_World) = this.method_55162(arg0)
+//fun TrialSpawnerLogic.setEntityDetector(arg0: EntityDetector) = this.method_55168(arg0)
+fun TrialSpawnerLogic.setOminous(arg0: ServerWorld, arg1: BlockPos) = this.method_58700(arg0, arg1)
+fun TrialSpawnerLogic.isOminous() = this.method_58705()
+fun KClass<Spawner>.appendSpawnDataToTooltip(arg0: ItemStack, arg1: List<Text>, arg2: String) = Spawner.method_55121(arg0, arg1, arg2)
+fun KClass<Spawner>.getSpawnedEntityText(arg0: ItemStack, arg1: String) = Spawner.method_55120(arg0, arg1)
+fun Spawner.setEntityType(arg0: EntityType<*>, arg1: Random) = this.method_46408(arg0, arg1)
+fun ChatLogEntry.getType() = this.method_46538()
+fun TimeCheckLootCondition.test(arg0: LootContext) = this.method_22587(arg0)
+fun TimeCheckLootCondition.value() = this.comp_1886()
+fun TimeCheckLootCondition.period() = this.comp_1885()
+val ExecutionFlags.NONE by aliasStatic(ExecutionFlags::field_47160)
+fun ExecutionFlags.isSilent() = this.method_54884()
+fun ExecutionFlags.setSilent() = this.method_54886()
+fun ExecutionFlags.setInsideReturnRun() = this.method_54888()
+fun ExecutionFlags.isInsideReturnRun() = this.method_54887()
+fun ExecutionFlags.flags() = this.comp_2020()
+fun SentMessage.send(arg0: ServerPlayerEntity, arg1: Boolean, arg2: net.minecraft.class_2556.class_7602) = this.method_45095(arg0, arg1, arg2)
+fun SentMessage.content() = this.comp_1081()
+val ServerLoginNetworkHandler.connection by alias(ServerLoginNetworkHandler::field_14158)
+fun ServerLoginNetworkHandler.getConnectionInfo() = this.method_14383()
+fun ServerLoginNetworkHandler.disconnect(arg0: Text) = this.method_14380(arg0)
+fun LootableInventory.setLootTable(arg0: RegistryKey<LootTable>) = this.method_11285(arg0)
+fun LootableInventory.getLootTableSeed() = this.method_54870()
+fun LootableInventory.getLootTable() = this.method_54869()
+fun LootableInventory.writeLootTable(arg0: NbtCompound) = this.method_54872(arg0)
+fun LootableInventory.readLootTable(arg0: NbtCompound) = this.method_54871(arg0)
+fun LootableInventory.getPos() = this.method_11016()
+fun LootableInventory.generateLoot(arg0: PlayerEntity) = this.method_54873(arg0)
+fun KClass<LootableInventory>.setLootTable(arg0: BlockView, arg1: Random, arg2: BlockPos, arg3: RegistryKey<LootTable>) = LootableInventory.method_54868(arg0, arg1, arg2, arg3)
+fun LootableInventory.getWorld() = this.method_10997()
+fun LootableInventory.setLootTable(arg0: RegistryKey<LootTable>, arg1: Long) = this.method_54867(arg0, arg1)
+fun LootableInventory.setLootTableSeed(arg0: Long) = this.method_54866(arg0)
+val ServerNetworkIo.EPOLL_CHANNEL by aliasStatic(ServerNetworkIo::field_14105)
+val ServerNetworkIo.DEFAULT_CHANNEL by aliasStatic(ServerNetworkIo::field_14111)
+val ServerNetworkIo.active by alias(ServerNetworkIo::field_14108)
+fun ServerNetworkIo.tick() = this.method_14357()
+fun ServerNetworkIo.stop() = this.method_14356()
+fun ServerNetworkIo.bind(arg0: InetAddress, arg1: Int) = this.method_14354(arg0, arg1)
+fun ServerNetworkIo.bindLocal() = this.method_14353()
+val ServerPlayNetworkHandler.chunkDataSender by alias(ServerPlayNetworkHandler::field_45026)
+val ServerPlayNetworkHandler.player by alias(ServerPlayNetworkHandler::field_14140)
+fun ServerPlayNetworkHandler.syncWithPlayerPosition() = this.method_14372()
+fun ServerPlayNetworkHandler.sendChatMessage(arg0: SignedMessage, arg1: net.minecraft.class_2556.class_7602) = this.method_45170(arg0, arg1)
+fun ServerPlayNetworkHandler.getConnectionAddress() = this.method_48107()
+fun ServerPlayNetworkHandler.addPendingAcknowledgment(arg0: SignedMessage) = this.method_44897(arg0)
+fun ServerPlayNetworkHandler.requestTeleport(arg0: Double, arg1: Double, arg2: Double, arg3: Float, arg4: Float, arg5: Set<PositionFlag>) = this.method_14360(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ServerPlayNetworkHandler.updateSequence(arg0: Int) = this.method_41255(arg0)
+fun ServerPlayNetworkHandler.reconfigure() = this.method_52414()
+fun ServerPlayNetworkHandler.sendProfilelessChatMessage(arg0: Text, arg1: net.minecraft.class_2556.class_7602) = this.method_45168(arg0, arg1)
+fun ServerPlayNetworkHandler.requestTeleport(arg0: Double, arg1: Double, arg2: Double, arg3: Float, arg4: Float) = this.method_14363(arg0, arg1, arg2, arg3, arg4)
+val BatAnimations.ROOSTING by aliasStatic(BatAnimations::field_47103)
+val BatAnimations.FLYING by aliasStatic(BatAnimations::field_47104)
+fun OxidizableTrapdoorBlock.getDegradationLevel() = this.method_54774()
+fun OxidizableGrateBlock.getDegradationLevel() = this.method_54772()
+val StorageDataObject.TYPE_FACTORY by aliasStatic(StorageDataObject::field_20855)
+fun SkinOverlayOwner.shouldRenderOverlay() = this.method_6872()
+val BreezeAttackablesSensor.RANGE by aliasStatic(BreezeAttackablesSensor::field_47260)
+fun MessageVerifier.ensureVerified(arg0: SignedMessage) = this.method_45048(arg0)
+fun KClass<LongJumpUtil>.getJumpingVelocity(arg0: MobEntity, arg1: Vec3d, arg2: Float, arg3: Int, arg4: Boolean) = LongJumpUtil.method_54990(arg0, arg1, arg2, arg3, arg4)
+fun VertexConsumer.vertex(arg0: Float, arg1: Float, arg2: Float) = this.method_22912(arg0, arg1, arg2)
+fun VertexConsumer.normal(arg0: Float, arg1: Float, arg2: Float) = this.method_22914(arg0, arg1, arg2)
+fun VertexConsumer.color(arg0: Int) = this.method_39415(arg0)
+fun VertexConsumer.overlay(arg0: Int, arg1: Int) = this.method_60796(arg0, arg1)
+fun VertexConsumer.quad(arg0: net.minecraft.class_4587.class_4665, arg1: BakedQuad, arg2: FloatArray, arg3: Float, arg4: Float, arg5: Float, arg6: Float, arg7: IntArray, arg8: Int, arg9: Boolean) = this.method_22920(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
+fun VertexConsumer.overlay(arg0: Int) = this.method_22922(arg0)
+fun VertexConsumer.vertex(arg0: net.minecraft.class_4587.class_4665, arg1: Float, arg2: Float, arg3: Float) = this.method_56824(arg0, arg1, arg2, arg3)
+fun VertexConsumer.normal(entry: net.minecraft.class_4587.class_4665, x: Float, y: Float, z: Float) = this.method_60831(entry, x, y, z)
+fun VertexConsumer.quad(arg0: net.minecraft.class_4587.class_4665, arg1: BakedQuad, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Int, arg7: Int) = this.method_22919(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun VertexConsumer.vertex(arg0: Vector3f) = this.method_60830(arg0)
+fun VertexConsumer.texture(arg0: Float, arg1: Float) = this.method_22913(arg0, arg1)
+fun VertexConsumer.light(arg0: Int) = this.method_60803(arg0)
+fun VertexConsumer.light(arg0: Int, arg1: Int) = this.method_22921(arg0, arg1)
+fun VertexConsumer.color(arg0: Int, arg1: Int, arg2: Int, arg3: Int) = this.method_1336(arg0, arg1, arg2, arg3)
+fun VertexConsumer.vertex(matrix: Matrix4f, x: Float, y: Float, z: Float) = this.method_22918(matrix, x, y, z)
+fun VertexConsumer.vertex(arg0: net.minecraft.class_4587.class_4665, arg1: Vector3f) = this.method_61032(arg0, arg1)
+fun VertexConsumer.color(arg0: Float, arg1: Float, arg2: Float, arg3: Float) = this.method_22915(arg0, arg1, arg2, arg3)
+fun VertexConsumer.vertex(arg0: Float, arg1: Float, arg2: Float, arg3: Int, arg4: Float, arg5: Float, arg6: Int, arg7: Int, arg8: Float, arg9: Float, arg10: Float) = this.method_23919(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
+fun VertexConsumer.colorRgb(arg0: Int) = this.method_60832(arg0)
+fun KClass<ZipResourcePack>.getNamespace(arg0: String, arg1: String) = ZipResourcePack.method_52423(arg0, arg1)
+fun KClass<DirectoryResourcePack>.isValidPath(arg0: file_Path) = DirectoryResourcePack.method_14402(arg0)
+fun KClass<DirectoryResourcePack>.findResources(arg0: String, arg1: file_Path, arg2: List<String>, arg3: net.minecraft.class_3262.class_7664) = DirectoryResourcePack.method_45183(arg0, arg1, arg2, arg3)
+fun LootContextPredicateValidator.validateEntityPredicates(arg0: List<LootContextPredicate>, arg1: String) = this.method_54965(arg0, arg1)
+fun LootContextPredicateValidator.validate(arg0: List<LootContextPredicate>, arg1: LootContextType, arg2: String) = this.method_54964(arg0, arg1, arg2)
+fun LootContextPredicateValidator.validateEntityPredicate(arg0: LootContextPredicate, arg1: String) = this.method_54962(arg0, arg1)
+fun LootContextPredicateValidator.validateEntityPredicate(arg0: Optional<LootContextPredicate>, arg1: String) = this.method_54966(arg0, arg1)
+fun LootContextPredicateValidator.validate(arg0: LootContextPredicate, arg1: LootContextType, arg2: String) = this.method_54961(arg0, arg1, arg2)
+fun ErrorReporter.makeChild(arg0: String) = this.method_54946(arg0)
+fun ErrorReporter.report(arg0: String) = this.method_54947(arg0)
+fun MatrixStack.pop() = this.method_22909()
+fun MatrixStack.multiply(arg0: Quaternionf, arg1: Float, arg2: Float, arg3: Float) = this.method_49278(arg0, arg1, arg2, arg3)
+fun MatrixStack.translate(arg0: Float, arg1: Float, arg2: Float) = this.method_46416(arg0, arg1, arg2)
+fun MatrixStack.loadIdentity() = this.method_34426()
+fun MatrixStack.scale(arg0: Float, arg1: Float, arg2: Float) = this.method_22905(arg0, arg1, arg2)
+fun MatrixStack.peek() = this.method_23760()
+fun MatrixStack.translate(arg0: Double, arg1: Double, arg2: Double) = this.method_22904(arg0, arg1, arg2)
+fun MatrixStack.isEmpty() = this.method_22911()
+fun MatrixStack.multiply(arg0: Quaternionf) = this.method_22907(arg0)
+fun MatrixStack.multiplyPositionMatrix(arg0: Matrix4f) = this.method_34425(arg0)
+fun MatrixStack.push() = this.method_22903()
+fun <T>KClass<AbstractFileResourcePack>.parseMetadata(arg0: ResourceMetadataReader<T>, arg1: InputStream) = AbstractFileResourcePack.method_14392<T>(arg0, arg1)
+fun MessageChain.getPacker(arg0: Signer) = this.method_44880(arg0)
+fun MessageChain.getUnpacker(arg0: PlayerPublicKey) = this.method_44874(arg0)
+fun MessageBody.update(arg0: net.minecraft.class_7498.class_7499) = this.method_46304(arg0)
+fun MessageBody.timestamp() = this.comp_930()
+fun MessageBody.toSerialized(arg0: MessageSignatureStorage) = this.method_46306(arg0)
+fun MessageBody.lastSeenMessages() = this.comp_932()
+fun MessageBody.content() = this.comp_929()
+fun MessageBody.salt() = this.comp_931()
+fun Frame.succeed(arg0: Int) = this.method_54895(arg0)
+fun Frame.doReturn() = this.method_54896()
+fun Frame.fail() = this.method_54894()
+fun Frame.depth() = this.comp_2022()
+fun Frame.frameControl() = this.comp_2024()
+fun Frame.returnValueConsumer() = this.comp_2023()
+fun MultiplayerScreen.select(arg0: net.minecraft.class_4267.class_504) = this.method_2531(arg0)
+fun MultiplayerScreen.connect() = this.method_2536()
+val predicate_BlockPredicate.PACKET_CODEC by aliasStatic(predicate_BlockPredicate::field_49181)
+fun predicate_BlockPredicate.test(arg0: CachedBlockPosition) = this.method_57147(arg0)
+fun predicate_BlockPredicate.test(arg0: ServerWorld, arg1: BlockPos) = this.method_22454(arg0, arg1)
+fun predicate_BlockPredicate.state() = this.comp_1733()
+fun predicate_BlockPredicate.hasNbt() = this.method_57143()
+fun predicate_BlockPredicate.nbt() = this.comp_1734()
+fun predicate_BlockPredicate.blocks() = this.comp_1732()
+fun RecipeBookGhostSlots.setRecipe(arg0: RecipeEntry<*>) = this.method_2565(arg0)
+fun RecipeBookGhostSlots.addSlot(arg0: Ingredient, arg1: Int, arg2: Int) = this.method_2569(arg0, arg1, arg2)
+fun RecipeBookGhostSlots.draw(arg0: DrawContext, arg1: MinecraftClient, arg2: Int, arg3: Int, arg4: Boolean, arg5: Float) = this.method_2567(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RecipeBookGhostSlots.reset() = this.method_2571()
+fun RecipeBookGhostSlots.getSlot(arg0: Int) = this.method_2570(arg0)
+fun RecipeBookGhostSlots.getSlotCount() = this.method_2572()
+fun TickStepS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_54667(arg0)
+fun TickStepS2CPacket.tickSteps() = this.comp_2016()
+fun ServerPlayerInteractionManager.processBlockBreakingAction(arg0: BlockPos, arg1: net.minecraft.class_2846.class_2847, arg2: Direction, arg3: Int, arg4: Int) = this.method_14263(arg0, arg1, arg2, arg3, arg4)
+fun ServerPlayerInteractionManager.setWorld(arg0: ServerWorld) = this.method_14259(arg0)
+fun ServerPlayerInteractionManager.finishMining(arg0: BlockPos, arg1: Int, arg2: String) = this.method_21717(arg0, arg1, arg2)
+fun ServerPlayerInteractionManager.isSurvivalLike() = this.method_14267()
+fun ServerPlayerInteractionManager.interactItem(arg0: ServerPlayerEntity, arg1: world_World, arg2: ItemStack, arg3: Hand) = this.method_14256(arg0, arg1, arg2, arg3)
+fun ServerPlayerInteractionManager.interactBlock(arg0: ServerPlayerEntity, arg1: world_World, arg2: ItemStack, arg3: Hand, arg4: BlockHitResult) = this.method_14262(arg0, arg1, arg2, arg3, arg4)
+fun ServerPlayerInteractionManager.update() = this.method_14264()
+fun ServerPlayerInteractionManager.isCreative() = this.method_14268()
+fun ServerPlayerInteractionManager.changeGameMode(arg0: GameMode) = this.method_30118(arg0)
+fun ServerPlayerInteractionManager.tryBreakBlock(arg0: BlockPos) = this.method_14266(arg0)
+fun UpdateTickRateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_54665(arg0)
+fun UpdateTickRateS2CPacket.isFrozen() = this.comp_2015()
+fun UpdateTickRateS2CPacket.tickRate() = this.comp_2014()
+val RandomFeatureEntry.chance by alias(RandomFeatureEntry::field_14011)
+val RandomFeatureEntry.feature by alias(RandomFeatureEntry::field_14013)
+fun RandomFeatureEntry.generate(arg0: StructureWorldAccess, arg1: ChunkGenerator, arg2: Random, arg3: BlockPos) = this.method_14271(arg0, arg1, arg2, arg3)
+fun WorldBorderInitializeS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34123(arg0)
+fun ServerLightingProvider.initializeLight(arg0: Chunk, arg1: Boolean) = this.method_51285(arg0, arg1)
+fun ServerLightingProvider.tick() = this.method_17303()
+fun ServerLightingProvider.enqueue(arg0: Int, arg1: Int) = this.method_53694(arg0, arg1)
+fun ServerLightingProvider.light(arg0: Chunk, arg1: Boolean) = this.method_17310(arg0, arg1)
+fun ClearTitleS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34115(arg0)
+fun ClearTitleS2CPacket.shouldReset() = this.method_34116()
+fun LightPredicate.test(arg0: ServerWorld, arg1: BlockPos) = this.method_22483(arg0, arg1)
+fun LightPredicate.range() = this.comp_1791()
+fun FluidPredicate.state() = this.comp_1782()
+fun FluidPredicate.test(arg0: ServerWorld, arg1: BlockPos) = this.method_22475(arg0, arg1)
+fun FluidPredicate.fluids() = this.comp_2372()
+val ServerPlayerEntity.interactionManager by alias(ServerPlayerEntity::field_13974)
+val ServerPlayerEntity.notInAnyWorld by alias(ServerPlayerEntity::field_13989)
+val ServerPlayerEntity.server by alias(ServerPlayerEntity::field_13995)
+val ServerPlayerEntity.networkHandler by alias(ServerPlayerEntity::field_13987)
+val ServerPlayerEntity.seenCredits by alias(ServerPlayerEntity::field_13969)
+fun ServerPlayerEntity.updateLastActionTime() = this.method_14234()
+fun ServerPlayerEntity.getServerWorld() = this.method_51469()
+fun ServerPlayerEntity.setWatchedSection(arg0: ChunkSectionPos) = this.method_17668(arg0)
+fun ServerPlayerEntity.setOnGround(arg0: Vec3d) = this.method_52208(arg0)
+fun ServerPlayerEntity.getIp() = this.method_14209()
+fun ServerPlayerEntity.setChunkFilter(arg0: ChunkFilter) = this.method_52373(arg0)
+fun ServerPlayerEntity.setSpawnPoint(arg0: RegistryKey<world_World>, arg1: BlockPos, arg2: Float, arg3: Boolean, arg4: Boolean) = this.method_26284(arg0, arg1, arg2, arg3, arg4)
+fun ServerPlayerEntity.setSession(arg0: PublicPlayerSession) = this.method_46364(arg0)
+fun ServerPlayerEntity.markHealthDirty() = this.method_14217()
+fun ServerPlayerEntity.onSpawn() = this.method_34225()
+fun ServerPlayerEntity.handleFall(arg0: Double, arg1: Double, arg2: Double, arg3: Boolean) = this.method_14207(arg0, arg1, arg2, arg3)
+fun ServerPlayerEntity.increaseTravelMotionStats(arg0: Double, arg1: Double, arg2: Double) = this.method_54720(arg0, arg1, arg2)
+fun ServerPlayerEntity.setCameraEntity(arg0: Entity) = this.method_14224(arg0)
+fun ServerPlayerEntity.sendChatMessage(arg0: SentMessage, arg1: Boolean, arg2: net.minecraft.class_2556.class_7602) = this.method_43505(arg0, arg1, arg2)
+fun ServerPlayerEntity.isInTeleportationState() = this.method_14208()
+fun ServerPlayerEntity.setExperiencePoints(arg0: Int) = this.method_14228(arg0)
+fun ServerPlayerEntity.teleport(arg0: ServerWorld, arg1: Double, arg2: Double, arg3: Double, arg4: Float, arg5: Float) = this.method_14251(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ServerPlayerEntity.dropSelectedItem(arg0: Boolean) = this.method_37413(arg0)
+fun ServerPlayerEntity.updateInput(arg0: Float, arg1: Float, arg2: Boolean, arg3: Boolean) = this.method_14218(arg0, arg1, arg2, arg3)
+fun ServerPlayerEntity.isSpawnForced() = this.method_26282()
+fun ServerPlayerEntity.detachForDimensionChange() = this.method_60594()
+fun ServerPlayerEntity.sendServerMetadata(arg0: ServerMetadata) = this.method_43930(arg0)
+fun ServerPlayerEntity.setClientOptions(arg0: SyncedClientOptions) = this.method_14213(arg0)
+fun ServerPlayerEntity.setStartRaidPos(arg0: BlockPos) = this.method_58586(arg0)
+fun ServerPlayerEntity.readGameModeNbt(arg0: NbtCompound) = this.method_32748(arg0)
+fun ServerPlayerEntity.tickFallStartPos() = this.method_38786()
+fun ServerPlayerEntity.playerTick() = this.method_14226()
+fun ServerPlayerEntity.createCommonPlayerSpawnInfo(arg0: ServerWorld) = this.method_52374(arg0)
+fun ServerPlayerEntity.setServerWorld(arg0: ServerWorld) = this.method_51468(arg0)
+fun ServerPlayerEntity.getPlayerListName() = this.method_14206()
+fun ServerPlayerEntity.setSpawnPointFrom(arg0: ServerPlayerEntity) = this.method_60592(arg0)
+fun ServerPlayerEntity.clearStartRaidPos() = this.method_58584()
+fun ServerPlayerEntity.onTeleportationDone() = this.method_14240()
+fun ServerPlayerEntity.tickVehicleInLavaRiding() = this.method_38787()
+fun ServerPlayerEntity.setSpawnExtraParticlesOnFall(arg0: Boolean) = this.method_58143(arg0)
+fun ServerPlayerEntity.areClientChatColorsEnabled() = this.method_34879()
+fun ServerPlayerEntity.copyFrom(arg0: ServerPlayerEntity, arg1: Boolean) = this.method_14203(arg0, arg1)
+fun ServerPlayerEntity.onDisconnect() = this.method_14231()
+fun ServerPlayerEntity.lookAtEntity(arg0: net.minecraft.class_2183.class_2184, arg1: Entity, arg2: net.minecraft.class_2183.class_2184) = this.method_14222(arg0, arg1, arg2)
+fun ServerPlayerEntity.setExperienceLevel(arg0: Int) = this.method_14252(arg0)
+fun ServerPlayerEntity.getClientOptions() = this.method_53823()
+fun ServerPlayerEntity.allowsServerListing() = this.method_39426()
+fun ServerPlayerEntity.sendMessageToClient(arg0: Text, arg1: Boolean) = this.method_43502(arg0, arg1)
+fun ServerPlayerEntity.getRespawnTarget(arg0: Boolean, arg1: net.minecraft.class_5454.class_9823) = this.method_60590(arg0, arg1)
+fun ServerPlayerEntity.isDisconnected() = this.method_14239()
+fun ServerPlayerEntity.shouldFilterMessagesSentTo(arg0: ServerPlayerEntity) = this.method_33795(arg0)
+fun ServerPlayerEntity.changeGameMode(arg0: GameMode) = this.method_7336(arg0)
+val PlayerPredicate.LOOKING_AT_DISTANCE by aliasStatic(PlayerPredicate::field_33928)
+fun PlayerPredicate.gameMode() = this.comp_1818()
+fun PlayerPredicate.experienceLevel() = this.comp_1817()
+fun PlayerPredicate.recipes() = this.comp_1820()
+fun PlayerPredicate.lookingAt() = this.comp_1822()
+fun PlayerPredicate.advancements() = this.comp_1821()
+fun PlayerPredicate.stats() = this.comp_1819()
+val ServerWorld.CLEAR_WEATHER_DURATION_PROVIDER by aliasStatic(ServerWorld::field_41749)
+val ServerWorld.THUNDER_WEATHER_DURATION_PROVIDER by aliasStatic(ServerWorld::field_41751)
+val ServerWorld.RAIN_WEATHER_DURATION_PROVIDER by aliasStatic(ServerWorld::field_41750)
+val ServerWorld.savingDisabled by alias(ServerWorld::field_13957)
+val ServerWorld.END_SPAWN_POS by aliasStatic(ServerWorld::field_25144)
+fun ServerWorld.isNearOccupiedPointOfInterest(arg0: ChunkSectionPos) = this.method_20588(arg0)
+fun ServerWorld.hasRaidAt(arg0: BlockPos) = this.method_19503(arg0)
+fun ServerWorld.clearUpdatesInArea(arg0: BlockBox) = this.method_23658(arg0)
+fun ServerWorld.isSleepingEnabled() = this.method_33144()
+fun ServerWorld.isFlat() = this.method_28125()
+fun ServerWorld.onPlayerRespawned(arg0: ServerPlayerEntity) = this.method_18215(arg0)
+fun ServerWorld.getDragonPart(arg0: Int) = this.method_31424(arg0)
+fun ServerWorld.getRaidAt(arg0: BlockPos) = this.method_19502(arg0)
+fun ServerWorld.tickSpawners(arg0: Boolean, arg1: Boolean) = this.method_29202(arg0, arg1)
+fun ServerWorld.loadEntities(arg0: Stream<Entity>) = this.method_31423(arg0)
+fun ServerWorld.getPointOfInterestStorage() = this.method_19494()
+fun ServerWorld.getDebugString() = this.method_31268()
+fun ServerWorld.locateBiome(arg0: Predicate<RegistryEntry<Biome>>, arg1: BlockPos, arg2: Int, arg3: Int, arg4: Int) = this.method_42108(arg0, arg1, arg2, arg3, arg4)
+fun ServerWorld.disableTickSchedulers(arg0: WorldChunk) = this.method_39223(arg0)
+fun ServerWorld.setEnderDragonFight(arg0: EnderDragonFight) = this.method_51837(arg0)
+fun ServerWorld.isInBlockTick() = this.method_14177()
+fun ServerWorld.getForcedChunks() = this.method_17984()
+fun ServerWorld.addEntities(arg0: Stream<Entity>) = this.method_31426(arg0)
+fun ServerWorld.cacheStructures(arg0: Chunk) = this.method_39778(arg0)
+fun ServerWorld.shouldTickEntity(arg0: BlockPos) = this.method_37118(arg0)
+fun ServerWorld.tickEntity(arg0: Entity) = this.method_18762(arg0)
+fun ServerWorld.shouldTick(arg0: ChunkPos) = this.method_39998(arg0)
+fun ServerWorld.handleInteraction(arg0: EntityInteraction, arg1: Entity, arg2: InteractionObserver) = this.method_19496(arg0, arg1, arg2)
+fun ServerWorld.sendToPlayerIfNearby(arg0: ServerPlayerEntity, arg1: Boolean, arg2: Double, arg3: Double, arg4: Double, arg5: Packet<*>) = this.method_14191(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ServerWorld.resetWeather() = this.method_14195()
+fun ServerWorld.setSpawnPos(arg0: BlockPos, arg1: Float) = this.method_8554(arg0, arg1)
+fun ServerWorld.getRandomAlivePlayer() = this.method_18779()
+fun ServerWorld.getPersistentStateManager() = this.method_17983()
+fun ServerWorld.unloadEntities(arg0: WorldChunk) = this.method_18764(arg0)
+fun ServerWorld.getAliveEnderDragons() = this.method_18776()
+fun ServerWorld.getOccupiedPointOfInterestDistance(arg0: ChunkSectionPos) = this.method_19498(arg0)
+fun ServerWorld.getLogicalHeight() = this.method_32819()
+fun ServerWorld.tryLoadEntity(arg0: Entity) = this.method_18768(arg0)
+fun ServerWorld.setChunkForced(arg0: Int, arg1: Int, arg2: Boolean) = this.method_17988(arg0, arg1, arg2)
+fun ServerWorld.onDimensionChanged(arg0: Entity) = this.method_18769(arg0)
+fun ServerWorld.isNearOccupiedPointOfInterest(arg0: BlockPos) = this.method_19500(arg0)
+fun ServerWorld.tick(arg0: BooleanSupplier) = this.method_18765(arg0)
+fun ServerWorld.setWeather(arg0: Int, arg1: Int, arg2: Boolean, arg3: Boolean) = this.method_27910(arg0, arg1, arg2, arg3)
+fun ServerWorld.iterateEntities() = this.method_27909()
+fun ServerWorld.getEntity(arg0: UUID) = this.method_14190(arg0)
+fun <T>ServerWorld.getEntitiesByType(arg0: TypeFilter<Entity, T>, arg1: Predicate<in T>) where T: Entity = this.method_18198<T>(arg0, arg1)
+fun <T>ServerWorld.spawnParticles(arg0: T, arg1: Double, arg2: Double, arg3: Double, arg4: Int, arg5: Double, arg6: Double, arg7: Double, arg8: Double) where T: ParticleEffect = this.method_14199<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+fun ServerWorld.tickChunk(arg0: WorldChunk, arg1: Int) = this.method_18203(arg0, arg1)
+fun ServerWorld.tickIceAndSnow(arg0: BlockPos) = this.method_52370(arg0)
+fun ServerWorld.getOrCreateRandom(arg0: Identifier) = this.method_51836(arg0)
+fun ServerWorld.resetIdleTimeout() = this.method_14197()
+fun ServerWorld.save(arg0: ProgressListener, arg1: Boolean, arg2: Boolean) = this.method_14176(arg0, arg1, arg2)
+fun ServerWorld.spawnNewEntityAndPassengers(arg0: Entity) = this.method_30736(arg0)
+fun ServerWorld.setTimeOfDay(arg0: Long) = this.method_29199(arg0)
+fun ServerWorld.locateStructure(arg0: TagKey<Structure>, arg1: BlockPos, arg2: Int, arg3: Boolean) = this.method_8487(arg0, arg1, arg2, arg3)
+fun ServerWorld.isNearOccupiedPointOfInterest(arg0: BlockPos, arg1: Int) = this.method_19497(arg0, arg1)
+fun ServerWorld.onPlayerConnected(arg0: ServerPlayerEntity) = this.method_18213(arg0)
+fun ServerWorld.shouldTick(arg0: BlockPos) = this.method_39999(arg0)
+fun ServerWorld.isChunkLoaded(arg0: Long) = this.method_37116(arg0)
+fun <T>ServerWorld.spawnParticles(arg0: ServerPlayerEntity, arg1: T, arg2: Boolean, arg3: Double, arg4: Double, arg5: Double, arg6: Int, arg7: Double, arg8: Double, arg9: Double, arg10: Double) where T: ParticleEffect = this.method_14166<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
+fun ServerWorld.getScoreboard() = this.method_14170()
+fun ServerWorld.removePlayer(arg0: ServerPlayerEntity, arg1: net.minecraft.class_1297.class_5529) = this.method_18770(arg0, arg1)
+fun ServerWorld.dump(arg0: file_Path) = this.method_21625(arg0)
+fun ServerWorld.getStructureTemplateManager() = this.method_14183()
+fun ServerWorld.updateSleepingPlayers() = this.method_8448()
+fun EndCombatS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34141(arg0)
+fun RecipeGroupButtonWidget.checkForNewRecipes(arg0: MinecraftClient) = this.method_2622(arg0)
+fun RecipeGroupButtonWidget.hasKnownRecipes(arg0: ClientRecipeBook) = this.method_2624(arg0)
+fun DeathMessageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34143(arg0)
+fun DeathMessageS2CPacket.playerId() = this.comp_2275()
+fun DeathMessageS2CPacket.message() = this.comp_2276()
+val <T>ChunkTicketType<T>.POST_TELEPORT by aliasStatic({ChunkTicketType.field_19347})
+val <T>ChunkTicketType<T>.DRAGON by aliasStatic({ChunkTicketType.field_17264})
+val <T>ChunkTicketType<T>.START by aliasStatic({ChunkTicketType.field_14030})
+val <T>ChunkTicketType<T>.PORTAL by aliasStatic({ChunkTicketType.field_19280})
+val <T>ChunkTicketType<T>.FORCED by aliasStatic({ChunkTicketType.field_14031})
+val <T>ChunkTicketType<T>.UNKNOWN by aliasStatic({ChunkTicketType.field_14032})
+val <T>ChunkTicketType<T>.PLAYER by aliasStatic({ChunkTicketType.field_14033})
+val EnterCombatS2CPacket.INSTANCE by aliasStatic(EnterCombatS2CPacket::field_47951)
+fun EnterCombatS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34142(arg0)
+fun RecipeResultCollection.hasCraftableRecipes() = this.method_2655()
+fun RecipeResultCollection.hasFittingRecipes() = this.method_2657()
+fun RecipeResultCollection.hasSingleOutput() = this.method_2656()
+fun RecipeResultCollection.getResults(arg0: Boolean) = this.method_2651(arg0)
+fun RecipeResultCollection.getAllRecipes() = this.method_2650()
+fun RecipeResultCollection.isCraftable(arg0: RecipeEntry<*>) = this.method_2653(arg0)
+fun RecipeResultCollection.isInitialized() = this.method_2652()
+fun RecipeResultCollection.computeCraftables(arg0: RecipeMatcher, arg1: Int, arg2: Int, arg3: RecipeBook) = this.method_2649(arg0, arg1, arg2, arg3)
+fun RecipeResultCollection.initialize(arg0: RecipeBook) = this.method_2647(arg0)
+fun RecipeDisplayListener.onRecipesDisplayed(arg0: List<RecipeEntry<*>>) = this.method_2646(arg0)
+fun AnimatedResultButton.hasResults() = this.method_2642()
+fun AnimatedResultButton.showResultCollection(arg0: RecipeResultCollection, arg1: RecipeBookResults) = this.method_2640(arg0, arg1)
+fun AnimatedResultButton.currentRecipe() = this.method_2643()
+fun AnimatedResultButton.getTooltip() = this.method_2644()
+fun RecipeBookResults.onRecipesDisplayed(arg0: List<RecipeEntry<*>>) = this.method_2629(arg0)
+fun RecipeBookResults.draw(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float) = this.method_2634(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RecipeBookResults.setResults(arg0: List<RecipeResultCollection>, arg1: Boolean) = this.method_2627(arg0, arg1)
+fun RecipeBookResults.getLastClickedResults() = this.method_2635()
+fun RecipeBookResults.mouseClicked(arg0: Double, arg1: Double, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int) = this.method_2632(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun RecipeBookResults.drawTooltip(arg0: DrawContext, arg1: Int, arg2: Int) = this.method_2628(arg0, arg1, arg2)
+fun RecipeBookResults.setGui(arg0: RecipeBookWidget) = this.method_2630(arg0)
+fun RecipeBookResults.initialize(arg0: MinecraftClient, arg1: Int, arg2: Int) = this.method_2636(arg0, arg1, arg2)
+fun RecipeBookResults.hideAlternates() = this.method_2638()
+fun OxidizableDoorBlock.getDegradationLevel() = this.method_54770()
+fun WorldBorderWarningTimeChangedS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34165(arg0)
+fun OxidizableBulbBlock.getDegradationLevel() = this.method_54768()
+fun WorldBorderSizeChangedS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34163(arg0)
+val BulbBlock.POWERED by aliasStatic(BulbBlock::field_47081)
+val BulbBlock.LIT by aliasStatic(BulbBlock::field_47082)
+fun BulbBlock.update(arg0: BlockState, arg1: ServerWorld, arg2: BlockPos) = this.method_55373(arg0, arg1, arg2)
+fun WorldBorderWarningBlocksChangedS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34167(arg0)
+fun ReferenceLootCondition.id() = this.comp_1869()
+fun ReferenceLootCondition.test(arg0: LootContext) = this.method_22579(arg0)
+val TickManager.MIN_TICK_RATE by aliasStatic(TickManager::field_46960)
+fun TickManager.setStepTicks(arg0: Int) = this.method_54747(arg0)
+fun TickManager.shouldSkipTick(arg0: Entity) = this.method_54746(arg0)
+fun TickManager.setFrozen(arg0: Boolean) = this.method_54675(arg0)
+fun TickManager.getMillisPerTick() = this.method_54749()
+fun TickManager.shouldTick() = this.method_54751()
+fun TickManager.isStepping() = this.method_54752()
+fun TickManager.isFrozen() = this.method_54754()
+fun TickManager.setTickRate(arg0: Float) = this.method_54671(arg0)
+fun TickManager.step() = this.method_54755()
+fun EntityTrackerEntry.startTracking(arg0: ServerPlayerEntity) = this.method_18760(arg0)
+fun EntityTrackerEntry.getPos() = this.method_60942()
+fun EntityTrackerEntry.tick() = this.method_18756()
+fun EntityTrackerEntry.stopTracking(arg0: ServerPlayerEntity) = this.method_14302(arg0)
+fun EntityTrackerEntry.sendPackets(arg0: ServerPlayerEntity, arg1: Consumer<Packet<ClientPlayPacketListener>>) = this.method_18757(arg0, arg1)
+fun EntityTrackerEntry.getYaw() = this.method_60945()
+fun EntityTrackerEntry.getHeadYaw() = this.method_60946()
+fun EntityTrackerEntry.getPitch() = this.method_60944()
+fun OverlayMessageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34154(arg0)
+fun OverlayMessageS2CPacket.text() = this.comp_2279()
+fun FlatChunkGeneratorConfig.with(arg0: List<FlatChunkGeneratorLayer>, arg1: Optional<RegistryEntryList<StructureSet>>, arg2: RegistryEntry<Biome>) = this.method_46727(arg0, arg1, arg2)
+fun FlatChunkGeneratorConfig.updateLayerBlocks() = this.method_14330()
+fun FlatChunkGeneratorConfig.enableFeatures() = this.method_28911()
+fun FlatChunkGeneratorConfig.createGenerationSettings(arg0: RegistryEntry<Biome>) = this.method_44225(arg0)
+fun KClass<FlatChunkGeneratorConfig>.getPlains(arg0: RegistryEntryLookup<Biome>) = FlatChunkGeneratorConfig.method_46726(arg0)
+fun KClass<FlatChunkGeneratorConfig>.getDefaultConfig(arg0: RegistryEntryLookup<Biome>, arg1: RegistryEntryLookup<StructureSet>, arg2: RegistryEntryLookup<PlacedFeature>) = FlatChunkGeneratorConfig.method_14309(arg0, arg1, arg2)
+fun FlatChunkGeneratorConfig.enableLakes() = this.method_28916()
+fun KClass<FlatChunkGeneratorConfig>.getLavaLakes(arg0: RegistryEntryLookup<PlacedFeature>) = FlatChunkGeneratorConfig.method_46729(arg0)
+fun DataCommandStorage.get(arg0: Identifier) = this.method_22546(arg0)
+fun DataCommandStorage.getIds() = this.method_22542()
+fun DataCommandStorage.set(arg0: Identifier, arg1: NbtCompound) = this.method_22547(arg0, arg1)
+fun ChunkRegion.needsBlending(arg0: ChunkPos, arg1: Int) = this.method_42109(arg0, arg1)
+fun WorldBorderInterpolateSizeS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34159(arg0)
+fun WorldBorderCenterChangedS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34156(arg0)
+fun <T>ChunkTicket<T>.compareTo(arg0: ChunkTicket<*>) = this.method_14285(arg0)
+val StatePredicate.PACKET_CODEC by aliasStatic(StatePredicate::field_49396)
+fun StatePredicate.test(arg0: FluidState) = this.method_22518(arg0)
+fun StatePredicate.conditions() = this.comp_1830()
+fun StatePredicate.findMissing(arg0: StateManager<*, *>) = this.method_53235(arg0)
+fun <S>StatePredicate.test(arg0: StateManager<*, S>, arg1: S) where S: State<*, S> = this.method_22515<S>(arg0, arg1)
+fun StatePredicate.test(arg0: BlockState) = this.method_22514(arg0)
+fun <T>PriorityIterator<T>.enqueue(arg0: T, arg1: Int) = this.method_54726(arg0, arg1)
+fun FlatChunkGeneratorLayer.getBlockState() = this.method_14286()
+fun ServerTickManager.isSprinting() = this.method_54670()
+fun ServerTickManager.updateSprintTime() = this.method_54680()
+fun ServerTickManager.stopStepping() = this.method_54676()
+fun ServerTickManager.stopSprinting() = this.method_54678()
+fun ServerTickManager.step(arg0: Int) = this.method_54672(arg0)
+fun ServerTickManager.sprint() = this.method_54679()
+fun ServerTickManager.startSprint(arg0: Int) = this.method_54677(arg0)
+fun ServerTickManager.sendPackets(arg0: ServerPlayerEntity) = this.method_54674(arg0)
+fun RecipeAlternativesWidget.isVisible() = this.method_2616()
+fun RecipeAlternativesWidget.getResults() = this.method_2614()
+fun RecipeAlternativesWidget.showAlternativesForResult(arg0: MinecraftClient, arg1: RecipeResultCollection, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Float) = this.method_2617(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun RecipeAlternativesWidget.setVisible(arg0: Boolean) = this.method_2613(arg0)
+val RecipeBookWidget.BUTTON_TEXTURES by aliasStatic(RecipeBookWidget::field_45550)
+fun RecipeBookWidget.drawGhostSlots(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Boolean, arg4: Float) = this.method_2581(arg0, arg1, arg2, arg3, arg4)
+fun RecipeBookWidget.initialize(arg0: Int, arg1: Int, arg2: MinecraftClient, arg3: Boolean, arg4: AbstractRecipeScreenHandler<*, *>) = this.method_2597(arg0, arg1, arg2, arg3, arg4)
+fun RecipeBookWidget.acceptAlignedInput(arg0: Ingredient, arg1: Int, arg2: Int, arg3: Int, arg4: Int) = this.method_60344(arg0, arg1, arg2, arg3, arg4)
+fun RecipeBookWidget.update() = this.method_2590()
+fun RecipeBookWidget.isClickOutsideBounds(arg0: Double, arg1: Double, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int) = this.method_2598(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun RecipeBookWidget.reset() = this.method_2579()
+fun RecipeBookWidget.toggleOpen() = this.method_2591()
+fun RecipeBookWidget.slotClicked(arg0: Slot) = this.method_2600(arg0)
+fun RecipeBookWidget.drawTooltip(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Int, arg4: Int) = this.method_2601(arg0, arg1, arg2, arg3, arg4)
+fun RecipeBookWidget.isOpen() = this.method_2605()
+fun RecipeBookWidget.refresh() = this.method_2592()
+fun RecipeBookWidget.findLeftEdge(arg0: Int, arg1: Int) = this.method_2595(arg0, arg1)
+fun RecipeBookWidget.showGhostRecipe(arg0: RecipeEntry<*>, arg1: List<Slot>) = this.method_2596(arg0, arg1)
+fun ZipCompressor.copyAll(arg0: file_Path) = this.method_37161(arg0)
+fun ZipCompressor.write(arg0: file_Path, arg1: String) = this.method_37163(arg0, arg1)
+fun ZipCompressor.copy(arg0: file_Path, arg1: File) = this.method_37162(arg0, arg1)
+fun FallAfterExplosionCriterion.trigger(arg0: ServerPlayerEntity, arg1: Vec3d, arg2: Entity) = this.method_58358(arg0, arg1, arg2)
+val SystemDetails.MEBI by aliasStatic(SystemDetails::field_33852)
+fun SystemDetails.addSection(arg0: String, arg1: Supplier<String>) = this.method_37123(arg0, arg1)
+fun SystemDetails.writeTo(arg0: StringBuilder) = this.method_37124(arg0)
+fun SystemDetails.addSection(arg0: String, arg1: String) = this.method_37122(arg0, arg1)
+fun KClass<SystemDetails>.toMebibytes(arg0: Long) = SystemDetails.method_59895(arg0)
+fun SystemDetails.collect() = this.method_37120()
+fun BlockListChecker.isAllowed(arg0: Address) = this.method_37098(arg0)
+fun BlockListChecker.isAllowed(arg0: ServerAddress) = this.method_37099(arg0)
+val MapDecorationType.NO_MAP_COLOR by aliasStatic(MapDecorationType::field_50016)
+val MapDecorationType.PACKET_CODEC by aliasStatic(MapDecorationType::field_50018)
+fun MapDecorationType.hasMapColor() = this.method_58452()
+fun MapDecorationType.mapColor() = this.comp_2516()
+fun MapDecorationType.showOnItemFrame() = this.comp_2515()
+fun MapDecorationType.trackCount() = this.comp_2518()
+fun MapDecorationType.explorationMapElement() = this.comp_2517()
+fun MapDecorationType.assetId() = this.comp_2514()
+val ToolComponent.PACKET_CODEC by aliasStatic(ToolComponent::field_50010)
+fun ToolComponent.getSpeed(arg0: BlockState) = this.method_58425(arg0)
+fun ToolComponent.isCorrectForDrops(arg0: BlockState) = this.method_58426(arg0)
+fun ToolComponent.rules() = this.comp_2498()
+fun ToolComponent.defaultMiningSpeed() = this.comp_2499()
+fun ToolComponent.damagePerBlock() = this.comp_2500()
+val <T>RegistryEntryArgumentType<T>.FAILED_TO_PARSE_EXCEPTION by aliasStatic({RegistryEntryArgumentType.field_50037})
+fun <T>RegistryEntryArgumentType<T>.parse(arg0: StringReader) = this.method_58479(arg0)
+fun <T>KClass<RegistryEntryArgumentType<T>>.getLootFunction(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryEntryArgumentType.method_58485(arg0, arg1)
+fun <T>KClass<RegistryEntryArgumentType<T>>.getLootCondition(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryEntryArgumentType.method_58488(arg0, arg1)
+fun <T>KClass<RegistryEntryArgumentType<T>>.getLootTable(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryEntryArgumentType.method_58481(arg0, arg1)
+fun <T>KClass<RegistryEntryArgumentType<T>>.lootCondition(arg0: CommandRegistryAccess) = RegistryEntryArgumentType.method_58489(arg0)
+fun <T>KClass<RegistryEntryArgumentType<T>>.lootFunction(arg0: CommandRegistryAccess) = RegistryEntryArgumentType.method_58486(arg0)
+fun <T>KClass<RegistryEntryArgumentType<T>>.lootTable(arg0: CommandRegistryAccess) = RegistryEntryArgumentType.method_58482(arg0)
+fun WorldCreator.setWorldType(arg0: net.minecraft.class_8100.class_8101) = this.method_48705(arg0)
+fun WorldCreator.areCheatsEnabled() = this.method_48724()
+fun WorldCreator.update() = this.method_48695()
+fun WorldCreator.setBonusChestEnabled(arg0: Boolean) = this.method_48720(arg0)
+fun WorldCreator.setSeed(arg0: String) = this.method_48716(arg0)
+fun WorldCreator.isDebug() = this.method_48729()
+fun WorldCreator.applyModifier(arg0: net.minecraft.class_7193.class_7195) = this.method_48700(arg0)
+fun WorldCreator.setDifficulty(arg0: Difficulty) = this.method_48696(arg0)
+fun WorldCreator.addListener(arg0: Consumer<WorldCreator>) = this.method_48712(arg0)
+fun WorldCreator.setGenerateStructures(arg0: Boolean) = this.method_48717(arg0)
+fun WorldCreator.setGeneratorOptionsHolder(arg0: GeneratorOptionsHolder) = this.method_48701(arg0)
+fun WorldCreator.setCheatsEnabled(arg0: Boolean) = this.method_48713(arg0)
+fun WorldCreator.shouldGenerateStructures() = this.method_48726()
+fun WorldCreator.setGameMode(arg0: net.minecraft.class_8100.class_4539) = this.method_48704(arg0)
+fun WorldCreator.setGameRules(arg0: GameRules) = this.method_48697(arg0)
+fun WorldCreator.setWorldName(arg0: String) = this.method_48710(arg0)
+fun WorldCreator.isBonusChestEnabled() = this.method_48727()
+fun WorldCreator.isHardcore() = this.method_48723()
+fun WorldCreator.getLevelScreenProvider() = this.method_48731()
+fun StorageLootNumberProvider.storage() = this.comp_2525()
+fun StorageLootNumberProvider.path() = this.comp_2526()
+val DamageScaling.NEVER by aliasEnum(DamageScaling::class, "field_42285")
+val DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER by aliasEnum(DamageScaling::class, "field_42286")
+val DamageScaling.ALWAYS by aliasEnum(DamageScaling::class, "field_42287")
+val DamageSources.registry by alias(DamageSources::field_42296)
+fun DamageSources.fallingStalactite(arg0: Entity) = this.method_48814(arg0)
+fun DamageSources.arrow(arg0: PersistentProjectileEntity, arg1: Entity) = this.method_48803(arg0, arg1)
+fun DamageSources.sting(arg0: LivingEntity) = this.method_48801(arg0)
+fun DamageSources.fallingAnvil(arg0: Entity) = this.method_48810(arg0)
+fun DamageSources.windCharge(arg0: Entity, arg1: LivingEntity) = this.method_55648(arg0, arg1)
+fun DamageSources.witherSkull(arg0: WitherSkullEntity, arg1: Entity) = this.method_48806(arg0, arg1)
+fun DamageSources.genericKill() = this.method_51847()
+fun DamageSources.thorns(arg0: Entity) = this.method_48818(arg0)
+fun DamageSources.cactus() = this.method_48826()
+fun DamageSources.dryOut() = this.method_48834()
+fun DamageSources.inWall() = this.method_48822()
+fun DamageSources.fallingBlock(arg0: Entity) = this.method_48798(arg0)
+fun DamageSources.spit(arg0: Entity, arg1: LivingEntity) = this.method_55647(arg0, arg1)
+fun DamageSources.outsideBorder() = this.method_51846()
+fun DamageSources.wither() = this.method_48832()
+fun DamageSources.hotFloor() = this.method_48820()
+fun DamageSources.trident(arg0: Entity, arg1: Entity) = this.method_48799(arg0, arg1)
+fun DamageSources.stalagmite() = this.method_48837()
+fun DamageSources.outOfWorld() = this.method_48829()
+fun DamageSources.lava() = this.method_48817()
+fun DamageSources.dragonBreath() = this.method_48833()
+fun DamageSources.starve() = this.method_48825()
+fun DamageSources.onFire() = this.method_48813()
+fun DamageSources.fireworks(arg0: FireworkRocketEntity, arg1: Entity) = this.method_48805(arg0, arg1)
+fun DamageSources.lightningBolt() = this.method_48809()
+fun DamageSources.create(arg0: RegistryKey<DamageType>) = this.method_48795(arg0)
+fun DamageSources.fireball(arg0: AbstractFireballEntity, arg1: Entity) = this.method_48804(arg0, arg1)
+fun DamageSources.magic() = this.method_48831()
+fun DamageSources.inFire() = this.method_48794()
+fun DamageSources.create(arg0: RegistryKey<DamageType>, arg1: Entity) = this.method_48796(arg0, arg1)
+fun DamageSources.playerAttack(arg0: PlayerEntity) = this.method_48802(arg0)
+fun DamageSources.flyIntoWall() = this.method_48828()
+fun DamageSources.freeze() = this.method_48836()
+fun DamageSources.drown() = this.method_48824()
+fun DamageSources.mobProjectile(arg0: Entity, arg1: LivingEntity) = this.method_48800(arg0, arg1)
+fun DamageSources.mobAttackNoAggro(arg0: LivingEntity) = this.method_48816(arg0)
+fun DamageSources.create(arg0: RegistryKey<DamageType>, arg1: Entity, arg2: Entity) = this.method_48797(arg0, arg1, arg2)
+fun DamageSources.mobAttack(arg0: LivingEntity) = this.method_48812(arg0)
+fun DamageSources.sonicBoom(arg0: Entity) = this.method_48821(arg0)
+fun DamageSources.generic() = this.method_48830()
+fun DamageSources.badRespawnPoint(arg0: Vec3d) = this.method_48808(arg0)
+fun DamageSources.fall() = this.method_48827()
+fun DamageSources.thrown(arg0: Entity, arg1: Entity) = this.method_48811(arg0, arg1)
+fun DamageSources.cramming() = this.method_48823()
+fun DamageSources.campfire() = this.method_59917()
+fun DamageSources.indirectMagic(arg0: Entity, arg1: Entity) = this.method_48815(arg0, arg1)
+fun DamageSources.sweetBerryBush() = this.method_48835()
+fun DamageSources.explosion(arg0: Explosion) = this.method_48807(arg0)
+fun DamageSources.explosion(arg0: Entity, arg1: Entity) = this.method_48819(arg0, arg1)
+fun <T, P, C>KClass<PackratParsing>.createParser(arg0: net.minecraft.class_9437.class_9439<T, C, P>) = PackratParsing.method_58495<T, C, P>(arg0)
+val DamageEffects.HURT by aliasEnum(DamageEffects::class, "field_42275")
+val DamageEffects.FREEZING by aliasEnum(DamageEffects::class, "field_42280")
+val DamageEffects.THORNS by aliasEnum(DamageEffects::class, "field_42276")
+val DamageEffects.BURNING by aliasEnum(DamageEffects::class, "field_42278")
+val DamageEffects.DROWNING by aliasEnum(DamageEffects::class, "field_42277")
+val DamageEffects.POKING by aliasEnum(DamageEffects::class, "field_42279")
+val Brightness.LIGHT_LEVEL_CODEC by aliasStatic(Brightness::field_42262)
+val Brightness.FULL by aliasStatic(Brightness::field_42264)
+fun KClass<Brightness>.unpack(arg0: Int) = Brightness.method_48764(arg0)
+fun Brightness.pack() = this.method_48763()
+fun Brightness.block() = this.comp_1240()
+fun Brightness.sky() = this.comp_1241()
+fun <V, K>CachedMapper<K, V>.map(arg0: K) = this.method_48782(arg0)
+fun AngledModelEntity.getModelAngles() = this.method_36976()
+fun ParseResults.putAll(arg0: ParseResults) = this.method_58324(arg0)
+fun <T>ParseResults.getOrThrow(arg0: Symbol<T>) = this.method_58326<T>(arg0)
+fun <T>ParseResults.get(arg0: Symbol<T>) = this.method_58322<T>(arg0)
+fun <T>ParseResults.getAny(arg0: Array<Symbol<T>>) = this.method_58325<T>(*arg0)
+fun <T>ParseResults.getOrDefault(arg0: Symbol<T>, arg1: T) = this.method_58327<T>(arg0, arg1)
+fun <T>ParseResults.getAnyOrThrow(arg0: Array<Symbol<T>>) = this.method_58328<T>(*arg0)
+fun <T>ParseResults.put(arg0: Symbol<T>, arg1: T) = this.method_58323<T>(arg0, arg1)
+fun CommonPingS2CPacket.apply(arg0: ClientCommonPacketListener) = this.method_36949(arg0)
+fun CommonPongC2SPacket.apply(arg0: ServerCommonPacketListener) = this.method_36959(arg0)
+fun KClass<RedirectResolver>.createSrv() = RedirectResolver.method_36909()
+val AllowedAddressResolver.DEFAULT by aliasStatic(AllowedAddressResolver::field_33745)
+fun AllowedAddressResolver.resolve(arg0: ServerAddress) = this.method_36907(arg0)
+val AnyIdParsingRule.INSTANCE by aliasStatic(AnyIdParsingRule::field_49967)
+fun <T>ArgumentParser<T>.startParsing(arg0: ParsingState<StringReader>) = this.method_58340(arg0)
+fun <T>ArgumentParser<T>.parse(arg0: StringReader) = this.method_58341(arg0)
+fun <T>ArgumentParser<T>.listSuggestions(arg0: SuggestionsBuilder) = this.method_58342(arg0)
+fun <T>ArgumentParser<T>.top() = this.comp_2485()
+fun <T>ArgumentParser<T>.rules() = this.comp_2484()
+fun Selectable.getType() = this.method_37018()
+fun Selectable.isNarratable() = this.method_37303()
+fun <S>KClass<Term<S>>.symbol(arg0: Symbol<*>) = Term.method_58332<S>(arg0)
+fun <S>Term<S>.matches(arg0: ParsingState<S>, arg1: ParseResults, arg2: Cut) = this.method_58334(arg0, arg1, arg2)
+fun <S>KClass<Term<S>>.sequence(arg0: Array<Term<S>>) = Term.method_58336<S>(*arg0)
+fun <S>KClass<Term<S>>.cutting() = Term.method_58331<S>()
+fun <S>KClass<Term<S>>.epsilon() = Term.method_58337<S>()
+val ProtectedBlocksStructureProcessor.protectedBlocksTag by alias(ProtectedBlocksStructureProcessor::field_33771)
+fun IdentifierSuggestable.possibleIds() = this.method_58344()
+val <T>Narration<T>.EMPTY by aliasStatic({Narration.field_33793})
+fun <T>Narration<T>.forEachSentence(arg0: Consumer<String>) = this.method_37039(arg0)
+fun <T>KClass<Narration<T>>.texts(arg0: List<Text>) = Narration.method_37037(arg0)
+fun ScreenNarrator.buildNarrations(arg0: Consumer<NarrationMessageBuilder>) = this.method_37044(arg0)
+fun ScreenNarrator.buildNarratorText(arg0: Boolean) = this.method_37045(arg0)
+fun NarrationMessageBuilder.put(arg0: NarrationPart, arg1: Narration<*>) = this.method_37032(arg0, arg1)
+fun NarrationMessageBuilder.nextMessage() = this.method_37031()
+fun NarrationMessageBuilder.put(arg0: NarrationPart, arg1: Text) = this.method_37034(arg0, arg1)
+fun NarrationMessageBuilder.put(arg0: NarrationPart, arg1: String) = this.method_37033(arg0, arg1)
+fun NarrationMessageBuilder.put(arg0: NarrationPart, arg1: Array<Text>) = this.method_37035(arg0, *arg1)
+fun Narratable.appendNarrations(arg0: NarrationMessageBuilder) = this.method_37020(arg0)
+val NarrationPart.USAGE by aliasEnum(NarrationPart::class, "field_33791")
+val NarrationPart.HINT by aliasEnum(NarrationPart::class, "field_33790")
+val NarrationPart.TITLE by aliasEnum(NarrationPart::class, "field_33788")
+val NarrationPart.POSITION by aliasEnum(NarrationPart::class, "field_33789")
+val NbtParsingRule.INSTANCE by aliasStatic(NbtParsingRule::field_49971)
+fun KClass<Literals>.character(arg0: Char) = Literals.method_58346(arg0)
+val <T>EndermanEntityModel<T>.angry where T: LivingEntity by alias(EndermanEntityModel<T>::field_3370)
+val <T>EndermanEntityModel<T>.carryingBlock where T: LivingEntity by alias(EndermanEntityModel<T>::field_3371)
+fun <T>EndermanEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: LivingEntity = this.method_17087(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>DrownedEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: ZombieEntity = this.method_17134(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>DrownedEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: ZombieEntity = this.method_17077(arg0, arg1, arg2, arg3)
+fun KClass<AquiferSampler>.seaLevel(arg0: net.minecraft.class_6350.class_6565) = AquiferSampler.method_36381(arg0)
+fun KClass<AquiferSampler>.aquifer(arg0: ChunkNoiseSampler, arg1: ChunkPos, arg2: NoiseRouter, arg3: RandomSplitter, arg4: Int, arg5: Int, arg6: net.minecraft.class_6350.class_6565) = AquiferSampler.method_36382(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun AquiferSampler.apply(arg0: net.minecraft.class_6910.class_6912, arg1: Double) = this.method_38317(arg0, arg1)
+fun AquiferSampler.needsFluidTick() = this.method_33742()
+fun <T>ElytraEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: LivingEntity = this.method_17079(arg0, arg1, arg2, arg3, arg4, arg5)
+val CamelEntity.standingTransitionAnimationState by alias(CamelEntity::field_40143)
+val CamelEntity.dashingAnimationState by alias(CamelEntity::field_40145)
+val CamelEntity.DASHING by aliasStatic(CamelEntity::field_40139)
+val CamelEntity.idlingAnimationState by alias(CamelEntity::field_40144)
+val CamelEntity.sittingTransitionAnimationState by alias(CamelEntity::field_40142)
+val CamelEntity.sittingAnimationState by alias(CamelEntity::field_40734)
+val CamelEntity.LAST_POSE_TICK by aliasStatic(CamelEntity::field_40140)
+fun CamelEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_45347(arg0, arg1)
+fun CamelEntity.isDashing() = this.method_45361()
+fun CamelEntity.isChangingPose() = this.method_45351()
+fun CamelEntity.startSitting() = this.method_45352()
+fun CamelEntity.setStanding() = this.method_45354()
+fun CamelEntity.canChangePose() = this.method_52548()
+fun CamelEntity.setDashing(arg0: Boolean) = this.method_45362(arg0)
+fun CamelEntity.isSitting() = this.method_45350()
+fun KClass<CamelEntity>.createCamelAttributes() = CamelEntity.method_45360()
+fun CamelEntity.shouldUpdateSittingAnimations() = this.method_48573()
+fun CamelEntity.startStanding() = this.method_45353()
+fun CamelEntity.isStationary() = this.method_45357()
+fun CamelEntity.getLastPoseTickDelta() = this.method_45355()
+fun CamelEntity.setLastPoseTick(arg0: Long) = this.method_45344(arg0)
+fun <T>CowEntityModel<T>.getHead() where T: Entity = this.method_2800()
+fun <T>LlamaEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: AbstractDonkeyEntity = this.method_22962(arg0, arg1, arg2, arg3, arg4, arg5)
+val WindowFramebuffer.DEFAULT_WIDTH by aliasStatic(WindowFramebuffer::field_33724)
+val WindowFramebuffer.DEFAULT_HEIGHT by aliasStatic(WindowFramebuffer::field_33725)
+fun ToggleableFeature.isEnabled(arg0: FeatureSet) = this.method_45382(arg0)
+fun ToggleableFeature.getRequiredFeatures() = this.method_45322()
+fun <T>MagmaCubeEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: SlimeEntity = this.method_22958(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>MagmaCubeEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: SlimeEntity = this.method_17098(arg0, arg1, arg2, arg3)
+fun <T>IllagerEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: IllagerEntity = this.method_17094(arg0, arg1, arg2, arg3, arg4, arg5)
+fun KClass<CamelBrain>.createProfile() = CamelBrain.method_45363()
+fun ResourceReloadLogger.finish() = this.method_36562()
+fun ResourceReloadLogger.recover(arg0: Throwable) = this.method_36564(arg0)
+fun ResourceReloadLogger.addReloadSection(arg0: CrashReport) = this.method_36565(arg0)
+fun ResourceReloadLogger.reload(arg0: net.minecraft.class_6360.class_6362, arg1: List<ResourcePack>) = this.method_36563(arg0, arg1)
+fun GuardianEntityModel.setAngles(arg0: GuardianEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_17083(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>IronGolemEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: IronGolemEntity = this.method_17095(arg0, arg1, arg2, arg3)
+fun <T>IronGolemEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: IronGolemEntity = this.method_17097(arg0, arg1, arg2, arg3, arg4, arg5)
+fun Address.getInetSocketAddress() = this.method_36902()
+fun Address.getHostAddress() = this.method_36900()
+fun Address.getHostName() = this.method_36898()
+fun Address.getPort() = this.method_36901()
+val FeatureSet.MAX_FEATURE_FLAGS by aliasStatic(FeatureSet::field_40172)
+fun FeatureSet.contains(arg0: FeatureFlag) = this.method_45403(arg0)
+fun FeatureSet.isEmpty() = this.method_58398()
+fun FeatureSet.subtract(arg0: FeatureSet) = this.method_59820(arg0)
+fun FeatureSet.isSubsetOf(arg0: FeatureSet) = this.method_45400(arg0)
+fun FeatureSet.intersects(arg0: FeatureSet) = this.method_59819(arg0)
+fun FeatureSet.combine(arg0: FeatureSet) = this.method_45404(arg0)
+val <T>BipedEntityModel<T>.head where T: LivingEntity by alias(BipedEntityModel<T>::field_3398)
+val <T>BipedEntityModel<T>.rightArm where T: LivingEntity by alias(BipedEntityModel<T>::field_3401)
+val <T>BipedEntityModel<T>.leftLeg where T: LivingEntity by alias(BipedEntityModel<T>::field_3397)
+val <T>BipedEntityModel<T>.body where T: LivingEntity by alias(BipedEntityModel<T>::field_3391)
+val <T>BipedEntityModel<T>.sneaking where T: LivingEntity by alias(BipedEntityModel<T>::field_3400)
+val <T>BipedEntityModel<T>.leftArm where T: LivingEntity by alias(BipedEntityModel<T>::field_27433)
+val <T>BipedEntityModel<T>.leftArmPose where T: LivingEntity by alias(BipedEntityModel<T>::field_3399)
+val <T>BipedEntityModel<T>.rightArmPose where T: LivingEntity by alias(BipedEntityModel<T>::field_3395)
+val <T>BipedEntityModel<T>.leaningPitch where T: LivingEntity by alias(BipedEntityModel<T>::field_3396)
+val <T>BipedEntityModel<T>.hat where T: LivingEntity by alias(BipedEntityModel<T>::field_3394)
+val <T>BipedEntityModel<T>.rightLeg where T: LivingEntity by alias(BipedEntityModel<T>::field_3392)
+fun <T>BipedEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: LivingEntity = this.method_17087(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>BipedEntityModel<T>.setVisible(arg0: Boolean) where T: LivingEntity = this.method_2805(arg0)
+fun <T>BipedEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: LivingEntity = this.method_17086(arg0, arg1, arg2, arg3)
+fun <T>BipedEntityModel<T>.copyBipedStateTo(arg0: BipedEntityModel<T>) where T: LivingEntity = this.method_2818(arg0)
+fun FeatureManager.featureSetOf(arg0: Iterable<Identifier>) = this.method_45387(arg0)
+fun FeatureManager.contains(arg0: FeatureSet) = this.method_45385(arg0)
+fun FeatureManager.getCodec() = this.method_45391()
+fun FeatureManager.toId(arg0: FeatureSet) = this.method_45392(arg0)
+fun FeatureManager.featureSetOf(arg0: Iterable<Identifier>, arg1: Consumer<Identifier>) = this.method_45388(arg0, arg1)
+fun FeatureManager.featureSetOf(arg0: Array<FeatureFlag>) = this.method_45390(*arg0)
+fun RavagerEntityModel.setAngles(arg0: RavagerEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_17091(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RavagerEntityModel.animateModel(arg0: RavagerEntity, arg1: Float, arg2: Float, arg3: Float) = this.method_17089(arg0, arg1, arg2, arg3)
+fun <T>ResourceMetadataMap.get(arg0: ResourceMetadataReader<T>) = this.method_45173<T>(arg0)
+fun <T>PhantomEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: PhantomEntity = this.method_33686(arg0, arg1, arg2, arg3, arg4, arg5)
+val PackFeatureSetMetadata.SERIALIZER by aliasStatic(PackFeatureSetMetadata::field_39996)
+fun PackFeatureSetMetadata.flags() = this.comp_994()
+val Orientation.WEST_UP by aliasEnum(Orientation::class, "field_23389")
+val Orientation.UP_WEST by aliasEnum(Orientation::class, "field_23388")
+val Orientation.UP_SOUTH by aliasEnum(Orientation::class, "field_23387")
+val Orientation.UP_NORTH by aliasEnum(Orientation::class, "field_23386")
+val Orientation.UP_EAST by aliasEnum(Orientation::class, "field_23385")
+val Orientation.DOWN_WEST by aliasEnum(Orientation::class, "field_23384")
+val Orientation.DOWN_SOUTH by aliasEnum(Orientation::class, "field_23383")
+val Orientation.DOWN_NORTH by aliasEnum(Orientation::class, "field_23382")
+val Orientation.DOWN_EAST by aliasEnum(Orientation::class, "field_23381")
+val Orientation.SOUTH_UP by aliasEnum(Orientation::class, "field_23392")
+val Orientation.NORTH_UP by aliasEnum(Orientation::class, "field_23391")
+val Orientation.EAST_UP by aliasEnum(Orientation::class, "field_23390")
+fun KClass<Orientation>.byDirections(arg0: Direction, arg1: Direction) = Orientation.method_26425(arg0, arg1)
+fun <T>PandaEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: PandaEntity = this.method_17103(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>PandaEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: PandaEntity = this.method_17102(arg0, arg1, arg2, arg3)
+fun <T>RegistryCloner<T>.clone(arg0: T, arg1: net.minecraft.class_7225.class_7874, arg2: net.minecraft.class_7225.class_7874) = this.method_55277(arg0, arg1, arg2)
+val RamImpactTask.SPEED_STRENGTH_MULTIPLIER by aliasStatic(RamImpactTask::field_33475)
+val RamImpactTask.RUN_TIME by aliasStatic(RamImpactTask::field_33474)
+val TrialChamberData.ALIAS_BINDINGS by aliasStatic(TrialChamberData::field_47510)
+val TrialChamberData.CHAMBER_ENTRANCE_CAP_POOL_KEY by aliasStatic(TrialChamberData::field_47509)
+val TrialChamberData.CHAMBER_END_POOL_KEY by aliasStatic(TrialChamberData::field_47507)
+val TrialChamberData.HALLWAY_FALLBACK_POOL_KEY by aliasStatic(TrialChamberData::field_47508)
+fun KClass<TrialChamberData>.spawner(arg0: String) = TrialChamberData.method_55312(arg0)
+val <E>PrepareRamTask<E>.RUN_TIME where E: PathAwareEntity by aliasStatic({PrepareRamTask.field_33461})
+fun ParrotEntityModel.poseOnShoulder(arg0: MatrixStack, arg1: VertexConsumer, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Float, arg7: Float, arg8: Int) = this.method_17106(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+fun ParrotEntityModel.setAngles(arg0: ParrotEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_17112(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ParrotEntityModel.animateModel(arg0: ParrotEntity, arg1: Float, arg2: Float, arg3: Float) = this.method_17108(arg0, arg1, arg2, arg3)
+val <T>EntityModel<T>.child where T: Entity by alias(EntityModel<T>::field_3448)
+val <T>EntityModel<T>.riding where T: Entity by alias(EntityModel<T>::field_3449)
+val <T>EntityModel<T>.handSwingProgress where T: Entity by alias(EntityModel<T>::field_3447)
+fun <T>EntityModel<T>.copyStateTo(arg0: EntityModel<T>) where T: Entity = this.method_17081(arg0)
+fun <T>EntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: Entity = this.method_2819(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>EntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: Entity = this.method_2816(arg0, arg1, arg2, arg3)
+val DefaultResourcePackBuilder.callback by aliasStatic(DefaultResourcePackBuilder::field_40004)
+fun DefaultResourcePackBuilder.withNamespaces(arg0: Array<String>) = this.method_45206(*arg0)
+fun DefaultResourcePackBuilder.withRoot(arg0: file_Path) = this.method_45204(arg0)
+fun DefaultResourcePackBuilder.build(arg0: ResourcePackInfo) = this.method_45210(arg0)
+fun DefaultResourcePackBuilder.withPath(arg0: ResourceType, arg1: file_Path) = this.method_45201(arg0, arg1)
+fun DefaultResourcePackBuilder.withDefaultPaths() = this.method_45197()
+fun DefaultResourcePackBuilder.withMetadataMap(arg0: ResourceMetadataMap) = this.method_45198(arg0)
+fun DefaultResourcePackBuilder.withPaths(arg0: ResourceType, arg1: Class<*>) = this.method_45200(arg0, arg1)
+fun DefaultResourcePackBuilder.runCallback() = this.method_45207()
+fun <T>SheepWoolEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: SheepEntity = this.method_17118(arg0, arg1, arg2, arg3)
+fun <T>SheepWoolEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: SheepEntity = this.method_17119(arg0, arg1, arg2, arg3, arg4, arg5)
+val ResourceFileSystem.SEPARATOR by aliasStatic(ResourceFileSystem::field_40028)
+val <T>PlayerEntityModel<T>.rightSleeve where T: LivingEntity by alias(PlayerEntityModel<T>::field_3486)
+val <T>PlayerEntityModel<T>.leftSleeve where T: LivingEntity by alias(PlayerEntityModel<T>::field_3484)
+val <T>PlayerEntityModel<T>.jacket where T: LivingEntity by alias(PlayerEntityModel<T>::field_3483)
+val <T>PlayerEntityModel<T>.rightPants where T: LivingEntity by alias(PlayerEntityModel<T>::field_3479)
+val <T>PlayerEntityModel<T>.leftPants where T: LivingEntity by alias(PlayerEntityModel<T>::field_3482)
+fun <T>PlayerEntityModel<T>.renderCape(arg0: MatrixStack, arg1: VertexConsumer, arg2: Int, arg3: Int) where T: LivingEntity = this.method_2823(arg0, arg1, arg2, arg3)
+fun <T>PlayerEntityModel<T>.renderEars(arg0: MatrixStack, arg1: VertexConsumer, arg2: Int, arg3: Int) where T: LivingEntity = this.method_2824(arg0, arg1, arg2, arg3)
+fun <T>PlayerEntityModel<T>.getRandomPart(arg0: Random) where T: LivingEntity = this.method_22697(arg0)
+fun <T>PlayerEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: LivingEntity = this.method_17087(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>PolarBearEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: PolarBearEntity = this.method_17114(arg0, arg1, arg2, arg3, arg4, arg5)
+fun Tracer.traceCommandStart(arg0: Int, arg1: String) = this.method_36349(arg0, arg1)
+fun Tracer.traceCommandEnd(arg0: Int, arg1: String, arg2: Int) = this.method_36350(arg0, arg1, arg2)
+fun Tracer.traceFunctionCall(arg0: Int, arg1: Identifier, arg2: Int) = this.method_36351(arg0, arg1, arg2)
+fun Tracer.traceError(arg0: String) = this.method_36352(arg0)
+fun <T>RabbitEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: RabbitEntity = this.method_17117(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <T>RabbitEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: RabbitEntity = this.method_17115(arg0, arg1, arg2, arg3)
+fun <T>KClass<ResourceMetadataSerializer<T>>.fromCodec(arg0: String, arg1: Codec<T>) = ResourceMetadataSerializer.method_45252<T>(arg0, arg1)
+fun <T>ResourceMetadataSerializer<T>.toJson(arg0: T) = this.method_45251(arg0)
+val VanillaResourcePackProvider.VANILLA_KEY by aliasStatic(VanillaResourcePackProvider::field_40039)
+val VanillaResourcePackProvider.VANILLA_ID by aliasStatic(VanillaResourcePackProvider::field_49033)
+val FlatLevelGeneratorPresetTags.VISIBLE by aliasStatic(FlatLevelGeneratorPresetTags::field_37402)
+val WorldPresetTags.EXTENDED by aliasStatic(WorldPresetTags::field_37407)
+val WorldPresetTags.NORMAL by aliasStatic(WorldPresetTags::field_37406)
+val ResourceFilter.SERIALIZER by aliasStatic(ResourceFilter::field_40055)
+fun ResourceFilter.isNamespaceBlocked(arg0: String) = this.method_41279(arg0)
+fun ResourceFilter.isPathBlocked(arg0: String) = this.method_41281(arg0)
+val FireworkRocketItem.OFFSET_POS_MULTIPLIER by aliasStatic(FireworkRocketItem::field_30884)
+val FireworkRocketItem.FLIGHT_VALUES by aliasStatic(FireworkRocketItem::field_41064)
+val TimeHelper.MILLI_IN_NANOS by aliasStatic(TimeHelper::field_33869)
+val TimeHelper.SECOND_IN_NANOS by aliasStatic(TimeHelper::field_33868)
+val TimeHelper.HOUR_IN_SECONDS by aliasStatic(TimeHelper::field_46958)
+val TimeHelper.SECOND_IN_MILLIS by aliasStatic(TimeHelper::field_46957)
+val TimeHelper.MINUTE_IN_SECONDS by aliasStatic(TimeHelper::field_47726)
+fun KClass<TimeHelper>.betweenSeconds(arg0: Int, arg1: Int) = TimeHelper.method_24505(arg0, arg1)
+fun MemoryExpiryDataFix.updateBrain(arg0: Dynamic<*>) = this.method_24506(arg0)
+val Item.MAX_MAX_COUNT by aliasStatic(Item::field_49998)
+val Item.DEFAULT_MAX_COUNT by aliasStatic(Item::field_30887)
+val Item.BASE_ATTACK_SPEED_MODIFIER_ID by aliasStatic(Item::field_8001)
+val Item.BLOCK_ITEMS by aliasStatic(Item::field_8003)
+val Item.BASE_ATTACK_DAMAGE_MODIFIER_ID by aliasStatic(Item::field_8006)
+val Item.ITEM_BAR_STEPS by aliasStatic(Item::field_30889)
+fun Item.onItemEntityDestroyed(arg0: ItemEntity) = this.method_33261(arg0)
+fun Item.hasRecipeRemainder() = this.method_7857()
+fun Item.useOnBlock(arg0: ItemUsageContext) = this.method_7884(arg0)
+fun Item.canMine(arg0: BlockState, arg1: world_World, arg2: BlockPos, arg3: PlayerEntity) = this.method_7885(arg0, arg1, arg2, arg3)
+fun Item.onClicked(arg0: ItemStack, arg1: ItemStack, arg2: Slot, arg3: ClickType, arg4: PlayerEntity, arg5: StackReference) = this.method_31566(arg0, arg1, arg2, arg3, arg4, arg5)
+fun Item.getMiningSpeed(arg0: ItemStack, arg1: BlockState) = this.method_58404(arg0, arg1)
+fun Item.isNetworkSynced() = this.method_16698()
+fun Item.onStackClicked(arg0: ItemStack, arg1: Slot, arg2: ClickType, arg3: PlayerEntity) = this.method_31565(arg0, arg1, arg2, arg3)
+fun Item.getEatSound() = this.method_21830()
+fun Item.getUseAction(arg0: ItemStack) = this.method_7853(arg0)
+fun Item.getItemBarColor(arg0: ItemStack) = this.method_31571(arg0)
+fun Item.isItemBarVisible(arg0: ItemStack) = this.method_31567(arg0)
+fun Item.finishUsing(arg0: ItemStack, arg1: world_World, arg2: LivingEntity) = this.method_7861(arg0, arg1, arg2)
+fun Item.getMaxUseTime(arg0: ItemStack, arg1: LivingEntity) = this.method_7881(arg0, arg1)
+fun Item.onCraftByPlayer(arg0: ItemStack, arg1: world_World, arg2: PlayerEntity) = this.method_54465(arg0, arg1, arg2)
+fun Item.appendTooltip(arg0: ItemStack, arg1: net.minecraft.class_1792.class_9635, arg2: List<Text>, arg3: TooltipType) = this.method_7851(arg0, arg1, arg2, arg3)
+fun Item.getDefaultStack() = this.method_7854()
+fun Item.isEnchantable(arg0: ItemStack) = this.method_7870(arg0)
+fun Item.hasGlint(arg0: ItemStack) = this.method_7886(arg0)
+fun Item.getAttributeModifiers() = this.method_7844()
+fun Item.useOnEntity(arg0: ItemStack, arg1: PlayerEntity, arg2: LivingEntity, arg3: Hand) = this.method_7847(arg0, arg1, arg2, arg3)
+fun Item.isUsedOnRelease(arg0: ItemStack) = this.method_7838(arg0)
+fun Item.getMaxCount() = this.method_7882()
+fun Item.postHit(arg0: ItemStack, arg1: LivingEntity, arg2: LivingEntity) = this.method_7873(arg0, arg1, arg2)
+fun KClass<Item>.getRawId(arg0: Item) = Item.method_7880(arg0)
+fun Item.isCorrectForDrops(arg0: ItemStack, arg1: BlockState) = this.method_58405(arg0, arg1)
+fun Item.postDamageEntity(arg0: ItemStack, arg1: LivingEntity, arg2: LivingEntity) = this.method_59978(arg0, arg1, arg2)
+fun Item.getTooltipData(arg0: ItemStack) = this.method_32346(arg0)
+fun Item.onStoppedUsing(arg0: ItemStack, arg1: world_World, arg2: LivingEntity, arg3: Int) = this.method_7840(arg0, arg1, arg2, arg3)
+fun Item.getBreakSound() = this.method_57336()
+fun Item.getName() = this.method_7848()
+fun Item.use(arg0: world_World, arg1: PlayerEntity, arg2: Hand) = this.method_7836(arg0, arg1, arg2)
+fun Item.canBeNested() = this.method_31568()
+fun Item.getEnchantability() = this.method_7837()
+fun KClass<Item>.byRawId(arg0: Int) = Item.method_7875(arg0)
+fun Item.inventoryTick(arg0: ItemStack, arg1: world_World, arg2: Entity, arg3: Int, arg4: Boolean) = this.method_7888(arg0, arg1, arg2, arg3, arg4)
+fun Item.getItemBarStep(arg0: ItemStack) = this.method_31569(arg0)
+fun Item.usageTick(arg0: world_World, arg1: LivingEntity, arg2: ItemStack, arg3: Int) = this.method_7852(arg0, arg1, arg2, arg3)
+fun Item.getDrinkSound() = this.method_21831()
+fun Item.onCraft(arg0: ItemStack, arg1: world_World) = this.method_7843(arg0, arg1)
+fun Item.getName(arg0: ItemStack) = this.method_7864(arg0)
+fun Item.postProcessComponents(arg0: ItemStack) = this.method_7860(arg0)
+fun Item.getBonusAttackDamage(arg0: Entity, arg1: Float, arg2: DamageSource) = this.method_58403(arg0, arg1, arg2)
+fun Item.postMine(arg0: ItemStack, arg1: world_World, arg2: BlockState, arg3: BlockPos, arg4: LivingEntity) = this.method_7879(arg0, arg1, arg2, arg3, arg4)
+fun Item.canRepair(arg0: ItemStack, arg1: ItemStack) = this.method_7878(arg0, arg1)
+fun ItemCooldownManager.update() = this.method_7903()
+fun ItemCooldownManager.set(arg0: Item, arg1: Int) = this.method_7906(arg0, arg1)
+fun ItemCooldownManager.remove(arg0: Item) = this.method_7900(arg0)
+fun ItemCooldownManager.isCoolingDown(arg0: Item) = this.method_7904(arg0)
+fun ItemCooldownManager.getCooldownProgress(arg0: Item, arg1: Float) = this.method_7905(arg0, arg1)
+fun KClass<HoeItem>.canTillFarmland(arg0: ItemUsageContext) = HoeItem.method_36987(arg0)
+fun KClass<HoeItem>.createTillAndDropAction(arg0: BlockState, arg1: ItemConvertible) = HoeItem.method_36985(arg0, arg1)
+fun KClass<HoeItem>.createTillAction(arg0: BlockState) = HoeItem.method_36988(arg0)
+fun KClass<StrollTask>.createSolidTargeting(arg0: Float) = StrollTask.method_47025(arg0)
+fun KClass<StrollTask>.createDynamicRadius(arg0: Float) = StrollTask.method_47027(arg0)
+fun AnimationState.update(arg0: Float, arg1: Float) = this.method_43686(arg0, arg1)
+fun AnimationState.setRunning(arg0: Boolean, arg1: Int) = this.method_45317(arg0, arg1)
+fun AnimationState.skip(arg0: Int, arg1: Float) = this.method_56988(arg0, arg1)
+fun AnimationState.isRunning() = this.method_41327()
+fun AnimationState.stop() = this.method_41325()
+fun AnimationState.run(arg0: Consumer<AnimationState>) = this.method_41323(arg0)
+fun AnimationState.start(arg0: Int) = this.method_41322(arg0)
+fun AnimationState.startIfNotRunning(arg0: Int) = this.method_41324(arg0)
+fun <T>KClass<RegistryPredicateArgumentType<T>>.getPredicate(arg0: CommandContext<ServerCommandSource>, arg1: String, arg2: RegistryKey<Registry<T>>, arg3: DynamicCommandExceptionType) = RegistryPredicateArgumentType.method_41166<T>(arg0, arg1, arg2, arg3)
+fun <T>RegistryPredicateArgumentType<T>.parse(arg0: StringReader) = this.method_41164(arg0)
+fun <T>KClass<RegistryPredicateArgumentType<T>>.registryPredicate(arg0: RegistryKey<out Registry<T>>) = RegistryPredicateArgumentType.method_41170<T>(arg0)
+val CrossbowItem.RANGE by aliasStatic(CrossbowItem::field_30863)
+fun KClass<CrossbowItem>.isCharged(arg0: ItemStack) = CrossbowItem.method_7781(arg0)
+fun CrossbowItem.shootAll(arg0: world_World, arg1: LivingEntity, arg2: Hand, arg3: ItemStack, arg4: Float, arg5: Float, arg6: LivingEntity) = this.method_7777(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun KClass<CrossbowItem>.getPullTime(arg0: ItemStack, arg1: LivingEntity) = CrossbowItem.method_7775(arg0, arg1)
+fun NetworkSyncedItem.createSyncPacket(arg0: ItemStack, arg1: world_World, arg2: PlayerEntity) = this.method_7757(arg0, arg1, arg2)
+fun ItemGroup.contains(arg0: ItemStack) = this.method_45412(arg0)
+fun ItemGroup.hasStacks() = this.method_47310()
+fun KClass<ItemGroup>.getTabTextureId(arg0: String) = ItemGroup.method_60733(arg0)
+fun ItemGroup.hasScrollbar() = this.method_7756()
+fun ItemGroup.shouldRenderName() = this.method_7754()
+fun ItemGroup.isSpecial() = this.method_7752()
+fun ItemGroup.shouldDisplay() = this.method_47311()
+fun ItemGroup.updateEntries(arg0: net.minecraft.class_1761.class_8128) = this.method_47306(arg0)
+fun KClass<BucketItem>.getEmptiedStack(arg0: ItemStack, arg1: PlayerEntity) = BucketItem.method_7732(arg0, arg1)
+fun KClass<CompassItem>.createSpawnPos(arg0: world_World) = CompassItem.method_43123(arg0)
+fun StructureSpawns.spawns() = this.comp_515()
+fun StructureSpawns.boundingBox() = this.comp_514()
+fun <T>KClass<RegistryKeyArgumentType<T>>.getStructurePoolEntry(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryKeyArgumentType.method_43780(arg0, arg1)
+fun <T>RegistryKeyArgumentType<T>.parse(arg0: StringReader) = this.method_41218(arg0)
+fun <T>KClass<RegistryKeyArgumentType<T>>.getConfiguredFeatureEntry(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryKeyArgumentType.method_41225(arg0, arg1)
+fun <T>KClass<RegistryKeyArgumentType<T>>.getStructureEntry(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryKeyArgumentType.method_43779(arg0, arg1)
+fun <T>KClass<RegistryKeyArgumentType<T>>.registryKey(arg0: RegistryKey<out Registry<T>>) = RegistryKeyArgumentType.method_41224<T>(arg0)
+fun KClass<ElytraItem>.isUsable(arg0: ItemStack) = ElytraItem.method_7804(arg0)
+fun KClass<EnchantedBookItem>.forEnchantment(arg0: EnchantmentLevelEntry) = EnchantedBookItem.method_7808(arg0)
+val DyeColor.PACKET_CODEC by aliasStatic(DyeColor::field_49259)
+val DyeColor.BROWN by aliasEnum(DyeColor::class, "field_7957")
+val DyeColor.MAGENTA by aliasEnum(DyeColor::class, "field_7958")
+val DyeColor.WHITE by aliasEnum(DyeColor::class, "field_7952")
+val DyeColor.CYAN by aliasEnum(DyeColor::class, "field_7955")
+val DyeColor.PINK by aliasEnum(DyeColor::class, "field_7954")
+val DyeColor.LIGHT_BLUE by aliasEnum(DyeColor::class, "field_7951")
+val DyeColor.PURPLE by aliasEnum(DyeColor::class, "field_7945")
+val DyeColor.GRAY by aliasEnum(DyeColor::class, "field_7944")
+val DyeColor.YELLOW by aliasEnum(DyeColor::class, "field_7947")
+val DyeColor.ORANGE by aliasEnum(DyeColor::class, "field_7946")
+val DyeColor.GREEN by aliasEnum(DyeColor::class, "field_7942")
+val DyeColor.RED by aliasEnum(DyeColor::class, "field_7964")
+val DyeColor.LIGHT_GRAY by aliasEnum(DyeColor::class, "field_7967")
+val DyeColor.BLUE by aliasEnum(DyeColor::class, "field_7966")
+val DyeColor.LIME by aliasEnum(DyeColor::class, "field_7961")
+val DyeColor.BLACK by aliasEnum(DyeColor::class, "field_7963")
+fun KClass<DyeColor>.byFireworkColor(arg0: Int) = DyeColor.method_7786(arg0)
+fun KClass<DyeItem>.byColor(arg0: DyeColor) = DyeItem.method_7803(arg0)
+fun ArmorMaterial.enchantability() = this.comp_2299()
+fun ArmorMaterial.getProtection(arg0: net.minecraft.class_1738.class_8051) = this.method_48403(arg0)
+fun ArmorMaterial.defense() = this.comp_2298()
+fun ArmorMaterial.equipSound() = this.comp_2300()
+fun ArmorMaterial.knockbackResistance() = this.comp_2304()
+fun ArmorMaterial.toughness() = this.comp_2303()
+fun ArmorMaterial.layers() = this.comp_2302()
+fun ArmorMaterial.repairIngredient() = this.comp_2301()
+val ArmorMaterials.CHAIN by aliasStatic(ArmorMaterials::field_7887)
+val ArmorMaterials.ARMADILLO by aliasStatic(ArmorMaterials::field_48846)
+val ArmorMaterials.NETHERITE by aliasStatic(ArmorMaterials::field_21977)
+val ArmorMaterials.LEATHER by aliasStatic(ArmorMaterials::field_7897)
+val ArmorMaterials.GOLD by aliasStatic(ArmorMaterials::field_7895)
+val ArmorMaterials.IRON by aliasStatic(ArmorMaterials::field_7892)
+val ArmorMaterials.TURTLE by aliasStatic(ArmorMaterials::field_7890)
+val ArmorMaterials.DIAMOND by aliasStatic(ArmorMaterials::field_7889)
+val Slot.id by alias(Slot::field_7874)
+val Slot.y by alias(Slot::field_7872)
+val Slot.inventory by alias(Slot::field_7871)
+val Slot.x by alias(Slot::field_7873)
+fun Slot.takeStackRange(arg0: Int, arg1: Int, arg2: PlayerEntity) = this.method_32753(arg0, arg1, arg2)
+fun Slot.getMaxItemCount() = this.method_7675()
+fun Slot.tryTakeStackRange(arg0: Int, arg1: Int, arg2: PlayerEntity) = this.method_34264(arg0, arg1, arg2)
+fun Slot.onQuickTransfer(arg0: ItemStack, arg1: ItemStack) = this.method_7670(arg0, arg1)
+fun Slot.canBeHighlighted() = this.method_51306()
+fun Slot.setStackNoCallbacks(arg0: ItemStack) = this.method_7673(arg0)
+fun Slot.isEnabled() = this.method_7682()
+fun Slot.setStack(arg0: ItemStack, arg1: ItemStack) = this.method_48931(arg0, arg1)
+fun Slot.getBackgroundSprite() = this.method_7679()
+fun Slot.canInsert(arg0: ItemStack) = this.method_7680(arg0)
+fun Slot.insertStack(arg0: ItemStack) = this.method_32756(arg0)
+fun Slot.insertStack(arg0: ItemStack, arg1: Int) = this.method_32755(arg0, arg1)
+fun Slot.canTakePartial(arg0: PlayerEntity) = this.method_32754(arg0)
+fun Slot.setStack(arg0: ItemStack) = this.method_53512(arg0)
+fun Slot.disablesDynamicDisplay() = this.method_55059()
+fun Slot.markDirty() = this.method_7668()
+fun Slot.onTakeItem(arg0: PlayerEntity, arg1: ItemStack) = this.method_7667(arg0, arg1)
+fun Slot.getStack() = this.method_7677()
+fun Slot.takeStack(arg0: Int) = this.method_7671(arg0)
+fun Slot.hasStack() = this.method_7681()
+fun Slot.getMaxItemCount(arg0: ItemStack) = this.method_7676(arg0)
+fun Slot.canTakeItems(arg0: PlayerEntity) = this.method_7674(arg0)
+fun RecipeUnlocker.unlockLastRecipe(arg0: PlayerEntity, arg1: List<ItemStack>) = this.method_7664(arg0, arg1)
+fun RecipeUnlocker.shouldCraftRecipe(arg0: world_World, arg1: ServerPlayerEntity, arg2: RecipeEntry<*>) = this.method_7665(arg0, arg1, arg2)
+fun RecipeUnlocker.getLastRecipe() = this.method_7663()
+fun RecipeUnlocker.setLastRecipe(arg0: RecipeEntry<*>) = this.method_7662(arg0)
+val ArmorItem.DISPENSER_BEHAVIOR by aliasStatic(ArmorItem::field_7879)
+fun ArmorItem.getProtection() = this.method_7687()
+fun ArmorItem.getToughness() = this.method_26353()
+fun KClass<ArmorItem>.dispenseArmor(arg0: BlockPointer, arg1: ItemStack) = ArmorItem.method_7684(arg0, arg1)
+fun RecipeInputProvider.provideRecipeInputs(arg0: RecipeMatcher) = this.method_7683(arg0)
+val BowItem.RANGE by aliasStatic(BowItem::field_30856)
+val BowItem.TICKS_PER_SECOND by aliasStatic(BowItem::field_30855)
+fun KClass<BowItem>.getPullProgress(arg0: Int) = BowItem.method_7722(arg0)
+fun KClass<BoneMealItem>.useOnFertilizable(arg0: ItemStack, arg1: world_World, arg2: BlockPos) = BoneMealItem.method_7720(arg0, arg1, arg2)
+fun KClass<BoneMealItem>.createParticles(arg0: WorldAccess, arg1: BlockPos, arg2: Int) = BoneMealItem.method_7721(arg0, arg1, arg2)
+fun KClass<BoneMealItem>.useOnGround(arg0: ItemStack, arg1: world_World, arg2: BlockPos, arg3: Direction) = BoneMealItem.method_7719(arg0, arg1, arg2, arg3)
+val StructureSet.REGISTRY_CODEC by aliasStatic(StructureSet::field_37196)
+fun StructureSet.placement() = this.comp_511()
+fun StructureSet.structures() = this.comp_510()
+fun ItemPlacementContext.getPlacementDirections() = this.method_7718()
+fun ItemPlacementContext.canReplaceExisting() = this.method_7717()
+fun ItemPlacementContext.canPlace() = this.method_7716()
+fun ItemPlacementContext.getPlayerLookDirection() = this.method_7715()
+fun ItemPlacementContext.getVerticalPlayerLookDirection() = this.method_32760()
+fun BannerItem.getColor() = this.method_7706()
+fun KClass<BannerItem>.appendBannerTooltip(arg0: ItemStack, arg1: List<Text>) = BannerItem.method_7705(arg0, arg1)
+val PathNodeType.DANGER_POWDER_SNOW by aliasEnum(PathNodeType::class, "field_36432")
+val PathNodeType.STICKY_HONEY by aliasEnum(PathNodeType::class, "field_21326")
+val PathNodeType.UNPASSABLE_RAIL by aliasEnum(PathNodeType::class, "field_25418")
+val PathNodeType.WATER by aliasEnum(PathNodeType::class, "field_18")
+val PathNodeType.DAMAGE_OTHER by aliasEnum(PathNodeType::class, "field_17")
+val PathNodeType.BREACH by aliasEnum(PathNodeType::class, "field_16")
+val PathNodeType.DOOR_OPEN by aliasEnum(PathNodeType::class, "field_15")
+val PathNodeType.LAVA by aliasEnum(PathNodeType::class, "field_14")
+val PathNodeType.WALKABLE by aliasEnum(PathNodeType::class, "field_12")
+val PathNodeType.FENCE by aliasEnum(PathNodeType::class, "field_10")
+val PathNodeType.TRAPDOOR by aliasEnum(PathNodeType::class, "field_19")
+val PathNodeType.DAMAGE_CAUTIOUS by aliasEnum(PathNodeType::class, "field_43351")
+val PathNodeType.DOOR_WOOD_CLOSED by aliasEnum(PathNodeType::class, "field_23")
+val PathNodeType.BLOCKED by aliasEnum(PathNodeType::class, "field_22")
+val PathNodeType.RAIL by aliasEnum(PathNodeType::class, "field_21")
+val PathNodeType.COCOA by aliasEnum(PathNodeType::class, "field_21516")
+val PathNodeType.DAMAGE_FIRE by aliasEnum(PathNodeType::class, "field_3")
+val PathNodeType.WATER_BORDER by aliasEnum(PathNodeType::class, "field_4")
+val PathNodeType.DANGER_OTHER by aliasEnum(PathNodeType::class, "field_5")
+val PathNodeType.LEAVES by aliasEnum(PathNodeType::class, "field_6")
+val PathNodeType.OPEN by aliasEnum(PathNodeType::class, "field_7")
+val PathNodeType.DOOR_IRON_CLOSED by aliasEnum(PathNodeType::class, "field_8")
+val PathNodeType.DANGER_FIRE by aliasEnum(PathNodeType::class, "field_9")
+val PathNodeType.POWDER_SNOW by aliasEnum(PathNodeType::class, "field_33534")
+val PathNodeType.WALKABLE_DOOR by aliasEnum(PathNodeType::class, "field_26446")
+val PathNodeType.DANGER_TRAPDOOR by aliasEnum(PathNodeType::class, "field_47413")
+fun BannerPatternItem.getPattern() = this.method_7704()
+fun BannerPatternItem.getDescription() = this.method_7703()
+fun KClass<PathNodeMaker>.isFireDamaging(arg0: BlockState) = PathNodeMaker.method_57082(arg0)
+fun PathNodeMaker.setCanWalkOverFences(arg0: Boolean) = this.method_46737(arg0)
+fun PathNodeMaker.getNode(arg0: Double, arg1: Double, arg2: Double) = this.method_16(arg0, arg1, arg2)
+fun PathNodeMaker.canSwim() = this.method_22()
+fun PathNodeMaker.setCanSwim(arg0: Boolean) = this.method_14(arg0)
+fun PathNodeMaker.setCanOpenDoors(arg0: Boolean) = this.method_20(arg0)
+fun PathNodeMaker.getStart() = this.method_21()
+fun PathNodeMaker.getNodeType(arg0: PathContext, arg1: Int, arg2: Int, arg3: Int, arg4: MobEntity) = this.method_25(arg0, arg1, arg2, arg3, arg4)
+fun PathNodeMaker.canOpenDoors() = this.method_24()
+fun PathNodeMaker.clear() = this.method_19()
+fun PathNodeMaker.canWalkOverFences() = this.method_46738()
+fun PathNodeMaker.getSuccessors(arg0: Array<PathNode>, arg1: PathNode) = this.method_18(arg0, arg1)
+fun PathNodeMaker.getDefaultNodeType(arg0: PathContext, arg1: Int, arg2: Int, arg3: Int) = this.method_17(arg0, arg1, arg2, arg3)
+fun PathNodeMaker.getDefaultNodeType(arg0: MobEntity, arg1: BlockPos) = this.method_57615(arg0, arg1)
+fun PathNodeMaker.setCanEnterOpenDoors(arg0: Boolean) = this.method_15(arg0)
+fun PathNodeMaker.init(arg0: ChunkCache, arg1: MobEntity) = this.method_12(arg0, arg1)
+fun PathNodeMaker.canEnterOpenDoors() = this.method_23()
+fun ArrowItem.createArrow(arg0: world_World, arg1: ItemStack, arg2: LivingEntity, arg3: ItemStack) = this.method_7702(arg0, arg1, arg2, arg3)
+val PathNode.x by alias(PathNode::field_40)
+val PathNode.y by alias(PathNode::field_39)
+val PathNode.heapWeight by alias(PathNode::field_47)
+val PathNode.heapIndex by alias(PathNode::field_37)
+val PathNode.penalty by alias(PathNode::field_43)
+val PathNode.visited by alias(PathNode::field_42)
+val PathNode.previous by alias(PathNode::field_35)
+val PathNode.type by alias(PathNode::field_41)
+val PathNode.penalizedPathLength by alias(PathNode::field_36)
+val PathNode.distanceToNearestTarget by alias(PathNode::field_34)
+val PathNode.z by alias(PathNode::field_38)
+val PathNode.pathLength by alias(PathNode::field_46)
+fun PathNode.getSquaredDistance(arg0: PathNode) = this.method_32(arg0)
+fun PathNode.getDistance(arg0: BlockPos) = this.method_35494(arg0)
+fun PathNode.getDistance(arg0: PathNode) = this.method_31(arg0)
+fun KClass<PathNode>.hash(arg0: Int, arg1: Int, arg2: Int) = PathNode.method_30(arg0, arg1, arg2)
+fun PathNode.getBlockPos() = this.method_22879()
+fun PathNode.getPos() = this.method_35496()
+fun PathNode.getSquaredDistance(arg0: BlockPos) = this.method_35497(arg0)
+fun PathNode.getHorizontalDistance(arg0: PathNode) = this.method_44022(arg0)
+fun PathNode.copyWithNewPosition(arg0: Int, arg1: Int, arg2: Int) = this.method_26(arg0, arg1, arg2)
+fun PathNode.getManhattanDistance(arg0: PathNode) = this.method_21653(arg0)
+fun PathNode.write(arg0: PacketByteBuf) = this.method_35495(arg0)
+fun PathNode.isInHeap() = this.method_27()
+fun PathNode.getManhattanDistance(arg0: BlockPos) = this.method_21654(arg0)
+fun PathMinHeap.setNodeWeight(arg0: PathNode, arg1: Float) = this.method_3(arg0, arg1)
+fun PathMinHeap.pop() = this.method_6()
+fun PathMinHeap.getNodes() = this.method_35493()
+fun PathMinHeap.getStart() = this.method_35490()
+fun PathMinHeap.push(arg0: PathNode) = this.method_2(arg0)
+fun PathMinHeap.isEmpty() = this.method_8()
+fun PathMinHeap.clear() = this.method_5()
+fun PathMinHeap.popNode(arg0: PathNode) = this.method_35491(arg0)
+fun KClass<BlockItem>.writeNbtToBlockEntity(arg0: world_World, arg1: PlayerEntity, arg2: BlockPos, arg3: ItemStack) = BlockItem.method_7714(arg0, arg1, arg2, arg3)
+fun BlockItem.getPlacementContext(arg0: ItemPlacementContext) = this.method_16356(arg0)
+fun KClass<BlockItem>.setBlockEntityData(arg0: ItemStack, arg1: BlockEntityType<*>, arg2: NbtCompound) = BlockItem.method_57338(arg0, arg1, arg2)
+fun BlockItem.appendBlocks(arg0: Map<Block, Item>, arg1: Item) = this.method_7713(arg0, arg1)
+fun BlockItem.place(arg0: ItemPlacementContext) = this.method_7712(arg0)
+fun <A>CodecCache.wrap(arg0: Codec<A>) = this.method_59856<A>(arg0)
+fun AbstractFurnaceScreenHandler.getFuelProgress() = this.method_17364()
+fun AbstractFurnaceScreenHandler.isBurning() = this.method_17365()
+fun AbstractFurnaceScreenHandler.getCookProgress() = this.method_17363()
+val SlotActionType.SWAP by aliasEnum(SlotActionType::class, "field_7791")
+val SlotActionType.PICKUP by aliasEnum(SlotActionType::class, "field_7790")
+val SlotActionType.THROW by aliasEnum(SlotActionType::class, "field_7795")
+val SlotActionType.CLONE by aliasEnum(SlotActionType::class, "field_7796")
+val SlotActionType.PICKUP_ALL by aliasEnum(SlotActionType::class, "field_7793")
+val SlotActionType.QUICK_MOVE by aliasEnum(SlotActionType::class, "field_7794")
+val SlotActionType.QUICK_CRAFT by aliasEnum(SlotActionType::class, "field_7789")
+fun ScreenHandlerListener.onPropertyUpdate(arg0: ScreenHandler, arg1: Int, arg2: Int) = this.method_7633(arg0, arg1, arg2)
+fun ScreenHandlerListener.onSlotUpdate(arg0: ScreenHandler, arg1: Int, arg2: ItemStack) = this.method_7635(arg0, arg1, arg2)
+fun KClass<FurnaceFuelSlot>.isBucket(arg0: ItemStack) = FurnaceFuelSlot.method_7636(arg0)
+val CraftingScreenHandler.RESULT_ID by aliasStatic(CraftingScreenHandler::field_30781)
+val EnchantmentScreenHandler.enchantmentLevel by alias(EnchantmentScreenHandler::field_7810)
+val EnchantmentScreenHandler.enchantmentId by alias(EnchantmentScreenHandler::field_7812)
+val EnchantmentScreenHandler.enchantmentPower by alias(EnchantmentScreenHandler::field_7808)
+fun EnchantmentScreenHandler.getLapisCount() = this.method_7638()
+fun <T>EnchantmentEffectEntry<T>.test(arg0: LootContext) = this.method_60006(arg0)
+fun <T>KClass<EnchantmentEffectEntry<T>>.createRequirementsCodec(arg0: LootContextType) = EnchantmentEffectEntry.method_60007(arg0)
+fun <T>EnchantmentEffectEntry<T>.effect() = this.comp_2680()
+fun <T>EnchantmentEffectEntry<T>.requirements() = this.comp_2681()
+fun SmithingRecipeInput.template() = this.comp_2677()
+fun SmithingRecipeInput.base() = this.comp_2678()
+fun SmithingRecipeInput.addition() = this.comp_2679()
+fun SingleStackRecipeInput.item() = this.comp_2676()
+fun RecipeInput.isEmpty() = this.method_59987()
+fun RecipeInput.getStackInSlot(arg0: Int) = this.method_59984(arg0)
+fun RecipeInput.getSize() = this.method_59983()
+val CraftingRecipeInput.EMPTY by aliasStatic(CraftingRecipeInput::field_51631)
+fun CraftingRecipeInput.getRecipeMatcher() = this.method_59988()
+fun KClass<CraftingRecipeInput>.createPositioned(arg0: Int, arg1: Int, arg2: List<ItemStack>) = CraftingRecipeInput.method_60505(arg0, arg1, arg2)
+fun CraftingRecipeInput.getStackInSlot(arg0: Int, arg1: Int) = this.method_59985(arg0, arg1)
+fun BlockAttachedEntity.onBreak(arg0: Entity) = this.method_6889(arg0)
+fun BlockAttachedEntity.canStayAttached() = this.method_6888()
+fun EnderChestInventory.setActiveBlockEntity(arg0: EnderChestBlockEntity) = this.method_7661(arg0)
+fun EnderChestInventory.isActiveBlockEntity(arg0: EnderChestBlockEntity) = this.method_31556(arg0)
+fun EnchantmentEffectContext.stack() = this.comp_2682()
+fun EnchantmentEffectContext.slot() = this.comp_2683()
+fun EnchantmentEffectContext.owner() = this.comp_2684()
+fun EnchantmentEffectContext.onBreak() = this.comp_2685()
+val PlayerScreenHandler.INVENTORY_END by aliasStatic(PlayerScreenHandler::field_30809)
+val PlayerScreenHandler.EMPTY_HELMET_SLOT_TEXTURE by aliasStatic(PlayerScreenHandler::field_21669)
+val PlayerScreenHandler.CRAFTING_INPUT_END by aliasStatic(PlayerScreenHandler::field_30805)
+val PlayerScreenHandler.EQUIPMENT_END by aliasStatic(PlayerScreenHandler::field_30807)
+val PlayerScreenHandler.onServer by alias(PlayerScreenHandler::field_7827)
+val PlayerScreenHandler.EMPTY_CHESTPLATE_SLOT_TEXTURE by aliasStatic(PlayerScreenHandler::field_21670)
+val PlayerScreenHandler.EMPTY_BOOTS_SLOT_TEXTURE by aliasStatic(PlayerScreenHandler::field_21672)
+val PlayerScreenHandler.CRAFTING_RESULT_ID by aliasStatic(PlayerScreenHandler::field_30803)
+val PlayerScreenHandler.BLOCK_ATLAS_TEXTURE by aliasStatic(PlayerScreenHandler::field_21668)
+val PlayerScreenHandler.HOTBAR_END by aliasStatic(PlayerScreenHandler::field_30811)
+val PlayerScreenHandler.EQUIPMENT_START by aliasStatic(PlayerScreenHandler::field_30806)
+val PlayerScreenHandler.INVENTORY_START by aliasStatic(PlayerScreenHandler::field_30808)
+val PlayerScreenHandler.CRAFTING_INPUT_COUNT by aliasStatic(PlayerScreenHandler::field_49739)
+val PlayerScreenHandler.EMPTY_LEGGINGS_SLOT_TEXTURE by aliasStatic(PlayerScreenHandler::field_21671)
+val PlayerScreenHandler.OFFHAND_ID by aliasStatic(PlayerScreenHandler::field_30812)
+val PlayerScreenHandler.EMPTY_OFFHAND_ARMOR_SLOT by aliasStatic(PlayerScreenHandler::field_21673)
+val PlayerScreenHandler.CRAFTING_INPUT_START by aliasStatic(PlayerScreenHandler::field_30804)
+val PlayerScreenHandler.EQUIPMENT_COUNT by aliasStatic(PlayerScreenHandler::field_49740)
+val PlayerScreenHandler.HOTBAR_START by aliasStatic(PlayerScreenHandler::field_30810)
+fun KClass<PlayerScreenHandler>.isInHotbar(arg0: Int) = PlayerScreenHandler.method_36211(arg0)
+val HopperScreenHandler.SLOT_COUNT by aliasStatic(HopperScreenHandler::field_30801)
+fun MerchantScreenHandler.setCanRefreshTrades(arg0: Boolean) = this.method_20700(arg0)
+fun MerchantScreenHandler.setRecipeIndex(arg0: Int) = this.method_7650(arg0)
+fun MerchantScreenHandler.getMerchantRewardedExperience() = this.method_19256()
+fun MerchantScreenHandler.getExperience() = this.method_19254()
+fun MerchantScreenHandler.isLeveled() = this.method_19259()
+fun MerchantScreenHandler.setLeveled(arg0: Boolean) = this.method_19253(arg0)
+fun MerchantScreenHandler.canRefreshTrades() = this.method_20701()
+fun MerchantScreenHandler.switchTo(arg0: Int) = this.method_20215(arg0)
+fun MerchantScreenHandler.setLevelProgress(arg0: Int) = this.method_19257(arg0)
+fun MerchantScreenHandler.setOffers(arg0: TradeOfferList) = this.method_17437(arg0)
+fun MerchantScreenHandler.getRecipes() = this.method_17438()
+fun MerchantScreenHandler.setExperienceFromServer(arg0: Int) = this.method_19255(arg0)
+fun LoomScreenHandler.setInventoryChangeListener(arg0: Runnable) = this.method_17423(arg0)
+fun MerchantInventory.setOfferIndex(arg0: Int) = this.method_7643(arg0)
+fun MerchantInventory.updateOffers() = this.method_7645()
+fun <I, R>AbstractRecipeScreenHandler<I, R>.getCraftingHeight() where I: RecipeInput, R: Recipe<I> = this.method_7656()
+fun <I, R>AbstractRecipeScreenHandler<I, R>.getCraftingResultSlotIndex() where I: RecipeInput, R: Recipe<I> = this.method_7655()
+fun <I, R>AbstractRecipeScreenHandler<I, R>.getCraftingSlotCount() where I: RecipeInput, R: Recipe<I> = this.method_7658()
+fun <I, R>AbstractRecipeScreenHandler<I, R>.canInsertIntoSlot(arg0: Int) where I: RecipeInput, R: Recipe<I> = this.method_32339(arg0)
+fun <I, R>AbstractRecipeScreenHandler<I, R>.getCategory() where I: RecipeInput, R: Recipe<I> = this.method_30264()
+fun <I, R>AbstractRecipeScreenHandler<I, R>.getCraftingWidth() where I: RecipeInput, R: Recipe<I> = this.method_7653()
+fun <I, R>AbstractRecipeScreenHandler<I, R>.populateRecipeFinder(arg0: RecipeMatcher) where I: RecipeInput, R: Recipe<I> = this.method_7654(arg0)
+fun <I, R>AbstractRecipeScreenHandler<I, R>.fillInputSlots(arg0: Boolean, arg1: RecipeEntry<*>, arg2: ServerPlayerEntity) where I: RecipeInput, R: Recipe<I> = this.method_17697(arg0, arg1, arg2)
+fun <I, R>AbstractRecipeScreenHandler<I, R>.matches(arg0: RecipeEntry<R>) where I: RecipeInput, R: Recipe<I> = this.method_7652(arg0)
+fun <I, R>AbstractRecipeScreenHandler<I, R>.clearCraftingSlots() where I: RecipeInput, R: Recipe<I> = this.method_7657()
+val WorldTemplatePaginatedList.templates by alias(WorldTemplatePaginatedList::field_22676)
+val WorldTemplatePaginatedList.total by alias(WorldTemplatePaginatedList::field_22679)
+val WorldTemplatePaginatedList.size by alias(WorldTemplatePaginatedList::field_22678)
+val WorldTemplatePaginatedList.page by alias(WorldTemplatePaginatedList::field_22677)
+fun WorldTemplatePaginatedList.isLastPage() = this.method_35688()
+fun <M>LightStorage<M>.getLightSection(arg0: Long) where M: ChunkToNibbleArrayMap<M> = this.method_20533(arg0)
+fun <M>LightStorage<M>.getStatus(arg0: Long) where M: ChunkToNibbleArrayMap<M> = this.method_51549(arg0)
+fun <M>LightStorage<M>.setRetainColumn(arg0: Long, arg1: Boolean) where M: ChunkToNibbleArrayMap<M> = this.method_20600(arg0, arg1)
+val WorldTemplate.version by alias(WorldTemplate::field_22668)
+val WorldTemplate.name by alias(WorldTemplate::field_22667)
+val WorldTemplate.id by alias(WorldTemplate::field_22666)
+val WorldTemplate.type by alias(WorldTemplate::field_22674)
+val WorldTemplate.author by alias(WorldTemplate::field_22669)
+val WorldTemplate.image by alias(WorldTemplate::field_22671)
+val WorldTemplate.link by alias(WorldTemplate::field_22670)
+val WorldTemplate.recommendedPlayers by alias(WorldTemplate::field_22673)
+val WorldTemplate.trailer by alias(WorldTemplate::field_22672)
+fun LightingView.setSectionStatus(arg0: BlockPos, arg1: Boolean) = this.method_15552(arg0, arg1)
+fun LightingView.propagateLight(arg0: ChunkPos) = this.method_51471(arg0)
+fun LightingView.hasUpdates() = this.method_15518()
+fun LightingView.setColumnEnabled(arg0: ChunkPos, arg1: Boolean) = this.method_15512(arg0, arg1)
+fun LightingView.doLightUpdates() = this.method_15516()
+fun LightingView.checkBlock(arg0: BlockPos) = this.method_15513(arg0)
+fun LightingView.setSectionStatus(arg0: ChunkSectionPos, arg1: Boolean) = this.method_15551(arg0, arg1)
+val Registries.SENSOR_TYPE by aliasStatic(Registries::field_41130)
+val Registries.LOOT_SCORE_PROVIDER_TYPE by aliasStatic(Registries::field_41138)
+val Registries.ENCHANTMENT_ENTITY_EFFECT_TYPE by aliasStatic(Registries::field_51834)
+val Registries.VILLAGER_TYPE by aliasStatic(Registries::field_41194)
+val Registries.DATA_COMPONENT_TYPE by aliasStatic(Registries::field_49658)
+val Registries.TREE_DECORATOR_TYPE by aliasStatic(Registries::field_41153)
+val Registries.HEIGHT_PROVIDER_TYPE by aliasStatic(Registries::field_41141)
+val Registries.STAT_TYPE by aliasStatic(Registries::field_41193)
+val Registries.BLOCK_ENTITY_TYPE by aliasStatic(Registries::field_41181)
+val Registries.MAP_DECORATION_TYPE by aliasStatic(Registries::field_50078)
+val Registries.ARMOR_MATERIAL by aliasStatic(Registries::field_48976)
+val Registries.BLOCK_STATE_PROVIDER_TYPE by aliasStatic(Registries::field_41149)
+val Registries.GAME_EVENT by aliasStatic(Registries::field_41171)
+val Registries.RECIPE_SERIALIZER by aliasStatic(Registries::field_41189)
+val Registries.LOOT_NBT_PROVIDER_TYPE by aliasStatic(Registries::field_41137)
+val Registries.VILLAGER_PROFESSION by aliasStatic(Registries::field_41195)
+val Registries.ENCHANTMENT_LEVEL_BASED_VALUE_TYPE by aliasStatic(Registries::field_51833)
+val Registries.DECORATED_POT_PATTERN by aliasStatic(Registries::field_42940)
+val Registries.PARTICLE_TYPE by aliasStatic(Registries::field_41180)
+val Registries.CRITERION by aliasStatic(Registries::field_47496)
+val Registries.FROG_VARIANT by aliasStatic(Registries::field_41164)
+val Registries.ROOT_PLACER_TYPE by aliasStatic(Registries::field_41152)
+val Registries.RECIPE_TYPE by aliasStatic(Registries::field_41188)
+val Registries.COMMAND_ARGUMENT_TYPE by aliasStatic(Registries::field_41192)
+val Registries.INT_PROVIDER_TYPE by aliasStatic(Registries::field_41140)
+val Registries.PLACEMENT_MODIFIER_TYPE by aliasStatic(Registries::field_41148)
+val Registries.LOOT_NUMBER_PROVIDER_TYPE by aliasStatic(Registries::field_41136)
+val Registries.ENCHANTMENT_VALUE_EFFECT_TYPE by aliasStatic(Registries::field_51836)
+val Registries.POSITION_SOURCE_TYPE by aliasStatic(Registries::field_41191)
+val Registries.CAT_VARIANT by aliasStatic(Registries::field_41163)
+val Registries.SCREEN_HANDLER by aliasStatic(Registries::field_41187)
+val Registries.TRUNK_PLACER_TYPE by aliasStatic(Registries::field_41151)
+val Registries.ENTITY_TYPE by aliasStatic(Registries::field_41177)
+val Registries.LOOT_CONDITION_TYPE by aliasStatic(Registries::field_41135)
+val Registries.ENCHANTMENT_LOCATION_BASED_EFFECT_TYPE by aliasStatic(Registries::field_51835)
+val Registries.MATERIAL_RULE by aliasStatic(Registries::field_41159)
+val Registries.STRUCTURE_TYPE by aliasStatic(Registries::field_41147)
+val Registries.ATTRIBUTE by aliasStatic(Registries::field_41190)
+val Registries.POS_RULE_TEST by aliasStatic(Registries::field_41186)
+val Registries.POOL_ALIAS_BINDING by aliasStatic(Registries::field_46912)
+val Registries.STATUS_EFFECT by aliasStatic(Registries::field_41174)
+val Registries.ITEM by aliasStatic(Registries::field_41178)
+val Registries.STRUCTURE_POOL_ELEMENT by aliasStatic(Registries::field_41162)
+val Registries.FOLIAGE_PLACER_TYPE by aliasStatic(Registries::field_41150)
+val Registries.STRUCTURE_PIECE by aliasStatic(Registries::field_41146)
+val Registries.LOOT_FUNCTION_TYPE by aliasStatic(Registries::field_41134)
+val Registries.MATERIAL_CONDITION by aliasStatic(Registries::field_41158)
+val Registries.RULE_TEST by aliasStatic(Registries::field_41185)
+val Registries.LOOT_POOL_ENTRY_TYPE by aliasStatic(Registries::field_41133)
+val Registries.STRUCTURE_PROCESSOR by aliasStatic(Registries::field_41161)
+val Registries.BLOCK by aliasStatic(Registries::field_41175)
+val Registries.CHUNK_GENERATOR by aliasStatic(Registries::field_41157)
+val Registries.STRUCTURE_PLACEMENT by aliasStatic(Registries::field_41145)
+val Registries.ENCHANTMENT_PROVIDER_TYPE by aliasStatic(Registries::field_51837)
+val Registries.RULE_BLOCK_ENTITY_MODIFIER by aliasStatic(Registries::field_43381)
+val Registries.FEATURE by aliasStatic(Registries::field_41144)
+val Registries.ACTIVITY by aliasStatic(Registries::field_41132)
+val Registries.DENSITY_FUNCTION_TYPE by aliasStatic(Registries::field_41160)
+val Registries.SOUND_EVENT by aliasStatic(Registries::field_41172)
+val Registries.POINT_OF_INTEREST_TYPE by aliasStatic(Registries::field_41128)
+val Registries.BIOME_SOURCE by aliasStatic(Registries::field_41156)
+val Registries.CHUNK_STATUS by aliasStatic(Registries::field_41184)
+val Registries.ENCHANTMENT_EFFECT_COMPONENT_TYPE by aliasStatic(Registries::field_51832)
+val Registries.ENTITY_SUB_PREDICATE_TYPE by aliasStatic(Registries::field_49911)
+val Registries.ITEM_SUB_PREDICATE_TYPE by aliasStatic(Registries::field_49912)
+val Registries.SCHEDULE by aliasStatic(Registries::field_41131)
+val Registries.ITEM_GROUP by aliasStatic(Registries::field_44687)
+val Registries.MEMORY_MODULE_TYPE by aliasStatic(Registries::field_41129)
+val Registries.FEATURE_SIZE_TYPE by aliasStatic(Registries::field_41155)
+val Registries.CARVER by aliasStatic(Registries::field_41143)
+val Registries.CUSTOM_STAT by aliasStatic(Registries::field_41183)
+val Registries.FLOAT_PROVIDER_TYPE by aliasStatic(Registries::field_41139)
+val Registries.POTION by aliasStatic(Registries::field_41179)
+val Registries.REGISTRIES by aliasStatic(Registries::field_41167)
+val Registries.FLUID by aliasStatic(Registries::field_41173)
+val Registries.BLOCK_TYPE by aliasStatic(Registries::field_46591)
+val Registries.NUMBER_FORMAT_TYPE by aliasStatic(Registries::field_47555)
+val Registries.BLOCK_PREDICATE_TYPE by aliasStatic(Registries::field_41142)
+val Registries.INSTRUMENT by aliasStatic(Registries::field_41166)
+fun KClass<Registries>.init() = Registries.method_47487()
+val RegistryKeys.PLACEMENT_MODIFIER_TYPE by aliasStatic(RegistryKeys::field_41211)
+val RegistryKeys.TRUNK_PLACER_TYPE by aliasStatic(RegistryKeys::field_41233)
+val RegistryKeys.WORLD by aliasStatic(RegistryKeys::field_41223)
+val RegistryKeys.PLACED_FEATURE by aliasStatic(RegistryKeys::field_41245)
+val RegistryKeys.FEATURE by aliasStatic(RegistryKeys::field_41267)
+val RegistryKeys.STRUCTURE_TYPE by aliasStatic(RegistryKeys::field_41231)
+val RegistryKeys.BIOME_SOURCE by aliasStatic(RegistryKeys::field_41253)
+val RegistryKeys.CHUNK_GENERATOR_SETTINGS by aliasStatic(RegistryKeys::field_41243)
+val RegistryKeys.MESSAGE_TYPE by aliasStatic(RegistryKeys::field_41237)
+val RegistryKeys.MATERIAL_RULE by aliasStatic(RegistryKeys::field_41205)
+val RegistryKeys.STRUCTURE_PIECE by aliasStatic(RegistryKeys::field_41227)
+val RegistryKeys.TEMPLATE_POOL by aliasStatic(RegistryKeys::field_41249)
+val RegistryKeys.BLOCK_STATE_PROVIDER_TYPE by aliasStatic(RegistryKeys::field_41257)
+val RegistryKeys.PROCESSOR_LIST by aliasStatic(RegistryKeys::field_41247)
+val RegistryKeys.FOLIAGE_PLACER_TYPE by aliasStatic(RegistryKeys::field_41271)
+val RegistryKeys.ROOT by aliasStatic(RegistryKeys::field_47497)
+val RegistryKeys.ITEM_GROUP by aliasStatic(RegistryKeys::field_44688)
+val RegistryKeys.STATUS_EFFECT by aliasStatic(RegistryKeys::field_41208)
+val RegistryKeys.STRUCTURE_PLACEMENT by aliasStatic(RegistryKeys::field_41228)
+val RegistryKeys.ROOT_PLACER_TYPE by aliasStatic(RegistryKeys::field_41218)
+val RegistryKeys.NOISE_PARAMETERS by aliasStatic(RegistryKeys::field_41244)
+val RegistryKeys.FLAT_LEVEL_GENERATOR_PRESET by aliasStatic(RegistryKeys::field_41242)
+val RegistryKeys.DENSITY_FUNCTION_TYPE by aliasStatic(RegistryKeys::field_41264)
+val RegistryKeys.TREE_DECORATOR_TYPE by aliasStatic(RegistryKeys::field_41232)
+val RegistryKeys.MATERIAL_CONDITION by aliasStatic(RegistryKeys::field_41204)
+val RegistryKeys.STRUCTURE_SET by aliasStatic(RegistryKeys::field_41248)
+val RegistryKeys.CONFIGURED_CARVER by aliasStatic(RegistryKeys::field_41238)
+val RegistryKeys.DIMENSION by aliasStatic(RegistryKeys::field_41224)
+val RegistryKeys.STRUCTURE by aliasStatic(RegistryKeys::field_41246)
+val RegistryKeys.FEATURE_SIZE_TYPE by aliasStatic(RegistryKeys::field_41268)
+val RegistryKeys.BIOME by aliasStatic(RegistryKeys::field_41236)
+val RegistryKeys.CARVER by aliasStatic(RegistryKeys::field_41258)
+val RegistryKeys.MULTI_NOISE_BIOME_SOURCE_PARAMETER_LIST by aliasStatic(RegistryKeys::field_43089)
+val RegistryKeys.DENSITY_FUNCTION by aliasStatic(RegistryKeys::field_41240)
+val RegistryKeys.STRUCTURE_PROCESSOR by aliasStatic(RegistryKeys::field_41230)
+val RegistryKeys.CHUNK_GENERATOR by aliasStatic(RegistryKeys::field_41260)
+val RegistryKeys.WORLD_PRESET by aliasStatic(RegistryKeys::field_41250)
+val RegistryKeys.POOL_ALIAS_BINDING by aliasStatic(RegistryKeys::field_46913)
+val RegistryKeys.CRITERION by aliasStatic(RegistryKeys::field_47498)
+val RegistryKeys.CONFIGURED_FEATURE by aliasStatic(RegistryKeys::field_41239)
+val RegistryKeys.SCREEN_HANDLER by aliasStatic(RegistryKeys::field_41207)
+val RegistryKeys.STRUCTURE_POOL_ELEMENT by aliasStatic(RegistryKeys::field_41229)
+val RegistryKeys.RULE_TEST by aliasStatic(RegistryKeys::field_41219)
+val RegistryKeys.RECIPE_TYPE by aliasStatic(RegistryKeys::field_41217)
+val RegistryKeys.ACTIVITY by aliasStatic(RegistryKeys::field_41222)
+val RegistryKeys.SENSOR_TYPE by aliasStatic(RegistryKeys::field_41221)
+val RegistryKeys.STAT_TYPE by aliasStatic(RegistryKeys::field_41226)
+val RegistryKeys.SOUND_EVENT by aliasStatic(RegistryKeys::field_41225)
+val RegistryKeys.SCHEDULE by aliasStatic(RegistryKeys::field_41220)
+val RegistryKeys.RULE_BLOCK_ENTITY_MODIFIER by aliasStatic(RegistryKeys::field_43382)
+val RegistryKeys.MEMORY_MODULE_TYPE by aliasStatic(RegistryKeys::field_41206)
+val RegistryKeys.PAINTING_VARIANT by aliasStatic(RegistryKeys::field_41209)
+val RegistryKeys.PARTICLE_TYPE by aliasStatic(RegistryKeys::field_41210)
+val RegistryKeys.POINT_OF_INTEREST_TYPE by aliasStatic(RegistryKeys::field_41212)
+val RegistryKeys.POS_RULE_TEST by aliasStatic(RegistryKeys::field_41214)
+val RegistryKeys.POSITION_SOURCE_TYPE by aliasStatic(RegistryKeys::field_41213)
+val RegistryKeys.RECIPE_SERIALIZER by aliasStatic(RegistryKeys::field_41216)
+val RegistryKeys.POTION by aliasStatic(RegistryKeys::field_41215)
+val RegistryKeys.NUMBER_FORMAT_TYPE by aliasStatic(RegistryKeys::field_47556)
+val RegistryKeys.LOOT_NBT_PROVIDER_TYPE by aliasStatic(RegistryKeys::field_41200)
+val RegistryKeys.LOOT_POOL_ENTRY_TYPE by aliasStatic(RegistryKeys::field_41202)
+val RegistryKeys.LOOT_NUMBER_PROVIDER_TYPE by aliasStatic(RegistryKeys::field_41201)
+val RegistryKeys.LOOT_SCORE_PROVIDER_TYPE by aliasStatic(RegistryKeys::field_41203)
+val RegistryKeys.DAMAGE_TYPE by aliasStatic(RegistryKeys::field_42534)
+val RegistryKeys.RECIPE by aliasStatic(RegistryKeys::field_52178)
+val RegistryKeys.ADVANCEMENT by aliasStatic(RegistryKeys::field_52177)
+val RegistryKeys.JUKEBOX_SONG by aliasStatic(RegistryKeys::field_52176)
+val RegistryKeys.DECORATED_POT_PATTERN by aliasStatic(RegistryKeys::field_42941)
+val RegistryKeys.FLOAT_PROVIDER_TYPE by aliasStatic(RegistryKeys::field_41269)
+val RegistryKeys.COMMAND_ARGUMENT_TYPE by aliasStatic(RegistryKeys::field_41262)
+val RegistryKeys.CHUNK_STATUS by aliasStatic(RegistryKeys::field_41261)
+val RegistryKeys.CUSTOM_STAT by aliasStatic(RegistryKeys::field_41263)
+val RegistryKeys.ENTITY_TYPE by aliasStatic(RegistryKeys::field_41266)
+val RegistryKeys.ENCHANTMENT by aliasStatic(RegistryKeys::field_41265)
+val RegistryKeys.CAT_VARIANT by aliasStatic(RegistryKeys::field_41259)
+val RegistryKeys.BANNER_PATTERN by aliasStatic(RegistryKeys::field_41252)
+val RegistryKeys.ATTRIBUTE by aliasStatic(RegistryKeys::field_41251)
+val RegistryKeys.BLOCK by aliasStatic(RegistryKeys::field_41254)
+val RegistryKeys.BLOCK_PREDICATE_TYPE by aliasStatic(RegistryKeys::field_41256)
+val RegistryKeys.BLOCK_ENTITY_TYPE by aliasStatic(RegistryKeys::field_41255)
+val RegistryKeys.TRIM_PATTERN by aliasStatic(RegistryKeys::field_42082)
+val RegistryKeys.TRIM_MATERIAL by aliasStatic(RegistryKeys::field_42083)
+val RegistryKeys.DIMENSION_TYPE by aliasStatic(RegistryKeys::field_41241)
+val RegistryKeys.VILLAGER_PROFESSION by aliasStatic(RegistryKeys::field_41234)
+val RegistryKeys.VILLAGER_TYPE by aliasStatic(RegistryKeys::field_41235)
+val RegistryKeys.DATA_COMPONENT_TYPE by aliasStatic(RegistryKeys::field_49659)
+val RegistryKeys.ENCHANTMENT_LOCATION_BASED_EFFECT_TYPE by aliasStatic(RegistryKeys::field_51842)
+val RegistryKeys.ENCHANTMENT_VALUE_EFFECT_TYPE by aliasStatic(RegistryKeys::field_51844)
+val RegistryKeys.ENCHANTMENT_PROVIDER_TYPE by aliasStatic(RegistryKeys::field_51843)
+val RegistryKeys.ENCHANTMENT_ENTITY_EFFECT_TYPE by aliasStatic(RegistryKeys::field_51840)
+val RegistryKeys.ENCHANTMENT_LEVEL_BASED_VALUE_TYPE by aliasStatic(RegistryKeys::field_51841)
+val RegistryKeys.ENCHANTMENT_PROVIDER by aliasStatic(RegistryKeys::field_51839)
+val RegistryKeys.ENCHANTMENT_EFFECT_COMPONENT_TYPE by aliasStatic(RegistryKeys::field_51838)
+val RegistryKeys.FLUID by aliasStatic(RegistryKeys::field_41270)
+val RegistryKeys.FROG_VARIANT by aliasStatic(RegistryKeys::field_41272)
+val RegistryKeys.WOLF_VARIANT by aliasStatic(RegistryKeys::field_49772)
+val RegistryKeys.HEIGHT_PROVIDER_TYPE by aliasStatic(RegistryKeys::field_41274)
+val RegistryKeys.GAME_EVENT by aliasStatic(RegistryKeys::field_41273)
+val RegistryKeys.INSTRUMENT by aliasStatic(RegistryKeys::field_41275)
+val RegistryKeys.MAP_DECORATION_TYPE by aliasStatic(RegistryKeys::field_50082)
+val RegistryKeys.BLOCK_TYPE by aliasStatic(RegistryKeys::field_46592)
+val RegistryKeys.ITEM_MODIFIER by aliasStatic(RegistryKeys::field_50080)
+val RegistryKeys.PREDICATE by aliasStatic(RegistryKeys::field_50081)
+val RegistryKeys.LOOT_TABLE by aliasStatic(RegistryKeys::field_50079)
+val RegistryKeys.ARMOR_MATERIAL by aliasStatic(RegistryKeys::field_48977)
+val RegistryKeys.ITEM by aliasStatic(RegistryKeys::field_41197)
+val RegistryKeys.INT_PROVIDER_TYPE by aliasStatic(RegistryKeys::field_41196)
+val RegistryKeys.LOOT_FUNCTION_TYPE by aliasStatic(RegistryKeys::field_41199)
+val RegistryKeys.LOOT_CONDITION_TYPE by aliasStatic(RegistryKeys::field_41198)
+val RegistryKeys.ENTITY_SUB_PREDICATE_TYPE by aliasStatic(RegistryKeys::field_49913)
+val RegistryKeys.ITEM_SUB_PREDICATE_TYPE by aliasStatic(RegistryKeys::field_49914)
+fun KClass<RegistryKeys>.toDimensionKey(arg0: RegistryKey<world_World>) = RegistryKeys.method_47518(arg0)
+fun KClass<RegistryKeys>.toWorldKey(arg0: RegistryKey<DimensionOptions>) = RegistryKeys.method_47516(arg0)
+fun KClass<RegistryKeys>.getTagPath(arg0: RegistryKey<out Registry<*>>) = RegistryKeys.method_60916(arg0)
+fun KClass<CrossbowPosing>.meleeAttack(arg0: ModelPart, arg1: ModelPart, arg2: Boolean, arg3: Float, arg4: Float) = CrossbowPosing.method_29352(arg0, arg1, arg2, arg3, arg4)
+fun KClass<CrossbowPosing>.swingArms(arg0: ModelPart, arg1: ModelPart, arg2: Float) = CrossbowPosing.method_32789(arg0, arg1, arg2)
+fun KClass<CrossbowPosing>.hold(arg0: ModelPart, arg1: ModelPart, arg2: ModelPart, arg3: Boolean) = CrossbowPosing.method_25447(arg0, arg1, arg2, arg3)
+fun KClass<CrossbowPosing>.swingArm(arg0: ModelPart, arg1: Float, arg2: Float) = CrossbowPosing.method_29350(arg0, arg1, arg2)
+fun LightingProvider.setRetainData(arg0: ChunkPos, arg1: Boolean) = this.method_20601(arg0, arg1)
+fun LightingProvider.displaySectionLevel(arg0: LightType, arg1: ChunkSectionPos) = this.method_22876(arg0, arg1)
+fun LightingProvider.isLightingEnabled(arg0: ChunkSectionPos) = this.method_51559(arg0)
+fun LightingProvider.getLight(arg0: BlockPos, arg1: Int) = this.method_22363(arg0, arg1)
+fun LightingProvider.getStatus(arg0: LightType, arg1: ChunkSectionPos) = this.method_51560(arg0, arg1)
+fun LightingProvider.get(arg0: LightType) = this.method_15562(arg0)
+fun LightingProvider.enqueueSectionData(arg0: LightType, arg1: ChunkSectionPos, arg2: ChunkNibbleArray) = this.method_15558(arg0, arg1, arg2)
+fun LightingProvider.getTopY() = this.method_31930()
+fun LightingProvider.getHeight() = this.method_31928()
+fun LightingProvider.getBottomY() = this.method_31929()
+fun <T>DefaultedRegistry<T>.getDefaultId() = this.method_10137()
+val CoralParentBlock.WATERLOGGED by aliasStatic(CoralParentBlock::field_9940)
+val FlatteningBiomeMapping.RENAMED_BIOMES by aliasStatic(FlatteningBiomeMapping::field_15810)
+fun ChunkLightingView.getLightLevel(arg0: BlockPos) = this.method_15543(arg0)
+fun ChunkLightingView.getLightSection(arg0: ChunkSectionPos) = this.method_15544(arg0)
+fun KClass<IdentifierArgumentType>.getRecipeArgument(arg0: CommandContext<ServerCommandSource>, arg1: String) = IdentifierArgumentType.method_9442(arg0, arg1)
+fun KClass<IdentifierArgumentType>.getIdentifier(arg0: CommandContext<ServerCommandSource>, arg1: String) = IdentifierArgumentType.method_9443(arg0, arg1)
+fun KClass<IdentifierArgumentType>.getAdvancementArgument(arg0: CommandContext<ServerCommandSource>, arg1: String) = IdentifierArgumentType.method_9439(arg0, arg1)
+fun IdentifierArgumentType.parse(arg0: StringReader) = this.method_9446(arg0)
+fun KClass<IdentifierArgumentType>.identifier() = IdentifierArgumentType.method_9441()
+val ScoreHolderArgumentType.SUGGESTION_PROVIDER by aliasStatic(ScoreHolderArgumentType::field_9951)
+fun KClass<ScoreHolderArgumentType>.scoreHolder() = ScoreHolderArgumentType.method_9447()
+fun KClass<ScoreHolderArgumentType>.getScoreHolders(arg0: CommandContext<ServerCommandSource>, arg1: String, arg2: Supplier<Collection<ScoreHolder>>) = ScoreHolderArgumentType.method_9450(arg0, arg1, arg2)
+fun KClass<ScoreHolderArgumentType>.scoreHolders() = ScoreHolderArgumentType.method_9451()
+fun KClass<ScoreHolderArgumentType>.getScoreboardScoreHolders(arg0: CommandContext<ServerCommandSource>, arg1: String) = ScoreHolderArgumentType.method_9449(arg0, arg1)
+fun ScoreHolderArgumentType.parse(arg0: StringReader) = this.method_9453(arg0)
+fun KClass<ScoreHolderArgumentType>.getScoreHolder(arg0: CommandContext<ServerCommandSource>, arg1: String) = ScoreHolderArgumentType.method_9452(arg0, arg1)
+fun BlockEntityBannerColorFix.fixBannerColor(arg0: Dynamic<*>) = this.method_15546(arg0)
+fun KClass<GameModeArgumentType>.getGameMode(arg0: CommandContext<ServerCommandSource>, arg1: String) = GameModeArgumentType.method_47385(arg0, arg1)
+fun GameModeArgumentType.parse(arg0: StringReader) = this.method_47384(arg0)
+fun KClass<GameModeArgumentType>.gameMode() = GameModeArgumentType.method_47383()
+fun KClass<Tooltip>.wrapLines(arg0: MinecraftClient, arg1: Text) = Tooltip.method_47406(arg0, arg1)
+fun <M, S>KClass<ChunkLightProvider<M, S>>.getOpaqueShape(arg0: BlockView, arg1: BlockPos, arg2: BlockState, arg3: Direction) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = ChunkLightProvider.method_51562(arg0, arg1, arg2, arg3)
+fun <M, S>ChunkLightProvider<M, S>.getStatus(arg0: Long) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_51568(arg0)
+fun <M, S>ChunkLightProvider<M, S>.setRetainColumn(arg0: ChunkPos, arg1: Boolean) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_20599(arg0, arg1)
+fun <M, S>ChunkLightProvider<M, S>.enqueueSectionData(arg0: Long, arg1: ChunkNibbleArray) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_15515(arg0, arg1)
+fun <M, S>KClass<ChunkLightProvider<M, S>>.needsLightUpdate(arg0: BlockView, arg1: BlockPos, arg2: BlockState, arg3: BlockState) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = ChunkLightProvider.method_51561(arg0, arg1, arg2, arg3)
+fun <M, S>ChunkLightProvider<M, S>.displaySectionLevel(arg0: Long) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_22875(arg0)
+fun <M, S>KClass<ChunkLightProvider<M, S>>.getRealisticOpacity(arg0: BlockView, arg1: BlockState, arg2: BlockPos, arg3: BlockState, arg4: BlockPos, arg5: Direction, arg6: Int) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = ChunkLightProvider.method_20049(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun SuspiciousStewIngredient.getStewEffects() = this.method_53233()
+val WorldDownload.downloadLink by alias(WorldDownload::field_22662)
+val WorldDownload.resourcePackHash by alias(WorldDownload::field_22664)
+val WorldDownload.resourcePackUrl by alias(WorldDownload::field_22663)
+fun KClass<ItemSlotArgumentType>.itemSlot() = ItemSlotArgumentType.method_9473()
+fun ItemSlotArgumentType.parse(arg0: StringReader) = this.method_9470(arg0)
+fun KClass<ItemSlotArgumentType>.getItemSlot(arg0: CommandContext<ServerCommandSource>, arg1: String) = ItemSlotArgumentType.method_9469(arg0, arg1)
+fun TimeArgumentType.parse(arg0: StringReader) = this.method_9490(arg0)
+fun KClass<TimeArgumentType>.time() = TimeArgumentType.method_9489()
+fun ChunkData.getSectionsDataBuf() = this.method_38586()
+fun ChunkData.write(arg0: RegistryByteBuf) = this.method_38590(arg0)
+fun KClass<ChunkData>.writeSections(arg0: PacketByteBuf, arg1: WorldChunk) = ChunkData.method_38591(arg0, arg1)
+fun <T>LogWriter<T>.getReader() = this.method_47566()
+fun <T>LogWriter<T>.write(arg0: T) = this.method_47568(arg0)
+
+class Generated6
