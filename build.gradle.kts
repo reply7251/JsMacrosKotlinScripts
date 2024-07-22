@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
+    kotlin("jvm") version "1.7.10"
 }
 
 group = "me.hellrevenger"
@@ -17,5 +17,7 @@ tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain {
+        this.languageVersion = JavaLanguageVersion.of(17)
+    }
 }

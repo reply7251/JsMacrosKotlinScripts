@@ -1,11 +1,5 @@
-import io.github.gaming32.jsmacros.kotlin.language.impl.KotlinScriptContext
 import io.github.gaming32.jsmacros.kotlin.library.impl.FWrapper
-import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.MethodWrapper
-import xyz.wagyourtail.jsmacros.core.library.BaseLibrary
-import xyz.wagyourtail.jsmacros.core.library.PerExecLibrary
-import xyz.wagyourtail.jsmacros.core.library.impl.classes.ClassBuilder
-import xyz.wagyourtail.jsmacros.core.library.impl.classes.LibraryBuilder
 import xyz.wagyourtail.jsmacros.core.service.EventService
 
 
