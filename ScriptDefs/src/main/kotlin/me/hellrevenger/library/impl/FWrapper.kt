@@ -5,6 +5,7 @@ import me.hellrevenger.language.impl.KotlinScriptContext
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.MethodWrapper
 import xyz.wagyourtail.jsmacros.core.language.BaseLanguage
+import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.library.IFWrapper
 import xyz.wagyourtail.jsmacros.core.library.Library
 import xyz.wagyourtail.jsmacros.core.library.PerExecLanguageLibrary
@@ -13,13 +14,16 @@ import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 
 
 @Library(value = "JavaWrapper", languages = [KotlinLanguageDefinition::class])
-class FWrapper(context: KotlinScriptContext, language: Class<out BaseLanguage<BasicJvmScriptingHost, KotlinScriptContext>>) :
-    PerExecLanguageLibrary<BasicJvmScriptingHost, KotlinScriptContext>(context, language), IFWrapper<Function<*>> {
-    override fun <A : Any?, B : Any?, R : Any?> methodToJava(p0: Function<*>): MethodWrapper<A, B, R, *> {
+class FWrapper(
+    context: KotlinScriptContext,
+    language: Class<out BaseLanguage<BasicJvmScriptingHost, KotlinScriptContext>>
+) : PerExecLanguageLibrary<BasicJvmScriptingHost, KotlinScriptContext>(context, language),
+    IFWrapper<Function<*>> {
+    override fun <A, B, R> methodToJava(p0: Function<*>): MethodWrapper<A, B, R, *> {
         return KotlinMethodWrapper(ctx, true, p0)
     }
 
-    override fun <A : Any?, B : Any?, R : Any?> methodToJavaAsync(p0: Function<*>): MethodWrapper<A, B, R, *> {
+    override fun <A, B, R> methodToJavaAsync(p0: Function<*>): MethodWrapper<A, B, R, *> {
         return KotlinMethodWrapper(ctx, false, p0)
     }
 
@@ -53,8 +57,8 @@ class FWrapper(context: KotlinScriptContext, language: Class<out BaseLanguage<Ba
 }
 
 @Suppress("UNCHECKED_CAST")
-class KotlinMethodWrapper<T, U, R>(ctx: KotlinScriptContext, val await: Boolean = true, val callback: Function<*>) :
-    MethodWrapper<T, U, R, KotlinScriptContext>(ctx) {
+class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>, val await: Boolean = true, val callback: Function<*>) :
+    MethodWrapper<T, U, R, BaseScriptContext<BasicJvmScriptingHost>>(ctx) {
 
     private fun callAsync(wrapped: () -> Unit){
         thread {

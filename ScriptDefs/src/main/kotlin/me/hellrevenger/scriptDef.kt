@@ -1,6 +1,6 @@
 package me.hellrevenger
 
-import me.hellrevenger.language.impl.FEventCenter
+import me.hellrevenger.library.impl.FEventCenter
 import xyz.wagyourtail.jsmacros.client.api.library.impl.*
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext

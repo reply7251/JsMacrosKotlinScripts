@@ -1,5 +1,7 @@
 
-import io.github.gaming32.jsmacros.kotlin.library.impl.FWrapper
+
+import me.hellrevenger.language.impl.KotlinScriptContext
+import me.hellrevenger.library.impl.FWrapper
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.event.Event
 import net.minecraft.class_2561
@@ -126,24 +128,9 @@ _event.trigger()
 
 var tick = 0L
 
-fun <T> registerEvent(event: Event<T>, callback: T) {
-    val register = JsMacros.createCustomEvent("RegisterKtEvent")
-    register.putObject("event", event)
-    register.putObject("callback", callback)
-    register.putObject("context", context.ctx)
-    register.trigger()
-}
-
-fun <T> unregisterEvent(event: Event<T>) {
-    val register = JsMacros.createCustomEvent("UnregisterKtEvent")
-    register.putObject("event", event)
-    register.putObject("context", context.ctx)
-    register.trigger()
-}
 val closedField = Reflection.getDeclaredField(BaseScriptContext::class.java, "closed")
 closedField.trySetAccessible()
-
-registerEvent(ClientTickEvents.START_CLIENT_TICK, ClientTickEvents.StartTick {
+EventCenter.registerEvent(context.ctx, ClientTickEvents.START_CLIENT_TICK, ClientTickEvents.StartTick {
     if ((tick++).toInt() % globalInterval == 0) {
         if(nextAttackTime > tick + attackIntervalRandom + attackInterval) {
             nextAttackTime = 0
@@ -161,7 +148,6 @@ registerEvent(ClientTickEvents.START_CLIENT_TICK, ClientTickEvents.StartTick {
             JsMacros.createCustomEvent("HoldActionCallback").putBoolean("attack", false)
         }
     }
-
 })
 
 val screen = Hud.createScreen("HoldActionConfig", false)
@@ -251,7 +237,7 @@ Chat.commandManager.createCommandBuilder("/hold")
     } as Function1<*,*>))
     .register()
 
-(event as EventService).stopListener = JavaWrapper.methodToJava(fun(){
+(event as EventService).stopListener = JavaWrapper.methodToJava<Any, Any, Any>(fun(){
     Chat.commandManager.unregisterCommand("/hold")
 } as Function0<*>)
 

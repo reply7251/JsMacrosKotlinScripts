@@ -1,15 +1,6 @@
+import net.minecraft.class_310
 
-import me.hellrevenger.generated.player
-import me.hellrevenger.generated.sendMessage
 
-val text = Chat.createTextBuilder().append("yeah").build().raw
-try {
-    Client.minecraft.player?.sendMessage(text)
-    Client.minecraft.field_1724?.method_43496(text)
-
-} catch(e: Exception){
-    Chat.log(e)
-}
-
+Chat.log("version: " + class_310.method_1551().method_1515())
 
 Chat.log("test")

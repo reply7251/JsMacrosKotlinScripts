@@ -35,7 +35,6 @@ fun splitMain() {
     val source = File("./generated/Generated.kt")
     val targetFolder = File("./ScriptDefs/src/main/kotlin/$packagePath")
 
-    val importPrefix = "import "
     val valPrefix = "val "
     val funPrefix = "fun "
     val typealiasPrefix = "typealias "
@@ -112,7 +111,7 @@ fun splitMain() {
         val currentImports = hashSetOf<String>()
         val currentMembers = arrayListOf<String>()
         var lastAccessClass = ""
-        var currentFile = targetFolder //File(targetFolder, "Generated$counter")
+        var currentFile: File  //File(targetFolder, "Generated$counter")
         //counter++
 
         source.forEachLine {

@@ -1,7 +1,11 @@
 package me.hellrevenger
 
+
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
+import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
+import net.minecraft.class_310
+import xyz.wagyourtail.jsmacros.client.JsMacros
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.extensions.Extension
 import xyz.wagyourtail.jsmacros.core.language.BaseLanguage
@@ -66,7 +70,9 @@ class KotlinExtension: Extension {
         return languageDefinition!!
     }
 
-    override fun getLibraries() = mutableSetOf(FWrapper::class.java)
+    override fun getLibraries() =
+        if(class_310.method_1551().method_1515() == "1.21") mutableSetOf(FWrapper::class.java, FEventCenter::class.java)
+        else mutableSetOf(FWrapper::class.java)
 
 
     override fun wrapException(p0: Throwable?): BaseWrappedException<*>? {
@@ -74,10 +80,7 @@ class KotlinExtension: Extension {
             val nextGetter = p0.resultWithDiagnostics.reports.iterator()
             p0.resultWithDiagnostics.reports.forEach {
                 if (it.severity == ScriptDiagnostic.Severity.ERROR) {
-                    val sw = StringWriter()
-                    val pw = PrintWriter(sw)
-                    it.exception?.printStackTrace(pw)
-                    //sw.toString().split("\r\n").forEach { Chat.log(it) }
+                    JsMacros.core.profile.logError(it.exception)
                 }
             }
             return BaseWrappedException(null, "KotlinSub script failed to compile", null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)

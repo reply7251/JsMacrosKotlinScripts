@@ -1,5 +1,6 @@
-package me.hellrevenger.language.impl
+package me.hellrevenger.library.impl
 
+import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientBlockEntityEvents
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientChunkEvents
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientEntityEvents
@@ -8,39 +9,76 @@ import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback
 import net.fabricmc.fabric.api.event.Event
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
-import xyz.wagyourtail.jsmacros.core.library.BaseLibrary
 import xyz.wagyourtail.jsmacros.core.library.Library
+import xyz.wagyourtail.jsmacros.core.library.PerExecLibrary
 
 
 val events = hashMapOf<Event<*>, HashMap<BaseScriptContext<*>, Any>>()
 val whitelist = hashMapOf<BaseScriptContext<*>, Long>()
 
+val listeners = hashMapOf<String, HashMap<BaseScriptContext<*>, (Map<String, Any>) -> Unit>>()
+val whitelist2 = hashMapOf<BaseScriptContext<*>, Long>()
+
 fun time() = System.currentTimeMillis()
 
-@Library(value = "EventCenter", languages = [KotlinLanguageDefinition::class])
-class FEventCenter : BaseLibrary() {
+@Library("EventCenter", languages = [KotlinLanguageDefinition::class])
+class FEventCenter(context: BaseScriptContext<*>?) : PerExecLibrary(context) {
     init {
         init()
     }
 
-    fun <T> registerEvent(context: KotlinScriptContext, event: Event<T>, callback: T) {
+    fun <T> registerEvent(context: BaseScriptContext<*>, event: Event<T>, callback: T) {
         whitelist[context] = time() + 1000L
         val listeners = events.getOrPut(event) { hashMapOf() }
         listeners[context] = callback as Any
     }
 
-    fun <T> unregisterEvent(context: KotlinScriptContext, event: Event<T>) {
+    fun <T> unregisterEvent(context: BaseScriptContext<*>, event: Event<T>) {
         val listeners = events[event] ?: return
         whitelist.remove(context)
         listeners.remove(context)
     }
-}
 
+    fun listenTo(name: String, context: BaseScriptContext<*>, callback: (Map<String, Any>) -> Unit) {
+        whitelist2[context] = time() + 1000L
+        val listener = listeners.getOrPut(name) { hashMapOf() }
+        listener[context] = callback
+    }
+
+    fun cancelListen(name: String, context: BaseScriptContext<*>) {
+        whitelist2.remove(context)
+        listeners[name]?.remove(context)
+    }
+
+    fun trigger(name: String, data: HashMap<String, Any>) {
+        val listener = listeners[name] ?: return
+        val unregisters = arrayListOf<BaseScriptContext<*>>()
+        listener.forEach {
+            if(isClosed2(it.key)) {
+                unregisters.add(it.key)
+                return@forEach
+            }
+            it.value.invoke(data)
+        }
+        unregisters.forEach {
+            listener.remove(it)
+        }
+    }
+}
 
 fun isClosed(ctx: BaseScriptContext<*>): Boolean {
     val whitelistTime = whitelist[ctx] ?: return ctx.isContextClosed
     if(whitelistTime < time()) {
         whitelist.remove(ctx)
+        return ctx.isContextClosed
+    }
+    return false
+}
+
+fun isClosed2(ctx: BaseScriptContext<*>): Boolean {
+    val whitelistTime = whitelist2[ctx] ?: return ctx.isContextClosed
+    if(whitelistTime < time()) {
+        whitelist2.remove(ctx)
         return ctx.isContextClosed
     }
     return false

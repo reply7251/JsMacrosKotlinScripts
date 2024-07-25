@@ -78,8 +78,8 @@ class GenMapping {
         }
         generics = if(generics == "") "" else "<$generics>"
         * */
-        if(param.parameterizedType is Class) {
-            val params = param.parameterizedType.typeParameters
+        if(param.parameterizedType is Class<*>) {
+            val params = (param.parameterizedType as Class<*>).typeParameters
             if(params.isNotEmpty()) {
                 return getNameFromType(param.parameterizedType) + "<*>"
             }
