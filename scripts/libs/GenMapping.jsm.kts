@@ -8,7 +8,14 @@ import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 import java.lang.reflect.TypeVariable
 import java.lang.reflect.WildcardType
-
+/*
+Map_world_World & Map_ServerWorld
+    collectEntitiesByType method_47575 List -> MutableList
+    collectEntitiesByType method_47574 List -> MutableList
+Map_BlockStatePredicate
+    with method_11762 Predicate<*> -> Predicate<Any>
+typealias Instance = com.mojang.serialization.codecs.RecordCodecBuilder.Instance + <S>
+* */
 class MyMappings(mappingsource: String?) : Mappings(mappingsource) {
     override fun loadMappings() {
         val builder = StringBuilder()
@@ -19,7 +26,12 @@ class MyMappings(mappingsource: String?) : Mappings(mappingsource) {
     }
 }
 
+class Generic(val name: String, var bounds: CachedClassData)
 
+class CachedClassData(val fullName: String, val alias: String) {
+    val generics = hashSetOf<Generic>()
+    val publicFields = hashSetOf<String>()
+}
 
 class GenMapping {
     val fromAlias = hashMapOf<String, String>()
@@ -27,15 +39,8 @@ class GenMapping {
     val aliasUsage = hashSetOf<String>()
     val kotlinArrays = mapOf(*listOf("Int", "Long", "Byte", "Double", "Float", "Boolean", "Char", "Short").map { "Array<$it>" to it+"Array" }.toTypedArray())
     val blackListMethods = setOf<String>(
-        "method_41996", "method_41997", //writeJson writePacket
-        /*
-        "method_30040",
-        "method_42697", "method_59807", "method_11762",
-        "method_47574", "method_47575",
-        "method_52207", "method_22992",
-        "method_47539", "method_47538",
-
-         */
+        "method_41996", "method_41997", //ConstantArgumentSerializer. writeJson writePacket
+        "method_59807", // PacketListener.onPacketException
     )
     val blackListStaticMethods = hashSetOf<String>(
     )
@@ -45,8 +50,11 @@ class GenMapping {
     val blackListClasses = setOf(
         "net.minecraft.class_4597", // VertexConsumerProvider
         "net.minecraft.class_6302", "net.minecraft.class_6300",
-        "net.minecraft.class_6301"
+        "net.minecraft.class_6301",
+        "net.minecraft.class_4516" // TestContext
     )
+
+    val usedAliases = hashSetOf<String>()
 
     fun getGenerics(type: Type, includingBounds: Boolean = false): List<String> {
         if(type is ParameterizedType) {
@@ -146,6 +154,7 @@ class GenMapping {
         if(result != null) {
             if(addUsage)
                 aliasUsage.add(result)
+            usedAliases.add(result)
             return result
         }
         if(className.matches(".+class_\\d+".toRegex())) return className.replace("$", ".")
@@ -163,6 +172,7 @@ class GenMapping {
         toAlias[className] = simpleName
         if(addUsage)
             aliasUsage.add(simpleName)
+        usedAliases.add(simpleName)
         return simpleName
     }
 
@@ -208,12 +218,18 @@ class GenMapping {
         if(aliasName == "Any") return builder.toString()
         if(aliasName.matches(".+PackageInfo\\d+".toRegex())) return builder.toString()
 
+        usedAliases.clear()
+
         val classGenerics = if(clazz.typeParameters.isEmpty()) {
             listOf()
         } else {
             clazz.typeParameters.map { getGenerics(it, true) }.flatten()
-        } + getGenerics(clazz.genericSuperclass)
+        } + if(clazz.isInterface)
+            listOf()
+        else
+            getGenerics(clazz.genericSuperclass)
 
+        val fields = hashSetOf<String>()
 
         var simpleClassGenerics = classGenerics.joinToString { it.split(":")[0] }
         if(simpleClassGenerics.isNotEmpty()) simpleClassGenerics = "<$simpleClassGenerics>"
@@ -228,6 +244,8 @@ class GenMapping {
                         return@forEach
 
                     if(to == "CODEC" && Modifier.isStatic(field.modifiers) && !field.isEnumConstant) return@forEach
+
+                    fields.add(to)
 
                     val byAlias = if(Modifier.isStatic(field.modifiers))
                         if(field.isEnumConstant)
@@ -264,12 +282,13 @@ class GenMapping {
             try {
                 val methodName = from.split("(")[0]
                 if(methodName == to.name) return@forEach
-                if(methodName in blackListMethods) return@forEach
+                if(methodName in blackListMethods || to.name in blackListMethods) return@forEach
                 val method = clazz.methods.first { return@first it.name == methodName }
                 if(!Modifier.isPublic(method.modifiers)) return@forEach
                 if(Modifier.isPrivate(method.modifiers) || Modifier.isProtected(method.modifiers)) return@forEach
-                if(to.name.startsWith("get") && to.name.length > 4 && (to.name[3].lowercase() + to.name.substring(4)) in classData.fields.values)
+                if(to.name.startsWith("get") && to.name.length > 4 && (to.name[3].lowercase() + to.name.substring(4)) in fields) {
                     return@forEach
+                }
                 if(to.name in blackListDeobfMethods) return@forEach
 
                 val isStatic = Modifier.isStatic(method.modifiers)
@@ -455,7 +474,7 @@ fun main() {
     Chat.log("parent: $parent")
     Chat.log("macro: $macro")
     val pathToTiny = "." + parent.substring(macro.length) + "/jars/mappings-yarn.tiny"
-    Chat.log("sub: " + pathToTiny)
+    Chat.log("sub: $pathToTiny")
 
     val mapping = Reflection.loadMappingHelper(pathToTiny)
 
