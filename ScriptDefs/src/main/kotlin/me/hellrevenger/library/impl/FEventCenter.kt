@@ -21,10 +21,15 @@ val whitelist2 = hashMapOf<BaseScriptContext<*>, Long>()
 
 fun time() = System.currentTimeMillis()
 
+var initialized = false
+
 @Library("EventCenter", languages = [KotlinLanguageDefinition::class])
 class FEventCenter(context: BaseScriptContext<*>?) : PerExecLibrary(context) {
     init {
-        init()
+        if(!initialized) {
+            initialized = true
+            init()
+        }
     }
 
     fun <T> registerEvent(context: BaseScriptContext<*>, event: Event<T>, callback: T) {

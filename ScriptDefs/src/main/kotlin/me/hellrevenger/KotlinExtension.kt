@@ -79,7 +79,7 @@ class KotlinExtension: Extension {
         if (p0 is KotlinLanguageDefinition.KotlinCompileException) {
             val nextGetter = p0.resultWithDiagnostics.reports.iterator()
             p0.resultWithDiagnostics.reports.forEach {
-                if (it.severity == ScriptDiagnostic.Severity.ERROR) {
+                if (it.severity == ScriptDiagnostic.Severity.ERROR && it.exception != null) {
                     JsMacros.core.profile.logError(it.exception)
                 }
             }

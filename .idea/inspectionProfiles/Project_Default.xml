@@ -1,0 +1,66 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="AddedMixinMembersNamePattern" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AmbiguousMixinReference" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AnnotationOutsideOfMixin" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AtUsage" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BukkitListenerImplemented" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BungeeCordListenerImplemented" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CancellableInjectionUsage" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CtorHeadNoUnsafe" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CtorHeadPostInit" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CtorHeadUsedForNonConstructor" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DuplicateAwEntry" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DuplicateInterface" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DuplicateInterfacePrefix" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="EditorConfigUnusedDeclaration" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="EmptyImplements" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="FabricModJsonEntrypointsValidation" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ImplicitConstructorInvoker" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="InjectCancellableBeforeSuperConstructorCall" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="InjectIntoConstructor" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="InterfaceIsInterface" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="InvalidConfigValue" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="InvalidInjectorMethodSignature" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="InvalidInterfacePrefix" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="InvalidMemberReference" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="InvalidMixinPluginRegistration" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="InvalidMixinRegistration" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="InvalidMixinTarget" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="IsCancelled" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="LocalMayBeArgsOnly" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="MissingFormat" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="MissingMessageConstructor" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="MissingUnique" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="MixinAnnotationTarget" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="MixinExtrasOperationParameters" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="MixinExtrasUnnecessaryMutableLocal" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="MixinInnerClass" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="MixinSuperClass" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ModifyVariableMayBeArgsOnly" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ModsTomlValidation" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="NoTranslation" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="NonJavaMixin" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="OverwriteAuthorRequired" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="OverwriteModifiers" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="PublicStaticMixinMember" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ReferenceToMixin" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ShadowFieldPrefix" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ShadowFinalModification" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ShadowModifiers" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="SoftImplementOverrides" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="SuperfluousFormat" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="UnnecessaryQualifiedMemberReference" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="UnnecessaryUnsafe" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="UnqualifiedMemberReference" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="UnresolvedConfigReference" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="UnresolvedFabricModJsonReference" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="UnresolvedLocalCapture" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="UnresolvedMixinReference" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="UnusedMixin" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="UnusedShadowMethodPrefix" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="WrongEntityDataParameterClass" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="WrongTypeInTranslationArgs" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>

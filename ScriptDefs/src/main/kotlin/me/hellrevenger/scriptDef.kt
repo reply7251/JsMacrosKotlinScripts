@@ -1,6 +1,7 @@
 package me.hellrevenger
 
 import me.hellrevenger.library.impl.FEventCenter
+import me.hellrevenger.library.impl.FWrapper
 import xyz.wagyourtail.jsmacros.client.api.library.impl.*
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
@@ -13,6 +14,7 @@ import kotlin.script.experimental.jvm.dependenciesFromCurrentContext
 import kotlin.script.experimental.jvm.jvm
 
 import net.minecraft.class_310;
+import xyz.wagyourtail.jsmacros.core.MethodWrapper
 import kotlin.script.experimental.api.*
 
 
@@ -42,7 +44,7 @@ abstract class SimpleScript(
     val Utils: FUtils,
     val World: FWorld,
 
-    val JavaWrapper: IFWrapper<Function<*>>,
+    val JavaWrapper: FWrapper,
     val context: EventContainer<BaseScriptContext<*>>,
     val file: File,
     val event: BaseEvent,

@@ -1,0 +1,15 @@
+java -jar JavaDowngrader-Standalone-1.1.2.jar -i jsmacros-1.21-fabric.jar -o jsmacros-1.21-fabric-jvm17.jar -v 17
+java -jar JavaDowngrader-Standalone-1.1.2.jar -i noObf.jar -o noObf-jvm17.jar -v 17
+
+java -jar JavaDowngrader-Standalone-1.1.2.jar -i int.jar -o int-jvm17.jar -v 17
+
+java -jar JavaDowngrader-Standalone-1.1.2.jar -i minecraft-open-int.jar -o minecraft-open-int-jvm17.jar -v 17
+
+java -jar tiny-remapper-0.8.11+local-fat.jar minecraft-open.jar minecraft-open-int.jar mappings-reverse.tiny named intermediary
+
+
+c\t(.+)\t(.+)
+c\t$2\t$1
+
+(\tf\t.+\t)(.+)\t(.+)
+$1$3\t$2

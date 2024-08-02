@@ -51,6 +51,18 @@ class FWrapper(
         return KotlinMethodWrapper(ctx, false, p0)
     }
 
+    fun <R> m2j1(func: Function0<R>): MethodWrapper<Any, Any, R, *> {
+        return methodToJava(func as Function0<Any>) as MethodWrapper<Any, Any, R, *>
+    }
+
+    fun <T, R> m2j1(func: Function1<T,R>): MethodWrapper<T, Any, R, *> {
+        return methodToJava(func as Function1<Any, Any>) as MethodWrapper<T, Any, R, *>
+    }
+
+    fun <A, B, R> m2j2(func: Function2<A,B,R>): MethodWrapper<A, B, R, *> {
+        return methodToJava(func as Function2<Any, Any, Any>) as MethodWrapper<A, B, R, *>
+    }
+
     override fun stop() {
         ctx.closeContext()
     }
