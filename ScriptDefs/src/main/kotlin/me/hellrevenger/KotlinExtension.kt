@@ -6,6 +6,7 @@ import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
 import net.minecraft.class_310
 import xyz.wagyourtail.jsmacros.client.JsMacros
+import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.extensions.Extension
 import xyz.wagyourtail.jsmacros.core.language.BaseLanguage
@@ -71,7 +72,7 @@ class KotlinExtension: Extension {
     }
 
     override fun getLibraries() =
-        if(class_310.method_1551().method_1515() == "1.21") mutableSetOf(FWrapper::class.java, FEventCenter::class.java)
+        if(FClient(null).mcVersion() == "1.21") mutableSetOf(FWrapper::class.java, FEventCenter::class.java)
         else mutableSetOf(FWrapper::class.java)
 
 

@@ -27,40 +27,40 @@ class FWrapper(
         return KotlinMethodWrapper(ctx, false, p0)
     }
 
-    fun <R> methodToJava(p0: () -> R) : MethodWrapper<*, *, R, *> {
-        return KotlinMethodWrapper<Unit, Unit, R>(ctx, true, p0)
-    }
-
-    fun <R> methodToJavaAsync(p0: () -> R) : MethodWrapper<*, *, R, *> {
-        return KotlinMethodWrapper<Unit, Unit, R>(ctx, false, p0)
-    }
-
-    fun <A: Any, R: Any> methodToJava(p0: (A) -> R) : MethodWrapper<A, Unit, R, *> {
+    fun <A, B, R> methodToJava(p0: () -> R) : MethodWrapper<A, B, R, *>{
         return KotlinMethodWrapper(ctx, true, p0)
     }
 
-    fun <A: Any, R: Any> methodToJavaAsync(p0: (A) -> R) : MethodWrapper<A, Unit, R, *> {
+    fun <A, B, R> methodToJavaAsync(p0: () -> R) : MethodWrapper<A, B, R, *> {
         return KotlinMethodWrapper(ctx, false, p0)
     }
 
-    fun <A: Any, B: Any, R: Any> methodToJava(p0: (A,B) -> R) : MethodWrapper<A, B, R, *> {
+    fun <A, B, R> methodToJava(p0: (A) -> R) : MethodWrapper<A, B, R, *> {
         return KotlinMethodWrapper(ctx, true, p0)
     }
 
-    fun <A: Any, B: Any, R: Any> methodToJavaAsync(p0: (A,B) -> R) : MethodWrapper<A, B, R, *> {
+    fun <A, B, R> methodToJavaAsync(p0: (A) -> R) : MethodWrapper<A, B, R, *> {
         return KotlinMethodWrapper(ctx, false, p0)
     }
 
-    fun <R> m2j1(func: Function0<R>): MethodWrapper<Any, Any, R, *> {
-        return methodToJava(func as Function0<Any>) as MethodWrapper<Any, Any, R, *>
+    fun <A, B, R> methodToJava(p0: (A,B) -> R) : MethodWrapper<A, B, R, *> {
+        return KotlinMethodWrapper(ctx, true, p0)
     }
 
-    fun <T, R> m2j1(func: Function1<T,R>): MethodWrapper<T, Any, R, *> {
-        return methodToJava(func as Function1<Any, Any>) as MethodWrapper<T, Any, R, *>
+    fun <A, B, R> methodToJavaAsync(p0: (A,B) -> R) : MethodWrapper<A, B, R, *> {
+        return KotlinMethodWrapper(ctx, false, p0)
+    }
+
+    fun <A, B, R> m2j1(func: Function0<R>): MethodWrapper<A, B, R, *> {
+        return methodToJava<A, B, R>(func as Function0<Any>)
+    }
+
+    fun <A, B, R> m2j1(func: Function1<A,R>): MethodWrapper<A, B, R, *> {
+        return methodToJava<A, B, R>(func as Function1<Any, Any>)
     }
 
     fun <A, B, R> m2j2(func: Function2<A,B,R>): MethodWrapper<A, B, R, *> {
-        return methodToJava(func as Function2<Any, Any, Any>) as MethodWrapper<A, B, R, *>
+        return methodToJava<A, B, R>(func as Function2<Any, Any, Any>)
     }
 
     override fun stop() {

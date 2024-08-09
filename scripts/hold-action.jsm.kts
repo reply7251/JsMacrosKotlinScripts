@@ -12,23 +12,12 @@ import xyz.wagyourtail.jsmacros.client.api.helpers.TextHelper
 import xyz.wagyourtail.jsmacros.client.api.helpers.screen.ClickableWidgetHelper
 import xyz.wagyourtail.jsmacros.client.api.helpers.screen.SliderWidgetHelper
 import xyz.wagyourtail.jsmacros.core.MethodWrapper
+import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
-
-fun <R> m2j1(func: Function0<R>): MethodWrapper<Any, Any, R, *> {
-    return (JavaWrapper as FWrapper).methodToJava(func as Function0<Any>) as MethodWrapper<Any, Any, R, *>
-}
-
-fun <T, R> m2j1(func: Function1<T,R>): MethodWrapper<T, Any, R, *> {
-    return (JavaWrapper as FWrapper).methodToJava(func as Function1<Any, Any>) as MethodWrapper<T, Any, R, *>
-}
-
-fun <A, B, R> m2j2(func: Function2<A,B,R>): MethodWrapper<A, B, R, *> {
-    return (JavaWrapper as FWrapper).methodToJava(func as Function2<Any, Any, Any>) as MethodWrapper<A, B, R, *>
-}
 
 val mc = Client.getMinecraft()
 val interactKey =  mc.field_1690.field_1904;
@@ -96,7 +85,8 @@ var nextAttackTime = 0L
 var nextInteractTime = 0L
 
 JsMacros.createCustomEvent("HoldAction").registerEvent()
-JsMacros.on("HoldAction", JavaWrapper.methodToJava(fun(event: EventCustom, _: EventContainer<*>){
+JsMacros.on("HoldAction", JavaWrapper.methodToJava(fun(event: BaseEvent, _: EventContainer<*>){
+    if(event !is EventCustom) return
     with(event) {
         if(getBoolean("loadFromGlobal") == true) {
             Globals.globalInterval = GlobalVars.getInt("globalInterval") ?: globalInterval
@@ -120,7 +110,7 @@ JsMacros.on("HoldAction", JavaWrapper.methodToJava(fun(event: EventCustom, _: Ev
             globalInterval = 1
         }
     }
-} as Function2<*, *, *>))
+}))
 
 val _event = JsMacros.createCustomEvent("HoldAction")
 _event.putBoolean("loadFromGlobal", true)
@@ -155,7 +145,7 @@ val screen = Hud.createScreen("HoldActionConfig", false)
 fun IScreen.labeledButton(labelText: String, x: Int, y: Int, buttonText: String,
                           callback: (ClickableWidgetHelper<*,*>, IScreen) -> Unit): Pair<Text, ClickableWidgetHelper<*, *>> {
     val label = this.addText(labelText, x, y + 6, 0xffffff, true)
-    val button = this.addButton(x + label.width + 10, y, 60, 20, buttonText, m2j2(callback))
+    val button = this.addButton(x + label.width + 10, y, 60, 20, buttonText, JavaWrapper.m2j2(callback))
     return label to button
 }
 
@@ -163,7 +153,7 @@ fun IScreen.labeledSlider(labelText: String, x: Int, y: Int, initValue: Double =
                           callback: (SliderWidgetHelper, IScreen) -> Any): Pair<SliderWidgetHelper, Text> {
     val label = this.labeled(labelText, x, y)
     val slider = this.addSlider(label.second + 20,
-        y, 100, 20, "", initValue, steps, m2j2 {slider, screen ->
+        y, 100, 20, "", initValue, steps, JavaWrapper.m2j2 {slider, screen ->
             val result = callback(slider, screen)
             label.first.setText("$labelText: $result")
     })
@@ -179,7 +169,7 @@ fun getText(text: String) = TextHelper.wrap(class_2561.method_43470(text))
 fun initScreen() {
     val iscreen = screen as IScreen
 
-    iscreen.setOnInit(m2j1 { screen ->
+    iscreen.setOnInit(JavaWrapper.m2j1 { screen ->
         val left = screen.width / 3
         val top = screen.height / 3
 
@@ -234,7 +224,7 @@ Chat.commandManager.createCommandBuilder("/hold")
             Client.waitTick(1)
             Hud.openScreen(screen as IScreen)
         }
-    } as Function1<*,*>))
+    }))
     .register()
 
 (event as EventService).stopListener = JavaWrapper.methodToJava<Any, Any, Any>(fun(){
