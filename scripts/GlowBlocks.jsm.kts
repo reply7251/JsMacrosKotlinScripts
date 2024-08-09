@@ -11,37 +11,11 @@ import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventChunkUnload
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.BlockStateHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
-import kotlin.script.experimental.jvm.util.KotlinJars
 
 val JWrapper = FWrapper(context.ctx as KotlinScriptContext, KotlinLanguageDefinition::class.java)
 
-//class EventListener(val eventName: String, val callback: (BaseEvent) -> Unit) : IEventListener {
-//    init {
-//        Core.getInstance().eventRegistry.addListener(eventName, this)
-//        context.ctx.eventListeners[this] = eventName
-//    }
-//
-//    override fun off() {
-//        Core.getInstance().eventRegistry.removeListener(eventName, this)
-//    }
-//
-//    override fun joined(): Boolean {
-//        return true
-//    }
-//
-//    override fun trigger(p0: BaseEvent): EventContainer<*> {
-//        try {
-//            callback.invoke(p0)
-//        } catch (e: Throwable) {
-//            off()
-//            Core.getInstance().profile.logError(e)
-//        }
-//        return context
-//    }
-//}
-
 val glowColors = hashMapOf<String, Int>()
-val glowings = hashMapOf<Pos3D, Box>()
+val glowingBoxes = hashMapOf<Pos3D, Box>()
 val d3ds = hashMapOf<Pair<Int, Int>, Draw3D>()
 var enabled = true
 var scanner = World.worldScanner.build()
@@ -58,7 +32,7 @@ fun onChunkLoad(x: Int, z: Int) {
                     val box = d3d.addBox(pos.x, pos.y, pos.z, pos.x + 1, pos.y + 1, pos.z + 1, color, color, true)
                     box.setAlpha(127)
                     box.setFillAlpha(10)
-                    glowings[pos] = box
+                    glowingBoxes[pos] = box
                 }
             }
         }
@@ -72,13 +46,14 @@ fun onChunkUnload(x: Int, z: Int) {
     d3ds.remove(x to z)?.let {
         it.unregister()
         it.boxes.forEach { box ->
-            glowings.remove(box.pos.start)
+            glowingBoxes.remove(box.pos.start)
         }
     }
 }
 
 fun enable() {
     disable()
+    if(glowColors.isEmpty()) return
     enabled = true
     scanner = World.worldScanner.withBlockFilter("getId").`is`("EQUALS", *glowColors.keys.toTypedArray()).build()
     val player = Player.player ?: return
@@ -93,13 +68,13 @@ fun enable() {
         }
     }
 }
-KotlinJars.stdlib
+
 fun disable() {
     if(enabled) {
         enabled = false
         d3ds.values.forEach { it.unregister() }
         d3ds.clear()
-        glowings.clear()
+        glowingBoxes.clear()
     }
 }
 
@@ -124,17 +99,22 @@ Chat.commandManager.createCommandBuilder("/scan")
         glowColors[(ctx.getArg("block") as BlockStateHelper).id] = 0xff0000
         enable()
     })
-    .regexArgType("color", "([\\da-fA-F]{1,6})", "")
+    .regexArgType("color", "(0x)?([\\da-fA-F]{1,6})", "")
     .executes(JWrapper.methodToJava { ctx ->
-        glowColors[(ctx.getArg("block") as BlockStateHelper).id] = Integer.valueOf((ctx.getArg("color") as Array<String>)[1], 16)
+        glowColors[(ctx.getArg("block") as BlockStateHelper).id] = Integer.valueOf((ctx.getArg("color") as Array<String>)[2], 16)
         enable()
     }).or().or().or()
     .literalArg("remove")
-    .blockArg("block")
+    .blockArg("block").suggestMatching(*glowColors.keys.toTypedArray())
     .executes(JWrapper.methodToJava { ctx ->
         glowColors.remove((ctx.getArg("block") as BlockStateHelper).id)
         enable()
     }).or().or()
+    .literalArg("clear")
+    .executes(JWrapper.methodToJava { ctx ->
+        glowColors.clear()
+        enable()
+    }).or()
     .literalArg("enable")
     .executes(JWrapper.methodToJava { ctx ->
         enable()
