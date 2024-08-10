@@ -8,8 +8,12 @@ import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw2D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.RenderElement
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.EntityHelper
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.PlayerEntityHelper
+import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
+import xyz.wagyourtail.jsmacros.core.library.impl.FReflection
 
-val mc = MinecraftClient.method_1551()
+val mc get() = MinecraftClient.method_1551()
+
+val methodFov = net.minecraft.class_757::class.java.declaredMethods.first { it.name == "method_3196" }
 
 open class WorldPosWrapper(
     val draw2d: Draw2D,
@@ -32,16 +36,21 @@ open class WorldPosWrapper(
 
     var bindEntity: EntityHelper<*>? = null
 
-    val width get() = mc.method_22683().method_4486()
-    val height get() = mc.method_22683().method_4502()
-
     var removed = false
+
+    fun getFov(cam: net.minecraft.class_4184, delta: Float, a3: Boolean): Double {
+        val gameRenderer = mc.gameRenderer
+        if(methodFov.trySetAccessible()) {
+            return methodFov.invoke(gameRenderer, cam, delta, a3) as? Double ?: 70.0
+        }
+        return 70.0
+    }
 
     fun updateIfNecessary() {
         val gameRenderer = mc.gameRenderer
         val cam = gameRenderer.method_19418()
         camera = Pos3D(cam.method_19326())
-        val fov = mc.options.method_41808().value.toDouble().coerceAtLeast(gameRenderer.getFov(cam, getDelta(), true))
+        val fov = mc.options.method_41808().value.toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
         if (fov != lastFov) {
             projectionMatrix = gameRenderer.getBasicProjectionMatrix(fov)
             lastFov = fov
@@ -74,8 +83,6 @@ open class WorldPosWrapper(
             }
             tmpPos = tmpPos.add(Pos3D(bind.raw.getLerpedPos(getDelta())))
         }
-
-
 
         val width = context.getScaledWindowWidth()
         val height = context.getScaledWindowHeight()
