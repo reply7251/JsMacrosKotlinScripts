@@ -1,0 +1,40 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.DimensionType
+
+val DimensionType.MOON_SIZES by aliasStatic(DimensionType::field_24752)
+val DimensionType.SIZE_BITS_Y by aliasStatic(DimensionType::field_28133)
+val DimensionType.REGISTRY_CODEC by aliasStatic(DimensionType::field_24756)
+val DimensionType.MIN_HEIGHT by aliasStatic(DimensionType::field_28136)
+val DimensionType.MAX_COLUMN_HEIGHT by aliasStatic(DimensionType::field_28135)
+val DimensionType.MAX_HEIGHT by aliasStatic(DimensionType::field_28134)
+val DimensionType.PACKET_CODEC by aliasStatic(DimensionType::field_51951)
+fun DimensionType.monsterSpawnLightTest() = this.method_44222()
+fun KClass<DimensionType>.getCoordinateScaleFactor(arg0: DimensionType, arg1: DimensionType) = DimensionType.method_31109(arg0, arg1)
+fun DimensionType.hasFixedTime() = this.method_29960()
+fun KClass<DimensionType>.worldFromDimensionNbt(arg0: Dynamic<*>) = DimensionType.method_28521(arg0)
+fun DimensionType.effects() = this.comp_655()
+fun DimensionType.piglinSafe() = this.method_44220()
+fun DimensionType.hasRaids() = this.method_44221()
+fun KClass<DimensionType>.getSaveDirectory(arg0: RegistryKey<world_World>, arg1: file_Path) = DimensionType.method_12488(arg0, arg1)
+fun DimensionType.getMoonPhase(arg0: Long) = this.method_28531(arg0)
+fun DimensionType.getSkyAngle(arg0: Long) = this.method_28528(arg0)
+fun DimensionType.ultrawarm() = this.comp_644()
+fun DimensionType.monsterSpawnBlockLightLimit() = this.method_44223()
+fun DimensionType.infiniburn() = this.comp_654()
+fun DimensionType.fixedTime() = this.comp_641()
+fun DimensionType.minY() = this.comp_651()
+fun DimensionType.ambientLight() = this.comp_656()
+fun DimensionType.logicalHeight() = this.comp_653()
+fun DimensionType.height() = this.comp_652()
+fun DimensionType.monsterSettings() = this.comp_847()
+fun DimensionType.hasCeiling() = this.comp_643()
+fun DimensionType.hasSkyLight() = this.comp_642()
+fun DimensionType.coordinateScale() = this.comp_646()
+fun DimensionType.natural() = this.comp_645()
+fun DimensionType.respawnAnchorWorks() = this.comp_649()
+fun DimensionType.bedWorks() = this.comp_648()

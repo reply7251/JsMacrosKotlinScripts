@@ -1,0 +1,14 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.JukeboxManager
+
+val JukeboxManager.TICKS_PER_SECOND by aliasStatic(JukeboxManager::field_52032)
+fun JukeboxManager.setValues(arg0: RegistryEntry<JukeboxSong>, arg1: Long) = this.method_60758(arg0, arg1)
+fun JukeboxManager.isPlaying() = this.method_60754()
+fun JukeboxManager.stopPlaying(arg0: WorldAccess, arg1: BlockState) = this.method_60755(arg0, arg1)
+fun JukeboxManager.startPlaying(arg0: WorldAccess, arg1: RegistryEntry<JukeboxSong>) = this.method_60757(arg0, arg1)
+fun JukeboxManager.tick(arg0: WorldAccess, arg1: BlockState) = this.method_60760(arg0, arg1)

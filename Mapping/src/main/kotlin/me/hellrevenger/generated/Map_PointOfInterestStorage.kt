@@ -1,0 +1,31 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.PointOfInterestStorage
+
+fun PointOfInterestStorage.getNearestTypeAndPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_43985(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.getDistanceFromNearestOccupied(arg0: ChunkSectionPos) = this.method_19118(arg0)
+fun PointOfInterestStorage.releaseTicket(arg0: BlockPos) = this.method_19129(arg0)
+fun PointOfInterestStorage.count(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_20252(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.getNearestPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_20006(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.getType(arg0: BlockPos) = this.method_19132(arg0)
+fun PointOfInterestStorage.getInCircle(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_19125(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.remove(arg0: BlockPos) = this.method_19112(arg0)
+fun PointOfInterestStorage.preloadChunks(arg0: WorldView, arg1: BlockPos, arg2: Int) = this.method_22439(arg0, arg1, arg2)
+fun PointOfInterestStorage.getSortedTypesAndPositions(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_30957(arg0, arg1, arg2, arg3, arg4)
+fun PointOfInterestStorage.hasTypeAt(arg0: RegistryKey<PointOfInterestType>, arg1: BlockPos) = this.method_26339(arg0, arg1)
+fun PointOfInterestStorage.getInSquare(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_22383(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.getPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: net.minecraft.class_4153.class_4155, arg3: BlockPos, arg4: Int, arg5: Random) = this.method_20005(arg0, arg1, arg2, arg3, arg4, arg5)
+fun PointOfInterestStorage.getNearestPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_34712(arg0, arg1, arg2, arg3, arg4)
+fun PointOfInterestStorage.test(arg0: BlockPos, arg1: Predicate<RegistryEntry<PointOfInterestType>>) = this.method_19116(arg0, arg1)
+fun PointOfInterestStorage.getFreeTickets(arg0: BlockPos) = this.method_35155(arg0)
+fun PointOfInterestStorage.getPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_19127(arg0, arg1, arg2, arg3, arg4)
+fun PointOfInterestStorage.initForPalette(arg0: ChunkSectionPos, arg1: ChunkSection) = this.method_19510(arg0, arg1)
+fun PointOfInterestStorage.getPositions(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_21647(arg0, arg1, arg2, arg3, arg4)
+fun PointOfInterestStorage.getInChunk(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: ChunkPos, arg2: net.minecraft.class_4153.class_4155) = this.method_19123(arg0, arg1, arg2)
+fun PointOfInterestStorage.add(arg0: BlockPos, arg1: RegistryEntry<PointOfInterestType>) = this.method_19115(arg0, arg1)
+fun PointOfInterestStorage.getPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BiPredicate<RegistryEntry<PointOfInterestType>, BlockPos>, arg2: BlockPos, arg3: Int) = this.method_19126(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.getTypesAndPositions(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_43983(arg0, arg1, arg2, arg3, arg4)

@@ -1,0 +1,10 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.GlowSquidEntity
+
+fun GlowSquidEntity.getDarkTicksRemaining() = this.method_33334()
+fun KClass<GlowSquidEntity>.canSpawn(arg0: EntityType<out LivingEntity>, arg1: ServerWorldAccess, arg2: SpawnReason, arg3: BlockPos, arg4: Random) = GlowSquidEntity.method_38962(arg0, arg1, arg2, arg3, arg4)

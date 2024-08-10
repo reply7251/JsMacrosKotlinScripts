@@ -1,0 +1,42 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.TrackedDataHandlerRegistry
+
+val TrackedDataHandlerRegistry.BYTE by aliasStatic(TrackedDataHandlerRegistry::field_13319)
+val TrackedDataHandlerRegistry.WOLF_VARIANT by aliasStatic(TrackedDataHandlerRegistry::field_49713)
+val TrackedDataHandlerRegistry.TEXT_COMPONENT by aliasStatic(TrackedDataHandlerRegistry::field_13317)
+val TrackedDataHandlerRegistry.INTEGER by aliasStatic(TrackedDataHandlerRegistry::field_13327)
+val TrackedDataHandlerRegistry.OPTIONAL_INT by aliasStatic(TrackedDataHandlerRegistry::field_17910)
+val TrackedDataHandlerRegistry.VILLAGER_DATA by aliasStatic(TrackedDataHandlerRegistry::field_17207)
+val TrackedDataHandlerRegistry.ITEM_STACK by aliasStatic(TrackedDataHandlerRegistry::field_13322)
+val TrackedDataHandlerRegistry.FLOAT by aliasStatic(TrackedDataHandlerRegistry::field_13320)
+val TrackedDataHandlerRegistry.STRING by aliasStatic(TrackedDataHandlerRegistry::field_13326)
+val TrackedDataHandlerRegistry.PAINTING_VARIANT by aliasStatic(TrackedDataHandlerRegistry::field_39017)
+val TrackedDataHandlerRegistry.PARTICLE by aliasStatic(TrackedDataHandlerRegistry::field_13314)
+val TrackedDataHandlerRegistry.BLOCK_POS by aliasStatic(TrackedDataHandlerRegistry::field_13324)
+val TrackedDataHandlerRegistry.BLOCK_STATE by aliasStatic(TrackedDataHandlerRegistry::field_13312)
+val TrackedDataHandlerRegistry.ARMADILLO_STATE by aliasStatic(TrackedDataHandlerRegistry::field_47707)
+val TrackedDataHandlerRegistry.CAT_VARIANT by aliasStatic(TrackedDataHandlerRegistry::field_38826)
+val TrackedDataHandlerRegistry.OPTIONAL_BLOCK_STATE by aliasStatic(TrackedDataHandlerRegistry::field_42236)
+val TrackedDataHandlerRegistry.SNIFFER_STATE by aliasStatic(TrackedDataHandlerRegistry::field_42543)
+val TrackedDataHandlerRegistry.NBT_COMPOUND by aliasStatic(TrackedDataHandlerRegistry::field_13318)
+val TrackedDataHandlerRegistry.ROTATION by aliasStatic(TrackedDataHandlerRegistry::field_13316)
+val TrackedDataHandlerRegistry.PARTICLE_LIST by aliasStatic(TrackedDataHandlerRegistry::field_49774)
+val TrackedDataHandlerRegistry.FACING by aliasStatic(TrackedDataHandlerRegistry::field_13321)
+val TrackedDataHandlerRegistry.OPTIONAL_BLOCK_POS by aliasStatic(TrackedDataHandlerRegistry::field_13315)
+val TrackedDataHandlerRegistry.OPTIONAL_TEXT_COMPONENT by aliasStatic(TrackedDataHandlerRegistry::field_13325)
+val TrackedDataHandlerRegistry.OPTIONAL_UUID by aliasStatic(TrackedDataHandlerRegistry::field_13313)
+val TrackedDataHandlerRegistry.LONG by aliasStatic(TrackedDataHandlerRegistry::field_39965)
+val TrackedDataHandlerRegistry.BOOLEAN by aliasStatic(TrackedDataHandlerRegistry::field_13323)
+val TrackedDataHandlerRegistry.OPTIONAL_GLOBAL_POS by aliasStatic(TrackedDataHandlerRegistry::field_38825)
+val TrackedDataHandlerRegistry.VECTOR3F by aliasStatic(TrackedDataHandlerRegistry::field_42237)
+val TrackedDataHandlerRegistry.FROG_VARIANT by aliasStatic(TrackedDataHandlerRegistry::field_38827)
+val TrackedDataHandlerRegistry.QUATERNIONF by aliasStatic(TrackedDataHandlerRegistry::field_42235)
+val TrackedDataHandlerRegistry.ENTITY_POSE by aliasStatic(TrackedDataHandlerRegistry::field_18238)
+fun KClass<TrackedDataHandlerRegistry>.getId(arg0: TrackedDataHandler<*>) = TrackedDataHandlerRegistry.method_12719(arg0)
+fun KClass<TrackedDataHandlerRegistry>.register(arg0: TrackedDataHandler<*>) = TrackedDataHandlerRegistry.method_12720(arg0)
+fun KClass<TrackedDataHandlerRegistry>.get(arg0: Int) = TrackedDataHandlerRegistry.method_12721(arg0)

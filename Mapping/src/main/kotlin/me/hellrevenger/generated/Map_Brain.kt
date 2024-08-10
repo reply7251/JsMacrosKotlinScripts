@@ -1,0 +1,41 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.Brain
+
+fun <E>Brain<E>.setCoreActivities(arg0: Set<Activity>) where E: LivingEntity = this.method_18890(arg0)
+fun <E>Brain<E>.refreshActivities(arg0: Long, arg1: Long) where E: LivingEntity = this.method_18871(arg0, arg1)
+fun <E>Brain<E>.setTaskList(arg0: Activity, arg1: Int, arg2: ImmutableList<out Task<in E>>) where E: LivingEntity = this.method_18882(arg0, arg1, arg2)
+fun <E>Brain<E>.setSchedule(arg0: Schedule) where E: LivingEntity = this.method_18884(arg0)
+fun <E>Brain<E>.hasMemoryModule(arg0: MemoryModuleType<*>) where E: LivingEntity = this.method_18896(arg0)
+fun <E>Brain<E>.resetPossibleActivities() where E: LivingEntity = this.method_24536()
+fun <E, U>Brain<E>.remember(arg0: MemoryModuleType<U>, arg1: U) where E: LivingEntity = this.method_18878<U>(arg0, arg1)
+fun <E, U>Brain<E>.getOptionalMemory(arg0: MemoryModuleType<U>) where E: LivingEntity = this.method_46873<U>(arg0)
+fun <E>Brain<E>.clear() where E: LivingEntity = this.method_35060()
+fun <E>Brain<E>.setTaskList(arg0: Activity, arg1: ImmutableList<out util_Pair<Int, out Task<in E>>>, arg2: Set<util_Pair<MemoryModuleType<*>, MemoryModuleState>>) where E: LivingEntity = this.method_24529(arg0, arg1, arg2)
+fun <E>KClass<Brain<E>>.createBrainCodec(arg0: Collection<out MemoryModuleType<*>>, arg1: Collection<out SensorType<out Sensor<in E>>>) where E: LivingEntity = Brain.method_28313<E>(arg0, arg1)
+fun <E>Brain<E>.copy() where E: LivingEntity = this.method_18911()
+fun <E, U>Brain<E>.getMemoryExpiry(arg0: MemoryModuleType<U>) where E: LivingEntity = this.method_36978<U>(arg0)
+fun <E>Brain<E>.setTaskList(arg0: Activity, arg1: ImmutableList<out util_Pair<Int, out Task<in E>>>) where E: LivingEntity = this.method_18881(arg0, arg1)
+fun <E>Brain<E>.setDefaultActivity(arg0: Activity) where E: LivingEntity = this.method_18897(arg0)
+fun <E, U>Brain<E>.remember(arg0: MemoryModuleType<U>, arg1: U, arg2: Long) where E: LivingEntity = this.method_24525<U>(arg0, arg1, arg2)
+fun <E>Brain<E>.doExclusively(arg0: Activity) where E: LivingEntity = this.method_24526(arg0)
+fun <E>Brain<E>.setTaskList(arg0: Activity, arg1: Int, arg2: ImmutableList<out Task<in E>>, arg3: MemoryModuleType<*>) where E: LivingEntity = this.method_24527(arg0, arg1, arg2, arg3)
+fun <E>Brain<E>.getRunningTasks() where E: LivingEntity = this.method_27074()
+fun <E, U>Brain<E>.hasMemoryModuleWithValue(arg0: MemoryModuleType<U>, arg1: U) where E: LivingEntity = this.method_29519<U>(arg0, arg1)
+fun <E>Brain<E>.tick(arg0: ServerWorld, arg1: E) where E: LivingEntity = this.method_19542(arg0, arg1)
+fun <E, U>Brain<E>.getOptionalRegisteredMemory(arg0: MemoryModuleType<U>) where E: LivingEntity = this.method_18904<U>(arg0)
+fun <E>Brain<E>.resetPossibleActivities(arg0: List<Activity>) where E: LivingEntity = this.method_24531(arg0)
+fun <E>Brain<E>.hasActivity(arg0: Activity) where E: LivingEntity = this.method_18906(arg0)
+fun <E>Brain<E>.setTaskList(arg0: Activity, arg1: ImmutableList<out util_Pair<Int, out Task<in E>>>, arg2: Set<util_Pair<MemoryModuleType<*>, MemoryModuleState>>, arg3: Set<MemoryModuleType<*>>) where E: LivingEntity = this.method_24530(arg0, arg1, arg2, arg3)
+fun <E, U>Brain<E>.forget(arg0: MemoryModuleType<U>) where E: LivingEntity = this.method_18875<U>(arg0)
+fun <E>Brain<E>.isMemoryInState(arg0: MemoryModuleType<*>, arg1: MemoryModuleState) where E: LivingEntity = this.method_18876(arg0, arg1)
+fun <E>KClass<Brain<E>>.createProfile(arg0: Collection<out MemoryModuleType<*>>, arg1: Collection<out SensorType<out Sensor<in E>>>) where E: LivingEntity = Brain.method_28311<E>(arg0, arg1)
+fun <E>Brain<E>.stopAllTasks(arg0: ServerWorld, arg1: E) where E: LivingEntity = this.method_18900(arg0, arg1)
+fun <T, E>Brain<E>.encode(arg0: DynamicOps<T>) where E: LivingEntity = this.method_28310<T>(arg0)
+fun <E, U>Brain<E>.remember(arg0: MemoryModuleType<U>, arg1: Optional<out U>) where E: LivingEntity = this.method_18879<U>(arg0, arg1)
+fun <E>Brain<E>.forgetAll() where E: LivingEntity = this.method_49709()
+fun <E>Brain<E>.getFirstPossibleNonCoreActivity() where E: LivingEntity = this.method_24538()

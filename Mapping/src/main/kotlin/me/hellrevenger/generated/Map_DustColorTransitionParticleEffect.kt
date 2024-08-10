@@ -1,0 +1,11 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.DustColorTransitionParticleEffect
+
+val DustColorTransitionParticleEffect.SCULK_BLUE by aliasStatic(DustColorTransitionParticleEffect::field_28267)
+val DustColorTransitionParticleEffect.PACKET_CODEC by aliasStatic(DustColorTransitionParticleEffect::field_48454)
+val DustColorTransitionParticleEffect.DEFAULT by aliasStatic(DustColorTransitionParticleEffect::field_28268)

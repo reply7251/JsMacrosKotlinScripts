@@ -1,0 +1,46 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.Direction
+
+val Direction.ID_TO_VALUE_FUNCTION by aliasStatic(Direction::field_48449)
+val Direction.PACKET_CODEC by aliasStatic(Direction::field_48450)
+val Direction.VERTICAL_CODEC by aliasStatic(Direction::field_35088)
+val Direction.NORTH by aliasEnum(Direction::class, "field_11043")
+val Direction.WEST by aliasEnum(Direction::class, "field_11039")
+val Direction.UP by aliasEnum(Direction::class, "field_11036")
+val Direction.SOUTH by aliasEnum(Direction::class, "field_11035")
+val Direction.EAST by aliasEnum(Direction::class, "field_11034")
+val Direction.DOWN by aliasEnum(Direction::class, "field_11033")
+fun KClass<Direction>.getFacing(x: Float, y: Float, z: Float) = Direction.method_10147(x, y, z)
+fun Direction.rotateYClockwise() = this.method_10170()
+fun KClass<Direction>.get(arg0: net.minecraft.class_2350.class_2352, arg1: net.minecraft.class_2350.class_2351) = Direction.method_10156(arg0, arg1)
+fun KClass<Direction>.from(arg0: net.minecraft.class_2350.class_2351, arg1: net.minecraft.class_2350.class_2352) = Direction.method_10169(arg0, arg1)
+fun KClass<Direction>.fromHorizontal(arg0: Int) = Direction.method_10139(arg0)
+fun KClass<Direction>.getLookDirectionForAxis(arg0: Entity, arg1: net.minecraft.class_2350.class_2351) = Direction.method_32801(arg0, arg1)
+fun KClass<Direction>.getFacing(arg0: Vec3d) = Direction.method_58251(arg0)
+fun KClass<Direction>.byId(arg0: Int) = Direction.method_10143(arg0)
+fun Direction.rotateClockwise(arg0: net.minecraft.class_2350.class_2351) = this.method_35833(arg0)
+fun Direction.getUnitVector() = this.method_23955()
+fun KClass<Direction>.getFacing(arg0: Double, arg1: Double, arg2: Double) = Direction.method_10142(arg0, arg1, arg2)
+fun KClass<Direction>.stream() = Direction.method_42013()
+fun Direction.getRotationQuaternion() = this.method_23224()
+fun Direction.rotateCounterclockwise(arg0: net.minecraft.class_2350.class_2351) = this.method_35834(arg0)
+fun Direction.rotateYCounterclockwise() = this.method_10160()
+fun KClass<Direction>.getEntityFacingOrder(arg0: Entity) = Direction.method_10159(arg0)
+fun KClass<Direction>.transform(arg0: Matrix4f, arg1: Direction) = Direction.method_23225(arg0, arg1)
+fun KClass<Direction>.shuffle(arg0: Random) = Direction.method_42014(arg0)
+fun Direction.getOffsetX() = this.method_10148()
+fun Direction.pointsTo(arg0: Float) = this.method_30928(arg0)
+fun Direction.asRotation() = this.method_10144()
+fun KClass<Direction>.byName(arg0: String) = Direction.method_10168(arg0)
+fun KClass<Direction>.fromRotation(arg0: Double) = Direction.method_10150(arg0)
+fun Direction.getOpposite() = this.method_10153()
+fun KClass<Direction>.random(arg0: Random) = Direction.method_10162(arg0)
+fun Direction.getOffsetY() = this.method_10164()
+fun Direction.getHorizontal() = this.method_10161()
+fun KClass<Direction>.fromVector(arg0: Int, arg1: Int, arg2: Int) = Direction.method_50026(arg0, arg1, arg2)
+fun Direction.getOffsetZ() = this.method_10165()

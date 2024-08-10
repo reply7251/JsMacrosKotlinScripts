@@ -1,0 +1,11 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.UnderwaterMagmaFeatureConfig
+
+val UnderwaterMagmaFeatureConfig.placementRadiusAroundFloor by alias(UnderwaterMagmaFeatureConfig::field_28855)
+val UnderwaterMagmaFeatureConfig.floorSearchRange by alias(UnderwaterMagmaFeatureConfig::field_28854)
+val UnderwaterMagmaFeatureConfig.placementProbabilityPerValidPosition by alias(UnderwaterMagmaFeatureConfig::field_28856)

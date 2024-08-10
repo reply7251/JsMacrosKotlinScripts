@@ -1,0 +1,11 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.ServerMetadataS2CPacket
+
+fun ServerMetadataS2CPacket.favicon() = this.comp_2278()
+fun ServerMetadataS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_44131(arg0)
+fun ServerMetadataS2CPacket.description() = this.comp_2277()

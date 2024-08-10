@@ -1,0 +1,11 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.TimeArgumentType
+
+fun TimeArgumentType.parse(arg0: StringReader) = this.method_9490(arg0)
+fun KClass<TimeArgumentType>.time() = TimeArgumentType.method_9489()
+fun KClass<TimeArgumentType>.time(arg0: Int) = TimeArgumentType.method_48287(arg0)

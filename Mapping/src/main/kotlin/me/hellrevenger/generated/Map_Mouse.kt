@@ -1,0 +1,20 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.Mouse
+
+fun Mouse.lockCursor() = this.method_1612()
+fun Mouse.tick() = this.method_55793()
+fun Mouse.onResolutionChanged() = this.method_1599()
+fun Mouse.unlockCursor() = this.method_1610()
+fun Mouse.wasLeftButtonClicked() = this.method_1608()
+fun Mouse.getX() = this.method_1603()
+fun Mouse.setResolutionChanged() = this.method_30134()
+fun Mouse.isCursorLocked() = this.method_1613()
+fun Mouse.wasMiddleButtonClicked() = this.method_35707()
+fun Mouse.wasRightButtonClicked() = this.method_1609()
+fun Mouse.setup(arg0: Long) = this.method_1607(arg0)
+fun Mouse.getY() = this.method_1604()

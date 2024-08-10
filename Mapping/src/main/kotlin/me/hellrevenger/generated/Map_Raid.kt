@@ -1,0 +1,40 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.Raid
+
+val Raid.MAX_DESPAWN_COUNTER by aliasStatic(Raid::field_30670)
+val Raid.SQUARED_MAX_RAIDER_DISTANCE by aliasStatic(Raid::field_30675)
+fun Raid.getMaxAcceptableBadOmenLevel() = this.method_16514()
+fun Raid.invalidate() = this.method_16506()
+fun Raid.hasStopped() = this.method_20022()
+fun KClass<Raid>.getOminousBanner(arg0: RegistryEntryLookup<BannerPattern>) = Raid.method_16515(arg0)
+fun Raid.start(arg0: ServerPlayerEntity) = this.method_16518(arg0)
+fun Raid.isFinished() = this.method_16832()
+fun Raid.setWaveCaptain(arg0: Int, arg1: RaiderEntity) = this.method_16491(arg0, arg1)
+fun Raid.getGroupsSpawned() = this.method_16490()
+fun Raid.getRaidId() = this.method_16494()
+fun Raid.setBadOmenLevel(arg0: Int) = this.method_35211(arg0)
+fun Raid.writeNbt(arg0: NbtCompound) = this.method_16502(arg0)
+fun Raid.hasSpawned() = this.method_20021()
+fun Raid.removeLeader(arg0: Int) = this.method_16500(arg0)
+fun Raid.hasLost() = this.method_20024()
+fun Raid.addHero(arg0: Entity) = this.method_20017(arg0)
+fun Raid.updateBar() = this.method_16523()
+fun Raid.isPreRaid() = this.method_20020()
+fun Raid.getAllRaiders() = this.method_35213()
+fun Raid.removeFromWave(arg0: RaiderEntity, arg1: Boolean) = this.method_16510(arg0, arg1)
+fun Raid.getEnchantmentChance() = this.method_20025()
+fun Raid.getCaptain(arg0: Int) = this.method_16496(arg0)
+fun Raid.addRaider(arg0: Int, arg1: RaiderEntity, arg2: BlockPos, arg3: Boolean) = this.method_16516(arg0, arg1, arg2, arg3)
+fun Raid.addToWave(arg0: Int, arg1: RaiderEntity, arg2: Boolean) = this.method_16487(arg0, arg1, arg2)
+fun Raid.tick() = this.method_16509()
+fun Raid.getMaxWaves(arg0: Difficulty) = this.method_20016(arg0)
+fun Raid.hasWon() = this.method_20023()
+fun Raid.isActive() = this.method_16504()
+fun Raid.hasStarted() = this.method_16524()
+fun Raid.getCurrentRaiderHealth() = this.method_16513()
+fun Raid.getRaiderCount() = this.method_16517()

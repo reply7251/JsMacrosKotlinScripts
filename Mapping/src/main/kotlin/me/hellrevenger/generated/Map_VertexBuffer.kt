@@ -1,0 +1,15 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.VertexBuffer
+
+fun VertexBuffer.upload(arg0: BuiltBuffer) = this.method_1352(arg0)
+fun VertexBuffer.uploadIndexBuffer(arg0: net.minecraft.class_9799.class_9800) = this.method_60829(arg0)
+fun VertexBuffer.draw() = this.method_35665()
+fun VertexBuffer.draw(arg0: Matrix4f, arg1: Matrix4f, arg2: ShaderProgram) = this.method_34427(arg0, arg1, arg2)
+fun VertexBuffer.isClosed() = this.method_43444()
+fun VertexBuffer.bind() = this.method_1353()
+fun KClass<VertexBuffer>.unbind() = VertexBuffer.method_1354()

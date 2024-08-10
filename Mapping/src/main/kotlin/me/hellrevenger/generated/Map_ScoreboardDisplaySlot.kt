@@ -1,0 +1,29 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.ScoreboardDisplaySlot
+
+val ScoreboardDisplaySlot.FROM_ID by aliasStatic(ScoreboardDisplaySlot::field_45176)
+val ScoreboardDisplaySlot.TEAM_AQUA by aliasEnum(ScoreboardDisplaySlot::class, "field_45170")
+val ScoreboardDisplaySlot.TEAM_RED by aliasEnum(ScoreboardDisplaySlot::class, "field_45171")
+val ScoreboardDisplaySlot.TEAM_LIGHT_PURPLE by aliasEnum(ScoreboardDisplaySlot::class, "field_45172")
+val ScoreboardDisplaySlot.TEAM_YELLOW by aliasEnum(ScoreboardDisplaySlot::class, "field_45173")
+val ScoreboardDisplaySlot.TEAM_WHITE by aliasEnum(ScoreboardDisplaySlot::class, "field_45174")
+val ScoreboardDisplaySlot.TEAM_DARK_RED by aliasEnum(ScoreboardDisplaySlot::class, "field_45163")
+val ScoreboardDisplaySlot.TEAM_DARK_PURPLE by aliasEnum(ScoreboardDisplaySlot::class, "field_45164")
+val ScoreboardDisplaySlot.TEAM_GOLD by aliasEnum(ScoreboardDisplaySlot::class, "field_45165")
+val ScoreboardDisplaySlot.TEAM_GRAY by aliasEnum(ScoreboardDisplaySlot::class, "field_45166")
+val ScoreboardDisplaySlot.TEAM_DARK_GRAY by aliasEnum(ScoreboardDisplaySlot::class, "field_45167")
+val ScoreboardDisplaySlot.TEAM_BLUE by aliasEnum(ScoreboardDisplaySlot::class, "field_45168")
+val ScoreboardDisplaySlot.TEAM_GREEN by aliasEnum(ScoreboardDisplaySlot::class, "field_45169")
+val ScoreboardDisplaySlot.TEAM_DARK_BLUE by aliasEnum(ScoreboardDisplaySlot::class, "field_45160")
+val ScoreboardDisplaySlot.TEAM_DARK_GREEN by aliasEnum(ScoreboardDisplaySlot::class, "field_45161")
+val ScoreboardDisplaySlot.TEAM_DARK_AQUA by aliasEnum(ScoreboardDisplaySlot::class, "field_45162")
+val ScoreboardDisplaySlot.TEAM_BLACK by aliasEnum(ScoreboardDisplaySlot::class, "field_45159")
+val ScoreboardDisplaySlot.LIST by aliasEnum(ScoreboardDisplaySlot::class, "field_45156")
+val ScoreboardDisplaySlot.SIDEBAR by aliasEnum(ScoreboardDisplaySlot::class, "field_45157")
+val ScoreboardDisplaySlot.BELOW_NAME by aliasEnum(ScoreboardDisplaySlot::class, "field_45158")
+fun KClass<ScoreboardDisplaySlot>.fromFormatting(arg0: Formatting) = ScoreboardDisplaySlot.method_52622(arg0)

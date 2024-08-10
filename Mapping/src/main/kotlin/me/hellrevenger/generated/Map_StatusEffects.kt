@@ -1,0 +1,48 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.StatusEffects
+
+val StatusEffects.INFESTED by aliasStatic(StatusEffects::field_50121)
+val StatusEffects.OOZING by aliasStatic(StatusEffects::field_50120)
+val StatusEffects.TRIAL_OMEN by aliasStatic(StatusEffects::field_50116)
+val StatusEffects.WIND_CHARGED by aliasStatic(StatusEffects::field_50118)
+val StatusEffects.RAID_OMEN by aliasStatic(StatusEffects::field_50117)
+val StatusEffects.WEAVING by aliasStatic(StatusEffects::field_50119)
+val StatusEffects.ABSORPTION by aliasStatic(StatusEffects::field_5898)
+val StatusEffects.POISON by aliasStatic(StatusEffects::field_5899)
+val StatusEffects.BAD_OMEN by aliasStatic(StatusEffects::field_16595)
+val StatusEffects.HERO_OF_THE_VILLAGE by aliasStatic(StatusEffects::field_18980)
+val StatusEffects.MINING_FATIGUE by aliasStatic(StatusEffects::field_5901)
+val StatusEffects.LEVITATION by aliasStatic(StatusEffects::field_5902)
+val StatusEffects.HUNGER by aliasStatic(StatusEffects::field_5903)
+val StatusEffects.SPEED by aliasStatic(StatusEffects::field_5904)
+val StatusEffects.DOLPHINS_GRACE by aliasStatic(StatusEffects::field_5900)
+val StatusEffects.NIGHT_VISION by aliasStatic(StatusEffects::field_5925)
+val StatusEffects.LUCK by aliasStatic(StatusEffects::field_5926)
+val StatusEffects.CONDUIT_POWER by aliasStatic(StatusEffects::field_5927)
+val StatusEffects.INSTANT_DAMAGE by aliasStatic(StatusEffects::field_5921)
+val StatusEffects.SATURATION by aliasStatic(StatusEffects::field_5922)
+val StatusEffects.WATER_BREATHING by aliasStatic(StatusEffects::field_5923)
+val StatusEffects.REGENERATION by aliasStatic(StatusEffects::field_5924)
+val StatusEffects.WITHER by aliasStatic(StatusEffects::field_5920)
+val StatusEffects.HASTE by aliasStatic(StatusEffects::field_5917)
+val StatusEffects.FIRE_RESISTANCE by aliasStatic(StatusEffects::field_5918)
+val StatusEffects.BLINDNESS by aliasStatic(StatusEffects::field_5919)
+val StatusEffects.JUMP_BOOST by aliasStatic(StatusEffects::field_5913)
+val StatusEffects.HEALTH_BOOST by aliasStatic(StatusEffects::field_5914)
+val StatusEffects.INSTANT_HEALTH by aliasStatic(StatusEffects::field_5915)
+val StatusEffects.NAUSEA by aliasStatic(StatusEffects::field_5916)
+val StatusEffects.STRENGTH by aliasStatic(StatusEffects::field_5910)
+val StatusEffects.WEAKNESS by aliasStatic(StatusEffects::field_5911)
+val StatusEffects.GLOWING by aliasStatic(StatusEffects::field_5912)
+val StatusEffects.INVISIBILITY by aliasStatic(StatusEffects::field_5905)
+val StatusEffects.SLOW_FALLING by aliasStatic(StatusEffects::field_5906)
+val StatusEffects.RESISTANCE by aliasStatic(StatusEffects::field_5907)
+val StatusEffects.UNLUCK by aliasStatic(StatusEffects::field_5908)
+val StatusEffects.SLOWNESS by aliasStatic(StatusEffects::field_5909)
+val StatusEffects.DARKNESS by aliasStatic(StatusEffects::field_38092)
+fun KClass<StatusEffects>.registerAndGetDefault(arg0: Registry<StatusEffect>) = StatusEffects.method_55664(arg0)

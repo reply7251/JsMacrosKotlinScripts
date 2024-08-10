@@ -1,0 +1,46 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.TreeConfiguredFeatures
+
+val TreeConfiguredFeatures.FANCY_OAK by aliasStatic(TreeConfiguredFeatures::field_35912)
+val TreeConfiguredFeatures.CRIMSON_FUNGUS_PLANTED by aliasStatic(TreeConfiguredFeatures::field_35900)
+val TreeConfiguredFeatures.OAK_BEES_0002 by aliasStatic(TreeConfiguredFeatures::field_35922)
+val TreeConfiguredFeatures.PINE by aliasStatic(TreeConfiguredFeatures::field_35910)
+val TreeConfiguredFeatures.JUNGLE_BUSH by aliasStatic(TreeConfiguredFeatures::field_35920)
+val TreeConfiguredFeatures.ACACIA by aliasStatic(TreeConfiguredFeatures::field_35908)
+val TreeConfiguredFeatures.SUPER_BIRCH_BEES by aliasStatic(TreeConfiguredFeatures::field_35918)
+val TreeConfiguredFeatures.DARK_OAK by aliasStatic(TreeConfiguredFeatures::field_35906)
+val TreeConfiguredFeatures.MEGA_PINE by aliasStatic(TreeConfiguredFeatures::field_35916)
+val TreeConfiguredFeatures.CRIMSON_FUNGUS by aliasStatic(TreeConfiguredFeatures::field_35899)
+val TreeConfiguredFeatures.HUGE_RED_MUSHROOM by aliasStatic(TreeConfiguredFeatures::field_35904)
+val TreeConfiguredFeatures.BIRCH_BEES_002 by aliasStatic(TreeConfiguredFeatures::field_35889)
+val TreeConfiguredFeatures.MEGA_JUNGLE_TREE by aliasStatic(TreeConfiguredFeatures::field_35914)
+val TreeConfiguredFeatures.WARPED_FUNGUS_PLANTED by aliasStatic(TreeConfiguredFeatures::field_35902)
+val TreeConfiguredFeatures.OAK_BEES_005 by aliasStatic(TreeConfiguredFeatures::field_35924)
+val TreeConfiguredFeatures.CHERRY_BEES_005 by aliasStatic(TreeConfiguredFeatures::field_42959)
+val TreeConfiguredFeatures.FANCY_OAK_BEES_0002 by aliasStatic(TreeConfiguredFeatures::field_35891)
+val TreeConfiguredFeatures.FANCY_OAK_BEES_005 by aliasStatic(TreeConfiguredFeatures::field_35893)
+val TreeConfiguredFeatures.MANGROVE by aliasStatic(TreeConfiguredFeatures::field_38810)
+val TreeConfiguredFeatures.WARPED_FUNGUS by aliasStatic(TreeConfiguredFeatures::field_35901)
+val TreeConfiguredFeatures.OAK_BEES_002 by aliasStatic(TreeConfiguredFeatures::field_35923)
+val TreeConfiguredFeatures.JUNGLE_TREE by aliasStatic(TreeConfiguredFeatures::field_35911)
+val TreeConfiguredFeatures.AZALEA_TREE by aliasStatic(TreeConfiguredFeatures::field_35921)
+val TreeConfiguredFeatures.FANCY_OAK_BEES by aliasStatic(TreeConfiguredFeatures::field_35894)
+val TreeConfiguredFeatures.SPRUCE by aliasStatic(TreeConfiguredFeatures::field_35909)
+val TreeConfiguredFeatures.SWAMP_OAK by aliasStatic(TreeConfiguredFeatures::field_35919)
+val TreeConfiguredFeatures.BIRCH by aliasStatic(TreeConfiguredFeatures::field_35907)
+val TreeConfiguredFeatures.SUPER_BIRCH_BEES_0002 by aliasStatic(TreeConfiguredFeatures::field_35917)
+val TreeConfiguredFeatures.OAK by aliasStatic(TreeConfiguredFeatures::field_35905)
+val TreeConfiguredFeatures.BIRCH_BEES_0002 by aliasStatic(TreeConfiguredFeatures::field_35888)
+val TreeConfiguredFeatures.MEGA_SPRUCE by aliasStatic(TreeConfiguredFeatures::field_35915)
+val TreeConfiguredFeatures.HUGE_BROWN_MUSHROOM by aliasStatic(TreeConfiguredFeatures::field_35903)
+val TreeConfiguredFeatures.JUNGLE_TREE_NO_VINE by aliasStatic(TreeConfiguredFeatures::field_35913)
+val TreeConfiguredFeatures.BIRCH_BEES_005 by aliasStatic(TreeConfiguredFeatures::field_35890)
+val TreeConfiguredFeatures.FANCY_OAK_BEES_002 by aliasStatic(TreeConfiguredFeatures::field_35892)
+val TreeConfiguredFeatures.CHERRY by aliasStatic(TreeConfiguredFeatures::field_42960)
+val TreeConfiguredFeatures.TALL_MANGROVE by aliasStatic(TreeConfiguredFeatures::field_38811)
+fun KClass<TreeConfiguredFeatures>.bootstrap(arg0: Registerable<ConfiguredFeature<*, *>>) = TreeConfiguredFeatures.method_46857(arg0)

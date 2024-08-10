@@ -1,0 +1,33 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.UndergroundConfiguredFeatures
+
+val UndergroundConfiguredFeatures.LARGE_DRIPSTONE by aliasStatic(UndergroundConfiguredFeatures::field_35774)
+val UndergroundConfiguredFeatures.CLAY_POOL_WITH_DRIPLEAVES by aliasStatic(UndergroundConfiguredFeatures::field_35786)
+val UndergroundConfiguredFeatures.UNDERWATER_MAGMA by aliasStatic(UndergroundConfiguredFeatures::field_35776)
+val UndergroundConfiguredFeatures.MOSS_PATCH_CEILING by aliasStatic(UndergroundConfiguredFeatures::field_35788)
+val UndergroundConfiguredFeatures.SCULK_VEIN by aliasStatic(UndergroundConfiguredFeatures::field_38034)
+val UndergroundConfiguredFeatures.ROOTED_AZALEA_TREE by aliasStatic(UndergroundConfiguredFeatures::field_35778)
+val UndergroundConfiguredFeatures.AMETHYST_GEODE by aliasStatic(UndergroundConfiguredFeatures::field_35790)
+val UndergroundConfiguredFeatures.CAVE_VINE_IN_MOSS by aliasStatic(UndergroundConfiguredFeatures::field_35780)
+val UndergroundConfiguredFeatures.MONSTER_ROOM by aliasStatic(UndergroundConfiguredFeatures::field_35770)
+val UndergroundConfiguredFeatures.MOSS_PATCH by aliasStatic(UndergroundConfiguredFeatures::field_35782)
+val UndergroundConfiguredFeatures.FOSSIL_DIAMONDS by aliasStatic(UndergroundConfiguredFeatures::field_35772)
+val UndergroundConfiguredFeatures.DRIPLEAF by aliasStatic(UndergroundConfiguredFeatures::field_35784)
+val UndergroundConfiguredFeatures.CLAY_WITH_DRIPLEAVES by aliasStatic(UndergroundConfiguredFeatures::field_35785)
+val UndergroundConfiguredFeatures.SCULK_PATCH_DEEP_DARK by aliasStatic(UndergroundConfiguredFeatures::field_38033)
+val UndergroundConfiguredFeatures.POINTED_DRIPSTONE by aliasStatic(UndergroundConfiguredFeatures::field_35775)
+val UndergroundConfiguredFeatures.LUSH_CAVES_CLAY by aliasStatic(UndergroundConfiguredFeatures::field_35787)
+val UndergroundConfiguredFeatures.GLOW_LICHEN by aliasStatic(UndergroundConfiguredFeatures::field_35777)
+val UndergroundConfiguredFeatures.SPORE_BLOSSOM by aliasStatic(UndergroundConfiguredFeatures::field_35789)
+val UndergroundConfiguredFeatures.CAVE_VINE by aliasStatic(UndergroundConfiguredFeatures::field_35779)
+val UndergroundConfiguredFeatures.MOSS_VEGETATION by aliasStatic(UndergroundConfiguredFeatures::field_35781)
+val UndergroundConfiguredFeatures.FOSSIL_COAL by aliasStatic(UndergroundConfiguredFeatures::field_35771)
+val UndergroundConfiguredFeatures.MOSS_PATCH_BONEMEAL by aliasStatic(UndergroundConfiguredFeatures::field_35783)
+val UndergroundConfiguredFeatures.DRIPSTONE_CLUSTER by aliasStatic(UndergroundConfiguredFeatures::field_35773)
+val UndergroundConfiguredFeatures.SCULK_PATCH_ANCIENT_CITY by aliasStatic(UndergroundConfiguredFeatures::field_38477)
+fun KClass<UndergroundConfiguredFeatures>.bootstrap(arg0: Registerable<ConfiguredFeature<*, *>>) = UndergroundConfiguredFeatures.method_46850(arg0)
