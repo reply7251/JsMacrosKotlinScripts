@@ -21,6 +21,7 @@ repositories {
 }
 
 val jsmacrosExtensionInclude by configurations.creating
+val include by configurations.creating
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-scripting-common")
@@ -32,6 +33,9 @@ dependencies {
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-common")
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-jvm")
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-jvm-host")
+
+    implementation(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT.jar"))
+    include(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT.jar"))
 
     implementation("org.javassist:javassist:3.30.2-GA")
 
@@ -89,4 +93,6 @@ tasks.jar {
         include("*")
         into("META-INF/jsmacrosdeps")
     }
+
+    from(include.files.map { if(it.isDirectory()) it else zipTree(it) }) {}
 }
