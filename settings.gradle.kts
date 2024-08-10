@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "JSMScripts"
 include("ScriptDefs")
+include("Mapping")

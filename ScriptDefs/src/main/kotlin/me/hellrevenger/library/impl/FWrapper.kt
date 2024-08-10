@@ -167,7 +167,7 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
             return (callback as (T) -> Boolean)(p0)
         }
 
-        return call2<Boolean> {
+        return call2 {
             (callback as (T) -> Boolean)(p0)
         }
     }
@@ -177,7 +177,7 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
             return (callback as (T, U) -> Boolean)(p0, p1)
         }
 
-        return call2<Boolean> {
+        return call2 {
             (callback as (T, U) -> Boolean)(p0, p1)
         }
     }
@@ -208,7 +208,7 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
             return (callback as (T,  T) -> Int)(o1, o2)
         }
 
-        return call2<Int> {
+        return call2 {
             (callback as (T, T) -> Int)(o1, o2)
         }
     }

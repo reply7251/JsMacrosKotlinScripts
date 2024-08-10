@@ -6,7 +6,7 @@ import xyz.wagyourtail.jsmacros.core.event.Event
 import xyz.wagyourtail.jsmacros.core.event.IEventListener
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 
-class EventListener<T: BaseEvent>(val context: EventContainer<*>, eventClass: Class<T>, private val callback: (T) -> Unit) : IEventListener {
+class EventListener<T: BaseEvent>(val context: EventContainer<*>, eventClass: Class<T>, private val callback: (T) -> Unit, private val joined: Boolean = false) : IEventListener {
     private val eventName: String = eventClass.getAnnotation(Event::class.java).value
 
     init {
@@ -19,7 +19,7 @@ class EventListener<T: BaseEvent>(val context: EventContainer<*>, eventClass: Cl
     }
 
     override fun joined(): Boolean {
-        return true
+        return joined
     }
 
     override fun trigger(p0: BaseEvent): EventContainer<*> {
