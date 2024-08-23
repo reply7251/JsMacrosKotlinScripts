@@ -5,6 +5,7 @@ import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.Event
 import xyz.wagyourtail.jsmacros.core.event.IEventListener
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
+import xyz.wagyourtail.jsmacros.core.service.EventService
 
 class EventListener<T: BaseEvent>(val context: EventContainer<*>, eventClass: Class<T>, private val callback: (T) -> Unit, private val joined: Boolean = false) : IEventListener {
     private val eventName: String = eventClass.getAnnotation(Event::class.java).value
@@ -12,6 +13,8 @@ class EventListener<T: BaseEvent>(val context: EventContainer<*>, eventClass: Cl
     init {
         Core.getInstance().eventRegistry.addListener(eventName, this)
         context.ctx.eventListeners[this] = eventName
+
+        (context.ctx.triggeringEvent as? EventService)?.unregisterOnStop(true)
     }
 
     override fun off() {

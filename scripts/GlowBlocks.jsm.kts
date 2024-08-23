@@ -3,9 +3,7 @@ import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.api.EventListener
 import me.hellrevenger.library.impl.FWrapper
-import xyz.wagyourtail.jsmacros.client.api.classes.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw3D
-import xyz.wagyourtail.jsmacros.client.api.classes.render.components3d.Box
 import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventChunkLoad
 import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventChunkUnload
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.BlockStateHelper
@@ -15,38 +13,44 @@ import kotlin.concurrent.thread
 val JWrapper = FWrapper(context.ctx as KotlinScriptContext, KotlinLanguageDefinition::class.java)
 
 val glowColors = hashMapOf<String, Int>()
-val glowingBoxes = hashMapOf<Pos3D, Box>()
 val d3ds = hashMapOf<Pair<Int, Int>, Draw3D>()
+val d3dsToRemove = hashSetOf<Pair<Int, Int>>()
 var enabled = true
 var scanner = World.worldScanner.build()
 
 fun onChunkLoad(x: Int, z: Int) {
     if(enabled) {
         val d3d = Hud.createDraw3D()
+        d3d.register()
 
         thread {
             scanner.scanChunkRange(x, z, 0).forEach { pos ->
                 val block = World.getBlock(pos) ?: return@forEach
                 val id = block.blockStateHelper.id
                 glowColors[id]?.let { color ->
-                    val box = d3d.addBox(pos.x, pos.y, pos.z, pos.x + 1, pos.y + 1, pos.z + 1, color, color, true)
+                    val box = d3d.addBox(pos.x, pos.y, pos.z, pos.x + 1, pos.y + 1, pos.z + 1, color, color, false)
                     box.setAlpha(127)
-                    box.setFillAlpha(10)
-                    glowingBoxes[pos] = box
                 }
             }
         }
 
         d3ds[x to z] = d3d
-        d3d.register()
     }
 }
 
 fun onChunkUnload(x: Int, z: Int) {
-    d3ds.remove(x to z)?.let {
-        it.unregister()
-        it.boxes.forEach { box ->
-            glowingBoxes.remove(box.pos.start)
+    val d3d = d3ds.remove(x to z)
+    if(d3d == null) {
+        d3dsToRemove.add(x to z)
+    } else {
+        d3d.unregister()
+        d3dsToRemove.forEach { (x, z) ->
+            if(!World.isChunkLoaded(x, z)) {
+                if(d3ds.remove(x to z)?.unregister() != null) {
+                    d3dsToRemove.remove(x to z)
+                    return@forEach
+                }
+            }
         }
     }
 }
@@ -74,21 +78,16 @@ fun disable() {
         enabled = false
         d3ds.values.forEach { it.unregister() }
         d3ds.clear()
-        glowingBoxes.clear()
     }
 }
 
-EventListener(context, EventChunkLoad::class.java) {
-    (it as? EventChunkLoad)?.let {
-        onChunkLoad(it.x, it.z)
-    }
-}
+EventListener(context, EventChunkLoad::class.java, {
+    onChunkLoad(it.x, it.z)
+})
 
-EventListener(context, EventChunkUnload::class.java) {
-    (it as? EventChunkUnload)?.let {
-        onChunkUnload(it.x, it.z)
-    }
-}
+EventListener(context, EventChunkUnload::class.java, {
+    onChunkUnload(it.x, it.z)
+})
 
 Chat.commandManager.unregisterCommand("/scan")
 
