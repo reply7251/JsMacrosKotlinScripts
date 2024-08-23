@@ -69,7 +69,7 @@ dependencies {
     implementation(files("../scripts/libs/jars/int-jvm17-open.jar"))
     //implementation(files("../scripts/libs/jars/int-jvm17.jar"))
     //implementation(files("../scripts/libs/jars/noObf-jvm17.jar"))
-    implementation(files("../scripts/libs/jars/wynntils-1.0.12-fabric+MC-1.20.2.jar"))
+    implementation(files("../scripts/libs/jars/wynntils-2.0.0-fabric+MC-1.21.jar"))
 }
 
 tasks.processResources {
