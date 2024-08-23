@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtPredicate
 
-val NbtPredicate.PACKET_CODEC by aliasStatic(NbtPredicate::field_49244)
 fun NbtPredicate.test(arg0: NbtElement) = this.method_9077(arg0)
 fun NbtPredicate.test(arg0: ItemStack) = this.method_9074(arg0)
 fun NbtPredicate.nbt() = this.comp_1816()

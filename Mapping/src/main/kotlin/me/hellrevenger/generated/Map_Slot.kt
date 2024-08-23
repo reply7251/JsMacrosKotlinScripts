@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Slot
 
-val Slot.id by alias(Slot::field_7874)
+var Slot.id by alias(Slot::field_7874)
 val Slot.y by alias(Slot::field_7872)
 val Slot.inventory by alias(Slot::field_7871)
 val Slot.x by alias(Slot::field_7873)
@@ -26,6 +26,7 @@ fun Slot.canTakePartial(arg0: PlayerEntity) = this.method_32754(arg0)
 fun Slot.setStack(arg0: ItemStack) = this.method_53512(arg0)
 fun Slot.disablesDynamicDisplay() = this.method_55059()
 fun Slot.markDirty() = this.method_7668()
+fun Slot.getIndex() = this.method_34266()
 fun Slot.onTakeItem(arg0: PlayerEntity, arg1: ItemStack) = this.method_7667(arg0, arg1)
 fun Slot.getStack() = this.method_7677()
 fun Slot.takeStack(arg0: Int) = this.method_7671(arg0)

@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BlankNumberFormat
 
-val BlankNumberFormat.INSTANCE by aliasStatic(BlankNumberFormat::field_47557)
-val BlankNumberFormat.TYPE by aliasStatic(BlankNumberFormat::field_47558)
+val KClass<BlankNumberFormat>.INSTANCE by aliasStatic(BlankNumberFormat::field_47557)
+val KClass<BlankNumberFormat>.TYPE by aliasStatic(BlankNumberFormat::field_47558)

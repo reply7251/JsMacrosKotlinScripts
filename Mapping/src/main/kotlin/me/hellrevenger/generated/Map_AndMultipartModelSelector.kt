@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AndMultipartModelSelector
 
-val AndMultipartModelSelector.KEY by aliasStatic(AndMultipartModelSelector::field_32814)
+val KClass<AndMultipartModelSelector>.KEY by aliasStatic(AndMultipartModelSelector::field_32814)

@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtIntArray
 
-val NbtIntArray.TYPE by aliasStatic(NbtIntArray::field_21036)
+val KClass<NbtIntArray>.TYPE by aliasStatic(NbtIntArray::field_21036)
 fun NbtIntArray.copy() = this.method_10591()
 fun NbtIntArray.set(arg0: Int, arg1: NbtInt) = this.method_17806(arg0, arg1)
 fun NbtIntArray.getIntArray() = this.method_10588()

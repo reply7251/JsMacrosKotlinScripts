@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.MapPostProcessingComponent
 
-val MapPostProcessingComponent.PACKET_CODEC by aliasStatic(MapPostProcessingComponent::field_49356)
-val MapPostProcessingComponent.ID_TO_VALUE by aliasStatic(MapPostProcessingComponent::field_49355)
-val MapPostProcessingComponent.SCALE by aliasEnum(MapPostProcessingComponent::class, "field_49354")
-val MapPostProcessingComponent.LOCK by aliasEnum(MapPostProcessingComponent::class, "field_49353")
+val KClass<MapPostProcessingComponent>.ID_TO_VALUE by aliasStatic(MapPostProcessingComponent::field_49355)
+val KClass<MapPostProcessingComponent>.SCALE by aliasEnum(MapPostProcessingComponent::class, "field_49354")
+val KClass<MapPostProcessingComponent>.LOCK by aliasEnum(MapPostProcessingComponent::class, "field_49353")
+fun MapPostProcessingComponent.getId() = this.method_57505()

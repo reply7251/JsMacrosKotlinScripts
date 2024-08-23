@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ModelTransformation
 
-val ModelTransformation.NONE by aliasStatic(ModelTransformation::field_4301)
+val KClass<ModelTransformation>.NONE by aliasStatic(ModelTransformation::field_4301)
 val ModelTransformation.fixed by alias(ModelTransformation::field_4306)
 val ModelTransformation.thirdPersonRightHand by alias(ModelTransformation::field_4307)
 val ModelTransformation.firstPersonRightHand by alias(ModelTransformation::field_4304)

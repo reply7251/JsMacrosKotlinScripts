@@ -6,6 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.UserCache
 
+fun UserCache.getByUuid(arg0: UUID) = this.method_14512(arg0)
 fun UserCache.save() = this.method_14518()
 fun UserCache.clearExecutor() = this.method_39753()
 fun UserCache.add(arg0: GameProfile) = this.method_14508(arg0)

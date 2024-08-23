@@ -6,5 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ConstantIntProvider
 
-val ConstantIntProvider.ZERO by aliasStatic(ConstantIntProvider::field_29942)
+val KClass<ConstantIntProvider>.ZERO by aliasStatic(ConstantIntProvider::field_29942)
+fun ConstantIntProvider.getValue() = this.method_34997()
 fun KClass<ConstantIntProvider>.create(arg0: Int) = ConstantIntProvider.method_34998(arg0)

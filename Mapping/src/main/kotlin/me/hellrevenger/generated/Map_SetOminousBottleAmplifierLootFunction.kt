@@ -7,3 +7,4 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.SetOminousBottleAmplifierLootFunction
 
 fun KClass<SetOminousBottleAmplifierLootFunction>.builder(arg0: LootNumberProvider) = SetOminousBottleAmplifierLootFunction.method_58737(arg0)
+fun SetOminousBottleAmplifierLootFunction.getAmplifier() = this.method_58740()

@@ -15,6 +15,7 @@ fun ChatHud.getTextStyleAt(arg0: Double, arg1: Double) = this.method_1816(arg0, 
 fun ChatHud.addMessage(arg0: Text) = this.method_1812(arg0)
 fun ChatHud.getVisibleLineCount() = this.method_1813()
 fun KClass<ChatHud>.getWidth(arg0: Double) = ChatHud.method_1806(arg0)
+fun ChatHud.getMessageHistory() = this.method_1809()
 fun KClass<ChatHud>.getHeight(arg0: Double) = ChatHud.method_1818(arg0)
 fun ChatHud.getIndicatorAt(arg0: Double, arg1: Double) = this.method_44723(arg0, arg1)
 fun ChatHud.addMessage(arg0: Text, arg1: MessageSignatureData, arg2: MessageIndicator) = this.method_44811(arg0, arg1, arg2)

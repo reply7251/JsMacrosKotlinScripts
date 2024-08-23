@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TropicalFishEntity
 
-val TropicalFishEntity.BUCKET_VARIANT_TAG_KEY by aliasStatic(TropicalFishEntity::field_30378)
-val TropicalFishEntity.COMMON_VARIANTS by aliasStatic(TropicalFishEntity::field_41573)
+val KClass<TropicalFishEntity>.BUCKET_VARIANT_TAG_KEY by aliasStatic(TropicalFishEntity::field_30378)
+val KClass<TropicalFishEntity>.COMMON_VARIANTS by aliasStatic(TropicalFishEntity::field_41573)
 fun KClass<TropicalFishEntity>.getPatternDyeColor(arg0: Int) = TropicalFishEntity.method_6651(arg0)
 fun TropicalFishEntity.getBaseColorComponents() = this.method_6658()
 fun KClass<TropicalFishEntity>.getToolTipForVariant(arg0: Int) = TropicalFishEntity.method_6649(arg0)

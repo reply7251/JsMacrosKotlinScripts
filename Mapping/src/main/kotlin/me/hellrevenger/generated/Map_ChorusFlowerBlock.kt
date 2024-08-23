@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ChorusFlowerBlock
 
-val ChorusFlowerBlock.AGE by aliasStatic(ChorusFlowerBlock::field_10762)
-val ChorusFlowerBlock.MAX_AGE by aliasStatic(ChorusFlowerBlock::field_31060)
+val KClass<ChorusFlowerBlock>.AGE by aliasStatic(ChorusFlowerBlock::field_10762)
+val KClass<ChorusFlowerBlock>.MAX_AGE by aliasStatic(ChorusFlowerBlock::field_31060)
 fun KClass<ChorusFlowerBlock>.generate(arg0: WorldAccess, arg1: BlockPos, arg2: Random, arg3: Int) = ChorusFlowerBlock.method_9744(arg0, arg1, arg2, arg3)

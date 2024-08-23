@@ -7,3 +7,5 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.WorldBorderCenterChangedS2CPacket
 
 fun WorldBorderCenterChangedS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34156(arg0)
+fun WorldBorderCenterChangedS2CPacket.getCenterX() = this.method_34158()
+fun WorldBorderCenterChangedS2CPacket.getCenterZ() = this.method_34157()

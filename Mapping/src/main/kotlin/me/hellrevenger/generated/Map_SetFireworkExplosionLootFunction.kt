@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SetFireworkExplosionLootFunction
 
-val SetFireworkExplosionLootFunction.DEFAULT_EXPLOSION by aliasStatic(SetFireworkExplosionLootFunction::field_49875)
+val KClass<SetFireworkExplosionLootFunction>.DEFAULT_EXPLOSION by aliasStatic(SetFireworkExplosionLootFunction::field_49875)

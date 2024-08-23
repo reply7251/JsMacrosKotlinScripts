@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LeapingChargeTask
 
-val LeapingChargeTask.RUN_TIME by aliasStatic(LeapingChargeTask::field_30132)
+val KClass<LeapingChargeTask>.RUN_TIME by aliasStatic(LeapingChargeTask::field_30132)

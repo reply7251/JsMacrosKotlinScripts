@@ -15,3 +15,4 @@ fun PortalManager.tick(arg0: ServerWorld, arg1: Entity, arg2: Boolean) = this.me
 fun PortalManager.setInPortal(arg0: Boolean) = this.method_60705(arg0)
 fun PortalManager.setPortalPos(arg0: BlockPos) = this.method_60704(arg0)
 fun PortalManager.getEffect() = this.method_60700()
+fun PortalManager.getTicksInPortal() = this.method_60708()

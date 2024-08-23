@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PassthroughRuleBlockEntityModifier
 
-val PassthroughRuleBlockEntityModifier.INSTANCE by aliasStatic(PassthroughRuleBlockEntityModifier::field_43343)
+val KClass<PassthroughRuleBlockEntityModifier>.INSTANCE by aliasStatic(PassthroughRuleBlockEntityModifier::field_43343)

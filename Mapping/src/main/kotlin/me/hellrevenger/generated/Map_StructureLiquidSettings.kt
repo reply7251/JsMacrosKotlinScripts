@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.StructureLiquidSettings
 
-val StructureLiquidSettings.codec by aliasStatic(StructureLiquidSettings::field_52239)
-val StructureLiquidSettings.APPLY_WATERLOGGING by aliasEnum(StructureLiquidSettings::class, "field_52238")
-val StructureLiquidSettings.IGNORE_WATERLOGGING by aliasEnum(StructureLiquidSettings::class, "field_52237")
+val KClass<StructureLiquidSettings>.codec by aliasStatic(StructureLiquidSettings::field_52239)
+val KClass<StructureLiquidSettings>.APPLY_WATERLOGGING by aliasEnum(StructureLiquidSettings::class, "field_52238")
+val KClass<StructureLiquidSettings>.IGNORE_WATERLOGGING by aliasEnum(StructureLiquidSettings::class, "field_52237")

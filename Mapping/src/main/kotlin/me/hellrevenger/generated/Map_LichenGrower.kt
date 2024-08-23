@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LichenGrower
 
-val LichenGrower.GROW_TYPES by aliasStatic(LichenGrower::field_37595)
+val KClass<LichenGrower>.GROW_TYPES by aliasStatic(LichenGrower::field_37595)
 fun LichenGrower.grow(arg0: BlockState, arg1: WorldAccess, arg2: BlockPos, arg3: Boolean) = this.method_41452(arg0, arg1, arg2, arg3)
 fun LichenGrower.grow(arg0: BlockState, arg1: WorldAccess, arg2: BlockPos, arg3: Random) = this.method_41450(arg0, arg1, arg2, arg3)
 fun LichenGrower.grow(arg0: BlockState, arg1: WorldAccess, arg2: BlockPos, arg3: Direction, arg4: Direction, arg5: Boolean) = this.method_41446(arg0, arg1, arg2, arg3, arg4, arg5)

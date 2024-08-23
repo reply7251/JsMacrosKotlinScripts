@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RegistryEntryArgumentType
 
-val <T>RegistryEntryArgumentType<T>.FAILED_TO_PARSE_EXCEPTION by aliasStatic({RegistryEntryArgumentType.field_50037})
+val <T>KClass<RegistryEntryArgumentType<T>>.FAILED_TO_PARSE_EXCEPTION by aliasStatic({RegistryEntryArgumentType.field_50037})
 fun <T>RegistryEntryArgumentType<T>.parse(arg0: StringReader) = this.method_58479(arg0)
 fun <T>KClass<RegistryEntryArgumentType<T>>.getLootFunction(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryEntryArgumentType.method_58485(arg0, arg1)
 fun <T>KClass<RegistryEntryArgumentType<T>>.getLootCondition(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryEntryArgumentType.method_58488(arg0, arg1)

@@ -7,6 +7,7 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.TutorialManager
 
 fun TutorialManager.add(arg0: TutorialToast, arg1: Int) = this.method_31365(arg0, arg1)
+fun TutorialManager.getClient() = this.method_4914()
 fun TutorialManager.onSlotUpdate(arg0: ItemStack) = this.method_4906(arg0)
 fun TutorialManager.tick(arg0: ClientWorld, arg1: HitResult) = this.method_4911(arg0, arg1)
 fun TutorialManager.onBlockBreaking(arg0: ClientWorld, arg1: BlockPos, arg2: BlockState, arg3: Float) = this.method_4907(arg0, arg1, arg2, arg3)

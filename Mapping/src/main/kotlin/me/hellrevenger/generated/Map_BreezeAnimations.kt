@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BreezeAnimations
 
-val BreezeAnimations.SLIDING by aliasStatic(BreezeAnimations::field_47430)
-val BreezeAnimations.INHALING by aliasStatic(BreezeAnimations::field_47429)
-val BreezeAnimations.SHOOTING by aliasStatic(BreezeAnimations::field_47428)
+val KClass<BreezeAnimations>.SLIDING by aliasStatic(BreezeAnimations::field_47430)
+val KClass<BreezeAnimations>.INHALING by aliasStatic(BreezeAnimations::field_47429)
+val KClass<BreezeAnimations>.SHOOTING by aliasStatic(BreezeAnimations::field_47428)

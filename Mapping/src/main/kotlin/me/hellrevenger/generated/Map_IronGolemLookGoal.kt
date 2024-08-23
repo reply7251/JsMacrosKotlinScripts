@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.IronGolemLookGoal
 
-val IronGolemLookGoal.MAX_LOOK_COOLDOWN by aliasStatic(IronGolemLookGoal::field_30224)
+val KClass<IronGolemLookGoal>.MAX_LOOK_COOLDOWN by aliasStatic(IronGolemLookGoal::field_30224)

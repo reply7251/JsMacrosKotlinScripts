@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.MessageSignatureData
 
-val MessageSignatureData.SIZE by aliasStatic(MessageSignatureData::field_40683)
+val KClass<MessageSignatureData>.SIZE by aliasStatic(MessageSignatureData::field_40683)
 fun MessageSignatureData.pack(arg0: MessageSignatureStorage) = this.method_46277(arg0)
 fun MessageSignatureData.verify(arg0: SignatureVerifier, arg1: SignatureUpdatable) = this.method_44843(arg0, arg1)
 fun MessageSignatureData.toByteBuffer() = this.method_44994()

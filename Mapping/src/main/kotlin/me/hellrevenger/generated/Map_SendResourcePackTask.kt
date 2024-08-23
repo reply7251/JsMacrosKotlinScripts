@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SendResourcePackTask
 
-val SendResourcePackTask.KEY by aliasStatic(SendResourcePackTask::field_45034)
+val KClass<SendResourcePackTask>.KEY by aliasStatic(SendResourcePackTask::field_45034)

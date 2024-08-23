@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RecipeDisplayListener
 
-fun RecipeDisplayListener.onRecipesDisplayed(arg0: List<RecipeEntry<*>>) = this.method_2646(arg0)
+fun RecipeDisplayListener.onRecipesDisplayed(arg0: MutableList<RecipeEntry<*>>) = this.method_2646(arg0)

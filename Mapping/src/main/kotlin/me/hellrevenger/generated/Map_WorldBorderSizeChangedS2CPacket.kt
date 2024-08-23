@@ -7,3 +7,4 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.WorldBorderSizeChangedS2CPacket
 
 fun WorldBorderSizeChangedS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34163(arg0)
+fun WorldBorderSizeChangedS2CPacket.getSizeLerpTarget() = this.method_34164()

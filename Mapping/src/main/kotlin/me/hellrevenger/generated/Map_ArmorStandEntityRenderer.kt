@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ArmorStandEntityRenderer
 
-val ArmorStandEntityRenderer.TEXTURE by aliasStatic(ArmorStandEntityRenderer::field_4642)
+val KClass<ArmorStandEntityRenderer>.TEXTURE by aliasStatic(ArmorStandEntityRenderer::field_4642)
 fun ArmorStandEntityRenderer.getTexture(arg0: ArmorStandEntity) = this.method_3880(arg0)

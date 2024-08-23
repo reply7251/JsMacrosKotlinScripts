@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.GrindstoneScreenHandler
 
-val GrindstoneScreenHandler.OUTPUT_ID by aliasStatic(GrindstoneScreenHandler::field_30796)
-val GrindstoneScreenHandler.INPUT_1_ID by aliasStatic(GrindstoneScreenHandler::field_30794)
-val GrindstoneScreenHandler.INPUT_2_ID by aliasStatic(GrindstoneScreenHandler::field_30795)
+val KClass<GrindstoneScreenHandler>.OUTPUT_ID by aliasStatic(GrindstoneScreenHandler::field_30796)
+val KClass<GrindstoneScreenHandler>.INPUT_1_ID by aliasStatic(GrindstoneScreenHandler::field_30794)
+val KClass<GrindstoneScreenHandler>.INPUT_2_ID by aliasStatic(GrindstoneScreenHandler::field_30795)

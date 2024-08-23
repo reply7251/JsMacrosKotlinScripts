@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AdvancementRewards
 
-val AdvancementRewards.NONE by aliasStatic(AdvancementRewards::field_1167)
+val KClass<AdvancementRewards>.NONE by aliasStatic(AdvancementRewards::field_1167)
 fun AdvancementRewards.experience() = this.comp_2025()
 fun AdvancementRewards.recipes() = this.comp_2027()
 fun AdvancementRewards.loot() = this.comp_2026()

@@ -6,9 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Enchantment
 
-val Enchantment.ENTRY_CODEC by aliasStatic(Enchantment::field_51644)
-val Enchantment.ENTRY_PACKET_CODEC by aliasStatic(Enchantment::field_51950)
-val Enchantment.MAX_LEVEL by aliasStatic(Enchantment::field_51949)
+val KClass<Enchantment>.MAX_LEVEL by aliasStatic(Enchantment::field_51949)
 fun Enchantment.applyLocationBasedEffects(arg0: ServerWorld, arg1: Int, arg2: EnchantmentEffectContext, arg3: LivingEntity) = this.method_60025(arg0, arg1, arg2, arg3)
 fun Enchantment.modifyDamageProtection(arg0: ServerWorld, arg1: Int, arg2: ItemStack, arg3: Entity, arg4: DamageSource, arg5: MutableFloat) = this.method_60018(arg0, arg1, arg2, arg3, arg4, arg5)
 fun Enchantment.modifyTridentReturnAcceleration(arg0: ServerWorld, arg1: Int, arg2: ItemStack, arg3: Entity, arg4: MutableFloat) = this.method_60042(arg0, arg1, arg2, arg3, arg4)
@@ -37,7 +35,7 @@ fun Enchantment.modifyAmmoUse(arg0: ServerWorld, arg1: Int, arg2: ItemStack, arg
 fun Enchantment.modifyCrossbowChargeTime(arg0: Random, arg1: Int, arg2: MutableFloat) = this.method_60058(arg0, arg1, arg2)
 fun Enchantment.getWeight() = this.method_58445()
 fun Enchantment.getMinLevel() = this.method_8187()
-fun <T>Enchantment.getEffect(arg0: ComponentType<List<T>>) = this.method_60034<T>(arg0)
+fun <T>Enchantment.getEffect(arg0: ComponentType<MutableList<T>>) = this.method_60034<T>(arg0)
 fun Enchantment.modifyFishingTimeReduction(arg0: ServerWorld, arg1: Int, arg2: ItemStack, arg3: Entity, arg4: MutableFloat) = this.method_60052(arg0, arg1, arg2, arg3, arg4)
 fun Enchantment.slotMatches(arg0: EquipmentSlot) = this.method_60026(arg0)
 fun Enchantment.onProjectileSpawned(arg0: ServerWorld, arg1: Int, arg2: EnchantmentEffectContext, arg3: Entity) = this.method_60044(arg0, arg1, arg2, arg3)

@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TwistingVinesPlantBlock
 
-val TwistingVinesPlantBlock.SHAPE by aliasStatic(TwistingVinesPlantBlock::field_23325)
+val KClass<TwistingVinesPlantBlock>.SHAPE by aliasStatic(TwistingVinesPlantBlock::field_23325)

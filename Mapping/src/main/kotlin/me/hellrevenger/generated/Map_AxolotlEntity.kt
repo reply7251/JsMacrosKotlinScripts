@@ -6,10 +6,10 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AxolotlEntity
 
-val AxolotlEntity.BLUE_BABY_CHANCE by aliasStatic(AxolotlEntity::field_30390)
-val AxolotlEntity.PLAY_DEAD_TICKS by aliasStatic(AxolotlEntity::field_30388)
-val AxolotlEntity.VARIANT_KEY by aliasStatic(AxolotlEntity::field_30391)
-val AxolotlEntity.BUFF_RANGE by aliasStatic(AxolotlEntity::field_30389)
+val KClass<AxolotlEntity>.BLUE_BABY_CHANCE by aliasStatic(AxolotlEntity::field_30390)
+val KClass<AxolotlEntity>.PLAY_DEAD_TICKS by aliasStatic(AxolotlEntity::field_30388)
+val KClass<AxolotlEntity>.VARIANT_KEY by aliasStatic(AxolotlEntity::field_30391)
+val KClass<AxolotlEntity>.BUFF_RANGE by aliasStatic(AxolotlEntity::field_30389)
 fun AxolotlEntity.isPlayingDead() = this.method_33226()
 fun AxolotlEntity.getVariant() = this.method_33225()
 fun AxolotlEntity.setPlayingDead(arg0: Boolean) = this.method_33231(arg0)

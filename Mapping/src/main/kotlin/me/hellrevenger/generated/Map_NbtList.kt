@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtList
 
-val NbtList.TYPE by aliasStatic(NbtList::field_21039)
+val KClass<NbtList>.TYPE by aliasStatic(NbtList::field_21039)
 fun NbtList.getString(arg0: Int) = this.method_10608(arg0)
 fun NbtList.getDouble(arg0: Int) = this.method_10611(arg0)
 fun NbtList.getShort(arg0: Int) = this.method_10609(arg0)

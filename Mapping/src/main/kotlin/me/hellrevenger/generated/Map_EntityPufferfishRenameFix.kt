@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EntityPufferfishRenameFix
 
-val EntityPufferfishRenameFix.RENAMED_FISH by aliasStatic(EntityPufferfishRenameFix::field_15899)
+val KClass<EntityPufferfishRenameFix>.RENAMED_FISH by aliasStatic(EntityPufferfishRenameFix::field_15899)

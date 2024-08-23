@@ -6,10 +6,11 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NavigationDirection
 
-val NavigationDirection.RIGHT by aliasEnum(NavigationDirection::class, "field_41829")
-val NavigationDirection.UP by aliasEnum(NavigationDirection::class, "field_41826")
-val NavigationDirection.DOWN by aliasEnum(NavigationDirection::class, "field_41827")
-val NavigationDirection.LEFT by aliasEnum(NavigationDirection::class, "field_41828")
+val KClass<NavigationDirection>.RIGHT by aliasEnum(NavigationDirection::class, "field_41829")
+val KClass<NavigationDirection>.UP by aliasEnum(NavigationDirection::class, "field_41826")
+val KClass<NavigationDirection>.DOWN by aliasEnum(NavigationDirection::class, "field_41827")
+val KClass<NavigationDirection>.LEFT by aliasEnum(NavigationDirection::class, "field_41828")
+fun NavigationDirection.getComparator() = this.method_48243()
 fun NavigationDirection.getOpposite() = this.method_48239()
 fun NavigationDirection.isBefore(arg0: Int, arg1: Int) = this.method_48240(arg0, arg1)
 fun NavigationDirection.getAxis() = this.method_48237()

@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LightmapTextureManager
 
-val LightmapTextureManager.MAX_LIGHT_COORDINATE by aliasStatic(LightmapTextureManager::field_32767)
-val LightmapTextureManager.MAX_SKY_LIGHT_COORDINATE by aliasStatic(LightmapTextureManager::field_32768)
-val LightmapTextureManager.MAX_BLOCK_LIGHT_COORDINATE by aliasStatic(LightmapTextureManager::field_32769)
+val KClass<LightmapTextureManager>.MAX_LIGHT_COORDINATE by aliasStatic(LightmapTextureManager::field_32767)
+val KClass<LightmapTextureManager>.MAX_SKY_LIGHT_COORDINATE by aliasStatic(LightmapTextureManager::field_32768)
+val KClass<LightmapTextureManager>.MAX_BLOCK_LIGHT_COORDINATE by aliasStatic(LightmapTextureManager::field_32769)
 fun KClass<LightmapTextureManager>.getBlockLightCoordinates(arg0: Int) = LightmapTextureManager.method_24186(arg0)
 fun KClass<LightmapTextureManager>.getSkyLightCoordinates(arg0: Int) = LightmapTextureManager.method_24187(arg0)
 fun LightmapTextureManager.enable() = this.method_3316()

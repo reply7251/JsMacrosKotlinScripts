@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Tick
 
-val <T>Tick<T>.HASH_STRATEGY by aliasStatic({Tick.field_35542})
+val <T>KClass<Tick<T>>.HASH_STRATEGY by aliasStatic({Tick.field_35542})
 fun <T>KClass<Tick<T>>.orderedTickToNbt(arg0: OrderedTick<T>, arg1: Function<T, String>, arg2: Long) = Tick.method_39401<T>(arg0, arg1, arg2)
 fun <T>KClass<Tick<T>>.tick(arg0: NbtList, arg1: Function<String, Optional<T>>, arg2: ChunkPos, arg3: Consumer<Tick<T>>) = Tick.method_39406<T>(arg0, arg1, arg2, arg3)
 fun <T>KClass<Tick<T>>.create(arg0: T, arg1: BlockPos) = Tick.method_39402<T>(arg0, arg1)

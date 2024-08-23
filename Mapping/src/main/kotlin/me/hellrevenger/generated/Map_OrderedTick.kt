@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.OrderedTick
 
-val <T>OrderedTick<T>.HASH_STRATEGY by aliasStatic({OrderedTick.field_35551})
-val <T>OrderedTick<T>.BASIC_COMPARATOR by aliasStatic({OrderedTick.field_35550})
-val <T>OrderedTick<T>.TRIGGER_TICK_COMPARATOR by aliasStatic({OrderedTick.field_35549})
+val <T>KClass<OrderedTick<T>>.HASH_STRATEGY by aliasStatic({OrderedTick.field_35551})
+val <T>KClass<OrderedTick<T>>.BASIC_COMPARATOR by aliasStatic({OrderedTick.field_35550})
+val <T>KClass<OrderedTick<T>>.TRIGGER_TICK_COMPARATOR by aliasStatic({OrderedTick.field_35549})
 fun <T>KClass<OrderedTick<T>>.create(arg0: T, arg1: BlockPos) = OrderedTick.method_39410<T>(arg0, arg1)
 fun <T>OrderedTick<T>.type() = this.comp_252()
 fun <T>OrderedTick<T>.pos() = this.comp_253()

@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ChatInputSuggestor
 
-val ChatInputSuggestor.HIGHLIGHT_STYLES by aliasStatic(ChatInputSuggestor::field_25887)
 fun ChatInputSuggestor.tryRenderWindow(arg0: DrawContext, arg1: Int, arg2: Int) = this.method_44933(arg0, arg1, arg2)
 fun ChatInputSuggestor.setCanLeave(arg0: Boolean) = this.method_53869(arg0)
 fun ChatInputSuggestor.isOpen() = this.method_53867()

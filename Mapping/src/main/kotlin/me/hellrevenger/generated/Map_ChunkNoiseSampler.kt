@@ -14,6 +14,7 @@ fun KClass<ChunkNoiseSampler>.create(arg0: Chunk, arg1: NoiseConfig, arg2: net.m
 fun ChunkNoiseSampler.swapBuffers() = this.method_38348()
 fun ChunkNoiseSampler.estimateSurfaceHeight(arg0: Int, arg1: Int) = this.method_39900(arg0, arg1)
 fun ChunkNoiseSampler.sampleStartDensity() = this.method_38336()
+fun ChunkNoiseSampler.getAquiferSampler() = this.method_38354()
 fun ChunkNoiseSampler.interpolateZ(arg0: Int, arg1: Double) = this.method_38355(arg0, arg1)
 fun ChunkNoiseSampler.at(arg0: Int) = this.method_40534(arg0)
 fun ChunkNoiseSampler.onSampledCellCorners(arg0: Int, arg1: Int) = this.method_38362(arg0, arg1)

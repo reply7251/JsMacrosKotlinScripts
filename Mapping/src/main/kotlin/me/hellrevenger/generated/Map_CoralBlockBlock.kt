@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.CoralBlockBlock
 
-val CoralBlockBlock.DEAD_FIELD by aliasStatic(CoralBlockBlock::field_46323)
+val KClass<CoralBlockBlock>.DEAD_FIELD by aliasStatic(CoralBlockBlock::field_46323)

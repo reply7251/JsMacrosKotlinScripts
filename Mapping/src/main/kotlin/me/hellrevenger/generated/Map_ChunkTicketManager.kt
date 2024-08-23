@@ -11,7 +11,6 @@ fun ChunkTicketManager.update(arg0: ServerChunkLoadingManager) = this.method_158
 fun ChunkTicketManager.handleChunkEnter(arg0: ChunkSectionPos, arg1: ServerPlayerEntity) = this.method_14048(arg0, arg1)
 fun <T>ChunkTicketManager.addTicketWithLevel(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_17290<T>(arg0, arg1, arg2, arg3)
 fun ChunkTicketManager.shouldTickEntities(arg0: Long) = this.method_38630(arg0)
-fun ChunkTicketManager.purge() = this.method_14045()
 fun ChunkTicketManager.shouldTick(arg0: Long) = this.method_20800(arg0)
 fun ChunkTicketManager.handleChunkLeave(arg0: ChunkSectionPos, arg1: ServerPlayerEntity) = this.method_14051(arg0, arg1)
 fun ChunkTicketManager.setSimulationDistance(arg0: Int) = this.method_38629(arg0)

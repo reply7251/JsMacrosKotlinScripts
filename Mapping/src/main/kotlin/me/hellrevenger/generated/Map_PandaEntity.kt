@@ -6,8 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PandaEntity
 
-val PandaEntity.MAIN_GENE_MUTATION_CHANCE by aliasStatic(PandaEntity::field_30343)
-val PandaEntity.playingTicks by alias(PandaEntity::field_6767)
+val KClass<PandaEntity>.MAIN_GENE_MUTATION_CHANCE by aliasStatic(PandaEntity::field_30343)
+var PandaEntity.playingTicks by alias(PandaEntity::field_6767)
+fun PandaEntity.getLieOnBackAnimationProgress(arg0: Float) = this.method_6555(arg0)
 fun PandaEntity.getMainGene() = this.method_6525()
 fun PandaEntity.isEating() = this.method_6527()
 fun PandaEntity.isSitting() = this.method_6535()
@@ -28,9 +29,11 @@ fun PandaEntity.setHiddenGene(arg0: net.minecraft.class_1440.class_1443) = this.
 fun PandaEntity.isWorried() = this.method_6509()
 fun PandaEntity.isBrown() = this.method_35173()
 fun PandaEntity.getAskForBambooTicks() = this.method_6521()
+fun PandaEntity.getRollOverAnimationProgress(arg0: Float) = this.method_6560(arg0)
 fun PandaEntity.setAskForBambooTicks(arg0: Int) = this.method_6517(arg0)
 fun PandaEntity.isWeak() = this.method_6550()
 fun PandaEntity.setSneezing(arg0: Boolean) = this.method_6546(arg0)
+fun PandaEntity.getSittingAnimationProgress(arg0: Float) = this.method_6534(arg0)
 fun PandaEntity.isPlaying() = this.method_6526()
 fun PandaEntity.isLyingOnBack() = this.method_6514()
 fun PandaEntity.isPlayful() = this.method_6522()

@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PlayStateFactories
 
-val PlayStateFactories.C2S by aliasStatic(PlayStateFactories::field_48172)
-val PlayStateFactories.S2C by aliasStatic(PlayStateFactories::field_48173)
+val KClass<PlayStateFactories>.C2S by aliasStatic(PlayStateFactories::field_48172)
+val KClass<PlayStateFactories>.S2C by aliasStatic(PlayStateFactories::field_48173)

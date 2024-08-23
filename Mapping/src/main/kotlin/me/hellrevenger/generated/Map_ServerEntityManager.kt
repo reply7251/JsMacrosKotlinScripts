@@ -13,6 +13,7 @@ fun <T>ServerEntityManager<T>.shouldTick(arg0: ChunkPos) where T: EntityLike = t
 fun <T>ServerEntityManager<T>.getIndexSize() where T: EntityLike = this.method_54490()
 fun <T>ServerEntityManager<T>.updateTrackingStatus(arg0: ChunkPos, arg1: EntityTrackingStatus) where T: EntityLike = this.method_31816(arg0, arg1)
 fun <T>ServerEntityManager<T>.flush() where T: EntityLike = this.method_31836()
+fun <T>ServerEntityManager<T>.getLookup() where T: EntityLike = this.method_31841()
 fun <T>ServerEntityManager<T>.addEntity(arg0: T) where T: EntityLike = this.method_31818(arg0)
 fun <T>ServerEntityManager<T>.save() where T: EntityLike = this.method_31829()
 fun <T>ServerEntityManager<T>.tick() where T: EntityLike = this.method_31809()

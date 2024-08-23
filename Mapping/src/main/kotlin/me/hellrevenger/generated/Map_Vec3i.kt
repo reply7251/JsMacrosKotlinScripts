@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Vec3i
 
-val Vec3i.ZERO by aliasStatic(Vec3i::field_11176)
+val KClass<Vec3i>.ZERO by aliasStatic(Vec3i::field_11176)
 fun Vec3i.up() = this.method_30931()
 fun Vec3i.compareTo(arg0: Vec3i) = this.method_10265(arg0)
 fun Vec3i.down(arg0: Int) = this.method_23227(arg0)

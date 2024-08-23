@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NarratorManager
 
-val NarratorManager.EMPTY by aliasStatic(NarratorManager::field_18967)
+val KClass<NarratorManager>.EMPTY by aliasStatic(NarratorManager::field_18967)
 fun NarratorManager.narrateChatMessage(arg0: Text) = this.method_44708(arg0)
 fun NarratorManager.narrateSystemMessage(arg0: Text) = this.method_47976(arg0)
 fun NarratorManager.clear() = this.method_1793()

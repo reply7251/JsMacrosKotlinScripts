@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.HangingSignEditScreen
 
-val HangingSignEditScreen.BACKGROUND_SCALE by aliasStatic(HangingSignEditScreen::field_40431)
+val KClass<HangingSignEditScreen>.BACKGROUND_SCALE by aliasStatic(HangingSignEditScreen::field_40431)

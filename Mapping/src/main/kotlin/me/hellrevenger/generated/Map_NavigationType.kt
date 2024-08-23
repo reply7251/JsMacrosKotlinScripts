@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NavigationType
 
-val NavigationType.AIR by aliasEnum(NavigationType::class, "field_51")
-val NavigationType.LAND by aliasEnum(NavigationType::class, "field_50")
-val NavigationType.WATER by aliasEnum(NavigationType::class, "field_48")
+val KClass<NavigationType>.AIR by aliasEnum(NavigationType::class, "field_51")
+val KClass<NavigationType>.LAND by aliasEnum(NavigationType::class, "field_50")
+val KClass<NavigationType>.WATER by aliasEnum(NavigationType::class, "field_48")

@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LavaFluid
 
-val LavaFluid.MIN_HEIGHT_TO_REPLACE by aliasStatic(LavaFluid::field_31729)
+val KClass<LavaFluid>.MIN_HEIGHT_TO_REPLACE by aliasStatic(LavaFluid::field_31729)

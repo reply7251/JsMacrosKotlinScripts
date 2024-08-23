@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LavaSubmergedBlockStructureProcessor
 
-val LavaSubmergedBlockStructureProcessor.INSTANCE by aliasStatic(LavaSubmergedBlockStructureProcessor::field_25619)
+val KClass<LavaSubmergedBlockStructureProcessor>.INSTANCE by aliasStatic(LavaSubmergedBlockStructureProcessor::field_25619)

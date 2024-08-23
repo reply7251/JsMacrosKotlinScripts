@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BambooBlock
 
-val BambooBlock.AGE by aliasStatic(BambooBlock::field_9914)
-val BambooBlock.LEAVES by aliasStatic(BambooBlock::field_9917)
-val BambooBlock.STAGE by aliasStatic(BambooBlock::field_9916)
+val KClass<BambooBlock>.AGE by aliasStatic(BambooBlock::field_9914)
+val KClass<BambooBlock>.LEAVES by aliasStatic(BambooBlock::field_9917)
+val KClass<BambooBlock>.STAGE by aliasStatic(BambooBlock::field_9916)

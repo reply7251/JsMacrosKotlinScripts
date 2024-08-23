@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BreezeEntity
 
-val BreezeEntity.inhalingAnimationState by alias(BreezeEntity::field_47280)
-val BreezeEntity.shootingAnimationState by alias(BreezeEntity::field_47281)
-val BreezeEntity.slidingAnimationState by alias(BreezeEntity::field_47277)
+var BreezeEntity.inhalingAnimationState by alias(BreezeEntity::field_47280)
+var BreezeEntity.shootingAnimationState by alias(BreezeEntity::field_47281)
+var BreezeEntity.slidingAnimationState by alias(BreezeEntity::field_47277)
 fun BreezeEntity.playWhirlSound() = this.method_55747()
 fun BreezeEntity.isWithinShortRange(arg0: Vec3d) = this.method_55013(arg0)
 fun BreezeEntity.addLongJumpingParticles() = this.method_55008()

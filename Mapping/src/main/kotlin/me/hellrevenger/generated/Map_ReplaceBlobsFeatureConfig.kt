@@ -8,3 +8,4 @@ import me.hellrevenger.generated.ReplaceBlobsFeatureConfig
 
 val ReplaceBlobsFeatureConfig.state by alias(ReplaceBlobsFeatureConfig::field_25850)
 val ReplaceBlobsFeatureConfig.target by alias(ReplaceBlobsFeatureConfig::field_25849)
+fun ReplaceBlobsFeatureConfig.getRadius() = this.method_30405()

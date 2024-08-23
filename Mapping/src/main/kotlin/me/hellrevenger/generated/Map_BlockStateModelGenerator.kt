@@ -7,7 +7,7 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.BlockStateModelGenerator
 
 val BlockStateModelGenerator.blockStateCollector by alias(BlockStateModelGenerator::field_22830)
-val BlockStateModelGenerator.CONNECTION_VARIANT_FUNCTIONS by aliasStatic(BlockStateModelGenerator::field_28548)
+val KClass<BlockStateModelGenerator>.CONNECTION_VARIANT_FUNCTIONS by aliasStatic(BlockStateModelGenerator::field_28548)
 val BlockStateModelGenerator.modelCollector by alias(BlockStateModelGenerator::field_22831)
 fun BlockStateModelGenerator.registerMirrorable(arg0: Block) = this.method_25619(arg0)
 fun KClass<BlockStateModelGenerator>.createSlabBlockState(arg0: Block, arg1: Identifier, arg2: Identifier, arg3: Identifier) = BlockStateModelGenerator.method_25668(arg0, arg1, arg2, arg3)
@@ -37,7 +37,7 @@ fun KClass<BlockStateModelGenerator>.createStairsBlockState(arg0: Block, arg1: I
 fun BlockStateModelGenerator.registerParented(arg0: Block, arg1: Block) = this.method_25672(arg0, arg1)
 fun KClass<BlockStateModelGenerator>.createButtonBlockState(arg0: Block, arg1: Identifier, arg2: Identifier) = BlockStateModelGenerator.method_25654(arg0, arg1, arg2)
 fun BlockStateModelGenerator.registerBuiltinWithParticle(arg0: Block, arg1: Item) = this.method_25542(arg0, arg1)
-fun KClass<BlockStateModelGenerator>.buildBlockStateVariants(arg0: List<Identifier>, arg1: UnaryOperator<BlockStateVariant>) = BlockStateModelGenerator.method_25583(arg0, arg1)
+fun KClass<BlockStateModelGenerator>.buildBlockStateVariants(arg0: MutableList<Identifier>, arg1: UnaryOperator<BlockStateVariant>) = BlockStateModelGenerator.method_25583(arg0, arg1)
 fun BlockStateModelGenerator.registerTintableCrossBlockStateWithStages(arg0: Block, arg1: net.minecraft.class_4910.class_4913, arg2: property_Property<Int>, arg3: IntArray) = this.method_49374(arg0, arg1, arg2, *arg3)
 fun BlockStateModelGenerator.registerSouthDefaultHorizontalFacing(arg0: net.minecraft.class_4946.class_4947, arg1: Array<Block>) = this.method_25614(arg0, *arg1)
 fun KClass<BlockStateModelGenerator>.createCustomFenceBlockState(arg0: Block, arg1: Identifier, arg2: Identifier, arg3: Identifier, arg4: Identifier, arg5: Identifier) = BlockStateModelGenerator.method_46189(arg0, arg1, arg2, arg3, arg4, arg5)

@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.MathConstants
 
-val MathConstants.PI by aliasStatic(MathConstants::field_29658)
-val MathConstants.DEGREES_PER_RADIAN by aliasStatic(MathConstants::field_29659)
-val MathConstants.RADIANS_PER_DEGREE by aliasStatic(MathConstants::field_29660)
-val MathConstants.EPSILON by aliasStatic(MathConstants::field_29661)
+val KClass<MathConstants>.PI by aliasStatic(MathConstants::field_29658)
+val KClass<MathConstants>.DEGREES_PER_RADIAN by aliasStatic(MathConstants::field_29659)
+val KClass<MathConstants>.RADIANS_PER_DEGREE by aliasStatic(MathConstants::field_29660)
+val KClass<MathConstants>.EPSILON by aliasStatic(MathConstants::field_29661)

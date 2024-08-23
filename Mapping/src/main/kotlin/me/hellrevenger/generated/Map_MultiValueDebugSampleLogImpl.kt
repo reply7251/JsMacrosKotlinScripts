@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.MultiValueDebugSampleLogImpl
 
-val MultiValueDebugSampleLogImpl.LOG_SIZE by aliasStatic(MultiValueDebugSampleLogImpl::field_48813)
+val KClass<MultiValueDebugSampleLogImpl>.LOG_SIZE by aliasStatic(MultiValueDebugSampleLogImpl::field_48813)

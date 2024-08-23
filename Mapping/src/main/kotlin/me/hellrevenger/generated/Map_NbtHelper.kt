@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtHelper
 
-val NbtHelper.DATA_KEY by aliasStatic(NbtHelper::field_33224)
+val KClass<NbtHelper>.DATA_KEY by aliasStatic(NbtHelper::field_33224)
 fun KClass<NbtHelper>.matches(arg0: NbtElement, arg1: NbtElement, arg2: Boolean) = NbtHelper.method_10687(arg0, arg1, arg2)
 fun KClass<NbtHelper>.toFormattedString(arg0: NbtElement) = NbtHelper.method_36118(arg0)
 fun KClass<NbtHelper>.toFormattedString(arg0: NbtElement, arg1: Boolean) = NbtHelper.method_36117(arg0, arg1)

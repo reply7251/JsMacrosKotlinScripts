@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.CameraSubmersionType
 
-val CameraSubmersionType.NONE by aliasEnum(CameraSubmersionType::class, "field_27888")
-val CameraSubmersionType.LAVA by aliasEnum(CameraSubmersionType::class, "field_27885")
-val CameraSubmersionType.WATER by aliasEnum(CameraSubmersionType::class, "field_27886")
-val CameraSubmersionType.POWDER_SNOW by aliasEnum(CameraSubmersionType::class, "field_27887")
+val KClass<CameraSubmersionType>.NONE by aliasEnum(CameraSubmersionType::class, "field_27888")
+val KClass<CameraSubmersionType>.LAVA by aliasEnum(CameraSubmersionType::class, "field_27885")
+val KClass<CameraSubmersionType>.WATER by aliasEnum(CameraSubmersionType::class, "field_27886")
+val KClass<CameraSubmersionType>.POWDER_SNOW by aliasEnum(CameraSubmersionType::class, "field_27887")

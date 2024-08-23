@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Texts
 
-val Texts.DEFAULT_SEPARATOR by aliasStatic(Texts::field_33536)
-val Texts.GRAY_DEFAULT_SEPARATOR_TEXT by aliasStatic(Texts::field_33537)
-val Texts.DEFAULT_SEPARATOR_TEXT by aliasStatic(Texts::field_33538)
+val KClass<Texts>.DEFAULT_SEPARATOR by aliasStatic(Texts::field_33536)
+val KClass<Texts>.GRAY_DEFAULT_SEPARATOR_TEXT by aliasStatic(Texts::field_33537)
+val KClass<Texts>.DEFAULT_SEPARATOR_TEXT by aliasStatic(Texts::field_33538)
 fun <T>KClass<Texts>.join(arg0: Collection<out T>, arg1: Function<T, Text>) = Texts.method_10884<T>(arg0, arg1)
 fun <T>KClass<Texts>.joinOrdered(arg0: Collection<T>, arg1: Function<T, Text>) where T: Comparable<T> = Texts.method_10887<T>(arg0, arg1)
 fun KClass<Texts>.bracketed(arg0: Text) = Texts.method_10885(arg0)

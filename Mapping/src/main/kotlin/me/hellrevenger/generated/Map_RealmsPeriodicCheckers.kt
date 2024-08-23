@@ -14,3 +14,4 @@ val RealmsPeriodicCheckers.trialAvailability by alias(RealmsPeriodicCheckers::fi
 val RealmsPeriodicCheckers.pendingInvitesCount by alias(RealmsPeriodicCheckers::field_39685)
 val RealmsPeriodicCheckers.news by alias(RealmsPeriodicCheckers::field_39687)
 val RealmsPeriodicCheckers.onlinePlayers by alias(RealmsPeriodicCheckers::field_52122)
+fun RealmsPeriodicCheckers.getCheckers() = this.method_54369()

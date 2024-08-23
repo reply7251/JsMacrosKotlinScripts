@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FoxEntity
 
-val FoxEntity.CROUCHING_FLAG by aliasStatic(FoxEntity::field_30328)
-val FoxEntity.CHASING_FLAG by aliasStatic(FoxEntity::field_30330)
-val FoxEntity.ROLLING_HEAD_FLAG by aliasStatic(FoxEntity::field_30329)
+val KClass<FoxEntity>.CROUCHING_FLAG by aliasStatic(FoxEntity::field_30328)
+val KClass<FoxEntity>.CHASING_FLAG by aliasStatic(FoxEntity::field_30330)
+val KClass<FoxEntity>.ROLLING_HEAD_FLAG by aliasStatic(FoxEntity::field_30329)
 fun FoxEntity.isSitting() = this.method_18272()
 fun FoxEntity.setChasing(arg0: Boolean) = this.method_18296(arg0)
 fun FoxEntity.setVariant(arg0: net.minecraft.class_4019.class_4039) = this.method_47844(arg0)

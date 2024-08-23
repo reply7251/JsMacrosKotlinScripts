@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TextureManager
 
-val TextureManager.MISSING_IDENTIFIER by aliasStatic(TextureManager::field_5285)
+val KClass<TextureManager>.MISSING_IDENTIFIER by aliasStatic(TextureManager::field_5285)
 fun TextureManager.loadTextureAsync(arg0: Identifier, arg1: Executor) = this.method_18168(arg0, arg1)
 fun TextureManager.bindTexture(arg0: Identifier) = this.method_22813(arg0)
 fun TextureManager.destroyTexture(arg0: Identifier) = this.method_4615(arg0)

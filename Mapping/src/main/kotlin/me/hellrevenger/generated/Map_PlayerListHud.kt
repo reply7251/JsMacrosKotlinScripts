@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PlayerListHud
 
-val PlayerListHud.MAX_ROWS by aliasStatic(PlayerListHud::field_32205)
+val KClass<PlayerListHud>.MAX_ROWS by aliasStatic(PlayerListHud::field_32205)
 fun PlayerListHud.getPlayerName(arg0: PlayerListEntry) = this.method_1918(arg0)
 fun PlayerListHud.render(arg0: DrawContext, arg1: Int, arg2: Scoreboard, arg3: ScoreboardObjective) = this.method_1919(arg0, arg1, arg2, arg3)
 fun PlayerListHud.setHeader(arg0: Text) = this.method_1925(arg0)

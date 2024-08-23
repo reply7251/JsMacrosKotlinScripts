@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RedstoneTorchBlock
 
-val RedstoneTorchBlock.LIT by aliasStatic(RedstoneTorchBlock::field_11446)
+val KClass<RedstoneTorchBlock>.LIT by aliasStatic(RedstoneTorchBlock::field_11446)

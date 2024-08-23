@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtLongArray
 
-val NbtLongArray.TYPE by aliasStatic(NbtLongArray::field_21040)
+val KClass<NbtLongArray>.TYPE by aliasStatic(NbtLongArray::field_21040)
 fun NbtLongArray.get(arg0: Int) = this.method_10616(arg0)
 fun NbtLongArray.copy() = this.method_10618()
 fun NbtLongArray.add(arg0: Int, arg1: NbtLong) = this.method_17812(arg0, arg1)

@@ -12,6 +12,7 @@ fun ChunkBuilder.send(arg0: net.minecraft.class_846.class_851.class_4577) = this
 fun ChunkBuilder.rebuild(arg0: net.minecraft.class_846.class_851, arg1: ChunkRendererRegionBuilder) = this.method_3627(arg0, arg1)
 fun ChunkBuilder.scheduleUpload(arg0: BuiltBuffer, arg1: VertexBuffer) = this.method_3635(arg0, arg1)
 fun ChunkBuilder.isEmpty() = this.method_3630()
+fun ChunkBuilder.getCameraPosition() = this.method_19420()
 fun ChunkBuilder.reset() = this.method_3632()
 fun ChunkBuilder.getToBatchCount() = this.method_34845()
 fun ChunkBuilder.stop() = this.method_3619()

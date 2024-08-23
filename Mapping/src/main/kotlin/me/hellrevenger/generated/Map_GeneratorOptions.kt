@@ -6,7 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.GeneratorOptions
 
-val GeneratorOptions.DEMO_OPTIONS by aliasStatic(GeneratorOptions::field_40367)
+val KClass<GeneratorOptions>.DEMO_OPTIONS by aliasStatic(GeneratorOptions::field_40367)
+fun GeneratorOptions.getSeed() = this.method_28028()
 fun GeneratorOptions.isLegacyCustomizedType() = this.method_28035()
 fun GeneratorOptions.withStructures(arg0: Boolean) = this.method_45542(arg0)
 fun KClass<GeneratorOptions>.parseSeed(arg0: String) = GeneratorOptions.method_46720(arg0)

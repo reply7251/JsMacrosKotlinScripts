@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.HopperBlockEntity
 
-val HopperBlockEntity.TRANSFER_COOLDOWN by aliasStatic(HopperBlockEntity::field_31341)
-val HopperBlockEntity.INVENTORY_SIZE by aliasStatic(HopperBlockEntity::field_31342)
+val KClass<HopperBlockEntity>.TRANSFER_COOLDOWN by aliasStatic(HopperBlockEntity::field_31341)
+val KClass<HopperBlockEntity>.INVENTORY_SIZE by aliasStatic(HopperBlockEntity::field_31342)
 fun KClass<HopperBlockEntity>.serverTick(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: HopperBlockEntity) = HopperBlockEntity.method_31692(arg0, arg1, arg2, arg3)
 fun KClass<HopperBlockEntity>.extract(arg0: Inventory, arg1: ItemEntity) = HopperBlockEntity.method_11247(arg0, arg1)
 fun KClass<HopperBlockEntity>.transfer(arg0: Inventory, arg1: Inventory, arg2: ItemStack, arg3: Direction) = HopperBlockEntity.method_11260(arg0, arg1, arg2, arg3)

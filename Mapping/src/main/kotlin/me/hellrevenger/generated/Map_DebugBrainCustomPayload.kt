@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DebugBrainCustomPayload
 
-val DebugBrainCustomPayload.ID by aliasStatic(DebugBrainCustomPayload::field_48653)
+val KClass<DebugBrainCustomPayload>.ID by aliasStatic(DebugBrainCustomPayload::field_48653)
 fun DebugBrainCustomPayload.brainDump() = this.comp_1658()

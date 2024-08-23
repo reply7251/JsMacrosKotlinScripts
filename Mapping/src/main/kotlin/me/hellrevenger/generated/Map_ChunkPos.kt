@@ -8,8 +8,8 @@ import me.hellrevenger.generated.ChunkPos
 
 val ChunkPos.z by alias(ChunkPos::field_9180)
 val ChunkPos.x by alias(ChunkPos::field_9181)
-val ChunkPos.ORIGIN by aliasStatic(ChunkPos::field_35107)
-val ChunkPos.MARKER by aliasStatic(ChunkPos::field_17348)
+val KClass<ChunkPos>.ORIGIN by aliasStatic(ChunkPos::field_35107)
+val KClass<ChunkPos>.MARKER by aliasStatic(ChunkPos::field_17348)
 fun KClass<ChunkPos>.hashCode(arg0: Int, arg1: Int) = ChunkPos.method_42307(arg0, arg1)
 fun KClass<ChunkPos>.fromRegionCenter(arg0: Int, arg1: Int) = ChunkPos.method_42306(arg0, arg1)
 fun ChunkPos.getStartPos() = this.method_8323()

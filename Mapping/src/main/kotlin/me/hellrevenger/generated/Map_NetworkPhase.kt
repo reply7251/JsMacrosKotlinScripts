@@ -6,8 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NetworkPhase
 
-val NetworkPhase.STATUS by aliasEnum(NetworkPhase::class, "field_20592")
-val NetworkPhase.LOGIN by aliasEnum(NetworkPhase::class, "field_20593")
-val NetworkPhase.HANDSHAKING by aliasEnum(NetworkPhase::class, "field_20590")
-val NetworkPhase.PLAY by aliasEnum(NetworkPhase::class, "field_20591")
-val NetworkPhase.CONFIGURATION by aliasEnum(NetworkPhase::class, "field_45671")
+val KClass<NetworkPhase>.STATUS by aliasEnum(NetworkPhase::class, "field_20592")
+val KClass<NetworkPhase>.LOGIN by aliasEnum(NetworkPhase::class, "field_20593")
+val KClass<NetworkPhase>.HANDSHAKING by aliasEnum(NetworkPhase::class, "field_20590")
+val KClass<NetworkPhase>.PLAY by aliasEnum(NetworkPhase::class, "field_20591")
+val KClass<NetworkPhase>.CONFIGURATION by aliasEnum(NetworkPhase::class, "field_45671")
+fun NetworkPhase.getId() = this.method_10785()

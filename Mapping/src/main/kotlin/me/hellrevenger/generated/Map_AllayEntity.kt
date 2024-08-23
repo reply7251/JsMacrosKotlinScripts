@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AllayEntity
 
-val AllayEntity.THROW_SOUND_PITCHES by aliasStatic(AllayEntity::field_38937)
+val KClass<AllayEntity>.THROW_SOUND_PITCHES by aliasStatic(AllayEntity::field_38937)
 fun AllayEntity.updateJukeboxPos(arg0: BlockPos, arg1: Boolean) = this.method_44358(arg0, arg1)
 fun AllayEntity.isHoldingItem() = this.method_43396()
 fun AllayEntity.isDancing() = this.method_44359()

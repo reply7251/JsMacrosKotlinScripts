@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TorchflowerBlock
 
-val TorchflowerBlock.AGE by aliasStatic(TorchflowerBlock::field_42776)
+val KClass<TorchflowerBlock>.AGE by aliasStatic(TorchflowerBlock::field_42776)

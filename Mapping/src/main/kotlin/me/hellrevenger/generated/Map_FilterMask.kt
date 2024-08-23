@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FilterMask
 
-val FilterMask.FILTERED_STYLE by aliasStatic(FilterMask::field_40674)
-val FilterMask.PASS_THROUGH by aliasStatic(FilterMask::field_39942)
-val FilterMask.FULLY_FILTERED by aliasStatic(FilterMask::field_39941)
+val KClass<FilterMask>.FILTERED_STYLE by aliasStatic(FilterMask::field_40674)
+val KClass<FilterMask>.PASS_THROUGH by aliasStatic(FilterMask::field_39942)
+val KClass<FilterMask>.FULLY_FILTERED by aliasStatic(FilterMask::field_39941)
 fun KClass<FilterMask>.writeMask(arg0: PacketByteBuf, arg1: FilterMask) = FilterMask.method_45091(arg0, arg1)
 fun FilterMask.isFullyFiltered() = this.method_45093()
 fun FilterMask.filter(arg0: String) = this.method_45089(arg0)

@@ -6,9 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BlockPos
 
-val BlockPos.ORIGIN by aliasStatic(BlockPos::field_10980)
-val BlockPos.PACKET_CODEC by aliasStatic(BlockPos::field_48404)
-val BlockPos.SIZE_BITS_Y by aliasStatic(BlockPos::field_10975)
+val KClass<BlockPos>.ORIGIN by aliasStatic(BlockPos::field_10980)
+val KClass<BlockPos>.SIZE_BITS_Y by aliasStatic(BlockPos::field_10975)
 fun KClass<BlockPos>.add(arg0: Long, arg1: Int, arg2: Int, arg3: Int) = BlockPos.method_10096(arg0, arg1, arg2, arg3)
 fun BlockPos.mutableCopy() = this.method_25503()
 fun BlockPos.west(arg0: Int) = this.method_10088(arg0)

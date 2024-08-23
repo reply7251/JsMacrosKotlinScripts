@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DefaultClientResourcePackProvider
 
-val DefaultClientResourcePackProvider.HIGH_CONTRAST_ID by aliasStatic(DefaultClientResourcePackProvider::field_43088)
+val KClass<DefaultClientResourcePackProvider>.HIGH_CONTRAST_ID by aliasStatic(DefaultClientResourcePackProvider::field_43088)

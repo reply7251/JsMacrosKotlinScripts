@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FixedNumberFormat
 
-val FixedNumberFormat.TYPE by aliasStatic(FixedNumberFormat::field_47560)
+val KClass<FixedNumberFormat>.TYPE by aliasStatic(FixedNumberFormat::field_47560)

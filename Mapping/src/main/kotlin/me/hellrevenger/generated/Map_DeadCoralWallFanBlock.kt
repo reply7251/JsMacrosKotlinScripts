@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DeadCoralWallFanBlock
 
-val DeadCoralWallFanBlock.FACING by aliasStatic(DeadCoralWallFanBlock::field_9933)
+val KClass<DeadCoralWallFanBlock>.FACING by aliasStatic(DeadCoralWallFanBlock::field_9933)

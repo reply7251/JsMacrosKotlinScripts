@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ObserverBlock
 
-val ObserverBlock.POWERED by aliasStatic(ObserverBlock::field_11322)
+val KClass<ObserverBlock>.POWERED by aliasStatic(ObserverBlock::field_11322)

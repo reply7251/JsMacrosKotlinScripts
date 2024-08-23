@@ -10,4 +10,4 @@ fun KClass<ThreadAllocationStatisticsSample>.fromEvent(arg0: RecordedEvent) = Th
 fun ThreadAllocationStatisticsSample.allocated() = this.comp_50()
 fun ThreadAllocationStatisticsSample.threadName() = this.comp_49()
 fun ThreadAllocationStatisticsSample.time() = this.comp_48()
-fun KClass<ThreadAllocationStatisticsSample>.toAllocationMap(arg0: List<ThreadAllocationStatisticsSample>) = ThreadAllocationStatisticsSample.method_38055(arg0)
+fun KClass<ThreadAllocationStatisticsSample>.toAllocationMap(arg0: MutableList<ThreadAllocationStatisticsSample>) = ThreadAllocationStatisticsSample.method_38055(arg0)

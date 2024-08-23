@@ -6,6 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Vibration
 
+fun Vibration.getEntity(arg0: ServerWorld) = this.method_42348(arg0)
 fun Vibration.getOwner(arg0: ServerWorld) = this.method_42687(arg0)
 fun Vibration.projectileOwnerUuid() = this.comp_681()
 fun Vibration.distance() = this.comp_658()

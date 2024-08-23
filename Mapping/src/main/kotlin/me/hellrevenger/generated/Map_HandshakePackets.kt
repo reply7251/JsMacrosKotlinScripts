@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.HandshakePackets
 
-val HandshakePackets.INTENTION by aliasStatic(HandshakePackets::field_48230)
+val KClass<HandshakePackets>.INTENTION by aliasStatic(HandshakePackets::field_48230)

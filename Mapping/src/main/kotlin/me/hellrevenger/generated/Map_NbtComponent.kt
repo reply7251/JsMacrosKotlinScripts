@@ -6,9 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtComponent
 
-val NbtComponent.PACKET_CODEC by aliasStatic(NbtComponent::field_49305)
-val NbtComponent.DEFAULT by aliasStatic(NbtComponent::field_49302)
-val NbtComponent.CODEC_WITH_ID by aliasStatic(NbtComponent::field_49304)
+val KClass<NbtComponent>.DEFAULT by aliasStatic(NbtComponent::field_49302)
+val KClass<NbtComponent>.CODEC_WITH_ID by aliasStatic(NbtComponent::field_49304)
 fun KClass<NbtComponent>.createPredicate(arg0: ComponentType<NbtComponent>, arg1: NbtCompound) = NbtComponent.method_57454(arg0, arg1)
 fun NbtComponent.applyToEntity(arg0: Entity) = this.method_57445(arg0)
 fun NbtComponent.contains(arg0: String) = this.method_57450(arg0)
@@ -20,6 +19,7 @@ fun NbtComponent.getSize() = this.method_57444()
 fun NbtComponent.matches(arg0: NbtCompound) = this.method_57460(arg0)
 fun KClass<NbtComponent>.set(arg0: ComponentType<NbtComponent>, arg1: ItemStack, arg2: Consumer<NbtCompound>) = NbtComponent.method_57452(arg0, arg1, arg2)
 fun <T>NbtComponent.get(arg0: DynamicOps<NbtElement>, arg1: MapDecoder<T>) = this.method_59980<T>(arg0, arg1)
+fun NbtComponent.getNbt() = this.method_57463()
 fun NbtComponent.isEmpty() = this.method_57458()
 fun KClass<NbtComponent>.set(arg0: ComponentType<NbtComponent>, arg1: ItemStack, arg2: NbtCompound) = NbtComponent.method_57453(arg0, arg1, arg2)
 fun KClass<NbtComponent>.of(arg0: NbtCompound) = NbtComponent.method_57456(arg0)

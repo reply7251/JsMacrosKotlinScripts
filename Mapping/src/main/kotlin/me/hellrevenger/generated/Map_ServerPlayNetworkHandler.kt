@@ -7,7 +7,7 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.ServerPlayNetworkHandler
 
 val ServerPlayNetworkHandler.chunkDataSender by alias(ServerPlayNetworkHandler::field_45026)
-val ServerPlayNetworkHandler.player by alias(ServerPlayNetworkHandler::field_14140)
+var ServerPlayNetworkHandler.player by alias(ServerPlayNetworkHandler::field_14140)
 fun ServerPlayNetworkHandler.syncWithPlayerPosition() = this.method_14372()
 fun ServerPlayNetworkHandler.sendChatMessage(arg0: SignedMessage, arg1: net.minecraft.class_2556.class_7602) = this.method_45170(arg0, arg1)
 fun ServerPlayNetworkHandler.getConnectionAddress() = this.method_48107()

@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ComparatorBlock
 
-val ComparatorBlock.MODE by aliasStatic(ComparatorBlock::field_10789)
+val KClass<ComparatorBlock>.MODE by aliasStatic(ComparatorBlock::field_10789)

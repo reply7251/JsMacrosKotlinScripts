@@ -7,3 +7,4 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.CloseScreenS2CPacket
 
 fun CloseScreenS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11427(arg0)
+fun CloseScreenS2CPacket.getSyncId() = this.method_36148()

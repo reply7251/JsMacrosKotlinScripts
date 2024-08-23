@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.MultipartUnbakedModel
 
-val MultipartUnbakedModel.stateFactory by alias(MultipartUnbakedModel::field_4329)
 fun MultipartUnbakedModel.getModels() = this.method_3520()
+fun MultipartUnbakedModel.getComponents() = this.method_3519()

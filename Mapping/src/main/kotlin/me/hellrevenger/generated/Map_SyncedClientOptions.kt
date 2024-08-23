@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SyncedClientOptions
 
-val SyncedClientOptions.MAX_LANGUAGE_CODE_LENGTH by aliasStatic(SyncedClientOptions::field_46155)
+val KClass<SyncedClientOptions>.MAX_LANGUAGE_CODE_LENGTH by aliasStatic(SyncedClientOptions::field_46155)
 fun SyncedClientOptions.mainArm() = this.comp_1956()
 fun KClass<SyncedClientOptions>.createDefault() = SyncedClientOptions.method_53821()
 fun SyncedClientOptions.chatColorsEnabled() = this.comp_1954()

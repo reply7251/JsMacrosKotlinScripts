@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SmallDripleafBlock
 
-val SmallDripleafBlock.FACING by aliasStatic(SmallDripleafBlock::field_29563)
+val KClass<SmallDripleafBlock>.FACING by aliasStatic(SmallDripleafBlock::field_29563)

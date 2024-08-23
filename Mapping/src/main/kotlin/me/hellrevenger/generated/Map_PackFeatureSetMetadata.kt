@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PackFeatureSetMetadata
 
-val PackFeatureSetMetadata.SERIALIZER by aliasStatic(PackFeatureSetMetadata::field_39996)
+val KClass<PackFeatureSetMetadata>.SERIALIZER by aliasStatic(PackFeatureSetMetadata::field_39996)
 fun PackFeatureSetMetadata.flags() = this.comp_994()

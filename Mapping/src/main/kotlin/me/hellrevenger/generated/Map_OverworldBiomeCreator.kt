@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.OverworldBiomeCreator
 
-val OverworldBiomeCreator.SWAMP_SKELETON_WEIGHT by aliasStatic(OverworldBiomeCreator::field_51968)
+val KClass<OverworldBiomeCreator>.SWAMP_SKELETON_WEIGHT by aliasStatic(OverworldBiomeCreator::field_51968)
 fun KClass<OverworldBiomeCreator>.createJungle(arg0: RegistryEntryLookup<PlacedFeature>, arg1: RegistryEntryLookup<ConfiguredCarver<*>>) = OverworldBiomeCreator.method_30683(arg0, arg1)
 fun KClass<OverworldBiomeCreator>.createPlains(arg0: RegistryEntryLookup<PlacedFeature>, arg1: RegistryEntryLookup<ConfiguredCarver<*>>, arg2: Boolean, arg3: Boolean, arg4: Boolean) = OverworldBiomeCreator.method_30701(arg0, arg1, arg2, arg3, arg4)
 fun KClass<OverworldBiomeCreator>.createSavanna(arg0: RegistryEntryLookup<PlacedFeature>, arg1: RegistryEntryLookup<ConfiguredCarver<*>>, arg2: Boolean, arg3: Boolean) = OverworldBiomeCreator.method_30694(arg0, arg1, arg2, arg3)

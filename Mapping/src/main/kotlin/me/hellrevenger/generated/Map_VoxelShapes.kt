@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.VoxelShapes
 
-val VoxelShapes.UNBOUNDED by aliasStatic(VoxelShapes::field_17669)
-val VoxelShapes.MIN_SIZE by aliasStatic(VoxelShapes::field_31880)
+val KClass<VoxelShapes>.UNBOUNDED by aliasStatic(VoxelShapes::field_17669)
+val KClass<VoxelShapes>.MIN_SIZE by aliasStatic(VoxelShapes::field_31880)
 fun KClass<VoxelShapes>.calculateMaxOffset(arg0: net.minecraft.class_2350.class_2351, arg1: Box, arg2: Iterable<VoxelShape>, arg3: Double) = VoxelShapes.method_1085(arg0, arg1, arg2, arg3)
 fun KClass<VoxelShapes>.union(arg0: VoxelShape, arg1: Array<VoxelShape>) = VoxelShapes.method_17786(arg0, *arg1)
 fun KClass<VoxelShapes>.cuboid(arg0: Double, arg1: Double, arg2: Double, arg3: Double, arg4: Double, arg5: Double) = VoxelShapes.method_1081(arg0, arg1, arg2, arg3, arg4, arg5)

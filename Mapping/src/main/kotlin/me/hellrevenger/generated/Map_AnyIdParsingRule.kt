@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AnyIdParsingRule
 
-val AnyIdParsingRule.INSTANCE by aliasStatic(AnyIdParsingRule::field_49967)
+val KClass<AnyIdParsingRule>.INSTANCE by aliasStatic(AnyIdParsingRule::field_49967)

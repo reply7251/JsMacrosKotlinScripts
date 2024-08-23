@@ -6,8 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Structure
 
-val Structure.ENTRY_CODEC by aliasStatic(Structure::field_37745)
-val Structure.STRUCTURE_CODEC by aliasStatic(Structure::field_37744)
 fun Structure.expandBoxIfShouldAdaptNoise(arg0: BlockBox) = this.method_41609(arg0)
 fun Structure.getStructureSpawns() = this.method_41615()
 fun Structure.getTerrainAdaptation() = this.method_42701()

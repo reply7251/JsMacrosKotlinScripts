@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LevelDataGeneratorOptionsFix
 
-val LevelDataGeneratorOptionsFix.GENERATOR_OPTIONS_KEY by aliasStatic(LevelDataGeneratorOptionsFix::field_29903)
+val KClass<LevelDataGeneratorOptionsFix>.GENERATOR_OPTIONS_KEY by aliasStatic(LevelDataGeneratorOptionsFix::field_29903)

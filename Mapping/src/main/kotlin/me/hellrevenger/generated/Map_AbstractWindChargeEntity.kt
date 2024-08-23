@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AbstractWindChargeEntity
 
-val AbstractWindChargeEntity.EXPLOSION_BEHAVIOR by aliasStatic(AbstractWindChargeEntity::field_50137)
+val KClass<AbstractWindChargeEntity>.EXPLOSION_BEHAVIOR by aliasStatic(AbstractWindChargeEntity::field_50137)

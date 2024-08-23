@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EmptyBlockView
 
-val EmptyBlockView.INSTANCE by aliasEnum(EmptyBlockView::class, "field_12294")
+val KClass<EmptyBlockView>.INSTANCE by aliasEnum(EmptyBlockView::class, "field_12294")

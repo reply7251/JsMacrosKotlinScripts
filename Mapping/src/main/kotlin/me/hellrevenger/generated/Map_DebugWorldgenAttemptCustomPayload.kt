@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DebugWorldgenAttemptCustomPayload
 
-val DebugWorldgenAttemptCustomPayload.ID by aliasStatic(DebugWorldgenAttemptCustomPayload::field_48689)
+val KClass<DebugWorldgenAttemptCustomPayload>.ID by aliasStatic(DebugWorldgenAttemptCustomPayload::field_48689)
 fun DebugWorldgenAttemptCustomPayload.scale() = this.comp_1719()
 fun DebugWorldgenAttemptCustomPayload.blue() = this.comp_1722()
 fun DebugWorldgenAttemptCustomPayload.alpha() = this.comp_1723()

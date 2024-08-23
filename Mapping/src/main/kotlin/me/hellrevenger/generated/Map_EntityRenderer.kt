@@ -11,3 +11,4 @@ fun <T>EntityRenderer<T>.getTexture(arg0: T) where T: Entity = this.method_3931(
 fun <T>EntityRenderer<T>.shouldRender(arg0: T, arg1: Frustum, arg2: Double, arg3: Double, arg4: Double) where T: Entity = this.method_3933(arg0, arg1, arg2, arg3, arg4)
 fun <T>EntityRenderer<T>.getPositionOffset(arg0: T, arg1: Float) where T: Entity = this.method_23169(arg0, arg1)
 fun <T>EntityRenderer<T>.getLight(arg0: T, arg1: Float) where T: Entity = this.method_24088(arg0, arg1)
+fun <T>EntityRenderer<T>.getTextRenderer() where T: Entity = this.method_3932()

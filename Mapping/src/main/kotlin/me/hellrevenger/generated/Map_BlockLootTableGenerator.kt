@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BlockLootTableGenerator
 
-val BlockLootTableGenerator.WITH_SHEARS by aliasStatic(BlockLootTableGenerator::field_40604)
+val KClass<BlockLootTableGenerator>.WITH_SHEARS by aliasStatic(BlockLootTableGenerator::field_40604)
 val BlockLootTableGenerator.lootTables by alias(BlockLootTableGenerator::field_40610)
 fun BlockLootTableGenerator.slabDrops(arg0: Block) = this.method_45980(arg0)
 fun BlockLootTableGenerator.drops(arg0: ItemConvertible, arg1: LootNumberProvider) = this.method_45979(arg0, arg1)

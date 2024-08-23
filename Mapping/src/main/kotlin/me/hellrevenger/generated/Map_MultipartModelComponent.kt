@@ -7,3 +7,4 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.MultipartModelComponent
 
 fun MultipartModelComponent.getPredicate(arg0: StateManager<Block, BlockState>) = this.method_3530(arg0)
+fun MultipartModelComponent.getModel() = this.method_3529()

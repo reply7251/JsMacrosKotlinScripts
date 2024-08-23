@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.MemoryModuleState
 
-val MemoryModuleState.VALUE_ABSENT by aliasEnum(MemoryModuleState::class, "field_18457")
-val MemoryModuleState.REGISTERED by aliasEnum(MemoryModuleState::class, "field_18458")
-val MemoryModuleState.VALUE_PRESENT by aliasEnum(MemoryModuleState::class, "field_18456")
+val KClass<MemoryModuleState>.VALUE_ABSENT by aliasEnum(MemoryModuleState::class, "field_18457")
+val KClass<MemoryModuleState>.REGISTERED by aliasEnum(MemoryModuleState::class, "field_18458")
+val KClass<MemoryModuleState>.VALUE_PRESENT by aliasEnum(MemoryModuleState::class, "field_18456")

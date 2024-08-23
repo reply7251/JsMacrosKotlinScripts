@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AbstractSignBlock
 
-val AbstractSignBlock.WATERLOGGED by aliasStatic(AbstractSignBlock::field_11491)
+val KClass<AbstractSignBlock>.WATERLOGGED by aliasStatic(AbstractSignBlock::field_11491)
 fun AbstractSignBlock.getWoodType() = this.method_24025()
 fun KClass<AbstractSignBlock>.getWoodType(arg0: Block) = AbstractSignBlock.method_45459(arg0)
 fun AbstractSignBlock.getCenter(arg0: BlockState) = this.method_50003(arg0)

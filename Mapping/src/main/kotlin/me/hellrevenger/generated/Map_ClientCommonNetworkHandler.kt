@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ClientCommonNetworkHandler
 
-val ClientCommonNetworkHandler.postDisconnectScreen by alias(ClientCommonNetworkHandler::field_45593)
+fun ClientCommonNetworkHandler.getBrand() = this.method_52790()
 fun ClientCommonNetworkHandler.sendPacket(arg0: Packet<*>) = this.method_52787(arg0)

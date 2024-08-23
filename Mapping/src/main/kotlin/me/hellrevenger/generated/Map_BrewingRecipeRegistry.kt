@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BrewingRecipeRegistry
 
-val BrewingRecipeRegistry.EMPTY by aliasStatic(BrewingRecipeRegistry::field_51402)
+val KClass<BrewingRecipeRegistry>.EMPTY by aliasStatic(BrewingRecipeRegistry::field_51402)
 fun BrewingRecipeRegistry.isBrewable(arg0: RegistryEntry<Potion>) = this.method_20361(arg0)
 fun BrewingRecipeRegistry.isPotionRecipeIngredient(arg0: ItemStack) = this.method_8069(arg0)
 fun BrewingRecipeRegistry.isValidIngredient(arg0: ItemStack) = this.method_8077(arg0)

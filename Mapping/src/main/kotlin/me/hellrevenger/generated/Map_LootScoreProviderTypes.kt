@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LootScoreProviderTypes
 
-val LootScoreProviderTypes.FIXED by aliasStatic(LootScoreProviderTypes::field_27932)
-val LootScoreProviderTypes.CONTEXT by aliasStatic(LootScoreProviderTypes::field_27933)
+val KClass<LootScoreProviderTypes>.FIXED by aliasStatic(LootScoreProviderTypes::field_27932)
+val KClass<LootScoreProviderTypes>.CONTEXT by aliasStatic(LootScoreProviderTypes::field_27933)

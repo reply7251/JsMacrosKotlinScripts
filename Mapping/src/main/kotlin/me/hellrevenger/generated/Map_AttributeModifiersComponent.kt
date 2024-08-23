@@ -6,9 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AttributeModifiersComponent
 
-val AttributeModifiersComponent.PACKET_CODEC by aliasStatic(AttributeModifiersComponent::field_49328)
-val AttributeModifiersComponent.DECIMAL_FORMAT by aliasStatic(AttributeModifiersComponent::field_49329)
-val AttributeModifiersComponent.DEFAULT by aliasStatic(AttributeModifiersComponent::field_49326)
+val KClass<AttributeModifiersComponent>.DECIMAL_FORMAT by aliasStatic(AttributeModifiersComponent::field_49329)
+val KClass<AttributeModifiersComponent>.DEFAULT by aliasStatic(AttributeModifiersComponent::field_49326)
 fun AttributeModifiersComponent.applyModifiers(arg0: AttributeModifierSlot, arg1: BiConsumer<RegistryEntry<EntityAttribute>, EntityAttributeModifier>) = this.method_60618(arg0, arg1)
 fun AttributeModifiersComponent.applyOperations(arg0: Double, arg1: EquipmentSlot) = this.method_57481(arg0, arg1)
 fun AttributeModifiersComponent.applyModifiers(arg0: EquipmentSlot, arg1: BiConsumer<RegistryEntry<EntityAttribute>, EntityAttributeModifier>) = this.method_57482(arg0, arg1)

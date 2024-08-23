@@ -6,10 +6,10 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ParrotEntity
 
-val ParrotEntity.prevMaxWingDeviation by alias(ParrotEntity::field_6827)
-val ParrotEntity.maxWingDeviation by alias(ParrotEntity::field_6819)
-val ParrotEntity.flapProgress by alias(ParrotEntity::field_6818)
-val ParrotEntity.prevFlapProgress by alias(ParrotEntity::field_6829)
+var ParrotEntity.prevMaxWingDeviation by alias(ParrotEntity::field_6827)
+var ParrotEntity.maxWingDeviation by alias(ParrotEntity::field_6819)
+var ParrotEntity.flapProgress by alias(ParrotEntity::field_6818)
+var ParrotEntity.prevFlapProgress by alias(ParrotEntity::field_6829)
 fun KClass<ParrotEntity>.createParrotAttributes() = ParrotEntity.method_26889()
 fun ParrotEntity.isSongPlaying() = this.method_6582()
 fun ParrotEntity.getVariant() = this.method_6584()

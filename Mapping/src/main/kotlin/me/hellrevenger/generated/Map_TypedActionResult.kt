@@ -11,3 +11,5 @@ fun <T>KClass<TypedActionResult<T>>.pass(arg0: T) = TypedActionResult.method_224
 fun <T>KClass<TypedActionResult<T>>.success(arg0: T, arg1: Boolean) = TypedActionResult.method_29237<T>(arg0, arg1)
 fun <T>KClass<TypedActionResult<T>>.consume(arg0: T) = TypedActionResult.method_22428<T>(arg0)
 fun <T>KClass<TypedActionResult<T>>.success(arg0: T) = TypedActionResult.method_22427<T>(arg0)
+fun <T>TypedActionResult<T>.getValue() = this.method_5466()
+fun <T>TypedActionResult<T>.getResult() = this.method_5467()

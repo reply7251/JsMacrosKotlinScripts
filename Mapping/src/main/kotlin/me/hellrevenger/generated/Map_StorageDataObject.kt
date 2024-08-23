@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.StorageDataObject
 
-val StorageDataObject.TYPE_FACTORY by aliasStatic(StorageDataObject::field_20855)
+val KClass<StorageDataObject>.TYPE_FACTORY by aliasStatic(StorageDataObject::field_20855)

@@ -11,4 +11,5 @@ fun TrackedPosition.withDelta(arg0: Long, arg1: Long, arg2: Long) = this.method_
 fun TrackedPosition.getDeltaY(arg0: Vec3d) = this.method_43491(arg0)
 fun TrackedPosition.getDeltaZ(arg0: Vec3d) = this.method_43492(arg0)
 fun TrackedPosition.subtract(arg0: Vec3d) = this.method_43493(arg0)
+fun TrackedPosition.getPos() = this.method_60933()
 fun TrackedPosition.setPos(arg0: Vec3d) = this.method_43494(arg0)

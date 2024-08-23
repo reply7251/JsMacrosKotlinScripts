@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ConduitBlockEntity
 
-val ConduitBlockEntity.ticks by alias(ConduitBlockEntity::field_11936)
+var ConduitBlockEntity.ticks by alias(ConduitBlockEntity::field_11936)
 fun ConduitBlockEntity.getRotation(arg0: Float) = this.method_11061(arg0)
 fun ConduitBlockEntity.isActive() = this.method_11065()
 fun ConduitBlockEntity.toUpdatePacket() = this.method_38247()

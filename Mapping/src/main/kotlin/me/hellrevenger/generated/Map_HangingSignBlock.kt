@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.HangingSignBlock
 
-val HangingSignBlock.ROTATION by aliasStatic(HangingSignBlock::field_40300)
-val HangingSignBlock.ATTACHED by aliasStatic(HangingSignBlock::field_40301)
+val KClass<HangingSignBlock>.ROTATION by aliasStatic(HangingSignBlock::field_40300)
+val KClass<HangingSignBlock>.ATTACHED by aliasStatic(HangingSignBlock::field_40301)

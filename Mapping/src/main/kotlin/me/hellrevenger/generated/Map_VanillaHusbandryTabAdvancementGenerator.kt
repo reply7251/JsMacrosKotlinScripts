@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.VanillaHusbandryTabAdvancementGenerator
 
-val VanillaHusbandryTabAdvancementGenerator.AXE_ITEMS by aliasStatic(VanillaHusbandryTabAdvancementGenerator::field_33964)
-val VanillaHusbandryTabAdvancementGenerator.EGG_LAYING_ANIMALS by aliasStatic(VanillaHusbandryTabAdvancementGenerator::field_38467)
-val VanillaHusbandryTabAdvancementGenerator.BREEDABLE_ANIMALS by aliasStatic(VanillaHusbandryTabAdvancementGenerator::field_11296)
+val KClass<VanillaHusbandryTabAdvancementGenerator>.AXE_ITEMS by aliasStatic(VanillaHusbandryTabAdvancementGenerator::field_33964)
+val KClass<VanillaHusbandryTabAdvancementGenerator>.EGG_LAYING_ANIMALS by aliasStatic(VanillaHusbandryTabAdvancementGenerator::field_38467)
+val KClass<VanillaHusbandryTabAdvancementGenerator>.BREEDABLE_ANIMALS by aliasStatic(VanillaHusbandryTabAdvancementGenerator::field_11296)
 fun KClass<VanillaHusbandryTabAdvancementGenerator>.createBreedAllAnimalsAdvancement(arg0: AdvancementEntry, arg1: Consumer<AdvancementEntry>, arg2: Stream<EntityType<*>>, arg3: Stream<EntityType<*>>) = VanillaHusbandryTabAdvancementGenerator.method_47810(arg0, arg1, arg2, arg3)

@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EnchantmentEffectTarget
 
-val EnchantmentEffectTarget.VICTIM by aliasEnum(EnchantmentEffectTarget::class, "field_51685")
-val EnchantmentEffectTarget.DAMAGING_ENTITY by aliasEnum(EnchantmentEffectTarget::class, "field_51684")
-val EnchantmentEffectTarget.ATTACKER by aliasEnum(EnchantmentEffectTarget::class, "field_51683")
+val KClass<EnchantmentEffectTarget>.VICTIM by aliasEnum(EnchantmentEffectTarget::class, "field_51685")
+val KClass<EnchantmentEffectTarget>.DAMAGING_ENTITY by aliasEnum(EnchantmentEffectTarget::class, "field_51684")
+val KClass<EnchantmentEffectTarget>.ATTACKER by aliasEnum(EnchantmentEffectTarget::class, "field_51683")

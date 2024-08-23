@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.CoordinateArgument
 
-val CoordinateArgument.MISSING_BLOCK_POSITION by aliasStatic(CoordinateArgument::field_10761)
-val CoordinateArgument.MISSING_COORDINATE by aliasStatic(CoordinateArgument::field_10759)
+val KClass<CoordinateArgument>.MISSING_BLOCK_POSITION by aliasStatic(CoordinateArgument::field_10761)
+val KClass<CoordinateArgument>.MISSING_COORDINATE by aliasStatic(CoordinateArgument::field_10759)
 fun CoordinateArgument.isRelative() = this.method_9741()
 fun KClass<CoordinateArgument>.parse(arg0: StringReader) = CoordinateArgument.method_9739(arg0)
 fun KClass<CoordinateArgument>.isRelative(arg0: StringReader) = CoordinateArgument.method_9742(arg0)

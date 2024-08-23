@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.JoinWorldTask
 
-val JoinWorldTask.KEY by aliasStatic(JoinWorldTask::field_45033)
+val KClass<JoinWorldTask>.KEY by aliasStatic(JoinWorldTask::field_45033)

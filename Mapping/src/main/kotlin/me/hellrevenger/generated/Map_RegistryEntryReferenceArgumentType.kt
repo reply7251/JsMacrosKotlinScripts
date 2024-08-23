@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RegistryEntryReferenceArgumentType
 
-val <T>RegistryEntryReferenceArgumentType<T>.INVALID_TYPE_EXCEPTION by aliasStatic({RegistryEntryReferenceArgumentType.field_40402})
-val <T>RegistryEntryReferenceArgumentType<T>.NOT_FOUND_EXCEPTION by aliasStatic({RegistryEntryReferenceArgumentType.field_40401})
+val <T>KClass<RegistryEntryReferenceArgumentType<T>>.INVALID_TYPE_EXCEPTION by aliasStatic({RegistryEntryReferenceArgumentType.field_40402})
+val <T>KClass<RegistryEntryReferenceArgumentType<T>>.NOT_FOUND_EXCEPTION by aliasStatic({RegistryEntryReferenceArgumentType.field_40401})
 fun <T>KClass<RegistryEntryReferenceArgumentType<T>>.getSummonableEntityType(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryEntryReferenceArgumentType.method_45610(arg0, arg1)
 fun <T>KClass<RegistryEntryReferenceArgumentType<T>>.registryEntry(arg0: CommandRegistryAccess, arg1: RegistryKey<out Registry<T>>) = RegistryEntryReferenceArgumentType.method_45603<T>(arg0, arg1)
 fun <T>KClass<RegistryEntryReferenceArgumentType<T>>.getConfiguredFeature(arg0: CommandContext<ServerCommandSource>, arg1: String) = RegistryEntryReferenceArgumentType.method_45607(arg0, arg1)

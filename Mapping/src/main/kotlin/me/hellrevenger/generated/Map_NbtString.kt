@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtString
 
-val NbtString.TYPE by aliasStatic(NbtString::field_21045)
+val KClass<NbtString>.TYPE by aliasStatic(NbtString::field_21045)
 fun NbtString.copy() = this.method_10705()
 fun KClass<NbtString>.escape(arg0: String) = NbtString.method_10706(arg0)
 fun KClass<NbtString>.skip(arg0: DataInput) = NbtString.method_39875(arg0)

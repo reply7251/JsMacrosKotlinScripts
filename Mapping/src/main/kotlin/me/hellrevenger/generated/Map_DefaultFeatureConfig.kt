@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DefaultFeatureConfig
 
-val DefaultFeatureConfig.INSTANCE by aliasStatic(DefaultFeatureConfig::field_24894)
+val KClass<DefaultFeatureConfig>.INSTANCE by aliasStatic(DefaultFeatureConfig::field_24894)

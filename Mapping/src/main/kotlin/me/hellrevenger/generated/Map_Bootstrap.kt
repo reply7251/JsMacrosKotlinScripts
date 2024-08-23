@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Bootstrap
 
-val Bootstrap.SYSOUT by aliasStatic(Bootstrap::field_13358)
-val Bootstrap.LOAD_TIME by aliasStatic(Bootstrap::field_44781)
+val KClass<Bootstrap>.SYSOUT by aliasStatic(Bootstrap::field_13358)
+val KClass<Bootstrap>.LOAD_TIME by aliasStatic(Bootstrap::field_44781)
 fun KClass<Bootstrap>.getMissingTranslations() = Bootstrap.method_17597()
 fun KClass<Bootstrap>.initialize() = Bootstrap.method_12851()
 fun KClass<Bootstrap>.logMissing() = Bootstrap.method_17598()

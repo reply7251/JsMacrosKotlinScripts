@@ -26,12 +26,12 @@ class MyMappings(mappingsource: String?) : Mappings(mappingsource) {
     }
 }
 
-class Generic(val name: String, var bounds: CachedClassData)
-
-class CachedClassData(val fullName: String, val alias: String) {
-    val generics = hashSetOf<Generic>()
-    val publicFields = hashSetOf<String>()
-}
+//class Generic(val name: String, var bounds: CachedClassData)
+//
+//class CachedClassData(val fullName: String, val alias: String) {
+//    val generics = hashSetOf<Generic>()
+//    val publicFields = hashSetOf<String>()
+//}
 
 class GenMapping {
     val fromAlias = hashMapOf<String, String>()
@@ -41,10 +41,12 @@ class GenMapping {
     val blackListMethods = setOf<String>(
         "method_41996", "method_41997", //ConstantArgumentSerializer. writeJson writePacket
         "method_59807", // PacketListener.onPacketException
+        "method_11762", // BlockStatePredicate.with
     )
     val blackListStaticMethods = hashSetOf<String>(
     )
     val blackListDeobfMethods = setOf<String>(
+        "collectEntitiesByType"
         //"getGenerationSettings", "getSpawnSettings"
     )
     val blackListClasses = setOf(
@@ -52,6 +54,10 @@ class GenMapping {
         "net.minecraft.class_6302", "net.minecraft.class_6300",
         "net.minecraft.class_6301",
         "net.minecraft.class_4516" // TestContext
+    )
+
+    val finalFields = setOf(
+        "field_26393" // Biome.weather
     )
 
     val usedAliases = hashSetOf<String>()
@@ -220,18 +226,32 @@ class GenMapping {
 
         usedAliases.clear()
 
-        val classGenerics = if(clazz.typeParameters.isEmpty()) {
-            listOf()
-        } else {
-            clazz.typeParameters.map { getGenerics(it, true) }.flatten()
-        } + if(clazz.isInterface)
-            listOf()
-        else
-            getGenerics(clazz.genericSuperclass)
+//        val classGenerics = (
+//                if(clazz.isInterface) arrayListOf()
+//                else getGenerics(clazz.genericSuperclass).toMutableList()
+//                )
 
-        val fields = hashSetOf<String>()
 
-        var simpleClassGenerics = classGenerics.joinToString { it.split(":")[0] }
+
+        val classGenerics = if(clazz.isInterface) mutableMapOf()
+        else mutableMapOf(*getGenerics(clazz.genericSuperclass).map { it.split(":")[0] to it }.toTypedArray())
+
+
+        if(clazz.typeParameters.isNotEmpty()) {
+            clazz.typeParameters.map { getGenerics(it, true) }.flatten().forEach {
+                val key = it.split(":")[0]
+                if(!classGenerics.containsKey(key)) classGenerics[key] = it
+                else if (key != it) {
+                    val original = classGenerics[key]!!
+                    if(original != it && original.split("<")[0] != it.split("<")[0])
+                        classGenerics[key] += (if(original != key) "," else "") + it.substring(key.length + 1)
+                }
+            }
+        }
+
+        val fields = hashMapOf<String, Boolean>()
+
+        var simpleClassGenerics = classGenerics.keys.joinToString()
         if(simpleClassGenerics.isNotEmpty()) simpleClassGenerics = "<$simpleClassGenerics>"
 
         if(!clazz.isInterface) {
@@ -243,11 +263,11 @@ class GenMapping {
                         || Modifier.isProtected(field.modifiers) || Modifier.isPrivate(field.modifiers))
                         return@forEach
 
-                    if(to == "CODEC" && Modifier.isStatic(field.modifiers) && !field.isEnumConstant) return@forEach
+                    if((to == "CODEC" || to.endsWith("_CODEC")) && Modifier.isStatic(field.modifiers) && !field.isEnumConstant) return@forEach
 
-                    fields.add(to)
+                    val isStatic = Modifier.isStatic(field.modifiers)
 
-                    val byAlias = if(Modifier.isStatic(field.modifiers))
+                    val byAlias = if(isStatic)
                         if(field.isEnumConstant)
                             " by aliasEnum("
                         else
@@ -255,23 +275,35 @@ class GenMapping {
                     else
                         " by alias("
 
-                    val accessor = if(field.isEnumConstant)
-                        "$aliasName$simpleClassGenerics::class, \"$from\""
+                    val (writable, accessor) = if(field.isEnumConstant)
+                        false to "$aliasName$simpleClassGenerics::class, \"$from\""
                     else if (Modifier.isStatic(field.modifiers) && simpleClassGenerics.isNotEmpty())
-                        "{$aliasName.$from}"
+                        false to "{$aliasName.$from}"
                     else
-                        "$aliasName$simpleClassGenerics::$from"
+                        !(isStatic || Modifier.isFinal(field.modifiers) || Modifier.isTransient(field.modifiers) ||
+                                Modifier.isVolatile(field.modifiers) || finalFields.contains(from)) to "$aliasName$simpleClassGenerics::$from"
 
-                    val genericWithBounds = hashMapOf(*classGenerics.map { it.split(":")[0] to it }.toTypedArray())
-                    var bounds = genericWithBounds.map {
-                        if(it.value.length > it.key.length+1)
-                            it.value.substring(it.key.length+1).trim()
+                    fields[to] = writable
+
+                    var bounds = classGenerics.map {
+                        if (it.value.length > it.key.length + 1)
+                            it.value.substring(it.key.length + 1).trim()
                         else ""
                     }.filter { it.isNotEmpty() }.joinToString { it }
                     if(bounds.isNotEmpty()) bounds = " where $bounds"
 
-                    builder.append("val ").append(simpleClassGenerics).append(aliasName).append(simpleClassGenerics)
-                        .append(".").append(to)
+                    if(writable)
+                        builder.append("var ")
+                    else
+                        builder.append("val ")
+                    builder.append(simpleClassGenerics)
+                    if(isStatic) {
+                        builder.append("KClass<$aliasName$simpleClassGenerics>")
+                    } else {
+                        builder.append(aliasName).append(simpleClassGenerics)
+                    }
+
+                    builder.append(".").append(to)
                         .append(bounds).append(byAlias).append(accessor).append(")\n")
 
                 } catch (_: NoSuchFieldException) {}
@@ -286,6 +318,9 @@ class GenMapping {
                 val method = clazz.methods.first { return@first it.name == methodName }
                 if(!Modifier.isPublic(method.modifiers)) return@forEach
                 if(Modifier.isPrivate(method.modifiers) || Modifier.isProtected(method.modifiers)) return@forEach
+                if(to.name.startsWith("set") && to.name.length > 4 && fields[to.name[3].lowercase() + to.name.substring(4)] == true) {
+                    return@forEach
+                }
                 if(to.name.startsWith("get") && to.name.length > 4 && (to.name[3].lowercase() + to.name.substring(4)) in fields) {
                     return@forEach
                 }
@@ -297,14 +332,23 @@ class GenMapping {
                     //blackListStaticMethods.add(to.name)
                 }
                 val host = if (isStatic) " = ${aliasName}." else " = this."
-                val genericWithBounds = hashMapOf(*classGenerics.map { it.split(":")[0] to it }.toTypedArray())
+                val genericWithBounds = classGenerics.toMutableMap()
+
+                val flag2 = methodName == "method_54317"
+
                 getGenericsFromMethod(method, true).forEach {
                     val key = it.split(":")[0]
                     if(!genericWithBounds.containsKey(key)) genericWithBounds[key] = it
                     else if (key != it) {
-                        val original = genericWithBounds[key]!!
-                        if(original != it && original.split("<")[0] != it.split("<")[0])
-                            genericWithBounds[key] += (if(original != key) "," else "") + it.substring(key.length + 1)
+                        var original = genericWithBounds[key]!!
+                        if(original.startsWith("$key ") || original.startsWith("$key:")) original = original.substring(key.length+1)
+                        val bound = it.substring(key.length+1)
+                        if(original.trim() != bound.trim()  && original.split("<")[0] != bound.split("<")[0]) {
+                            genericWithBounds[key] += (if(original != key) "," else "") + bound
+                            if(flag2) {
+                                Chat.log("debug method_54317: $bound, $original")
+                            }
+                        }
                     }
                 }
 
@@ -339,27 +383,30 @@ class GenMapping {
             } catch (_: NoSuchMethodException) {
             } catch (_: NoSuchElementException) {}
         }
+
+
+
         return builder.toString()
     }
 
     fun genPrefix() =
         """
             import kotlin.properties.ReadOnlyProperty
-            import kotlin.properties.ReadWriteProperty
             import kotlin.reflect.*
+
             fun <R, T> alias(alias: KProperty1<R, T>) = ReadOnlyProperty<R, T> { thisRef, _ -> alias.get(thisRef) }
+            fun <R, T> alias(alias: KMutableProperty1<R, T>) = MyReadWriteProperty(alias)
             fun <T> aliasStatic(alias: KProperty0<T>) = ReadOnlyStaticProperty(alias)
             fun <T> aliasStatic(alias: () -> T) = ReadOnlyStaticProperty(alias)
+            fun <T> aliasStatic(alias: KMutableProperty0<T>) = ReadOnlyStaticProperty(alias)
             fun <T: Any> aliasEnum(type: KClass<T>, name: kotlin.String) = EnumProperty(type, name)
 
             class ReadOnlyStaticProperty<T>(val getter: () -> T) {
                 constructor(alias: KProperty0<T>): this(alias as () -> T)
-            
-                operator fun <Self> getValue(thisRef: Self, prop: KProperty<*>): T {
-                    return getter.invoke()
-                }
-            }
 
+                operator fun <Self> getValue(thisRef: Self, prop: KProperty<*>): T = getter.invoke()
+            }
+            
             class EnumProperty<T : Any>(val type: KClass<T>, val name: kotlin.String) {
                 private val ordinal: Int
                 init {
@@ -370,16 +417,42 @@ class GenMapping {
                     return type.java.enumConstants[ordinal]
                 }
             }
+
+            class ReadWriteStaticProperty<T>(val alias: KMutableProperty0<T>) {
+                operator fun <Self> getValue(thisRef: Self, prop: KProperty<*>): T = alias.get()
+
+                operator fun <Self> setValue(thisRef: Self, property: KProperty<*>, value: T) {
+                    alias.set(value)
+                }
+            }
+
+            class MyReadWriteProperty<R, T>(val alias: KMutableProperty1<R, T>) {
+                operator fun getValue(thisRef: R, property: KProperty<*>): T = alias.get(thisRef)
+
+                operator fun setValue(thisRef: R, property: KProperty<*>, value: T) {
+                    (alias as? KMutableProperty1<R, T>)?.set(thisRef, value)
+                }
+            }
             
         """.trimIndent()
 
-    fun getGenericsForClass(fullName: String): String {
-        val clazz = try {
-            Class.forName(fullName,false, GenMapping::class.java.classLoader)
+    fun tryGetClass(fullName: String): Class<*>? {
+        try {
+            return Class.forName(fullName,false, GenMapping::class.java.classLoader)
         } catch (e: ClassNotFoundException) {
-            return ""
+            if("." in fullName) {
+                val lastIndex = fullName.lastIndexOf(".")
+                val pre = fullName.substring(0, lastIndex)
+                val post = fullName.substring(lastIndex+1)
+                return tryGetClass("$pre$$post")
+            }
+            return null
         }
-        val generics = clazz.typeParameters.map { getGenerics(it) }.flatten().toHashSet()
+    }
+
+    fun getGenericsForClass(fullName: String): String {
+        val clazz = tryGetClass(fullName) ?: return ""
+        val generics = clazz.typeParameters.map { getGenerics(it) }.flatten().toMutableSet()
         /*
         if(clazz.genericSuperclass != null)
             generics.addAll(getGenerics(clazz.genericSuperclass))

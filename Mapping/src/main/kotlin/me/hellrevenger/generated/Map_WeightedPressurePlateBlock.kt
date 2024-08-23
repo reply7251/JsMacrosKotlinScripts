@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WeightedPressurePlateBlock
 
-val WeightedPressurePlateBlock.POWER by aliasStatic(WeightedPressurePlateBlock::field_11739)
+val KClass<WeightedPressurePlateBlock>.POWER by aliasStatic(WeightedPressurePlateBlock::field_11739)

@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WorldGenSettingsHeightAndBiomeFix
 
-val WorldGenSettingsHeightAndBiomeFix.HAS_INCREASED_HEIGHT_ALREADY_KEY by aliasStatic(WorldGenSettingsHeightAndBiomeFix::field_35030)
+val KClass<WorldGenSettingsHeightAndBiomeFix>.HAS_INCREASED_HEIGHT_ALREADY_KEY by aliasStatic(WorldGenSettingsHeightAndBiomeFix::field_35030)

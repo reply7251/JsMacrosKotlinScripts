@@ -6,6 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WolfVariant
 
-val WolfVariant.ENTRY_CODEC by aliasStatic(WolfVariant::field_49980)
-val WolfVariant.ENTRY_PACKET_CODEC by aliasStatic(WolfVariant::field_51944)
-val WolfVariant.PACKET_CODEC by aliasStatic(WolfVariant::field_51943)
+fun WolfVariant.getBiomes() = this.method_58385()
+fun WolfVariant.getWildTextureId() = this.method_58377()
+fun WolfVariant.getAngryTextureId() = this.method_58383()
+fun WolfVariant.getTameTextureId() = this.method_58381()

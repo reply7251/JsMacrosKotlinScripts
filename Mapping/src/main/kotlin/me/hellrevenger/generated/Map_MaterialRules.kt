@@ -6,12 +6,12 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.MaterialRules
 
-val MaterialRules.STONE_DEPTH_FLOOR by aliasStatic(MaterialRules::field_35222)
-val MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_6 by aliasStatic(MaterialRules::field_36341)
-val MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_30 by aliasStatic(MaterialRules::field_36342)
-val MaterialRules.STONE_DEPTH_CEILING by aliasStatic(MaterialRules::field_35494)
-val MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH by aliasStatic(MaterialRules::field_35224)
-val MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH by aliasStatic(MaterialRules::field_35223)
+val KClass<MaterialRules>.STONE_DEPTH_FLOOR by aliasStatic(MaterialRules::field_35222)
+val KClass<MaterialRules>.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_6 by aliasStatic(MaterialRules::field_36341)
+val KClass<MaterialRules>.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_30 by aliasStatic(MaterialRules::field_36342)
+val KClass<MaterialRules>.STONE_DEPTH_CEILING by aliasStatic(MaterialRules::field_35494)
+val KClass<MaterialRules>.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH by aliasStatic(MaterialRules::field_35224)
+val KClass<MaterialRules>.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH by aliasStatic(MaterialRules::field_35223)
 fun KClass<MaterialRules>.waterWithStoneDepth(arg0: Int, arg1: Int) = MaterialRules.method_39057(arg0, arg1)
 fun KClass<MaterialRules>.biome(arg0: Array<RegistryKey<Biome>>) = MaterialRules.method_39055(*arg0)
 fun KClass<MaterialRules>.stoneDepth(arg0: Int, arg1: Boolean, arg2: Int, arg3: VerticalSurfaceType) = MaterialRules.method_40023(arg0, arg1, arg2, arg3)

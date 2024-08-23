@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.StructureTemplateManager
 
-val StructureTemplateManager.STRUCTURE_DIRECTORY by aliasStatic(StructureTemplateManager::field_31684)
+val KClass<StructureTemplateManager>.STRUCTURE_DIRECTORY by aliasStatic(StructureTemplateManager::field_31684)
 fun StructureTemplateManager.getTemplateOrBlank(arg0: Identifier) = this.method_15091(arg0)
 fun StructureTemplateManager.getTemplatePath(arg0: Identifier, arg1: String) = this.method_15085(arg0, arg1)
 fun StructureTemplateManager.unloadTemplate(arg0: Identifier) = this.method_15087(arg0)

@@ -6,11 +6,12 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DoorBlock
 
-val DoorBlock.HALF by aliasStatic(DoorBlock::field_10946)
-val DoorBlock.FACING by aliasStatic(DoorBlock::field_10938)
-val DoorBlock.OPEN by aliasStatic(DoorBlock::field_10945)
-val DoorBlock.HINGE by aliasStatic(DoorBlock::field_10941)
-val DoorBlock.POWERED by aliasStatic(DoorBlock::field_10940)
+val KClass<DoorBlock>.HALF by aliasStatic(DoorBlock::field_10946)
+val KClass<DoorBlock>.FACING by aliasStatic(DoorBlock::field_10938)
+val KClass<DoorBlock>.OPEN by aliasStatic(DoorBlock::field_10945)
+val KClass<DoorBlock>.HINGE by aliasStatic(DoorBlock::field_10941)
+val KClass<DoorBlock>.POWERED by aliasStatic(DoorBlock::field_10940)
+fun DoorBlock.getBlockSetType() = this.method_51169()
 fun KClass<DoorBlock>.canOpenByHand(arg0: BlockState) = DoorBlock.method_24796(arg0)
 fun DoorBlock.isOpen(arg0: BlockState) = this.method_30841(arg0)
 fun KClass<DoorBlock>.canOpenByHand(arg0: world_World, arg1: BlockPos) = DoorBlock.method_24795(arg0, arg1)

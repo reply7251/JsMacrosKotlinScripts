@@ -8,11 +8,11 @@ import me.hellrevenger.generated.CamelEntity
 
 val CamelEntity.standingTransitionAnimationState by alias(CamelEntity::field_40143)
 val CamelEntity.dashingAnimationState by alias(CamelEntity::field_40145)
-val CamelEntity.DASHING by aliasStatic(CamelEntity::field_40139)
+val KClass<CamelEntity>.DASHING by aliasStatic(CamelEntity::field_40139)
 val CamelEntity.idlingAnimationState by alias(CamelEntity::field_40144)
 val CamelEntity.sittingTransitionAnimationState by alias(CamelEntity::field_40142)
 val CamelEntity.sittingAnimationState by alias(CamelEntity::field_40734)
-val CamelEntity.LAST_POSE_TICK by aliasStatic(CamelEntity::field_40140)
+val KClass<CamelEntity>.LAST_POSE_TICK by aliasStatic(CamelEntity::field_40140)
 fun CamelEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_45347(arg0, arg1)
 fun CamelEntity.isDashing() = this.method_45361()
 fun CamelEntity.isChangingPose() = this.method_45351()

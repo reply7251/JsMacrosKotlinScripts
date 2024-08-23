@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FlatteningBiomeMapping
 
-val FlatteningBiomeMapping.RENAMED_BIOMES by aliasStatic(FlatteningBiomeMapping::field_15810)
+val KClass<FlatteningBiomeMapping>.RENAMED_BIOMES by aliasStatic(FlatteningBiomeMapping::field_15810)

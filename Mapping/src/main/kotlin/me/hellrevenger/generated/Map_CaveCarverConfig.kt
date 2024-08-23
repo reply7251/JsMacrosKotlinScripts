@@ -6,6 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.CaveCarverConfig
 
-val CaveCarverConfig.CAVE_CODEC by aliasStatic(CaveCarverConfig::field_31491)
 val CaveCarverConfig.horizontalRadiusMultiplier by alias(CaveCarverConfig::field_31492)
 val CaveCarverConfig.verticalRadiusMultiplier by alias(CaveCarverConfig::field_31493)

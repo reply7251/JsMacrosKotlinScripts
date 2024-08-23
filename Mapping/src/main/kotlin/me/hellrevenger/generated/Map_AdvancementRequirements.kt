@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AdvancementRequirements
 
-val AdvancementRequirements.EMPTY by aliasStatic(AdvancementRequirements::field_46084)
+val KClass<AdvancementRequirements>.EMPTY by aliasStatic(AdvancementRequirements::field_46084)
 fun AdvancementRequirements.writeRequirements(arg0: PacketByteBuf) = this.method_53670(arg0)
 fun AdvancementRequirements.getLength() = this.method_53664()
 fun AdvancementRequirements.countMatches(arg0: Predicate<String>) = this.method_53675(arg0)

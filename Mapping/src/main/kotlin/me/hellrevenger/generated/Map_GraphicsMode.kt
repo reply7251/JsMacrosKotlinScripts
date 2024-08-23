@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.GraphicsMode
 
-val GraphicsMode.FAST by aliasEnum(GraphicsMode::class, "field_25427")
-val GraphicsMode.FABULOUS by aliasEnum(GraphicsMode::class, "field_25429")
-val GraphicsMode.FANCY by aliasEnum(GraphicsMode::class, "field_25428")
+val KClass<GraphicsMode>.FAST by aliasEnum(GraphicsMode::class, "field_25427")
+val KClass<GraphicsMode>.FABULOUS by aliasEnum(GraphicsMode::class, "field_25429")
+val KClass<GraphicsMode>.FANCY by aliasEnum(GraphicsMode::class, "field_25428")
 fun KClass<GraphicsMode>.byId(arg0: Int) = GraphicsMode.method_29592(arg0)

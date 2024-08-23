@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DolphinEntity
 
-val DolphinEntity.CAN_TAKE by aliasStatic(DolphinEntity::field_6748)
-val DolphinEntity.MAX_AIR by aliasStatic(DolphinEntity::field_30326)
+val KClass<DolphinEntity>.CAN_TAKE by aliasStatic(DolphinEntity::field_6748)
+val KClass<DolphinEntity>.MAX_AIR by aliasStatic(DolphinEntity::field_30326)
 fun DolphinEntity.getTreasurePos() = this.method_6494()
 fun DolphinEntity.hasFish() = this.method_6487()
 fun DolphinEntity.setTreasurePos(arg0: BlockPos) = this.method_6493(arg0)

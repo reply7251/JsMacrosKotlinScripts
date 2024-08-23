@@ -6,8 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ComponentChanges
 
-val ComponentChanges.EMPTY by aliasStatic(ComponentChanges::field_49588)
-val ComponentChanges.PACKET_CODEC by aliasStatic(ComponentChanges::field_49590)
+val KClass<ComponentChanges>.EMPTY by aliasStatic(ComponentChanges::field_49588)
 fun ComponentChanges.withRemovedIf(arg0: Predicate<ComponentType<*>>) = this.method_58757(arg0)
 fun ComponentChanges.entrySet() = this.method_57846()
 fun ComponentChanges.isEmpty() = this.method_57848()

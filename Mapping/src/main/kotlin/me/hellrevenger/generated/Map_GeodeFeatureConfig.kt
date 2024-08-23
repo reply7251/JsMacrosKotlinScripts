@@ -16,7 +16,7 @@ val GeodeFeatureConfig.outerWallDistance by alias(GeodeFeatureConfig::field_3351
 val GeodeFeatureConfig.pointOffset by alias(GeodeFeatureConfig::field_33518)
 val GeodeFeatureConfig.maxGenOffset by alias(GeodeFeatureConfig::field_27329)
 val GeodeFeatureConfig.invalidBlocksThreshold by alias(GeodeFeatureConfig::field_29062)
-val GeodeFeatureConfig.RANGE by aliasStatic(GeodeFeatureConfig::field_27314)
+val KClass<GeodeFeatureConfig>.RANGE by aliasStatic(GeodeFeatureConfig::field_27314)
 val GeodeFeatureConfig.layerThicknessConfig by alias(GeodeFeatureConfig::field_27317)
 val GeodeFeatureConfig.crackConfig by alias(GeodeFeatureConfig::field_27318)
 val GeodeFeatureConfig.usePotentialPlacementsChance by alias(GeodeFeatureConfig::field_27319)

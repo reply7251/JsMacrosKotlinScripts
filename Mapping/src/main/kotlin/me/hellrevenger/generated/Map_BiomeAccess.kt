@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BiomeAccess
 
-val BiomeAccess.CHUNK_CENTER_OFFSET by aliasStatic(BiomeAccess::field_28106)
+val KClass<BiomeAccess>.CHUNK_CENTER_OFFSET by aliasStatic(BiomeAccess::field_28106)
 fun BiomeAccess.getBiome(arg0: BlockPos) = this.method_22393(arg0)
 fun BiomeAccess.getBiomeForNoiseGen(arg0: Double, arg1: Double, arg2: Double) = this.method_24938(arg0, arg1, arg2)
 fun BiomeAccess.getBiomeForNoiseGen(arg0: BlockPos) = this.method_27344(arg0)

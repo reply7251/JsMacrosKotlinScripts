@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FoodComponent
 
-val FoodComponent.PACKET_CODEC by aliasStatic(FoodComponent::field_49993)
 fun FoodComponent.getEatTicks() = this.method_58399()
 fun FoodComponent.nutrition() = this.comp_2491()
 fun FoodComponent.saturation() = this.comp_2492()

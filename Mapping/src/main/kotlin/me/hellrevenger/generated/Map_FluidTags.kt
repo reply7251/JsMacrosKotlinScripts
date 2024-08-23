@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FluidTags
 
-val FluidTags.WATER by aliasStatic(FluidTags::field_15517)
-val FluidTags.LAVA by aliasStatic(FluidTags::field_15518)
+val KClass<FluidTags>.WATER by aliasStatic(FluidTags::field_15517)
+val KClass<FluidTags>.LAVA by aliasStatic(FluidTags::field_15518)

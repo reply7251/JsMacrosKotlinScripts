@@ -7,3 +7,4 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.ModelOverride
 
 fun ModelOverride.streamConditions() = this.method_33690()
+fun ModelOverride.getModelId() = this.method_3472()

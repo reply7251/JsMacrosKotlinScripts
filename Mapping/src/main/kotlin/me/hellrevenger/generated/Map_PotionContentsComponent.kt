@@ -6,8 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PotionContentsComponent
 
-val PotionContentsComponent.PACKET_CODEC by aliasStatic(PotionContentsComponent::field_49276)
-val PotionContentsComponent.DEFAULT by aliasStatic(PotionContentsComponent::field_49274)
+val KClass<PotionContentsComponent>.DEFAULT by aliasStatic(PotionContentsComponent::field_49274)
 fun PotionContentsComponent.with(arg0: RegistryEntry<Potion>) = this.method_57403(arg0)
 fun PotionContentsComponent.with(arg0: StatusEffectInstance) = this.method_57398(arg0)
 fun KClass<PotionContentsComponent>.mixColors(arg0: Iterable<StatusEffectInstance>) = PotionContentsComponent.method_58111(arg0)

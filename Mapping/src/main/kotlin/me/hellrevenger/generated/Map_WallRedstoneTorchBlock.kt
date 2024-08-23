@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WallRedstoneTorchBlock
 
-val WallRedstoneTorchBlock.FACING by aliasStatic(WallRedstoneTorchBlock::field_11443)
-val WallRedstoneTorchBlock.LIT by aliasStatic(WallRedstoneTorchBlock::field_11444)
+val KClass<WallRedstoneTorchBlock>.FACING by aliasStatic(WallRedstoneTorchBlock::field_11443)
+val KClass<WallRedstoneTorchBlock>.LIT by aliasStatic(WallRedstoneTorchBlock::field_11444)

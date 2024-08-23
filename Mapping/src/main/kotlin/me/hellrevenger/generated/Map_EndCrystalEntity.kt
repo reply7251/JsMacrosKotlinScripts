@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EndCrystalEntity
 
-val EndCrystalEntity.endCrystalAge by alias(EndCrystalEntity::field_7034)
+var EndCrystalEntity.endCrystalAge by alias(EndCrystalEntity::field_7034)
 fun EndCrystalEntity.setBeamTarget(arg0: BlockPos) = this.method_6837(arg0)
 fun EndCrystalEntity.getBeamTarget() = this.method_6838()
 fun EndCrystalEntity.shouldShowBottom() = this.method_6836()

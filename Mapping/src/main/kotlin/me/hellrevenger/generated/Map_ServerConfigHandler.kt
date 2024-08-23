@@ -6,10 +6,10 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ServerConfigHandler
 
-val ServerConfigHandler.OPERATORS_FILE by aliasStatic(ServerConfigHandler::field_14327)
-val ServerConfigHandler.WHITE_LIST_FILE by aliasStatic(ServerConfigHandler::field_14325)
-val ServerConfigHandler.BANNED_PLAYERS_FILE by aliasStatic(ServerConfigHandler::field_14328)
-val ServerConfigHandler.BANNED_IPS_FILE by aliasStatic(ServerConfigHandler::field_14324)
+val KClass<ServerConfigHandler>.OPERATORS_FILE by aliasStatic(ServerConfigHandler::field_14327)
+val KClass<ServerConfigHandler>.WHITE_LIST_FILE by aliasStatic(ServerConfigHandler::field_14325)
+val KClass<ServerConfigHandler>.BANNED_PLAYERS_FILE by aliasStatic(ServerConfigHandler::field_14328)
+val KClass<ServerConfigHandler>.BANNED_IPS_FILE by aliasStatic(ServerConfigHandler::field_14324)
 fun KClass<ServerConfigHandler>.convertOperators(arg0: MinecraftServer) = ServerConfigHandler.method_14539(arg0)
 fun KClass<ServerConfigHandler>.convertBannedPlayers(arg0: MinecraftServer) = ServerConfigHandler.method_14547(arg0)
 fun KClass<ServerConfigHandler>.convertBannedIps(arg0: MinecraftServer) = ServerConfigHandler.method_14545(arg0)

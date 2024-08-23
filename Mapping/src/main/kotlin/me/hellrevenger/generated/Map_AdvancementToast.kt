@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AdvancementToast
 
-val AdvancementToast.DEFAULT_DURATION_MS by aliasStatic(AdvancementToast::field_41812)
+val KClass<AdvancementToast>.DEFAULT_DURATION_MS by aliasStatic(AdvancementToast::field_41812)

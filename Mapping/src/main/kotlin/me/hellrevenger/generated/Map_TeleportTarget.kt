@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TeleportTarget
 
-val TeleportTarget.SEND_TRAVEL_THROUGH_PORTAL_PACKET by aliasStatic(TeleportTarget::field_52246)
-val TeleportTarget.ADD_PORTAL_CHUNK_TICKET by aliasStatic(TeleportTarget::field_52247)
-val TeleportTarget.NO_OP by aliasStatic(TeleportTarget::field_52245)
+val KClass<TeleportTarget>.SEND_TRAVEL_THROUGH_PORTAL_PACKET by aliasStatic(TeleportTarget::field_52246)
+val KClass<TeleportTarget>.ADD_PORTAL_CHUNK_TICKET by aliasStatic(TeleportTarget::field_52247)
+val KClass<TeleportTarget>.NO_OP by aliasStatic(TeleportTarget::field_52245)
 fun TeleportTarget.pitch() = this.comp_2824()
 fun TeleportTarget.yaw() = this.comp_2823()
 fun TeleportTarget.world() = this.comp_2820()

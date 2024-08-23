@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SideValidatingDispatchingCodecBuilder
 
-fun <L, T, B>SideValidatingDispatchingCodecBuilder<B, L>.add(arg0: PacketType<T>, arg1: PacketCodec<in B, T>) where L: PacketListener, T: Packet<in L>, B: ByteBuf = this.method_56446<T>(arg0, arg1)
-fun <L, B>SideValidatingDispatchingCodecBuilder<B, L>.build() where L: PacketListener, B: ByteBuf = this.method_56445()
+fun <B, L, T>SideValidatingDispatchingCodecBuilder<B, L>.add(arg0: PacketType<T>, arg1: PacketCodec<in B, T>) where B: ByteBuf, L: PacketListener, T: Packet<in L> = this.method_56446<T>(arg0, arg1)
+fun <B, L>SideValidatingDispatchingCodecBuilder<B, L>.build() where B: ByteBuf, L: PacketListener = this.method_56445()

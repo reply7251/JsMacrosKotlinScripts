@@ -12,4 +12,5 @@ fun KClass<CampfireBlockEntity>.unlitServerTick(arg0: world_World, arg1: BlockPo
 fun CampfireBlockEntity.toUpdatePacket() = this.method_38245()
 fun CampfireBlockEntity.getRecipeFor(arg0: ItemStack) = this.method_17502(arg0)
 fun CampfireBlockEntity.addItem(arg0: LivingEntity, arg1: ItemStack, arg2: Int) = this.method_17503(arg0, arg1, arg2)
+fun CampfireBlockEntity.getItemsBeingCooked() = this.method_17505()
 fun CampfireBlockEntity.spawnItemsBeingCooked() = this.method_17506()

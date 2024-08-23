@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NullOps
 
-val NullOps.INSTANCE by aliasStatic(NullOps::field_51366)
+val KClass<NullOps>.INSTANCE by aliasStatic(NullOps::field_51366)
 fun NullOps.getNumberValue(arg0: Unit) = this.method_59561(arg0)
 fun NullOps.createLongList(arg0: LongStream) = this.method_59574(arg0)
 fun NullOps.createIntList(arg0: IntStream) = this.method_59573(arg0)
@@ -24,7 +24,7 @@ fun NullOps.remove(arg0: Unit, arg1: String) = this.method_59565(arg0, arg1)
 fun NullOps.getByteBuffer(arg0: Unit) = this.method_59594(arg0)
 fun NullOps.getMapValues(arg0: Unit) = this.method_59584(arg0)
 fun NullOps.createInt(arg0: Int) = this.method_59559(arg0)
-fun NullOps.mergeToList(arg0: Unit, arg1: List<Unit>) = this.method_59566(arg0, arg1)
+fun NullOps.mergeToList(arg0: Unit, arg1: MutableList<Unit>) = this.method_59566(arg0, arg1)
 fun NullOps.getList(arg0: Unit) = this.method_59592(arg0)
 fun NullOps.getStringValue(arg0: Unit) = this.method_59582(arg0)
 fun NullOps.getLongStream(arg0: Unit) = this.method_59598(arg0)

@@ -6,9 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RealmsMainScreen
 
-val RealmsMainScreen.serverFilterer by alias(RealmsMainScreen::field_39681)
 fun KClass<RealmsMainScreen>.resetPendingInvitesCount() = RealmsMainScreen.method_53792()
-fun RealmsMainScreen.findServer() = this.method_38503()
 fun KClass<RealmsMainScreen>.getVersionText(arg0: String, arg1: Boolean) = RealmsMainScreen.method_54562(arg0, arg1)
 fun KClass<RealmsMainScreen>.play(arg0: RealmsServer, arg1: Screen) = RealmsMainScreen.method_20853(arg0, arg1)
 fun RealmsMainScreen.removeSelection() = this.method_38505()

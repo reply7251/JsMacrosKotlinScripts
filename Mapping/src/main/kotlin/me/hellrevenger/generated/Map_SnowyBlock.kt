@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SnowyBlock
 
-val SnowyBlock.SNOWY by aliasStatic(SnowyBlock::field_11522)
+val KClass<SnowyBlock>.SNOWY by aliasStatic(SnowyBlock::field_11522)

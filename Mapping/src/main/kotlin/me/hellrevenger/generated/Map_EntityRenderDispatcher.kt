@@ -6,12 +6,13 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EntityRenderDispatcher
 
-val EntityRenderDispatcher.camera by alias(EntityRenderDispatcher::field_4686)
+var EntityRenderDispatcher.camera by alias(EntityRenderDispatcher::field_4686)
 val EntityRenderDispatcher.gameOptions by alias(EntityRenderDispatcher::field_4692)
 val EntityRenderDispatcher.textureManager by alias(EntityRenderDispatcher::field_4685)
-val EntityRenderDispatcher.targetedEntity by alias(EntityRenderDispatcher::field_4678)
+var EntityRenderDispatcher.targetedEntity by alias(EntityRenderDispatcher::field_4678)
 fun EntityRenderDispatcher.setRenderShadows(arg0: Boolean) = this.method_3948(arg0)
 fun <E>EntityRenderDispatcher.getLight(arg0: E, arg1: Float) where E: Entity = this.method_23839<E>(arg0, arg1)
+fun EntityRenderDispatcher.getHeldItemRenderer() = this.method_43336()
 fun EntityRenderDispatcher.getSquaredDistanceToCamera(arg0: Entity) = this.method_23168(arg0)
 fun EntityRenderDispatcher.setRotation(arg0: Quaternionf) = this.method_24196(arg0)
 fun <E>EntityRenderDispatcher.shouldRender(arg0: E, arg1: Frustum, arg2: Double, arg3: Double, arg4: Double) where E: Entity = this.method_3950<E>(arg0, arg1, arg2, arg3, arg4)
@@ -22,3 +23,4 @@ fun EntityRenderDispatcher.setRenderHitboxes(arg0: Boolean) = this.method_3955(a
 fun <T>EntityRenderDispatcher.getRenderer(arg0: T) where T: Entity = this.method_3953<T>(arg0)
 fun EntityRenderDispatcher.getSquaredDistanceToCamera(arg0: Double, arg1: Double, arg2: Double) = this.method_3959(arg0, arg1, arg2)
 fun EntityRenderDispatcher.setWorld(arg0: world_World) = this.method_3944(arg0)
+fun EntityRenderDispatcher.getRotation() = this.method_24197()

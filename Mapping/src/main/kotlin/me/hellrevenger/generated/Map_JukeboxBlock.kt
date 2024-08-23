@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.JukeboxBlock
 
-val JukeboxBlock.HAS_RECORD by aliasStatic(JukeboxBlock::field_11180)
+val KClass<JukeboxBlock>.HAS_RECORD by aliasStatic(JukeboxBlock::field_11180)

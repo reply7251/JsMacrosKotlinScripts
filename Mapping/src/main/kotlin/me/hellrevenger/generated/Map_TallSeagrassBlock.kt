@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TallSeagrassBlock
 
-val TallSeagrassBlock.HALF by aliasStatic(TallSeagrassBlock::field_11616)
+val KClass<TallSeagrassBlock>.HALF by aliasStatic(TallSeagrassBlock::field_11616)

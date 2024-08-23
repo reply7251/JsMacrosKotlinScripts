@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LootNbtProviderTypes
 
-val LootNbtProviderTypes.STORAGE by aliasStatic(LootNbtProviderTypes::field_27918)
-val LootNbtProviderTypes.CONTEXT by aliasStatic(LootNbtProviderTypes::field_27919)
+val KClass<LootNbtProviderTypes>.STORAGE by aliasStatic(LootNbtProviderTypes::field_27918)
+val KClass<LootNbtProviderTypes>.CONTEXT by aliasStatic(LootNbtProviderTypes::field_27919)

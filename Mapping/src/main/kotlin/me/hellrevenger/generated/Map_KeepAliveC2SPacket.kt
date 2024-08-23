@@ -6,4 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.KeepAliveC2SPacket
 
+fun KeepAliveC2SPacket.getId() = this.method_12267()
 fun KeepAliveC2SPacket.apply(arg0: ServerCommonPacketListener) = this.method_12266(arg0)

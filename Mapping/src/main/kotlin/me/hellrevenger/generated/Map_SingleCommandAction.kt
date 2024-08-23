@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SingleCommandAction
 
-val <T>SingleCommandAction<T>.FORK_LIMIT_EXCEPTION where T: AbstractServerCommandSource<T> by aliasStatic({SingleCommandAction.field_46739})
+val <T>KClass<SingleCommandAction<T>>.FORK_LIMIT_EXCEPTION where T: AbstractServerCommandSource<T> by aliasStatic({SingleCommandAction.field_46739})

@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SystemDetails
 
-val SystemDetails.MEBI by aliasStatic(SystemDetails::field_33852)
+val KClass<SystemDetails>.MEBI by aliasStatic(SystemDetails::field_33852)
 fun SystemDetails.addSection(arg0: String, arg1: Supplier<String>) = this.method_37123(arg0, arg1)
 fun SystemDetails.writeTo(arg0: StringBuilder) = this.method_37124(arg0)
 fun SystemDetails.addSection(arg0: String, arg1: String) = this.method_37122(arg0, arg1)

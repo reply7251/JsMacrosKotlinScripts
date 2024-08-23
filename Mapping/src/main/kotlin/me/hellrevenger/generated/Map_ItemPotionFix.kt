@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ItemPotionFix
 
-val ItemPotionFix.WATER by aliasStatic(ItemPotionFix::field_29884)
+val KClass<ItemPotionFix>.WATER by aliasStatic(ItemPotionFix::field_29884)

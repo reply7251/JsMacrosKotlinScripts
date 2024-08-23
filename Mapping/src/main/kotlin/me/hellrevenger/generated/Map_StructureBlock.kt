@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.StructureBlock
 
-val StructureBlock.MODE by aliasStatic(StructureBlock::field_11586)
+val KClass<StructureBlock>.MODE by aliasStatic(StructureBlock::field_11586)

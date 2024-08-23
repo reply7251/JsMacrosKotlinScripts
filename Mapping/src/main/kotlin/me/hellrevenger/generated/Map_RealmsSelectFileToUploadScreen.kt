@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RealmsSelectFileToUploadScreen
 
-val RealmsSelectFileToUploadScreen.TITLE by aliasStatic(RealmsSelectFileToUploadScreen::field_46131)
+val KClass<RealmsSelectFileToUploadScreen>.TITLE by aliasStatic(RealmsSelectFileToUploadScreen::field_46131)

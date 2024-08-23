@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RecordDumper
 
-val RecordDumper.METRICS_DIRECTORY by aliasStatic(RecordDumper::field_32677)
-val RecordDumper.DEBUG_PROFILING_DIRECTORY by aliasStatic(RecordDumper::field_29616)
-val RecordDumper.DEVIATIONS_DIRECTORY by aliasStatic(RecordDumper::field_32678)
-val RecordDumper.FILE_NAME by aliasStatic(RecordDumper::field_32679)
-fun RecordDumper.createDump(arg0: Set<Sampler>, arg1: Map<Sampler, List<Deviation>>, arg2: ProfileResult) = this.method_34807(arg0, arg1, arg2)
+val KClass<RecordDumper>.METRICS_DIRECTORY by aliasStatic(RecordDumper::field_32677)
+val KClass<RecordDumper>.DEBUG_PROFILING_DIRECTORY by aliasStatic(RecordDumper::field_29616)
+val KClass<RecordDumper>.DEVIATIONS_DIRECTORY by aliasStatic(RecordDumper::field_32678)
+val KClass<RecordDumper>.FILE_NAME by aliasStatic(RecordDumper::field_32679)
+fun RecordDumper.createDump(arg0: Set<Sampler>, arg1: Map<Sampler, MutableList<Deviation>>, arg2: ProfileResult) = this.method_34807(arg0, arg1, arg2)

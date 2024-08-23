@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BlockHalf
 
-val BlockHalf.BOTTOM by aliasEnum(BlockHalf::class, "field_12617")
-val BlockHalf.TOP by aliasEnum(BlockHalf::class, "field_12619")
+val KClass<BlockHalf>.BOTTOM by aliasEnum(BlockHalf::class, "field_12617")
+val KClass<BlockHalf>.TOP by aliasEnum(BlockHalf::class, "field_12619")

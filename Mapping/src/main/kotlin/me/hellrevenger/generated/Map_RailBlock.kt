@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RailBlock
 
-val RailBlock.SHAPE by aliasStatic(RailBlock::field_11369)
+val KClass<RailBlock>.SHAPE by aliasStatic(RailBlock::field_11369)

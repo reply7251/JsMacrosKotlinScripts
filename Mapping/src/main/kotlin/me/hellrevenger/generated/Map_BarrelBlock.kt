@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BarrelBlock
 
-val BarrelBlock.FACING by aliasStatic(BarrelBlock::field_16320)
-val BarrelBlock.OPEN by aliasStatic(BarrelBlock::field_18006)
+val KClass<BarrelBlock>.FACING by aliasStatic(BarrelBlock::field_16320)
+val KClass<BarrelBlock>.OPEN by aliasStatic(BarrelBlock::field_18006)

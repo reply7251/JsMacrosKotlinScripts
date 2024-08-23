@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.HopperScreenHandler
 
-val HopperScreenHandler.SLOT_COUNT by aliasStatic(HopperScreenHandler::field_30801)
+val KClass<HopperScreenHandler>.SLOT_COUNT by aliasStatic(HopperScreenHandler::field_30801)

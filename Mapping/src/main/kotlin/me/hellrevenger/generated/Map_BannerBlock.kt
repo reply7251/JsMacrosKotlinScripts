@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BannerBlock
 
-val BannerBlock.ROTATION by aliasStatic(BannerBlock::field_9924)
+val KClass<BannerBlock>.ROTATION by aliasStatic(BannerBlock::field_9924)
 fun KClass<BannerBlock>.getForColor(arg0: DyeColor) = BannerBlock.method_9398(arg0)

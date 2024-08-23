@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AxolotlAttackablesSensor
 
-val AxolotlAttackablesSensor.TARGET_RANGE by aliasStatic(AxolotlAttackablesSensor::field_30248)
+val KClass<AxolotlAttackablesSensor>.TARGET_RANGE by aliasStatic(AxolotlAttackablesSensor::field_30248)

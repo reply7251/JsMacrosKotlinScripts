@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DamageImmunityEnchantmentEffect
 
-val DamageImmunityEnchantmentEffect.INSTANCE by aliasStatic(DamageImmunityEnchantmentEffect::field_51703)
+val KClass<DamageImmunityEnchantmentEffect>.INSTANCE by aliasStatic(DamageImmunityEnchantmentEffect::field_51703)

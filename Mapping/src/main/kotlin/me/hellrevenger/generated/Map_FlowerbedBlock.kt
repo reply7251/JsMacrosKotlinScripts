@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FlowerbedBlock
 
-val FlowerbedBlock.FACING by aliasStatic(FlowerbedBlock::field_42764)
-val FlowerbedBlock.FLOWER_AMOUNT by aliasStatic(FlowerbedBlock::field_42765)
+val KClass<FlowerbedBlock>.FACING by aliasStatic(FlowerbedBlock::field_42764)
+val KClass<FlowerbedBlock>.FLOWER_AMOUNT by aliasStatic(FlowerbedBlock::field_42765)

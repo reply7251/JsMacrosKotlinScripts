@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SpriteIdentifier
 
-val SpriteIdentifier.COMPARATOR by aliasStatic(SpriteIdentifier::field_40566)
+val KClass<SpriteIdentifier>.COMPARATOR by aliasStatic(SpriteIdentifier::field_40566)
 fun SpriteIdentifier.getTextureId() = this.method_24147()
 fun SpriteIdentifier.getSprite() = this.method_24148()
 fun SpriteIdentifier.getAtlasId() = this.method_24144()

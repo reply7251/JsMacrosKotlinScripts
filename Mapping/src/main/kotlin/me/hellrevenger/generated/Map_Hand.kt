@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Hand
 
-val Hand.MAIN_HAND by aliasEnum(Hand::class, "field_5808")
-val Hand.OFF_HAND by aliasEnum(Hand::class, "field_5810")
+val KClass<Hand>.MAIN_HAND by aliasEnum(Hand::class, "field_5808")
+val KClass<Hand>.OFF_HAND by aliasEnum(Hand::class, "field_5810")

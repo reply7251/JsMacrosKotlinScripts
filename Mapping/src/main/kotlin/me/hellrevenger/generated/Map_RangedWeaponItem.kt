@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RangedWeaponItem
 
-val RangedWeaponItem.BOW_PROJECTILES by aliasStatic(RangedWeaponItem::field_18281)
-val RangedWeaponItem.CROSSBOW_HELD_PROJECTILES by aliasStatic(RangedWeaponItem::field_18282)
+val KClass<RangedWeaponItem>.BOW_PROJECTILES by aliasStatic(RangedWeaponItem::field_18281)
+val KClass<RangedWeaponItem>.CROSSBOW_HELD_PROJECTILES by aliasStatic(RangedWeaponItem::field_18282)
 fun RangedWeaponItem.getProjectiles() = this.method_19268()
 fun RangedWeaponItem.getHeldProjectiles() = this.method_20310()
 fun RangedWeaponItem.getRange() = this.method_24792()

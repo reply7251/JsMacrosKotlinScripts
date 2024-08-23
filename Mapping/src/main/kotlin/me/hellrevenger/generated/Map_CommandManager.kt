@@ -8,6 +8,7 @@ import me.hellrevenger.generated.CommandManager
 
 fun KClass<CommandManager>.getCommandValidator(arg0: net.minecraft.class_2170.class_2171) = CommandManager.method_9238(arg0)
 fun KClass<CommandManager>.literal(arg0: String) = CommandManager.method_9247(arg0)
+fun CommandManager.getDispatcher() = this.method_9235()
 fun <S>KClass<CommandManager>.withCommandSource(arg0: brigadier_ParseResults<S>, arg1: UnaryOperator<S>) = CommandManager.method_45018<S>(arg0, arg1)
 fun KClass<CommandManager>.checkMissing() = CommandManager.method_30852()
 fun CommandManager.executeWithPrefix(arg0: ServerCommandSource, arg1: String) = this.method_44252(arg0, arg1)

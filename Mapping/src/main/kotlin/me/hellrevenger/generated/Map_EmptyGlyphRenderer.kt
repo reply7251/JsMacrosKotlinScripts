@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EmptyGlyphRenderer
 
-val EmptyGlyphRenderer.INSTANCE by aliasStatic(EmptyGlyphRenderer::field_38311)
+val KClass<EmptyGlyphRenderer>.INSTANCE by aliasStatic(EmptyGlyphRenderer::field_38311)

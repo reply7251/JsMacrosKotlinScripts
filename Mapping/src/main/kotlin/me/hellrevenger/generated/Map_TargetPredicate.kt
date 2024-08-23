@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TargetPredicate
 
-val TargetPredicate.DEFAULT by aliasStatic(TargetPredicate::field_18092)
+val KClass<TargetPredicate>.DEFAULT by aliasStatic(TargetPredicate::field_18092)
 fun TargetPredicate.copy() = this.method_33335()
 fun TargetPredicate.setBaseMaxDistance(arg0: Double) = this.method_18418(arg0)
 fun TargetPredicate.setPredicate(arg0: Predicate<LivingEntity>) = this.method_18420(arg0)

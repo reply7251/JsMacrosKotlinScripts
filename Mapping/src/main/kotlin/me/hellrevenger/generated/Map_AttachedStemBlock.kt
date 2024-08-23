@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AttachedStemBlock
 
-val AttachedStemBlock.FACING by aliasStatic(AttachedStemBlock::field_9873)
+val KClass<AttachedStemBlock>.FACING by aliasStatic(AttachedStemBlock::field_9873)

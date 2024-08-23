@@ -7,3 +7,4 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.OpenWrittenBookS2CPacket
 
 fun OpenWrittenBookS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_17187(arg0)
+fun OpenWrittenBookS2CPacket.getHand() = this.method_17188()

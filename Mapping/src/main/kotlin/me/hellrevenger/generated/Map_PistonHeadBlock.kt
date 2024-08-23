@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PistonHeadBlock
 
-val PistonHeadBlock.TYPE by aliasStatic(PistonHeadBlock::field_12224)
-val PistonHeadBlock.SHORT by aliasStatic(PistonHeadBlock::field_12227)
+val KClass<PistonHeadBlock>.TYPE by aliasStatic(PistonHeadBlock::field_12224)
+val KClass<PistonHeadBlock>.SHORT by aliasStatic(PistonHeadBlock::field_12227)

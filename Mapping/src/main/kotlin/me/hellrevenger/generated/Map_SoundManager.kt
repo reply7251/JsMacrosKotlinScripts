@@ -6,11 +6,11 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SoundManager
 
-val SoundManager.MISSING_SOUND by aliasStatic(SoundManager::field_5592)
-val SoundManager.INTENTIONALLY_EMPTY_SOUND_SET by aliasStatic(SoundManager::field_42935)
-val SoundManager.INTENTIONALLY_EMPTY_SOUND by aliasStatic(SoundManager::field_42936)
-val SoundManager.EMPTY_ID by aliasStatic(SoundManager::field_52173)
-val SoundManager.INTENTIONALLY_EMPTY_ID by aliasStatic(SoundManager::field_42934)
+val KClass<SoundManager>.MISSING_SOUND by aliasStatic(SoundManager::field_5592)
+val KClass<SoundManager>.INTENTIONALLY_EMPTY_SOUND_SET by aliasStatic(SoundManager::field_42935)
+val KClass<SoundManager>.INTENTIONALLY_EMPTY_SOUND by aliasStatic(SoundManager::field_42936)
+val KClass<SoundManager>.EMPTY_ID by aliasStatic(SoundManager::field_52173)
+val KClass<SoundManager>.INTENTIONALLY_EMPTY_ID by aliasStatic(SoundManager::field_42934)
 fun SoundManager.close() = this.method_4882()
 fun SoundManager.resumeAll() = this.method_4880()
 fun SoundManager.reloadSounds() = this.method_38566()

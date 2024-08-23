@@ -6,8 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ChunkGenerator
 
-val ChunkGenerator.indexedFeaturesListSupplier by alias(ChunkGenerator::field_39412)
+var ChunkGenerator.indexedFeaturesListSupplier by alias(ChunkGenerator::field_39412)
 fun ChunkGenerator.getHeightInGround(arg0: Int, arg1: Int, arg2: net.minecraft.class_2902.class_2903, arg3: HeightLimitView, arg4: NoiseConfig) = this.method_18028(arg0, arg1, arg2, arg3, arg4)
+fun ChunkGenerator.getBiomeSource() = this.method_12098()
 fun ChunkGenerator.addStructureReferences(arg0: StructureWorldAccess, arg1: StructureAccessor, arg2: Chunk) = this.method_16130(arg0, arg1, arg2)
 fun ChunkGenerator.getColumnSample(arg0: Int, arg1: Int, arg2: HeightLimitView, arg3: NoiseConfig) = this.method_26261(arg0, arg1, arg2, arg3)
 fun ChunkGenerator.carve(arg0: ChunkRegion, arg1: Long, arg2: NoiseConfig, arg3: BiomeAccess, arg4: StructureAccessor, arg5: Chunk, arg6: net.minecraft.class_2893.class_2894) = this.method_12108(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
@@ -22,7 +23,7 @@ fun ChunkGenerator.getCodecKey() = this.method_39301()
 fun ChunkGenerator.initializeIndexedFeaturesList() = this.method_59825()
 fun ChunkGenerator.buildSurface(arg0: ChunkRegion, arg1: StructureAccessor, arg2: NoiseConfig, arg3: Chunk) = this.method_12110(arg0, arg1, arg2, arg3)
 fun ChunkGenerator.getEntitySpawnList(arg0: RegistryEntry<Biome>, arg1: StructureAccessor, arg2: SpawnGroup, arg3: BlockPos) = this.method_12113(arg0, arg1, arg2, arg3)
-fun ChunkGenerator.getDebugHudText(arg0: List<String>, arg1: NoiseConfig, arg2: BlockPos) = this.method_40450(arg0, arg1, arg2)
+fun ChunkGenerator.getDebugHudText(arg0: MutableList<String>, arg1: NoiseConfig, arg2: BlockPos) = this.method_40450(arg0, arg1, arg2)
 fun ChunkGenerator.locateStructure(arg0: ServerWorld, arg1: RegistryEntryList<Structure>, arg2: BlockPos, arg3: Int, arg4: Boolean) = this.method_12103(arg0, arg1, arg2, arg3, arg4)
 fun ChunkGenerator.createStructurePlacementCalculator(arg0: RegistryWrapper<StructureSet>, arg1: NoiseConfig, arg2: Long) = this.method_46696(arg0, arg1, arg2)
 fun ChunkGenerator.setStructureStarts(arg0: DynamicRegistryManager, arg1: StructurePlacementCalculator, arg2: StructureAccessor, arg3: Chunk, arg4: StructureTemplateManager) = this.method_16129(arg0, arg1, arg2, arg3, arg4)

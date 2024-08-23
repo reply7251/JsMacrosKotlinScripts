@@ -6,13 +6,11 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DimensionType
 
-val DimensionType.MOON_SIZES by aliasStatic(DimensionType::field_24752)
-val DimensionType.SIZE_BITS_Y by aliasStatic(DimensionType::field_28133)
-val DimensionType.REGISTRY_CODEC by aliasStatic(DimensionType::field_24756)
-val DimensionType.MIN_HEIGHT by aliasStatic(DimensionType::field_28136)
-val DimensionType.MAX_COLUMN_HEIGHT by aliasStatic(DimensionType::field_28135)
-val DimensionType.MAX_HEIGHT by aliasStatic(DimensionType::field_28134)
-val DimensionType.PACKET_CODEC by aliasStatic(DimensionType::field_51951)
+val KClass<DimensionType>.MOON_SIZES by aliasStatic(DimensionType::field_24752)
+val KClass<DimensionType>.SIZE_BITS_Y by aliasStatic(DimensionType::field_28133)
+val KClass<DimensionType>.MIN_HEIGHT by aliasStatic(DimensionType::field_28136)
+val KClass<DimensionType>.MAX_COLUMN_HEIGHT by aliasStatic(DimensionType::field_28135)
+val KClass<DimensionType>.MAX_HEIGHT by aliasStatic(DimensionType::field_28134)
 fun DimensionType.monsterSpawnLightTest() = this.method_44222()
 fun KClass<DimensionType>.getCoordinateScaleFactor(arg0: DimensionType, arg1: DimensionType) = DimensionType.method_31109(arg0, arg1)
 fun DimensionType.hasFixedTime() = this.method_29960()

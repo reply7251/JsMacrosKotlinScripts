@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ComparatorMode
 
-val ComparatorMode.COMPARE by aliasEnum(ComparatorMode::class, "field_12576")
-val ComparatorMode.SUBTRACT by aliasEnum(ComparatorMode::class, "field_12578")
+val KClass<ComparatorMode>.COMPARE by aliasEnum(ComparatorMode::class, "field_12576")
+val KClass<ComparatorMode>.SUBTRACT by aliasEnum(ComparatorMode::class, "field_12578")

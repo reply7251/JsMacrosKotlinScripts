@@ -8,3 +8,5 @@ import me.hellrevenger.generated.ResourcePackOrganizer
 
 fun ResourcePackOrganizer.refresh() = this.method_29981()
 fun ResourcePackOrganizer.apply() = this.method_29642()
+fun ResourcePackOrganizer.getEnabledPacks() = this.method_29643()
+fun ResourcePackOrganizer.getDisabledPacks() = this.method_29639()

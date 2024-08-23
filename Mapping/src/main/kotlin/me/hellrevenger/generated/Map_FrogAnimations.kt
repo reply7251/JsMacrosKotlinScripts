@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FrogAnimations
 
-val FrogAnimations.IDLING_IN_WATER by aliasStatic(FrogAnimations::field_37897)
-val FrogAnimations.USING_TONGUE by aliasStatic(FrogAnimations::field_37895)
-val FrogAnimations.SWIMMING by aliasStatic(FrogAnimations::field_37896)
-val FrogAnimations.WALKING by aliasStatic(FrogAnimations::field_37893)
-val FrogAnimations.LONG_JUMPING by aliasStatic(FrogAnimations::field_37894)
-val FrogAnimations.CROAKING by aliasStatic(FrogAnimations::field_37892)
+val KClass<FrogAnimations>.IDLING_IN_WATER by aliasStatic(FrogAnimations::field_37897)
+val KClass<FrogAnimations>.USING_TONGUE by aliasStatic(FrogAnimations::field_37895)
+val KClass<FrogAnimations>.SWIMMING by aliasStatic(FrogAnimations::field_37896)
+val KClass<FrogAnimations>.WALKING by aliasStatic(FrogAnimations::field_37893)
+val KClass<FrogAnimations>.LONG_JUMPING by aliasStatic(FrogAnimations::field_37894)
+val KClass<FrogAnimations>.CROAKING by aliasStatic(FrogAnimations::field_37892)

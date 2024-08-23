@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.StructureTestUtil
 
-val StructureTestUtil.TEST_STRUCTURES_DIRECTORY_NAME by aliasStatic(StructureTestUtil::field_33173)
-val StructureTestUtil.testStructuresDirectoryName by aliasStatic(StructureTestUtil::field_20579)
+val KClass<StructureTestUtil>.TEST_STRUCTURES_DIRECTORY_NAME by aliasStatic(StructureTestUtil::field_33173)
+val KClass<StructureTestUtil>.testStructuresDirectoryName by aliasStatic(StructureTestUtil::field_20579)
 fun KClass<StructureTestUtil>.getStructureBlockBox(arg0: BlockPos, arg1: Vec3i, arg2: BlockRotation) = StructureTestUtil.method_29409(arg0, arg1, arg2)
 fun KClass<StructureTestUtil>.findNearestStructureBlock(arg0: BlockPos, arg1: Int, arg2: ServerWorld) = StructureTestUtil.method_22255(arg0, arg1, arg2)
 fun KClass<StructureTestUtil>.findStructureBlocks(arg0: BlockPos, arg1: Int, arg2: ServerWorld) = StructureTestUtil.method_22258(arg0, arg1, arg2)

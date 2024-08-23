@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LightType
 
-val LightType.SKY by aliasEnum(LightType::class, "field_9284")
-val LightType.BLOCK by aliasEnum(LightType::class, "field_9282")
+val KClass<LightType>.SKY by aliasEnum(LightType::class, "field_9284")
+val KClass<LightType>.BLOCK by aliasEnum(LightType::class, "field_9282")

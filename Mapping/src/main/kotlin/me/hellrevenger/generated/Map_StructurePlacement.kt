@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.StructurePlacement
 
-val StructurePlacement.TYPE_CODEC by aliasStatic(StructurePlacement::field_36428)
 fun StructurePlacement.applyExclusionZone(arg0: StructurePlacementCalculator, arg1: Int, arg2: Int) = this.method_56576(arg0, arg1, arg2)
 fun StructurePlacement.getType() = this.method_40166()
 fun StructurePlacement.getLocatePos(arg0: ChunkPos) = this.method_41636(arg0)

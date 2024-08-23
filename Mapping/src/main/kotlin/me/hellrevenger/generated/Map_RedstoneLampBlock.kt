@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RedstoneLampBlock
 
-val RedstoneLampBlock.LIT by aliasStatic(RedstoneLampBlock::field_11413)
+val KClass<RedstoneLampBlock>.LIT by aliasStatic(RedstoneLampBlock::field_11413)

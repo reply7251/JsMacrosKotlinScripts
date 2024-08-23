@@ -6,12 +6,12 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EntityArgumentType
 
-val EntityArgumentType.PLAYER_SELECTOR_HAS_ENTITIES_EXCEPTION by aliasStatic(EntityArgumentType::field_9861)
-val EntityArgumentType.ENTITY_NOT_FOUND_EXCEPTION by aliasStatic(EntityArgumentType::field_9863)
-val EntityArgumentType.PLAYER_NOT_FOUND_EXCEPTION by aliasStatic(EntityArgumentType::field_9856)
-val EntityArgumentType.TOO_MANY_ENTITIES_EXCEPTION by aliasStatic(EntityArgumentType::field_9860)
-val EntityArgumentType.NOT_ALLOWED_EXCEPTION by aliasStatic(EntityArgumentType::field_9862)
-val EntityArgumentType.TOO_MANY_PLAYERS_EXCEPTION by aliasStatic(EntityArgumentType::field_9864)
+val KClass<EntityArgumentType>.PLAYER_SELECTOR_HAS_ENTITIES_EXCEPTION by aliasStatic(EntityArgumentType::field_9861)
+val KClass<EntityArgumentType>.ENTITY_NOT_FOUND_EXCEPTION by aliasStatic(EntityArgumentType::field_9863)
+val KClass<EntityArgumentType>.PLAYER_NOT_FOUND_EXCEPTION by aliasStatic(EntityArgumentType::field_9856)
+val KClass<EntityArgumentType>.TOO_MANY_ENTITIES_EXCEPTION by aliasStatic(EntityArgumentType::field_9860)
+val KClass<EntityArgumentType>.NOT_ALLOWED_EXCEPTION by aliasStatic(EntityArgumentType::field_9862)
+val KClass<EntityArgumentType>.TOO_MANY_PLAYERS_EXCEPTION by aliasStatic(EntityArgumentType::field_9864)
 fun KClass<EntityArgumentType>.getOptionalPlayers(arg0: CommandContext<ServerCommandSource>, arg1: String) = EntityArgumentType.method_9310(arg0, arg1)
 fun KClass<EntityArgumentType>.entity() = EntityArgumentType.method_9309()
 fun KClass<EntityArgumentType>.player() = EntityArgumentType.method_9305()

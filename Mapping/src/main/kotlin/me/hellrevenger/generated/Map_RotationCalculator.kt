@@ -6,6 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RotationCalculator
 
+fun RotationCalculator.getMax() = this.method_48120()
 fun RotationCalculator.toRotation(arg0: Direction) = this.method_48124(arg0)
 fun RotationCalculator.areRotationsParallel(arg0: Int, arg1: Int) = this.method_48123(arg0, arg1)
 fun RotationCalculator.toWrappedDegrees(arg0: Int) = this.method_48126(arg0)

@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BlockStatePredicate
 
-val BlockStatePredicate.ANY by aliasStatic(BlockStatePredicate::field_12419)
+val KClass<BlockStatePredicate>.ANY by aliasStatic(BlockStatePredicate::field_12419)
 fun BlockStatePredicate.test(arg0: BlockState) = this.method_11760(arg0)
-fun <V>BlockStatePredicate.with(arg0: property_Property<V>, arg1: Predicate<Any>) where V: Comparable<V> = this.method_11762<V>(arg0, arg1)
 fun KClass<BlockStatePredicate>.forBlock(arg0: Block) = BlockStatePredicate.method_11758(arg0)

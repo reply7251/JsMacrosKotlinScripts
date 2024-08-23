@@ -6,10 +6,11 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DecoratedPotBlockEntity
 
-val DecoratedPotBlockEntity.lastWobbleType by alias(DecoratedPotBlockEntity::field_46662)
-val DecoratedPotBlockEntity.ITEM_NBT_KEY by aliasStatic(DecoratedPotBlockEntity::field_46659)
-val DecoratedPotBlockEntity.SHERDS_NBT_KEY by aliasStatic(DecoratedPotBlockEntity::field_42782)
-val DecoratedPotBlockEntity.lastWobbleTime by alias(DecoratedPotBlockEntity::field_46661)
+var DecoratedPotBlockEntity.lastWobbleType by alias(DecoratedPotBlockEntity::field_46662)
+val KClass<DecoratedPotBlockEntity>.ITEM_NBT_KEY by aliasStatic(DecoratedPotBlockEntity::field_46659)
+val KClass<DecoratedPotBlockEntity>.SHERDS_NBT_KEY by aliasStatic(DecoratedPotBlockEntity::field_42782)
+var DecoratedPotBlockEntity.lastWobbleTime by alias(DecoratedPotBlockEntity::field_46661)
+fun DecoratedPotBlockEntity.getSherds() = this.method_51511()
 fun DecoratedPotBlockEntity.toUpdatePacket() = this.method_49200()
 fun DecoratedPotBlockEntity.asStack() = this.method_52578()
 fun DecoratedPotBlockEntity.wobble(arg0: net.minecraft.class_8172.class_8837) = this.method_54301(arg0)

@@ -6,6 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NetherForestVegetationFeatureConfig
 
-val NetherForestVegetationFeatureConfig.VEGETATION_CODEC by aliasStatic(NetherForestVegetationFeatureConfig::field_35707)
 val NetherForestVegetationFeatureConfig.spreadWidth by alias(NetherForestVegetationFeatureConfig::field_35708)
 val NetherForestVegetationFeatureConfig.spreadHeight by alias(NetherForestVegetationFeatureConfig::field_35709)

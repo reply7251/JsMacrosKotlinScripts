@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PotionEntity
 
-val PotionEntity.AFFECTED_BY_WATER by aliasStatic(PotionEntity::field_40737)
+val KClass<PotionEntity>.AFFECTED_BY_WATER by aliasStatic(PotionEntity::field_40737)

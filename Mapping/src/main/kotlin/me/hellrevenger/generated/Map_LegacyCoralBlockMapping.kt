@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LegacyCoralBlockMapping
 
-val LegacyCoralBlockMapping.MAP by aliasStatic(LegacyCoralBlockMapping::field_5733)
+val KClass<LegacyCoralBlockMapping>.MAP by aliasStatic(LegacyCoralBlockMapping::field_5733)

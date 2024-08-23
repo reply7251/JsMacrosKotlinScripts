@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BreezeAttackablesSensor
 
-val BreezeAttackablesSensor.RANGE by aliasStatic(BreezeAttackablesSensor::field_47260)
+val KClass<BreezeAttackablesSensor>.RANGE by aliasStatic(BreezeAttackablesSensor::field_47260)

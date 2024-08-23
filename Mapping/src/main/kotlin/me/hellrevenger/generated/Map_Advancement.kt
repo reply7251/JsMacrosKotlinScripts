@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Advancement
 
-val Advancement.PACKET_CODEC by aliasStatic(Advancement::field_47996)
 fun Advancement.validate(arg0: ErrorReporter, arg1: net.minecraft.class_7871.class_7872) = this.method_54912(arg0, arg1)
 fun KClass<Advancement>.getNameFromIdentity(arg0: AdvancementEntry) = Advancement.method_53622(arg0)
 fun Advancement.isRoot() = this.method_53630()

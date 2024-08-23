@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SugarCaneBlock
 
-val SugarCaneBlock.AGE by aliasStatic(SugarCaneBlock::field_11610)
+val KClass<SugarCaneBlock>.AGE by aliasStatic(SugarCaneBlock::field_11610)

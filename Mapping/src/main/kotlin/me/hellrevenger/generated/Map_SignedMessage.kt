@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SignedMessage
 
-val SignedMessage.SERVERBOUND_TIME_TO_LIVE by aliasStatic(SignedMessage::field_39786)
-val SignedMessage.CLIENTBOUND_TIME_TO_LIVE by aliasStatic(SignedMessage::field_39787)
+val KClass<SignedMessage>.SERVERBOUND_TIME_TO_LIVE by aliasStatic(SignedMessage::field_39786)
+val KClass<SignedMessage>.CLIENTBOUND_TIME_TO_LIVE by aliasStatic(SignedMessage::field_39787)
 fun SignedMessage.getSalt() = this.method_44865()
 fun SignedMessage.isSenderMissing() = this.method_46293()
 fun SignedMessage.isExpiredOnServer(arg0: Instant) = this.method_44747(arg0)

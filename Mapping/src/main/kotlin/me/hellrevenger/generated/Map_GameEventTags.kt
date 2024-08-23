@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.GameEventTags
 
-val GameEventTags.VIBRATIONS by aliasStatic(GameEventTags::field_28090)
-val GameEventTags.IGNORE_VIBRATIONS_SNEAKING by aliasStatic(GameEventTags::field_28091)
-val GameEventTags.WARDEN_CAN_LISTEN by aliasStatic(GameEventTags::field_38079)
-val GameEventTags.SHRIEKER_CAN_LISTEN by aliasStatic(GameEventTags::field_38698)
-val GameEventTags.ALLAY_CAN_LISTEN by aliasStatic(GameEventTags::field_39031)
+val KClass<GameEventTags>.VIBRATIONS by aliasStatic(GameEventTags::field_28090)
+val KClass<GameEventTags>.IGNORE_VIBRATIONS_SNEAKING by aliasStatic(GameEventTags::field_28091)
+val KClass<GameEventTags>.WARDEN_CAN_LISTEN by aliasStatic(GameEventTags::field_38079)
+val KClass<GameEventTags>.SHRIEKER_CAN_LISTEN by aliasStatic(GameEventTags::field_38698)
+val KClass<GameEventTags>.ALLAY_CAN_LISTEN by aliasStatic(GameEventTags::field_39031)

@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LegacyDyeItemMapping
 
-val LegacyDyeItemMapping.MAP by aliasStatic(LegacyDyeItemMapping::field_15890)
+val KClass<LegacyDyeItemMapping>.MAP by aliasStatic(LegacyDyeItemMapping::field_15890)

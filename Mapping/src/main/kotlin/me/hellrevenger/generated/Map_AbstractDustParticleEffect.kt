@@ -6,5 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AbstractDustParticleEffect
 
-val AbstractDustParticleEffect.MIN_SCALE by aliasStatic(AbstractDustParticleEffect::field_51494)
-val AbstractDustParticleEffect.MAX_SCALE by aliasStatic(AbstractDustParticleEffect::field_51495)
+val KClass<AbstractDustParticleEffect>.MIN_SCALE by aliasStatic(AbstractDustParticleEffect::field_51494)
+val KClass<AbstractDustParticleEffect>.MAX_SCALE by aliasStatic(AbstractDustParticleEffect::field_51495)
+fun AbstractDustParticleEffect.getScale() = this.method_59846()

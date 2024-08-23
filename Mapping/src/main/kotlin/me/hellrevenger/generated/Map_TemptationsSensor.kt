@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TemptationsSensor
 
-val TemptationsSensor.MAX_DISTANCE by aliasStatic(TemptationsSensor::field_30262)
+val KClass<TemptationsSensor>.MAX_DISTANCE by aliasStatic(TemptationsSensor::field_30262)

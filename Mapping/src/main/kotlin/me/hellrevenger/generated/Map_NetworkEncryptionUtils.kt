@@ -6,13 +6,11 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NetworkEncryptionUtils
 
-val NetworkEncryptionUtils.BASE64_ENCODER by aliasStatic(NetworkEncryptionUtils::field_39272)
-val NetworkEncryptionUtils.RSA_PUBLIC_KEY_PREFIX by aliasStatic(NetworkEncryptionUtils::field_39033)
-val NetworkEncryptionUtils.SHA256_WITH_RSA by aliasStatic(NetworkEncryptionUtils::field_39109)
-val NetworkEncryptionUtils.RSA_PUBLIC_KEY_CODEC by aliasStatic(NetworkEncryptionUtils::field_39035)
-val NetworkEncryptionUtils.LINEBREAK by aliasStatic(NetworkEncryptionUtils::field_39034)
-val NetworkEncryptionUtils.SHA256_BITS by aliasStatic(NetworkEncryptionUtils::field_40111)
-val NetworkEncryptionUtils.RSA_PRIVATE_KEY_CODEC by aliasStatic(NetworkEncryptionUtils::field_39036)
+val KClass<NetworkEncryptionUtils>.BASE64_ENCODER by aliasStatic(NetworkEncryptionUtils::field_39272)
+val KClass<NetworkEncryptionUtils>.RSA_PUBLIC_KEY_PREFIX by aliasStatic(NetworkEncryptionUtils::field_39033)
+val KClass<NetworkEncryptionUtils>.SHA256_WITH_RSA by aliasStatic(NetworkEncryptionUtils::field_39109)
+val KClass<NetworkEncryptionUtils>.LINEBREAK by aliasStatic(NetworkEncryptionUtils::field_39034)
+val KClass<NetworkEncryptionUtils>.SHA256_BITS by aliasStatic(NetworkEncryptionUtils::field_40111)
 fun KClass<NetworkEncryptionUtils>.generateSecretKey() = NetworkEncryptionUtils.method_15239()
 fun KClass<NetworkEncryptionUtils>.decodeEncodedRsaPublicKey(arg0: ByteArray) = NetworkEncryptionUtils.method_15242(arg0)
 fun KClass<NetworkEncryptionUtils>.computeServerId(arg0: String, arg1: PublicKey, arg2: SecretKey) = NetworkEncryptionUtils.method_15240(arg0, arg1, arg2)

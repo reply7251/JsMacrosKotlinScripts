@@ -6,8 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.MapDecorationType
 
-val MapDecorationType.NO_MAP_COLOR by aliasStatic(MapDecorationType::field_50016)
-val MapDecorationType.PACKET_CODEC by aliasStatic(MapDecorationType::field_50018)
+val KClass<MapDecorationType>.NO_MAP_COLOR by aliasStatic(MapDecorationType::field_50016)
 fun MapDecorationType.hasMapColor() = this.method_58452()
 fun MapDecorationType.mapColor() = this.comp_2516()
 fun MapDecorationType.showOnItemFrame() = this.comp_2515()

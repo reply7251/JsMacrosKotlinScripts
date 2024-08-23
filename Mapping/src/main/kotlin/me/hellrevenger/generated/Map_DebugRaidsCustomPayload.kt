@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DebugRaidsCustomPayload
 
-val DebugRaidsCustomPayload.ID by aliasStatic(DebugRaidsCustomPayload::field_48683)
+val KClass<DebugRaidsCustomPayload>.ID by aliasStatic(DebugRaidsCustomPayload::field_48683)
 fun DebugRaidsCustomPayload.raidCenters() = this.comp_1710()

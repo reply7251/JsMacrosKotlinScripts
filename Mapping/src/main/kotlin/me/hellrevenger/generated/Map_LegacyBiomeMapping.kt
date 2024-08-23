@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.LegacyBiomeMapping
 
-val LegacyBiomeMapping.MAP by aliasStatic(LegacyBiomeMapping::field_35100)
+val KClass<LegacyBiomeMapping>.MAP by aliasStatic(LegacyBiomeMapping::field_35100)

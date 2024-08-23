@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.CloudRenderMode
 
-val CloudRenderMode.FANCY by aliasEnum(CloudRenderMode::class, "field_18164")
-val CloudRenderMode.FAST by aliasEnum(CloudRenderMode::class, "field_18163")
-val CloudRenderMode.OFF by aliasEnum(CloudRenderMode::class, "field_18162")
+val KClass<CloudRenderMode>.FANCY by aliasEnum(CloudRenderMode::class, "field_18164")
+val KClass<CloudRenderMode>.FAST by aliasEnum(CloudRenderMode::class, "field_18163")
+val KClass<CloudRenderMode>.OFF by aliasEnum(CloudRenderMode::class, "field_18162")

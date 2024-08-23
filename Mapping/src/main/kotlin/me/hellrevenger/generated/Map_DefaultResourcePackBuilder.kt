@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DefaultResourcePackBuilder
 
-val DefaultResourcePackBuilder.callback by aliasStatic(DefaultResourcePackBuilder::field_40004)
+val KClass<DefaultResourcePackBuilder>.callback by aliasStatic(DefaultResourcePackBuilder::field_40004)
 fun DefaultResourcePackBuilder.withNamespaces(arg0: Array<String>) = this.method_45206(*arg0)
 fun DefaultResourcePackBuilder.withRoot(arg0: file_Path) = this.method_45204(arg0)
 fun DefaultResourcePackBuilder.build(arg0: ResourcePackInfo) = this.method_45210(arg0)

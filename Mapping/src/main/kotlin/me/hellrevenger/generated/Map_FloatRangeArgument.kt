@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FloatRangeArgument
 
-val FloatRangeArgument.ONLY_INTS_EXCEPTION by aliasStatic(FloatRangeArgument::field_9781)
-val FloatRangeArgument.ANY by aliasStatic(FloatRangeArgument::field_9780)
+val KClass<FloatRangeArgument>.ONLY_INTS_EXCEPTION by aliasStatic(FloatRangeArgument::field_9781)
+val KClass<FloatRangeArgument>.ANY by aliasStatic(FloatRangeArgument::field_9780)
 fun KClass<FloatRangeArgument>.between(arg0: Float, arg1: Float) = FloatRangeArgument.method_35402(arg0, arg1)
 fun KClass<FloatRangeArgument>.exactly(arg0: Float) = FloatRangeArgument.method_35401(arg0)
 fun FloatRangeArgument.isInRange(arg0: Float) = this.method_35409(arg0)

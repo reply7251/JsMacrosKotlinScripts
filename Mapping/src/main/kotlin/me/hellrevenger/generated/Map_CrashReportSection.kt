@@ -17,3 +17,4 @@ fun KClass<CrashReportSection>.addBlockInfo(arg0: CrashReportSection, arg1: Heig
 fun CrashReportSection.trimStackTraceEnd(arg0: Int) = this.method_580(arg0)
 fun CrashReportSection.add(arg0: String, arg1: Object) = this.method_578(arg0, arg1)
 fun KClass<CrashReportSection>.createPositionString(arg0: HeightLimitView, arg1: BlockPos) = CrashReportSection.method_582(arg0, arg1)
+fun CrashReportSection.getStackTrace() = this.method_575()

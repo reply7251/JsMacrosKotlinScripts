@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.JigsawReplacementStructureProcessor
 
-val JigsawReplacementStructureProcessor.INSTANCE by aliasStatic(JigsawReplacementStructureProcessor::field_16871)
+val KClass<JigsawReplacementStructureProcessor>.INSTANCE by aliasStatic(JigsawReplacementStructureProcessor::field_16871)

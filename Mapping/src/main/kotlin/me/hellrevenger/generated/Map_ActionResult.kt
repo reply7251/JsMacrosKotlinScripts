@@ -6,12 +6,12 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ActionResult
 
-val ActionResult.FAIL by aliasEnum(ActionResult::class, "field_5814")
-val ActionResult.CONSUME_PARTIAL by aliasEnum(ActionResult::class, "field_33562")
-val ActionResult.PASS by aliasEnum(ActionResult::class, "field_5811")
-val ActionResult.SUCCESS by aliasEnum(ActionResult::class, "field_5812")
-val ActionResult.CONSUME by aliasEnum(ActionResult::class, "field_21466")
-val ActionResult.SUCCESS_NO_ITEM_USED by aliasEnum(ActionResult::class, "field_51370")
+val KClass<ActionResult>.FAIL by aliasEnum(ActionResult::class, "field_5814")
+val KClass<ActionResult>.CONSUME_PARTIAL by aliasEnum(ActionResult::class, "field_33562")
+val KClass<ActionResult>.PASS by aliasEnum(ActionResult::class, "field_5811")
+val KClass<ActionResult>.SUCCESS by aliasEnum(ActionResult::class, "field_5812")
+val KClass<ActionResult>.CONSUME by aliasEnum(ActionResult::class, "field_21466")
+val KClass<ActionResult>.SUCCESS_NO_ITEM_USED by aliasEnum(ActionResult::class, "field_51370")
 fun ActionResult.shouldSwingHand() = this.method_23666()
 fun ActionResult.shouldIncrementStat() = this.method_36360()
 fun ActionResult.isAccepted() = this.method_23665()

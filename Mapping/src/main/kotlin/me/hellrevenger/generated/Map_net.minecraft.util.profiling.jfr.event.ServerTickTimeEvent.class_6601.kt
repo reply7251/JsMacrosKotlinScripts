@@ -5,4 +5,4 @@ import me.hellrevenger.generated.aliasEnum
 import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 
-val net.minecraft.util.profiling.jfr.event.ServerTickTimeEvent.class_6601.AVERAGE_TICK_DURATION by aliasStatic(net.minecraft.util.profiling.jfr.event.ServerTickTimeEvent.class_6601::field_34854)
+val KClass<net.minecraft.util.profiling.jfr.event.ServerTickTimeEvent.class_6601>.AVERAGE_TICK_DURATION by aliasStatic(net.minecraft.util.profiling.jfr.event.ServerTickTimeEvent.class_6601::field_34854)

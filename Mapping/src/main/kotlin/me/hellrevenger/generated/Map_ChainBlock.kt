@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ChainBlock
 
-val ChainBlock.WATERLOGGED by aliasStatic(ChainBlock::field_24411)
+val KClass<ChainBlock>.WATERLOGGED by aliasStatic(ChainBlock::field_24411)

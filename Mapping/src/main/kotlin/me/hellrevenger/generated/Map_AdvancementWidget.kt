@@ -6,6 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AdvancementWidget
 
+fun AdvancementWidget.getWidth() = this.method_35737()
 fun AdvancementWidget.renderWidgets(arg0: DrawContext, arg1: Int, arg2: Int) = this.method_2325(arg0, arg1, arg2)
 fun AdvancementWidget.shouldRender(arg0: Int, arg1: Int, arg2: Int, arg3: Int) = this.method_2329(arg0, arg1, arg2, arg3)
 fun AdvancementWidget.drawTooltip(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Float, arg4: Int, arg5: Int) = this.method_2331(arg0, arg1, arg2, arg3, arg4, arg5)

@@ -6,6 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.JsonEffectShaderProgram
 
+fun JsonEffectShaderProgram.getName() = this.method_35763()
+fun JsonEffectShaderProgram.getUniformByName(arg0: String) = this.method_1271(arg0)
 fun JsonEffectShaderProgram.bindSampler(arg0: String, arg1: IntSupplier) = this.method_1269(arg0, arg1)
 fun KClass<JsonEffectShaderProgram>.deserializeBlendState(arg0: JsonObject) = JsonEffectShaderProgram.method_16035(arg0)
 fun JsonEffectShaderProgram.getUniformByNameOrDummy(arg0: String) = this.method_1275(arg0)

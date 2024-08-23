@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WanderAroundFarGoal
 
-val WanderAroundFarGoal.CHANCE by aliasStatic(WanderAroundFarGoal::field_30229)
+val KClass<WanderAroundFarGoal>.CHANCE by aliasStatic(WanderAroundFarGoal::field_30229)

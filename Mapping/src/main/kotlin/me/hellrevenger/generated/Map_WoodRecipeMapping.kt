@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WoodRecipeMapping
 
-val WoodRecipeMapping.RECIPES by aliasStatic(WoodRecipeMapping::field_5707)
+val KClass<WoodRecipeMapping>.RECIPES by aliasStatic(WoodRecipeMapping::field_5707)

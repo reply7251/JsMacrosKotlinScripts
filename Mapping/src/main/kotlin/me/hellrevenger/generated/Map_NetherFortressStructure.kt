@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NetherFortressStructure
 
-val NetherFortressStructure.MONSTER_SPAWNS by aliasStatic(NetherFortressStructure::field_13705)
+val KClass<NetherFortressStructure>.MONSTER_SPAWNS by aliasStatic(NetherFortressStructure::field_13705)

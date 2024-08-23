@@ -6,8 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TradedItem
 
-val TradedItem.OPTIONAL_PACKET_CODEC by aliasStatic(TradedItem::field_49395)
-val TradedItem.PACKET_CODEC by aliasStatic(TradedItem::field_49394)
 fun TradedItem.matches(arg0: ItemStack) = this.method_57552(arg0)
 fun TradedItem.withComponents(arg0: UnaryOperator<net.minecraft.class_9329.class_9330>) = this.method_57554(arg0)
 fun TradedItem.itemStack() = this.comp_2427()

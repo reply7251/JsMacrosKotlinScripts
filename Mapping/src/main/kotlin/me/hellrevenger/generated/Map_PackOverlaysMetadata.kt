@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PackOverlaysMetadata
 
-val PackOverlaysMetadata.SERIALIZER by aliasStatic(PackOverlaysMetadata::field_45045)
+val KClass<PackOverlaysMetadata>.SERIALIZER by aliasStatic(PackOverlaysMetadata::field_45045)
 fun PackOverlaysMetadata.getAppliedOverlays(arg0: Int) = this.method_52427(arg0)
 fun PackOverlaysMetadata.overlays() = this.comp_1577()

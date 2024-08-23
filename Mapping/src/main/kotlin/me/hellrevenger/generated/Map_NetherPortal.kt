@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NetherPortal
 
-val NetherPortal.MAX_WIDTH by aliasStatic(NetherPortal::field_31823)
-val NetherPortal.MAX_HEIGHT by aliasStatic(NetherPortal::field_31824)
+val KClass<NetherPortal>.MAX_WIDTH by aliasStatic(NetherPortal::field_31823)
+val KClass<NetherPortal>.MAX_HEIGHT by aliasStatic(NetherPortal::field_31824)
 fun KClass<NetherPortal>.getOrEmpty(arg0: WorldAccess, arg1: BlockPos, arg2: Predicate<NetherPortal>, arg3: net.minecraft.class_2350.class_2351) = NetherPortal.method_30486(arg0, arg1, arg2, arg3)
 fun NetherPortal.isValid() = this.method_10360()
 fun NetherPortal.wasAlreadyValid() = this.method_10362()

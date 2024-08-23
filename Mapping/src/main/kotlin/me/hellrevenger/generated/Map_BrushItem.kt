@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BrushItem
 
-val BrushItem.ANIMATION_DURATION by aliasStatic(BrushItem::field_43390)
+val KClass<BrushItem>.ANIMATION_DURATION by aliasStatic(BrushItem::field_43390)

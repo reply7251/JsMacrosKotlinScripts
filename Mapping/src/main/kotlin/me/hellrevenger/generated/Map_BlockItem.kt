@@ -11,3 +11,4 @@ fun BlockItem.getPlacementContext(arg0: ItemPlacementContext) = this.method_1635
 fun KClass<BlockItem>.setBlockEntityData(arg0: ItemStack, arg1: BlockEntityType<*>, arg2: NbtCompound) = BlockItem.method_57338(arg0, arg1, arg2)
 fun BlockItem.appendBlocks(arg0: Map<Block, Item>, arg1: Item) = this.method_7713(arg0, arg1)
 fun BlockItem.place(arg0: ItemPlacementContext) = this.method_7712(arg0)
+fun BlockItem.getBlock() = this.method_7711()

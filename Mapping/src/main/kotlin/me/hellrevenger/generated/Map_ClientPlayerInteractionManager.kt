@@ -13,6 +13,7 @@ fun ClientPlayerInteractionManager.clickSlot(arg0: Int, arg1: Int, arg2: Int, ar
 fun ClientPlayerInteractionManager.isBreakingBlock() = this.method_2923()
 fun ClientPlayerInteractionManager.getBlockBreakingProgress() = this.method_51888()
 fun ClientPlayerInteractionManager.setGameMode(arg0: GameMode) = this.method_2907(arg0)
+fun ClientPlayerInteractionManager.getPreviousGameMode() = this.method_28107()
 fun ClientPlayerInteractionManager.hasCreativeInventory() = this.method_2914()
 fun ClientPlayerInteractionManager.setGameModes(arg0: GameMode, arg1: GameMode) = this.method_32790(arg0, arg1)
 fun ClientPlayerInteractionManager.interactEntity(arg0: PlayerEntity, arg1: Entity, arg2: Hand) = this.method_2905(arg0, arg1, arg2)

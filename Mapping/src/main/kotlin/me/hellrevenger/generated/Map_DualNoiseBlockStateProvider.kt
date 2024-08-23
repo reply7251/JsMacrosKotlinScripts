@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DualNoiseBlockStateProvider
 
-val DualNoiseBlockStateProvider.DUAL_CODEC by aliasStatic(DualNoiseBlockStateProvider::field_34702)
+val KClass<DualNoiseBlockStateProvider>.DUAL_CODEC by aliasStatic(DualNoiseBlockStateProvider::field_34702)

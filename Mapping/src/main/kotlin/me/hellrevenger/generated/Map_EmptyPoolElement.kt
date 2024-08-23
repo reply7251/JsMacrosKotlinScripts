@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EmptyPoolElement
 
-val EmptyPoolElement.INSTANCE by aliasStatic(EmptyPoolElement::field_16663)
+val KClass<EmptyPoolElement>.INSTANCE by aliasStatic(EmptyPoolElement::field_16663)

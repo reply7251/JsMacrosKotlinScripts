@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FilteredMessage
 
-val FilteredMessage.EMPTY by aliasStatic(FilteredMessage::field_28863)
+val KClass<FilteredMessage>.EMPTY by aliasStatic(FilteredMessage::field_28863)
 fun FilteredMessage.raw() = this.comp_841()
 fun FilteredMessage.filter() = this.method_45059()
 fun FilteredMessage.isFiltered() = this.method_45063()

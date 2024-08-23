@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PlayerPredicate
 
-val PlayerPredicate.LOOKING_AT_DISTANCE by aliasStatic(PlayerPredicate::field_33928)
+val KClass<PlayerPredicate>.LOOKING_AT_DISTANCE by aliasStatic(PlayerPredicate::field_33928)
 fun PlayerPredicate.gameMode() = this.comp_1818()
 fun PlayerPredicate.experienceLevel() = this.comp_1817()
 fun PlayerPredicate.recipes() = this.comp_1820()

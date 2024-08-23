@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FeatureSet
 
-val FeatureSet.MAX_FEATURE_FLAGS by aliasStatic(FeatureSet::field_40172)
+val KClass<FeatureSet>.MAX_FEATURE_FLAGS by aliasStatic(FeatureSet::field_40172)
 fun FeatureSet.contains(arg0: FeatureFlag) = this.method_45403(arg0)
 fun FeatureSet.isEmpty() = this.method_58398()
 fun FeatureSet.subtract(arg0: FeatureSet) = this.method_59820(arg0)

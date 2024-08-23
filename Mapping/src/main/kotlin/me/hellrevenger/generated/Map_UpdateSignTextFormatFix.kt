@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.UpdateSignTextFormatFix
 
-val UpdateSignTextFormatFix.FILTERED_CORRECT by aliasStatic(UpdateSignTextFormatFix::field_45085)
+val KClass<UpdateSignTextFormatFix>.FILTERED_CORRECT by aliasStatic(UpdateSignTextFormatFix::field_45085)

@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.JungleTempleGenerator
 
-val JungleTempleGenerator.DEPTH by aliasStatic(JungleTempleGenerator::field_34728)
+val KClass<JungleTempleGenerator>.DEPTH by aliasStatic(JungleTempleGenerator::field_34728)

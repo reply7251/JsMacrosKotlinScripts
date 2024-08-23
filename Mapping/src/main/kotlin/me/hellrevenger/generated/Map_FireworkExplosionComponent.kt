@@ -6,9 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FireworkExplosionComponent
 
-val FireworkExplosionComponent.PACKET_CODEC by aliasStatic(FireworkExplosionComponent::field_49317)
-val FireworkExplosionComponent.COLORS_CODEC by aliasStatic(FireworkExplosionComponent::field_49318)
-val FireworkExplosionComponent.DEFAULT by aliasStatic(FireworkExplosionComponent::field_49315)
+val KClass<FireworkExplosionComponent>.DEFAULT by aliasStatic(FireworkExplosionComponent::field_49315)
 fun FireworkExplosionComponent.appendOptionalTooltip(arg0: Consumer<Text>) = this.method_57477(arg0)
 fun FireworkExplosionComponent.appendShapeTooltip(arg0: Consumer<Text>) = this.method_57475(arg0)
 fun FireworkExplosionComponent.withFadeColors(arg0: IntList) = this.method_57474(arg0)

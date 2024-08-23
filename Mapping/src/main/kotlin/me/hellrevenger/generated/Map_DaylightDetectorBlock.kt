@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DaylightDetectorBlock
 
-val DaylightDetectorBlock.INVERTED by aliasStatic(DaylightDetectorBlock::field_10899)
-val DaylightDetectorBlock.POWER by aliasStatic(DaylightDetectorBlock::field_10897)
+val KClass<DaylightDetectorBlock>.INVERTED by aliasStatic(DaylightDetectorBlock::field_10899)
+val KClass<DaylightDetectorBlock>.POWER by aliasStatic(DaylightDetectorBlock::field_10897)

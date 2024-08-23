@@ -6,8 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Brightness
 
-val Brightness.LIGHT_LEVEL_CODEC by aliasStatic(Brightness::field_42262)
-val Brightness.FULL by aliasStatic(Brightness::field_42264)
+val KClass<Brightness>.FULL by aliasStatic(Brightness::field_42264)
 fun KClass<Brightness>.unpack(arg0: Int) = Brightness.method_48764(arg0)
 fun Brightness.pack() = this.method_48763()
 fun Brightness.block() = this.comp_1240()

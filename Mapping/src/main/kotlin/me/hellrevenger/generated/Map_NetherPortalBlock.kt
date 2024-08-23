@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NetherPortalBlock
 
-val NetherPortalBlock.AXIS by aliasStatic(NetherPortalBlock::field_11310)
+val KClass<NetherPortalBlock>.AXIS by aliasStatic(NetherPortalBlock::field_11310)

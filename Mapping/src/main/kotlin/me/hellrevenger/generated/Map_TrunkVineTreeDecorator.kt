@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TrunkVineTreeDecorator
 
-val TrunkVineTreeDecorator.INSTANCE by aliasStatic(TrunkVineTreeDecorator::field_24965)
+val KClass<TrunkVineTreeDecorator>.INSTANCE by aliasStatic(TrunkVineTreeDecorator::field_24965)

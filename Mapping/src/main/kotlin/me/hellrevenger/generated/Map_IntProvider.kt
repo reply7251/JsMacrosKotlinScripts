@@ -6,9 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.IntProvider
 
-val IntProvider.POSITIVE_CODEC by aliasStatic(IntProvider::field_33451)
-val IntProvider.NON_NEGATIVE_CODEC by aliasStatic(IntProvider::field_33450)
-val IntProvider.VALUE_CODEC by aliasStatic(IntProvider::field_29946)
 fun IntProvider.getMin() = this.method_35009()
 fun <T>KClass<IntProvider>.createValidatingCodec(arg0: Int, arg1: Int, arg2: Codec<T>) where T: IntProvider = IntProvider.method_49103<T>(arg0, arg1, arg2)
 fun IntProvider.getType() = this.method_35012()

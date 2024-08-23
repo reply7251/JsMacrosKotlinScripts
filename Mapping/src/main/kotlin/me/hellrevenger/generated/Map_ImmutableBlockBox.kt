@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ImmutableBlockBox
 
-val ImmutableBlockBox.PACKET_CODEC by aliasStatic(ImmutableBlockBox::field_49907)
 fun ImmutableBlockBox.includes(arg0: BlockPos) = this.method_58244(arg0)
 fun ImmutableBlockBox.expand(arg0: Direction, arg1: Int) = this.method_58238(arg0, arg1)
 fun ImmutableBlockBox.move(arg0: Vec3i) = this.method_58239(arg0)

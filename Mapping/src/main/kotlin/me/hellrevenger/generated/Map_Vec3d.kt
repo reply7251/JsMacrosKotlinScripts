@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Vec3d
 
-val Vec3d.ZERO by aliasStatic(Vec3d::field_1353)
+val KClass<Vec3d>.ZERO by aliasStatic(Vec3d::field_1353)
 val Vec3d.x by alias(Vec3d::field_1352)
 val Vec3d.z by alias(Vec3d::field_1350)
 val Vec3d.y by alias(Vec3d::field_1351)

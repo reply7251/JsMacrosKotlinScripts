@@ -7,7 +7,7 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.OctavePerlinNoiseSampler
 
 fun KClass<OctavePerlinNoiseSampler>.maintainPrecision(arg0: Double) = OctavePerlinNoiseSampler.method_16452(arg0)
-fun KClass<OctavePerlinNoiseSampler>.create(arg0: Random, arg1: List<Int>) = OctavePerlinNoiseSampler.method_39127(arg0, arg1)
+fun KClass<OctavePerlinNoiseSampler>.create(arg0: Random, arg1: MutableList<Int>) = OctavePerlinNoiseSampler.method_39127(arg0, arg1)
 fun OctavePerlinNoiseSampler.getOctave(arg0: Int) = this.method_16668(arg0)
 fun KClass<OctavePerlinNoiseSampler>.create(arg0: Random, arg1: Int, arg2: DoubleList) = OctavePerlinNoiseSampler.method_30847(arg0, arg1, arg2)
 fun KClass<OctavePerlinNoiseSampler>.create(arg0: Random, arg1: Int, arg2: Double, arg3: DoubleArray) = OctavePerlinNoiseSampler.method_35480(arg0, arg1, arg2, *arg3)

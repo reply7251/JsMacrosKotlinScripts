@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtOps
 
-val NbtOps.INSTANCE by aliasStatic(NbtOps::field_11560)
+val KClass<NbtOps>.INSTANCE by aliasStatic(NbtOps::field_11560)
 fun NbtOps.createByte(arg0: Byte) = this.method_10640(arg0)
 fun NbtOps.getIntStream(arg0: NbtElement) = this.method_10651(arg0)
 fun NbtOps.mergeToMap(arg0: NbtElement, arg1: MapLike<NbtElement>) = this.method_29154(arg0, arg1)
@@ -28,7 +28,7 @@ fun NbtOps.createFloat(arg0: Float) = this.method_10662(arg0)
 fun NbtOps.createList(arg0: Stream<NbtElement>) = this.method_10665(arg0)
 fun NbtOps.createBoolean(arg0: Boolean) = this.method_23253(arg0)
 fun NbtOps.createString(arg0: String) = this.method_10639(arg0)
-fun NbtOps.mergeToList(arg0: NbtElement, arg1: List<NbtElement>) = this.method_29155(arg0, arg1)
+fun NbtOps.mergeToList(arg0: NbtElement, arg1: MutableList<NbtElement>) = this.method_29155(arg0, arg1)
 fun NbtOps.empty() = this.method_10668()
 fun NbtOps.getNumberValue(arg0: NbtElement) = this.method_10645(arg0)
 fun NbtOps.getLongStream(arg0: NbtElement) = this.method_10637(arg0)

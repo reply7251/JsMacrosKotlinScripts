@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.StatePredicate
 
-val StatePredicate.PACKET_CODEC by aliasStatic(StatePredicate::field_49396)
 fun StatePredicate.test(arg0: FluidState) = this.method_22518(arg0)
 fun StatePredicate.conditions() = this.comp_1830()
 fun StatePredicate.findMissing(arg0: StateManager<*, *>) = this.method_53235(arg0)

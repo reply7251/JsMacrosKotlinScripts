@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EnderDragonEntityRenderer
 
-val EnderDragonEntityRenderer.CRYSTAL_BEAM_TEXTURE by aliasStatic(EnderDragonEntityRenderer::field_4668)
+val KClass<EnderDragonEntityRenderer>.CRYSTAL_BEAM_TEXTURE by aliasStatic(EnderDragonEntityRenderer::field_4668)
 fun KClass<EnderDragonEntityRenderer>.getTexturedModelData() = EnderDragonEntityRenderer.method_32165()
 fun EnderDragonEntityRenderer.getTexture(arg0: EnderDragonEntity) = this.method_3914(arg0)
 fun EnderDragonEntityRenderer.render(arg0: EnderDragonEntity, arg1: Float, arg2: Float, arg3: MatrixStack, arg4: VertexConsumerProvider, arg5: Int) = this.method_3918(arg0, arg1, arg2, arg3, arg4, arg5)

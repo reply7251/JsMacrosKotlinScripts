@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TurtleEntity
 
-val TurtleEntity.BABY_TURTLE_ON_LAND_FILTER by aliasStatic(TurtleEntity::field_6921)
+val KClass<TurtleEntity>.BABY_TURTLE_ON_LAND_FILTER by aliasStatic(TurtleEntity::field_6921)
 fun TurtleEntity.setHomePos(arg0: BlockPos) = this.method_6683(arg0)
 fun KClass<TurtleEntity>.createTurtleAttributes() = TurtleEntity.method_26896()
 fun TurtleEntity.isDiggingSand() = this.method_6695()

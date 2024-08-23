@@ -6,6 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WorldGenerationProgressTracker
 
+fun WorldGenerationProgressTracker.getCenterSize() = this.method_17677()
+fun WorldGenerationProgressTracker.getSize() = this.method_17678()
 fun WorldGenerationProgressTracker.getChunkStatus(arg0: Int, arg1: Int) = this.method_17676(arg0, arg1)
 fun WorldGenerationProgressTracker.getProgressPercentage() = this.method_17679()
 fun KClass<WorldGenerationProgressTracker>.noSpawnChunks() = WorldGenerationProgressTracker.method_56046()

@@ -6,8 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BedBlock
 
-val BedBlock.PART by aliasStatic(BedBlock::field_9967)
-val BedBlock.OCCUPIED by aliasStatic(BedBlock::field_9968)
+val KClass<BedBlock>.PART by aliasStatic(BedBlock::field_9967)
+val KClass<BedBlock>.OCCUPIED by aliasStatic(BedBlock::field_9968)
+fun BedBlock.getColor() = this.method_9487()
 fun KClass<BedBlock>.getBedPart(arg0: BlockState) = BedBlock.method_24164(arg0)
 fun KClass<BedBlock>.getDirection(arg0: BlockView, arg1: BlockPos) = BedBlock.method_18476(arg0, arg1)
 fun KClass<BedBlock>.isBedWorking(arg0: world_World) = BedBlock.method_27352(arg0)

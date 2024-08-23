@@ -6,6 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ServerBossBar
 
+fun ServerBossBar.getPlayers() = this.method_14092()
 fun ServerBossBar.isVisible() = this.method_14093()
 fun ServerBossBar.clearPlayers() = this.method_14094()
 fun ServerBossBar.addPlayer(arg0: ServerPlayerEntity) = this.method_14088(arg0)

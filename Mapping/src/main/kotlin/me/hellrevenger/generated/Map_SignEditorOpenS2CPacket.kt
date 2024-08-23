@@ -6,5 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SignEditorOpenS2CPacket
 
+fun SignEditorOpenS2CPacket.getPos() = this.method_11677()
 fun SignEditorOpenS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11676(arg0)
 fun SignEditorOpenS2CPacket.isFront() = this.method_49995()

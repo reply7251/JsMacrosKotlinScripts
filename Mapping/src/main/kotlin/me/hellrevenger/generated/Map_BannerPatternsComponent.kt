@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BannerPatternsComponent
 
-val BannerPatternsComponent.DEFAULT by aliasStatic(BannerPatternsComponent::field_49404)
-val BannerPatternsComponent.PACKET_CODEC by aliasStatic(BannerPatternsComponent::field_49406)
+val KClass<BannerPatternsComponent>.DEFAULT by aliasStatic(BannerPatternsComponent::field_49404)
 fun BannerPatternsComponent.withoutTopLayer() = this.method_57571()
 fun BannerPatternsComponent.layers() = this.comp_2428()

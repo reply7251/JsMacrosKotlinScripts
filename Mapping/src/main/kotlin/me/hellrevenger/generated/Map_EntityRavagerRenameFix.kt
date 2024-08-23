@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EntityRavagerRenameFix
 
-val EntityRavagerRenameFix.ITEMS by aliasStatic(EntityRavagerRenameFix::field_17712)
+val KClass<EntityRavagerRenameFix>.ITEMS by aliasStatic(EntityRavagerRenameFix::field_17712)

@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PressurePlateBlock
 
-val PressurePlateBlock.POWERED by aliasStatic(PressurePlateBlock::field_11358)
+val KClass<PressurePlateBlock>.POWERED by aliasStatic(PressurePlateBlock::field_11358)

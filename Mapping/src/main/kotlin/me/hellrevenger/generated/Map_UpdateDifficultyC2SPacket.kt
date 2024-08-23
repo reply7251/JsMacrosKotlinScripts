@@ -6,4 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.UpdateDifficultyC2SPacket
 
+fun UpdateDifficultyC2SPacket.getDifficulty() = this.method_19478()
 fun UpdateDifficultyC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_19477(arg0)

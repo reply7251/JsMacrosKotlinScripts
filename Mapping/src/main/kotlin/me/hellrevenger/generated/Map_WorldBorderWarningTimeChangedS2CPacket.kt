@@ -7,3 +7,4 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.WorldBorderWarningTimeChangedS2CPacket
 
 fun WorldBorderWarningTimeChangedS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34165(arg0)
+fun WorldBorderWarningTimeChangedS2CPacket.getWarningTime() = this.method_34166()

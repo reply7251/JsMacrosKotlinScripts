@@ -6,4 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EntityAttachS2CPacket
 
+fun EntityAttachS2CPacket.getHoldingEntityId() = this.method_11810()
+fun EntityAttachS2CPacket.getAttachedEntityId() = this.method_11812()
 fun EntityAttachS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11811(arg0)

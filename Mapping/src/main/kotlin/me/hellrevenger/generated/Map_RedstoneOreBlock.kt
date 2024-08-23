@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RedstoneOreBlock
 
-val RedstoneOreBlock.LIT by aliasStatic(RedstoneOreBlock::field_11392)
+val KClass<RedstoneOreBlock>.LIT by aliasStatic(RedstoneOreBlock::field_11392)

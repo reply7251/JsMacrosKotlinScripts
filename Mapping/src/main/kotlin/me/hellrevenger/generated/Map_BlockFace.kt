@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BlockFace
 
-val BlockFace.CEILING by aliasEnum(BlockFace::class, "field_12473")
-val BlockFace.WALL by aliasEnum(BlockFace::class, "field_12471")
-val BlockFace.FLOOR by aliasEnum(BlockFace::class, "field_12475")
+val KClass<BlockFace>.CEILING by aliasEnum(BlockFace::class, "field_12473")
+val KClass<BlockFace>.WALL by aliasEnum(BlockFace::class, "field_12471")
+val KClass<BlockFace>.FLOOR by aliasEnum(BlockFace::class, "field_12475")

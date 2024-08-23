@@ -8,4 +8,4 @@ import me.hellrevenger.generated.RealmsServerFilterer
 
 fun RealmsServerFilterer.remove(arg0: RealmsServer) = this.method_44622(arg0)
 fun RealmsServerFilterer.isEmpty() = this.method_52664()
-fun RealmsServerFilterer.filterAndSort(arg0: List<RealmsServer>) = this.method_44623(arg0)
+fun RealmsServerFilterer.filterAndSort(arg0: MutableList<RealmsServer>) = this.method_44623(arg0)

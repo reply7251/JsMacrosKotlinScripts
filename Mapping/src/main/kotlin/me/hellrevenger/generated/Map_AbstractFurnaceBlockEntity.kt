@@ -6,12 +6,12 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.AbstractFurnaceBlockEntity
 
-val AbstractFurnaceBlockEntity.COOK_TIME_TOTAL_PROPERTY_INDEX by aliasStatic(AbstractFurnaceBlockEntity::field_31292)
-val AbstractFurnaceBlockEntity.FUEL_TIME_PROPERTY_INDEX by aliasStatic(AbstractFurnaceBlockEntity::field_31290)
-val AbstractFurnaceBlockEntity.DEFAULT_COOK_TIME by aliasStatic(AbstractFurnaceBlockEntity::field_31294)
-val AbstractFurnaceBlockEntity.COOK_TIME_PROPERTY_INDEX by aliasStatic(AbstractFurnaceBlockEntity::field_31291)
-val AbstractFurnaceBlockEntity.PROPERTY_COUNT by aliasStatic(AbstractFurnaceBlockEntity::field_31293)
-val AbstractFurnaceBlockEntity.BURN_TIME_PROPERTY_INDEX by aliasStatic(AbstractFurnaceBlockEntity::field_31289)
+val KClass<AbstractFurnaceBlockEntity>.COOK_TIME_TOTAL_PROPERTY_INDEX by aliasStatic(AbstractFurnaceBlockEntity::field_31292)
+val KClass<AbstractFurnaceBlockEntity>.FUEL_TIME_PROPERTY_INDEX by aliasStatic(AbstractFurnaceBlockEntity::field_31290)
+val KClass<AbstractFurnaceBlockEntity>.DEFAULT_COOK_TIME by aliasStatic(AbstractFurnaceBlockEntity::field_31294)
+val KClass<AbstractFurnaceBlockEntity>.COOK_TIME_PROPERTY_INDEX by aliasStatic(AbstractFurnaceBlockEntity::field_31291)
+val KClass<AbstractFurnaceBlockEntity>.PROPERTY_COUNT by aliasStatic(AbstractFurnaceBlockEntity::field_31293)
+val KClass<AbstractFurnaceBlockEntity>.BURN_TIME_PROPERTY_INDEX by aliasStatic(AbstractFurnaceBlockEntity::field_31289)
 fun KClass<AbstractFurnaceBlockEntity>.addFuel(arg0: Map<Item, Int>, arg1: TagKey<Item>, arg2: Int) = AbstractFurnaceBlockEntity.method_11194(arg0, arg1, arg2)
 fun AbstractFurnaceBlockEntity.getRecipesUsedAndDropExperience(arg0: ServerWorld, arg1: Vec3d) = this.method_27354(arg0, arg1)
 fun KClass<AbstractFurnaceBlockEntity>.canUseAsFuel(arg0: ItemStack) = AbstractFurnaceBlockEntity.method_11195(arg0)

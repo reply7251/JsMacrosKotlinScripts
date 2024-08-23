@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.OrMultipartModelSelector
 
-val OrMultipartModelSelector.KEY by aliasStatic(OrMultipartModelSelector::field_32815)
+val KClass<OrMultipartModelSelector>.KEY by aliasStatic(OrMultipartModelSelector::field_32815)

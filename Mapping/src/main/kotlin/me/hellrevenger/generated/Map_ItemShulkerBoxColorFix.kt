@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ItemShulkerBoxColorFix
 
-val ItemShulkerBoxColorFix.COLORED_SHULKER_BOX_IDS by aliasStatic(ItemShulkerBoxColorFix::field_5680)
+val KClass<ItemShulkerBoxColorFix>.COLORED_SHULKER_BOX_IDS by aliasStatic(ItemShulkerBoxColorFix::field_5680)

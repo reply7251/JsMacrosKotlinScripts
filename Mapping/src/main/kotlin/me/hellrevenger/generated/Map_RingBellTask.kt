@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RingBellTask
 
-val RingBellTask.MAX_DISTANCE by aliasStatic(RingBellTask::field_30159)
+val KClass<RingBellTask>.MAX_DISTANCE by aliasStatic(RingBellTask::field_30159)
 fun KClass<RingBellTask>.create() = RingBellTask.method_47044()

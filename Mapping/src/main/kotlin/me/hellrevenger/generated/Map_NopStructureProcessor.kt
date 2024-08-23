@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NopStructureProcessor
 
-val NopStructureProcessor.INSTANCE by aliasStatic(NopStructureProcessor::field_16876)
+val KClass<NopStructureProcessor>.INSTANCE by aliasStatic(NopStructureProcessor::field_16876)

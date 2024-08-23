@@ -6,8 +6,12 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PistonBlockEntity
 
+fun PistonBlockEntity.getPushedBlock() = this.method_11495()
+fun PistonBlockEntity.getFacing() = this.method_11498()
+fun PistonBlockEntity.getProgress(arg0: Float) = this.method_11499(arg0)
 fun PistonBlockEntity.finish() = this.method_11513()
 fun PistonBlockEntity.getMovementDirection() = this.method_11506()
+fun PistonBlockEntity.getSavedWorldTime() = this.method_11508()
 fun PistonBlockEntity.getRenderOffsetY(arg0: Float) = this.method_11511(arg0)
 fun PistonBlockEntity.isExtending() = this.method_11501()
 fun KClass<PistonBlockEntity>.tick(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: PistonBlockEntity) = PistonBlockEntity.method_31707(arg0, arg1, arg2, arg3)

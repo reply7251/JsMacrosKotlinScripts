@@ -17,7 +17,7 @@ dependencies {
 }
 
 tasks.register("splitGenerated") {
-    onlyIf { false }
+    //onlyIf { false }
 
     doLast {
         splitMain()
@@ -33,9 +33,10 @@ fun splitMain() {
     val packagePathDot = packagePath.replace("/", ".")
 
     val source = File("./generated/Generated.kt")
-    val targetFolder = File("./ScriptDefs/src/main/kotlin/$packagePath")
+    val targetFolder = File("./Mapping/src/main/kotlin/$packagePath")
 
     val valPrefix = "val "
+    val varPrefix = "var "
     val funPrefix = "fun "
     val typealiasPrefix = "typealias "
 
@@ -50,10 +51,10 @@ fun splitMain() {
     val funRegex = "fun (?:<[\\w\\s,]+>)?([\\w.]+)(?:<[\\w\\s,]+>)?\\.(\\w+)\\(([\\w:<*>\\s,.]*)\\)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? = (\\w+)\\.([.\\w]+)(?:<[\\w\\s,<>]+>)?\\([\\w,\\s*]*\\)".toRegex()
     val staticFunRegex = "fun (?:<[\\w\\s,]+>)?KClass<([\\w.]+)(?:<[\\w\\s,]+>)?>\\.(\\w+)\\(([\\w:<*>\\s,.]*)\\)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? = (\\w+)\\.([.\\w]+)(?:<[\\w\\s,]+>)?\\([\\w\\s,*]*\\)".toRegex()
 
-    val aliasRegex = "val (?:<[\\w\\s,]+>)?([\\w.]+)(?:<[\\w\\s,]+>)?\\.(\\w+)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? by alias\\(([\\w.]+)(?:<[\\w\\s,]+>)?::(\\w+)\\)".toRegex()
-    val aliasStaticRegex = "val (?:<[\\w\\s,]+>)?([\\w.]+)(?:<[\\w\\s,]+>)?\\.(\\w+)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? by aliasStatic\\(([\\w.]+)::(\\w+)\\)".toRegex()
-    val aliasStaticRegex2 = "val (?:<[\\w\\s,]+>)?([\\w.]+)(?:<[\\w\\s,]+>)?\\.(\\w+)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? by aliasStatic\\(\\{(\\w+).(\\w+)}\\)".toRegex()
-    val aliasEnumRegex = "val (?:<[\\w\\s,]+>)?([\\w.]+)(?:<[\\w\\s,]+>)?\\.(\\w+)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? by aliasEnum\\(([\\w.]+)::class, \"(\\w+)\"\\)".toRegex()
+    val aliasRegex = "va[lr] (?:<[\\w\\s,]+>)?([\\w.]+)(?:<[\\w\\s,]+>)?\\.(\\w+)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? by alias\\(([\\w.]+)(?:<[\\w\\s,]+>)?::(\\w+)\\)".toRegex()
+    val aliasStaticRegex = "va[lr] (?:<[\\w\\s,]+>)?KClass<([\\w.]+)(?:<[\\w\\s,]+>)?>\\.(\\w+)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? by aliasStatic\\(([\\w.]+)::(\\w+)\\)".toRegex()
+    val aliasStaticRegex2 = "val (?:<[\\w\\s,]+>)?KClass<([\\w.]+)(?:<[\\w\\s,]+>)?>\\.(\\w+)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? by aliasStatic\\(\\{(\\w+).(\\w+)}\\)".toRegex()
+    val aliasEnumRegex = "val (?:<[\\w\\s,]+>)?KClass<([\\w.]+)(?:<[\\w\\s,]+>)?>\\.(\\w+)( where (?:(?:, )?(?:in|out )?\\w+: [\\s\\w<*>.,]+)+)? by aliasEnum\\(([\\w.]+)::class, \"(\\w+)\"\\)".toRegex()
 
     fun splitArgs(string: String) =
         if(string.isNotEmpty())
@@ -127,25 +128,30 @@ fun splitMain() {
             }
             var match: MatchResult?
 
-            if (it.startsWith(valPrefix)) {
+            if (it.startsWith(valPrefix) || it.startsWith(varPrefix)) {
                 // 1 == 4 = type
                 // 2 = yarn
                 // 3 = where
                 // 5 = int
-                val (type, where) = if("aliasStatic" in it) {
-                    match = aliasStaticRegex2.matchEntire(it) ?: aliasStaticRegex.matchEntire(it)
-                    if(match != null) {
-                        match.groupValues[1] to match.groupValues[3]
+                val (type, where) = if("KClass" in it) {
+                    if("aliasStatic" in it) {
+                        match = aliasStaticRegex2.matchEntire(it) ?: aliasStaticRegex.matchEntire(it)
+                        if(match != null) {
+                            match.groupValues[1] to match.groupValues[3]
+                        } else {
+                            println("error on static val: $it")
+                            null to null
+                        }
+                    } else if("aliasEnum" in it) {
+                        match = aliasEnumRegex.matchEntire(it)
+                        if(match != null) {
+                            match.groupValues[1] to match.groupValues[3]
+                        } else {
+                            println("error on enum val: $it")
+                            null to null
+                        }
                     } else {
-                        println("error on static val: $it")
-                        null to null
-                    }
-                } else if("aliasEnum" in it) {
-                    match = aliasEnumRegex.matchEntire(it)
-                    if(match != null) {
-                        match.groupValues[1] to match.groupValues[3]
-                    } else {
-                        println("error on enum val: $it")
+                        println("error on unknown static val: $it")
                         null to null
                     }
                 } else {
@@ -237,21 +243,21 @@ fun splitMain() {
         writer.append("package $packagePathDot\n\n")
         writer.append("""
             import kotlin.properties.ReadOnlyProperty
-            import kotlin.properties.ReadWriteProperty
             import kotlin.reflect.*
+
             fun <R, T> alias(alias: KProperty1<R, T>) = ReadOnlyProperty<R, T> { thisRef, _ -> alias.get(thisRef) }
+            fun <R, T> alias(alias: KMutableProperty1<R, T>) = MyReadWriteProperty(alias)
             fun <T> aliasStatic(alias: KProperty0<T>) = ReadOnlyStaticProperty(alias)
             fun <T> aliasStatic(alias: () -> T) = ReadOnlyStaticProperty(alias)
+            fun <T> aliasStatic(alias: KMutableProperty0<T>) = ReadOnlyStaticProperty(alias)
             fun <T: Any> aliasEnum(type: KClass<T>, name: kotlin.String) = EnumProperty(type, name)
 
             class ReadOnlyStaticProperty<T>(val getter: () -> T) {
                 constructor(alias: KProperty0<T>): this(alias as () -> T)
-            
-                operator fun <Self> getValue(thisRef: Self, prop: KProperty<*>): T {
-                    return getter.invoke()
-                }
-            }
 
+                operator fun <Self> getValue(thisRef: Self, prop: KProperty<*>): T = getter.invoke()
+            }
+            
             class EnumProperty<T : Any>(val type: KClass<T>, val name: kotlin.String) {
                 private val ordinal: Int
                 init {
@@ -260,6 +266,22 @@ fun splitMain() {
                 }
                 operator fun <Self> getValue(thisRef: Self, prop: KProperty<*>): T {
                     return type.java.enumConstants[ordinal]
+                }
+            }
+
+            class ReadWriteStaticProperty<T>(val alias: KMutableProperty0<T>) {
+                operator fun <Self> getValue(thisRef: Self, prop: KProperty<*>): T = alias.get()
+
+                operator fun <Self> setValue(thisRef: Self, property: KProperty<*>, value: T) {
+                    alias.set(value)
+                }
+            }
+
+            class MyReadWriteProperty<R, T>(val alias: KMutableProperty1<R, T>) {
+                operator fun getValue(thisRef: R, property: KProperty<*>): T = alias.get(thisRef)
+
+                operator fun setValue(thisRef: R, property: KProperty<*>, value: T) {
+                    (alias as? KMutableProperty1<R, T>)?.set(thisRef, value)
                 }
             }
             

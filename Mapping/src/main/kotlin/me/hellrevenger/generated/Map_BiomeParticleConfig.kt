@@ -6,4 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BiomeParticleConfig
 
+fun BiomeParticleConfig.getParticle() = this.method_24369()
 fun BiomeParticleConfig.shouldAddParticle(arg0: Random) = this.method_24370(arg0)

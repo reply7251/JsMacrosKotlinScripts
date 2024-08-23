@@ -8,7 +8,7 @@ import me.hellrevenger.generated.TextRenderer
 
 val TextRenderer.random by alias(TextRenderer::field_2001)
 val TextRenderer.fontHeight by alias(TextRenderer::field_2000)
-val TextRenderer.ARABIC_SHAPING_LETTERS_SHAPE by aliasStatic(TextRenderer::field_35427)
+val KClass<TextRenderer>.ARABIC_SHAPING_LETTERS_SHAPE by aliasStatic(TextRenderer::field_35427)
 fun TextRenderer.isRightToLeft() = this.method_1726()
 fun TextRenderer.getTextHandler() = this.method_27527()
 fun TextRenderer.trimToWidth(arg0: StringVisitable, arg1: Int) = this.method_1714(arg0, arg1)
@@ -20,7 +20,6 @@ fun TextRenderer.trimToWidth(arg0: String, arg1: Int, arg2: Boolean) = this.meth
 fun TextRenderer.getWrappedLinesHeight(arg0: StringVisitable, arg1: Int) = this.method_44378(arg0, arg1)
 fun TextRenderer.draw(arg0: OrderedText, arg1: Float, arg2: Float, arg3: Int, arg4: Boolean, arg5: Matrix4f, arg6: VertexConsumerProvider, arg7: net.minecraft.class_327.class_6415, arg8: Int, arg9: Int) = this.method_22942(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 fun TextRenderer.getWidth(arg0: OrderedText) = this.method_30880(arg0)
-fun TextRenderer.drawLayer(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Boolean, arg5: Matrix4f, arg6: VertexConsumerProvider, arg7: net.minecraft.class_327.class_6415, arg8: Int, arg9: Int) = this.method_1724(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 fun TextRenderer.trimToWidth(arg0: String, arg1: Int) = this.method_27523(arg0, arg1)
 fun TextRenderer.mirror(arg0: String) = this.method_1721(arg0)
 fun TextRenderer.draw(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Boolean, arg5: Matrix4f, arg6: VertexConsumerProvider, arg7: net.minecraft.class_327.class_6415, arg8: Int, arg9: Int) = this.method_27521(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)

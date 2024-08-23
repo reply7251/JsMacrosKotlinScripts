@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EmptyProfileResult
 
-val EmptyProfileResult.INSTANCE by aliasStatic(EmptyProfileResult::field_16265)
+val KClass<EmptyProfileResult>.INSTANCE by aliasStatic(EmptyProfileResult::field_16265)

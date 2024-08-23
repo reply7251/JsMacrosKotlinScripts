@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ScoreboardCriterionArgumentType
 
-val ScoreboardCriterionArgumentType.INVALID_CRITERION_EXCEPTION by aliasStatic(ScoreboardCriterionArgumentType::field_9927)
+val KClass<ScoreboardCriterionArgumentType>.INVALID_CRITERION_EXCEPTION by aliasStatic(ScoreboardCriterionArgumentType::field_9927)
 fun KClass<ScoreboardCriterionArgumentType>.getCriterion(arg0: CommandContext<ServerCommandSource>, arg1: String) = ScoreboardCriterionArgumentType.method_9402(arg0, arg1)
 fun KClass<ScoreboardCriterionArgumentType>.scoreboardCriterion() = ScoreboardCriterionArgumentType.method_9399()
 fun <T>ScoreboardCriterionArgumentType.getStatName(arg0: StatType<T>, arg1: Object) = this.method_9400<T>(arg0, arg1)

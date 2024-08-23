@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RealmsResetNormalWorldScreen
 
-val RealmsResetNormalWorldScreen.TITLE by aliasStatic(RealmsResetNormalWorldScreen::field_46114)
+val KClass<RealmsResetNormalWorldScreen>.TITLE by aliasStatic(RealmsResetNormalWorldScreen::field_46114)

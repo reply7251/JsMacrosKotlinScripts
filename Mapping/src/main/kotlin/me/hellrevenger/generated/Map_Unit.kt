@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Unit
 
-val Unit.INSTANCE by aliasEnum(Unit::class, "field_17274")
+val KClass<Unit>.INSTANCE by aliasEnum(Unit::class, "field_17274")

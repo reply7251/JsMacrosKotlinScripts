@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ChestBlock
 
-val ChestBlock.WATERLOGGED by aliasStatic(ChestBlock::field_10772)
-val ChestBlock.CHEST_TYPE by aliasStatic(ChestBlock::field_10770)
-val ChestBlock.FACING by aliasStatic(ChestBlock::field_10768)
+val KClass<ChestBlock>.WATERLOGGED by aliasStatic(ChestBlock::field_10772)
+val KClass<ChestBlock>.CHEST_TYPE by aliasStatic(ChestBlock::field_10770)
+val KClass<ChestBlock>.FACING by aliasStatic(ChestBlock::field_10768)
 fun ChestBlock.getExpectedEntityType() = this.method_31641()
 fun KClass<ChestBlock>.getInventory(arg0: ChestBlock, arg1: BlockState, arg2: world_World, arg3: BlockPos, arg4: Boolean) = ChestBlock.method_17458(arg0, arg1, arg2, arg3, arg4)
 fun KClass<ChestBlock>.getFacing(arg0: BlockState) = ChestBlock.method_9758(arg0)

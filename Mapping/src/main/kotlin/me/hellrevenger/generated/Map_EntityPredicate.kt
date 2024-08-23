@@ -6,7 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EntityPredicate
 
-val EntityPredicate.LOOT_CONTEXT_PREDICATE_CODEC by aliasStatic(EntityPredicate::field_47250)
 fun KClass<EntityPredicate>.contextPredicateFromEntityPredicate(arg0: Optional<EntityPredicate>) = EntityPredicate.method_53137(arg0)
 fun KClass<EntityPredicate>.contextPredicateFromEntityPredicate(arg0: net.minecraft.class_2048.class_2049) = EntityPredicate.method_53134(arg0)
 fun EntityPredicate.typeSpecific() = this.comp_1769()

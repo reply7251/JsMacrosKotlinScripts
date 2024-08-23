@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WorldPresetTags
 
-val WorldPresetTags.EXTENDED by aliasStatic(WorldPresetTags::field_37407)
-val WorldPresetTags.NORMAL by aliasStatic(WorldPresetTags::field_37406)
+val KClass<WorldPresetTags>.EXTENDED by aliasStatic(WorldPresetTags::field_37407)
+val KClass<WorldPresetTags>.NORMAL by aliasStatic(WorldPresetTags::field_37406)

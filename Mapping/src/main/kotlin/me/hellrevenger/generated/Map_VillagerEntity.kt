@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.VillagerEntity
 
-val VillagerEntity.POINTS_OF_INTEREST by aliasStatic(VillagerEntity::field_18851)
-val VillagerEntity.ITEM_FOOD_VALUES by aliasStatic(VillagerEntity::field_18526)
+val KClass<VillagerEntity>.POINTS_OF_INTEREST by aliasStatic(VillagerEntity::field_18851)
+val KClass<VillagerEntity>.ITEM_FOOD_VALUES by aliasStatic(VillagerEntity::field_18526)
 fun VillagerEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_7225(arg0, arg1)
 fun VillagerEntity.releaseTicketFor(arg0: MemoryModuleType<GlobalPos>) = this.method_19176(arg0)
 fun VillagerEntity.setOffers(arg0: TradeOfferList) = this.method_16917(arg0)
@@ -27,3 +27,4 @@ fun VillagerEntity.canSummonGolem(arg0: Long) = this.method_20687(arg0)
 fun VillagerEntity.summonGolem(arg0: ServerWorld, arg1: Long, arg2: Int) = this.method_20688(arg0, arg1, arg2)
 fun KClass<VillagerEntity>.createVillagerAttributes() = VillagerEntity.method_26955()
 fun VillagerEntity.isNatural() = this.method_29279()
+fun VillagerEntity.getGossip() = this.method_21651()

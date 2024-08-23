@@ -6,6 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BlockRenderManager
 
+fun BlockRenderManager.getModels() = this.method_3351()
 fun BlockRenderManager.renderDamage(arg0: BlockState, arg1: BlockPos, arg2: BlockRenderView, arg3: MatrixStack, arg4: VertexConsumer) = this.method_23071(arg0, arg1, arg2, arg3, arg4)
 fun BlockRenderManager.getModel(arg0: BlockState) = this.method_3349(arg0)
 fun BlockRenderManager.getModelRenderer() = this.method_3350()

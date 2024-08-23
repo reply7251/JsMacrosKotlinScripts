@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EmptyPaletteStorage
 
-val EmptyPaletteStorage.EMPTY_DATA by aliasStatic(EmptyPaletteStorage::field_34401)
+val KClass<EmptyPaletteStorage>.EMPTY_DATA by aliasStatic(EmptyPaletteStorage::field_34401)

@@ -6,9 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SoundSystem
 
-val SoundSystem.OPENAL_SOFT_ON by aliasStatic(SoundSystem::field_34827)
-val SoundSystem.FOR_THE_DEBUG by aliasStatic(SoundSystem::field_33020)
-val SoundSystem.OPENAL_SOFT_ON_LENGTH by aliasStatic(SoundSystem::field_34828)
+val KClass<SoundSystem>.OPENAL_SOFT_ON by aliasStatic(SoundSystem::field_34827)
+val KClass<SoundSystem>.FOR_THE_DEBUG by aliasStatic(SoundSystem::field_33020)
+val KClass<SoundSystem>.OPENAL_SOFT_ON_LENGTH by aliasStatic(SoundSystem::field_34828)
 fun SoundSystem.pauseAll() = this.method_19761()
 fun SoundSystem.stop(arg0: SoundInstance) = this.method_19753(arg0)
 fun SoundSystem.stopSounds(arg0: Identifier, arg1: SoundCategory) = this.method_4838(arg0, arg1)

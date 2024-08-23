@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ChunkLevels
 
-val ChunkLevels.INACCESSIBLE by aliasStatic(ChunkLevels::field_44849)
-val ChunkLevels.FULL_GENERATION_REQUIRED_LEVEL by aliasStatic(ChunkLevels::field_51859)
+val KClass<ChunkLevels>.INACCESSIBLE by aliasStatic(ChunkLevels::field_44849)
+val KClass<ChunkLevels>.FULL_GENERATION_REQUIRED_LEVEL by aliasStatic(ChunkLevels::field_51859)
 fun KClass<ChunkLevels>.getLevelFromStatus(arg0: ChunkStatus) = ChunkLevels.method_51829(arg0)
 fun KClass<ChunkLevels>.shouldTickEntities(arg0: Int) = ChunkLevels.method_51831(arg0)
 fun KClass<ChunkLevels>.shouldTickBlocks(arg0: Int) = ChunkLevels.method_51832(arg0)

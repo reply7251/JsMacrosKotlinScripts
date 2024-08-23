@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DebugGameTestAddMarkerCustomPayload
 
-val DebugGameTestAddMarkerCustomPayload.ID by aliasStatic(DebugGameTestAddMarkerCustomPayload::field_48665)
+val KClass<DebugGameTestAddMarkerCustomPayload>.ID by aliasStatic(DebugGameTestAddMarkerCustomPayload::field_48665)
 fun DebugGameTestAddMarkerCustomPayload.color() = this.comp_1684()
 fun DebugGameTestAddMarkerCustomPayload.durationMs() = this.comp_1686()
 fun DebugGameTestAddMarkerCustomPayload.pos() = this.comp_1683()

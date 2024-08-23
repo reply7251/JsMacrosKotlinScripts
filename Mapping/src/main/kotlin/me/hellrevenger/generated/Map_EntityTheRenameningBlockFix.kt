@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EntityTheRenameningBlockFix
 
-val EntityTheRenameningBlockFix.ITEMS by aliasStatic(EntityTheRenameningBlockFix::field_5673)
-val EntityTheRenameningBlockFix.BLOCKS by aliasStatic(EntityTheRenameningBlockFix::field_5672)
-val EntityTheRenameningBlockFix.ENTITIES by aliasStatic(EntityTheRenameningBlockFix::field_5671)
+val KClass<EntityTheRenameningBlockFix>.ITEMS by aliasStatic(EntityTheRenameningBlockFix::field_5673)
+val KClass<EntityTheRenameningBlockFix>.BLOCKS by aliasStatic(EntityTheRenameningBlockFix::field_5672)
+val KClass<EntityTheRenameningBlockFix>.ENTITIES by aliasStatic(EntityTheRenameningBlockFix::field_5671)

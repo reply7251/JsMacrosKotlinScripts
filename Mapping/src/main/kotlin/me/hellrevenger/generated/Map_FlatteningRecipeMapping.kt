@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FlatteningRecipeMapping
 
-val FlatteningRecipeMapping.RECIPES by aliasStatic(FlatteningRecipeMapping::field_5708)
+val KClass<FlatteningRecipeMapping>.RECIPES by aliasStatic(FlatteningRecipeMapping::field_5708)

@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TadpoleEntity
 
-val TadpoleEntity.WIDTH by aliasStatic(TadpoleEntity::field_39302)
-val TadpoleEntity.HEIGHT by aliasStatic(TadpoleEntity::field_39303)
-val TadpoleEntity.MAX_TADPOLE_AGE by aliasStatic(TadpoleEntity::field_37496)
+val KClass<TadpoleEntity>.WIDTH by aliasStatic(TadpoleEntity::field_39302)
+val KClass<TadpoleEntity>.HEIGHT by aliasStatic(TadpoleEntity::field_39303)
+val KClass<TadpoleEntity>.MAX_TADPOLE_AGE by aliasStatic(TadpoleEntity::field_37496)
 fun KClass<TadpoleEntity>.createTadpoleAttributes() = TadpoleEntity.method_41395()

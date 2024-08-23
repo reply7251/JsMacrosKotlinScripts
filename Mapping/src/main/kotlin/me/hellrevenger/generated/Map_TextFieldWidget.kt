@@ -6,10 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TextFieldWidget
 
-val TextFieldWidget.DEFAULT_EDITABLE_COLOR by aliasStatic(TextFieldWidget::field_32196)
-val TextFieldWidget.maxLength by alias(TextFieldWidget::field_2108)
-val TextFieldWidget.textRenderer by alias(TextFieldWidget::field_2105)
-val TextFieldWidget.firstCharacterIndex by alias(TextFieldWidget::field_2103)
+val KClass<TextFieldWidget>.DEFAULT_EDITABLE_COLOR by aliasStatic(TextFieldWidget::field_32196)
 fun TextFieldWidget.isVisible() = this.method_1885()
 fun TextFieldWidget.setText(arg0: String) = this.method_1852(arg0)
 fun TextFieldWidget.getCursor() = this.method_1881()
@@ -37,6 +34,7 @@ fun TextFieldWidget.setEditableColor(arg0: Int) = this.method_1868(arg0)
 fun TextFieldWidget.setTextPredicate(arg0: Predicate<String>) = this.method_1890(arg0)
 fun TextFieldWidget.setPlaceholder(arg0: Text) = this.method_47404(arg0)
 fun TextFieldWidget.setDrawsBackground(arg0: Boolean) = this.method_1858(arg0)
+fun TextFieldWidget.getText() = this.method_1882()
 fun TextFieldWidget.setRenderTextProvider(arg0: BiFunction<String, Int, OrderedText>) = this.method_1854(arg0)
 fun TextFieldWidget.getInnerWidth() = this.method_1859()
 fun TextFieldWidget.setCursorToStart(arg0: Boolean) = this.method_1870(arg0)

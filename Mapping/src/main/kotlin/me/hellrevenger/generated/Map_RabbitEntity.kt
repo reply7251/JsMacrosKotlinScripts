@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.RabbitEntity
 
-val RabbitEntity.ESCAPE_DANGER_SPEED by aliasStatic(RabbitEntity::field_30359)
-val RabbitEntity.MELEE_ATTACK_SPEED by aliasStatic(RabbitEntity::field_30360)
+val KClass<RabbitEntity>.ESCAPE_DANGER_SPEED by aliasStatic(RabbitEntity::field_30359)
+val KClass<RabbitEntity>.MELEE_ATTACK_SPEED by aliasStatic(RabbitEntity::field_30360)
 fun RabbitEntity.setVariant(arg0: net.minecraft.class_1463.class_7990) = this.method_47853(arg0)
 fun RabbitEntity.startJump() = this.method_6618()
 fun KClass<RabbitEntity>.createRabbitAttributes() = RabbitEntity.method_26892()

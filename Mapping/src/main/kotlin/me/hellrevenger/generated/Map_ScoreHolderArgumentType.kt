@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ScoreHolderArgumentType
 
-val ScoreHolderArgumentType.SUGGESTION_PROVIDER by aliasStatic(ScoreHolderArgumentType::field_9951)
+val KClass<ScoreHolderArgumentType>.SUGGESTION_PROVIDER by aliasStatic(ScoreHolderArgumentType::field_9951)
 fun KClass<ScoreHolderArgumentType>.scoreHolder() = ScoreHolderArgumentType.method_9447()
 fun KClass<ScoreHolderArgumentType>.getScoreHolders(arg0: CommandContext<ServerCommandSource>, arg1: String, arg2: Supplier<Collection<ScoreHolder>>) = ScoreHolderArgumentType.method_9450(arg0, arg1, arg2)
 fun KClass<ScoreHolderArgumentType>.scoreHolders() = ScoreHolderArgumentType.method_9451()

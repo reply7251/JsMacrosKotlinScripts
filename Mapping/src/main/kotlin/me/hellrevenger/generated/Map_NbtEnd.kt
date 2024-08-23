@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtEnd
 
-val NbtEnd.INSTANCE by aliasStatic(NbtEnd::field_21033)
-val NbtEnd.TYPE by aliasStatic(NbtEnd::field_21032)
+val KClass<NbtEnd>.INSTANCE by aliasStatic(NbtEnd::field_21033)
+val KClass<NbtEnd>.TYPE by aliasStatic(NbtEnd::field_21032)
 fun NbtEnd.copy() = this.method_10586()

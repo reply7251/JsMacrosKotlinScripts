@@ -6,6 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.CommandSuggestionsS2CPacket
 
+fun CommandSuggestionsS2CPacket.getSuggestions() = this.method_11397()
 fun CommandSuggestionsS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11398(arg0)
 fun CommandSuggestionsS2CPacket.suggestions() = this.comp_2265()
 fun CommandSuggestionsS2CPacket.id() = this.comp_2262()

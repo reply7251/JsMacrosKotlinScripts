@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ItemKeys
 
-val ItemKeys.PUMPKIN_SEEDS by aliasStatic(ItemKeys::field_46227)
-val ItemKeys.MELON_SEEDS by aliasStatic(ItemKeys::field_46228)
+val KClass<ItemKeys>.PUMPKIN_SEEDS by aliasStatic(ItemKeys::field_46227)
+val KClass<ItemKeys>.MELON_SEEDS by aliasStatic(ItemKeys::field_46228)

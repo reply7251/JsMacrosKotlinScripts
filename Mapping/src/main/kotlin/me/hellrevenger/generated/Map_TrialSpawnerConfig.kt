@@ -6,8 +6,10 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.TrialSpawnerConfig
 
-val TrialSpawnerConfig.DEFAULT by aliasStatic(TrialSpawnerConfig::field_47367)
+val KClass<TrialSpawnerConfig>.DEFAULT by aliasStatic(TrialSpawnerConfig::field_47367)
 fun TrialSpawnerConfig.getCooldownLength() = this.method_58712()
+fun TrialSpawnerConfig.getTotalMobs(arg0: Int) = this.method_55179(arg0)
+fun TrialSpawnerConfig.getSimultaneousMobs(arg0: Int) = this.method_55181(arg0)
 fun TrialSpawnerConfig.spawnPotentialsDefinition() = this.comp_2110()
 fun TrialSpawnerConfig.lootTablesToEject() = this.comp_2111()
 fun TrialSpawnerConfig.spawnRange() = this.comp_2103()

@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ScreenshotRecorder
 
-val ScreenshotRecorder.SCREENSHOTS_DIRECTORY by aliasStatic(ScreenshotRecorder::field_41337)
+val KClass<ScreenshotRecorder>.SCREENSHOTS_DIRECTORY by aliasStatic(ScreenshotRecorder::field_41337)
 fun ScreenshotRecorder.finish() = this.method_35712()
 fun ScreenshotRecorder.writeToStream() = this.method_35710()
 fun KClass<ScreenshotRecorder>.takeScreenshot(arg0: Framebuffer) = ScreenshotRecorder.method_1663(arg0)

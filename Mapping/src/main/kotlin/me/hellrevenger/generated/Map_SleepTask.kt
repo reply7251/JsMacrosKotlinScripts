@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.SleepTask
 
-val SleepTask.RUN_TIME by aliasStatic(SleepTask::field_30175)
+val KClass<SleepTask>.RUN_TIME by aliasStatic(SleepTask::field_30175)

@@ -15,7 +15,7 @@ val ServerPropertiesHandler.playerIdleTimeout by alias(ServerPropertiesHandler::
 val ServerPropertiesHandler.rateLimit by alias(ServerPropertiesHandler::field_25802)
 val ServerPropertiesHandler.maxPlayers by alias(ServerPropertiesHandler::field_16814)
 val ServerPropertiesHandler.enableStatus by alias(ServerPropertiesHandler::field_24453)
-val ServerPropertiesHandler.acceptsTransfers by alias(ServerPropertiesHandler::field_48270)
+var ServerPropertiesHandler.acceptsTransfers by alias(ServerPropertiesHandler::field_48270)
 val ServerPropertiesHandler.pvp by alias(ServerPropertiesHandler::field_16833)
 val ServerPropertiesHandler.hardcore by alias(ServerPropertiesHandler::field_16838)
 val ServerPropertiesHandler.broadcastConsoleToOps by alias(ServerPropertiesHandler::field_16802)

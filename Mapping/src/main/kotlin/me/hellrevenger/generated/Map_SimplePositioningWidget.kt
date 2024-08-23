@@ -10,6 +10,7 @@ fun KClass<SimplePositioningWidget>.setPos(arg0: Int, arg1: Int, arg2: Int, arg3
 fun SimplePositioningWidget.copyPositioner() = this.method_46448()
 fun SimplePositioningWidget.setMinHeight(arg0: Int) = this.method_46447(arg0)
 fun <T>SimplePositioningWidget.add(arg0: T) where T: Widget = this.method_46441<T>(arg0)
+fun SimplePositioningWidget.getMainPositioner() = this.method_46450()
 fun SimplePositioningWidget.setDimensions(arg0: Int, arg1: Int) = this.method_46446(arg0, arg1)
 fun KClass<SimplePositioningWidget>.setPos(arg0: Widget, arg1: ScreenRect, arg2: Float, arg3: Float) = SimplePositioningWidget.method_49617(arg0, arg1, arg2, arg3)
 fun <T>SimplePositioningWidget.add(arg0: T, arg1: Consumer<Positioner>) where T: Widget = this.method_52732<T>(arg0, arg1)

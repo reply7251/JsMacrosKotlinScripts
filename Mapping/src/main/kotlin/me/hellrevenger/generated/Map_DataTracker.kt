@@ -8,7 +8,7 @@ import me.hellrevenger.generated.DataTracker
 
 fun DataTracker.getChangedEntries() = this.method_46357()
 fun DataTracker.isDirty() = this.method_12786()
-fun DataTracker.writeUpdatedEntries(arg0: List<net.minecraft.class_2945.class_7834<*>>) = this.method_12779(arg0)
+fun DataTracker.writeUpdatedEntries(arg0: MutableList<net.minecraft.class_2945.class_7834<*>>) = this.method_12779(arg0)
 fun <T>DataTracker.get(arg0: TrackedData<T>) = this.method_12789<T>(arg0)
 fun DataTracker.getDirtyEntries() = this.method_12781()
 fun <T>DataTracker.set(arg0: TrackedData<T>, arg1: T) = this.method_12778<T>(arg0, arg1)

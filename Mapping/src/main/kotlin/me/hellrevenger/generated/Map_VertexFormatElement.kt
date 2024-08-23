@@ -6,13 +6,13 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.VertexFormatElement
 
-val VertexFormatElement.UV by aliasStatic(VertexFormatElement::field_52110)
-val VertexFormatElement.POSITION by aliasStatic(VertexFormatElement::field_52107)
-val VertexFormatElement.UV_1 by aliasStatic(VertexFormatElement::field_52111)
-val VertexFormatElement.UV_2 by aliasStatic(VertexFormatElement::field_52112)
-val VertexFormatElement.NORMAL by aliasStatic(VertexFormatElement::field_52113)
-val VertexFormatElement.COLOR by aliasStatic(VertexFormatElement::field_52108)
-val VertexFormatElement.UV_0 by aliasStatic(VertexFormatElement::field_52109)
+val KClass<VertexFormatElement>.UV by aliasStatic(VertexFormatElement::field_52110)
+val KClass<VertexFormatElement>.POSITION by aliasStatic(VertexFormatElement::field_52107)
+val KClass<VertexFormatElement>.UV_1 by aliasStatic(VertexFormatElement::field_52111)
+val KClass<VertexFormatElement>.UV_2 by aliasStatic(VertexFormatElement::field_52112)
+val KClass<VertexFormatElement>.NORMAL by aliasStatic(VertexFormatElement::field_52113)
+val KClass<VertexFormatElement>.COLOR by aliasStatic(VertexFormatElement::field_52108)
+val KClass<VertexFormatElement>.UV_0 by aliasStatic(VertexFormatElement::field_52109)
 fun KClass<VertexFormatElement>.register(arg0: Int, arg1: Int, arg2: net.minecraft.class_296.class_297, arg3: net.minecraft.class_296.class_298, arg4: Int) = VertexFormatElement.method_60845(arg0, arg1, arg2, arg3, arg4)
 fun KClass<VertexFormatElement>.streamFromMask(arg0: Int) = VertexFormatElement.method_60848(arg0)
 fun KClass<VertexFormatElement>.get(arg0: Int) = VertexFormatElement.method_60844(arg0)

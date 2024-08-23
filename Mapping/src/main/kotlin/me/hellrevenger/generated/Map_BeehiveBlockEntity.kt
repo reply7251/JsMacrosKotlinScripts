@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BeehiveBlockEntity
 
-val BeehiveBlockEntity.MIN_OCCUPATION_TICKS_WITHOUT_NECTAR by aliasStatic(BeehiveBlockEntity::field_31313)
-val BeehiveBlockEntity.MAX_BEE_COUNT by aliasStatic(BeehiveBlockEntity::field_31312)
+val KClass<BeehiveBlockEntity>.MIN_OCCUPATION_TICKS_WITHOUT_NECTAR by aliasStatic(BeehiveBlockEntity::field_31313)
+val KClass<BeehiveBlockEntity>.MAX_BEE_COUNT by aliasStatic(BeehiveBlockEntity::field_31312)
 fun BeehiveBlockEntity.getBeeCount() = this.method_23903()
 fun BeehiveBlockEntity.tryEnterHive(arg0: Entity) = this.method_21848(arg0)
 fun KClass<BeehiveBlockEntity>.serverTick(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: BeehiveBlockEntity) = BeehiveBlockEntity.method_31656(arg0, arg1, arg2, arg3)

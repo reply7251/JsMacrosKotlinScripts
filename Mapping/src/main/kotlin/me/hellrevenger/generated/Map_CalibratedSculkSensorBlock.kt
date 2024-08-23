@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.CalibratedSculkSensorBlock
 
-val CalibratedSculkSensorBlock.FACING by aliasStatic(CalibratedSculkSensorBlock::field_43235)
+val KClass<CalibratedSculkSensorBlock>.FACING by aliasStatic(CalibratedSculkSensorBlock::field_43235)

@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.NbtParsingRule
 
-val NbtParsingRule.INSTANCE by aliasStatic(NbtParsingRule::field_49971)
+val KClass<NbtParsingRule>.INSTANCE by aliasStatic(NbtParsingRule::field_49971)

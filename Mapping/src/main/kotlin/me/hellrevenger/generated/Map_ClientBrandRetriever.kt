@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ClientBrandRetriever
 
-val ClientBrandRetriever.VANILLA by aliasStatic(ClientBrandRetriever::field_33204)
+val KClass<ClientBrandRetriever>.VANILLA by aliasStatic(ClientBrandRetriever::field_33204)

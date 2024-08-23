@@ -6,8 +6,9 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FontType
 
-val FontType.SPACE by aliasEnum(FontType::class, "field_37904")
-val FontType.REFERENCE by aliasEnum(FontType::class, "field_44761")
-val FontType.TTF by aliasEnum(FontType::class, "field_2317")
-val FontType.BITMAP by aliasEnum(FontType::class, "field_2312")
-val FontType.UNIHEX by aliasEnum(FontType::class, "field_2313")
+val KClass<FontType>.SPACE by aliasEnum(FontType::class, "field_37904")
+val KClass<FontType>.REFERENCE by aliasEnum(FontType::class, "field_44761")
+val KClass<FontType>.TTF by aliasEnum(FontType::class, "field_2317")
+val KClass<FontType>.BITMAP by aliasEnum(FontType::class, "field_2312")
+val KClass<FontType>.UNIHEX by aliasEnum(FontType::class, "field_2313")
+fun FontType.getLoaderCodec() = this.method_51758()

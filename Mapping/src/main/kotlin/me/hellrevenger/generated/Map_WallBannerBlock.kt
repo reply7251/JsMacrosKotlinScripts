@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WallBannerBlock
 
-val WallBannerBlock.FACING by aliasStatic(WallBannerBlock::field_11722)
+val KClass<WallBannerBlock>.FACING by aliasStatic(WallBannerBlock::field_11722)

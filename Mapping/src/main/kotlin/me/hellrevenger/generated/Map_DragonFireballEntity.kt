@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DragonFireballEntity
 
-val DragonFireballEntity.DAMAGE_RANGE by aliasStatic(DragonFireballEntity::field_30661)
+val KClass<DragonFireballEntity>.DAMAGE_RANGE by aliasStatic(DragonFireballEntity::field_30661)

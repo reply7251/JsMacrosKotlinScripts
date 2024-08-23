@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DebugSampleType
 
-val DebugSampleType.TICK_TIME by aliasEnum(DebugSampleType::class, "field_48817")
+val KClass<DebugSampleType>.TICK_TIME by aliasEnum(DebugSampleType::class, "field_48817")

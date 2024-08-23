@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FlatLevelGeneratorPresetTags
 
-val FlatLevelGeneratorPresetTags.VISIBLE by aliasStatic(FlatLevelGeneratorPresetTags::field_37402)
+val KClass<FlatLevelGeneratorPresetTags>.VISIBLE by aliasStatic(FlatLevelGeneratorPresetTags::field_37402)

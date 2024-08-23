@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.EntityCodSalmonFix
 
-val EntityCodSalmonFix.SPAWN_EGGS by aliasStatic(EntityCodSalmonFix::field_15893)
-val EntityCodSalmonFix.ENTITIES by aliasStatic(EntityCodSalmonFix::field_15892)
+val KClass<EntityCodSalmonFix>.SPAWN_EGGS by aliasStatic(EntityCodSalmonFix::field_15893)
+val KClass<EntityCodSalmonFix>.ENTITIES by aliasStatic(EntityCodSalmonFix::field_15892)

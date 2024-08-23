@@ -11,7 +11,7 @@ import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.PlayerEntityHelp
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.core.library.impl.FReflection
 
-val mc get() = MinecraftClient.method_1551()
+val mc get() = MinecraftClient::class.getInstance()
 
 val methodFov = net.minecraft.class_757::class.java.declaredMethods.first { it.name == "method_3196" }
 
@@ -32,7 +32,7 @@ open class WorldPosWrapper(
         var pitch = 0f
     }
 
-    fun getDelta() = mc.method_60646().getTickDelta(true)
+    fun getDelta() = mc.getRenderTickCounter().getTickDelta(true)
 
     var bindEntity: EntityHelper<*>? = null
 
@@ -48,15 +48,16 @@ open class WorldPosWrapper(
 
     fun updateIfNecessary() {
         val gameRenderer = mc.gameRenderer
-        val cam = gameRenderer.method_19418()
-        camera = Pos3D(cam.method_19326())
-        val fov = mc.options.method_41808().value.toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
+        val cam = gameRenderer.getCamera()
+        camera = Pos3D(cam.getPos())
+
+        val fov = mc.options.getFov().getValue().toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
         if (fov != lastFov) {
             projectionMatrix = gameRenderer.getBasicProjectionMatrix(fov)
             lastFov = fov
             pitch = 1000f;
         }
-
+        mc.isInSingleplayer()
         val player = mc.player?.let { PlayerEntityHelper.create(it) } ?: return
         val cPitch = player.pitch
         val cYaw = player.yaw
@@ -87,7 +88,7 @@ open class WorldPosWrapper(
         val width = context.getScaledWindowWidth()
         val height = context.getScaledWindowHeight()
 
-        val matrixStack = context.method_51448()
+        val matrixStack = context.getMatrices()
         val clip = Vector4f(tmpPos.x.toFloat(), tmpPos.y.toFloat(), tmpPos.z.toFloat(), 1f)
 
         clipMatrix.transform(clip)

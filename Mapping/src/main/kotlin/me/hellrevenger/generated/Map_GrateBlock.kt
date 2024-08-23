@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.GrateBlock
 
-val GrateBlock.WATERLOGGED by aliasStatic(GrateBlock::field_47523)
+val KClass<GrateBlock>.WATERLOGGED by aliasStatic(GrateBlock::field_47523)

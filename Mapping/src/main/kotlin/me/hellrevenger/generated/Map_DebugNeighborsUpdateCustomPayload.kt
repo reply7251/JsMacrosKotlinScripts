@@ -6,6 +6,6 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.DebugNeighborsUpdateCustomPayload
 
-val DebugNeighborsUpdateCustomPayload.ID by aliasStatic(DebugNeighborsUpdateCustomPayload::field_48673)
+val KClass<DebugNeighborsUpdateCustomPayload>.ID by aliasStatic(DebugNeighborsUpdateCustomPayload::field_48673)
 fun DebugNeighborsUpdateCustomPayload.pos() = this.comp_1700()
 fun DebugNeighborsUpdateCustomPayload.time() = this.comp_1699()

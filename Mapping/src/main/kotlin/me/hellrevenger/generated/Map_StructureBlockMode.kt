@@ -6,8 +6,8 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.StructureBlockMode
 
-val StructureBlockMode.LOAD by aliasEnum(StructureBlockMode::class, "field_12697")
-val StructureBlockMode.CORNER by aliasEnum(StructureBlockMode::class, "field_12699")
-val StructureBlockMode.SAVE by aliasEnum(StructureBlockMode::class, "field_12695")
-val StructureBlockMode.DATA by aliasEnum(StructureBlockMode::class, "field_12696")
+val KClass<StructureBlockMode>.LOAD by aliasEnum(StructureBlockMode::class, "field_12697")
+val KClass<StructureBlockMode>.CORNER by aliasEnum(StructureBlockMode::class, "field_12699")
+val KClass<StructureBlockMode>.SAVE by aliasEnum(StructureBlockMode::class, "field_12695")
+val KClass<StructureBlockMode>.DATA by aliasEnum(StructureBlockMode::class, "field_12696")
 fun StructureBlockMode.asText() = this.method_30844()

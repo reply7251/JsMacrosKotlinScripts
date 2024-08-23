@@ -6,9 +6,10 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.PersistentProjectileEntity
 
-val PersistentProjectileEntity.shake by alias(PersistentProjectileEntity::field_7574)
-val PersistentProjectileEntity.pickupType by alias(PersistentProjectileEntity::field_7572)
+var PersistentProjectileEntity.shake by alias(PersistentProjectileEntity::field_7574)
+var PersistentProjectileEntity.pickupType by alias(PersistentProjectileEntity::field_7572)
 fun PersistentProjectileEntity.applyDamageModifier(arg0: Float) = this.method_59955(arg0)
+fun PersistentProjectileEntity.getDamage() = this.method_7448()
 fun PersistentProjectileEntity.setSound(arg0: SoundEvent) = this.method_7444(arg0)
 fun PersistentProjectileEntity.isShotFromCrossbow() = this.method_7456()
 fun PersistentProjectileEntity.setDamage(arg0: Double) = this.method_7438(arg0)

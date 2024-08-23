@@ -6,10 +6,10 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.FallingBlockEntity
 
-val FallingBlockEntity.dropItem by alias(FallingBlockEntity::field_7193)
-val FallingBlockEntity.blockEntityData by alias(FallingBlockEntity::field_7194)
-val FallingBlockEntity.shouldDupe by alias(FallingBlockEntity::field_52015)
-val FallingBlockEntity.timeFalling by alias(FallingBlockEntity::field_7192)
+var FallingBlockEntity.dropItem by alias(FallingBlockEntity::field_7193)
+var FallingBlockEntity.blockEntityData by alias(FallingBlockEntity::field_7194)
+var FallingBlockEntity.shouldDupe by alias(FallingBlockEntity::field_52015)
+var FallingBlockEntity.timeFalling by alias(FallingBlockEntity::field_7192)
 fun FallingBlockEntity.setHurtEntities(arg0: Float, arg1: Int) = this.method_6965(arg0, arg1)
 fun FallingBlockEntity.getFallingBlockPos() = this.method_6964()
 fun FallingBlockEntity.setFallingBlockPos(arg0: BlockPos) = this.method_6963(arg0)

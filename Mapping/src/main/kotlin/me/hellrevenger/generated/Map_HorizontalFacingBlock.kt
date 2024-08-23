@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.HorizontalFacingBlock
 
-val HorizontalFacingBlock.FACING by aliasStatic(HorizontalFacingBlock::field_11177)
+val KClass<HorizontalFacingBlock>.FACING by aliasStatic(HorizontalFacingBlock::field_11177)

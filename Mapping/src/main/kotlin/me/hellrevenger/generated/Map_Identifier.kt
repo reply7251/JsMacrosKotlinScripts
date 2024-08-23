@@ -6,17 +6,18 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Identifier
 
-val Identifier.COMMAND_EXCEPTION by aliasStatic(Identifier::field_13354)
-val Identifier.DEFAULT_NAMESPACE by aliasStatic(Identifier::field_33381)
-val Identifier.REALMS_NAMESPACE by aliasStatic(Identifier::field_33382)
-val Identifier.NAMESPACE_SEPARATOR by aliasStatic(Identifier::field_33380)
-val Identifier.PACKET_CODEC by aliasStatic(Identifier::field_48267)
+val KClass<Identifier>.COMMAND_EXCEPTION by aliasStatic(Identifier::field_13354)
+val KClass<Identifier>.DEFAULT_NAMESPACE by aliasStatic(Identifier::field_33381)
+val KClass<Identifier>.REALMS_NAMESPACE by aliasStatic(Identifier::field_33382)
+val KClass<Identifier>.NAMESPACE_SEPARATOR by aliasStatic(Identifier::field_33380)
 fun Identifier.compareTo(arg0: Identifier) = this.method_12833(arg0)
 fun KClass<Identifier>.of(arg0: String) = Identifier.method_60654(arg0)
 fun Identifier.withPath(arg0: UnaryOperator<String>) = this.method_45134(arg0)
 fun Identifier.withSuffixedPath(arg0: String) = this.method_48331(arg0)
+fun Identifier.getNamespace() = this.method_12836()
 fun Identifier.toShortTranslationKey() = this.method_43903()
 fun Identifier.withPrefixedPath(arg0: String) = this.method_45138(arg0)
+fun Identifier.getPath() = this.method_12832()
 fun KClass<Identifier>.ofVanilla(arg0: String) = Identifier.method_60656(arg0)
 fun Identifier.toTranslationKey(arg0: String, arg1: String) = this.method_48747(arg0, arg1)
 fun KClass<Identifier>.isPathValid(arg0: String) = Identifier.method_20208(arg0)

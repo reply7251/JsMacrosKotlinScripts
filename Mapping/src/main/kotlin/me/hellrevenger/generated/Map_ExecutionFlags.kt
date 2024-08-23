@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ExecutionFlags
 
-val ExecutionFlags.NONE by aliasStatic(ExecutionFlags::field_47160)
+val KClass<ExecutionFlags>.NONE by aliasStatic(ExecutionFlags::field_47160)
 fun ExecutionFlags.isSilent() = this.method_54884()
 fun ExecutionFlags.setSilent() = this.method_54886()
 fun ExecutionFlags.setInsideReturnRun() = this.method_54888()

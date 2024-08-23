@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.WeightedListHeightProvider
 
-val WeightedListHeightProvider.WEIGHTED_LIST_CODEC by aliasStatic(WeightedListHeightProvider::field_35712)
+val KClass<WeightedListHeightProvider>.WEIGHTED_LIST_CODEC by aliasStatic(WeightedListHeightProvider::field_35712)

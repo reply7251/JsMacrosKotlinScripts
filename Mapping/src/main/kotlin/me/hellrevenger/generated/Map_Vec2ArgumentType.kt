@@ -6,7 +6,7 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.Vec2ArgumentType
 
-val Vec2ArgumentType.INCOMPLETE_EXCEPTION by aliasStatic(Vec2ArgumentType::field_10743)
+val KClass<Vec2ArgumentType>.INCOMPLETE_EXCEPTION by aliasStatic(Vec2ArgumentType::field_10743)
 fun KClass<Vec2ArgumentType>.vec2(arg0: Boolean) = Vec2ArgumentType.method_35802(arg0)
 fun Vec2ArgumentType.parse(arg0: StringReader) = this.method_9725(arg0)
 fun KClass<Vec2ArgumentType>.vec2() = Vec2ArgumentType.method_9723()

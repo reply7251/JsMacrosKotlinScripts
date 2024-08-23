@@ -10,6 +10,7 @@ fun KClass<SystemToast>.addLowDiskSpace(arg0: MinecraftClient) = SystemToast.met
 fun KClass<SystemToast>.addChunkLoadFailure(arg0: MinecraftClient, arg1: ChunkPos) = SystemToast.method_57724(arg0, arg1)
 fun KClass<SystemToast>.addPackCopyFailure(arg0: MinecraftClient, arg1: String) = SystemToast.method_29627(arg0, arg1)
 fun KClass<SystemToast>.addFileDropFailure(arg0: MinecraftClient, arg1: Int) = SystemToast.method_60865(arg0, arg1)
+fun SystemToast.getType() = this.method_1989()
 fun KClass<SystemToast>.hide(arg0: ToastManager, arg1: net.minecraft.class_370.class_9037) = SystemToast.method_55507(arg0, arg1)
 fun KClass<SystemToast>.show(arg0: ToastManager, arg1: net.minecraft.class_370.class_9037, arg2: Text, arg3: Text) = SystemToast.method_1990(arg0, arg1, arg2, arg3)
 fun SystemToast.setContent(arg0: Text, arg1: Text) = this.method_1991(arg0, arg1)

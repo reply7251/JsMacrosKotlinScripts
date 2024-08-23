@@ -7,8 +7,10 @@ import kotlin.reflect.*
 import me.hellrevenger.generated.ResourcePackProfile
 
 fun ResourcePackProfile.getInformationText(arg0: Boolean) = this.method_14461(arg0)
+fun ResourcePackProfile.getInfo() = this.method_56933()
 fun ResourcePackProfile.createResourcePack() = this.method_14458()
 fun ResourcePackProfile.getInitialPosition() = this.method_14466()
+fun ResourcePackProfile.getPosition() = this.method_56934()
 fun ResourcePackProfile.isPinned() = this.method_14465()
 fun ResourcePackProfile.getCompatibility() = this.method_14460()
 fun ResourcePackProfile.getRequestedFeatures() = this.method_45276()

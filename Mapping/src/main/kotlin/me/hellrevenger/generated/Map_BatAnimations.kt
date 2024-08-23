@@ -6,5 +6,5 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.BatAnimations
 
-val BatAnimations.ROOSTING by aliasStatic(BatAnimations::field_47103)
-val BatAnimations.FLYING by aliasStatic(BatAnimations::field_47104)
+val KClass<BatAnimations>.ROOSTING by aliasStatic(BatAnimations::field_47103)
+val KClass<BatAnimations>.FLYING by aliasStatic(BatAnimations::field_47104)

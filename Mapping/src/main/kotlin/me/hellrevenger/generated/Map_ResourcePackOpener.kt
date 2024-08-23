@@ -6,4 +6,4 @@ import me.hellrevenger.generated.aliasStatic
 import kotlin.reflect.*
 import me.hellrevenger.generated.ResourcePackOpener
 
-fun <T>ResourcePackOpener<T>.open(arg0: file_Path, arg1: List<SymlinkEntry>) = this.method_52441(arg0, arg1)
+fun <T>ResourcePackOpener<T>.open(arg0: file_Path, arg1: MutableList<SymlinkEntry>) = this.method_52441(arg0, arg1)
