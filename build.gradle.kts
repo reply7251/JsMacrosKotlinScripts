@@ -32,7 +32,7 @@ fun splitMain() {
     val packagePath = "me/hellrevenger/generated"
     val packagePathDot = packagePath.replace("/", ".")
 
-    val source = File("./generated/Generated.kt")
+    val source = File("./scripts/libs/Generated.kt")
     val targetFolder = File("./Mapping/src/main/kotlin/$packagePath")
 
     val valPrefix = "val "
