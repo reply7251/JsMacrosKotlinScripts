@@ -140,6 +140,7 @@ open inner class WynnClass {
     open fun chooseAction() { }
 
     open fun updateConfig() {
+        texts.forEach { d2d.reAddElement(it) }
         getLine(0).setText("Enabled (${coloredKey(binds["enabled"]?.simpleName)}): " + coloredBoolean(enabled))
         getLine(1).setText("Spam Shift (${coloredKey(binds["spamSneak"]?.simpleName)}): " + coloredBoolean(spamSneak))
     }
@@ -180,6 +181,7 @@ open inner class WynnClass {
         d2d.register()
         d2d.reAddElement(crossHair)
         updateConfig()
+        texts.forEach { d2d.reAddElement(it) }
         KeyBind.setKeyBind("key.attack", "key.mouse.left")
         KeyBind.setKeyBind("key.use", "key.mouse.right")
         holdAction()
