@@ -6,6 +6,7 @@ import xyz.wagyourtail.jsmacros.core.event.Event
 import xyz.wagyourtail.jsmacros.core.event.IEventListener
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import xyz.wagyourtail.jsmacros.core.service.EventService
+import kotlin.concurrent.thread
 
 class EventListener<T: BaseEvent>(val context: EventContainer<*>, eventClass: Class<T>, private val callback: (T) -> Unit, private val joined: Boolean = false) : IEventListener {
     private val eventName: String = eventClass.getAnnotation(Event::class.java).value
@@ -25,9 +26,16 @@ class EventListener<T: BaseEvent>(val context: EventContainer<*>, eventClass: Cl
         return joined
     }
 
+    @Suppress("Unchecked")
     override fun trigger(p0: BaseEvent): EventContainer<*> {
         try {
-            callback.invoke(p0 as T)
+            if(joined) {
+                callback.invoke(p0 as T)
+            } else {
+                thread {
+                    callback.invoke(p0 as T)
+                }
+            }
         } catch (e: Throwable) {
             off()
             Core.getInstance().profile.logError(e)

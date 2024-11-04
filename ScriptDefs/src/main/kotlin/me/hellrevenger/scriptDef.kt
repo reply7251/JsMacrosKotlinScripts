@@ -48,18 +48,11 @@ abstract class SimpleScript(
     val context: EventContainer<BaseScriptContext<*>>,
     val file: File,
     val event: BaseEvent,
-    val SubLibraries: SubLibraries,
     val EventCenter: FEventCenter,
 )
 
 object SimpleScriptConfiguration : ScriptCompilationConfiguration({
     jvm {
-        dependenciesFromCurrentContext(wholeClasspath = true, unpackJarCollections = true);
+        dependenciesFromCurrentContext();
     }
 })
-
-interface SubLibraries {
-    fun <T : Any> addLibrary(name: String, clazz: Class<T>, provider: () -> T): Class<*>?
-
-    fun removeLibrary(name: String): Class<*>?
-}

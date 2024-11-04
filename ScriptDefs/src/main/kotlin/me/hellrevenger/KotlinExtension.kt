@@ -112,9 +112,10 @@ class KotlinExtension: Extension {
             if (startIndex == null) startIndex = -1
             if (endIndex == null) endIndex = -1
             val loc = BaseWrappedException.GuestLocation(file, startIndex, endIndex, line, column)
-            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message, loc, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
+
+            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + sd.exception?.cause?.message, loc, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
         } else {
-            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message, null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
+            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + sd.exception?.cause?.message, null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
         }
     }
 
