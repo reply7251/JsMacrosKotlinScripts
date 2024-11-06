@@ -1,8 +1,17 @@
+import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Models
 import com.wynntils.core.components.Services
-import com.wynntils.models.abilities.BossBarModel
+import com.wynntils.core.notifications.event.NotificationEvent
+import com.wynntils.core.text.StyledText
+import com.wynntils.models.abilities.AbilityModel
 import com.wynntils.models.abilities.type.OphanimOrb
+import com.wynntils.models.abilities.type.ShamanMaskType
+import me.hellrevenger.generated.BLINDNESS
+import me.hellrevenger.generated.DARKNESS
+import me.hellrevenger.generated.StatusEffects
+import me.hellrevenger.generated.removeStatusEffectInternal
 import me.hellrevenger.library.api.EventListener
+import org.jetbrains.kotlin.backend.common.pop
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
 import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
 import xyz.wagyourtail.jsmacros.client.api.event.impl.player.EventArmorChange
@@ -16,6 +25,14 @@ object Actions {
     val cast3 = "Cast 3rd Spell"
     val cast4 = "Cast 4th Spell"
     val jump = "key.jump"
+    val R = 1
+    val L = 2
+    val map = mapOf(
+        cast1 to arrayOf(R, L, R),
+        cast2 to arrayOf(R, R, R),
+        cast3 to arrayOf(R, L, L),
+        cast4 to arrayOf(R, R, L)
+    )
 }
 
 val skill1Key = "key.keyboard.c"
@@ -30,6 +47,9 @@ val mc = Client.minecraft
 val interactKey =  mc.field_1690.field_1904;
 val attackKey = mc.field_1690.field_1886;
 
+val attackCooldown = mc::class.java.getDeclaredField("field_1771")
+attackCooldown.trySetAccessible()
+
 open inner class WynnClass {
     var lastAction = ""
     var ping = 200.0
@@ -41,6 +61,7 @@ open inner class WynnClass {
     val formatChar = '§'
 
     var configIndex = ""
+    var lineIndex = -1
     var modifyConfig: (Boolean) -> Unit = { }
 
     var configPos = 150 to 50
@@ -51,6 +72,14 @@ open inner class WynnClass {
     var terminated = false
 
     var spamSneak = false
+
+    var reverseMouse = false
+    var castQueue = mutableListOf<Int>()
+    var spellCooldown = 10
+    var castCooldown = 0
+    var rightCooldown = 0
+    var customCastEnabled = false
+
 
     init {
         onInit()
@@ -83,6 +112,20 @@ open inner class WynnClass {
             updateConfig()
         }
 
+        binds["spellCooldown"] = Bind("key.keyboard.keypad.decimal") {
+            configIndex = "spellCooldown"
+            modifyConfig = { add ->
+                if(add) spellCooldown += 1
+                else spellCooldown -= 1
+            }
+            updateConfig()
+        }
+
+//        binds["customCastEnabled"] = Bind("key.keyboard.keypad.decimal") {
+//            customCastEnabled = !customCastEnabled
+//            updateConfig()
+//        }
+
         return this
     }
 
@@ -92,24 +135,41 @@ open inner class WynnClass {
         KeyBind.releaseKey(key)
     }
 
-    fun pressKeyBind(key: String, record: Boolean = false) {
+    fun pressKeyBind(key: String, record: Boolean = false, release: Boolean = true): Boolean {
         if(record) lastAction = key
+        if(customCastEnabled) return cast(Actions.cast1)
         KeyBind.pressKeyBind(key)
-        Client.waitTick()
-        KeyBind.releaseKeyBind(key)
+        if(release) {
+            Client.waitTick()
+            KeyBind.releaseKeyBind(key)
+        }
+        return false
     }
 
-    fun cast1() = pressKeyBind(Actions.cast1, true)
+    fun cast(action: String): Boolean {
+        if(castQueue.size > 3) {
+            return false
+        }
 
-    fun cast2() = pressKeyBind(Actions.cast2, true)
+        val queue = Actions.map[action]!!.map { if(reverseMouse) 2 - it else it }
 
-    fun cast3() = pressKeyBind(Actions.cast3, true)
+        castQueue.addAll(queue)
+        return true
+    }
 
-    fun cast4() = pressKeyBind(Actions.cast4, true)
+    fun cast1(release: Boolean = true) = pressKeyBind(Actions.cast1, true, release)
+
+    fun cast2(release: Boolean = true) = pressKeyBind(Actions.cast2, true, release)
+
+    fun cast3(release: Boolean = true) = pressKeyBind(Actions.cast3, true, release)
+
+    fun cast4(release: Boolean = true) = pressKeyBind(Actions.cast4, true, release)
 
     fun melee() {
         lastMelee = World.time
+        attackCooldown.set(mc, 0)
         Player.interactions()?.attack()
+        attackCooldown.set(mc, 0)
     }
 
     fun updatePing(): Double {
@@ -124,13 +184,21 @@ open inner class WynnClass {
 
     open fun reset() {
         lastMelee = 0
+        resetLineIndex()
+    }
+
+    fun removeBlind() {
+        val player = Player.player?.raw ?: return
+        player.removeStatusEffectInternal(StatusEffects::class.BLINDNESS)
+        player.removeStatusEffectInternal(StatusEffects::class.DARKNESS)
     }
 
     open fun main() {
         reset()
         thread {
             while (enabled && World.isWorldLoaded) {
-                chooseAction()
+                if(!isBlocked())
+                    chooseAction()
                 Client.waitTick()
             }
             enabled = false
@@ -141,8 +209,11 @@ open inner class WynnClass {
 
     open fun updateConfig() {
         texts.forEach { d2d.reAddElement(it) }
-        getLine(0).setText("Enabled (${coloredKey(binds["enabled"]?.simpleName)}): " + coloredBoolean(enabled))
-        getLine(1).setText("Spam Shift (${coloredKey(binds["spamSneak"]?.simpleName)}): " + coloredBoolean(spamSneak))
+        resetLineIndex()
+        nextLine().setText("Enabled (${coloredKey(binds["enabled"]?.simpleName)}): " + coloredBoolean(enabled))
+        nextLine().setText(coloredConfig("spellCooldown" ) + "SpellCooldown ${formatChar}r(${coloredKey(binds["spellCooldown"]?.simpleName)}): " + coloredNumber(spellCooldown))
+        //nextLine().setText("Custom Spell Cast (${coloredKey(binds["customCastEnabled"]?.simpleName)}): " + coloredBoolean(customCastEnabled))
+        nextLine().setText("Spam Shift (${coloredKey(binds["spamSneak"]?.simpleName)}): " + coloredBoolean(spamSneak))
     }
 
     fun coloredBoolean(bool: Boolean) = formatChar + (if(bool) "2" else "c") + bool
@@ -153,11 +224,16 @@ open inner class WynnClass {
 
     fun coloredConfig(configName: String) = if(configIndex == configName) formatChar + "5" else ""
 
-    fun getLine(index: Int): Text {
-        while(index+1 >= texts.size) {
+    fun resetLineIndex() {
+        lineIndex = -1
+    }
+
+    fun nextLine(): Text {
+        lineIndex++
+        while(lineIndex >= texts.size) {
             texts.add(d2d.addText("", configPos.first, configPos.second + texts.size * 10, 0xffffff, true))
         }
-        return texts[index]
+        return texts[lineIndex]
     }
 
     fun setCrossHairText(text: String) {
@@ -177,7 +253,6 @@ open inner class WynnClass {
 
     open fun restart() {
         terminated = false
-        d2d.unregister()
         d2d.register()
         d2d.reAddElement(crossHair)
         updateConfig()
@@ -198,27 +273,49 @@ open inner class WynnClass {
     fun yAboveTarget(dy: Double): Boolean {
         val player = Player.player ?: return false
         if(player.y + dy - height < targetY) return true
-        val distance = ceil(height - dy).toInt()
-        var blockPos = player.blockPos
-        for(i in 0..distance) {
-            if(World.getBlock(blockPos)?.blockStateHelper?.isSolid == true) return true
-            blockPos = blockPos.down()
-        }
-        return false
+        return Models.CharacterStats.blocksAboveGround < height - dy
     }
 
     fun getMana() = Models.CharacterStats.mana.percentage
     fun getHealth() = Models.CharacterStats.health.percentage
 
+    fun findEffect(name: String) = Models.StatusEffect.statusEffects.find { it.name.contains(name) }
+    fun isHoldItem(name: String) = Player.player?.let { it.mainHand.name.stringStripFormatting.lowercase() == name } ?: false
+
     open fun holdAction() {
-        thread {
-            while (!terminated) {
-                if(World.isWorldLoaded && spamSneak) {
-                    pressKeyBind("key.sneak")
-                }
-                Client.waitTick(2)
+    }
+
+    fun smoothPitch(target: Float, ticks: Int = 1) {
+        val player = Player.player?: return
+        val pitch = player.pitch
+        val perTick = (target - pitch) / ticks
+        for(i in 1..ticks) {
+            player.lookAt(player.yaw.toDouble(), (pitch + perTick * i).toDouble())
+            Client.waitTick()
+        }
+    }
+
+    open fun onIncompatible() { }
+
+    open fun isBlocked() = false
+
+    open fun onTick() {
+        if(World.time % 2 == 0L) {
+            if(World.isWorldLoaded && spamSneak) {
+                pressKeyBind("key.sneak")
             }
         }
+        castCooldown--
+        if(castCooldown < 0 && castQueue.isNotEmpty()) {
+            if(castQueue.pop() == Actions.L) {
+                melee()
+                castCooldown = 2
+            } else {
+                Player.interactions()?.interact()
+                castCooldown = 4
+            }
+        }
+        removeBlind()
     }
 }
 
@@ -227,9 +324,11 @@ inner class Warrior : WynnClass() {
     var lastWarScream = 0L
     var keepHeight = true
     var interactCounter = 0
+    var attackCounter = 0
 
     var meleeInterval = 20
     var quick = true
+    var cspam = false
 
     override fun onInitOverride(): WynnClass {
         binds["quick"] = Bind("key.keyboard.keypad.5") {
@@ -237,6 +336,10 @@ inner class Warrior : WynnClass() {
             updateConfig()
         }
 
+        binds["cspam"] = Bind("key.keyboard.keypad.4") {
+            cspam = !cspam
+            updateConfig()
+        }
 
         binds["keepHeight"] = Bind("key.keyboard.keypad.7") {
             keepHeight = !keepHeight
@@ -254,8 +357,8 @@ inner class Warrior : WynnClass() {
         binds["height"] = Bind("key.keyboard.keypad.9") {
             configIndex = "height"
             modifyConfig = { add ->
-                if(add) height += 3
-                else height -= 3
+                if(add) height += 1
+                else height -= 1
             }
             updateConfig()
         }
@@ -275,14 +378,15 @@ inner class Warrior : WynnClass() {
     override fun updateConfig() {
         super.updateConfig()
 
-        getLine(2).setText("Quick (${coloredKey(binds["quick"]?.simpleName)}): " + coloredBoolean(quick))
-        getLine(3).setText("KeepHeight (${coloredKey(binds["keepHeight"]?.simpleName)}): " + coloredBoolean(keepHeight))
-        getLine(4).setText(coloredConfig("targetY" ) + "Target Y ${formatChar}r(${coloredKey(binds["targetY"]?.simpleName)}): " + coloredNumber(targetY))
-        getLine(5).setText(coloredConfig("height" ) + "Height ${formatChar}r(${coloredKey(binds["height"]?.simpleName)}): " + coloredNumber(height))
-        getLine(6).setText(coloredConfig("meleeInterval" ) + "MeleeInterval ${formatChar}r(${coloredKey(binds["meleeInterval"]?.simpleName)}): " + coloredNumber(meleeInterval))
+        nextLine().setText("CSpam (${coloredKey(binds["cspam"]?.simpleName)}): " + coloredBoolean(cspam))
+        nextLine().setText("Quick (${coloredKey(binds["quick"]?.simpleName)}): " + coloredBoolean(quick))
+        nextLine().setText("KeepHeight (${coloredKey(binds["keepHeight"]?.simpleName)}): " + coloredBoolean(keepHeight))
+        nextLine().setText(coloredConfig("targetY" ) + "Target Y ${formatChar}r(${coloredKey(binds["targetY"]?.simpleName)}): " + coloredNumber(targetY))
+        nextLine().setText(coloredConfig("height" ) + "Height ${formatChar}r(${coloredKey(binds["height"]?.simpleName)}): " + coloredNumber(height))
+        nextLine().setText(coloredConfig("meleeInterval" ) + "MeleeInterval ${formatChar}r(${coloredKey(binds["meleeInterval"]?.simpleName)}): " + coloredNumber(meleeInterval))
     }
 
-    fun heightCheck(): Boolean {
+    fun heightCheck(time: Int = 4): Boolean {
         val player = Player.player ?: return false
 
         var speed = player.velocity.y
@@ -290,7 +394,8 @@ inner class Warrior : WynnClass() {
 
         val delay = ((ping / 50) - 4).toInt()
         var dy = 0.0
-        for(tick in -delay..4) {
+        val end = 4 + time
+        for(tick in -delay..end) {
             speed -= 0.08;
             speed *= 0.98
             dy += speed;
@@ -300,15 +405,18 @@ inner class Warrior : WynnClass() {
 
     override fun reset() {
         super.reset()
+        lastBash = 0
+        lastWarScream = 0
         interactCounter = 0
+        attackCounter = 0
     }
 
-    fun isIdol() = Player.player?.let { it.mainHand.name.stringStripFormatting.lowercase() == "idol" } ?: false
+    fun isIdol() = isHoldItem("idol")
 
     fun burstCharge() = Models.Spell.lastBurstSpellName.lowercase().contains("charge") && Models.Spell.repeatedBurstSpellCount > 5
 
     override fun chooseAction() {
-        if(isIdol()) {
+        if(cspam && isIdol()) {
             if(!keepHeight || heightCheck()) {
                 if(World.time % 2L == 0L) {
                     Player.interactions()?.interact()
@@ -320,24 +428,46 @@ inner class Warrior : WynnClass() {
                     interactCounter = 0
                 }
             }
+        } else {
+            if(World.time >= lastWarScream + 200) {
+                cast4()
+                lastWarScream = World.time
+                Client.waitTick(spellCooldown)
+            } else if(lastAction != Actions.cast1 && World.time >= lastBash + 30) {
+                lastBash = World.time
+                cast1()
+                Client.waitTick(spellCooldown)
+            } else if(lastAction != Actions.cast2 && keepHeight) {
+                cast2()
+                Client.waitTick(spellCooldown)
+            } else if(World.time >= lastWarScream + 30) {
+                cast4()
+                lastWarScream = World.time
+                Client.waitTick(spellCooldown)
+            } else {
+                cast3()
+                Client.waitTick(spellCooldown)
+            }
+//            else if (lastMelee + meleeInterval + (Math.random() * 5).toInt() < World.time) {
+//                melee()
+//            }
         }
     }
 
-    override fun holdAction() {
-        super.holdAction()
+    override fun onTick() {
+        super.onTick()
 
-        thread {
-            while (!terminated) {
-                if(World.isWorldLoaded && isIdol() && quick) {
-                    if(attackKey.method_1434() && (lastMelee + meleeInterval + (Math.random() * 5).toInt() < World.time || burstCharge())) {
-                        melee()
-                        interactCounter = 0
-                    } else if(interactKey.method_1434()) {
-                        Player.interactions()?.interact()
-                        interactCounter++
-                    }
-                }
-                Client.waitTick()
+        if(World.isWorldLoaded && isIdol() && quick) {
+            if(attackKey.method_1434() && (lastMelee + meleeInterval + (Math.random() * 5).toInt() < World.time || (burstCharge() && attackCounter < 3))) {
+                melee()
+                interactCounter = 0
+                attackCounter++
+            } else {
+                attackCounter = 0
+            }
+            if(interactKey.method_1434()) {
+                Player.interactions()?.interact()
+                interactCounter++
             }
         }
     }
@@ -347,8 +477,8 @@ inner class Assassin : WynnClass() {
     var tickToHop = 20
 
     var enableFly = true
-    var enableDash = true
-    var enableSmoke = true
+    var enableDash = false
+    var enableSmoke = false
     var enableMultiHit = true
 
     var enableManualFly = true
@@ -409,41 +539,42 @@ inner class Assassin : WynnClass() {
         binds["height"] = Bind("key.keyboard.keypad.8") {
             configIndex = "height"
             modifyConfig = { add ->
-                if(add) height += 3
-                else height -= 3
+                if(add) height += 1
+                else height -= 1
             }
             updateConfig()
         }
-
+        height = 3
+        spellCooldown = 12
         return super.onInitOverride()
     }
 
     fun smoke() {
         cast4()
         lastSmoke = World.time
-        Client.waitTick(12)
+        Client.waitTick(spellCooldown)
     }
 
     fun multiHit(){
         cast3()
-        Client.waitTick(12)
+        Client.waitTick(spellCooldown)
     }
 
     fun dash() {
         cast2()
         lastDash = World.time
-        Client.waitTick(12)
+        Client.waitTick(spellCooldown)
     }
 
     override fun updateConfig() {
         super.updateConfig()
-        getLine(2).setText("Dash (${coloredKey(binds["enableDash"]?.simpleName)}): " + coloredBoolean(enableDash))
-        getLine(3).setText("Smoke (${coloredKey(binds["enableSmoke"]?.simpleName)}): " + coloredBoolean(enableSmoke))
-        getLine(4).setText("MultiHit (${coloredKey(binds["enableMultiHit"]?.simpleName)}): " + coloredBoolean(enableMultiHit))
-        getLine(5).setText("Fly (${coloredKey(binds["enableFly"]?.simpleName)}): " + coloredBoolean(enableFly))
-        getLine(6).setText("ManualFly (${coloredKey(binds["enableManualFly"]?.simpleName)}): " + coloredBoolean(enableManualFly))
-        getLine(7).setText(coloredConfig("targetY" ) + "Target Y ${formatChar}r(${coloredKey(binds["targetY"]?.simpleName)}): " + coloredNumber(targetY))
-        getLine(8).setText(coloredConfig("height" ) + "Height ${formatChar}r(${coloredKey(binds["height"]?.simpleName)}): " + coloredNumber(height))
+        nextLine().setText("Dash (${coloredKey(binds["enableDash"]?.simpleName)}): " + coloredBoolean(enableDash))
+        nextLine().setText("Smoke (${coloredKey(binds["enableSmoke"]?.simpleName)}): " + coloredBoolean(enableSmoke))
+        nextLine().setText("MultiHit (${coloredKey(binds["enableMultiHit"]?.simpleName)}): " + coloredBoolean(enableMultiHit))
+        nextLine().setText("Fly (${coloredKey(binds["enableFly"]?.simpleName)}): " + coloredBoolean(enableFly))
+        nextLine().setText("ManualFly (${coloredKey(binds["enableManualFly"]?.simpleName)}): " + coloredBoolean(enableManualFly))
+        nextLine().setText(coloredConfig("targetY" ) + "Target Y ${formatChar}r(${coloredKey(binds["targetY"]?.simpleName)}): " + coloredNumber(targetY))
+        nextLine().setText(coloredConfig("height" ) + "Height ${formatChar}r(${coloredKey(binds["height"]?.simpleName)}): " + coloredNumber(height))
     }
 
     fun heightCheck(): Boolean {
@@ -480,7 +611,7 @@ inner class Assassin : WynnClass() {
                 return
             }
             cast1()
-            Client.waitTick(15)
+            Client.waitTick(16)
             tryMelee()
             if(enableFly) {
                 val wasJumping = KeyBind.pressedKeys.contains(KeyBind.keyBindings[Actions.jump])
@@ -531,11 +662,12 @@ inner class Mage : WynnClass() {
     var lastHeal = 0L
     var enableIceSnake = true
     var enableMeteor = true
-    var maxRepeat = 2
+    var maxRepeat = 1
+    var blocked = false
 
     fun getArchType(): String {
-        return if(BossBarModel.ophanimBar.isActive) "lb"
-        else if(BossBarModel.manaBankBar.isActive) "ar"
+        return if(AbilityModel.ophanimBar.isActive) "lb"
+        else if(AbilityModel.manaBankBar.isActive) "ar"
         else "rw"
     }
 
@@ -564,9 +696,14 @@ inner class Mage : WynnClass() {
     override fun updateConfig() {
         super.updateConfig()
 
-        getLine(2).setText("IceSnake (${coloredKey(binds["enableIceSnake"]?.simpleName)}): " + coloredBoolean(enableIceSnake))
-        getLine(3).setText("Meteor (${coloredKey(binds["enableMeteor"]?.simpleName)}): " + coloredBoolean(enableMeteor))
-        getLine(4).setText(coloredConfig("maxRepeat" ) + "Repeat ${formatChar}r(${coloredKey(binds["maxRepeat"]?.simpleName)}): " + coloredNumber(maxRepeat))
+        nextLine().setText("IceSnake (${coloredKey(binds["enableIceSnake"]?.simpleName)}): " + coloredBoolean(enableIceSnake))
+        nextLine().setText("Meteor (${coloredKey(binds["enableMeteor"]?.simpleName)}): " + coloredBoolean(enableMeteor))
+        nextLine().setText(coloredConfig("maxRepeat" ) + "Repeat ${formatChar}r(${coloredKey(binds["maxRepeat"]?.simpleName)}): " + coloredNumber(maxRepeat))
+    }
+
+    override fun reset() {
+        super.reset()
+        lastHeal = 0
     }
 
     override fun chooseAction() {
@@ -578,7 +715,7 @@ inner class Mage : WynnClass() {
     }
 
     fun orbNotHealthy() =
-        BossBarModel.ophanimBar.orbs.any {
+        AbilityModel.ophanimBar.orbs.any {
             it.string.startsWith(OphanimOrb.HealthState.DYING.color.toString())
         }
 
@@ -587,20 +724,20 @@ inner class Mage : WynnClass() {
         val health = getHealth()
         val notHealthy = health < 60 || orbNotHealthy()
 
-        if(notHealthy && lastAction != Actions.cast1) {
-            cast1()
+        if(notHealthy && (lastAction != Actions.cast1 || World.time > lastHeal + 80) && getMana() > 40) {
             lastHeal = World.time
-            Client.waitTick(10)
-        } else if(World.time - lastMelee >= 30 && !player.mainHand.isOnCooldown) {
+            cast1()
+            Client.waitTick(spellCooldown)
+        } else if(World.time - lastMelee >= 20 && !player.mainHand.isOnCooldown) {
             melee()
-            Client.waitTick(10)
-        } else if(enableIceSnake && getMana() > 75 && (lastAction != Actions.cast4 || Models.Spell.repeatedSpellCount < maxRepeat) || notHealthy) {
+            Client.waitTick(1)
+        } else if(enableIceSnake && getMana() > 75 && (lastAction != Actions.cast4 || Models.Spell.repeatedSpellCount < maxRepeat) || (notHealthy && getMana() > 55)) {
             cast4()
-            Client.waitTick(10)
+            Client.waitTick(spellCooldown)
         } else if((lastAction == Actions.cast4 && Models.Spell.repeatedSpellCount >= maxRepeat) && World.time - lastMelee <= 20 && getMana() > 75) {
-            cast1()
             lastHeal = World.time
-            Client.waitTick(10)
+            cast1()
+            Client.waitTick(spellCooldown)
         }
     }
 
@@ -610,31 +747,56 @@ inner class Mage : WynnClass() {
         if(health < 90 && lastAction != Actions.cast1) {
             cast1()
             lastHeal = World.time
-            Client.waitTick(10)
+            Client.waitTick(spellCooldown)
         } else if(enableIceSnake && (getMana() > 75 || health < 80)
             && (lastAction != Actions.cast4 || Models.Spell.repeatedSpellCount < maxRepeat)) {
             cast4()
-            Client.waitTick(10)
+            Client.waitTick(spellCooldown)
         } else if(enableMeteor && (getMana() > 75 || health < 80) && lastAction != Actions.cast3) {
             cast3()
-            Client.waitTick(10)
+            Client.waitTick(spellCooldown)
         } else if(!enableMeteor && lastAction == Actions.cast4) {
             cast1()
             lastHeal = World.time
-            Client.waitTick(10)
+            Client.waitTick(spellCooldown)
         } else if(enableMelee && World.time - lastMelee > 4 && !player.mainHand.isOnCooldown) {
             melee()
         }
     }
+
+    override fun holdAction() {
+        super.holdAction()
+
+        thread {
+            while (!terminated) {
+
+                Client.waitTick()
+                Client.waitTick()
+            }
+        }
+    }
+
+    override fun onTick() {
+        super.onTick()
+        if(World.time % 2 == 0L) {
+            if(World.isWorldLoaded && isHoldItem("warp") && !enabled) {
+                if(interactKey.method_1434()) {
+                    Player.interactions()?.interact()
+                }
+            }
+        }
+    }
+
+    override fun isBlocked(): Boolean {
+        return blocked
+    }
 }
 
 inner class Archer : WynnClass() {
+    override fun onInitOverride(): WynnClass {
+        reverseMouse = true
 
-    override fun restart() {
-        super.restart()
-
-        KeyBind.setKeyBind("key.attack", "key.mouse.right")
-        KeyBind.setKeyBind("key.use", "key.mouse.left")
+        return super.onInitOverride()
     }
 
     override fun chooseAction() {
@@ -643,16 +805,150 @@ inner class Archer : WynnClass() {
         }
     }
 
-    override fun holdAction() {
-        super.holdAction()
-        thread {
-            while (!terminated) {
-                if(World.isWorldLoaded) {
-                    if(interactKey.method_1434()) {
-                        Player.interactions()?.interact()
-                    }
-                }
-                Client.waitTick()
+    override fun onTick() {
+        super.onTick()
+        if(World.isWorldLoaded) {
+            if(interactKey.method_1434() && World.time % 2 == 0L) {
+                Player.interactions()?.interact()
+            }
+        }
+    }
+}
+
+inner class Shaman : WynnClass() {
+    var lastAura = 0L
+    var enableAwakened = false
+    var enableBlood = false
+    var assertMask = false
+    var normal = true
+    var lastTimeMask = 0L
+    var recordedPitch = 0f
+    var enableAura = false
+
+    override fun onInitOverride(): WynnClass {
+
+        binds["enableBlood"] = Bind("key.keyboard.keypad.5") {
+            enableBlood = !enableBlood
+            updateConfig()
+        }
+
+        binds["enableAwakened"] = Bind("key.keyboard.keypad.2") {
+            enableAwakened = !enableAwakened
+            updateConfig()
+        }
+
+        binds["normal"] = Bind("key.keyboard.keypad.8") {
+            normal = !normal
+            updateConfig()
+        }
+
+        binds["enableAura"] = Bind("key.keyboard.keypad.9") {
+            enableAura = !enableAura
+            updateConfig()
+        }
+
+        return super.onInitOverride()
+    }
+
+    override fun updateConfig() {
+        super.updateConfig()
+
+        nextLine().setText("Awakened (${coloredKey(binds["enableAwakened"]?.simpleName)}): " + coloredBoolean(enableAwakened))
+        nextLine().setText("Blood (${coloredKey(binds["enableBlood"]?.simpleName)}): " + coloredBoolean(enableBlood))
+        nextLine().setText("Normal (${coloredKey(binds["normal"]?.simpleName)}): " + coloredBoolean(normal))
+        nextLine().setText("Aura (${coloredKey(binds["enableAura"]?.simpleName)}): " + coloredBoolean(enableAura))
+    }
+
+    override fun chooseAction() {
+        if(awakened()) {
+            val totem = Models.ShamanTotem.activeTotems.firstOrNull()
+            if((totem == null || (totem.time < 2 && totem.time != -1)) && (enableBlood || normal) && Models.Spell.repeatedBurstSpellCount < 2) {
+                totem(spellCooldown)
+            } else if (((getHealth() < 65 && World.time - lastAura > 30 && totem != null) || (normal && !enableBlood)) && Models.Spell.repeatedBurstSpellCount < 3 && enableAura && getMana() > 40){
+                cast3()
+                lastAura = World.time
+                Client.waitTick(spellCooldown)
+            } else if(normal && !enableAwakened && enableAura) {
+                cast4()
+                Client.waitTick(spellCooldown)
+            } else if(World.time % 2L == 0L) {
+                melee()
+            }
+        } else if(World.time % 2L == 0L) {
+            melee()
+        }
+    }
+
+    fun awakened(): Boolean {
+        if(!enableAwakened) return true
+        val mask = Models.ShamanMask.currentMaskType
+        val progress = AbilityModel.awakenedBar.barProgress?.progress ?: 0f
+        if(mask == ShamanMaskType.AWAKENED && findEffect("Awakened") != null) {
+            Player.openInventory().selectedHotbarSlotIndex = 0
+            return true
+        } else if(progress >= 1f) {
+            //Chat.log("try awakened")
+            Player.openInventory().selectedHotbarSlotIndex = 0
+            cast4()
+            if(recordedPitch != 0f) {
+                smoothPitch(recordedPitch, spellCooldown + 5)
+                recordedPitch = 0f
+            } else {
+                Client.waitTick(spellCooldown + 5)
+            }
+            return false
+        } else if(mask != ShamanMaskType.FANATIC && !assertMask) {
+            //Chat.log("try switch mask")
+            Player.openInventory().selectedHotbarSlotIndex = 0
+            cast4()
+            Client.waitTick(20)
+            return false
+        }  else {
+            //Chat.log("try summon totem")
+            assertMask = true
+            val originalSlot = Player.openInventory().selectedHotbarSlotIndex
+            Player.openInventory().selectedHotbarSlotIndex = 1
+            if(recordedPitch == 0f) recordedPitch = Player.player!!.pitch
+            totem(12, false)
+            Player.openInventory().selectedHotbarSlotIndex = originalSlot
+            return false
+        }
+    }
+
+    override fun reset() {
+        super.reset()
+        lastAura = 0
+        lastTimeMask = 0
+        assertMask = false
+    }
+
+    fun totem(tick: Int = 10, back: Boolean = true) {
+        val lookDown = 2
+        val interval = 5
+        val lookUp = tick - lookDown - interval
+        val player = Player.player ?: return
+        val pitch = player.pitch
+        cast1()
+        smoothPitch(90f, lookDown)
+        Client.waitTick(interval)
+        if(back) {
+            smoothPitch(pitch, lookUp)
+        } else {
+            Client.waitTick(lookUp)
+        }
+    }
+
+    fun setInterval(interval: Int = 100) {
+        //right_interval_ms.set(configData, interval)
+    }
+
+    override fun onTick() {
+        super.onTick()
+
+
+        if(World.isWorldLoaded) {
+            if(attackKey.method_1434() && World.time % 2 == 0L) {
+                melee()
             }
         }
     }
@@ -666,10 +962,11 @@ val classes = mapOf(
     "assassin" to Assassin(),
     "warrior" to Warrior(),
     "mage" to Mage(),
-    "shaman" to WynnClass(),
+    "shaman" to Shaman(),
     "archer" to Archer(),
 )
 
+currentWynnClass.terminate()
 classes.forEach {
     it.value.terminate()
 }
@@ -694,18 +991,40 @@ fun checkClass() {
 
 EventListener(context, EventKey::class.java, { e ->
     currentWynnClass.onKey(e)
-})
+}, true)
 
-EventListener(context, EventArmorChange::class.java, { checkClass() })
+EventListener(context, EventArmorChange::class.java, { checkClass() }, true)
 
 
+
+val notificationEvent = { it: NotificationEvent.Queue ->
+    if(it.messageContainer.message.string.contains("Please wait for the incompatible spell-cast to finish.")) {
+        thread {
+            currentWynnClass.onIncompatible()
+        }
+    }
+}
+
+//WynntilsMod.registerListener(notificationEvent)
+
+var running = true
+thread {
+    while (running) {
+        currentWynnClass.onTick()
+        Client.waitTick()
+    }
+}
 
 JsMacros.assertEvent(event, "Service")
 val service = event as EventService
 service.unregisterOnStop(true)
 
 service.stopListener = JavaWrapper.methodToJava { ->
+    running = false
     d2d.unregister()
+    currentWynnClass.reset()
+    currentWynnClass.terminate()
+//    WynntilsMod.unregisterEventListener(notificationEvent)
 }
 
 checkClass()
