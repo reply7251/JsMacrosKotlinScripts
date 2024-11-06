@@ -7,23 +7,32 @@ import kotlin.concurrent.thread
 
 val d2d = Hud.createDraw2D()
 d2d.register()
+
+var running = true
+val queue = mutableListOf<EntityHelper<*>>()
+
 fun check(entity: EntityHelper<*>) {
-    if(entity.type != "minecraft:item") return
-    thread {
+    val item = entity.asItem().containedItemStack
+    if(item.itemId != "minecraft:stone_shovel") return
+    val name = item.name ?: entity.name
+    val d2d2 = Hud.createDraw2D()
+    d2d2.lineBuilder().pos(0,0,8, -7).color(0xffffff, 0xBF).buildAndAdd()
+    d2d2.textBuilder().pos(9, -16).text(name).shadow(true).buildAndAdd()
+    WorldPosWrapper(d2d2).move(0.0, 0.7, 0.0).bind(entity).addToDraw2d(d2d)
+}
+
+thread {
+    while(running) {
+        while(queue.isNotEmpty())
+            check(queue.removeFirst())
         Client.waitTick()
-        val item = entity.asItem().containedItemStack
-        if(item.itemId != "minecraft:stone_shovel") return@thread
-        val name = item.name ?: entity.name
-        val d2d2 = Hud.createDraw2D()
-        d2d2.lineBuilder().pos(0,0,8, -7).color(0xffffff, 0xBF).buildAndAdd()
-        d2d2.textBuilder().pos(9, -16).text(name).shadow(true).buildAndAdd()
-        WorldPosWrapper(d2d2).move(0.0, 0.7, 0.0).bind(entity).addToDraw2d(d2d)
     }
 }
 
 EventListener(context, EventEntityLoad::class.java, {
-    check(it.entity)
-})
+    if(it.entity.type != "minecraft:item") return@EventListener
+    queue.add(it.entity)
+}, true)
 
 JsMacros.assertEvent(event, "Service")
 val service = event as EventService
@@ -31,6 +40,7 @@ service.unregisterOnStop(true)
 
 service.stopListener = JavaWrapper.methodToJava { ->
     d2d.unregister()
+    running = false
 }
 
 Chat.toast("RevealItemName", "enabled")
