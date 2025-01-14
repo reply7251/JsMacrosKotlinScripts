@@ -1,0 +1,11 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.NoPenaltyTargeting
+
+fun KClass<NoPenaltyTargeting>.findTo(arg0: PathAwareEntity, arg1: Int, arg2: Int, arg3: Vec3d, arg4: Double) = NoPenaltyTargeting.method_31512(arg0, arg1, arg2, arg3, arg4)
+fun KClass<NoPenaltyTargeting>.findFrom(arg0: PathAwareEntity, arg1: Int, arg2: Int, arg3: Vec3d) = NoPenaltyTargeting.method_31511(arg0, arg1, arg2, arg3)
+fun KClass<NoPenaltyTargeting>.find(arg0: PathAwareEntity, arg1: Int, arg2: Int) = NoPenaltyTargeting.method_31510(arg0, arg1, arg2)

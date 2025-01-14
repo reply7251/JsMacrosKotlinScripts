@@ -1,0 +1,9 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.DeadCoralWallFanBlock
+
+val KClass<DeadCoralWallFanBlock>.FACING by aliasStatic(DeadCoralWallFanBlock::field_9933)

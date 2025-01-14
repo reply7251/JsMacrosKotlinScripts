@@ -1,0 +1,42 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.ClientWorld
+
+fun ClientWorld.tick(arg0: BooleanSupplier) = this.method_8441(arg0)
+fun ClientWorld.unloadBlockEntities(arg0: WorldChunk) = this.method_18110(arg0)
+fun ClientWorld.setTimeOfDay(arg0: Long) = this.method_8435(arg0)
+fun ClientWorld.runQueuedChunkUpdates() = this.method_38534()
+fun ClientWorld.tickEntity(arg0: Entity) = this.method_18646(arg0)
+fun ClientWorld.resetChunkColor(arg0: ChunkPos) = this.method_23782(arg0)
+fun ClientWorld.tickEntities() = this.method_18116()
+fun ClientWorld.doRandomBlockDisplayTicks(arg0: Int, arg1: Int, arg2: Int) = this.method_2941(arg0, arg1, arg2)
+fun ClientWorld.setSpawnPos(arg0: BlockPos, arg1: Float) = this.method_27873(arg0, arg1)
+fun ClientWorld.getEntities() = this.method_18112()
+fun ClientWorld.handleBlockUpdate(arg0: BlockPos, arg1: BlockState, arg2: Int) = this.method_41928(arg0, arg1, arg2)
+fun ClientWorld.putClientsideMapState(arg0: MapIdComponent, arg1: MapState) = this.method_47437(arg0, arg1)
+fun ClientWorld.removeEntity(arg0: Int, arg1: net.minecraft.class_1297.class_5529) = this.method_2945(arg0, arg1)
+fun ClientWorld.getSkyBrightness(arg0: Float) = this.method_23783(arg0)
+fun ClientWorld.getStarBrightness(arg0: Float) = this.method_23787(arg0)
+fun ClientWorld.addEntity(arg0: Entity) = this.method_53875(arg0)
+fun ClientWorld.scheduleBlockRenders(arg0: Int, arg1: Int, arg2: Int) = this.method_18113(arg0, arg1, arg2)
+fun ClientWorld.getCloudsColor(arg0: Float) = this.method_23785(arg0)
+fun ClientWorld.getSimulationDistance() = this.method_39024()
+fun ClientWorld.getChunkManager() = this.method_2935()
+fun ClientWorld.setSimulationDistance(arg0: Int) = this.method_39023(arg0)
+fun ClientWorld.setTime(arg0: Long) = this.method_29089(arg0)
+fun ClientWorld.processPendingUpdate(arg0: BlockPos, arg1: BlockState, arg2: Vec3d) = this.method_41926(arg0, arg1, arg2)
+fun ClientWorld.getLightningTicksLeft() = this.method_23789()
+fun ClientWorld.getRegularEntityCount() = this.method_18120()
+fun ClientWorld.getSkyColor(arg0: Vec3d, arg1: Float) = this.method_23777(arg0, arg1)
+fun ClientWorld.randomBlockDisplayTick(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Random, arg5: Block, arg6: net.minecraft.class_2338.class_2339) = this.method_2943(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun ClientWorld.reloadColor() = this.method_23784()
+fun ClientWorld.hasNoChunkUpdaters() = this.method_38743()
+fun ClientWorld.getLevelProperties() = this.method_28104()
+fun ClientWorld.handlePlayerActionResponse(arg0: Int) = this.method_41927(arg0)
+fun ClientWorld.getDimensionEffects() = this.method_28103()
+fun ClientWorld.enqueueChunkUpdate(arg0: Runnable) = this.method_38536(arg0)
+fun ClientWorld.calculateColor(arg0: BlockPos, arg1: ColorResolver) = this.method_23780(arg0, arg1)

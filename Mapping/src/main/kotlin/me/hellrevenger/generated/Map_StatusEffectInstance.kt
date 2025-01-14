@@ -1,0 +1,35 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.StatusEffectInstance
+
+val KClass<StatusEffectInstance>.INFINITE by aliasStatic(StatusEffectInstance::field_42106)
+val KClass<StatusEffectInstance>.MIN_AMPLIFIER by aliasStatic(StatusEffectInstance::field_49014)
+val KClass<StatusEffectInstance>.MAX_AMPLIFIER by aliasStatic(StatusEffectInstance::field_49015)
+fun StatusEffectInstance.shouldShowParticles() = this.method_5581()
+fun StatusEffectInstance.getEffectType() = this.method_5579()
+fun StatusEffectInstance.getAmplifier() = this.method_5578()
+fun StatusEffectInstance.getFadeFactor(arg0: LivingEntity, arg1: Float) = this.method_55653(arg0, arg1)
+fun StatusEffectInstance.isDurationBelow(arg0: Int) = this.method_48557(arg0)
+fun StatusEffectInstance.writeNbt() = this.method_5582()
+fun StatusEffectInstance.skipFading() = this.method_55657()
+fun StatusEffectInstance.shouldShowIcon() = this.method_5592()
+fun KClass<StatusEffectInstance>.fromNbt(arg0: NbtCompound) = StatusEffectInstance.method_5583(arg0)
+fun StatusEffectInstance.upgrade(arg0: StatusEffectInstance) = this.method_5590(arg0)
+fun StatusEffectInstance.getDuration() = this.method_5584()
+fun StatusEffectInstance.compareTo(arg0: StatusEffectInstance) = this.method_5587(arg0)
+fun StatusEffectInstance.equals(arg0: RegistryEntry<StatusEffect>) = this.method_55654(arg0)
+fun StatusEffectInstance.isAmbient() = this.method_5591()
+fun StatusEffectInstance.copyFadingFrom(arg0: StatusEffectInstance) = this.method_55656(arg0)
+fun StatusEffectInstance.playApplySound(arg0: LivingEntity) = this.method_58623(arg0)
+fun StatusEffectInstance.createParticle() = this.method_58148()
+fun StatusEffectInstance.isInfinite() = this.method_48559()
+fun StatusEffectInstance.onApplied(arg0: LivingEntity) = this.method_52523(arg0)
+fun StatusEffectInstance.onEntityRemoval(arg0: LivingEntity, arg1: net.minecraft.class_1297.class_5529) = this.method_58622(arg0, arg1)
+fun StatusEffectInstance.onEntityDamage(arg0: LivingEntity, arg1: DamageSource, arg2: Float) = this.method_58621(arg0, arg1, arg2)
+fun StatusEffectInstance.getTranslationKey() = this.method_5586()
+fun StatusEffectInstance.mapDuration(arg0: Int2IntFunction) = this.method_48558(arg0)
+fun StatusEffectInstance.update(arg0: LivingEntity, arg1: Runnable) = this.method_5585(arg0, arg1)

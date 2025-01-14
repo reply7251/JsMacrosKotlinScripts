@@ -1,0 +1,13 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.CauldronBehavior
+
+fun KClass<CauldronBehavior>.registerBehavior() = CauldronBehavior.method_32212()
+fun KClass<CauldronBehavior>.fillCauldron(arg0: world_World, arg1: BlockPos, arg2: PlayerEntity, arg3: Hand, arg4: ItemStack, arg5: BlockState, arg6: SoundEvent) = CauldronBehavior.method_32207(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun KClass<CauldronBehavior>.createMap(arg0: String) = CauldronBehavior.method_32206(arg0)
+fun KClass<CauldronBehavior>.registerBucketBehavior(arg0: Map<Item, CauldronBehavior>) = CauldronBehavior.method_34850(arg0)
+fun KClass<CauldronBehavior>.emptyCauldron(arg0: BlockState, arg1: world_World, arg2: BlockPos, arg3: PlayerEntity, arg4: Hand, arg5: ItemStack, arg6: ItemStack, arg7: Predicate<BlockState>, arg8: SoundEvent) = CauldronBehavior.method_32210(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)

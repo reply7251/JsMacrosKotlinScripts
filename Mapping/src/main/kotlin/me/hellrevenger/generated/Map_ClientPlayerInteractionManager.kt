@@ -1,0 +1,41 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.ClientPlayerInteractionManager
+
+fun ClientPlayerInteractionManager.createPlayer(arg0: ClientWorld, arg1: StatHandler, arg2: ClientRecipeBook) = this.method_29357(arg0, arg1, arg2)
+fun ClientPlayerInteractionManager.breakBlock(arg0: BlockPos) = this.method_2899(arg0)
+fun ClientPlayerInteractionManager.tick() = this.method_2927()
+fun ClientPlayerInteractionManager.clickSlot(arg0: Int, arg1: Int, arg2: Int, arg3: SlotActionType, arg4: PlayerEntity) = this.method_2906(arg0, arg1, arg2, arg3, arg4)
+fun ClientPlayerInteractionManager.isBreakingBlock() = this.method_2923()
+fun ClientPlayerInteractionManager.getBlockBreakingProgress() = this.method_51888()
+fun ClientPlayerInteractionManager.setGameMode(arg0: GameMode) = this.method_2907(arg0)
+fun ClientPlayerInteractionManager.getPreviousGameMode() = this.method_28107()
+fun ClientPlayerInteractionManager.hasCreativeInventory() = this.method_2914()
+fun ClientPlayerInteractionManager.setGameModes(arg0: GameMode, arg1: GameMode) = this.method_32790(arg0, arg1)
+fun ClientPlayerInteractionManager.interactEntity(arg0: PlayerEntity, arg1: Entity, arg2: Hand) = this.method_2905(arg0, arg1, arg2)
+fun ClientPlayerInteractionManager.dropCreativeStack(arg0: ItemStack) = this.method_2915(arg0)
+fun ClientPlayerInteractionManager.interactItem(arg0: PlayerEntity, arg1: Hand) = this.method_2919(arg0, arg1)
+fun ClientPlayerInteractionManager.clickCreativeStack(arg0: ItemStack, arg1: Int) = this.method_2909(arg0, arg1)
+fun ClientPlayerInteractionManager.attackEntity(arg0: PlayerEntity, arg1: Entity) = this.method_2918(arg0, arg1)
+fun ClientPlayerInteractionManager.copyAbilities(arg0: PlayerEntity) = this.method_2903(arg0)
+fun ClientPlayerInteractionManager.clickButton(arg0: Int, arg1: Int) = this.method_2900(arg0, arg1)
+fun ClientPlayerInteractionManager.cancelBlockBreaking() = this.method_2925()
+fun ClientPlayerInteractionManager.interactBlock(arg0: ClientPlayerEntity, arg1: Hand, arg2: BlockHitResult) = this.method_2896(arg0, arg1, arg2)
+fun ClientPlayerInteractionManager.hasExperienceBar() = this.method_2913()
+fun ClientPlayerInteractionManager.updateBlockBreakingProgress(arg0: BlockPos, arg1: Direction) = this.method_2902(arg0, arg1)
+fun ClientPlayerInteractionManager.attackBlock(arg0: BlockPos, arg1: Direction) = this.method_2910(arg0, arg1)
+fun ClientPlayerInteractionManager.stopUsingItem(arg0: PlayerEntity) = this.method_2897(arg0)
+fun ClientPlayerInteractionManager.pickFromInventory(arg0: Int) = this.method_2916(arg0)
+fun ClientPlayerInteractionManager.isFlyingLocked() = this.method_2928()
+fun ClientPlayerInteractionManager.slotChangedState(arg0: Int, arg1: Int, arg2: Boolean) = this.method_54634(arg0, arg1, arg2)
+fun ClientPlayerInteractionManager.createPlayer(arg0: ClientWorld, arg1: StatHandler, arg2: ClientRecipeBook, arg3: Boolean, arg4: Boolean) = this.method_2901(arg0, arg1, arg2, arg3, arg4)
+fun ClientPlayerInteractionManager.hasStatusBars() = this.method_2908()
+fun ClientPlayerInteractionManager.interactEntityAtLocation(arg0: PlayerEntity, arg1: Entity, arg2: EntityHitResult, arg3: Hand) = this.method_2917(arg0, arg1, arg2, arg3)
+fun ClientPlayerInteractionManager.hasRidingInventory() = this.method_2895()
+fun ClientPlayerInteractionManager.getCurrentGameMode() = this.method_2920()
+fun ClientPlayerInteractionManager.hasLimitedAttackSpeed() = this.method_2924()
+fun ClientPlayerInteractionManager.clickRecipe(arg0: Int, arg1: RecipeEntry<*>, arg2: Boolean) = this.method_2912(arg0, arg1, arg2)

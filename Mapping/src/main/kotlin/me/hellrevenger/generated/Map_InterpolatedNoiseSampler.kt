@@ -1,0 +1,11 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.InterpolatedNoiseSampler
+
+fun InterpolatedNoiseSampler.copyWithRandom(arg0: Random) = this.method_42386(arg0)
+fun InterpolatedNoiseSampler.addDebugInfo(arg0: StringBuilder) = this.method_39117(arg0)
+fun KClass<InterpolatedNoiseSampler>.createBase3dNoiseFunction(arg0: Double, arg1: Double, arg2: Double, arg3: Double, arg4: Double) = InterpolatedNoiseSampler.method_42384(arg0, arg1, arg2, arg3, arg4)

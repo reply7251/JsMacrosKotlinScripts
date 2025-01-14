@@ -8,8 +8,6 @@ import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw2D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.RenderElement
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.EntityHelper
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.PlayerEntityHelper
-import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
-import xyz.wagyourtail.jsmacros.core.library.impl.FReflection
 
 val mc get() = MinecraftClient::class.getInstance()
 
@@ -26,7 +24,6 @@ open class WorldPosWrapper(
         var projectionMatrix = Matrix4f()
 
         var camera = Pos3D(0.0, 0.0, 0.0)
-        var rotation = Quaternionf()
         var lastFov = 0.0
         var yaw = 0f
         var pitch = 0f
@@ -57,7 +54,7 @@ open class WorldPosWrapper(
             lastFov = fov
             pitch = 1000f;
         }
-        mc.isInSingleplayer()
+
         val player = mc.player?.let { PlayerEntityHelper.create(it) } ?: return
         val cPitch = player.pitch
         val cYaw = player.yaw

@@ -1,0 +1,12 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.ScoreboardObjectiveArgumentType
+
+fun ScoreboardObjectiveArgumentType.parse(arg0: StringReader) = this.method_9396(arg0)
+fun KClass<ScoreboardObjectiveArgumentType>.getWritableObjective(arg0: CommandContext<ServerCommandSource>, arg1: String) = ScoreboardObjectiveArgumentType.method_9393(arg0, arg1)
+fun KClass<ScoreboardObjectiveArgumentType>.scoreboardObjective() = ScoreboardObjectiveArgumentType.method_9391()
+fun KClass<ScoreboardObjectiveArgumentType>.getObjective(arg0: CommandContext<ServerCommandSource>, arg1: String) = ScoreboardObjectiveArgumentType.method_9395(arg0, arg1)

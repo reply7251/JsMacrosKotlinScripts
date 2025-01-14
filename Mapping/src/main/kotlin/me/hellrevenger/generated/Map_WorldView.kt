@@ -1,0 +1,39 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.WorldView
+
+fun WorldView.isRegionLoaded(arg0: Int, arg1: Int, arg2: Int, arg3: Int) = this.method_33597(arg0, arg1, arg2, arg3)
+fun WorldView.getLightLevel(arg0: BlockPos, arg1: Int) = this.method_22346(arg0, arg1)
+fun WorldView.getDimension() = this.method_8597()
+fun WorldView.getLightLevel(arg0: BlockPos) = this.method_22339(arg0)
+fun WorldView.containsFluid(arg0: Box) = this.method_22345(arg0)
+fun WorldView.getBrightness(arg0: BlockPos) = this.method_22349(arg0)
+fun WorldView.getSeaLevel() = this.method_8615()
+fun WorldView.getChunk(arg0: Int, arg1: Int, arg2: ChunkStatus) = this.method_22342(arg0, arg1, arg2)
+fun WorldView.getPhototaxisFavor(arg0: BlockPos) = this.method_42309(arg0)
+fun WorldView.getBiome(arg0: BlockPos) = this.method_23753(arg0)
+fun WorldView.getAmbientDarkness() = this.method_8594()
+fun WorldView.isAir(arg0: BlockPos) = this.method_22347(arg0)
+fun WorldView.getBiomeAccess() = this.method_22385()
+fun WorldView.isWater(arg0: BlockPos) = this.method_22351(arg0)
+fun WorldView.getEnabledFeatures() = this.method_45162()
+fun <T>WorldView.createCommandRegistryWrapper(arg0: RegistryKey<out Registry<out T>>) = this.method_45448<T>(arg0)
+fun WorldView.isRegionLoaded(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int) = this.method_22341(arg0, arg1, arg2, arg3, arg4, arg5)
+fun WorldView.isChunkLoaded(arg0: Int, arg1: Int) = this.method_8393(arg0, arg1)
+fun WorldView.isPosLoaded(arg0: Int, arg1: Int) = this.method_33598(arg0, arg1)
+fun WorldView.getTopY(arg0: net.minecraft.class_2902.class_2903, arg1: Int, arg2: Int) = this.method_8624(arg0, arg1, arg2)
+fun WorldView.isSkyVisibleAllowingSea(arg0: BlockPos) = this.method_22348(arg0)
+fun WorldView.isRegionLoaded(arg0: BlockPos, arg1: BlockPos) = this.method_22343(arg0, arg1)
+fun WorldView.getChunk(arg0: Int, arg1: Int, arg2: ChunkStatus, arg3: Boolean) = this.method_8402(arg0, arg1, arg2, arg3)
+fun WorldView.isClient() = this.method_8608()
+fun WorldView.getGeneratorStoredBiome(arg0: Int, arg1: Int, arg2: Int) = this.method_22387(arg0, arg1, arg2)
+fun WorldView.getChunk(arg0: Int, arg1: Int) = this.method_8392(arg0, arg1)
+fun WorldView.getTopPosition(arg0: net.minecraft.class_2902.class_2903, arg1: BlockPos) = this.method_8598(arg0, arg1)
+fun WorldView.isChunkLoaded(arg0: BlockPos) = this.method_22340(arg0)
+fun WorldView.getRegistryManager() = this.method_30349()
+fun WorldView.getChunk(arg0: BlockPos) = this.method_22350(arg0)
+fun WorldView.getStatesInBoxIfLoaded(arg0: Box) = this.method_29556(arg0)

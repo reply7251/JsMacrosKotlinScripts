@@ -1,0 +1,12 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.LightBlock
+
+val KClass<LightBlock>.STATE_TO_LUMINANCE by aliasStatic(LightBlock::field_31189)
+val KClass<LightBlock>.LEVEL_15 by aliasStatic(LightBlock::field_31187)
+val KClass<LightBlock>.WATERLOGGED by aliasStatic(LightBlock::field_31188)
+fun KClass<LightBlock>.addNbtForLevel(arg0: ItemStack, arg1: Int) = LightBlock.method_47377(arg0, arg1)

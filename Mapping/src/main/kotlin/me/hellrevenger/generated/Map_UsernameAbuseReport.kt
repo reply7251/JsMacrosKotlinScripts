@@ -1,0 +1,10 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.UsernameAbuseReport
+
+fun UsernameAbuseReport.copy() = this.method_53608()
+fun UsernameAbuseReport.getUsername() = this.method_53607()

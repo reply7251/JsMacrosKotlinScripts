@@ -1,0 +1,11 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.DynamicRegistriesS2CPacket
+
+fun DynamicRegistriesS2CPacket.apply(arg0: ClientConfigurationPacketListener) = this.method_53042(arg0)
+fun DynamicRegistriesS2CPacket.registry() = this.comp_2258()
+fun DynamicRegistriesS2CPacket.entries() = this.comp_2259()

@@ -1,0 +1,10 @@
+package me.hellrevenger.generated
+
+import me.hellrevenger.generated.alias
+import me.hellrevenger.generated.aliasEnum
+import me.hellrevenger.generated.aliasStatic
+import kotlin.reflect.*
+import me.hellrevenger.generated.SpectatorMenuState
+
+fun SpectatorMenuState.getSelectedSlot() = this.method_2787()
+fun SpectatorMenuState.getCommand(arg0: Int) = this.method_2786(arg0)
