@@ -4,6 +4,7 @@ package me.hellrevenger
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
+import me.hellrevenger.mixins.MixinMain
 import net.minecraft.class_310
 import xyz.wagyourtail.jsmacros.client.JsMacros
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
@@ -23,7 +24,8 @@ import kotlin.script.experimental.api.onFailure
 import kotlin.script.experimental.host.toScriptSource
 import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 
-class KotlinExtension: Extension {
+class
+KotlinExtension: Extension {
     private var languageDefinition: KotlinLanguageDefinition? = null
 
     override fun init() {
@@ -44,6 +46,8 @@ class KotlinExtension: Extension {
                 }
                 throw RuntimeException("Kotlin script failed:\n        ${reports.joinToString("\n        ")}", exceptions.firstOrNull())
             }
+
+            MixinMain.mixins()
         }
     }
 
@@ -79,11 +83,6 @@ class KotlinExtension: Extension {
     override fun wrapException(p0: Throwable?): BaseWrappedException<*>? {
         if (p0 is KotlinLanguageDefinition.KotlinCompileException) {
             val nextGetter = p0.resultWithDiagnostics.reports.iterator()
-            p0.resultWithDiagnostics.reports.forEach {
-                if (it.severity == ScriptDiagnostic.Severity.ERROR && it.exception != null) {
-                    JsMacros.core.profile.logError(it.exception)
-                }
-            }
             return BaseWrappedException(null, "KotlinSub script failed to compile", null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
         }
         if (p0 is KotlinLanguageDefinition.KotlinRuntimeException) {
@@ -112,7 +111,6 @@ class KotlinExtension: Extension {
             if (startIndex == null) startIndex = -1
             if (endIndex == null) endIndex = -1
             val loc = BaseWrappedException.GuestLocation(file, startIndex, endIndex, line, column)
-
             BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + sd.exception?.cause?.message, loc, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
         } else {
             BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + sd.exception?.cause?.message, null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)

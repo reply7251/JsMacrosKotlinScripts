@@ -7,6 +7,9 @@ import com.wynntils.services.itemfilter.type.ItemStatProvider
 import com.wynntils.services.itemfilter.type.StatFilter
 import com.wynntils.services.itemfilter.type.StatFilterFactory
 import com.wynntils.utils.type.Pair
+import me.hellrevenger.library.api.EventListener
+import xyz.wagyourtail.jsmacros.client.api.event.impl.EventRecvMessage
+import xyz.wagyourtail.jsmacros.client.api.helpers.TextHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.*
 

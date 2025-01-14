@@ -1,3 +1,4 @@
+import me.hellrevenger.generated.*
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.event.Event
 
@@ -21,11 +22,12 @@ registerEvent(ClientTickEvents.START_CLIENT_TICK, ClientTickEvents.StartTick {
     val block = World.getBlock(pos) ?: return@StartTick
     val rawBlock = block.rawBlock
     if (rawBlock is VaultBlock) {
-        val blockEntity = block.rawBlockEntity as net.minecraft.class_9199
+        val blockEntity = block.rawBlockEntity as VaultBlockEntity
         val blockState = block.rawBlockState
-        val item = blockEntity.method_56735().method_56787()
 
-        if (item.method_31574(Items.field_49813)) {
+        val item = blockEntity.getSharedData().getDisplayItem()
+
+        if (item.isOf(Items::class.HEAVY_CORE)) {
             interactions.interact();
         }
         else if (blockState.method_11654(VaultBlock.field_50171)) {

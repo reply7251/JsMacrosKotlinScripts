@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback
 import net.fabricmc.fabric.api.event.Event
+import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.service.EventService
@@ -17,21 +18,25 @@ val whitelist = hashMapOf<BaseScriptContext<*>, Long>()
 JsMacros.createCustomEvent("RegisterKtEvent").registerEvent()
 JsMacros.createCustomEvent("UnregisterKtEvent").registerEvent()
 
-JsMacros.on("RegisterKtEvent", JavaWrapper.methodToJava(fun(e: EventCustom, _: Any){
-    val eventToRegister = e.getObject("event") as Event<*>
-    val ctx = e.getObject("context") as BaseScriptContext<*>
-    whitelist[ctx] = Time.time() + 1000L
-    val listeners = events.getOrPut(eventToRegister) { hashMapOf() }
-    listeners[ctx] = e.getObject("callback") as Any
-} as Function2<*,*,*>))
+JsMacros.on("RegisterKtEvent", JavaWrapper.methodToJava { e: BaseEvent, _: Any ->
+    (e as? EventCustom)?.let { e ->
+        val eventToRegister = e.getObject("event") as Event<*>
+        val ctx = e.getObject("context") as BaseScriptContext<*>
+        whitelist[ctx] = Time.time() + 1000L
+        val listeners = events.getOrPut(eventToRegister) { hashMapOf() }
+        listeners[ctx] = e.getObject("callback") as Any
+    }
+})
 
-JsMacros.on("UnregisterKtEvent", JavaWrapper.methodToJava(fun(e: EventCustom, _: Any){
-    val eventToRegister = e.getObject("event") as Event<*>
-    val listeners = events[eventToRegister] ?: return
-    val ctx = e.getObject("context") as BaseScriptContext<*>
-    whitelist.remove(ctx)
-    listeners.remove(ctx)
-} as Function2<*,*,*>))
+JsMacros.on("UnregisterKtEvent", JavaWrapper.methodToJava { e: BaseEvent, _: Any ->
+    (e as? EventCustom)?.let { e ->
+        val eventToRegister = e.getObject("event") as Event<*>
+        val listeners = events[eventToRegister] ?: return@methodToJava
+        val ctx = e.getObject("context") as BaseScriptContext<*>
+        whitelist.remove(ctx)
+        listeners.remove(ctx)
+    }
+})
 Chat.log("EventCenter init " +Time.time() % 100+" ...")
 
 

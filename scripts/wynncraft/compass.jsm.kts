@@ -2,6 +2,7 @@ import com.wynntils.models.marker.MarkerModel
 import com.wynntils.utils.mc.type.Location
 import com.wynntils.utils.wynn.LocationUtils
 import net.minecraft.class_2338
+import xyz.wagyourtail.jsmacros.client.api.helpers.world.BlockPosHelper
 
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")
@@ -18,8 +19,8 @@ Chat.commandManager.createCommandBuilder("/compass")
         }
     })
     .or().literalArg("add").blockPosArg("pos").executes(JavaWrapper.methodToJava { ctx ->
-        val pos = ctx.getArg("pos") as class_2338
-        MarkerModel.USER_WAYPOINTS_PROVIDER.addLocation(Location(pos), null)
+        val pos = ctx.getArg("pos") as BlockPosHelper
+        MarkerModel.USER_WAYPOINTS_PROVIDER.addLocation(Location(pos.raw), null)
     }).register()
 
 Chat.toast("compass", "enabled")

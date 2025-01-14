@@ -1,5 +1,4 @@
 
-
 import me.hellrevenger.generated.*
 import xyz.wagyourtail.jsmacros.client.api.classes.RegistryHelper
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.PlayerEntityHelper

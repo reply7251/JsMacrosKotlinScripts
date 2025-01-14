@@ -18,6 +18,11 @@ repositories {
         name = "minecraft"
         url = URI("https://libraries.minecraft.net")
     }
+
+    maven {
+        name = "sponge powered"
+        url = URI("https://repo.spongepowered.org/repository/maven-public/")
+    }
 }
 
 val jsmacrosExtensionInclude by configurations.creating
@@ -30,9 +35,13 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-scripting-dependencies")
     implementation("org.jetbrains.kotlin:kotlin-scripting-dependencies-maven")
     implementation("org.jetbrains.kotlin:kotlin-scripting-compiler")
+    implementation(kotlin("compiler-embeddable"))
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-common")
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-jvm")
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-jvm-host")
+    implementation("net.bytebuddy:byte-buddy:1.15.1")
+    include("net.bytebuddy:byte-buddy:1.15.1")
+    //jsmacrosExtensionInclude("net.bytebuddy:byte-buddy:1.15.1")
 
     implementation(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT.jar"))
     include(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT.jar"))
@@ -62,6 +71,9 @@ dependencies {
     implementation("org.apache.commons:commons-lang3:3.14.0")
     implementation("org.apache.logging.log4j:log4j-api:2.22.1")
     implementation("org.slf4j:slf4j-api:2.0.9")
+    implementation("org.spongepowered:mixin:0.8.5")
+    implementation("net.java.dev.jna:jna:5.6.0")
+    implementation("org.ow2.asm:asm:9.7")
 
     implementation("net.fabricmc.fabric-api:fabric-api:0.100.4+1.21")
     implementation(files("../scripts/libs/jars/jsmacros-1.21-fabric-jvm17.jar"))
@@ -69,7 +81,10 @@ dependencies {
     implementation(files("../scripts/libs/jars/int-jvm17-open.jar"))
     //implementation(files("../scripts/libs/jars/int-jvm17.jar"))
     //implementation(files("../scripts/libs/jars/noObf-jvm17.jar"))
-    implementation(files("../scripts/libs/jars/wynntils-2.0.0-fabric+MC-1.21.jar"))
+    implementation(files("../scripts/libs/jars/wynntils-2.3.11-fabric+MC-1.21.1.jar"))
+    implementation(files("../scripts/libs/jars/malilib-fabric-1.21-0.18.9999-sakura.1.jar"))
+    implementation(files("../scripts/libs/jars/tweakeroo-fabric-1.21-0.20.999-sakura.2.jar"))
+
 }
 
 tasks.processResources {

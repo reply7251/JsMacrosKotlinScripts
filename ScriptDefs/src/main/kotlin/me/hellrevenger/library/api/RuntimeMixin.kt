@@ -4,8 +4,8 @@ package me.hellrevenger.library.api
 import com.sun.jna.NativeLibrary
 import com.sun.jna.ptr.IntByReference
 import com.sun.jna.ptr.PointerByReference
+import javassist.ClassPool
 import net.bytebuddy.ByteBuddy
-import net.bytebuddy.agent.builder.AgentBuilder
 import net.bytebuddy.asm.Advice
 import net.bytebuddy.asm.AsmVisitorWrapper
 import net.bytebuddy.description.field.FieldDescription
@@ -20,32 +20,28 @@ import net.bytebuddy.dynamic.scaffold.TypeValidation
 import net.bytebuddy.implementation.Implementation
 import net.bytebuddy.implementation.MethodDelegation
 import net.bytebuddy.jar.asm.AnnotationVisitor
-import net.bytebuddy.jar.asm.Label
 import net.bytebuddy.jar.asm.MethodVisitor
-import net.bytebuddy.jar.asm.Opcodes
 import net.bytebuddy.matcher.ElementMatcher
 import net.bytebuddy.matcher.ElementMatchers
 import net.bytebuddy.pool.TypePool
 import net.bytebuddy.utility.OpenedClassReader
 import net.bytebuddy.utility.RandomString
-import net.minecraft.class_310
+import org.jetbrains.kotlin.js.translate.intrinsic.Intrinsics
 import org.objectweb.asm.Type
 import org.spongepowered.tools.agent.MixinAgent
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
-import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import java.io.File
 import java.lang.instrument.ClassDefinition
 import java.lang.instrument.ClassFileTransformer
 import java.lang.instrument.Instrumentation
 import java.lang.reflect.Modifier
-import java.net.URL
-import java.net.URLClassLoader
 import java.security.ProtectionDomain
-import kotlin.random.Random
-import kotlin.random.nextUBytes
 
 private fun tryGetInstrumentation(): Instrumentation {
+//    try {
+//        return net.bytebuddy.agent.ByteBuddyAgent.install()
+//    } catch (_: Exception) {}
     val field = MixinAgent::class.java.getDeclaredField("instrumentation")
     if(field.trySetAccessible()) {
         val result = field.get(null)
@@ -80,7 +76,6 @@ private fun tryGetInstrumentation(): Instrumentation {
 }
 
 public val instrumentation = tryGetInstrumentation()
-val classInjector = ClassInjector.UsingUnsafe.Factory.resolve(instrumentation).make(net.minecraft.class_310::class.java.classLoader)
 
 
 class GetByteCode : ClassFileTransformer {
@@ -107,6 +102,22 @@ class GetByteCode : ClassFileTransformer {
         return super.transform(loader, className, classBeingRedefined, protectionDomain, classfileBuffer)
     }
 }
+
+val classInjector = ClassInjector.UsingUnsafe.Factory.resolve(instrumentation).make(net.minecraft.class_310::class.java.classLoader)
+
+//var classInjectorInited = false
+//private fun initClassInjector() {
+//    if(!classInjectorInited) {
+//        classInjectorInited = true
+//
+//        val jvmClasses = arrayOf(
+//            KotlinNullPointerException::class.java,
+//            UninitializedPropertyAccessException::class.java,
+//            Intrinsics::class.java,
+//        )
+//        classInjector.inject(jvmClasses.associate { TypeDescription.ForLoadedType.of(it) to GetByteCode.getByteCode(it) })
+//    }
+//}
 
 class KotlinFinalRemovalMethodVisitor(visitor: MethodVisitor) : MethodVisitor(OpenedClassReader.ASM_API, visitor) {
     enum class Status {
@@ -235,19 +246,25 @@ class RuntimeMixin {
             getIntercepts(targetClass).remove(matcher)
         }
 
-        fun addClassPath(targetClass: Class<*>): Class<out Any> {
-            val unloaded = ByteBuddy()
-                .with(TypeValidation.DISABLED)
-                .rebase(targetClass, ClassFileLocator.ForInstrumentation.of(instrumentation, targetClass))
-                .name(targetClass.name + "$$" + RandomString.hashOf(hash++))
-                .make()
-            val bytes = unloaded.bytes
-            val result = unloaded
-                .load(targetClass.classLoader)
-                .loaded
+        fun addClassPath(targetClass: Class<*>, constant: Boolean = false): Class<out Any> {
+            return if(constant) {
+                if(!addedClassPath.contains(targetClass.name))
+                    classInjector.inject(mapOf(TypeDescription.ForLoadedType.of(targetClass) to getOriginalByteCode(targetClass)))
+                targetClass
+            } else {
+                val unloaded = ByteBuddy()
+                    .with(TypeValidation.DISABLED)
+                    .rebase(targetClass, ClassFileLocator.ForInstrumentation.of(instrumentation, targetClass))
+                    .name(targetClass.name + "$$" + RandomString.hashOf(hash++))
+                    .make()
+                val bytes = unloaded.bytes
+                val result = unloaded
+                    .load(targetClass.classLoader)
+                    .loaded
 
-            classInjector.inject(mapOf(unloaded.typeDescription to bytes))
-            return result
+                classInjector.inject(mapOf(unloaded.typeDescription to bytes))
+                result
+            }
         }
 
         fun addMixin(targetClass: Class<*>, visitor: AsmVisitorWrapper) {
@@ -268,13 +285,17 @@ class RuntimeMixin {
 
         fun doMixin(targetClass: Class<*>) {
             val oldByteCode = getOriginalByteCode(targetClass) ?: return
+
             originalByteCodes[targetClass] = oldByteCode
             instrumentation.redefineClasses(ClassDefinition(targetClass, oldByteCode))
+
+//            initClassInjector()
 
             var builder = ByteBuddy()
                 .with(TypeValidation.DISABLED)
                 .with(VisibilityBridgeStrategy.Default.NEVER)
                 .redefine(targetClass, ClassFileLocator.ForInstrumentation.of(instrumentation, targetClass))
+
 
             getPublic(targetClass).forEach {
                 builder = builder.field(it).transform(ForField.withModifiers(Visibility.PUBLIC))
@@ -311,12 +332,6 @@ class RuntimeMixin {
             }
 
             return Advice.to(implementation, ClassFileLocator.ForInstrumentation.of(instrumentation, implementation))
-        }
-
-        fun debug(context: EventContainer<*>) {
-            val debug = File(context.ctx.containedFolder, "debug")
-            System.setProperty("net.bytebuddy.dump", debug.absolutePath)
-            enableDebug = true
         }
 
         fun writeResult(context: EventContainer<*>, targetClass: Class<*>, fileName: String = "dump.class") {

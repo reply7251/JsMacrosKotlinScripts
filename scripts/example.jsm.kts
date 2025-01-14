@@ -1,10 +1,7 @@
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventTick
-import xyz.wagyourtail.jsmacros.core.service.EventService
-JsMacros.on("Tick", JavaWrapper.methodToJava(fun(e: EventTick, _: Any) {
-    val time = World.time
-    Chat.actionbar("time: $time")
-} as Function2<*,*,*>))
+import me.hellrevenger.generated.*
+import xyz.wagyourtail.jsmacros.core.Core
 
-(event as EventService).stopListener = JavaWrapper.methodToJava(fun(){
+Core.getInstance().contexts.forEach {
+    it.closeContext()
+}
 
-} as Function0<*>)

@@ -1,23 +1,21 @@
 import me.hellrevenger.generated.*
 import me.hellrevenger.library.api.WorldPosWrapper
-import me.hellrevenger.library.impl.FWrapper
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientEntityEvents
 import net.minecraft.class_332
 import xyz.wagyourtail.jsmacros.client.api.classes.TextBuilder
 import xyz.wagyourtail.jsmacros.client.api.classes.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventEntityLoad
 import xyz.wagyourtail.jsmacros.client.api.helpers.CommandContextHelper
 import xyz.wagyourtail.jsmacros.client.api.helpers.NBTElementHelper
 import xyz.wagyourtail.jsmacros.client.api.helpers.TextHelper
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.EntityHelper
-import xyz.wagyourtail.jsmacros.core.MethodWrapper
-import xyz.wagyourtail.jsmacros.core.event.BaseEvent
-import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
+import kotlin.math.ceil
 
+
+var targetEntity: EntityHelper<*>? = null
 
 class MyText(val callback: (() -> List<TextHelper>), x: Int = 0, y: Int = 0, color: Int = 0xffffff,
              zIndex: Int = 0, shadow: Boolean = true, scale: Double = 1.0, rotation: Float = 0f)
@@ -79,7 +77,7 @@ class CompoundAccessor(val tag: String, next: NBTAccessor? = null) : NBTAccessor
             val nbt2 = compound[tag]
             if(nbt2 == null && next == null) {
                 return NBTElementHelper.wrap(NbtCompound(mapOf(*compound.keys
-                    .filter { it.startsWith(tag) }
+                    .filter { it.startsWith(tag, true) }
                     .map { it to compound[it]!!.raw }
                     .toTypedArray())))
             }
@@ -116,35 +114,36 @@ val green = 0x008B00
 val salmon = 0xFA8072
 val darkCyan = 0x008B8B
 fun getNBTString(nbt: NBTElementHelper<*>, out: ArrayList<TextHelper>, width: Int = 300, depth: Int = 0): TextHelper {
-    if(depth > 0) {
-        if(nbt.isList) {
-            return if(nbt.asListHelper().length() > 0)
-                TextBuilder().withColor(sign).append("[").withColor(white).append("...").withColor(sign).append("]").build()
-            else TextBuilder().withColor(sign).append("[]").build()
-        } else if(nbt.isCompound) {
-            return if(nbt.asCompoundHelper().keys.isNotEmpty())
-                TextBuilder().withColor(sign).append("[").withColor(white).append("...").withColor(sign).append("}").build()
-            else TextBuilder().withColor(sign).append("{}").build()
-        } else if(nbt.isNull) {
-            return TextBuilder().withColor(green).append("null").build()
-        } else if(nbt.isString) {
-            return TextBuilder().withColor(salmon).append(nbt.asString()).build()
-        } else if(nbt.isNumber) {
-            return TextBuilder().withColor(darkCyan).append(nbt.asNumberHelper().raw.toString()).build()
-        }
-        return TextBuilder().build()
+    if(nbt.isNull) {
+        return TextBuilder().withColor(green).append("null").build()
+    } else if(nbt.isString) {
+        return TextBuilder().withColor(salmon).append(nbt.asString()).build()
+    } else if(nbt.isNumber) {
+        return TextBuilder().withColor(darkCyan).append(nbt.asNumberHelper().raw.method_10702()).build()
     }
+//    if(depth > 0) {
+//        if(nbt.isList) {
+//            return if(nbt.asListHelper().length() > 0)
+//                TextBuilder().withColor(sign).append("[").withColor(white).append("...").withColor(sign).append("]").build()
+//            else TextBuilder().withColor(sign).append("[]").build()
+//        } else if(nbt.isCompound) {
+//            return if(nbt.asCompoundHelper().keys.isNotEmpty())
+//                TextBuilder().withColor(sign).append("[").withColor(white).append("...").withColor(sign).append("}").build()
+//            else TextBuilder().withColor(sign).append("{}").build()
+//        }
+//        return TextBuilder().build()
+//    }
     if(nbt.isList) {
         val list = nbt.asListHelper()
         val len = list.length()
         var tb = TextBuilder().withColor(sign).append("[")
-        /*
-        arrayOfNulls<Int>(len).forEachIndexed { i, _ ->
+        val end = len-1
+        for(i in 0..end) {
             if(i > 0) tb.withColor(sign).append(", ")
-            val text = getNBTString(nbt, out, depth+1)
+            val text = getNBTString(list[i]!!, out, width, depth+1)
             val tw = text.width
             currentWidth += tw
-            if(currentWidth > width) {
+            if(width != -1 && currentWidth > width) {
                 out.add(tb.build())
                 tb = TextBuilder()
                 currentWidth = tw
@@ -152,9 +151,7 @@ fun getNBTString(nbt: NBTElementHelper<*>, out: ArrayList<TextHelper>, width: In
             tb.append(text)
         }
 
-         */
-        tb.withColor(sign).append("]")
-        return tb.build()
+        return tb.withColor(sign).append("]").build()
     } else if(nbt.isCompound) {
         val compound = nbt.asCompoundHelper()
         var tb = TextBuilder().withColor(sign).append("{")
@@ -162,11 +159,11 @@ fun getNBTString(nbt: NBTElementHelper<*>, out: ArrayList<TextHelper>, width: In
         compound.keys.forEachIndexed { index, key ->
             val tb2 = TextBuilder()
             if(index > 0) tb2.withColor(sign).append(", ")
-            tb2.withColor(salmon).append(key).withColor(sign).append(": ").append(getNBTString(compound[key]!!, out, depth+1))
+            tb2.withColor(salmon).append(key).withColor(sign).append(": ").append(getNBTString(compound[key]!!, out, width, depth+1))
             val text = tb2.build()
             val tw = text.width
             currentWidth += tw
-            if(currentWidth > width) {
+            if(width != -1 && currentWidth > width) {
                 out.add(tb.build())
                 tb = TextBuilder()
                 currentWidth = tw
@@ -189,12 +186,100 @@ fun onLoadEntity(entity: EntityHelper<*>) {
 val d2d = Hud.createDraw2D()
 d2d.register()
 
-JsMacros.on("EntityLoad", JavaWrapper.methodToJava<BaseEvent, EventContainer<*>, Any>({ event: EventEntityLoad, ctx: EventContainer<*> ->
-    onLoadEntity(event.entity)
-}))
+//JsMacros.on("EntityLoad", JavaWrapper.methodToJava<BaseEvent, EventContainer<*>, Any>({ event: EventEntityLoad, ctx: EventContainer<*> ->
+//    onLoadEntity(event.entity)
+//}))
+//
+//World.entities?.forEach {
+//    onLoadEntity(it)
+//}
 
-World.entities?.forEach {
-    onLoadEntity(it)
+class MultiLine {
+    var x = 0
+    var y = 0
+    var maxLines = 12
+    var maxWidth = 1000
+    var scroll = 0
+    var textCache = Chat.createTextBuilder().build()
+    var rawTextCache = ""
+    var predictLinesCache = 1
+
+    fun doScroll(value: Double) {
+        if(value < 0 && scroll < predictLinesCache - maxLines) {
+            scroll += 1
+        } else if (value > 0 && scroll > 0){
+            scroll -= 1
+        }
+        updateText()
+    }
+
+    fun predictLines(): Int {
+        predictLinesCache = ceil(getWidth(rawTextCache) / maxWidth.toDouble()).toInt() + 1
+        if(predictLinesCache < 0) predictLinesCache = 1
+        return predictLinesCache
+    }
+
+    fun updateText() {
+        val lines = Math.min(predictLinesCache, maxLines)
+        val iscreen = (screen as IScreen)
+        val texts = iscreen.elements.filterIsInstance<Text>()
+        val offset = rawTextCache.length / predictLinesCache
+        texts.forEachIndexed { index, renderElement ->
+            val line = index - 1
+            if(line < 0) return@forEachIndexed
+            val start = Math.min((line + scroll) * offset, rawTextCache.length)
+            val end = Math.min((line+scroll+1) * offset, rawTextCache.length)
+
+            renderElement.setText(if(line <= lines) rawTextCache.substring(start, end) else "")
+        }
+    }
+
+    fun setText(text: TextHelper?) {
+        textCache = text ?: Chat.createTextBuilder().build()
+        rawTextCache = textCache.stringStripFormatting
+        val predictLines = predictLines()
+        val lines = Math.min(predictLines, maxLines)
+        val iscreen = (screen as IScreen)
+        val texts = iscreen.elements.filterIsInstance<Text>()
+        val from = (texts.size - 1)
+        val to = lines
+        for(line in from .. to) {
+            iscreen.addText("", x, y + line * 15, 0xffffff, true)
+        }
+        updateText()
+    }
+
+    fun getWidth(text: String) = Client.minecraft.field_1772.method_1727(text)
+}
+val multiLine = MultiLine()
+
+fun parseAccessor(string: String) {
+    val cursor = Cursor(string)
+    var compound = true
+    accessor = NBTAccessor()
+    var tmp = accessor
+
+    while (cursor.canRead()) {
+        if(compound) {
+            val a0 = CompoundAccessor(cursor.read())
+            tmp.next = a0
+            tmp = a0
+        } else {
+            val a0 = ListAccessor(cursor.read().toInt())
+            tmp.next = a0
+            tmp = a0
+            cursor.peek("]")
+        }
+        if(cursor.canRead()) {
+            compound = if(cursor.peek(".")) {
+                true
+            } else if(cursor.peek("[")) {
+                false
+            } else {
+                break
+            }
+        }
+    }
 }
 
 val screen = Hud.createScreen("Peek Config", false)
@@ -203,38 +288,31 @@ val screen = Hud.createScreen("Peek Config", false)
     val hw = iscreen.width / 2
     val hh = iscreen.height / 2
     iscreen.addText("path: ", hw - 200, hh, 0xffffff, true)
-    iscreen.addTextInput(hw - 160, hh, 360, 40, "", JavaWrapper.methodToJava { string, b ->
-        val cursor = Cursor(string)
-        var compound = true
-        accessor = NBTAccessor()
-        var tmp = accessor
-
-        while (cursor.canRead()) {
-            if(compound) {
-                val a0 = CompoundAccessor(cursor.read())
-                tmp.next = a0
-                tmp = a0
-            } else {
-                val a0 = ListAccessor(cursor.read().toInt())
-                tmp.next = a0
-                tmp = a0
-                cursor.peek("]")
-            }
-            if(cursor.canRead()) {
-                compound = if(cursor.peek(".")) {
-                    true
-                } else if(cursor.peek("[")) {
-                    false
-                } else {
-                    break
-                }
-            }
+    iscreen.addTextInput(hw - 160, hh, 360, 40, "", JavaWrapper.methodToJava { string, _ ->
+        parseAccessor(string)
+        targetEntity?.let {
+            multiLine.setText(accessor.access(it.nbt)?.let { getNBTString(it, arrayListOf(), -1) })
         }
+
     })
+    iscreen.setOnScroll(JavaWrapper.methodToJava { pos1, pos2 ->
+        multiLine.doScroll(pos2.y)
+    })
+    multiLine.x = hw - 200
+    multiLine.y = hh + 50
+    multiLine.maxWidth = hw * 2 / 3
+    parseAccessor("")
+    targetEntity?.let {
+        multiLine.setText(it.nbt?.let { getNBTString(it, arrayListOf(), -1) })
+    }
+
 })
 
 Chat.commandManager.createCommandBuilder("/peek")
     .executes(JavaWrapper.methodToJava(fun(ctx: CommandContextHelper){
+        Player.interactions()?.targetedEntity?.let {
+            targetEntity = it
+        }
         thread {
             Client.waitTick(1)
             Hud.openScreen(screen as IScreen)
