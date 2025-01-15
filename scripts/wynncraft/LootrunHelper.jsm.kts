@@ -1,7 +1,6 @@
 import com.wynntils.core.components.Models
 import com.wynntils.features.inventory.ContainerSearchFeature
 import me.hellrevenger.generated.GenericContainerScreen
-import me.hellrevenger.generated.getTitle
 import me.hellrevenger.library.api.EventListener
 import xyz.wagyourtail.jsmacros.client.access.IInventory
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen

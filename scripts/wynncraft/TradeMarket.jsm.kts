@@ -11,8 +11,8 @@ import com.wynntils.models.containers.type.ScrollableContainerProperty
 import com.wynntils.models.containers.type.SearchableContainerProperty
 import com.wynntils.screens.base.widgets.SearchWidget
 import com.wynntils.services.itemfilter.type.ItemProviderType
+import me.hellrevenger.generated.Map_Widget.setY
 import sun.misc.Unsafe
-import me.hellrevenger.generated.setY
 import org.jetbrains.kotlin.backend.common.pop
 import xyz.wagyourtail.jsmacros.client.access.IInventory
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen

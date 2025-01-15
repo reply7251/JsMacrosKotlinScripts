@@ -1,10 +1,4 @@
-import me.hellrevenger.generated.getCustomName
-import me.hellrevenger.library.api.EventListener
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventEntityLoad
-import xyz.wagyourtail.jsmacros.client.api.helpers.TextHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.EntityHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.specialized.display.DisplayEntityHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.specialized.display.ItemDisplayEntityHelper
+
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.specialized.display.TextDisplayEntityHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.*

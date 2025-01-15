@@ -2,6 +2,10 @@ import fi.dy.masa.tweakeroo.config.Configs
 import fi.dy.masa.tweakeroo.config.FeatureToggle
 import fi.dy.masa.tweakeroo.util.CameraEntity
 import me.hellrevenger.generated.*
+import me.hellrevenger.generated.Map_Entity.*
+import me.hellrevenger.generated.Map_MinecraftClient.getRenderTickCounter
+import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
+import me.hellrevenger.generated.Map_Vec3d.*
 import me.hellrevenger.library.api.EventListener
 import me.hellrevenger.library.api.KtGlobals
 import me.hellrevenger.library.api.RuntimeMixin

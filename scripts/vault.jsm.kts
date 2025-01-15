@@ -1,4 +1,8 @@
 import me.hellrevenger.generated.*
+import me.hellrevenger.generated.Map_ItemStack.isOf
+import me.hellrevenger.generated.Map_Items.HEAVY_CORE
+import me.hellrevenger.generated.Map_VaultBlockEntity.getSharedData
+import me.hellrevenger.generated.Map_VaultSharedData.getDisplayItem
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.event.Event
 

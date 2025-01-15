@@ -1,5 +1,8 @@
 
 import me.hellrevenger.generated.*
+import me.hellrevenger.generated.Map_EntityLike.getUuid
+import me.hellrevenger.generated.Map_EntityView.getPlayers
+import me.hellrevenger.generated.Map_MinecraftServer.*
 import xyz.wagyourtail.jsmacros.client.api.classes.RegistryHelper
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.PlayerEntityHelper
 import xyz.wagyourtail.jsmacros.core.Core

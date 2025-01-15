@@ -1,9 +1,10 @@
-import me.hellrevenger.generated.getCustomName
+
 import me.hellrevenger.library.api.EventListener
 import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.LivingEntityHelper
 import fi.dy.masa.tweakeroo.config.FeatureToggle
 import fi.dy.masa.tweakeroo.util.CameraEntity
+import me.hellrevenger.generated.Map_Nameable.getCustomName
 import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.EntityHelper
 
 fun getPlayer() =

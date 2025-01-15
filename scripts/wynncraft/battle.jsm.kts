@@ -8,10 +8,9 @@ import com.wynntils.models.abilities.AbilityModel
 import com.wynntils.models.abilities.type.OphanimOrb
 import com.wynntils.models.abilities.type.ShamanMaskType
 import javassist.ClassPool
-import me.hellrevenger.generated.BLINDNESS
-import me.hellrevenger.generated.DARKNESS
+import me.hellrevenger.generated.Map_LivingEntity.removeStatusEffectInternal
+import me.hellrevenger.generated.Map_StatusEffects.*
 import me.hellrevenger.generated.StatusEffects
-import me.hellrevenger.generated.removeStatusEffectInternal
 import me.hellrevenger.library.api.EventListener
 import me.hellrevenger.library.api.RuntimeMixin
 import net.bytebuddy.asm.Advice

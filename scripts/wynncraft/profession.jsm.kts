@@ -14,6 +14,10 @@ import com.wynntils.utils.render.RenderUtils
 import com.wynntils.utils.render.Texture
 import com.wynntils.utils.type.BoundingBox
 import me.hellrevenger.generated.*
+import me.hellrevenger.generated.Map_DrawContext.getMatrices
+import me.hellrevenger.generated.Map_Screen.height
+import me.hellrevenger.generated.Map_Screen.renderBackground
+import me.hellrevenger.generated.Map_Screen.width
 import net.minecraft.class_332
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.ScriptScreen

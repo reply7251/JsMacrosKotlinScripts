@@ -1,4 +1,4 @@
-import me.hellrevenger.generated.getCustomName
+import me.hellrevenger.generated.Map_Nameable.getCustomName
 import me.hellrevenger.library.api.EventListener
 import me.hellrevenger.library.api.WorldPosWrapper
 import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventEntityLoad
