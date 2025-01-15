@@ -1,6 +1,15 @@
 package me.hellrevenger.library.api
 
 import me.hellrevenger.generated.*
+import me.hellrevenger.generated.Map_Camera.getPos
+import me.hellrevenger.generated.Map_DrawContext.*
+import me.hellrevenger.generated.Map_Entity.*
+import me.hellrevenger.generated.Map_GameOptions.getFov
+import me.hellrevenger.generated.Map_GameRenderer.*
+import me.hellrevenger.generated.Map_MatrixStack.*
+import me.hellrevenger.generated.Map_MinecraftClient.*
+import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
+import me.hellrevenger.generated.Map_SimpleOption.getValue
 import net.minecraft.class_332
 import org.joml.Vector3d
 import xyz.wagyourtail.jsmacros.client.api.classes.math.Pos3D

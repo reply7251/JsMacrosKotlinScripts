@@ -1,0 +1,13 @@
+package me.hellrevenger.generated.Map_LargeDripstoneFeatureConfig
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+
+val LargeDripstoneFeatureConfig.floorToCeilingSearchRange by alias(LargeDripstoneFeatureConfig::field_28228)
+val LargeDripstoneFeatureConfig.minBluntnessForWind by alias(LargeDripstoneFeatureConfig::field_28236)
+val LargeDripstoneFeatureConfig.columnRadius by alias(LargeDripstoneFeatureConfig::field_28229)
+val LargeDripstoneFeatureConfig.maxColumnRadiusToCaveHeightRatio by alias(LargeDripstoneFeatureConfig::field_28231)
+val LargeDripstoneFeatureConfig.minRadiusForWind by alias(LargeDripstoneFeatureConfig::field_28235)
+val LargeDripstoneFeatureConfig.heightScale by alias(LargeDripstoneFeatureConfig::field_28230)
+val LargeDripstoneFeatureConfig.stalagmiteBluntness by alias(LargeDripstoneFeatureConfig::field_28233)
+val LargeDripstoneFeatureConfig.stalactiteBluntness by alias(LargeDripstoneFeatureConfig::field_28232)
+val LargeDripstoneFeatureConfig.windSpeed by alias(LargeDripstoneFeatureConfig::field_28234)

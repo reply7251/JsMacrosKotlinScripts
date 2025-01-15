@@ -1,0 +1,10 @@
+package me.hellrevenger.generated.Map_SculkSpreadable
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+
+fun SculkSpreadable.spreadAtSamePosition(arg0: WorldAccess, arg1: BlockState, arg2: BlockPos, arg3: Random) = this.method_41468(arg0, arg1, arg2, arg3)
+fun SculkSpreadable.shouldConvertToSpreadable() = this.method_41472()
+fun SculkSpreadable.getUpdate() = this.method_41467()
+fun SculkSpreadable.spread(arg0: net.minecraft.class_7128.class_7129, arg1: WorldAccess, arg2: BlockPos, arg3: Random, arg4: SculkSpreadManager, arg5: Boolean) = this.method_41471(arg0, arg1, arg2, arg3, arg4, arg5)
+fun SculkSpreadable.getDecay(arg0: Int) = this.method_41473(arg0)
+fun SculkSpreadable.spread(arg0: WorldAccess, arg1: BlockPos, arg2: BlockState, arg3: Collection<Direction>, arg4: Boolean) = this.method_41469(arg0, arg1, arg2, arg3, arg4)

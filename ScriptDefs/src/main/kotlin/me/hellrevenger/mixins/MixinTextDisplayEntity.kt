@@ -2,7 +2,7 @@ package me.hellrevenger.mixins
 
 import me.hellrevenger.generated.DataTracker
 import me.hellrevenger.generated.TrackedData
-import me.hellrevenger.generated.get
+import me.hellrevenger.generated.Map_DataTracker.get
 import net.bytebuddy.asm.Advice
 import net.bytebuddy.implementation.bytecode.assign.Assigner
 import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventNameChange

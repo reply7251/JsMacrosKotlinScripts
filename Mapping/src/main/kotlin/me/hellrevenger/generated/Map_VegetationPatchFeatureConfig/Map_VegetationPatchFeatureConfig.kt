@@ -1,0 +1,14 @@
+package me.hellrevenger.generated.Map_VegetationPatchFeatureConfig
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+
+val VegetationPatchFeatureConfig.groundState by alias(VegetationPatchFeatureConfig::field_29287)
+val VegetationPatchFeatureConfig.vegetationFeature by alias(VegetationPatchFeatureConfig::field_29288)
+val VegetationPatchFeatureConfig.replaceable by alias(VegetationPatchFeatureConfig::field_29286)
+val VegetationPatchFeatureConfig.extraEdgeColumnChance by alias(VegetationPatchFeatureConfig::field_29295)
+val VegetationPatchFeatureConfig.surface by alias(VegetationPatchFeatureConfig::field_29289)
+val VegetationPatchFeatureConfig.vegetationChance by alias(VegetationPatchFeatureConfig::field_29293)
+val VegetationPatchFeatureConfig.extraBottomBlockChance by alias(VegetationPatchFeatureConfig::field_29291)
+val VegetationPatchFeatureConfig.verticalRange by alias(VegetationPatchFeatureConfig::field_29292)
+val VegetationPatchFeatureConfig.depth by alias(VegetationPatchFeatureConfig::field_29290)
+val VegetationPatchFeatureConfig.horizontalRadius by alias(VegetationPatchFeatureConfig::field_29294)

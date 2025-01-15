@@ -1,0 +1,6 @@
+package me.hellrevenger.generated.Map_SlimeEntityModel
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+
+fun <T>KClass<SlimeEntityModel<T>>.getOuterTexturedModelData() where T: Entity = SlimeEntityModel.method_32051()
+fun <T>KClass<SlimeEntityModel<T>>.getInnerTexturedModelData() where T: Entity = SlimeEntityModel.method_32052()

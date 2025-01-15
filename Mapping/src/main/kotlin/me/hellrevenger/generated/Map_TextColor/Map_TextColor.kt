@@ -1,0 +1,10 @@
+package me.hellrevenger.generated.Map_TextColor
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+
+fun KClass<TextColor>.fromFormatting(arg0: Formatting) = TextColor.method_27718(arg0)
+fun KClass<TextColor>.parse(arg0: String) = TextColor.method_27719(arg0)
+fun KClass<TextColor>.fromRgb(arg0: Int) = TextColor.method_27717(arg0)
+fun TextColor.getRgb() = this.method_27716()
+fun TextColor.getName() = this.method_27721()
+fun TextColor.getHexCode() = this.method_27723()
