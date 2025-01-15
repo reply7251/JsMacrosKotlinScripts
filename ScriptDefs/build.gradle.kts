@@ -81,7 +81,7 @@ dependencies {
     implementation(files("../scripts/libs/jars/int-jvm17-open.jar"))
     //implementation(files("../scripts/libs/jars/int-jvm17.jar"))
     //implementation(files("../scripts/libs/jars/noObf-jvm17.jar"))
-    implementation(files("../scripts/libs/jars/wynntils-2.3.11-fabric+MC-1.21.1.jar"))
+    implementation(files("../scripts/libs/jars/wynntils.jar"))
     implementation(files("../scripts/libs/jars/malilib-fabric-1.21-0.18.9999-sakura.1.jar"))
     implementation(files("../scripts/libs/jars/tweakeroo-fabric-1.21-0.20.999-sakura.2.jar"))
 
