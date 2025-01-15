@@ -1,0 +1,6 @@
+package me.hellrevenger.generated.Map_ClientCommonNetworkHandler
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+
+fun ClientCommonNetworkHandler.getBrand() = this.method_52790()
+fun ClientCommonNetworkHandler.sendPacket(arg0: Packet<*>) = this.method_52787(arg0)

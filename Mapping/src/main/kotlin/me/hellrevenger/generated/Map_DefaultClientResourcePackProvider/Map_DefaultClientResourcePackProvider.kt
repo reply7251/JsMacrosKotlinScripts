@@ -1,0 +1,5 @@
+package me.hellrevenger.generated.Map_DefaultClientResourcePackProvider
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+
+val KClass<DefaultClientResourcePackProvider>.HIGH_CONTRAST_ID by aliasStatic(DefaultClientResourcePackProvider::field_43088)

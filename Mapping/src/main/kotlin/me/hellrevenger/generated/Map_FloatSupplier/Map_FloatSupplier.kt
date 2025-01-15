@@ -1,0 +1,5 @@
+package me.hellrevenger.generated.Map_FloatSupplier
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+
+fun FloatSupplier.get(arg0: Random) = this.method_33920(arg0)

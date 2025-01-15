@@ -1,0 +1,15 @@
+package me.hellrevenger.generated.Map_DripstoneClusterFeatureConfig
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+
+val DripstoneClusterFeatureConfig.maxStalagmiteStalactiteHeightDiff by alias(DripstoneClusterFeatureConfig::field_28217)
+val DripstoneClusterFeatureConfig.height by alias(DripstoneClusterFeatureConfig::field_28215)
+val DripstoneClusterFeatureConfig.maxDistanceFromCenterAffectingChanceOfDripstoneColumn by alias(DripstoneClusterFeatureConfig::field_28225)
+val DripstoneClusterFeatureConfig.density by alias(DripstoneClusterFeatureConfig::field_28220)
+val DripstoneClusterFeatureConfig.chanceOfDripstoneColumnAtMaxDistanceFromCenter by alias(DripstoneClusterFeatureConfig::field_28224)
+val DripstoneClusterFeatureConfig.heightDeviation by alias(DripstoneClusterFeatureConfig::field_28218)
+val DripstoneClusterFeatureConfig.radius by alias(DripstoneClusterFeatureConfig::field_28216)
+val DripstoneClusterFeatureConfig.floorToCeilingSearchRange by alias(DripstoneClusterFeatureConfig::field_28214)
+val DripstoneClusterFeatureConfig.maxDistanceFromCenterAffectingHeightBias by alias(DripstoneClusterFeatureConfig::field_28226)
+val DripstoneClusterFeatureConfig.wetness by alias(DripstoneClusterFeatureConfig::field_28221)
+val DripstoneClusterFeatureConfig.dripstoneBlockLayerThickness by alias(DripstoneClusterFeatureConfig::field_28219)
