@@ -1,13 +1,39 @@
 package me.hellrevenger.generated.Map_StructureTemplateManager
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * field_31684
+ */
 val KClass<StructureTemplateManager>.STRUCTURE_DIRECTORY by aliasStatic(StructureTemplateManager::field_31684)
+/**
+ * method_15091
+ */
 fun StructureTemplateManager.getTemplateOrBlank(arg0: Identifier) = this.method_15091(arg0)
+/**
+ * method_15085
+ */
 fun StructureTemplateManager.getTemplatePath(arg0: Identifier, arg1: String) = this.method_15085(arg0, arg1)
+/**
+ * method_15087
+ */
 fun StructureTemplateManager.unloadTemplate(arg0: Identifier) = this.method_15087(arg0)
+/**
+ * method_15094
+ */
 fun StructureTemplateManager.getTemplate(arg0: Identifier) = this.method_15094(arg0)
+/**
+ * method_15093
+ */
 fun StructureTemplateManager.saveTemplate(arg0: Identifier) = this.method_15093(arg0)
+/**
+ * method_29300
+ */
 fun StructureTemplateManager.setResourceManager(arg0: ResourceManager) = this.method_29300(arg0)
+/**
+ * method_44226
+ */
 fun StructureTemplateManager.streamTemplates() = this.method_44226()
+/**
+ * method_21891
+ */
 fun StructureTemplateManager.createTemplate(arg0: NbtCompound) = this.method_21891(arg0)

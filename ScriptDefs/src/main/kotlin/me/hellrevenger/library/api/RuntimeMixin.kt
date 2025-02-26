@@ -26,7 +26,6 @@ import net.bytebuddy.matcher.ElementMatchers
 import net.bytebuddy.pool.TypePool
 import net.bytebuddy.utility.OpenedClassReader
 import net.bytebuddy.utility.RandomString
-import org.jetbrains.kotlin.js.translate.intrinsic.Intrinsics
 import org.objectweb.asm.Type
 import org.spongepowered.tools.agent.MixinAgent
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat

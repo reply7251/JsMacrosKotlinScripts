@@ -1,8 +1,19 @@
 package me.hellrevenger.generated.Map_UpgradeData
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * field_12950
+ */
 val KClass<UpgradeData>.NO_UPGRADE_DATA by aliasStatic(UpgradeData::field_12950)
+/**
+ * method_12350
+ */
 fun UpgradeData.toNbt() = this.method_12350()
+/**
+ * method_12349
+ */
 fun UpgradeData.isDone() = this.method_12349()
+/**
+ * method_12356
+ */
 fun UpgradeData.upgrade(arg0: WorldChunk) = this.method_12356(arg0)

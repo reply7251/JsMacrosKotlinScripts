@@ -2,7 +2,8 @@
 import java.net.URI
 
 plugins {
-    kotlin("jvm") version "1.7.10"
+    kotlin("jvm")
+    id("xyz.wagyourtail.jvmdowngrader") version "1.2.2"
 }
 
 group = "me.hellrevenger"
@@ -32,18 +33,14 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-scripting-common")
     implementation("org.jetbrains.kotlin:kotlin-scripting-jvm")
     implementation("org.jetbrains.kotlin:kotlin-scripting-jvm-host")
-    implementation("org.jetbrains.kotlin:kotlin-scripting-dependencies")
-    implementation("org.jetbrains.kotlin:kotlin-scripting-dependencies-maven")
-    implementation("org.jetbrains.kotlin:kotlin-scripting-compiler")
-    implementation(kotlin("compiler-embeddable"))
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-common")
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-jvm")
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-jvm-host")
     implementation("net.bytebuddy:byte-buddy:1.15.1")
     include("net.bytebuddy:byte-buddy:1.15.1")
 
-    implementation(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT.jar"))
-    include(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT.jar"))
+    implementation(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT-downgraded.jar"))
+    include(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT-downgraded.jar"))
 
     implementation("org.javassist:javassist:3.30.2-GA")
 
@@ -89,10 +86,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
-
 tasks.jar {
     from(jsmacrosExtensionInclude.files) {
         include("*")
@@ -100,4 +93,9 @@ tasks.jar {
     }
 
     from(include.files.map { if(it.isDirectory()) it else zipTree(it) }) {}
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
+
+jvmdg.downgradeTo = JavaVersion.VERSION_1_8
+jvmdg.shadeInlining.set(true)

@@ -1,32 +1,115 @@
 package me.hellrevenger.generated.Map_MapState
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * field_17403
+ */
 val MapState.locked by alias(MapState::field_17403)
+/**
+ * field_122
+ */
 var MapState.colors by alias(MapState::field_122)
+/**
+ * field_115
+ */
 val MapState.centerZ by alias(MapState::field_115)
+/**
+ * field_118
+ */
 val MapState.dimension by alias(MapState::field_118)
+/**
+ * field_119
+ */
 val MapState.scale by alias(MapState::field_119)
+/**
+ * field_116
+ */
 val MapState.centerX by alias(MapState::field_116)
+/**
+ * field_31831
+ */
 val KClass<MapState>.MAX_SCALE by aliasStatic(MapState::field_31831)
+/**
+ * field_33991
+ */
 val KClass<MapState>.MAX_DECORATIONS by aliasStatic(MapState::field_33991)
+/**
+ * method_102
+ */
 fun MapState.update(arg0: PlayerEntity, arg1: ItemStack) = this.method_102(arg0, arg1)
+/**
+ * method_52611
+ */
 fun KClass<MapState>.getPersistentStateType() = MapState.method_52611()
+/**
+ * method_109
+ */
 fun MapState.removeBanner(arg0: BlockView, arg1: Int, arg2: Int) = this.method_109(arg0, arg1, arg2)
+/**
+ * method_101
+ */
 fun MapState.getPlayerSyncData(arg0: PlayerEntity) = this.method_101(arg0)
+/**
+ * method_32370
+ */
 fun MapState.setColor(arg0: Int, arg1: Int, arg2: Byte) = this.method_32370(arg0, arg1, arg2)
+/**
+ * method_35503
+ */
 fun MapState.getBanners() = this.method_35503()
+/**
+ * method_32364
+ */
 fun MapState.zoomOut() = this.method_32364()
+/**
+ * method_100
+ */
 fun MapState.getPlayerMarkerPacket(arg0: MapIdComponent, arg1: PlayerEntity) = this.method_100(arg0, arg1)
+/**
+ * method_32372
+ */
 fun MapState.hasExplorationMapDecoration() = this.method_32372()
+/**
+ * method_108
+ */
 fun MapState.addBanner(arg0: WorldAccess, arg1: BlockPos) = this.method_108(arg0, arg1)
+/**
+ * method_32362
+ */
 fun KClass<MapState>.of(arg0: Byte, arg1: Boolean, arg2: RegistryKey<world_World>) = MapState.method_32362(arg0, arg1, arg2)
+/**
+ * method_32363
+ */
 fun KClass<MapState>.of(arg0: Double, arg1: Double, arg2: Byte, arg3: Boolean, arg4: Boolean, arg5: RegistryKey<world_World>) = MapState.method_32363(arg0, arg1, arg2, arg3, arg4, arg5)
+/**
+ * method_37343
+ */
 fun MapState.decorationCountNotLessThan(arg0: Int) = this.method_37343(arg0)
+/**
+ * method_110
+ */
 fun KClass<MapState>.addDecorationsNbt(arg0: ItemStack, arg1: BlockPos, arg2: String, arg3: RegistryEntry<MapDecorationType>) = MapState.method_110(arg0, arg1, arg2, arg3)
+/**
+ * method_32369
+ */
 fun MapState.replaceDecorations(arg0: MutableList<MapDecoration>) = this.method_32369(arg0)
+/**
+ * method_32365
+ */
 fun MapState.putColor(arg0: Int, arg1: Int, arg2: Byte) = this.method_32365(arg0, arg1, arg2)
+/**
+ * method_32373
+ */
 fun MapState.getDecorations() = this.method_32373()
+/**
+ * method_104
+ */
 fun MapState.removeFrame(arg0: BlockPos, arg1: Int) = this.method_104(arg0, arg1)
+/**
+ * method_32371
+ */
 fun KClass<MapState>.fromNbt(arg0: NbtCompound, arg1: net.minecraft.class_7225.class_7874) = MapState.method_32371(arg0, arg1)
+/**
+ * method_32361
+ */
 fun MapState.copy() = this.method_32361()

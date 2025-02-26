@@ -111,9 +111,9 @@ KotlinExtension: Extension {
             if (startIndex == null) startIndex = -1
             if (endIndex == null) endIndex = -1
             val loc = BaseWrappedException.GuestLocation(file, startIndex, endIndex, line, column)
-            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + sd.exception?.cause?.message, loc, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
+            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + getExceptionMessage(sd.exception), loc, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
         } else {
-            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + sd.exception?.cause?.message, null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
+            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + getExceptionMessage(sd.exception), null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
         }
     }
 
@@ -128,6 +128,8 @@ KotlinExtension: Extension {
             BaseWrappedException.wrapHostElement(element, if (nextGetter.hasNext()) wrapStackTrace(f, nextGetter.next(), nextGetter) else null)
         }
     }
+
+    fun getExceptionMessage(ex: Throwable?) = ex?.cause?.stackTraceToString() ?: ex.toString()
 
     override fun isGuestObject(p0: Any?): Boolean {
         return false

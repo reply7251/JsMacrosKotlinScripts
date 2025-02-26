@@ -2,6 +2,7 @@ import java.net.URI
 
 plugins {
     kotlin("jvm")
+    id("xyz.wagyourtail.jvmdowngrader") version "1.2.2"
 }
 
 group = "me.hellrevenger"
@@ -51,6 +52,4 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
+jvmdg.downgradeTo = JavaVersion.VERSION_1_8

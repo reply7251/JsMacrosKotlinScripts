@@ -6,21 +6,15 @@ import xyz.wagyourtail.jsmacros.client.api.library.impl.*
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
-import xyz.wagyourtail.jsmacros.core.library.IFWrapper
 import xyz.wagyourtail.jsmacros.core.library.impl.*
 import java.io.File
 import kotlin.script.experimental.annotations.KotlinScript
 import kotlin.script.experimental.jvm.dependenciesFromCurrentContext
 import kotlin.script.experimental.jvm.jvm
 
-import net.minecraft.class_310;
-import xyz.wagyourtail.jsmacros.core.MethodWrapper
 import kotlin.script.experimental.api.*
+import kotlin.script.experimental.jvm.JvmDependency
 
-
-fun noop() {
-    class_310.method_1551()
-}
 
 @Suppress("UNUSED")
 @KotlinScript(
@@ -55,4 +49,36 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
     jvm {
         dependenciesFromCurrentContext();
     }
+
+    defaultImports(ImportJar::class)
+
+    refineConfiguration {
+        onAnnotations<ImportJar> { context ->
+            val annotations = context.collectedData?.get(ScriptCollectedData.collectedAnnotations)
+                ?.takeIf { it.isNotEmpty() }
+                ?: return@onAnnotations context.compilationConfiguration.asSuccess()
+            val files = annotations.mapNotNull { (it.annotation as? ImportJar)?.path }
+                .filter { it.endsWith(".jar") }
+                .mapNotNull {
+                    var f = File(it)
+                    if(f.exists()) f
+                    else {
+                        f = File(context.script.locationId?.let { it1 -> File(it1).parentFile }, it)
+                        if(f.exists()) f
+                        else null
+                    }
+                }
+            context.compilationConfiguration.with {
+                dependencies.append(JvmDependency(files))
+            }.asSuccess()
+        }
+    }
 })
+
+/**
+ * Put @file:ImportJar(...) on the top of file.
+ *
+ * Only for IDE, still needs to add to classpath at runtime
+ */
+@Target(AnnotationTarget.FILE)
+annotation class ImportJar(val path: String)

@@ -1,12 +1,35 @@
 package me.hellrevenger.generated.Map_AdvancementManager
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * method_714
+ */
 fun AdvancementManager.clear() = this.method_714()
+/**
+ * method_713
+ */
 fun AdvancementManager.removeAll(arg0: Set<Identifier>) = this.method_713(arg0)
+/**
+ * method_715
+ */
 fun AdvancementManager.getRoots() = this.method_715()
+/**
+ * method_53690
+ */
 fun AdvancementManager.get(arg0: AdvancementEntry) = this.method_53690(arg0)
+/**
+ * method_53691
+ */
 fun AdvancementManager.addAll(arg0: Collection<AdvancementEntry>) = this.method_53691(arg0)
+/**
+ * method_53693
+ */
 fun AdvancementManager.getAdvancements() = this.method_53693()
+/**
+ * method_716
+ */
 fun AdvancementManager.get(arg0: Identifier) = this.method_716(arg0)
+/**
+ * method_717
+ */
 fun AdvancementManager.setListener(arg0: net.minecraft.class_163.class_164) = this.method_717(arg0)

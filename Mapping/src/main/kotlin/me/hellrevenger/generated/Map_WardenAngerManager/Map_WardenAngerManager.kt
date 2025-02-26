@@ -1,10 +1,27 @@
 package me.hellrevenger.generated.Map_WardenAngerManager
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * method_42178
+ */
 fun WardenAngerManager.removeSuspect(arg0: Entity) = this.method_42178(arg0)
+/**
+ * method_43692
+ */
 fun KClass<WardenAngerManager>.createCodec(arg0: Predicate<Entity>) = WardenAngerManager.method_43692(arg0)
+/**
+ * method_42181
+ */
 fun WardenAngerManager.getPrimeSuspect() = this.method_42181()
+/**
+ * method_42185
+ */
 fun WardenAngerManager.getAngerFor(arg0: Entity) = this.method_42185(arg0)
+/**
+ * method_42179
+ */
 fun WardenAngerManager.increaseAngerAt(arg0: Entity, arg1: Int) = this.method_42179(arg0, arg1)
+/**
+ * method_42176
+ */
 fun WardenAngerManager.tick(arg0: ServerWorld, arg1: Predicate<Entity>) = this.method_42176(arg0, arg1)

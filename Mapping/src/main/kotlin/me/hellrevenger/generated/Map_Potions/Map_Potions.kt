@@ -1,51 +1,191 @@
 package me.hellrevenger.generated.Map_Potions
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * field_9000
+ */
 val KClass<Potions>.LONG_INVISIBILITY by aliasStatic(Potions::field_9000)
+/**
+ * field_9001
+ */
 val KClass<Potions>.LONG_WATER_BREATHING by aliasStatic(Potions::field_9001)
+/**
+ * field_9002
+ */
 val KClass<Potions>.LONG_POISON by aliasStatic(Potions::field_9002)
+/**
+ * field_9004
+ */
 val KClass<Potions>.HARMING by aliasStatic(Potions::field_9004)
+/**
+ * field_9003
+ */
 val KClass<Potions>.LONG_REGENERATION by aliasStatic(Potions::field_9003)
+/**
+ * field_9005
+ */
 val KClass<Potions>.SWIFTNESS by aliasStatic(Potions::field_9005)
+/**
+ * field_8963
+ */
 val KClass<Potions>.HEALING by aliasStatic(Potions::field_8963)
+/**
+ * field_8964
+ */
 val KClass<Potions>.LONG_SLOW_FALLING by aliasStatic(Potions::field_8964)
+/**
+ * field_8965
+ */
 val KClass<Potions>.LONG_STRENGTH by aliasStatic(Potions::field_8965)
+/**
+ * field_8966
+ */
 val KClass<Potions>.STRONG_SWIFTNESS by aliasStatic(Potions::field_8966)
+/**
+ * field_8967
+ */
 val KClass<Potions>.MUNDANE by aliasStatic(Potions::field_8967)
+/**
+ * field_8968
+ */
 val KClass<Potions>.NIGHT_VISION by aliasStatic(Potions::field_8968)
+/**
+ * field_8969
+ */
 val KClass<Potions>.LONG_FIRE_RESISTANCE by aliasStatic(Potions::field_8969)
+/**
+ * field_50155
+ */
 val KClass<Potions>.OOZING by aliasStatic(Potions::field_50155)
+/**
+ * field_50156
+ */
 val KClass<Potions>.INFESTED by aliasStatic(Potions::field_50156)
+/**
+ * field_8990
+ */
 val KClass<Potions>.TURTLE_MASTER by aliasStatic(Potions::field_8990)
+/**
+ * field_8991
+ */
 val KClass<Potions>.WATER by aliasStatic(Potions::field_8991)
+/**
+ * field_8992
+ */
 val KClass<Potions>.STRONG_REGENERATION by aliasStatic(Potions::field_8992)
+/**
+ * field_8993
+ */
 val KClass<Potions>.STRONG_STRENGTH by aliasStatic(Potions::field_8993)
+/**
+ * field_8994
+ */
 val KClass<Potions>.WATER_BREATHING by aliasStatic(Potions::field_8994)
+/**
+ * field_8995
+ */
 val KClass<Potions>.LUCK by aliasStatic(Potions::field_8995)
+/**
+ * field_8996
+ */
 val KClass<Potions>.SLOWNESS by aliasStatic(Potions::field_8996)
+/**
+ * field_8997
+ */
 val KClass<Potions>.INVISIBILITY by aliasStatic(Potions::field_8997)
+/**
+ * field_8998
+ */
 val KClass<Potions>.STRONG_LEAPING by aliasStatic(Potions::field_8998)
+/**
+ * field_8999
+ */
 val KClass<Potions>.AWKWARD by aliasStatic(Potions::field_8999)
+/**
+ * field_50153
+ */
 val KClass<Potions>.WIND_CHARGED by aliasStatic(Potions::field_50153)
+/**
+ * field_50154
+ */
 val KClass<Potions>.WEAVING by aliasStatic(Potions::field_50154)
+/**
+ * field_8970
+ */
 val KClass<Potions>.LONG_WEAKNESS by aliasStatic(Potions::field_8970)
+/**
+ * field_8971
+ */
 val KClass<Potions>.LONG_LEAPING by aliasStatic(Potions::field_8971)
+/**
+ * field_8972
+ */
 val KClass<Potions>.STRONG_POISON by aliasStatic(Potions::field_8972)
+/**
+ * field_8973
+ */
 val KClass<Potions>.STRONG_HARMING by aliasStatic(Potions::field_8973)
+/**
+ * field_8974
+ */
 val KClass<Potions>.SLOW_FALLING by aliasStatic(Potions::field_8974)
+/**
+ * field_8975
+ */
 val KClass<Potions>.WEAKNESS by aliasStatic(Potions::field_8975)
+/**
+ * field_8976
+ */
 val KClass<Potions>.STRONG_SLOWNESS by aliasStatic(Potions::field_8976)
+/**
+ * field_8977
+ */
 val KClass<Potions>.STRONG_TURTLE_MASTER by aliasStatic(Potions::field_8977)
+/**
+ * field_8978
+ */
 val KClass<Potions>.STRENGTH by aliasStatic(Potions::field_8978)
+/**
+ * field_8979
+ */
 val KClass<Potions>.LEAPING by aliasStatic(Potions::field_8979)
+/**
+ * field_8980
+ */
 val KClass<Potions>.STRONG_HEALING by aliasStatic(Potions::field_8980)
+/**
+ * field_8981
+ */
 val KClass<Potions>.LONG_NIGHT_VISION by aliasStatic(Potions::field_8981)
+/**
+ * field_8982
+ */
 val KClass<Potions>.POISON by aliasStatic(Potions::field_8982)
+/**
+ * field_8983
+ */
 val KClass<Potions>.LONG_SWIFTNESS by aliasStatic(Potions::field_8983)
+/**
+ * field_8985
+ */
 val KClass<Potions>.THICK by aliasStatic(Potions::field_8985)
+/**
+ * field_8986
+ */
 val KClass<Potions>.REGENERATION by aliasStatic(Potions::field_8986)
+/**
+ * field_8987
+ */
 val KClass<Potions>.FIRE_RESISTANCE by aliasStatic(Potions::field_8987)
+/**
+ * field_8988
+ */
 val KClass<Potions>.LONG_TURTLE_MASTER by aliasStatic(Potions::field_8988)
+/**
+ * field_8989
+ */
 val KClass<Potions>.LONG_SLOWNESS by aliasStatic(Potions::field_8989)
+/**
+ * method_55763
+ */
 fun KClass<Potions>.registerAndGetDefault(arg0: Registry<Potion>) = Potions.method_55763(arg0)

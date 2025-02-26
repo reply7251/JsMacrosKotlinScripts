@@ -1,80 +1,303 @@
 package me.hellrevenger.generated.Map_Util
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-import java.util.function.Function
-
+/**
+ * field_37250
+ */
 val KClass<Util>.TICKER by aliasStatic(Util::field_37250)
+/**
+ * field_25140
+ */
 val KClass<Util>.NIL_UUID by aliasStatic(Util::field_25140)
+/**
+ * field_33859
+ */
 val KClass<Util>.JAR_FILE_SYSTEM_PROVIDER by aliasStatic(Util::field_33859)
+/**
+ * field_1128
+ */
 val KClass<Util>.nanoTimeSupplier by aliasStatic(Util::field_1128)
+/**
+ * method_57109
+ */
 fun <K, V>KClass<Util>.mapWith(arg0: Map<K, V>, arg1: K, arg2: V) = Util.method_57109<K, V>(arg0, arg1, arg2)
+/**
+ * method_659
+ */
 fun KClass<Util>.getEpochTimeMs() = Util.method_659()
+/**
+ * method_22321
+ */
 fun KClass<Util>.getInnermostMessage(arg0: Throwable) = Util.method_22321(arg0)
+/**
+ * method_651
+ */
 fun KClass<Util>.getJVMFlags() = Util.method_651()
+/**
+ * method_22320
+ */
 fun <T>KClass<Util>.throwOrPause(arg0: T) where T: Throwable = Util.method_22320<T>(arg0)
+/**
+ * method_648
+ */
 fun KClass<Util>.getMeasuringTimeNano() = Util.method_648()
+/**
+ * method_33141
+ */
 fun <T>KClass<Util>.decodeFixedLengthList(arg0: MutableList<T>, arg1: Int) = Util.method_33141<T>(arg0, arg1)
+/**
+ * method_58272
+ */
 fun <T>KClass<Util>.withPrepended(arg0: T, arg1: MutableList<T>) = Util.method_58272<T>(arg0, arg1)
+/**
+ * method_54908
+ */
 fun <T>KClass<Util>.readTyped(arg0: types_Type<T>, arg1: Dynamic<*>) = Util.method_54908<T>(arg0, arg1)
+/**
+ * method_668
+ */
 fun KClass<Util>.getOperatingSystem() = Util.method_668()
+/**
+ * method_55473
+ */
 fun KClass<Util>.getDownloadWorkerExecutor() = Util.method_55473()
+/**
+ * method_27172
+ */
 fun KClass<Util>.getRandom(arg0: IntArray, arg1: Random) = Util.method_27172(arg0, arg1)
+/**
+ * method_18349
+ */
 fun KClass<Util>.getMainWorkerExecutor() = Util.method_18349()
+/**
+ * method_43027
+ */
 fun <T>KClass<Util>.copyShuffled(arg0: ObjectArrayList<T>, arg1: Random) = Util.method_43027<T>(arg0, arg1)
+/**
+ * method_43658
+ */
 fun <T>KClass<Util>.lastIndexGetter(arg0: MutableList<T>) = Util.method_43658<T>(arg0)
+/**
+ * method_656
+ */
 fun <T>KClass<Util>.make(arg0: Supplier<T>) = Util.method_656<T>(arg0)
+/**
+ * method_43373
+ */
 fun <V>KClass<Util>.combineCancellable(arg0: MutableList<out CompletableFuture<out V>>) = Util.method_43373<V>(arg0)
+/**
+ * method_34865
+ */
 fun <T, U, R>KClass<Util>.memoize(arg0: BiFunction<T, U, R>) = Util.method_34865<T, U, R>(arg0)
+/**
+ * method_41204
+ */
 fun KClass<Util>.backupAndReplace(arg0: file_Path, arg1: file_Path, arg2: file_Path, arg3: Boolean) = Util.method_41204(arg0, arg1, arg2, arg3)
+/**
+ * method_20793
+ */
 fun <T>KClass<Util>.getLast(arg0: MutableList<T>) = Util.method_20793<T>(arg0)
+/**
+ * method_29187
+ */
 fun KClass<Util>.getChoiceType(arg0: TypeReference, arg1: String) = Util.method_29187(arg0, arg1)
+/**
+ * method_17974
+ */
 fun <T>KClass<Util>.ifPresentOrElse(arg0: Optional<T>, arg1: Consumer<T>, arg2: Runnable) = Util.method_17974<T>(arg0, arg1, arg2)
+/**
+ * method_27958
+ */
 fun KClass<Util>.getIoWorkerExecutor() = Util.method_27958()
+/**
+ * method_54907
+ */
 fun <A, B>KClass<Util>.apply(arg0: Typed<A>, arg1: types_Type<B>, arg2: UnaryOperator<Dynamic<*>>) = Util.method_54907<A, B>(arg0, arg1, arg2)
+/**
+ * method_56616
+ */
 fun <T>KClass<Util>.anyOf(arg0: MutableList<out Predicate<T>>) = Util.method_56616<T>(arg0)
+/**
+ * method_658
+ */
 fun KClass<Util>.getMeasuringTimeMs() = Util.method_658()
+/**
+ * method_60931
+ */
 fun KClass<Util>.validateUri(arg0: String) = Util.method_60931(arg0)
+/**
+ * method_37910
+ */
 fun <V>KClass<Util>.debugSupplier(arg0: String, arg1: Supplier<V>) = Util.method_37910<V>(arg0, arg1)
+/**
+ * method_29476
+ */
 fun KClass<Util>.startTimerHack() = Util.method_29476()
+/**
+ * method_43253
+ */
 fun <T>KClass<Util>.copyShuffled(arg0: Array<T>, arg1: Random) = Util.method_43253<T>(arg0, arg1)
-fun <K, V>KClass<Util>.cachedMapper(arg0: Function<K, V>) = Util.method_48746<K, V>(arg0)
+/**
+ * method_48746
+ */
+fun <K, V>KClass<Util>.cachedMapper(arg0: function_Function<K, V>) = Util.method_48746<K, V>(arg0)
+/**
+ * method_645
+ */
 fun <T>KClass<Util>.previous(arg0: Iterable<T>, arg1: T) = Util.method_645<T>(arg0, arg1)
-fun <T>KClass<Util>.waitAndApply(arg0: Function<Executor, CompletableFuture<T>>) = Util.method_43499<T>(arg0)
+/**
+ * method_43499
+ */
+fun <T>KClass<Util>.waitAndApply(arg0: function_Function<Executor, CompletableFuture<T>>) = Util.method_43499<T>(arg0)
+/**
+ * method_29775
+ */
 fun KClass<Util>.relativeCopy(arg0: file_Path, arg1: file_Path, arg2: file_Path) = Util.method_29775(arg0, arg1, arg2)
+/**
+ * method_27173
+ */
 fun <T>KClass<Util>.getRandom(arg0: Array<T>, arg1: Random) = Util.method_27173<T>(arg0, arg1)
+/**
+ * method_38646
+ */
 fun KClass<Util>.setMissingBreakpointHandler(arg0: Consumer<String>) = Util.method_38646(arg0)
+/**
+ * method_59901
+ */
 fun <T>KClass<Util>.isSymmetrical(arg0: Int, arg1: Int, arg2: MutableList<T>) = Util.method_59901<T>(arg0, arg1, arg2)
+/**
+ * method_51822
+ */
 fun KClass<Util>.decodeFixedLengthArray(arg0: LongStream, arg1: Int) = Util.method_51822(arg0, arg1)
+/**
+ * method_660
+ */
 fun <T>KClass<Util>.next(arg0: Iterable<T>, arg1: T) = Util.method_660<T>(arg0, arg1)
+/**
+ * method_43251
+ */
 fun KClass<Util>.shuffle(arg0: IntStream, arg1: Random) = Util.method_43251(arg0, arg1)
+/**
+ * method_57108
+ */
 fun <T>KClass<Util>.withAppended(arg0: MutableList<T>, arg1: T) = Util.method_57108<T>(arg0, arg1)
+/**
+ * method_39977
+ */
 fun KClass<Util>.error(arg0: String, arg1: Throwable) = Util.method_39977(arg0, arg1)
+/**
+ * method_43028
+ */
 fun <T>KClass<Util>.shuffle(arg0: MutableList<T>, arg1: Random) = Util.method_43028<T>(arg0, arg1)
+/**
+ * method_33559
+ */
 fun KClass<Util>.error(arg0: String) = Util.method_33559(arg0)
+/**
+ * method_18350
+ */
 fun KClass<Util>.shutdownExecutors() = Util.method_18350()
+/**
+ * method_33791
+ */
 fun <V>KClass<Util>.combineSafe(arg0: MutableList<out CompletableFuture<V>>) = Util.method_33791<V>(arg0)
+/**
+ * method_24155
+ */
 fun KClass<Util>.throwUnchecked(arg0: Throwable) = Util.method_24155(arg0)
+/**
+ * method_53909
+ */
 fun <T>KClass<Util>.lastIdentityIndexGetter(arg0: MutableList<T>) = Util.method_53909<T>(arg0)
+/**
+ * method_650
+ */
 fun <T>KClass<Util>.getValueAsString(arg0: property_Property<T>, arg1: Object) where T: Comparable<T> = Util.method_650<T>(arg0, arg1)
+/**
+ * method_41238
+ */
 fun <T>KClass<Util>.debugSupplier(arg0: Supplier<T>, arg1: Supplier<String>) = Util.method_41238<T>(arg0, arg1)
+/**
+ * method_29190
+ */
 fun KClass<Util>.decodeFixedLengthArray(arg0: IntStream, arg1: Int) = Util.method_29190(arg0, arg1)
-fun <T, R>KClass<Util>.memoize(arg0: Function<T, R>) = Util.method_34866<T, R>(arg0)
+/**
+ * method_34866
+ */
+fun <T, R>KClass<Util>.memoize(arg0: function_Function<T, R>) = Util.method_34866<T, R>(arg0)
+/**
+ * method_32309
+ */
 fun <T>KClass<Util>.getRandom(arg0: MutableList<T>, arg1: Random) = Util.method_32309<T>(arg0, arg1)
+/**
+ * method_40083
+ */
 fun <T>KClass<Util>.getRandomOrEmpty(arg0: MutableList<T>, arg1: Random) = Util.method_40083<T>(arg0, arg1)
+/**
+ * method_56613
+ */
 fun <T>KClass<Util>.allOf(arg0: MutableList<out Predicate<T>>) = Util.method_56613<T>(arg0)
+/**
+ * method_33787
+ */
 fun KClass<Util>.debugRunnable(arg0: String, arg1: Runnable) = Util.method_33787(arg0, arg1)
+/**
+ * method_43252
+ */
 fun <T>KClass<Util>.copyShuffled(arg0: Stream<T>, arg1: Random) = Util.method_43252<T>(arg0, arg1)
+/**
+ * method_30309
+ */
 fun KClass<Util>.replaceInvalidChars(arg0: String, arg1: CharPredicate) = Util.method_30309(arg0, arg1)
+/**
+ * method_30626
+ */
 fun KClass<Util>.backupAndReplace(arg0: file_Path, arg1: file_Path, arg2: file_Path) = Util.method_30626(arg0, arg1, arg2)
+/**
+ * method_57107
+ */
 fun <T>KClass<Util>.registryValueToString(arg0: Registry<T>, arg1: T) = Util.method_57107<T>(arg0, arg1)
+/**
+ * method_29188
+ */
 fun KClass<Util>.addPrefix(arg0: String, arg1: Consumer<String>) = Util.method_29188(arg0, arg1)
+/**
+ * method_652
+ */
 fun <V>KClass<Util>.combine(arg0: MutableList<out CompletableFuture<out V>>) = Util.method_652<V>(arg0)
+/**
+ * method_18839
+ */
 fun KClass<Util>.debugRunnable(arg0: Runnable, arg1: Supplier<String>) = Util.method_18839(arg0, arg1)
+/**
+ * method_27761
+ */
 fun KClass<Util>.moveCursor(arg0: String, arg1: Int, arg2: Int) = Util.method_27761(arg0, arg1, arg2)
+/**
+ * method_654
+ */
 fun <T>KClass<Util>.make(arg0: T, arg1: Consumer<in T>) = Util.method_654<T>(arg0, arg1)
+/**
+ * method_55333
+ */
 fun <T>KClass<Util>.readTyped(arg0: types_Type<T>, arg1: Dynamic<*>, arg2: Boolean) = Util.method_55333<T>(arg0, arg1, arg2)
+/**
+ * method_664
+ */
 fun <K, V>KClass<Util>.toMap() = Util.method_664<K, V>()
+/**
+ * method_58579
+ */
 fun <T>KClass<Util>.toArrayList() = Util.method_58579<T>()
+/**
+ * method_44893
+ */
 fun KClass<Util>.getFormattedCurrentTime() = Util.method_44893()
-fun <T>KClass<Util>.waitAndApply(arg0: Function<Executor, T>, arg1: Predicate<T>) = Util.method_43498<T>(arg0, arg1)
+/**
+ * method_43498
+ */
+fun <T>KClass<Util>.waitAndApply(arg0: function_Function<Executor, T>, arg1: Predicate<T>) = Util.method_43498<T>(arg0, arg1)
+/**
+ * method_646
+ */
 fun KClass<Util>.createTranslationKey(arg0: String, arg1: Identifier) = Util.method_646(arg0, arg1)

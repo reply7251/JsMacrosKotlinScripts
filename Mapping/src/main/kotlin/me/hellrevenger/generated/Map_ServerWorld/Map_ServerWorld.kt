@@ -1,80 +1,307 @@
 package me.hellrevenger.generated.Map_ServerWorld
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * field_41749
+ */
 val KClass<ServerWorld>.CLEAR_WEATHER_DURATION_PROVIDER by aliasStatic(ServerWorld::field_41749)
+/**
+ * field_41751
+ */
 val KClass<ServerWorld>.THUNDER_WEATHER_DURATION_PROVIDER by aliasStatic(ServerWorld::field_41751)
+/**
+ * field_41750
+ */
 val KClass<ServerWorld>.RAIN_WEATHER_DURATION_PROVIDER by aliasStatic(ServerWorld::field_41750)
+/**
+ * field_13957
+ */
 var ServerWorld.savingDisabled by alias(ServerWorld::field_13957)
+/**
+ * field_25144
+ */
 val KClass<ServerWorld>.END_SPAWN_POS by aliasStatic(ServerWorld::field_25144)
+/**
+ * method_20588
+ */
 fun ServerWorld.isNearOccupiedPointOfInterest(arg0: ChunkSectionPos) = this.method_20588(arg0)
+/**
+ * method_19503
+ */
 fun ServerWorld.hasRaidAt(arg0: BlockPos) = this.method_19503(arg0)
+/**
+ * method_23658
+ */
 fun ServerWorld.clearUpdatesInArea(arg0: BlockBox) = this.method_23658(arg0)
+/**
+ * method_33144
+ */
 fun ServerWorld.isSleepingEnabled() = this.method_33144()
+/**
+ * method_28125
+ */
 fun ServerWorld.isFlat() = this.method_28125()
+/**
+ * method_14178
+ */
 fun ServerWorld.getChunkManager() = this.method_14178()
+/**
+ * method_18215
+ */
 fun ServerWorld.onPlayerRespawned(arg0: ServerPlayerEntity) = this.method_18215(arg0)
+/**
+ * method_31424
+ */
 fun ServerWorld.getDragonPart(arg0: Int) = this.method_31424(arg0)
+/**
+ * method_19502
+ */
 fun ServerWorld.getRaidAt(arg0: BlockPos) = this.method_19502(arg0)
+/**
+ * method_29202
+ */
 fun ServerWorld.tickSpawners(arg0: Boolean, arg1: Boolean) = this.method_29202(arg0, arg1)
+/**
+ * method_31423
+ */
 fun ServerWorld.loadEntities(arg0: Stream<Entity>) = this.method_31423(arg0)
+/**
+ * method_19494
+ */
 fun ServerWorld.getPointOfInterestStorage() = this.method_19494()
+/**
+ * method_31268
+ */
 fun ServerWorld.getDebugString() = this.method_31268()
+/**
+ * method_42108
+ */
 fun ServerWorld.locateBiome(arg0: Predicate<RegistryEntry<Biome>>, arg1: BlockPos, arg2: Int, arg3: Int, arg4: Int) = this.method_42108(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_39223
+ */
 fun ServerWorld.disableTickSchedulers(arg0: WorldChunk) = this.method_39223(arg0)
+/**
+ * method_51837
+ */
 fun ServerWorld.setEnderDragonFight(arg0: EnderDragonFight) = this.method_51837(arg0)
+/**
+ * method_14177
+ */
 fun ServerWorld.isInBlockTick() = this.method_14177()
+/**
+ * method_17984
+ */
 fun ServerWorld.getForcedChunks() = this.method_17984()
+/**
+ * method_18766
+ */
 fun ServerWorld.getPlayers(arg0: Predicate<in ServerPlayerEntity>) = this.method_18766(arg0)
+/**
+ * method_31426
+ */
 fun ServerWorld.addEntities(arg0: Stream<Entity>) = this.method_31426(arg0)
+/**
+ * method_39778
+ */
 fun ServerWorld.cacheStructures(arg0: Chunk) = this.method_39778(arg0)
+/**
+ * method_37118
+ */
 fun ServerWorld.shouldTickEntity(arg0: BlockPos) = this.method_37118(arg0)
+/**
+ * method_18762
+ */
 fun ServerWorld.tickEntity(arg0: Entity) = this.method_18762(arg0)
+/**
+ * method_39998
+ */
 fun ServerWorld.shouldTick(arg0: ChunkPos) = this.method_39998(arg0)
+/**
+ * method_19496
+ */
 fun ServerWorld.handleInteraction(arg0: EntityInteraction, arg1: Entity, arg2: InteractionObserver) = this.method_19496(arg0, arg1, arg2)
+/**
+ * method_14191
+ */
 fun ServerWorld.sendToPlayerIfNearby(arg0: ServerPlayerEntity, arg1: Boolean, arg2: Double, arg3: Double, arg4: Double, arg5: Packet<*>) = this.method_14191(arg0, arg1, arg2, arg3, arg4, arg5)
+/**
+ * method_14179
+ */
 fun ServerWorld.getFluidTickScheduler() = this.method_14179()
+/**
+ * method_14195
+ */
 fun ServerWorld.resetWeather() = this.method_14195()
+/**
+ * method_27056
+ */
 fun ServerWorld.getStructureAccessor() = this.method_27056()
+/**
+ * method_8554
+ */
 fun ServerWorld.setSpawnPos(arg0: BlockPos, arg1: Float) = this.method_8554(arg0, arg1)
+/**
+ * method_18779
+ */
 fun ServerWorld.getRandomAlivePlayer() = this.method_18779()
+/**
+ * method_17983
+ */
 fun ServerWorld.getPersistentStateManager() = this.method_17983()
+/**
+ * method_18764
+ */
 fun ServerWorld.unloadEntities(arg0: WorldChunk) = this.method_18764(arg0)
+/**
+ * method_18776
+ */
 fun ServerWorld.getAliveEnderDragons() = this.method_18776()
+/**
+ * method_19498
+ */
 fun ServerWorld.getOccupiedPointOfInterestDistance(arg0: ChunkSectionPos) = this.method_19498(arg0)
+/**
+ * method_32819
+ */
 fun ServerWorld.getLogicalHeight() = this.method_32819()
+/**
+ * method_18768
+ */
 fun ServerWorld.tryLoadEntity(arg0: Entity) = this.method_18768(arg0)
+/**
+ * method_17988
+ */
 fun ServerWorld.setChunkForced(arg0: Int, arg1: Int, arg2: Boolean) = this.method_17988(arg0, arg1, arg2)
+/**
+ * method_18769
+ */
 fun ServerWorld.onDimensionChanged(arg0: Entity) = this.method_18769(arg0)
+/**
+ * method_19500
+ */
 fun ServerWorld.isNearOccupiedPointOfInterest(arg0: BlockPos) = this.method_19500(arg0)
+/**
+ * method_18765
+ */
 fun ServerWorld.tick(arg0: BooleanSupplier) = this.method_18765(arg0)
+/**
+ * method_27910
+ */
 fun ServerWorld.setWeather(arg0: Int, arg1: Int, arg2: Boolean, arg3: Boolean) = this.method_27910(arg0, arg1, arg2, arg3)
+/**
+ * method_27909
+ */
 fun ServerWorld.iterateEntities() = this.method_27909()
+/**
+ * method_14190
+ */
 fun ServerWorld.getEntity(arg0: UUID) = this.method_14190(arg0)
+/**
+ * method_19495
+ */
 fun ServerWorld.getRaidManager() = this.method_19495()
+/**
+ * method_18198
+ */
 fun <T>ServerWorld.getEntitiesByType(arg0: TypeFilter<Entity, T>, arg1: Predicate<in T>) where T: Entity = this.method_18198<T>(arg0, arg1)
+/**
+ * method_14199
+ */
 fun <T>ServerWorld.spawnParticles(arg0: T, arg1: Double, arg2: Double, arg3: Double, arg4: Int, arg5: Double, arg6: Double, arg7: Double, arg8: Double) where T: ParticleEffect = this.method_14199<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+/**
+ * method_18203
+ */
 fun ServerWorld.tickChunk(arg0: WorldChunk, arg1: Int) = this.method_18203(arg0, arg1)
+/**
+ * method_52370
+ */
 fun ServerWorld.tickIceAndSnow(arg0: BlockPos) = this.method_52370(arg0)
+/**
+ * method_51836
+ */
 fun ServerWorld.getOrCreateRandom(arg0: Identifier) = this.method_51836(arg0)
+/**
+ * method_14197
+ */
 fun ServerWorld.resetIdleTimeout() = this.method_14197()
+/**
+ * method_14176
+ */
 fun ServerWorld.save(arg0: ProgressListener, arg1: Boolean, arg2: Boolean) = this.method_14176(arg0, arg1, arg2)
+/**
+ * method_30736
+ */
 fun ServerWorld.spawnNewEntityAndPassengers(arg0: Entity) = this.method_30736(arg0)
+/**
+ * method_29199
+ */
 fun ServerWorld.setTimeOfDay(arg0: Long) = this.method_29199(arg0)
+/**
+ * method_8487
+ */
 fun ServerWorld.locateStructure(arg0: TagKey<Structure>, arg1: BlockPos, arg2: Int, arg3: Boolean) = this.method_8487(arg0, arg1, arg2, arg3)
+/**
+ * method_19497
+ */
 fun ServerWorld.isNearOccupiedPointOfInterest(arg0: BlockPos, arg1: Int) = this.method_19497(arg0, arg1)
+/**
+ * method_18213
+ */
 fun ServerWorld.onPlayerConnected(arg0: ServerPlayerEntity) = this.method_18213(arg0)
+/**
+ * method_39999
+ */
 fun ServerWorld.shouldTick(arg0: BlockPos) = this.method_39999(arg0)
+/**
+ * method_47540
+ */
 fun ServerWorld.getPlayers(arg0: Predicate<in ServerPlayerEntity>, arg1: Int) = this.method_47540(arg0, arg1)
+/**
+ * method_14196
+ */
 fun ServerWorld.getBlockTickScheduler() = this.method_14196()
+/**
+ * method_37116
+ */
 fun ServerWorld.isChunkLoaded(arg0: Long) = this.method_37116(arg0)
+/**
+ * method_14166
+ */
 fun <T>ServerWorld.spawnParticles(arg0: ServerPlayerEntity, arg1: T, arg2: Boolean, arg3: Double, arg4: Double, arg5: Double, arg6: Int, arg7: Double, arg8: Double, arg9: Double, arg10: Double) where T: ParticleEffect = this.method_14166<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
+/**
+ * method_14170
+ */
 fun ServerWorld.getScoreboard() = this.method_14170()
+/**
+ * method_57133
+ */
 fun ServerWorld.getPathNodeTypeCache() = this.method_57133()
+/**
+ * method_14173
+ */
 fun ServerWorld.getPortalForcer() = this.method_14173()
+/**
+ * method_29198
+ */
 fun ServerWorld.getEnderDragonFight() = this.method_29198()
+/**
+ * method_18770
+ */
 fun ServerWorld.removePlayer(arg0: ServerPlayerEntity, arg1: net.minecraft.class_1297.class_5529) = this.method_18770(arg0, arg1)
+/**
+ * method_52168
+ */
 fun ServerWorld.getRandomSequences() = this.method_52168()
+/**
+ * method_21625
+ */
 fun ServerWorld.dump(arg0: file_Path) = this.method_21625(arg0)
+/**
+ * method_14183
+ */
 fun ServerWorld.getStructureTemplateManager() = this.method_14183()
+/**
+ * method_8448
+ */
 fun ServerWorld.updateSleepingPlayers() = this.method_8448()

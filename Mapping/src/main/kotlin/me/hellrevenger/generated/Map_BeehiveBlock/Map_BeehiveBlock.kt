@@ -1,10 +1,27 @@
 package me.hellrevenger.generated.Map_BeehiveBlock
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * field_31011
+ */
 val KClass<BeehiveBlock>.FULL_HONEY_LEVEL by aliasStatic(BeehiveBlock::field_31011)
+/**
+ * field_20419
+ */
 val KClass<BeehiveBlock>.FACING by aliasStatic(BeehiveBlock::field_20419)
+/**
+ * field_20420
+ */
 val KClass<BeehiveBlock>.HONEY_LEVEL by aliasStatic(BeehiveBlock::field_20420)
+/**
+ * method_23754
+ */
 fun BeehiveBlock.takeHoney(arg0: world_World, arg1: BlockState, arg2: BlockPos) = this.method_23754(arg0, arg1, arg2)
+/**
+ * method_21841
+ */
 fun BeehiveBlock.takeHoney(arg0: world_World, arg1: BlockState, arg2: BlockPos, arg3: PlayerEntity, arg4: net.minecraft.class_4482.class_4484) = this.method_21841(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_21842
+ */
 fun KClass<BeehiveBlock>.dropHoneycomb(arg0: world_World, arg1: BlockPos) = BeehiveBlock.method_21842(arg0, arg1)

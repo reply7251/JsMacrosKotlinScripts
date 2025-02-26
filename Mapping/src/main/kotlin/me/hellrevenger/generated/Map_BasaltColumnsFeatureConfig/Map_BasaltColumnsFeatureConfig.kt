@@ -1,6 +1,11 @@
 package me.hellrevenger.generated.Map_BasaltColumnsFeatureConfig
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * method_30391
+ */
 fun BasaltColumnsFeatureConfig.getReach() = this.method_30391()
+/**
+ * method_30394
+ */
 fun BasaltColumnsFeatureConfig.getHeight() = this.method_30394()

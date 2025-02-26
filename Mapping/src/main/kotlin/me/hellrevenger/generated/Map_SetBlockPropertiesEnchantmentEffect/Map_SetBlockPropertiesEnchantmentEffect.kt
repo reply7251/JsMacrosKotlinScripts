@@ -1,7 +1,15 @@
 package me.hellrevenger.generated.Map_SetBlockPropertiesEnchantmentEffect
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
-
+/**
+ * comp_2749
+ */
 fun SetBlockPropertiesEnchantmentEffect.offset() = this.comp_2749()
+/**
+ * comp_2800
+ */
 fun SetBlockPropertiesEnchantmentEffect.triggerGameEvent() = this.comp_2800()
+/**
+ * comp_2748
+ */
 fun SetBlockPropertiesEnchantmentEffect.properties() = this.comp_2748()
