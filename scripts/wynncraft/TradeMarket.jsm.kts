@@ -16,6 +16,7 @@ import sun.misc.Unsafe
 import org.jetbrains.kotlin.backend.common.pop
 import xyz.wagyourtail.jsmacros.client.access.IInventory
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
+import xyz.wagyourtail.jsmacros.core.library.impl.FReflection
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.function.Supplier
 import java.util.regex.Pattern
@@ -55,7 +56,7 @@ val containerSearchFeature: ContainerSearchFeature = Managers.Feature.getFeature
 //})
 
 
-inner class MyTradeMarketContainer : Container(pattern), SearchableContainerProperty, ScrollableContainerProperty {
+class MyTradeMarketContainer : Container(pattern), SearchableContainerProperty, ScrollableContainerProperty {
     override fun getNextItemPattern() = NEXT_PAGE_PATTERN
 
     override fun getPreviousItemPattern() = PREVIOUS_PAGE_PATTERN
@@ -64,7 +65,7 @@ inner class MyTradeMarketContainer : Container(pattern), SearchableContainerProp
 
     override fun getPreviousItemSlot() = 51
     override fun getBounds(): ContainerBounds? {
-        Reflection.getClass<ContainerBounds>("com.wynntils.models.containers.type.ContainerBounds")
+        FReflection(null).getClass<ContainerBounds>("com.wynntils.models.containers.type.ContainerBounds")
             .constructors.firstOrNull { it.parameterCount == 4 }?.let {
                 return it.newInstance(0, 0, 4, 8) as ContainerBounds
             }
@@ -83,10 +84,10 @@ inner class MyTradeMarketContainer : Container(pattern), SearchableContainerProp
     }
 }
 
-inner class WynncraftServerContainer : LobbyContainer(), SearchableContainerProperty {
+class WynncraftServerContainer : LobbyContainer(), SearchableContainerProperty {
 
     override fun getBounds(): ContainerBounds? {
-        Reflection.getClass<ContainerBounds>("com.wynntils.models.containers.type.ContainerBounds")
+        FReflection(null).getClass<ContainerBounds>("com.wynntils.models.containers.type.ContainerBounds")
             .constructors.firstOrNull { it.parameterCount == 4 }?.let {
                 return it.newInstance(1, 1, 5, 7) as ContainerBounds
             }
@@ -99,16 +100,13 @@ inner class WynncraftServerContainer : LobbyContainer(), SearchableContainerProp
 }
 
 fun main(): Boolean {
-    val myTradeMarketContainer = MyTradeMarketContainer()
-    val serverContainer = WynncraftServerContainer()
-
     var onStop = { }
     var success1 = false
     var success2 = false
 
     val containerReplaceMap = mapOf(
-        MyTradeMarketContainer::class to TradeMarketContainer::class,
-        WynncraftServerContainer::class to LobbyContainer::class
+        MyTradeMarketContainer() to TradeMarketContainer::class,
+        WynncraftServerContainer() to LobbyContainer::class
     )
     val addedContainers = mutableSetOf<Container>()
     val removedContainers = mutableSetOf<Container>()
@@ -118,11 +116,10 @@ fun main(): Boolean {
         (containerTypesField.get(Models.Container) as? ArrayList<Container>)?.let {
 
             containerReplaceMap.forEach { (t, u) ->
-                val container = t.constructors.firstOrNull()?.call(this) ?: return@forEach
-                it.add(container)
-                addedContainers.add(container)
+                it.add(t)
+                addedContainers.add(t)
                 it.removeIf {
-                    if(u.isInstance(it) && !t.isInstance(it)) {
+                    if(u.isInstance(it) && !t::class.isInstance(it)) {
                         removedContainers.add(it)
                         true
                     } else false
