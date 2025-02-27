@@ -132,7 +132,7 @@ KotlinExtension: Extension {
 
     fun getExceptionMessage(sd: ScriptDiagnostic) =
         "code: ${sd.code}, detail: ${sd.render(withException = false)}, stack: ${
-            (sd.exception?.cause ?: sd.exception)?.stackTraceToString()?.split("\n")?.subList(0, 10)?.joinToString(separator = "\n")
+            (sd.exception?.cause ?: sd.exception)?.stackTraceToString()?.split("\n")?.subList(0, 30)?.joinToString(separator = "\n")
         }"
 
     override fun isGuestObject(p0: Any?): Boolean {

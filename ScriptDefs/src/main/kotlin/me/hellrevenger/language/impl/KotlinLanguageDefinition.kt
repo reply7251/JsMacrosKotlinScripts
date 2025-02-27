@@ -1,5 +1,9 @@
 package me.hellrevenger.language.impl
 
+import me.hellrevenger.ImportJar
+import me.hellrevenger.SimpleScript
+import me.hellrevenger.createSimpleScript
+import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.config.ScriptTrigger
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
@@ -26,12 +30,15 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
         val libs = retrieveLibs(ctx.ctx)
 
+        val everything = createSimpleScript(vars + libs)
+
         val compConf = object : ScriptCompilationConfiguration({
             jvm {
                 // Extract the whole classpath from context classloader and use it as dependencies
                 dependenciesFromCurrentContext(wholeClasspath = true)
                 dependencies.append(JvmDependencyFromClassLoader { KotlinLanguageDefinition::class.java.classLoader })
             }
+            defaultImports(ImportJar::class)
 
             providedProperties.replaceOnlyDefault(mapOf(
                 "event" to KotlinType(if (event == null) BaseEvent::class else event::class, isNullable = true),
@@ -39,9 +46,17 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
                 "context" to KotlinType(KotlinScriptContext::class)
             ) + libs.mapValues { KotlinType(it.value::class) })
 
+            if(everything != null) {
+                implicitReceivers.append(KotlinType(everything::class))
+            }
+
         }) {}
         val execConf = object : ScriptEvaluationConfiguration({
             providedProperties(vars + libs)
+
+            if(everything != null) {
+                implicitReceivers.append(everything)
+            }
         }) {}
 
         val host = BasicJvmScriptingHost()
