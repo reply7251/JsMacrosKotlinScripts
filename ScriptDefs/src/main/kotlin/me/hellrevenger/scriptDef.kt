@@ -21,7 +21,7 @@ import kotlin.script.experimental.jvm.JvmDependency
     fileExtension = "jsm.kts",
     compilationConfiguration = SimpleScriptConfiguration::class,
 )
-abstract class SimpleScript(
+open class SimpleScript(
     val JsMacros: FJsMacros,
     val FS: FFS,
     val GlobalVars: FGlobalVars,
@@ -45,6 +45,17 @@ abstract class SimpleScript(
     val event: BaseEvent,
     val EventCenter: FEventCenter,
 )
+
+fun createSimpleScript(map: Map<String, Any?>): SimpleScript? {
+    return SimpleScript::class.constructors.firstOrNull()?.let { constructor ->
+        val params = mutableListOf<Any>()
+        constructor.parameters.forEach { param ->
+            val obj = map[param.name] ?: return null
+            params.add(obj)
+        }
+        constructor.call(*params.toTypedArray())
+    }
+}
 
 object SimpleScriptConfiguration : ScriptCompilationConfiguration({
     jvm {
@@ -75,6 +86,8 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
             }.asSuccess()
         }
     }
+
+    implicitReceivers.append(KotlinType((SimpleScript::class)))
 })
 
 /**
