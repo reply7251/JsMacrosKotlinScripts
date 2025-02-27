@@ -21,7 +21,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
         val vars = mapOf(
             "event" to event,
             "file" to ctx.ctx.file,
-            "context" to ctx
+            "context" to ctx.ctx
         )
 
         val libs = retrieveLibs(ctx.ctx)
@@ -36,7 +36,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
             providedProperties.replaceOnlyDefault(mapOf(
                 "event" to KotlinType(if (event == null) BaseEvent::class else event::class, isNullable = true),
                 "file" to KotlinType(File::class, isNullable = true),
-                "context" to KotlinType(EventContainer::class)
+                "context" to KotlinType(KotlinScriptContext::class)
             ) + libs.mapValues { KotlinType(it.value::class) })
 
         }) {}

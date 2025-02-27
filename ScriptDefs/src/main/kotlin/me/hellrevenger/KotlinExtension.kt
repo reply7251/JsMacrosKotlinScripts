@@ -2,6 +2,7 @@ package me.hellrevenger
 
 
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
+import me.hellrevenger.library.api.FEventListener
 import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
 import me.hellrevenger.mixins.MixinMain
@@ -76,8 +77,8 @@ KotlinExtension: Extension {
     }
 
     override fun getLibraries() =
-        if(FClient(null).mcVersion() == "1.21") mutableSetOf(FWrapper::class.java, FEventCenter::class.java)
-        else mutableSetOf(FWrapper::class.java)
+        if(FClient(null).mcVersion() == "1.21") mutableSetOf(FWrapper::class.java, FEventListener::class.java, FEventCenter::class.java)
+        else mutableSetOf(FWrapper::class.java, FEventListener::class.java)
 
 
     override fun wrapException(p0: Throwable?): BaseWrappedException<*>? {
@@ -111,9 +112,9 @@ KotlinExtension: Extension {
             if (startIndex == null) startIndex = -1
             if (endIndex == null) endIndex = -1
             val loc = BaseWrappedException.GuestLocation(file, startIndex, endIndex, line, column)
-            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + getExceptionMessage(sd.exception), loc, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
+            BaseWrappedException(sd, "    " + getExceptionMessage(sd), loc, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
         } else {
-            BaseWrappedException(sd, "    " + sd.severity.toString() + " " + sd.message + " cause: " + getExceptionMessage(sd.exception), null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
+            BaseWrappedException(sd, "    " + getExceptionMessage(sd), null, if (nextGetter.hasNext()) wrapReport(nextGetter.next(), nextGetter) else null)
         }
     }
 
@@ -129,7 +130,10 @@ KotlinExtension: Extension {
         }
     }
 
-    fun getExceptionMessage(ex: Throwable?) = ex?.cause?.stackTraceToString() ?: ex.toString()
+    fun getExceptionMessage(sd: ScriptDiagnostic) =
+        "code: ${sd.code}, detail: ${sd.render(withException = false)}, stack: ${
+            (sd.exception?.cause ?: sd.exception)?.stackTraceToString()?.split("\n")?.subList(0, 10)?.joinToString(separator = "\n")
+        }"
 
     override fun isGuestObject(p0: Any?): Boolean {
         return false

@@ -1,32 +1,36 @@
 package me.hellrevenger.library.api
 
+import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.Event
 import xyz.wagyourtail.jsmacros.core.event.IEventListener
+import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
+import xyz.wagyourtail.jsmacros.core.library.Library
+import xyz.wagyourtail.jsmacros.core.library.PerExecLibrary
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 
-class EventListener<T: BaseEvent>(val context: EventContainer<*>, eventClass: Class<T>, private val callback: (T) -> Unit, private val joined: Boolean = false) : IEventListener {
+@Library(value = "EventListener", languages = [KotlinLanguageDefinition::class])
+class FEventListener(val context: BaseScriptContext<*>) : PerExecLibrary(context) {
+    operator fun <T: BaseEvent> invoke(eventClass: Class<T>, callback: (T) -> Unit, joined: Boolean = false)
+        = Listener(context, eventClass, callback, joined)
+}
+
+class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, eventClass: Class<T>, private val callback: (T) -> Unit, private val joined: Boolean) : IEventListener {
     private val eventName: String = eventClass.getAnnotation(Event::class.java).value
 
     init {
         Core.getInstance().eventRegistry.addListener(eventName, this)
-        context.ctx.eventListeners[this] = eventName
+        context.eventListeners[this] = eventName
 
-        (context.ctx.triggeringEvent as? EventService)?.unregisterOnStop(true)
+        (context.triggeringEvent as? EventService)?.unregisterOnStop(true)
     }
 
-    override fun off() {
-        Core.getInstance().eventRegistry.removeListener(eventName, this)
-    }
+    override fun joined() = joined
 
-    override fun joined(): Boolean {
-        return joined
-    }
-
-    @Suppress("Unchecked")
+    @Suppress("UNCHECKED_CAST")
     override fun trigger(p0: BaseEvent): EventContainer<*> {
         try {
             if(joined) {
@@ -40,6 +44,10 @@ class EventListener<T: BaseEvent>(val context: EventContainer<*>, eventClass: Cl
             off()
             Core.getInstance().profile.logError(e)
         }
-        return context
+        return EventContainer(context)
+    }
+
+    override fun off() {
+        Core.getInstance().eventRegistry.removeListener(eventName, this)
     }
 }
