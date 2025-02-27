@@ -59,6 +59,7 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
                 ?.takeIf { it.isNotEmpty() }
                 ?: return@onAnnotations context.compilationConfiguration.asSuccess()
             val files = annotations.mapNotNull { (it.annotation as? ImportJar)?.path }
+                .flatMap { it.toList() }
                 .filter { it.endsWith(".jar") }
                 .mapNotNull {
                     var f = File(it)
@@ -82,4 +83,4 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
  * Only for IDE, still needs to add to classpath at runtime
  */
 @Target(AnnotationTarget.FILE)
-annotation class ImportJar(val path: String)
+annotation class ImportJar(vararg val path: String)
