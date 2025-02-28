@@ -1,6 +1,7 @@
 package me.hellrevenger.library.api
 
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
+import me.hellrevenger.language.impl.KotlinScriptContext
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.Event
@@ -32,19 +33,18 @@ class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, eventClass: Clas
 
     @Suppress("UNCHECKED_CAST")
     override fun trigger(p0: BaseEvent): EventContainer<*> {
+        val ctx = EventContainer(KotlinScriptContext(p0, context.file))
         try {
-            if(joined) {
+            thread {
                 callback.invoke(p0 as T)
-            } else {
-                thread {
-                    callback.invoke(p0 as T)
-                }
+                ctx.ctx.closeContext()
+                ctx.releaseLock()
             }
         } catch (e: Throwable) {
             off()
             Core.getInstance().profile.logError(e)
         }
-        return EventContainer(context)
+        return ctx
     }
 
     override fun off() {
