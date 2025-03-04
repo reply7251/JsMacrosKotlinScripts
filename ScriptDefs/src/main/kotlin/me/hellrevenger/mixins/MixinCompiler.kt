@@ -4,6 +4,7 @@ import me.hellrevenger.library.api.RuntimeMixin
 import net.bytebuddy.description.method.MethodDescription
 import net.bytebuddy.implementation.MethodDelegation
 import net.bytebuddy.matcher.ElementMatchers
+import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.config.Option
 
@@ -25,9 +26,10 @@ class MixinCompiler {
 
     @JvmName("setEnabled")
     fun setEnabled(enabled: Boolean) {
-        val flag = K2Enabled == enabled
+        val flag = K2Enabled != enabled
         K2Enabled = enabled
         if(flag) {
+            FChat().log("K2 enabled: $K2Enabled")
             if(K2Enabled) {
                 onEnabled()
             } else {
