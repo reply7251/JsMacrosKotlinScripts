@@ -18,6 +18,7 @@ import java.io.File
 import java.io.PrintWriter
 import java.io.StringWriter
 import kotlin.concurrent.thread
+import kotlin.math.min
 import kotlin.script.experimental.api.ScriptCompilationConfiguration
 import kotlin.script.experimental.api.ScriptDiagnostic
 import kotlin.script.experimental.api.ScriptEvaluationConfiguration
@@ -30,26 +31,23 @@ KotlinExtension: Extension {
     private var languageDefinition: KotlinLanguageDefinition? = null
 
     override fun init() {
-        thread {
-            val compConf = object : ScriptCompilationConfiguration({}) {}
-            val evalConf = object : ScriptEvaluationConfiguration({}) {}
-            val ret = BasicJvmScriptingHost().eval("println(\"Kotlin Preloaded!\")".toScriptSource(), compConf, evalConf)
-            ret.onFailure {
-                var reports = mutableListOf<String>()
-                var exceptions = mutableListOf<Throwable>()
-                for (report in it.reports) {
-                    if (report.exception != null) {
-                        exceptions.add(report.exception!!)
-                        reports.add(report.toString())
-                    } else {
-                        reports += report.toString()
-                    }
+        val compConf = object : ScriptCompilationConfiguration({}) {}
+        val evalConf = object : ScriptEvaluationConfiguration({}) {}
+        val ret = BasicJvmScriptingHost().eval("println(\"Kotlin Preloaded!\")".toScriptSource(), compConf, evalConf)
+        ret.onFailure {
+            var reports = mutableListOf<String>()
+            var exceptions = mutableListOf<Throwable>()
+            for (report in it.reports) {
+                if (report.exception != null) {
+                    exceptions.add(report.exception!!)
+                    reports.add(report.toString())
+                } else {
+                    reports += report.toString()
                 }
-                throw RuntimeException("Kotlin script failed:\n        ${reports.joinToString("\n        ")}", exceptions.firstOrNull())
             }
-
-            MixinMain.mixins()
+            throw RuntimeException("Kotlin script failed:\n        ${reports.joinToString("\n        ")}", exceptions.firstOrNull())
         }
+        MixinMain.mixins()
     }
 
     override fun getPriority() = 0
@@ -132,7 +130,9 @@ KotlinExtension: Extension {
 
     fun getExceptionMessage(sd: ScriptDiagnostic) =
         "code: ${sd.code}, detail: ${sd.render(withException = false)}, stack: ${
-            (sd.exception?.cause ?: sd.exception)?.stackTraceToString()?.split("\n")?.subList(0, 30)?.joinToString(separator = "\n")
+            (sd.exception?.cause ?: sd.exception)?.stackTraceToString()?.split("\n")?.let {
+                it.subList(0, min(30, it.size)).joinToString(separator = "\n")
+            }
         }"
 
     override fun isGuestObject(p0: Any?): Boolean {
