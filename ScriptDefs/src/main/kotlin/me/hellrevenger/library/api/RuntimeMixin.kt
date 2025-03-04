@@ -29,6 +29,7 @@ import net.bytebuddy.utility.RandomString
 import org.objectweb.asm.Type
 import org.spongepowered.tools.agent.MixinAgent
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
+import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import java.io.File
 import java.lang.instrument.ClassDefinition
@@ -101,8 +102,7 @@ class GetByteCode : ClassFileTransformer {
         return super.transform(loader, className, classBeingRedefined, protectionDomain, classfileBuffer)
     }
 }
-
-val classInjector = ClassInjector.UsingUnsafe.Factory.resolve(instrumentation).make(net.minecraft.class_310::class.java.classLoader)
+val classInjector = ClassInjector.UsingUnsafe.Factory.resolve(instrumentation).make(FClient::class.java.getDeclaredField("mc").type.classLoader)
 
 //var classInjectorInited = false
 //private fun initClassInjector() {

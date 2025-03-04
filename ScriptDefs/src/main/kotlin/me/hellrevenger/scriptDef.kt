@@ -1,7 +1,6 @@
 package me.hellrevenger
 
 import me.hellrevenger.library.api.FEventListener
-import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
 import xyz.wagyourtail.jsmacros.client.api.library.impl.*
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
@@ -43,7 +42,6 @@ open class SimpleScript(
     val context: BaseScriptContext<*>,
     val file: File,
     val event: BaseEvent,
-    val EventCenter: FEventCenter,
 )
 
 fun createSimpleScript(map: Map<String, Any?>): SimpleScript? {

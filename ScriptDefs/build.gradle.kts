@@ -39,9 +39,6 @@ dependencies {
     implementation("net.bytebuddy:byte-buddy:1.15.1")
     include("net.bytebuddy:byte-buddy:1.15.1")
 
-    implementation(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT-downgraded.jar"))
-    include(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT-downgraded.jar"))
-
     implementation("org.javassist:javassist:3.30.2-GA")
 
     implementation("com.mojang:brigadier:1.2.9")
@@ -70,8 +67,6 @@ dependencies {
 
     implementation("net.fabricmc.fabric-api:fabric-api:0.100.4+1.21")
     implementation(files("../scripts/libs/jars/jsmacros-1.21-fabric-jvm17.jar"))
-    implementation(files("../scripts/libs/jars/int-jvm17-open.jar"))
-
 }
 
 tasks.processResources {
@@ -95,6 +90,15 @@ tasks.jar {
     from(include.files.map { if(it.isDirectory()) it else zipTree(it) }) {}
 
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    archiveClassifier.set("Pure")
+}
+
+tasks.downgradeJar {
+    archiveClassifier.set("Pure-downgraded")
+}
+tasks.shadeDowngradedApi {
+    archiveClassifier.set("Pure-downgraded-shade")
 }
 
 jvmdg.downgradeTo = JavaVersion.VERSION_1_8

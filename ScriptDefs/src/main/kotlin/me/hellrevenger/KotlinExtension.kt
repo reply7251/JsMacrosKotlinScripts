@@ -3,10 +3,8 @@ package me.hellrevenger
 
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.library.api.FEventListener
-import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
 import me.hellrevenger.mixins.MixinMain
-import net.minecraft.class_310
 import xyz.wagyourtail.jsmacros.client.JsMacros
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
 import xyz.wagyourtail.jsmacros.core.Core
@@ -76,9 +74,7 @@ KotlinExtension: Extension {
         return languageDefinition!!
     }
 
-    override fun getLibraries() =
-        if(FClient(null).mcVersion() == "1.21") mutableSetOf(FWrapper::class.java, FEventListener::class.java, FEventCenter::class.java)
-        else mutableSetOf(FWrapper::class.java, FEventListener::class.java)
+    override fun getLibraries() = mutableSetOf(FWrapper::class.java, FEventListener::class.java)
 
 
     override fun wrapException(p0: Throwable?): BaseWrappedException<*>? {
