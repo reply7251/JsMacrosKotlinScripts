@@ -720,7 +720,7 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
 
 
     val modes = arrayOf(Mode.BashSurf, Mode.ScreamSurf, Mode.ChargeSpam, Mode.BashScream, Mode.BashUpperScream, Mode.AlterSurf, Mode.UpperScream)
-    override var mode = Mode.BashUpperScream
+    override var mode = Mode.BashScream
 
     override fun onInitOverride() {
 
@@ -801,6 +801,7 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
     fun burstCharge() = Models.Spell.lastBurstSpellName.lowercase().contains("charge") && Models.Spell.repeatedBurstSpellCount > 5
 
     override fun chooseAction() {
+        if(isHoldItem("elaborated ")) return
         if(isHoldItem("rhythm") || isHoldItem("catamaran")) {
             global.KeyBind.pressKeyBind("key.sneak")
             waitSpell(Actions.cast2, 1)
@@ -839,8 +840,8 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
             }
         } else if(mode == Mode.BashUpperScream) {
             waitSpell(Actions.cast4)
-            waitSpell(Actions.cast3)
             waitSpell(Actions.cast1)
+            waitSpell(Actions.cast3)
         } else if(mode == Mode.AlterSurf) {
             waitSpell(Actions.cast3)
             waitSpell(Actions.cast2)
@@ -854,17 +855,18 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
     override fun onTick() {
         super.onTick()
 
-
-        if(global.attackKey.method_1434() && (lastMelee + meleeInterval.value + (Math.random() * 5).toInt() < global.World.time || (burstCharge() && attackCounter < 3))) {
-            melee()
-            interactCounter = 0
-            attackCounter++
-        } else {
-            attackCounter = 0
-        }
-        if(global.interactKey.method_1434() && (global.World.time % 3 == 0L || isIdol())) {
-            global.Player.interactions()?.interact()
-            interactCounter++
+        if(!isHoldItem("elaborated ")) {
+            if(global.attackKey.method_1434() && (lastMelee + meleeInterval.value + (Math.random() * 5).toInt() < global.World.time || (burstCharge() && attackCounter % 3 != 0))) {
+                melee()
+                interactCounter = 0
+                attackCounter++
+            } else {
+                attackCounter = 0
+            }
+            if(global.interactKey.method_1434() && (global.World.time % 3 == 0L || isIdol())) {
+                global.Player.interactions()?.interact()
+                interactCounter++
+            }
         }
         if(enabled.value && abs(global.Player.player!!.pitch) < 45 && (mode == Mode.BashSurf || mode == Mode.ScreamSurf)) {
             CustomInput.override = true
@@ -1380,7 +1382,7 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
                     global.Client.waitTick(getSpellCooldownWithMana()+2)
                 }
             }
-        } else if(isHoldItem("panic ") || mode == Mode.AuraSpam) {
+        } else if(mode == Mode.AuraSpam) {
             cast1()
             global.Client.waitTick(getSpellCooldownWithMana()-1)
             for(i in 1..getMaxRepeatValue()) {
@@ -1554,6 +1556,7 @@ val classes = mapOf(
 currentWynnClass.terminate()
 classes.forEach {
     it.value.terminate()
+    it.value.updateConfig()
 }
 
 fun checkClass() {
@@ -1569,6 +1572,7 @@ fun checkClass() {
             currentClassString = newClass
             currentWynnClass = classes[currentClassString] ?: return@let
             currentWynnClass.restart()
+            currentWynnClass.updateConfig()
         }
     }
 }
