@@ -3,6 +3,7 @@ package me.hellrevenger.language.impl
 import me.hellrevenger.ImportJar
 import me.hellrevenger.SimpleScript
 import me.hellrevenger.createSimpleScript
+import me.hellrevenger.mixins.MixinCompiler
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.config.ScriptTrigger
@@ -30,7 +31,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
         val libs = retrieveLibs(ctx.ctx)
 
-        val everything = createSimpleScript(vars + libs)
+        val everything = if(MixinCompiler.isK2Enabled()) createSimpleScript(vars + libs) else null
 
         val compConf = object : ScriptCompilationConfiguration({
             jvm {

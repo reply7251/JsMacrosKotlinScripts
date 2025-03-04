@@ -13,11 +13,18 @@ class MixinCompiler {
         val clazz = Class.forName("org.jetbrains.kotlin.scripting.compiler.plugin.impl.ScriptJvmCompilerImplsKt")
         val matcher = ElementMatchers.named<MethodDescription>("doCompileWithK2")
         val delegate = MethodDelegation.withDefaultConfiguration().filter(ElementMatchers.named("doCompile")).to(clazz)
+        val config = Core.getInstance().config
 
         fun mixin() {
-            val config = Core.getInstance().config
             config.addOptions("MixinCompiler", MixinCompiler::class.java)
+            config.getOptions(MixinCompiler::class.java).let {
+                if(!it.K2Enabled) {
+                    it.onDisabled()
+                }
+            }
         }
+
+        fun isK2Enabled() = config.getOptions(MixinCompiler::class.java)?.K2Enabled ?: true
     }
 
     @JvmField
