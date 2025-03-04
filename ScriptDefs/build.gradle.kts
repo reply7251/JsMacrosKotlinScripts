@@ -65,7 +65,6 @@ dependencies {
     implementation("net.java.dev.jna:jna:5.6.0")
     implementation("org.ow2.asm:asm:9.7")
 
-    implementation("net.fabricmc.fabric-api:fabric-api:0.100.4+1.21")
     implementation(files("../scripts/libs/jars/jsmacros-1.21-fabric-jvm17.jar"))
 }
 
