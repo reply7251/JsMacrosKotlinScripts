@@ -555,7 +555,6 @@ open class WynnClass(val global: Battle_jsm) {
         global.d2d.register()
         global.d2d.reAddElement(crossHair)
         updateConfig()
-        texts.forEach { global.d2d.reAddElement(it) }
         global.KeyBind.setKeyBind("key.attack", "key.mouse.left")
         global.KeyBind.setKeyBind("key.use", "key.mouse.right")
 
@@ -1572,7 +1571,6 @@ fun checkClass() {
             currentClassString = newClass
             currentWynnClass = classes[currentClassString] ?: return@let
             currentWynnClass.restart()
-            currentWynnClass.updateConfig()
         }
     }
 }
