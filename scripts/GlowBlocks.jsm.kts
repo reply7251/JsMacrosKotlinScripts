@@ -15,6 +15,7 @@ var scanner = World.worldScanner.build()
 fun onChunkLoad(x: Int, z: Int) {
     if(enabled) {
         val d3d = Hud.createDraw3D()
+        d3ds[x to z] = d3d
         d3d.register()
 
         thread {
@@ -28,7 +29,6 @@ fun onChunkLoad(x: Int, z: Int) {
             }
         }
 
-        d3ds[x to z] = d3d
     }
 }
 
@@ -77,7 +77,7 @@ fun disable() {
 
 EventListener(EventChunkLoad::class.java, {
     onChunkLoad(it.x, it.z)
-})
+}, true)
 
 EventListener(EventChunkUnload::class.java, {
     onChunkUnload(it.x, it.z)

@@ -4,6 +4,12 @@ import me.hellrevenger.generated.Map_MinecraftClient.gameRenderer
 import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
 import xyz.wagyourtail.jsmacros.core.service.EventService
 
+
+
+if(!World.isWorldLoaded) {
+    JsMacros.waitForEvent("ChunkLoad")
+}
+
 class MyCamera : Camera() {
     var offsetPitch = 0f
         set(value) {
