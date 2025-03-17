@@ -37,10 +37,10 @@ dependencies {
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-jvm")
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-jvm-host")
     implementation("net.bytebuddy:byte-buddy:1.15.1")
-    include("net.bytebuddy:byte-buddy:1.15.1")
+    jsmacrosExtensionInclude("net.bytebuddy:byte-buddy:1.15.1")
 
-    implementation(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT-downgraded.jar"))
-    include(files("../Mapping/build/libs/Mapping-1.0-SNAPSHOT-downgraded.jar"))
+    implementation(project(":Mapping"))
+    jsmacrosExtensionInclude(project(":Mapping"))
 
     implementation("org.javassist:javassist:3.30.2-GA")
 
@@ -87,6 +87,7 @@ tasks.test {
 }
 
 tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from(jsmacrosExtensionInclude.files) {
         include("*")
         into("META-INF/jsmacrosdeps")
@@ -94,7 +95,6 @@ tasks.jar {
 
     from(include.files.map { if(it.isDirectory()) it else zipTree(it) }) {}
 
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 jvmdg.downgradeTo = JavaVersion.VERSION_1_8
