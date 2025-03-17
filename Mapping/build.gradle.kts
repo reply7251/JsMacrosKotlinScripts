@@ -1,3 +1,4 @@
+import org.gradle.kotlin.dsl.support.kotlinCompilerOptions
 import java.net.URI
 
 plugins {
@@ -46,6 +47,10 @@ dependencies {
     implementation("org.apache.commons:commons-lang3:3.14.0")
     implementation("org.apache.logging.log4j:log4j-api:2.22.1")
     implementation("org.slf4j:slf4j-api:2.0.9")
+}
+
+tasks.compileKotlin {
+    compilerOptions.suppressWarnings.set(true)
 }
 
 tasks.test {
