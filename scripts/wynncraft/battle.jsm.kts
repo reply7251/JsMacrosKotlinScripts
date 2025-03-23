@@ -64,6 +64,7 @@ object Actions {
 }
 
 val skill1Key = "key.keyboard.c"
+val skill2Key = "key.keyboard.x"
 var enableMelee = true
 
 val d2d = Hud.createDraw2D()
@@ -129,6 +130,10 @@ open class BindBoolean(key: String, value: Boolean = false, callback: (Bind) -> 
     override fun trigger() {
         value = !value
         super.trigger()
+    }
+
+    fun toString(name: String): String {
+        return  "$name ${Format.formatChar}r(${Format.coloredKey(simpleName)}): " + Format.coloredBoolean(value)
     }
 }
 
@@ -221,6 +226,7 @@ while(Managers.Feature.getFeatureInstance(QuickCastFeature::class.java) == null)
 val mc = MinecraftClient.method_1551()
 val interactKey =  mc.field_1690.field_1904;
 val attackKey = mc.field_1690.field_1886;
+val sneakKey = mc.field_1690.field_1832;
 
 val attackCooldown = mc::class.java.getDeclaredField("field_1771")
 attackCooldown.trySetAccessible()
@@ -292,7 +298,7 @@ enum class Mode {
     BashSurf,
     ChargeSpam,
     BashScream,
-    BashUpperScream,
+    AlterScream,
     UpperScream,
     AlterSurf,
 
@@ -350,6 +356,7 @@ open class WynnClass(val global: Battle_jsm) {
 
     open var mode = Mode.None
     val modeSelectorScreen: ScriptScreen = global.Hud.createScreen("", false)
+    open var quickMode = Mode.None
 
     init {
         onInit()
@@ -704,6 +711,15 @@ open class WynnClass(val global: Battle_jsm) {
     open fun getAvailableModes() = arrayOf<Mode>()
 
     fun openModeSelector() {
+        if(global.Player.player?.isSneaking == true) {
+            if(mode != quickMode) {
+                val tmp = mode
+                mode = quickMode
+                quickMode = tmp
+                return
+            }
+        }
+
         modeSelectorScreen.shouldPause = false
         val iscreen = modeSelectorScreen as IScreen
         iscreen.setOnInit(global.JavaWrapper.methodToJava { _ ->
@@ -716,6 +732,9 @@ open class WynnClass(val global: Battle_jsm) {
                     .width(200)
                     .message(mode.name)
                     .action(global.JavaWrapper.methodToJava { btn, iscreen ->
+                        if(mode == quickMode) {
+                            quickMode = this.mode
+                        }
                         this.mode = mode
                         updateConfig()
                     })
@@ -733,6 +752,7 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
     var lastBash = 0L
     var lastWarScream = 0L
     lateinit var keepHeight: BindBoolean
+    lateinit var bloodPact: BindBoolean
     var interactCounter = 0
     var attackCounter = 0
 
@@ -742,8 +762,9 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
     lateinit var maxRepeat: BindInt
 
 
-    val modes = arrayOf(Mode.BashSurf, Mode.ScreamSurf, Mode.ChargeSpam, Mode.BashScream, Mode.BashUpperScream, Mode.AlterSurf, Mode.UpperScream)
+    val modes = arrayOf(Mode.BashSurf, Mode.ScreamSurf, Mode.ChargeSpam, Mode.BashScream, Mode.AlterScream, Mode.AlterSurf, Mode.UpperScream)
     override var mode = Mode.BashScream
+    override var quickMode = Mode.AlterSurf
 
     override fun onInitOverride() {
 
@@ -767,6 +788,9 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
         maxRepeat = BindInt("key.keyboard.keypad.7", "MaxRepeat", 2) {}.setAfterValueChange { updateConfig() }
         binds["maxRepeat"] = maxRepeat
 
+        bloodPact = BindBoolean("key.keyboard.keypad.4") { updateConfig() }
+        binds["bloodPact"] = bloodPact
+
         super.onInitOverride()
 
 
@@ -783,6 +807,7 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
         }
         nextLine().setText(meleeInterval.toString())
         nextLine().setText(maxRepeat.toString())
+        nextLine().setText(bloodPact.toString("Blood Pact"))
         nextLine().setText("upper: charge charge scream upper")
         nextLine().setText("bash(scream): scream scream")
     }
@@ -861,10 +886,15 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
             for(i in 1..maxRepeat.value) {
                 waitSpell(Actions.cast4)
             }
-        } else if(mode == Mode.BashUpperScream) {
-            waitSpell(Actions.cast4)
+        } else if(mode == Mode.AlterScream) {
             waitSpell(Actions.cast1)
+            for(i in 1..maxRepeat.value) {
+                waitSpell(Actions.cast4)
+            }
             waitSpell(Actions.cast3)
+            for(i in 1..maxRepeat.value) {
+                waitSpell(Actions.cast4)
+            }
         } else if(mode == Mode.AlterSurf) {
             waitSpell(Actions.cast3)
             waitSpell(Actions.cast2)
@@ -909,6 +939,12 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
             }
         }
     }
+
+    override fun getSpellCooldownWithMana() =
+        if(bloodPact.value)
+            spellCooldown.value
+        else
+            super.getSpellCooldownWithMana()
 
     override fun getAvailableModes() = modes
 }
@@ -1093,7 +1129,7 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
 
     override fun getAvailableModes() = modes
 
-    override fun getSpellCooldownWithMana() = if(mode == Mode.BashUpperScream) spellCooldown.value else super.getSpellCooldownWithMana()
+    //override fun getSpellCooldownWithMana() = if(mode == Mode.BashUpperScream) spellCooldown.value else super.getSpellCooldownWithMana()
 }
 
 inner class Mage(global: Battle_jsm) : WynnClass(global) {
@@ -1107,6 +1143,7 @@ inner class Mage(global: Battle_jsm) : WynnClass(global) {
 
     val modes = arrayOf(Mode.Arcanist, Mode.LightBender, Mode.RiftWalker)
     override var mode = Mode.Arcanist
+    override var quickMode = Mode.LightBender
 
     override fun getAvailableModes() = modes
 
@@ -1240,6 +1277,8 @@ inner class Mage(global: Battle_jsm) : WynnClass(global) {
 inner class Archer(global: Battle_jsm) : WynnClass(global) {
     var counter = 0
     var lastShield = 0L
+    var lastBomb = 0L
+    var manualEscape = 0L
 
     override fun onInitOverride() {
 
@@ -1249,8 +1288,23 @@ inner class Archer(global: Battle_jsm) : WynnClass(global) {
     }
 
     override fun chooseAction() {
-        if(getMana() > 44 && !isHoldItem("anthracite")) {
-            if(global.World.time - lastShield > 20 && lastAction != Actions.cast4 && counter++ % 5 == 0) {
+        var melee = true
+        val shield = Models.Shield.shieldCharge < 3
+        if(isHoldItem("anthracite")) {
+            if(getMana() > 80) {
+                if((global.World.time - lastShield >= 60 || lastAction != Actions.cast4) && shield) {
+                    lastShield = global.World.time
+                    waitSpell(Actions.cast4)
+                    manualEscape += getSpellCooldownWithMana()
+                } else if(global.World.time - lastBomb >= 260) {
+                    lastBomb = global.World.time
+                    waitSpell(Actions.cast3)
+                    manualEscape += getSpellCooldownWithMana()
+                }
+            }
+        } else if(getMana() > 50) {
+            melee = false
+            if((global.World.time - lastShield >= 60 || lastAction != Actions.cast4) && shield) {
                 cast4()
                 global.Client.waitTick(getSpellCooldownWithMana())
                 lastShield = global.World.time
@@ -1261,7 +1315,8 @@ inner class Archer(global: Battle_jsm) : WynnClass(global) {
                 cast1()
                 global.Client.waitTick(getSpellCooldownWithMana())
             }
-        } else if(global.World.time % 2L == 0L) {
+        }
+        if(global.World.time % 2L == 0L && melee) {
             global.Player.interactions()?.interact()
         }
     }
@@ -1277,7 +1332,18 @@ inner class Archer(global: Battle_jsm) : WynnClass(global) {
         super.reset()
         counter = 0
         lastShield = 0
+        lastBomb = 0
+        manualEscape = 0
     }
+
+    override fun onKey(e: EventKey) {
+        super.onKey(e)
+        if(e.key == skill2Key && e.action == 1) {
+            manualEscape = global.World.time
+        }
+    }
+
+    override fun isBlocked() = global.World.time - manualEscape < 16
 }
 
 inner class Shaman(global: Battle_jsm) : WynnClass(global) {
@@ -1297,6 +1363,7 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
     var targetMask = ShamanMaskType.FANATIC
     override var mode = Mode.TotemSpam
     val modes = arrayOf(Mode.None, Mode.TotemSpam, Mode.Acolyte, Mode.AuraSpam, Mode.PuppetBomber)
+    override var quickMode = Mode.PuppetBomber
 
     override fun onInitOverride() {
 
