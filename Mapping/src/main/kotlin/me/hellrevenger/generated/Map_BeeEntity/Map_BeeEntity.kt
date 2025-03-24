@@ -30,13 +30,17 @@ val KClass<BeeEntity>.HAS_STUNG_KEY by aliasStatic(BeeEntity::field_30277)
  */
 val KClass<BeeEntity>.HAS_NECTAR_KEY by aliasStatic(BeeEntity::field_30278)
 /**
+ * method_65348
+ */
+fun KClass<BeeEntity>.isAttractive(arg0: BlockState) = BeeEntity.method_65348(arg0)
+/**
  * method_21797
  */
 fun BeeEntity.setFlowerPos(arg0: BlockPos) = this.method_21797(arg0)
 /**
  * method_21791
  */
-fun BeeEntity.hasHive() = this.method_21791()
+fun BeeEntity.hasHivePos() = this.method_21791()
 /**
  * method_57301
  */
@@ -73,6 +77,10 @@ fun BeeEntity.getGoalSelector() = this.method_35163()
  * method_21807
  */
 fun BeeEntity.setCannotEnterHiveTicks(arg0: Int) = this.method_21807(arg0)
+/**
+ * method_63007
+ */
+fun KClass<BeeEntity>.isNightOrRaining(arg0: world_World) = BeeEntity.method_63007(arg0)
 /**
  * method_26880
  */

@@ -14,10 +14,14 @@ fun ChunkGenerationContext.lightingProvider() = this.comp_2437()
  */
 fun ChunkGenerationContext.generator() = this.comp_2435()
 /**
- * comp_2808
+ * comp_3323
  */
-fun ChunkGenerationContext.mainThreadMailBox() = this.comp_2808()
+fun ChunkGenerationContext.unsavedListener() = this.comp_3323()
 /**
  * comp_2436
  */
 fun ChunkGenerationContext.structureManager() = this.comp_2436()
+/**
+ * comp_2942
+ */
+fun ChunkGenerationContext.mainThreadExecutor() = this.comp_2942()

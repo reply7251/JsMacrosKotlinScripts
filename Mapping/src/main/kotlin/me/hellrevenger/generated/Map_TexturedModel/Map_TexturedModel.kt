@@ -14,10 +14,6 @@ val KClass<TexturedModel>.FLOWERBED_4 by aliasStatic(TexturedModel::field_42955)
  */
 val KClass<TexturedModel>.CUBE_COLUMN_HORIZONTAL by aliasStatic(TexturedModel::field_23039)
 /**
- * field_23047
- */
-val KClass<TexturedModel>.PARTICLE by aliasStatic(TexturedModel::field_23047)
-/**
  * field_23057
  */
 val KClass<TexturedModel>.SIDE_TOP_BOTTOM_WALL by aliasStatic(TexturedModel::field_23057)
@@ -49,6 +45,10 @@ val KClass<TexturedModel>.CUBE_TOP by aliasStatic(TexturedModel::field_23041)
  * field_23051
  */
 val KClass<TexturedModel>.TEMPLATE_HANGING_LANTERN by aliasStatic(TexturedModel::field_23051)
+/**
+ * field_54879
+ */
+val KClass<TexturedModel>.MOSSY_CARPET_SIDE by aliasStatic(TexturedModel::field_54879)
 /**
  * field_42954
  */
@@ -116,7 +116,7 @@ fun TexturedModel.getModel() = this.method_25914()
 /**
  * method_25916
  */
-fun TexturedModel.upload(arg0: Block, arg1: BiConsumer<Identifier, Supplier<JsonElement>>) = this.method_25916(arg0, arg1)
+fun TexturedModel.upload(arg0: Block, arg1: BiConsumer<Identifier, ModelSupplier>) = this.method_25916(arg0, arg1)
 /**
  * method_25917
  */
@@ -128,7 +128,7 @@ fun KClass<TexturedModel>.getCubeAll(arg0: Identifier) = TexturedModel.method_25
 /**
  * method_25915
  */
-fun TexturedModel.upload(arg0: Block, arg1: String, arg2: BiConsumer<Identifier, Supplier<JsonElement>>) = this.method_25915(arg0, arg1, arg2)
+fun TexturedModel.upload(arg0: Block, arg1: String, arg2: BiConsumer<Identifier, ModelSupplier>) = this.method_25915(arg0, arg1, arg2)
 /**
  * method_25921
  */

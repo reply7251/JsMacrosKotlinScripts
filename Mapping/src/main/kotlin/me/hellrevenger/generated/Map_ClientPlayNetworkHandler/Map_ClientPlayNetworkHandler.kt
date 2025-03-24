@@ -10,9 +10,17 @@ fun ClientPlayNetworkHandler.acknowledge(arg0: SignedMessage, arg1: Boolean) = t
  */
 fun ClientPlayNetworkHandler.getDataQueryHandler() = this.method_2876()
 /**
+ * method_64899
+ */
+fun ClientPlayNetworkHandler.getRecipeManager() = this.method_64899()
+/**
  * method_60885
  */
 fun ClientPlayNetworkHandler.getServerLinks() = this.method_60885()
+/**
+ * method_62149
+ */
+fun ClientPlayNetworkHandler.syncOptions(arg0: SyncedClientOptions) = this.method_62149(arg0)
 /**
  * method_2875
  */
@@ -58,10 +66,6 @@ fun ClientPlayNetworkHandler.getPlayerUuids() = this.method_31363()
  */
 fun ClientPlayNetworkHandler.getProfile() = this.method_2879()
 /**
- * method_2877
- */
-fun ClientPlayNetworkHandler.getRecipeManager() = this.method_2877()
-/**
  * method_45731
  */
 fun ClientPlayNetworkHandler.sendCommand(arg0: String) = this.method_45731(arg0)
@@ -90,9 +94,9 @@ fun ClientPlayNetworkHandler.getWorldKeys() = this.method_29356()
  */
 fun ClientPlayNetworkHandler.refreshSearchManager() = this.method_60346()
 /**
- * method_47657
+ * method_62151
  */
-fun ClientPlayNetworkHandler.updateKeyPair(arg0: PlayerKeyPair) = this.method_47657(arg0)
+fun ClientPlayNetworkHandler.fetchProfileKey() = this.method_62151()
 /**
  * method_45732
  */
@@ -117,6 +121,10 @@ fun ClientPlayNetworkHandler.getSessionId() = this.method_16690()
  * method_45730
  */
 fun ClientPlayNetworkHandler.sendChatCommand(arg0: String) = this.method_45730(arg0)
+/**
+ * method_62147
+ */
+fun ClientPlayNetworkHandler.getFuelRegistry() = this.method_62147()
 /**
  * method_55823
  */

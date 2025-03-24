@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_27847
  */
-fun KClass<RecipeUnlockedCriterion>.create(arg0: Identifier) = RecipeUnlockedCriterion.method_27847(arg0)
+fun KClass<RecipeUnlockedCriterion>.create(arg0: RegistryKey<Recipe<*>>) = RecipeUnlockedCriterion.method_27847(arg0)
 /**
  * method_9107
  */

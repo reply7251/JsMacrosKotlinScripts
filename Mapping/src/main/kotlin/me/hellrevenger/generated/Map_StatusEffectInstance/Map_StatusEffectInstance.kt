@@ -42,6 +42,10 @@ fun StatusEffectInstance.writeNbt() = this.method_5582()
  */
 fun StatusEffectInstance.skipFading() = this.method_55657()
 /**
+ * method_58621
+ */
+fun StatusEffectInstance.onEntityDamage(arg0: ServerWorld, arg1: LivingEntity, arg2: DamageSource, arg3: Float) = this.method_58621(arg0, arg1, arg2, arg3)
+/**
  * method_5592
  */
 fun StatusEffectInstance.shouldShowIcon() = this.method_5592()
@@ -90,14 +94,6 @@ fun StatusEffectInstance.isInfinite() = this.method_48559()
  */
 fun StatusEffectInstance.onApplied(arg0: LivingEntity) = this.method_52523(arg0)
 /**
- * method_58622
- */
-fun StatusEffectInstance.onEntityRemoval(arg0: LivingEntity, arg1: net.minecraft.class_1297.class_5529) = this.method_58622(arg0, arg1)
-/**
- * method_58621
- */
-fun StatusEffectInstance.onEntityDamage(arg0: LivingEntity, arg1: DamageSource, arg2: Float) = this.method_58621(arg0, arg1, arg2)
-/**
  * method_5586
  */
 fun StatusEffectInstance.getTranslationKey() = this.method_5586()
@@ -109,3 +105,7 @@ fun StatusEffectInstance.mapDuration(arg0: Int2IntFunction) = this.method_48558(
  * method_5585
  */
 fun StatusEffectInstance.update(arg0: LivingEntity, arg1: Runnable) = this.method_5585(arg0, arg1)
+/**
+ * method_58622
+ */
+fun StatusEffectInstance.onEntityRemoval(arg0: ServerWorld, arg1: LivingEntity, arg2: net.minecraft.class_1297.class_5529) = this.method_58622(arg0, arg1, arg2)

@@ -10,6 +10,10 @@ val KClass<SkeletonEntity>.STRAY_CONVERSION_TIME_KEY by aliasStatic(SkeletonEnti
  */
 fun SkeletonEntity.setConverting(arg0: Boolean) = this.method_35193(arg0)
 /**
+ * method_33589
+ */
+fun SkeletonEntity.setConversionTime(arg0: Int) = this.method_33589(arg0)
+/**
  * method_33590
  */
 fun SkeletonEntity.isConverting() = this.method_33590()

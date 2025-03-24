@@ -46,6 +46,10 @@ fun PacketByteBuf.writeBytes(arg0: ByteBuf, arg1: Int, arg2: Int) = this.method_
  */
 fun KClass<PacketByteBuf>.writeVector3f(arg0: ByteBuf, arg1: Vector3f) = PacketByteBuf.method_56339(arg0, arg1)
 /**
+ * method_62787
+ */
+fun KClass<PacketByteBuf>.readSyncId(arg0: ByteBuf) = PacketByteBuf.method_62787(arg0)
+/**
  * method_44119
  */
 fun PacketByteBuf.readPublicKey() = this.method_44119()
@@ -170,6 +174,10 @@ fun <T, B>KClass<PacketByteBuf>.writeNullable(arg0: B, arg1: T, arg2: PacketEnco
  */
 fun PacketByteBuf.writerIndex(arg0: Int) = this.method_52990(arg0)
 /**
+ * method_64263
+ */
+fun KClass<PacketByteBuf>.writeChunkPos(arg0: ByteBuf, arg1: ChunkPos) = PacketByteBuf.method_64263(arg0, arg1)
+/**
  * method_34059
  */
 fun PacketByteBuf.readIntList() = this.method_34059()
@@ -270,6 +278,10 @@ fun PacketByteBuf.writeMedium(arg0: Int) = this.method_53000(arg0)
  */
 fun <T, C>PacketByteBuf.readCollection(arg0: IntFunction<C>, arg1: PacketDecoder<in PacketByteBuf, T>) where C: Collection<T> = this.method_34068<T, C>(arg0, arg1)
 /**
+ * method_62783
+ */
+fun KClass<PacketByteBuf>.writeVec3d(arg0: ByteBuf, arg1: Vec3d) = PacketByteBuf.method_62783(arg0, arg1)
+/**
  * method_10790
  */
 fun PacketByteBuf.readUuid() = this.method_10790()
@@ -313,6 +325,10 @@ fun PacketByteBuf.writeGlobalPos(arg0: GlobalPos) = this.method_44113(arg0)
  * method_52967
  */
 fun PacketByteBuf.setLongLE(arg0: Int, arg1: Long) = this.method_52967(arg0, arg1)
+/**
+ * method_62785
+ */
+fun KClass<PacketByteBuf>.readVec3d(arg0: ByteBuf) = PacketByteBuf.method_62785(arg0)
 /**
  * method_52947
  */
@@ -406,6 +422,10 @@ fun PacketByteBuf.resetWriterIndex() = this.method_52935()
  */
 fun PacketByteBuf.writeChunkPos(arg0: ChunkPos) = this.method_36130(arg0)
 /**
+ * method_64264
+ */
+fun KClass<PacketByteBuf>.readChunkPos(arg0: ByteBuf) = PacketByteBuf.method_64264(arg0)
+/**
  * method_52969
  */
 fun PacketByteBuf.setBytes(arg0: Int, arg1: ByteBuf, arg2: Int) = this.method_52969(arg0, arg1, arg2)
@@ -474,6 +494,10 @@ fun PacketByteBuf.writeDate(arg0: Date) = this.method_10796(arg0)
  */
 fun PacketByteBuf.readLongArray(arg0: LongArray) = this.method_10801(arg0)
 /**
+ * method_62784
+ */
+fun KClass<PacketByteBuf>.writeSyncId(arg0: ByteBuf, arg1: Int) = PacketByteBuf.method_62784(arg0, arg1)
+/**
  * method_52951
  */
 fun PacketByteBuf.setBoolean(arg0: Int, arg1: Boolean) = this.method_52951(arg0, arg1)
@@ -505,6 +529,10 @@ fun PacketByteBuf.setShort(arg0: Int, arg1: Int) = this.method_52981(arg0, arg1)
  * method_52993
  */
 fun PacketByteBuf.setChar(arg0: Int, arg1: Int) = this.method_52993(arg0, arg1)
+/**
+ * method_62788
+ */
+fun PacketByteBuf.readSyncId() = this.method_62788()
 /**
  * method_52941
  */
@@ -617,6 +645,10 @@ fun <E>PacketByteBuf.readEnumSet(arg0: Class<E>) where E: Enum<E> = this.method_
  * method_43826
  */
 fun <T>PacketByteBuf.writeNullable(arg0: T, arg1: PacketEncoder<in PacketByteBuf, T>) = this.method_43826<T>(arg0, arg1)
+/**
+ * method_62786
+ */
+fun PacketByteBuf.writeSyncId(arg0: Int) = this.method_62786(arg0)
 /**
  * method_53006
  */

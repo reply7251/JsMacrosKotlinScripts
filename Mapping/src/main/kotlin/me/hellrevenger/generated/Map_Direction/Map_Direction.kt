@@ -30,9 +30,13 @@ val KClass<Direction>.EAST by aliasEnum(Direction::class, "field_11034")
  */
 val KClass<Direction>.DOWN by aliasEnum(Direction::class, "field_11033")
 /**
+ * method_62672
+ */
+fun KClass<Direction>.fromVector(arg0: Int, arg1: Int, arg2: Int, arg3: Direction) = Direction.method_62672(arg0, arg1, arg2, arg3)
+/**
  * method_10147
  */
-fun KClass<Direction>.getFacing(arg0: Float, arg1: Float, arg2: Float) = Direction.method_10147(arg0, arg1, arg2)
+fun KClass<Direction>.getFacing(x: Float, y: Float, z: Float) = Direction.method_10147(x, y, z)
 /**
  * method_10170
  */
@@ -48,7 +52,7 @@ fun KClass<Direction>.from(arg0: net.minecraft.class_2350.class_2351, arg1: net.
 /**
  * method_10139
  */
-fun KClass<Direction>.fromHorizontal(arg0: Int) = Direction.method_10139(arg0)
+fun KClass<Direction>.fromHorizontalQuarterTurns(arg0: Int) = Direction.method_10139(arg0)
 /**
  * method_32801
  */
@@ -66,10 +70,6 @@ fun KClass<Direction>.byId(arg0: Int) = Direction.method_10143(arg0)
  */
 fun Direction.getId() = this.method_10146()
 /**
- * method_10163
- */
-fun Direction.getVector() = this.method_10163()
-/**
  * method_35833
  */
 fun Direction.rotateClockwise(arg0: net.minecraft.class_2350.class_2351) = this.method_35833(arg0)
@@ -82,6 +82,10 @@ fun Direction.getAxis() = this.method_10166()
  */
 fun Direction.getUnitVector() = this.method_23955()
 /**
+ * method_62674
+ */
+fun KClass<Direction>.fromVector(arg0: Vec3i, arg1: Direction) = Direction.method_62674(arg0, arg1)
+/**
  * method_10142
  */
 fun KClass<Direction>.getFacing(arg0: Double, arg1: Double, arg2: Double) = Direction.method_10142(arg0, arg1, arg2)
@@ -93,6 +97,10 @@ fun KClass<Direction>.stream() = Direction.method_42013()
  * method_23224
  */
 fun Direction.getRotationQuaternion() = this.method_23224()
+/**
+ * method_62675
+ */
+fun Direction.getVector() = this.method_62675()
 /**
  * method_10151
  */
@@ -118,6 +126,10 @@ fun KClass<Direction>.transform(arg0: Matrix4f, arg1: Direction) = Direction.met
  */
 fun KClass<Direction>.shuffle(arg0: Random) = Direction.method_42014(arg0)
 /**
+ * method_62676
+ */
+fun Direction.getDoubleVector() = this.method_62676()
+/**
  * method_10148
  */
 fun Direction.getOffsetX() = this.method_10148()
@@ -128,15 +140,19 @@ fun Direction.pointsTo(arg0: Float) = this.method_30928(arg0)
 /**
  * method_10144
  */
-fun Direction.asRotation() = this.method_10144()
+fun Direction.getPositiveHorizontalDegrees() = this.method_10144()
 /**
  * method_10168
  */
 fun KClass<Direction>.byName(arg0: String) = Direction.method_10168(arg0)
 /**
+ * method_62673
+ */
+fun KClass<Direction>.getHorizontalDegreesOrThrow(arg0: Direction) = Direction.method_62673(arg0)
+/**
  * method_10150
  */
-fun KClass<Direction>.fromRotation(arg0: Double) = Direction.method_10150(arg0)
+fun KClass<Direction>.fromHorizontalDegrees(arg0: Double) = Direction.method_10150(arg0)
 /**
  * method_10153
  */
@@ -152,15 +168,11 @@ fun Direction.getOffsetY() = this.method_10164()
 /**
  * method_10161
  */
-fun Direction.getHorizontal() = this.method_10161()
+fun Direction.getHorizontalQuarterTurns() = this.method_10161()
 /**
  * method_10171
  */
 fun Direction.getDirection() = this.method_10171()
-/**
- * method_50026
- */
-fun KClass<Direction>.fromVector(arg0: Int, arg1: Int, arg2: Int) = Direction.method_50026(arg0, arg1, arg2)
 /**
  * method_10165
  */

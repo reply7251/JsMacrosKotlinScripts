@@ -22,10 +22,6 @@ val KClass<OceanPlacedFeatures>.KELP_COLD by aliasStatic(OceanPlacedFeatures::fi
  */
 val KClass<OceanPlacedFeatures>.SEA_PICKLE by aliasStatic(OceanPlacedFeatures::field_35976)
 /**
- * field_35975
- */
-val KClass<OceanPlacedFeatures>.SEAGRASS_SIMPLE by aliasStatic(OceanPlacedFeatures::field_35975)
-/**
  * field_35974
  */
 val KClass<OceanPlacedFeatures>.SEAGRASS_DEEP_COLD by aliasStatic(OceanPlacedFeatures::field_35974)

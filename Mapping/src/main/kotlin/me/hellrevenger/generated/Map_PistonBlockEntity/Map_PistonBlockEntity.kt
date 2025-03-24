@@ -46,6 +46,10 @@ fun PistonBlockEntity.isSource() = this.method_11515()
  */
 fun PistonBlockEntity.getRenderOffsetZ(arg0: Float) = this.method_11507(arg0)
 /**
+ * method_61764
+ */
+fun PistonBlockEntity.getDirection() = this.method_61764()
+/**
  * method_11494
  */
 fun PistonBlockEntity.getRenderOffsetX(arg0: Float) = this.method_11494(arg0)

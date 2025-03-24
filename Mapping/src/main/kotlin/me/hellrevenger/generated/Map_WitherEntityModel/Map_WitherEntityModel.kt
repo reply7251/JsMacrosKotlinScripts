@@ -4,12 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_17130
  */
-fun <T>WitherEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: WitherEntity = this.method_17130(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
- * method_17128
- */
-fun <T>WitherEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: WitherEntity = this.method_17128(arg0, arg1, arg2, arg3)
+fun WitherEntityModel.setAngles(arg0: WitherEntityRenderState) = this.method_17130(arg0)
 /**
  * method_32067
  */
-fun <T>KClass<WitherEntityModel<T>>.getTexturedModelData(arg0: Dilation) where T: WitherEntity = WitherEntityModel.method_32067(arg0)
+fun KClass<WitherEntityModel>.getTexturedModelData(arg0: Dilation) = WitherEntityModel.method_32067(arg0)

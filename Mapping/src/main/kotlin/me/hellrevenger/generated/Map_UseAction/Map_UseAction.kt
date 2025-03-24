@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_UseAction
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_55494
+ */
+val KClass<UseAction>.BUNDLE by aliasEnum(UseAction::class, "field_55494")
+/**
  * field_39058
  */
 val KClass<UseAction>.TOOT_HORN by aliasEnum(UseAction::class, "field_39058")
@@ -41,3 +45,7 @@ val KClass<UseAction>.CROSSBOW by aliasEnum(UseAction::class, "field_8947")
  * field_42717
  */
 val KClass<UseAction>.BRUSH by aliasEnum(UseAction::class, "field_42717")
+/**
+ * method_62838
+ */
+fun UseAction.getId() = this.method_62838()

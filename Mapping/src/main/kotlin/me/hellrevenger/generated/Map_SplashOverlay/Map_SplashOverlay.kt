@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_SplashOverlay
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_2483
+ */
+val KClass<SplashOverlay>.LOGO by aliasStatic(SplashOverlay::field_2483)
+/**
  * field_32248
  */
 val KClass<SplashOverlay>.RELOAD_START_FADE_DURATION by aliasStatic(SplashOverlay::field_32248)
@@ -12,4 +16,4 @@ val KClass<SplashOverlay>.RELOAD_COMPLETE_FADE_DURATION by aliasStatic(SplashOve
 /**
  * method_18819
  */
-fun KClass<SplashOverlay>.init(arg0: MinecraftClient) = SplashOverlay.method_18819(arg0)
+fun KClass<SplashOverlay>.init(arg0: TextureManager) = SplashOverlay.method_18819(arg0)

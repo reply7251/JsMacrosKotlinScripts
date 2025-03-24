@@ -2,6 +2,6 @@ package me.hellrevenger.generated.Map_TadpoleEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_41966
+ * method_62546
  */
-fun TadpoleEntityRenderer.getTexture(arg0: TadpoleEntity) = this.method_41966(arg0)
+fun TadpoleEntityRenderer.createRenderState() = this.method_62546()

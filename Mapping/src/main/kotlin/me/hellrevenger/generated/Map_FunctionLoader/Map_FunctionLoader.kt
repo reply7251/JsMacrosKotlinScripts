@@ -10,6 +10,10 @@ val KClass<FunctionLoader>.FUNCTION_REGISTRY_KEY by aliasStatic(FunctionLoader::
  */
 fun FunctionLoader.getTags() = this.method_29458()
 /**
+ * method_29459
+ */
+fun FunctionLoader.getTagOrEmpty(arg0: Identifier) = this.method_29459(arg0)
+/**
  * method_29456
  */
 fun FunctionLoader.get(arg0: Identifier) = this.method_29456(arg0)
@@ -17,7 +21,3 @@ fun FunctionLoader.get(arg0: Identifier) = this.method_29456(arg0)
  * method_29447
  */
 fun FunctionLoader.getFunctions() = this.method_29447()
-/**
- * method_29459
- */
-fun FunctionLoader.getTagOrEmpty(arg0: Identifier) = this.method_29459(arg0)

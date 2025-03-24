@@ -22,6 +22,10 @@ fun RealmsConfigureWorldScreen.closeTheWorld() = this.method_21217()
  */
 fun RealmsConfigureWorldScreen.saveSlotSettings(arg0: RealmsWorldOptions) = this.method_21208(arg0)
 /**
+ * method_21204
+ */
+fun RealmsConfigureWorldScreen.fetchServerData(arg0: Long) = this.method_21204(arg0)
+/**
  * method_21215
  */
 fun RealmsConfigureWorldScreen.saveSettings(arg0: String, arg1: String) = this.method_21215(arg0, arg1)

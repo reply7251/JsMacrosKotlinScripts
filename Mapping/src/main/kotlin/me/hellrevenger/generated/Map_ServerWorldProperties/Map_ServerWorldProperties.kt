@@ -26,6 +26,10 @@ fun ServerWorldProperties.areCommandsAllowed() = this.method_194()
  */
 fun ServerWorldProperties.getWorldBorder() = this.method_27422()
 /**
+ * method_146
+ */
+fun ServerWorldProperties.getGameRules() = this.method_146()
+/**
  * method_193
  */
 fun ServerWorldProperties.setGameMode(arg0: GameMode) = this.method_193(arg0)

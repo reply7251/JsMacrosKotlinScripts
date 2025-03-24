@@ -8,19 +8,15 @@ fun SpawnEggItem.spawnBaby(arg0: PlayerEntity, arg1: MobEntity, arg2: EntityType
 /**
  * method_8018
  */
-fun SpawnEggItem.isOfSameEntityType(arg0: ItemStack, arg1: EntityType<*>) = this.method_8018(arg0, arg1)
+fun SpawnEggItem.isOfSameEntityType(arg0: net.minecraft.class_7225.class_7874, arg1: ItemStack, arg2: EntityType<*>) = this.method_8018(arg0, arg1, arg2)
 /**
- * method_8016
+ * method_8015
  */
-fun SpawnEggItem.getColor(arg0: Int) = this.method_8016(arg0)
+fun SpawnEggItem.getEntityType(arg0: net.minecraft.class_7225.class_7874, arg1: ItemStack) = this.method_8015(arg0, arg1)
 /**
  * method_8019
  */
 fun KClass<SpawnEggItem>.forEntity(arg0: EntityType<*>) = SpawnEggItem.method_8019(arg0)
-/**
- * method_8015
- */
-fun SpawnEggItem.getEntityType(arg0: ItemStack) = this.method_8015(arg0)
 /**
  * method_8017
  */

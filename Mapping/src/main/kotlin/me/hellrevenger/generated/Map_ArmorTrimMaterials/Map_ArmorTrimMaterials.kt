@@ -34,6 +34,10 @@ val KClass<ArmorTrimMaterials>.GOLD by aliasStatic(ArmorTrimMaterials::field_420
  */
 val KClass<ArmorTrimMaterials>.COPPER by aliasStatic(ArmorTrimMaterials::field_42008)
 /**
+ * field_55049
+ */
+val KClass<ArmorTrimMaterials>.RESIN by aliasStatic(ArmorTrimMaterials::field_55049)
+/**
  * field_42013
  */
 val KClass<ArmorTrimMaterials>.AMETHYST by aliasStatic(ArmorTrimMaterials::field_42013)

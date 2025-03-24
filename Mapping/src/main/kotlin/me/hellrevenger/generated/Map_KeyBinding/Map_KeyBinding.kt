@@ -18,9 +18,17 @@ val KClass<KeyBinding>.MOVEMENT_CATEGORY by aliasStatic(KeyBinding::field_32136)
  */
 val KClass<KeyBinding>.MULTIPLAYER_CATEGORY by aliasStatic(KeyBinding::field_32138)
 /**
+ * field_1657
+ */
+val KClass<KeyBinding>.KEYS_BY_ID by aliasStatic(KeyBinding::field_1657)
+/**
  * field_32141
  */
 val KClass<KeyBinding>.UI_CATEGORY by aliasStatic(KeyBinding::field_32141)
+/**
+ * field_1655
+ */
+var KeyBinding.boundKey by alias(KeyBinding::field_1655)
 /**
  * field_32137
  */
@@ -62,10 +70,6 @@ fun KClass<KeyBinding>.getLocalizedName(arg0: String) = KeyBinding.method_1419(a
  */
 fun KeyBinding.getBoundKeyTranslationKey() = this.method_1428()
 /**
- * method_1422
- */
-fun KeyBinding.setBoundKey(arg0: net.minecraft.class_3675.class_306) = this.method_1422(arg0)
-/**
  * method_1415
  */
 fun KeyBinding.isUnbound() = this.method_1415()
@@ -77,6 +81,10 @@ fun KClass<KeyBinding>.onKeyPressed(arg0: net.minecraft.class_3675.class_306) = 
  * method_1429
  */
 fun KeyBinding.getDefaultKey() = this.method_1429()
+/**
+ * method_65807
+ */
+fun KClass<KeyBinding>.byId(arg0: String) = KeyBinding.method_65807(arg0)
 /**
  * method_1424
  */

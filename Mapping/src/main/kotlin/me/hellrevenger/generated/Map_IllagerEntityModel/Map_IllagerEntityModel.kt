@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_17094
  */
-fun <T>IllagerEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: IllagerEntity = this.method_17094(arg0, arg1, arg2, arg3, arg4, arg5)
+fun <S>IllagerEntityModel<S>.setAngles(arg0: S) where S: IllagerEntityRenderState = this.method_17094(arg0)
 /**
  * method_2812
  */
-fun <T>IllagerEntityModel<T>.getHat() where T: IllagerEntity = this.method_2812()
+fun <S>IllagerEntityModel<S>.getHat() where S: IllagerEntityRenderState = this.method_2812()
 /**
  * method_32012
  */
-fun <T>KClass<IllagerEntityModel<T>>.getTexturedModelData() where T: IllagerEntity = IllagerEntityModel.method_32012()
+fun <S>KClass<IllagerEntityModel<S>>.getTexturedModelData() where S: IllagerEntityRenderState = IllagerEntityModel.method_32012()

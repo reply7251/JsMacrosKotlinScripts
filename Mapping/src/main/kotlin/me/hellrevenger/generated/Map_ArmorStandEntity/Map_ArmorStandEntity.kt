@@ -14,6 +14,14 @@ val KClass<ArmorStandEntity>.TRACKER_HEAD_ROTATION by aliasStatic(ArmorStandEnti
  */
 val KClass<ArmorStandEntity>.TRACKER_LEFT_LEG_ROTATION by aliasStatic(ArmorStandEntity::field_7127)
 /**
+ * field_7119
+ */
+val KClass<ArmorStandEntity>.DEFAULT_BODY_ROTATION by aliasStatic(ArmorStandEntity::field_7119)
+/**
+ * field_7115
+ */
+val KClass<ArmorStandEntity>.DEFAULT_RIGHT_ARM_ROTATION by aliasStatic(ArmorStandEntity::field_7115)
+/**
  * field_30452
  */
 val KClass<ArmorStandEntity>.SMALL_FLAG by aliasStatic(ArmorStandEntity::field_30452)
@@ -42,6 +50,10 @@ val KClass<ArmorStandEntity>.TRACKER_RIGHT_LEG_ROTATION by aliasStatic(ArmorStan
  */
 val KClass<ArmorStandEntity>.TRACKER_RIGHT_ARM_ROTATION by aliasStatic(ArmorStandEntity::field_7105)
 /**
+ * field_7124
+ */
+val KClass<ArmorStandEntity>.DEFAULT_LEFT_ARM_ROTATION by aliasStatic(ArmorStandEntity::field_7124)
+/**
  * field_30442
  */
 val KClass<ArmorStandEntity>.HIDE_BASE_PLATE_FLAG by aliasStatic(ArmorStandEntity::field_30442)
@@ -49,6 +61,18 @@ val KClass<ArmorStandEntity>.HIDE_BASE_PLATE_FLAG by aliasStatic(ArmorStandEntit
  * field_7122
  */
 val KClass<ArmorStandEntity>.TRACKER_BODY_ROTATION by aliasStatic(ArmorStandEntity::field_7122)
+/**
+ * field_7117
+ */
+val KClass<ArmorStandEntity>.DEFAULT_RIGHT_LEG_ROTATION by aliasStatic(ArmorStandEntity::field_7117)
+/**
+ * field_7121
+ */
+val KClass<ArmorStandEntity>.DEFAULT_LEFT_LEG_ROTATION by aliasStatic(ArmorStandEntity::field_7121)
+/**
+ * field_7113
+ */
+val KClass<ArmorStandEntity>.DEFAULT_HEAD_ROTATION by aliasStatic(ArmorStandEntity::field_7113)
 /**
  * method_6917
  */
@@ -74,9 +98,9 @@ fun ArmorStandEntity.setLeftLegRotation(arg0: EulerAngle) = this.method_6909(arg
  */
 fun ArmorStandEntity.setRightArmRotation(arg0: EulerAngle) = this.method_6925(arg0)
 /**
- * method_6901
+ * method_61489
  */
-fun ArmorStandEntity.shouldHideBasePlate() = this.method_6901()
+fun ArmorStandEntity.shouldShowBasePlate() = this.method_61489()
 /**
  * method_6913
  */

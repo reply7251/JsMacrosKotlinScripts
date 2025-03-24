@@ -10,13 +10,13 @@ fun ChunkManager.getWorldChunk(arg0: Int, arg1: Int, arg2: Boolean) = this.metho
  */
 fun ChunkManager.getLoadedChunkCount() = this.method_14151()
 /**
- * method_12128
- */
-fun ChunkManager.setMobSpawnOptions(arg0: Boolean, arg1: Boolean) = this.method_12128(arg0, arg1)
-/**
  * method_12130
  */
 fun ChunkManager.getLightingProvider() = this.method_12130()
+/**
+ * method_62872
+ */
+fun ChunkManager.onSectionStatusChanged(arg0: Int, arg1: Int, arg2: Int, arg3: Boolean) = this.method_62872(arg0, arg1, arg2, arg3)
 /**
  * method_12122
  */
@@ -29,6 +29,10 @@ fun ChunkManager.setChunkForced(arg0: ChunkPos, arg1: Boolean) = this.method_121
  * method_21730
  */
 fun ChunkManager.getWorldChunk(arg0: Int, arg1: Int) = this.method_21730(arg0, arg1)
+/**
+ * method_12128
+ */
+fun ChunkManager.setMobSpawnOptions(arg0: Boolean) = this.method_12128(arg0)
 /**
  * method_12121
  */

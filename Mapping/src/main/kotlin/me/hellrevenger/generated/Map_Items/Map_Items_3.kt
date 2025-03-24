@@ -2,6 +2,306 @@ package me.hellrevenger.generated.Map_Items
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_28355
+ */
+val KClass<Items>.AXOLOTL_SPAWN_EGG by aliasStatic(Items::field_28355)
+/**
+ * field_38216
+ */
+val KClass<Items>.OAK_CHEST_BOAT by aliasStatic(Items::field_38216)
+/**
+ * field_8325
+ */
+val KClass<Items>.PILLAGER_SPAWN_EGG by aliasStatic(Items::field_8325)
+/**
+ * field_38219
+ */
+val KClass<Items>.WARDEN_SPAWN_EGG by aliasStatic(Items::field_38219)
+/**
+ * field_8322
+ */
+val KClass<Items>.GOLDEN_SHOVEL by aliasStatic(Items::field_8322)
+/**
+ * field_8324
+ */
+val KClass<Items>.BONE_MEAL by aliasStatic(Items::field_8324)
+/**
+ * field_8323
+ */
+val KClass<Items>.PUFFERFISH by aliasStatic(Items::field_8323)
+/**
+ * field_8450
+ */
+val KClass<Items>.FIREWORK_STAR by aliasStatic(Items::field_8450)
+/**
+ * field_8806
+ */
+val KClass<Items>.MUSIC_DISC_WAIT by aliasStatic(Items::field_8806)
+/**
+ * field_8807
+ */
+val KClass<Items>.DIAMOND_HORSE_ARMOR by aliasStatic(Items::field_8807)
+/**
+ * field_8805
+ */
+val KClass<Items>.DIAMOND_HELMET by aliasStatic(Items::field_8805)
+/**
+ * field_8802
+ */
+val KClass<Items>.DIAMOND_SWORD by aliasStatic(Items::field_8802)
+/**
+ * field_8803
+ */
+val KClass<Items>.EGG by aliasStatic(Items::field_8803)
+/**
+ * field_8099
+ */
+val KClass<Items>.BROWN_DYE by aliasStatic(Items::field_8099)
+/**
+ * field_38974
+ */
+val KClass<Items>.DISC_FRAGMENT_5 by aliasStatic(Items::field_38974)
+/**
+ * field_47832
+ */
+val KClass<Items>.ARMADILLO_SPAWN_EGG by aliasStatic(Items::field_47832)
+/**
+ * field_47831
+ */
+val KClass<Items>.WOLF_ARMOR by aliasStatic(Items::field_47831)
+/**
+ * field_8094
+ */
+val KClass<Items>.ACACIA_BOAT by aliasStatic(Items::field_8094)
+/**
+ * field_47830
+ */
+val KClass<Items>.ARMADILLO_SCUTE by aliasStatic(Items::field_47830)
+/**
+ * field_8093
+ */
+val KClass<Items>.ZOMBIFIED_PIGLIN_SPAWN_EGG by aliasStatic(Items::field_8093)
+/**
+ * field_8090
+ */
+val KClass<Items>.TURTLE_HELMET by aliasStatic(Items::field_8090)
+/**
+ * field_8317
+ */
+val KClass<Items>.WHEAT_SEEDS by aliasStatic(Items::field_8317)
+/**
+ * field_8091
+ */
+val KClass<Items>.WOODEN_SWORD by aliasStatic(Items::field_8091)
+/**
+ * field_8447
+ */
+val KClass<Items>.SALMON_SPAWN_EGG by aliasStatic(Items::field_8447)
+/**
+ * field_8313
+ */
+val KClass<Items>.CHAINMAIL_BOOTS by aliasStatic(Items::field_8313)
+/**
+ * field_8446
+ */
+val KClass<Items>.WHITE_DYE by aliasStatic(Items::field_8446)
+/**
+ * field_38973
+ */
+val KClass<Items>.MUSIC_DISC_5 by aliasStatic(Items::field_38973)
+/**
+ * field_8449
+ */
+val KClass<Items>.ENDER_EYE by aliasStatic(Items::field_8449)
+/**
+ * field_8448
+ */
+val KClass<Items>.NAME_TAG by aliasStatic(Items::field_8448)
+/**
+ * field_8227
+ */
+val KClass<Items>.RABBIT_SPAWN_EGG by aliasStatic(Items::field_8227)
+/**
+ * field_8226
+ */
+val KClass<Items>.BLACK_DYE by aliasStatic(Items::field_8226)
+/**
+ * field_8220
+ */
+val KClass<Items>.COMMAND_BLOCK_MINECART by aliasStatic(Items::field_8220)
+/**
+ * field_8486
+ */
+val KClass<Items>.SPRUCE_BOAT by aliasStatic(Items::field_8486)
+/**
+ * field_8355
+ */
+val KClass<Items>.MUSIC_DISC_WARD by aliasStatic(Items::field_8355)
+/**
+ * field_8485
+ */
+val KClass<Items>.WOLF_SPAWN_EGG by aliasStatic(Items::field_8485)
+/**
+ * field_18138
+ */
+val KClass<Items>.LEATHER_HORSE_ARMOR by aliasStatic(Items::field_18138)
+/**
+ * field_18005
+ */
+val KClass<Items>.FOX_SPAWN_EGG by aliasStatic(Items::field_18005)
+/**
+ * field_50140
+ */
+val KClass<Items>.OMINOUS_BOTTLE by aliasStatic(Items::field_50140)
+/**
+ * field_8705
+ */
+val KClass<Items>.WATER_BUCKET by aliasStatic(Items::field_8705)
+/**
+ * field_8480
+ */
+val KClass<Items>.SHULKER_SPAWN_EGG by aliasStatic(Items::field_8480)
+/**
+ * field_8836
+ */
+val KClass<Items>.HOPPER_MINECART by aliasStatic(Items::field_8836)
+/**
+ * field_8834
+ */
+val KClass<Items>.MUSIC_DISC_STAL by aliasStatic(Items::field_8834)
+/**
+ * field_8835
+ */
+val KClass<Items>.CHICKEN_SPAWN_EGG by aliasStatic(Items::field_8835)
+/**
+ * field_8832
+ */
+val KClass<Items>.WITHER_SKELETON_SPAWN_EGG by aliasStatic(Items::field_8832)
+/**
+ * field_8833
+ */
+val KClass<Items>.ELYTRA by aliasStatic(Items::field_8833)
+/**
+ * field_55044
+ */
+val KClass<Items>.RESIN_BRICK by aliasStatic(Items::field_55044)
+/**
+ * field_8218
+ */
+val KClass<Items>.CHAINMAIL_LEGGINGS by aliasStatic(Items::field_8218)
+/**
+ * field_8479
+ */
+val KClass<Items>.SUGAR by aliasStatic(Items::field_8479)
+/**
+ * field_8346
+ */
+val KClass<Items>.POLAR_BEAR_SPAWN_EGG by aliasStatic(Items::field_8346)
+/**
+ * field_8345
+ */
+val KClass<Items>.BLUE_DYE by aliasStatic(Items::field_8345)
+/**
+ * field_8478
+ */
+val KClass<Items>.TROPICAL_FISH_BUCKET by aliasStatic(Items::field_8478)
+/**
+ * field_8348
+ */
+val KClass<Items>.DIAMOND_LEGGINGS by aliasStatic(Items::field_8348)
+/**
+ * field_43196
+ */
+val KClass<Items>.WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE by aliasStatic(Items::field_43196)
+/**
+ * field_8347
+ */
+val KClass<Items>.COOKED_MUTTON by aliasStatic(Items::field_8347)
+/**
+ * field_43195
+ */
+val KClass<Items>.PITCHER_POD by aliasStatic(Items::field_43195)
+/**
+ * field_8475
+ */
+val KClass<Items>.IRON_AXE by aliasStatic(Items::field_8475)
+/**
+ * field_8477
+ */
+val KClass<Items>.DIAMOND by aliasStatic(Items::field_8477)
+/**
+ * field_8344
+ */
+val KClass<Items>.MUSIC_DISC_MELLOHI by aliasStatic(Items::field_8344)
+/**
+ * field_54314
+ */
+val KClass<Items>.BROWN_BUNDLE by aliasStatic(Items::field_54314)
+/**
+ * field_54315
+ */
+val KClass<Items>.GREEN_BUNDLE by aliasStatic(Items::field_54315)
+/**
+ * field_27876
+ */
+val KClass<Items>.POWDER_SNOW_BUCKET by aliasStatic(Items::field_27876)
+/**
+ * field_54316
+ */
+val KClass<Items>.RED_BUNDLE by aliasStatic(Items::field_54316)
+/**
+ * field_42707
+ */
+val KClass<Items>.CHERRY_CHEST_BOAT by aliasStatic(Items::field_42707)
+/**
+ * field_54317
+ */
+val KClass<Items>.BLACK_BUNDLE by aliasStatic(Items::field_54317)
+/**
+ * field_42706
+ */
+val KClass<Items>.CHERRY_BOAT by aliasStatic(Items::field_42706)
+/**
+ * field_54310
+ */
+val KClass<Items>.LIGHT_GRAY_BUNDLE by aliasStatic(Items::field_54310)
+/**
+ * field_43198
+ */
+val KClass<Items>.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE by aliasStatic(Items::field_43198)
+/**
+ * field_54311
+ */
+val KClass<Items>.CYAN_BUNDLE by aliasStatic(Items::field_54311)
+/**
+ * field_43197
+ */
+val KClass<Items>.SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE by aliasStatic(Items::field_43197)
+/**
+ * field_54312
+ */
+val KClass<Items>.PURPLE_BUNDLE by aliasStatic(Items::field_54312)
+/**
+ * field_54313
+ */
+val KClass<Items>.BLUE_BUNDLE by aliasStatic(Items::field_54313)
+/**
+ * field_43199
+ */
+val KClass<Items>.RAISER_ARMOR_TRIM_SMITHING_TEMPLATE by aliasStatic(Items::field_43199)
+/**
+ * field_37536
+ */
+val KClass<Items>.TADPOLE_SPAWN_EGG by aliasStatic(Items::field_37536)
+/**
+ * field_8825
+ */
+val KClass<Items>.GOLDEN_AXE by aliasStatic(Items::field_8825)
+/**
+ * field_37535
+ */
+val KClass<Items>.FROG_SPAWN_EGG by aliasStatic(Items::field_37535)
+/**
  * field_50139
  */
 val KClass<Items>.OMINOUS_TRIAL_KEY by aliasStatic(Items::field_50139)
@@ -13,6 +313,10 @@ val KClass<Items>.SALMON by aliasStatic(Items::field_8209)
  * field_8208
  */
 val KClass<Items>.MUSHROOM_STEW by aliasStatic(Items::field_8208)
+/**
+ * field_55037
+ */
+val KClass<Items>.RESIN_CLUMP by aliasStatic(Items::field_55037)
 /**
  * field_49153
  */
@@ -54,17 +358,9 @@ val KClass<Items>.FISHING_ROD by aliasStatic(Items::field_8378)
  */
 val KClass<Items>.RABBIT_HIDE by aliasStatic(Items::field_8245)
 /**
- * field_8111
- */
-val KClass<Items>.SPRUCE_SIGN by aliasStatic(Items::field_8111)
-/**
  * field_8377
  */
 val KClass<Items>.DIAMOND_PICKAXE by aliasStatic(Items::field_8377)
-/**
- * field_8379
- */
-val KClass<Items>.LIGHT_BLUE_BANNER by aliasStatic(Items::field_8379)
 /**
  * field_8374
  */
@@ -117,18 +413,6 @@ val KClass<Items>.REDSTONE by aliasStatic(Items::field_8725)
  * field_8726
  */
 val KClass<Items>.CHICKEN by aliasStatic(Items::field_8726)
-/**
- * field_42709
- */
-val KClass<Items>.CHERRY_SIGN by aliasStatic(Items::field_42709)
-/**
- * field_42708
- */
-val KClass<Items>.CHERRY_HANGING_SIGN by aliasStatic(Items::field_42708)
-/**
- * field_8855
- */
-val KClass<Items>.LIGHT_GRAY_BANNER by aliasStatic(Items::field_8855)
 /**
  * field_8852
  */
@@ -189,10 +473,6 @@ val KClass<Items>.KNOWLEDGE_BOOK by aliasStatic(Items::field_8361)
  * field_8497
  */
 val KClass<Items>.MELON_SLICE by aliasStatic(Items::field_8497)
-/**
- * field_8496
- */
-val KClass<Items>.DARK_OAK_SIGN by aliasStatic(Items::field_8496)
 /**
  * field_8719
  */
@@ -262,6 +542,10 @@ val KClass<Items>.OCELOT_SPAWN_EGG by aliasStatic(Items::field_8132)
  */
 val KClass<Items>.GHAST_SPAWN_EGG by aliasStatic(Items::field_8265)
 /**
+ * field_52583
+ */
+val KClass<Items>.BORDURE_INDENTED_BANNER_PATTERN by aliasStatic(Items::field_52583)
+/**
  * field_8264
  */
 val KClass<Items>.RED_DYE by aliasStatic(Items::field_8264)
@@ -273,6 +557,10 @@ val KClass<Items>.LIME_DYE by aliasStatic(Items::field_8131)
  * field_8397
  */
 val KClass<Items>.GOLD_NUGGET by aliasStatic(Items::field_8397)
+/**
+ * field_52582
+ */
+val KClass<Items>.FIELD_MASONED_BANNER_PATTERN by aliasStatic(Items::field_52582)
 /**
  * field_20414
  */
@@ -297,10 +585,6 @@ val KClass<Items>.COOKED_PORKCHOP by aliasStatic(Items::field_8261)
  * field_8396
  */
 val KClass<Items>.IRON_LEGGINGS by aliasStatic(Items::field_8396)
-/**
- * field_8617
- */
-val KClass<Items>.GRAY_BANNER by aliasStatic(Items::field_8617)
 /**
  * field_8614
  */
@@ -345,14 +629,6 @@ val KClass<Items>.CHAINMAIL_CHESTPLATE by aliasStatic(Items::field_8873)
  * field_16314
  */
 val KClass<Items>.CAT_SPAWN_EGG by aliasStatic(Items::field_16314)
-/**
- * field_8128
- */
-val KClass<Items>.BLUE_BANNER by aliasStatic(Items::field_8128)
-/**
- * field_8124
- */
-val KClass<Items>.BROWN_BANNER by aliasStatic(Items::field_8124)
 /**
  * field_8389
  */
@@ -406,10 +682,6 @@ val KClass<Items>.SHEARS by aliasStatic(Items::field_8868)
  */
 val KClass<Items>.STICK by aliasStatic(Items::field_8600)
 /**
- * field_8867
- */
-val KClass<Items>.JUNGLE_SIGN by aliasStatic(Items::field_8867)
-/**
  * field_8601
  */
 val KClass<Items>.GLOWSTONE_DUST by aliasStatic(Items::field_8601)
@@ -441,14 +713,6 @@ val KClass<Items>.MUSIC_DISC_CREATOR by aliasStatic(Items::field_51628)
  * field_51629
  */
 val KClass<Items>.MUSIC_DISC_CREATOR_MUSIC_BOX by aliasStatic(Items::field_51629)
-/**
- * field_40228
- */
-val KClass<Items>.BAMBOO_SIGN by aliasStatic(Items::field_40228)
-/**
- * field_40229
- */
-val KClass<Items>.OAK_HANGING_SIGN by aliasStatic(Items::field_40229)
 /**
  * field_8159
  */
@@ -598,10 +862,6 @@ val KClass<Items>.MAP by aliasStatic(Items::field_8895)
  */
 val KClass<Items>.BLADE_POTTERY_SHERD by aliasStatic(Items::field_43204)
 /**
- * field_40238
- */
-val KClass<Items>.WARPED_HANGING_SIGN by aliasStatic(Items::field_40238)
-/**
  * field_8892
  */
 val KClass<Items>.PAINTING by aliasStatic(Items::field_8892)
@@ -618,29 +878,13 @@ val KClass<Items>.HUSK_SPAWN_EGG by aliasStatic(Items::field_8760)
  */
 val KClass<Items>.SKULL_BANNER_PATTERN by aliasStatic(Items::field_8891)
 /**
- * field_40234
- */
-val KClass<Items>.DARK_OAK_HANGING_SIGN by aliasStatic(Items::field_40234)
-/**
- * field_40235
- */
-val KClass<Items>.MANGROVE_HANGING_SIGN by aliasStatic(Items::field_40235)
-/**
  * field_49098
  */
 val KClass<Items>.WIND_CHARGE by aliasStatic(Items::field_49098)
 /**
- * field_40236
- */
-val KClass<Items>.BAMBOO_HANGING_SIGN by aliasStatic(Items::field_40236)
-/**
  * field_8149
  */
 val KClass<Items>.VINDICATOR_SPAWN_EGG by aliasStatic(Items::field_8149)
-/**
- * field_40237
- */
-val KClass<Items>.CRIMSON_HANGING_SIGN by aliasStatic(Items::field_40237)
 /**
  * field_8144
  */
@@ -686,10 +930,6 @@ val KClass<Items>.HEART_POTTERY_SHERD by aliasStatic(Items::field_43210)
  */
 val KClass<Items>.MINER_POTTERY_SHERD by aliasStatic(Items::field_43213)
 /**
- * field_8629
- */
-val KClass<Items>.CYAN_BANNER by aliasStatic(Items::field_8629)
-/**
  * field_43212
  */
 val KClass<Items>.HOWL_POTTERY_SHERD by aliasStatic(Items::field_43212)
@@ -702,10 +942,6 @@ val KClass<Items>.LAPIS_LAZULI by aliasStatic(Items::field_8759)
  */
 val KClass<Items>.SKULL_POTTERY_SHERD by aliasStatic(Items::field_43219)
 /**
- * field_40230
- */
-val KClass<Items>.SPRUCE_HANGING_SIGN by aliasStatic(Items::field_40230)
-/**
  * field_8623
  */
 val KClass<Items>.MUSIC_DISC_CHIRP by aliasStatic(Items::field_8623)
@@ -713,10 +949,6 @@ val KClass<Items>.MUSIC_DISC_CHIRP by aliasStatic(Items::field_8623)
  * field_43218
  */
 val KClass<Items>.SHELTER_POTTERY_SHERD by aliasStatic(Items::field_43218)
-/**
- * field_40231
- */
-val KClass<Items>.BIRCH_HANGING_SIGN by aliasStatic(Items::field_40231)
 /**
  * field_8753
  */
@@ -726,17 +958,9 @@ val KClass<Items>.GOLDEN_BOOTS by aliasStatic(Items::field_8753)
  */
 val KClass<Items>.IRON_INGOT by aliasStatic(Items::field_8620)
 /**
- * field_40232
- */
-val KClass<Items>.JUNGLE_HANGING_SIGN by aliasStatic(Items::field_40232)
-/**
  * field_8621
  */
 val KClass<Items>.BRICK by aliasStatic(Items::field_8621)
-/**
- * field_40233
- */
-val KClass<Items>.ACACIA_HANGING_SIGN by aliasStatic(Items::field_40233)
 /**
  * field_8884
  */
@@ -810,10 +1034,6 @@ val KClass<Items>.CARROT by aliasStatic(Items::field_8179)
  */
 val KClass<Items>.ENDER_DRAGON_SPAWN_EGG by aliasStatic(Items::field_40865)
 /**
- * field_8049
- */
-val KClass<Items>.YELLOW_BANNER by aliasStatic(Items::field_8049)
-/**
  * field_40866
  */
 val KClass<Items>.SNOW_GOLEM_SPAWN_EGG by aliasStatic(Items::field_40866)
@@ -862,10 +1082,6 @@ val KClass<Items>.IRON_CHESTPLATE by aliasStatic(Items::field_8523)
  */
 val KClass<Items>.WANDERING_TRADER_SPAWN_EGG by aliasStatic(Items::field_17732)
 /**
- * field_8788
- */
-val KClass<Items>.OAK_SIGN by aliasStatic(Items::field_8788)
-/**
  * field_23744
  */
 val KClass<Items>.ZOGLIN_SPAWN_EGG by aliasStatic(Items::field_23744)
@@ -889,6 +1105,10 @@ val KClass<Items>.SCRAPE_POTTERY_SHERD by aliasStatic(Items::field_49822)
  * field_8167
  */
 val KClass<Items>.WOODEN_HOE by aliasStatic(Items::field_8167)
+/**
+ * field_54620
+ */
+val KClass<Items>.PALE_OAK_BOAT by aliasStatic(Items::field_54620)
 /**
  * field_8297
  */
@@ -914,17 +1134,21 @@ val KClass<Items>.MOOSHROOM_SPAWN_EGG by aliasStatic(Items::field_8299)
  */
 val KClass<Items>.GRAY_DYE by aliasStatic(Items::field_8298)
 /**
- * field_8295
- */
-val KClass<Items>.GREEN_BANNER by aliasStatic(Items::field_8295)
-/**
  * field_8161
  */
 val KClass<Items>.TURTLE_SCUTE by aliasStatic(Items::field_8161)
 /**
+ * field_54621
+ */
+val KClass<Items>.PALE_OAK_CHEST_BOAT by aliasStatic(Items::field_54621)
+/**
  * field_8515
  */
 val KClass<Items>.BEETROOT_SOUP by aliasStatic(Items::field_8515)
+/**
+ * field_54624
+ */
+val KClass<Items>.CREAKING_SPAWN_EGG by aliasStatic(Items::field_54624)
 /**
  * field_8512
  */
@@ -953,10 +1177,6 @@ val KClass<Items>.MACE by aliasStatic(Items::field_49814)
  * field_49815
  */
 val KClass<Items>.FLOW_BANNER_PATTERN by aliasStatic(Items::field_49815)
-/**
- * field_8778
- */
-val KClass<Items>.LIME_BANNER by aliasStatic(Items::field_8778)
 /**
  * field_49816
  */
@@ -1138,10 +1358,6 @@ val KClass<Items>.AMETHYST_SHARD by aliasStatic(Items::field_27063)
  */
 val KClass<Items>.PHANTOM_SPAWN_EGG by aliasStatic(Items::field_8670)
 /**
- * field_8671
- */
-val KClass<Items>.MAGENTA_BANNER by aliasStatic(Items::field_8671)
-/**
  * field_8058
  */
 val KClass<Items>.DIAMOND_CHESTPLATE by aliasStatic(Items::field_8058)
@@ -1198,10 +1414,6 @@ val KClass<Items>.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE by aliasStatic(Items::field
  */
 val KClass<Items>.WOODEN_AXE by aliasStatic(Items::field_8406)
 /**
- * field_8539
- */
-val KClass<Items>.WHITE_BANNER by aliasStatic(Items::field_8539)
-/**
  * field_8409
  */
 val KClass<Items>.GUARDIAN_SPAWN_EGG by aliasStatic(Items::field_8409)
@@ -1213,10 +1425,6 @@ val KClass<Items>.GREEN_DYE by aliasStatic(Items::field_8408)
  * field_8403
  */
 val KClass<Items>.IRON_PICKAXE by aliasStatic(Items::field_8403)
-/**
- * field_8405
- */
-val KClass<Items>.PURPLE_BANNER by aliasStatic(Items::field_8405)
 /**
  * field_8669
  */
@@ -1238,13 +1446,21 @@ val KClass<Items>.OAK_BOAT by aliasStatic(Items::field_8533)
  */
 val KClass<Items>.CHARCOAL by aliasStatic(Items::field_8665)
 /**
+ * method_63748
+ */
+fun KClass<Items>.register(arg0: Block, arg1: BiFunction<Block, net.minecraft.class_1792.class_1793, Item>, arg2: net.minecraft.class_1792.class_1793) = Items.method_63748(arg0, arg1, arg2)
+/**
  * method_7991
  */
-fun KClass<Items>.register(arg0: String, arg1: Item) = Items.method_7991(arg0, arg1)
+fun KClass<Items>.register(arg0: String, arg1: net.minecraft.class_1792.class_1793) = Items.method_7991(arg0, arg1)
 /**
- * method_51348
+ * method_63750
  */
-fun KClass<Items>.register(arg0: RegistryKey<Item>, arg1: Item) = Items.method_51348(arg0, arg1)
+fun KClass<Items>.register(arg0: String, arg1: function_Function<net.minecraft.class_1792.class_1793, Item>, arg2: net.minecraft.class_1792.class_1793) = Items.method_63750(arg0, arg1, arg2)
+/**
+ * method_7993
+ */
+fun KClass<Items>.register(arg0: Block, arg1: BiFunction<Block, net.minecraft.class_1792.class_1793, Item>) = Items.method_7993(arg0, arg1)
 /**
  * method_7989
  */
@@ -1252,20 +1468,28 @@ fun KClass<Items>.register(arg0: Block) = Items.method_7989(arg0)
 /**
  * method_7992
  */
-fun KClass<Items>.register(arg0: Block, arg1: Item) = Items.method_7992(arg0, arg1)
+fun KClass<Items>.register(arg0: Block, arg1: net.minecraft.class_1792.class_1793) = Items.method_7992(arg0, arg1)
+/**
+ * method_7990
+ */
+fun KClass<Items>.register(arg0: String) = Items.method_7990(arg0)
+/**
+ * method_63747
+ */
+fun KClass<Items>.register(arg0: RegistryKey<Item>, arg1: function_Function<net.minecraft.class_1792.class_1793, Item>) = Items.method_63747(arg0, arg1)
 /**
  * method_35220
  */
 fun KClass<Items>.register(arg0: Block, arg1: Array<Block>) = Items.method_35220(arg0, *arg1)
 /**
+ * method_51348
+ */
+fun KClass<Items>.register(arg0: RegistryKey<Item>, arg1: function_Function<net.minecraft.class_1792.class_1793, Item>, arg2: net.minecraft.class_1792.class_1793) = Items.method_51348(arg0, arg1, arg2)
+/**
  * method_58096
  */
 fun KClass<Items>.register(arg0: Block, arg1: UnaryOperator<net.minecraft.class_1792.class_1793>) = Items.method_58096(arg0, arg1)
 /**
- * method_7993
+ * method_63749
  */
-fun KClass<Items>.register(arg0: BlockItem) = Items.method_7993(arg0)
-/**
- * method_7990
- */
-fun KClass<Items>.register(arg0: Identifier, arg1: Item) = Items.method_7990(arg0, arg1)
+fun KClass<Items>.register(arg0: String, arg1: function_Function<net.minecraft.class_1792.class_1793, Item>) = Items.method_63749(arg0, arg1)

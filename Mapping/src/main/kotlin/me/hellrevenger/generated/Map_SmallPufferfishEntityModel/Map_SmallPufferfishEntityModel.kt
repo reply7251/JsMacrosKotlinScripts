@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_32032
  */
-fun <T>KClass<SmallPufferfishEntityModel<T>>.getTexturedModelData() where T: Entity = SmallPufferfishEntityModel.method_32032()
+fun KClass<SmallPufferfishEntityModel>.getTexturedModelData() = SmallPufferfishEntityModel.method_32032()

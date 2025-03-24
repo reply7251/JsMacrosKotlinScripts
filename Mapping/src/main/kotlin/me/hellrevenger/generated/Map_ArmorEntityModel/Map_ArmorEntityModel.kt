@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_49032
  */
-fun <T>KClass<ArmorEntityModel<T>>.getModelData(arg0: Dilation) where T: LivingEntity = ArmorEntityModel.method_49032(arg0)
+fun <S>KClass<ArmorEntityModel<S>>.getModelData(arg0: Dilation) where S: BipedEntityRenderState = ArmorEntityModel.method_49032(arg0)

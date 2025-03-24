@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_ShapeContext
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_61893
+ */
+fun KClass<ShapeContext>.of(arg0: Entity, arg1: Boolean) = ShapeContext.method_61893(arg0, arg1)
+/**
  * method_27866
  */
 fun ShapeContext.canWalkOnFluid(arg0: FluidState, arg1: FluidState) = this.method_27866(arg0, arg1)
@@ -17,6 +21,10 @@ fun ShapeContext.isDescending() = this.method_16193()
  * method_16195
  */
 fun KClass<ShapeContext>.of(arg0: Entity) = ShapeContext.method_16195(arg0)
+/**
+ * method_62878
+ */
+fun ShapeContext.getCollisionShape(arg0: BlockState, arg1: CollisionView, arg2: BlockPos) = this.method_62878(arg0, arg1, arg2)
 /**
  * method_16194
  */

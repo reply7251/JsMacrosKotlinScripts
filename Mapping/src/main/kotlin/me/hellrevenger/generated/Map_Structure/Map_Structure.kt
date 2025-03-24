@@ -14,10 +14,6 @@ fun Structure.getStructureSpawns() = this.method_41615()
  */
 fun Structure.getTerrainAdaptation() = this.method_42701()
 /**
- * method_41614
- */
-fun Structure.createStructureStart(arg0: DynamicRegistryManager, arg1: ChunkGenerator, arg2: BiomeSource, arg3: NoiseConfig, arg4: StructureTemplateManager, arg5: Long, arg6: ChunkPos, arg7: Int, arg8: HeightLimitView, arg9: Predicate<RegistryEntry<Biome>>) = this.method_41614(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
-/**
  * method_42699
  */
 fun <S>KClass<Structure>.createCodec(arg0: function_Function<net.minecraft.class_3195.class_7302, S>) where S: Structure = Structure.method_42699<S>(arg0)
@@ -33,6 +29,10 @@ fun Structure.getFeatureGenerationStep() = this.method_41616()
  * method_59863
  */
 fun KClass<Structure>.getAverageCornerHeights(arg0: net.minecraft.class_3195.class_7149, arg1: Int, arg2: Int, arg3: Int, arg4: Int) = Structure.method_59863(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_41614
+ */
+fun Structure.createStructureStart(arg0: RegistryEntry<Structure>, arg1: RegistryKey<world_World>, arg2: DynamicRegistryManager, arg3: ChunkGenerator, arg4: BiomeSource, arg5: NoiseConfig, arg6: StructureTemplateManager, arg7: Long, arg8: ChunkPos, arg9: Int, arg10: HeightLimitView, arg11: Predicate<RegistryEntry<Biome>>) = this.method_41614(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
 /**
  * method_41618
  */

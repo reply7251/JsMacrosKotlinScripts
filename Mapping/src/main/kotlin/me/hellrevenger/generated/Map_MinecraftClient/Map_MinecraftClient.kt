@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_MinecraftClient
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_1708
+ */
+val MinecraftClient.fontManager by alias(MinecraftClient::field_1708)
+/**
  * field_32144
  */
 var MinecraftClient.wireFrame by alias(MinecraftClient::field_32144)
@@ -190,6 +194,10 @@ fun MinecraftClient.isRealmsEnabled() = this.method_35706()
  */
 fun MinecraftClient.getServicesSignatureVerifier() = this.method_44256()
 /**
+ * method_62887
+ */
+fun MinecraftClient.getShaderLoader() = this.method_62887()
+/**
  * method_18096
  */
 fun MinecraftClient.disconnect(arg0: Screen, arg1: Boolean) = this.method_18096(arg0, arg1)
@@ -254,13 +262,13 @@ fun MinecraftClient.getVideoWarningManager() = this.method_30049()
  */
 fun MinecraftClient.hasReducedDebugInfo() = this.method_1555()
 /**
- * method_16011
- */
-fun MinecraftClient.getProfiler() = this.method_16011()
-/**
  * method_29610
  */
 fun MinecraftClient.startIntegratedServer(arg0: net.minecraft.class_32.class_5143, arg1: ResourcePackManager, arg2: SaveLoader, arg3: Boolean) = this.method_29610(arg0, arg1, arg2, arg3)
+/**
+ * method_1544
+ */
+fun MinecraftClient.getMusicInstance() = this.method_1544()
 /**
  * method_44377
  */
@@ -281,6 +289,10 @@ fun MinecraftClient.getPaintingManager() = this.method_18321()
  * method_31975
  */
 fun MinecraftClient.getBlockEntityRenderDispatcher() = this.method_31975()
+/**
+ * method_61963
+ */
+fun MinecraftClient.getMapTextureManager() = this.method_61963()
 /**
  * method_44714
  */
@@ -314,10 +326,6 @@ fun MinecraftClient.onResourceReloadFailure(arg0: Throwable, arg1: Text, arg2: n
  */
 fun MinecraftClient.updateWindowTitle() = this.method_24288()
 /**
- * method_1544
- */
-fun MinecraftClient.getMusicType() = this.method_1544()
-/**
  * method_29970
  */
 fun MinecraftClient.setScreenAndRender(arg0: Screen) = this.method_29970(arg0)
@@ -340,7 +348,7 @@ fun MinecraftClient.getSkinProvider() = this.method_1582()
 /**
  * method_31974
  */
-fun MinecraftClient.getEntityModelLoader() = this.method_31974()
+fun MinecraftClient.getLoadedEntityModels() = this.method_31974()
 /**
  * method_47600
  */
@@ -398,6 +406,10 @@ fun MinecraftClient.isTelemetryEnabledByApi() = this.method_47596()
  */
 fun KClass<MinecraftClient>.getInstance() = MinecraftClient.method_1551()
 /**
+ * method_63507
+ */
+fun MinecraftClient.onShaderResourceReloadFailure(arg0: Exception) = this.method_63507(arg0)
+/**
  * method_48185
  */
 fun MinecraftClient.setNavigationType(arg0: GuiNavigationType) = this.method_48185(arg0)
@@ -426,6 +438,10 @@ fun MinecraftClient.getRealmsPeriodicCheckers() = this.method_44646()
  */
 fun MinecraftClient.onDisconnected() = this.method_55505()
 /**
+ * method_61965
+ */
+fun MinecraftClient.getMapRenderer() = this.method_61965()
+/**
  * method_29043
  */
 fun MinecraftClient.isMultiplayerEnabled() = this.method_29043()
@@ -442,6 +458,10 @@ fun MinecraftClient.getTutorialManager() = this.method_1577()
  */
 fun MinecraftClient.isIntegratedServerRunning() = this.method_1496()
 /**
+ * method_1536
+ */
+fun MinecraftClient.doAttack() = this.method_1536()
+/**
  * method_1521
  */
 fun MinecraftClient.reloadResources() = this.method_1521()
@@ -453,6 +473,10 @@ fun KClass<MinecraftClient>.getModStatus() = MinecraftClient.method_24289()
  * method_33883
  */
 fun MinecraftClient.shouldFilterText() = this.method_33883()
+/**
+ * method_61962
+ */
+fun KClass<MinecraftClient>.saveCrashReport(arg0: File, arg1: CrashReport) = MinecraftClient.method_61962(arg0, arg1)
 /**
  * method_53462
  */
@@ -486,13 +510,13 @@ fun MinecraftClient.scheduleStop() = this.method_1592()
  */
 fun MinecraftClient.openGameMenu(arg0: Boolean) = this.method_20539(arg0)
 /**
+ * method_1583
+ */
+fun MinecraftClient.doItemUse() = this.method_1583()
+/**
  * method_31320
  */
 fun MinecraftClient.getSocialInteractionsManager() = this.method_31320()
-/**
- * method_60646
- */
-fun MinecraftClient.getRenderTickCounter() = this.method_60646()
 /**
  * method_52700
  */
@@ -521,6 +545,10 @@ fun KClass<MinecraftClient>.isHudEnabled() = MinecraftClient.method_1498()
  * method_48186
  */
 fun MinecraftClient.getNavigationType() = this.method_48186()
+/**
+ * method_65386
+ */
+fun MinecraftClient.getItemModelManager() = this.method_65386()
 /**
  * method_1531
  */
@@ -602,10 +630,6 @@ fun MinecraftClient.getResourcePackManager() = this.method_1520()
  */
 fun MinecraftClient.isConnectedToLocalServer() = this.method_47392()
 /**
- * method_1524
- */
-fun MinecraftClient.handleProfilerKeyPress(arg0: Int) = this.method_1524(arg0)
-/**
  * method_44713
  */
 fun MinecraftClient.getNarratorManager() = this.method_44713()
@@ -614,6 +638,10 @@ fun MinecraftClient.getNarratorManager() = this.method_44713()
  */
 fun MinecraftClient.getNetworkProxy() = this.method_1487()
 /**
+ * method_61964
+ */
+fun MinecraftClient.getInactivityFpsLimiter() = this.method_61964()
+/**
  * method_43587
  */
 fun MinecraftClient.setCrashReportSupplier(arg0: CrashReport) = this.method_43587(arg0)
@@ -621,3 +649,7 @@ fun MinecraftClient.setCrashReportSupplier(arg0: CrashReport) = this.method_4358
  * method_33884
  */
 fun MinecraftClient.getChatRestriction() = this.method_33884()
+/**
+ * method_61966
+ */
+fun MinecraftClient.getRenderTickCounter() = this.method_61966()

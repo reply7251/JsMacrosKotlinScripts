@@ -10,6 +10,10 @@ fun KClass<EnchantmentHelper>.getItemDamage(arg0: ServerWorld, arg1: ItemStack, 
  */
 fun KClass<EnchantmentHelper>.getBlockExperience(arg0: ServerWorld, arg1: ItemStack, arg2: Int) = EnchantmentHelper.method_60157(arg0, arg1, arg2)
 /**
+ * method_61711
+ */
+fun KClass<EnchantmentHelper>.getEnchantedBookWith(arg0: EnchantmentLevelEntry) = EnchantmentHelper.method_61711(arg0)
+/**
  * method_60142
  */
 fun KClass<EnchantmentHelper>.hasAnyEnchantmentsWith(arg0: ItemStack, arg1: ComponentType<*>) = EnchantmentHelper.method_60142(arg0, arg1)
@@ -76,7 +80,7 @@ fun KClass<EnchantmentHelper>.applyAttributeModifiers(arg0: ItemStack, arg1: Att
 /**
  * method_60127
  */
-fun KClass<EnchantmentHelper>.onProjectileSpawned(arg0: ServerWorld, arg1: ItemStack, arg2: PersistentProjectileEntity, arg3: Consumer<Item>) = EnchantmentHelper.method_60127(arg0, arg1, arg2, arg3)
+fun KClass<EnchantmentHelper>.onProjectileSpawned(arg0: ServerWorld, arg1: ItemStack, arg2: ProjectileEntity, arg3: Consumer<Item>) = EnchantmentHelper.method_60127(arg0, arg1, arg2, arg3)
 /**
  * method_60124
  */
@@ -117,6 +121,10 @@ fun KClass<EnchantmentHelper>.enchant(arg0: Random, arg1: ItemStack, arg2: Int, 
  * method_8231
  */
 fun KClass<EnchantmentHelper>.removeConflicts(arg0: MutableList<EnchantmentLevelEntry>, arg1: EnchantmentLevelEntry) = EnchantmentHelper.method_8231(arg0, arg1)
+/**
+ * method_63016
+ */
+fun KClass<EnchantmentHelper>.onTargetDamaged(arg0: ServerWorld, arg1: Entity, arg2: DamageSource, arg3: ItemStack, arg4: Consumer<Item>) = EnchantmentHelper.method_63016(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_57529
  */
@@ -172,11 +180,11 @@ fun KClass<EnchantmentHelper>.onTargetDamaged(arg0: ServerWorld, arg1: Entity, a
 /**
  * method_60174
  */
-fun <T>KClass<EnchantmentHelper>.getEffectListAndLevel(arg0: ItemStack, arg1: ComponentType<T>) = EnchantmentHelper.method_60174<T>(arg0, arg1)
+fun <T>KClass<EnchantmentHelper>.getHighestLevelEffect(arg0: ItemStack, arg1: ComponentType<T>) = EnchantmentHelper.method_60174<T>(arg0, arg1)
 /**
  * method_60168
  */
-fun KClass<EnchantmentHelper>.getRepairWithXp(arg0: ServerWorld, arg1: ItemStack, arg2: Int) = EnchantmentHelper.method_60168(arg0, arg1, arg2)
+fun KClass<EnchantmentHelper>.getRepairWithExperience(arg0: ServerWorld, arg1: ItemStack, arg2: Int) = EnchantmentHelper.method_60168(arg0, arg1, arg2)
 /**
  * method_60140
  */

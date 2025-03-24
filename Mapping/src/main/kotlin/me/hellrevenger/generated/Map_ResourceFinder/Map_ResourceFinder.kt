@@ -10,6 +10,10 @@ fun ResourceFinder.toResourcePath(arg0: Identifier) = this.method_45112(arg0)
  */
 fun ResourceFinder.toResourceId(arg0: Identifier) = this.method_45115(arg0)
 /**
+ * method_65309
+ */
+fun KClass<ResourceFinder>.json(arg0: RegistryKey<out Registry<*>>) = ResourceFinder.method_65309(arg0)
+/**
  * method_45114
  */
 fun KClass<ResourceFinder>.json(arg0: String) = ResourceFinder.method_45114(arg0)

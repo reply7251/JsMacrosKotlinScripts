@@ -50,6 +50,10 @@ fun EntityNavigation.isIdle() = this.method_6357()
  */
 fun EntityNavigation.getTargetPos() = this.method_6355()
 /**
+ * method_61441
+ */
+fun EntityNavigation.updateRange() = this.method_61441()
+/**
  * method_6352
  */
 fun EntityNavigation.findPathTo(arg0: Double, arg1: Double, arg2: Double, arg3: Int) = this.method_6352(arg0, arg1, arg2, arg3)
@@ -101,6 +105,10 @@ fun EntityNavigation.findPathTo(arg0: Entity, arg1: Int) = this.method_6349(arg0
  * method_6356
  */
 fun EntityNavigation.recalculatePath() = this.method_6356()
+/**
+ * method_61439
+ */
+fun EntityNavigation.setMaxFollowRange(arg0: Float) = this.method_61439(arg0)
 /**
  * method_21643
  */

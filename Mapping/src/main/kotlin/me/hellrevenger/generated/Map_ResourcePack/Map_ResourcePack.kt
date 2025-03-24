@@ -14,6 +14,10 @@ fun ResourcePack.openRoot(arg0: Array<String>) = this.method_14410(*arg0)
  */
 fun ResourcePack.open(arg0: ResourceType, arg1: Identifier) = this.method_14405(arg0, arg1)
 /**
+ * method_14407
+ */
+fun <T>ResourcePack.parseMetadata(arg0: ResourceMetadataSerializer<T>) = this.method_14407<T>(arg0)
+/**
  * method_56926
  */
 fun ResourcePack.getInfo() = this.method_56926()
@@ -29,7 +33,3 @@ fun ResourcePack.getKnownPackInfo() = this.method_56929()
  * method_14406
  */
 fun ResourcePack.getNamespaces(arg0: ResourceType) = this.method_14406(arg0)
-/**
- * method_14407
- */
-fun <T>ResourcePack.parseMetadata(arg0: ResourceMetadataReader<T>) = this.method_14407<T>(arg0)

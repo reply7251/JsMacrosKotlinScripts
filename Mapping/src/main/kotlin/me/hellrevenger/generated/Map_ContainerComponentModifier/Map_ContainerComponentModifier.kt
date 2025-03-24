@@ -24,7 +24,7 @@ fun <T>ContainerComponentModifier<T>.getComponentType() = this.method_59719()
 /**
  * method_59724
  */
-fun <T>ContainerComponentModifier<T>.create(arg0: T, arg1: Stream<ItemStack>) = this.method_59724(arg0, arg1)
+fun <T>ContainerComponentModifier<T>.apply(arg0: T, arg1: Stream<ItemStack>) = this.method_59724(arg0, arg1)
 /**
  * method_59722
  */

@@ -2,10 +2,10 @@ package me.hellrevenger.generated.Map_ResourceMetadataSerializer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_45252
+ * comp_3436
  */
-fun <T>KClass<ResourceMetadataSerializer<T>>.fromCodec(arg0: String, arg1: Codec<T>) = ResourceMetadataSerializer.method_45252<T>(arg0, arg1)
+fun <T>ResourceMetadataSerializer<T>.name() = this.comp_3436()
 /**
- * method_45251
+ * comp_3437
  */
-fun <T>ResourceMetadataSerializer<T>.toJson(arg0: T) = this.method_45251(arg0)
+fun <T>ResourceMetadataSerializer<T>.codec() = this.comp_3437()

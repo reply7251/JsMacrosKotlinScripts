@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun <T>Palette<T>.getPacketSize() = this.method_12290()
 /**
- * method_39956
- */
-fun <T>Palette<T>.copy() = this.method_39956()
-/**
  * method_12291
  */
 fun <T>Palette<T>.index(arg0: T) = this.method_12291(arg0)
@@ -33,3 +29,7 @@ fun <T>Palette<T>.getSize() = this.method_12197()
  * method_19525
  */
 fun <T>Palette<T>.hasAny(arg0: Predicate<T>) = this.method_19525(arg0)
+/**
+ * method_39956
+ */
+fun <T>Palette<T>.copy(arg0: PaletteResizeListener<T>) = this.method_39956(arg0)

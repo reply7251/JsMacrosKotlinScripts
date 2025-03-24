@@ -26,6 +26,10 @@ fun <K, V>KClass<Util>.mapWith(arg0: Map<K, V>, arg1: K, arg2: V) = Util.method_
  */
 fun KClass<Util>.getEpochTimeMs() = Util.method_659()
 /**
+ * method_27958
+ */
+fun KClass<Util>.getIoWorkerExecutor() = Util.method_27958()
+/**
  * method_22321
  */
 fun KClass<Util>.getInnermostMessage(arg0: Throwable) = Util.method_22321(arg0)
@@ -36,7 +40,11 @@ fun KClass<Util>.getJVMFlags() = Util.method_651()
 /**
  * method_22320
  */
-fun <T>KClass<Util>.throwOrPause(arg0: T) where T: Throwable = Util.method_22320<T>(arg0)
+fun <T>KClass<Util>.getFatalOrPause(arg0: T) where T: Throwable = Util.method_22320<T>(arg0)
+/**
+ * method_65951
+ */
+fun KClass<Util>.getAvailableBackgroundThreads() = Util.method_65951()
 /**
  * method_648
  */
@@ -50,6 +58,10 @@ fun <T>KClass<Util>.decodeFixedLengthList(arg0: MutableList<T>, arg1: Int) = Uti
  */
 fun <T>KClass<Util>.withPrepended(arg0: T, arg1: MutableList<T>) = Util.method_58272<T>(arg0, arg1)
 /**
+ * method_61199
+ */
+fun <T>KClass<Util>.or(arg0: Predicate<in T>) = Util.method_61199<T>(arg0)
+/**
  * method_54908
  */
 fun <T>KClass<Util>.readTyped(arg0: types_Type<T>, arg1: Dynamic<*>) = Util.method_54908<T>(arg0, arg1)
@@ -58,21 +70,25 @@ fun <T>KClass<Util>.readTyped(arg0: types_Type<T>, arg1: Dynamic<*>) = Util.meth
  */
 fun KClass<Util>.getOperatingSystem() = Util.method_668()
 /**
- * method_55473
+ * method_61194
  */
-fun KClass<Util>.getDownloadWorkerExecutor() = Util.method_55473()
+fun <T>KClass<Util>.and(arg0: Predicate<in T>, arg1: Predicate<in T>, arg2: Predicate<in T>, arg3: Predicate<in T>) = Util.method_61194<T>(arg0, arg1, arg2, arg3)
 /**
  * method_27172
  */
 fun KClass<Util>.getRandom(arg0: IntArray, arg1: Random) = Util.method_27172(arg0, arg1)
 /**
- * method_18349
+ * method_61190
  */
-fun KClass<Util>.getMainWorkerExecutor() = Util.method_18349()
+fun <T>KClass<Util>.and(arg0: Predicate<in T>, arg1: Predicate<in T>) = Util.method_61190<T>(arg0, arg1)
 /**
  * method_43027
  */
 fun <T>KClass<Util>.copyShuffled(arg0: ObjectArrayList<T>, arg1: Random) = Util.method_43027<T>(arg0, arg1)
+/**
+ * method_61196
+ */
+fun <T>KClass<Util>.and(arg0: Predicate<in T>, arg1: Predicate<in T>, arg2: Predicate<in T>, arg3: Predicate<in T>, arg4: Predicate<in T>) = Util.method_61196<T>(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_43658
  */
@@ -102,13 +118,13 @@ fun <T>KClass<Util>.getLast(arg0: MutableList<T>) = Util.method_20793<T>(arg0)
  */
 fun KClass<Util>.getChoiceType(arg0: TypeReference, arg1: String) = Util.method_29187(arg0, arg1)
 /**
+ * method_63541
+ */
+fun <K, V>KClass<Util>.mapEnum(arg0: Class<K>, arg1: function_Function<K, V>) where K: Enum<K> = Util.method_63541<K, V>(arg0, arg1)
+/**
  * method_17974
  */
 fun <T>KClass<Util>.ifPresentOrElse(arg0: Optional<T>, arg1: Consumer<T>, arg2: Runnable) = Util.method_17974<T>(arg0, arg1, arg2)
-/**
- * method_27958
- */
-fun KClass<Util>.getIoWorkerExecutor() = Util.method_27958()
 /**
  * method_54907
  */
@@ -116,7 +132,7 @@ fun <A, B>KClass<Util>.apply(arg0: Typed<A>, arg1: types_Type<B>, arg2: UnaryOpe
 /**
  * method_56616
  */
-fun <T>KClass<Util>.anyOf(arg0: MutableList<out Predicate<T>>) = Util.method_56616<T>(arg0)
+fun <T>KClass<Util>.anyOf(arg0: MutableList<out Predicate<in T>>) = Util.method_56616<T>(arg0)
 /**
  * method_658
  */
@@ -126,13 +142,13 @@ fun KClass<Util>.getMeasuringTimeMs() = Util.method_658()
  */
 fun KClass<Util>.validateUri(arg0: String) = Util.method_60931(arg0)
 /**
- * method_37910
- */
-fun <V>KClass<Util>.debugSupplier(arg0: String, arg1: Supplier<V>) = Util.method_37910<V>(arg0, arg1)
-/**
  * method_29476
  */
 fun KClass<Util>.startTimerHack() = Util.method_29476()
+/**
+ * method_61192
+ */
+fun <T>KClass<Util>.and(arg0: Predicate<in T>, arg1: Predicate<in T>, arg2: Predicate<in T>) = Util.method_61192<T>(arg0, arg1, arg2)
 /**
  * method_43253
  */
@@ -154,6 +170,10 @@ fun <T>KClass<Util>.waitAndApply(arg0: function_Function<Executor, CompletableFu
  */
 fun KClass<Util>.relativeCopy(arg0: file_Path, arg1: file_Path, arg2: file_Path) = Util.method_29775(arg0, arg1, arg2)
 /**
+ * method_55473
+ */
+fun KClass<Util>.getDownloadWorkerExecutor() = Util.method_55473()
+/**
  * method_27173
  */
 fun <T>KClass<Util>.getRandom(arg0: Array<T>, arg1: Random) = Util.method_27173<T>(arg0, arg1)
@@ -161,6 +181,10 @@ fun <T>KClass<Util>.getRandom(arg0: Array<T>, arg1: Random) = Util.method_27173<
  * method_38646
  */
 fun KClass<Util>.setMissingBreakpointHandler(arg0: Consumer<String>) = Util.method_38646(arg0)
+/**
+ * method_61208
+ */
+fun <T>KClass<Util>.or(arg0: Array<Predicate<in T>>) = Util.method_61208<T>(*arg0)
 /**
  * method_59901
  */
@@ -184,7 +208,15 @@ fun <T>KClass<Util>.withAppended(arg0: MutableList<T>, arg1: T) = Util.method_57
 /**
  * method_39977
  */
-fun KClass<Util>.error(arg0: String, arg1: Throwable) = Util.method_39977(arg0, arg1)
+fun KClass<Util>.logErrorOrPause(arg0: String, arg1: Throwable) = Util.method_39977(arg0, arg1)
+/**
+ * method_61204
+ */
+fun <T>KClass<Util>.or(arg0: Predicate<in T>, arg1: Predicate<in T>, arg2: Predicate<in T>, arg3: Predicate<in T>) = Util.method_61204<T>(arg0, arg1, arg2, arg3)
+/**
+ * method_61211
+ */
+fun <T>KClass<Util>.or() = Util.method_61211<T>()
 /**
  * method_43028
  */
@@ -192,7 +224,7 @@ fun <T>KClass<Util>.shuffle(arg0: MutableList<T>, arg1: Random) = Util.method_43
 /**
  * method_33559
  */
-fun KClass<Util>.error(arg0: String) = Util.method_33559(arg0)
+fun KClass<Util>.logErrorOrPause(arg0: String) = Util.method_33559(arg0)
 /**
  * method_18350
  */
@@ -218,6 +250,10 @@ fun <T>KClass<Util>.getValueAsString(arg0: property_Property<T>, arg1: Object) w
  */
 fun <T>KClass<Util>.debugSupplier(arg0: Supplier<T>, arg1: Supplier<String>) = Util.method_41238<T>(arg0, arg1)
 /**
+ * method_64122
+ */
+fun KClass<Util>.runInNamedZone(arg0: Runnable, arg1: String) = Util.method_64122(arg0, arg1)
+/**
  * method_29190
  */
 fun KClass<Util>.decodeFixedLengthArray(arg0: IntStream, arg1: Int) = Util.method_29190(arg0, arg1)
@@ -234,21 +270,33 @@ fun <T>KClass<Util>.getRandom(arg0: MutableList<T>, arg1: Random) = Util.method_
  */
 fun <T>KClass<Util>.getRandomOrEmpty(arg0: MutableList<T>, arg1: Random) = Util.method_40083<T>(arg0, arg1)
 /**
+ * method_61200
+ */
+fun <T>KClass<Util>.or(arg0: Predicate<in T>, arg1: Predicate<in T>) = Util.method_61200<T>(arg0, arg1)
+/**
  * method_56613
  */
-fun <T>KClass<Util>.allOf(arg0: MutableList<out Predicate<T>>) = Util.method_56613<T>(arg0)
-/**
- * method_33787
- */
-fun KClass<Util>.debugRunnable(arg0: String, arg1: Runnable) = Util.method_33787(arg0, arg1)
+fun <T>KClass<Util>.allOf(arg0: MutableList<out Predicate<in T>>) = Util.method_56613<T>(arg0)
 /**
  * method_43252
  */
 fun <T>KClass<Util>.copyShuffled(arg0: Stream<T>, arg1: Random) = Util.method_43252<T>(arg0, arg1)
 /**
+ * method_18349
+ */
+fun KClass<Util>.getMainWorkerExecutor() = Util.method_18349()
+/**
+ * method_61189
+ */
+fun <T>KClass<Util>.and(arg0: Predicate<in T>) = Util.method_61189<T>(arg0)
+/**
  * method_30309
  */
 fun KClass<Util>.replaceInvalidChars(arg0: String, arg1: CharPredicate) = Util.method_30309(arg0, arg1)
+/**
+ * method_61206
+ */
+fun <T>KClass<Util>.or(arg0: Predicate<in T>, arg1: Predicate<in T>, arg2: Predicate<in T>, arg3: Predicate<in T>, arg4: Predicate<in T>) = Util.method_61206<T>(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_30626
  */
@@ -282,6 +330,10 @@ fun <T>KClass<Util>.make(arg0: T, arg1: Consumer<in T>) = Util.method_654<T>(arg
  */
 fun <T>KClass<Util>.readTyped(arg0: types_Type<T>, arg1: Dynamic<*>, arg2: Boolean) = Util.method_55333<T>(arg0, arg1, arg2)
 /**
+ * method_61198
+ */
+fun <T>KClass<Util>.and(arg0: Array<Predicate<in T>>) = Util.method_61198<T>(*arg0)
+/**
  * method_664
  */
 fun <K, V>KClass<Util>.toMap() = Util.method_664<K, V>()
@@ -298,6 +350,14 @@ fun KClass<Util>.getFormattedCurrentTime() = Util.method_44893()
  */
 fun <T>KClass<Util>.waitAndApply(arg0: function_Function<Executor, T>, arg1: Predicate<T>) = Util.method_43498<T>(arg0, arg1)
 /**
+ * method_61210
+ */
+fun <T>KClass<Util>.and() = Util.method_61210<T>()
+/**
  * method_646
  */
 fun KClass<Util>.createTranslationKey(arg0: String, arg1: Identifier) = Util.method_646(arg0, arg1)
+/**
+ * method_61202
+ */
+fun <T>KClass<Util>.or(arg0: Predicate<in T>, arg1: Predicate<in T>, arg2: Predicate<in T>) = Util.method_61202<T>(arg0, arg1, arg2)

@@ -10,10 +10,6 @@ fun BakedModel.useAmbientOcclusion() = this.method_4708()
  */
 fun BakedModel.getParticleSprite() = this.method_4711()
 /**
- * method_4713
- */
-fun BakedModel.isBuiltin() = this.method_4713()
-/**
  * method_4712
  */
 fun BakedModel.hasDepth() = this.method_4712()
@@ -29,7 +25,3 @@ fun BakedModel.isSideLit() = this.method_24304()
  * method_4707
  */
 fun BakedModel.getQuads(arg0: BlockState, arg1: Direction, arg2: Random) = this.method_4707(arg0, arg1, arg2)
-/**
- * method_4710
- */
-fun BakedModel.getOverrides() = this.method_4710()

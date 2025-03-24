@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 val KClass<SuggestionProviders>.SUMMONABLE_ENTITIES by aliasStatic(SuggestionProviders::field_10935)
 /**
- * field_10932
- */
-val KClass<SuggestionProviders>.ALL_RECIPES by aliasStatic(SuggestionProviders::field_10932)
-/**
  * field_10933
  */
 val KClass<SuggestionProviders>.ASK_SERVER by aliasStatic(SuggestionProviders::field_10933)

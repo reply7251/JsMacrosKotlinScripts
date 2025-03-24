@@ -16,7 +16,7 @@ val KClass<WorldBorder>.DEFAULT_BORDER by aliasStatic(WorldBorder::field_24122)
 /**
  * method_61117
  */
-fun WorldBorder.clamp(arg0: BlockPos) = this.method_61117(arg0)
+fun WorldBorder.clampFloored(arg0: BlockPos) = this.method_61117(arg0)
 /**
  * method_11952
  */
@@ -84,7 +84,7 @@ fun WorldBorder.asVoxelShape() = this.method_17903()
 /**
  * method_39538
  */
-fun WorldBorder.clamp(arg0: Double, arg1: Double, arg2: Double) = this.method_39538(arg0, arg1, arg2)
+fun WorldBorder.clampFloored(arg0: Double, arg1: Double, arg2: Double) = this.method_39538(arg0, arg1, arg2)
 /**
  * method_27355
  */
@@ -122,9 +122,17 @@ fun WorldBorder.getBoundWest() = this.method_11976()
  */
 fun WorldBorder.getCenterX() = this.method_11964()
 /**
+ * method_61770
+ */
+fun WorldBorder.clamp(arg0: Vec3d) = this.method_61770(arg0)
+/**
  * method_11973
  */
 fun WorldBorder.setMaxRadius(arg0: Int) = this.method_11973(arg0)
+/**
+ * method_61769
+ */
+fun WorldBorder.clamp(arg0: Double, arg1: Double, arg2: Double) = this.method_61769(arg0, arg1, arg2)
 /**
  * method_35318
  */
@@ -164,7 +172,7 @@ fun WorldBorder.getSizeLerpTime() = this.method_11962()
 /**
  * method_61116
  */
-fun WorldBorder.clamp(arg0: Vec3d) = this.method_61116(arg0)
+fun WorldBorder.clampFloored(arg0: Vec3d) = this.method_61116(arg0)
 /**
  * method_11954
  */

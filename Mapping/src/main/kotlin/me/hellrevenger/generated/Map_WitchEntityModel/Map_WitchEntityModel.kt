@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_32065
  */
-fun <T>KClass<WitchEntityModel<T>>.getTexturedModelData() where T: Entity = WitchEntityModel.method_32065()
+fun KClass<WitchEntityModel>.getTexturedModelData() = WitchEntityModel.method_32065()
+/**
+ * method_62124
+ */
+fun WitchEntityModel.setAngles(arg0: WitchEntityRenderState) = this.method_62124(arg0)
 /**
  * method_2839
  */
-fun <T>WitchEntityModel<T>.getNose() where T: Entity = this.method_2839()
-/**
- * method_2840
- */
-fun <T>WitchEntityModel<T>.setLiftingNose(arg0: Boolean) where T: Entity = this.method_2840(arg0)
+fun WitchEntityModel.getNose() = this.method_2839()

@@ -14,13 +14,17 @@ val KClass<FeatureFlags>.DEFAULT_ENABLED_FEATURES by aliasStatic(FeatureFlags::f
  */
 val KClass<FeatureFlags>.VANILLA by aliasStatic(FeatureFlags::field_40177)
 /**
- * field_40178
+ * field_52556
  */
-val KClass<FeatureFlags>.BUNDLE by aliasStatic(FeatureFlags::field_40178)
+val KClass<FeatureFlags>.MINECART_IMPROVEMENTS by aliasStatic(FeatureFlags::field_52556)
 /**
  * field_45142
  */
 val KClass<FeatureFlags>.TRADE_REBALANCE by aliasStatic(FeatureFlags::field_45142)
+/**
+ * field_52555
+ */
+val KClass<FeatureFlags>.REDSTONE_EXPERIMENTS by aliasStatic(FeatureFlags::field_52555)
 /**
  * field_40180
  */

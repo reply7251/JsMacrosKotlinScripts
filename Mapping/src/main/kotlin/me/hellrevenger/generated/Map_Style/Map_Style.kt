@@ -66,6 +66,10 @@ fun Style.withObfuscated(arg0: Boolean) = this.method_36141(arg0)
  */
 fun Style.withUnderline(arg0: Boolean) = this.method_30938(arg0)
 /**
+ * method_65301
+ */
+fun Style.getShadowColor() = this.method_65301()
+/**
  * method_10965
  */
 fun Style.isUnderlined() = this.method_10965()
@@ -113,6 +117,10 @@ fun Style.withColor(arg0: Formatting) = this.method_10977(arg0)
  * method_36140
  */
 fun Style.withStrikethrough(arg0: Boolean) = this.method_36140(arg0)
+/**
+ * method_65302
+ */
+fun Style.withShadowColor(arg0: Int) = this.method_65302(arg0)
 /**
  * method_10970
  */

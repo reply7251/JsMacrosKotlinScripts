@@ -14,14 +14,6 @@ val KClass<ShulkerBoxBlock>.FACING by aliasStatic(ShulkerBoxBlock::field_11496)
  */
 fun KClass<ShulkerBoxBlock>.get(arg0: DyeColor) = ShulkerBoxBlock.method_10525(arg0)
 /**
- * method_10527
- */
-fun KClass<ShulkerBoxBlock>.getColor(arg0: Item) = ShulkerBoxBlock.method_10527(arg0)
-/**
- * method_10526
- */
-fun KClass<ShulkerBoxBlock>.getColor(arg0: Block) = ShulkerBoxBlock.method_10526(arg0)
-/**
  * method_10529
  */
 fun KClass<ShulkerBoxBlock>.getItemStack(arg0: DyeColor) = ShulkerBoxBlock.method_10529(arg0)

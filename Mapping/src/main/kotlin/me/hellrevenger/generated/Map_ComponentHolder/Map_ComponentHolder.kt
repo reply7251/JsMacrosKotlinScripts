@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_ComponentHolder
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_62984
+ */
+fun <T>ComponentHolder.streamAll(arg0: Class<out T>) = this.method_62984<T>(arg0)
+/**
  * method_57826
  */
 fun ComponentHolder.contains(arg0: ComponentType<*>) = this.method_57826(arg0)

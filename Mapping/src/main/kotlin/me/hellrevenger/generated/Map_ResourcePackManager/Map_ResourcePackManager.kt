@@ -38,6 +38,10 @@ fun ResourcePackManager.getIds() = this.method_29206()
  */
 fun ResourcePackManager.disable(arg0: String) = this.method_49428(arg0)
 /**
+ * method_63566
+ */
+fun ResourcePackManager.hasOptionalProfilesEnabled() = this.method_63566()
+/**
  * method_14444
  */
 fun ResourcePackManager.getEnabledProfiles() = this.method_14444()

@@ -26,6 +26,10 @@ val KClass<BlockSetType>.BIRCH by aliasStatic(BlockSetType::field_42825)
  */
 val KClass<BlockSetType>.IRON by aliasStatic(BlockSetType::field_42819)
 /**
+ * field_54792
+ */
+val KClass<BlockSetType>.PALE_OAK by aliasStatic(BlockSetType::field_54792)
+/**
  * field_42828
  */
 val KClass<BlockSetType>.JUNGLE by aliasStatic(BlockSetType::field_42828)

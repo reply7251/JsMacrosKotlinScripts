@@ -2,10 +2,10 @@ package me.hellrevenger.generated.Map_EntityModelLayer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_35744
+ * comp_2996
  */
-fun EntityModelLayer.getName() = this.method_35744()
+fun EntityModelLayer.name() = this.comp_2996()
 /**
- * method_35743
+ * comp_2995
  */
-fun EntityModelLayer.getId() = this.method_35743()
+fun EntityModelLayer.id() = this.comp_2995()

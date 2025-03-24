@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_DebugRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_4535
- */
-val DebugRenderer.neighborUpdateDebugRenderer by alias(DebugRenderer::field_4535)
-/**
  * field_28254
  */
 val DebugRenderer.gameEventDebugRenderer by alias(DebugRenderer::field_28254)
@@ -30,9 +26,21 @@ val DebugRenderer.villageDebugRenderer by alias(DebugRenderer::field_18777)
  */
 val DebugRenderer.raidCenterDebugRenderer by alias(DebugRenderer::field_19325)
 /**
+ * field_53961
+ */
+val DebugRenderer.octreeDebugRenderer by alias(DebugRenderer::field_53961)
+/**
  * field_4539
  */
 val DebugRenderer.structureDebugRenderer by alias(DebugRenderer::field_4539)
+/**
+ * field_53172
+ */
+val DebugRenderer.redstoneUpdateOrderDebugRenderer by alias(DebugRenderer::field_53172)
+/**
+ * field_53173
+ */
+val DebugRenderer.chunkDebugRenderer by alias(DebugRenderer::field_53173)
 /**
  * field_22408
  */
@@ -70,6 +78,10 @@ val DebugRenderer.chunkBorderDebugRenderer by alias(DebugRenderer::field_4532)
  */
 val DebugRenderer.collisionDebugRenderer by alias(DebugRenderer::field_4534)
 /**
+ * field_4535
+ */
+val DebugRenderer.neighborUpdateDebugRenderer by alias(DebugRenderer::field_4535)
+/**
  * field_44827
  */
 val DebugRenderer.supportingBlockDebugRenderer by alias(DebugRenderer::field_44827)
@@ -90,10 +102,6 @@ val DebugRenderer.beeDebugRenderer by alias(DebugRenderer::field_21547)
  */
 fun KClass<DebugRenderer>.drawBox(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: BlockPos, arg3: Float, arg4: Float, arg5: Float, arg6: Float, arg7: Float) = DebugRenderer.method_23103(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
 /**
- * method_23099
- */
-fun DebugRenderer.render(arg0: MatrixStack, arg1: net.minecraft.class_4597.class_4598, arg2: Double, arg3: Double, arg4: Double) = this.method_23099(arg0, arg1, arg2, arg3, arg4)
-/**
  * method_23105
  */
 fun KClass<DebugRenderer>.drawString(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: String, arg3: Double, arg4: Double, arg5: Double, arg6: Int) = DebugRenderer.method_23105(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
@@ -106,6 +114,10 @@ fun KClass<DebugRenderer>.drawBox(arg0: MatrixStack, arg1: VertexConsumerProvide
  */
 fun DebugRenderer.toggleShowChunkBorder() = this.method_3713()
 /**
+ * method_62979
+ */
+fun DebugRenderer.toggleShowOctree() = this.method_62979()
+/**
  * method_23101
  */
 fun KClass<DebugRenderer>.getTargetedEntity(arg0: Entity, arg1: Int) = DebugRenderer.method_23101(arg0, arg1)
@@ -113,6 +125,10 @@ fun KClass<DebugRenderer>.getTargetedEntity(arg0: Entity, arg1: Int) = DebugRend
  * method_23107
  */
 fun KClass<DebugRenderer>.drawString(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: String, arg3: Double, arg4: Double, arg5: Double, arg6: Int, arg7: Float, arg8: Boolean, arg9: Float, arg10: Boolean) = DebugRenderer.method_23107(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
+/**
+ * method_62351
+ */
+fun DebugRenderer.renderLate(arg0: MatrixStack, arg1: net.minecraft.class_4597.class_4598, arg2: Double, arg3: Double, arg4: Double) = this.method_62351(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_23098
  */
@@ -126,6 +142,10 @@ fun KClass<DebugRenderer>.drawString(arg0: MatrixStack, arg1: VertexConsumerProv
  */
 fun KClass<DebugRenderer>.drawString(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: String, arg3: Int, arg4: Int, arg5: Int, arg6: Int) = DebugRenderer.method_23108(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
 /**
+ * method_23099
+ */
+fun DebugRenderer.render(arg0: MatrixStack, arg1: Frustum, arg2: net.minecraft.class_4597.class_4598, arg3: Double, arg4: Double, arg5: Double) = this.method_23099(arg0, arg1, arg2, arg3, arg4, arg5)
+/**
  * method_20413
  */
 fun DebugRenderer.reset() = this.method_20413()
@@ -133,6 +153,10 @@ fun DebugRenderer.reset() = this.method_20413()
  * method_23104
  */
 fun KClass<DebugRenderer>.drawBox(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: BlockPos, arg3: BlockPos, arg4: Float, arg5: Float, arg6: Float, arg7: Float) = DebugRenderer.method_23104(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+/**
+ * method_62350
+ */
+fun KClass<DebugRenderer>.drawVoxelShapeOutlines(arg0: MatrixStack, arg1: VertexConsumer, arg2: VoxelShape, arg3: Double, arg4: Double, arg5: Double, arg6: Float, arg7: Float, arg8: Float, arg9: Float, arg10: Boolean) = DebugRenderer.method_62350(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
 /**
  * method_54808
  */

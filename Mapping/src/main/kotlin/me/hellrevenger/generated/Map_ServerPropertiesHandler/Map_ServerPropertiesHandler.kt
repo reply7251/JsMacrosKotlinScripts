@@ -14,10 +14,6 @@ val ServerPropertiesHandler.onlineMode by alias(ServerPropertiesHandler::field_1
  */
 val ServerPropertiesHandler.regionFileCompression by alias(ServerPropertiesHandler::field_48711)
 /**
- * field_16809
- */
-val ServerPropertiesHandler.spawnNpcs by alias(ServerPropertiesHandler::field_16809)
-/**
  * field_51987
  */
 val ServerPropertiesHandler.bugReportLink by alias(ServerPropertiesHandler::field_51987)
@@ -54,6 +50,10 @@ val ServerPropertiesHandler.hardcore by alias(ServerPropertiesHandler::field_168
  */
 val ServerPropertiesHandler.broadcastConsoleToOps by alias(ServerPropertiesHandler::field_16802)
 /**
+ * field_52352
+ */
+val ServerPropertiesHandler.pauseWhenEmptySeconds by alias(ServerPropertiesHandler::field_52352)
+/**
  * field_16818
  */
 val ServerPropertiesHandler.enableRcon by alias(ServerPropertiesHandler::field_16818)
@@ -85,6 +85,10 @@ val ServerPropertiesHandler.logIps by alias(ServerPropertiesHandler::field_44985
  * field_16835
  */
 val ServerPropertiesHandler.spawnMonsters by alias(ServerPropertiesHandler::field_16835)
+/**
+ * field_52351
+ */
+val ServerPropertiesHandler.textFilteringVersion by alias(ServerPropertiesHandler::field_52351)
 /**
  * field_16819
  */
@@ -158,10 +162,6 @@ val ServerPropertiesHandler.whiteList by alias(ServerPropertiesHandler::field_16
  */
 val ServerPropertiesHandler.entityBroadcastRangePercentage by alias(ServerPropertiesHandler::field_24454)
 /**
- * field_16836
- */
-val ServerPropertiesHandler.spawnAnimals by alias(ServerPropertiesHandler::field_16836)
-/**
  * field_16824
  */
 val ServerPropertiesHandler.broadcastRconToOps by alias(ServerPropertiesHandler::field_16824)
@@ -218,10 +218,10 @@ val ServerPropertiesHandler.difficulty by alias(ServerPropertiesHandler::field_1
  */
 val ServerPropertiesHandler.useNativeTransport by alias(ServerPropertiesHandler::field_16832)
 /**
- * method_45157
- */
-fun ServerPropertiesHandler.createDimensionsRegistryHolder(arg0: DynamicRegistryManager) = this.method_45157(arg0)
-/**
  * method_16714
  */
 fun KClass<ServerPropertiesHandler>.load(arg0: file_Path) = ServerPropertiesHandler.method_16714(arg0)
+/**
+ * method_45157
+ */
+fun ServerPropertiesHandler.createDimensionsRegistryHolder(arg0: net.minecraft.class_7225.class_7874) = this.method_45157(arg0)

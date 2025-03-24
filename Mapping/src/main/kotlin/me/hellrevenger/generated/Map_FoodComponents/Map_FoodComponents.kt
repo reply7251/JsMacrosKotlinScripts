@@ -158,10 +158,6 @@ val KClass<FoodComponents>.COOKED_CHICKEN by aliasStatic(FoodComponents::field_1
  */
 val KClass<FoodComponents>.BAKED_POTATO by aliasStatic(FoodComponents::field_18639)
 /**
- * field_50138
- */
-val KClass<FoodComponents>.OMINOUS_BOTTLE by aliasStatic(FoodComponents::field_50138)
-/**
  * field_20381
  */
 val KClass<FoodComponents>.HONEY_BOTTLE by aliasStatic(FoodComponents::field_20381)

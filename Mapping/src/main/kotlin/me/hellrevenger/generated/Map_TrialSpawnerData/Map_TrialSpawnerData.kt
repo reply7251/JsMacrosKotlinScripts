@@ -10,6 +10,10 @@ val KClass<TrialSpawnerData>.SPAWN_DATA_KEY by aliasStatic(TrialSpawnerData::fie
  */
 val KClass<TrialSpawnerData>.codec by aliasStatic(TrialSpawnerData::field_47370)
 /**
+ * method_61763
+ */
+fun TrialSpawnerData.deactivate() = this.method_61763()
+/**
  * method_55185
  */
 fun TrialSpawnerData.canSpawnMore(arg0: ServerWorld, arg1: TrialSpawnerConfig, arg2: Int) = this.method_55185(arg0, arg1, arg2)
@@ -37,10 +41,6 @@ fun TrialSpawnerData.resetAndClearMobs(arg0: TrialSpawnerLogic, arg1: ServerWorl
  * method_55200
  */
 fun TrialSpawnerData.areMobsDead() = this.method_55200()
-/**
- * method_55189
- */
-fun TrialSpawnerData.setEntityType(arg0: TrialSpawnerLogic, arg1: Random, arg2: EntityType<*>) = this.method_55189(arg0, arg1, arg2)
 /**
  * method_55197
  */

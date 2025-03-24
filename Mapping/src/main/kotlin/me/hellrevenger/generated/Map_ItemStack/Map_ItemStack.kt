@@ -2,9 +2,17 @@ package me.hellrevenger.generated.Map_ItemStack
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_8031
+ */
+var ItemStack.count by alias(ItemStack::field_8031)
+/**
  * field_8037
  */
 val KClass<ItemStack>.EMPTY by aliasStatic(ItemStack::field_8037)
+/**
+ * method_65359
+ */
+fun ItemStack.getImmutableComponents() = this.method_65359()
 /**
  * method_57373
  */
@@ -34,10 +42,6 @@ fun ItemStack.copy() = this.method_7972()
  */
 fun ItemStack.getName() = this.method_7964()
 /**
- * method_21832
- */
-fun ItemStack.getDrinkSound() = this.method_21832()
-/**
  * method_7970
  */
 fun ItemStack.damage(arg0: Int, arg1: LivingEntity, arg2: EquipmentSlot) = this.method_7970(arg0, arg1, arg2)
@@ -66,9 +70,13 @@ fun KClass<ItemStack>.areItemsAndComponentsEqual(arg0: ItemStack, arg1: ItemStac
  */
 fun ItemStack.applyAttributeModifiers(arg0: EquipmentSlot, arg1: BiConsumer<RegistryEntry<EntityAttribute>, EntityAttributeModifier>) = this.method_57354(arg0, arg1)
 /**
+ * method_7979
+ */
+fun ItemStack.postHit(arg0: LivingEntity, arg1: LivingEntity) = this.method_7979(arg0, arg1)
+/**
  * method_57376
  */
-fun ItemStack.encode(arg0: net.minecraft.class_7225.class_7874, arg1: NbtElement) = this.method_57376(arg0, arg1)
+fun ItemStack.toNbt(arg0: net.minecraft.class_7225.class_7874, arg1: NbtElement) = this.method_57376(arg0, arg1)
 /**
  * method_31580
  */
@@ -98,9 +106,17 @@ fun ItemStack.getBreakSound() = this.method_57351()
  */
 fun ItemStack.streamTags() = this.method_40133()
 /**
+ * method_61657
+ */
+fun ItemStack.shouldBreak() = this.method_61657()
+/**
  * method_7960
  */
 fun ItemStack.isEmpty() = this.method_7960()
+/**
+ * method_65130
+ */
+fun ItemStack.getCustomName() = this.method_65130()
 /**
  * method_31573
  */
@@ -134,6 +150,14 @@ fun ItemStack.useOnEntity(arg0: PlayerEntity, arg1: LivingEntity, arg2: Hand) = 
  */
 fun ItemStack.hasEnchantments() = this.method_7942()
 /**
+ * method_63692
+ */
+fun ItemStack.willBreakNextUse() = this.method_63692()
+/**
+ * method_61653
+ */
+fun ItemStack.damage(arg0: Int, arg1: PlayerEntity) = this.method_61653(arg0, arg1)
+/**
  * method_7914
  */
 fun ItemStack.getMaxCount() = this.method_7914()
@@ -154,6 +178,10 @@ fun ItemStack.toHoverableText() = this.method_7954()
  */
 fun <T>ItemStack.apply(arg0: ComponentType<T>, arg1: T, arg2: UnaryOperator<T>) = this.method_57368<T>(arg0, arg1, arg2)
 /**
+ * method_63015
+ */
+fun ItemStack.getFormattedName() = this.method_63015()
+/**
  * method_41407
  */
 fun ItemStack.itemMatches(arg0: Predicate<RegistryEntry<Item>>) = this.method_41407(arg0)
@@ -169,6 +197,14 @@ fun ItemStack.getMaxUseTime(arg0: LivingEntity) = this.method_7935(arg0)
  * method_32347
  */
 fun ItemStack.getTooltipData() = this.method_32347()
+/**
+ * method_63693
+ */
+fun ItemStack.getItemName() = this.method_63693()
+/**
+ * method_61655
+ */
+fun ItemStack.canRepairWith(arg0: ItemStack) = this.method_61655(arg0)
 /**
  * method_7910
  */
@@ -194,6 +230,10 @@ fun ItemStack.getRegistryEntry() = this.method_41409()
  */
 fun ItemStack.isUsedOnRelease() = this.method_7967()
 /**
+ * method_65797
+ */
+fun ItemStack.hasChangedComponent(arg0: ComponentType<*>) = this.method_65797(arg0)
+/**
  * method_60617
  */
 fun ItemStack.applyAttributeModifier(arg0: AttributeModifierSlot, arg1: BiConsumer<RegistryEntry<EntityAttribute>, EntityAttributeModifier>) = this.method_60617(arg0, arg1)
@@ -216,7 +256,7 @@ fun KClass<ItemStack>.createOptionalCodec(arg0: String) = ItemStack.method_56702
 /**
  * method_57358
  */
-fun ItemStack.encode(arg0: net.minecraft.class_7225.class_7874) = this.method_57358(arg0)
+fun ItemStack.toNbt(arg0: net.minecraft.class_7225.class_7874) = this.method_57358(arg0)
 /**
  * method_57380
  */
@@ -233,10 +273,6 @@ fun ItemStack.getMaxDamage() = this.method_7936()
  * method_58407
  */
 fun ItemStack.takesDamageFrom(arg0: DamageSource) = this.method_58407(arg0)
-/**
- * method_7979
- */
-fun ItemStack.postHit(arg0: LivingEntity, arg1: PlayerEntity) = this.method_7979(arg0, arg1)
 /**
  * method_58658
  */
@@ -277,10 +313,6 @@ fun ItemStack.getMiningSpeedMultiplier(arg0: BlockState) = this.method_7924(arg0
  * method_59692
  */
 fun ItemStack.applyChanges(arg0: ComponentChanges) = this.method_59692(arg0)
-/**
- * method_7913
- */
-fun ItemStack.use(arg0: world_World, arg1: PlayerEntity, arg2: Hand) = this.method_7913(arg0, arg1, arg2)
 /**
  * method_57366
  */
@@ -354,10 +386,6 @@ fun KClass<ItemStack>.areItemsEqual(arg0: ItemStack, arg1: ItemStack) = ItemStac
  */
 fun ItemStack.splitUnlessCreative(arg0: Int, arg1: LivingEntity) = this.method_60504(arg0, arg1)
 /**
- * method_7922
- */
-fun ItemStack.getTranslationKey() = this.method_7922()
-/**
  * method_57381
  */
 fun <T>ItemStack.remove(arg0: ComponentType<out T>) = this.method_57381<T>(arg0)
@@ -370,17 +398,21 @@ fun ItemStack.copyWithCount(arg0: Int) = this.method_46651(arg0)
  */
 fun ItemStack.onClicked(arg0: ItemStack, arg1: Slot, arg2: ClickType, arg3: PlayerEntity, arg4: StackReference) = this.method_31576(arg0, arg1, arg2, arg3, arg4)
 /**
- * method_59979
+ * method_7913
  */
-fun ItemStack.postDamageEntity(arg0: LivingEntity, arg1: PlayerEntity) = this.method_59979(arg0, arg1)
+fun ItemStack.use(arg0: world_World, arg1: PlayerEntity, arg2: Hand) = this.method_7913(arg0, arg1, arg2)
 /**
  * method_7963
  */
 fun ItemStack.isDamageable() = this.method_7963()
 /**
+ * method_59979
+ */
+fun ItemStack.postDamageEntity(arg0: LivingEntity, arg1: LivingEntity) = this.method_59979(arg0, arg1)
+/**
  * method_57375
  */
-fun ItemStack.encodeAllowEmpty(arg0: net.minecraft.class_7225.class_7874) = this.method_57375(arg0)
+fun ItemStack.toNbtAllowEmpty(arg0: net.minecraft.class_7225.class_7874) = this.method_57375(arg0)
 /**
  * method_60986
  */
@@ -393,14 +425,6 @@ fun ItemStack.isEnchantable() = this.method_7923()
  * method_57359
  */
 fun KClass<ItemStack>.fromNbtOrEmpty(arg0: net.minecraft.class_7225.class_7874, arg1: NbtCompound) = ItemStack.method_57359(arg0, arg1)
-/**
- * method_7947
- */
-fun ItemStack.getCount() = this.method_7947()
-/**
- * method_21833
- */
-fun ItemStack.getEatSound() = this.method_21833()
 /**
  * method_7917
  */
@@ -417,7 +441,3 @@ fun KClass<ItemStack>.areEqual(arg0: ItemStack, arg1: ItemStack) = ItemStack.met
  * method_56701
  */
 fun ItemStack.copyComponentsToNewStack(arg0: ItemConvertible, arg1: Int) = this.method_56701(arg0, arg1)
-/**
- * method_7939
- */
-fun ItemStack.setCount(arg0: Int) = this.method_7939(arg0)

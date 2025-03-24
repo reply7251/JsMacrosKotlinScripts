@@ -2,6 +2,6 @@ package me.hellrevenger.generated.Map_EndermiteEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_3920
+ * method_62423
  */
-fun EndermiteEntityRenderer.getTexture(arg0: EndermiteEntity) = this.method_3920(arg0)
+fun EndermiteEntityRenderer.createRenderState() = this.method_62423()

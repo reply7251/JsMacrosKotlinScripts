@@ -112,7 +112,7 @@ fun AbstractHorseEntity.getMinAmbientStandDelay() = this.method_45377()
 /**
  * method_56680
  */
-fun AbstractHorseEntity.getInventory() = this.method_56680()
+fun AbstractHorseEntity.getArmorInventory() = this.method_56680()
 /**
  * method_6745
  */

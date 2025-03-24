@@ -142,10 +142,6 @@ fun KClass<DefaultBiomeFeatures>.addDefaultDisks(arg0: net.minecraft.class_5485.
  */
 fun KClass<DefaultBiomeFeatures>.addSavannaGrass(arg0: net.minecraft.class_5485.class_5495) = DefaultBiomeFeatures.method_16968(arg0)
 /**
- * method_16992
- */
-fun KClass<DefaultBiomeFeatures>.addSeagrassOnStone(arg0: net.minecraft.class_5485.class_5495) = DefaultBiomeFeatures.method_16992(arg0)
-/**
  * method_16980
  */
 fun KClass<DefaultBiomeFeatures>.addTaigaGrass(arg0: net.minecraft.class_5485.class_5495) = DefaultBiomeFeatures.method_16980(arg0)

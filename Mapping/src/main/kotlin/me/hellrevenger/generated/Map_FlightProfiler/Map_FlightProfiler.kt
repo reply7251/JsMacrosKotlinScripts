@@ -2,13 +2,21 @@ package me.hellrevenger.generated.Map_FlightProfiler
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_38654
- */
-fun FlightProfiler.onTick(arg0: Float) = this.method_38654(arg0)
-/**
  * method_38656
  */
 fun FlightProfiler.onPacketReceived(arg0: NetworkPhase, arg1: PacketType<*>, arg2: SocketAddress, arg3: Int) = this.method_38656(arg0, arg1, arg2, arg3)
+/**
+ * method_65105
+ */
+fun FlightProfiler.startStructureGenerationProfiling(arg0: ChunkPos, arg1: RegistryKey<world_World>, arg2: RegistryEntry<Structure>) = this.method_65105(arg0, arg1, arg2)
+/**
+ * method_38659
+ */
+fun FlightProfiler.startWorldLoadProfiling() = this.method_38659()
+/**
+ * method_38654
+ */
+fun FlightProfiler.onTick(arg0: Float) = this.method_38654(arg0)
 /**
  * method_56980
  */
@@ -41,7 +49,3 @@ fun FlightProfiler.isProfiling() = this.method_37984()
  * method_37980
  */
 fun FlightProfiler.stop() = this.method_37980()
-/**
- * method_38659
- */
-fun FlightProfiler.startWorldLoadProfiling() = this.method_38659()

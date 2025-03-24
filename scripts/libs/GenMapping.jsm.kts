@@ -1,13 +1,105 @@
-import xyz.wagyourtail.jsmacros.core.classes.Mappings
+
 import java.io.*
-import java.lang.reflect.GenericArrayType
-import java.lang.reflect.Method
+import java.lang.reflect.*
+import java.net.URL
+import java.nio.charset.StandardCharsets
+import java.util.regex.Pattern
 import java.util.stream.Collectors
-import java.lang.reflect.Modifier
-import java.lang.reflect.ParameterizedType
-import java.lang.reflect.Type
-import java.lang.reflect.TypeVariable
-import java.lang.reflect.WildcardType
+import java.util.zip.ZipEntry
+import java.util.zip.ZipInputStream
+import kotlin.concurrent.thread
+
+val global = this
+
+class Mappings(val path: String) {
+    val mappings = mutableMapOf<String, ClassData>()
+    val methodParts = Pattern.compile("\\((.*?)\\)(.+)");
+    val sig = Pattern.compile("L(.+?);");
+
+    init {
+        loadMappings()
+    }
+
+    fun loadMappings() {
+        val builder = java.lang.StringBuilder()
+        if (path.endsWith(".tiny")) {
+            if (path.startsWith("http")) {
+                builder.append(
+                    BufferedReader(InputStreamReader(URL(path).openStream(), StandardCharsets.UTF_8)).lines()
+                        .collect(
+                            Collectors.joining("\n")
+                        )
+                )
+            } else {
+                builder.append(
+                    BufferedReader(
+                        FileReader(
+                            context.runner.config.macroFolder.toPath().resolve(path).toFile()
+                        )
+                    ).lines().collect(
+                        Collectors.joining("\n")
+                    )
+                )
+            }
+        }
+        parseMappings(builder.toString())
+    }
+
+    fun parseMappings(rawMappings: String) {
+        var currentClass: ClassData? = null
+        rawMappings.split("\n").forEach { line ->
+            try {
+                val parts = line.split("\\s+".toRegex());
+                if (parts[0] == "c") {
+                    currentClass = ClassData(parts[2])
+                    mappings[parts[1]] = currentClass!!
+                } else {
+                    when(parts[1]) {
+                        "m" -> {
+                            assert(currentClass != null)
+                            currentClass!!.methods[parts[3] + parts[2]] =
+                                MethodData(parts[4]) { remapSig(parts[2], mappings) }
+                        }
+                        "f" -> {
+                            assert(currentClass != null)
+                            currentClass!!.fields[parts[3]] = parts[4]
+                        }
+                    }
+                }
+
+            }catch (ignored: IndexOutOfBoundsException) {
+            }
+        }
+
+    }
+
+    fun remapSig(sign: String, mapping: Map<String, ClassData>): String {
+        var sign = sign
+        val matcher = methodParts.matcher(sign)
+        if(!matcher.find())
+            throw RuntimeException(String.format("method signature \"%s\" invalid", sign));
+        val cfinder = sig.matcher(sign)
+        var  offset = 0
+        while (cfinder.find()) {
+            var cls = cfinder.group(1)
+            mapping.get(cls)?.name?.let {
+                cls = it
+            }
+            sign = sign.substring(0, cfinder.start(1) + offset) + cls + sign.substring(cfinder.end(1) + offset)
+            offset += cls.length - cfinder.group(1).length
+        }
+        return sign
+    }
+}
+
+class ClassData(val name: String) {
+    val methods = mutableMapOf<String, MethodData>()
+    val fields = mutableMapOf<String, String>()
+
+}
+class MethodData(val name: String, val sig: () -> String) {
+    override fun toString() = name + sig()
+}
 
 class GenMapping(val folder: File) {
     val fromAlias = hashMapOf<String, String>()
@@ -167,7 +259,7 @@ class GenMapping(val folder: File) {
         }
     }
 
-    fun genMap(name: String, classData: Mappings.ClassData): String {
+    fun genMap(name: String, classData: ClassData): String {
         val builder = StringBuilder()
         val className = name.replace("/",".")
 
@@ -549,10 +641,10 @@ fun main() {
     val macro = JsMacros.config.macroFolder.absolutePath
     Chat.log("parent: $parent")
     Chat.log("macro: $macro")
-    val pathToTiny = "." + parent.substring(macro.length) + "/jars/mappings-yarn.tiny"
+    val pathToTiny = "." + parent.substring(macro.length) + "/jars/mappings.tiny"
     Chat.log("sub: $pathToTiny")
 
-    val mapping = Reflection.loadMappingHelper(pathToTiny)
+    val mapping = Mappings(pathToTiny)
     val root = File(parentFile, "generated")
     root.mkdirs()
 
@@ -571,5 +663,6 @@ fun main() {
 }
 
 
-
-main()
+thread {
+    main()
+}

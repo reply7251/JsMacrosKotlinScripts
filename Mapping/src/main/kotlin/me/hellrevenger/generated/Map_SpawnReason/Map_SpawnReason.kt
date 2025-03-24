@@ -40,7 +40,7 @@ val KClass<SpawnReason>.TRIGGERED by aliasEnum(SpawnReason::class, "field_16461"
 /**
  * field_16465
  */
-val KClass<SpawnReason>.SPAWN_EGG by aliasEnum(SpawnReason::class, "field_16465")
+val KClass<SpawnReason>.SPAWN_ITEM_USE by aliasEnum(SpawnReason::class, "field_16465")
 /**
  * field_16462
  */
@@ -49,6 +49,14 @@ val KClass<SpawnReason>.COMMAND by aliasEnum(SpawnReason::class, "field_16462")
  * field_16463
  */
 val KClass<SpawnReason>.REINFORCEMENT by aliasEnum(SpawnReason::class, "field_16463")
+/**
+ * field_52445
+ */
+val KClass<SpawnReason>.DIMENSION_TRAVEL by aliasEnum(SpawnReason::class, "field_52445")
+/**
+ * field_52444
+ */
+val KClass<SpawnReason>.LOAD by aliasEnum(SpawnReason::class, "field_52444")
 /**
  * field_16472
  */

@@ -16,7 +16,7 @@ fun IntegratedServerLoader.startNewWorld(arg0: net.minecraft.class_32.class_5143
 /**
  * method_41895
  */
-fun IntegratedServerLoader.createAndStart(arg0: String, arg1: LevelInfo, arg2: GeneratorOptions, arg3: function_Function<DynamicRegistryManager, DimensionOptionsRegistryHolder>, arg4: Screen) = this.method_41895(arg0, arg1, arg2, arg3, arg4)
+fun IntegratedServerLoader.createAndStart(arg0: String, arg1: LevelInfo, arg2: GeneratorOptions, arg3: function_Function<net.minecraft.class_7225.class_7874, DimensionOptionsRegistryHolder>, arg4: Screen) = this.method_41895(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_57784
  */

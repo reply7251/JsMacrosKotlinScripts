@@ -50,6 +50,10 @@ fun ChunkHolder.updateAccessibleStatus() = this.method_20385()
  */
 fun ChunkHolder.isSavable() = this.method_60436()
 /**
+ * method_65077
+ */
+fun ChunkHolder.hasPendingUpdates() = this.method_65077()
+/**
  * method_15890
  */
 fun ChunkHolder.setLevel(arg0: Int) = this.method_15890(arg0)

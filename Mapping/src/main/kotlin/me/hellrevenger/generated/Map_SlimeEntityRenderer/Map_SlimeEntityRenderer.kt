@@ -2,10 +2,18 @@ package me.hellrevenger.generated.Map_SlimeEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_4784
+ */
+val KClass<SlimeEntityRenderer>.TEXTURE by aliasStatic(SlimeEntityRenderer::field_4784)
+/**
+ * method_62532
+ */
+fun SlimeEntityRenderer.createRenderState() = this.method_62532()
+/**
+ * method_62531
+ */
+fun SlimeEntityRenderer.updateRenderState(arg0: SlimeEntity, arg1: SlimeEntityRenderState, arg2: Float) = this.method_62531(arg0, arg1, arg2)
+/**
  * method_4116
  */
-fun SlimeEntityRenderer.getTexture(arg0: SlimeEntity) = this.method_4116(arg0)
-/**
- * method_4117
- */
-fun SlimeEntityRenderer.render(arg0: SlimeEntity, arg1: Float, arg2: Float, arg3: MatrixStack, arg4: VertexConsumerProvider, arg5: Int) = this.method_4117(arg0, arg1, arg2, arg3, arg4, arg5)
+fun SlimeEntityRenderer.getTexture(arg0: SlimeEntityRenderState) = this.method_4116(arg0)

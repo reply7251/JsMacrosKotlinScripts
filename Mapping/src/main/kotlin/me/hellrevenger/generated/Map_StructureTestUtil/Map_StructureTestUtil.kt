@@ -26,13 +26,17 @@ fun KClass<StructureTestUtil>.findStructureBlocks(arg0: BlockPos, arg1: Int, arg
  */
 fun KClass<StructureTestUtil>.findStructureBlocks(arg0: BlockPos, arg1: Int, arg2: ServerWorld, arg3: String) = StructureTestUtil.method_59782(arg0, arg1, arg2, arg3)
 /**
+ * method_62774
+ */
+fun KClass<StructureTestUtil>.getPlacementPos(arg0: GameTestState, arg1: BlockPos, arg2: BlockRotation, arg3: ServerWorld) = StructureTestUtil.method_62774(arg0, arg1, arg2, arg3)
+/**
  * method_56252
  */
 fun KClass<StructureTestUtil>.findTargetedStructureBlock(arg0: BlockPos, arg1: Entity, arg2: ServerWorld) = StructureTestUtil.method_56252(arg0, arg1, arg2)
 /**
  * method_54849
  */
-fun KClass<StructureTestUtil>.getStructureBlockPos(arg0: StructureBlockBlockEntity) = StructureTestUtil.method_54849(arg0)
+fun KClass<StructureTestUtil>.getOrigin(arg0: StructureBlockBlockEntity) = StructureTestUtil.method_54849(arg0)
 /**
  * method_54903
  */

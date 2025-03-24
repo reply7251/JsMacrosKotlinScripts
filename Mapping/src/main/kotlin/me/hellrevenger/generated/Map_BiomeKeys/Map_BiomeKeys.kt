@@ -134,6 +134,10 @@ val KClass<BiomeKeys>.SMALL_END_ISLANDS by aliasStatic(BiomeKeys::field_9457)
  */
 val KClass<BiomeKeys>.CHERRY_GROVE by aliasStatic(BiomeKeys::field_42720)
 /**
+ * field_55052
+ */
+val KClass<BiomeKeys>.PALE_GARDEN by aliasStatic(BiomeKeys::field_55052)
+/**
  * field_9461
  */
 val KClass<BiomeKeys>.NETHER_WASTES by aliasStatic(BiomeKeys::field_9461)

@@ -79,6 +79,10 @@ typealias JigsawJunction = net.minecraft.class_3780
  */
 typealias BannedPlayerEntry = net.minecraft.class_3336
 /**
+ * net.minecraft.class_10014
+ */
+typealias EndCrystalEntityRenderState = net.minecraft.class_10014
+/**
  * net.minecraft.class_380
  */
 typealias GlyphAtlasTexture = net.minecraft.class_380
@@ -107,9 +111,9 @@ typealias TabNavigationWidget = net.minecraft.class_8089
  */
 typealias GameProfile = com.mojang.authlib.GameProfile
 /**
- * net.minecraft.class_4480
+ * net.minecraft.class_10515
  */
-typealias HoneyBottleItem = net.minecraft.class_4480
+typealias SpecialModelRenderer<T> = net.minecraft.class_10515<T>
 /**
  * net.minecraft.class_1685
  */
@@ -183,6 +187,10 @@ typealias ArmorTrim = net.minecraft.class_8053
  */
 typealias FleeTask<E> = net.minecraft.class_6028<E>
 /**
+ * net.minecraft.class_9939
+ */
+typealias PiglinBaseEntityModel<S> = net.minecraft.class_9939<S>
+/**
  * net.minecraft.class_3408
  */
 typealias RconListener = net.minecraft.class_3408
@@ -233,7 +241,7 @@ typealias JukeboxPlayablePredicate = net.minecraft.class_9790
 /**
  * net.minecraft.class_909
  */
-typealias BipedEntityRenderer<T, M> = net.minecraft.class_909<T, M>
+typealias BipedEntityRenderer<T, S, M> = net.minecraft.class_909<T, S, M>
 /**
  * net.minecraft.class_6417
  */
@@ -301,15 +309,15 @@ typealias BlockEntityRenderDispatcher = net.minecraft.class_824
 /**
  * net.minecraft.class_4997
  */
-typealias StriderEntityModel<T> = net.minecraft.class_4997<T>
+typealias StriderEntityModel = net.minecraft.class_4997
 /**
  * net.minecraft.class_9104
  */
 typealias AnyBlockUseCriterion = net.minecraft.class_9104
 /**
- * net.minecraft.class_9462
+ * net.minecraft.class_10157
  */
-typealias OminousBottleItem = net.minecraft.class_9462
+typealias ShaderProgramDefinition = net.minecraft.class_10157
 /**
  * com.mojang.authlib.minecraft.BanDetails
  */
@@ -347,10 +355,6 @@ typealias LevelFlatGeneratorInfoFix = net.minecraft.class_1195
  */
 typealias AmbientStandGoal = net.minecraft.class_7688
 /**
- * net.minecraft.class_5355
- */
-typealias WalkTowardClosestAdultTask = net.minecraft.class_5355
-/**
  * net.minecraft.class_8199
  */
 typealias HeightmapArgumentType = net.minecraft.class_8199
@@ -358,6 +362,10 @@ typealias HeightmapArgumentType = net.minecraft.class_8199
  * net.minecraft.class_4208
  */
 typealias GlobalPos = net.minecraft.class_4208
+/**
+ * net.minecraft.class_10003
+ */
+typealias BlockDisplayEntityRenderState = net.minecraft.class_10003
 /**
  * net.minecraft.class_3866
  */
@@ -375,13 +383,13 @@ typealias LevitationCriterion = net.minecraft.class_2085
  */
 typealias LayFrogSpawnTask = net.minecraft.class_7099
 /**
- * net.minecraft.class_277
- */
-typealias GlBlendState = net.minecraft.class_277
-/**
  * net.minecraft.class_9721
  */
 typealias EnchantmentEntityEffect = net.minecraft.class_9721
+/**
+ * net.minecraft.class_10141
+ */
+typealias CompiledShader = net.minecraft.class_10141
 /**
  * net.minecraft.class_2491
  */
@@ -394,6 +402,10 @@ typealias StringIdentifiable = net.minecraft.class_3542
  * net.minecraft.class_2603
  */
 typealias DaylightDetectorBlockEntity = net.minecraft.class_2603
+/**
+ * net.minecraft.class_9960
+ */
+typealias DefaultFramebufferSet = net.minecraft.class_9960
 /**
  * net.minecraft.class_3194
  */
@@ -418,6 +430,10 @@ typealias CompletableFuture<T> = java.util.concurrent.CompletableFuture<T>
  * net.minecraft.class_3213
  */
 typealias ServerBossBar = net.minecraft.class_3213
+/**
+ * net.minecraft.class_9909
+ */
+typealias FrameGraphBuilder = net.minecraft.class_9909
 /**
  * net.minecraft.class_8047
  */
@@ -493,23 +509,15 @@ typealias SwampHutGenerator = net.minecraft.class_3447
 /**
  * net.minecraft.class_8136
  */
-typealias ArmorEntityModel<T> = net.minecraft.class_8136<T>
+typealias ArmorEntityModel<S> = net.minecraft.class_8136<S>
 /**
  * net.minecraft.class_1646
  */
 typealias VillagerEntity = net.minecraft.class_1646
 /**
- * net.minecraft.class_384
- */
-typealias EmptyGlyphRenderer = net.minecraft.class_384
-/**
  * net.minecraft.class_4218
  */
 typealias PlayWithVillagerBabiesTask = net.minecraft.class_4218
-/**
- * net.minecraft.class_2076
- */
-typealias KilledByCrossbowCriterion = net.minecraft.class_2076
 /**
  * net.minecraft.class_5450
  */
@@ -522,10 +530,6 @@ typealias ServerConfigEntry<T> = net.minecraft.class_3330<T>
  * net.minecraft.class_4829
  */
 typealias ForgetAngryAtTargetTask = net.minecraft.class_4829
-/**
- * net.minecraft.class_6375
- */
-typealias AngledModelEntity = net.minecraft.class_6375
 /**
  * net.minecraft.class_1588
  */
@@ -647,13 +651,13 @@ typealias ModelElement = net.minecraft.class_785
  */
 typealias LightDebugRenderer = net.minecraft.class_8520
 /**
+ * net.minecraft.class_10220
+ */
+typealias InitialWorldOptions = net.minecraft.class_10220
+/**
  * net.minecraft.class_9471
  */
 typealias RaiderPredicate = net.minecraft.class_9471
-/**
- * net.minecraft.class_1271
- */
-typealias TypedActionResult<T> = net.minecraft.class_1271<T>
 /**
  * net.minecraft.class_8714
  */
@@ -675,9 +679,9 @@ typealias PlayerListGui = net.minecraft.class_3184
  */
 typealias DamageSource = net.minecraft.class_1282
 /**
- * net.minecraft.class_4112
+ * net.minecraft.class_9974
  */
-typealias WanderAroundTask = net.minecraft.class_4112
+typealias VertexRendering = net.minecraft.class_9974
 /**
  * net.minecraft.class_3443
  */
@@ -750,6 +754,10 @@ typealias TextureTickListener = net.minecraft.class_1061
  * net.minecraft.class_8019
  */
 typealias NarratedMultilineTextWidget = net.minecraft.class_8019
+/**
+ * net.minecraft.class_10471
+ */
+typealias BundleFullnessProperty = net.minecraft.class_10471
 /**
  * net.minecraft.class_8758
  */
@@ -861,7 +869,7 @@ typealias SummonEntityEnchantmentEffect = net.minecraft.class_9739
 /**
  * net.minecraft.class_4309
  */
-typealias JsonDataLoader = net.minecraft.class_4309
+typealias JsonDataLoader<T> = net.minecraft.class_4309<T>
 /**
  * java.lang.Runnable
  */
@@ -871,6 +879,10 @@ typealias Runnable = java.lang.Runnable
  */
 typealias ArmadilloScareDetectedSensor<T> = net.minecraft.class_9068<T>
 /**
+ * net.minecraft.class_10057
+ */
+typealias PolarBearEntityRenderState = net.minecraft.class_10057
+/**
  * net.minecraft.class_1674
  */
 typealias FireballEntity = net.minecraft.class_1674
@@ -879,6 +891,10 @@ typealias FireballEntity = net.minecraft.class_1674
  */
 typealias HeavyCoreBlock = net.minecraft.class_9366
 /**
+ * net.minecraft.class_10390
+ */
+typealias EquippableAssetRenameFix = net.minecraft.class_10390
+/**
  * net.minecraft.class_8884
  */
 typealias RecipeCache = net.minecraft.class_8884
@@ -886,6 +902,10 @@ typealias RecipeCache = net.minecraft.class_8884
  * net.minecraft.class_9
  */
 typealias PathNode = net.minecraft.class_9
+/**
+ * net.minecraft.class_10554
+ */
+typealias EntityAttributeBaseFix = net.minecraft.class_10554
 /**
  * net.minecraft.class_3115
  */
@@ -899,10 +919,6 @@ typealias PlacedAdvancement = net.minecraft.class_8781
  */
 typealias DripstoneClusterFeature = net.minecraft.class_5725
 /**
- * net.minecraft.class_4904
- */
-typealias RealmsObjectSelectionList<E> = net.minecraft.class_4904<E>
-/**
  * net.minecraft.class_5431
  */
 typealias SideShapeType = net.minecraft.class_5431
@@ -911,9 +927,17 @@ typealias SideShapeType = net.minecraft.class_5431
  */
 typealias PublicKey = java.security.PublicKey
 /**
+ * net.minecraft.class_9999
+ */
+typealias ProjectileEntityRenderState = net.minecraft.class_9999
+/**
  * net.minecraft.class_3902
  */
 typealias util_Unit = net.minecraft.class_3902
+/**
+ * net.minecraft.class_9834
+ */
+typealias SetCursorItemS2CPacket = net.minecraft.class_9834
 /**
  * net.minecraft.class_4453
  */
@@ -931,6 +955,10 @@ typealias CpuLoadSample = net.minecraft.class_6522
  */
 typealias VertexFormatElement = net.minecraft.class_296
 /**
+ * net.minecraft.class_10027
+ */
+typealias FoxEntityRenderState = net.minecraft.class_10027
+/**
  * net.minecraft.class_1750
  */
 typealias ItemPlacementContext = net.minecraft.class_1750
@@ -947,10 +975,6 @@ typealias GlowItemFrameEntity = net.minecraft.class_5915
  */
 typealias SlotChangedStateC2SPacket = net.minecraft.class_8875
 /**
- * net.minecraft.class_7288
- */
-typealias WardenFeatureRenderer<T, M> = net.minecraft.class_7288<T, M>
-/**
  * net.minecraft.class_8242
  */
 typealias SignText = net.minecraft.class_8242
@@ -959,6 +983,10 @@ typealias SignText = net.minecraft.class_8242
  */
 typealias SetWorldSpawnCommand = net.minecraft.class_3128
 /**
+ * net.minecraft.class_9846
+ */
+typealias V1TextFilterer = net.minecraft.class_9846
+/**
  * net.minecraft.class_9401
  */
 typealias Suggestable<S> = net.minecraft.class_9401<S>
@@ -966,6 +994,10 @@ typealias Suggestable<S> = net.minecraft.class_9401<S>
  * java.util.function.IntSupplier
  */
 typealias IntSupplier = java.util.function.IntSupplier
+/**
+ * net.minecraft.class_10457
+ */
+typealias BrokenProperty = net.minecraft.class_10457
 /**
  * net.minecraft.class_8582
  */
@@ -999,13 +1031,21 @@ typealias ArmorMaterial = net.minecraft.class_1741
  */
 typealias PendingInvitesList = net.minecraft.class_4872
 /**
+ * net.minecraft.class_10051
+ */
+typealias ParrotEntityRenderState = net.minecraft.class_10051
+/**
  * net.minecraft.class_2231
  */
 typealias AbstractPressurePlateBlock = net.minecraft.class_2231
 /**
+ * net.minecraft.class_10012
+ */
+typealias DolphinEntityRenderState = net.minecraft.class_10012
+/**
  * net.minecraft.class_596
  */
-typealias RabbitEntityModel<T> = net.minecraft.class_596<T>
+typealias RabbitEntityModel = net.minecraft.class_596
 /**
  * net.minecraft.class_3934
  */
@@ -1061,7 +1101,7 @@ typealias WorldDownload = net.minecraft.class_4889
 /**
  * net.minecraft.class_1002
  */
-typealias SkeletonOverlayFeatureRenderer<T, M> = net.minecraft.class_1002<T, M>
+typealias SkeletonOverlayFeatureRenderer<S, M> = net.minecraft.class_1002<S, M>
 /**
  * net.minecraft.class_9801
  */
@@ -1086,6 +1126,10 @@ typealias GiantEntityRenderer = net.minecraft.class_908
  * net.minecraft.class_2855
  */
 typealias RenameItemC2SPacket = net.minecraft.class_2855
+/**
+ * net.minecraft.class_10161
+ */
+typealias OctreeDebugRenderer = net.minecraft.class_10161
 /**
  * net.minecraft.class_1547
  */
@@ -1131,13 +1175,17 @@ typealias MultiValueDebugSampleLogImpl = net.minecraft.class_9191
  */
 typealias ChanneledLightningCriterion = net.minecraft.class_2002
 /**
+ * net.minecraft.class_10289
+ */
+typealias PreparedRecipes = net.minecraft.class_10289
+/**
  * net.minecraft.class_642
  */
 typealias ServerInfo = net.minecraft.class_642
 /**
  * net.minecraft.class_590
  */
-typealias PolarBearEntityModel<T> = net.minecraft.class_590<T>
+typealias PolarBearEntityModel = net.minecraft.class_590
 /**
  * com.google.common.collect.ImmutableList
  */
@@ -1146,6 +1194,10 @@ typealias ImmutableList<E> = com.google.common.collect.ImmutableList<E>
  * net.minecraft.class_2985
  */
 typealias PlayerAdvancementTracker = net.minecraft.class_2985
+/**
+ * net.minecraft.class_9998
+ */
+typealias ArmorStandEntityRenderState = net.minecraft.class_9998
 /**
  * net.minecraft.class_4069
  */
@@ -1209,7 +1261,7 @@ typealias ArmadilloAnimations = net.minecraft.class_9079
 /**
  * net.minecraft.class_4495
  */
-typealias BeeEntityModel<T> = net.minecraft.class_4495<T>
+typealias BeeEntityModel = net.minecraft.class_4495
 /**
  * net.minecraft.class_953
  */
@@ -1234,6 +1286,10 @@ typealias GlowstoneBlobFeature = net.minecraft.class_3047
  * net.minecraft.class_5709
  */
 typealias EntityPositionSource = net.minecraft.class_5709
+/**
+ * net.minecraft.class_10192
+ */
+typealias EquippableComponent = net.minecraft.class_10192
 /**
  * net.minecraft.class_1838
  */
@@ -1335,9 +1391,9 @@ typealias EndIslandFeature = net.minecraft.class_3026
  */
 typealias InsideWorldBoundsBlockPredicate = net.minecraft.class_6783
 /**
- * net.minecraft.class_3875
+ * net.minecraft.class_10086
  */
-typealias BlastFurnaceRecipeBookScreen = net.minecraft.class_3875
+typealias ZombieEntityRenderState = net.minecraft.class_10086
 /**
  * net.minecraft.class_2827
  */
@@ -1366,6 +1422,10 @@ typealias OpenToLanScreen = net.minecraft.class_436
  * net.minecraft.class_9741
  */
 typealias EnchantmentProvider = net.minecraft.class_9741
+/**
+ * net.minecraft.class_10509
+ */
+typealias ShieldModelRenderer = net.minecraft.class_10509
 /**
  * net.minecraft.class_7261
  */
@@ -1419,6 +1479,10 @@ typealias HuskEntityRenderer = net.minecraft.class_912
  */
 typealias WeightedBlockStateProvider = net.minecraft.class_4657
 /**
+ * net.minecraft.class_10128
+ */
+typealias ConsumableComponents = net.minecraft.class_10128
+/**
  * net.minecraft.class_2181
  */
 typealias DimensionArgumentType = net.minecraft.class_2181
@@ -1426,6 +1490,10 @@ typealias DimensionArgumentType = net.minecraft.class_2181
  * net.minecraft.class_8239
  */
 typealias CalibratedSculkSensorBlockEntity = net.minecraft.class_8239
+/**
+ * net.minecraft.class_10028
+ */
+typealias FrogEntityRenderState = net.minecraft.class_10028
 /**
  * net.minecraft.class_4416
  */
@@ -1446,6 +1514,10 @@ typealias SimpleRandomFeatureConfig = net.minecraft.class_3179
  * net.minecraft.class_1855
  */
 typealias MapCloningRecipe = net.minecraft.class_1855
+/**
+ * net.minecraft.class_9847
+ */
+typealias AbstractTextFilterer = net.minecraft.class_9847
 /**
  * net.minecraft.class_2327
  */
@@ -1482,6 +1554,10 @@ typealias BreedTask = net.minecraft.class_4806
  * net.minecraft.class_4739
  */
 typealias AbstractChestBlock<E> = net.minecraft.class_4739<E>
+/**
+ * net.minecraft.class_10247
+ */
+typealias ContainerBlockEntityLockPredicateFix = net.minecraft.class_10247
 /**
  * net.minecraft.class_5575
  */
@@ -1541,7 +1617,7 @@ typealias VariantsBlockStateSupplier = net.minecraft.class_4925
 /**
  * net.minecraft.class_619
  */
-typealias ZombieVillagerEntityModel<T> = net.minecraft.class_619<T>
+typealias ZombieVillagerEntityModel<S> = net.minecraft.class_619<S>
 /**
  * net.minecraft.class_6564
  */
@@ -1557,7 +1633,7 @@ typealias NetherWartBlock = net.minecraft.class_2421
 /**
  * net.minecraft.class_3887
  */
-typealias FeatureRenderer<T, M> = net.minecraft.class_3887<T, M>
+typealias FeatureRenderer<S, M> = net.minecraft.class_3887<S, M>
 /**
  * net.minecraft.class_3898
  */
@@ -1565,7 +1641,7 @@ typealias ServerChunkLoadingManager = net.minecraft.class_3898
 /**
  * net.minecraft.class_568
  */
-typealias EvokerFangsEntityModel<T> = net.minecraft.class_568<T>
+typealias EvokerFangsEntityModel = net.minecraft.class_568
 /**
  * net.minecraft.class_2939
  */
@@ -1598,6 +1674,10 @@ typealias ItemPotionFix = net.minecraft.class_1183
  * net.minecraft.class_7442
  */
 typealias GoatHornIdFix = net.minecraft.class_7442
+/**
+ * net.minecraft.class_10411
+ */
+typealias ModelSupplier = net.minecraft.class_10411
 /**
  * net.minecraft.class_9355
  */
@@ -1703,6 +1783,14 @@ typealias LunarWorldView = net.minecraft.class_5424
  */
 typealias ItemCustomNameToComponentFix = net.minecraft.class_1178
 /**
+ * net.minecraft.class_10039
+ */
+typealias ItemEntityRenderState = net.minecraft.class_10039
+/**
+ * net.minecraft.class_10455
+ */
+typealias SpecialItemModel<T> = net.minecraft.class_10455<T>
+/**
  * net.minecraft.class_4874
  */
 typealias PlayerInfo = net.minecraft.class_4874
@@ -1715,21 +1803,17 @@ typealias BlastFurnaceScreenHandler = net.minecraft.class_3705
  */
 typealias DataPackContents = net.minecraft.class_5350
 /**
+ * net.minecraft.class_10426
+ */
+typealias ArmedEntityRenderState = net.minecraft.class_10426
+/**
  * net.minecraft.class_9347
  */
 typealias WolfVariants = net.minecraft.class_9347
 /**
- * net.minecraft.class_7687
- */
-typealias RandomLookAroundTask = net.minecraft.class_7687
-/**
  * net.minecraft.class_9102
  */
 typealias StatusPackets = net.minecraft.class_9102
-/**
- * net.minecraft.class_961
- */
-typealias ZombieHorseEntityRenderer = net.minecraft.class_961
 /**
  * net.minecraft.class_7477
  */
@@ -1738,10 +1822,6 @@ typealias PointOfInterestTypes = net.minecraft.class_7477
  * net.minecraft.class_2601
  */
 typealias DispenserBlockEntity = net.minecraft.class_2601
-/**
- * net.minecraft.class_756
- */
-typealias BuiltinModelItemRenderer = net.minecraft.class_756
 /**
  * net.minecraft.class_2575
  */
@@ -1795,6 +1875,10 @@ typealias CactusBlock = net.minecraft.class_2266
  */
 typealias ByCostEnchantmentProvider = net.minecraft.class_9743
 /**
+ * net.minecraft.class_549
+ */
+typealias AbstractHorseEntityModel<T> = net.minecraft.class_549<T>
+/**
  * net.minecraft.class_3540
  */
 typealias Smoother = net.minecraft.class_3540
@@ -1831,6 +1915,10 @@ typealias RealmsCreateRealmScreen = net.minecraft.class_4390
  */
 typealias SetInstrumentLootFunction = net.minecraft.class_7431
 /**
+ * net.minecraft.class_10535
+ */
+typealias SignModelRenderer = net.minecraft.class_10535
+/**
  * net.minecraft.class_2708
  */
 typealias PlayerPositionLookS2CPacket = net.minecraft.class_2708
@@ -1843,10 +1931,6 @@ typealias ContainerWidget = net.minecraft.class_9017
  */
 typealias VanillaLootTableProviders = net.minecraft.class_7794
 /**
- * net.minecraft.class_4660
- */
-typealias CocoaBeansTreeDecorator = net.minecraft.class_4660
-/**
  * net.minecraft.class_4819
  */
 typealias HuntFinishTask = net.minecraft.class_4819
@@ -1858,6 +1942,10 @@ typealias TameableShoulderEntity = net.minecraft.class_1471
  * net.minecraft.class_8538
  */
 typealias TextRenderLayerSet = net.minecraft.class_8538
+/**
+ * net.minecraft.class_7749
+ */
+typealias WorldCreationSettings = net.minecraft.class_7749
 /**
  * net.minecraft.class_7551
  */
@@ -1893,7 +1981,7 @@ typealias EndermanEntityModel<T> = net.minecraft.class_566<T>
 /**
  * net.minecraft.class_4506
  */
-typealias StuckStingersFeatureRenderer<T, M> = net.minecraft.class_4506<T, M>
+typealias StuckStingersFeatureRenderer<M> = net.minecraft.class_4506<M>
 /**
  * net.minecraft.class_3262
  */
@@ -1923,6 +2011,10 @@ typealias Tick<T> = net.minecraft.class_6759<T>
  */
 typealias SocketAddress = java.net.SocketAddress
 /**
+ * java.lang.Void
+ */
+typealias Void = java.lang.Void
+/**
  * net.minecraft.class_355
  */
 typealias PlayerListHud = net.minecraft.class_355
@@ -1950,6 +2042,10 @@ typealias JoinWorldTask = net.minecraft.class_8611
  * net.minecraft.class_3176
  */
 typealias MinecraftDedicatedServer = net.minecraft.class_3176
+/**
+ * net.minecraft.class_9951
+ */
+typealias Deadmau5EarsEntityModel = net.minecraft.class_9951
 /**
  * net.minecraft.class_5535
  */
@@ -1999,6 +2095,10 @@ typealias LootDataType<T> = net.minecraft.class_8490<T>
  */
 typealias SculkSpreadable = net.minecraft.class_7124
 /**
+ * net.minecraft.class_10036
+ */
+typealias IllusionerEntityRenderState = net.minecraft.class_10036
+/**
  * net.minecraft.class_6637
  */
 typealias ChunkHeightAndBiomeFix = net.minecraft.class_6637
@@ -2047,14 +2147,6 @@ typealias SampleEvent = net.minecraft.class_7976
  */
 typealias SaveVersion = net.minecraft.class_6595
 /**
- * net.minecraft.class_7801
- */
-typealias BundleRecipeProvider = net.minecraft.class_7801
-/**
- * net.minecraft.class_281
- */
-typealias ShaderStage = net.minecraft.class_281
-/**
  * net.minecraft.class_7372
  */
 typealias MultipliedFloatSupplier = net.minecraft.class_7372
@@ -2066,6 +2158,10 @@ typealias ServerWorldProperties = net.minecraft.class_5268
  * javax.swing.JTextArea
  */
 typealias JTextArea = javax.swing.JTextArea
+/**
+ * net.minecraft.class_10184
+ */
+typealias InputPredicate = net.minecraft.class_10184
 /**
  * net.minecraft.class_1825
  */
@@ -2135,6 +2231,10 @@ typealias UntamedActiveTargetGoal<T> = net.minecraft.class_1404<T>
  */
 typealias AdmireItemTask = net.minecraft.class_4823
 /**
+ * net.minecraft.class_9959
+ */
+typealias WorldEventHandler = net.minecraft.class_9959
+/**
  * net.minecraft.class_7413
  */
 typealias LoadingDisplay = net.minecraft.class_7413
@@ -2195,6 +2295,10 @@ typealias EntityNbtDataSource = net.minecraft.class_2576
  */
 typealias HealthUpdateS2CPacket = net.minecraft.class_2749
 /**
+ * net.minecraft.class_10069
+ */
+typealias SquidEntityRenderState = net.minecraft.class_10069
+/**
  * net.minecraft.class_3903
  */
 typealias CatTypeFix = net.minecraft.class_3903
@@ -2202,6 +2306,10 @@ typealias CatTypeFix = net.minecraft.class_3903
  * net.minecraft.class_300
  */
 typealias DataQueryHandler = net.minecraft.class_300
+/**
+ * net.minecraft.class_10133
+ */
+typealias ClearAllEffectsConsumeEffect = net.minecraft.class_10133
 /**
  * net.minecraft.class_8690
  */
@@ -2215,9 +2323,17 @@ typealias NarratorManager = net.minecraft.class_333
  */
 typealias WrittenBookContentPredicate = net.minecraft.class_9663
 /**
+ * net.minecraft.class_8051
+ */
+typealias EquipmentType = net.minecraft.class_8051
+/**
  * net.minecraft.class_5659
  */
 typealias LootNumberProviderTypes = net.minecraft.class_5659
+/**
+ * net.minecraft.class_10206
+ */
+typealias EquipmentAssetProvider = net.minecraft.class_10206
 /**
  * net.minecraft.class_77
  */
@@ -2251,9 +2367,17 @@ typealias FloatArgumentType = com.mojang.brigadier.arguments.FloatArgumentType
  */
 typealias IntProperty = net.minecraft.class_2758
 /**
+ * net.minecraft.class_9854
+ */
+typealias CarvingStepRemoveFix = net.minecraft.class_9854
+/**
  * net.minecraft.class_350
  */
 typealias EntryListWidget<E> = net.minecraft.class_350<E>
+/**
+ * net.minecraft.class_9980
+ */
+typealias BlockPropertiesPredicate = net.minecraft.class_9980
 /**
  * net.minecraft.class_2815
  */
@@ -2262,6 +2386,14 @@ typealias CloseHandledScreenC2SPacket = net.minecraft.class_2815
  * net.minecraft.class_1535
  */
 typealias PaintingVariant = net.minecraft.class_1535
+/**
+ * net.minecraft.class_10494
+ */
+typealias SelectProperty<T> = net.minecraft.class_10494<T>
+/**
+ * net.minecraft.class_10246
+ */
+typealias BoatSplitFix = net.minecraft.class_10246
 /**
  * net.minecraft.class_7566
  */
@@ -2273,7 +2405,7 @@ typealias MultilineTextWidget = net.minecraft.class_7940
 /**
  * net.minecraft.class_599
  */
-typealias SalmonEntityModel<T> = net.minecraft.class_599<T>
+typealias SalmonEntityModel = net.minecraft.class_599
 /**
  * net.minecraft.class_6350
  */
@@ -2295,10 +2427,6 @@ typealias AtlasSourceType = net.minecraft.class_7951
  */
 typealias UncaughtExceptionHandler = net.minecraft.class_143
 /**
- * net.minecraft.class_4005
- */
-typealias AsyncTexture = net.minecraft.class_4005
-/**
  * net.minecraft.class_2853
  */
 typealias RecipeBookDataC2SPacket = net.minecraft.class_2853
@@ -2306,6 +2434,10 @@ typealias RecipeBookDataC2SPacket = net.minecraft.class_2853
  * java.util.function.IntPredicate
  */
 typealias IntPredicate = java.util.function.IntPredicate
+/**
+ * net.minecraft.class_10075
+ */
+typealias TntEntityRenderState = net.minecraft.class_10075
 /**
  * net.minecraft.class_3497
  */
@@ -2359,6 +2491,14 @@ typealias DecoratedPotBlockEntityRenderer = net.minecraft.class_8188
  */
 typealias Nameable = net.minecraft.class_1275
 /**
+ * net.minecraft.class_10435
+ */
+typealias CompositeItemModel = net.minecraft.class_10435
+/**
+ * net.minecraft.class_9916
+ */
+typealias RenderPass = net.minecraft.class_9916
+/**
  * net.minecraft.class_3483
  */
 typealias EntityTypeTags = net.minecraft.class_3483
@@ -2395,13 +2535,9 @@ typealias CriterionProgress = net.minecraft.class_178
  */
 typealias ChunkHolder = net.minecraft.class_3193
 /**
- * net.minecraft.class_4215
- */
-typealias LookTargetUtil = net.minecraft.class_4215
-/**
  * net.minecraft.class_2955
  */
-typealias InputSlotFiller<I, R> = net.minecraft.class_2955<I, R>
+typealias InputSlotFiller<R> = net.minecraft.class_2955<R>
 /**
  * net.minecraft.class_5561
  */
@@ -2417,11 +2553,19 @@ typealias ArmorStandItem = net.minecraft.class_1742
 /**
  * net.minecraft.class_970
  */
-typealias ArmorFeatureRenderer<T, M, A> = net.minecraft.class_970<T, M, A>
+typealias ArmorFeatureRenderer<S, M, A> = net.minecraft.class_970<S, M, A>
 /**
  * net.minecraft.class_6374
  */
 typealias CommonPongC2SPacket = net.minecraft.class_6374
+/**
+ * net.minecraft.class_10488
+ */
+typealias ChargeTypeProperty = net.minecraft.class_10488
+/**
+ * net.minecraft.class_10231
+ */
+typealias RealmsWorldCreating = net.minecraft.class_10231
 /**
  * org.apache.commons.lang3.math.Fraction
  */
@@ -2430,6 +2574,10 @@ typealias Fraction = org.apache.commons.lang3.math.Fraction
  * net.minecraft.class_7375
  */
 typealias CatVariant = net.minecraft.class_7375
+/**
+ * net.minecraft.class_10518
+ */
+typealias TridentModelRenderer = net.minecraft.class_10518
 /**
  * net.minecraft.class_4959
  */
@@ -2442,6 +2590,10 @@ typealias FT_Vector = org.lwjgl.util.freetype.FT_Vector
  * net.minecraft.class_8087
  */
 typealias Tab = net.minecraft.class_8087
+/**
+ * net.minecraft.class_9975
+ */
+typealias SkyRendering = net.minecraft.class_9975
 /**
  * net.minecraft.class_9448
  */
@@ -2495,10 +2647,6 @@ typealias ConnectionParticle = net.minecraft.class_668
  */
 typealias Degradable<T> = net.minecraft.class_5547<T>
 /**
- * net.minecraft.class_801
- */
-typealias json_ItemModelGenerator = net.minecraft.class_801
-/**
  * net.minecraft.class_725
  */
 typealias SquidInkParticle = net.minecraft.class_725
@@ -2506,6 +2654,10 @@ typealias SquidInkParticle = net.minecraft.class_725
  * net.minecraft.class_696
  */
 typealias LargeFireSmokeParticle = net.minecraft.class_696
+/**
+ * net.minecraft.class_169
+ */
+typealias ContextParameter<T> = net.minecraft.class_169<T>
 /**
  * net.minecraft.class_3298
  */
@@ -2550,6 +2702,10 @@ typealias ServerLinksScreen = net.minecraft.class_9807
  * net.minecraft.class_4620
  */
 typealias PointOfInterestFix = net.minecraft.class_4620
+/**
+ * net.minecraft.class_4351
+ */
+typealias UploadProgress = net.minecraft.class_4351
 /**
  * net.minecraft.class_9292
  */
@@ -2623,6 +2779,10 @@ typealias BiomeParametersProvider = net.minecraft.class_7228
  */
 typealias Finishable = net.minecraft.class_6613
 /**
+ * net.minecraft.class_10052
+ */
+typealias PhantomEntityRenderState = net.minecraft.class_10052
+/**
  * net.minecraft.class_39
  */
 typealias LootTables = net.minecraft.class_39
@@ -2646,6 +2806,10 @@ typealias StartSniffingTask = net.minecraft.class_7259
  * net.minecraft.class_873
  */
 typealias WorldGenAttemptDebugRenderer = net.minecraft.class_873
+/**
+ * net.minecraft.class_10218
+ */
+typealias TracyLoader = net.minecraft.class_10218
 /**
  * net.minecraft.class_3152
  */
@@ -2683,17 +2847,21 @@ typealias Function5<T1, T2, T3, T4, T5, R> = com.mojang.datafixers.util.Function
  */
 typealias Function4<T1, T2, T3, T4, R> = com.mojang.datafixers.util.Function4<T1, T2, T3, T4, R>
 /**
+ * com.mojang.datafixers.util.Function7
+ */
+typealias Function7<T1, T2, T3, T4, T5, T6, T7, R> = com.mojang.datafixers.util.Function7<T1, T2, T3, T4, T5, T6, T7, R>
+/**
  * com.mojang.datafixers.util.Function6
  */
 typealias Function6<T1, T2, T3, T4, T5, T6, R> = com.mojang.datafixers.util.Function6<T1, T2, T3, T4, T5, T6, R>
 /**
- * net.minecraft.class_1088
- */
-typealias ModelLoader = net.minecraft.class_1088
-/**
  * net.minecraft.class_592
  */
-typealias LargePufferfishEntityModel<T> = net.minecraft.class_592<T>
+typealias LargePufferfishEntityModel = net.minecraft.class_592
+/**
+ * net.minecraft.class_10290
+ */
+typealias RecipePropertySet = net.minecraft.class_10290
 /**
  * net.minecraft.class_2973
  */
@@ -2707,6 +2875,10 @@ typealias LanguageResourceMetadata = net.minecraft.class_1082
  */
 typealias NbtIntArray = net.minecraft.class_2495
 /**
+ * com.mojang.datafixers.util.Function8
+ */
+typealias Function8<T1, T2, T3, T4, T5, T6, T7, T8, R> = com.mojang.datafixers.util.Function8<T1, T2, T3, T4, T5, T6, T7, T8, R>
+/**
  * net.minecraft.class_3351
  */
 typealias IglooGenerator = net.minecraft.class_3351
@@ -2718,6 +2890,10 @@ typealias Merchant = net.minecraft.class_1915
  * net.minecraft.class_2707
  */
 typealias LookAtS2CPacket = net.minecraft.class_2707
+/**
+ * net.minecraft.class_8635
+ */
+typealias PoisonStatusEffect = net.minecraft.class_8635
 /**
  * net.minecraft.class_4717
  */
@@ -2761,7 +2937,7 @@ typealias SaveLoading = net.minecraft.class_7237
 /**
  * net.minecraft.class_507
  */
-typealias RecipeBookWidget = net.minecraft.class_507
+typealias RecipeBookWidget<T> = net.minecraft.class_507<T>
 /**
  * net.minecraft.class_2771
  */
@@ -2785,11 +2961,7 @@ typealias EndPlacedFeatures = net.minecraft.class_6813
 /**
  * net.minecraft.class_3680
  */
-typealias CatEntityModel<T> = net.minecraft.class_3680<T>
-/**
- * net.minecraft.class_3877
- */
-typealias SmokerRecipeBookScreen = net.minecraft.class_3877
+typealias CatEntityModel = net.minecraft.class_3680
 /**
  * net.minecraft.class_1835
  */
@@ -2798,6 +2970,10 @@ typealias TridentItem = net.minecraft.class_1835
  * net.minecraft.class_5521
  */
 typealias SocialInteractionsPlayerListWidget = net.minecraft.class_5521
+/**
+ * net.minecraft.class_10552
+ */
+typealias LocalBufPacker = net.minecraft.class_10552
 /**
  * net.minecraft.class_7370
  */
@@ -2838,6 +3014,14 @@ typealias RealmsServiceException = net.minecraft.class_4355
  * net.minecraft.class_2724
  */
 typealias PlayerRespawnS2CPacket = net.minecraft.class_2724
+/**
+ * net.minecraft.class_10222
+ */
+typealias Cooldown = net.minecraft.class_10222
+/**
+ * net.minecraft.class_9866
+ */
+typealias WaterAnimalEntity = net.minecraft.class_9866
 /**
  * net.minecraft.class_677
  */
@@ -2935,6 +3119,10 @@ typealias SetBlockCommand = net.minecraft.class_3119
  */
 typealias LandPathNodeMaker = net.minecraft.class_14
 /**
+ * net.minecraft.class_10129
+ */
+typealias OminousBottleAmplifierComponent = net.minecraft.class_10129
+/**
  * net.minecraft.class_1407
  */
 typealias BirdNavigation = net.minecraft.class_1407
@@ -2942,6 +3130,10 @@ typealias BirdNavigation = net.minecraft.class_1407
  * net.minecraft.class_8726
  */
 typealias DebugStructuresCustomPayload = net.minecraft.class_8726
+/**
+ * net.minecraft.class_10264
+ */
+typealias EntityPositionSyncS2CPacket = net.minecraft.class_10264
 /**
  * net.minecraft.class_6767
  */
@@ -2962,6 +3154,10 @@ typealias BarrierBlock = net.minecraft.class_2213
  * net.minecraft.class_2558
  */
 typealias ClickEvent = net.minecraft.class_2558
+/**
+ * net.minecraft.class_10191
+ */
+typealias EquipmentAssetKeys = net.minecraft.class_10191
 /**
  * net.minecraft.class_3879
  */
@@ -3031,6 +3227,10 @@ typealias HorseChestIndexingFix = net.minecraft.class_9182
  */
 typealias IntFunction<R> = java.util.function.IntFunction<R>
 /**
+ * net.minecraft.class_10248
+ */
+typealias LockComponentPredicateFix = net.minecraft.class_10248
+/**
  * net.minecraft.class_7243
  */
 typealias CodecHolder<A> = net.minecraft.class_7243<A>
@@ -3054,10 +3254,6 @@ typealias ServerChunkManager = net.minecraft.class_3215
  * net.minecraft.class_8603
  */
 typealias ChunkFilter = net.minecraft.class_8603
-/**
- * net.minecraft.class_176
- */
-typealias LootContextType = net.minecraft.class_176
 /**
  * net.minecraft.class_5181
  */
@@ -3119,6 +3315,10 @@ typealias ScreenRect = net.minecraft.class_8030
  */
 typealias EnderDragonFight = net.minecraft.class_2881
 /**
+ * net.minecraft.class_10120
+ */
+typealias VillagerCanPickUpLootFix = net.minecraft.class_10120
+/**
  * net.minecraft.class_7390
  */
 typealias UpwardsBranchingTrunkPlacer = net.minecraft.class_7390
@@ -3131,6 +3331,10 @@ typealias LoginSuccessS2CPacket = net.minecraft.class_2901
  */
 typealias ChunkGenerators = net.minecraft.class_7511
 /**
+ * net.minecraft.class_10339
+ */
+typealias TrailParticleEffect = net.minecraft.class_10339
+/**
  * net.minecraft.class_3488
  */
 typealias BlockRotStructureProcessor = net.minecraft.class_3488
@@ -3138,6 +3342,10 @@ typealias BlockRotStructureProcessor = net.minecraft.class_3488
  * net.minecraft.class_2265
  */
 typealias ColumnPos = net.minecraft.class_2265
+/**
+ * net.minecraft.class_10262
+ */
+typealias AbstractBoatEntityRenderer = net.minecraft.class_10262
 /**
  * net.minecraft.class_8027
  */
@@ -3175,6 +3383,10 @@ typealias TameableEntity = net.minecraft.class_1321
  */
 typealias DownloadTask = net.minecraft.class_4436
 /**
+ * net.minecraft.class_9831
+ */
+typealias DebugRedstoneUpdateOrderCustomPayload = net.minecraft.class_9831
+/**
  * net.minecraft.class_7838
  */
 typealias WrapperWidget = net.minecraft.class_7838
@@ -3201,7 +3413,7 @@ typealias AcaciaFoliagePlacer = net.minecraft.class_4645
 /**
  * net.minecraft.class_609
  */
-typealias SlimeEntityModel<T> = net.minecraft.class_609<T>
+typealias SlimeEntityModel = net.minecraft.class_609
 /**
  * net.minecraft.class_1308
  */
@@ -3225,7 +3437,7 @@ typealias EntityLookTarget = net.minecraft.class_4102
 /**
  * net.minecraft.class_576
  */
-typealias MagmaCubeEntityModel<T> = net.minecraft.class_576<T>
+typealias MagmaCubeEntityModel = net.minecraft.class_576
 /**
  * net.minecraft.class_6843
  */
@@ -3259,6 +3471,10 @@ typealias SpectatorMenuCommandGroup = net.minecraft.class_535
  */
 typealias AddServerScreen = net.minecraft.class_422
 /**
+ * net.minecraft.class_10096
+ */
+typealias MissingModel = net.minecraft.class_10096
+/**
  * net.minecraft.class_7444
  */
 typealias Instrument = net.minecraft.class_7444
@@ -3270,6 +3486,10 @@ typealias ExplodeEnchantmentEffect = net.minecraft.class_9724
  * net.minecraft.class_9669
  */
 typealias ModifyContentsLootFunction = net.minecraft.class_9669
+/**
+ * net.minecraft.class_10209
+ */
+typealias Profilers = net.minecraft.class_10209
 /**
  * net.minecraft.class_5452
  */
@@ -3291,6 +3511,10 @@ typealias ScoreboardScoreUpdateS2CPacket = net.minecraft.class_2757
  */
 typealias AreaEffectCloudPotionFix = net.minecraft.class_9263
 /**
+ * net.minecraft.class_10227
+ */
+typealias GpuBuffer = net.minecraft.class_10227
+/**
  * net.minecraft.class_9234
  */
 typealias ChunkRegionSample = net.minecraft.class_9234
@@ -3311,17 +3535,9 @@ typealias StructureStart = net.minecraft.class_3449
  */
 typealias IntegerArgumentSerializer = net.minecraft.class_2330
 /**
- * net.minecraft.class_5851
- */
-typealias CarvingMaskPlacementModifier = net.minecraft.class_5851
-/**
  * net.minecraft.class_1694
  */
 typealias ChestMinecartEntity = net.minecraft.class_1694
-/**
- * net.minecraft.class_5673
- */
-typealias ResettingNormalWorldTask = net.minecraft.class_5673
 /**
  * net.minecraft.class_151
  */
@@ -3342,6 +3558,10 @@ typealias ParsingRule<S, T> = net.minecraft.class_9396<S, T>
  * net.minecraft.class_5705
  */
 typealias SculkSensorPhase = net.minecraft.class_5705
+/**
+ * net.minecraft.class_9922
+ */
+typealias ObjectAllocator = net.minecraft.class_9922
 /**
  * net.minecraft.class_2277
  */
@@ -3371,6 +3591,10 @@ typealias TntMinecartEntityRenderer = net.minecraft.class_957
  */
 typealias HangingSignItem = net.minecraft.class_7707
 /**
+ * net.minecraft.class_10119
+ */
+typealias FoodToConsumableFix = net.minecraft.class_10119
+/**
  * net.minecraft.class_8162
  */
 typealias BrushItem = net.minecraft.class_8162
@@ -3387,6 +3611,10 @@ typealias GoToSecondaryPositionTask = net.minecraft.class_4220
  */
 typealias SaveOffCommand = net.minecraft.class_3106
 /**
+ * net.minecraft.class_10261
+ */
+typealias AbstractBoatEntityModel = net.minecraft.class_10261
+/**
  * net.minecraft.class_5520
  */
 typealias SocialInteractionsManager = net.minecraft.class_5520
@@ -3395,9 +3623,17 @@ typealias SocialInteractionsManager = net.minecraft.class_5520
  */
 typealias Writer = java.io.Writer
 /**
+ * net.minecraft.class_10260
+ */
+typealias RecipeBookScreen<T> = net.minecraft.class_10260<T>
+/**
  * net.minecraft.class_584
  */
 typealias ParrotEntityModel = net.minecraft.class_584
+/**
+ * net.minecraft.class_10387
+ */
+typealias PlayerLoadedC2SPacket = net.minecraft.class_10387
 /**
  * net.minecraft.class_2889
  */
@@ -3427,6 +3663,10 @@ typealias LockButtonWidget = net.minecraft.class_347
  */
 typealias WorldGenerationProgressTracker = net.minecraft.class_3953
 /**
+ * net.minecraft.class_1088
+ */
+typealias ModelBaker = net.minecraft.class_1088
+/**
  * net.minecraft.class_8575
  */
 typealias LegacyDragonFightFix = net.minecraft.class_8575
@@ -3434,10 +3674,6 @@ typealias LegacyDragonFightFix = net.minecraft.class_8575
  * net.minecraft.class_2950
  */
 typealias ForestRockFeature = net.minecraft.class_2950
-/**
- * net.minecraft.class_4300
- */
-typealias VillagerXpRebuildFix = net.minecraft.class_4300
 /**
  * net.minecraft.class_8776
  */
@@ -3466,6 +3702,10 @@ typealias WardenEntity = net.minecraft.class_7260
  * net.minecraft.class_1501
  */
 typealias LlamaEntity = net.minecraft.class_1501
+/**
+ * net.minecraft.class_10149
+ */
+typealias Defines = net.minecraft.class_10149
 /**
  * net.minecraft.class_9701
  */
@@ -3511,6 +3751,10 @@ typealias EntityVelocityUpdateS2CPacket = net.minecraft.class_2743
  */
 typealias Potions = net.minecraft.class_1847
 /**
+ * net.minecraft.class_9943
+ */
+typealias BellBlockModel = net.minecraft.class_9943
+/**
  * net.minecraft.class_7376
  */
 typealias EntitySubPredicate = net.minecraft.class_7376
@@ -3545,15 +3789,11 @@ typealias SkinReportScreen = net.minecraft.class_8771
 /**
  * net.minecraft.class_587
  */
-typealias PigEntityModel<T> = net.minecraft.class_587<T>
+typealias PigEntityModel = net.minecraft.class_587
 /**
  * net.minecraft.class_2747
  */
 typealias ComparatorMode = net.minecraft.class_2747
-/**
- * net.minecraft.class_1751
- */
-typealias BookItem = net.minecraft.class_1751
 /**
  * net.minecraft.class_1686
  */
@@ -3595,10 +3835,6 @@ typealias BlueIceFeature = net.minecraft.class_2954
  */
 typealias NumberFormat = net.minecraft.class_9022
 /**
- * net.minecraft.class_169
- */
-typealias LootContextParameter<T> = net.minecraft.class_169<T>
-/**
  * net.minecraft.class_7145
  */
 typealias WorldPreset = net.minecraft.class_7145
@@ -3610,6 +3846,10 @@ typealias BlockFace = net.minecraft.class_2738
  * net.minecraft.class_2574
  */
 typealias NbtTextContent = net.minecraft.class_2574
+/**
+ * net.minecraft.class_10004
+ */
+typealias BoatEntityRenderState = net.minecraft.class_10004
 /**
  * net.minecraft.class_3723
  */
@@ -3650,6 +3890,10 @@ typealias TestListener = net.minecraft.class_4518
  * net.minecraft.class_4253
  */
 typealias StartRaidTask = net.minecraft.class_4253
+/**
+ * net.minecraft.class_10546
+ */
+typealias ViewEntityProperty = net.minecraft.class_10546
 /**
  * net.minecraft.class_3012
  */
@@ -3769,7 +4013,7 @@ typealias RegistryEntryArgumentType<T> = net.minecraft.class_9433<T>
 /**
  * net.minecraft.class_4041
  */
-typealias FoxEntityModel<T> = net.minecraft.class_4041<T>
+typealias FoxEntityModel = net.minecraft.class_4041
 /**
  * net.minecraft.class_2297
  */
@@ -3791,17 +4035,25 @@ typealias ChunkTicketManager = net.minecraft.class_3204
  */
 typealias BlockBufferBuilderPool = net.minecraft.class_8901
 /**
+ * net.minecraft.class_10314
+ */
+typealias SmithingRecipeDisplay = net.minecraft.class_10314
+/**
  * net.minecraft.class_421
  */
 typealias FatalErrorScreen = net.minecraft.class_421
+/**
+ * net.minecraft.class_9944
+ */
+typealias ChestBlockModel = net.minecraft.class_9944
 /**
  * net.minecraft.class_289
  */
 typealias Tessellator = net.minecraft.class_289
 /**
- * net.minecraft.class_4491
+ * net.minecraft.class_10166
  */
-typealias RenderCallStorage = net.minecraft.class_4491
+typealias TrialSpawnerConfigs = net.minecraft.class_10166
 /**
  * net.minecraft.class_3990
  */
@@ -3893,7 +4145,7 @@ typealias OffsetDoubleList = net.minecraft.class_261
 /**
  * net.minecraft.class_1005
  */
-typealias WitchHeldItemFeatureRenderer<T> = net.minecraft.class_1005<T>
+typealias WitchHeldItemFeatureRenderer = net.minecraft.class_1005
 /**
  * net.minecraft.class_2909
  */
@@ -3951,6 +4203,10 @@ typealias BlockMarkerParticle = net.minecraft.class_6734
  */
 typealias SnowyBlock = net.minecraft.class_2493
 /**
+ * net.minecraft.class_4116
+ */
+typealias GoAroundTask = net.minecraft.class_4116
+/**
  * net.minecraft.class_1381
  */
 typealias ProjectileAttackGoal = net.minecraft.class_1381
@@ -3967,9 +4223,17 @@ typealias CommandBossBar = net.minecraft.class_3002
  */
 typealias DamageRecord = net.minecraft.class_1281
 /**
+ * net.minecraft.class_10448
+ */
+typealias RangeDispatchItemModel = net.minecraft.class_10448
+/**
  * net.minecraft.class_3177
  */
 typealias SimpleRandomFeature = net.minecraft.class_3177
+/**
+ * net.minecraft.class_382
+ */
+typealias BakedGlyph = net.minecraft.class_382
 /**
  * net.minecraft.class_2325
  */
@@ -3978,6 +4242,10 @@ typealias DropperBlock = net.minecraft.class_2325
  * net.minecraft.class_6558
  */
 typealias EntryMissingException = net.minecraft.class_6558
+/**
+ * net.minecraft.class_10181
+ */
+typealias EntityConversionType = net.minecraft.class_10181
 /**
  * net.minecraft.class_527
  */
@@ -3999,10 +4267,6 @@ typealias ChunkDataS2CPacket = net.minecraft.class_2672
  */
 typealias SoundLoader = net.minecraft.class_4237
 /**
- * net.minecraft.class_4219
- */
-typealias GoToNearbyPositionTask = net.minecraft.class_4219
-/**
  * net.minecraft.class_5892
  */
 typealias DeathMessageS2CPacket = net.minecraft.class_5892
@@ -4019,9 +4283,9 @@ typealias GameEvent = net.minecraft.class_5712
  */
 typealias ResourcePackManager = net.minecraft.class_3283
 /**
- * net.minecraft.class_6012
+ * net.minecraft.class_9920
  */
-typealias Pool<E> = net.minecraft.class_6012<E>
+typealias Pool = net.minecraft.class_9920
 /**
  * net.minecraft.class_1105
  */
@@ -4062,6 +4326,10 @@ typealias DropInvalidSignDatafixDataFix = net.minecraft.class_8625
  * net.minecraft.class_2697
  */
 typealias BlockPatternBuilder = net.minecraft.class_2697
+/**
+ * net.minecraft.class_10011
+ */
+typealias DisplayEntityRenderState = net.minecraft.class_10011
 /**
  * net.minecraft.class_9041
  */
@@ -4137,7 +4405,7 @@ typealias BlockEventS2CPacket = net.minecraft.class_2623
 /**
  * net.minecraft.class_561
  */
-typealias CodEntityModel<T> = net.minecraft.class_561<T>
+typealias CodEntityModel = net.minecraft.class_561
 /**
  * net.minecraft.class_4014
  */
@@ -4158,6 +4426,10 @@ typealias SimplexNoiseSampler = net.minecraft.class_3541
  * net.minecraft.class_8761
  */
 typealias PingMeasurer = net.minecraft.class_8761
+/**
+ * net.minecraft.class_8638
+ */
+typealias WitherStatusEffect = net.minecraft.class_8638
 /**
  * net.minecraft.class_1197
  */
@@ -4193,11 +4465,15 @@ typealias OperationArgumentType = net.minecraft.class_2218
 /**
  * net.minecraft.class_7280
  */
-typealias WardenEntityModel<T> = net.minecraft.class_7280<T>
+typealias WardenEntityModel = net.minecraft.class_7280
 /**
  * net.minecraft.class_2357
  */
 typealias DispenserBehavior = net.minecraft.class_2357
+/**
+ * net.minecraft.class_10370
+ */
+typealias PickItemFromBlockC2SPacket = net.minecraft.class_10370
 /**
  * net.minecraft.class_9236
  */
@@ -4287,10 +4563,6 @@ typealias Advancement = net.minecraft.class_161
  */
 typealias EntityCustomNameToTextFix = net.minecraft.class_3597
 /**
- * net.minecraft.class_5936
- */
-typealias EffectShaderProgram = net.minecraft.class_5936
-/**
  * net.minecraft.class_1107
  */
 typealias MinecartInsideSoundInstance = net.minecraft.class_1107
@@ -4343,9 +4615,9 @@ typealias BlazeEntity = net.minecraft.class_1545
  */
 typealias Position = net.minecraft.class_2374
 /**
- * net.minecraft.class_1832
+ * net.minecraft.class_9886
  */
-typealias ToolMaterial = net.minecraft.class_1832
+typealias ToolMaterial = net.minecraft.class_9886
 /**
  * net.minecraft.class_9651
  */
@@ -4473,7 +4745,7 @@ typealias LoginHelloC2SPacket = net.minecraft.class_2915
 /**
  * net.minecraft.class_992
  */
-typealias SaddleFeatureRenderer<T, M> = net.minecraft.class_992<T, M>
+typealias SaddleFeatureRenderer<S, M> = net.minecraft.class_992<S, M>
 /**
  * net.minecraft.class_8046
  */
@@ -4513,7 +4785,7 @@ typealias Range<T> = net.minecraft.class_6497<T>
 /**
  * net.minecraft.class_567
  */
-typealias GhastEntityModel<T> = net.minecraft.class_567<T>
+typealias GhastEntityModel = net.minecraft.class_567
 /**
  * net.minecraft.class_8056
  */
@@ -4558,6 +4830,10 @@ typealias EntityRendererFactory<T> = net.minecraft.class_5617<T>
  * net.minecraft.class_5498
  */
 typealias Perspective = net.minecraft.class_5498
+/**
+ * net.minecraft.class_10485
+ */
+typealias UseDurationProperty = net.minecraft.class_10485
 /**
  * net.minecraft.class_1091
  */
@@ -4607,6 +4883,10 @@ typealias Vec3d = net.minecraft.class_243
  */
 typealias BufferedAudioStream = net.minecraft.class_9673
 /**
+ * net.minecraft.class_10087
+ */
+typealias ZombieVillagerRenderState = net.minecraft.class_10087
+/**
  * net.minecraft.class_5734
  */
 typealias DustColorTransitionParticle = net.minecraft.class_5734
@@ -4643,6 +4923,10 @@ typealias PlayerInteractBlockC2SPacket = net.minecraft.class_2885
  */
 typealias LoginPackets = net.minecraft.class_9098
 /**
+ * net.minecraft.class_10391
+ */
+typealias BlockEntityLockToComponentFix = net.minecraft.class_10391
+/**
  * net.minecraft.class_5327
  */
 typealias TakeJobSiteTask = net.minecraft.class_5327
@@ -4662,10 +4946,6 @@ typealias AdvancementDisplays = net.minecraft.class_8005
  * net.minecraft.class_2381
  */
 typealias MushroomBlock = net.minecraft.class_2381
-/**
- * net.minecraft.class_8567
- */
-typealias LootContextParameterSet = net.minecraft.class_8567
 /**
  * net.minecraft.class_6954
  */
@@ -4691,9 +4971,9 @@ typealias BookScreen = net.minecraft.class_3872
  */
 typealias Spawner = net.minecraft.class_8959
 /**
- * net.minecraft.class_1762
+ * net.minecraft.class_10255
  */
-typealias NetworkSyncedItem = net.minecraft.class_1762
+typealias AbstractBoatEntity = net.minecraft.class_10255
 /**
  * net.minecraft.class_2617
  */
@@ -4723,10 +5003,6 @@ typealias MultiTickTask<E> = net.minecraft.class_4097<E>
  */
 typealias SnifferAnimations = net.minecraft.class_8182
 /**
- * net.minecraft.class_382
- */
-typealias GlyphRenderer = net.minecraft.class_382
-/**
  * net.minecraft.class_9791
  */
 typealias RegistryPair<T> = net.minecraft.class_9791<T>
@@ -4751,6 +5027,10 @@ typealias ChunkDataAccess<T> = net.minecraft.class_5571<T>
  */
 typealias LingeringPotionItem = net.minecraft.class_1803
 /**
+ * net.minecraft.class_4458
+ */
+typealias GoToCloserPointOfInterestTask = net.minecraft.class_4458
+/**
  * net.minecraft.class_8133
  */
 typealias LayoutWidget = net.minecraft.class_8133
@@ -4773,7 +5053,7 @@ typealias EnderDragonEntity = net.minecraft.class_1510
 /**
  * net.minecraft.class_4791
  */
-typealias HoglinEntityModel<T> = net.minecraft.class_4791<T>
+typealias HoglinEntityModel = net.minecraft.class_4791
 /**
  * java.util.OptionalInt
  */
@@ -4789,7 +5069,7 @@ typealias StrollTask = net.minecraft.class_4818
 /**
  * net.minecraft.class_1729
  */
-typealias AbstractRecipeScreenHandler<I, R> = net.minecraft.class_1729<I, R>
+typealias AbstractRecipeScreenHandler = net.minecraft.class_1729
 /**
  * net.minecraft.class_1811
  */
@@ -4809,7 +5089,7 @@ typealias TimeHelper = net.minecraft.class_4802
 /**
  * net.minecraft.class_555
  */
-typealias BlazeEntityModel<T> = net.minecraft.class_555<T>
+typealias BlazeEntityModel = net.minecraft.class_555
 /**
  * net.minecraft.class_4381
  */
@@ -4819,13 +5099,9 @@ typealias RealmsBackupScreen = net.minecraft.class_4381
  */
 typealias WorldChunk = net.minecraft.class_2818
 /**
- * net.minecraft.class_4593
- */
-typealias TintableAnimalModel<E> = net.minecraft.class_4593<E>
-/**
  * net.minecraft.class_7751
  */
-typealias CamelEntityModel<T> = net.minecraft.class_7751<T>
+typealias CamelEntityModel = net.minecraft.class_7751
 /**
  * net.minecraft.class_9188
  */
@@ -4933,7 +5209,7 @@ typealias DebugGoalSelectorCustomPayload = net.minecraft.class_8716
 /**
  * net.minecraft.class_610
  */
-typealias SquidEntityModel<T> = net.minecraft.class_610<T>
+typealias SquidEntityModel = net.minecraft.class_610
 /**
  * net.minecraft.class_1699
  */
@@ -4947,9 +5223,9 @@ typealias Registry<T> = net.minecraft.class_2378<T>
  */
 typealias LevelLegacyWorldGenSettingsFix = net.minecraft.class_8876
 /**
- * net.minecraft.class_3876
+ * net.minecraft.class_1863
  */
-typealias FurnaceRecipeBookScreen = net.minecraft.class_3876
+typealias ServerRecipeManager = net.minecraft.class_1863
 /**
  * net.minecraft.class_7843
  */
@@ -5019,6 +5295,10 @@ typealias BreezeBrain = net.minecraft.class_8950
  */
 typealias SimulationDistanceLevelPropagator = net.minecraft.class_6609
 /**
+ * net.minecraft.class_10016
+ */
+typealias EndermanEntityRenderState = net.minecraft.class_10016
+/**
  * net.minecraft.class_1916
  */
 typealias TradeOfferList = net.minecraft.class_1916
@@ -5026,10 +5306,6 @@ typealias TradeOfferList = net.minecraft.class_1916
  * net.minecraft.class_3486
  */
 typealias FluidTags = net.minecraft.class_3486
-/**
- * net.minecraft.class_3505
- */
-typealias TagManagerLoader = net.minecraft.class_3505
 /**
  * net.minecraft.class_693
  */
@@ -5054,6 +5330,10 @@ typealias LeavesFix = net.minecraft.class_1191
  * net.minecraft.class_2637
  */
 typealias ChunkDeltaUpdateS2CPacket = net.minecraft.class_2637
+/**
+ * net.minecraft.class_2076
+ */
+typealias KilledByArrowCriterion = net.minecraft.class_2076
 /**
  * net.minecraft.class_1996
  */
@@ -5155,6 +5435,10 @@ typealias EnderChestBlockEntity = net.minecraft.class_2611
  */
 typealias Model = net.minecraft.class_4942
 /**
+ * net.minecraft.class_10033
+ */
+typealias HorseEntityRenderState = net.minecraft.class_10033
+/**
  * net.minecraft.class_5949
  */
 typealias SampleType = net.minecraft.class_5949
@@ -5163,9 +5447,17 @@ typealias SampleType = net.minecraft.class_5949
  */
 typealias BoatItem = net.minecraft.class_1749
 /**
+ * net.minecraft.class_10137
+ */
+typealias RemoveEffectsConsumeEffect = net.minecraft.class_10137
+/**
  * net.minecraft.class_6026
  */
 typealias Mount = net.minecraft.class_6026
+/**
+ * net.minecraft.class_10046
+ */
+typealias TntMinecartEntityRenderState = net.minecraft.class_10046
 /**
  * net.minecraft.class_2876
  */
@@ -5202,6 +5494,10 @@ typealias HandshakePackets = net.minecraft.class_9096
  * net.minecraft.class_4227
  */
 typealias SoundListener = net.minecraft.class_4227
+/**
+ * net.minecraft.class_10132
+ */
+typealias ApplyEffectsConsumeEffect = net.minecraft.class_10132
 /**
  * net.minecraft.class_3060
  */
@@ -5251,6 +5547,10 @@ typealias PngMetadata = net.minecraft.class_8800
  */
 typealias StriderEntity = net.minecraft.class_4985
 /**
+ * net.minecraft.class_10269
+ */
+typealias RecipeBookSettingsS2CPacket = net.minecraft.class_10269
+/**
  * net.minecraft.class_3076
  */
 typealias JungleTempleStructure = net.minecraft.class_3076
@@ -5270,6 +5570,10 @@ typealias NbtCollector = net.minecraft.class_6844
  * net.minecraft.class_3489
  */
 typealias ItemTags = net.minecraft.class_3489
+/**
+ * net.minecraft.class_10437
+ */
+typealias ConditionItemModel = net.minecraft.class_10437
 /**
  * net.minecraft.class_2242
  */
@@ -5351,6 +5655,10 @@ typealias OpenWrittenBookS2CPacket = net.minecraft.class_3895
  */
 typealias ClientAdvancementManager = net.minecraft.class_632
 /**
+ * net.minecraft.class_10258
+ */
+typealias RaftEntity = net.minecraft.class_10258
+/**
  * net.minecraft.class_4317
  */
 typealias RepairItemRecipe = net.minecraft.class_4317
@@ -5387,13 +5695,13 @@ typealias EntityPositionS2CPacket = net.minecraft.class_2777
  */
 typealias SizePrepender = net.minecraft.class_2552
 /**
+ * net.minecraft.class_10395
+ */
+typealias ClientBootstrap = net.minecraft.class_10395
+/**
  * net.minecraft.class_2480
  */
 typealias ShulkerBoxBlock = net.minecraft.class_2480
-/**
- * net.minecraft.class_3900
- */
-typealias ChunkTaskPrioritySystem = net.minecraft.class_3900
 /**
  * net.minecraft.class_734
  */
@@ -5401,15 +5709,15 @@ typealias TotemParticle = net.minecraft.class_734
 /**
  * net.minecraft.class_588
  */
-typealias PhantomEntityModel<T> = net.minecraft.class_588<T>
-/**
- * net.minecraft.class_5325
- */
-typealias WalkTowardJobSiteTask = net.minecraft.class_5325
+typealias PhantomEntityModel = net.minecraft.class_588
 /**
  * net.minecraft.class_3346
  */
 typealias DesertTempleGenerator = net.minecraft.class_3346
+/**
+ * net.minecraft.class_384
+ */
+typealias EmptyBakedGlyph = net.minecraft.class_384
 /**
  * net.minecraft.class_1185
  */
@@ -5451,6 +5759,10 @@ typealias PingResult = net.minecraft.class_4873
  */
 typealias TextVisitFactory = net.minecraft.class_5223
 /**
+ * net.minecraft.class_10386
+ */
+typealias UsesSystemOut = net.minecraft.class_10386
+/**
  * net.minecraft.class_7257
  */
 typealias LookAtDisturbanceTask = net.minecraft.class_7257
@@ -5474,6 +5786,10 @@ typealias ZipCompressor = net.minecraft.class_6397
  * net.minecraft.class_1719
  */
 typealias FurnaceOutputSlot = net.minecraft.class_1719
+/**
+ * net.minecraft.class_10462
+ */
+typealias DamagedProperty = net.minecraft.class_10462
 /**
  * net.minecraft.class_6628
  */
@@ -5527,6 +5843,10 @@ typealias InputSupplier<T> = net.minecraft.class_7367<T>
  * net.minecraft.class_5800
  */
 typealias AzaleaBlock = net.minecraft.class_5800
+/**
+ * net.minecraft.class_4289
+ */
+typealias GoIndoorsTask = net.minecraft.class_4289
 /**
  * net.minecraft.class_5707
  */
@@ -5584,13 +5904,17 @@ typealias StringBuilder = java.lang.StringBuilder
  */
 typealias BitStorageAlignFix = net.minecraft.class_5196
 /**
+ * net.minecraft.client.data.Main
+ */
+typealias client_data_Main = net.minecraft.client.data.Main
+/**
  * net.minecraft.class_640
  */
 typealias PlayerListEntry = net.minecraft.class_640
 /**
- * net.minecraft.class_9681
+ * net.minecraft.class_9836
  */
-typealias NoopInboundHandler = net.minecraft.class_9681
+typealias ClientTickEndC2SPacket = net.minecraft.class_9836
 /**
  * net.minecraft.class_9375
  */
@@ -5604,10 +5928,6 @@ typealias BakedModelManager = net.minecraft.class_1092
  */
 typealias RealmsAcceptRejectButton = net.minecraft.class_4371
 /**
- * net.minecraft.class_3679
- */
-typealias ShaderProgramSetupView = net.minecraft.class_3679
-/**
  * net.minecraft.class_930
  */
 typealias ParrotEntityRenderer = net.minecraft.class_930
@@ -5619,10 +5939,6 @@ typealias OptionsAmbientOcclusionFix = net.minecraft.class_8004
  * net.minecraft.class_386
  */
 typealias BitmapFont = net.minecraft.class_386
-/**
- * net.minecraft.class_2713
- */
-typealias ChangeUnlockedRecipesS2CPacket = net.minecraft.class_2713
 /**
  * net.minecraft.class_2311
  */
@@ -5636,9 +5952,9 @@ typealias EmptyItemInHotbarFix = net.minecraft.class_9266
  */
 typealias ChestBlockEntityRenderer<T> = net.minecraft.class_826<T>
 /**
- * net.minecraft.class_1770
+ * net.minecraft.class_10533
  */
-typealias ElytraItem = net.minecraft.class_1770
+typealias HangingSignModelRenderer = net.minecraft.class_10533
 /**
  * net.minecraft.class_3222
  */
@@ -5736,6 +6052,10 @@ typealias RecreationStorage = net.minecraft.class_9171
  */
 typealias NoWaterTargeting = net.minecraft.class_5531
 /**
+ * net.minecraft.class_10328
+ */
+typealias CreakingAnimations = net.minecraft.class_10328
+/**
  * net.minecraft.class_2336
  */
 typealias EnderChestBlock = net.minecraft.class_2336
@@ -5743,10 +6063,6 @@ typealias EnderChestBlock = net.minecraft.class_2336
  * net.minecraft.class_149
  */
 typealias SetDamageLootFunction = net.minecraft.class_149
-/**
- * net.minecraft.class_3890
- */
-typealias VillagerResourceMetadataReader = net.minecraft.class_3890
 /**
  * net.minecraft.class_2302
  */
@@ -5767,10 +6083,6 @@ typealias TakeoffPhase = net.minecraft.class_1524
  * net.minecraft.class_6501
  */
 typealias ToFloatFunction<C> = net.minecraft.class_6501<C>
-/**
- * net.minecraft.class_9175
- */
-typealias ClientTagLoader = net.minecraft.class_9175
 /**
  * net.minecraft.class_6505
  */
@@ -5828,6 +6140,10 @@ typealias MatchToolLootCondition = net.minecraft.class_223
  */
 typealias MusicSound = net.minecraft.class_5195
 /**
+ * net.minecraft.class_10266
+ */
+typealias RecipeBookAddS2CPacket = net.minecraft.class_10266
+/**
  * net.minecraft.class_6732
  */
 typealias RandomOffsetPlacementModifier = net.minecraft.class_6732
@@ -5835,6 +6151,10 @@ typealias RandomOffsetPlacementModifier = net.minecraft.class_6732
  * net.minecraft.class_7451
  */
 typealias SignedArgumentType<T> = net.minecraft.class_7451<T>
+/**
+ * net.minecraft.class_10009
+ */
+typealias ChickenEntityRenderState = net.minecraft.class_10009
 /**
  * net.minecraft.class_7569
  */
@@ -5863,6 +6183,10 @@ typealias EntityBrushableBlockFieldsRenameFix = net.minecraft.class_8222
  * net.minecraft.class_9139
  */
 typealias PacketCodec<B, V> = net.minecraft.class_9139<B, V>
+/**
+ * net.minecraft.class_9843
+ */
+typealias SuppressedExceptionsTracker = net.minecraft.class_9843
 /**
  * net.minecraft.class_3170
  */
@@ -5952,10 +6276,6 @@ typealias VexEntityModel = net.minecraft.class_617
  */
 typealias DoubleBlockProperties = net.minecraft.class_4732
 /**
- * net.minecraft.class_1757
- */
-typealias ChorusFruitItem = net.minecraft.class_1757
-/**
  * net.minecraft.class_4940
  */
 typealias SimpleModelSupplier = net.minecraft.class_4940
@@ -5964,13 +6284,13 @@ typealias SimpleModelSupplier = net.minecraft.class_4940
  */
 typealias AttributeIdFix = net.minecraft.class_9785
 /**
- * net.minecraft.class_5753
- */
-typealias TemptationCooldownTask = net.minecraft.class_5753
-/**
  * net.minecraft.class_8238
  */
 typealias SnifferEggBlock = net.minecraft.class_8238
+/**
+ * net.minecraft.class_10239
+ */
+typealias UploadProgressTracker = net.minecraft.class_10239
 /**
  * net.minecraft.class_2373
  */
@@ -6036,6 +6356,10 @@ typealias EntityBucketItem = net.minecraft.class_1785
  */
 typealias Angerable = net.minecraft.class_5354
 /**
+ * net.minecraft.class_10061
+ */
+typealias SaddleableRenderState = net.minecraft.class_10061
+/**
  * net.minecraft.class_4618
  */
 typealias OutlineVertexConsumerProvider = net.minecraft.class_4618
@@ -6058,7 +6382,7 @@ typealias Window = net.minecraft.class_1041
 /**
  * net.minecraft.class_578
  */
-typealias LlamaEntityModel<T> = net.minecraft.class_578<T>
+typealias LlamaEntityModel = net.minecraft.class_578
 /**
  * net.minecraft.class_6130
  */
@@ -6080,6 +6404,14 @@ typealias ServerTask = net.minecraft.class_3738
  */
 typealias FeatureUpdater = net.minecraft.class_3360
 /**
+ * net.minecraft.class_10038
+ */
+typealias ItemDisplayEntityRenderState = net.minecraft.class_10038
+/**
+ * net.minecraft.class_10045
+ */
+typealias MinecartEntityRenderState = net.minecraft.class_10045
+/**
  * net.minecraft.class_3820
  */
 typealias BlockStateMatchRuleTest = net.minecraft.class_3820
@@ -6088,9 +6420,21 @@ typealias BlockStateMatchRuleTest = net.minecraft.class_3820
  */
 typealias OptionsAccessibilityOnboardFix = net.minecraft.class_8014
 /**
+ * net.minecraft.class_4215
+ */
+typealias TargetUtil = net.minecraft.class_4215
+/**
+ * net.minecraft.class_10363
+ */
+typealias SlotDisplayContexts = net.minecraft.class_10363
+/**
  * net.minecraft.class_9699
  */
 typealias EnchantmentEffectContext = net.minecraft.class_9699
+/**
+ * net.minecraft.class_10077
+ */
+typealias TurtleEntityRenderState = net.minecraft.class_10077
 /**
  * net.minecraft.class_1364
  */
@@ -6176,6 +6520,10 @@ typealias FoodComponents = net.minecraft.class_4176
  */
 typealias CommonPingS2CPacket = net.minecraft.class_6373
 /**
+ * net.minecraft.class_10000
+ */
+typealias AxolotlEntityRenderState = net.minecraft.class_10000
+/**
  * net.minecraft.class_3534
  */
 typealias ProfilerTiming = net.minecraft.class_3534
@@ -6244,9 +6592,17 @@ typealias WorldAccess = net.minecraft.class_1936
  */
 typealias ScatteredOreFeature = net.minecraft.class_5875
 /**
+ * net.minecraft.class_10513
+ */
+typealias HeadModelRenderer = net.minecraft.class_10513
+/**
  * net.minecraft.class_2280
  */
 typealias DefaultPosArgument = net.minecraft.class_2280
+/**
+ * net.minecraft.class_9012
+ */
+typealias Scores = net.minecraft.class_9012
 /**
  * net.minecraft.class_106
  */
@@ -6266,11 +6622,15 @@ typealias ZombieSiegeManager = net.minecraft.class_1419
 /**
  * net.minecraft.class_4180
  */
-typealias SerializingRegionBasedStorage<R> = net.minecraft.class_4180<R>
+typealias SerializingRegionBasedStorage<R, P> = net.minecraft.class_4180<R, P>
 /**
  * net.minecraft.class_1150
  */
 typealias NoneTutorialStepHandler = net.minecraft.class_1150
+/**
+ * net.minecraft.class_10002
+ */
+typealias BeeEntityRenderState = net.minecraft.class_10002
 /**
  * net.minecraft.class_5504
  */
@@ -6307,6 +6667,10 @@ typealias FletchingTableBlock = net.minecraft.class_3712
  * net.minecraft.class_6832
  */
 typealias StructureLocator = net.minecraft.class_6832
+/**
+ * net.minecraft.class_9924
+ */
+typealias ClosableFactory<T> = net.minecraft.class_9924<T>
 /**
  * net.minecraft.class_2014
  */
@@ -6372,6 +6736,10 @@ typealias ChatMessages = net.minecraft.class_341
  */
 typealias PackOverlaysMetadata = net.minecraft.class_8617
 /**
+ * net.minecraft.class_10090
+ */
+typealias MapRenderState = net.minecraft.class_10090
+/**
  * net.minecraft.class_8803
  */
 typealias BlockKeys = net.minecraft.class_8803
@@ -6380,13 +6748,29 @@ typealias BlockKeys = net.minecraft.class_8803
  */
 typealias BiomePlacementModifier = net.minecraft.class_6792
 /**
+ * net.minecraft.class_10225
+ */
+typealias ScheduledTickView = net.minecraft.class_10225
+/**
  * net.minecraft.class_5127
  */
 typealias ThrowableDeliverer<T> = net.minecraft.class_5127<T>
 /**
+ * net.minecraft.class_10466
+ */
+typealias SelectedProperty = net.minecraft.class_10466
+/**
  * net.minecraft.class_283
  */
 typealias PostEffectPass = net.minecraft.class_283
+/**
+ * net.minecraft.class_9988
+ */
+typealias AbstractHoglinEntityRenderer<T> = net.minecraft.class_9988<T>
+/**
+ * net.minecraft.class_10136
+ */
+typealias PlaySoundConsumeEffect = net.minecraft.class_10136
 /**
  * net.minecraft.class_2934
  */
@@ -6468,6 +6852,10 @@ typealias BannedIpEntry = net.minecraft.class_3320
  */
 typealias AbstractRailBlock = net.minecraft.class_2241
 /**
+ * net.minecraft.class_10298
+ */
+typealias NetworkRecipeId = net.minecraft.class_10298
+/**
  * net.minecraft.util.profiling.jfr.event.ChunkGenerationEvent
  */
 typealias ChunkGenerationEvent = net.minecraft.util.profiling.jfr.event.ChunkGenerationEvent
@@ -6480,9 +6868,17 @@ typealias CustomReportDetailsS2CPacket = net.minecraft.class_9814
  */
 typealias ChickenEntity = net.minecraft.class_1428
 /**
+ * net.minecraft.class_4290
+ */
+typealias GoToHomeTask = net.minecraft.class_4290
+/**
  * net.minecraft.class_5285
  */
 typealias GeneratorOptions = net.minecraft.class_5285
+/**
+ * net.minecraft.class_10300
+ */
+typealias ShapedCraftingRecipeDisplay = net.minecraft.class_10300
 /**
  * net.minecraft.class_1867
  */
@@ -6515,6 +6911,10 @@ typealias Timer<T> = net.minecraft.class_236<T>
  * net.minecraft.class_5469
  */
 typealias StructureProcessorLists = net.minecraft.class_5469
+/**
+ * net.minecraft.class_9853
+ */
+typealias AttributeRenameFix = net.minecraft.class_9853
 /**
  * net.minecraft.class_4770
  */
@@ -6556,6 +6956,10 @@ typealias Stopwatch = com.google.common.base.Stopwatch
  */
 typealias StatusEffectCategory = net.minecraft.class_4081
 /**
+ * net.minecraft.class_9852
+ */
+typealias AttributeIdPrefixFix = net.minecraft.class_9852
+/**
  * net.minecraft.class_3185
  */
 typealias SpringFeature = net.minecraft.class_3185
@@ -6587,10 +6991,6 @@ typealias FallibleItemDispenserBehavior = net.minecraft.class_2969
  * net.minecraft.class_273
  */
 typealias ScoreboardState = net.minecraft.class_273
-/**
- * net.minecraft.class_9335
- */
-typealias ComponentMapImpl = net.minecraft.class_9335
 /**
  * net.minecraft.class_3564
  */
@@ -6644,10 +7044,6 @@ typealias FallthroughCommandAction<T> = net.minecraft.class_8939<T>
  */
 typealias PiglinActivity = net.minecraft.class_4837
 /**
- * net.minecraft.class_5514
- */
-typealias TextFilterer = net.minecraft.class_5514
-/**
  * net.minecraft.class_2237
  */
 typealias BlockWithEntity = net.minecraft.class_2237
@@ -6679,6 +7075,10 @@ typealias VanillaShearingLootTableGenerator = net.minecraft.class_9340
  * net.minecraft.class_3561
  */
 typealias FlatteningBiomeMapping = net.minecraft.class_3561
+/**
+ * net.minecraft.class_10131
+ */
+typealias UseRemainderComponent = net.minecraft.class_10131
 /**
  * net.minecraft.class_69
  */
@@ -6776,6 +7176,10 @@ typealias Procedure<T> = net.minecraft.class_8868<T>
  */
 typealias OreConfiguredFeatures = net.minecraft.class_6806
 /**
+ * net.minecraft.class_9958
+ */
+typealias Fog = net.minecraft.class_9958
+/**
  * net.minecraft.class_5804
  */
 typealias CaveVinesBodyBlock = net.minecraft.class_5804
@@ -6832,6 +7236,10 @@ typealias ChorusPlantBlock = net.minecraft.class_2283
  */
 typealias DamageTypeTags = net.minecraft.class_8103
 /**
+ * net.minecraft.class_9953
+ */
+typealias ModelTransformer = net.minecraft.class_9953
+/**
  * net.minecraft.class_2477
  */
 typealias Language = net.minecraft.class_2477
@@ -6847,6 +7255,10 @@ typealias DedicatedServerGui = net.minecraft.class_3182
  * net.minecraft.class_5780
  */
 typealias MultifaceGrowthFeatureConfig = net.minecraft.class_5780
+/**
+ * net.minecraft.class_10521
+ */
+typealias ItemAssetsLoader = net.minecraft.class_10521
 /**
  * net.minecraft.class_2761
  */
@@ -6876,13 +7288,21 @@ typealias EndCrystalEntityRenderer = net.minecraft.class_892
  */
 typealias CustomDataPredicate = net.minecraft.class_9354
 /**
+ * net.minecraft.class_10389
+ */
+typealias CustomModelDataExpansionFix = net.minecraft.class_10389
+/**
+ * net.minecraft.class_10459
+ */
+typealias BooleanProperties = net.minecraft.class_10459
+/**
  * net.minecraft.class_4883
  */
 typealias RealmsWorldOptions = net.minecraft.class_4883
 /**
  * net.minecraft.class_4840
  */
-typealias PiglinEntityModel<T> = net.minecraft.class_4840<T>
+typealias PiglinEntityModel = net.minecraft.class_4840
 /**
  * net.minecraft.class_8181
  */
@@ -6903,6 +7323,10 @@ typealias ServerLightingProvider = net.minecraft.class_3227
  * net.minecraft.class_9632
  */
 typealias ProjectilePowerS2CPacket = net.minecraft.class_9632
+/**
+ * net.minecraft.class_10294
+ */
+typealias FurnaceRecipeDisplay = net.minecraft.class_10294
 /**
  * net.minecraft.class_9424
  */
@@ -6957,6 +7381,10 @@ typealias DataOutput = net.minecraft.class_7784
  */
 typealias Reader = java.io.Reader
 /**
+ * net.minecraft.class_10480
+ */
+typealias NeedleAngleState = net.minecraft.class_10480
+/**
  * net.minecraft.class_6334
  */
 typealias ClampedIntProvider = net.minecraft.class_6334
@@ -6981,9 +7409,17 @@ typealias FallAfterExplosionCriterion = net.minecraft.class_9421
  */
 typealias ClearCommand = net.minecraft.class_3020
 /**
+ * net.minecraft.class_10439
+ */
+typealias ItemModel = net.minecraft.class_10439
+/**
  * net.minecraft.class_8709
  */
 typealias BrandCustomPayload = net.minecraft.class_8709
+/**
+ * net.minecraft.class_10017
+ */
+typealias EntityRenderState = net.minecraft.class_10017
 /**
  * net.minecraft.class_3940
  */
@@ -6992,6 +7428,10 @@ typealias BillboardParticle = net.minecraft.class_3940
  * net.minecraft.class_6005
  */
 typealias DataPool<E> = net.minecraft.class_6005<E>
+/**
+ * net.minecraft.class_10084
+ */
+typealias WitherSkullEntityRenderState = net.minecraft.class_10084
 /**
  * net.minecraft.class_7608
  */
@@ -7008,6 +7448,10 @@ typealias MessageTrustStatus = net.minecraft.class_7595
  * net.minecraft.class_1538
  */
 typealias LightningEntity = net.minecraft.class_1538
+/**
+ * net.minecraft.class_10124
+ */
+typealias ConsumableComponent = net.minecraft.class_10124
 /**
  * net.minecraft.class_3083
  */
@@ -7027,7 +7471,7 @@ typealias WakeUpTask = net.minecraft.class_4214
 /**
  * net.minecraft.class_606
  */
-typealias SkeletonEntityModel<T> = net.minecraft.class_606<T>
+typealias SkeletonEntityModel<S> = net.minecraft.class_606<S>
 /**
  * net.minecraft.class_3935
  */
@@ -7057,6 +7501,10 @@ typealias ElderGuardianEntityRenderer = net.minecraft.class_893
  */
 typealias SpriteDimensions = net.minecraft.class_7771
 /**
+ * net.minecraft.class_9851
+ */
+typealias TriState = net.minecraft.class_9851
+/**
  * net.minecraft.class_2587
  */
 typealias BedBlockEntity = net.minecraft.class_2587
@@ -7069,13 +7517,21 @@ typealias EulaReader = net.minecraft.class_2981
  */
 typealias CopyStateLootFunction = net.minecraft.class_4488
 /**
+ * net.minecraft.class_9976
+ */
+typealias WeatherRendering = net.minecraft.class_9976
+/**
  * net.minecraft.class_8180
  */
 typealias CherryTrunkPlacer = net.minecraft.class_8180
 /**
- * net.minecraft.class_2952
+ * net.minecraft.class_7803
  */
-typealias RecipeGridAligner<T> = net.minecraft.class_2952<T>
+typealias VanillaRecipeGenerator = net.minecraft.class_7803
+/**
+ * net.minecraft.class_9838
+ */
+typealias RecipeGridAligner = net.minecraft.class_9838
 /**
  * net.minecraft.class_4694
  */
@@ -7084,10 +7540,6 @@ typealias SpectateCommand = net.minecraft.class_4694
  * net.minecraft.class_900
  */
 typealias EvokerFangsEntityRenderer = net.minecraft.class_900
-/**
- * net.minecraft.class_9062
- */
-typealias ItemActionResult = net.minecraft.class_9062
 /**
  * net.minecraft.class_613
  */
@@ -7132,6 +7584,10 @@ typealias SmeltingRecipe = net.minecraft.class_3861
  * net.minecraft.class_8621
  */
 typealias ResourcePackOpener<T> = net.minecraft.class_8621<T>
+/**
+ * net.minecraft.class_10233
+ */
+typealias RealmsUploadException = net.minecraft.class_10233
 /**
  * java.util.function.ToDoubleFunction
  */
@@ -7235,7 +7691,7 @@ typealias ExecuteCommand = net.minecraft.class_3050
 /**
  * net.minecraft.class_3729
  */
-typealias IllagerEntityRenderer<T> = net.minecraft.class_3729<T>
+typealias IllagerEntityRenderer<T, S> = net.minecraft.class_3729<T, S>
 /**
  * net.minecraft.class_2622
  */
@@ -7249,6 +7705,10 @@ typealias LanguageOptionsScreen = net.minecraft.class_426
  */
 typealias FlyingEntity = net.minecraft.class_1307
 /**
+ * net.minecraft.class_10419
+ */
+typealias ModelTextures = net.minecraft.class_10419
+/**
  * net.minecraft.class_1473
  */
 typealias SnowGolemEntity = net.minecraft.class_1473
@@ -7260,6 +7720,10 @@ typealias FlightProfiler = net.minecraft.class_6611
  * com.mojang.authlib.minecraft.UserApiService
  */
 typealias UserApiService = com.mojang.authlib.minecraft.UserApiService
+/**
+ * net.minecraft.class_10127
+ */
+typealias Consumable = net.minecraft.class_10127
 /**
  * net.minecraft.class_46
  */
@@ -7288,10 +7752,6 @@ typealias ShapedRecipeJsonBuilder = net.minecraft.class_2447
  * net.minecraft.class_9129
  */
 typealias RegistryByteBuf = net.minecraft.class_9129
-/**
- * net.minecraft.class_8184
- */
-typealias SinglePartEntityModelWithChildTransform<E> = net.minecraft.class_8184<E>
 /**
  * net.minecraft.class_109
  */
@@ -7333,10 +7793,6 @@ typealias ItemRemoveBlockEntityTagFix = net.minecraft.class_7641
  */
 typealias WeightedBakedModel = net.minecraft.class_1097
 /**
- * net.minecraft.class_5937
- */
-typealias EffectShaderStage = net.minecraft.class_5937
-/**
  * net.minecraft.class_2742
  */
 typealias BedPart = net.minecraft.class_2742
@@ -7373,9 +7829,13 @@ typealias BigDripleafBlock = net.minecraft.class_5801
  */
 typealias PlayerKeyPair = net.minecraft.class_7427
 /**
+ * net.minecraft.class_10066
+ */
+typealias SkeletonEntityRenderState = net.minecraft.class_10066
+/**
  * net.minecraft.class_897
  */
-typealias EntityRenderer<T> = net.minecraft.class_897<T>
+typealias EntityRenderer<T, S> = net.minecraft.class_897<T, S>
 /**
  * net.minecraft.class_1221
  */
@@ -7453,9 +7913,9 @@ typealias EndSpikeFeature = net.minecraft.class_3310
  */
 typealias BlockFamily = net.minecraft.class_5794
 /**
- * net.minecraft.class_4116
+ * net.minecraft.class_10058
  */
-typealias GoToIfNearbyTask = net.minecraft.class_4116
+typealias PufferfishEntityRenderState = net.minecraft.class_10058
 /**
  * net.minecraft.class_3545
  */
@@ -7509,6 +7969,10 @@ typealias ChunkTicket<T> = net.minecraft.class_3228<T>
  */
 typealias BrewingStandBlock = net.minecraft.class_2260
 /**
+ * net.minecraft.class_4815
+ */
+typealias WalkTowardsNearestVisibleWantedItemTask = net.minecraft.class_4815
+/**
  * net.minecraft.class_9246
  */
 typealias FontOptionsScreen = net.minecraft.class_9246
@@ -7520,6 +7984,10 @@ typealias CamelBrain = net.minecraft.class_7691
  * net.minecraft.class_412
  */
 typealias ConnectScreen = net.minecraft.class_412
+/**
+ * net.minecraft.class_10065
+ */
+typealias ShulkerEntityRenderState = net.minecraft.class_10065
 /**
  * net.minecraft.class_626
  */
@@ -7540,6 +8008,10 @@ typealias data_Main = net.minecraft.data.Main
  * net.minecraft.class_4922
  */
 typealias MultipartBlockStateSupplier = net.minecraft.class_4922
+/**
+ * net.minecraft.class_10498
+ */
+typealias BannerModelRenderer = net.minecraft.class_10498
 /**
  * org.apache.commons.lang3.mutable.MutableFloat
  */
@@ -7565,6 +8037,14 @@ typealias ThreadedLogWriter = net.minecraft.class_7963
  */
 typealias VoxelSet = net.minecraft.class_251
 /**
+ * net.minecraft.class_8167
+ */
+typealias ParticleLeavesBlock = net.minecraft.class_8167
+/**
+ * net.minecraft.class_10088
+ */
+typealias ZombifiedPiglinEntityRenderState = net.minecraft.class_10088
+/**
  * net.minecraft.class_7291
  */
 typealias TranslatableOption = net.minecraft.class_7291
@@ -7572,10 +8052,6 @@ typealias TranslatableOption = net.minecraft.class_7291
  * net.minecraft.class_8816
  */
 typealias PopupScreen = net.minecraft.class_8816
-/**
- * net.minecraft.class_3972
- */
-typealias CuttingRecipe = net.minecraft.class_3972
 /**
  * net.minecraft.class_6858
  */
@@ -7591,7 +8067,7 @@ typealias EmotionParticle = net.minecraft.class_684
 /**
  * net.minecraft.class_5697
  */
-typealias PlayerHeldItemFeatureRenderer<T, M> = net.minecraft.class_5697<T, M>
+typealias PlayerHeldItemFeatureRenderer<S, M> = net.minecraft.class_5697<S, M>
 /**
  * net.minecraft.class_8249
  */
@@ -7633,6 +8109,10 @@ typealias SugarCaneBlock = net.minecraft.class_2523
  */
 typealias DontObfuscate = net.minecraft.obfuscate.DontObfuscate
 /**
+ * net.minecraft.class_10270
+ */
+typealias RotateCommand = net.minecraft.class_10270
+/**
  * net.minecraft.class_1948
  */
 typealias SpawnHelper = net.minecraft.class_1948
@@ -7644,6 +8124,10 @@ typealias ClientCommandC2SPacket = net.minecraft.class_2848
  * net.minecraft.class_4092
  */
 typealias OptionsAddTextBackgroundFix = net.minecraft.class_4092
+/**
+ * net.minecraft.class_10237
+ */
+typealias UploadCompressor = net.minecraft.class_10237
 /**
  * net.minecraft.class_6847
  */
@@ -7697,10 +8181,6 @@ typealias ElytraSoundInstance = net.minecraft.class_1103
  */
 typealias HoverPhase = net.minecraft.class_1516
 /**
- * net.minecraft.class_7752
- */
-typealias ChestBoatEntityModel = net.minecraft.class_7752
-/**
  * net.minecraft.class_2248
  */
 typealias Block = net.minecraft.class_2248
@@ -7725,10 +8205,6 @@ typealias ParsingStateImpl = net.minecraft.class_9412
  */
 typealias ChunkData = net.minecraft.class_6603
 /**
- * net.minecraft.class_517
- */
-typealias AbstractFurnaceRecipeBookScreen = net.minecraft.class_517
-/**
  * net.minecraft.class_7458
  */
 typealias VanillaBannerPatternTagProvider = net.minecraft.class_7458
@@ -7744,6 +8220,10 @@ typealias Backup = net.minecraft.class_4867
  * net.minecraft.class_234
  */
 typealias TimerCallback<T> = net.minecraft.class_234<T>
+/**
+ * net.minecraft.class_10072
+ */
+typealias FlyingItemEntityRenderState = net.minecraft.class_10072
 /**
  * net.minecraft.class_3268
  */
@@ -7781,9 +8261,17 @@ typealias SpiderEntityRenderer<T> = net.minecraft.class_949<T>
  */
 typealias EmergeTask<E> = net.minecraft.class_7250<E>
 /**
+ * net.minecraft.class_10475
+ */
+typealias CooldownProperty = net.minecraft.class_10475
+/**
  * com.mojang.blaze3d.platform.TextureUtil
  */
 typealias TextureUtil = com.mojang.blaze3d.platform.TextureUtil
+/**
+ * net.minecraft.class_10171
+ */
+typealias ChunkTaskScheduler = net.minecraft.class_10171
 /**
  * net.minecraft.class_5555
  */
@@ -7800,6 +8288,10 @@ typealias Particle = net.minecraft.class_703
  * net.minecraft.class_9316
  */
 typealias PathContext = net.minecraft.class_9316
+/**
+ * net.minecraft.class_10001
+ */
+typealias BatEntityRenderState = net.minecraft.class_10001
 /**
  * net.minecraft.class_3695
  */
@@ -7820,6 +8312,10 @@ typealias RemovePoiValidTagFix = net.minecraft.class_4731
  * net.minecraft.class_2342
  */
 typealias BlockPointer = net.minecraft.class_2342
+/**
+ * net.minecraft.class_5778
+ */
+typealias MultifaceBlock = net.minecraft.class_5778
 /**
  * net.minecraft.class_4519
  */
@@ -7851,7 +8347,7 @@ typealias IglooMetadataRemovalFix = net.minecraft.class_1176
 /**
  * net.minecraft.class_3885
  */
-typealias VillagerClothingFeatureRenderer<T, M> = net.minecraft.class_3885<T, M>
+typealias VillagerClothingFeatureRenderer<S, M> = net.minecraft.class_3885<S, M>
 /**
  * net.minecraft.class_1559
  */
@@ -8017,6 +8513,10 @@ typealias PriorityIterator<T> = net.minecraft.class_8917<T>
  */
 typealias LavaSubmergedBlockStructureProcessor = net.minecraft.class_5399
 /**
+ * net.minecraft.class_10117
+ */
+typealias DeprecatedLanguageData = net.minecraft.class_10117
+/**
  * net.minecraft.class_1687
  */
 typealias WitherSkullEntity = net.minecraft.class_1687
@@ -8089,6 +8589,10 @@ typealias Component<T> = net.minecraft.class_9336<T>
  */
 typealias SmithingTemplateItem = net.minecraft.class_8052
 /**
+ * net.minecraft.class_9929
+ */
+typealias BundleTooltipSubmenuHandler = net.minecraft.class_9929
+/**
  * net.minecraft.class_4597
  */
 typealias VertexConsumerProvider = net.minecraft.class_4597
@@ -8133,10 +8637,6 @@ typealias CamelAnimations = net.minecraft.class_7730
  */
 typealias Brain<E> = net.minecraft.class_4095<E>
 /**
- * net.minecraft.class_8167
- */
-typealias CherryLeavesBlock = net.minecraft.class_8167
-/**
  * net.minecraft.class_7102
  */
 typealias FrogEntity = net.minecraft.class_7102
@@ -8159,15 +8659,11 @@ typealias LanternBlock = net.minecraft.class_3749
 /**
  * net.minecraft.class_564
  */
-typealias DrownedEntityModel<T> = net.minecraft.class_564<T>
+typealias DrownedEntityModel = net.minecraft.class_564
 /**
  * net.minecraft.class_4779
  */
 typealias BasaltPillarFeature = net.minecraft.class_4779
-/**
- * net.minecraft.class_7755
- */
-typealias ModelWithWaterPatch = net.minecraft.class_7755
 /**
  * java.util.function.BinaryOperator
  */
@@ -8176,6 +8672,10 @@ typealias BinaryOperator<T> = java.util.function.BinaryOperator<T>
  * net.minecraft.class_2306
  */
 typealias EntitySelectorOptions = net.minecraft.class_2306
+/**
+ * net.minecraft.class_9987
+ */
+typealias RedstoneUpdateOrderDebugRenderer = net.minecraft.class_9987
 /**
  * net.minecraft.class_1542
  */
@@ -8245,10 +8745,6 @@ typealias ItemStackParticleEffect = net.minecraft.class_2392
  */
 typealias TestableWorld = net.minecraft.class_3746
 /**
- * net.minecraft.class_4594
- */
-typealias TintableCompositeModel<E> = net.minecraft.class_4594<E>
-/**
  * net.minecraft.class_8801
  */
 typealias NbtSizeValidationException = net.minecraft.class_8801
@@ -8273,6 +8769,10 @@ typealias SpitParticle = net.minecraft.class_721
  */
 typealias ChatOptionsScreen = net.minecraft.class_404
 /**
+ * net.minecraft.class_10295
+ */
+typealias RecipeDisplay = net.minecraft.class_10295
+/**
  * net.minecraft.class_3944
  */
 typealias OpenScreenS2CPacket = net.minecraft.class_3944
@@ -8293,13 +8793,17 @@ typealias VillageSectionsDebugRenderer = net.minecraft.class_4841
  */
 typealias PlayerListS2CPacket = net.minecraft.class_2703
 /**
- * net.minecraft.class_3270
- */
-typealias ResourceMetadataReader<T> = net.minecraft.class_3270<T>
-/**
  * net.minecraft.class_7486
  */
 typealias BlockMirrorArgumentType = net.minecraft.class_7486
+/**
+ * net.minecraft.class_10030
+ */
+typealias GoatEntityRenderState = net.minecraft.class_10030
+/**
+ * net.minecraft.class_10539
+ */
+typealias TextureContents = net.minecraft.class_10539
 /**
  * net.minecraft.class_7419
  */
@@ -8336,10 +8840,6 @@ typealias PunchTreeTutorialStepHandler = net.minecraft.class_1153
  * net.minecraft.class_4100
  */
 typealias StopPanickingTask = net.minecraft.class_4100
-/**
- * net.minecraft.class_4814
- */
-typealias WalkTowardsPosTask = net.minecraft.class_4814
 /**
  * net.minecraft.class_353
  */
@@ -8389,6 +8889,10 @@ typealias InstantStatusEffect = net.minecraft.class_1289
  */
 typealias DamageEffects = net.minecraft.class_8107
 /**
+ * net.minecraft.class_10372
+ */
+typealias RenameEntityNbtKeyFix = net.minecraft.class_10372
+/**
  * net.minecraft.class_2102
  */
 typealias EntityEffectPredicate = net.minecraft.class_2102
@@ -8429,6 +8933,14 @@ typealias ArmorStandEntityModel = net.minecraft.class_551
  */
 typealias SpawnerBlock = net.minecraft.class_2496
 /**
+ * net.minecraft.class_10473
+ */
+typealias CompassState = net.minecraft.class_10473
+/**
+ * net.minecraft.class_10297
+ */
+typealias RecipeDisplayEntry = net.minecraft.class_10297
+/**
  * net.minecraft.class_8858
  */
 typealias SingleCommandAction<T> = net.minecraft.class_8858<T>
@@ -8441,9 +8953,21 @@ typealias VanillaBiomeTagProvider = net.minecraft.class_6957
  */
 typealias MutableRegistry<T> = net.minecraft.class_2385<T>
 /**
+ * net.minecraft.class_9919
+ */
+typealias InactivityFpsLimiter = net.minecraft.class_9919
+/**
  * net.minecraft.class_3471
  */
 typealias WoodlandMansionGenerator = net.minecraft.class_3471
+/**
+ * net.minecraft.class_9925
+ */
+typealias Handle<T> = net.minecraft.class_9925<T>
+/**
+ * net.minecraft.class_10185
+ */
+typealias PlayerInput = net.minecraft.class_10185
 /**
  * net.minecraft.class_7563
  */
@@ -8515,7 +9039,7 @@ typealias PoolStructurePiece = net.minecraft.class_3790
 /**
  * net.minecraft.class_558
  */
-typealias ChickenEntityModel<T> = net.minecraft.class_558<T>
+typealias ChickenEntityModel = net.minecraft.class_558
 /**
  * net.minecraft.class_3785
  */
@@ -8544,6 +9068,10 @@ typealias FlatteningRecipeMapping = net.minecraft.class_1206
  * net.minecraft.class_5256
  */
 typealias StriderGravityFix = net.minecraft.class_5256
+/**
+ * net.minecraft.class_10405
+ */
+typealias ItemModelOutput = net.minecraft.class_10405
 /**
  * net.minecraft.class_6306
  */
@@ -8577,13 +9105,17 @@ typealias ToggleableFeature = net.minecraft.class_7695
  */
 typealias BlockStatePredicate = net.minecraft.class_2715
 /**
+ * net.minecraft.class_10404
+ */
+typealias PotionTintSource = net.minecraft.class_10404
+/**
  * net.minecraft.class_5558
  */
 typealias BlockEntityTicker<T> = net.minecraft.class_5558<T>
 /**
  * net.minecraft.class_612
  */
-typealias SmallTropicalFishEntityModel<T> = net.minecraft.class_612<T>
+typealias SmallTropicalFishEntityModel = net.minecraft.class_612
 /**
  * net.minecraft.class_1973
  */
@@ -8665,6 +9197,10 @@ typealias BeaconScreenHandler = net.minecraft.class_1704
  */
 typealias ConduitBlockEntity = net.minecraft.class_2597
 /**
+ * net.minecraft.class_10460
+ */
+typealias bool_BooleanProperty = net.minecraft.class_10460
+/**
  * net.minecraft.class_9650
  */
 typealias ParticleUnflatteningFix = net.minecraft.class_9650
@@ -8688,10 +9224,6 @@ typealias GrassColors = net.minecraft.class_1933
  * net.minecraft.class_7654
  */
 typealias ResourceFinder = net.minecraft.class_7654
-/**
- * net.minecraft.class_4592
- */
-typealias AnimalModel<E> = net.minecraft.class_4592<E>
 /**
  * net.minecraft.class_7386
  */
@@ -8753,6 +9285,10 @@ typealias MultiNoiseUtil = net.minecraft.class_6544
  */
 typealias SingleTickTask<E> = net.minecraft.class_7894<E>
 /**
+ * net.minecraft.class_9901
+ */
+typealias DefaultRedstoneController = net.minecraft.class_9901
+/**
  * net.minecraft.class_3590
  */
 typealias ChunkStructuresTemplateRenameFix = net.minecraft.class_3590
@@ -8763,7 +9299,7 @@ typealias MultipartBakedModel = net.minecraft.class_1095
 /**
  * net.minecraft.class_1662
  */
-typealias RecipeMatcher = net.minecraft.class_1662
+typealias RecipeMatcher<T> = net.minecraft.class_1662<T>
 /**
  * net.minecraft.class_9159
  */
@@ -8889,6 +9425,10 @@ typealias CraftPlanksTutorialStepHandler = net.minecraft.class_1149
  */
 typealias ConfigPackets = net.minecraft.class_9156
 /**
+ * net.minecraft.class_10479
+ */
+typealias DamageProperty = net.minecraft.class_10479
+/**
  * net.minecraft.class_4151
  */
 typealias EntityInteraction = net.minecraft.class_4151
@@ -8905,9 +9445,17 @@ typealias SwimGoal = net.minecraft.class_1347
  */
 typealias AttackIndicator = net.minecraft.class_4061
 /**
+ * net.minecraft.class_10064
+ */
+typealias ShulkerBulletEntityRenderState = net.minecraft.class_10064
+/**
  * net.minecraft.class_7706
  */
 typealias ItemGroups = net.minecraft.class_7706
+/**
+ * net.minecraft.class_9895
+ */
+typealias FuelRegistry = net.minecraft.class_9895
 /**
  * net.minecraft.class_185
  */
@@ -9013,6 +9561,10 @@ typealias FireworkRocketItem = net.minecraft.class_1781
  */
 typealias HorseBondWithPlayerGoal = net.minecraft.class_1387
 /**
+ * net.minecraft.class_9930
+ */
+typealias TooltipSubmenuHandler = net.minecraft.class_9930
+/**
  * net.minecraft.class_9695
  */
 typealias RecipeInput = net.minecraft.class_9695
@@ -9025,6 +9577,10 @@ typealias TwistingVinesBlock = net.minecraft.class_4777
  */
 typealias VegetationPatchFeatureConfig = net.minecraft.class_5927
 /**
+ * net.minecraft.class_10463
+ */
+typealias FishingRodCastProperty = net.minecraft.class_10463
+/**
  * net.minecraft.class_1194
  */
 typealias ItemWrittenBookPagesStrictJsonFix = net.minecraft.class_1194
@@ -9033,9 +9589,21 @@ typealias ItemWrittenBookPagesStrictJsonFix = net.minecraft.class_1194
  */
 typealias Widget = net.minecraft.class_8021
 /**
+ * net.minecraft.class_582
+ */
+typealias FelineEntityModel<T> = net.minecraft.class_582<T>
+/**
  * net.minecraft.class_4559
  */
 typealias StatePredicate = net.minecraft.class_4559
+/**
+ * net.minecraft.class_9871
+ */
+typealias EnderDragonFrameTracker = net.minecraft.class_9871
+/**
+ * net.minecraft.class_314
+ */
+typealias RecipeBookCategories = net.minecraft.class_314
 /**
  * net.minecraft.class_4794
  */
@@ -9289,10 +9857,6 @@ typealias TimeSupplier = net.minecraft.class_7576
  */
 typealias ChunkBorderDebugRenderer = net.minecraft.class_862
 /**
- * net.minecraft.class_285
- */
-typealias GlProgramManager = net.minecraft.class_285
-/**
  * net.minecraft.class_9796
  */
 typealias JukeboxSongs = net.minecraft.class_9796
@@ -9349,6 +9913,10 @@ typealias SignItem = net.minecraft.class_1822
  */
 typealias AbuseReportLimits = com.mojang.authlib.minecraft.report.AbuseReportLimits
 /**
+ * net.minecraft.class_9955
+ */
+typealias CloudRenderer = net.minecraft.class_9955
+/**
  * net.minecraft.class_9103
  */
 typealias QueryStates = net.minecraft.class_9103
@@ -9364,6 +9932,10 @@ typealias BlockEntityRenderer<T> = net.minecraft.class_827<T>
  * net.minecraft.class_2380
  */
 typealias HayBlock = net.minecraft.class_2380
+/**
+ * net.minecraft.class_10050
+ */
+typealias PandaEntityRenderState = net.minecraft.class_10050
 /**
  * net.minecraft.class_8599
  */
@@ -9396,6 +9968,10 @@ typealias Urls = net.minecraft.class_8216
  * net.minecraft.class_938
  */
 typealias SalmonEntityRenderer = net.minecraft.class_938
+/**
+ * net.minecraft.class_10035
+ */
+typealias IllagerEntityRenderState = net.minecraft.class_10035
 /**
  * net.minecraft.class_3621
  */
@@ -9433,10 +10009,6 @@ typealias RecipeBookResults = net.minecraft.class_513
  */
 typealias GuiNavigationType = net.minecraft.class_8015
 /**
- * net.minecraft.class_2753
- */
-typealias DirectionProperty = net.minecraft.class_2753
-/**
  * net.minecraft.class_4725
  */
 typealias MipmapHelper = net.minecraft.class_4725
@@ -9465,9 +10037,17 @@ typealias RenameScoreboardDisplaySlotFix = net.minecraft.class_8627
  */
 typealias ServerQueryNetworkHandler = net.minecraft.class_3251
 /**
+ * net.minecraft.class_801
+ */
+typealias GeneratedItemModel = net.minecraft.class_801
+/**
  * net.minecraft.class_4812
  */
 typealias RidingTask = net.minecraft.class_4812
+/**
+ * net.minecraft.class_10428
+ */
+typealias ItemStackEntityRenderState = net.minecraft.class_10428
 /**
  * net.minecraft.class_327
  */
@@ -9511,11 +10091,15 @@ typealias Quantiles = net.minecraft.class_6508
 /**
  * net.minecraft.class_615
  */
-typealias LargeTropicalFishEntityModel<T> = net.minecraft.class_615<T>
+typealias LargeTropicalFishEntityModel = net.minecraft.class_615
 /**
  * net.minecraft.class_1394
  */
 typealias WanderAroundFarGoal = net.minecraft.class_1394
+/**
+ * net.minecraft.class_9906
+ */
+typealias RedstoneController = net.minecraft.class_9906
 /**
  * net.minecraft.class_1820
  */
@@ -9529,6 +10113,10 @@ typealias WolfEntity = net.minecraft.class_1493
  */
 typealias ComparatorBlock = net.minecraft.class_2286
 
+/**
+ * net.minecraft.class_10366
+ */
+typealias ProjectionType = net.minecraft.class_10366
 /**
  * net.minecraft.class_9097
  */
@@ -9557,6 +10145,10 @@ typealias VariantSetting<T> = net.minecraft.class_4938<T>
  * net.minecraft.class_2837
  */
 typealias Palette<T> = net.minecraft.class_2837<T>
+/**
+ * net.minecraft.class_10214
+ */
+typealias ScopedProfiler = net.minecraft.class_10214
 /**
  * net.minecraft.class_1521
  */
@@ -9598,6 +10190,10 @@ typealias RenderSystem = com.mojang.blaze3d.systems.RenderSystem
  */
 typealias OcelotEntity = net.minecraft.class_3701
 /**
+ * net.minecraft.class_10022
+ */
+typealias ExperienceOrbEntityRenderState = net.minecraft.class_10022
+/**
  * net.minecraft.class_8799
  */
 typealias TradeRebalanceStructureTagProvider = net.minecraft.class_8799
@@ -9622,6 +10218,10 @@ typealias FocusedTooltipPositioner = net.minecraft.class_7999
  */
 typealias ShulkerBoxSlot = net.minecraft.class_1736
 /**
+ * net.minecraft.class_10219
+ */
+typealias TracyFrameCapturer = net.minecraft.class_10219
+/**
  * net.minecraft.class_4107
  */
 typealias OpenDoorsTask = net.minecraft.class_4107
@@ -9645,6 +10245,10 @@ typealias DoubleArgumentSerializer = net.minecraft.class_2326
  * net.minecraft.class_3233
  */
 typealias ChunkRegion = net.minecraft.class_3233
+/**
+ * net.minecraft.class_10531
+ */
+typealias ContextEntityTypeProperty = net.minecraft.class_10531
 /**
  * net.minecraft.class_7371
  */
@@ -9681,6 +10285,10 @@ typealias BiomeKeys = net.minecraft.class_1972
  * net.minecraft.class_1659
  */
 typealias ChatVisibility = net.minecraft.class_1659
+/**
+ * java.util.concurrent.TimeUnit
+ */
+typealias TimeUnit = java.util.concurrent.TimeUnit
 /**
  * net.minecraft.class_6599
  */
@@ -9750,13 +10358,25 @@ typealias AbuseReportTypeScreen = net.minecraft.class_8770
  */
 typealias WorldEvents = net.minecraft.class_6088
 /**
+ * net.minecraft.class_10478
+ */
+typealias CustomModelDataFloatProperty = net.minecraft.class_10478
+/**
  * net.minecraft.class_7310
  */
 typealias AllayEntityRenderer = net.minecraft.class_7310
 /**
+ * net.minecraft.class_10234
+ */
+typealias FailedRealmsUploadException = net.minecraft.class_10234
+/**
  * net.minecraft.class_3711
  */
 typealias CartographyTableBlock = net.minecraft.class_3711
+/**
+ * net.minecraft.class_10529
+ */
+typealias AbstractSignBlockEntityRenderer = net.minecraft.class_10529
 /**
  * net.minecraft.class_1549
  */
@@ -9798,13 +10418,13 @@ typealias LoomScreenHandler = net.minecraft.class_1726
  */
 typealias PlayDeadTask = net.minecraft.class_5769
 /**
+ * net.minecraft.class_10511
+ */
+typealias ShulkerBoxModelRenderer = net.minecraft.class_10511
+/**
  * net.minecraft.class_1374
  */
 typealias EscapeDangerGoal = net.minecraft.class_1374
-/**
- * net.minecraft.class_7391
- */
-typealias CompassAnglePredicateProvider = net.minecraft.class_7391
 /**
  * net.minecraft.class_4139
  */
@@ -9818,6 +10438,10 @@ typealias PaletteStorage = net.minecraft.class_6490
  */
 typealias RealmsPendingInvitesScreen = net.minecraft.class_4401
 /**
+ * net.minecraft.class_10010
+ */
+typealias CreeperEntityRenderState = net.minecraft.class_10010
+/**
  * net.minecraft.class_2960
  */
 typealias Identifier = net.minecraft.class_2960
@@ -9826,9 +10450,17 @@ typealias Identifier = net.minecraft.class_2960
  */
 typealias SummonCommand = net.minecraft.class_3138
 /**
+ * net.minecraft.class_10047
+ */
+typealias MooshroomEntityRenderState = net.minecraft.class_10047
+/**
  * net.minecraft.class_5726
  */
 typealias DripstoneHelper = net.minecraft.class_5726
+/**
+ * net.minecraft.class_10369
+ */
+typealias EntitySalmonSizeFix = net.minecraft.class_10369
 /**
  * com.mojang.brigadier.arguments.StringArgumentType
  */
@@ -9910,6 +10542,14 @@ typealias InkSacItem = net.minecraft.class_8233
  */
 typealias FallingBlockEntity = net.minecraft.class_1540
 /**
+ * net.minecraft.class_4219
+ */
+typealias GoToPosTask = net.minecraft.class_4219
+/**
+ * net.minecraft.class_10500
+ */
+typealias BedModelRenderer = net.minecraft.class_10500
+/**
  * net.minecraft.class_3342
  */
 typealias EndCityGenerator = net.minecraft.class_3342
@@ -9917,6 +10557,10 @@ typealias EndCityGenerator = net.minecraft.class_3342
  * net.minecraft.class_538
  */
 typealias TeleportSpectatorMenu = net.minecraft.class_538
+/**
+ * net.minecraft.class_9879
+ */
+typealias ExperimentalMinecartController = net.minecraft.class_9879
 /**
  * net.minecraft.class_5891
  */
@@ -9933,6 +10577,10 @@ typealias OffsetPredicate = net.minecraft.class_6679
  * net.minecraft.class_4715
  */
 typealias NoOpFeature = net.minecraft.class_4715
+/**
+ * net.minecraft.class_10140
+ */
+typealias ExperimentalMinecartShapeContext = net.minecraft.class_10140
 /**
  * net.minecraft.class_5605
  */
@@ -9962,6 +10610,10 @@ typealias ClientWorld = net.minecraft.class_638
  */
 typealias LegacyCoralFanBlockMapping = net.minecraft.class_1207
 /**
+ * net.minecraft.class_925
+ */
+typealias AbstractMinecartEntityRenderer<T, S> = net.minecraft.class_925<T, S>
+/**
  * net.minecraft.class_9028
  */
 typealias Downloader = net.minecraft.class_9028
@@ -9978,9 +10630,17 @@ typealias BoggedEntityRenderer = net.minecraft.class_9255
  */
 typealias SizeUnit = net.minecraft.class_4428
 /**
+ * net.minecraft.class_10489
+ */
+typealias CustomModelDataStringProperty = net.minecraft.class_10489
+/**
  * net.minecraft.class_8757
  */
 typealias RenderingChart = net.minecraft.class_8757
+/**
+ * net.minecraft.class_10013
+ */
+typealias DonkeyEntityRenderState = net.minecraft.class_10013
 /**
  * net.minecraft.class_1324
  */
@@ -10005,6 +10665,10 @@ typealias ChunkLoader = net.minecraft.class_9759
  * net.minecraft.class_9239
  */
 typealias WindChargeItem = net.minecraft.class_9239
+/**
+ * net.minecraft.class_9938
+ */
+typealias CurrentIndexProvider = net.minecraft.class_9938
 /**
  * net.minecraft.class_1184
  */
@@ -10053,6 +10717,14 @@ typealias ChunkDataList<T> = net.minecraft.class_5566<T>
  * net.minecraft.class_4967
  */
 typealias BiomeAdditionsSound = net.minecraft.class_4967
+/**
+ * net.minecraft.class_10241
+ */
+typealias CreateWorldCallback = net.minecraft.class_10241
+/**
+ * net.minecraft.class_10008
+ */
+typealias CatEntityRenderState = net.minecraft.class_10008
 /**
  * net.minecraft.class_4389
  */
@@ -10142,6 +10814,10 @@ typealias EntityShulkerRotationFix = net.minecraft.class_5277
  */
 typealias DataTracked = net.minecraft.class_9221
 /**
+ * net.minecraft.class_9887
+ */
+typealias IngredientPlacement = net.minecraft.class_9887
+/**
  * net.minecraft.class_1148
  */
 typealias SoundContainer<T> = net.minecraft.class_1148<T>
@@ -10164,7 +10840,7 @@ typealias InteractionObserver = net.minecraft.class_4094
 /**
  * net.minecraft.class_563
  */
-typealias ElytraEntityModel<T> = net.minecraft.class_563<T>
+typealias ElytraEntityModel = net.minecraft.class_563
 /**
  * net.minecraft.class_2945
  */
@@ -10186,6 +10862,14 @@ typealias MeleeAttackTask = net.minecraft.class_4816
  */
 typealias BuiltinEmptyGlyph = net.minecraft.class_7191
 /**
+ * net.minecraft.class_10023
+ */
+typealias FallingBlockEntityRenderState = net.minecraft.class_10023
+/**
+ * net.minecraft.class_10236
+ */
+typealias CloseFailureRealmsUploadException = net.minecraft.class_10236
+/**
  * net.minecraft.class_3619
  */
 typealias PistonBehavior = net.minecraft.class_3619
@@ -10193,10 +10877,6 @@ typealias PistonBehavior = net.minecraft.class_3619
  * net.minecraft.class_4835
  */
 typealias HoglinBrain = net.minecraft.class_4835
-/**
- * net.minecraft.class_4595
- */
-typealias CompositeEntityModel<E> = net.minecraft.class_4595<E>
 /**
  * it.unimi.dsi.fastutil.longs.LongConsumer
  */
@@ -10271,6 +10951,10 @@ typealias SideValidatingDispatchingCodecBuilder<B, L> = net.minecraft.class_9146
  */
 typealias StructurePoolElementType<P> = net.minecraft.class_3816<P>
 /**
+ * net.minecraft.class_10093
+ */
+typealias MapTextureManager = net.minecraft.class_10093
+/**
  * net.minecraft.class_8020
  */
 typealias LogoDrawer = net.minecraft.class_8020
@@ -10303,6 +10987,10 @@ typealias Memory<T> = net.minecraft.class_4831<T>
  */
 typealias CharPredicate = net.minecraft.class_5462
 /**
+ * net.minecraft.class_4114
+ */
+typealias UpdateJobSiteTask = net.minecraft.class_4114
+/**
  * net.minecraft.class_6492
  */
 typealias Spline<C, I> = net.minecraft.class_6492<C, I>
@@ -10310,6 +10998,10 @@ typealias Spline<C, I> = net.minecraft.class_6492<C, I>
  * net.minecraft.class_1515
  */
 typealias DyingPhase = net.minecraft.class_1515
+/**
+ * net.minecraft.class_10168
+ */
+typealias SheepPredicate = net.minecraft.class_10168
 /**
  * net.minecraft.class_907
  */
@@ -10319,17 +11011,13 @@ typealias GuardianEntityRenderer = net.minecraft.class_907
  */
 typealias TntEntity = net.minecraft.class_1541
 /**
- * net.minecraft.class_8844
+ * net.minecraft.class_10151
  */
-typealias CreatingSnapshotWorldTask = net.minecraft.class_8844
+typealias ShaderLoader = net.minecraft.class_10151
 /**
  * net.minecraft.class_9066
  */
 typealias EntityAttachments = net.minecraft.class_9066
-/**
- * net.minecraft.class_6395
- */
-typealias ClampedModelPredicateProvider = net.minecraft.class_6395
 /**
  * net.minecraft.class_570
  */
@@ -10375,9 +11063,21 @@ typealias SerializableTickScheduler<T> = net.minecraft.class_6761<T>
  */
 typealias TagKey<T> = net.minecraft.class_6862<T>
 /**
+ * net.minecraft.class_10544
+ */
+typealias EmptyItemModel = net.minecraft.class_10544
+/**
+ * net.minecraft.class_10377
+ */
+typealias BannerFlagBlockModel = net.minecraft.class_10377
+/**
  * net.minecraft.class_7710
  */
 typealias CraftingRecipeCategory = net.minecraft.class_7710
+/**
+ * net.minecraft.class_10229
+ */
+typealias GlFenceSync = net.minecraft.class_10229
 /**
  * net.minecraft.class_8057
  */
@@ -10463,10 +11163,6 @@ typealias GameJoinS2CPacket = net.minecraft.class_2678
  */
 typealias SculkShriekerBlockEntity = net.minecraft.class_7133
 /**
- * net.minecraft.class_806
- */
-typealias ModelOverrideList = net.minecraft.class_806
-/**
  * net.minecraft.class_5898
  */
 typealias WorldBorderWarningTimeChangedS2CPacket = net.minecraft.class_5898
@@ -10519,6 +11215,10 @@ typealias ItemRenderer = net.minecraft.class_918
  */
 typealias ProjectileDispenserBehavior = net.minecraft.class_2965
 /**
+ * net.minecraft.class_10265
+ */
+typealias PlayerRotationS2CPacket = net.minecraft.class_10265
+/**
  * net.minecraft.class_3819
  */
 typealias BlockMatchRuleTest = net.minecraft.class_3819
@@ -10526,6 +11226,10 @@ typealias BlockMatchRuleTest = net.minecraft.class_3819
  * net.minecraft.class_7269
  */
 typealias Vibration = net.minecraft.class_7269
+/**
+ * net.minecraft.class_10537
+ */
+typealias ReloadableTexture = net.minecraft.class_10537
 /**
  * net.minecraft.class_4456
  */
@@ -10546,6 +11250,10 @@ typealias RegistryEntry<T> = net.minecraft.class_6880<T>
  * java.nio.ByteBuffer
  */
 typealias ByteBuffer = java.nio.ByteBuffer
+/**
+ * net.minecraft.class_9883
+ */
+typealias DefaultMinecartController = net.minecraft.class_9883
 /**
  * net.minecraft.class_7487
  */
@@ -10575,6 +11283,10 @@ typealias AxisAlignedLinearPosRuleTest = net.minecraft.class_4992
  */
 typealias DebugBeeCustomPayload = net.minecraft.class_8707
 /**
+ * net.minecraft.class_4120
+ */
+typealias GoToLookTargetTask = net.minecraft.class_4120
+/**
  * net.minecraft.class_8221
  */
 typealias UpdateSignTextFormatFix = net.minecraft.class_8221
@@ -10587,6 +11299,14 @@ typealias CheckedGson = net.minecraft.class_4869
  */
 typealias FixedBufferInputStream = net.minecraft.class_6826
 /**
+ * net.minecraft.class_10200
+ */
+typealias WrapperBakedModel = net.minecraft.class_10200
+/**
+ * net.minecraft.class_9884
+ */
+typealias AbstractCraftingScreenHandler = net.minecraft.class_9884
+/**
  * net.minecraft.class_7398
  */
 typealias AboveRootPlacement = net.minecraft.class_7398
@@ -10598,6 +11318,10 @@ typealias CroakTask = net.minecraft.class_7095
  * net.minecraft.class_2781
  */
 typealias EntityAttributesS2CPacket = net.minecraft.class_2781
+/**
+ * net.minecraft.class_5421
+ */
+typealias RecipeBookType = net.minecraft.class_5421
 /**
  * net.minecraft.class_423
  */
@@ -10615,9 +11339,21 @@ typealias EntityPufferfishRenameFix = net.minecraft.class_3608
  */
 typealias ContextLootNbtProvider = net.minecraft.class_5646
 /**
+ * net.minecraft.class_10005
+ */
+typealias BoggedEntityRenderState = net.minecraft.class_10005
+/**
  * net.minecraft.class_5776
  */
 typealias GlowSquidEntity = net.minecraft.class_5776
+/**
+ * net.minecraft.class_5753
+ */
+typealias TickCooldownTask = net.minecraft.class_5753
+/**
+ * net.minecraft.class_10081
+ */
+typealias WardenEntityRenderState = net.minecraft.class_10081
 /**
  * net.minecraft.class_1246
  */
@@ -10626,6 +11362,10 @@ typealias Schema700 = net.minecraft.class_1246
  * net.minecraft.class_1249
  */
 typealias Schema701 = net.minecraft.class_1249
+/**
+ * net.minecraft.class_9849
+ */
+typealias InterpolatedFlipFlop = net.minecraft.class_9849
 /**
  * net.minecraft.class_1250
  */
@@ -10717,7 +11457,11 @@ typealias DecoderHandler<T> = net.minecraft.class_2543<T>
 /**
  * net.minecraft.class_591
  */
-typealias PlayerEntityModel<T> = net.minecraft.class_591<T>
+typealias PlayerEntityModel = net.minecraft.class_591
+/**
+ * net.minecraft.class_9950
+ */
+typealias PlayerCapeModel<T> = net.minecraft.class_9950<T>
 /**
  * net.minecraft.class_8845
  */
@@ -10743,9 +11487,17 @@ typealias GeneratorOptionsHolder = net.minecraft.class_7193
  */
 typealias StyledNumberFormat = net.minecraft.class_9025
 /**
+ * net.minecraft.class_10073
+ */
+typealias TridentEntityRenderState = net.minecraft.class_10073
+/**
  * net.minecraft.class_8174
  */
 typealias BrushableBlockEntity = net.minecraft.class_8174
+/**
+ * net.minecraft.class_10451
+ */
+typealias SelectItemModel<T> = net.minecraft.class_10451<T>
 /**
  * net.minecraft.class_5737
  */
@@ -10778,10 +11530,6 @@ typealias EntityZombieVillagerTypeFix = net.minecraft.class_1174
  * net.minecraft.class_1291
  */
 typealias StatusEffect = net.minecraft.class_1291
-/**
- * net.minecraft.class_8574
- */
-typealias WearableCarvedPumpkinBlock = net.minecraft.class_8574
 /**
  * net.minecraft.class_9095
  */
@@ -10858,6 +11606,10 @@ typealias FacingBlock = net.minecraft.class_2318
  * net.minecraft.class_8215
  */
 typealias DynamicTexture = net.minecraft.class_8215
+/**
+ * net.minecraft.class_10169
+ */
+typealias TridentRiptideEntityModel = net.minecraft.class_10169
 /**
  * net.minecraft.class_775
  */
@@ -10971,10 +11723,6 @@ typealias CampfireBlockEntity = net.minecraft.class_3924
  */
 typealias PufferfishEntityRenderer = net.minecraft.class_936
 /**
- * net.minecraft.class_2852
- */
-typealias ChunkSerializer = net.minecraft.class_2852
-/**
  * net.minecraft.class_7262
  */
 typealias SculkShriekerWarningManager = net.minecraft.class_7262
@@ -10997,7 +11745,7 @@ typealias EffectsChangedCriterion = net.minecraft.class_2027
 /**
  * net.minecraft.class_8138
  */
-typealias DisplayEntityRenderer<T, S> = net.minecraft.class_8138<T, S>
+typealias DisplayEntityRenderer<T, S, ST> = net.minecraft.class_8138<T, S, ST>
 /**
  * net.minecraft.class_2767
  */
@@ -11019,13 +11767,13 @@ typealias ClientChunkManager = net.minecraft.class_631
  */
 typealias EndPortalBlockEntityRenderer<T> = net.minecraft.class_840<T>
 /**
- * net.minecraft.class_1863
- */
-typealias RecipeManager = net.minecraft.class_1863
-/**
  * net.minecraft.class_194
  */
 typealias AdvancementPositioner = net.minecraft.class_194
+/**
+ * net.minecraft.class_10286
+ */
+typealias RecipeManager = net.minecraft.class_10286
 /**
  * net.minecraft.class_7287
  */
@@ -11082,10 +11830,6 @@ typealias PeriodicRunnerFactory = net.minecraft.class_7581
  * net.minecraft.class_1492
  */
 typealias AbstractDonkeyEntity = net.minecraft.class_1492
-/**
- * net.minecraft.class_3957
- */
-typealias CookingRecipeSerializer<T> = net.minecraft.class_3957<T>
 /**
  * net.minecraft.class_2331
  */
@@ -11147,10 +11891,6 @@ typealias LootTableProvider = net.minecraft.class_2438
  */
 typealias Toast = net.minecraft.class_368
 /**
- * net.minecraft.class_1046
- */
-typealias PlayerSkinTexture = net.minecraft.class_1046
-/**
  * com.mojang.serialization.MapDecoder
  */
 typealias MapDecoder<A> = com.mojang.serialization.MapDecoder<A>
@@ -11163,6 +11903,10 @@ typealias OptionsKeyLwjgl3Fix = net.minecraft.class_1201
  */
 typealias HorseMarking = net.minecraft.class_5148
 /**
+ * net.minecraft.class_10325
+ */
+typealias PaleMossTreeDecorator = net.minecraft.class_10325
+/**
  * net.minecraft.class_2695
  */
 typealias CraftFailedResponseS2CPacket = net.minecraft.class_2695
@@ -11171,9 +11915,9 @@ typealias CraftFailedResponseS2CPacket = net.minecraft.class_2695
  */
 typealias FontManager = net.minecraft.class_378
 /**
- * net.minecraft.class_5421
+ * net.minecraft.class_10355
  */
-typealias RecipeBookCategory = net.minecraft.class_5421
+typealias RecipeBookCategory = net.minecraft.class_10355
 /**
  * net.minecraft.class_5468
  */
@@ -11202,6 +11946,10 @@ typealias BrushableBlockEntityRenderer = net.minecraft.class_8189
  * net.minecraft.class_974
  */
 typealias CreeperChargeFeatureRenderer = net.minecraft.class_974
+/**
+ * net.minecraft.class_10068
+ */
+typealias SnifferEntityRenderState = net.minecraft.class_10068
 /**
  * net.minecraft.class_2510
  */
@@ -11268,9 +12016,9 @@ typealias GameProfileArgumentType = net.minecraft.class_2191
  */
 typealias ThreadAllocationStatisticsSample = net.minecraft.class_6530
 /**
- * net.minecraft.class_582
+ * net.minecraft.class_9949
  */
-typealias OcelotEntityModel<T> = net.minecraft.class_582<T>
+typealias OcelotEntityModel = net.minecraft.class_9949
 /**
  * net.minecraft.class_2937
  */
@@ -11344,6 +12092,14 @@ typealias PlacementModifier = net.minecraft.class_6797
  */
 typealias ChunkBatchSizeCalculator = net.minecraft.class_8760
 /**
+ * net.minecraft.class_10232
+ */
+typealias CancelledRealmsUploadException = net.minecraft.class_10232
+/**
+ * net.minecraft.class_10302
+ */
+typealias SlotDisplay = net.minecraft.class_10302
+/**
  * net.minecraft.class_7422
  */
 typealias TrackedPosition = net.minecraft.class_7422
@@ -11368,10 +12124,6 @@ typealias GivensPair = net.minecraft.class_8218
  */
 typealias Input = net.minecraft.class_744
 /**
- * net.minecraft.class_4413
- */
-typealias ResetWorldInfo = net.minecraft.class_4413
-/**
  * net.minecraft.class_7100
  */
 typealias FrogAttackablesSensor = net.minecraft.class_7100
@@ -11391,6 +12143,10 @@ typealias BundleS2CPacket = net.minecraft.class_8042
  * net.minecraft.class_2640
  */
 typealias EndPortalBlockEntity = net.minecraft.class_2640
+/**
+ * net.minecraft.class_10301
+ */
+typealias ShapelessCraftingRecipeDisplay = net.minecraft.class_10301
 /**
  * net.minecraft.class_1701
  */
@@ -11432,6 +12188,10 @@ typealias VanillaPaintingVariantTagProvider = net.minecraft.class_7416
  */
 typealias EquipmentHolder = net.minecraft.class_9460
 /**
+ * net.minecraft.class_9979
+ */
+typealias GroupableModel = net.minecraft.class_9979
+/**
  * net.minecraft.class_5641
  */
 typealias AndLootFunction = net.minecraft.class_5641
@@ -11464,6 +12224,10 @@ typealias TranslationStorage = net.minecraft.class_1078
  */
 typealias ChunkBuilder = net.minecraft.class_846
 /**
+ * net.minecraft.class_4660
+ */
+typealias CocoaTreeDecorator = net.minecraft.class_4660
+/**
  * net.minecraft.class_1199
  */
 typealias ObjectiveRenderTypeFix = net.minecraft.class_1199
@@ -11490,7 +12254,7 @@ typealias FurnaceScreenHandler = net.minecraft.class_3858
 /**
  * net.minecraft.class_998
  */
-typealias TridentRiptideFeatureRenderer<T> = net.minecraft.class_998<T>
+typealias TridentRiptideFeatureRenderer = net.minecraft.class_998
 /**
  * net.minecraft.class_5743
  */
@@ -11562,7 +12326,7 @@ typealias StringHelper = net.minecraft.class_3544
 /**
  * net.minecraft.class_603
  */
-typealias ShulkerBulletEntityModel<T> = net.minecraft.class_603<T>
+typealias ShulkerBulletEntityModel = net.minecraft.class_603
 /**
  * net.minecraft.class_2967
  */
@@ -11576,6 +12340,10 @@ typealias FillCommand = net.minecraft.class_3057
  */
 typealias SetBookCoverLootFunction = net.minecraft.class_9374
 /**
+ * net.minecraft.class_10104
+ */
+typealias ParsedSelector = net.minecraft.class_10104
+/**
  * net.minecraft.class_5568
  */
 typealias EntityLike = net.minecraft.class_5568
@@ -11583,6 +12351,10 @@ typealias EntityLike = net.minecraft.class_5568
  * net.minecraft.class_5626
  */
 typealias StringNbtWriter = net.minecraft.class_5626
+/**
+ * net.minecraft.class_9335
+ */
+typealias MergedComponentMap = net.minecraft.class_9335
 /**
  * com.mojang.brigadier.StringReader
  */
@@ -11594,7 +12366,7 @@ typealias DifficultyS2CPacket = net.minecraft.class_2632
 /**
  * net.minecraft.class_3883
  */
-typealias FeatureRendererContext<T, M> = net.minecraft.class_3883<T, M>
+typealias FeatureRendererContext<S, M> = net.minecraft.class_3883<S, M>
 /**
  * net.minecraft.class_3823
  */
@@ -11667,6 +12439,10 @@ typealias RuleTest = net.minecraft.class_3825
  * net.minecraft.class_8720
  */
 typealias DebugNeighborsUpdateCustomPayload = net.minecraft.class_8720
+/**
+ * net.minecraft.class_10482
+ */
+typealias NumericProperties = net.minecraft.class_10482
 /**
  * net.minecraft.class_3143
  */
@@ -11768,9 +12544,9 @@ typealias ModifiableTestableWorld = net.minecraft.class_3747
  */
 typealias BlockFilterPlacementModifier = net.minecraft.class_6658
 /**
- * net.minecraft.class_5778
+ * net.minecraft.class_10376
  */
-typealias MultifaceGrowthBlock = net.minecraft.class_5778
+typealias MultifaceGrowthBlock = net.minecraft.class_10376
 /**
  * net.minecraft.class_2980
  */
@@ -11832,13 +12608,17 @@ typealias HeightmapPlacementModifier = net.minecraft.class_5925
  */
 typealias StairShape = net.minecraft.class_2778
 /**
+ * net.minecraft.class_10174
+ */
+typealias ConsecutiveExecutor<T> = net.minecraft.class_10174<T>
+/**
  * net.minecraft.class_5574
  */
 typealias EntityList = net.minecraft.class_5574
 /**
  * net.minecraft.class_4125
  */
-typealias StayAboveWaterTask = net.minecraft.class_4125
+typealias StayAboveWaterTask<T> = net.minecraft.class_4125<T>
 /**
  * net.minecraft.class_2922
  */
@@ -11864,6 +12644,10 @@ typealias TickCriterion = net.minecraft.class_2135
  */
 typealias DynamicRegistriesS2CPacket = net.minecraft.class_8734
 /**
+ * net.minecraft.class_10054
+ */
+typealias PiglinEntityRenderState = net.minecraft.class_10054
+/**
  * net.minecraft.class_9106
  */
 typealias RenameEnchantmentFix = net.minecraft.class_9106
@@ -11883,6 +12667,10 @@ typealias DamageSources = net.minecraft.class_8109
  * net.minecraft.class_524
  */
 typealias EditWorldScreen = net.minecraft.class_524
+/**
+ * net.minecraft.class_10434
+ */
+typealias ItemAsset = net.minecraft.class_10434
 /**
  * net.minecraft.class_4463
  */
@@ -11924,6 +12712,10 @@ typealias RandomizedIntBlockStateProvider = net.minecraft.class_5929
  */
 typealias ArrayListDeque<T> = net.minecraft.class_8623<T>
 /**
+ * net.minecraft.class_10019
+ */
+typealias LivingHorseEntityRenderState = net.minecraft.class_10019
+/**
  * net.minecraft.class_2189
  */
 typealias AirBlock = net.minecraft.class_2189
@@ -11952,9 +12744,9 @@ typealias SetCameraEntityS2CPacket = net.minecraft.class_2734
  */
 typealias WitherRoseBlock = net.minecraft.class_2563
 /**
- * net.minecraft.class_925
+ * net.minecraft.class_9992
  */
-typealias MinecartEntityRenderer<T> = net.minecraft.class_925<T>
+typealias MinecartEntityRenderer = net.minecraft.class_9992
 /**
  * net.minecraft.class_9064
  */
@@ -11964,9 +12756,9 @@ typealias EntityAttachmentType = net.minecraft.class_9064
  */
 typealias BuriedTreasureGenerator = net.minecraft.class_3789
 /**
- * net.minecraft.class_4110
+ * net.minecraft.class_7687
  */
-typealias LookAroundTask = net.minecraft.class_4110
+typealias LookAroundTask = net.minecraft.class_7687
 /**
  * net.minecraft.class_6621
  */
@@ -11983,6 +12775,10 @@ typealias ColoredFallingBlock = net.minecraft.class_8812
  * net.minecraft.class_7389
  */
 typealias AttachedToLeavesTreeDecorator = net.minecraft.class_7389
+/**
+ * net.minecraft.class_10182
+ */
+typealias PlayerPosition = net.minecraft.class_10182
 /**
  * java.util.function.Function
  */
@@ -12003,6 +12799,10 @@ typealias PlayerGeneratesContainerLootCriterion = net.minecraft.class_5282
  * net.minecraft.class_3913
  */
 typealias PropertyDelegate = net.minecraft.class_3913
+/**
+ * net.minecraft.class_9890
+ */
+typealias RepairableComponent = net.minecraft.class_9890
 /**
  * net.minecraft.class_2779
  */
@@ -12040,9 +12840,9 @@ typealias SimpleInventory = net.minecraft.class_1277
  */
 typealias MagmaBlock = net.minecraft.class_2413
 /**
- * net.minecraft.class_2230
+ * net.minecraft.class_10029
  */
-typealias CoralParentBlock = net.minecraft.class_2230
+typealias GhastEntityRenderState = net.minecraft.class_10029
 /**
  * net.minecraft.class_4964
  */
@@ -12050,7 +12850,7 @@ typealias PersistentStateUuidFix = net.minecraft.class_4964
 /**
  * net.minecraft.class_875
  */
-typealias AbstractHorseEntityRenderer<T, M> = net.minecraft.class_875<T, M>
+typealias AbstractHorseEntityRenderer<T, S, M> = net.minecraft.class_875<T, S, M>
 /**
  * net.minecraft.class_1543
  */
@@ -12060,6 +12860,10 @@ typealias IllagerEntity = net.minecraft.class_1543
  */
 typealias PlantBlock = net.minecraft.class_2261
 /**
+ * net.minecraft.class_10243
+ */
+typealias TransmuteRecipeJsonBuilder = net.minecraft.class_10243
+/**
  * net.minecraft.class_5996
  */
 typealias Debug = net.minecraft.class_5996
@@ -12068,9 +12872,9 @@ typealias Debug = net.minecraft.class_5996
  */
 typealias IdentifierSearcher<T> = net.minecraft.class_7455<T>
 /**
- * net.minecraft.class_9682
+ * net.minecraft.util.profiling.jfr.event.StructureGenerationEvent
  */
-typealias NoopOutboundHandler = net.minecraft.class_9682
+typealias StructureGenerationEvent = net.minecraft.util.profiling.jfr.event.StructureGenerationEvent
 /**
  * net.minecraft.class_1661
  */
@@ -12184,6 +12988,10 @@ typealias RealmsInviteScreen = net.minecraft.class_4395
  */
 typealias Key = java.security.Key
 /**
+ * net.minecraft.class_9889
+ */
+typealias EnchantableComponent = net.minecraft.class_9889
+/**
  * net.minecraft.class_1175
  */
 typealias EntityZombieSplitFix = net.minecraft.class_1175
@@ -12212,6 +13020,10 @@ typealias ClientQueryPacketListener = net.minecraft.class_2921
  */
 typealias SystemToast = net.minecraft.class_370
 /**
+ * net.minecraft.class_10398
+ */
+typealias DyeTintSource = net.minecraft.class_10398
+/**
  * net.minecraft.class_1703
  */
 typealias ScreenHandler = net.minecraft.class_1703
@@ -12222,7 +13034,7 @@ typealias LastSeenMessagesCollector = net.minecraft.class_7637
 /**
  * net.minecraft.class_7201
  */
-typealias TadpoleEntityModel<T> = net.minecraft.class_7201<T>
+typealias TadpoleEntityModel = net.minecraft.class_7201
 /**
  * net.minecraft.class_2289
  */
@@ -12231,10 +13043,6 @@ typealias ConduitBlock = net.minecraft.class_2289
  * net.minecraft.class_3552
  */
 typealias ChunkBlockLightProvider = net.minecraft.class_3552
-/**
- * net.minecraft.class_1834
- */
-typealias ToolMaterials = net.minecraft.class_1834
 /**
  * net.minecraft.class_1928
  */
@@ -12248,13 +13056,17 @@ typealias SymlinkEntry = net.minecraft.class_8581
  */
 typealias OggAudioStream = net.minecraft.class_4228
 /**
+ * net.minecraft.class_10043
+ */
+typealias LlamaEntityRenderState = net.minecraft.class_10043
+/**
  * net.minecraft.class_120
  */
 typealias ConditionalLootFunction = net.minecraft.class_120
 /**
  * net.minecraft.class_927
  */
-typealias MobEntityRenderer<T, M> = net.minecraft.class_927<T, M>
+typealias MobEntityRenderer<T, S, M> = net.minecraft.class_927<T, S, M>
 /**
  * net.minecraft.class_1724
  */
@@ -12267,6 +13079,10 @@ typealias RunArgs = net.minecraft.class_542
  * net.minecraft.class_1127
  */
 typealias TextSearchableIterator<T> = net.minecraft.class_1127<T>
+/**
+ * net.minecraft.class_10331
+ */
+typealias recipebook_RecipeBookType = net.minecraft.class_10331
 /**
  * net.minecraft.class_6338
  */
@@ -12283,6 +13099,10 @@ typealias LevelInfo = net.minecraft.class_1940
  * net.minecraft.class_1681
  */
 typealias EggEntity = net.minecraft.class_1681
+/**
+ * net.minecraft.class_10429
+ */
+typealias SnowGolemEntityRenderState = net.minecraft.class_10429
 /**
  * net.minecraft.class_2907
  */
@@ -12332,6 +13152,10 @@ typealias TexturedModelData = net.minecraft.class_5607
  */
 typealias StructureSet = net.minecraft.class_7059
 /**
+ * net.minecraft.class_10396
+ */
+typealias ConstantTintSource = net.minecraft.class_10396
+/**
  * net.minecraft.class_2565
  */
 typealias WetSpongeBlock = net.minecraft.class_2565
@@ -12352,6 +13176,10 @@ typealias Deadmau5FeatureRenderer = net.minecraft.class_978
  */
 typealias StopSoundCommand = net.minecraft.class_3136
 /**
+ * net.minecraft.class_4300
+ */
+typealias VillagerExperienceRebuildFix = net.minecraft.class_4300
+/**
  * net.minecraft.class_7196
  */
 typealias IntegratedServerLoader = net.minecraft.class_7196
@@ -12360,13 +13188,21 @@ typealias IntegratedServerLoader = net.minecraft.class_7196
  */
 typealias Icons = net.minecraft.class_8518
 /**
+ * net.minecraft.class_9835
+ */
+typealias SetPlayerInventoryS2CPacket = net.minecraft.class_9835
+/**
+ * net.minecraft.class_1800
+ */
+typealias NumericProperty = net.minecraft.class_1800
+/**
  * net.minecraft.class_4354
  */
 typealias RealmsHttpException = net.minecraft.class_4354
 /**
- * net.minecraft.class_6035
+ * net.minecraft.class_10183
  */
-typealias Control = net.minecraft.class_6035
+typealias Control = net.minecraft.class_10183
 /**
  * net.minecraft.class_8044
  */
@@ -12432,6 +13268,10 @@ typealias GenericContainerScreenHandler = net.minecraft.class_1707
  */
 typealias AlwaysTruePosRuleTest = net.minecraft.class_4994
 /**
+ * net.minecraft.class_10074
+ */
+typealias ArrowEntityRenderState = net.minecraft.class_10074
+/**
  * net.minecraft.class_1311
  */
 typealias SpawnGroup = net.minecraft.class_1311
@@ -12456,6 +13296,10 @@ typealias TradeRebalanceEnchantmentProviders = net.minecraft.class_9746
  */
 typealias SymlinkWarningScreen = net.minecraft.class_8669
 /**
+ * net.minecraft.class_9875
+ */
+typealias RecipeFinder = net.minecraft.class_9875
+/**
  * net.minecraft.class_6496
  */
 typealias TopologicalSorts = net.minecraft.class_6496
@@ -12471,10 +13315,6 @@ typealias CoralWallFanBlock = net.minecraft.class_2299
  * net.minecraft.class_133
  */
 typealias CrashCallable<V> = net.minecraft.class_133<V>
-/**
- * net.minecraft.class_2838
- */
-typealias PickFromInventoryC2SPacket = net.minecraft.class_2838
 /**
  * net.minecraft.class_1463
  */
@@ -12494,7 +13334,7 @@ typealias SuggestionProviders = net.minecraft.class_2321
 /**
  * net.minecraft.class_621
  */
-typealias WitherEntityModel<T> = net.minecraft.class_621<T>
+typealias WitherEntityModel = net.minecraft.class_621
 /**
  * net.minecraft.class_8206
  */
@@ -12515,6 +13355,10 @@ typealias StructureTemplate = net.minecraft.class_3499
  * net.minecraft.class_3791
  */
 typealias PillagerOutpostGenerator = net.minecraft.class_3791
+/**
+ * net.minecraft.class_10025
+ */
+typealias FireworkRocketEntityRenderState = net.minecraft.class_10025
 /**
  * net.minecraft.class_2812
  */
@@ -12566,7 +13410,7 @@ typealias MessageAcknowledgmentC2SPacket = net.minecraft.class_7640
 /**
  * net.minecraft.class_602
  */
-typealias ShulkerEntityModel<T> = net.minecraft.class_602<T>
+typealias ShulkerEntityModel = net.minecraft.class_602
 /**
  * net.minecraft.class_301
  */
@@ -12620,6 +13464,10 @@ typealias SculkPatchFeature = net.minecraft.class_7140
  */
 typealias BlockPattern = net.minecraft.class_2700
 /**
+ * net.minecraft.class_10550
+ */
+typealias OpaqueByteBufHolder = net.minecraft.class_10550
+/**
  * net.minecraft.class_3984
  */
 typealias Schema1928 = net.minecraft.class_3984
@@ -12630,7 +13478,7 @@ typealias RandomPatchFeatureConfig = net.minecraft.class_4638
 /**
  * net.minecraft.class_976
  */
-typealias HeadFeatureRenderer<T, M> = net.minecraft.class_976<T, M>
+typealias HeadFeatureRenderer<S, M> = net.minecraft.class_976<S, M>
 /**
  * net.minecraft.class_3985
  */
@@ -12662,7 +13510,11 @@ typealias Schema1931 = net.minecraft.class_4016
 /**
  * net.minecraft.class_922
  */
-typealias LivingEntityRenderer<T, M> = net.minecraft.class_922<T, M>
+typealias LivingEntityRenderer<T, S, M> = net.minecraft.class_922<T, S, M>
+/**
+ * net.minecraft.class_9892
+ */
+typealias ExplosionImpl = net.minecraft.class_9892
 /**
  * net.minecraft.class_5153
  */
@@ -12670,7 +13522,7 @@ typealias BasaltColumnsFeature = net.minecraft.class_5153
 /**
  * net.minecraft.class_989
  */
-typealias HeldItemFeatureRenderer<T, M> = net.minecraft.class_989<T, M>
+typealias HeldItemFeatureRenderer<S, M> = net.minecraft.class_989<S, M>
 /**
  * net.minecraft.class_4877
  */
@@ -12686,7 +13538,7 @@ typealias FireChargeItem = net.minecraft.class_1778
 /**
  * net.minecraft.class_574
  */
-typealias IronGolemEntityModel<T> = net.minecraft.class_574<T>
+typealias IronGolemEntityModel = net.minecraft.class_574
 /**
  * net.minecraft.class_152
  */
@@ -12720,6 +13572,10 @@ typealias DefaultedRegistry<T> = net.minecraft.class_7922<T>
  */
 typealias DolphinEntityRenderer = net.minecraft.class_888
 /**
+ * net.minecraft.class_10212
+ */
+typealias TracyProfiler = net.minecraft.class_10212
+/**
  * net.minecraft.class_3389
  */
 typealias RconClient = net.minecraft.class_3389
@@ -12736,9 +13592,17 @@ typealias WorldPresets = net.minecraft.class_5317
  */
 typealias TextifiedException = net.minecraft.class_7437
 /**
+ * net.minecraft.class_10491
+ */
+typealias ItemBlockStateProperty = net.minecraft.class_10491
+/**
  * com.mojang.datafixers.types.Type
  */
 typealias types_Type<A> = com.mojang.datafixers.types.Type<A>
+/**
+ * net.minecraft.class_10458
+ */
+typealias BundleHasSelectedItemProperty = net.minecraft.class_10458
 /**
  * net.minecraft.class_2942
  */
@@ -12792,6 +13656,10 @@ typealias PacketType<T> = net.minecraft.class_9145<T>
  */
 typealias ServerLinksS2CPacket = net.minecraft.class_9815
 /**
+ * net.minecraft.class_10403
+ */
+typealias MapColorTintSource = net.minecraft.class_10403
+/**
  * net.minecraft.class_83
  */
 typealias LootTableEntry = net.minecraft.class_83
@@ -12815,6 +13683,10 @@ typealias WeatherCommand = net.minecraft.class_3155
  * net.minecraft.class_3124
  */
 typealias OreFeatureConfig = net.minecraft.class_3124
+/**
+ * net.minecraft.class_10256
+ */
+typealias AbstractChestBoatEntity = net.minecraft.class_10256
 /**
  * net.minecraft.class_8219
  */
@@ -12844,6 +13716,10 @@ typealias EntityAttachS2CPacket = net.minecraft.class_2740
  */
 typealias BlockEvent = net.minecraft.class_1919
 /**
+ * net.minecraft.class_10007
+ */
+typealias CamelEntityRenderState = net.minecraft.class_10007
+/**
  * net.minecraft.class_816
  */
 typealias MultipartUnbakedModel = net.minecraft.class_816
@@ -12868,6 +13744,10 @@ typealias ItemListProvider = net.minecraft.class_9338
  */
 typealias MyceliumBlock = net.minecraft.class_2418
 /**
+ * net.minecraft.class_10399
+ */
+typealias FireworkTintSource = net.minecraft.class_10399
+/**
  * net.minecraft.class_4517
  */
 typealias GameTestState = net.minecraft.class_4517
@@ -12878,7 +13758,7 @@ typealias TickDurationMonitor = net.minecraft.class_4758
 /**
  * net.minecraft.class_565
  */
-typealias EndermiteEntityModel<T> = net.minecraft.class_565<T>
+typealias EndermiteEntityModel = net.minecraft.class_565
 /**
  * net.minecraft.class_1725
  */
@@ -12892,6 +13772,10 @@ typealias HoglinEntity = net.minecraft.class_4760
  */
 typealias main_Main = net.minecraft.client.main.Main
 /**
+ * net.minecraft.class_9856
+ */
+typealias OminousBannerRarityFix = net.minecraft.class_9856
+/**
  * net.minecraft.class_5704
  */
 typealias SculkSensorBlockEntity = net.minecraft.class_5704
@@ -12899,10 +13783,6 @@ typealias SculkSensorBlockEntity = net.minecraft.class_5704
  * net.minecraft.class_2465
  */
 typealias PillarBlock = net.minecraft.class_2465
-/**
- * net.minecraft.class_1873
- */
-typealias SuspiciousStewRecipe = net.minecraft.class_1873
 /**
  * net.minecraft.class_8705
  */
@@ -12972,6 +13852,10 @@ typealias LookAtMobWithIntervalTask = net.minecraft.class_7895
  */
 typealias ProbabilityConfig = net.minecraft.class_3133
 /**
+ * net.minecraft.class_8661
+ */
+typealias LoadingWidget = net.minecraft.class_8661
+/**
  * net.minecraft.class_822
  */
 typealias BeaconBlockEntityRenderer = net.minecraft.class_822
@@ -12984,10 +13868,6 @@ typealias RealmsGenericErrorScreen = net.minecraft.class_4394
  */
 typealias BowItem = net.minecraft.class_1753
 /**
- * net.minecraft.class_5272
- */
-typealias ModelPredicateProviderRegistry = net.minecraft.class_5272
-/**
  * net.minecraft.class_6885
  */
 typealias RegistryEntryList<T> = net.minecraft.class_6885<T>
@@ -12995,6 +13875,14 @@ typealias RegistryEntryList<T> = net.minecraft.class_6885<T>
  * net.minecraft.class_773
  */
 typealias BlockModels = net.minecraft.class_773
+/**
+ * net.minecraft.class_10044
+ */
+typealias LlamaSpitEntityRenderState = net.minecraft.class_10044
+/**
+ * net.minecraft.class_10490
+ */
+typealias DisplayContextProperty = net.minecraft.class_10490
 /**
  * net.minecraft.class_5904
  */
@@ -13010,7 +13898,7 @@ typealias MusicTracker = net.minecraft.class_1142
 /**
  * net.minecraft.class_4004
  */
-typealias VillagerHeldItemFeatureRenderer<T, M> = net.minecraft.class_4004<T, M>
+typealias VillagerHeldItemFeatureRenderer<S, M> = net.minecraft.class_4004<S, M>
 /**
  * net.minecraft.class_8074
  */
@@ -13018,7 +13906,7 @@ typealias SmithingTransformRecipeJsonBuilder = net.minecraft.class_8074
 /**
  * net.minecraft.class_581
  */
-typealias LlamaSpitEntityModel<T> = net.minecraft.class_581<T>
+typealias LlamaSpitEntityModel = net.minecraft.class_581
 /**
  * net.minecraft.class_4427
  */
@@ -13027,6 +13915,10 @@ typealias RealmsUploadScreen = net.minecraft.class_4427
  * net.minecraft.class_1006
  */
 typealias WolfCollarFeatureRenderer = net.minecraft.class_1006
+/**
+ * net.minecraft.class_9931
+ */
+typealias PieChart = net.minecraft.class_9931
 /**
  * net.minecraft.class_3567
  */
@@ -13040,9 +13932,17 @@ typealias ChunkTickScheduler<T> = net.minecraft.class_6755<T>
  */
 typealias WhiteAshParticle = net.minecraft.class_5165
 /**
+ * net.minecraft.class_10483
+ */
+typealias TimeProperty = net.minecraft.class_10483
+/**
  * net.minecraft.class_7299
  */
 typealias AllayBrain = net.minecraft.class_7299
+/**
+ * net.minecraft.class_10447
+ */
+typealias MissingItemModel = net.minecraft.class_10447
 /**
  * net.minecraft.class_3509
  */
@@ -13054,7 +13954,11 @@ typealias ItemNameFix = net.minecraft.class_1182
 /**
  * net.minecraft.class_595
  */
-typealias MediumPufferfishEntityModel<T> = net.minecraft.class_595<T>
+typealias MediumPufferfishEntityModel = net.minecraft.class_595
+/**
+ * net.minecraft.class_10112
+ */
+typealias LootTableData = net.minecraft.class_10112
 /**
  * net.minecraft.class_408
  */
@@ -13075,6 +13979,10 @@ typealias GameModeList = net.minecraft.class_9789
  * com.mojang.brigadier.context.CommandContext
  */
 typealias CommandContext<S> = com.mojang.brigadier.context.CommandContext<S>
+/**
+ * net.minecraft.class_10467
+ */
+typealias ExtendedViewProperty = net.minecraft.class_10467
 /**
  * net.minecraft.class_8494
  */
@@ -13144,9 +14052,9 @@ typealias NbtElementArgumentType = net.minecraft.class_2212
  */
 typealias BlockStateVariantMap = net.minecraft.class_4926
 /**
- * net.minecraft.class_4458
+ * net.minecraft.class_4117
  */
-typealias GoToPointOfInterestTask = net.minecraft.class_4458
+typealias GoToPointOfInterestTask = net.minecraft.class_4117
 /**
  * net.minecraft.class_8573
  */
@@ -13192,6 +14100,10 @@ typealias HandSwingC2SPacket = net.minecraft.class_2879
  */
 typealias VehicleMoveS2CPacket = net.minecraft.class_2692
 /**
+ * net.minecraft.class_10280
+ */
+typealias CreakingBrain = net.minecraft.class_10280
+/**
  * org.joml.Quaternionf
  */
 typealias Quaternionf = org.joml.Quaternionf
@@ -13202,7 +14114,11 @@ typealias VegetationPlacedFeatures = net.minecraft.class_6819
 /**
  * net.minecraft.class_622
  */
-typealias WitchEntityModel<T> = net.minecraft.class_622<T>
+typealias WitchEntityModel = net.minecraft.class_622
+/**
+ * net.minecraft.class_10502
+ */
+typealias ChestModelRenderer = net.minecraft.class_10502
 /**
  * net.minecraft.class_689
  */
@@ -13242,7 +14158,7 @@ typealias TextCollector = net.minecraft.class_5222
 /**
  * net.minecraft.class_604
  */
-typealias SilverfishEntityModel<T> = net.minecraft.class_604<T>
+typealias SilverfishEntityModel = net.minecraft.class_604
 /**
  * net.minecraft.class_337
  */
@@ -13288,9 +14204,9 @@ typealias FleeEntityGoal<T> = net.minecraft.class_1338<T>
  */
 typealias SpawnLocation = net.minecraft.class_9168
 /**
- * net.minecraft.class_549
+ * net.minecraft.class_9947
  */
-typealias HorseEntityModel<T> = net.minecraft.class_549<T>
+typealias HorseEntityModel = net.minecraft.class_9947
 /**
  * net.minecraft.class_1451
  */
@@ -13342,7 +14258,7 @@ typealias File = java.io.File
 /**
  * net.minecraft.class_586
  */
-typealias PandaEntityModel<T> = net.minecraft.class_586<T>
+typealias PandaEntityModel = net.minecraft.class_586
 /**
  * net.minecraft.class_7534
  */
@@ -13359,6 +14275,14 @@ typealias DisableableFollowTargetGoal<T> = net.minecraft.class_3760<T>
  * net.minecraft.class_1247
  */
 typealias Schema501 = net.minecraft.class_1247
+/**
+ * net.minecraft.class_5514
+ */
+typealias V0TextFilterer = net.minecraft.class_5514
+/**
+ * net.minecraft.class_9878
+ */
+typealias MinecartController = net.minecraft.class_9878
 /**
  * net.minecraft.class_4875
  */
@@ -13384,13 +14308,13 @@ typealias DamageTracker = net.minecraft.class_1283
  */
 typealias ChunkRendererRegionBuilder = net.minecraft.class_6850
 /**
- * net.minecraft.class_505
- */
-typealias RecipeBookGhostSlots = net.minecraft.class_505
-/**
  * net.minecraft.class_1066
  */
 typealias ServerResourcePackLoader = net.minecraft.class_1066
+/**
+ * net.minecraft.class_10338
+ */
+typealias CreakingEntityRenderState = net.minecraft.class_10338
 /**
  * net.minecraft.class_1512
  */
@@ -13444,9 +14368,13 @@ typealias SimpleVoxelShape = net.minecraft.class_249
  */
 typealias AxolotlEntityRenderer = net.minecraft.class_5774
 /**
- * net.minecraft.class_314
+ * net.minecraft.class_2446
  */
-typealias RecipeBookGroup = net.minecraft.class_314
+typealias RecipeGenerator = net.minecraft.class_2446
+/**
+ * net.minecraft.class_10287
+ */
+typealias RecipeBookGroup = net.minecraft.class_10287
 /**
  * net.minecraft.class_5814
  */
@@ -13512,6 +14440,14 @@ typealias CreeperEntity = net.minecraft.class_1548
  */
 typealias GrindstoneScreenHandler = net.minecraft.class_3803
 /**
+ * net.minecraft.class_4110
+ */
+typealias UpdateLookControlTask = net.minecraft.class_4110
+/**
+ * net.minecraft.class_10394
+ */
+typealias EquipmentAsset = net.minecraft.class_10394
+/**
  * net.minecraft.class_8786
  */
 typealias RecipeEntry<T> = net.minecraft.class_8786<T>
@@ -13519,6 +14455,10 @@ typealias RecipeEntry<T> = net.minecraft.class_8786<T>
  * net.minecraft.class_7079
  */
 typealias RegistryKeyArgumentType<T> = net.minecraft.class_7079<T>
+/**
+ * net.minecraft.class_10082
+ */
+typealias WitchEntityRenderState = net.minecraft.class_10082
 /**
  * net.minecraft.class_94
  */
@@ -13560,6 +14500,10 @@ typealias TypeReference = com.mojang.datafixers.DSL.TypeReference
  */
 typealias TrunkPlacerType<P> = net.minecraft.class_5142<P>
 /**
+ * net.minecraft.class_10059
+ */
+typealias RabbitEntityRenderState = net.minecraft.class_10059
+/**
  * net.minecraft.class_2924
  */
 typealias QueryResponseS2CPacket = net.minecraft.class_2924
@@ -13572,6 +14516,10 @@ typealias HugeFungusFeatureConfig = net.minecraft.class_4780
  */
 typealias PlaySoundFromEntityS2CPacket = net.minecraft.class_2765
 /**
+ * net.minecraft.class_9833
+ */
+typealias MoveMinecartAlongTrackS2CPacket = net.minecraft.class_9833
+/**
  * net.minecraft.class_8914
  */
 typealias TickStepS2CPacket = net.minecraft.class_8914
@@ -13579,10 +14527,6 @@ typealias TickStepS2CPacket = net.minecraft.class_8914
  * net.minecraft.class_9278
  */
 typealias ChargedProjectilesComponent = net.minecraft.class_9278
-/**
- * net.minecraft.class_1798
- */
-typealias AliasedBlockItem = net.minecraft.class_1798
 /**
  * net.minecraft.class_6724
  */
@@ -13640,6 +14584,10 @@ typealias CrashException = net.minecraft.class_148
  */
 typealias SlotRangeArgumentType = net.minecraft.class_9351
 /**
+ * net.minecraft.class_485
+ */
+typealias StatusEffectsDisplay = net.minecraft.class_485
+/**
  * net.minecraft.class_6413
  */
 typealias PerfCommand = net.minecraft.class_6413
@@ -13660,9 +14608,17 @@ typealias TestRunContext = net.minecraft.class_4520
  */
 typealias LookAtMobTask = net.minecraft.class_4119
 /**
+ * net.minecraft.class_10418
+ */
+typealias LoadedBlockEntityModels = net.minecraft.class_10418
+/**
  * net.minecraft.class_9178
  */
 typealias DebugSampleS2CPacket = net.minecraft.class_9178
+/**
+ * net.minecraft.class_10138
+ */
+typealias TeleportRandomlyConsumeEffect = net.minecraft.class_10138
 /**
  * net.minecraft.class_7891
  */
@@ -13712,6 +14668,10 @@ typealias ColorCode = net.minecraft.class_8805
  */
 typealias FoxEntityRenderer = net.minecraft.class_4042
 /**
+ * net.minecraft.class_9942
+ */
+typealias StingerModel = net.minecraft.class_9942
+/**
  * net.minecraft.class_9069
  */
 typealias ArmadilloEntity = net.minecraft.class_9069
@@ -13748,6 +14708,14 @@ typealias GameTestException = net.minecraft.class_4512
  */
 typealias ItemDispenserBehavior = net.minecraft.class_2347
 /**
+ * net.minecraft.class_10031
+ */
+typealias GuardianEntityRenderState = net.minecraft.class_10031
+/**
+ * net.minecraft.class_10078
+ */
+typealias VexEntityRenderState = net.minecraft.class_10078
+/**
  * net.minecraft.class_7722
  */
 typealias VibrationSelector = net.minecraft.class_7722
@@ -13767,6 +14735,10 @@ typealias EffectCommand = net.minecraft.class_3043
  * net.minecraft.class_7678
  */
 typealias VanillaResourcePackProvider = net.minecraft.class_7678
+/**
+ * net.minecraft.class_10142
+ */
+typealias ShaderProgramKeys = net.minecraft.class_10142
 /**
  * net.minecraft.class_7977
  */
@@ -13804,9 +14776,25 @@ typealias ProjectileItem = net.minecraft.class_9463
  */
 typealias UnihexFont = net.minecraft.class_391
 /**
+ * net.minecraft.class_10335
+ */
+typealias TrailParticle = net.minecraft.class_10335
+/**
+ * net.minecraft.class_10053
+ */
+typealias PigEntityRenderState = net.minecraft.class_10053
+/**
  * net.minecraft.class_8711
  */
 typealias UnknownCustomPayload = net.minecraft.class_8711
+/**
+ * net.minecraft.class_10079
+ */
+typealias VillagerDataRenderState = net.minecraft.class_10079
+/**
+ * net.minecraft.class_10015
+ */
+typealias EnderDragonEntityRenderState = net.minecraft.class_10015
 /**
  * net.minecraft.class_727
  */
@@ -13840,6 +14828,10 @@ typealias WaterSuspendParticle = net.minecraft.class_723
  */
 typealias PlaySoundCommand = net.minecraft.class_3091
 /**
+ * net.minecraft.class_10322
+ */
+typealias PaleMossCarpetBlock = net.minecraft.class_10322
+/**
  * net.minecraft.class_4509
  */
 typealias PassiveBeeSoundInstance = net.minecraft.class_4509
@@ -13862,7 +14854,7 @@ typealias ChunkGenerationContext = net.minecraft.class_9312
 /**
  * net.minecraft.class_6227
  */
-typealias GoatEntityModel<T> = net.minecraft.class_6227<T>
+typealias GoatEntityModel = net.minecraft.class_6227
 /**
  * net.minecraft.class_4252
  */
@@ -13920,9 +14912,17 @@ typealias PaintingManager = net.minecraft.class_4044
  */
 typealias ChunkPosKeyedStorage = net.minecraft.class_9172
 /**
+ * net.minecraft.class_10121
+ */
+typealias Schema4059 = net.minecraft.class_10121
+/**
  * net.minecraft.class_8721
  */
 typealias DebugPathCustomPayload = net.minecraft.class_8721
+/**
+ * net.minecraft.class_10062
+ */
+typealias SalmonEntityRenderState = net.minecraft.class_10062
 /**
  * net.minecraft.class_3929
  */
@@ -13932,6 +14932,10 @@ typealias HandledScreens = net.minecraft.class_3929
  */
 typealias WorldView = net.minecraft.class_4538
 /**
+ * net.minecraft.class_10085
+ */
+typealias WolfEntityRenderState = net.minecraft.class_10085
+/**
  * net.minecraft.class_276
  */
 typealias Framebuffer = net.minecraft.class_276
@@ -13940,9 +14944,25 @@ typealias Framebuffer = net.minecraft.class_276
  */
 typealias RealmsConnection = net.minecraft.class_4902
 /**
+ * net.minecraft.class_10468
+ */
+typealias UsingItemProperty = net.minecraft.class_10468
+/**
+ * net.minecraft.class_10163
+ */
+typealias TrialSpawnerConfigInRegistryFix = net.minecraft.class_10163
+/**
  * net.minecraft.class_787
  */
 typealias ModelElementTexture = net.minecraft.class_787
+/**
+ * net.minecraft.class_10208
+ */
+typealias FireResistantToDamageResistantComponentFix = net.minecraft.class_10208
+/**
+ * net.minecraft.class_10249
+ */
+typealias Schema4067 = net.minecraft.class_10249
 /**
  * net.minecraft.class_691
  */
@@ -13971,6 +14991,14 @@ typealias BufferRenderer = net.minecraft.class_286
  * java.util.function.IntUnaryOperator
  */
 typealias IntUnaryOperator = java.util.function.IntUnaryOperator
+/**
+ * net.minecraft.class_10274
+ */
+typealias Schema4071 = net.minecraft.class_10274
+/**
+ * net.minecraft.class_10273
+ */
+typealias Schema4070 = net.minecraft.class_10273
 /**
  * net.minecraft.class_7745
  */
@@ -14024,6 +15052,14 @@ typealias PowderSnowJumpGoal = net.minecraft.class_6868
  */
 typealias BlockMirror = net.minecraft.class_2415
 /**
+ * net.minecraft.class_10176
+ */
+typealias SimpleConsecutiveExecutor = net.minecraft.class_10176
+/**
+ * net.minecraft.class_9934
+ */
+typealias GhostRecipe = net.minecraft.class_9934
+/**
  * net.minecraft.class_9053
  */
 typealias ResourcePackRemoveS2CPacket = net.minecraft.class_9053
@@ -14051,10 +15087,6 @@ typealias PacketReportProvider = net.minecraft.class_9827
  * net.minecraft.class_5817
  */
 typealias StructureWeightSampler = net.minecraft.class_5817
-/**
- * net.minecraft.class_4114
- */
-typealias GoToWorkTask = net.minecraft.class_4114
 /**
  * net.minecraft.class_8528
  */
@@ -14127,6 +15159,10 @@ typealias ArmadilloEntityModel = net.minecraft.class_9082
  * net.minecraft.class_5349
  */
 typealias FunctionLoader = net.minecraft.class_5349
+/**
+ * net.minecraft.class_176
+ */
+typealias ContextType = net.minecraft.class_176
 /**
  * net.minecraft.class_9381
  */
@@ -14236,6 +15272,10 @@ typealias ReadableProfiler = net.minecraft.class_3693
  */
 typealias ParticleEffect = net.minecraft.class_2394
 /**
+ * net.minecraft.class_10226
+ */
+typealias GlBufferTarget = net.minecraft.class_10226
+/**
  * net.minecraft.class_4264
  */
 typealias PressableWidget = net.minecraft.class_4264
@@ -14272,9 +15312,13 @@ typealias BlockAgeStructureProcessor = net.minecraft.class_5193
  */
 typealias BlockDataObject = net.minecraft.class_3161
 /**
+ * net.minecraft.class_10442
+ */
+typealias ItemModelManager = net.minecraft.class_10442
+/**
  * net.minecraft.class_889
  */
-typealias DolphinEntityModel<T> = net.minecraft.class_889<T>
+typealias DolphinEntityModel = net.minecraft.class_889
 /**
  * net.minecraft.class_865
  */
@@ -14332,6 +15376,14 @@ typealias LootTableGenerator = net.minecraft.class_7791
  */
 typealias NetworkThreadUtils = net.minecraft.class_2600
 /**
+ * net.minecraft.class_10037
+ */
+typealias IronGolemEntityRenderState = net.minecraft.class_10037
+/**
+ * net.minecraft.class_10427
+ */
+typealias ItemHolderEntityRenderState = net.minecraft.class_10427
+/**
  * net.minecraft.class_1151
  */
 typealias MovementTutorialStepHandler = net.minecraft.class_1151
@@ -14340,6 +15392,10 @@ typealias MovementTutorialStepHandler = net.minecraft.class_1151
  */
 typealias LoginQueryResponseC2SPacket = net.minecraft.class_2913
 /**
+ * net.minecraft.class_9902
+ */
+typealias OrientationHelper = net.minecraft.class_9902
+/**
  * net.minecraft.class_2312
  */
 typealias AbstractRedstoneGateBlock = net.minecraft.class_2312
@@ -14347,6 +15403,10 @@ typealias AbstractRedstoneGateBlock = net.minecraft.class_2312
  * net.minecraft.class_2555
  */
 typealias WallTorchBlock = net.minecraft.class_2555
+/**
+ * net.minecraft.class_10504
+ */
+typealias ConduitModelRenderer = net.minecraft.class_10504
 /**
  * net.minecraft.class_3558
  */
@@ -14386,7 +15446,7 @@ typealias RenderCall = net.minecraft.class_4573
 /**
  * net.minecraft.class_614
  */
-typealias TurtleEntityModel<T> = net.minecraft.class_614<T>
+typealias TurtleEntityModel = net.minecraft.class_614
 /**
  * net.minecraft.class_4126
  */
@@ -14424,6 +15484,10 @@ typealias ClientConnection = net.minecraft.class_2535
  */
 typealias ArrowItem = net.minecraft.class_1744
 /**
+ * it.unimi.dsi.fastutil.longs.LongOpenHashSet
+ */
+typealias LongOpenHashSet = it.unimi.dsi.fastutil.longs.LongOpenHashSet
+/**
  * net.minecraft.class_3805
  */
 typealias BlockPileFeature = net.minecraft.class_3805
@@ -14448,10 +15512,6 @@ typealias UnbakedModel = net.minecraft.class_1100
  */
 typealias RealmsAvailability = net.minecraft.class_8647
 /**
- * net.minecraft.class_5599
- */
-typealias EntityModelLoader = net.minecraft.class_5599
-/**
  * net.minecraft.class_4143
  */
 typealias DummySensor = net.minecraft.class_4143
@@ -14466,7 +15526,7 @@ typealias WanderingTraderEntityRenderer = net.minecraft.class_3992
 /**
  * net.minecraft.class_8973
  */
-typealias BreezeEntityModel<T> = net.minecraft.class_8973<T>
+typealias BreezeEntityModel = net.minecraft.class_8973
 /**
  * net.minecraft.class_2239
  */
@@ -14507,6 +15567,10 @@ typealias BreezeEyesFeatureRenderer = net.minecraft.class_8988
  * net.minecraft.class_6368
  */
 typealias Address = net.minecraft.class_6368
+/**
+ * net.minecraft.class_10242
+ */
+typealias MinecartDispenserBehavior = net.minecraft.class_10242
 /**
  * net.minecraft.class_3162
  */
@@ -14568,6 +15632,10 @@ typealias LoreComponent = net.minecraft.class_9290
  */
 typealias PointOfInterestRenameFix = net.minecraft.class_7507
 /**
+ * net.minecraft.class_10517
+ */
+typealias SpecialModelTypes = net.minecraft.class_10517
+/**
  * net.minecraft.class_2891
  */
 typealias DebugChunkGenerator = net.minecraft.class_2891
@@ -14579,6 +15647,10 @@ typealias TabManager = net.minecraft.class_8088
  * net.minecraft.class_815
  */
 typealias MultipartModelSelector = net.minecraft.class_815
+/**
+ * net.minecraft.class_10076
+ */
+typealias TropicalFishEntityRenderState = net.minecraft.class_10076
 /**
  * net.minecraft.class_9120
  */
@@ -14600,6 +15672,10 @@ typealias NetherConfiguredFeatures = net.minecraft.class_6805
  */
 typealias WorldCreationTask = net.minecraft.class_4445
 /**
+ * net.minecraft.class_9993
+ */
+typealias ZombifiedPiglinEntityRenderer = net.minecraft.class_9993
+/**
  * net.minecraft.class_1673
  */
 typealias LlamaSpitEntity = net.minecraft.class_1673
@@ -14615,6 +15691,10 @@ typealias GenerationStep = net.minecraft.class_2893
  * net.minecraft.class_8557
  */
 typealias TrueTypeFontLoader = net.minecraft.class_8557
+/**
+ * net.minecraft.class_8567
+ */
+typealias LootWorldContext = net.minecraft.class_8567
 /**
  * net.minecraft.class_3806
  */
@@ -14643,6 +15723,10 @@ typealias BuddingAmethystBlock = net.minecraft.class_5543
  * net.minecraft.class_3135
  */
 typealias RandomBooleanFeature = net.minecraft.class_3135
+/**
+ * net.minecraft.class_10032
+ */
+typealias HoglinEntityRenderState = net.minecraft.class_10032
 /**
  * net.minecraft.class_954
  */
@@ -14686,7 +15770,7 @@ typealias CrossbowItem = net.minecraft.class_1764
 /**
  * net.minecraft.class_4507
  */
-typealias StuckObjectsFeatureRenderer<T, M> = net.minecraft.class_4507<T, M>
+typealias StuckObjectsFeatureRenderer<M> = net.minecraft.class_4507<M>
 /**
  * net.minecraft.class_1438
  */
@@ -14707,6 +15791,10 @@ typealias CookieStorage = net.minecraft.class_9112
  * net.minecraft.class_2890
  */
 typealias ServerHandshakePacketListener = net.minecraft.class_2890
+/**
+ * net.minecraft.class_10465
+ */
+typealias CarriedProperty = net.minecraft.class_10465
 /**
  * net.minecraft.class_9390
  */
@@ -14732,10 +15820,6 @@ typealias TooltipPositioner = net.minecraft.class_8000
  */
 typealias PendingServerCommand = net.minecraft.class_2976
 /**
- * net.minecraft.class_3906
- */
-typealias MessageListener<Msg> = net.minecraft.class_3906<Msg>
-/**
  * net.minecraft.class_891
  */
 typealias DragonFireballEntityRenderer = net.minecraft.class_891
@@ -14751,6 +15835,10 @@ typealias AnyOfLootCondition = net.minecraft.class_8551
  * net.minecraft.class_5134
  */
 typealias EntityAttributes = net.minecraft.class_5134
+/**
+ * net.minecraft.class_10221
+ */
+typealias GeneratorOptionsFactory = net.minecraft.class_10221
 /**
  * net.minecraft.class_3086
  */
@@ -14776,10 +15864,6 @@ typealias SoundEngine = net.minecraft.class_4225
  */
 typealias BlockStateStructureTemplateFix = net.minecraft.class_3581
 /**
- * net.minecraft.class_1805
- */
-typealias MilkBucketItem = net.minecraft.class_1805
-/**
  * net.minecraft.class_818
  */
 typealias SimpleMultipartModelSelector = net.minecraft.class_818
@@ -14787,10 +15871,6 @@ typealias SimpleMultipartModelSelector = net.minecraft.class_818
  * net.minecraft.class_4345
  */
 typealias RealmsError = net.minecraft.class_4345
-/**
- * net.minecraft.class_1830
- */
-typealias SuspiciousStewItem = net.minecraft.class_1830
 /**
  * net.minecraft.class_394
  */
@@ -14827,6 +15907,10 @@ typealias LootNbtProvider = net.minecraft.class_5651
  * net.minecraft.class_1823
  */
 typealias SnowballItem = net.minecraft.class_1823
+/**
+ * net.minecraft.class_9997
+ */
+typealias ArmadilloEntityRenderState = net.minecraft.class_9997
 /**
  * net.minecraft.class_8928
  */
@@ -14916,6 +16000,10 @@ typealias SlotActionType = net.minecraft.class_1713
  */
 typealias MegaJungleTrunkPlacer = net.minecraft.class_5215
 /**
+ * net.minecraft.class_9918
+ */
+typealias ClientWatchdog = net.minecraft.class_9918
+/**
  * net.minecraft.class_1747
  */
 typealias BlockItem = net.minecraft.class_1747
@@ -14930,7 +16018,7 @@ typealias ResourceFilter = net.minecraft.class_7084
 /**
  * net.minecraft.class_594
  */
-typealias SmallPufferfishEntityModel<T> = net.minecraft.class_594<T>
+typealias SmallPufferfishEntityModel = net.minecraft.class_594
 /**
  * net.minecraft.class_3735
  */
@@ -14962,7 +16050,7 @@ typealias ModelCuboidData = net.minecraft.class_5604
 /**
  * net.minecraft.class_7198
  */
-typealias FrogEntityModel<T> = net.minecraft.class_7198<T>
+typealias FrogEntityModel = net.minecraft.class_7198
 /**
  * net.minecraft.class_636
  */
@@ -15052,9 +16140,17 @@ typealias DataPackFailureScreen = net.minecraft.class_5346
  */
 typealias RaidManager = net.minecraft.class_3767
 /**
+ * net.minecraft.class_10472
+ */
+typealias CompassProperty = net.minecraft.class_10472
+/**
  * net.minecraft.class_5263
  */
 typealias GravityField = net.minecraft.class_5263
+/**
+ * net.minecraft.class_10216
+ */
+typealias DeathProtectionComponent = net.minecraft.class_10216
 /**
  * net.minecraft.class_1941
  */
@@ -15086,7 +16182,11 @@ typealias Bootstrap = net.minecraft.class_2966
 /**
  * net.minecraft.class_4607
  */
-typealias EnergySwirlOverlayFeatureRenderer<T, M> = net.minecraft.class_4607<T, M>
+typealias EnergySwirlOverlayFeatureRenderer<S, M> = net.minecraft.class_4607<S, M>
+/**
+ * net.minecraft.class_10327
+ */
+typealias RealmsWorldSettings = net.minecraft.class_10327
 /**
  * net.minecraft.class_2933
  */
@@ -15108,6 +16208,14 @@ typealias TippedArrowRecipe = net.minecraft.class_1876
  */
 typealias FeatureSizeType<P> = net.minecraft.class_5202<P>
 /**
+ * net.minecraft.class_9940
+ */
+typealias ArrowEntityModel = net.minecraft.class_9940
+/**
+ * net.minecraft.class_10238
+ */
+typealias RealmsUploader = net.minecraft.class_10238
+/**
  * net.minecraft.class_6575
  */
 typealias LocalRandom = net.minecraft.class_6575
@@ -15115,6 +16223,10 @@ typealias LocalRandom = net.minecraft.class_6575
  * net.minecraft.class_6622
  */
 typealias StructurePiecesGenerator<C> = net.minecraft.class_6622<C>
+/**
+ * net.minecraft.class_10506
+ */
+typealias DecoratedPotModelRenderer = net.minecraft.class_10506
 /**
  * net.minecraft.class_4828
  */
@@ -15135,10 +16247,6 @@ typealias EntityTrackerEntry = net.minecraft.class_3231
  * net.minecraft.class_5156
  */
 typealias BasaltColumnsFeatureConfig = net.minecraft.class_5156
-/**
- * net.minecraft.class_515
- */
-typealias RecipeDisplayListener = net.minecraft.class_515
 /**
  * net.minecraft.class_6409
  */
@@ -15224,6 +16332,10 @@ typealias TaigaVillageData = net.minecraft.class_3870
  */
 typealias StringNbtReader = net.minecraft.class_2522
 /**
+ * net.minecraft.class_10392
+ */
+typealias InvalidLockComponentPredicateFix = net.minecraft.class_10392
+/**
  * net.minecraft.class_5437
  */
 typealias ReplaceBlobsFeatureConfig = net.minecraft.class_5437
@@ -15292,6 +16404,10 @@ typealias ComposterBlock = net.minecraft.class_3962
  */
 typealias EntityHealthFix = net.minecraft.class_3600
 /**
+ * net.minecraft.class_10484
+ */
+typealias UseCycleProperty = net.minecraft.class_10484
+/**
  * net.minecraft.class_290
  */
 typealias VertexFormats = net.minecraft.class_290
@@ -15300,9 +16416,17 @@ typealias VertexFormats = net.minecraft.class_290
  */
 typealias ChunkCache = net.minecraft.class_1950
 /**
+ * net.minecraft.class_10527
+ */
+typealias SpriteGetter = net.minecraft.class_10527
+/**
  * net.minecraft.class_9099
  */
 typealias LoginStates = net.minecraft.class_9099
+/**
+ * net.minecraft.class_961
+ */
+typealias UndeadHorseEntityRenderer = net.minecraft.class_961
 /**
  * java.lang.Thread
  */
@@ -15315,6 +16439,10 @@ typealias LecternBlockEntityRenderer = net.minecraft.class_3942
  * com.google.gson.JsonElement
  */
 typealias JsonElement = com.google.gson.JsonElement
+/**
+ * net.minecraft.class_10263
+ */
+typealias RaftEntityRenderer = net.minecraft.class_10263
 /**
  * net.minecraft.class_4974
  */
@@ -15448,6 +16576,10 @@ typealias BlockView = net.minecraft.class_1922
  */
 typealias TaskTriggerer<E, M> = net.minecraft.class_7898<E, M>
 /**
+ * net.minecraft.class_9719
+ */
+typealias ChangeItemDamageEnchantmentEffect = net.minecraft.class_9719
+/**
  * net.minecraft.class_8641
  */
 typealias Macro<T> = net.minecraft.class_8641<T>
@@ -15472,6 +16604,10 @@ typealias ContextLootScoreProvider = net.minecraft.class_5664
  */
 typealias UpdateDifficultyC2SPacket = net.minecraft.class_4210
 /**
+ * net.minecraft.class_9923
+ */
+typealias SimpleFramebufferFactory = net.minecraft.class_9923
+/**
  * net.minecraft.class_5129
  */
 typealias RenameEntityAttributesFix = net.minecraft.class_5129
@@ -15483,6 +16619,14 @@ typealias MissingSprite = net.minecraft.class_1047
  * net.minecraft.class_2802
  */
 typealias ChunkManager = net.minecraft.class_2802
+/**
+ * net.minecraft.class_10143
+ */
+typealias Octree = net.minecraft.class_10143
+/**
+ * net.minecraft.class_10477
+ */
+typealias CrossbowPullProperty = net.minecraft.class_10477
 /**
  * net.minecraft.class_9428
  */
@@ -15518,7 +16662,7 @@ typealias ChunkErrorHandler = net.minecraft.class_9820
 /**
  * net.minecraft.class_993
  */
-typealias PhantomEyesFeatureRenderer<T> = net.minecraft.class_993<T>
+typealias PhantomEyesFeatureRenderer = net.minecraft.class_993
 /**
  * net.minecraft.class_1267
  */
@@ -15526,23 +16670,23 @@ typealias Difficulty = net.minecraft.class_1267
 /**
  * net.minecraft.class_598
  */
-typealias SheepWoolEntityModel<T> = net.minecraft.class_598<T>
+typealias SheepWoolEntityModel = net.minecraft.class_598
 /**
  * net.minecraft.class_671
  */
 typealias RedDustParticle = net.minecraft.class_671
 /**
+ * net.minecraft.class_10160
+ */
+typealias ChunkRenderTaskScheduler = net.minecraft.class_10160
+/**
  * net.minecraft.class_1000
  */
-typealias SpiderEyesFeatureRenderer<T, M> = net.minecraft.class_1000<T, M>
+typealias SpiderEyesFeatureRenderer<M> = net.minecraft.class_1000<M>
 /**
  * net.minecraft.class_4871
  */
 typealias PendingInvite = net.minecraft.class_4871
-/**
- * net.minecraft.class_1081
- */
-typealias AnimationResourceMetadataReader = net.minecraft.class_1081
 /**
  * net.minecraft.class_479
  */
@@ -15612,6 +16756,10 @@ typealias Schema2832 = net.minecraft.class_6640
  */
 typealias IdentifierSearchProvider<T> = net.minecraft.class_1121<T>
 /**
+ * net.minecraft.class_10383
+ */
+typealias MusicInstance = net.minecraft.class_10383
+/**
  * net.minecraft.class_3037
  */
 typealias FeatureConfig = net.minecraft.class_3037
@@ -15619,6 +16767,10 @@ typealias FeatureConfig = net.minecraft.class_3037
  * net.minecraft.class_141
  */
 typealias SetCountLootFunction = net.minecraft.class_141
+/**
+ * net.minecraft.class_9962
+ */
+typealias PostEffectPipeline = net.minecraft.class_9962
 /**
  * net.minecraft.class_1613
  */
@@ -15698,7 +16850,7 @@ typealias VaultBlockEntityRenderer = net.minecraft.class_9214
 /**
  * net.minecraft.class_560
  */
-typealias CowEntityModel<T> = net.minecraft.class_560<T>
+typealias CowEntityModel = net.minecraft.class_560
 /**
  * net.minecraft.class_5954
  */
@@ -15714,7 +16866,7 @@ typealias ChunkGenerationSteps = net.minecraft.class_9768
 /**
  * net.minecraft.class_579
  */
-typealias LeashKnotEntityModel<T> = net.minecraft.class_579<T>
+typealias LeashKnotEntityModel = net.minecraft.class_579
 /**
  * net.minecraft.class_6632
  */
@@ -15758,7 +16910,7 @@ typealias EntityTrackingStatus = net.minecraft.class_5584
 /**
  * net.minecraft.class_8185
  */
-typealias SnifferEntityModel<T> = net.minecraft.class_8185<T>
+typealias SnifferEntityModel = net.minecraft.class_8185
 /**
  * net.minecraft.class_417
  */
@@ -15800,9 +16952,9 @@ typealias RecipeCategory = net.minecraft.class_7800
  */
 typealias ChickenEntityRenderer = net.minecraft.class_882
 /**
- * net.minecraft.class_763
+ * net.minecraft.class_10410
  */
-typealias ItemModels = net.minecraft.class_763
+typealias ItemModels = net.minecraft.class_10410
 /**
  * net.minecraft.class_489
  */
@@ -15880,6 +17032,10 @@ typealias BlockFamilies = net.minecraft.class_5793
  */
 typealias SporeBlossomBlock = net.minecraft.class_5809
 /**
+ * net.minecraft.class_10026
+ */
+typealias FishingBobberEntityState = net.minecraft.class_10026
+/**
  * net.minecraft.class_173
  */
 typealias LootContextTypes = net.minecraft.class_173
@@ -15912,6 +17068,10 @@ typealias VanillaGameEventTagProvider = net.minecraft.class_5746
  */
 typealias HopperBlock = net.minecraft.class_2377
 /**
+ * net.minecraft.class_10444
+ */
+typealias ItemRenderState = net.minecraft.class_10444
+/**
  * net.minecraft.class_7368
  */
 typealias ResourceMetadata = net.minecraft.class_7368
@@ -15940,10 +17100,6 @@ typealias OxidizableTrapdoorBlock = net.minecraft.class_8927
  */
 typealias FloatSupplier = net.minecraft.class_7373
 /**
- * net.minecraft.class_280
- */
-typealias JsonEffectShaderProgram = net.minecraft.class_280
-/**
  * net.minecraft.class_6400
  */
 typealias SamplerSource = net.minecraft.class_6400
@@ -15955,6 +17111,10 @@ typealias Frustum = net.minecraft.class_4604
  * net.minecraft.class_1668
  */
 typealias ExplosiveProjectileEntity = net.minecraft.class_1668
+/**
+ * net.minecraft.class_9903
+ */
+typealias ExperimentalRedstoneController = net.minecraft.class_9903
 /**
  * net.minecraft.class_2203
  */
@@ -15988,10 +17148,6 @@ typealias BanReason = net.minecraft.class_8186
  */
 typealias BlockPosFormatFix = net.minecraft.class_9230
 /**
- * net.minecraft.class_326
- */
-typealias ItemColorProvider = net.minecraft.class_326
-/**
  * net.minecraft.class_7434
  */
 typealias ProfileKeysImpl = net.minecraft.class_7434
@@ -16016,10 +17172,6 @@ typealias SortedArraySet<T> = net.minecraft.class_4706<T>
  */
 typealias SpectralArrowEntityRenderer = net.minecraft.class_947
 /**
- * net.minecraft.class_4582
- */
-typealias SkinOverlayOwner = net.minecraft.class_4582
-/**
  * net.minecraft.class_4881
  */
 typealias RealmsServerPlayerList = net.minecraft.class_4881
@@ -16031,10 +17183,6 @@ typealias EvokerFangsEntity = net.minecraft.class_1669
  * net.minecraft.class_3610
  */
 typealias FluidState = net.minecraft.class_3610
-/**
- * net.minecraft.class_4815
- */
-typealias WalkToNearestVisibleWantedItemTask = net.minecraft.class_4815
 /**
  * net.minecraft.class_7578
  */
@@ -16052,6 +17200,10 @@ typealias AnimatedResultButton = net.minecraft.class_514
  */
 typealias OxidizableBlock = net.minecraft.class_5812
 /**
+ * net.minecraft.class_10060
+ */
+typealias RavagerEntityRenderState = net.minecraft.class_10060
+/**
  * net.minecraft.class_8855
  */
 typealias ExecutionControl<T> = net.minecraft.class_8855<T>
@@ -16068,6 +17220,10 @@ typealias AbstractSignEditScreen = net.minecraft.class_7743
  */
 typealias TexturedModel = net.minecraft.class_4946
 /**
+ * net.minecraft.class_9989
+ */
+typealias AbstractSkeletonEntityRenderer<T, S> = net.minecraft.class_9989<T, S>
+/**
  * net.minecraft.class_2244
  */
 typealias BedBlock = net.minecraft.class_2244
@@ -16080,9 +17236,17 @@ typealias StopFollowingCustomerGoal = net.minecraft.class_1390
  */
 typealias SnowGolemEntityRenderer = net.minecraft.class_948
 /**
+ * net.minecraft.class_9891
+ */
+typealias EmptyBlockRenderView = net.minecraft.class_9891
+/**
  * net.minecraft.class_7251
  */
 typealias SniffTask<E> = net.minecraft.class_7251<E>
+/**
+ * net.minecraft.class_10538
+ */
+typealias PlayerSkinTextureDownloader = net.minecraft.class_10538
 /**
  * net.minecraft.class_4065
  */
@@ -16099,6 +17263,14 @@ typealias DiskFeatureConfig = net.minecraft.class_6577
  * net.minecraft.class_3784
  */
 typealias StructurePoolElement = net.minecraft.class_3784
+/**
+ * net.minecraft.class_2852
+ */
+typealias SerializedChunk = net.minecraft.class_2852
+/**
+ * net.minecraft.class_9978
+ */
+typealias WorldBorderRendering = net.minecraft.class_9978
 /**
  * net.minecraft.class_227
  */
@@ -16152,9 +17324,17 @@ typealias GLFWErrorCallbackI = org.lwjgl.glfw.GLFWErrorCallbackI
  */
 typealias TadpoleEntity = net.minecraft.class_7110
 /**
+ * net.minecraft.class_10551
+ */
+typealias LocalBufUnpacker = net.minecraft.class_10551
+/**
  * net.minecraft.class_3607
  */
 typealias EntityPaintingMotiveFix = net.minecraft.class_3607
+/**
+ * net.minecraft.class_10177
+ */
+typealias PrioritizedConsecutiveExecutor = net.minecraft.class_10177
 /**
  * net.minecraft.class_3562
  */
@@ -16179,6 +17359,10 @@ typealias BooleanProperty = net.minecraft.class_2746
  * net.minecraft.class_9767
  */
 typealias GenerationDependencies = net.minecraft.class_9767
+/**
+ * net.minecraft.class_10321
+ */
+typealias HangingMossBlock = net.minecraft.class_10321
 /**
  * net.minecraft.class_8016
  */
@@ -16220,6 +17404,10 @@ typealias DarkOakTrunkPlacer = net.minecraft.class_5211
  */
 typealias SimpleEntityLookup<T> = net.minecraft.class_5578<T>
 /**
+ * net.minecraft.class_10070
+ */
+typealias StriderEntityRenderState = net.minecraft.class_10070
+/**
  * com.mojang.datafixers.schemas.Schema
  */
 typealias Schema = com.mojang.datafixers.schemas.Schema
@@ -16256,13 +17444,17 @@ typealias RenameChunkStatusFix = net.minecraft.class_8505
  */
 typealias HotbarStorageEntry = net.minecraft.class_748
 /**
+ * net.minecraft.class_10333
+ */
+typealias ClientRecipeManager = net.minecraft.class_10333
+/**
  * net.minecraft.class_3201
  */
 typealias DemoServerPlayerInteractionManager = net.minecraft.class_3201
 /**
  * net.minecraft.class_997
  */
-typealias SlimeOverlayFeatureRenderer<T> = net.minecraft.class_997<T>
+typealias SlimeOverlayFeatureRenderer = net.minecraft.class_997
 /**
  * net.minecraft.class_5756
  */
@@ -16296,6 +17488,10 @@ typealias SuspiciousStewIngredient = net.minecraft.class_7917
  */
 typealias BundleContentsPredicate = net.minecraft.class_9655
 /**
+ * net.minecraft.class_10067
+ */
+typealias SlimeEntityRenderState = net.minecraft.class_10067
+/**
  * net.minecraft.class_1350
  */
 typealias FollowOwnerGoal = net.minecraft.class_1350
@@ -16307,6 +17503,10 @@ typealias DatapackCommand = net.minecraft.class_3027
  * java.time.format.DateTimeFormatter
  */
 typealias DateTimeFormatter = java.time.format.DateTimeFormatter
+/**
+ * net.minecraft.class_10173
+ */
+typealias ThrottledChunkTaskScheduler = net.minecraft.class_10173
 /**
  * net.minecraft.class_1655
  */
@@ -16324,17 +17524,25 @@ typealias BlockEntityTickInvoker = net.minecraft.class_5562
  */
 typealias Rect2i = net.minecraft.class_768
 /**
+ * net.minecraft.class_8253
+ */
+typealias LeavesParticle = net.minecraft.class_8253
+/**
  * java.net.HttpURLConnection
  */
 typealias HttpURLConnection = java.net.HttpURLConnection
 /**
  * net.minecraft.class_580
  */
-typealias MinecartEntityModel<T> = net.minecraft.class_580<T>
+typealias MinecartEntityModel = net.minecraft.class_580
 /**
  * net.minecraft.class_1576
  */
 typealias HuskEntity = net.minecraft.class_1576
+/**
+ * net.minecraft.class_10099
+ */
+typealias ModelGrouper = net.minecraft.class_10099
 /**
  * net.minecraft.class_7473
  */
@@ -16346,7 +17554,11 @@ typealias AdvancementTabGenerator = net.minecraft.class_7785
 /**
  * net.minecraft.class_985
  */
-typealias EndermanEyesFeatureRenderer<T> = net.minecraft.class_985<T>
+typealias EndermanEyesFeatureRenderer = net.minecraft.class_985
+/**
+ * net.minecraft.class_10496
+ */
+typealias TrimMaterialProperty = net.minecraft.class_10496
 /**
  * net.minecraft.class_2863
  */
@@ -16354,11 +17566,11 @@ typealias SelectMerchantTradeC2SPacket = net.minecraft.class_2863
 /**
  * net.minecraft.class_601
  */
-typealias SheepEntityModel<T> = net.minecraft.class_601<T>
+typealias SheepEntityModel = net.minecraft.class_601
 /**
- * net.minecraft.class_5151
+ * net.minecraft.class_2230
  */
-typealias Equipment = net.minecraft.class_5151
+typealias AbstractCoralBlock = net.minecraft.class_2230
 /**
  * net.minecraft.class_5455
  */
@@ -16395,6 +17607,10 @@ typealias ChatSuggestionsS2CPacket = net.minecraft.class_7597
  * net.minecraft.class_1352
  */
 typealias Goal = net.minecraft.class_1352
+/**
+ * net.minecraft.class_10530
+ */
+typealias KeybindDownProperty = net.minecraft.class_10530
 /**
  * net.minecraft.class_5611
  */
@@ -16440,6 +17656,10 @@ typealias DebugBrainCustomPayload = net.minecraft.class_8708
  */
 typealias SectionDistanceLevelPropagator = net.minecraft.class_4079
 /**
+ * net.minecraft.class_10352
+ */
+typealias ContextParameterMap = net.minecraft.class_10352
+/**
  * net.minecraft.class_905
  */
 typealias GhastEntityRenderer = net.minecraft.class_905
@@ -16464,6 +17684,10 @@ typealias NarrationMessageBuilder = net.minecraft.class_6382
  */
 typealias EntityModels = net.minecraft.class_5600
 /**
+ * net.minecraft.class_10071
+ */
+typealias TextDisplayEntityRenderState = net.minecraft.class_10071
+/**
  * net.minecraft.class_9100
  */
 typealias PingPackets = net.minecraft.class_9100
@@ -16475,6 +17699,10 @@ typealias CollectionCountsPredicate<T, P> = net.minecraft.class_9643<T, P>
  * net.minecraft.class_4956
  */
 typealias SoulParticle = net.minecraft.class_4956
+/**
+ * net.minecraft.class_9986
+ */
+typealias ChunkDebugRenderer = net.minecraft.class_9986
 /**
  * org.joml.Vector4f
  */
@@ -16510,7 +17738,7 @@ typealias HideWhenBellRingsTask = net.minecraft.class_4249
 /**
  * net.minecraft.class_991
  */
-typealias MooshroomMushroomFeatureRenderer<T> = net.minecraft.class_991<T>
+typealias MooshroomMushroomFeatureRenderer = net.minecraft.class_991
 /**
  * net.minecraft.class_302
  */
@@ -16544,9 +17772,17 @@ typealias BannerPatternItem = net.minecraft.class_1745
  */
 typealias LegacyServerPinger = net.minecraft.class_8676
 /**
+ * net.minecraft.class_10415
+ */
+typealias ScrollableTextFieldWidget = net.minecraft.class_10415
+/**
  * net.minecraft.class_5309
  */
 typealias GenerationShapeConfig = net.minecraft.class_5309
+/**
+ * net.minecraft.class_10006
+ */
+typealias BreezeEntityRenderState = net.minecraft.class_10006
 /**
  * net.minecraft.class_4432
  */
@@ -16592,6 +17828,14 @@ typealias NoiseThresholdCountPlacementModifier = net.minecraft.class_3003
  */
 typealias EntityHandler<T> = net.minecraft.class_5576<T>
 /**
+ * net.minecraft.class_10042
+ */
+typealias LivingEntityRenderState = net.minecraft.class_10042
+/**
+ * net.minecraft.class_4814
+ */
+typealias WalkTowardsFuzzyPosTask = net.minecraft.class_4814
+/**
  * net.minecraft.class_8171
  */
 typealias TorchflowerBlock = net.minecraft.class_8171
@@ -16600,10 +17844,6 @@ typealias TorchflowerBlock = net.minecraft.class_8171
  */
 typealias GameModeArgumentType = net.minecraft.class_7918
 /**
- * net.minecraft.class_4289
- */
-typealias WanderIndoorsTask = net.minecraft.class_4289
-/**
  * net.minecraft.class_2035
  */
 typealias EnchantmentPredicate = net.minecraft.class_2035
@@ -16611,6 +17851,10 @@ typealias EnchantmentPredicate = net.minecraft.class_2035
  * net.minecraft.class_9779
  */
 typealias RenderTickCounter = net.minecraft.class_9779
+/**
+ * net.minecraft.class_9928
+ */
+typealias Scroller = net.minecraft.class_9928
 /**
  * net.minecraft.class_5155
  */
@@ -16624,9 +17868,13 @@ typealias ChiseledBookshelfBlockEntity = net.minecraft.class_7716
  */
 typealias LevelStorage = net.minecraft.class_32
 /**
- * net.minecraft.class_559
+ * net.minecraft.class_10197
  */
-typealias DonkeyEntityModel<T> = net.minecraft.class_559<T>
+typealias EquipmentRenderer = net.minecraft.class_10197
+/**
+ * net.minecraft.class_9945
+ */
+typealias DonkeyEntityModel = net.minecraft.class_9945
 /**
  * com.mojang.serialization.DynamicOps
  */
@@ -16652,10 +17900,6 @@ typealias BastionRemnantGenerator = net.minecraft.class_5179
  */
 typealias MissingDimensionFix = net.minecraft.class_5396
 /**
- * net.minecraft.class_7118
- */
-typealias LichenGrower = net.minecraft.class_7118
-/**
  * net.minecraft.class_9282
  */
 typealias DyedColorComponent = net.minecraft.class_9282
@@ -16672,6 +17916,10 @@ typealias AllowedAddressResolver = net.minecraft.class_6370
  */
 typealias BuiltChunkStorage = net.minecraft.class_769
 /**
+ * net.minecraft.class_10541
+ */
+typealias TeamTintSource = net.minecraft.class_10541
+/**
  * net.minecraft.class_2564
  */
 typealias Texts = net.minecraft.class_2564
@@ -16682,7 +17930,7 @@ typealias TallSeagrassBlock = net.minecraft.class_2525
 /**
  * net.minecraft.class_623
  */
-typealias ZombieEntityModel<T> = net.minecraft.class_623<T>
+typealias ZombieEntityModel<S> = net.minecraft.class_623<S>
 /**
  * net.minecraft.class_29
  */
@@ -16695,6 +17943,10 @@ typealias SculkShriekerBlock = net.minecraft.class_7268
  * net.minecraft.class_246
  */
 typealias FractionalDoubleList = net.minecraft.class_246
+/**
+ * net.minecraft.class_4112
+ */
+typealias MoveToTargetTask = net.minecraft.class_4112
 /**
  * net.minecraft.class_766
  */
@@ -16720,6 +17972,10 @@ typealias EnumArgumentType<T> = net.minecraft.class_7485<T>
  */
 typealias ConfiguredFeature<FC, F> = net.minecraft.class_2975<FC, F>
 /**
+ * net.minecraft.class_10358
+ */
+typealias DisplayedItemFactory<T> = net.minecraft.class_10358<T>
+/**
  * net.minecraft.class_7441
  */
 typealias InstrumentTags = net.minecraft.class_7441
@@ -16731,6 +17987,10 @@ typealias ItemPickupAnimationS2CPacket = net.minecraft.class_2775
  * java.lang.reflect.Method
  */
 typealias Method = java.lang.reflect.Method
+/**
+ * net.minecraft.class_10397
+ */
+typealias CustomModelDataTintSource = net.minecraft.class_10397
 /**
  * net.minecraft.class_170
  */
@@ -16747,6 +18007,10 @@ typealias OctavePerlinNoiseSampler = net.minecraft.class_3537
  * java.net.InetAddress
  */
 typealias InetAddress = java.net.InetAddress
+/**
+ * net.minecraft.class_9863
+ */
+typealias ElytraFlightController = net.minecraft.class_9863
 /**
  * net.minecraft.class_2259
  */
@@ -16824,6 +18088,10 @@ typealias ItemConvertible = net.minecraft.class_1935
  */
 typealias UnbreakableComponent = net.minecraft.class_9300
 /**
+ * net.minecraft.class_10156
+ */
+typealias ShaderProgramKey = net.minecraft.class_10156
+/**
  * net.minecraft.class_9696
  */
 typealias SingleStackRecipeInput = net.minecraft.class_9696
@@ -16888,6 +18156,10 @@ typealias Instruments = net.minecraft.class_7445
  */
 typealias EnchantingTableBlockEntity = net.minecraft.class_2605
 /**
+ * net.minecraft.class_9941
+ */
+typealias BabyModelTransformer = net.minecraft.class_9941
+/**
  * net.minecraft.class_1268
  */
 typealias Hand = net.minecraft.class_1268
@@ -16900,6 +18172,10 @@ typealias Weight = net.minecraft.class_6007
  */
 typealias SkinAbuseReport = net.minecraft.class_8777
 /**
+ * net.minecraft.class_3972
+ */
+typealias SingleStackRecipe = net.minecraft.class_3972
+/**
  * net.minecraft.class_2387
  */
 typealias JukeboxBlock = net.minecraft.class_2387
@@ -16908,9 +18184,9 @@ typealias JukeboxBlock = net.minecraft.class_2387
  */
 typealias SimpleMerchant = net.minecraft.class_1645
 /**
- * net.minecraft.class_5807
+ * net.minecraft.class_10318
  */
-typealias MossBlock = net.minecraft.class_5807
+typealias MossBlock = net.minecraft.class_10318
 /**
  * net.minecraft.class_9250
  */
@@ -16976,6 +18252,10 @@ typealias HangingSignBlockEntity = net.minecraft.class_7717
  */
 typealias TooltipState = net.minecraft.class_9110
 /**
+ * net.minecraft.class_10508
+ */
+typealias SimpleSpecialModelRenderer = net.minecraft.class_10508
+/**
  * net.minecraft.class_9799
  */
 typealias BufferAllocator = net.minecraft.class_9799
@@ -16987,10 +18267,6 @@ typealias StructureFeatureChildrenPoolElementFix = net.minecraft.class_5947
  * net.minecraft.class_3033
  */
 typealias EndPortalFeature = net.minecraft.class_3033
-/**
- * net.minecraft.class_325
- */
-typealias ItemColors = net.minecraft.class_325
 /**
  * net.minecraft.class_3993
  */
@@ -17148,6 +18424,14 @@ typealias DedicatedPlayerManager = net.minecraft.class_3174
  */
 typealias ParrotEntity = net.minecraft.class_1453
 /**
+ * net.minecraft.class_10257
+ */
+typealias ChestRaftEntity = net.minecraft.class_10257
+/**
+ * net.minecraft.class_10532
+ */
+typealias LocalTimeProperty = net.minecraft.class_10532
+/**
  * net.minecraft.class_4051
  */
 typealias TargetPredicate = net.minecraft.class_4051
@@ -17167,6 +18451,10 @@ typealias Schema1470 = net.minecraft.class_1240
  * net.minecraft.class_1157
  */
 typealias TutorialStep = net.minecraft.class_1157
+/**
+ * net.minecraft.class_9904
+ */
+typealias WireOrientation = net.minecraft.class_9904
 /**
  * net.minecraft.class_647
  */
@@ -17196,10 +18484,6 @@ typealias SimpleBlockFeatureConfig = net.minecraft.class_3175
  */
 typealias Schema1483 = net.minecraft.class_1242
 /**
- * net.minecraft.class_1800
- */
-typealias ModelPredicateProvider = net.minecraft.class_1800
-/**
  * net.minecraft.class_9670
  */
 typealias SetCustomModelDataLootFunction = net.minecraft.class_9670
@@ -17228,9 +18512,9 @@ typealias FontLoader = net.minecraft.class_389
  */
 typealias CommandSyntaxProvider = net.minecraft.class_2425
 /**
- * net.minecraft.class_3846
+ * net.minecraft.class_10178
  */
-typealias TaskExecutor<T> = net.minecraft.class_3846<T>
+typealias TaskExecutor<R> = net.minecraft.class_10178<R>
 /**
  * net.minecraft.class_5342
  */
@@ -17275,6 +18559,10 @@ typealias EmptyEntityRenderer<T> = net.minecraft.class_6344<T>
  * net.minecraft.class_3592
  */
 typealias ColorlessShulkerEntityFix = net.minecraft.class_3592
+/**
+ * net.minecraft.class_10553
+ */
+typealias BlockEntityFurnaceBurnTimeFix = net.minecraft.class_10553
 /**
  * net.minecraft.class_967
  */
@@ -17332,6 +18620,10 @@ typealias TrialSpawnerConfig = net.minecraft.class_8965
  */
 typealias Activity = net.minecraft.class_4168
 /**
+ * net.minecraft.class_517
+ */
+typealias AbstractFurnaceRecipeBookWidget = net.minecraft.class_517
+/**
  * net.minecraft.class_7670
  */
 typealias ResourceFileSystem = net.minecraft.class_7670
@@ -17343,6 +18635,10 @@ typealias WallShape = net.minecraft.class_4778
  * net.minecraft.class_8667
  */
 typealias DirectionalLayoutWidget = net.minecraft.class_8667
+/**
+ * net.minecraft.class_6012
+ */
+typealias collection_Pool<E> = net.minecraft.class_6012<E>
 /**
  * net.minecraft.class_6578
  */
@@ -17388,6 +18684,10 @@ typealias BredAnimalsCriterion = net.minecraft.class_196
  */
 typealias Drawable = net.minecraft.class_4068
 /**
+ * net.minecraft.class_10400
+ */
+typealias GrassTintSource = net.minecraft.class_10400
+/**
  * net.minecraft.class_2663
  */
 typealias EntityStatusS2CPacket = net.minecraft.class_2663
@@ -17416,10 +18716,6 @@ typealias SwimNavigation = net.minecraft.class_1412
  * net.minecraft.class_2281
  */
 typealias ChestBlock = net.minecraft.class_2281
-/**
- * net.minecraft.class_944
- */
-typealias ShulkerHeadFeatureRenderer = net.minecraft.class_944
 /**
  * net.minecraft.class_8519
  */
@@ -17509,9 +18805,9 @@ typealias AbstractPiglinEntity = net.minecraft.class_5418
  */
 typealias BookModel = net.minecraft.class_557
 /**
- * net.minecraft.class_5253
+ * net.minecraft.class_9848
  */
-typealias ColorHelper = net.minecraft.class_5253
+typealias ColorHelper = net.minecraft.class_9848
 /**
  * net.minecraft.class_3014
  */
@@ -17536,6 +18832,14 @@ typealias ServerRecipeBook = net.minecraft.class_3441
  * net.minecraft.class_4870
  */
 typealias Ops = net.minecraft.class_4870
+/**
+ * net.minecraft.class_8555
+ */
+typealias GlUsage = net.minecraft.class_8555
+/**
+ * net.minecraft.class_10134
+ */
+typealias ConsumeEffect = net.minecraft.class_10134
 /**
  * net.minecraft.class_8656
  */
@@ -17593,6 +18897,10 @@ typealias SkinTextures = net.minecraft.class_8685
  */
 typealias BigInteger = java.math.BigInteger
 /**
+ * net.minecraft.class_10548
+ */
+typealias ContextDimensionProperty = net.minecraft.class_10548
+/**
  * net.minecraft.class_1430
  */
 typealias CowEntity = net.minecraft.class_1430
@@ -17643,7 +18951,7 @@ typealias TicksInWrongChunkFix = net.minecraft.class_6909
 /**
  * net.minecraft.class_3899
  */
-typealias LevelPrioritizedQueue<T> = net.minecraft.class_3899<T>
+typealias LevelPrioritizedQueue = net.minecraft.class_3899
 /**
  * net.minecraft.class_8002
  */
@@ -17685,10 +18993,6 @@ typealias ConnectedClientData = net.minecraft.class_8792
  */
 typealias BlockNameFlatteningFix = net.minecraft.class_3578
 /**
- * net.minecraft.class_485
- */
-typealias AbstractInventoryScreen<T> = net.minecraft.class_485<T>
-/**
  * net.minecraft.class_3089
  */
 typealias ParticleCommand = net.minecraft.class_3089
@@ -17705,6 +19009,10 @@ typealias GoToWalkTargetGoal = net.minecraft.class_1370
  */
 typealias JukeboxBlockEntity = net.minecraft.class_2619
 /**
+ * net.minecraft.class_10492
+ */
+typealias MainHandProperty = net.minecraft.class_10492
+/**
  * net.minecraft.class_1217
  */
 typealias TeamDisplayNameFix = net.minecraft.class_1217
@@ -17719,7 +19027,7 @@ typealias ConnectionIntent = net.minecraft.class_8592
 /**
  * net.minecraft.class_5772
  */
-typealias AxolotlEntityModel<T> = net.minecraft.class_5772<T>
+typealias AxolotlEntityModel = net.minecraft.class_5772
 /**
  * net.minecraft.class_6857
  */
@@ -17889,10 +19197,6 @@ typealias TestFailureLogger = net.minecraft.class_5623
  */
 typealias IronGolemCrackFeatureRenderer = net.minecraft.class_4691
 /**
- * net.minecraft.class_7803
- */
-typealias VanillaRecipeProvider = net.minecraft.class_7803
-/**
  * net.minecraft.class_2590
  */
 typealias TranslationException = net.minecraft.class_2590
@@ -17957,10 +19261,6 @@ typealias BubbleColumnUpParticle = net.minecraft.class_653
  */
 typealias UnknownLoginQueryResponsePayload = net.minecraft.class_8596
 /**
- * net.minecraft.class_1871
- */
-typealias ShulkerBoxColoringRecipe = net.minecraft.class_1871
-/**
  * net.minecraft.class_635
  */
 typealias ClientLoginNetworkHandler = net.minecraft.class_635
@@ -17997,6 +19297,10 @@ typealias HeldItemRenderer = net.minecraft.class_759
  */
 typealias WidgetTooltipPositioner = net.minecraft.class_8092
 /**
+ * net.minecraft.class_10324
+ */
+typealias CreakingHeartTreeDecorator = net.minecraft.class_10324
+/**
  * net.minecraft.class_3151
  */
 typealias TitleCommand = net.minecraft.class_3151
@@ -18008,6 +19312,10 @@ typealias TurtleEntity = net.minecraft.class_1481
  * net.minecraft.class_4529
  */
 typealias TestFunction = net.minecraft.class_4529
+/**
+ * net.minecraft.class_9990
+ */
+typealias AgeableMobEntityRenderer<T, S, M> = net.minecraft.class_9990<T, S, M>
 /**
  * net.minecraft.class_4782
  */
@@ -18024,6 +19332,10 @@ typealias EntitySelectorReader = net.minecraft.class_2303
  * net.minecraft.class_5135
  */
 typealias DefaultAttributeRegistry = net.minecraft.class_5135
+/**
+ * net.minecraft.class_10461
+ */
+typealias CustomModelDataFlagProperty = net.minecraft.class_10461
 /**
  * net.minecraft.class_2170
  */
@@ -18057,10 +19369,6 @@ typealias world_World = net.minecraft.class_1937
  */
 typealias RecoverWorldScreen = net.minecraft.class_8897
 /**
- * net.minecraft.class_5829
- */
-typealias BundleTutorial = net.minecraft.class_5829
-/**
  * net.minecraft.class_4019
  */
 typealias FoxEntity = net.minecraft.class_4019
@@ -18087,7 +19395,7 @@ typealias EnderEyeItem = net.minecraft.class_1777
 /**
  * net.minecraft.class_562
  */
-typealias CreeperEntityModel<T> = net.minecraft.class_562<T>
+typealias CreeperEntityModel = net.minecraft.class_562
 /**
  * io.netty.buffer.ByteBuf
  */
@@ -18119,7 +19427,7 @@ typealias TeleportTarget = net.minecraft.class_5454
 /**
  * net.minecraft.class_4606
  */
-typealias EyesFeatureRenderer<T, M> = net.minecraft.class_4606<T, M>
+typealias EyesFeatureRenderer<S, M> = net.minecraft.class_4606<S, M>
 /**
  * net.minecraft.class_2483
  */
@@ -18136,6 +19444,10 @@ typealias LanguageDefinition = net.minecraft.class_1077
  * org.lwjgl.glfw.GLFWCursorPosCallbackI
  */
 typealias GLFWCursorPosCallbackI = org.lwjgl.glfw.GLFWCursorPosCallbackI
+/**
+ * net.minecraft.class_10323
+ */
+typealias CreakingHeartBlockEntity = net.minecraft.class_10323
 /**
  * net.minecraft.class_5525
  */
@@ -18197,6 +19509,10 @@ typealias Schema3808_1 = net.minecraft.class_9186
  */
 typealias ChoiceWriteReadFix = net.minecraft.class_8877
 /**
+ * net.minecraft.class_10373
+ */
+typealias StructureGenerationSample = net.minecraft.class_10373
+/**
  * it.unimi.dsi.fastutil.floats.FloatConsumer
  */
 typealias FloatConsumer = it.unimi.dsi.fastutil.floats.FloatConsumer
@@ -18231,7 +19547,7 @@ typealias Term<S> = net.minecraft.class_9402<S>
 /**
  * net.minecraft.class_624
  */
-typealias WolfEntityModel<T> = net.minecraft.class_624<T>
+typealias WolfEntityModel = net.minecraft.class_624
 /**
  * net.minecraft.class_1214
  */
@@ -18244,6 +19560,10 @@ typealias ConstantFloatProvider = net.minecraft.class_5862
  * net.minecraft.class_9723
  */
 typealias EnchantmentValueEffect = net.minecraft.class_9723
+/**
+ * net.minecraft.class_625
+ */
+typealias DragonEntityModel = net.minecraft.class_625
 /**
  * net.minecraft.class_6871
  */
@@ -18293,6 +19613,10 @@ typealias TeleportConfirmC2SPacket = net.minecraft.class_2793
  */
 typealias WorldBorderStage = net.minecraft.class_2789
 /**
+ * net.minecraft.class_10021
+ */
+typealias EvokerEntityRenderState = net.minecraft.class_10021
+/**
  * net.minecraft.class_7958
  */
 typealias AtlasSprite = net.minecraft.class_7958
@@ -18300,6 +19624,14 @@ typealias AtlasSprite = net.minecraft.class_7958
  * java.io.DataOutput
  */
 typealias io_DataOutput = java.io.DataOutput
+/**
+ * net.minecraft.class_10063
+ */
+typealias SheepEntityRenderState = net.minecraft.class_10063
+/**
+ * net.minecraft.class_10268
+ */
+typealias RecipeBookRemoveS2CPacket = net.minecraft.class_10268
 /**
  * net.minecraft.class_4446
  */
@@ -18353,10 +19685,6 @@ typealias VanillaStoryTabAdvancementGenerator = net.minecraft.class_2417
  */
 typealias BeehiveBlockEntity = net.minecraft.class_4482
 /**
- * net.minecraft.class_7753
- */
-typealias ChestRaftEntityModel = net.minecraft.class_7753
-/**
  * net.minecraft.class_825
  */
 typealias BedBlockEntityRenderer = net.minecraft.class_825
@@ -18372,6 +19700,10 @@ typealias VillagerWorkTask = net.minecraft.class_4133
  * net.minecraft.class_8925
  */
 typealias OxidizableDoorBlock = net.minecraft.class_8925
+/**
+ * net.minecraft.class_10205
+ */
+typealias EquippableDispenserBehavior = net.minecraft.class_10205
 /**
  * net.minecraft.class_5922
  */
@@ -18409,6 +19741,10 @@ typealias EmptyMapItem = net.minecraft.class_1773
  */
 typealias CraftingTableBlock = net.minecraft.class_2304
 /**
+ * net.minecraft.class_10201
+ */
+typealias EquipmentModelLoader = net.minecraft.class_10201
+/**
  * net.minecraft.class_4617
  */
 typealias NameGenerator = net.minecraft.class_4617
@@ -18425,10 +19761,6 @@ typealias DataComponentTypes = net.minecraft.class_9334
  */
 typealias DebugBreezeCustomPayload = net.minecraft.class_9004
 /**
- * net.minecraft.class_1772
- */
-typealias EnchantedBookItem = net.minecraft.class_1772
-/**
  * net.minecraft.class_3917
  */
 typealias ScreenHandlerType<T> = net.minecraft.class_3917<T>
@@ -18444,10 +19776,6 @@ typealias UpdateStructureBlockC2SPacket = net.minecraft.class_2875
  * net.minecraft.class_6502
  */
 typealias EmptyPaletteStorage = net.minecraft.class_6502
-/**
- * net.minecraft.class_4409
- */
-typealias RealmsResetNormalWorldScreen = net.minecraft.class_4409
 /**
  * net.minecraft.class_9302
  */
@@ -18595,7 +19923,7 @@ typealias JigsawReplacementStructureProcessor = net.minecraft.class_3794
 /**
  * net.minecraft.class_575
  */
-typealias IllagerEntityModel<T> = net.minecraft.class_575<T>
+typealias IllagerEntityModel<S> = net.minecraft.class_575<S>
 /**
  * net.minecraft.class_9726
  */
@@ -18605,13 +19933,25 @@ typealias MultiplyEnchantmentEffect = net.minecraft.class_9726
  */
 typealias SetTradeOffersS2CPacket = net.minecraft.class_3943
 /**
+ * net.minecraft.class_10291
+ */
+typealias CuttingRecipeDisplay<T> = net.minecraft.class_10291<T>
+/**
+ * net.minecraft.class_5325
+ */
+typealias WalkTowardsJobSiteTask = net.minecraft.class_5325
+/**
+ * net.minecraft.class_10378
+ */
+typealias BannerBlockModel = net.minecraft.class_10378
+/**
  * net.minecraft.class_8594
  */
 typealias LoginQueryResponsePayload = net.minecraft.class_8594
 /**
  * net.minecraft.class_608
  */
-typealias SnowGolemEntityModel<T> = net.minecraft.class_608<T>
+typealias SnowGolemEntityModel = net.minecraft.class_608
 /**
  * net.minecraft.class_6800
  */
@@ -18620,6 +19960,10 @@ typealias OceanConfiguredFeatures = net.minecraft.class_6800
  * net.minecraft.class_3217
  */
 typealias VoidStartPlatformFeature = net.minecraft.class_3217
+/**
+ * net.minecraft.class_5355
+ */
+typealias WalkTowardsClosestAdultTask = net.minecraft.class_5355
 /**
  * net.minecraft.class_313
  */
@@ -18636,10 +19980,6 @@ typealias TrackedDataHandlerRegistry = net.minecraft.class_2943
  * net.minecraft.class_8043
  */
 typealias DamageTiltS2CPacket = net.minecraft.class_8043
-/**
- * net.minecraft.class_1831
- */
-typealias ToolItem = net.minecraft.class_1831
 /**
  * net.minecraft.class_3032
  */
@@ -18671,7 +20011,7 @@ typealias AbstractTorchBlock = net.minecraft.class_8810
 /**
  * net.minecraft.class_876
  */
-typealias ProjectileEntityRenderer<T> = net.minecraft.class_876<T>
+typealias ProjectileEntityRenderer<T, S> = net.minecraft.class_876<T, S>
 /**
  * net.minecraft.class_7633
  */
@@ -18692,10 +20032,6 @@ typealias OceanMonumentGenerator = net.minecraft.class_3366
  * net.minecraft.class_91
  */
 typealias TagEntry = net.minecraft.class_91
-/**
- * net.minecraft.class_1085
- */
-typealias TextureResourceMetadataReader = net.minecraft.class_1085
 /**
  * net.minecraft.server.Main
  */
@@ -18733,6 +20069,10 @@ typealias WardenAnimations = net.minecraft.class_7278
  */
 typealias GameEventListener = net.minecraft.class_5714
 /**
+ * net.minecraft.class_10245
+ */
+typealias EntityLookupView = net.minecraft.class_10245
+/**
  * net.minecraft.class_7718
  */
 typealias RotationPropertyHelper = net.minecraft.class_7718
@@ -18740,10 +20080,6 @@ typealias RotationPropertyHelper = net.minecraft.class_7718
  * net.minecraft.class_8960
  */
 typealias TrialSpawnerBlock = net.minecraft.class_8960
-/**
- * net.minecraft.class_8661
- */
-typealias RealmsLoadingWidget = net.minecraft.class_8661
 /**
  * net.minecraft.class_1129
  */
@@ -18783,15 +20119,15 @@ typealias JumpingMount = net.minecraft.class_1316
 /**
  * net.minecraft.class_3968
  */
-typealias AbstractZombieModel<T> = net.minecraft.class_3968<T>
+typealias AbstractZombieModel<S> = net.minecraft.class_3968<S>
 /**
  * net.minecraft.class_6789
  */
 typealias NetherForestVegetationFeatureConfig = net.minecraft.class_6789
 /**
- * net.minecraft.class_1866
+ * net.minecraft.class_10332
  */
-typealias SpecialRecipeSerializer<T> = net.minecraft.class_1866<T>
+typealias CreakingEntityModel = net.minecraft.class_10332
 /**
  * net.minecraft.class_1621
  */
@@ -18865,6 +20201,10 @@ typealias EnterConfigurationC2SPacket = net.minecraft.class_8593
  */
 typealias BackupList = net.minecraft.class_4868
 /**
+ * net.minecraft.class_9946
+ */
+typealias EndCrystalEntityModel = net.minecraft.class_9946
+/**
  * net.minecraft.class_9183
  */
 typealias HorseArmorFix = net.minecraft.class_9183
@@ -18872,6 +20212,10 @@ typealias HorseArmorFix = net.minecraft.class_9183
  * net.minecraft.class_4251
  */
 typealias RingBellTask = net.minecraft.class_4251
+/**
+ * net.minecraft.class_10337
+ */
+typealias CreakingEntityRenderer<T> = net.minecraft.class_10337<T>
 /**
  * net.minecraft.class_7842
  */
@@ -19002,6 +20346,10 @@ typealias ClientCommonNetworkHandler = net.minecraft.class_8673
  */
 typealias RealmsDefaultUncaughtExceptionHandler = net.minecraft.class_4353
 /**
+ * net.minecraft.class_10313
+ */
+typealias SlotDisplays = net.minecraft.class_10313
+/**
  * net.minecraft.class_8769
  */
 typealias UsernameReportScreen = net.minecraft.class_8769
@@ -19025,10 +20373,6 @@ typealias PickaxeItem = net.minecraft.class_1810
  * net.minecraft.class_7968
  */
 typealias TelemetryLogManager = net.minecraft.class_7968
-/**
- * net.minecraft.class_7407
- */
-typealias EntityPaintingFieldsRenameFix = net.minecraft.class_7407
 /**
  * net.minecraft.class_3730
  */
@@ -19122,6 +20466,10 @@ typealias LakeFeature = net.minecraft.class_3085
  */
 typealias PeriodicNotificationManager = net.minecraft.class_6877
 /**
+ * net.minecraft.class_10275
+ */
+typealias CreakingEntity = net.minecraft.class_10275
+/**
  * net.minecraft.class_174
  */
 typealias Criteria = net.minecraft.class_174
@@ -19146,6 +20494,10 @@ typealias DrawContext = net.minecraft.class_332
  */
 typealias LandingBlock = net.minecraft.class_5688
 /**
+ * net.minecraft.class_10186
+ */
+typealias EquipmentModel = net.minecraft.class_10186
+/**
  * java.util.function.UnaryOperator
  */
 typealias UnaryOperator<T> = java.util.function.UnaryOperator<T>
@@ -19169,10 +20521,6 @@ typealias TextureResourceMetadata = net.minecraft.class_1084
  * net.minecraft.class_6525
  */
 typealias GcHeapSummarySample = net.minecraft.class_6525
-/**
- * net.minecraft.class_883
- */
-typealias DonkeyEntityRenderer<T> = net.minecraft.class_883<T>
 /**
  * net.minecraft.class_1472
  */
@@ -19216,7 +20564,7 @@ typealias PufferfishEntity = net.minecraft.class_1454
 /**
  * net.minecraft.class_979
  */
-typealias ElytraFeatureRenderer<T, M> = net.minecraft.class_979<T, M>
+typealias ElytraFeatureRenderer<S, M> = net.minecraft.class_979<S, M>
 /**
  * net.minecraft.class_248
  */
@@ -19258,6 +20606,10 @@ typealias GuiNavigation = net.minecraft.class_8023
  */
 typealias SignBlockEntity = net.minecraft.class_2625
 /**
+ * net.minecraft.class_10443
+ */
+typealias ItemModelTypes = net.minecraft.class_10443
+/**
  * net.minecraft.class_6798
  */
 typealias PlacementModifierType<P> = net.minecraft.class_6798<P>
@@ -19277,6 +20629,10 @@ typealias TextIconButtonWidget = net.minecraft.class_8662
  * net.minecraft.class_2905
  */
 typealias LoginHelloS2CPacket = net.minecraft.class_2905
+/**
+ * net.minecraft.class_10525
+ */
+typealias ModelNameSupplier = net.minecraft.class_10525
 /**
  * net.minecraft.class_2968
  */
@@ -19298,13 +20654,13 @@ typealias NbtOps = net.minecraft.class_2509
  */
 typealias ArrowEntity = net.minecraft.class_1667
 /**
- * net.minecraft.class_4117
- */
-typealias FindWalkTargetTask = net.minecraft.class_4117
-/**
  * net.minecraft.class_7252
  */
 typealias WardenAttackablesSensor = net.minecraft.class_7252
+/**
+ * net.minecraft.class_9991
+ */
+typealias AbstractDonkeyEntityRenderer<T> = net.minecraft.class_9991<T>
 /**
  * net.minecraft.class_1362
  */
@@ -19322,17 +20678,13 @@ typealias PotionItem = net.minecraft.class_1812
  */
 typealias StringVisitable = net.minecraft.class_5348
 /**
- * net.minecraft.class_5597
+ * net.minecraft.class_10371
  */
-typealias SinglePartEntityModel<E> = net.minecraft.class_5597<E>
+typealias PickItemFromEntityC2SPacket = net.minecraft.class_10371
 /**
  * net.minecraft.class_2252
  */
 typealias BlockPredicateArgumentType = net.minecraft.class_2252
-/**
- * net.minecraft.class_2446
- */
-typealias RecipeProvider = net.minecraft.class_2446
 /**
  * net.minecraft.class_4661
  */
@@ -19422,6 +20774,14 @@ typealias GlDebugInfo = net.minecraft.class_4494
  */
 typealias FixedCommandAction<T> = net.minecraft.class_8865<T>
 /**
+ * net.minecraft.class_10401
+ */
+typealias TintSource = net.minecraft.class_10401
+/**
+ * net.minecraft.class_9933
+ */
+typealias AbstractCraftingRecipeBookWidget = net.minecraft.class_9933
+/**
  * net.minecraft.class_1790
  */
 typealias DecorationItem = net.minecraft.class_1790
@@ -19430,6 +20790,10 @@ typealias DecorationItem = net.minecraft.class_1790
  */
 typealias AnimationResourceMetadata = net.minecraft.class_1079
 /**
+ * net.minecraft.class_10049
+ */
+typealias PaintingEntityRenderState = net.minecraft.class_10049
+/**
  * net.minecraft.class_4282
  */
 typealias ChunkRenderDistanceCenterS2CPacket = net.minecraft.class_4282
@@ -19437,6 +20801,10 @@ typealias ChunkRenderDistanceCenterS2CPacket = net.minecraft.class_4282
  * net.minecraft.class_8926
  */
 typealias OxidizableGrateBlock = net.minecraft.class_8926
+/**
+ * net.minecraft.class_10215
+ */
+typealias DamageResistantComponent = net.minecraft.class_10215
 /**
  * net.minecraft.class_5321
  */
@@ -19453,10 +20821,6 @@ typealias property_EnumProperty<T> = net.minecraft.class_2754<T>
  * net.minecraft.class_5352
  */
 typealias ResourcePackSource = net.minecraft.class_5352
-/**
- * net.minecraft.class_4351
- */
-typealias UploadStatus = net.minecraft.class_4351
 /**
  * net.minecraft.class_7472
  */
@@ -19517,6 +20881,10 @@ typealias SoulSandBlock = net.minecraft.class_2492
  * net.minecraft.class_1717
  */
 typealias FurnaceFuelSlot = net.minecraft.class_1717
+/**
+ * net.minecraft.class_10130
+ */
+typealias UseCooldownComponent = net.minecraft.class_10130
 /**
  * net.minecraft.class_7438
  */
@@ -19618,6 +20986,10 @@ typealias Schema2501 = net.minecraft.class_4755
  */
 typealias Schema2502 = net.minecraft.class_4756
 /**
+ * net.minecraft.class_3144
+ */
+typealias command_LookTarget = net.minecraft.class_3144
+/**
  * net.minecraft.class_5235
  */
 typealias EditGameRulesScreen = net.minecraft.class_5235
@@ -19674,6 +21046,10 @@ typealias BlastingRecipe = net.minecraft.class_3859
  */
 typealias StatusEffectFix = net.minecraft.class_8744
 /**
+ * net.minecraft.class_10162
+ */
+typealias RegistryKeyedValue<T, V> = net.minecraft.class_10162<T, V>
+/**
  * net.minecraft.class_4979
  */
 typealias Schema2519 = net.minecraft.class_4979
@@ -19681,6 +21057,10 @@ typealias Schema2519 = net.minecraft.class_4979
  * net.minecraft.class_742
  */
 typealias AbstractClientPlayerEntity = net.minecraft.class_742
+/**
+ * net.minecraft.class_9927
+ */
+typealias InactivityFpsLimit = net.minecraft.class_9927
 /**
  * net.minecraft.class_6319
  */
@@ -19710,9 +21090,17 @@ typealias LightType = net.minecraft.class_1944
  */
 typealias Schema2522 = net.minecraft.class_5130
 /**
+ * net.minecraft.class_10083
+ */
+typealias WitherEntityRenderState = net.minecraft.class_10083
+/**
  * net.minecraft.class_9243
  */
 typealias FontFilterType = net.minecraft.class_9243
+/**
+ * net.minecraft.class_9996
+ */
+typealias AllayEntityRenderState = net.minecraft.class_9996
 /**
  * net.minecraft.class_7833
  */
@@ -19738,17 +21126,21 @@ typealias StructureLiquidSettings = net.minecraft.class_9822
  */
 typealias StainedGlassBlock = net.minecraft.class_2506
 /**
+ * net.minecraft.class_10432
+ */
+typealias BundleSelectedItemModel = net.minecraft.class_10432
+/**
  * net.minecraft.class_9091
  */
 typealias CookieResponseC2SPacket = net.minecraft.class_9091
 /**
+ * net.minecraft.class_10179
+ */
+typealias EntityConversionContext = net.minecraft.class_10179
+/**
  * net.minecraft.class_5620
  */
 typealias CauldronBehavior = net.minecraft.class_5620
-/**
- * net.minecraft.class_4496
- */
-typealias ModelUtil = net.minecraft.class_4496
 /**
  * net.minecraft.class_3285
  */
@@ -19786,6 +21178,10 @@ typealias FallingBlockEntityRenderer = net.minecraft.class_901
  */
 typealias Supplier<T> = java.util.function.Supplier<T>
 /**
+ * net.minecraft.class_5599
+ */
+typealias LoadedEntityModels = net.minecraft.class_5599
+/**
  * net.minecraft.class_3916
  */
 typealias LecternScreenHandler = net.minecraft.class_3916
@@ -19818,9 +21214,21 @@ typealias FrogEatEntityTask = net.minecraft.class_7108
  */
 typealias CyclingSlotIcon = net.minecraft.class_8064
 /**
+ * net.minecraft.class_10034
+ */
+typealias BipedEntityRenderState = net.minecraft.class_10034
+/**
+ * net.minecraft.class_10235
+ */
+typealias TooBigRealmsUploadException = net.minecraft.class_10235
+/**
  * net.minecraft.class_887
  */
 typealias CreeperEntityRenderer = net.minecraft.class_887
+/**
+ * net.minecraft.class_10493
+ */
+typealias SelectProperties = net.minecraft.class_10493
 /**
  * net.minecraft.class_3173
  */
@@ -19838,6 +21246,10 @@ typealias CatVariantTags = net.minecraft.class_7369
  */
 typealias Schema2568 = net.minecraft.class_5416
 /**
+ * net.minecraft.class_10402
+ */
+typealias TintSourceTypes = net.minecraft.class_10402
+/**
  * net.minecraft.class_4111
  */
 typealias VillagerBreedTask = net.minecraft.class_4111
@@ -19853,6 +21265,10 @@ typealias Schema2571 = net.minecraft.class_5999
  * net.minecraft.class_3149
  */
 typealias TimeCommand = net.minecraft.class_3149
+/**
+ * net.minecraft.class_10097
+ */
+typealias ReferencedModelsCollector = net.minecraft.class_10097
 /**
  * net.minecraft.class_4286
  */
@@ -19936,7 +21352,7 @@ typealias EntityBlockStateFix = net.minecraft.class_3595
 /**
  * net.minecraft.class_983
  */
-typealias ShoulderParrotFeatureRenderer<T> = net.minecraft.class_983<T>
+typealias ShoulderParrotFeatureRenderer = net.minecraft.class_983
 /**
  * net.minecraft.class_413
  */
@@ -19970,6 +21386,10 @@ typealias TradeOutputSlot = net.minecraft.class_1727
  */
 typealias AddTrappedChestFix = net.minecraft.class_1215
 /**
+ * net.minecraft.class_10107
+ */
+typealias DataPackStructureProvider = net.minecraft.class_10107
+/**
  * net.minecraft.class_9114
  */
 typealias BatchListener = net.minecraft.class_9114
@@ -19985,6 +21405,10 @@ typealias MinecraftServer = net.minecraft.server.MinecraftServer
  * net.minecraft.class_1889
  */
 typealias EnchantmentLevelEntry = net.minecraft.class_1889
+/**
+ * net.minecraft.class_10476
+ */
+typealias CountProperty = net.minecraft.class_10476
 /**
  * net.minecraft.class_5955
  */
@@ -20033,6 +21457,10 @@ typealias SayCommand = net.minecraft.class_3110
  * net.minecraft.class_2780
  */
 typealias WorldBorderListener = net.minecraft.class_2780
+/**
+ * net.minecraft.class_9837
+ */
+typealias BundleItemSelectedC2SPacket = net.minecraft.class_9837
 /**
  * net.minecraft.class_9021
  */
@@ -20098,6 +21526,10 @@ typealias MeCommand = net.minecraft.class_3045
  */
 typealias BlankFont = net.minecraft.class_376
 /**
+ * net.minecraft.class_7118
+ */
+typealias MultifaceGrower = net.minecraft.class_7118
+/**
  * net.minecraft.class_8949
  */
 typealias BreezeEntity = net.minecraft.class_8949
@@ -20122,9 +21554,17 @@ typealias LeavesBlock = net.minecraft.class_2397
  */
 typealias FossilFeatureConfig = net.minecraft.class_5919
 /**
+ * net.minecraft.class_7288
+ */
+typealias EmissiveFeatureRenderer<S, M> = net.minecraft.class_7288<S, M>
+/**
  * net.minecraft.class_4274
  */
 typealias CatSpawner = net.minecraft.class_4274
+/**
+ * net.minecraft.class_10315
+ */
+typealias StonecutterRecipeDisplay = net.minecraft.class_10315
 /**
  * net.minecraft.class_1505
  */
@@ -20133,6 +21573,10 @@ typealias SkeletonHorseTrapTriggerGoal = net.minecraft.class_1505
  * net.minecraft.class_7500
  */
 typealias SignatureVerifier = net.minecraft.class_7500
+/**
+ * net.minecraft.class_10526
+ */
+typealias ResolvableModel = net.minecraft.class_10526
 /**
  * java.util.function.BooleanSupplier
  */
@@ -20158,14 +21602,6 @@ typealias CombinedDynamicRegistries<T> = net.minecraft.class_7780<T>
  */
 typealias DependencyTracker<K, V> = net.minecraft.class_8523<K, V>
 /**
- * net.minecraft.class_4290
- */
-typealias WalkHomeTask = net.minecraft.class_4290
-/**
- * net.minecraft.class_9719
- */
-typealias DamageItemEnchantmentEffect = net.minecraft.class_9719
-/**
  * net.minecraft.class_5532
  */
 typealias NoPenaltyTargeting = net.minecraft.class_5532
@@ -20173,10 +21609,6 @@ typealias NoPenaltyTargeting = net.minecraft.class_5532
  * net.minecraft.class_7941
  */
 typealias TelemetryEventWidget = net.minecraft.class_7941
-/**
- * net.minecraft.class_8253
- */
-typealias CherryLeavesParticle = net.minecraft.class_8253
 /**
  * net.minecraft.class_4277
  */
@@ -20194,9 +21626,17 @@ typealias MessageVerifier = net.minecraft.class_7615
  */
 typealias RecipeResultCollection = net.minecraft.class_516
 /**
+ * net.minecraft.class_10299
+ */
+typealias RecipeDisplayBootstrap = net.minecraft.class_10299
+/**
  * net.minecraft.class_6765
  */
 typealias VanillaTerrainParametersCreator = net.minecraft.class_6765
+/**
+ * net.minecraft.class_10080
+ */
+typealias VillagerEntityRenderState = net.minecraft.class_10080
 /**
  * net.minecraft.class_5916
  */
@@ -20209,6 +21649,10 @@ typealias MatchingBlockTagPredicate = net.minecraft.class_6848
  * net.minecraft.class_531
  */
 typealias SpectatorMenu = net.minecraft.class_531
+/**
+ * net.minecraft.class_9952
+ */
+typealias ZombifiedPiglinEntityModel = net.minecraft.class_9952
 /**
  * net.minecraft.class_2054
  */
@@ -20272,7 +21716,7 @@ typealias CraftingRecipeJsonBuilder = net.minecraft.class_5797
 /**
  * net.minecraft.class_611
  */
-typealias SpiderEntityModel<T> = net.minecraft.class_611<T>
+typealias SpiderEntityModel = net.minecraft.class_611
 /**
  * net.minecraft.class_5188
  */
@@ -20330,13 +21774,17 @@ typealias RespawnAnchorBlock = net.minecraft.class_4969
  */
 typealias AngleArgumentType = net.minecraft.class_5473
 /**
+ * net.minecraft.class_10223
+ */
+typealias TransmuteRecipe = net.minecraft.class_10223
+/**
  * net.minecraft.class_4834
  */
 typealias PiglinSpecificSensor = net.minecraft.class_4834
 /**
  * net.minecraft.class_3847
  */
-typealias TaskQueue<T, F> = net.minecraft.class_3847<T, F>
+typealias TaskQueue<T> = net.minecraft.class_3847<T>
 /**
  * net.minecraft.class_7766
  */
@@ -20364,7 +21812,7 @@ typealias CoralClawFeature = net.minecraft.class_2972
 /**
  * net.minecraft.class_973
  */
-typealias StuckArrowsFeatureRenderer<T, M> = net.minecraft.class_973<T, M>
+typealias StuckArrowsFeatureRenderer<M> = net.minecraft.class_973<M>
 /**
  * net.minecraft.class_5178
  */
@@ -20374,6 +21822,10 @@ typealias BastionUnitsData = net.minecraft.class_5178
  */
 typealias RavagerEntity = net.minecraft.class_1584
 /**
+ * net.minecraft.class_10374
+ */
+typealias EyeblossomBlock = net.minecraft.class_10374
+/**
  * net.minecraft.class_6343
  */
 typealias VeryBiasedToBottomHeightProvider = net.minecraft.class_6343
@@ -20382,6 +21834,10 @@ typealias VeryBiasedToBottomHeightProvider = net.minecraft.class_6343
  */
 typealias RavineCarverConfig = net.minecraft.class_5869
 /**
+ * net.minecraft.class_10040
+ */
+typealias ItemFrameEntityRenderState = net.minecraft.class_10040
+/**
  * net.minecraft.class_5167
  */
 typealias HorseMarkingFeatureRenderer = net.minecraft.class_5167
@@ -20389,6 +21845,10 @@ typealias HorseMarkingFeatureRenderer = net.minecraft.class_5167
  * net.minecraft.class_6742
  */
 typealias ChunkLevelTagRenameFix = net.minecraft.class_6742
+/**
+ * net.minecraft.class_10024
+ */
+typealias FelineEntityRenderState = net.minecraft.class_10024
 /**
  * net.minecraft.class_7130
  */
@@ -20400,7 +21860,7 @@ typealias VarInts = net.minecraft.class_8703
 /**
  * net.minecraft.class_968
  */
-typealias ZombieBaseEntityRenderer<T, M> = net.minecraft.class_968<T, M>
+typealias ZombieBaseEntityRenderer<T, S, M> = net.minecraft.class_968<T, S, M>
 /**
  * net.minecraft.class_4827
  */
@@ -20418,9 +21878,13 @@ typealias PowderSnowBlock = net.minecraft.class_5635
  */
 typealias AdvancedExplosionBehavior = net.minecraft.class_9749
 /**
- * net.minecraft.class_4120
+ * net.minecraft.class_10020
  */
-typealias GoTowardsLookTargetTask = net.minecraft.class_4120
+typealias EvokerFangsEntityRenderState = net.minecraft.class_10020
+/**
+ * net.minecraft.class_10207
+ */
+typealias NameableExecutor = net.minecraft.class_10207
 /**
  * net.minecraft.class_5671
  */
@@ -20462,6 +21926,10 @@ typealias VillagerTaskListProvider = net.minecraft.class_4129
  */
 typealias Raid = net.minecraft.class_3765
 /**
+ * net.minecraft.class_10041
+ */
+typealias LightningEntityRenderState = net.minecraft.class_10041
+/**
  * net.minecraft.class_3826
  */
 typealias RuleStructureProcessor = net.minecraft.class_3826
@@ -20481,6 +21949,10 @@ typealias ParsingState<S> = net.minecraft.class_9393<S>
  * net.minecraft.class_4205
  */
 typealias GoalSelectorDebugRenderer = net.minecraft.class_4205
+/**
+ * net.minecraft.class_10319
+ */
+typealias CreakingHeartBlock = net.minecraft.class_10319
 /**
  * net.minecraft.class_7756
  */
@@ -20524,7 +21996,7 @@ typealias VillagerTradeFix = net.minecraft.class_1219
 /**
  * net.minecraft.class_620
  */
-typealias VillagerResemblingModel<T> = net.minecraft.class_620<T>
+typealias VillagerResemblingModel = net.minecraft.class_620
 /**
  * net.minecraft.class_8946
  */
@@ -20550,6 +22022,10 @@ typealias PositionSourceType<T> = net.minecraft.class_5717<T>
  */
 typealias ModifiableWorld = net.minecraft.class_1945
 /**
+ * net.minecraft.class_10464
+ */
+typealias HasComponentProperty = net.minecraft.class_10464
+/**
  * net.minecraft.class_437
  */
 typealias Screen = net.minecraft.class_437
@@ -20558,13 +22034,17 @@ typealias Screen = net.minecraft.class_437
  */
 typealias CandleCakeBlock = net.minecraft.class_5545
 /**
- * net.minecraft.class_1090
- */
-typealias BuiltinBakedModel = net.minecraft.class_1090
-/**
  * net.minecraft.class_980
  */
-typealias DrownedOverlayFeatureRenderer<T> = net.minecraft.class_980<T>
+typealias DrownedOverlayFeatureRenderer = net.minecraft.class_980
+/**
+ * net.minecraft.class_10055
+ */
+typealias PlayerEntityRenderState = net.minecraft.class_10055
+/**
+ * net.minecraft.class_10430
+ */
+typealias BasicItemModel = net.minecraft.class_10430
 /**
  * net.minecraft.class_9666
  */
@@ -20622,10 +22102,6 @@ typealias Exception = java.lang.Exception
  */
 typealias BigDecimal = java.math.BigDecimal
 /**
- * net.minecraft.class_799
- */
-typealias ModelOverride = net.minecraft.class_799
-/**
  * net.minecraft.class_946
  */
-typealias SkeletonEntityRenderer<T> = net.minecraft.class_946<T>
+typealias SkeletonEntityRenderer = net.minecraft.class_946

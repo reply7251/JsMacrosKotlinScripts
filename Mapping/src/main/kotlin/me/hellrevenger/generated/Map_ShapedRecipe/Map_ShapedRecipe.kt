@@ -14,6 +14,10 @@ fun ShapedRecipe.getWidth() = this.method_8150()
  */
 fun ShapedRecipe.matches(arg0: CraftingRecipeInput, arg1: world_World) = this.method_17728(arg0, arg1)
 /**
+ * method_61693
+ */
+fun ShapedRecipe.getIngredients() = this.method_61693()
+/**
  * method_8158
  */
 fun ShapedRecipe.getHeight() = this.method_8158()

@@ -14,10 +14,6 @@ val KClass<TexturedRenderLayers>.BANNER_PATTERNS_ATLAS_TEXTURE by aliasStatic(Te
  */
 val KClass<TexturedRenderLayers>.DECORATED_POT_ATLAS_TEXTURE by aliasStatic(TexturedRenderLayers::field_42910)
 /**
- * field_21713
- */
-val KClass<TexturedRenderLayers>.BED_TEXTURES by aliasStatic(TexturedRenderLayers::field_21713)
-/**
  * field_42911
  */
 val KClass<TexturedRenderLayers>.DECORATED_POT_PATTERN_TEXTURES by aliasStatic(TexturedRenderLayers::field_42911)
@@ -118,9 +114,17 @@ val KClass<TexturedRenderLayers>.ENDER by aliasStatic(TexturedRenderLayers::fiel
  */
 fun KClass<TexturedRenderLayers>.getShulkerBoxes() = TexturedRenderLayers.method_24070()
 /**
+ * method_65528
+ */
+fun KClass<TexturedRenderLayers>.createShulkerBoxTextureId(arg0: Identifier) = TexturedRenderLayers.method_65528(arg0)
+/**
  * method_24067
  */
 fun KClass<TexturedRenderLayers>.getShieldPatterns() = TexturedRenderLayers.method_24067()
+/**
+ * method_65532
+ */
+fun KClass<TexturedRenderLayers>.getShulkerBoxTextureId(arg0: DyeColor) = TexturedRenderLayers.method_65532(arg0)
 /**
  * method_24059
  */
@@ -138,9 +142,17 @@ fun KClass<TexturedRenderLayers>.getArmorTrims(arg0: Boolean) = TexturedRenderLa
  */
 fun KClass<TexturedRenderLayers>.getSign() = TexturedRenderLayers.method_24071()
 /**
- * method_24076
+ * method_65531
  */
-fun KClass<TexturedRenderLayers>.getEntityTranslucentCull() = TexturedRenderLayers.method_24076()
+fun KClass<TexturedRenderLayers>.createBedTextureId(arg0: DyeColor) = TexturedRenderLayers.method_65531(arg0)
+/**
+ * method_65527
+ */
+fun KClass<TexturedRenderLayers>.getBedTextureId(arg0: DyeColor) = TexturedRenderLayers.method_65527(arg0)
+/**
+ * method_65817
+ */
+fun KClass<TexturedRenderLayers>.createSignTextureId(arg0: Identifier) = TexturedRenderLayers.method_65817(arg0)
 /**
  * method_24072
  */
@@ -154,13 +166,37 @@ fun KClass<TexturedRenderLayers>.getHangingSignTextureId(arg0: WoodType) = Textu
  */
 fun KClass<TexturedRenderLayers>.getBannerPatternTextureId(arg0: RegistryEntry<BannerPattern>) = TexturedRenderLayers.method_33081(arg0)
 /**
+ * method_65530
+ */
+fun KClass<TexturedRenderLayers>.createChestTextureId(arg0: Identifier) = TexturedRenderLayers.method_65530(arg0)
+/**
+ * method_65526
+ */
+fun KClass<TexturedRenderLayers>.createBedTextureId(arg0: Identifier) = TexturedRenderLayers.method_65526(arg0)
+/**
  * method_24062
  */
 fun KClass<TexturedRenderLayers>.getChestTextureId(arg0: BlockEntity, arg1: ChestType, arg2: Boolean) = TexturedRenderLayers.method_24062(arg0, arg1, arg2)
 /**
+ * method_65533
+ */
+fun KClass<TexturedRenderLayers>.createShulkerId(arg0: DyeColor) = TexturedRenderLayers.method_65533(arg0)
+/**
+ * method_65818
+ */
+fun KClass<TexturedRenderLayers>.createHangingSignTextureId(arg0: Identifier) = TexturedRenderLayers.method_65818(arg0)
+/**
+ * method_65534
+ */
+fun KClass<TexturedRenderLayers>.createShulkerBoxTextureId(arg0: DyeColor) = TexturedRenderLayers.method_65534(arg0)
+/**
  * method_24073
  */
 fun KClass<TexturedRenderLayers>.getEntitySolid() = TexturedRenderLayers.method_24073()
+/**
+ * method_65529
+ */
+fun KClass<TexturedRenderLayers>.createColorId(arg0: DyeColor) = TexturedRenderLayers.method_65529(arg0)
 /**
  * method_24069
  */

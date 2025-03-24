@@ -4,4 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_32000
  */
-fun <T>KClass<GhastEntityModel<T>>.getTexturedModelData() where T: Entity = GhastEntityModel.method_32000()
+fun KClass<GhastEntityModel>.getTexturedModelData() = GhastEntityModel.method_32000()
+/**
+ * method_62088
+ */
+fun GhastEntityModel.setAngles(arg0: GhastEntityRenderState) = this.method_62088(arg0)

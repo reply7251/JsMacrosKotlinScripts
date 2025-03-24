@@ -2,14 +2,18 @@ package me.hellrevenger.generated.Map_SmithingRecipe
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_48454
+ * method_61702
  */
-fun SmithingRecipe.testBase(arg0: ItemStack) = this.method_48454(arg0)
+fun SmithingRecipe.matches(arg0: SmithingRecipeInput, arg1: world_World) = this.method_61702(arg0, arg1)
 /**
- * method_30029
+ * method_64723
  */
-fun SmithingRecipe.testAddition(arg0: ItemStack) = this.method_30029(arg0)
+fun SmithingRecipe.base() = this.method_64723()
 /**
- * method_48453
+ * method_64724
  */
-fun SmithingRecipe.testTemplate(arg0: ItemStack) = this.method_48453(arg0)
+fun SmithingRecipe.addition() = this.method_64724()
+/**
+ * method_64722
+ */
+fun SmithingRecipe.template() = this.method_64722()

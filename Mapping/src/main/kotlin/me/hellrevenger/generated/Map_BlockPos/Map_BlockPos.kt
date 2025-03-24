@@ -10,6 +10,14 @@ val KClass<BlockPos>.ORIGIN by aliasStatic(BlockPos::field_10980)
  */
 val KClass<BlockPos>.SIZE_BITS_Y by aliasStatic(BlockPos::field_10975)
 /**
+ * field_54978
+ */
+val KClass<BlockPos>.SIZE_BITS_XZ by aliasStatic(BlockPos::field_54978)
+/**
+ * field_54979
+ */
+val KClass<BlockPos>.MAX_XZ by aliasStatic(BlockPos::field_54979)
+/**
  * method_10096
  */
 fun KClass<BlockPos>.add(arg0: Long, arg1: Int, arg2: Int, arg3: Int) = BlockPos.method_10096(arg0, arg1, arg2, arg3)
@@ -122,6 +130,10 @@ fun BlockPos.clampToWithin(arg0: Vec3d) = this.method_60913(arg0)
  */
 fun BlockPos.withY(arg0: Int) = this.method_33096(arg0)
 /**
+ * method_62671
+ */
+fun KClass<BlockPos>.iterate(arg0: Box) = BlockPos.method_62671(arg0)
+/**
  * method_20437
  */
 fun KClass<BlockPos>.stream(arg0: BlockPos, arg1: BlockPos) = BlockPos.method_20437(arg0, arg1)
@@ -145,10 +157,6 @@ fun BlockPos.toBottomCenterPos() = this.method_61082()
  * method_10064
  */
 fun KClass<BlockPos>.asLong(arg0: Int, arg1: Int, arg2: Int) = BlockPos.method_10064(arg0, arg1, arg2)
-/**
- * method_49925
- */
-fun KClass<BlockPos>.iterateRecursively(arg0: BlockPos, arg1: Int, arg2: Int, arg3: BiConsumer<BlockPos, Consumer<BlockPos>>, arg4: Predicate<BlockPos>) = BlockPos.method_49925(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_10074
  */
@@ -201,6 +209,10 @@ fun KClass<BlockPos>.findClosest(arg0: BlockPos, arg1: Int, arg2: Int, arg3: Pre
  * method_10087
  */
 fun BlockPos.down(arg0: Int) = this.method_10087(arg0)
+/**
+ * method_49925
+ */
+fun KClass<BlockPos>.iterateRecursively(arg0: BlockPos, arg1: Int, arg2: Int, arg3: BiConsumer<BlockPos, Consumer<BlockPos>>, arg4: function_Function<BlockPos, net.minecraft.class_2338.class_10384>) = BlockPos.method_49925(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_10097
  */

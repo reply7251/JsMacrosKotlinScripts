@@ -12,7 +12,7 @@ fun PersistentState.markDirty() = this.method_80()
 /**
  * method_17919
  */
-fun PersistentState.save(arg0: File, arg1: net.minecraft.class_7225.class_7874) = this.method_17919(arg0, arg1)
+fun PersistentState.toNbt(arg0: net.minecraft.class_7225.class_7874) = this.method_17919(arg0)
 /**
  * method_79
  */

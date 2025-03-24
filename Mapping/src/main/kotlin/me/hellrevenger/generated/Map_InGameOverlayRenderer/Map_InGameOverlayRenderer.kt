@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_23067
  */
-fun KClass<InGameOverlayRenderer>.renderOverlays(arg0: MinecraftClient, arg1: MatrixStack) = InGameOverlayRenderer.method_23067(arg0, arg1)
+fun KClass<InGameOverlayRenderer>.renderOverlays(arg0: MinecraftClient, arg1: MatrixStack, arg2: VertexConsumerProvider) = InGameOverlayRenderer.method_23067(arg0, arg1, arg2)

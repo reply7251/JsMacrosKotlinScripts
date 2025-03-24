@@ -46,6 +46,10 @@ fun JfrProfile.duration() = this.comp_5()
  */
 fun JfrProfile.packetSentStatistics() = this.comp_12()
 /**
+ * comp_3330
+ */
+fun JfrProfile.structureGenerationSamples() = this.comp_3330()
+/**
  * comp_13
  */
 fun JfrProfile.fileWriteStatistics() = this.comp_13()

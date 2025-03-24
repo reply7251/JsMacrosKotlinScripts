@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_55581
  */
-fun KClass<VanillaAdventureTabAdvancementGenerator>.createKillMobAdvancements(arg0: AdvancementEntry, arg1: Consumer<AdvancementEntry>, arg2: MutableList<EntityType<*>>) = VanillaAdventureTabAdvancementGenerator.method_55581(arg0, arg1, arg2)
+fun KClass<VanillaAdventureTabAdvancementGenerator>.createKillMobAdvancements(arg0: AdvancementEntry, arg1: Consumer<AdvancementEntry>, arg2: RegistryEntryLookup<EntityType<*>>, arg3: MutableList<EntityType<*>>) = VanillaAdventureTabAdvancementGenerator.method_55581(arg0, arg1, arg2, arg3)

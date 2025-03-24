@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * field_45632
  */
-val KClass<SpriteLoader>.METADATA_READERS by aliasStatic(SpriteLoader::field_45632)
+val KClass<SpriteLoader>.METADATA_SERIALIZERS by aliasStatic(SpriteLoader::field_45632)
 /**
  * method_52849
  */
@@ -12,7 +12,7 @@ fun SpriteLoader.load(arg0: ResourceManager, arg1: Identifier, arg2: Int, arg3: 
 /**
  * method_47661
  */
-fun SpriteLoader.load(arg0: ResourceManager, arg1: Identifier, arg2: Int, arg3: Executor, arg4: Collection<ResourceMetadataReader<*>>) = this.method_47661(arg0, arg1, arg2, arg3, arg4)
+fun SpriteLoader.load(arg0: ResourceManager, arg1: Identifier, arg2: Int, arg3: Executor, arg4: Collection<ResourceMetadataSerializer<*>>) = this.method_47661(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_45837
  */

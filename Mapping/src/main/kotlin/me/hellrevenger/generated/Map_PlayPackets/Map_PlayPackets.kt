@@ -190,13 +190,33 @@ val KClass<PlayPackets>.MOVE_ENTITY_POS by aliasStatic(PlayPackets::field_48029)
  */
 val KClass<PlayPackets>.CHUNK_BATCH_START by aliasStatic(PlayPackets::field_48160)
 /**
+ * field_54524
+ */
+val KClass<PlayPackets>.RECIPE_BOOK_ADD by aliasStatic(PlayPackets::field_54524)
+/**
+ * field_54523
+ */
+val KClass<PlayPackets>.PLAYER_ROTATION by aliasStatic(PlayPackets::field_54523)
+/**
  * field_48162
  */
 val KClass<PlayPackets>.CLEAR_TITLES by aliasStatic(PlayPackets::field_48162)
 /**
+ * field_54526
+ */
+val KClass<PlayPackets>.RECIPE_BOOK_SETTINGS by aliasStatic(PlayPackets::field_54526)
+/**
  * field_48161
  */
 val KClass<PlayPackets>.CHUNKS_BIOMES by aliasStatic(PlayPackets::field_48161)
+/**
+ * field_54525
+ */
+val KClass<PlayPackets>.RECIPE_BOOK_REMOVE by aliasStatic(PlayPackets::field_54525)
+/**
+ * field_54527
+ */
+val KClass<PlayPackets>.ENTITY_POSITION_SYNC by aliasStatic(PlayPackets::field_54527)
 /**
  * field_48169
  */
@@ -362,6 +382,18 @@ val KClass<PlayPackets>.RECIPE_BOOK_CHANGE_SETTINGS by aliasStatic(PlayPackets::
  */
 val KClass<PlayPackets>.SET_COMMAND_BLOCK by aliasStatic(PlayPackets::field_48109)
 /**
+ * field_52330
+ */
+val KClass<PlayPackets>.CLIENT_TICK_END by aliasStatic(PlayPackets::field_52330)
+/**
+ * field_52331
+ */
+val KClass<PlayPackets>.SET_CURSOR_ITEM by aliasStatic(PlayPackets::field_52331)
+/**
+ * field_52332
+ */
+val KClass<PlayPackets>.SET_PLAYER_INVENTORY by aliasStatic(PlayPackets::field_52332)
+/**
  * field_48110
  */
 val KClass<PlayPackets>.SET_COMMAND_MINECART by aliasStatic(PlayPackets::field_48110)
@@ -478,6 +510,26 @@ val KClass<PlayPackets>.INTERACT by aliasStatic(PlayPackets::field_48139)
  */
 val KClass<PlayPackets>.ENTITY_TAG_QUERY by aliasStatic(PlayPackets::field_48138)
 /**
+ * field_55192
+ */
+val KClass<PlayPackets>.PLAYER_LOADED by aliasStatic(PlayPackets::field_55192)
+/**
+ * field_52329
+ */
+val KClass<PlayPackets>.BUNDLE_ITEM_SELECTED by aliasStatic(PlayPackets::field_52329)
+/**
+ * field_54984
+ */
+val KClass<PlayPackets>.PICK_ITEM_FROM_ENTITY by aliasStatic(PlayPackets::field_54984)
+/**
+ * field_54983
+ */
+val KClass<PlayPackets>.PICK_ITEM_FROM_BLOCK by aliasStatic(PlayPackets::field_54983)
+/**
+ * field_52328
+ */
+val KClass<PlayPackets>.MOVE_MINECART_ALONG_TRACK by aliasStatic(PlayPackets::field_52328)
+/**
  * field_48059
  */
 val KClass<PlayPackets>.STOP_SOUND by aliasStatic(PlayPackets::field_48059)
@@ -566,10 +618,6 @@ val KClass<PlayPackets>.PLAYER_LOOK_AT by aliasStatic(PlayPackets::field_48071)
  */
 val KClass<PlayPackets>.PLAYER_INFO_UPDATE by aliasStatic(PlayPackets::field_48070)
 /**
- * field_48073
- */
-val KClass<PlayPackets>.RECIPE by aliasStatic(PlayPackets::field_48073)
-/**
  * field_48072
  */
 val KClass<PlayPackets>.PLAYER_POSITION by aliasStatic(PlayPackets::field_48072)
@@ -649,7 +697,3 @@ val KClass<PlayPackets>.PADDLE_BOAT by aliasStatic(PlayPackets::field_48095)
  * field_48097
  */
 val KClass<PlayPackets>.PLACE_RECIPE by aliasStatic(PlayPackets::field_48097)
-/**
- * field_48096
- */
-val KClass<PlayPackets>.PICK_ITEM by aliasStatic(PlayPackets::field_48096)

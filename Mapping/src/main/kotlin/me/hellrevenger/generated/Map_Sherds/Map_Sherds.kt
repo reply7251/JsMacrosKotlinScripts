@@ -8,7 +8,7 @@ val KClass<Sherds>.DEFAULT by aliasStatic(Sherds::field_44707)
 /**
  * method_51512
  */
-fun Sherds.stream() = this.method_51512()
+fun Sherds.toList() = this.method_51512()
 /**
  * method_51513
  */

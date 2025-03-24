@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_57946
  */
-fun <T>Component<T>.apply(arg0: ComponentMapImpl) = this.method_57946(arg0)
+fun <T>Component<T>.apply(arg0: MergedComponentMap) = this.method_57946(arg0)
 /**
  * method_57945
  */

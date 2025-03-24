@@ -30,10 +30,6 @@ fun ClientConnectionState.enabledFeatures() = this.comp_1614()
  */
 fun ClientConnectionState.receivedRegistries() = this.comp_1613()
 /**
- * comp_2663
- */
-fun ClientConnectionState.strictErrorHandling() = this.comp_2663()
-/**
  * comp_2849
  */
 fun ClientConnectionState.customReportDetails() = this.comp_2849()

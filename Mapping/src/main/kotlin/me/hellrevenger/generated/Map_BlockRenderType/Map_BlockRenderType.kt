@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 val KClass<BlockRenderType>.MODEL by aliasEnum(BlockRenderType::class, "field_11458")
 /**
- * field_11456
- */
-val KClass<BlockRenderType>.ENTITYBLOCK_ANIMATED by aliasEnum(BlockRenderType::class, "field_11456")
-/**
  * field_11455
  */
 val KClass<BlockRenderType>.INVISIBLE by aliasEnum(BlockRenderType::class, "field_11455")

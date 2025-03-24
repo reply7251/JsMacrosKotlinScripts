@@ -8,7 +8,7 @@ fun KClass<CamelBrain>.getTemptItemPredicate() = CamelBrain.method_45368()
 /**
  * method_45363
  */
-fun KClass<CamelBrain>.createProfile() = CamelBrain.method_45363()
+fun KClass<CamelBrain>.createBrainProfile() = CamelBrain.method_45363()
 /**
  * method_45366
  */

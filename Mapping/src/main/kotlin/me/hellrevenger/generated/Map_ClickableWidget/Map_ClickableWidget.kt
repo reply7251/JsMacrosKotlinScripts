@@ -42,6 +42,10 @@ fun ClickableWidget.setNavigationOrder(arg0: Int) = this.method_48591(arg0)
  */
 fun ClickableWidget.setHeight(arg0: Int) = this.method_53533(arg0)
 /**
+ * method_62888
+ */
+fun KClass<ClickableWidget>.playClickSound(arg0: SoundManager) = ClickableWidget.method_62888(arg0)
+/**
  * method_25354
  */
 fun ClickableWidget.playDownSound(arg0: SoundManager) = this.method_25354(arg0)

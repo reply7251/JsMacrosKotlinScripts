@@ -42,13 +42,13 @@ fun VehicleInventory.canPlayerAccess(arg0: PlayerEntity) = this.method_42294(arg
  */
 fun VehicleInventory.getLootTable() = this.method_42276()
 /**
- * method_42283
- */
-fun VehicleInventory.onBroken(arg0: DamageSource, arg1: world_World, arg2: Entity) = this.method_42283(arg0, arg1, arg2)
-/**
  * method_42289
  */
 fun VehicleInventory.removeInventoryStack(arg0: Int) = this.method_42289(arg0)
+/**
+ * method_42283
+ */
+fun VehicleInventory.onBroken(arg0: DamageSource, arg1: ServerWorld, arg2: Entity) = this.method_42283(arg0, arg1, arg2)
 /**
  * method_31481
  */

@@ -82,6 +82,10 @@ val KClass<Models>.CUBE_COLUMN_MIRRORED by aliasStatic(Models::field_29081)
  */
 val KClass<Models>.TEMPLATE_CAMPFIRE by aliasStatic(Models::field_23957)
 /**
+ * field_54878
+ */
+val KClass<Models>.MOSSY_CARPET_SIDE by aliasStatic(Models::field_54878)
+/**
  * field_40628
  */
 val KClass<Models>.TEMPLATE_CUSTOM_FENCE_GATE_WALL_OPEN by aliasStatic(Models::field_40628)
@@ -138,6 +142,14 @@ val KClass<Models>.TEMPLATE_CANDLE by aliasStatic(Models::field_27785)
  */
 val KClass<Models>.TEMPLATE_CAULDRON_FULL by aliasStatic(Models::field_27784)
 /**
+ * field_54395
+ */
+val KClass<Models>.TEMPLATE_TORCH_WALL_UNLIT by aliasStatic(Models::field_54395)
+/**
+ * field_54394
+ */
+val KClass<Models>.TEMPLATE_TORCH_UNLIT by aliasStatic(Models::field_54394)
+/**
  * field_40631
  */
 val KClass<Models>.CUSTOM_FENCE_SIDE_NORTH by aliasStatic(Models::field_40631)
@@ -146,13 +158,37 @@ val KClass<Models>.CUSTOM_FENCE_SIDE_NORTH by aliasStatic(Models::field_40631)
  */
 val KClass<Models>.CUSTOM_FENCE_POST by aliasStatic(Models::field_40630)
 /**
+ * field_53719
+ */
+val KClass<Models>.TEMPLATE_REDSTONE_TORCH by aliasStatic(Models::field_53719)
+/**
+ * field_55256
+ */
+val KClass<Models>.CROSSBOW by aliasStatic(Models::field_55256)
+/**
+ * field_55255
+ */
+val KClass<Models>.BOW by aliasStatic(Models::field_55255)
+/**
+ * field_55254
+ */
+val KClass<Models>.TEMPLATE_BUNDLE_OPEN_BACK by aliasStatic(Models::field_55254)
+/**
  * field_28015
  */
 val KClass<Models>.TEMPLATE_CAULDRON_LEVEL2 by aliasStatic(Models::field_28015)
 /**
+ * field_55253
+ */
+val KClass<Models>.TEMPLATE_BUNDLE_OPEN_FRONT by aliasStatic(Models::field_55253)
+/**
  * field_28014
  */
 val KClass<Models>.TEMPLATE_CAULDRON_LEVEL1 by aliasStatic(Models::field_28014)
+/**
+ * field_55252
+ */
+val KClass<Models>.TEMPLATE_CHEST by aliasStatic(Models::field_55252)
 /**
  * field_38469
  */
@@ -202,6 +238,14 @@ val KClass<Models>.TEMPLATE_ORIENTABLE_TRAPDOOR_TOP by aliasStatic(Models::field
  */
 val KClass<Models>.TEMPLATE_TRAPDOOR_OPEN by aliasStatic(Models::field_22917)
 /**
+ * field_55181
+ */
+val KClass<Models>.FLOWER_POT_CROSS_EMISSIVE by aliasStatic(Models::field_55181)
+/**
+ * field_55180
+ */
+val KClass<Models>.CROSS_EMISSIVE by aliasStatic(Models::field_55180)
+/**
  * field_22907
  */
 val KClass<Models>.PRESSURE_PLATE_DOWN by aliasStatic(Models::field_22907)
@@ -221,6 +265,10 @@ val KClass<Models>.PRESSURE_PLATE_UP by aliasStatic(Models::field_22906)
  * field_22905
  */
 val KClass<Models>.TEMPLATE_FENCE_GATE_WALL_OPEN by aliasStatic(Models::field_22905)
+/**
+ * field_53720
+ */
+val KClass<Models>.TEMPLATE_REDSTONE_TORCH_WALL by aliasStatic(Models::field_53720)
 /**
  * field_22930
  */
@@ -454,10 +502,6 @@ val KClass<Models>.TEMPLATE_CHORUS_FLOWER by aliasStatic(Models::field_22949)
  */
 val KClass<Models>.TEMPLATE_CHISELED_BOOKSHELF_SLOT_TOP_MID by aliasStatic(Models::field_41528)
 /**
- * field_22944
- */
-val KClass<Models>.TEMPLATE_BANNER by aliasStatic(Models::field_22944)
-/**
  * field_41527
  */
 val KClass<Models>.TEMPLATE_CHISELED_BOOKSHELF_SLOT_TOP_LEFT by aliasStatic(Models::field_41527)
@@ -469,10 +513,6 @@ val KClass<Models>.TEMPLATE_BED by aliasStatic(Models::field_22943)
  * field_22946
  */
 val KClass<Models>.CORAL_FAN by aliasStatic(Models::field_22946)
-/**
- * field_22945
- */
-val KClass<Models>.TEMPLATE_SKULL by aliasStatic(Models::field_22945)
 /**
  * field_48980
  */

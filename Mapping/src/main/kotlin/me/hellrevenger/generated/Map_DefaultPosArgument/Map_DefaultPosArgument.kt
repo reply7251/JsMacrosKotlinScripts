@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun KClass<DefaultPosArgument>.absolute(arg0: Vec2f) = DefaultPosArgument.method_35811(arg0)
 /**
- * method_9751
- */
-fun KClass<DefaultPosArgument>.zero() = DefaultPosArgument.method_9751()
-/**
  * method_9749
  */
 fun KClass<DefaultPosArgument>.parse(arg0: StringReader) = DefaultPosArgument.method_9749(arg0)

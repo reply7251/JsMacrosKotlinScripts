@@ -2,13 +2,13 @@ package me.hellrevenger.generated.Map_MusicTracker
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_4858
+ */
+fun MusicTracker.play(arg0: MusicInstance) = this.method_4858(arg0)
+/**
  * method_4860
  */
 fun MusicTracker.isPlayingType(arg0: MusicSound) = this.method_4860(arg0)
-/**
- * method_4858
- */
-fun MusicTracker.play(arg0: MusicSound) = this.method_4858(arg0)
 /**
  * method_18669
  */

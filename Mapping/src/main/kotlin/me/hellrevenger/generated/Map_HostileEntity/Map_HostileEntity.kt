@@ -14,10 +14,10 @@ fun KClass<HostileEntity>.canSpawnIgnoreLightLevel(arg0: EntityType<out HostileE
  */
 fun KClass<HostileEntity>.isSpawnDark(arg0: ServerWorldAccess, arg1: BlockPos, arg2: Random) = HostileEntity.method_20679(arg0, arg1, arg2)
 /**
- * method_7076
- */
-fun HostileEntity.isAngryAt(arg0: PlayerEntity) = this.method_7076(arg0)
-/**
  * method_26918
  */
 fun KClass<HostileEntity>.createHostileAttributes() = HostileEntity.method_26918()
+/**
+ * method_7076
+ */
+fun HostileEntity.isAngryAt(arg0: ServerWorld, arg1: PlayerEntity) = this.method_7076(arg0, arg1)

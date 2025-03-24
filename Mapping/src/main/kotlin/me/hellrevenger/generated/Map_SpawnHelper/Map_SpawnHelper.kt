@@ -14,9 +14,9 @@ fun KClass<SpawnHelper>.spawnEntitiesInChunk(arg0: SpawnGroup, arg1: ServerWorld
  */
 fun KClass<SpawnHelper>.spawnEntitiesInChunk(arg0: SpawnGroup, arg1: ServerWorld, arg2: WorldChunk, arg3: net.minecraft.class_1948.class_5261, arg4: net.minecraft.class_1948.class_5259) = SpawnHelper.method_8663(arg0, arg1, arg2, arg3, arg4)
 /**
- * method_27821
+ * method_61729
  */
-fun KClass<SpawnHelper>.spawn(arg0: ServerWorld, arg1: WorldChunk, arg2: net.minecraft.class_1948.class_5262, arg3: Boolean, arg4: Boolean, arg5: Boolean) = SpawnHelper.method_27821(arg0, arg1, arg2, arg3, arg4, arg5)
+fun KClass<SpawnHelper>.collectSpawnableGroups(arg0: net.minecraft.class_1948.class_5262, arg1: Boolean, arg2: Boolean, arg3: Boolean) = SpawnHelper.method_61729(arg0, arg1, arg2, arg3)
 /**
  * method_8662
  */
@@ -29,6 +29,10 @@ fun KClass<SpawnHelper>.populateEntities(arg0: ServerWorldAccess, arg1: Registry
  * method_27815
  */
 fun KClass<SpawnHelper>.setupSpawn(arg0: Int, arg1: Iterable<Entity>, arg2: net.minecraft.class_1948.class_5260, arg3: SpawnDensityCapper) = SpawnHelper.method_27815(arg0, arg1, arg2, arg3)
+/**
+ * method_27821
+ */
+fun KClass<SpawnHelper>.spawn(arg0: ServerWorld, arg1: WorldChunk, arg2: net.minecraft.class_1948.class_5262, arg3: MutableList<SpawnGroup>) = SpawnHelper.method_27821(arg0, arg1, arg2, arg3)
 /**
  * method_35240
  */

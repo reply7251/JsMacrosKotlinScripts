@@ -13,3 +13,7 @@ fun KClass<DecoratedPotBlockEntityRenderer>.getSidesTexturedModelData() = Decora
  * method_49346
  */
 fun KClass<DecoratedPotBlockEntityRenderer>.getTopBottomNeckTexturedModelData() = DecoratedPotBlockEntityRenderer.method_49346()
+/**
+ * method_65560
+ */
+fun DecoratedPotBlockEntityRenderer.renderAsItem(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: Int, arg4: Sherds) = this.method_65560(arg0, arg1, arg2, arg3, arg4)

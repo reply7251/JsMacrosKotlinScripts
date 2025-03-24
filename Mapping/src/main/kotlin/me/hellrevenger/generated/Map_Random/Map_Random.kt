@@ -58,6 +58,10 @@ fun Random.nextGaussian() = this.method_43059()
  */
 fun Random.nextDouble() = this.method_43058()
 /**
+ * method_62816
+ */
+fun Random.nextTriangular(arg0: Float, arg1: Float) = this.method_62816(arg0, arg1)
+/**
  * method_43056
  */
 fun Random.nextBoolean() = this.method_43056()

@@ -2,9 +2,13 @@ package me.hellrevenger.generated.Map_Baker
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_45872
+ * method_65733
  */
-fun Baker.getOrLoadModel(arg0: Identifier) = this.method_45872(arg0)
+fun Baker.getModelNameSupplier() = this.method_65733()
+/**
+ * method_65732
+ */
+fun Baker.getSpriteGetter() = this.method_65732()
 /**
  * method_45873
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_48537
  */
-fun SmithingTransformRecipeJsonBuilder.offerTo(arg0: RecipeExporter, arg1: Identifier) = this.method_48537(arg0, arg1)
+fun SmithingTransformRecipeJsonBuilder.offerTo(arg0: RecipeExporter, arg1: RegistryKey<Recipe<*>>) = this.method_48537(arg0, arg1)
 /**
  * method_48536
  */

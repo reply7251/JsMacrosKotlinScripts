@@ -54,6 +54,10 @@ fun GameTestState.getMaxAttempts() = this.method_32242()
  */
 fun GameTestState.copy() = this.method_56210()
 /**
+ * method_56212
+ */
+fun GameTestState.getBoxMinPos() = this.method_56212()
+/**
  * method_32241
  */
 fun GameTestState.isFlaky() = this.method_32241()
@@ -117,6 +121,10 @@ fun GameTestState.isOptional() = this.method_22184()
  * method_22180
  */
 fun GameTestState.isCompleted() = this.method_22180()
+/**
+ * method_64385
+ */
+fun GameTestState.getOrigin() = this.method_64385()
 /**
  * method_22169
  */

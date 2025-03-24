@@ -24,7 +24,7 @@ fun VillagerEntity.setOffers(arg0: TradeOfferList) = this.method_16917(arg0)
 /**
  * method_7234
  */
-fun VillagerEntity.wantsToStartBreeding() = this.method_7234()
+fun VillagerEntity.canShareFoodForBreeding() = this.method_7234()
 /**
  * method_19623
  */
@@ -40,7 +40,7 @@ fun VillagerEntity.restock() = this.method_19182()
 /**
  * method_7239
  */
-fun VillagerEntity.canBreed() = this.method_7239()
+fun VillagerEntity.needsFoodForBreeding() = this.method_7239()
 /**
  * method_20697
  */

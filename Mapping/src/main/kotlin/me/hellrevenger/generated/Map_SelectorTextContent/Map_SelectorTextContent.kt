@@ -6,14 +6,10 @@ import me.hellrevenger.generated.*
  */
 val KClass<SelectorTextContent>.TYPE by aliasStatic(SelectorTextContent::field_46630)
 /**
- * method_10932
+ * comp_3080
  */
-fun SelectorTextContent.getPattern() = this.method_10932()
+fun SelectorTextContent.selector() = this.comp_3080()
 /**
- * method_36339
+ * comp_3081
  */
-fun SelectorTextContent.getSeparator() = this.method_36339()
-/**
- * method_36138
- */
-fun SelectorTextContent.getSelector() = this.method_36138()
+fun SelectorTextContent.separator() = this.comp_3081()

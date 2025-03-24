@@ -10,10 +10,10 @@ fun InventoryOwner.readInventory(arg0: NbtCompound, arg1: net.minecraft.class_72
  */
 fun InventoryOwner.getInventory() = this.method_35199()
 /**
+ * method_43544
+ */
+fun KClass<InventoryOwner>.pickUpItem(arg0: ServerWorld, arg1: MobEntity, arg2: InventoryOwner, arg3: ItemEntity) = InventoryOwner.method_43544(arg0, arg1, arg2, arg3)
+/**
  * method_46399
  */
 fun InventoryOwner.writeInventory(arg0: NbtCompound, arg1: net.minecraft.class_7225.class_7874) = this.method_46399(arg0, arg1)
-/**
- * method_43544
- */
-fun KClass<InventoryOwner>.pickUpItem(arg0: MobEntity, arg1: InventoryOwner, arg2: ItemEntity) = InventoryOwner.method_43544(arg0, arg1, arg2)

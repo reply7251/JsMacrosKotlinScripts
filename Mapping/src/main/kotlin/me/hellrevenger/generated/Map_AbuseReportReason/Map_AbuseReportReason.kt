@@ -2,6 +2,14 @@ package me.hellrevenger.generated.Map_AbuseReportReason
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_53036
+ */
+val KClass<AbuseReportReason>.SEXUALLY_INAPPROPRIATE by aliasEnum(AbuseReportReason::class, "field_53036")
+/**
+ * field_53035
+ */
+val KClass<AbuseReportReason>.I_WANT_TO_REPORT_THEM by aliasEnum(AbuseReportReason::class, "field_53035")
+/**
  * field_39659
  */
 val KClass<AbuseReportReason>.HATE_SPEECH by aliasEnum(AbuseReportReason::class, "field_39659")
@@ -38,10 +46,6 @@ val KClass<AbuseReportReason>.TERRORISM_OR_VIOLENT_EXTREMISM by aliasEnum(AbuseR
  */
 val KClass<AbuseReportReason>.ALCOHOL_TOBACCO_DRUGS by aliasEnum(AbuseReportReason::class, "field_39670")
 /**
- * field_46063
- */
-val KClass<AbuseReportReason>.GENERIC by aliasEnum(AbuseReportReason::class, "field_46063")
-/**
  * method_44596
  */
 fun AbuseReportReason.getDescription() = this.method_44596()
@@ -53,3 +57,7 @@ fun AbuseReportReason.getText() = this.method_44595()
  * method_44594
  */
 fun AbuseReportReason.getId() = this.method_44594()
+/**
+ * method_62164
+ */
+fun KClass<AbuseReportReason>.getExcludedReasonsForType(arg0: AbuseReportType) = AbuseReportReason.method_62164(arg0)

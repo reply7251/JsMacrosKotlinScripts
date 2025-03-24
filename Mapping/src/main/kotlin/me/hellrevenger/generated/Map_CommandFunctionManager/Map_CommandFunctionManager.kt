@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun CommandFunctionManager.tick() = this.method_18699()
 /**
- * method_29462
- */
-fun CommandFunctionManager.getTag(arg0: Identifier) = this.method_29462(arg0)
-/**
  * method_29461
  */
 fun CommandFunctionManager.setFunctions(arg0: FunctionLoader) = this.method_29461(arg0)
@@ -25,6 +21,10 @@ fun CommandFunctionManager.getScheduledCommandSource() = this.method_12899()
  * method_12900
  */
 fun CommandFunctionManager.getDispatcher() = this.method_12900()
+/**
+ * method_29462
+ */
+fun CommandFunctionManager.getTag(arg0: Identifier) = this.method_29462(arg0)
 /**
  * method_12904
  */

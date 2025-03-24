@@ -26,6 +26,10 @@ fun ServerResourcePackLoader.initWorldPack() = this.method_55538()
  */
 fun ServerResourcePackLoader.addResourcePack(arg0: UUID, arg1: URL, arg2: String) = this.method_55523(arg0, arg1, arg2)
 /**
+ * method_55518
+ */
+fun KClass<ServerResourcePackLoader>.toHashCode(arg0: String) = ServerResourcePackLoader.method_55518(arg0)
+/**
  * method_55514
  */
 fun ServerResourcePackLoader.getPassthroughPackProvider() = this.method_55514()

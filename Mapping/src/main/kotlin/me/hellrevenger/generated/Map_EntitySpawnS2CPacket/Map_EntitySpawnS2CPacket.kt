@@ -8,7 +8,7 @@ fun EntitySpawnS2CPacket.getUuid() = this.method_11164()
 /**
  * method_11167
  */
-fun EntitySpawnS2CPacket.getId() = this.method_11167()
+fun EntitySpawnS2CPacket.getEntityId() = this.method_11167()
 /**
  * method_11169
  */

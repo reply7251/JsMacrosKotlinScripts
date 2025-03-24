@@ -54,6 +54,10 @@ val KClass<TreeConfiguredFeatures>.BIRCH_BEES_002 by aliasStatic(TreeConfiguredF
  */
 val KClass<TreeConfiguredFeatures>.MEGA_JUNGLE_TREE by aliasStatic(TreeConfiguredFeatures::field_35914)
 /**
+ * field_54882
+ */
+val KClass<TreeConfiguredFeatures>.PALE_OAK by aliasStatic(TreeConfiguredFeatures::field_54882)
+/**
  * field_35902
  */
 val KClass<TreeConfiguredFeatures>.WARPED_FUNGUS_PLANTED by aliasStatic(TreeConfiguredFeatures::field_35902)
@@ -73,6 +77,10 @@ val KClass<TreeConfiguredFeatures>.FANCY_OAK_BEES_0002 by aliasStatic(TreeConfig
  * field_35893
  */
 val KClass<TreeConfiguredFeatures>.FANCY_OAK_BEES_005 by aliasStatic(TreeConfiguredFeatures::field_35893)
+/**
+ * field_55183
+ */
+val KClass<TreeConfiguredFeatures>.PALE_OAK_BONEMEAL by aliasStatic(TreeConfiguredFeatures::field_55183)
 /**
  * field_38810
  */
@@ -133,6 +141,10 @@ val KClass<TreeConfiguredFeatures>.HUGE_BROWN_MUSHROOM by aliasStatic(TreeConfig
  * field_35913
  */
 val KClass<TreeConfiguredFeatures>.JUNGLE_TREE_NO_VINE by aliasStatic(TreeConfiguredFeatures::field_35913)
+/**
+ * field_54883
+ */
+val KClass<TreeConfiguredFeatures>.PALE_OAK_CREAKING by aliasStatic(TreeConfiguredFeatures::field_54883)
 /**
  * field_35890
  */

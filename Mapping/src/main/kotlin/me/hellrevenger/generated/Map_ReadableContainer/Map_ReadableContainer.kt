@@ -22,6 +22,10 @@ fun <T>ReadableContainer<T>.writePacket(arg0: PacketByteBuf) = this.method_12325
  */
 fun <T>ReadableContainer<T>.getPacketSize() = this.method_12327()
 /**
+ * method_39957
+ */
+fun <T>ReadableContainer<T>.copy() = this.method_39957()
+/**
  * method_19526
  */
 fun <T>ReadableContainer<T>.hasAny(arg0: Predicate<T>) = this.method_19526(arg0)

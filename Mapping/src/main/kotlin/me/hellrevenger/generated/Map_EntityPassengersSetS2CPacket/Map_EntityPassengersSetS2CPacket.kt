@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11841
  */
-fun EntityPassengersSetS2CPacket.getId() = this.method_11841()
+fun EntityPassengersSetS2CPacket.getEntityId() = this.method_11841()
 /**
  * method_11842
  */

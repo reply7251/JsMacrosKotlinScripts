@@ -30,13 +30,13 @@ fun BlockView.getDismountHeight(arg0: BlockPos) = this.method_30347(arg0)
  */
 fun BlockView.getFluidState(arg0: BlockPos) = this.method_8316(arg0)
 /**
+ * method_61714
+ */
+fun KClass<BlockView>.collectCollisionsBetween(arg0: Vec3d, arg1: Vec3d, arg2: Box) = BlockView.method_61714(arg0, arg1, arg2)
+/**
  * method_35230
  */
 fun <T>BlockView.getBlockEntity(arg0: BlockPos, arg1: BlockEntityType<T>) where T: BlockEntity = this.method_35230<T>(arg0, arg1)
-/**
- * method_8315
- */
-fun BlockView.getMaxLightLevel() = this.method_8315()
 /**
  * method_8317
  */

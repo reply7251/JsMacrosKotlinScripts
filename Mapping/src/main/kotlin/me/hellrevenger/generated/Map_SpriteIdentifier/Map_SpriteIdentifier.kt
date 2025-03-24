@@ -24,7 +24,7 @@ fun SpriteIdentifier.getVertexConsumer(arg0: VertexConsumerProvider, arg1: funct
 /**
  * method_30001
  */
-fun SpriteIdentifier.getVertexConsumer(arg0: VertexConsumerProvider, arg1: function_Function<Identifier, RenderLayer>, arg2: Boolean) = this.method_30001(arg0, arg1, arg2)
+fun SpriteIdentifier.getVertexConsumer(arg0: VertexConsumerProvider, arg1: function_Function<Identifier, RenderLayer>, arg2: Boolean, arg3: Boolean) = this.method_30001(arg0, arg1, arg2, arg3)
 /**
  * method_24146
  */

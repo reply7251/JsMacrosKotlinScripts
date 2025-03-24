@@ -26,6 +26,10 @@ fun Element.mouseScrolled(arg0: Double, arg1: Double, arg2: Double, arg3: Double
  */
 fun Element.getFocusedPath() = this.method_48218()
 /**
+ * method_65515
+ */
+fun Element.getBorder(arg0: NavigationDirection) = this.method_65515(arg0)
+/**
  * method_48205
  */
 fun Element.getNavigationPath(arg0: GuiNavigation) = this.method_48205(arg0)

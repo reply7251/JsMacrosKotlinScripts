@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_13392
  */
-fun KClass<GameRuleCommand>.register(arg0: CommandDispatcher<ServerCommandSource>) = GameRuleCommand.method_13392(arg0)
+fun KClass<GameRuleCommand>.register(arg0: CommandDispatcher<ServerCommandSource>, arg1: CommandRegistryAccess) = GameRuleCommand.method_13392(arg0, arg1)

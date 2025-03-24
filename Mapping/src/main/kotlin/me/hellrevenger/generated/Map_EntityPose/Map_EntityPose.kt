@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val KClass<EntityPose>.INDEX_TO_VALUE by aliasStatic(EntityPose::field_48322)
 /**
+ * field_18077
+ */
+val KClass<EntityPose>.GLIDING by aliasEnum(EntityPose::class, "field_18077")
+/**
  * field_40118
  */
 val KClass<EntityPose>.SITTING by aliasEnum(EntityPose::class, "field_40118")
@@ -21,10 +25,6 @@ val KClass<EntityPose>.EMERGING by aliasEnum(EntityPose::class, "field_38099")
  * field_38098
  */
 val KClass<EntityPose>.SNIFFING by aliasEnum(EntityPose::class, "field_38098")
-/**
- * field_18077
- */
-val KClass<EntityPose>.FALL_FLYING by aliasEnum(EntityPose::class, "field_18077")
 /**
  * field_18076
  */

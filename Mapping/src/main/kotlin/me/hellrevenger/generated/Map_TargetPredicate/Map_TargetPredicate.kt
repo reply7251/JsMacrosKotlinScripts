@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val KClass<TargetPredicate>.DEFAULT by aliasStatic(TargetPredicate::field_18092)
 /**
+ * method_18419
+ */
+fun TargetPredicate.test(arg0: ServerWorld, arg1: LivingEntity, arg2: LivingEntity) = this.method_18419(arg0, arg1, arg2)
+/**
  * method_33335
  */
 fun TargetPredicate.copy() = this.method_33335()
@@ -14,17 +18,13 @@ fun TargetPredicate.copy() = this.method_33335()
  */
 fun TargetPredicate.setBaseMaxDistance(arg0: Double) = this.method_18418(arg0)
 /**
- * method_18420
- */
-fun TargetPredicate.setPredicate(arg0: Predicate<LivingEntity>) = this.method_18420(arg0)
-/**
  * method_18424
  */
 fun TargetPredicate.ignoreDistanceScalingFactor() = this.method_18424()
 /**
- * method_18419
+ * method_18420
  */
-fun TargetPredicate.test(arg0: LivingEntity, arg1: LivingEntity) = this.method_18419(arg0, arg1)
+fun TargetPredicate.setPredicate(arg0: net.minecraft.class_4051.class_10254) = this.method_18420(arg0)
 /**
  * method_36625
  */

@@ -34,13 +34,13 @@ val KClass<PlayerSkinDrawer>.SKIN_TEXTURE_HEIGHT by aliasStatic(PlayerSkinDrawer
  */
 val KClass<PlayerSkinDrawer>.SKIN_TEXTURE_WIDTH by aliasStatic(PlayerSkinDrawer::field_39533)
 /**
- * method_44445
- */
-fun KClass<PlayerSkinDrawer>.draw(arg0: DrawContext, arg1: Identifier, arg2: Int, arg3: Int, arg4: Int, arg5: Boolean, arg6: Boolean) = PlayerSkinDrawer.method_44445(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
  * method_44443
  */
-fun KClass<PlayerSkinDrawer>.draw(arg0: DrawContext, arg1: Identifier, arg2: Int, arg3: Int, arg4: Int) = PlayerSkinDrawer.method_44443(arg0, arg1, arg2, arg3, arg4)
+fun KClass<PlayerSkinDrawer>.draw(arg0: DrawContext, arg1: SkinTextures, arg2: Int, arg3: Int, arg4: Int, arg5: Int) = PlayerSkinDrawer.method_44443(arg0, arg1, arg2, arg3, arg4, arg5)
+/**
+ * method_44445
+ */
+fun KClass<PlayerSkinDrawer>.draw(arg0: DrawContext, arg1: Identifier, arg2: Int, arg3: Int, arg4: Int, arg5: Boolean, arg6: Boolean, arg7: Int) = PlayerSkinDrawer.method_44445(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
 /**
  * method_52722
  */

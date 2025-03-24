@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_ServerPlayerEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_54209
+ */
+val KClass<ServerPlayerEntity>.ENDER_PEARLS_KEY by aliasStatic(ServerPlayerEntity::field_54209)
+/**
  * field_13974
  */
 val ServerPlayerEntity.interactionManager by alias(ServerPlayerEntity::field_13974)
@@ -22,6 +26,18 @@ var ServerPlayerEntity.networkHandler by alias(ServerPlayerEntity::field_13987)
  */
 var ServerPlayerEntity.seenCredits by alias(ServerPlayerEntity::field_13969)
 /**
+ * field_54210
+ */
+val KClass<ServerPlayerEntity>.ENDER_PEARLS_DIMENSION_KEY by aliasStatic(ServerPlayerEntity::field_54210)
+/**
+ * method_64128
+ */
+fun ServerPlayerEntity.getEnderPearls() = this.method_64128()
+/**
+ * method_61272
+ */
+fun ServerPlayerEntity.getPlayerListOrder() = this.method_61272()
+/**
  * method_45163
  */
 fun ServerPlayerEntity.getSession() = this.method_45163()
@@ -29,6 +45,10 @@ fun ServerPlayerEntity.getSession() = this.method_45163()
  * method_14234
  */
 fun ServerPlayerEntity.updateLastActionTime() = this.method_14234()
+/**
+ * method_64125
+ */
+fun ServerPlayerEntity.readRootVehicle(arg0: Optional<NbtCompound>) = this.method_64125(arg0)
 /**
  * method_51469
  */
@@ -40,7 +60,7 @@ fun ServerPlayerEntity.setWatchedSection(arg0: ChunkSectionPos) = this.method_17
 /**
  * method_52208
  */
-fun ServerPlayerEntity.setOnGround(arg0: Vec3d) = this.method_52208(arg0)
+fun ServerPlayerEntity.setMovement(arg0: Vec3d) = this.method_52208(arg0)
 /**
  * method_14209
  */
@@ -50,6 +70,10 @@ fun ServerPlayerEntity.getIp() = this.method_14209()
  */
 fun ServerPlayerEntity.getStartRaidPos() = this.method_58585()
 /**
+ * method_64123
+ */
+fun KClass<ServerPlayerEntity>.addEnderPearlTicket(arg0: ServerWorld, arg1: ChunkPos) = ServerPlayerEntity.method_64123(arg0, arg1)
+/**
  * method_52373
  */
 fun ServerPlayerEntity.setChunkFilter(arg0: ChunkFilter) = this.method_52373(arg0)
@@ -57,6 +81,10 @@ fun ServerPlayerEntity.setChunkFilter(arg0: ChunkFilter) = this.method_52373(arg
  * method_26284
  */
 fun ServerPlayerEntity.setSpawnPoint(arg0: RegistryKey<world_World>, arg1: BlockPos, arg2: Float, arg3: Boolean, arg4: Boolean) = this.method_26284(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_64133
+ */
+fun ServerPlayerEntity.handleThrownEnderPearl(arg0: EnderPearlEntity) = this.method_64133(arg0)
 /**
  * method_46364
  */
@@ -69,10 +97,6 @@ fun ServerPlayerEntity.markHealthDirty() = this.method_14217()
  * method_34225
  */
 fun ServerPlayerEntity.onSpawn() = this.method_34225()
-/**
- * method_14207
- */
-fun ServerPlayerEntity.handleFall(arg0: Double, arg1: Double, arg2: Double, arg3: Boolean) = this.method_14207(arg0, arg1, arg2, arg3)
 /**
  * method_54720
  */
@@ -90,6 +114,10 @@ fun ServerPlayerEntity.getTextStream() = this.method_31273()
  */
 fun ServerPlayerEntity.sendChatMessage(arg0: SentMessage, arg1: Boolean, arg2: net.minecraft.class_2556.class_7602) = this.method_43505(arg0, arg1, arg2)
 /**
+ * method_64131
+ */
+fun ServerPlayerEntity.readEnderPearls(arg0: Optional<NbtCompound>) = this.method_64131(arg0)
+/**
  * method_14208
  */
 fun ServerPlayerEntity.isInTeleportationState() = this.method_14208()
@@ -98,13 +126,17 @@ fun ServerPlayerEntity.isInTeleportationState() = this.method_14208()
  */
 fun ServerPlayerEntity.getViewDistance() = this.method_52371()
 /**
+ * method_61275
+ */
+fun ServerPlayerEntity.teleportTo(arg0: TeleportTarget) = this.method_61275(arg0)
+/**
  * method_14228
  */
 fun ServerPlayerEntity.setExperiencePoints(arg0: Int) = this.method_14228(arg0)
 /**
- * method_14251
+ * method_64130
  */
-fun ServerPlayerEntity.teleport(arg0: ServerWorld, arg1: Double, arg2: Double, arg3: Double, arg4: Float, arg5: Float) = this.method_14251(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ServerPlayerEntity.removeEnderPearl(arg0: EnderPearlEntity) = this.method_64130(arg0)
 /**
  * method_37413
  */
@@ -114,17 +146,21 @@ fun ServerPlayerEntity.dropSelectedItem(arg0: Boolean) = this.method_37413(arg0)
  */
 fun ServerPlayerEntity.getLastActionTime() = this.method_14219()
 /**
- * method_14218
- */
-fun ServerPlayerEntity.updateInput(arg0: Float, arg1: Float, arg2: Boolean, arg3: Boolean) = this.method_14218(arg0, arg1, arg2, arg3)
-/**
  * method_26282
  */
 fun ServerPlayerEntity.isSpawnForced() = this.method_26282()
 /**
+ * method_64398
+ */
+fun ServerPlayerEntity.sendMessage(arg0: Text) = this.method_64398(arg0)
+/**
  * method_14253
  */
 fun ServerPlayerEntity.getRecipeBook() = this.method_14253()
+/**
+ * method_64396
+ */
+fun ServerPlayerEntity.getCommandSource() = this.method_64396()
 /**
  * method_60594
  */
@@ -133,6 +169,10 @@ fun ServerPlayerEntity.detachForDimensionChange() = this.method_60594()
  * method_43930
  */
 fun ServerPlayerEntity.sendServerMetadata(arg0: ServerMetadata) = this.method_43930(arg0)
+/**
+ * method_63562
+ */
+fun ServerPlayerEntity.getPlayerInput() = this.method_63562()
 /**
  * method_14213
  */
@@ -190,6 +230,14 @@ fun ServerPlayerEntity.clearStartRaidPos() = this.method_58584()
  */
 fun ServerPlayerEntity.getSpawnPointDimension() = this.method_26281()
 /**
+ * method_63563
+ */
+fun ServerPlayerEntity.getInputVelocityForMinecart() = this.method_63563()
+/**
+ * method_64124
+ */
+fun ServerPlayerEntity.addEnderPearl(arg0: EnderPearlEntity) = this.method_64124(arg0)
+/**
  * method_14240
  */
 fun ServerPlayerEntity.onTeleportationDone() = this.method_14240()
@@ -201,6 +249,10 @@ fun ServerPlayerEntity.tickVehicleInLavaRiding() = this.method_38787()
  * method_58143
  */
 fun ServerPlayerEntity.setSpawnExtraParticlesOnFall(arg0: Boolean) = this.method_58143(arg0)
+/**
+ * method_63561
+ */
+fun ServerPlayerEntity.setPlayerInput(arg0: PlayerInput) = this.method_63561(arg0)
 /**
  * method_14232
  */
@@ -233,6 +285,10 @@ fun ServerPlayerEntity.setExperienceLevel(arg0: Int) = this.method_14252(arg0)
  * method_14238
  */
 fun ServerPlayerEntity.getClientChatVisibility() = this.method_14238()
+/**
+ * method_64401
+ */
+fun ServerPlayerEntity.getCommandOutput() = this.method_64401()
 /**
  * method_14236
  */

@@ -90,6 +90,10 @@ fun ServerWorld.setEnderDragonFight(arg0: EnderDragonFight) = this.method_51837(
  */
 fun ServerWorld.isInBlockTick() = this.method_14177()
 /**
+ * method_65096
+ */
+fun <T>ServerWorld.spawnParticles(arg0: T, arg1: Double, arg2: Double, arg3: Double, arg4: Int, arg5: Double, arg6: Double, arg7: Double, arg8: Double) where T: ParticleEffect = this.method_65096<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+/**
  * method_17984
  */
 fun ServerWorld.getForcedChunks() = this.method_17984()
@@ -125,6 +129,10 @@ fun ServerWorld.handleInteraction(arg0: EntityInteraction, arg1: Entity, arg2: I
  * method_14191
  */
 fun ServerWorld.sendToPlayerIfNearby(arg0: ServerPlayerEntity, arg1: Boolean, arg2: Double, arg3: Double, arg4: Double, arg5: Packet<*>) = this.method_14191(arg0, arg1, arg2, arg3, arg4, arg5)
+/**
+ * method_64577
+ */
+fun ServerWorld.getRecipeManager() = this.method_64577()
 /**
  * method_14179
  */
@@ -206,17 +214,21 @@ fun ServerWorld.getRaidManager() = this.method_19495()
  */
 fun <T>ServerWorld.getEntitiesByType(arg0: TypeFilter<Entity, T>, arg1: Predicate<in T>) where T: Entity = this.method_18198<T>(arg0, arg1)
 /**
- * method_14199
- */
-fun <T>ServerWorld.spawnParticles(arg0: T, arg1: Double, arg2: Double, arg3: Double, arg4: Int, arg5: Double, arg6: Double, arg7: Double, arg8: Double) where T: ParticleEffect = this.method_14199<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-/**
  * method_18203
  */
 fun ServerWorld.tickChunk(arg0: WorldChunk, arg1: Int) = this.method_18203(arg0, arg1)
 /**
+ * method_14199
+ */
+fun <T>ServerWorld.spawnParticles(arg0: T, arg1: Boolean, arg2: Boolean, arg3: Double, arg4: Double, arg5: Double, arg6: Int, arg7: Double, arg8: Double, arg9: Double, arg10: Double) where T: ParticleEffect = this.method_14199<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
+/**
  * method_52370
  */
 fun ServerWorld.tickIceAndSnow(arg0: BlockPos) = this.method_52370(arg0)
+/**
+ * method_14166
+ */
+fun <T>ServerWorld.spawnParticles(arg0: ServerPlayerEntity, arg1: T, arg2: Boolean, arg3: Boolean, arg4: Double, arg5: Double, arg6: Double, arg7: Int, arg8: Double, arg9: Double, arg10: Double, arg11: Double) where T: ParticleEffect = this.method_14166<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
 /**
  * method_51836
  */
@@ -266,10 +278,6 @@ fun ServerWorld.getBlockTickScheduler() = this.method_14196()
  */
 fun ServerWorld.isChunkLoaded(arg0: Long) = this.method_37116(arg0)
 /**
- * method_14166
- */
-fun <T>ServerWorld.spawnParticles(arg0: ServerPlayerEntity, arg1: T, arg2: Boolean, arg3: Double, arg4: Double, arg5: Double, arg6: Int, arg7: Double, arg8: Double, arg9: Double, arg10: Double) where T: ParticleEffect = this.method_14166<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
-/**
  * method_14170
  */
 fun ServerWorld.getScoreboard() = this.method_14170()
@@ -289,6 +297,10 @@ fun ServerWorld.getEnderDragonFight() = this.method_29198()
  * method_18770
  */
 fun ServerWorld.removePlayer(arg0: ServerPlayerEntity, arg1: net.minecraft.class_1297.class_5529) = this.method_18770(arg0, arg1)
+/**
+ * method_64395
+ */
+fun ServerWorld.getGameRules() = this.method_64395()
 /**
  * method_52168
  */

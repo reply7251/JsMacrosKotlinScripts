@@ -38,6 +38,10 @@ fun GeneratorOptionsHolder.combinedDynamicRegistries() = this.comp_1029()
  */
 fun GeneratorOptionsHolder.apply(arg0: net.minecraft.class_7193.class_7194) = this.method_45690(arg0)
 /**
+ * comp_3218
+ */
+fun GeneratorOptionsHolder.initialWorldCreationOptions() = this.comp_3218()
+/**
  * comp_1030
  */
 fun GeneratorOptionsHolder.dataConfiguration() = this.comp_1030()

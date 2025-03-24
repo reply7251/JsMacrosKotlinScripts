@@ -30,6 +30,10 @@ val KClass<Block>.NOTIFY_LISTENERS by aliasStatic(Block::field_31028)
  */
 val KClass<Block>.NOTIFY_ALL by aliasStatic(Block::field_31036)
 /**
+ * field_53822
+ */
+val KClass<Block>.SKIP_REDSTONE_WIRE_STATE_REPLACEMENT by aliasStatic(Block::field_53822)
+/**
  * field_31032
  */
 val KClass<Block>.SKIP_DROPS by aliasStatic(Block::field_31032)
@@ -46,6 +50,10 @@ val KClass<Block>.FORCE_STATE by aliasStatic(Block::field_31031)
  */
 fun Block.onBroken(arg0: WorldAccess, arg1: BlockPos, arg2: BlockState) = this.method_9585(arg0, arg1, arg2)
 /**
+ * method_9607
+ */
+fun KClass<Block>.shouldDrawSide(arg0: BlockState, arg1: BlockState, arg2: Direction) = Block.method_9607(arg0, arg1, arg2)
+/**
  * method_9503
  */
 fun KClass<Block>.getBlockFromItem(arg0: Item) = Block.method_9503(arg0)
@@ -61,10 +69,6 @@ fun Block.getVelocityMultiplier() = this.method_23349()
  * method_9562
  */
 fun KClass<Block>.getDroppedStacks(arg0: BlockState, arg1: ServerWorld, arg2: BlockPos, arg3: BlockEntity) = Block.method_9562(arg0, arg1, arg2, arg3)
-/**
- * method_9586
- */
-fun Block.onDestroyedByExplosion(arg0: world_World, arg1: BlockPos, arg2: Explosion) = this.method_9586(arg0, arg1, arg2)
 /**
  * method_9520
  */
@@ -122,6 +126,10 @@ fun KClass<Block>.pushEntitiesUpBeforeBlockChange(arg0: BlockState, arg1: BlockS
  */
 fun KClass<Block>.isFaceFullSquare(arg0: VoxelShape, arg1: Direction) = Block.method_9501(arg0, arg1)
 /**
+ * method_9586
+ */
+fun Block.onDestroyedByExplosion(arg0: ServerWorld, arg1: BlockPos, arg2: Explosion) = this.method_9586(arg0, arg1, arg2)
+/**
  * method_9595
  */
 fun Block.getStateManager() = this.method_9595()
@@ -178,10 +186,6 @@ fun Block.getPlacementState(arg0: ItemPlacementContext) = this.method_9605(arg0)
  */
 fun KClass<Block>.isShapeFullCube(arg0: VoxelShape) = Block.method_9614(arg0)
 /**
- * method_9574
- */
-fun Block.getPickStack(arg0: WorldView, arg1: BlockPos, arg2: BlockState) = this.method_9574(arg0, arg1, arg2)
-/**
  * method_9502
  */
 fun Block.onEntityLand(arg0: BlockView, arg1: Entity) = this.method_9502(arg0, arg1)
@@ -189,10 +193,6 @@ fun Block.onEntityLand(arg0: BlockView, arg1: Entity) = this.method_9502(arg0, a
  * method_9543
  */
 fun Block.hasDynamicBounds() = this.method_9543()
-/**
- * method_9607
- */
-fun KClass<Block>.shouldDrawSide(arg0: BlockState, arg1: BlockView, arg2: BlockPos, arg3: Direction, arg4: BlockPos) = Block.method_9607(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_9581
  */
@@ -209,10 +209,6 @@ fun Block.afterBreak(arg0: world_World, arg1: PlayerEntity, arg2: BlockPos, arg3
  * method_20044
  */
 fun KClass<Block>.sideCoversSmallSquare(arg0: WorldView, arg1: BlockPos, arg2: Direction) = Block.method_20044(arg0, arg1, arg2)
-/**
- * method_9539
- */
-fun Block.getTranslationKey() = this.method_9539()
 /**
  * method_36992
  */

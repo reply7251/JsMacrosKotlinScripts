@@ -2,6 +2,14 @@ package me.hellrevenger.generated.Map_BlockColors
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_55228
+ */
+val KClass<BlockColors>.LILY_PAD by aliasStatic(BlockColors::field_55228)
+/**
+ * field_55227
+ */
+val KClass<BlockColors>.PLACED_LILY_PAD by aliasStatic(BlockColors::field_55227)
+/**
  * method_1690
  */
 fun BlockColors.registerColorProvider(arg0: BlockColorProvider, arg1: Array<Block>) = this.method_1690(arg0, *arg1)

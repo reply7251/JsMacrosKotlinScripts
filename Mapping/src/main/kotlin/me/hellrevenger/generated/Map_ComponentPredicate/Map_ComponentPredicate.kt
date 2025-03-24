@@ -29,3 +29,7 @@ fun ComponentPredicate.test(arg0: ComponentMap) = this.method_57868(arg0)
  * method_57870
  */
 fun ComponentPredicate.toChanges() = this.method_57870()
+/**
+ * method_64096
+ */
+fun KClass<ComponentPredicate>.ofFiltered(arg0: ComponentMap, arg1: Array<ComponentType<*>>) = ComponentPredicate.method_64096(arg0, *arg1)

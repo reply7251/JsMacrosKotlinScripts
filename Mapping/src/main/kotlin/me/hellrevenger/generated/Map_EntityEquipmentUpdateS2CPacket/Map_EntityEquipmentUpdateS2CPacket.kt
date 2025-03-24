@@ -8,7 +8,7 @@ fun EntityEquipmentUpdateS2CPacket.getEquipmentList() = this.method_30145()
 /**
  * method_11820
  */
-fun EntityEquipmentUpdateS2CPacket.getId() = this.method_11820()
+fun EntityEquipmentUpdateS2CPacket.getEntityId() = this.method_11820()
 /**
  * method_11823
  */

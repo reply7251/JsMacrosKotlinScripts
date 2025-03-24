@@ -170,6 +170,10 @@ val KClass<EntityStatuses>.STUN_RAVAGER by aliasStatic(EntityStatuses::field_300
  */
 val KClass<EntityStatuses>.PULL_HOOKED_ENTITY by aliasStatic(EntityStatuses::field_29999)
 /**
+ * field_54559
+ */
+val KClass<EntityStatuses>.INVULNERABLE_CREAKING_HIT by aliasStatic(EntityStatuses::field_54559)
+/**
  * field_29995
  */
 val KClass<EntityStatuses>.SET_OP_LEVEL_3 by aliasStatic(EntityStatuses::field_29995)

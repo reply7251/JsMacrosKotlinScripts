@@ -8,11 +8,15 @@ fun BakedQuad.getSprite() = this.method_35788()
 /**
  * method_3359
  */
-fun BakedQuad.getColorIndex() = this.method_3359()
+fun BakedQuad.getTintIndex() = this.method_3359()
 /**
  * method_3357
  */
 fun BakedQuad.getVertexData() = this.method_3357()
+/**
+ * method_62324
+ */
+fun BakedQuad.getLightEmission() = this.method_62324()
 /**
  * method_3358
  */
@@ -24,4 +28,4 @@ fun BakedQuad.hasShade() = this.method_24874()
 /**
  * method_3360
  */
-fun BakedQuad.hasColor() = this.method_3360()
+fun BakedQuad.hasTint() = this.method_3360()

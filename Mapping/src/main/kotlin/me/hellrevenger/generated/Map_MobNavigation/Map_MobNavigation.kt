@@ -6,14 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun MobNavigation.setCanWalkOverFences(arg0: Boolean) = this.method_46645(arg0)
 /**
- * method_6366
- */
-fun MobNavigation.canEnterOpenDoors() = this.method_6366()
-/**
- * method_35139
- */
-fun MobNavigation.setCanEnterOpenDoors(arg0: Boolean) = this.method_35139(arg0)
-/**
  * method_6361
  */
 fun MobNavigation.setAvoidSunlight(arg0: Boolean) = this.method_6361(arg0)

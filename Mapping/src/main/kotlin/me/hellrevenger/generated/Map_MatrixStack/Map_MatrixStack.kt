@@ -42,6 +42,10 @@ fun MatrixStack.multiply(arg0: Quaternionf) = this.method_22907(arg0)
  */
 fun MatrixStack.multiplyPositionMatrix(arg0: Matrix4f) = this.method_34425(arg0)
 /**
+ * method_61958
+ */
+fun MatrixStack.translate(arg0: Vec3d) = this.method_61958(arg0)
+/**
  * method_22903
  */
 fun MatrixStack.push() = this.method_22903()

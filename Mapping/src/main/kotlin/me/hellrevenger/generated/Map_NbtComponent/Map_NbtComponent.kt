@@ -42,6 +42,10 @@ fun <T>NbtComponent.get(arg0: MapDecoder<T>) = this.method_57446<T>(arg0)
  */
 fun NbtComponent.getSize() = this.method_57444()
 /**
+ * method_65131
+ */
+fun NbtComponent.getId() = this.method_65131()
+/**
  * method_57460
  */
 fun NbtComponent.matches(arg0: NbtCompound) = this.method_57460(arg0)
@@ -57,6 +61,10 @@ fun <T>NbtComponent.get(arg0: DynamicOps<NbtElement>, arg1: MapDecoder<T>) = thi
  * method_57463
  */
 fun NbtComponent.getNbt() = this.method_57463()
+/**
+ * method_65904
+ */
+fun <T>NbtComponent.getRegistryValueOfId(arg0: net.minecraft.class_7225.class_7874, arg1: RegistryKey<out Registry<T>>) = this.method_65904<T>(arg0, arg1)
 /**
  * method_57458
  */

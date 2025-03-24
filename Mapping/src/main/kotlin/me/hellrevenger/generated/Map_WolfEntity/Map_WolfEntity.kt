@@ -14,10 +14,6 @@ fun KClass<WolfEntity>.canSpawn(arg0: EntityType<WolfEntity>, arg1: WorldAccess,
  */
 fun WolfEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6717(arg0, arg1)
 /**
- * method_6715
- */
-fun WolfEntity.getShakeAnimationProgress(arg0: Float, arg1: Float) = this.method_6715(arg0, arg1)
-/**
  * method_58062
  */
 fun WolfEntity.getVariant() = this.method_58062()
@@ -33,6 +29,10 @@ fun WolfEntity.getTextureId() = this.method_58061()
  * method_6710
  */
 fun WolfEntity.isBegging() = this.method_6710()
+/**
+ * method_61477
+ */
+fun WolfEntity.getShakeProgress(arg0: Float) = this.method_61477(arg0)
 /**
  * method_58063
  */
@@ -54,14 +54,6 @@ fun WolfEntity.getCollarColor() = this.method_6713()
  */
 fun WolfEntity.getFurWetBrightnessMultiplier(arg0: Float) = this.method_6707(arg0)
 /**
- * method_6711
- */
-fun WolfEntity.isFurWet() = this.method_6711()
-/**
  * method_6719
  */
 fun WolfEntity.getBegAnimationProgress(arg0: Float) = this.method_6719(arg0)
-/**
- * method_55710
- */
-fun WolfEntity.hasArmor() = this.method_55710()

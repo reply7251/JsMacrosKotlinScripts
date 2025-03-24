@@ -10,6 +10,10 @@ fun DimensionEffects.adjustFogColor(arg0: Vec3d, arg1: Float) = this.method_2811
  */
 fun KClass<DimensionEffects>.byDimensionType(arg0: DimensionType) = DimensionEffects.method_28111(arg0)
 /**
+ * method_62184
+ */
+fun DimensionEffects.getSkyColor(arg0: Float) = this.method_62184(arg0)
+/**
  * method_29993
  */
 fun DimensionEffects.isDarkened() = this.method_29993()
@@ -26,9 +30,9 @@ fun DimensionEffects.useThickFog(arg0: Int, arg1: Int) = this.method_28110(arg0,
  */
 fun DimensionEffects.getCloudsHeight() = this.method_28108()
 /**
- * method_28109
+ * method_62183
  */
-fun DimensionEffects.getFogColorOverride(arg0: Float, arg1: Float) = this.method_28109(arg0, arg1)
+fun DimensionEffects.isSunRisingOrSetting(arg0: Float) = this.method_62183(arg0)
 /**
  * method_28114
  */

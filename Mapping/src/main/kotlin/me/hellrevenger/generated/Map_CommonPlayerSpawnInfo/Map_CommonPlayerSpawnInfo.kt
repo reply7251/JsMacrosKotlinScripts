@@ -41,3 +41,7 @@ fun CommonPlayerSpawnInfo.dimensionType() = this.comp_1553()
  * comp_1560
  */
 fun CommonPlayerSpawnInfo.lastDeathLocation() = this.comp_1560()
+/**
+ * comp_2893
+ */
+fun CommonPlayerSpawnInfo.seaLevel() = this.comp_2893()

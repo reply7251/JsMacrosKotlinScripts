@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_AreaEffectCloudEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_49209
+ */
+var AreaEffectCloudEntity.potionContentsComponent by alias(AreaEffectCloudEntity::field_49209)
+/**
  * method_5608
  */
 fun AreaEffectCloudEntity.setParticleType(arg0: ParticleEffect) = this.method_5608(arg0)

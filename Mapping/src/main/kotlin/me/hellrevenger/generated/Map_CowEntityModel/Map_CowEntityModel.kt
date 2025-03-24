@@ -2,10 +2,14 @@ package me.hellrevenger.generated.Map_CowEntityModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_52893
+ */
+val KClass<CowEntityModel>.BABY_TRANSFORMER by aliasStatic(CowEntityModel::field_52893)
+/**
  * method_31990
  */
-fun <T>KClass<CowEntityModel<T>>.getTexturedModelData() where T: Entity = CowEntityModel.method_31990()
+fun KClass<CowEntityModel>.getTexturedModelData() = CowEntityModel.method_31990()
 /**
  * method_2800
  */
-fun <T>CowEntityModel<T>.getHead() where T: Entity = this.method_2800()
+fun CowEntityModel.getHead() = this.method_2800()

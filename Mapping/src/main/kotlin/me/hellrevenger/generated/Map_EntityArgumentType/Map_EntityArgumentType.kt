@@ -30,6 +30,10 @@ val KClass<EntityArgumentType>.TOO_MANY_PLAYERS_EXCEPTION by aliasStatic(EntityA
  */
 fun KClass<EntityArgumentType>.getOptionalPlayers(arg0: CommandContext<ServerCommandSource>, arg1: String) = EntityArgumentType.method_9310(arg0, arg1)
 /**
+ * method_61178
+ */
+fun EntityArgumentType.parse(arg0: StringReader) = this.method_61178(arg0)
+/**
  * method_9309
  */
 fun KClass<EntityArgumentType>.entity() = EntityArgumentType.method_9309()
@@ -42,13 +46,13 @@ fun KClass<EntityArgumentType>.player() = EntityArgumentType.method_9305()
  */
 fun KClass<EntityArgumentType>.getPlayers(arg0: CommandContext<ServerCommandSource>, arg1: String) = EntityArgumentType.method_9312(arg0, arg1)
 /**
+ * method_61179
+ */
+fun <S>EntityArgumentType.parse(arg0: StringReader, arg1: S) = this.method_61179<S>(arg0, arg1)
+/**
  * method_9308
  */
 fun KClass<EntityArgumentType>.players() = EntityArgumentType.method_9308()
-/**
- * method_9318
- */
-fun EntityArgumentType.parse(arg0: StringReader) = this.method_9318(arg0)
 /**
  * method_9315
  */

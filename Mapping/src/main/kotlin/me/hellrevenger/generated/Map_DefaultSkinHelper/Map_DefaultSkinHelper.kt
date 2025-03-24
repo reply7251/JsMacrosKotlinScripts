@@ -13,3 +13,7 @@ fun KClass<DefaultSkinHelper>.getSkinTextures(arg0: UUID) = DefaultSkinHelper.me
  * method_4649
  */
 fun KClass<DefaultSkinHelper>.getTexture() = DefaultSkinHelper.method_4649()
+/**
+ * method_62620
+ */
+fun KClass<DefaultSkinHelper>.getSteve() = DefaultSkinHelper.method_62620()

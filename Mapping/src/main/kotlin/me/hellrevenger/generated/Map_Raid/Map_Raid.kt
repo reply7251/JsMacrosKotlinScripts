@@ -10,6 +10,10 @@ val KClass<Raid>.MAX_DESPAWN_COUNTER by aliasStatic(Raid::field_30670)
  */
 val KClass<Raid>.SQUARED_MAX_RAIDER_DISTANCE by aliasStatic(Raid::field_30675)
 /**
+ * field_53976
+ */
+val KClass<Raid>.RAVAGER_SPAWN_LOCATION by aliasStatic(Raid::field_53976)
+/**
  * method_16514
  */
 fun Raid.getMaxAcceptableBadOmenLevel() = this.method_16514()
@@ -25,10 +29,6 @@ fun Raid.getBadOmenLevel() = this.method_16493()
  * method_20022
  */
 fun Raid.hasStopped() = this.method_20022()
-/**
- * method_16515
- */
-fun KClass<Raid>.getOminousBanner(arg0: RegistryEntryLookup<BannerPattern>) = Raid.method_16515(arg0)
 /**
  * method_16518
  */
@@ -69,6 +69,10 @@ fun Raid.writeNbt(arg0: NbtCompound) = this.method_16502(arg0)
  * method_20021
  */
 fun Raid.hasSpawned() = this.method_20021()
+/**
+ * method_61558
+ */
+fun KClass<Raid>.createOminousBanner(arg0: RegistryEntryLookup<BannerPattern>) = Raid.method_61558(arg0)
 /**
  * method_16500
  */

@@ -8,7 +8,7 @@ fun KClass<CraftingRecipeJsonBuilder>.toCraftingCategory(arg0: RecipeCategory) =
 /**
  * method_17972
  */
-fun CraftingRecipeJsonBuilder.offerTo(arg0: RecipeExporter, arg1: Identifier) = this.method_17972(arg0, arg1)
+fun CraftingRecipeJsonBuilder.offerTo(arg0: RecipeExporter, arg1: RegistryKey<Recipe<*>>) = this.method_17972(arg0, arg1)
 /**
  * method_36442
  */

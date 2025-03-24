@@ -14,6 +14,10 @@ val KClass<ParticleTypes>.FALLING_OBSIDIAN_TEAR by aliasStatic(ParticleTypes::fi
  */
 val KClass<ParticleTypes>.LANDING_OBSIDIAN_TEAR by aliasStatic(ParticleTypes::field_22448)
 /**
+ * field_54870
+ */
+val KClass<ParticleTypes>.BLOCK_CRUMBLE by aliasStatic(ParticleTypes::field_54870)
+/**
  * field_20537
  */
 val KClass<ParticleTypes>.FALLING_NECTAR by aliasStatic(ParticleTypes::field_20537)
@@ -37,6 +41,10 @@ val KClass<ParticleTypes>.SCULK_CHARGE_POP by aliasStatic(ParticleTypes::field_3
  * field_17741
  */
 val KClass<ParticleTypes>.COMPOSTER by aliasStatic(ParticleTypes::field_17741)
+/**
+ * field_54869
+ */
+val KClass<ParticleTypes>.TRAIL by aliasStatic(ParticleTypes::field_54869)
 /**
  * field_38002
  */
@@ -425,6 +433,10 @@ val KClass<ParticleTypes>.ITEM_COBWEB by aliasStatic(ParticleTypes::field_50246)
  * field_11206
  */
 val KClass<ParticleTypes>.FALLING_DUST by aliasStatic(ParticleTypes::field_11206)
+/**
+ * field_55169
+ */
+val KClass<ParticleTypes>.PALE_OAK_LEAVES by aliasStatic(ParticleTypes::field_55169)
 /**
  * field_49140
  */

@@ -118,6 +118,10 @@ fun KClass<MathHelper>.sign(arg0: Double) = MathHelper.method_17822(arg0)
  */
 fun KClass<MathHelper>.roundDownToMultiple(arg0: Double, arg1: Int) = MathHelper.method_38961(arg0, arg1)
 /**
+ * method_62994
+ */
+fun KClass<MathHelper>.unpackDegrees(arg0: Byte) = MathHelper.method_62994(arg0)
+/**
  * method_15338
  */
 fun KClass<MathHelper>.wrapDegrees(arg0: Double) = MathHelper.method_15338(arg0)
@@ -182,9 +186,9 @@ fun KClass<MathHelper>.parseInt(arg0: String, arg1: Int) = MathHelper.method_153
  */
 fun KClass<MathHelper>.atan2(arg0: Double, arg1: Double) = MathHelper.method_15349(arg0, arg1)
 /**
- * method_15353
+ * method_61345
  */
-fun KClass<MathHelper>.packRgb(arg0: Float, arg1: Float, arg2: Float) = MathHelper.method_15353(arg0, arg1, arg2)
+fun KClass<MathHelper>.lerpAngleRadians(arg0: Float, arg1: Float, arg2: Float) = MathHelper.method_61345(arg0, arg1, arg2)
 /**
  * method_33825
  */
@@ -258,6 +262,10 @@ fun KClass<MathHelper>.nextDouble(arg0: Random, arg1: Double, arg2: Double) = Ma
  */
 fun KClass<MathHelper>.clamp(arg0: Double, arg1: Double, arg2: Double) = MathHelper.method_15350(arg0, arg1, arg2)
 /**
+ * method_61342
+ */
+fun KClass<MathHelper>.lerp(arg0: Double, arg1: Vec3d, arg2: Vec3d) = MathHelper.method_61342(arg0, arg1, arg2)
+/**
  * method_15344
  */
 fun KClass<MathHelper>.nextFloat(arg0: Random, arg1: Float, arg2: Float) = MathHelper.method_15344(arg0, arg1, arg2)
@@ -281,6 +289,10 @@ fun KClass<MathHelper>.lerp(arg0: Float, arg1: Int, arg2: Int) = MathHelper.meth
  * method_37166
  */
 fun KClass<MathHelper>.clampedLerp(arg0: Float, arg1: Float, arg2: Float) = MathHelper.method_37166(arg0, arg1, arg2)
+/**
+ * method_61346
+ */
+fun KClass<MathHelper>.easeInOutSine(arg0: Float) = MathHelper.method_61346(arg0)
 /**
  * method_15382
  */
@@ -309,6 +321,10 @@ fun KClass<MathHelper>.isPowerOfTwo(arg0: Int) = MathHelper.method_15352(arg0)
  * method_15378
  */
 fun KClass<MathHelper>.randomUuid(arg0: Random) = MathHelper.method_15378(arg0)
+/**
+ * method_62995
+ */
+fun KClass<MathHelper>.packDegrees(arg0: Float) = MathHelper.method_62995(arg0)
 /**
  * method_15341
  */
@@ -398,6 +414,10 @@ fun KClass<MathHelper>.getLerpProgress(arg0: Float, arg1: Float, arg2: Float) = 
  */
 fun KClass<MathHelper>.floorLog2(arg0: Int) = MathHelper.method_15351(arg0)
 /**
+ * method_61343
+ */
+fun KClass<MathHelper>.wrapDegrees(arg0: Long) = MathHelper.method_61343(arg0)
+/**
  * method_15369
  */
 fun KClass<MathHelper>.hsvToRgb(arg0: Float, arg1: Float, arg2: Float) = MathHelper.method_15369(arg0, arg1, arg2)
@@ -409,6 +429,10 @@ fun KClass<MathHelper>.lerpAngleDegrees(arg0: Float, arg1: Float, arg2: Float) =
  * method_15384
  */
 fun KClass<MathHelper>.ceil(arg0: Double) = MathHelper.method_15384(arg0)
+/**
+ * method_61344
+ */
+fun KClass<MathHelper>.hypot(arg0: Float, arg1: Float) = MathHelper.method_61344(arg0, arg1)
 /**
  * method_15372
  */

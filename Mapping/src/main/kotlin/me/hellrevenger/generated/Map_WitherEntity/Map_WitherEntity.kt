@@ -2,13 +2,9 @@ package me.hellrevenger.generated.Map_WitherEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_6879
+ * method_6872
  */
-fun WitherEntity.getHeadYaw(arg0: Int) = this.method_6879(arg0)
-/**
- * method_6887
- */
-fun WitherEntity.getHeadPitch(arg0: Int) = this.method_6887(arg0)
+fun WitherEntity.shouldRenderOverlay() = this.method_6872()
 /**
  * method_6876
  */
@@ -17,6 +13,10 @@ fun WitherEntity.setTrackedEntityId(arg0: Int, arg1: Int) = this.method_6876(arg
  * method_6885
  */
 fun WitherEntity.onSummoned() = this.method_6885()
+/**
+ * method_61488
+ */
+fun WitherEntity.getSideHeadYaws() = this.method_61488()
 /**
  * method_6875
  */
@@ -37,3 +37,7 @@ fun KClass<WitherEntity>.canDestroy(arg0: BlockState) = WitherEntity.method_6883
  * method_26904
  */
 fun KClass<WitherEntity>.createWitherAttributes() = WitherEntity.method_26904()
+/**
+ * method_61487
+ */
+fun WitherEntity.getSideHeadPitches() = this.method_61487()

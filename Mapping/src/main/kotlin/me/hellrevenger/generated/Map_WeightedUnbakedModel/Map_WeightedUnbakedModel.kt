@@ -2,6 +2,6 @@ package me.hellrevenger.generated.Map_WeightedUnbakedModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_3497
+ * comp_3049
  */
-fun WeightedUnbakedModel.getVariants() = this.method_3497()
+fun WeightedUnbakedModel.variants() = this.comp_3049()

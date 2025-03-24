@@ -30,10 +30,6 @@ val GameOptions.loadToolbarActivatorKey by alias(GameOptions::field_1874)
  */
 val GameOptions.useKey by alias(GameOptions::field_1904)
 /**
- * field_28777
- */
-var GameOptions.hideBundleTutorial by alias(GameOptions::field_28777)
-/**
  * field_1906
  */
 val GameOptions.spectatorOutlinesKey by alias(GameOptions::field_1906)
@@ -144,7 +140,7 @@ var GameOptions.allKeys by alias(GameOptions::field_1839)
 /**
  * field_38300
  */
-val KClass<GameOptions>.MAX_FRAMERATE by aliasStatic(GameOptions::field_38300)
+val KClass<GameOptions>.MAX_FPS_LIMIT by aliasStatic(GameOptions::field_38300)
 /**
  * field_1881
  */
@@ -294,9 +290,17 @@ fun GameOptions.getMaxFps() = this.method_42524()
  */
 fun GameOptions.getChunkBuilderMode() = this.method_41798()
 /**
+ * method_1635
+ */
+fun GameOptions.setPlayerModelPart(arg0: PlayerModelPart, arg1: Boolean) = this.method_1635(arg0, arg1)
+/**
  * method_41803
  */
 fun GameOptions.getChatHeightFocused() = this.method_41803()
+/**
+ * method_64858
+ */
+fun GameOptions.getHighContrastBlockOutline() = this.method_64858()
 /**
  * method_42438
  */
@@ -334,6 +338,10 @@ fun GameOptions.getSimulationDistance() = this.method_42510()
  */
 fun GameOptions.getChatLinks() = this.method_42429()
 /**
+ * method_61967
+ */
+fun GameOptions.getRotateWithMinecart() = this.method_61967()
+/**
  * method_41805
  */
 fun GameOptions.getBiomeBlendRadius() = this.method_41805()
@@ -365,10 +373,6 @@ fun GameOptions.getMouseSensitivity() = this.method_42495()
  * method_42528
  */
 fun GameOptions.getCloudRenderMode() = this.method_42528()
-/**
- * method_1631
- */
-fun GameOptions.togglePlayerModelPart(arg0: PlayerModelPart, arg1: Boolean) = this.method_1631(arg0, arg1)
 /**
  * method_41807
  */
@@ -498,6 +502,10 @@ fun GameOptions.setPerspective(arg0: Perspective) = this.method_31043(arg0)
  */
 fun GameOptions.getClampedViewDistance() = this.method_38521()
 /**
+ * method_61970
+ */
+fun GameOptions.getInactivityFpsLimit() = this.method_61970()
+/**
  * method_57702
  */
 fun GameOptions.getMenuBackgroundBlurriness() = this.method_57702()
@@ -541,10 +549,6 @@ fun GameOptions.getFullscreen() = this.method_42447()
  * method_47395
  */
 fun GameOptions.getOperatorItemsTab() = this.method_47395()
-/**
- * method_1641
- */
-fun GameOptions.setKeyCode(arg0: KeyBinding, arg1: net.minecraft.class_3675.class_306) = this.method_1641(arg0, arg1)
 /**
  * method_42446
  */

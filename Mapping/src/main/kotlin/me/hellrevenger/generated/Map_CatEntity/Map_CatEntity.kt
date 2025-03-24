@@ -16,7 +16,7 @@ val KClass<CatEntity>.SPRINTING_SPEED by aliasStatic(CatEntity::field_30312)
 /**
  * method_16082
  */
-fun CatEntity.getSleepAnimation(arg0: Float) = this.method_16082(arg0)
+fun CatEntity.getSleepAnimationProgress(arg0: Float) = this.method_16082(arg0)
 /**
  * method_6573
  */
@@ -25,6 +25,10 @@ fun CatEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_
  * method_16088
  */
 fun CatEntity.setInSleepingPose(arg0: Boolean) = this.method_16088(arg0)
+/**
+ * method_61467
+ */
+fun CatEntity.isNearSleepingPlayer() = this.method_61467()
 /**
  * method_16086
  */
@@ -40,15 +44,11 @@ fun CatEntity.setVariant(arg0: RegistryEntry<CatVariant>) = this.method_47842(ar
 /**
  * method_16091
  */
-fun CatEntity.getTailCurlAnimation(arg0: Float) = this.method_16091(arg0)
+fun CatEntity.getTailCurlAnimationProgress(arg0: Float) = this.method_16091(arg0)
 /**
  * method_16095
  */
-fun CatEntity.getHeadDownAnimation(arg0: Float) = this.method_16095(arg0)
-/**
- * method_16092
- */
-fun CatEntity.getTexture() = this.method_16092()
+fun CatEntity.getHeadDownAnimationProgress(arg0: Float) = this.method_16095(arg0)
 /**
  * method_16096
  */

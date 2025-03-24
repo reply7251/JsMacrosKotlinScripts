@@ -10,6 +10,10 @@ var BiomeEffects.loopSound by alias(BiomeEffects::field_22491)
  */
 var BiomeEffects.additionsSound by alias(BiomeEffects::field_22493)
 /**
+ * field_55050
+ */
+var BiomeEffects.musicVolume by alias(BiomeEffects::field_55050)
+/**
  * field_26421
  */
 var BiomeEffects.grassColorModifier by alias(BiomeEffects::field_26421)

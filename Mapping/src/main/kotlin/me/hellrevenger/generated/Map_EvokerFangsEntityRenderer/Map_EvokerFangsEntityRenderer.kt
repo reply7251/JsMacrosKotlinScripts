@@ -4,8 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_3962
  */
-fun EvokerFangsEntityRenderer.render(arg0: EvokerFangsEntity, arg1: Float, arg2: Float, arg3: MatrixStack, arg4: VertexConsumerProvider, arg5: Int) = this.method_3962(arg0, arg1, arg2, arg3, arg4, arg5)
+fun EvokerFangsEntityRenderer.render(arg0: EvokerFangsEntityRenderState, arg1: MatrixStack, arg2: VertexConsumerProvider, arg3: Int) = this.method_3962(arg0, arg1, arg2, arg3)
 /**
- * method_3963
+ * method_62429
  */
-fun EvokerFangsEntityRenderer.getTexture(arg0: EvokerFangsEntity) = this.method_3963(arg0)
+fun EvokerFangsEntityRenderer.updateRenderState(arg0: EvokerFangsEntity, arg1: EvokerFangsEntityRenderState, arg2: Float) = this.method_62429(arg0, arg1, arg2)
+/**
+ * method_62428
+ */
+fun EvokerFangsEntityRenderer.createRenderState() = this.method_62428()

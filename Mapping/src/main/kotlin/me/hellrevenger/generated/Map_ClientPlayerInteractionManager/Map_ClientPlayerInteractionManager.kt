@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_ClientPlayerInteractionManager
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_2912
+ */
+fun ClientPlayerInteractionManager.clickRecipe(arg0: Int, arg1: NetworkRecipeId, arg2: Boolean) = this.method_2912(arg0, arg1, arg2)
+/**
  * method_29357
  */
 fun ClientPlayerInteractionManager.createPlayer(arg0: ClientWorld, arg1: StatHandler, arg2: ClientRecipeBook) = this.method_29357(arg0, arg1, arg2)
@@ -9,6 +13,10 @@ fun ClientPlayerInteractionManager.createPlayer(arg0: ClientWorld, arg1: StatHan
  * method_2899
  */
 fun ClientPlayerInteractionManager.breakBlock(arg0: BlockPos) = this.method_2899(arg0)
+/**
+ * method_2916
+ */
+fun ClientPlayerInteractionManager.pickItemFromEntity(arg0: Entity, arg1: Boolean) = this.method_2916(arg0, arg1)
 /**
  * method_2927
  */
@@ -29,6 +37,10 @@ fun ClientPlayerInteractionManager.getBlockBreakingProgress() = this.method_5188
  * method_2907
  */
 fun ClientPlayerInteractionManager.setGameMode(arg0: GameMode) = this.method_2907(arg0)
+/**
+ * method_65193
+ */
+fun ClientPlayerInteractionManager.pickItemFromBlock(arg0: BlockPos, arg1: Boolean) = this.method_65193(arg0, arg1)
 /**
  * method_28107
  */
@@ -94,9 +106,9 @@ fun ClientPlayerInteractionManager.attackBlock(arg0: BlockPos, arg1: Direction) 
  */
 fun ClientPlayerInteractionManager.stopUsingItem(arg0: PlayerEntity) = this.method_2897(arg0)
 /**
- * method_2916
+ * method_41931
  */
-fun ClientPlayerInteractionManager.pickFromInventory(arg0: Int) = this.method_2916(arg0)
+fun ClientPlayerInteractionManager.sendSequencedPacket(arg0: ClientWorld, arg1: SequencedPacketCreator) = this.method_41931(arg0, arg1)
 /**
  * method_2928
  */
@@ -129,7 +141,3 @@ fun ClientPlayerInteractionManager.getCurrentGameMode() = this.method_2920()
  * method_2924
  */
 fun ClientPlayerInteractionManager.hasLimitedAttackSpeed() = this.method_2924()
-/**
- * method_2912
- */
-fun ClientPlayerInteractionManager.clickRecipe(arg0: Int, arg1: RecipeEntry<*>, arg2: Boolean) = this.method_2912(arg0, arg1, arg2)

@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun Angerable.getTarget() = this.method_5968()
 /**
+ * method_29516
+ */
+fun Angerable.forgive(arg0: ServerWorld, arg1: PlayerEntity) = this.method_29516(arg0, arg1)
+/**
  * method_29511
  */
 fun Angerable.hasAngerTime() = this.method_29511()
@@ -50,10 +54,6 @@ fun Angerable.writeAngerToNbt(arg0: NbtCompound) = this.method_29517(arg0)
  */
 fun Angerable.getAngryAt() = this.method_29508()
 /**
- * method_29923
- */
-fun Angerable.isUniversallyAngry(arg0: world_World) = this.method_29923(arg0)
-/**
  * method_29514
  */
 fun Angerable.setAngerTime(arg0: Int) = this.method_29514(arg0)
@@ -66,17 +66,17 @@ fun Angerable.setAttacking(arg0: PlayerEntity) = this.method_29505(arg0)
  */
 fun Angerable.tickAngerLogic(arg0: ServerWorld, arg1: Boolean) = this.method_29510(arg0, arg1)
 /**
- * method_29516
- */
-fun Angerable.forgive(arg0: PlayerEntity) = this.method_29516(arg0)
-/**
- * method_29515
- */
-fun Angerable.shouldAngerAt(arg0: LivingEntity) = this.method_29515(arg0)
-/**
  * method_29921
  */
 fun Angerable.universallyAnger() = this.method_29921()
+/**
+ * method_29923
+ */
+fun Angerable.isUniversallyAngry(arg0: ServerWorld) = this.method_29923(arg0)
+/**
+ * method_29515
+ */
+fun Angerable.shouldAngerAt(arg0: LivingEntity, arg1: ServerWorld) = this.method_29515(arg0, arg1)
 /**
  * method_29922
  */

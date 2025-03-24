@@ -8,7 +8,7 @@ fun ExperienceOrbSpawnS2CPacket.apply(arg0: ClientPlayPacketListener) = this.met
 /**
  * method_11183
  */
-fun ExperienceOrbSpawnS2CPacket.getId() = this.method_11183()
+fun ExperienceOrbSpawnS2CPacket.getEntityId() = this.method_11183()
 /**
  * method_11184
  */

@@ -112,7 +112,7 @@ val KClass<TrackedDataHandlerRegistry>.OPTIONAL_GLOBAL_POS by aliasStatic(Tracke
 /**
  * field_42237
  */
-val KClass<TrackedDataHandlerRegistry>.VECTOR3F by aliasStatic(TrackedDataHandlerRegistry::field_42237)
+val KClass<TrackedDataHandlerRegistry>.VECTOR_3F by aliasStatic(TrackedDataHandlerRegistry::field_42237)
 /**
  * field_38827
  */
@@ -120,7 +120,7 @@ val KClass<TrackedDataHandlerRegistry>.FROG_VARIANT by aliasStatic(TrackedDataHa
 /**
  * field_42235
  */
-val KClass<TrackedDataHandlerRegistry>.QUATERNIONF by aliasStatic(TrackedDataHandlerRegistry::field_42235)
+val KClass<TrackedDataHandlerRegistry>.QUATERNION_F by aliasStatic(TrackedDataHandlerRegistry::field_42235)
 /**
  * field_18238
  */

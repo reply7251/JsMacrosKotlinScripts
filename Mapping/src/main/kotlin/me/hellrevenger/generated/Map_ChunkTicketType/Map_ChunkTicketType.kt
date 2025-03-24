@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_ChunkTicketType
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_19347
- */
-val <T>KClass<ChunkTicketType<T>>.POST_TELEPORT by aliasStatic({ChunkTicketType.field_19347})
-/**
  * field_17264
  */
 val <T>KClass<ChunkTicketType<T>>.DRAGON by aliasStatic({ChunkTicketType.field_17264})
@@ -29,6 +25,10 @@ val <T>KClass<ChunkTicketType<T>>.UNKNOWN by aliasStatic({ChunkTicketType.field_
  * field_14033
  */
 val <T>KClass<ChunkTicketType<T>>.PLAYER by aliasStatic({ChunkTicketType.field_14033})
+/**
+ * field_54211
+ */
+val <T>KClass<ChunkTicketType<T>>.ENDER_PEARL by aliasStatic({ChunkTicketType.field_54211})
 /**
  * method_14292
  */

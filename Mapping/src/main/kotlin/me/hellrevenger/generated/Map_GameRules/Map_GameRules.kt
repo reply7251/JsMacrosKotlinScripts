@@ -2,6 +2,22 @@ package me.hellrevenger.generated.Map_GameRules
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_19390
+ */
+val KClass<GameRules>.DO_MOB_SPAWNING by aliasStatic(GameRules::field_19390)
+/**
+ * field_30963
+ */
+val KClass<GameRules>.DEFAULT_RANDOM_TICK_SPEED by aliasStatic(GameRules::field_30963)
+/**
+ * field_19409
+ */
+val KClass<GameRules>.ANNOUNCE_ADVANCEMENTS by aliasStatic(GameRules::field_19409)
+/**
+ * field_19391
+ */
+val KClass<GameRules>.DO_MOB_LOOT by aliasStatic(GameRules::field_19391)
+/**
  * field_19388
  */
 val KClass<GameRules>.DO_MOB_GRIEFING by aliasStatic(GameRules::field_19388)
@@ -14,21 +30,9 @@ val KClass<GameRules>.REDUCED_DEBUG_INFO by aliasStatic(GameRules::field_19401)
  */
 val KClass<GameRules>.MAX_ENTITY_CRAMMING by aliasStatic(GameRules::field_19405)
 /**
- * field_19390
- */
-val KClass<GameRules>.DO_MOB_SPAWNING by aliasStatic(GameRules::field_19390)
-/**
- * field_30963
- */
-val KClass<GameRules>.DEFAULT_RANDOM_TICK_SPEED by aliasStatic(GameRules::field_30963)
-/**
  * field_19392
  */
 val KClass<GameRules>.DO_TILE_DROPS by aliasStatic(GameRules::field_19392)
-/**
- * field_19409
- */
-val KClass<GameRules>.ANNOUNCE_ADVANCEMENTS by aliasStatic(GameRules::field_19409)
 /**
  * field_19389
  */
@@ -37,10 +41,6 @@ val KClass<GameRules>.KEEP_INVENTORY by aliasStatic(GameRules::field_19389)
  * field_19422
  */
 val KClass<GameRules>.DISABLE_RAIDS by aliasStatic(GameRules::field_19422)
-/**
- * field_19391
- */
-val KClass<GameRules>.DO_MOB_LOOT by aliasStatic(GameRules::field_19391)
 /**
  * field_20638
  */
@@ -150,6 +150,10 @@ val KClass<GameRules>.DO_FIRE_TICK by aliasStatic(GameRules::field_19387)
  */
 val KClass<GameRules>.GLOBAL_SOUND_EVENTS by aliasStatic(GameRules::field_40886)
 /**
+ * field_52614
+ */
+val KClass<GameRules>.MINECART_MAX_SPEED by aliasStatic(GameRules::field_52614)
+/**
  * field_40881
  */
 val KClass<GameRules>.MOB_EXPLOSION_DROP_DECAY by aliasStatic(GameRules::field_40881)
@@ -177,6 +181,10 @@ val KClass<GameRules>.TNT_EXPLOSION_DROP_DECAY by aliasStatic(GameRules::field_4
  * field_28357
  */
 val KClass<GameRules>.PLAYERS_SLEEPING_PERCENTAGE by aliasStatic(GameRules::field_28357)
+/**
+ * field_54909
+ */
+val KClass<GameRules>.DISABLE_PLAYER_MOVEMENT_CHECK by aliasStatic(GameRules::field_54909)
 /**
  * field_38975
  */
@@ -210,17 +218,13 @@ val KClass<GameRules>.ENDER_PEARLS_VANISH_ON_DEATH by aliasStatic(GameRules::fie
  */
 val KClass<GameRules>.COMMAND_MODIFICATION_BLOCK_LIMIT by aliasStatic(GameRules::field_41766)
 /**
- * method_27322
- */
-fun GameRules.setAllValues(arg0: GameRules, arg1: MinecraftServer) = this.method_27322(arg0, arg1)
-/**
- * method_27325
- */
-fun GameRules.copy() = this.method_27325()
-/**
  * method_8355
  */
 fun GameRules.getBoolean(arg0: net.minecraft.class_1928.class_4313<net.minecraft.class_1928.class_4310>) = this.method_8355(arg0)
+/**
+ * method_27325
+ */
+fun GameRules.copy(arg0: FeatureSet) = this.method_27325(arg0)
 /**
  * method_8356
  */
@@ -228,7 +232,7 @@ fun GameRules.getInt(arg0: net.minecraft.class_1928.class_4313<net.minecraft.cla
 /**
  * method_20744
  */
-fun KClass<GameRules>.accept(arg0: net.minecraft.class_1928.class_4311) = GameRules.method_20744(arg0)
+fun GameRules.accept(arg0: net.minecraft.class_1928.class_4311) = this.method_20744(arg0)
 /**
  * method_8358
  */
@@ -237,3 +241,7 @@ fun GameRules.toNbt() = this.method_8358()
  * method_20746
  */
 fun <T>GameRules.get(arg0: net.minecraft.class_1928.class_4313<T>) where T: net.minecraft.class_1928.class_4315<T> = this.method_20746<T>(arg0)
+/**
+ * method_27322
+ */
+fun GameRules.setAllValues(arg0: GameRules, arg1: MinecraftServer) = this.method_27322(arg0, arg1)

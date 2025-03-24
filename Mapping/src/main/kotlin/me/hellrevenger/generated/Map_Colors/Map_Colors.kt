@@ -18,6 +18,10 @@ val KClass<Colors>.LIGHT_RED by aliasStatic(Colors::field_46652)
  */
 val KClass<Colors>.ALTERNATE_WHITE by aliasStatic(Colors::field_49788)
 /**
+ * field_54557
+ */
+val KClass<Colors>.CYAN by aliasStatic(Colors::field_54557)
+/**
  * field_52313
  */
 val KClass<Colors>.BLUE by aliasStatic(Colors::field_52313)
@@ -45,3 +49,7 @@ val KClass<Colors>.YELLOW by aliasStatic(Colors::field_46767)
  * field_44941
  */
 val KClass<Colors>.GRAY by aliasStatic(Colors::field_44941)
+/**
+ * field_52393
+ */
+val KClass<Colors>.PURPLE by aliasStatic(Colors::field_52393)

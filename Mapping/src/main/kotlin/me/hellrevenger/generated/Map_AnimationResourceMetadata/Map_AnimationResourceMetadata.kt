@@ -2,38 +2,30 @@ package me.hellrevenger.generated.Map_AnimationResourceMetadata
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_32974
+ * field_55537
  */
-val KClass<AnimationResourceMetadata>.KEY by aliasStatic(AnimationResourceMetadata::field_32974)
+val KClass<AnimationResourceMetadata>.SERIALIZER by aliasStatic(AnimationResourceMetadata::field_55537)
 /**
- * field_21768
+ * comp_3454
  */
-val KClass<AnimationResourceMetadata>.EMPTY by aliasStatic(AnimationResourceMetadata::field_21768)
+fun AnimationResourceMetadata.width() = this.comp_3454()
 /**
- * field_5337
+ * comp_3455
  */
-val KClass<AnimationResourceMetadata>.READER by aliasStatic(AnimationResourceMetadata::field_5337)
+fun AnimationResourceMetadata.height() = this.comp_3455()
 /**
- * field_32975
+ * comp_3457
  */
-val KClass<AnimationResourceMetadata>.EMPTY_FRAME_TIME by aliasStatic(AnimationResourceMetadata::field_32975)
-/**
- * field_32976
- */
-val KClass<AnimationResourceMetadata>.UNDEFINED by aliasStatic(AnimationResourceMetadata::field_32976)
+fun AnimationResourceMetadata.interpolate() = this.comp_3457()
 /**
  * method_24143
  */
 fun AnimationResourceMetadata.getSize(arg0: Int, arg1: Int) = this.method_24143(arg0, arg1)
 /**
- * method_4684
+ * comp_3456
  */
-fun AnimationResourceMetadata.getDefaultFrameTime() = this.method_4684()
+fun AnimationResourceMetadata.defaultFrameTime() = this.comp_3456()
 /**
- * method_33460
+ * comp_3453
  */
-fun AnimationResourceMetadata.forEachFrame(arg0: net.minecraft.class_1079.class_5792) = this.method_33460(arg0)
-/**
- * method_4685
- */
-fun AnimationResourceMetadata.shouldInterpolate() = this.method_4685()
+fun AnimationResourceMetadata.frames() = this.comp_3453()

@@ -28,7 +28,7 @@ fun EntityAnimationS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method
 /**
  * method_11269
  */
-fun EntityAnimationS2CPacket.getId() = this.method_11269()
+fun EntityAnimationS2CPacket.getEntityId() = this.method_11269()
 /**
  * method_11267
  */

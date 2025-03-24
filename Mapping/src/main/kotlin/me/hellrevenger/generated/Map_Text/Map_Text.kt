@@ -38,10 +38,6 @@ fun Text.asTruncatedString(arg0: Int) = this.method_10858(arg0)
  */
 fun Text.getWithStyle(arg0: Style) = this.method_36136(arg0)
 /**
- * method_43467
- */
-fun KClass<Text>.selector(arg0: String, arg1: Optional<Text>) = Text.method_43467(arg0, arg1)
-/**
  * method_54156
  */
 fun KClass<Text>.of(arg0: ChunkPos) = Text.method_54156(arg0)
@@ -70,9 +66,17 @@ fun KClass<Text>.of(arg0: Date) = Text.method_54157(arg0)
  */
 fun KClass<Text>.translatableWithFallback(arg0: String, arg1: String, arg2: Array<Object>) = Text.method_48322(arg0, arg1, *arg2)
 /**
+ * method_43467
+ */
+fun KClass<Text>.selector(arg0: ParsedSelector, arg1: Optional<Text>) = Text.method_43467(arg0, arg1)
+/**
  * method_54155
  */
 fun KClass<Text>.of(arg0: Message) = Text.method_54155(arg0)
+/**
+ * method_62790
+ */
+fun KClass<Text>.score(arg0: ParsedSelector, arg1: String) = Text.method_62790(arg0, arg1)
 /**
  * method_54154
  */

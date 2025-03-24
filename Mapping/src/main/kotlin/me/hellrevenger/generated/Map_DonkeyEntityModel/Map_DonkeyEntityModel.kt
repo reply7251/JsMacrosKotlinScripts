@@ -2,10 +2,14 @@ package me.hellrevenger.generated.Map_DonkeyEntityModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_31987
+ * method_62079
  */
-fun <T>KClass<DonkeyEntityModel<T>>.getTexturedModelData() where T: AbstractDonkeyEntity = DonkeyEntityModel.method_31987()
+fun KClass<DonkeyEntityModel>.getTexturedModelData(arg0: Float) = DonkeyEntityModel.method_62079(arg0)
 /**
- * method_17076
+ * method_62080
  */
-fun <T>DonkeyEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: AbstractDonkeyEntity = this.method_17076(arg0, arg1, arg2, arg3, arg4, arg5)
+fun KClass<DonkeyEntityModel>.getBabyTexturedModelData(arg0: Float) = DonkeyEntityModel.method_62080(arg0)
+/**
+ * method_62078
+ */
+fun DonkeyEntityModel.setAngles(arg0: DonkeyEntityRenderState) = this.method_62078(arg0)

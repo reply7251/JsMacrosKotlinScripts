@@ -72,7 +72,7 @@ fun ModelPart.copyTransform(arg0: ModelPart) = this.method_17138(arg0)
 /**
  * method_22703
  */
-fun ModelPart.rotate(arg0: MatrixStack) = this.method_22703(arg0)
+fun ModelPart.rotate(matrixStack: MatrixStack) = this.method_22703(matrixStack)
 /**
  * method_41922
  */
@@ -109,6 +109,10 @@ fun ModelPart.traverse() = this.method_32088()
  * method_41923
  */
 fun ModelPart.resetTransform() = this.method_41923()
+/**
+ * method_62132
+ */
+fun ModelPart.rotate(arg0: Quaternionf) = this.method_62132(arg0)
 /**
  * method_41921
  */

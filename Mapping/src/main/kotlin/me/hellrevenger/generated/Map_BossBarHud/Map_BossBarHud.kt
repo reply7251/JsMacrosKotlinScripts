@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_BossBarHud
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_2060
+ */
+var BossBarHud.bossBars by alias(BossBarHud::field_2060)
+/**
  * method_1801
  */
 fun BossBarHud.clear() = this.method_1801()

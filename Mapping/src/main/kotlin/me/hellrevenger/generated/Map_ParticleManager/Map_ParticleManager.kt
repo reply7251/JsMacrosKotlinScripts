@@ -38,10 +38,10 @@ fun ParticleManager.setWorld(arg0: ClientWorld) = this.method_3045(arg0)
  */
 fun ParticleManager.addBlockBreakingParticles(arg0: BlockPos, arg1: Direction) = this.method_3054(arg0, arg1)
 /**
+ * method_3049
+ */
+fun ParticleManager.renderParticles(arg0: Camera, arg1: Float, arg2: net.minecraft.class_4597.class_4598) = this.method_3049(arg0, arg1, arg2)
+/**
  * method_3052
  */
 fun ParticleManager.getDebugString() = this.method_3052()
-/**
- * method_3049
- */
-fun ParticleManager.renderParticles(arg0: LightmapTextureManager, arg1: Camera, arg2: Float) = this.method_3049(arg0, arg1, arg2)

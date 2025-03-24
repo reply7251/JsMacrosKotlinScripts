@@ -8,7 +8,7 @@ fun LootContextPredicateValidator.validateEntityPredicates(arg0: MutableList<Loo
 /**
  * method_54964
  */
-fun LootContextPredicateValidator.validate(arg0: MutableList<LootContextPredicate>, arg1: LootContextType, arg2: String) = this.method_54964(arg0, arg1, arg2)
+fun LootContextPredicateValidator.validate(arg0: MutableList<LootContextPredicate>, arg1: ContextType, arg2: String) = this.method_54964(arg0, arg1, arg2)
 /**
  * method_54962
  */
@@ -20,4 +20,4 @@ fun LootContextPredicateValidator.validateEntityPredicate(arg0: Optional<LootCon
 /**
  * method_54961
  */
-fun LootContextPredicateValidator.validate(arg0: LootContextPredicate, arg1: LootContextType, arg2: String) = this.method_54961(arg0, arg1, arg2)
+fun LootContextPredicateValidator.validate(arg0: LootContextPredicate, arg1: ContextType, arg2: String) = this.method_54961(arg0, arg1, arg2)

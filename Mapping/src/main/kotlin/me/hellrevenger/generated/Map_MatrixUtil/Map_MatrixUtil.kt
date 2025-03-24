@@ -10,6 +10,10 @@ fun KClass<MatrixUtil>.svdDecompose(arg0: Matrix3f) = MatrixUtil.method_46412(ar
  */
 fun KClass<MatrixUtil>.isTranslation(arg0: Matrix4f) = MatrixUtil.method_56826(arg0)
 /**
+ * method_65174
+ */
+fun KClass<MatrixUtil>.isIdentity(arg0: Matrix4f) = MatrixUtil.method_65174(arg0)
+/**
  * method_56827
  */
 fun KClass<MatrixUtil>.isOrthonormal(arg0: Matrix4f) = MatrixUtil.method_56827(arg0)

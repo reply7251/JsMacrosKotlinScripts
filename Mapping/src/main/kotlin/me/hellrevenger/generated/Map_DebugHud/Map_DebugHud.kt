@@ -22,6 +22,10 @@ fun DebugHud.pushToFrameLog(arg0: Long) = this.method_53534(arg0)
  */
 fun DebugHud.getPingLog() = this.method_53543()
 /**
+ * method_61981
+ */
+fun DebugHud.getPieChart() = this.method_61981()
+/**
  * method_53539
  */
 fun DebugHud.toggleDebugHud() = this.method_53539()

@@ -78,9 +78,17 @@ val KClass<RenderPhase>.ENTITY_CUTOUT_NONULL_OFFSET_Z_PROGRAM by aliasStatic(Ren
  */
 val KClass<RenderPhase>.LEASH_PROGRAM by aliasStatic(RenderPhase::field_29416)
 /**
+ * field_55137
+ */
+val KClass<RenderPhase>.OVERLAY_TRANSPARENCY by aliasStatic(RenderPhase::field_55137)
+/**
  * field_44818
  */
 val KClass<RenderPhase>.GUI_OVERLAY_PROGRAM by aliasStatic(RenderPhase::field_44818)
+/**
+ * field_53128
+ */
+val KClass<RenderPhase>.POSITION_TEXTURE_COLOR_PROGRAM by aliasStatic(RenderPhase::field_53128)
 /**
  * field_29420
  */
@@ -114,6 +122,10 @@ val KClass<RenderPhase>.ENTITY_NO_OUTLINE_PROGRAM by aliasStatic(RenderPhase::fi
  */
 val KClass<RenderPhase>.ENTITY_TRANSLUCENT_PROGRAM by aliasStatic(RenderPhase::field_29407)
 /**
+ * field_55136
+ */
+val KClass<RenderPhase>.WORLD_BORDER_LAYERING by aliasStatic(RenderPhase::field_55136)
+/**
  * field_29451
  */
 val KClass<RenderPhase>.ENTITY_CUTOUT_PROGRAM by aliasStatic(RenderPhase::field_29451)
@@ -125,6 +137,10 @@ val KClass<RenderPhase>.GLINT_TEXTURING by aliasStatic(RenderPhase::field_21381)
  * field_29446
  */
 val KClass<RenderPhase>.TRANSLUCENT_PROGRAM by aliasStatic(RenderPhase::field_29446)
+/**
+ * field_54961
+ */
+val KClass<RenderPhase>.ARMOR_TRANSLUCENT by aliasStatic(RenderPhase::field_54961)
 /**
  * field_21377
  */
@@ -149,10 +165,6 @@ val KClass<RenderPhase>.NO_PROGRAM by aliasStatic(RenderPhase::field_29434)
  * field_21348
  */
 val KClass<RenderPhase>.LEQUAL_DEPTH_TEST by aliasStatic(RenderPhase::field_21348)
-/**
- * field_29406
- */
-val KClass<RenderPhase>.ENTITY_TRANSLUCENT_CULL_PROGRAM by aliasStatic(RenderPhase::field_29406)
 /**
  * field_29418
  */
@@ -182,9 +194,9 @@ val KClass<RenderPhase>.NO_LAYERING by aliasStatic(RenderPhase::field_21352)
  */
 val KClass<RenderPhase>.ENTITY_ALPHA_PROGRAM by aliasStatic(RenderPhase::field_29413)
 /**
- * field_29425
+ * field_53127
  */
-val KClass<RenderPhase>.DIRECT_ENTITY_GLINT_PROGRAM by aliasStatic(RenderPhase::field_29425)
+val KClass<RenderPhase>.NAUSEA_OVERLAY_TRANSPARENCY by aliasStatic(RenderPhase::field_53127)
 /**
  * field_21344
  */
@@ -218,6 +230,10 @@ val KClass<RenderPhase>.BEACON_BEAM_PROGRAM by aliasStatic(RenderPhase::field_29
  */
 val KClass<RenderPhase>.WEATHER_TARGET by aliasStatic(RenderPhase::field_25282)
 /**
+ * field_55138
+ */
+val KClass<RenderPhase>.PARTICLE by aliasStatic(RenderPhase::field_55138)
+/**
  * field_44816
  */
 val KClass<RenderPhase>.OR_REVERSE by aliasStatic(RenderPhase::field_44816)
@@ -241,6 +257,10 @@ val KClass<RenderPhase>.ENTITY_SHADOW_PROGRAM by aliasStatic(RenderPhase::field_
  * field_29408
  */
 val KClass<RenderPhase>.ENTITY_SMOOTH_CUTOUT_PROGRAM by aliasStatic(RenderPhase::field_29408)
+/**
+ * field_53126
+ */
+val KClass<RenderPhase>.MOJANG_LOGO_TRANSPARENCY by aliasStatic(RenderPhase::field_53126)
 /**
  * field_25281
  */
@@ -286,6 +306,10 @@ val KClass<RenderPhase>.TEXT_PROGRAM by aliasStatic(RenderPhase::field_29427)
  */
 val KClass<RenderPhase>.CLOUDS_PROGRAM by aliasStatic(RenderPhase::field_48949)
 /**
+ * field_53123
+ */
+val KClass<RenderPhase>.VIEW_OFFSET_Z_LAYERING_FORWARD by aliasStatic(RenderPhase::field_53123)
+/**
  * field_44819
  */
 val KClass<RenderPhase>.GUI_TEXT_HIGHLIGHT_PROGRAM by aliasStatic(RenderPhase::field_44819)
@@ -293,6 +317,10 @@ val KClass<RenderPhase>.GUI_TEXT_HIGHLIGHT_PROGRAM by aliasStatic(RenderPhase::f
  * field_21359
  */
 val KClass<RenderPhase>.OUTLINE_TARGET by aliasStatic(RenderPhase::field_21359)
+/**
+ * field_53125
+ */
+val KClass<RenderPhase>.CROSSHAIR_TRANSPARENCY by aliasStatic(RenderPhase::field_53125)
 /**
  * field_25280
  */
@@ -350,6 +378,10 @@ val KClass<RenderPhase>.POSITION_PROGRAM by aliasStatic(RenderPhase::field_29438
  */
 val KClass<RenderPhase>.MAIN_TARGET by aliasStatic(RenderPhase::field_21358)
 /**
+ * field_53124
+ */
+val KClass<RenderPhase>.VIGNETTE_TRANSPARENCY by aliasStatic(RenderPhase::field_53124)
+/**
  * field_33628
  */
 val KClass<RenderPhase>.TEXT_INTENSITY_PROGRAM by aliasStatic(RenderPhase::field_33628)
@@ -364,7 +396,7 @@ val KClass<RenderPhase>.TRANSPARENT_TEXT_INTENSITY_PROGRAM by aliasStatic(Render
 /**
  * field_29442
  */
-val KClass<RenderPhase>.COLOR_PROGRAM by aliasStatic(RenderPhase::field_29442)
+val KClass<RenderPhase>.POSITION_COLOR_PROGRAM by aliasStatic(RenderPhase::field_29442)
 /**
  * field_29430
  */

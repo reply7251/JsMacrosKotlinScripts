@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_PotionContentsComponent
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_49277
+ */
+val KClass<PotionContentsComponent>.EFFECTLESS_COLOR by aliasStatic(PotionContentsComponent::field_49277)
+/**
  * field_49274
  */
 val KClass<PotionContentsComponent>.DEFAULT by aliasStatic(PotionContentsComponent::field_49274)
@@ -10,6 +14,14 @@ val KClass<PotionContentsComponent>.DEFAULT by aliasStatic(PotionContentsCompone
  */
 fun PotionContentsComponent.with(arg0: RegistryEntry<Potion>) = this.method_57403(arg0)
 /**
+ * method_65361
+ */
+fun PotionContentsComponent.getColor(arg0: Int) = this.method_65361(arg0)
+/**
+ * method_64195
+ */
+fun PotionContentsComponent.getName(arg0: String) = this.method_64195(arg0)
+/**
  * method_57398
  */
 fun PotionContentsComponent.with(arg0: StatusEffectInstance) = this.method_57398(arg0)
@@ -17,10 +29,6 @@ fun PotionContentsComponent.with(arg0: StatusEffectInstance) = this.method_57398
  * method_58111
  */
 fun KClass<PotionContentsComponent>.mixColors(arg0: Iterable<StatusEffectInstance>) = PotionContentsComponent.method_58111(arg0)
-/**
- * method_8062
- */
-fun KClass<PotionContentsComponent>.getColor(arg0: RegistryEntry<Potion>) = PotionContentsComponent.method_8062(arg0)
 /**
  * method_8065
  */
@@ -50,13 +58,17 @@ fun PotionContentsComponent.getColor() = this.method_8064()
  */
 fun PotionContentsComponent.hasEffects() = this.method_57405()
 /**
- * method_8055
- */
-fun KClass<PotionContentsComponent>.getColor(arg0: Iterable<StatusEffectInstance>) = PotionContentsComponent.method_8055(arg0)
-/**
  * method_57400
  */
 fun KClass<PotionContentsComponent>.createStack(arg0: Item, arg1: RegistryEntry<Potion>) = PotionContentsComponent.method_57400(arg0, arg1)
+/**
+ * method_62839
+ */
+fun PotionContentsComponent.apply(arg0: LivingEntity) = this.method_62839(arg0)
+/**
+ * comp_3209
+ */
+fun PotionContentsComponent.customName() = this.comp_3209()
 /**
  * comp_2380
  */

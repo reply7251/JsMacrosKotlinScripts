@@ -12,4 +12,4 @@ fun FileUpload.cancel() = this.method_20970()
 /**
  * method_20973
  */
-fun FileUpload.upload(arg0: Consumer<UploadResult>) = this.method_20973(arg0)
+fun FileUpload.upload() = this.method_20973()

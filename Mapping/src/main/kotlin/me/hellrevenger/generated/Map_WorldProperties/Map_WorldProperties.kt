@@ -10,10 +10,6 @@ fun WorldProperties.getTimeOfDay() = this.method_217()
  */
 fun WorldProperties.getDifficulty() = this.method_207()
 /**
- * method_146
- */
-fun WorldProperties.getGameRules() = this.method_146()
-/**
  * method_151
  */
 fun WorldProperties.populateCrashReport(arg0: CrashReportSection, arg1: HeightLimitView) = this.method_151(arg0, arg1)

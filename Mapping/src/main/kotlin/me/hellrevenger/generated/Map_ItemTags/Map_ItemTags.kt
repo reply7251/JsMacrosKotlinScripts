@@ -18,10 +18,6 @@ val KClass<ItemTags>.TRIMMABLE_ARMOR by aliasStatic(ItemTags::field_41890)
  */
 val KClass<ItemTags>.MANGROVE_LOGS by aliasStatic(ItemTags::field_37403)
 /**
- * field_41892
- */
-val KClass<ItemTags>.TRIM_TEMPLATES by aliasStatic(ItemTags::field_41892)
-/**
  * field_48310
  */
 val KClass<ItemTags>.DURABILITY_ENCHANTABLE by aliasStatic(ItemTags::field_48310)
@@ -82,6 +78,22 @@ val KClass<ItemTags>.SWORD_ENCHANTABLE by aliasStatic(ItemTags::field_48304)
  */
 val KClass<ItemTags>.WEAPON_ENCHANTABLE by aliasStatic(ItemTags::field_48305)
 /**
+ * field_55196
+ */
+val KClass<ItemTags>.SKELETON_PREFERRED_WEAPONS by aliasStatic(ItemTags::field_55196)
+/**
+ * field_55197
+ */
+val KClass<ItemTags>.DROWNED_PREFERRED_WEAPONS by aliasStatic(ItemTags::field_55197)
+/**
+ * field_55198
+ */
+val KClass<ItemTags>.PIGLIN_PREFERRED_WEAPONS by aliasStatic(ItemTags::field_55198)
+/**
+ * field_55199
+ */
+val KClass<ItemTags>.PILLAGER_PREFERRED_WEAPONS by aliasStatic(ItemTags::field_55199)
+/**
  * field_48300
  */
 val KClass<ItemTags>.LEG_ARMOR_ENCHANTABLE by aliasStatic(ItemTags::field_48300)
@@ -93,6 +105,18 @@ val KClass<ItemTags>.CHEST_ARMOR_ENCHANTABLE by aliasStatic(ItemTags::field_4830
  * field_24481
  */
 val KClass<ItemTags>.PIGLIN_LOVED by aliasStatic(ItemTags::field_24481)
+/**
+ * field_54214
+ */
+val KClass<ItemTags>.PANDA_EATS_FROM_GROUND by aliasStatic(ItemTags::field_54214)
+/**
+ * field_54213
+ */
+val KClass<ItemTags>.BREWING_FUEL by aliasStatic(ItemTags::field_54213)
+/**
+ * field_54212
+ */
+val KClass<ItemTags>.DUPLICATES_ALLAYS by aliasStatic(ItemTags::field_54212)
 /**
  * field_16444
  */
@@ -250,10 +274,6 @@ val KClass<ItemTags>.COPPER_ORES by aliasStatic(ItemTags::field_29199)
  */
 val KClass<ItemTags>.EMERALD_ORES by aliasStatic(ItemTags::field_29198)
 /**
- * field_20343
- */
-val KClass<ItemTags>.TALL_FLOWERS by aliasStatic(ItemTags::field_20343)
-/**
  * field_49956
  */
 val KClass<ItemTags>.PARROT_POISONOUS_FOOD by aliasStatic(ItemTags::field_49956)
@@ -358,10 +378,6 @@ val KClass<ItemTags>.LLAMA_FOOD by aliasStatic(ItemTags::field_49946)
  */
 val KClass<ItemTags>.LLAMA_TEMPT_ITEMS by aliasStatic(ItemTags::field_49947)
 /**
- * field_20344
- */
-val KClass<ItemTags>.FLOWERS by aliasStatic(ItemTags::field_20344)
-/**
  * field_15536
  */
 val KClass<ItemTags>.BOATS by aliasStatic(ItemTags::field_15536)
@@ -450,17 +466,45 @@ val KClass<ItemTags>.ANVIL by aliasStatic(ItemTags::field_15547)
  */
 val KClass<ItemTags>.SPRUCE_LOGS by aliasStatic(ItemTags::field_15549)
 /**
+ * field_52387
+ */
+val KClass<ItemTags>.NETHERITE_TOOL_MATERIALS by aliasStatic(ItemTags::field_52387)
+/**
+ * field_52386
+ */
+val KClass<ItemTags>.DIAMOND_TOOL_MATERIALS by aliasStatic(ItemTags::field_52386)
+/**
+ * field_52385
+ */
+val KClass<ItemTags>.GOLD_TOOL_MATERIALS by aliasStatic(ItemTags::field_52385)
+/**
+ * field_52384
+ */
+val KClass<ItemTags>.FURNACE_MINECART_FUEL by aliasStatic(ItemTags::field_52384)
+/**
  * field_15552
  */
 val KClass<ItemTags>.WOODEN_DOORS by aliasStatic(ItemTags::field_15552)
+/**
+ * field_52383
+ */
+val KClass<ItemTags>.VILLAGER_PICKS_UP by aliasStatic(ItemTags::field_52383)
 /**
  * field_15551
  */
 val KClass<ItemTags>.BUTTONS by aliasStatic(ItemTags::field_15551)
 /**
+ * field_52382
+ */
+val KClass<ItemTags>.IRON_TOOL_MATERIALS by aliasStatic(ItemTags::field_52382)
+/**
  * field_15554
  */
 val KClass<ItemTags>.BIRCH_LOGS by aliasStatic(ItemTags::field_15554)
+/**
+ * field_52381
+ */
+val KClass<ItemTags>.WOODEN_TOOL_MATERIALS by aliasStatic(ItemTags::field_52381)
 /**
  * field_15553
  */
@@ -482,9 +526,17 @@ val KClass<ItemTags>.LEAVES by aliasStatic(ItemTags::field_15558)
  */
 val KClass<ItemTags>.WOODEN_STAIRS by aliasStatic(ItemTags::field_15557)
 /**
+ * field_54294
+ */
+val KClass<ItemTags>.BUNDLES by aliasStatic(ItemTags::field_54294)
+/**
  * field_15550
  */
 val KClass<ItemTags>.WOODEN_TRAPDOORS by aliasStatic(ItemTags::field_15550)
+/**
+ * field_54293
+ */
+val KClass<ItemTags>.SHULKER_BOXES by aliasStatic(ItemTags::field_54293)
 /**
  * field_38699
  */
@@ -510,6 +562,10 @@ val KClass<ItemTags>.REDSTONE_ORES by aliasStatic(ItemTags::field_28996)
  */
 val KClass<ItemTags>.LAPIS_ORES by aliasStatic(ItemTags::field_28997)
 /**
+ * field_55484
+ */
+val KClass<ItemTags>.WITHER_SKELETON_DISLIKED_WEAPONS by aliasStatic(ItemTags::field_55484)
+/**
  * field_38080
  */
 val KClass<ItemTags>.CHEST_BOATS by aliasStatic(ItemTags::field_38080)
@@ -517,6 +573,10 @@ val KClass<ItemTags>.CHEST_BOATS by aliasStatic(ItemTags::field_38080)
  * field_50108
  */
 val KClass<ItemTags>.SHARP_WEAPON_ENCHANTABLE by aliasStatic(ItemTags::field_50108)
+/**
+ * field_54066
+ */
+val KClass<ItemTags>.REPAIRS_WOLF_ARMOR by aliasStatic(ItemTags::field_54066)
 /**
  * field_50109
  */
@@ -526,9 +586,33 @@ val KClass<ItemTags>.MACE_ENCHANTABLE by aliasStatic(ItemTags::field_50109)
  */
 val KClass<ItemTags>.WALLS by aliasStatic(ItemTags::field_15560)
 /**
+ * field_54065
+ */
+val KClass<ItemTags>.REPAIRS_TURTLE_HELMET by aliasStatic(ItemTags::field_54065)
+/**
+ * field_54064
+ */
+val KClass<ItemTags>.REPAIRS_NETHERITE_ARMOR by aliasStatic(ItemTags::field_54064)
+/**
  * field_50107
  */
 val KClass<ItemTags>.FIRE_ASPECT_ENCHANTABLE by aliasStatic(ItemTags::field_50107)
+/**
+ * field_54063
+ */
+val KClass<ItemTags>.REPAIRS_DIAMOND_ARMOR by aliasStatic(ItemTags::field_54063)
+/**
+ * field_54062
+ */
+val KClass<ItemTags>.REPAIRS_GOLD_ARMOR by aliasStatic(ItemTags::field_54062)
+/**
+ * field_54061
+ */
+val KClass<ItemTags>.REPAIRS_IRON_ARMOR by aliasStatic(ItemTags::field_54061)
+/**
+ * field_54060
+ */
+val KClass<ItemTags>.REPAIRS_CHAIN_ARMOR by aliasStatic(ItemTags::field_54060)
 /**
  * field_17487
  */
@@ -538,6 +622,14 @@ val KClass<ItemTags>.COALS by aliasStatic(ItemTags::field_17487)
  */
 val KClass<ItemTags>.DECORATED_POT_INGREDIENTS by aliasStatic(ItemTags::field_44701)
 /**
+ * field_54059
+ */
+val KClass<ItemTags>.REPAIRS_LEATHER_ARMOR by aliasStatic(ItemTags::field_54059)
+/**
+ * field_54058
+ */
+val KClass<ItemTags>.PIGLIN_SAFE_ARMOR by aliasStatic(ItemTags::field_54058)
+/**
  * field_21465
  */
 val KClass<ItemTags>.LECTERN_BOOKS by aliasStatic(ItemTags::field_21465)
@@ -545,6 +637,10 @@ val KClass<ItemTags>.LECTERN_BOOKS by aliasStatic(ItemTags::field_21465)
  * field_48297
  */
 val KClass<ItemTags>.HEAD_ARMOR by aliasStatic(ItemTags::field_48297)
+/**
+ * field_54405
+ */
+val KClass<ItemTags>.MAP_INVISIBILITY_EQUIPMENT by aliasStatic(ItemTags::field_54405)
 /**
  * field_48298
  */
@@ -581,6 +677,14 @@ val KClass<ItemTags>.CRIMSON_STEMS by aliasStatic(ItemTags::field_21957)
  * field_18317
  */
 val KClass<ItemTags>.ARROWS by aliasStatic(ItemTags::field_18317)
+/**
+ * field_54555
+ */
+val KClass<ItemTags>.PALE_OAK_LOGS by aliasStatic(ItemTags::field_54555)
+/**
+ * field_54554
+ */
+val KClass<ItemTags>.GAZE_DISGUISE_EQUIPMENT by aliasStatic(ItemTags::field_54554)
 /**
  * field_38836
  */

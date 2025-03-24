@@ -48,7 +48,7 @@ fun WardenEntity.removeSuspect(arg0: Entity) = this.method_42211(arg0)
 /**
  * method_42202
  */
-fun WardenEntity.getHeartPitch(arg0: Float) = this.method_42202(arg0)
+fun WardenEntity.getHeartAlpha(arg0: Float) = this.method_42202(arg0)
 /**
  * method_42213
  */
@@ -72,7 +72,7 @@ fun KClass<WardenEntity>.addAttributes() = WardenEntity.method_42221()
 /**
  * method_42223
  */
-fun WardenEntity.getTendrilPitch(arg0: Float) = this.method_42223(arg0)
+fun WardenEntity.getTendrilAlpha(arg0: Float) = this.method_42223(arg0)
 /**
  * method_42206
  */

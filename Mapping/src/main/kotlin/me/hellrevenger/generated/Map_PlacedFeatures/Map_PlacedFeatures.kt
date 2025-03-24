@@ -18,6 +18,10 @@ val KClass<PlacedFeatures>.FOUR_ABOVE_AND_BELOW_RANGE by aliasStatic(PlacedFeatu
  */
 val KClass<PlacedFeatures>.EIGHT_ABOVE_AND_BELOW_RANGE by aliasStatic(PlacedFeatures::field_36084)
 /**
+ * field_55187
+ */
+val KClass<PlacedFeatures>.MOTION_BLOCKING_NO_LEAVES_HEIGHTMAP by aliasStatic(PlacedFeatures::field_55187)
+/**
  * field_36086
  */
 val KClass<PlacedFeatures>.BOTTOM_TO_120_RANGE by aliasStatic(PlacedFeatures::field_36086)

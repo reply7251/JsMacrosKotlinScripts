@@ -2,6 +2,166 @@ package me.hellrevenger.generated.Map_Items
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_16310
+ */
+val KClass<Items>.FLETCHING_TABLE by aliasStatic(Items::field_16310)
+/**
+ * field_47015
+ */
+val KClass<Items>.WAXED_WEATHERED_COPPER_GRATE by aliasStatic(Items::field_47015)
+/**
+ * field_27072
+ */
+val KClass<Items>.EXPOSED_COPPER by aliasStatic(Items::field_27072)
+/**
+ * field_8793
+ */
+val KClass<Items>.REDSTONE_BLOCK by aliasStatic(Items::field_8793)
+/**
+ * field_8200
+ */
+val KClass<Items>.RED_SAND by aliasStatic(Items::field_8200)
+/**
+ * field_8333
+ */
+val KClass<Items>.GRAY_CONCRETE by aliasStatic(Items::field_8333)
+/**
+ * field_8115
+ */
+val KClass<Items>.BLUE_CARPET by aliasStatic(Items::field_8115)
+/**
+ * field_8466
+ */
+val KClass<Items>.ENDER_CHEST by aliasStatic(Items::field_8466)
+/**
+ * field_8224
+ */
+val KClass<Items>.JUNGLE_SLAB by aliasStatic(Items::field_8224)
+/**
+ * field_8357
+ */
+val KClass<Items>.DISPENSER by aliasStatic(Items::field_8357)
+/**
+ * field_8139
+ */
+val KClass<Items>.ORANGE_GLAZED_TERRACOTTA by aliasStatic(Items::field_8139)
+/**
+ * field_8248
+ */
+val KClass<Items>.STRIPPED_OAK_WOOD by aliasStatic(Items::field_8248)
+/**
+ * field_8596
+ */
+val KClass<Items>.INFESTED_MOSSY_STONE_BRICKS by aliasStatic(Items::field_8596)
+/**
+ * field_27073
+ */
+val KClass<Items>.WEATHERED_COPPER by aliasStatic(Items::field_27073)
+/**
+ * field_47014
+ */
+val KClass<Items>.WAXED_EXPOSED_COPPER_GRATE by aliasStatic(Items::field_47014)
+/**
+ * field_8572
+ */
+val KClass<Items>.BLACK_BANNER by aliasStatic(Items::field_8572)
+/**
+ * field_8681
+ */
+val KClass<Items>.CREEPER_HEAD by aliasStatic(Items::field_8681)
+/**
+ * field_8223
+ */
+val KClass<Items>.SANDSTONE_WALL by aliasStatic(Items::field_8223)
+/**
+ * field_8332
+ */
+val KClass<Items>.BROWN_STAINED_GLASS by aliasStatic(Items::field_8332)
+/**
+ * field_8465
+ */
+val KClass<Items>.CRAFTING_TABLE by aliasStatic(Items::field_8465)
+/**
+ * field_17530
+ */
+val KClass<Items>.COMPOSTER by aliasStatic(Items::field_17530)
+/**
+ * field_8247
+ */
+val KClass<Items>.TRAPPED_CHEST by aliasStatic(Items::field_8247)
+/**
+ * field_8114
+ */
+val KClass<Items>.ACACIA_FENCE_GATE by aliasStatic(Items::field_8114)
+/**
+ * field_40226
+ */
+val KClass<Items>.BAMBOO_TRAPDOOR by aliasStatic(Items::field_40226)
+/**
+ * field_47013
+ */
+val KClass<Items>.WAXED_COPPER_GRATE by aliasStatic(Items::field_47013)
+/**
+ * field_27074
+ */
+val KClass<Items>.OXIDIZED_COPPER by aliasStatic(Items::field_27074)
+/**
+ * field_27050
+ */
+val KClass<Items>.WAXED_WEATHERED_CUT_COPPER_SLAB by aliasStatic(Items::field_27050)
+/**
+ * field_8682
+ */
+val KClass<Items>.RED_MUSHROOM_BLOCK by aliasStatic(Items::field_8682)
+/**
+ * field_8791
+ */
+val KClass<Items>.WITHER_SKELETON_SKULL by aliasStatic(Items::field_8791)
+/**
+ * field_8460
+ */
+val KClass<Items>.COARSE_DIRT by aliasStatic(Items::field_8460)
+/**
+ * field_8351
+ */
+val KClass<Items>.DEAD_TUBE_CORAL_FAN by aliasStatic(Items::field_8351)
+/**
+ * field_55036
+ */
+val KClass<Items>.CLOSED_EYEBLOSSOM by aliasStatic(Items::field_55036)
+/**
+ * field_8133
+ */
+val KClass<Items>.LIGHT_GRAY_TERRACOTTA by aliasStatic(Items::field_8133)
+/**
+ * field_8484
+ */
+val KClass<Items>.BLUE_GLAZED_TERRACOTTA by aliasStatic(Items::field_8484)
+/**
+ * field_8242
+ */
+val KClass<Items>.BONE_BLOCK by aliasStatic(Items::field_8242)
+/**
+ * field_8157
+ */
+val KClass<Items>.BLACK_STAINED_GLASS_PANE by aliasStatic(Items::field_8157)
+/**
+ * field_8266
+ */
+val KClass<Items>.SMOOTH_RED_SANDSTONE_SLAB by aliasStatic(Items::field_8266)
+/**
+ * field_8048
+ */
+val KClass<Items>.SPRUCE_BUTTON by aliasStatic(Items::field_8048)
+/**
+ * field_22001
+ */
+val KClass<Items>.SOUL_TORCH by aliasStatic(Items::field_22001)
+/**
+ * field_28867
+ */
+val KClass<Items>.COBBLED_DEEPSLATE_STAIRS by aliasStatic(Items::field_28867)
+/**
  * field_28649
  */
 val KClass<Items>.FLOWERING_AZALEA_LEAVES by aliasStatic(Items::field_28649)
@@ -86,6 +246,10 @@ val KClass<Items>.STONE_SLAB by aliasStatic(Items::field_8595)
  */
 val KClass<Items>.BAMBOO_MOSAIC_STAIRS by aliasStatic(Items::field_40220)
 /**
+ * field_8111
+ */
+val KClass<Items>.SPRUCE_SIGN by aliasStatic(Items::field_8111)
+/**
  * field_8462
  */
 val KClass<Items>.DEAD_BUBBLE_CORAL_FAN by aliasStatic(Items::field_8462)
@@ -97,6 +261,10 @@ val KClass<Items>.PURPUR_BLOCK by aliasStatic(Items::field_20393)
  * field_8353
  */
 val KClass<Items>.RED_TERRACOTTA by aliasStatic(Items::field_8353)
+/**
+ * field_55038
+ */
+val KClass<Items>.RESIN_BLOCK by aliasStatic(Items::field_55038)
 /**
  * field_47010
  */
@@ -153,6 +321,14 @@ val KClass<Items>.GRAVEL by aliasStatic(Items::field_8110)
  * field_8376
  */
 val KClass<Items>.OAK_TRAPDOOR by aliasStatic(Items::field_8376)
+/**
+ * field_8049
+ */
+val KClass<Items>.YELLOW_BANNER by aliasStatic(Items::field_8049)
+/**
+ * field_55039
+ */
+val KClass<Items>.RESIN_BRICKS by aliasStatic(Items::field_55039)
 /**
  * field_8158
  */
@@ -406,6 +582,10 @@ val KClass<Items>.DEEPSLATE_TILES by aliasStatic(Items::field_28860)
  */
 val KClass<Items>.PURPLE_STAINED_GLASS by aliasStatic(Items::field_8838)
 /**
+ * field_40228
+ */
+val KClass<Items>.BAMBOO_SIGN by aliasStatic(Items::field_40228)
+/**
  * field_47019
  */
 val KClass<Items>.EXPOSED_COPPER_BULB by aliasStatic(Items::field_47019)
@@ -446,6 +626,10 @@ val KClass<Items>.CHISELED_DEEPSLATE by aliasStatic(Items::field_28861)
  */
 val KClass<Items>.MAGENTA_CONCRETE by aliasStatic(Items::field_8508)
 /**
+ * field_8617
+ */
+val KClass<Items>.GRAY_BANNER by aliasStatic(Items::field_8617)
+/**
  * field_8811
  */
 val KClass<Items>.MOSSY_STONE_BRICK_WALL by aliasStatic(Items::field_8811)
@@ -453,6 +637,10 @@ val KClass<Items>.MOSSY_STONE_BRICK_WALL by aliasStatic(Items::field_8811)
  * field_8702
  */
 val KClass<Items>.NETHER_QUARTZ_ORE by aliasStatic(Items::field_8702)
+/**
+ * field_40229
+ */
+val KClass<Items>.OAK_HANGING_SIGN by aliasStatic(Items::field_40229)
 /**
  * field_21086
  */
@@ -518,6 +706,10 @@ val KClass<Items>.CHISELED_QUARTZ_BLOCK by aliasStatic(Items::field_8084)
  */
 val KClass<Items>.WAXED_WEATHERED_COPPER_TRAPDOOR by aliasStatic(Items::field_46997)
 /**
+ * field_54610
+ */
+val KClass<Items>.PALE_MOSS_BLOCK by aliasStatic(Items::field_54610)
+/**
  * field_41066
  */
 val KClass<Items>.BAMBOO_BLOCK by aliasStatic(Items::field_41066)
@@ -545,6 +737,14 @@ val KClass<Items>.LIGHT_BLUE_CANDLE by aliasStatic(Items::field_27028)
  * field_46996
  */
 val KClass<Items>.WAXED_EXPOSED_COPPER_TRAPDOOR by aliasStatic(Items::field_46996)
+/**
+ * field_54611
+ */
+val KClass<Items>.CREAKING_HEART by aliasStatic(Items::field_54611)
+/**
+ * field_42709
+ */
+val KClass<Items>.CHERRY_SIGN by aliasStatic(Items::field_42709)
 /**
  * field_41065
  */
@@ -594,6 +794,10 @@ val KClass<Items>.QUARTZ_BRICKS by aliasStatic(Items::field_23830)
  */
 val KClass<Items>.WAXED_COPPER_TRAPDOOR by aliasStatic(Items::field_46995)
 /**
+ * field_54612
+ */
+val KClass<Items>.PALE_OAK_SLAB by aliasStatic(Items::field_54612)
+/**
  * field_27029
  */
 val KClass<Items>.YELLOW_CANDLE by aliasStatic(Items::field_27029)
@@ -605,6 +809,10 @@ val KClass<Items>.RED_STAINED_GLASS_PANE by aliasStatic(Items::field_8879)
  * field_8637
  */
 val KClass<Items>.CYAN_CONCRETE by aliasStatic(Items::field_8637)
+/**
+ * field_8855
+ */
+val KClass<Items>.LIGHT_GRAY_BANNER by aliasStatic(Items::field_8855)
 /**
  * field_8746
  */
@@ -633,6 +841,10 @@ val KClass<Items>.COBBLESTONE_SLAB by aliasStatic(Items::field_8194)
  * field_46994
  */
 val KClass<Items>.OXIDIZED_COPPER_TRAPDOOR by aliasStatic(Items::field_46994)
+/**
+ * field_54613
+ */
+val KClass<Items>.PALE_OAK_FENCE by aliasStatic(Items::field_54613)
 /**
  * field_37520
  */
@@ -794,6 +1006,10 @@ val KClass<Items>.WHITE_CANDLE by aliasStatic(Items::field_27025)
  */
 val KClass<Items>.SCULK by aliasStatic(Items::field_37523)
 /**
+ * field_42708
+ */
+val KClass<Items>.CHERRY_HANGING_SIGN by aliasStatic(Items::field_42708)
+/**
  * field_8418
  */
 val KClass<Items>.LIME_CONCRETE_POWDER by aliasStatic(Items::field_8418)
@@ -942,6 +1158,10 @@ val KClass<Items>.FIRE_CORAL by aliasStatic(Items::field_8546)
  */
 val KClass<Items>.ACTIVATOR_RAIL by aliasStatic(Items::field_8655)
 /**
+ * field_8788
+ */
+val KClass<Items>.OAK_SIGN by aliasStatic(Items::field_8788)
+/**
  * field_8522
  */
 val KClass<Items>.RED_NETHER_BRICK_SLAB by aliasStatic(Items::field_8522)
@@ -957,6 +1177,10 @@ val KClass<Items>.BREWING_STAND by aliasStatic(Items::field_8740)
  * field_27067
  */
 val KClass<Items>.MEDIUM_AMETHYST_BUD by aliasStatic(Items::field_27067)
+/**
+ * field_54619
+ */
+val KClass<Items>.PALE_OAK_DOOR by aliasStatic(Items::field_54619)
 /**
  * field_27043
  */
@@ -1049,6 +1273,10 @@ val KClass<Items>.SEA_LANTERN by aliasStatic(Items::field_8305)
  * field_8438
  */
 val KClass<Items>.BIRCH_DOOR by aliasStatic(Items::field_8438)
+/**
+ * field_8329
+ */
+val KClass<Items>.PINK_BANNER by aliasStatic(Items::field_8329)
 /**
  * field_22015
  */
@@ -1162,6 +1390,10 @@ val KClass<Items>.SMOOTH_SANDSTONE_SLAB by aliasStatic(Items::field_8872)
  */
 val KClass<Items>.WAXED_EXPOSED_CUT_COPPER_STAIRS by aliasStatic(Items::field_27046)
 /**
+ * field_54614
+ */
+val KClass<Items>.PALE_OAK_STAIRS by aliasStatic(Items::field_54614)
+/**
  * field_20387
  */
 val KClass<Items>.SMOOTH_RED_SANDSTONE by aliasStatic(Items::field_20387)
@@ -1234,9 +1466,17 @@ val KClass<Items>.ACACIA_PLANKS by aliasStatic(Items::field_8651)
  */
 val KClass<Items>.SMOOTH_BASALT by aliasStatic(Items::field_29024)
 /**
+ * field_55040
+ */
+val KClass<Items>.RESIN_BRICK_STAIRS by aliasStatic(Items::field_55040)
+/**
  * field_20386
  */
 val KClass<Items>.SMOOTH_QUARTZ by aliasStatic(Items::field_20386)
+/**
+ * field_54615
+ */
+val KClass<Items>.PALE_OAK_BUTTON by aliasStatic(Items::field_54615)
 /**
  * field_8104
  */
@@ -1253,6 +1493,10 @@ val KClass<Items>.PINK_WOOL by aliasStatic(Items::field_19050)
  * field_8213
  */
 val KClass<Items>.CYAN_SHULKER_BOX by aliasStatic(Items::field_8213)
+/**
+ * field_8128
+ */
+val KClass<Items>.BLUE_BANNER by aliasStatic(Items::field_8128)
 /**
  * field_46976
  */
@@ -1310,13 +1554,25 @@ val KClass<Items>.DEEPSLATE_REDSTONE_ORE by aliasStatic(Items::field_29023)
  */
 val KClass<Items>.RED_GLAZED_TERRACOTTA by aliasStatic(Items::field_8870)
 /**
+ * field_55041
+ */
+val KClass<Items>.RESIN_BRICK_SLAB by aliasStatic(Items::field_55041)
+/**
  * field_48847
  */
 val KClass<Items>.VAULT by aliasStatic(Items::field_48847)
 /**
+ * field_55042
+ */
+val KClass<Items>.RESIN_BRICK_WALL by aliasStatic(Items::field_55042)
+/**
  * field_18889
  */
 val KClass<Items>.CUT_SANDSTONE_SLAB by aliasStatic(Items::field_18889)
+/**
+ * field_54616
+ */
+val KClass<Items>.PALE_OAK_PRESSURE_PLATE by aliasStatic(Items::field_54616)
 /**
  * field_22019
  */
@@ -1378,9 +1634,17 @@ val KClass<Items>.ANVIL by aliasStatic(Items::field_8782)
  */
 val KClass<Items>.BUDDING_AMETHYST by aliasStatic(Items::field_27065)
 /**
+ * field_55043
+ */
+val KClass<Items>.CHISELED_RESIN_BRICKS by aliasStatic(Items::field_55043)
+/**
  * field_20388
  */
 val KClass<Items>.SMOOTH_SANDSTONE by aliasStatic(Items::field_20388)
+/**
+ * field_54617
+ */
+val KClass<Items>.PALE_OAK_TRAPDOOR by aliasStatic(Items::field_54617)
 /**
  * field_16312
  */
@@ -1450,6 +1714,10 @@ val KClass<Items>.INFESTED_STONE_BRICKS by aliasStatic(Items::field_8541)
  */
 val KClass<Items>.POLISHED_DIORITE_STAIRS by aliasStatic(Items::field_8650)
 /**
+ * field_54618
+ */
+val KClass<Items>.PALE_OAK_FENCE_GATE by aliasStatic(Items::field_54618)
+/**
  * field_27066
  */
 val KClass<Items>.SMALL_AMETHYST_BUD by aliasStatic(Items::field_27066)
@@ -1481,10 +1749,6 @@ val KClass<Items>.NETHERITE_SHOVEL by aliasStatic(Items::field_22023)
  * field_8577
  */
 val KClass<Items>.LEATHER_CHESTPLATE by aliasStatic(Items::field_8577)
-/**
- * field_8572
- */
-val KClass<Items>.BLACK_BANNER by aliasStatic(Items::field_8572)
 /**
  * field_22028
  */
@@ -1590,10 +1854,6 @@ val KClass<Items>.STONE_HOE by aliasStatic(Items::field_8431)
  */
 val KClass<Items>.SILVERFISH_SPAWN_EGG by aliasStatic(Items::field_8564)
 /**
- * field_22012
- */
-val KClass<Items>.WARPED_SIGN by aliasStatic(Items::field_22012)
-/**
  * field_44705
  */
 val KClass<Items>.MUSIC_DISC_RELIC by aliasStatic(Items::field_44705)
@@ -1613,10 +1873,6 @@ val KClass<Items>.SKELETON_SPAWN_EGG by aliasStatic(Items::field_8300)
  * field_8696
  */
 val KClass<Items>.CLAY_BALL by aliasStatic(Items::field_8696)
-/**
- * field_22011
- */
-val KClass<Items>.CRIMSON_SIGN by aliasStatic(Items::field_22011)
 /**
  * field_8560
  */
@@ -1670,10 +1926,6 @@ val KClass<Items>.COOKIE by aliasStatic(Items::field_8423)
  */
 val KClass<Items>.DIAMOND_AXE by aliasStatic(Items::field_8556)
 /**
- * field_8422
- */
-val KClass<Items>.BIRCH_SIGN by aliasStatic(Items::field_8422)
-/**
  * field_8425
  */
 val KClass<Items>.MUSIC_DISC_BLOCKS by aliasStatic(Items::field_8425)
@@ -1685,10 +1937,6 @@ val KClass<Items>.DEBUG_STICK by aliasStatic(Items::field_8688)
  * field_8557
  */
 val KClass<Items>.CLOCK by aliasStatic(Items::field_8557)
-/**
- * field_8203
- */
-val KClass<Items>.ACACIA_SIGN by aliasStatic(Items::field_8203)
 /**
  * field_8469
  */
@@ -1730,9 +1978,25 @@ val KClass<Items>.GLISTERING_MELON_SLICE by aliasStatic(Items::field_8597)
  */
 val KClass<Items>.JUNGLE_CHEST_BOAT by aliasStatic(Items::field_38212)
 /**
+ * field_54302
+ */
+val KClass<Items>.WHITE_BUNDLE by aliasStatic(Items::field_54302)
+/**
+ * field_54303
+ */
+val KClass<Items>.ORANGE_BUNDLE by aliasStatic(Items::field_54303)
+/**
+ * field_54304
+ */
+val KClass<Items>.MAGENTA_BUNDLE by aliasStatic(Items::field_54304)
+/**
  * field_39057
  */
 val KClass<Items>.GOAT_HORN by aliasStatic(Items::field_39057)
+/**
+ * field_54305
+ */
+val KClass<Items>.LIGHT_BLUE_BUNDLE by aliasStatic(Items::field_54305)
 /**
  * field_8814
  */
@@ -1741,6 +2005,22 @@ val KClass<Items>.FIRE_CHARGE by aliasStatic(Items::field_8814)
  * field_8815
  */
 val KClass<Items>.SHULKER_SHELL by aliasStatic(Items::field_8815)
+/**
+ * field_54306
+ */
+val KClass<Items>.YELLOW_BUNDLE by aliasStatic(Items::field_54306)
+/**
+ * field_54307
+ */
+val KClass<Items>.LIME_BUNDLE by aliasStatic(Items::field_54307)
+/**
+ * field_54308
+ */
+val KClass<Items>.PINK_BUNDLE by aliasStatic(Items::field_54308)
+/**
+ * field_54309
+ */
+val KClass<Items>.GRAY_BUNDLE by aliasStatic(Items::field_54309)
 /**
  * field_38217
  */
@@ -1762,10 +2042,6 @@ val KClass<Items>.BIRCH_CHEST_BOAT by aliasStatic(Items::field_38218)
  */
 val KClass<Items>.AXOLOTL_BUCKET by aliasStatic(Items::field_28354)
 /**
- * field_8329
- */
-val KClass<Items>.PINK_BANNER by aliasStatic(Items::field_8329)
-/**
  * field_27023
  */
 val KClass<Items>.BUNDLE by aliasStatic(Items::field_27023)
@@ -1773,279 +2049,3 @@ val KClass<Items>.BUNDLE by aliasStatic(Items::field_27023)
  * field_38215
  */
 val KClass<Items>.MANGROVE_CHEST_BOAT by aliasStatic(Items::field_38215)
-/**
- * field_28355
- */
-val KClass<Items>.AXOLOTL_SPAWN_EGG by aliasStatic(Items::field_28355)
-/**
- * field_38216
- */
-val KClass<Items>.OAK_CHEST_BOAT by aliasStatic(Items::field_38216)
-/**
- * field_8325
- */
-val KClass<Items>.PILLAGER_SPAWN_EGG by aliasStatic(Items::field_8325)
-/**
- * field_38219
- */
-val KClass<Items>.WARDEN_SPAWN_EGG by aliasStatic(Items::field_38219)
-/**
- * field_8322
- */
-val KClass<Items>.GOLDEN_SHOVEL by aliasStatic(Items::field_8322)
-/**
- * field_8324
- */
-val KClass<Items>.BONE_MEAL by aliasStatic(Items::field_8324)
-/**
- * field_8323
- */
-val KClass<Items>.PUFFERFISH by aliasStatic(Items::field_8323)
-/**
- * field_8450
- */
-val KClass<Items>.FIREWORK_STAR by aliasStatic(Items::field_8450)
-/**
- * field_8586
- */
-val KClass<Items>.RED_BANNER by aliasStatic(Items::field_8586)
-/**
- * field_8806
- */
-val KClass<Items>.MUSIC_DISC_WAIT by aliasStatic(Items::field_8806)
-/**
- * field_8807
- */
-val KClass<Items>.DIAMOND_HORSE_ARMOR by aliasStatic(Items::field_8807)
-/**
- * field_8805
- */
-val KClass<Items>.DIAMOND_HELMET by aliasStatic(Items::field_8805)
-/**
- * field_8802
- */
-val KClass<Items>.DIAMOND_SWORD by aliasStatic(Items::field_8802)
-/**
- * field_8803
- */
-val KClass<Items>.EGG by aliasStatic(Items::field_8803)
-/**
- * field_8099
- */
-val KClass<Items>.BROWN_DYE by aliasStatic(Items::field_8099)
-/**
- * field_38974
- */
-val KClass<Items>.DISC_FRAGMENT_5 by aliasStatic(Items::field_38974)
-/**
- * field_47832
- */
-val KClass<Items>.ARMADILLO_SPAWN_EGG by aliasStatic(Items::field_47832)
-/**
- * field_47831
- */
-val KClass<Items>.WOLF_ARMOR by aliasStatic(Items::field_47831)
-/**
- * field_8094
- */
-val KClass<Items>.ACACIA_BOAT by aliasStatic(Items::field_8094)
-/**
- * field_47830
- */
-val KClass<Items>.ARMADILLO_SCUTE by aliasStatic(Items::field_47830)
-/**
- * field_8093
- */
-val KClass<Items>.ZOMBIFIED_PIGLIN_SPAWN_EGG by aliasStatic(Items::field_8093)
-/**
- * field_8090
- */
-val KClass<Items>.TURTLE_HELMET by aliasStatic(Items::field_8090)
-/**
- * field_8317
- */
-val KClass<Items>.WHEAT_SEEDS by aliasStatic(Items::field_8317)
-/**
- * field_8091
- */
-val KClass<Items>.WOODEN_SWORD by aliasStatic(Items::field_8091)
-/**
- * field_8447
- */
-val KClass<Items>.SALMON_SPAWN_EGG by aliasStatic(Items::field_8447)
-/**
- * field_8313
- */
-val KClass<Items>.CHAINMAIL_BOOTS by aliasStatic(Items::field_8313)
-/**
- * field_8446
- */
-val KClass<Items>.WHITE_DYE by aliasStatic(Items::field_8446)
-/**
- * field_38973
- */
-val KClass<Items>.MUSIC_DISC_5 by aliasStatic(Items::field_38973)
-/**
- * field_8449
- */
-val KClass<Items>.ENDER_EYE by aliasStatic(Items::field_8449)
-/**
- * field_8448
- */
-val KClass<Items>.NAME_TAG by aliasStatic(Items::field_8448)
-/**
- * field_8227
- */
-val KClass<Items>.RABBIT_SPAWN_EGG by aliasStatic(Items::field_8227)
-/**
- * field_8226
- */
-val KClass<Items>.BLACK_DYE by aliasStatic(Items::field_8226)
-/**
- * field_8220
- */
-val KClass<Items>.COMMAND_BLOCK_MINECART by aliasStatic(Items::field_8220)
-/**
- * field_8486
- */
-val KClass<Items>.SPRUCE_BOAT by aliasStatic(Items::field_8486)
-/**
- * field_8355
- */
-val KClass<Items>.MUSIC_DISC_WARD by aliasStatic(Items::field_8355)
-/**
- * field_8485
- */
-val KClass<Items>.WOLF_SPAWN_EGG by aliasStatic(Items::field_8485)
-/**
- * field_18138
- */
-val KClass<Items>.LEATHER_HORSE_ARMOR by aliasStatic(Items::field_18138)
-/**
- * field_18005
- */
-val KClass<Items>.FOX_SPAWN_EGG by aliasStatic(Items::field_18005)
-/**
- * field_50140
- */
-val KClass<Items>.OMINOUS_BOTTLE by aliasStatic(Items::field_50140)
-/**
- * field_8705
- */
-val KClass<Items>.WATER_BUCKET by aliasStatic(Items::field_8705)
-/**
- * field_8480
- */
-val KClass<Items>.SHULKER_SPAWN_EGG by aliasStatic(Items::field_8480)
-/**
- * field_8836
- */
-val KClass<Items>.HOPPER_MINECART by aliasStatic(Items::field_8836)
-/**
- * field_8834
- */
-val KClass<Items>.MUSIC_DISC_STAL by aliasStatic(Items::field_8834)
-/**
- * field_8835
- */
-val KClass<Items>.CHICKEN_SPAWN_EGG by aliasStatic(Items::field_8835)
-/**
- * field_8832
- */
-val KClass<Items>.WITHER_SKELETON_SPAWN_EGG by aliasStatic(Items::field_8832)
-/**
- * field_8833
- */
-val KClass<Items>.ELYTRA by aliasStatic(Items::field_8833)
-/**
- * field_8218
- */
-val KClass<Items>.CHAINMAIL_LEGGINGS by aliasStatic(Items::field_8218)
-/**
- * field_8479
- */
-val KClass<Items>.SUGAR by aliasStatic(Items::field_8479)
-/**
- * field_8346
- */
-val KClass<Items>.POLAR_BEAR_SPAWN_EGG by aliasStatic(Items::field_8346)
-/**
- * field_8345
- */
-val KClass<Items>.BLUE_DYE by aliasStatic(Items::field_8345)
-/**
- * field_8478
- */
-val KClass<Items>.TROPICAL_FISH_BUCKET by aliasStatic(Items::field_8478)
-/**
- * field_8348
- */
-val KClass<Items>.DIAMOND_LEGGINGS by aliasStatic(Items::field_8348)
-/**
- * field_43196
- */
-val KClass<Items>.WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE by aliasStatic(Items::field_43196)
-/**
- * field_8347
- */
-val KClass<Items>.COOKED_MUTTON by aliasStatic(Items::field_8347)
-/**
- * field_43195
- */
-val KClass<Items>.PITCHER_POD by aliasStatic(Items::field_43195)
-/**
- * field_8475
- */
-val KClass<Items>.IRON_AXE by aliasStatic(Items::field_8475)
-/**
- * field_8477
- */
-val KClass<Items>.DIAMOND by aliasStatic(Items::field_8477)
-/**
- * field_8344
- */
-val KClass<Items>.MUSIC_DISC_MELLOHI by aliasStatic(Items::field_8344)
-/**
- * field_27876
- */
-val KClass<Items>.POWDER_SNOW_BUCKET by aliasStatic(Items::field_27876)
-/**
- * field_42707
- */
-val KClass<Items>.CHERRY_CHEST_BOAT by aliasStatic(Items::field_42707)
-/**
- * field_42706
- */
-val KClass<Items>.CHERRY_BOAT by aliasStatic(Items::field_42706)
-/**
- * field_43198
- */
-val KClass<Items>.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE by aliasStatic(Items::field_43198)
-/**
- * field_43197
- */
-val KClass<Items>.SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE by aliasStatic(Items::field_43197)
-/**
- * field_43199
- */
-val KClass<Items>.RAISER_ARMOR_TRIM_SMITHING_TEMPLATE by aliasStatic(Items::field_43199)
-/**
- * field_37536
- */
-val KClass<Items>.TADPOLE_SPAWN_EGG by aliasStatic(Items::field_37536)
-/**
- * field_8824
- */
-val KClass<Items>.ORANGE_BANNER by aliasStatic(Items::field_8824)
-/**
- * field_8825
- */
-val KClass<Items>.GOLDEN_AXE by aliasStatic(Items::field_8825)
-/**
- * field_37534
- */
-val KClass<Items>.MANGROVE_SIGN by aliasStatic(Items::field_37534)
-/**
- * field_37535
- */
-val KClass<Items>.FROG_SPAWN_EGG by aliasStatic(Items::field_37535)

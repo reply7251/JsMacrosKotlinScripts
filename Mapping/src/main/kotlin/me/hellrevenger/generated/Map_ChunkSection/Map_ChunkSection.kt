@@ -42,6 +42,10 @@ fun ChunkSection.getBlockState(arg0: Int, arg1: Int, arg2: Int) = this.method_12
  */
 fun ChunkSection.hasRandomTicks() = this.method_12262()
 /**
+ * method_61771
+ */
+fun ChunkSection.copy() = this.method_61771()
+/**
  * method_12258
  */
 fun ChunkSection.readDataPacket(arg0: PacketByteBuf) = this.method_12258(arg0)

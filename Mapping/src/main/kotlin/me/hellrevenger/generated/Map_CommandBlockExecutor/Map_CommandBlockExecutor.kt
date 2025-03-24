@@ -28,11 +28,11 @@ fun CommandBlockExecutor.markDirty() = this.method_8295()
 /**
  * method_8299
  */
-fun CommandBlockExecutor.getCustomName() = this.method_8299()
+fun CommandBlockExecutor.getName() = this.method_8299()
 /**
  * method_57558
  */
-fun CommandBlockExecutor.getCustomNameNullable() = this.method_57558()
+fun CommandBlockExecutor.getCustomName() = this.method_57558()
 /**
  * method_8301
  */

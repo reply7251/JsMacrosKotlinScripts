@@ -10,13 +10,13 @@ fun KClass<DebugInfoSender>.sendChunkWatchingChange(arg0: ServerWorld, arg1: Chu
  */
 fun KClass<DebugInfoSender>.sendNeighborUpdate(arg0: world_World, arg1: BlockPos) = DebugInfoSender.method_19472(arg0, arg1)
 /**
- * method_19470
- */
-fun KClass<DebugInfoSender>.sendPathfindingData(arg0: world_World, arg1: MobEntity, arg2: Path, arg3: Float) = DebugInfoSender.method_19470(arg0, arg1, arg2, arg3)
-/**
  * method_19474
  */
 fun KClass<DebugInfoSender>.sendStructureStart(arg0: StructureWorldAccess, arg1: StructureStart) = DebugInfoSender.method_19474(arg0, arg1)
+/**
+ * method_19470
+ */
+fun KClass<DebugInfoSender>.sendPathfindingData(arg0: world_World, arg1: MobEntity, arg2: Path, arg3: Float) = DebugInfoSender.method_19470(arg0, arg1, arg2, arg3)
 /**
  * method_23855
  */
@@ -54,6 +54,10 @@ fun KClass<DebugInfoSender>.sendGoalSelector(arg0: world_World, arg1: MobEntity,
  */
 fun KClass<DebugInfoSender>.clearGameTestMarkers(arg0: ServerWorld) = DebugInfoSender.method_22317(arg0)
 /**
+ * method_61218
+ */
+fun KClass<DebugInfoSender>.sendRedstoneUpdateOrder(arg0: world_World, arg1: DebugRedstoneUpdateOrderCustomPayload) = DebugInfoSender.method_61218(arg0, arg1)
+/**
  * method_33140
  */
 fun KClass<DebugInfoSender>.sendGameEventListener(arg0: world_World, arg1: GameEventListener) = DebugInfoSender.method_33140(arg0, arg1)
@@ -62,10 +66,10 @@ fun KClass<DebugInfoSender>.sendGameEventListener(arg0: world_World, arg1: GameE
  */
 fun KClass<DebugInfoSender>.sendRaids(arg0: ServerWorld, arg1: Collection<Raid>) = DebugInfoSender.method_20575(arg0, arg1)
 /**
- * method_19774
- */
-fun KClass<DebugInfoSender>.sendBrainDebugData(arg0: LivingEntity) = DebugInfoSender.method_19774(arg0)
-/**
  * method_22318
  */
 fun KClass<DebugInfoSender>.addGameTestMarker(arg0: ServerWorld, arg1: BlockPos, arg2: String, arg3: Int, arg4: Int) = DebugInfoSender.method_22318(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_19774
+ */
+fun KClass<DebugInfoSender>.sendBrainDebugData(arg0: LivingEntity) = DebugInfoSender.method_19774(arg0)

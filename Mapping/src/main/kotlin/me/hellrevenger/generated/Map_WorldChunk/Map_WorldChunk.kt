@@ -6,13 +6,17 @@ import me.hellrevenger.generated.*
  */
 fun WorldChunk.loadBiomeFromPacket(arg0: PacketByteBuf) = this.method_49525(arg0)
 /**
+ * method_12221
+ */
+fun WorldChunk.runPostProcessing(arg0: ServerWorld) = this.method_12221(arg0)
+/**
  * method_12207
  */
 fun WorldChunk.setLevelTypeProvider(arg0: Supplier<ChunkLevelType>) = this.method_12207(arg0)
 /**
- * method_12221
+ * method_65066
  */
-fun WorldChunk.runPostProcessing() = this.method_12221()
+fun WorldChunk.setUnsavedListener(arg0: net.minecraft.class_2818.class_10368) = this.method_65066(arg0)
 /**
  * method_38289
  */

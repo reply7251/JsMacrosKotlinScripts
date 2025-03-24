@@ -25,7 +25,3 @@ fun <E>BlockEntityRenderDispatcher.render(arg0: E, arg1: Float, arg2: MatrixStac
  * method_3550
  */
 fun <E>BlockEntityRenderDispatcher.get(arg0: E) where E: BlockEntity = this.method_3550<E>(arg0)
-/**
- * method_23077
- */
-fun <E>BlockEntityRenderDispatcher.renderEntity(arg0: E, arg1: MatrixStack, arg2: VertexConsumerProvider, arg3: Int, arg4: Int) where E: BlockEntity = this.method_23077<E>(arg0, arg1, arg2, arg3, arg4)

@@ -14,6 +14,10 @@ val KClass<LightmapTextureManager>.MAX_SKY_LIGHT_COORDINATE by aliasStatic(Light
  */
 val KClass<LightmapTextureManager>.MAX_BLOCK_LIGHT_COORDINATE by aliasStatic(LightmapTextureManager::field_32769)
 /**
+ * method_62226
+ */
+fun KClass<LightmapTextureManager>.getBrightness(arg0: Float, arg1: Int) = LightmapTextureManager.method_62226(arg0, arg1)
+/**
  * method_24186
  */
 fun KClass<LightmapTextureManager>.getBlockLightCoordinates(arg0: Int) = LightmapTextureManager.method_24186(arg0)
@@ -21,6 +25,10 @@ fun KClass<LightmapTextureManager>.getBlockLightCoordinates(arg0: Int) = Lightma
  * method_24187
  */
 fun KClass<LightmapTextureManager>.getSkyLightCoordinates(arg0: Int) = LightmapTextureManager.method_24187(arg0)
+/**
+ * method_62228
+ */
+fun KClass<LightmapTextureManager>.applyEmission(arg0: Int, arg1: Int) = LightmapTextureManager.method_62228(arg0, arg1)
 /**
  * method_3316
  */

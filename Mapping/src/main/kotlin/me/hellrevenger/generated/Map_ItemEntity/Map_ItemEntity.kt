@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val ItemEntity.uniqueOffset by alias(ItemEntity::field_7203)
 /**
+ * field_7199
+ */
+val KClass<ItemEntity>.STACK by aliasStatic(ItemEntity::field_7199)
+/**
  * method_35190
  */
 fun ItemEntity.setNeverDespawn() = this.method_35190()
@@ -29,10 +33,6 @@ fun ItemEntity.setPickupDelay(arg0: Int) = this.method_6982(arg0)
  * method_6983
  */
 fun ItemEntity.getStack() = this.method_6983()
-/**
- * method_27314
- */
-fun ItemEntity.getRotation(arg0: Float) = this.method_27314(arg0)
 /**
  * method_6988
  */
@@ -69,6 +69,10 @@ fun ItemEntity.resetPickupDelay() = this.method_6975()
  * method_6989
  */
 fun ItemEntity.setPickupDelayInfinite() = this.method_6989()
+/**
+ * method_27314
+ */
+fun KClass<ItemEntity>.getRotation(arg0: Float, arg1: Float) = ItemEntity.method_27314(arg0, arg1)
 /**
  * method_6977
  */

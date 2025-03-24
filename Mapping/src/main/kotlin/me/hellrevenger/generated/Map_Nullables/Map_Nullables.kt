@@ -42,6 +42,10 @@ fun <T, R>KClass<Nullables>.mapOrElse(arg0: T, arg1: function_Function<T, R>, ar
  */
 fun KClass<Nullables>.isEmpty(arg0: FloatArray) = Nullables.method_49086(arg0)
 /**
+ * method_62789
+ */
+fun <T>KClass<Nullables>.requireNonNullElse(arg0: T, arg1: T) = Nullables.method_62789<T>(arg0, arg1)
+/**
  * method_49081
  */
 fun <T>KClass<Nullables>.getFirstOrElse(arg0: Collection<T>, arg1: T) = Nullables.method_49081<T>(arg0, arg1)

@@ -29,3 +29,7 @@ val KClass<RedstoneWireBlock>.DIRECTION_TO_WIRE_CONNECTION_PROPERTY by aliasStat
  * method_10487
  */
 fun KClass<RedstoneWireBlock>.getWireColor(arg0: Int) = RedstoneWireBlock.method_10487(arg0)
+/**
+ * method_61746
+ */
+fun RedstoneWireBlock.getStrongPower(arg0: world_World, arg1: BlockPos) = this.method_61746(arg0, arg1)

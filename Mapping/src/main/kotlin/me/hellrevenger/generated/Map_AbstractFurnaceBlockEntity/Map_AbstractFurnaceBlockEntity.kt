@@ -26,33 +26,13 @@ val KClass<AbstractFurnaceBlockEntity>.PROPERTY_COUNT by aliasStatic(AbstractFur
  */
 val KClass<AbstractFurnaceBlockEntity>.BURN_TIME_PROPERTY_INDEX by aliasStatic(AbstractFurnaceBlockEntity::field_31289)
 /**
- * method_11194
- */
-fun KClass<AbstractFurnaceBlockEntity>.addFuel(arg0: Map<Item, Int>, arg1: TagKey<Item>, arg2: Int) = AbstractFurnaceBlockEntity.method_11194(arg0, arg1, arg2)
-/**
  * method_27354
  */
 fun AbstractFurnaceBlockEntity.getRecipesUsedAndDropExperience(arg0: ServerWorld, arg1: Vec3d) = this.method_27354(arg0, arg1)
 /**
- * method_11195
- */
-fun KClass<AbstractFurnaceBlockEntity>.canUseAsFuel(arg0: ItemStack) = AbstractFurnaceBlockEntity.method_11195(arg0)
-/**
- * method_56120
- */
-fun KClass<AbstractFurnaceBlockEntity>.clearFuelTimes() = AbstractFurnaceBlockEntity.method_56120()
-/**
- * method_11196
- */
-fun KClass<AbstractFurnaceBlockEntity>.createFuelTimeMap() = AbstractFurnaceBlockEntity.method_11196()
-/**
- * method_11202
- */
-fun KClass<AbstractFurnaceBlockEntity>.addFuel(arg0: Map<Item, Int>, arg1: ItemConvertible, arg2: Int) = AbstractFurnaceBlockEntity.method_11202(arg0, arg1, arg2)
-/**
  * method_31651
  */
-fun KClass<AbstractFurnaceBlockEntity>.tick(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: AbstractFurnaceBlockEntity) = AbstractFurnaceBlockEntity.method_31651(arg0, arg1, arg2, arg3)
+fun KClass<AbstractFurnaceBlockEntity>.tick(arg0: ServerWorld, arg1: BlockPos, arg2: BlockState, arg3: AbstractFurnaceBlockEntity) = AbstractFurnaceBlockEntity.method_31651(arg0, arg1, arg2, arg3)
 /**
  * method_17763
  */

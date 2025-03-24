@@ -42,10 +42,6 @@ fun FluidState.isStill() = this.method_15771()
  */
 fun FluidState.hasRandomTicks() = this.method_15773()
 /**
- * method_15757
- */
-fun FluidState.onRandomTick(arg0: world_World, arg1: BlockPos, arg2: Random) = this.method_15757(arg0, arg1, arg2)
-/**
  * method_15756
  */
 fun FluidState.canFlowTo(arg0: BlockView, arg1: BlockPos) = this.method_15756(arg0, arg1)
@@ -58,6 +54,10 @@ fun FluidState.getRegistryEntry() = this.method_40180()
  */
 fun FluidState.isIn(arg0: TagKey<Fluid>) = this.method_15767(arg0)
 /**
+ * method_15770
+ */
+fun FluidState.onScheduledTick(arg0: ServerWorld, arg1: BlockPos, arg2: BlockState) = this.method_15770(arg0, arg1, arg2)
+/**
  * method_15772
  */
 fun FluidState.getFluid() = this.method_15772()
@@ -65,10 +65,6 @@ fun FluidState.getFluid() = this.method_15772()
  * method_15761
  */
 fun FluidState.getLevel() = this.method_15761()
-/**
- * method_15770
- */
-fun FluidState.onScheduledTick(arg0: world_World, arg1: BlockPos) = this.method_15770(arg0, arg1)
 /**
  * method_15763
  */
@@ -81,6 +77,10 @@ fun FluidState.isEmpty() = this.method_15769()
  * method_15766
  */
 fun FluidState.getParticle() = this.method_15766()
+/**
+ * method_15757
+ */
+fun FluidState.onRandomTick(arg0: ServerWorld, arg1: BlockPos, arg2: Random) = this.method_15757(arg0, arg1, arg2)
 /**
  * method_15759
  */

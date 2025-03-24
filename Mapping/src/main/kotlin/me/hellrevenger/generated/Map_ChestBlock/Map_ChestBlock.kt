@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_ChestBlock
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_10768
+ */
+val KClass<ChestBlock>.FACING by aliasStatic(ChestBlock::field_10768)
+/**
  * field_10772
  */
 val KClass<ChestBlock>.WATERLOGGED by aliasStatic(ChestBlock::field_10772)
@@ -9,10 +13,6 @@ val KClass<ChestBlock>.WATERLOGGED by aliasStatic(ChestBlock::field_10772)
  * field_10770
  */
 val KClass<ChestBlock>.CHEST_TYPE by aliasStatic(ChestBlock::field_10770)
-/**
- * field_10768
- */
-val KClass<ChestBlock>.FACING by aliasStatic(ChestBlock::field_10768)
 /**
  * method_31641
  */

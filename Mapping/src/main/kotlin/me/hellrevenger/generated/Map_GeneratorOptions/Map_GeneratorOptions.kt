@@ -42,6 +42,10 @@ fun KClass<GeneratorOptions>.createRandom() = GeneratorOptions.method_45541()
  */
 fun GeneratorOptions.shouldGenerateStructures() = this.method_28029()
 /**
+ * method_64223
+ */
+fun KClass<GeneratorOptions>.createTestWorld() = GeneratorOptions.method_64223()
+/**
  * method_28024
  */
 fun GeneratorOptions.withSeed(arg0: OptionalLong) = this.method_28024(arg0)

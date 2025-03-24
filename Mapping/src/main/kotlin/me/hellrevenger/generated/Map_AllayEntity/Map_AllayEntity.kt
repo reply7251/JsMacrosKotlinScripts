@@ -18,6 +18,10 @@ fun AllayEntity.isHoldingItem() = this.method_43396()
  */
 fun AllayEntity.isDancing() = this.method_44359()
 /**
+ * method_43397
+ */
+fun AllayEntity.getItemHoldAnimationTicks(arg0: Float) = this.method_43397(arg0)
+/**
  * method_44367
  */
 fun AllayEntity.setDancing(arg0: Boolean) = this.method_44367(arg0)
@@ -29,3 +33,7 @@ fun KClass<AllayEntity>.createAllayAttributes() = AllayEntity.method_42655()
  * method_44360
  */
 fun AllayEntity.isSpinning() = this.method_44360()
+/**
+ * method_44368
+ */
+fun AllayEntity.getSpinningAnimationTicks(arg0: Float) = this.method_44368(arg0)

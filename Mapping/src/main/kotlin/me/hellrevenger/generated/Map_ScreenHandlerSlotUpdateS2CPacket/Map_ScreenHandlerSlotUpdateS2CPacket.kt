@@ -2,14 +2,6 @@ package me.hellrevenger.generated.Map_ScreenHandlerSlotUpdateS2CPacket
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_33325
- */
-val KClass<ScreenHandlerSlotUpdateS2CPacket>.UPDATE_PLAYER_INVENTORY_SYNC_ID by aliasStatic(ScreenHandlerSlotUpdateS2CPacket::field_33325)
-/**
- * field_33324
- */
-val KClass<ScreenHandlerSlotUpdateS2CPacket>.UPDATE_CURSOR_SYNC_ID by aliasStatic(ScreenHandlerSlotUpdateS2CPacket::field_33324)
-/**
  * method_37439
  */
 fun ScreenHandlerSlotUpdateS2CPacket.getRevision() = this.method_37439()

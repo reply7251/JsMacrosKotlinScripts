@@ -2,9 +2,13 @@ package me.hellrevenger.generated.Map_AnimationState
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_43686
+ * method_61400
  */
-fun AnimationState.update(arg0: Float, arg1: Float) = this.method_43686(arg0, arg1)
+fun AnimationState.getTimeInMilliseconds(arg0: Float) = this.method_61400(arg0)
+/**
+ * method_61401
+ */
+fun AnimationState.copyFrom(arg0: AnimationState) = this.method_61401(arg0)
 /**
  * method_45317
  */
@@ -29,10 +33,6 @@ fun AnimationState.run(arg0: Consumer<AnimationState>) = this.method_41323(arg0)
  * method_41322
  */
 fun AnimationState.start(arg0: Int) = this.method_41322(arg0)
-/**
- * method_43687
- */
-fun AnimationState.getTimeRunning() = this.method_43687()
 /**
  * method_41324
  */

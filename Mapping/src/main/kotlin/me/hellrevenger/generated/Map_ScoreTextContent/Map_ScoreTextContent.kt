@@ -6,14 +6,10 @@ import me.hellrevenger.generated.*
  */
 val KClass<ScoreTextContent>.TYPE by aliasStatic(ScoreTextContent::field_46628)
 /**
- * method_10930
+ * comp_3078
  */
-fun ScoreTextContent.getName() = this.method_10930()
+fun ScoreTextContent.name() = this.comp_3078()
 /**
- * method_10928
+ * comp_3079
  */
-fun ScoreTextContent.getObjective() = this.method_10928()
-/**
- * method_36137
- */
-fun ScoreTextContent.getSelector() = this.method_36137()
+fun ScoreTextContent.objective() = this.comp_3079()

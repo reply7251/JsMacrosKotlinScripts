@@ -10,10 +10,6 @@ val KClass<TutorialToast>.PROGRESS_BAR_HEIGHT by aliasStatic(TutorialToast::fiel
  */
 val KClass<TutorialToast>.PROGRESS_BAR_WIDTH by aliasStatic(TutorialToast::field_32222)
 /**
- * field_32225
- */
-val KClass<TutorialToast>.PROGRESS_BAR_Y by aliasStatic(TutorialToast::field_32225)
-/**
  * field_32224
  */
 val KClass<TutorialToast>.PROGRESS_BAR_X by aliasStatic(TutorialToast::field_32224)

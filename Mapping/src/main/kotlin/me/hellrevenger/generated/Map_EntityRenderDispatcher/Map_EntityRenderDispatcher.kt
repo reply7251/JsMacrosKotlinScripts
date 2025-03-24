@@ -30,6 +30,10 @@ fun <E>EntityRenderDispatcher.getLight(arg0: E, arg1: Float) where E: Entity = t
  */
 fun EntityRenderDispatcher.getHeldItemRenderer() = this.method_43336()
 /**
+ * method_62424
+ */
+fun <E>EntityRenderDispatcher.render(arg0: E, arg1: Double, arg2: Double, arg3: Double, arg4: Float, arg5: MatrixStack, arg6: VertexConsumerProvider, arg7: Int) where E: Entity = this.method_62424<E>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+/**
  * method_23168
  */
 fun EntityRenderDispatcher.getSquaredDistanceToCamera(arg0: Entity) = this.method_23168(arg0)
@@ -49,10 +53,6 @@ fun EntityRenderDispatcher.configure(arg0: world_World, arg1: Camera, arg2: Enti
  * method_3958
  */
 fun EntityRenderDispatcher.shouldRenderHitboxes() = this.method_3958()
-/**
- * method_3954
- */
-fun <E>EntityRenderDispatcher.render(arg0: E, arg1: Double, arg2: Double, arg3: Double, arg4: Float, arg5: Float, arg6: MatrixStack, arg7: VertexConsumerProvider, arg8: Int) where E: Entity = this.method_3954<E>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
 /**
  * method_3955
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_22568
  */
-fun LootTableReporter.withContextType(arg0: LootContextType) = this.method_22568(arg0)
+fun LootTableReporter.withContextType(arg0: ContextType) = this.method_22568(arg0)
 /**
  * method_360
  */

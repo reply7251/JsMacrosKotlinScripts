@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 val KClass<BlockTags>.GUARDED_BY_PIGLINS by aliasStatic(BlockTags::field_23800)
 /**
- * field_20338
- */
-val KClass<BlockTags>.TALL_FLOWERS by aliasStatic(BlockTags::field_20338)
-/**
  * field_35567
  */
 val KClass<BlockTags>.ANIMALS_SPAWNABLE_ON by aliasStatic(BlockTags::field_35567)
@@ -226,6 +222,10 @@ val KClass<BlockTags>.ENCHANTMENT_POWER_PROVIDER by aliasStatic(BlockTags::field
  */
 val KClass<BlockTags>.CONVERTABLE_TO_MUD by aliasStatic(BlockTags::field_37397)
 /**
+ * field_54057
+ */
+val KClass<BlockTags>.BATS_SPAWNABLE_ON by aliasStatic(BlockTags::field_54057)
+/**
  * field_39030
  */
 val KClass<BlockTags>.OVERWORLD_NATURAL_LOGS by aliasStatic(BlockTags::field_39030)
@@ -317,6 +317,10 @@ val KClass<BlockTags>.SOUL_FIRE_BASE_BLOCKS by aliasStatic(BlockTags::field_2311
  * field_22414
  */
 val KClass<BlockTags>.CLIMBABLE by aliasStatic(BlockTags::field_22414)
+/**
+ * field_54553
+ */
+val KClass<BlockTags>.PALE_OAK_LOGS by aliasStatic(BlockTags::field_54553)
 /**
  * field_15468
  */
@@ -469,6 +473,10 @@ val KClass<BlockTags>.DARK_OAK_LOGS by aliasStatic(BlockTags::field_15485)
  * field_28040
  */
 val KClass<BlockTags>.INSIDE_STEP_SOUND_BLOCKS by aliasStatic(BlockTags::field_28040)
+/**
+ * field_55195
+ */
+val KClass<BlockTags>.BEE_ATTRACTIVE by aliasStatic(BlockTags::field_55195)
 /**
  * field_15487
  */

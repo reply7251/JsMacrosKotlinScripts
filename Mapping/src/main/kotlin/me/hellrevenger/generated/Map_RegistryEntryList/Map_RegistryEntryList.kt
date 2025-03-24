@@ -34,6 +34,10 @@ fun <T, E>KClass<RegistryEntryList<T>>.of(arg0: function_Function<E, RegistryEnt
  */
 fun <T>RegistryEntryList<T>.size() = this.method_40247()
 /**
+ * method_62680
+ */
+fun <T>RegistryEntryList<T>.isBound() = this.method_62680()
+/**
  * method_40246
  */
 fun <T>KClass<RegistryEntryList<T>>.of(arg0: Array<RegistryEntry<T>>) = RegistryEntryList.method_40246<T>(*arg0)

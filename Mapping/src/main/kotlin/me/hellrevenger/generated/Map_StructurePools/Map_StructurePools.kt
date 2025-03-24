@@ -21,3 +21,7 @@ fun KClass<StructurePools>.of(arg0: String) = StructurePools.method_60923(arg0)
  * method_46844
  */
 fun KClass<StructurePools>.ofVanilla(arg0: String) = StructurePools.method_46844(arg0)
+/**
+ * method_64955
+ */
+fun KClass<StructurePools>.of(arg0: Identifier) = StructurePools.method_64955(arg0)

@@ -22,10 +22,6 @@ fun PersistentProjectileEntity.getDamage() = this.method_7448()
  */
 fun PersistentProjectileEntity.setSound(arg0: SoundEvent) = this.method_7444(arg0)
 /**
- * method_7456
- */
-fun PersistentProjectileEntity.isShotFromCrossbow() = this.method_7456()
-/**
  * method_7438
  */
 fun PersistentProjectileEntity.setDamage(arg0: Double) = this.method_7438(arg0)

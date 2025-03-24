@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun CreeperEntity.setFuseSpeed(arg0: Int) = this.method_7005(arg0)
 /**
+ * method_61492
+ */
+fun CreeperEntity.isCharged() = this.method_61492()
+/**
  * method_7004
  */
 fun CreeperEntity.ignite() = this.method_7004()

@@ -30,13 +30,17 @@ val KClass<Codecs>.ARGB by aliasStatic(Codecs::field_51365)
  */
 val KClass<Codecs>.ESCAPED_STRING by aliasStatic(Codecs::field_46165)
 /**
+ * field_53754
+ */
+val KClass<Codecs>.NON_NEGATIVE_FLOAT by aliasStatic(Codecs::field_53754)
+/**
  * field_33442
  */
 val KClass<Codecs>.POSITIVE_INT by aliasStatic(Codecs::field_33442)
 /**
  * field_42265
  */
-val KClass<Codecs>.QUATERNIONF by aliasStatic(Codecs::field_42265)
+val KClass<Codecs>.QUATERNION_F by aliasStatic(Codecs::field_42265)
 /**
  * field_49012
  */
@@ -46,9 +50,13 @@ val KClass<Codecs>.UNSIGNED_BYTE by aliasStatic(Codecs::field_49012)
  */
 val KClass<Codecs>.VECTOR_4F by aliasStatic(Codecs::field_51364)
 /**
+ * field_54067
+ */
+val KClass<Codecs>.RGB by aliasStatic(Codecs::field_54067)
+/**
  * field_33441
  */
-val KClass<Codecs>.NONNEGATIVE_INT by aliasStatic(Codecs::field_33441)
+val KClass<Codecs>.NON_NEGATIVE_INT by aliasStatic(Codecs::field_33441)
 /**
  * field_39042
  */
@@ -60,7 +68,7 @@ val KClass<Codecs>.NON_EMPTY_STRING by aliasStatic(Codecs::field_41759)
 /**
  * field_42266
  */
-val KClass<Codecs>.AXIS_ANGLE4F by aliasStatic(Codecs::field_42266)
+val KClass<Codecs>.AXIS_ANGLE_4F by aliasStatic(Codecs::field_42266)
 /**
  * field_34387
  */
@@ -96,7 +104,7 @@ val KClass<Codecs>.CODEPOINT by aliasStatic(Codecs::field_44703)
 /**
  * field_42268
  */
-val KClass<Codecs>.MATRIX4F by aliasStatic(Codecs::field_42268)
+val KClass<Codecs>.MATRIX_4F by aliasStatic(Codecs::field_42268)
 /**
  * field_45075
  */
@@ -109,6 +117,14 @@ val KClass<Codecs>.BIT_SET by aliasStatic(Codecs::field_40724)
  * field_40723
  */
 val KClass<Codecs>.VECTOR_3F by aliasStatic(Codecs::field_40723)
+/**
+ * method_65320
+ */
+fun <E>KClass<Codecs>.listOrSingle(arg0: Codec<E>, arg1: Codec<MutableList<E>>) = Codecs.method_65320<E>(arg0, arg1)
+/**
+ * method_65313
+ */
+fun <E>KClass<Codecs>.listOrSingle(arg0: Codec<E>) = Codecs.method_65313<E>(arg0)
 /**
  * method_40113
  */
@@ -129,6 +145,10 @@ fun <E>KClass<Codecs>.orCompressed(arg0: Codec<E>, arg1: Codec<E>) = Codecs.meth
  * method_44167
  */
 fun KClass<Codecs>.optionalLong(arg0: MapCodec<Optional<Long>>) = Codecs.method_44167(arg0)
+/**
+ * method_65314
+ */
+fun <I, E>KClass<Codecs>.idChecked(arg0: Codec<I>, arg1: function_Function<I, E>, arg2: function_Function<E, I>) = Codecs.method_65314<I, E>(arg0, arg1, arg2)
 /**
  * method_39504
  */
@@ -153,6 +173,10 @@ fun <A>KClass<Codecs>.orElsePartial(arg0: A) = Codecs.method_39028<A>(arg0)
  * method_36973
  */
 fun <T>KClass<Codecs>.nonEmptyList(arg0: Codec<MutableList<T>>) = Codecs.method_36973<T>(arg0)
+/**
+ * method_65311
+ */
+fun KClass<Codecs>.rangedInclusiveFloat(arg0: Float, arg1: Float) = Codecs.method_65311(arg0, arg1)
 /**
  * method_48766
  */
@@ -185,6 +209,10 @@ fun <A>KClass<Codecs>.exceptionCatching(arg0: Codec<A>) = Codecs.method_42114<A>
  * method_53058
  */
 fun <T>KClass<Codecs>.object2BooleanMap(arg0: Codec<T>) = Codecs.method_53058<T>(arg0)
+/**
+ * method_63572
+ */
+fun <M>KClass<Codecs>.nonEmptyMap(arg0: Codec<M>) where M: Map<*, *> = Codecs.method_63572<M>(arg0)
 /**
  * method_40110
  */

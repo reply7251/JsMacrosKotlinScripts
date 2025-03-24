@@ -18,6 +18,10 @@ val KClass<MinecraftServer>.ANONYMOUS_PLAYER_PROFILE by aliasStatic(MinecraftSer
  */
 val KClass<MinecraftServer>.DEMO_LEVEL_INFO by aliasStatic(MinecraftServer::field_17704)
 /**
+ * field_25318
+ */
+var MinecraftServer.resourceManagerHolder by alias(MinecraftServer::field_25318)
+/**
  * method_3819
  */
 fun MinecraftServer.getServerIp() = this.method_3819()
@@ -130,10 +134,6 @@ fun MinecraftServer.isSaving() = this.method_39219()
  */
 fun KClass<MinecraftServer>.checkWorldGenException() = MinecraftServer.method_60584()
 /**
- * method_3813
- */
-fun MinecraftServer.tickWorlds(arg0: BooleanSupplier) = this.method_3813(arg0)
-/**
  * method_56626
  */
 fun MinecraftServer.shouldPushTickTimeLog() = this.method_56626()
@@ -201,10 +201,6 @@ fun MinecraftServer.getTickTimes() = this.method_54835()
  * method_30611
  */
 fun MinecraftServer.getRegistryManager() = this.method_30611()
-/**
- * method_16044
- */
-fun MinecraftServer.getProfiler() = this.method_16044()
 /**
  * method_24490
  */
@@ -350,6 +346,10 @@ fun MinecraftServer.isDedicated() = this.method_3816()
  */
 fun MinecraftServer.setHostProfile(arg0: GameProfile) = this.method_43825(arg0)
 /**
+ * method_62735
+ */
+fun MinecraftServer.getFuelRegistry() = this.method_62735()
+/**
  * method_3799
  */
 fun MinecraftServer.isDemo() = this.method_3799()
@@ -378,6 +378,10 @@ fun MinecraftServer.updateAutosaveTicks() = this.method_54831()
  */
 fun MinecraftServer.saveAll(arg0: Boolean, arg1: Boolean, arg2: Boolean) = this.method_39218(arg0, arg1, arg2)
 /**
+ * method_16209
+ */
+fun MinecraftServer.createTask(arg0: Runnable) = this.method_16209(arg0)
+/**
  * method_3734
  */
 fun MinecraftServer.getCommandManager() = this.method_3734()
@@ -398,10 +402,6 @@ fun MinecraftServer.getDataPackManager() = this.method_3836()
  */
 fun MinecraftServer.getDataFixer() = this.method_3855()
 /**
- * method_3796
- */
-fun MinecraftServer.shouldSpawnAnimals() = this.method_3796()
-/**
  * method_3826
  */
 fun MinecraftServer.getTimeReference() = this.method_3826()
@@ -417,6 +417,10 @@ fun <S>KClass<MinecraftServer>.startServer(arg0: function_Function<Thread, S>) w
  * method_3773
  */
 fun MinecraftServer.getNetworkCompressionThreshold() = this.method_3773()
+/**
+ * method_61254
+ */
+fun MinecraftServer.tickNetworkIo() = this.method_61254()
 /**
  * method_3761
  */
@@ -550,10 +554,6 @@ fun MinecraftServer.setCrashReport(arg0: CrashReport) = this.method_3744(arg0)
  */
 fun MinecraftServer.isSingleplayer() = this.method_3724()
 /**
- * method_3736
- */
-fun MinecraftServer.shouldSpawnNpcs() = this.method_3736()
-/**
  * method_3844
  */
 fun MinecraftServer.getSessionService() = this.method_3844()
@@ -577,6 +577,10 @@ fun MinecraftServer.openToLan(arg0: GameMode, arg1: Boolean, arg2: Int) = this.m
  * method_37323
  */
 fun MinecraftServer.stopRecorder() = this.method_37323()
+/**
+ * method_62733
+ */
+fun MinecraftServer.onPacketException(arg0: Throwable, arg1: PacketType<*>) = this.method_62733(arg0, arg1)
 /**
  * method_3748
  */

@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_SkeletonEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_4119
+ * method_62529
  */
-fun <T>SkeletonEntityRenderer<T>.getTexture(arg0: T) where T: AbstractSkeletonEntity = this.method_4119(arg0)
+fun SkeletonEntityRenderer.getTexture(arg0: SkeletonEntityRenderState) = this.method_62529(arg0)
+/**
+ * method_62530
+ */
+fun SkeletonEntityRenderer.createRenderState() = this.method_62530()

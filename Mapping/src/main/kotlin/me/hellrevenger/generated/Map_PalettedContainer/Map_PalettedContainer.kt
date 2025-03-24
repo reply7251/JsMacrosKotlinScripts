@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun <T>PalettedContainer<T>.lock() = this.method_12334()
 /**
- * method_39957
- */
-fun <T>PalettedContainer<T>.copy() = this.method_39957()
-/**
  * method_44347
  */
 fun <T>KClass<PalettedContainer<T>>.createReadableContainerCodec(arg0: IndexedIterable<T>, arg1: Codec<T>, arg2: net.minecraft.class_2841.class_6563, arg3: T) = PalettedContainer.method_44347<T>(arg0, arg1, arg2, arg3)

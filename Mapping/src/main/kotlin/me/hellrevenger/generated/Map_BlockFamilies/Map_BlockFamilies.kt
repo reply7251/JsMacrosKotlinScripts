@@ -34,6 +34,10 @@ val KClass<BlockFamilies>.RED_NETHER_BRICK by aliasStatic(BlockFamilies::field_2
  */
 val KClass<BlockFamilies>.SMOOTH_RED_SANDSTONE by aliasStatic(BlockFamilies::field_28496)
 /**
+ * field_55170
+ */
+val KClass<BlockFamilies>.RESIN_BRICK by aliasStatic(BlockFamilies::field_55170)
+/**
  * field_28488
  */
 val KClass<BlockFamilies>.DARK_PRISMARINE by aliasStatic(BlockFamilies::field_28488)
@@ -269,6 +273,10 @@ val KClass<BlockFamilies>.TUFF by aliasStatic(BlockFamilies::field_47131)
  * field_28524
  */
 val KClass<BlockFamilies>.MOSSY_COBBLESTONE by aliasStatic(BlockFamilies::field_28524)
+/**
+ * field_54877
+ */
+val KClass<BlockFamilies>.PALE_OAK by aliasStatic(BlockFamilies::field_54877)
 /**
  * method_33468
  */

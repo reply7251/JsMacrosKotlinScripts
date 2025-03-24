@@ -4,12 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_17117
  */
-fun <T>RabbitEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: RabbitEntity = this.method_17117(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RabbitEntityModel.setAngles(arg0: RabbitEntityRenderState) = this.method_17117(arg0)
 /**
  * method_32034
  */
-fun <T>KClass<RabbitEntityModel<T>>.getTexturedModelData() where T: RabbitEntity = RabbitEntityModel.method_32034()
-/**
- * method_17115
- */
-fun <T>RabbitEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: RabbitEntity = this.method_17115(arg0, arg1, arg2, arg3)
+fun KClass<RabbitEntityModel>.getTexturedModelData(arg0: Boolean) = RabbitEntityModel.method_32034(arg0)
