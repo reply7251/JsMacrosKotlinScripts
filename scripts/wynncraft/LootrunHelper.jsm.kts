@@ -1,4 +1,4 @@
-@file:ImportJar("../libs/jars/wynntils.jar")
+@file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
 import com.wynntils.core.components.Models
 import com.wynntils.features.inventory.ContainerSearchFeature
@@ -9,10 +9,10 @@ import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Rect
 import xyz.wagyourtail.jsmacros.client.api.event.impl.inventory.EventClickSlot
 import xyz.wagyourtail.jsmacros.client.api.event.impl.inventory.EventOpenContainer
 import xyz.wagyourtail.jsmacros.client.api.event.impl.player.EventOpenScreen
-import xyz.wagyourtail.jsmacros.client.api.helpers.NBTElementHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.StyleHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.TextHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.inventory.ItemStackHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.NBTElementHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.StyleHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.inventory.ItemStackHelper
 import java.util.regex.Pattern
 import kotlin.math.max
 import kotlin.math.min

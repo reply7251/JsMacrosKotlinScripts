@@ -1,4 +1,4 @@
-@file:ImportJar("../libs/jars/wynntils.jar")
+@file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 import com.wynntils.core.components.Managers
 import com.wynntils.core.components.Models
 import com.wynntils.features.inventory.ContainerSearchFeature

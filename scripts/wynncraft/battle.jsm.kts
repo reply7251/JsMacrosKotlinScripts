@@ -1,4 +1,4 @@
-@file:ImportJar("../libs/jars/wynntils.jar")
+@file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
 import com.wynntils.core.components.Managers
 import com.wynntils.core.components.Models
@@ -26,8 +26,7 @@ import net.bytebuddy.implementation.bytecode.assign.Assigner
 import net.bytebuddy.matcher.ElementMatchers
 import net.minecraft.*
 import org.jetbrains.kotlin.backend.common.pop
-import xyz.wagyourtail.jsmacros.client.api.classes.math.Pos3D
-import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw2D
+import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.ScriptScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
@@ -35,10 +34,11 @@ import xyz.wagyourtail.jsmacros.client.api.classes.render.components3d.RenderEle
 import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
 import xyz.wagyourtail.jsmacros.client.api.event.impl.player.EventArmorChange
 import xyz.wagyourtail.jsmacros.client.api.event.impl.player.EventDeath
-import xyz.wagyourtail.jsmacros.client.api.helpers.inventory.ItemStackHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.inventory.ItemStackHelper
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FPlayer
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import xyz.wagyourtail.jsmacros.core.library.impl.FGlobalVars
+import xyz.wagyourtail.jsmacros.core.library.impl.classes.ClassBuilder
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 import kotlin.math.abs
@@ -207,7 +207,7 @@ class BindInt(key: String, val configIndex: String, value: Int, val diff: Int = 
 class BindPos(key: String, value: Pos3D, callback: (Bind) -> Unit): BindValue<Pos3D>(key, value, callback) {
     override fun trigger() {
         if(value == Pos3D.ZERO) {
-            value = FPlayer().player!!.pos
+            value = global.Player.player!!.pos
         } else {
             value = Pos3D.ZERO
         }
@@ -1688,22 +1688,24 @@ val notificationEvent = { it: NotificationEvent.Queue ->
 
 object CustomInput  {
     var override = false
-        set(value) {
-            field = value
-            FGlobalVars.globalRaw["overrideInput"] = value
-        }
 
     @Advice.OnMethodExit
     @JvmStatic
     fun getBlockParticle(@Advice.This(typing = Assigner.Typing.DYNAMIC)zhis: class_743?, @Advice.Argument(0) sneak: Boolean?, @Advice.Argument(1) slow: Float?) {
-        if(FGlobalVars.globalRaw["overrideInput"] as? Boolean ?: false) {
-            zhis?.field_3905 = if(sneak ?: false) {
-                slow ?: 1f
-            } else {
-                1f
+        try {
+            if(ClassBuilder.methodWrappers["overrideInput"]?.get() as? Boolean == true) {
+                zhis?.field_3905 = if(sneak == true) {
+                    slow ?: 1f
+                } else {
+                    1f
+                }
             }
-        }
+        }catch (e: Exception) {}
+
     }
+}
+ClassBuilder.methodWrappers["overrideInput"] = JavaWrapper.methodToJava { ->
+    return@methodToJava CustomInput.override
 }
 val matcher = ElementMatchers.named<MethodDescription>("method_3129")
 

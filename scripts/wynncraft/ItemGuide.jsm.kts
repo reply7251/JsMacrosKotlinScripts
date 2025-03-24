@@ -1,9 +1,9 @@
-@file:ImportJar("../libs/jars/wynntils.jar")
+@file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
 import com.wynntils.screens.guides.gear.WynntilsItemGuideScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.event.impl.inventory.EventClickSlot
-import xyz.wagyourtail.jsmacros.client.api.helpers.inventory.ItemStackHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.inventory.ItemStackHelper
 
 val regex = ": (\\d+)-(\\d+)".toRegex()
 

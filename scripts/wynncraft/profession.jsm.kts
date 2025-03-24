@@ -1,4 +1,4 @@
-@file:ImportJar("../libs/jars/wynntils.jar")
+@file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
 import com.google.gson.*
 import com.google.gson.JsonArray
