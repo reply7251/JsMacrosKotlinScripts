@@ -23,7 +23,8 @@ class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, eventClass: Clas
     private val eventName: String = eventClass.getAnnotation(Event::class.java).value
 
     init {
-        Core.getInstance().eventRegistry.addListener(eventName, this)
+
+        context.runner.eventRegistry.addListener(eventName, this)
         context.eventListeners[this] = eventName
 
         (context.triggeringEvent as? EventService)?.unregisterOnStop(true)
@@ -33,7 +34,7 @@ class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, eventClass: Clas
 
     @Suppress("UNCHECKED_CAST")
     override fun trigger(p0: BaseEvent): EventContainer<*> {
-        val ctx = EventContainer(KotlinScriptContext(p0, context.file))
+        val ctx = EventContainer(KotlinScriptContext(context.runner, p0, context.file))
         try {
             thread {
                 callback.invoke(p0 as T)
@@ -42,12 +43,12 @@ class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, eventClass: Clas
             }
         } catch (e: Throwable) {
             off()
-            Core.getInstance().profile.logError(e)
+            context.runner.profile.logError(e)
         }
         return ctx
     }
 
     override fun off() {
-        Core.getInstance().eventRegistry.removeListener(eventName, this)
+        context.runner.eventRegistry.removeListener(eventName, this)
     }
 }

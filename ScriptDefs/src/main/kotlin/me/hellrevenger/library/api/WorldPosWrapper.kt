@@ -12,16 +12,15 @@ import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
 import me.hellrevenger.generated.Map_SimpleOption.getValue
 import net.minecraft.class_332
 import org.joml.Vector3d
-import xyz.wagyourtail.jsmacros.client.api.classes.math.Pos3D
+import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw2D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.RenderElement
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.EntityHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.PlayerEntityHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.PlayerEntityHelper
 
 val mc get() = MinecraftClient::class.getInstance()
 
 val methodFov = net.minecraft.class_757::class.java.declaredMethods.first { it.name == "method_3196" }
-
 open class WorldPosWrapper(
     val draw2d: Draw2D,
     var pos: Pos3D = Pos3D(0.0, 0.0, 0.0),
