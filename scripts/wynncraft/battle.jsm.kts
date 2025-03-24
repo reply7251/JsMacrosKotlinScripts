@@ -13,6 +13,7 @@ import com.wynntils.models.items.items.game.CraftedConsumableItem
 import com.wynntils.models.items.items.game.MultiHealthPotionItem
 import com.wynntils.models.items.items.game.PotionItem
 import javassist.ClassPool
+import me.hellrevenger.KotlinExtension
 import me.hellrevenger.generated.Map_LivingEntity.removeStatusEffectInternal
 import me.hellrevenger.generated.Map_MinecraftClient.getRenderTickCounter
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
@@ -207,7 +208,7 @@ class BindInt(key: String, val configIndex: String, value: Int, val diff: Int = 
 class BindPos(key: String, value: Pos3D, callback: (Bind) -> Unit): BindValue<Pos3D>(key, value, callback) {
     override fun trigger() {
         if(value == Pos3D.ZERO) {
-            value = global.Player.player!!.pos
+            value = FPlayer(KotlinExtension.runner).player!!.pos
         } else {
             value = Pos3D.ZERO
         }
