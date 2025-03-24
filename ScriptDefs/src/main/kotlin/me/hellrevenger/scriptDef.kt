@@ -1,11 +1,14 @@
 package me.hellrevenger
 
+import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.api.FEventListener
 import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
 import xyz.wagyourtail.jsmacros.client.api.library.impl.*
+import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
+import xyz.wagyourtail.jsmacros.core.library.Library
 import xyz.wagyourtail.jsmacros.core.library.impl.*
 import java.io.File
 import kotlin.script.experimental.annotations.KotlinScript
@@ -86,6 +89,15 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
             }.asSuccess()
         }
     }
+    val libs = mutableMapOf(*KotlinExtension().libraries.mapNotNull {
+        if(it.isAnnotationPresent(Library::class.java))
+            it.getAnnotation(Library::class.java).value to KotlinType(it.kotlin)
+        else
+            null
+    }.toTypedArray())
+
+    providedProperties.replaceOnlyDefault(libs)
+
 
     implicitReceivers.append(KotlinType((SimpleScript::class)))
 })

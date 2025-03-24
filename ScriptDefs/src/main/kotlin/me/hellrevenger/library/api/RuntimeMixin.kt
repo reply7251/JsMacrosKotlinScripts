@@ -28,7 +28,7 @@ import net.bytebuddy.utility.OpenedClassReader
 import net.bytebuddy.utility.RandomString
 import org.objectweb.asm.Type
 import org.spongepowered.tools.agent.MixinAgent
-import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
+import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import java.io.File
 import java.lang.instrument.ClassDefinition
@@ -36,6 +36,7 @@ import java.lang.instrument.ClassFileTransformer
 import java.lang.instrument.Instrumentation
 import java.lang.reflect.Modifier
 import java.security.ProtectionDomain
+import kotlin.jvm.internal.Intrinsics
 
 private fun tryGetInstrumentation(): Instrumentation {
 //    try {
@@ -102,21 +103,22 @@ class GetByteCode : ClassFileTransformer {
     }
 }
 
-val classInjector = ClassInjector.UsingUnsafe.Factory.resolve(instrumentation).make(net.minecraft.class_310::class.java.classLoader)
+val classInjector = ClassInjector.UsingUnsafe.Factory.resolve(instrumentation).make(FClient(null).minecraft::class.java.classLoader)
 
-//var classInjectorInited = false
-//private fun initClassInjector() {
-//    if(!classInjectorInited) {
-//        classInjectorInited = true
-//
-//        val jvmClasses = arrayOf(
-//            KotlinNullPointerException::class.java,
-//            UninitializedPropertyAccessException::class.java,
-//            Intrinsics::class.java,
-//        )
-//        classInjector.inject(jvmClasses.associate { TypeDescription.ForLoadedType.of(it) to GetByteCode.getByteCode(it) })
-//    }
-//}
+var classInjectorInited = false
+private fun initClassInjector() {
+    if(!classInjectorInited) {
+        classInjectorInited = true
+
+        val jvmClasses = arrayOf(
+            KotlinNullPointerException::class.java,
+            UninitializedPropertyAccessException::class.java,
+            Intrinsics::class.java,
+        )
+
+        classInjector.inject(jvmClasses.associate { TypeDescription.ForLoadedType.of(it) to ClassFileLocator.ForClassLoader.read(it) })
+    }
+}
 
 class KotlinFinalRemovalMethodVisitor(visitor: MethodVisitor) : MethodVisitor(OpenedClassReader.ASM_API, visitor) {
     enum class Status {
@@ -288,7 +290,7 @@ class RuntimeMixin {
             originalByteCodes[targetClass] = oldByteCode
             instrumentation.redefineClasses(ClassDefinition(targetClass, oldByteCode))
 
-//            initClassInjector()
+            initClassInjector()
 
             var builder = ByteBuddy()
                 .with(TypeValidation.DISABLED)
