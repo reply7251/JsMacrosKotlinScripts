@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val KClass<SculkSpreadManager>.MAX_CHARGE by aliasStatic(SculkSpreadManager::field_37610)
 /**
+ * field_54977
+ */
+val KClass<SculkSpreadManager>.MAX_CURSOR_DISTANCE by aliasStatic(SculkSpreadManager::field_54977)
+/**
  * method_41489
  */
 fun SculkSpreadManager.getMaxDistance() = this.method_41489()

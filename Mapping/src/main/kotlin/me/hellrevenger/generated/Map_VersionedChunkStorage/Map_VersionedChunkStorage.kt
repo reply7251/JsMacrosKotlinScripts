@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val KClass<VersionedChunkStorage>.FEATURE_UPDATING_VERSION by aliasStatic(VersionedChunkStorage::field_36219)
 /**
+ * method_17910
+ */
+fun VersionedChunkStorage.setNbt(arg0: ChunkPos, arg1: Supplier<NbtCompound>) = this.method_17910(arg0, arg1)
+/**
  * method_23696
  */
 fun VersionedChunkStorage.getNbt(arg0: ChunkPos) = this.method_23696(arg0)
@@ -13,10 +17,6 @@ fun VersionedChunkStorage.getNbt(arg0: ChunkPos) = this.method_23696(arg0)
  * method_17908
  */
 fun KClass<VersionedChunkStorage>.getDataVersion(arg0: NbtCompound) = VersionedChunkStorage.method_17908(arg0)
-/**
- * method_17910
- */
-fun VersionedChunkStorage.setNbt(arg0: ChunkPos, arg1: NbtCompound) = this.method_17910(arg0, arg1)
 /**
  * method_17907
  */

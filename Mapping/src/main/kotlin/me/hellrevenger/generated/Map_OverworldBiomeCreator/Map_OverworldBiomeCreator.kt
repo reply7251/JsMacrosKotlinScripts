@@ -98,13 +98,13 @@ fun KClass<OverworldBiomeCreator>.createDeepDark(arg0: RegistryEntryLookup<Place
  */
 fun KClass<OverworldBiomeCreator>.createLushCaves(arg0: RegistryEntryLookup<PlacedFeature>, arg1: RegistryEntryLookup<ConfiguredCarver<*>>) = OverworldBiomeCreator.method_34674(arg0, arg1)
 /**
- * method_30705
- */
-fun KClass<OverworldBiomeCreator>.createDarkForest(arg0: RegistryEntryLookup<PlacedFeature>, arg1: RegistryEntryLookup<ConfiguredCarver<*>>) = OverworldBiomeCreator.method_30705(arg0, arg1)
-/**
  * method_38576
  */
 fun KClass<OverworldBiomeCreator>.createJaggedPeaks(arg0: RegistryEntryLookup<PlacedFeature>, arg1: RegistryEntryLookup<ConfiguredCarver<*>>) = OverworldBiomeCreator.method_38576(arg0, arg1)
+/**
+ * method_30705
+ */
+fun KClass<OverworldBiomeCreator>.createDenseForest(arg0: RegistryEntryLookup<PlacedFeature>, arg1: RegistryEntryLookup<ConfiguredCarver<*>>, arg2: Boolean) = OverworldBiomeCreator.method_30705(arg0, arg1, arg2)
 /**
  * method_30703
  */

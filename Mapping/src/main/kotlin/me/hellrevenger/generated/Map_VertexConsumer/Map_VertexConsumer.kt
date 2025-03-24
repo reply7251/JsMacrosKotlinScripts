@@ -18,6 +18,10 @@ fun VertexConsumer.color(arg0: Int) = this.method_39415(arg0)
  */
 fun VertexConsumer.overlay(arg0: Int, arg1: Int) = this.method_60796(arg0, arg1)
 /**
+ * method_61959
+ */
+fun VertexConsumer.normal(arg0: net.minecraft.class_4587.class_4665, arg1: Vector3f) = this.method_61959(arg0, arg1)
+/**
  * method_22920
  */
 fun VertexConsumer.quad(arg0: net.minecraft.class_4587.class_4665, arg1: BakedQuad, arg2: FloatArray, arg3: Float, arg4: Float, arg5: Float, arg6: Float, arg7: IntArray, arg8: Int, arg9: Boolean) = this.method_22920(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
@@ -32,7 +36,7 @@ fun VertexConsumer.vertex(arg0: net.minecraft.class_4587.class_4665, arg1: Float
 /**
  * method_60831
  */
-fun VertexConsumer.normal(arg0: net.minecraft.class_4587.class_4665, arg1: Float, arg2: Float, arg3: Float) = this.method_60831(arg0, arg1, arg2, arg3)
+fun VertexConsumer.normal(pose: net.minecraft.class_4587.class_4665, x: Float, y: Float, z: Float) = this.method_60831(pose, x, y, z)
 /**
  * method_22919
  */
@@ -60,7 +64,7 @@ fun VertexConsumer.color(arg0: Int, arg1: Int, arg2: Int, arg3: Int) = this.meth
 /**
  * method_22918
  */
-fun VertexConsumer.vertex(arg0: Matrix4f, arg1: Float, arg2: Float, arg3: Float) = this.method_22918(arg0, arg1, arg2, arg3)
+fun VertexConsumer.vertex(matrix: Matrix4f, x: Float, y: Float, z: Float) = this.method_22918(matrix, x, y, z)
 /**
  * method_61032
  */

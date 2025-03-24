@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val KClass<WoodType>.MANGROVE by aliasStatic(WoodType::field_37657)
 /**
+ * field_54795
+ */
+val KClass<WoodType>.PALE_OAK by aliasStatic(WoodType::field_54795)
+/**
  * field_22183
  */
 val KClass<WoodType>.CRIMSON by aliasStatic(WoodType::field_22183)

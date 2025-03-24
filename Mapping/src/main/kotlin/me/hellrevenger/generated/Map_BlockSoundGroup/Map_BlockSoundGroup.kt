@@ -34,6 +34,10 @@ val KClass<BlockSoundGroup>.MANGROVE_ROOTS by aliasStatic(BlockSoundGroup::field
  */
 val KClass<BlockSoundGroup>.ROOTS by aliasStatic(BlockSoundGroup::field_22138)
 /**
+ * field_52633
+ */
+val KClass<BlockSoundGroup>.SPAWNER by aliasStatic(BlockSoundGroup::field_52633)
+/**
  * field_28697
  */
 val KClass<BlockSoundGroup>.MOSS_BLOCK by aliasStatic(BlockSoundGroup::field_28697)
@@ -41,6 +45,10 @@ val KClass<BlockSoundGroup>.MOSS_BLOCK by aliasStatic(BlockSoundGroup::field_286
  * field_11539
  */
 val BlockSoundGroup.pitch by alias(BlockSoundGroup::field_11539)
+/**
+ * field_55083
+ */
+val KClass<BlockSoundGroup>.RESIN_BRICKS by aliasStatic(BlockSoundGroup::field_55083)
 /**
  * field_37641
  */
@@ -149,6 +157,10 @@ val KClass<BlockSoundGroup>.WOOL by aliasStatic(BlockSoundGroup::field_11543)
  * field_22148
  */
 val KClass<BlockSoundGroup>.NETHER_ORE by aliasStatic(BlockSoundGroup::field_22148)
+/**
+ * field_54773
+ */
+val KClass<BlockSoundGroup>.CREAKING_HEART by aliasStatic(BlockSoundGroup::field_54773)
 /**
  * field_37636
  */
@@ -449,6 +461,10 @@ val KClass<BlockSoundGroup>.POLISHED_DEEPSLATE by aliasStatic(BlockSoundGroup::f
  * field_27198
  */
 val KClass<BlockSoundGroup>.AMETHYST_CLUSTER by aliasStatic(BlockSoundGroup::field_27198)
+/**
+ * field_55082
+ */
+val KClass<BlockSoundGroup>.RESIN by aliasStatic(BlockSoundGroup::field_55082)
 /**
  * field_42769
  */

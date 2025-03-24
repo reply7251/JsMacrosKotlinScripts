@@ -49,3 +49,7 @@ fun AnimalEntity.getLoveTicks() = this.method_29270()
  * method_24650
  */
 fun AnimalEntity.breed(arg0: ServerWorld, arg1: AnimalEntity) = this.method_24650(arg0, arg1)
+/**
+ * method_61457
+ */
+fun KClass<AnimalEntity>.createAnimalAttributes() = AnimalEntity.method_61457()

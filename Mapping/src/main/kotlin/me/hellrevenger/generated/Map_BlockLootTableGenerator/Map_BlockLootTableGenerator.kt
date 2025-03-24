@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_BlockLootTableGenerator
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_40604
- */
-val KClass<BlockLootTableGenerator>.WITH_SHEARS by aliasStatic(BlockLootTableGenerator::field_40604)
-/**
  * field_40610
  */
 val BlockLootTableGenerator.lootTables by alias(BlockLootTableGenerator::field_40610)
@@ -28,7 +24,7 @@ fun BlockLootTableGenerator.lapisOreDrops(arg0: Block) = this.method_46011(arg0)
 /**
  * method_45995
  */
-fun KClass<BlockLootTableGenerator>.dropsWithShears(arg0: ItemConvertible) = BlockLootTableGenerator.method_45995(arg0)
+fun BlockLootTableGenerator.dropsWithShears(arg0: ItemConvertible) = this.method_45995(arg0)
 /**
  * method_45981
  */
@@ -73,6 +69,10 @@ fun BlockLootTableGenerator.mushroomBlockDrops(arg0: Block, arg1: ItemConvertibl
  * method_46005
  */
 fun BlockLootTableGenerator.attachedCropStemDrops(arg0: Block, arg1: Item) = this.method_46005(arg0, arg1)
+/**
+ * method_65261
+ */
+fun BlockLootTableGenerator.multifaceGrowthDrops(arg0: Block) = this.method_65261(arg0)
 /**
  * method_45994
  */
@@ -178,6 +178,10 @@ fun BlockLootTableGenerator.drops(arg0: Block, arg1: ItemConvertible, arg2: Loot
  */
 fun <T>BlockLootTableGenerator.applyExplosionDecay(arg0: ItemConvertible, arg1: LootFunctionConsumingBuilder<T>) where T: LootFunctionConsumingBuilder<T> = this.method_45977<T>(arg0, arg1)
 /**
+ * method_64930
+ */
+fun BlockLootTableGenerator.paleMossCarpetDrops(arg0: Block) = this.method_64930(arg0)
+/**
  * method_45975
  */
 fun KClass<BlockLootTableGenerator>.dropsNothing() = BlockLootTableGenerator.method_45975()
@@ -193,6 +197,10 @@ fun BlockLootTableGenerator.doorDrops(arg0: Block) = this.method_46022(arg0)
  * method_46010
  */
 fun BlockLootTableGenerator.copperOreDrops(arg0: Block) = this.method_46010(arg0)
+/**
+ * method_62727
+ */
+fun BlockLootTableGenerator.createWithShearsCondition() = this.method_62727()
 /**
  * method_45986
  */
@@ -214,6 +222,10 @@ fun BlockLootTableGenerator.drops(arg0: ItemConvertible) = this.method_45976(arg
  */
 fun BlockLootTableGenerator.mangroveLeavesDrops(arg0: Block) = this.method_46018(arg0)
 /**
+ * method_65053
+ */
+fun BlockLootTableGenerator.dropsWithSilkTouchOrShears(arg0: ItemConvertible) = this.method_65053(arg0)
+/**
  * method_46014
  */
 fun BlockLootTableGenerator.beeNestDrops(arg0: Block) = this.method_46014(arg0)
@@ -224,4 +236,4 @@ fun BlockLootTableGenerator.cropDrops(arg0: Block, arg1: Item, arg2: Item, arg3:
 /**
  * method_60392
  */
-fun BlockLootTableGenerator.createWithShearsOrSilkTouchCondition() = this.method_60392()
+fun BlockLootTableGenerator.createWithSilkTouchOrShearsCondition() = this.method_60392()

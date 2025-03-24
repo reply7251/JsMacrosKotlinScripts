@@ -34,13 +34,13 @@ val KClass<EntitySubPredicateTypes>.FISHING_HOOK by aliasStatic(EntitySubPredica
  */
 val KClass<EntitySubPredicateTypes>.WOLF by aliasStatic(EntitySubPredicateTypes::field_49973)
 /**
+ * field_53974
+ */
+val KClass<EntitySubPredicateTypes>.SHEEP by aliasStatic(EntitySubPredicateTypes::field_53974)
+/**
  * field_38729
  */
 val KClass<EntitySubPredicateTypes>.CAT by aliasStatic(EntitySubPredicateTypes::field_38729)
-/**
- * field_41535
- */
-val KClass<EntitySubPredicateTypes>.BOAT by aliasStatic(EntitySubPredicateTypes::field_41535)
 /**
  * field_41534
  */
@@ -77,6 +77,10 @@ val KClass<EntitySubPredicateTypes>.PARROT by aliasStatic(EntitySubPredicateType
  * field_41542
  */
 val KClass<EntitySubPredicateTypes>.VILLAGER by aliasStatic(EntitySubPredicateTypes::field_41542)
+/**
+ * field_54227
+ */
+val KClass<EntitySubPredicateTypes>.SALMON by aliasStatic(EntitySubPredicateTypes::field_54227)
 /**
  * method_58157
  */

@@ -17,3 +17,11 @@ fun PaintingVariant.width() = this.comp_2670()
  * comp_2671
  */
 fun PaintingVariant.height() = this.comp_2671()
+/**
+ * comp_2919
+ */
+fun PaintingVariant.author() = this.comp_2919()
+/**
+ * comp_2918
+ */
+fun PaintingVariant.title() = this.comp_2918()

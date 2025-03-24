@@ -66,10 +66,6 @@ fun ClientPlayerEntity.updateHealth(arg0: Float) = this.method_3138(arg0)
  */
 fun ClientPlayerEntity.setClientPermissionLevel(arg0: Int) = this.method_3147(arg0)
 /**
- * method_3141
- */
-fun ClientPlayerEntity.onRecipeDisplayed(arg0: RecipeEntry<*>) = this.method_3141(arg0)
-/**
  * method_26269
  */
 fun ClientPlayerEntity.getMoodPercentage() = this.method_26269()
@@ -110,6 +106,10 @@ fun ClientPlayerEntity.isLimitedCraftingEnabled() = this.method_53847()
  */
 fun ClientPlayerEntity.isAutoJumpEnabled() = this.method_3149()
 /**
+ * method_64376
+ */
+fun ClientPlayerEntity.getItemDropCooldown() = this.method_64376()
+/**
  * method_3137
  */
 fun ClientPlayerEntity.closeScreen() = this.method_3137()
@@ -125,6 +125,10 @@ fun ClientPlayerEntity.showsDeathScreen() = this.method_22419()
  * method_3143
  */
 fun ClientPlayerEntity.getStatHandler() = this.method_3143()
+/**
+ * method_3141
+ */
+fun ClientPlayerEntity.onRecipeDisplayed(arg0: NetworkRecipeId) = this.method_3141(arg0)
 /**
  * method_3145
  */

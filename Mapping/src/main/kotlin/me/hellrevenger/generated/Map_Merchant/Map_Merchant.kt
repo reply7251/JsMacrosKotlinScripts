@@ -18,6 +18,10 @@ fun Merchant.setCustomer(arg0: PlayerEntity) = this.method_8259(arg0)
  */
 fun Merchant.getYesSound() = this.method_18010()
 /**
+ * method_65125
+ */
+fun Merchant.canInteract(arg0: PlayerEntity) = this.method_65125(arg0)
+/**
  * method_19269
  */
 fun Merchant.getExperience() = this.method_19269()

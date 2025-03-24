@@ -30,10 +30,6 @@ val KClass<Item>.ITEM_BAR_STEPS by aliasStatic(Item::field_30889)
  */
 fun Item.onItemEntityDestroyed(arg0: ItemEntity) = this.method_33261(arg0)
 /**
- * method_7857
- */
-fun Item.hasRecipeRemainder() = this.method_7857()
-/**
  * method_7884
  */
 fun Item.useOnBlock(arg0: ItemUsageContext) = this.method_7884(arg0)
@@ -50,17 +46,9 @@ fun Item.onClicked(arg0: ItemStack, arg1: ItemStack, arg2: Slot, arg3: ClickType
  */
 fun Item.getMiningSpeed(arg0: ItemStack, arg1: BlockState) = this.method_58404(arg0, arg1)
 /**
- * method_16698
- */
-fun Item.isNetworkSynced() = this.method_16698()
-/**
  * method_31565
  */
 fun Item.onStackClicked(arg0: ItemStack, arg1: Slot, arg2: ClickType, arg3: PlayerEntity) = this.method_31565(arg0, arg1, arg2, arg3)
-/**
- * method_21830
- */
-fun Item.getEatSound() = this.method_21830()
 /**
  * method_7853
  */
@@ -74,6 +62,10 @@ fun Item.getItemBarColor(arg0: ItemStack) = this.method_31571(arg0)
  */
 fun Item.isItemBarVisible(arg0: ItemStack) = this.method_31567(arg0)
 /**
+ * method_7836
+ */
+fun Item.use(arg0: world_World, arg1: PlayerEntity, arg2: Hand) = this.method_7836(arg0, arg1, arg2)
+/**
  * method_7861
  */
 fun Item.finishUsing(arg0: ItemStack, arg1: world_World, arg2: LivingEntity) = this.method_7861(arg0, arg1, arg2)
@@ -81,6 +73,10 @@ fun Item.finishUsing(arg0: ItemStack, arg1: world_World, arg2: LivingEntity) = t
  * method_7881
  */
 fun Item.getMaxUseTime(arg0: ItemStack, arg1: LivingEntity) = this.method_7881(arg0, arg1)
+/**
+ * method_7858
+ */
+fun Item.getRecipeRemainder() = this.method_7858()
 /**
  * method_54465
  */
@@ -98,17 +94,9 @@ fun Item.getDefaultStack() = this.method_7854()
  */
 fun Item.getRegistryEntry() = this.method_40131()
 /**
- * method_7870
- */
-fun Item.isEnchantable(arg0: ItemStack) = this.method_7870(arg0)
-/**
  * method_7886
  */
 fun Item.hasGlint(arg0: ItemStack) = this.method_7886(arg0)
-/**
- * method_7844
- */
-fun Item.getAttributeModifiers() = this.method_7844()
 /**
  * method_7847
  */
@@ -121,10 +109,6 @@ fun Item.isUsedOnRelease(arg0: ItemStack) = this.method_7838(arg0)
  * method_7882
  */
 fun Item.getMaxCount() = this.method_7882()
-/**
- * method_7866
- */
-fun Item.getTranslationKey(arg0: ItemStack) = this.method_7866(arg0)
 /**
  * method_7873
  */
@@ -142,41 +126,33 @@ fun Item.isCorrectForDrops(arg0: ItemStack, arg1: BlockState) = this.method_5840
  */
 fun Item.postDamageEntity(arg0: ItemStack, arg1: LivingEntity, arg2: LivingEntity) = this.method_59978(arg0, arg1, arg2)
 /**
- * method_7858
+ * method_65353
  */
-fun Item.getRecipeRemainder() = this.method_7858()
+fun Item.shouldShowOperatorBlockWarnings(arg0: ItemStack, arg1: PlayerEntity) = this.method_65353(arg0, arg1)
 /**
  * method_7867
  */
 fun KClass<Item>.fromBlock(arg0: Block) = Item.method_7867(arg0)
 /**
+ * method_64193
+ */
+fun Item.getDamageSource(arg0: LivingEntity) = this.method_64193(arg0)
+/**
  * method_32346
  */
 fun Item.getTooltipData(arg0: ItemStack) = this.method_32346(arg0)
-/**
- * method_7840
- */
-fun Item.onStoppedUsing(arg0: ItemStack, arg1: world_World, arg2: LivingEntity, arg3: Int) = this.method_7840(arg0, arg1, arg2, arg3)
 /**
  * method_57336
  */
 fun Item.getBreakSound() = this.method_57336()
 /**
- * method_7848
+ * method_7840
  */
-fun Item.getName() = this.method_7848()
-/**
- * method_7836
- */
-fun Item.use(arg0: world_World, arg1: PlayerEntity, arg2: Hand) = this.method_7836(arg0, arg1, arg2)
+fun Item.onStoppedUsing(arg0: ItemStack, arg1: world_World, arg2: LivingEntity, arg3: Int) = this.method_7840(arg0, arg1, arg2, arg3)
 /**
  * method_31568
  */
 fun Item.canBeNested() = this.method_31568()
-/**
- * method_7837
- */
-fun Item.getEnchantability() = this.method_7837()
 /**
  * method_7875
  */
@@ -193,10 +169,6 @@ fun Item.getItemBarStep(arg0: ItemStack) = this.method_31569(arg0)
  * method_7852
  */
 fun Item.usageTick(arg0: world_World, arg1: LivingEntity, arg2: ItemStack, arg3: Int) = this.method_7852(arg0, arg1, arg2, arg3)
-/**
- * method_21831
- */
-fun Item.getDrinkSound() = this.method_21831()
 /**
  * method_7843
  */
@@ -226,6 +198,6 @@ fun Item.postMine(arg0: ItemStack, arg1: world_World, arg2: BlockState, arg3: Bl
  */
 fun Item.getComponents() = this.method_57347()
 /**
- * method_7878
+ * method_63680
  */
-fun Item.canRepair(arg0: ItemStack, arg1: ItemStack) = this.method_7878(arg0, arg1)
+fun Item.getName() = this.method_63680()

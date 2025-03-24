@@ -2,10 +2,14 @@ package me.hellrevenger.generated.Map_MagmaCubeEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_48302
- */
-fun MagmaCubeEntityRenderer.render(arg0: MagmaCubeEntity, arg1: Float, arg2: Float, arg3: MatrixStack, arg4: VertexConsumerProvider, arg5: Int) = this.method_48302(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
  * method_4001
  */
-fun MagmaCubeEntityRenderer.getTexture(arg0: MagmaCubeEntity) = this.method_4001(arg0)
+fun MagmaCubeEntityRenderer.getTexture(arg0: SlimeEntityRenderState) = this.method_4001(arg0)
+/**
+ * method_62490
+ */
+fun MagmaCubeEntityRenderer.createRenderState() = this.method_62490()
+/**
+ * method_62489
+ */
+fun MagmaCubeEntityRenderer.updateRenderState(arg0: MagmaCubeEntity, arg1: SlimeEntityRenderState, arg2: Float) = this.method_62489(arg0, arg1, arg2)

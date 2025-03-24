@@ -10,6 +10,10 @@ val KClass<ArrowEntityRenderer>.TIPPED_TEXTURE by aliasStatic(ArrowEntityRendere
  */
 val KClass<ArrowEntityRenderer>.TEXTURE by aliasStatic(ArrowEntityRenderer::field_4795)
 /**
- * method_4130
+ * method_62553
  */
-fun ArrowEntityRenderer.getTexture(arg0: ArrowEntity) = this.method_4130(arg0)
+fun ArrowEntityRenderer.createRenderState() = this.method_62553()
+/**
+ * method_62554
+ */
+fun ArrowEntityRenderer.updateRenderState(arg0: ArrowEntity, arg1: ArrowEntityRenderState, arg2: Float) = this.method_62554(arg0, arg1, arg2)

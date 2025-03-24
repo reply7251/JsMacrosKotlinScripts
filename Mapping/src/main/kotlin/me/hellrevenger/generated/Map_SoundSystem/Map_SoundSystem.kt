@@ -42,6 +42,10 @@ fun SoundSystem.stop() = this.method_4856()
  */
 fun SoundSystem.resumeAll() = this.method_19762()
 /**
+ * method_65257
+ */
+fun SoundSystem.setVolume(arg0: SoundInstance, arg1: Float) = this.method_65257(arg0, arg1)
+/**
  * method_4844
  */
 fun SoundSystem.updateSoundVolume(arg0: SoundCategory, arg1: Float) = this.method_4844(arg0, arg1)

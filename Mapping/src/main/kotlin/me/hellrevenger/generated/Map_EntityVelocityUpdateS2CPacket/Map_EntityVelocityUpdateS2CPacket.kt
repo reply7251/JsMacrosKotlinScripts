@@ -16,7 +16,7 @@ fun EntityVelocityUpdateS2CPacket.getVelocityZ() = this.method_11819()
 /**
  * method_11818
  */
-fun EntityVelocityUpdateS2CPacket.getId() = this.method_11818()
+fun EntityVelocityUpdateS2CPacket.getEntityId() = this.method_11818()
 /**
  * method_11815
  */

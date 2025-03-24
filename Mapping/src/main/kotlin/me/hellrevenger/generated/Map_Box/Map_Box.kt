@@ -46,6 +46,10 @@ fun Box.contains(arg0: Double, arg1: Double, arg2: Double) = this.method_1008(ar
  */
 fun KClass<Box>.raycast(arg0: Iterable<Box>, arg1: Vec3d, arg2: Vec3d, arg3: BlockPos) = Box.method_1010(arg0, arg1, arg2, arg3)
 /**
+ * method_61885
+ */
+fun KClass<Box>.raycast(arg0: Double, arg1: Double, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: Vec3d, arg7: Vec3d) = Box.method_61885(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+/**
  * method_993
  */
 fun Box.intersects(arg0: Vec3d, arg1: Vec3d) = this.method_993(arg0, arg1)
@@ -102,9 +106,9 @@ fun Box.withMinX(arg0: Double) = this.method_35574(arg0)
  */
 fun Box.getMin(arg0: net.minecraft.class_2350.class_2351) = this.method_1001(arg0)
 /**
- * method_61124
+ * method_64032
  */
-fun Box.getBottomCenter() = this.method_61124()
+fun Box.collides(arg0: Vec3d, arg1: MutableList<Box>) = this.method_64032(arg0, arg1)
 /**
  * method_1013
  */
@@ -153,6 +157,10 @@ fun Box.contract(arg0: Double) = this.method_1011(arg0)
  * method_54784
  */
 fun KClass<Box>.enclosing(arg0: BlockPos, arg1: BlockPos) = Box.method_54784(arg0, arg1)
+/**
+ * method_64033
+ */
+fun Box.getHorizontalCenter() = this.method_64033()
 /**
  * method_989
  */

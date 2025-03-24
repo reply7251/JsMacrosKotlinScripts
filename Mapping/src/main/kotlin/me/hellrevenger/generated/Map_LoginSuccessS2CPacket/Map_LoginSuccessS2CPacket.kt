@@ -9,7 +9,3 @@ fun LoginSuccessS2CPacket.apply(arg0: ClientLoginPacketListener) = this.method_1
  * comp_2363
  */
 fun LoginSuccessS2CPacket.profile() = this.comp_2363()
-/**
- * comp_2662
- */
-fun LoginSuccessS2CPacket.strictErrorHandling() = this.comp_2662()

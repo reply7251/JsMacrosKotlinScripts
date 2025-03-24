@@ -6,6 +6,18 @@ import me.hellrevenger.generated.*
  */
 val KClass<ServerChunkLoadingManager>.DEFAULT_VIEW_DISTANCE by aliasStatic(ServerChunkLoadingManager::field_29675)
 /**
+ * field_17213
+ */
+val ServerChunkLoadingManager.currentChunkHolders by alias(ServerChunkLoadingManager::field_17213)
+/**
+ * field_17220
+ */
+val ServerChunkLoadingManager.chunkHolders by alias(ServerChunkLoadingManager::field_17220)
+/**
+ * field_18807
+ */
+val ServerChunkLoadingManager.chunksToUnload by alias(ServerChunkLoadingManager::field_18807)
+/**
  * method_23272
  */
 fun ServerChunkLoadingManager.getChunkLoadingDebugInfo(arg0: ChunkPos) = this.method_23272(arg0)

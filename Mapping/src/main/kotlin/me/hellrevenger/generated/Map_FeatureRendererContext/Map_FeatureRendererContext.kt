@@ -4,8 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_4038
  */
-fun <T, M>FeatureRendererContext<T, M>.getModel() where T: Entity, M: EntityModel<T> = this.method_4038()
-/**
- * method_3931
- */
-fun <T, M>FeatureRendererContext<T, M>.getTexture(arg0: T) where T: Entity, M: EntityModel<T> = this.method_3931(arg0)
+fun <S, M>FeatureRendererContext<S, M>.getModel() where S: EntityRenderState, M: EntityModel<in S> = this.method_4038()

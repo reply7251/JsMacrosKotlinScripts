@@ -8,16 +8,16 @@ fun EndCrystalEntityRenderer.shouldRender(arg0: EndCrystalEntity, arg1: Frustum,
 /**
  * method_3908
  */
-fun EndCrystalEntityRenderer.render(arg0: EndCrystalEntity, arg1: Float, arg2: Float, arg3: MatrixStack, arg4: VertexConsumerProvider, arg5: Int) = this.method_3908(arg0, arg1, arg2, arg3, arg4, arg5)
+fun EndCrystalEntityRenderer.render(arg0: EndCrystalEntityRenderState, arg1: MatrixStack, arg2: VertexConsumerProvider, arg3: Int) = this.method_3908(arg0, arg1, arg2, arg3)
+/**
+ * method_62417
+ */
+fun EndCrystalEntityRenderer.updateRenderState(arg0: EndCrystalEntity, arg1: EndCrystalEntityRenderState, arg2: Float) = this.method_62417(arg0, arg1, arg2)
+/**
+ * method_62416
+ */
+fun EndCrystalEntityRenderer.createRenderState() = this.method_62416()
 /**
  * method_23155
  */
-fun KClass<EndCrystalEntityRenderer>.getYOffset(arg0: EndCrystalEntity, arg1: Float) = EndCrystalEntityRenderer.method_23155(arg0, arg1)
-/**
- * method_32164
- */
-fun KClass<EndCrystalEntityRenderer>.getTexturedModelData() = EndCrystalEntityRenderer.method_32164()
-/**
- * method_3909
- */
-fun EndCrystalEntityRenderer.getTexture(arg0: EndCrystalEntity) = this.method_3909(arg0)
+fun KClass<EndCrystalEntityRenderer>.getYOffset(arg0: Float) = EndCrystalEntityRenderer.method_23155(arg0)

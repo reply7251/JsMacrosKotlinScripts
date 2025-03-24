@@ -14,6 +14,10 @@ val KClass<SaplingGenerator>.SPRUCE by aliasStatic(SaplingGenerator::field_46512
  */
 val KClass<SaplingGenerator>.OAK by aliasStatic(SaplingGenerator::field_46511)
 /**
+ * field_54791
+ */
+val KClass<SaplingGenerator>.PALE_OAK by aliasStatic(SaplingGenerator::field_54791)
+/**
  * field_46515
  */
 val KClass<SaplingGenerator>.BIRCH by aliasStatic(SaplingGenerator::field_46515)

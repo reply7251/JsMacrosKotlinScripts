@@ -134,10 +134,6 @@ val <T>KClass<EntityType<T>>.CAMEL where T: Entity by aliasStatic({EntityType.fi
  */
 val <T>KClass<EntityType<T>>.PAINTING where T: Entity by aliasStatic({EntityType.field_6120})
 /**
- * field_6121
- */
-val <T>KClass<EntityType<T>>.BOAT where T: Entity by aliasStatic({EntityType.field_6121})
-/**
  * field_6124
  */
 val <T>KClass<EntityType<T>>.LLAMA_SPIT where T: Entity by aliasStatic({EntityType.field_6124})
@@ -230,10 +226,6 @@ val <T>KClass<EntityType<T>>.LEASH_KNOT where T: Entity by aliasStatic({EntityTy
  */
 val <T>KClass<EntityType<T>>.HORSE where T: Entity by aliasStatic({EntityType.field_6139})
 /**
- * field_38096
- */
-val <T>KClass<EntityType<T>>.CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_38096})
-/**
  * field_6047
  */
 val <T>KClass<EntityType<T>>.SNOW_GOLEM where T: Entity by aliasStatic({EntityType.field_6047})
@@ -254,9 +246,37 @@ val <T>KClass<EntityType<T>>.CREEPER where T: Entity by aliasStatic({EntityType.
  */
 val <T>KClass<EntityType<T>>.SMALL_FIREBALL where T: Entity by aliasStatic({EntityType.field_6049})
 /**
+ * field_54412
+ */
+val <T>KClass<EntityType<T>>.JUNGLE_BOAT where T: Entity by aliasStatic({EntityType.field_54412})
+/**
+ * field_54410
+ */
+val <T>KClass<EntityType<T>>.OAK_BOAT where T: Entity by aliasStatic({EntityType.field_54410})
+/**
+ * field_54411
+ */
+val <T>KClass<EntityType<T>>.OAK_CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_54411})
+/**
+ * field_54414
+ */
+val <T>KClass<EntityType<T>>.MANGROVE_BOAT where T: Entity by aliasStatic({EntityType.field_54414})
+/**
+ * field_54413
+ */
+val <T>KClass<EntityType<T>>.JUNGLE_CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_54413})
+/**
+ * field_54416
+ */
+val <T>KClass<EntityType<T>>.SPRUCE_BOAT where T: Entity by aliasStatic({EntityType.field_54416})
+/**
  * field_6043
  */
 val <T>KClass<EntityType<T>>.ITEM_FRAME where T: Entity by aliasStatic({EntityType.field_6043})
+/**
+ * field_54415
+ */
+val <T>KClass<EntityType<T>>.ACACIA_CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_54415})
 /**
  * field_6044
  */
@@ -266,9 +286,21 @@ val <T>KClass<EntityType<T>>.EXPERIENCE_ORB where T: Entity by aliasStatic({Enti
  */
 val <T>KClass<EntityType<T>>.PIGLIN_BRUTE where T: Entity by aliasStatic({EntityType.field_25751})
 /**
+ * field_54418
+ */
+val <T>KClass<EntityType<T>>.BAMBOO_CHEST_RAFT where T: Entity by aliasStatic({EntityType.field_54418})
+/**
+ * field_54417
+ */
+val <T>KClass<EntityType<T>>.SPRUCE_CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_54417})
+/**
  * field_6042
  */
 val <T>KClass<EntityType<T>>.POLAR_BEAR where T: Entity by aliasStatic({EntityType.field_6042})
+/**
+ * field_54419
+ */
+val <T>KClass<EntityType<T>>.BAMBOO_RAFT where T: Entity by aliasStatic({EntityType.field_54419})
 /**
  * field_22281
  */
@@ -278,13 +310,41 @@ val <T>KClass<EntityType<T>>.PIGLIN where T: Entity by aliasStatic({EntityType.f
  */
 val <T>KClass<EntityType<T>>.STRIDER where T: Entity by aliasStatic({EntityType.field_23214})
 /**
+ * field_54406
+ */
+val <T>KClass<EntityType<T>>.DARK_OAK_BOAT where T: Entity by aliasStatic({EntityType.field_54406})
+/**
+ * field_54408
+ */
+val <T>KClass<EntityType<T>>.ACACIA_BOAT where T: Entity by aliasStatic({EntityType.field_54408})
+/**
+ * field_54407
+ */
+val <T>KClass<EntityType<T>>.DARK_OAK_CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_54407})
+/**
+ * field_54409
+ */
+val <T>KClass<EntityType<T>>.MANGROVE_CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_54409})
+/**
  * field_17943
  */
 val <T>KClass<EntityType<T>>.FOX where T: Entity by aliasStatic({EntityType.field_17943})
 /**
+ * field_54560
+ */
+val <T>KClass<EntityType<T>>.CREAKING where T: Entity by aliasStatic({EntityType.field_54560})
+/**
  * field_6069
  */
 val <T>KClass<EntityType<T>>.SLIME where T: Entity by aliasStatic({EntityType.field_6069})
+/**
+ * field_54562
+ */
+val <T>KClass<EntityType<T>>.PALE_OAK_BOAT where T: Entity by aliasStatic({EntityType.field_54562})
+/**
+ * field_54563
+ */
+val <T>KClass<EntityType<T>>.PALE_OAK_CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_54563})
 /**
  * field_6063
  */
@@ -342,9 +402,25 @@ val <T>KClass<EntityType<T>>.MULE where T: Entity by aliasStatic({EntityType.fie
  */
 val <T>KClass<EntityType<T>>.HOPPER_MINECART where T: Entity by aliasStatic({EntityType.field_6058})
 /**
+ * field_54421
+ */
+val <T>KClass<EntityType<T>>.BIRCH_CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_54421})
+/**
+ * field_54422
+ */
+val <T>KClass<EntityType<T>>.CHERRY_BOAT where T: Entity by aliasStatic({EntityType.field_54422})
+/**
+ * field_54420
+ */
+val <T>KClass<EntityType<T>>.BIRCH_BOAT where T: Entity by aliasStatic({EntityType.field_54420})
+/**
  * field_6051
  */
 val <T>KClass<EntityType<T>>.ZOMBIE where T: Entity by aliasStatic({EntityType.field_6051})
+/**
+ * field_54423
+ */
+val <T>KClass<EntityType<T>>.CHERRY_CHEST_BOAT where T: Entity by aliasStatic({EntityType.field_54423})
 /**
  * field_6052
  */
@@ -534,13 +610,13 @@ fun <T>KClass<EntityType<T>>.customNameCopier(arg0: Consumer<T>, arg1: ItemStack
  */
 fun <T>EntityType<T>.getSpawnGroup() where T: Entity = this.method_5891()
 /**
- * method_5892
+ * method_48156
  */
-fun <T>KClass<EntityType<T>>.getEntityFromNbt(arg0: NbtCompound, arg1: world_World) where T: Entity = EntityType.method_5892(arg0, arg1)
+fun <T>KClass<EntityType<T>>.copier(arg0: Consumer<T>, arg1: world_World, arg2: ItemStack, arg3: PlayerEntity) where T: Entity = EntityType.method_48156<T>(arg0, arg1, arg2, arg3)
 /**
- * method_48009
+ * method_48011
  */
-fun <T>KClass<EntityType<T>>.copier(arg0: ServerWorld, arg1: ItemStack, arg2: PlayerEntity) where T: Entity = EntityType.method_48009<T>(arg0, arg1, arg2)
+fun <T>KClass<EntityType<T>>.nbtCopier(arg0: Consumer<T>, arg1: world_World, arg2: ItemStack, arg3: PlayerEntity) where T: Entity = EntityType.method_48011<T>(arg0, arg1, arg2, arg3)
 /**
  * method_5898
  */
@@ -558,13 +634,17 @@ fun <T>EntityType<T>.getRegistryEntry() where T: Entity = this.method_40124()
  */
 fun <T>EntityType<T>.downcast(arg0: Entity) where T: Entity = this.method_31488(arg0)
 /**
+ * method_5892
+ */
+fun <T>KClass<EntityType<T>>.getEntityFromNbt(arg0: NbtCompound, arg1: world_World, arg2: SpawnReason) where T: Entity = EntityType.method_5892(arg0, arg1, arg2)
+/**
  * method_5899
  */
 fun <T>EntityType<T>.spawn(arg0: ServerWorld, arg1: Consumer<T>, arg2: BlockPos, arg3: SpawnReason, arg4: Boolean, arg5: Boolean) where T: Entity = this.method_5899(arg0, arg1, arg2, arg3, arg4, arg5)
 /**
  * method_16351
  */
-fun <T>EntityType<T>.getLootTableId() where T: Entity = this.method_16351()
+fun <T>EntityType<T>.getLootTableKey() where T: Entity = this.method_16351()
 /**
  * method_53125
  */
@@ -578,6 +658,10 @@ fun <T>EntityType<T>.getHeight() where T: Entity = this.method_17686()
  */
 fun <T>EntityType<T>.alwaysUpdateVelocity() where T: Entity = this.method_18389()
 /**
+ * method_48009
+ */
+fun <T>KClass<EntityType<T>>.copier(arg0: world_World, arg1: ItemStack, arg2: PlayerEntity) where T: Entity = EntityType.method_48009<T>(arg0, arg1, arg2)
+/**
  * method_58629
  */
 fun <T>EntityType<T>.getSpawnBox(arg0: Double, arg1: Double, arg2: Double) where T: Entity = this.method_58629(arg0, arg1, arg2)
@@ -586,13 +670,13 @@ fun <T>EntityType<T>.getSpawnBox(arg0: Double, arg1: Double, arg2: Double) where
  */
 fun <T>KClass<EntityType<T>>.getId(arg0: EntityType<*>) where T: Entity = EntityType.method_5890(arg0)
 /**
+ * method_31489
+ */
+fun <T>KClass<EntityType<T>>.streamFromNbt(arg0: MutableList<out NbtElement>, arg1: world_World, arg2: SpawnReason) where T: Entity = EntityType.method_31489(arg0, arg1, arg2)
+/**
  * method_5894
  */
 fun <T>EntityType<T>.spawnFromItemStack(arg0: ServerWorld, arg1: ItemStack, arg2: PlayerEntity, arg3: BlockPos, arg4: SpawnReason, arg5: Boolean, arg6: Boolean) where T: Entity = this.method_5894(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
- * method_48011
- */
-fun <T>KClass<EntityType<T>>.nbtCopier(arg0: Consumer<T>, arg1: ServerWorld, arg2: ItemStack, arg3: PlayerEntity) where T: Entity = EntityType.method_48011<T>(arg0, arg1, arg2, arg3)
 /**
  * method_5888
  */
@@ -602,9 +686,9 @@ fun <T>EntityType<T>.create(arg0: ServerWorld, arg1: Consumer<T>, arg2: BlockPos
  */
 fun <T>KClass<EntityType<T>>.loadFromEntityNbt(arg0: world_World, arg1: PlayerEntity, arg2: Entity, arg3: NbtComponent) where T: Entity = EntityType.method_5881(arg0, arg1, arg2, arg3)
 /**
- * method_48156
+ * method_65893
  */
-fun <T>KClass<EntityType<T>>.copier(arg0: Consumer<T>, arg1: ServerWorld, arg2: ItemStack, arg3: PlayerEntity) where T: Entity = EntityType.method_48156<T>(arg0, arg1, arg2, arg3)
+fun <T>EntityType<T>.canPotentiallyExecuteCommands() where T: Entity = this.method_65893()
 /**
  * method_29496
  */
@@ -614,13 +698,13 @@ fun <T>EntityType<T>.isInvalidSpawn(arg0: BlockState) where T: Entity = this.met
  */
 fun <T>EntityType<T>.getTranslationKey() where T: Entity = this.method_5882()
 /**
- * method_31489
- */
-fun <T>KClass<EntityType<T>>.streamFromNbt(arg0: MutableList<out NbtElement>, arg1: world_World) where T: Entity = EntityType.method_31489(arg0, arg1)
-/**
  * method_17685
  */
 fun <T>EntityType<T>.getWidth() where T: Entity = this.method_17685()
+/**
+ * method_17842
+ */
+fun <T>KClass<EntityType<T>>.loadEntityWithPassengers(arg0: NbtCompound, arg1: world_World, arg2: SpawnReason, arg3: function_Function<Entity, Entity>) where T: Entity = EntityType.method_17842(arg0, arg1, arg2, arg3)
 /**
  * method_18386
  */
@@ -630,21 +714,17 @@ fun <T>EntityType<T>.getDimensions() where T: Entity = this.method_18386()
  */
 fun <T>KClass<EntityType<T>>.fromNbt(arg0: NbtCompound) where T: Entity = EntityType.method_17684(arg0)
 /**
- * method_5883
- */
-fun <T>EntityType<T>.create(arg0: world_World) where T: Entity = this.method_5883(arg0)
-/**
  * method_18387
  */
 fun <T>EntityType<T>.getMaxTrackDistance() where T: Entity = this.method_18387()
 /**
- * method_17842
- */
-fun <T>KClass<EntityType<T>>.loadEntityWithPassengers(arg0: NbtCompound, arg1: world_World, arg2: function_Function<Entity, Entity>) where T: Entity = EntityType.method_17842(arg0, arg1, arg2)
-/**
  * method_47821
  */
 fun <T>EntityType<T>.spawn(arg0: ServerWorld, arg1: BlockPos, arg2: SpawnReason) where T: Entity = this.method_47821(arg0, arg1, arg2)
+/**
+ * method_5883
+ */
+fun <T>EntityType<T>.create(arg0: world_World, arg1: SpawnReason) where T: Entity = this.method_5883(arg0, arg1)
 /**
  * method_35050
  */

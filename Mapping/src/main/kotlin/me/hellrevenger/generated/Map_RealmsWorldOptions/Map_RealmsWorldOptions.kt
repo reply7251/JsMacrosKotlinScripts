@@ -2,17 +2,9 @@ package me.hellrevenger.generated.Map_RealmsWorldOptions
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_22635
- */
-val RealmsWorldOptions.spawnNpcs by alias(RealmsWorldOptions::field_22635)
-/**
  * field_22645
  */
 var RealmsWorldOptions.empty by alias(RealmsWorldOptions::field_22645)
-/**
- * field_22633
- */
-val RealmsWorldOptions.spawnAnimals by alias(RealmsWorldOptions::field_22633)
 /**
  * field_46844
  */
@@ -25,6 +17,10 @@ val RealmsWorldOptions.spawnProtection by alias(RealmsWorldOptions::field_22636)
  * field_22643
  */
 var RealmsWorldOptions.templateImage by alias(RealmsWorldOptions::field_22643)
+/**
+ * field_54384
+ */
+val RealmsWorldOptions.hardcore by alias(RealmsWorldOptions::field_54384)
 /**
  * field_22642
  */
@@ -66,9 +62,13 @@ fun RealmsWorldOptions.toJson() = this.method_25082()
  */
 fun RealmsWorldOptions.clone() = this.method_25083()
 /**
+ * method_64352
+ */
+fun KClass<RealmsWorldOptions>.create(arg0: GameMode, arg1: Difficulty, arg2: Boolean, arg3: String, arg4: String) = RealmsWorldOptions.method_64352(arg0, arg1, arg2, arg3, arg4)
+/**
  * method_25078
  */
-fun KClass<RealmsWorldOptions>.parse(arg0: JsonObject) = RealmsWorldOptions.method_25078(arg0)
+fun KClass<RealmsWorldOptions>.parse(arg0: JsonObject, arg1: RealmsWorldSettings) = RealmsWorldOptions.method_25078(arg0, arg1)
 /**
  * method_25081
  */
@@ -85,3 +85,7 @@ fun RealmsWorldOptions.getSlotName(arg0: Int) = this.method_25077(arg0)
  * method_25080
  */
 fun KClass<RealmsWorldOptions>.getEmptyDefaults() = RealmsWorldOptions.method_25080()
+/**
+ * method_64353
+ */
+fun KClass<RealmsWorldOptions>.create(arg0: LevelInfo, arg1: String) = RealmsWorldOptions.method_64353(arg0, arg1)

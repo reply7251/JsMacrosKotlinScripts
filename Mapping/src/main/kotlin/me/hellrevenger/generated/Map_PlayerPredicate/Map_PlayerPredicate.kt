@@ -14,6 +14,10 @@ fun PlayerPredicate.gameMode() = this.comp_1818()
  */
 fun PlayerPredicate.experienceLevel() = this.comp_1817()
 /**
+ * comp_3182
+ */
+fun PlayerPredicate.input() = this.comp_3182()
+/**
  * comp_1820
  */
 fun PlayerPredicate.recipes() = this.comp_1820()

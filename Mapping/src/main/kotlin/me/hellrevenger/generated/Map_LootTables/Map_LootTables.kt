@@ -2,9 +2,9 @@ package me.hellrevenger.generated.Map_LootTables
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_806
+ * field_52692
  */
-val KClass<LootTables>.LIGHT_GRAY_SHEEP_ENTITY by aliasStatic(LootTables::field_806)
+val KClass<LootTables>.SHEEP_DROPS_FROM_DYE_COLOR by aliasStatic(LootTables::field_52692)
 /**
  * field_17009
  */
@@ -13,10 +13,6 @@ val KClass<LootTables>.VILLAGE_ARMORER_CHEST by aliasStatic(LootTables::field_17
  * field_17108
  */
 val KClass<LootTables>.VILLAGE_FLETCHER_CHEST by aliasStatic(LootTables::field_17108)
-/**
- * field_285
- */
-val KClass<LootTables>.PURPLE_SHEEP_ENTITY by aliasStatic(LootTables::field_285)
 /**
  * field_16753
  */
@@ -30,49 +26,17 @@ val KClass<LootTables>.VILLAGE_SHEPARD_CHEST by aliasStatic(LootTables::field_17
  */
 val KClass<LootTables>.VILLAGE_CARTOGRAPHER_CHEST by aliasStatic(LootTables::field_16751)
 /**
- * field_394
- */
-val KClass<LootTables>.BLUE_SHEEP_ENTITY by aliasStatic(LootTables::field_394)
-/**
- * field_461
- */
-val KClass<LootTables>.LIGHT_BLUE_SHEEP_ENTITY by aliasStatic(LootTables::field_461)
-/**
- * field_702
- */
-val KClass<LootTables>.LIME_SHEEP_ENTITY by aliasStatic(LootTables::field_702)
-/**
- * field_716
- */
-val KClass<LootTables>.RED_SHEEP_ENTITY by aliasStatic(LootTables::field_716)
-/**
  * field_16749
  */
 val KClass<LootTables>.VILLAGE_TAIGA_HOUSE_CHEST by aliasStatic(LootTables::field_16749)
-/**
- * field_489
- */
-val KClass<LootTables>.BROWN_SHEEP_ENTITY by aliasStatic(LootTables::field_489)
-/**
- * field_869
- */
-val KClass<LootTables>.WHITE_SHEEP_ENTITY by aliasStatic(LootTables::field_869)
 /**
  * field_18007
  */
 val KClass<LootTables>.VILLAGE_FISHER_CHEST by aliasStatic(LootTables::field_18007)
 /**
- * field_778
+ * field_52693
  */
-val KClass<LootTables>.BLACK_SHEEP_ENTITY by aliasStatic(LootTables::field_778)
-/**
- * field_607
- */
-val KClass<LootTables>.GREEN_SHEEP_ENTITY by aliasStatic(LootTables::field_607)
-/**
- * field_629
- */
-val KClass<LootTables>.PINK_SHEEP_ENTITY by aliasStatic(LootTables::field_629)
+val KClass<LootTables>.SHEEP_SHEARING_FROM_DYE_COLOR by aliasStatic(LootTables::field_52693)
 /**
  * field_17109
  */
@@ -82,17 +46,9 @@ val KClass<LootTables>.VILLAGE_TEMPLE_CHEST by aliasStatic(LootTables::field_171
  */
 val KClass<LootTables>.VILLAGE_TOOLSMITH_CHEST by aliasStatic(LootTables::field_17107)
 /**
- * field_224
- */
-val KClass<LootTables>.MAGENTA_SHEEP_ENTITY by aliasStatic(LootTables::field_224)
-/**
  * field_16754
  */
 val KClass<LootTables>.VILLAGE_SNOWY_HOUSE_CHEST by aliasStatic(LootTables::field_16754)
-/**
- * field_365
- */
-val KClass<LootTables>.CYAN_SHEEP_ENTITY by aliasStatic(LootTables::field_365)
 /**
  * field_16752
  */
@@ -101,10 +57,6 @@ val KClass<LootTables>.VILLAGE_DESERT_HOUSE_CHEST by aliasStatic(LootTables::fie
  * field_17012
  */
 val KClass<LootTables>.VILLAGE_BUTCHER_CHEST by aliasStatic(LootTables::field_17012)
-/**
- * field_385
- */
-val KClass<LootTables>.YELLOW_SHEEP_ENTITY by aliasStatic(LootTables::field_385)
 /**
  * field_850
  */
@@ -118,10 +70,6 @@ val KClass<LootTables>.VILLAGE_TANNERY_CHEST by aliasStatic(LootTables::field_16
  */
 val KClass<LootTables>.VILLAGE_MASON_CHEST by aliasStatic(LootTables::field_17010)
 /**
- * field_814
- */
-val KClass<LootTables>.ORANGE_SHEEP_ENTITY by aliasStatic(LootTables::field_814)
-/**
  * field_434
  */
 val KClass<LootTables>.VILLAGE_WEAPONSMITH_CHEST by aliasStatic(LootTables::field_434)
@@ -129,14 +77,6 @@ val KClass<LootTables>.VILLAGE_WEAPONSMITH_CHEST by aliasStatic(LootTables::fiel
  * field_16748
  */
 val KClass<LootTables>.VILLAGE_PLAINS_CHEST by aliasStatic(LootTables::field_16748)
-/**
- * field_844
- */
-val KClass<LootTables>.EMPTY by aliasStatic(LootTables::field_844)
-/**
- * field_878
- */
-val KClass<LootTables>.GRAY_SHEEP_ENTITY by aliasStatic(LootTables::field_878)
 /**
  * field_47422
  */
@@ -206,6 +146,10 @@ val KClass<LootTables>.TRIAL_CHAMBER_ITEMS_TO_DROP_WHEN_OMINOUS_SPAWNER by alias
  */
 val KClass<LootTables>.FISHING_TREASURE_GAMEPLAY by aliasStatic(LootTables::field_854)
 /**
+ * field_54009
+ */
+val KClass<LootTables>.MOOSHROOM_SHEARING by aliasStatic(LootTables::field_54009)
+/**
  * field_43353
  */
 val KClass<LootTables>.DESERT_WELL_ARCHAEOLOGY by aliasStatic(LootTables::field_43353)
@@ -261,6 +205,10 @@ val KClass<LootTables>.WOODLAND_MANSION_CHEST by aliasStatic(LootTables::field_4
  * field_47419
  */
 val KClass<LootTables>.TRIAL_CHAMBERS_INTERSECTION_BARREL_CHEST by aliasStatic(LootTables::field_47419)
+/**
+ * field_54010
+ */
+val KClass<LootTables>.SHEEP_SHEARING by aliasStatic(LootTables::field_54010)
 /**
  * field_24050
  */
@@ -334,6 +282,18 @@ val KClass<LootTables>.IGLOO_CHEST_CHEST by aliasStatic(LootTables::field_662)
  */
 val KClass<LootTables>.FISHING_FISH_GAMEPLAY by aliasStatic(LootTables::field_795)
 /**
+ * field_52690
+ */
+val KClass<LootTables>.MOOSHROOM_BROWN_SHEARING by aliasStatic(LootTables::field_52690)
+/**
+ * field_52691
+ */
+val KClass<LootTables>.SNOW_GOLEM_SHEARING by aliasStatic(LootTables::field_52691)
+/**
+ * field_52689
+ */
+val KClass<LootTables>.MOOSHROOM_RED_SHEARING by aliasStatic(LootTables::field_52689)
+/**
  * field_19065
  */
 val KClass<LootTables>.HERO_OF_THE_VILLAGE_CLERIC_GIFT_GAMEPLAY by aliasStatic(LootTables::field_19065)
@@ -394,6 +354,14 @@ val KClass<LootTables>.HERO_OF_THE_VILLAGE_FISHERMAN_GIFT_GAMEPLAY by aliasStati
  */
 val KClass<LootTables>.HERO_OF_THE_VILLAGE_FARMER_GIFT_GAMEPLAY by aliasStatic(LootTables::field_19066)
 /**
+ * field_54247
+ */
+val KClass<LootTables>.HERO_OF_THE_VILLAGE_BABY_GIFT_GAMEPLAY by aliasStatic(LootTables::field_54247)
+/**
+ * field_54246
+ */
+val KClass<LootTables>.HERO_OF_THE_VILLAGE_UNEMPLOYED_GIFT_GAMEPLAY by aliasStatic(LootTables::field_54246)
+/**
  * field_50194
  */
 val KClass<LootTables>.TRIAL_CHAMBERS_REWARD_OMINOUS_CHEST by aliasStatic(LootTables::field_50194)
@@ -406,9 +374,17 @@ val KClass<LootTables>.TRIAL_CHAMBERS_REWARD_OMINOUS_RARE_CHEST by aliasStatic(L
  */
 val KClass<LootTables>.TRIAL_CHAMBERS_REWARD_OMINOUS_COMMON_CHEST by aliasStatic(LootTables::field_50195)
 /**
+ * field_54249
+ */
+val KClass<LootTables>.ARMADILLO_SHED_GAMEPLAY by aliasStatic(LootTables::field_54249)
+/**
  * field_50198
  */
 val KClass<LootTables>.OMINOUS_TRIAL_CHAMBER_KEY_SPAWNER by aliasStatic(LootTables::field_50198)
+/**
+ * field_54248
+ */
+val KClass<LootTables>.CHICKEN_LAY_GAMEPLAY by aliasStatic(LootTables::field_54248)
 /**
  * field_50197
  */

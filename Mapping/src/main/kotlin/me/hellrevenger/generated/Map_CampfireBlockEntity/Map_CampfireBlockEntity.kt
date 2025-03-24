@@ -2,9 +2,21 @@ package me.hellrevenger.generated.Map_CampfireBlockEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_17505
+ */
+fun CampfireBlockEntity.getItemsBeingCooked() = this.method_17505()
+/**
+ * method_17503
+ */
+fun CampfireBlockEntity.addItem(arg0: ServerWorld, arg1: LivingEntity, arg2: ItemStack) = this.method_17503(arg0, arg1, arg2)
+/**
  * method_31666
  */
-fun KClass<CampfireBlockEntity>.litServerTick(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: CampfireBlockEntity) = CampfireBlockEntity.method_31666(arg0, arg1, arg2, arg3)
+fun KClass<CampfireBlockEntity>.litServerTick(arg0: ServerWorld, arg1: BlockPos, arg2: BlockState, arg3: CampfireBlockEntity, arg4: net.minecraft.class_1863.class_7266<SingleStackRecipeInput, CampfireCookingRecipe>) = CampfireBlockEntity.method_31666(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_17506
+ */
+fun CampfireBlockEntity.spawnItemsBeingCooked() = this.method_17506()
 /**
  * method_31668
  */
@@ -17,19 +29,3 @@ fun KClass<CampfireBlockEntity>.unlitServerTick(arg0: world_World, arg1: BlockPo
  * method_38245
  */
 fun CampfireBlockEntity.toUpdatePacket() = this.method_38245()
-/**
- * method_17502
- */
-fun CampfireBlockEntity.getRecipeFor(arg0: ItemStack) = this.method_17502(arg0)
-/**
- * method_17503
- */
-fun CampfireBlockEntity.addItem(arg0: LivingEntity, arg1: ItemStack, arg2: Int) = this.method_17503(arg0, arg1, arg2)
-/**
- * method_17505
- */
-fun CampfireBlockEntity.getItemsBeingCooked() = this.method_17505()
-/**
- * method_17506
- */
-fun CampfireBlockEntity.spawnItemsBeingCooked() = this.method_17506()

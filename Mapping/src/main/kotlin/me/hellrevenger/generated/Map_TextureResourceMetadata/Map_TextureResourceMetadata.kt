@@ -2,14 +2,14 @@ package me.hellrevenger.generated.Map_TextureResourceMetadata
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_5344
+ * field_55542
  */
-val KClass<TextureResourceMetadata>.READER by aliasStatic(TextureResourceMetadata::field_5344)
+val KClass<TextureResourceMetadata>.SERIALIZER by aliasStatic(TextureResourceMetadata::field_55542)
 /**
- * method_4697
+ * comp_3460
  */
-fun TextureResourceMetadata.shouldClamp() = this.method_4697()
+fun TextureResourceMetadata.clamp() = this.comp_3460()
 /**
- * method_4696
+ * comp_3459
  */
-fun TextureResourceMetadata.shouldBlur() = this.method_4696()
+fun TextureResourceMetadata.blur() = this.comp_3459()

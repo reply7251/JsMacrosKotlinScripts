@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 val KClass<TrialChamberData>.ALIAS_BINDINGS by aliasStatic(TrialChamberData::field_47510)
 /**
- * field_47509
- */
-val KClass<TrialChamberData>.CHAMBER_ENTRANCE_CAP_POOL_KEY by aliasStatic(TrialChamberData::field_47509)
-/**
  * field_47507
  */
 val KClass<TrialChamberData>.CHAMBER_END_POOL_KEY by aliasStatic(TrialChamberData::field_47507)

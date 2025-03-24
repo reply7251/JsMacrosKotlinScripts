@@ -6,21 +6,21 @@ import me.hellrevenger.generated.*
  */
 val KClass<Blocks>.MELON by aliasStatic(Blocks::field_46283)
 /**
- * field_46287
- */
-val KClass<Blocks>.MELON_STEM by aliasStatic(Blocks::field_46287)
-/**
  * field_46284
  */
 val KClass<Blocks>.ATTACHED_PUMPKIN_STEM by aliasStatic(Blocks::field_46284)
 /**
- * field_46285
- */
-val KClass<Blocks>.ATTACHED_MELON_STEM by aliasStatic(Blocks::field_46285)
-/**
  * field_46282
  */
 val KClass<Blocks>.PUMPKIN by aliasStatic(Blocks::field_46282)
+/**
+ * field_46287
+ */
+val KClass<Blocks>.MELON_STEM by aliasStatic(Blocks::field_46287)
+/**
+ * field_46285
+ */
+val KClass<Blocks>.ATTACHED_MELON_STEM by aliasStatic(Blocks::field_46285)
 /**
  * field_46286
  */
@@ -170,6 +170,10 @@ val KClass<Blocks>.PINK_TERRACOTTA by aliasStatic(Blocks::field_10444)
  */
 val KClass<Blocks>.RED_NETHER_BRICK_WALL by aliasStatic(Blocks::field_10311)
 /**
+ * field_55059
+ */
+val KClass<Blocks>.RESIN_CLUMP by aliasStatic(Blocks::field_55059)
+/**
  * field_10576
  */
 val KClass<Blocks>.IRON_BARS by aliasStatic(Blocks::field_10576)
@@ -181,6 +185,10 @@ val KClass<Blocks>.ENDER_CHEST by aliasStatic(Blocks::field_10443)
  * field_10310
  */
 val KClass<Blocks>.POLISHED_DIORITE_STAIRS by aliasStatic(Blocks::field_10310)
+/**
+ * field_55058
+ */
+val KClass<Blocks>.CHISELED_RESIN_BRICKS by aliasStatic(Blocks::field_55058)
 /**
  * field_10441
  */
@@ -194,21 +202,41 @@ val KClass<Blocks>.BIRCH_SAPLING by aliasStatic(Blocks::field_10575)
  */
 val KClass<Blocks>.DIAMOND_ORE by aliasStatic(Blocks::field_10442)
 /**
+ * field_55057
+ */
+val KClass<Blocks>.RESIN_BRICK_WALL by aliasStatic(Blocks::field_55057)
+/**
  * field_10096
  */
 val KClass<Blocks>.YELLOW_GLAZED_TERRACOTTA by aliasStatic(Blocks::field_10096)
+/**
+ * field_55056
+ */
+val KClass<Blocks>.RESIN_BRICK_SLAB by aliasStatic(Blocks::field_55056)
 /**
  * field_10095
  */
 val KClass<Blocks>.ORANGE_WOOL by aliasStatic(Blocks::field_10095)
 /**
+ * field_55055
+ */
+val KClass<Blocks>.RESIN_BRICK_STAIRS by aliasStatic(Blocks::field_55055)
+/**
  * field_10094
  */
 val KClass<Blocks>.DEAD_BUBBLE_CORAL_WALL_FAN by aliasStatic(Blocks::field_10094)
 /**
+ * field_55054
+ */
+val KClass<Blocks>.RESIN_BRICKS by aliasStatic(Blocks::field_55054)
+/**
  * field_10093
  */
 val KClass<Blocks>.POLISHED_ANDESITE by aliasStatic(Blocks::field_10093)
+/**
+ * field_55053
+ */
+val KClass<Blocks>.RESIN_BLOCK by aliasStatic(Blocks::field_55053)
 /**
  * field_10092
  */
@@ -686,6 +714,10 @@ val KClass<Blocks>.OXEYE_DAISY by aliasStatic(Blocks::field_10554)
  */
 val KClass<Blocks>.LIME_CONCRETE by aliasStatic(Blocks::field_10421)
 /**
+ * field_54719
+ */
+val KClass<Blocks>.PALE_OAK_WALL_HANGING_SIGN by aliasStatic(Blocks::field_54719)
+/**
  * field_42734
  */
 val KClass<Blocks>.TORCHFLOWER by aliasStatic(Blocks::field_42734)
@@ -697,6 +729,10 @@ val KClass<Blocks>.JUNGLE_BUTTON by aliasStatic(Blocks::field_10553)
  * field_10420
  */
 val KClass<Blocks>.RED_SANDSTONE_STAIRS by aliasStatic(Blocks::field_10420)
+/**
+ * field_54718
+ */
+val KClass<Blocks>.PALE_OAK_SIGN by aliasStatic(Blocks::field_54718)
 /**
  * field_10551
  */
@@ -710,6 +746,10 @@ val KClass<Blocks>.CHERRY_PRESSURE_PLATE by aliasStatic(Blocks::field_42737)
  */
 val KClass<Blocks>.CHISELED_STONE_BRICKS by aliasStatic(Blocks::field_10552)
 /**
+ * field_54717
+ */
+val KClass<Blocks>.CREAKING_HEART by aliasStatic(Blocks::field_54717)
+/**
  * field_10550
  */
 val KClass<Blocks>.BLUE_GLAZED_TERRACOTTA by aliasStatic(Blocks::field_10550)
@@ -717,6 +757,10 @@ val KClass<Blocks>.BLUE_GLAZED_TERRACOTTA by aliasStatic(Blocks::field_10550)
  * field_42736
  */
 val KClass<Blocks>.CHERRY_WALL_SIGN by aliasStatic(Blocks::field_42736)
+/**
+ * field_54716
+ */
+val KClass<Blocks>.STRIPPED_PALE_OAK_LOG by aliasStatic(Blocks::field_54716)
 /**
  * field_10072
  */
@@ -730,9 +774,17 @@ val KClass<Blocks>.CHERRY_WALL_HANGING_SIGN by aliasStatic(Blocks::field_42739)
  */
 val KClass<Blocks>.SPRUCE_SLAB by aliasStatic(Blocks::field_10071)
 /**
+ * field_54715
+ */
+val KClass<Blocks>.PALE_OAK_LOG by aliasStatic(Blocks::field_54715)
+/**
  * field_42738
  */
 val KClass<Blocks>.CHERRY_HANGING_SIGN by aliasStatic(Blocks::field_42738)
+/**
+ * field_54714
+ */
+val KClass<Blocks>.PALE_OAK_LEAVES by aliasStatic(Blocks::field_54714)
 /**
  * field_10070
  */
@@ -742,9 +794,17 @@ val KClass<Blocks>.BLACK_STAINED_GLASS_PANE by aliasStatic(Blocks::field_10070)
  */
 val KClass<Blocks>.MANGROVE_LEAVES by aliasStatic(Blocks::field_37551)
 /**
+ * field_54713
+ */
+val KClass<Blocks>.STRIPPED_PALE_OAK_WOOD by aliasStatic(Blocks::field_54713)
+/**
  * field_37550
  */
 val KClass<Blocks>.STRIPPED_MANGROVE_WOOD by aliasStatic(Blocks::field_37550)
+/**
+ * field_54712
+ */
+val KClass<Blocks>.PALE_OAK_SAPLING by aliasStatic(Blocks::field_54712)
 /**
  * field_10429
  */
@@ -765,6 +825,10 @@ val KClass<Blocks>.RED_MUSHROOM by aliasStatic(Blocks::field_10559)
  * field_10426
  */
 val KClass<Blocks>.PURPLE_GLAZED_TERRACOTTA by aliasStatic(Blocks::field_10426)
+/**
+ * field_55060
+ */
+val KClass<Blocks>.OPEN_EYEBLOSSOM by aliasStatic(Blocks::field_55060)
 /**
  * field_10069
  */
@@ -1010,9 +1074,17 @@ val KClass<Blocks>.BIRCH_BUTTON by aliasStatic(Blocks::field_10417)
  */
 val KClass<Blocks>.SMOOTH_SANDSTONE_STAIRS by aliasStatic(Blocks::field_10549)
 /**
+ * field_55063
+ */
+val KClass<Blocks>.POTTED_CLOSED_EYEBLOSSOM by aliasStatic(Blocks::field_55063)
+/**
  * field_10416
  */
 val KClass<Blocks>.CRACKED_STONE_BRICKS by aliasStatic(Blocks::field_10416)
+/**
+ * field_55062
+ */
+val KClass<Blocks>.POTTED_OPEN_EYEBLOSSOM by aliasStatic(Blocks::field_55062)
 /**
  * field_10548
  */
@@ -1021,6 +1093,10 @@ val KClass<Blocks>.LILY_OF_THE_VALLEY by aliasStatic(Blocks::field_10548)
  * field_10415
  */
 val KClass<Blocks>.TERRACOTTA by aliasStatic(Blocks::field_10415)
+/**
+ * field_55061
+ */
+val KClass<Blocks>.CLOSED_EYEBLOSSOM by aliasStatic(Blocks::field_55061)
 /**
  * field_10547
  */
@@ -1033,6 +1109,10 @@ val KClass<Blocks>.DAMAGED_ANVIL by aliasStatic(Blocks::field_10414)
  * field_10056
  */
 val KClass<Blocks>.STONE_BRICKS by aliasStatic(Blocks::field_10056)
+/**
+ * field_54732
+ */
+val KClass<Blocks>.PALE_MOSS_CARPET by aliasStatic(Blocks::field_54732)
 /**
  * field_10057
  */
@@ -1050,6 +1130,10 @@ val KClass<Blocks>.OAK_FENCE_GATE by aliasStatic(Blocks::field_10188)
  */
 val KClass<Blocks>.GREEN_SHULKER_BOX by aliasStatic(Blocks::field_10055)
 /**
+ * field_54731
+ */
+val KClass<Blocks>.PALE_MOSS_BLOCK by aliasStatic(Blocks::field_54731)
+/**
  * field_10189
  */
 val KClass<Blocks>.GRANITE_SLAB by aliasStatic(Blocks::field_10189)
@@ -1065,6 +1149,10 @@ val KClass<Blocks>.PURPLE_WALL_BANNER by aliasStatic(Blocks::field_10054)
  * field_10187
  */
 val KClass<Blocks>.OAK_WALL_SIGN by aliasStatic(Blocks::field_10187)
+/**
+ * field_54730
+ */
+val KClass<Blocks>.PALE_OAK_FENCE_GATE by aliasStatic(Blocks::field_54730)
 /**
  * field_27110
  */
@@ -1310,6 +1398,10 @@ val KClass<Blocks>.MAGENTA_GLAZED_TERRACOTTA by aliasStatic(Blocks::field_10538)
  */
 val KClass<Blocks>.MOSSY_COBBLESTONE_SLAB by aliasStatic(Blocks::field_10405)
 /**
+ * field_54735
+ */
+val KClass<Blocks>.PALE_OAK_PLANKS by aliasStatic(Blocks::field_54735)
+/**
  * field_10537
  */
 val KClass<Blocks>.BLACK_WALL_BANNER by aliasStatic(Blocks::field_10537)
@@ -1317,6 +1409,10 @@ val KClass<Blocks>.BLACK_WALL_BANNER by aliasStatic(Blocks::field_10537)
  * field_10404
  */
 val KClass<Blocks>.PURPLE_CONCRETE_POWDER by aliasStatic(Blocks::field_10404)
+/**
+ * field_54734
+ */
+val KClass<Blocks>.PALE_OAK_WOOD by aliasStatic(Blocks::field_54734)
 /**
  * field_37571
  */
@@ -1333,6 +1429,10 @@ val KClass<Blocks>.RED_CARPET by aliasStatic(Blocks::field_10536)
  * field_10403
  */
 val KClass<Blocks>.DARK_OAK_DOOR by aliasStatic(Blocks::field_10403)
+/**
+ * field_54733
+ */
+val KClass<Blocks>.PALE_HANGING_MOSS by aliasStatic(Blocks::field_54733)
 /**
  * field_37570
  */
@@ -1357,6 +1457,10 @@ val KClass<Blocks>.WITHER_SKELETON_SKULL by aliasStatic(Blocks::field_10177)
  * field_10044
  */
 val KClass<Blocks>.CHISELED_QUARTZ_BLOCK by aliasStatic(Blocks::field_10044)
+/**
+ * field_54720
+ */
+val KClass<Blocks>.PALE_OAK_PRESSURE_PLATE by aliasStatic(Blocks::field_54720)
 /**
  * field_10178
  */
@@ -1590,6 +1694,10 @@ val KClass<Blocks>.CHERRY_SLAB by aliasStatic(Blocks::field_42746)
  */
 val KClass<Blocks>.TORCHFLOWER_CROP by aliasStatic(Blocks::field_42749)
 /**
+ * field_54729
+ */
+val KClass<Blocks>.PALE_OAK_DOOR by aliasStatic(Blocks::field_54729)
+/**
  * field_9983
  */
 val KClass<Blocks>.LADDER by aliasStatic(Blocks::field_9983)
@@ -1598,9 +1706,17 @@ val KClass<Blocks>.LADDER by aliasStatic(Blocks::field_9983)
  */
 val KClass<Blocks>.CHERRY_DOOR by aliasStatic(Blocks::field_42748)
 /**
+ * field_54728
+ */
+val KClass<Blocks>.PALE_OAK_FENCE by aliasStatic(Blocks::field_54728)
+/**
  * field_22103
  */
 val KClass<Blocks>.WARPED_DOOR by aliasStatic(Blocks::field_22103)
+/**
+ * field_54727
+ */
+val KClass<Blocks>.PALE_OAK_SLAB by aliasStatic(Blocks::field_54727)
 /**
  * field_22102
  */
@@ -1614,6 +1730,10 @@ val KClass<Blocks>.GREEN_CONCRETE_POWDER by aliasStatic(Blocks::field_10529)
  */
 val KClass<Blocks>.WARPED_BUTTON by aliasStatic(Blocks::field_22101)
 /**
+ * field_54726
+ */
+val KClass<Blocks>.PALE_OAK_STAIRS by aliasStatic(Blocks::field_54726)
+/**
  * field_22105
  */
 val KClass<Blocks>.WARPED_SIGN by aliasStatic(Blocks::field_22105)
@@ -1621,6 +1741,10 @@ val KClass<Blocks>.WARPED_SIGN by aliasStatic(Blocks::field_22105)
  * field_10528
  */
 val KClass<Blocks>.CHORUS_FLOWER by aliasStatic(Blocks::field_10528)
+/**
+ * field_54725
+ */
+val KClass<Blocks>.POTTED_PALE_OAK_SAPLING by aliasStatic(Blocks::field_54725)
 /**
  * field_22104
  */
@@ -1630,13 +1754,25 @@ val KClass<Blocks>.CRIMSON_SIGN by aliasStatic(Blocks::field_22104)
  */
 val KClass<Blocks>.BLUE_BED by aliasStatic(Blocks::field_10527)
 /**
+ * field_54724
+ */
+val KClass<Blocks>.PALE_OAK_BUTTON by aliasStatic(Blocks::field_54724)
+/**
  * field_10526
  */
 val KClass<Blocks>.GREEN_TERRACOTTA by aliasStatic(Blocks::field_10526)
 /**
+ * field_54723
+ */
+val KClass<Blocks>.PALE_OAK_TRAPDOOR by aliasStatic(Blocks::field_54723)
+/**
  * field_10525
  */
 val KClass<Blocks>.COMMAND_BLOCK by aliasStatic(Blocks::field_10525)
+/**
+ * field_54722
+ */
+val KClass<Blocks>.PALE_OAK_HANGING_SIGN by aliasStatic(Blocks::field_54722)
 /**
  * field_22100
  */
@@ -1645,6 +1781,10 @@ val KClass<Blocks>.CRIMSON_BUTTON by aliasStatic(Blocks::field_22100)
  * field_10524
  */
 val KClass<Blocks>.REDSTONE_LAMP by aliasStatic(Blocks::field_10524)
+/**
+ * field_54721
+ */
+val KClass<Blocks>.PALE_OAK_WALL_SIGN by aliasStatic(Blocks::field_54721)
 /**
  * field_10523
  */
@@ -1909,143 +2049,3 @@ val KClass<Blocks>.DIORITE_WALL by aliasStatic(Blocks::field_10517)
  * field_22117
  */
 val KClass<Blocks>.NETHER_SPROUTS by aliasStatic(Blocks::field_22117)
-/**
- * field_10516
- */
-val KClass<Blocks>.FIRE_CORAL_BLOCK by aliasStatic(Blocks::field_10516)
-/**
- * field_22116
- */
-val KClass<Blocks>.WARPED_ROOTS by aliasStatic(Blocks::field_22116)
-/**
- * field_10515
- */
-val KClass<Blocks>.NETHERRACK by aliasStatic(Blocks::field_10515)
-/**
- * field_33508
- */
-val KClass<Blocks>.RAW_IRON_BLOCK by aliasStatic(Blocks::field_33508)
-/**
- * field_22110
- */
-val KClass<Blocks>.SOUL_LANTERN by aliasStatic(Blocks::field_22110)
-/**
- * field_10514
- */
-val KClass<Blocks>.BLUE_WOOL by aliasStatic(Blocks::field_10514)
-/**
- * field_10513
- */
-val KClass<Blocks>.BIRCH_FENCE_GATE by aliasStatic(Blocks::field_10513)
-/**
- * field_22113
- */
-val KClass<Blocks>.WARPED_NYLIUM by aliasStatic(Blocks::field_22113)
-/**
- * field_43231
- */
-val KClass<Blocks>.CALIBRATED_SCULK_SENSOR by aliasStatic(Blocks::field_43231)
-/**
- * field_22112
- */
-val KClass<Blocks>.STRIPPED_WARPED_STEM by aliasStatic(Blocks::field_22112)
-/**
- * field_10512
- */
-val KClass<Blocks>.YELLOW_CARPET by aliasStatic(Blocks::field_10512)
-/**
- * field_43230
- */
-val KClass<Blocks>.SNIFFER_EGG by aliasStatic(Blocks::field_43230)
-/**
- * field_22111
- */
-val KClass<Blocks>.WARPED_STEM by aliasStatic(Blocks::field_22111)
-/**
- * field_10511
- */
-val KClass<Blocks>.BIRCH_LOG by aliasStatic(Blocks::field_10511)
-/**
- * field_10153
- */
-val KClass<Blocks>.QUARTZ_BLOCK by aliasStatic(Blocks::field_10153)
-/**
- * field_10020
- */
-val KClass<Blocks>.SPRUCE_FENCE by aliasStatic(Blocks::field_10020)
-/**
- * field_10286
- */
-val KClass<Blocks>.PURPUR_BLOCK by aliasStatic(Blocks::field_10286)
-/**
- * field_27148
- */
-val KClass<Blocks>.LIME_CANDLE_CAKE by aliasStatic(Blocks::field_27148)
-/**
- * field_10152
- */
-val KClass<Blocks>.PURPLE_STAINED_GLASS_PANE by aliasStatic(Blocks::field_10152)
-/**
- * field_10285
- */
-val KClass<Blocks>.GLASS_PANE by aliasStatic(Blocks::field_10285)
-/**
- * field_27147
- */
-val KClass<Blocks>.YELLOW_CANDLE_CAKE by aliasStatic(Blocks::field_27147)
-/**
- * field_10284
- */
-val KClass<Blocks>.ACACIA_SIGN by aliasStatic(Blocks::field_10284)
-/**
- * field_10151
- */
-val KClass<Blocks>.POTTED_POPPY by aliasStatic(Blocks::field_10151)
-/**
- * field_27146
- */
-val KClass<Blocks>.LIGHT_BLUE_CANDLE_CAKE by aliasStatic(Blocks::field_27146)
-/**
- * field_10283
- */
-val KClass<Blocks>.SMOOTH_RED_SANDSTONE_SLAB by aliasStatic(Blocks::field_10283)
-/**
- * field_27145
- */
-val KClass<Blocks>.MAGENTA_CANDLE_CAKE by aliasStatic(Blocks::field_27145)
-/**
- * field_10282
- */
-val KClass<Blocks>.OBSERVER by aliasStatic(Blocks::field_10282)
-/**
- * field_22119
- */
-val KClass<Blocks>.STRIPPED_CRIMSON_STEM by aliasStatic(Blocks::field_22119)
-/**
- * field_47041
- */
-val KClass<Blocks>.EXPOSED_COPPER_DOOR by aliasStatic(Blocks::field_47041)
-/**
- * field_27144
- */
-val KClass<Blocks>.ORANGE_CANDLE_CAKE by aliasStatic(Blocks::field_27144)
-/**
- * field_10281
- */
-val KClass<Blocks>.BLUE_BANNER by aliasStatic(Blocks::field_10281)
-/**
- * field_22118
- */
-val KClass<Blocks>.CRIMSON_STEM by aliasStatic(Blocks::field_22118)
-/**
- * field_47040
- */
-val KClass<Blocks>.COPPER_DOOR by aliasStatic(Blocks::field_47040)
-/**
- * field_10509
- */
-val KClass<Blocks>.CREEPER_WALL_HEAD by aliasStatic(Blocks::field_10509)
-/**
- * field_27143
- */
-val KClass<Blocks>.WHITE_CANDLE_CAKE by aliasStatic(Blocks::field_27143)

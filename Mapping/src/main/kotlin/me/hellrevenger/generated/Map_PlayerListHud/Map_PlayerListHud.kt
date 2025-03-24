@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_PlayerListHud
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_2158
+ */
+var PlayerListHud.visible by alias(PlayerListHud::field_2158)
+/**
  * field_32205
  */
 val KClass<PlayerListHud>.MAX_ROWS by aliasStatic(PlayerListHud::field_32205)
@@ -17,10 +21,6 @@ fun PlayerListHud.render(arg0: DrawContext, arg1: Int, arg2: Scoreboard, arg3: S
  * method_1925
  */
 fun PlayerListHud.setHeader(arg0: Text) = this.method_1925(arg0)
-/**
- * method_1921
- */
-fun PlayerListHud.setVisible(arg0: Boolean) = this.method_1921(arg0)
 /**
  * method_1920
  */

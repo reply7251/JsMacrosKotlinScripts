@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_32042
  */
-fun <T>KClass<SilverfishEntityModel<T>>.getTexturedModelData() where T: Entity = SilverfishEntityModel.method_32042()
+fun KClass<SilverfishEntityModel>.getTexturedModelData() = SilverfishEntityModel.method_32042()

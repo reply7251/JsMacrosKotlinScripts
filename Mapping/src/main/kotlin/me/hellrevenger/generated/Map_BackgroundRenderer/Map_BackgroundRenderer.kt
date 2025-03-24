@@ -6,18 +6,18 @@ import me.hellrevenger.generated.*
  */
 val KClass<BackgroundRenderer>.WATER_FOG_CHANGE_DURATION by aliasStatic(BackgroundRenderer::field_32684)
 /**
- * method_3210
+ * method_63521
  */
-fun KClass<BackgroundRenderer>.render(arg0: Camera, arg1: Float, arg2: ClientWorld, arg3: Int, arg4: Float) = BackgroundRenderer.method_3210(arg0, arg1, arg2, arg3, arg4)
+fun KClass<BackgroundRenderer>.toggleFog() = BackgroundRenderer.method_63521()
 /**
- * method_3212
+ * method_62185
  */
-fun KClass<BackgroundRenderer>.applyFogColor() = BackgroundRenderer.method_3212()
+fun KClass<BackgroundRenderer>.getFogColor(arg0: Camera, arg1: Float, arg2: ClientWorld, arg3: Int, arg4: Float) = BackgroundRenderer.method_62185(arg0, arg1, arg2, arg3, arg4)
 /**
- * method_23792
+ * method_42588
  */
-fun KClass<BackgroundRenderer>.clearFog() = BackgroundRenderer.method_23792()
+fun KClass<BackgroundRenderer>.getFogModifier(arg0: Entity, arg1: Float) = BackgroundRenderer.method_42588(arg0, arg1)
 /**
  * method_3211
  */
-fun KClass<BackgroundRenderer>.applyFog(arg0: Camera, arg1: net.minecraft.class_758.class_4596, arg2: Float, arg3: Boolean, arg4: Float) = BackgroundRenderer.method_3211(arg0, arg1, arg2, arg3, arg4)
+fun KClass<BackgroundRenderer>.applyFog(arg0: Camera, arg1: net.minecraft.class_758.class_4596, arg2: Vector4f, arg3: Float, arg4: Boolean, arg5: Float) = BackgroundRenderer.method_3211(arg0, arg1, arg2, arg3, arg4, arg5)

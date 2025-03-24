@@ -26,13 +26,13 @@ val KClass<PlayerInventory>.MAIN_SIZE by aliasStatic(PlayerInventory::field_3063
  */
 val PlayerInventory.player by alias(PlayerInventory::field_7546)
 /**
- * field_33767
- */
-val KClass<PlayerInventory>.ARMOR_SLOTS by aliasStatic(PlayerInventory::field_33767)
-/**
  * field_7547
  */
 val PlayerInventory.main by alias(PlayerInventory::field_7547)
+/**
+ * field_30641
+ */
+val KClass<PlayerInventory>.HOTBAR_SIZE by aliasStatic(PlayerInventory::field_30641)
 /**
  * field_30639
  */
@@ -42,10 +42,6 @@ val KClass<PlayerInventory>.OFF_HAND_SLOT by aliasStatic(PlayerInventory::field_
  */
 val KClass<PlayerInventory>.ITEM_USAGE_COOLDOWN by aliasStatic(PlayerInventory::field_30637)
 /**
- * field_33768
- */
-val KClass<PlayerInventory>.HELMET_SLOTS by aliasStatic(PlayerInventory::field_33768)
-/**
  * method_7372
  */
 fun PlayerInventory.getArmorStack(arg0: Int) = this.method_7372(arg0)
@@ -53,10 +49,6 @@ fun PlayerInventory.getArmorStack(arg0: Int) = this.method_7372(arg0)
  * method_7379
  */
 fun PlayerInventory.contains(arg0: ItemStack) = this.method_7379(arg0)
-/**
- * method_7371
- */
-fun PlayerInventory.indexOf(arg0: ItemStack) = this.method_7371(arg0)
 /**
  * method_7395
  */
@@ -70,13 +62,13 @@ fun PlayerInventory.offer(arg0: ItemStack, arg1: Boolean) = this.method_32338(ar
  */
 fun PlayerInventory.swapSlotWithHotbar(arg0: Int) = this.method_7365(arg0)
 /**
+ * method_61495
+ */
+fun KClass<PlayerInventory>.usableWhenFillingSlot(arg0: ItemStack) = PlayerInventory.method_61495(arg0)
+/**
  * method_7381
  */
 fun PlayerInventory.updateItems() = this.method_7381()
-/**
- * method_7387
- */
-fun PlayerInventory.populateRecipeFinder(arg0: RecipeMatcher) = this.method_7387(arg0)
 /**
  * method_7377
  */
@@ -102,9 +94,9 @@ fun PlayerInventory.dropSelectedItem(arg0: Boolean) = this.method_37417(arg0)
  */
 fun PlayerInventory.getBlockBreakingSpeed(arg0: BlockState) = this.method_7370(arg0)
 /**
- * method_7374
+ * method_61494
  */
-fun PlayerInventory.addPickBlock(arg0: ItemStack) = this.method_7374(arg0)
+fun PlayerInventory.getMatchingSlot(arg0: RegistryEntry<Item>, arg1: ItemStack) = this.method_61494(arg0, arg1)
 /**
  * method_7384
  */
@@ -138,6 +130,14 @@ fun PlayerInventory.contains(arg0: TagKey<Item>) = this.method_7382(arg0)
  */
 fun PlayerInventory.remove(arg0: Predicate<ItemStack>, arg1: Int, arg2: Inventory) = this.method_29280(arg0, arg1, arg2)
 /**
+ * method_61497
+ */
+fun PlayerInventory.createSlotSetPacket(arg0: Int) = this.method_61497(arg0)
+/**
+ * method_65126
+ */
+fun PlayerInventory.swapStackWithHotbar(arg0: ItemStack) = this.method_65126(arg0)
+/**
  * method_7391
  */
 fun PlayerInventory.getMainHandStack() = this.method_7391()
@@ -150,9 +150,9 @@ fun PlayerInventory.insertStack(arg0: ItemStack) = this.method_7394(arg0)
  */
 fun PlayerInventory.contains(arg0: Predicate<ItemStack>) = this.method_55753(arg0)
 /**
- * method_7373
+ * method_7387
  */
-fun PlayerInventory.scrollInHotbar(arg0: Double) = this.method_7373(arg0)
+fun PlayerInventory.populateRecipeFinder(arg0: RecipeFinder) = this.method_7387(arg0)
 /**
  * method_7397
  */

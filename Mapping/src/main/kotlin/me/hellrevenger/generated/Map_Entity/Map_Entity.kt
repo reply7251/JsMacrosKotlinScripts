@@ -10,10 +10,6 @@ var Entity.wasInPowderSnow by alias(Entity::field_28628)
  */
 var Entity.prevZ by alias(Entity::field_5969)
 /**
- * field_28629
- */
-var Entity.wasOnFire by alias(Entity::field_28629)
-/**
  * field_23807
  */
 var Entity.intersectionChecked by alias(Entity::field_23807)
@@ -42,10 +38,6 @@ var Entity.lastRenderY by alias(Entity::field_5971)
  */
 val KClass<Entity>.MAX_RIDING_COOLDOWN by aliasStatic(Entity::field_29987)
 /**
- * field_5973
- */
-var Entity.horizontalSpeed by alias(Entity::field_5973)
-/**
  * field_5960
  */
 var Entity.noClip by alias(Entity::field_5960)
@@ -58,9 +50,9 @@ val KClass<Entity>.UUID_KEY by aliasStatic(Entity::field_29994)
  */
 val KClass<Entity>.MAX_COMMAND_TAGS by aliasStatic(Entity::field_29989)
 /**
- * field_5985
+ * field_6027
  */
-var Entity.ignoreCameraFrustum by alias(Entity::field_5985)
+val KClass<Entity>.CUSTOM_NAME by aliasStatic(Entity::field_6027)
 /**
  * field_28627
  */
@@ -94,6 +86,10 @@ val KClass<Entity>.DEFAULT_MIN_FREEZE_DAMAGE_TICKS by aliasStatic(Entity::field_
  */
 var Entity.supportingBlockPos by alias(Entity::field_44784)
 /**
+ * field_5975
+ */
+val KClass<Entity>.NAME_VISIBLE by aliasStatic(Entity::field_5975)
+/**
  * field_34927
  */
 var Entity.collidedSoftly by alias(Entity::field_34927)
@@ -125,10 +121,6 @@ var Entity.distanceTraveled by alias(Entity::field_5994)
  * field_29973
  */
 val KClass<Entity>.DEFAULT_FRICTION by aliasStatic(Entity::field_29973)
-/**
- * field_6039
- */
-var Entity.prevHorizontalSpeed by alias(Entity::field_6039)
 /**
  * field_6037
  */
@@ -198,6 +190,10 @@ fun Entity.isInPose(arg0: EntityPose) = this.method_41328(arg0)
  */
 fun Entity.getRemovalReason() = this.method_35049()
 /**
+ * method_61409
+ */
+fun Entity.tickBlockCollision() = this.method_61409()
+/**
  * method_5654
  */
 fun Entity.doesNotCollide(arg0: Double, arg1: Double, arg2: Double) = this.method_5654(arg0, arg1, arg2)
@@ -246,10 +242,6 @@ fun Entity.canUsePortals(arg0: Boolean) = this.method_5822(arg0)
  */
 fun Entity.isRemoved() = this.method_31481()
 /**
- * method_5643
- */
-fun Entity.damage(arg0: DamageSource, arg1: Float) = this.method_5643(arg0, arg1)
-/**
  * method_5680
  */
 fun Entity.canBeSpectated(arg0: ServerPlayerEntity) = this.method_5680(arg0)
@@ -265,6 +257,10 @@ fun Entity.getRootVehicle() = this.method_5668()
  * method_5736
  */
 fun Entity.getPassengersDeep() = this.method_5736()
+/**
+ * method_5768
+ */
+fun Entity.kill(arg0: ServerWorld) = this.method_5768(arg0)
 /**
  * method_5700
  */
@@ -309,6 +305,10 @@ fun Entity.interactAt(arg0: PlayerEntity, arg1: Vec3d, arg2: Hand) = this.method
  * method_32876
  */
 fun Entity.emitGameEvent(arg0: RegistryEntry<GameEvent>) = this.method_32876(arg0)
+/**
+ * method_48105
+ */
+fun Entity.teleport(arg0: ServerWorld, arg1: Double, arg2: Double, arg3: Double, arg4: Set<PositionFlag>, arg5: Float, arg6: Float, arg7: Boolean) = this.method_48105(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
 /**
  * method_5692
  */
@@ -394,6 +394,10 @@ fun Entity.getLerpTargetYaw() = this.method_53831()
  */
 fun Entity.setAngles(arg0: Float, arg1: Float) = this.method_60608(arg0, arg1)
 /**
+ * method_64578
+ */
+fun Entity.rotate(arg0: Float, arg1: Float) = this.method_64578(arg0, arg1)
+/**
  * method_5862
  */
 fun Entity.doesRenderOnFire() = this.method_5862()
@@ -426,6 +430,10 @@ fun Entity.hasControllingPassenger() = this.method_42148()
  */
 fun Entity.addVelocity(arg0: Double, arg1: Double, arg2: Double) = this.method_5762(arg0, arg1, arg2)
 /**
+ * method_5716
+ */
+fun Entity.updateKilledAdvancementCriterion(arg0: Entity, arg1: DamageSource) = this.method_5716(arg0, arg1)
+/**
  * method_5750
  */
 fun Entity.setVelocityClient(arg0: Double, arg1: Double, arg2: Double) = this.method_5750(arg0, arg1, arg2)
@@ -433,6 +441,10 @@ fun Entity.setVelocityClient(arg0: Double, arg1: Double, arg2: Double) = this.me
  * method_5850
  */
 fun Entity.getSafeFallDistance() = this.method_5850()
+/**
+ * method_64420
+ */
+fun Entity.sidedDamage(arg0: DamageSource, arg1: Float) = this.method_64420(arg0, arg1)
 /**
  * method_5802
  */
@@ -458,10 +470,6 @@ fun Entity.setSprinting(arg0: Boolean) = this.method_5728(arg0)
  */
 fun Entity.updateTrackedPositionAndAngles(arg0: Double, arg1: Double, arg2: Double, arg3: Float, arg4: Float, arg5: Int) = this.method_5759(arg0, arg1, arg2, arg3, arg4, arg5)
 /**
- * method_5775
- */
-fun Entity.dropStack(arg0: ItemStack) = this.method_5775(arg0)
-/**
  * method_5740
  */
 fun Entity.hasNoGravity() = this.method_5740()
@@ -486,13 +494,9 @@ fun Entity.applyRotation(arg0: BlockRotation) = this.method_5832(arg0)
  */
 fun Entity.isConnectedThroughVehicle(arg0: Entity) = this.method_5794(arg0)
 /**
- * method_5830
+ * method_65342
  */
-fun Entity.getVisibilityBoundingBox() = this.method_5830()
-/**
- * method_5687
- */
-fun Entity.hasPermissionLevel(arg0: Int) = this.method_5687(arg0)
+fun Entity.setMovement(arg0: Boolean, arg1: Vec3d) = this.method_65342(arg0, arg1)
 /**
  * method_5836
  */
@@ -522,10 +526,6 @@ fun Entity.refreshPositionAfterTeleport(arg0: Double, arg1: Double, arg2: Double
  */
 fun Entity.getPassengerRidingPos(arg0: Entity) = this.method_52538(arg0)
 /**
- * method_48105
- */
-fun Entity.teleport(arg0: ServerWorld, arg1: Double, arg2: Double, arg3: Double, arg4: Set<PositionFlag>, arg5: Float, arg6: Float) = this.method_48105(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
  * method_29241
  */
 fun Entity.getSwimHeight() = this.method_29241()
@@ -541,6 +541,14 @@ fun Entity.getPlayerPassengers() = this.method_54757()
  * method_5747
  */
 fun Entity.handleFallDamage(arg0: Float, arg1: Float, arg2: DamageSource) = this.method_5747(arg0, arg1, arg2)
+/**
+ * method_5870
+ */
+fun Entity.dropItem(arg0: ServerWorld, arg1: ItemConvertible, arg2: Int) = this.method_5870(arg0, arg1, arg2)
+/**
+ * method_61414
+ */
+fun Entity.getLerpedPitch(arg0: Float) = this.method_61414(arg0)
 /**
  * method_18381
  */
@@ -573,6 +581,10 @@ fun Entity.getTrackedPosition() = this.method_43389()
  * method_5641
  */
 fun Entity.updatePositionAndAngles(arg0: Double, arg1: Double, arg2: Double, arg3: Float, arg4: Float) = this.method_5641(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_63615
+ */
+fun Entity.setPrevPositionAndAngles(arg0: Vec3d, arg1: Float, arg2: Float) = this.method_63615(arg0, arg1, arg2)
 /**
  * method_31476
  */
@@ -626,9 +638,17 @@ fun Entity.requestTeleport(arg0: Double, arg1: Double, arg2: Double) = this.meth
  */
 fun Entity.getMovement() = this.method_60478()
 /**
+ * method_36971
+ */
+fun Entity.canModifyAt(arg0: ServerWorld, arg1: BlockPos) = this.method_36971(arg0, arg1)
+/**
  * method_32313
  */
 fun Entity.getFreezingScale() = this.method_32313()
+/**
+ * method_5706
+ */
+fun Entity.dropItem(arg0: ServerWorld, arg1: ItemConvertible) = this.method_5706(arg0, arg1)
 /**
  * method_5685
  */
@@ -641,10 +661,6 @@ fun Entity.updateTrackedPosition(arg0: Double, arg1: Double, arg2: Double) = thi
  * method_31479
  */
 fun Entity.getBlockZ() = this.method_31479()
-/**
- * method_5706
- */
-fun Entity.dropItem(arg0: ItemConvertible) = this.method_5706(arg0)
 /**
  * method_5719
  */
@@ -670,6 +686,10 @@ fun Entity.startRiding(arg0: Entity) = this.method_5804(arg0)
  */
 fun Entity.isFrozen() = this.method_32314()
 /**
+ * method_63616
+ */
+fun Entity.isLocalPlayerOrLogicalSideForUpdatingMovement() = this.method_63616()
+/**
  * method_43390
  */
 fun Entity.getSyncedPos() = this.method_43390()
@@ -682,13 +702,17 @@ fun Entity.shouldControlVehicles() = this.method_52534()
  */
 fun Entity.isImmuneToExplosion(arg0: Explosion) = this.method_5659(arg0)
 /**
+ * method_61415
+ */
+fun Entity.getLerpedYaw(arg0: Float) = this.method_61415(arg0)
+/**
  * method_5711
  */
 fun Entity.handleStatus(arg0: Byte) = this.method_5711(arg0)
 /**
- * method_5768
+ * method_61411
  */
-fun Entity.kill() = this.method_5768()
+fun Entity.getLastRenderPos() = this.method_61411()
 /**
  * method_5873
  */
@@ -708,7 +732,7 @@ fun Entity.setHeadYaw(arg0: Float) = this.method_5847(arg0)
 /**
  * method_23324
  */
-fun Entity.offsetZ(arg0: Double) = this.method_23324(arg0)
+fun Entity.getBodyZ(arg0: Double) = this.method_23324(arg0)
 /**
  * method_5848
  */
@@ -718,13 +742,13 @@ fun Entity.stopRiding() = this.method_5848()
  */
 fun Entity.isSneaking() = this.method_5715()
 /**
- * method_5699
- */
-fun Entity.dropStack(arg0: ItemStack, arg1: Float) = this.method_5699(arg0, arg1)
-/**
  * method_32315
  */
 fun Entity.getMinFreezeDamageTicks() = this.method_32315()
+/**
+ * method_5991
+ */
+fun Entity.getLootTableKey() = this.method_5991()
 /**
  * method_56918
  */
@@ -737,6 +761,10 @@ fun Entity.slowMovement(arg0: BlockState, arg1: Vec3d) = this.method_5844(arg0, 
  * method_56072
  */
 fun Entity.getAttachments() = this.method_56072()
+/**
+ * method_64419
+ */
+fun Entity.serverDamage(arg0: DamageSource, arg1: Float) = this.method_64419(arg0, arg1)
 /**
  * method_36361
  */
@@ -778,6 +806,10 @@ fun Entity.isSilent() = this.method_5701()
  */
 fun Entity.setOnGround(arg0: Boolean) = this.method_24830(arg0)
 /**
+ * method_64397
+ */
+fun Entity.damage(arg0: ServerWorld, arg1: DamageSource, arg2: Float) = this.method_64397(arg0, arg1, arg2)
+/**
  * method_56073
  */
 fun Entity.setOnFireForTicks(arg0: Int) = this.method_56073(arg0)
@@ -806,17 +838,21 @@ fun Entity.getZ() = this.method_23321()
  */
 fun Entity.writeNbt(arg0: NbtCompound) = this.method_5647(arg0)
 /**
- * method_5833
- */
-fun Entity.entityDataRequiresOperator() = this.method_5833()
-/**
  * method_5784
  */
 fun Entity.move(arg0: MovementType, arg1: Vec3d) = this.method_5784(arg0, arg1)
 /**
+ * method_65038
+ */
+fun Entity.isControlledByPlayer() = this.method_65038()
+/**
  * method_20802
  */
 fun Entity.getFireTicks() = this.method_20802()
+/**
+ * method_5775
+ */
+fun Entity.dropStack(arg0: ServerWorld, arg1: ItemStack) = this.method_5775(arg0, arg1)
 /**
  * method_5720
  */
@@ -864,7 +900,7 @@ fun Entity.setPosition(arg0: Vec3d) = this.method_33574(arg0)
 /**
  * method_23316
  */
-fun Entity.offsetX(arg0: Double) = this.method_23316(arg0)
+fun Entity.getBodyX(arg0: Double) = this.method_23316(arg0)
 /**
  * method_5738
  */
@@ -974,13 +1010,13 @@ fun Entity.getPickBlockStack() = this.method_31480()
  */
 fun Entity.getEyePos() = this.method_33571()
 /**
- * method_5679
- */
-fun Entity.isInvulnerableTo(arg0: DamageSource) = this.method_5679(arg0)
-/**
  * method_5626
  */
 fun Entity.hasPassenger(arg0: Entity) = this.method_5626(arg0)
+/**
+ * method_5643
+ */
+fun Entity.clientDamage(arg0: DamageSource) = this.method_5643(arg0)
 /**
  * method_24829
  */
@@ -1022,9 +1058,17 @@ fun Entity.getClientCameraPosVec(arg0: Float) = this.method_31166(arg0)
  */
 fun Entity.getYaw() = this.method_36454()
 /**
+ * method_64166
+ */
+fun Entity.tickBlockCollision(arg0: Vec3d, arg1: Vec3d) = this.method_64166(arg0, arg1)
+/**
  * method_23319
  */
 fun Entity.getRandomBodyY() = this.method_23319()
+/**
+ * method_60607
+ */
+fun Entity.setMovement(arg0: Boolean, arg1: Boolean, arg2: Vec3d) = this.method_60607(arg0, arg1, arg2)
 /**
  * method_33572
  */
@@ -1066,6 +1110,10 @@ fun Entity.setCustomName(arg0: Text) = this.method_5665(arg0)
  */
 fun Entity.getBodyYaw() = this.method_43078()
 /**
+ * method_63614
+ */
+fun Entity.updatePrevAngles() = this.method_63614()
+/**
  * method_18798
  */
 fun Entity.getVelocity() = this.method_18798()
@@ -1081,6 +1129,10 @@ fun Entity.hasPassenger(arg0: Predicate<Entity>) = this.method_5703(arg0)
  * method_5742
  */
 fun Entity.onStoppedTrackingBy(arg0: ServerPlayerEntity) = this.method_5742(arg0)
+/**
+ * method_64168
+ */
+fun Entity.queueBlockCollisionCheck(arg0: Vec3d, arg1: Vec3d) = this.method_64168(arg0, arg1)
 /**
  * method_5838
  */
@@ -1210,9 +1262,9 @@ fun Entity.setPitch(arg0: Float) = this.method_36457(arg0)
  */
 fun Entity.updatePosition(arg0: Double, arg1: Double, arg2: Double) = this.method_30634(arg0, arg1, arg2)
 /**
- * method_5671
+ * method_5729
  */
-fun Entity.getCommandSource() = this.method_5671()
+fun Entity.setFlag(arg0: Int, arg1: Boolean) = this.method_5729(arg0, arg1)
 /**
  * method_5725
  */
@@ -1229,10 +1281,6 @@ fun Entity.isSwimming() = this.method_5681()
  * method_5790
  */
 fun Entity.updateSwimming() = this.method_5790()
-/**
- * method_5716
- */
-fun Entity.updateKilledAdvancementCriterion(arg0: Entity, arg1: Int, arg2: DamageSource) = this.method_5716(arg0, arg1, arg2)
 /**
  * method_5875
  */
@@ -1262,6 +1310,10 @@ fun Entity.getWeaponStack() = this.method_59958()
  */
 fun Entity.canTeleportBetween(arg0: world_World, arg1: world_World) = this.method_61113(arg0, arg1)
 /**
+ * method_5699
+ */
+fun Entity.dropStack(arg0: ServerWorld, arg1: ItemStack, arg2: Float) = this.method_5699(arg0, arg1, arg2)
+/**
  * method_23314
  */
 fun Entity.getVelocityAffectingPos() = this.method_23314()
@@ -1274,9 +1326,17 @@ fun Entity.getPose() = this.method_18376()
  */
 fun Entity.resetPosition() = this.method_22862()
 /**
+ * method_64615
+ */
+fun Entity.onRemove(arg0: net.minecraft.class_1297.class_5529) = this.method_64615(arg0)
+/**
  * method_22861
  */
 fun Entity.getTeamColorValue() = this.method_22861()
+/**
+ * method_5671
+ */
+fun Entity.getCommandSource(arg0: ServerWorld) = this.method_5671(arg0)
 /**
  * method_5764
  */
@@ -1354,6 +1414,10 @@ fun Entity.canSprintAsVehicle() = this.method_48155()
  */
 fun Entity.setUuid(arg0: UUID) = this.method_5826(arg0)
 /**
+ * method_64610
+ */
+fun Entity.resetLerp() = this.method_64610()
+/**
  * method_5878
  */
 fun Entity.copyFrom(arg0: Entity) = this.method_5878(arg0)
@@ -1382,6 +1446,10 @@ fun Entity.isCrawling() = this.method_20448()
  */
 fun Entity.getPortalCooldown() = this.method_51848()
 /**
+ * method_61412
+ */
+fun Entity.setPosition(arg0: PlayerPosition, arg1: Set<PositionFlag>) = this.method_61412(arg0, arg1)
+/**
  * method_49694
  */
 fun Entity.getControllingVehicle() = this.method_49694()
@@ -1406,10 +1474,6 @@ fun Entity.collidesWithStateAtPos(arg0: BlockPos, arg1: BlockState) = this.metho
  */
 fun Entity.getRegistryManager() = this.method_56673()
 /**
- * method_60607
- */
-fun Entity.setOnGround(arg0: Boolean, arg1: Vec3d) = this.method_60607(arg0, arg1)
-/**
  * method_59922
  */
 fun Entity.getRandom() = this.method_59922()
@@ -1426,6 +1490,10 @@ fun Entity.setInvisible(arg0: Boolean) = this.method_5648(arg0)
  */
 fun Entity.isDescending() = this.method_21752()
 /**
+ * method_65942
+ */
+fun Entity.handleFall(arg0: Double, arg1: Double, arg2: Double, arg3: Boolean) = this.method_65942(arg0, arg1, arg2, arg3)
+/**
  * method_18800
  */
 fun Entity.setVelocity(arg0: Double, arg1: Double, arg2: Double) = this.method_18800(arg0, arg1, arg2)
@@ -1433,10 +1501,6 @@ fun Entity.setVelocity(arg0: Double, arg1: Double, arg2: Double) = this.method_1
  * method_53829
  */
 fun Entity.getLerpTargetPitch() = this.method_53829()
-/**
- * method_5870
- */
-fun Entity.dropItem(arg0: ItemConvertible, arg1: Int) = this.method_5870(arg0, arg1)
 /**
  * method_5695
  */
@@ -1457,10 +1521,6 @@ fun Entity.getCommandTags() = this.method_5752()
  * method_30951
  */
 fun Entity.getLeashPos(arg0: Float) = this.method_30951(arg0)
-/**
- * method_36971
- */
-fun Entity.canModifyAt(arg0: world_World, arg1: BlockPos) = this.method_36971(arg0, arg1)
 /**
  * method_5779
  */

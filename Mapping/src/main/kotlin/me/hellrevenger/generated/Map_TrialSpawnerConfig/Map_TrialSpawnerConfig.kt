@@ -6,6 +6,14 @@ import me.hellrevenger.generated.*
  */
 val KClass<TrialSpawnerConfig>.DEFAULT by aliasStatic(TrialSpawnerConfig::field_47367)
 /**
+ * comp_2110
+ */
+fun TrialSpawnerConfig.spawnPotentials() = this.comp_2110()
+/**
+ * method_63466
+ */
+fun KClass<TrialSpawnerConfig>.builder() = TrialSpawnerConfig.method_63466()
+/**
  * method_58712
  */
 fun TrialSpawnerConfig.getCooldownLength() = this.method_58712()
@@ -14,13 +22,13 @@ fun TrialSpawnerConfig.getCooldownLength() = this.method_58712()
  */
 fun TrialSpawnerConfig.getTotalMobs(arg0: Int) = this.method_55179(arg0)
 /**
+ * method_65373
+ */
+fun TrialSpawnerConfig.withSpawnPotential(arg0: EntityType<*>) = this.method_65373(arg0)
+/**
  * method_55181
  */
 fun TrialSpawnerConfig.getSimultaneousMobs(arg0: Int) = this.method_55181(arg0)
-/**
- * comp_2110
- */
-fun TrialSpawnerConfig.spawnPotentialsDefinition() = this.comp_2110()
 /**
  * comp_2111
  */

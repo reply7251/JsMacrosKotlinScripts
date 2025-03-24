@@ -49,3 +49,7 @@ fun KClass<VertexFormat>.builder() = VertexFormat.method_60833()
  * method_60839
  */
 fun VertexFormat.getRequiredMask() = this.method_60839()
+/**
+ * method_62886
+ */
+fun VertexFormat.bindAttributes(arg0: Int) = this.method_62886(arg0)

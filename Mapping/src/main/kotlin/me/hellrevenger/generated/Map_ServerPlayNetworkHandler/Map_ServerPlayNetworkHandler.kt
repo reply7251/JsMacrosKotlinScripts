@@ -28,7 +28,7 @@ fun ServerPlayNetworkHandler.addPendingAcknowledgment(arg0: SignedMessage) = thi
 /**
  * method_14360
  */
-fun ServerPlayNetworkHandler.requestTeleport(arg0: Double, arg1: Double, arg2: Double, arg3: Float, arg4: Float, arg5: Set<PositionFlag>) = this.method_14360(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ServerPlayNetworkHandler.requestTeleport(arg0: PlayerPosition, arg1: Set<PositionFlag>) = this.method_14360(arg0, arg1)
 /**
  * method_41255
  */

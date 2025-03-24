@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun SynchronizeRecipesS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11997(arg0)
 /**
- * method_11998
+ * comp_3242
  */
-fun SynchronizeRecipesS2CPacket.getRecipes() = this.method_11998()
+fun SynchronizeRecipesS2CPacket.stonecutterRecipes() = this.comp_3242()
+/**
+ * comp_3241
+ */
+fun SynchronizeRecipesS2CPacket.itemSets() = this.comp_3241()

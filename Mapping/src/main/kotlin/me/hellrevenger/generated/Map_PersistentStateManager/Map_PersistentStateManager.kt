@@ -18,6 +18,10 @@ fun PersistentStateManager.save() = this.method_125()
  */
 fun PersistentStateManager.set(arg0: String, arg1: PersistentState) = this.method_123(arg0, arg1)
 /**
+ * method_61873
+ */
+fun PersistentStateManager.startSaving() = this.method_61873()
+/**
  * method_17924
  */
 fun <T>PersistentStateManager.getOrCreate(arg0: net.minecraft.class_18.class_8645<T>, arg1: String) where T: PersistentState = this.method_17924<T>(arg0, arg1)

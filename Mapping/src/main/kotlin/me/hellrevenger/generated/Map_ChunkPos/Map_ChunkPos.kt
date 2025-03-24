@@ -14,6 +14,10 @@ val ChunkPos.x by alias(ChunkPos::field_9181)
  */
 val KClass<ChunkPos>.ORIGIN by aliasStatic(ChunkPos::field_35107)
 /**
+ * field_54975
+ */
+val KClass<ChunkPos>.MAX_COORDINATE by aliasStatic(ChunkPos::field_54975)
+/**
  * field_17348
  */
 val KClass<ChunkPos>.MARKER by aliasStatic(ChunkPos::field_17348)

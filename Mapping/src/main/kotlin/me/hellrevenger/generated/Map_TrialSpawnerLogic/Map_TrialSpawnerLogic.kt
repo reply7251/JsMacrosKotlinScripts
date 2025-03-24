@@ -92,7 +92,7 @@ fun TrialSpawnerLogic.getSpawnerState() = this.method_55175()
 /**
  * method_55162
  */
-fun TrialSpawnerLogic.canActivate(arg0: world_World) = this.method_55162(arg0)
+fun TrialSpawnerLogic.canActivate(arg0: ServerWorld) = this.method_55162(arg0)
 /**
  * method_55168
  */
@@ -113,3 +113,7 @@ fun TrialSpawnerLogic.getEntityDetector() = this.method_55177()
  * method_58705
  */
 fun TrialSpawnerLogic.isOminous() = this.method_58705()
+/**
+ * method_65372
+ */
+fun TrialSpawnerLogic.setEntityType(arg0: EntityType<*>, arg1: world_World) = this.method_65372(arg0, arg1)

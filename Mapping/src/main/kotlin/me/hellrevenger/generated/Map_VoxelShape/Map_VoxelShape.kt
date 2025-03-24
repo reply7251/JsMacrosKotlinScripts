@@ -22,6 +22,10 @@ fun VoxelShape.getMax(arg0: net.minecraft.class_2350.class_2351) = this.method_1
  */
 fun VoxelShape.getBoundingBoxes() = this.method_1090()
 /**
+ * method_64034
+ */
+fun VoxelShape.offset(arg0: Vec3d) = this.method_64034(arg0)
+/**
  * method_1089
  */
 fun VoxelShape.forEachBox(arg0: net.minecraft.class_259.class_260) = this.method_1089(arg0)

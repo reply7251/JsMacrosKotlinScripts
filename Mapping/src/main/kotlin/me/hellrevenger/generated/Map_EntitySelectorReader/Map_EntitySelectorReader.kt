@@ -130,6 +130,10 @@ fun EntitySelectorReader.isSenderOnly() = this.method_9885()
  */
 fun EntitySelectorReader.getSorter() = this.method_35818()
 /**
+ * method_61185
+ */
+fun <S>KClass<EntitySelectorReader>.shouldAllowAtSelectors(arg0: S) = EntitySelectorReader.method_61185<S>(arg0)
+/**
  * method_9851
  */
 fun EntitySelectorReader.getDx() = this.method_9851()

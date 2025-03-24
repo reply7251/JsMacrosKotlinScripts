@@ -2,10 +2,18 @@ package me.hellrevenger.generated.Map_ModelVariant
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_3510
+ * comp_3379
  */
-fun ModelVariant.getLocation() = this.method_3510()
+fun ModelVariant.location() = this.comp_3379()
 /**
- * method_3511
+ * comp_3381
  */
-fun ModelVariant.getWeight() = this.method_3511()
+fun ModelVariant.uvLock() = this.comp_3381()
+/**
+ * comp_3380
+ */
+fun ModelVariant.rotation() = this.comp_3380()
+/**
+ * comp_3382
+ */
+fun ModelVariant.weight() = this.comp_3382()

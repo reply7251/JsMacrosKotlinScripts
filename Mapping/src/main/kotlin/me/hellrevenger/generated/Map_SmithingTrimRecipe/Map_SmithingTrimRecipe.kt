@@ -2,9 +2,9 @@ package me.hellrevenger.generated.Map_SmithingTrimRecipe
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_60001
+ * method_64996
  */
-fun SmithingTrimRecipe.matches(arg0: SmithingRecipeInput, arg1: world_World) = this.method_60001(arg0, arg1)
+fun KClass<SmithingTrimRecipe>.craft(arg0: net.minecraft.class_7225.class_7874, arg1: ItemStack, arg2: ItemStack, arg3: ItemStack) = SmithingTrimRecipe.method_64996(arg0, arg1, arg2, arg3)
 /**
  * method_60002
  */

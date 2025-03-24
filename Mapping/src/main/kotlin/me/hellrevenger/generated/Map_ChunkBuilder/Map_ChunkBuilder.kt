@@ -54,6 +54,10 @@ fun ChunkBuilder.setCameraPosition(arg0: Vec3d) = this.method_19419(arg0)
  */
 fun ChunkBuilder.setWorld(arg0: ClientWorld) = this.method_22752(arg0)
 /**
+ * method_60906
+ */
+fun ChunkBuilder.scheduleIndexBufferUpload(arg0: net.minecraft.class_9799.class_9800, arg1: VertexBuffer) = this.method_60906(arg0, arg1)
+/**
  * method_22761
  */
 fun ChunkBuilder.upload() = this.method_22761()

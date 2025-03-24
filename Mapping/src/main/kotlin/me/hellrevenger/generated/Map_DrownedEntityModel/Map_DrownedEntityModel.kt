@@ -2,14 +2,10 @@ package me.hellrevenger.generated.Map_DrownedEntityModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_17134
+ * method_17791
  */
-fun <T>DrownedEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: ZombieEntity = this.method_17134(arg0, arg1, arg2, arg3, arg4, arg5)
+fun DrownedEntityModel.setAngles(arg0: ZombieEntityRenderState) = this.method_17791(arg0)
 /**
  * method_31993
  */
-fun <T>KClass<DrownedEntityModel<T>>.getTexturedModelData(arg0: Dilation) where T: ZombieEntity = DrownedEntityModel.method_31993(arg0)
-/**
- * method_17077
- */
-fun <T>DrownedEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: ZombieEntity = this.method_17077(arg0, arg1, arg2, arg3)
+fun KClass<DrownedEntityModel>.getTexturedModelData(arg0: Dilation) = DrownedEntityModel.method_31993(arg0)

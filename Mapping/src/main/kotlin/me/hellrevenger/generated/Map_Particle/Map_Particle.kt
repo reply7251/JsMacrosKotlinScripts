@@ -30,6 +30,10 @@ fun Particle.scale(arg0: Float) = this.method_3087(arg0)
  */
 fun Particle.move(arg0: Float) = this.method_3075(arg0)
 /**
+ * method_65198
+ */
+fun Particle.renderCustom(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Camera, arg3: Float) = this.method_65198(arg0, arg1, arg2, arg3)
+/**
  * method_3064
  */
 fun Particle.getBoundingBox() = this.method_3064()
@@ -64,4 +68,4 @@ fun Particle.setPos(arg0: Double, arg1: Double, arg2: Double) = this.method_3063
 /**
  * method_3074
  */
-fun Particle.buildGeometry(arg0: VertexConsumer, arg1: Camera, arg2: Float) = this.method_3074(arg0, arg1, arg2)
+fun Particle.render(arg0: VertexConsumer, arg1: Camera, arg2: Float) = this.method_3074(arg0, arg1, arg2)

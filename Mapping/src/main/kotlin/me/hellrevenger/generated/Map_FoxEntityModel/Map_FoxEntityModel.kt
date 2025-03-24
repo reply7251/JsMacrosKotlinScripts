@@ -2,18 +2,18 @@ package me.hellrevenger.generated.Map_FoxEntityModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_52912
+ */
+val KClass<FoxEntityModel>.BABY_TRANSFORMER by aliasStatic(FoxEntityModel::field_52912)
+/**
  * field_18015
  */
-val <T>FoxEntityModel<T>.head where T: FoxEntity by alias(FoxEntityModel<*>::field_18015)
-/**
- * method_18330
- */
-fun <T>FoxEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: FoxEntity = this.method_18330(arg0, arg1, arg2, arg3)
-/**
- * method_31999
- */
-fun <T>KClass<FoxEntityModel<T>>.getTexturedModelData() where T: FoxEntity = FoxEntityModel.method_31999()
+val FoxEntityModel.head by alias(FoxEntityModel::field_18015)
 /**
  * method_18332
  */
-fun <T>FoxEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: FoxEntity = this.method_18332(arg0, arg1, arg2, arg3, arg4, arg5)
+fun FoxEntityModel.setAngles(arg0: FoxEntityRenderState) = this.method_18332(arg0)
+/**
+ * method_31999
+ */
+fun KClass<FoxEntityModel>.getTexturedModelData() = FoxEntityModel.method_31999()

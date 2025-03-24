@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_PigEntityModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_52925
+ */
+val KClass<PigEntityModel>.BABY_TRANSFORMER by aliasStatic(PigEntityModel::field_52925)
+/**
  * method_32025
  */
-fun <T>KClass<PigEntityModel<T>>.getTexturedModelData(arg0: Dilation) where T: Entity = PigEntityModel.method_32025(arg0)
+fun KClass<PigEntityModel>.getTexturedModelData(arg0: Dilation) = PigEntityModel.method_32025(arg0)

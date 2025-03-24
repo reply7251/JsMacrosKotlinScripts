@@ -138,9 +138,17 @@ fun ClientPlayPacketListener.onSynchronizeRecipes(arg0: SynchronizeRecipesS2CPac
  */
 fun ClientPlayPacketListener.onBossBar(arg0: BossBarS2CPacket) = this.method_11078(arg0)
 /**
+ * method_64556
+ */
+fun ClientPlayPacketListener.onRecipeBookSettings(arg0: RecipeBookSettingsS2CPacket) = this.method_64556(arg0)
+/**
  * method_11131
  */
 fun ClientPlayPacketListener.onScreenHandlerPropertyUpdate(arg0: ScreenHandlerPropertyUpdateS2CPacket) = this.method_11131(arg0)
+/**
+ * method_61186
+ */
+fun ClientPlayPacketListener.onMoveMinecartAlongTrack(arg0: MoveMinecartAlongTrackS2CPacket) = this.method_61186(arg0)
 /**
  * method_11159
  */
@@ -178,6 +186,10 @@ fun ClientPlayPacketListener.onTeam(arg0: TeamS2CPacket) = this.method_11099(arg
  */
 fun ClientPlayPacketListener.onPlayerPositionLook(arg0: PlayerPositionLookS2CPacket) = this.method_11157(arg0)
 /**
+ * method_64553
+ */
+fun ClientPlayPacketListener.onEntityPositionSync(arg0: EntityPositionSyncS2CPacket) = this.method_64553(arg0)
+/**
  * method_11077
  */
 fun ClientPlayPacketListener.onParticle(arg0: ParticleS2CPacket) = this.method_11077(arg0)
@@ -193,6 +205,10 @@ fun ClientPlayPacketListener.onGameJoin(arg0: GameJoinS2CPacket) = this.method_1
  * method_11139
  */
 fun ClientPlayPacketListener.onEntitySetHeadYaw(arg0: EntitySetHeadYawS2CPacket) = this.method_11139(arg0)
+/**
+ * method_61187
+ */
+fun ClientPlayPacketListener.onSetCursorItem(arg0: SetCursorItemS2CPacket) = this.method_61187(arg0)
 /**
  * method_11091
  */
@@ -226,6 +242,10 @@ fun ClientPlayPacketListener.onStopSound(arg0: StopSoundS2CPacket) = this.method
  */
 fun ClientPlayPacketListener.onPlayerRemove(arg0: PlayerRemoveS2CPacket) = this.method_45725(arg0)
 /**
+ * method_64554
+ */
+fun ClientPlayPacketListener.onPlayerRotation(arg0: PlayerRotationS2CPacket) = this.method_64554(arg0)
+/**
  * method_11158
  */
 fun ClientPlayPacketListener.onBlockEvent(arg0: BlockEventS2CPacket) = this.method_11158(arg0)
@@ -234,9 +254,17 @@ fun ClientPlayPacketListener.onBlockEvent(arg0: BlockEventS2CPacket) = this.meth
  */
 fun ClientPlayPacketListener.onRemoveEntityStatusEffect(arg0: RemoveEntityStatusEffectS2CPacket) = this.method_11119(arg0)
 /**
+ * method_11115
+ */
+fun ClientPlayPacketListener.onRecipeBookRemove(arg0: RecipeBookRemoveS2CPacket) = this.method_11115(arg0)
+/**
  * method_11132
  */
 fun ClientPlayPacketListener.onEntityVelocityUpdate(arg0: EntityVelocityUpdateS2CPacket) = this.method_11132(arg0)
+/**
+ * method_61188
+ */
+fun ClientPlayPacketListener.onSetPlayerInventory(arg0: SetPlayerInventoryS2CPacket) = this.method_61188(arg0)
 /**
  * method_11110
  */
@@ -281,6 +309,10 @@ fun ClientPlayPacketListener.onTitleClear(arg0: ClearTitleS2CPacket) = this.meth
  * method_11145
  */
 fun ClientPlayPacketListener.onCommandTree(arg0: CommandTreeS2CPacket) = this.method_11145(arg0)
+/**
+ * method_64555
+ */
+fun ClientPlayPacketListener.onRecipeBookAdd(arg0: RecipeBookAddS2CPacket) = this.method_64555(arg0)
 /**
  * method_11088
  */
@@ -353,10 +385,6 @@ fun ClientPlayPacketListener.onCraftFailedResponse(arg0: CraftFailedResponseS2CP
  * method_11111
  */
 fun ClientPlayPacketListener.onSetCameraEntity(arg0: SetCameraEntityS2CPacket) = this.method_11111(arg0)
-/**
- * method_11115
- */
-fun ClientPlayPacketListener.onUnlockRecipes(arg0: ChangeUnlockedRecipesS2CPacket) = this.method_11115(arg0)
 /**
  * method_11085
  */

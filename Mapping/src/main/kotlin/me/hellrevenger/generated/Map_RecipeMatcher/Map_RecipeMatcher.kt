@@ -2,46 +2,26 @@ package me.hellrevenger.generated.Map_RecipeMatcher
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_7550
+ * field_52504
  */
-val RecipeMatcher.inputs by alias(RecipeMatcher::field_7550)
+val <T>RecipeMatcher<T>.available by alias(RecipeMatcher<*>::field_52504)
 /**
- * method_7400
+ * method_65796
  */
-fun RecipeMatcher.addInput(arg0: ItemStack) = this.method_7400(arg0)
+fun <T>RecipeMatcher<T>.getMaximumCrafts(arg0: MutableList<out net.minecraft.class_1662.class_10528<T>>) = this.method_65796(arg0)
 /**
- * method_7402
+ * method_61504
  */
-fun RecipeMatcher.match(arg0: Recipe<*>, arg1: IntList) = this.method_7402(arg0, arg1)
+fun <T>RecipeMatcher<T>.countCrafts(arg0: MutableList<out net.minecraft.class_1662.class_10528<T>>, arg1: Int, arg2: net.minecraft.class_1662.class_9874<T>) = this.method_61504(arg0, arg1, arg2)
 /**
  * method_7409
  */
-fun RecipeMatcher.clear() = this.method_7409()
+fun <T>RecipeMatcher<T>.clear() = this.method_7409()
 /**
- * method_7407
+ * method_61501
  */
-fun RecipeMatcher.countCrafts(arg0: RecipeEntry<*>, arg1: IntList) = this.method_7407(arg0, arg1)
+fun <T>RecipeMatcher<T>.add(arg0: T, arg1: Int) = this.method_61501(arg0, arg1)
 /**
- * method_7404
+ * method_61502
  */
-fun RecipeMatcher.addUnenchantedInput(arg0: ItemStack) = this.method_7404(arg0)
-/**
- * method_7405
- */
-fun KClass<RecipeMatcher>.getStackFromId(arg0: Int) = RecipeMatcher.method_7405(arg0)
-/**
- * method_7406
- */
-fun RecipeMatcher.match(arg0: Recipe<*>, arg1: IntList, arg2: Int) = this.method_7406(arg0, arg1, arg2)
-/**
- * method_20478
- */
-fun RecipeMatcher.addInput(arg0: ItemStack, arg1: Int) = this.method_20478(arg0, arg1)
-/**
- * method_7403
- */
-fun RecipeMatcher.countCrafts(arg0: RecipeEntry<*>, arg1: Int, arg2: IntList) = this.method_7403(arg0, arg1, arg2)
-/**
- * method_7408
- */
-fun KClass<RecipeMatcher>.getItemId(arg0: ItemStack) = RecipeMatcher.method_7408(arg0)
+fun <T>RecipeMatcher<T>.match(arg0: MutableList<out net.minecraft.class_1662.class_10528<T>>, arg1: Int, arg2: net.minecraft.class_1662.class_9874<T>) = this.method_61502(arg0, arg1, arg2)

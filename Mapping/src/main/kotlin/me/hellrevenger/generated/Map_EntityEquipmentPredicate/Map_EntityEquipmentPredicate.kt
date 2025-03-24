@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_58057
  */
-fun KClass<EntityEquipmentPredicate>.ominousBannerOnHead(arg0: RegistryEntryLookup<BannerPattern>) = EntityEquipmentPredicate.method_58057(arg0)
+fun KClass<EntityEquipmentPredicate>.ominousBannerOnHead(arg0: RegistryEntryLookup<Item>, arg1: RegistryEntryLookup<BannerPattern>) = EntityEquipmentPredicate.method_58057(arg0, arg1)
 /**
  * method_16226
  */

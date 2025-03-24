@@ -16,4 +16,4 @@ fun <T>RegistryWrapper<T>.streamTagKeys() = this.method_46755()
 /**
  * method_42020
  */
-fun <T>RegistryWrapper<T>.streamTags() = this.method_42020()
+fun <T>RegistryWrapper<T>.getTags() = this.method_42020()

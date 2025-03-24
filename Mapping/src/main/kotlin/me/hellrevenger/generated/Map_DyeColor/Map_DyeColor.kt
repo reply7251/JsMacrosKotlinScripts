@@ -66,6 +66,22 @@ val KClass<DyeColor>.LIME by aliasEnum(DyeColor::class, "field_7961")
  */
 val KClass<DyeColor>.BLACK by aliasEnum(DyeColor::class, "field_7963")
 /**
+ * method_16357
+ */
+fun DyeColor.getSignColor() = this.method_16357()
+/**
+ * method_7786
+ */
+fun KClass<DyeColor>.byFireworkColor(arg0: Int) = DyeColor.method_7786(arg0)
+/**
+ * method_7787
+ */
+fun DyeColor.getEntityColor() = this.method_7787()
+/**
+ * method_7789
+ */
+fun DyeColor.getId() = this.method_7789()
+/**
  * method_7790
  */
 fun DyeColor.getFireworkColor() = this.method_7790()
@@ -86,18 +102,6 @@ fun DyeColor.getName() = this.method_7792()
  */
 fun KClass<DyeColor>.byId(arg0: Int) = DyeColor.method_7791(arg0)
 /**
- * method_16357
+ * method_65355
  */
-fun DyeColor.getSignColor() = this.method_16357()
-/**
- * method_7786
- */
-fun KClass<DyeColor>.byFireworkColor(arg0: Int) = DyeColor.method_7786(arg0)
-/**
- * method_7787
- */
-fun DyeColor.getEntityColor() = this.method_7787()
-/**
- * method_7789
- */
-fun DyeColor.getId() = this.method_7789()
+fun KClass<DyeColor>.mixColors(arg0: ServerWorld, arg1: DyeColor, arg2: DyeColor) = DyeColor.method_65355(arg0, arg1, arg2)

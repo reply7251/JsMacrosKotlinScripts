@@ -2,17 +2,25 @@ package me.hellrevenger.generated.Map_FoliageColors
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_8341
+ * field_55217
  */
-fun KClass<FoliageColors>.getDefaultColor() = FoliageColors.method_8341()
+val KClass<FoliageColors>.DEFAULT by aliasStatic(FoliageColors::field_55217)
 /**
- * method_8342
+ * field_55216
  */
-fun KClass<FoliageColors>.getSpruceColor() = FoliageColors.method_8342()
+val KClass<FoliageColors>.BIRCH by aliasStatic(FoliageColors::field_55216)
 /**
- * method_43717
+ * field_55215
  */
-fun KClass<FoliageColors>.getMangroveColor() = FoliageColors.method_43717()
+val KClass<FoliageColors>.SPRUCE by aliasStatic(FoliageColors::field_55215)
+/**
+ * field_9183
+ */
+val KClass<FoliageColors>.colorMap by aliasStatic(FoliageColors::field_9183)
+/**
+ * field_55218
+ */
+val KClass<FoliageColors>.MANGROVE by aliasStatic(FoliageColors::field_55218)
 /**
  * method_8340
  */
@@ -21,7 +29,3 @@ fun KClass<FoliageColors>.setColorMap(arg0: IntArray) = FoliageColors.method_834
  * method_8344
  */
 fun KClass<FoliageColors>.getColor(arg0: Double, arg1: Double) = FoliageColors.method_8344(arg0, arg1)
-/**
- * method_8343
- */
-fun KClass<FoliageColors>.getBirchColor() = FoliageColors.method_8343()

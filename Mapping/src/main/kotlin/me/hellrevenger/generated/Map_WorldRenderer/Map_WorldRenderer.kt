@@ -2,21 +2,13 @@ package me.hellrevenger.generated.Map_WorldRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_4095
- */
-val KClass<WorldRenderer>.DIRECTIONS by aliasStatic(WorldRenderer::field_4095)
-/**
  * method_3246
  */
 fun WorldRenderer.getCompletedChunkCount() = this.method_3246()
 /**
  * method_18145
  */
-fun WorldRenderer.scheduleBlockRenders(arg0: Int, arg1: Int, arg2: Int) = this.method_18145(arg0, arg1, arg2)
-/**
- * method_49041
- */
-fun KClass<WorldRenderer>.renderFilledBox(arg0: MatrixStack, arg1: VertexConsumer, arg2: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Float, arg7: Float, arg8: Float, arg9: Float, arg10: Float, arg11: Float) = WorldRenderer.method_49041(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
+fun WorldRenderer.scheduleChunkRenders3x3x3(x: Int, y: Int, z: Int) = this.method_18145(x, y, z)
 /**
  * method_29363
  */
@@ -32,11 +24,15 @@ fun WorldRenderer.setupFrustum(arg0: Vec3d, arg1: Matrix4f, arg2: Matrix4f) = th
 /**
  * method_18146
  */
-fun WorldRenderer.scheduleBlockRenders(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int) = this.method_18146(arg0, arg1, arg2, arg3, arg4, arg5)
+fun WorldRenderer.scheduleBlockRenders(minX: Int, minY: Int, minZ: Int, maxX: Int, maxY: Int, maxZ: Int) = this.method_18146(minX, minY, minZ, maxX, maxY, maxZ)
 /**
  * method_3289
  */
 fun WorldRenderer.getChunksDebugString() = this.method_3289()
+/**
+ * method_22710
+ */
+fun WorldRenderer.render(arg0: ObjectAllocator, arg1: RenderTickCounter, arg2: Boolean, arg3: Camera, arg4: GameRenderer, arg5: Matrix4f, arg6: Matrix4f) = this.method_22710(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
 /**
  * method_29364
  */
@@ -50,13 +46,21 @@ fun WorldRenderer.scheduleBlockRerenderIfNeeded(arg0: BlockPos, arg1: BlockState
  */
 fun WorldRenderer.setWorld(arg0: ClientWorld) = this.method_3244(arg0)
 /**
- * method_22981
+ * method_62220
  */
-fun KClass<WorldRenderer>.drawBox(arg0: MatrixStack, arg1: VertexConsumer, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: Double, arg7: Double, arg8: Float, arg9: Float, arg10: Float, arg11: Float, arg12: Float, arg13: Float, arg14: Float) = WorldRenderer.method_22981(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14)
+fun WorldRenderer.getBuiltChunks() = this.method_62220()
 /**
  * method_35776
  */
 fun WorldRenderer.killFrustum() = this.method_35776()
+/**
+ * method_62222
+ */
+fun WorldRenderer.getCapturedFrustum() = this.method_62222()
+/**
+ * method_62209
+ */
+fun WorldRenderer.addWeatherParticlesAndSound(arg0: Camera) = this.method_62209(arg0)
 /**
  * method_34812
  */
@@ -84,7 +88,7 @@ fun WorldRenderer.getChunkBuilder() = this.method_34810()
 /**
  * method_40050
  */
-fun WorldRenderer.isRenderingReady(arg0: BlockPos) = this.method_40050(arg0)
+fun WorldRenderer.isRenderingReady(pos: BlockPos) = this.method_40050(pos)
 /**
  * method_38550
  */
@@ -94,25 +98,13 @@ fun WorldRenderer.addBuiltChunk(arg0: net.minecraft.class_846.class_851) = this.
  */
 fun KClass<WorldRenderer>.getLightmapCoordinates(arg0: BlockRenderView, arg1: BlockState, arg2: BlockPos) = WorldRenderer.method_23793(arg0, arg1, arg2)
 /**
- * method_8564
- */
-fun WorldRenderer.processGlobalEvent(arg0: Int, arg1: BlockPos, arg2: Int) = this.method_8564(arg0, arg1, arg2)
-/**
- * method_35774
- */
-fun WorldRenderer.reloadTransparencyPostProcessor() = this.method_35774()
-/**
- * method_60889
- */
-fun WorldRenderer.stopJukeboxSongAndUpdate(arg0: BlockPos) = this.method_60889(arg0)
-/**
  * method_3281
  */
 fun WorldRenderer.isTerrainRenderComplete() = this.method_3281()
 /**
- * method_61044
+ * method_62196
  */
-fun KClass<WorldRenderer>.renderFilledBoxFace(arg0: MatrixStack, arg1: VertexConsumer, arg2: Direction, arg3: Float, arg4: Float, arg5: Float, arg6: Float, arg7: Float, arg8: Float, arg9: Float, arg10: Float, arg11: Float, arg12: Float) = WorldRenderer.method_61044(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12)
+fun WorldRenderer.getCloudRenderer() = this.method_62196()
 /**
  * method_8569
  */
@@ -126,13 +118,9 @@ fun WorldRenderer.addParticle(arg0: ParticleEffect, arg1: Boolean, arg2: Boolean
  */
 fun WorldRenderer.drawEntityOutlinesFramebuffer() = this.method_3254()
 /**
- * method_22710
+ * method_62908
  */
-fun WorldRenderer.render(arg0: RenderTickCounter, arg1: Boolean, arg2: Camera, arg3: GameRenderer, arg4: LightmapTextureManager, arg5: Matrix4f, arg6: Matrix4f) = this.method_22710(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
- * method_3258
- */
-fun KClass<WorldRenderer>.renderFilledBox(arg0: MatrixStack, arg1: VertexConsumer, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: Double, arg7: Double, arg8: Float, arg9: Float, arg10: Float, arg11: Float) = WorldRenderer.method_3258(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
+fun WorldRenderer.onChunkUnload(arg0: Long) = this.method_62908(arg0)
 /**
  * method_8570
  */
@@ -146,41 +134,33 @@ fun KClass<WorldRenderer>.getLightmapCoordinates(arg0: BlockRenderView, arg1: Bl
  */
 fun WorldRenderer.getTranslucentFramebuffer() = this.method_29360()
 /**
- * method_22713
- */
-fun WorldRenderer.tickRainSplashing(arg0: Camera) = this.method_22713(arg0)
-/**
- * method_22982
- */
-fun KClass<WorldRenderer>.drawBox(arg0: MatrixStack, arg1: VertexConsumer, arg2: Box, arg3: Float, arg4: Float, arg5: Float, arg6: Float) = WorldRenderer.method_22982(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
  * method_3279
  */
 fun WorldRenderer.reload() = this.method_3279()
 /**
- * method_3267
+ * method_62219
  */
-fun WorldRenderer.cleanUp() = this.method_3267()
+fun WorldRenderer.scheduleChunkRenders(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int) = this.method_62219(arg0, arg1, arg2, arg3, arg4, arg5)
 /**
  * method_3242
  */
 fun WorldRenderer.onResized(arg0: Int, arg1: Int) = this.method_3242(arg0, arg1)
 /**
+ * method_3276
+ */
+fun <T>WorldRenderer.addParticle(arg0: T, arg1: Double, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: Double) where T: ParticleEffect = this.method_3276<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+/**
  * method_3272
  */
 fun WorldRenderer.getEntitiesDebugString() = this.method_3272()
 /**
- * method_22983
+ * method_62221
  */
-fun KClass<WorldRenderer>.drawShapeOutline(arg0: MatrixStack, arg1: VertexConsumer, arg2: VoxelShape, arg3: Double, arg4: Double, arg5: Double, arg6: Float, arg7: Float, arg8: Float, arg9: Float, arg10: Boolean) = WorldRenderer.method_22983(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
+fun WorldRenderer.getChunkRenderingDataPreparer() = this.method_62221()
 /**
- * method_60891
+ * method_52816
  */
-fun WorldRenderer.playJukeboxSong(arg0: RegistryEntry<JukeboxSong>, arg1: BlockPos) = this.method_60891(arg0, arg1)
-/**
- * method_35773
- */
-fun KClass<WorldRenderer>.drawBox(arg0: VertexConsumer, arg1: Double, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: Double, arg7: Float, arg8: Float, arg9: Float, arg10: Float) = WorldRenderer.method_35773(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
+fun KClass<WorldRenderer>.offsetFrustum(arg0: Frustum) = WorldRenderer.method_52816(arg0)
 /**
  * method_29361
  */
@@ -188,15 +168,7 @@ fun WorldRenderer.getEntityFramebuffer() = this.method_29361()
 /**
  * method_8571
  */
-fun WorldRenderer.scheduleBlockRender(arg0: Int, arg1: Int, arg2: Int) = this.method_8571(arg0, arg1, arg2)
-/**
- * method_8567
- */
-fun WorldRenderer.processWorldEvent(arg0: Int, arg1: BlockPos, arg2: Int) = this.method_8567(arg0, arg1, arg2)
-/**
- * method_3257
- */
-fun WorldRenderer.renderSky(arg0: Matrix4f, arg1: Matrix4f, arg2: Float, arg3: Camera, arg4: Boolean, arg5: Runnable) = this.method_3257(arg0, arg1, arg2, arg3, arg4, arg5)
+fun WorldRenderer.scheduleChunkRender(arg0: Int, arg1: Int, arg2: Int) = this.method_8571(arg0, arg1, arg2)
 /**
  * method_3245
  */
@@ -206,9 +178,9 @@ fun WorldRenderer.updateNoCullingBlockEntities(arg0: Collection<BlockEntity>, ar
  */
 fun WorldRenderer.loadEntityOutlinePostProcessor() = this.method_3296()
 /**
- * method_22980
+ * method_65201
  */
-fun KClass<WorldRenderer>.drawBox(arg0: MatrixStack, arg1: VertexConsumer, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: Double, arg7: Double, arg8: Float, arg9: Float, arg10: Float, arg11: Float) = WorldRenderer.method_22980(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
+fun WorldRenderer.scheduleNeighborUpdates(arg0: ChunkPos) = this.method_65201(arg0)
 /**
  * method_29362
  */
@@ -217,7 +189,3 @@ fun WorldRenderer.getParticlesFramebuffer() = this.method_29362()
  * method_8568
  */
 fun WorldRenderer.addParticle(arg0: ParticleEffect, arg1: Boolean, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: Double, arg7: Double) = this.method_8568(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-/**
- * method_3259
- */
-fun WorldRenderer.renderClouds(arg0: MatrixStack, arg1: Matrix4f, arg2: Matrix4f, arg3: Float, arg4: Double, arg5: Double, arg6: Double) = this.method_3259(arg0, arg1, arg2, arg3, arg4, arg5, arg6)

@@ -46,10 +46,6 @@ fun KClass<VoxelShapes>.cuboidUnchecked(arg0: Double, arg1: Double, arg2: Double
  */
 fun KClass<VoxelShapes>.fullCube() = VoxelShapes.method_1077()
 /**
- * method_16344
- */
-fun KClass<VoxelShapes>.extrudeFace(arg0: VoxelShape, arg1: Direction) = VoxelShapes.method_16344(arg0, arg1)
-/**
  * method_1073
  */
 fun KClass<VoxelShapes>.empty() = VoxelShapes.method_1073()

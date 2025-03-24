@@ -6,6 +6,14 @@ import me.hellrevenger.generated.*
  */
 val KClass<EquipmentSlot>.NO_MAX_COUNT by aliasStatic(EquipmentSlot::field_51935)
 /**
+ * field_54086
+ */
+val KClass<EquipmentSlot>.VALUES by aliasStatic(EquipmentSlot::field_54086)
+/**
+ * field_54087
+ */
+val KClass<EquipmentSlot>.FROM_INDEX by aliasStatic(EquipmentSlot::field_54087)
+/**
  * field_6173
  */
 val KClass<EquipmentSlot>.MAINHAND by aliasEnum(EquipmentSlot::class, "field_6173")
@@ -34,6 +42,14 @@ val KClass<EquipmentSlot>.HEAD by aliasEnum(EquipmentSlot::class, "field_6169")
  */
 val KClass<EquipmentSlot>.BODY by aliasEnum(EquipmentSlot::class, "field_48824")
 /**
+ * method_63622
+ */
+fun EquipmentSlot.getIndex() = this.method_63622()
+/**
+ * method_63620
+ */
+fun EquipmentSlot.getOffsetIndex(arg0: Int) = this.method_63620(arg0)
+/**
  * method_46643
  */
 fun EquipmentSlot.isArmorSlot() = this.method_46643()
@@ -61,7 +77,3 @@ fun EquipmentSlot.getEntitySlotId() = this.method_5927()
  * method_5923
  */
 fun EquipmentSlot.getName() = this.method_5923()
-/**
- * method_5926
- */
-fun EquipmentSlot.getArmorStandSlotId() = this.method_5926()

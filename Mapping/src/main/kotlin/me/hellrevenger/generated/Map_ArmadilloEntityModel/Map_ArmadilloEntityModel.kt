@@ -2,9 +2,13 @@ package me.hellrevenger.generated.Map_ArmadilloEntityModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_52867
+ */
+val KClass<ArmadilloEntityModel>.BABY_TRANSFORMER by aliasStatic(ArmadilloEntityModel::field_52867)
+/**
  * method_55817
  */
-fun ArmadilloEntityModel.setAngles(arg0: ArmadilloEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_55817(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ArmadilloEntityModel.setAngles(arg0: ArmadilloEntityRenderState) = this.method_55817(arg0)
 /**
  * method_55818
  */

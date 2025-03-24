@@ -6,10 +6,14 @@ import me.hellrevenger.generated.*
  */
 fun AbstractFurnaceScreenHandler.getFuelProgress() = this.method_17364()
 /**
- * method_17365
- */
-fun AbstractFurnaceScreenHandler.isBurning() = this.method_17365()
-/**
  * method_17363
  */
 fun AbstractFurnaceScreenHandler.getCookProgress() = this.method_17363()
+/**
+ * method_61632
+ */
+fun AbstractFurnaceScreenHandler.getOutputSlot() = this.method_61632()
+/**
+ * method_17365
+ */
+fun AbstractFurnaceScreenHandler.isBurning() = this.method_17365()

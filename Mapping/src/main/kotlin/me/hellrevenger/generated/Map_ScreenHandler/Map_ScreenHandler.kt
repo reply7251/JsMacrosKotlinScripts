@@ -158,6 +158,10 @@ fun KClass<ScreenHandler>.calculateStackSize(arg0: Set<Slot>, arg1: Int, arg2: I
  */
 fun ScreenHandler.disableSyncing() = this.method_34256()
 /**
+ * method_61621
+ */
+fun ScreenHandler.selectBundleStack(arg0: Int, arg1: Int) = this.method_61621(arg0, arg1)
+/**
  * method_37421
  */
 fun ScreenHandler.getRevision() = this.method_37421()

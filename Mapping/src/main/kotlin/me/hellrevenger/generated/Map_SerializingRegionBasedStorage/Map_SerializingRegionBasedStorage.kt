@@ -4,8 +4,16 @@ import me.hellrevenger.generated.*
 /**
  * method_40020
  */
-fun <R>SerializingRegionBasedStorage<R>.hasUnsavedElements() = this.method_40020()
+fun <R, P>SerializingRegionBasedStorage<R, P>.hasUnsavedElements() = this.method_40020()
+/**
+ * method_61775
+ */
+fun <R, P>SerializingRegionBasedStorage<R, P>.save() = this.method_61775()
+/**
+ * method_61780
+ */
+fun <R, P>SerializingRegionBasedStorage<R, P>.load(arg0: ChunkPos) = this.method_61780(arg0)
 /**
  * method_20436
  */
-fun <R>SerializingRegionBasedStorage<R>.saveChunk(arg0: ChunkPos) = this.method_20436(arg0)
+fun <R, P>SerializingRegionBasedStorage<R, P>.saveChunk(arg0: ChunkPos) = this.method_20436(arg0)

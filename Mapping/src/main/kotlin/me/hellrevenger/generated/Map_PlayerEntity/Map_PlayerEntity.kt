@@ -86,13 +86,9 @@ var PlayerEntity.prevCapeZ by alias(PlayerEntity::field_7522)
  */
 val PlayerEntity.playerScreenHandler by alias(PlayerEntity::field_7498)
 /**
- * method_7284
- */
-fun PlayerEntity.disableShield() = this.method_7284()
-/**
  * method_7335
  */
-fun PlayerEntity.unlockRecipes(arg0: MutableList<Identifier>) = this.method_7335(arg0)
+fun PlayerEntity.unlockRecipes(arg0: MutableList<RegistryKey<Recipe<*>>>) = this.method_7335(arg0)
 /**
  * method_7266
  */
@@ -118,6 +114,10 @@ fun PlayerEntity.isCreativeLevelTwoOp() = this.method_7338()
  */
 fun PlayerEntity.hasReducedDebugInfo() = this.method_7302()
 /**
+ * method_61498
+ */
+fun PlayerEntity.shouldRotateWithMinecart() = this.method_61498()
+/**
  * method_7342
  */
 fun PlayerEntity.increaseStat(arg0: Stat<*>, arg1: Int) = this.method_7342(arg0, arg1)
@@ -130,6 +130,10 @@ fun PlayerEntity.isBlockBreakingRestricted(arg0: world_World, arg1: BlockPos, ar
  */
 fun PlayerEntity.getAttackCooldownProgress(arg0: Float) = this.method_7261(arg0)
 /**
+ * method_64271
+ */
+fun PlayerEntity.canDropItems() = this.method_64271()
+/**
  * method_7269
  */
 fun PlayerEntity.trySleep(arg0: BlockPos) = this.method_7269(arg0)
@@ -141,6 +145,14 @@ fun PlayerEntity.useBook(arg0: ItemStack, arg1: Hand) = this.method_7315(arg0, a
  * method_7355
  */
 fun PlayerEntity.sendAbilitiesUpdate() = this.method_7355()
+/**
+ * method_5691
+ */
+fun PlayerEntity.getPermissionLevel() = this.method_5691()
+/**
+ * method_65352
+ */
+fun PlayerEntity.setLoaded(arg0: Boolean) = this.method_65352(arg0)
 /**
  * method_7331
  */
@@ -250,6 +262,14 @@ fun PlayerEntity.useRiptide(arg0: Int, arg1: Float, arg2: ItemStack) = this.meth
  */
 fun PlayerEntity.isCreative() = this.method_7337()
 /**
+ * method_65350
+ */
+fun PlayerEntity.isLoaded() = this.method_65350()
+/**
+ * method_7284
+ */
+fun PlayerEntity.disableShield(arg0: ItemStack) = this.method_7284(arg0)
+/**
  * method_7268
  */
 fun PlayerEntity.setReducedDebugInfo(arg0: Boolean) = this.method_7268(arg0)
@@ -281,6 +301,10 @@ fun PlayerEntity.openHorseInventory(arg0: AbstractHorseEntity, arg1: Inventory) 
  * method_33592
  */
 fun PlayerEntity.onPickupSlotClick(arg0: ItemStack, arg1: ItemStack, arg2: ClickType) = this.method_33592(arg0, arg1, arg2)
+/**
+ * method_65351
+ */
+fun PlayerEntity.tickLoaded() = this.method_65351()
 /**
  * method_7305
  */
@@ -320,7 +344,7 @@ fun PlayerEntity.getBlockBreakingSpeed(arg0: BlockState) = this.method_7351(arg0
 /**
  * method_23670
  */
-fun PlayerEntity.stopFallFlying() = this.method_23670()
+fun PlayerEntity.stopGliding() = this.method_23670()
 /**
  * method_55755
  */
@@ -338,9 +362,13 @@ fun PlayerEntity.interact(arg0: Entity, arg1: Hand) = this.method_7287(arg0, arg
  */
 fun PlayerEntity.increaseStat(arg0: Identifier, arg1: Int) = this.method_7339(arg0, arg1)
 /**
+ * method_61499
+ */
+fun PlayerEntity.dropCreativeStack(arg0: ItemStack) = this.method_61499(arg0)
+/**
  * method_7278
  */
-fun PlayerEntity.getEnchantmentTableSeed() = this.method_7278()
+fun PlayerEntity.getEnchantingTableSeed() = this.method_7278()
 /**
  * method_7270
  */
@@ -386,6 +414,10 @@ fun PlayerEntity.addExperience(arg0: Int) = this.method_7255(arg0)
  */
 fun PlayerEntity.isPartVisible(arg0: PlayerModelPart) = this.method_7348(arg0)
 /**
+ * method_64475
+ */
+fun PlayerEntity.hasPermissionLevel(arg0: Int) = this.method_64475(arg0)
+/**
  * method_61165
  */
 fun PlayerEntity.shouldIgnoreFallDamageFromCurrentExplosion() = this.method_61165()
@@ -412,7 +444,7 @@ fun PlayerEntity.openHandledScreen(arg0: NamedScreenHandlerFactory) = this.metho
 /**
  * method_23668
  */
-fun PlayerEntity.checkFallFlying() = this.method_23668()
+fun PlayerEntity.checkGliding() = this.method_23668()
 /**
  * method_7259
  */
@@ -436,7 +468,7 @@ fun PlayerEntity.getInventory() = this.method_31548()
 /**
  * method_23669
  */
-fun PlayerEntity.startFallFlying() = this.method_23669()
+fun PlayerEntity.startGliding() = this.method_23669()
 /**
  * method_43122
  */

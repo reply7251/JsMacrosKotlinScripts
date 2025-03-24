@@ -110,6 +110,10 @@ fun ServerChunkManager.getLightingProvider() = this.method_17293()
  */
 fun ServerChunkManager.unloadEntity(arg0: Entity) = this.method_18753(arg0)
 /**
+ * method_65078
+ */
+fun ServerChunkManager.markForUpdate(arg0: ChunkHolder) = this.method_65078(arg0)
+/**
  * method_17300
  */
 fun <T>ServerChunkManager.removeTicket(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_17300<T>(arg0, arg1, arg2, arg3)

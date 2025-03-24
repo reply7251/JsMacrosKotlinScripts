@@ -62,6 +62,10 @@ fun KClass<StructureTemplate>.transformAround(arg0: BlockPos, arg1: BlockMirror,
  */
 fun StructureTemplate.calculateBoundingBox(arg0: StructurePlacementData, arg1: BlockPos) = this.method_16187(arg0, arg1)
 /**
+ * method_64822
+ */
+fun StructureTemplate.getJigsawInfos(arg0: BlockPos, arg1: BlockRotation) = this.method_64822(arg0, arg1)
+/**
  * method_15174
  */
 fun StructureTemplate.saveFromWorld(arg0: world_World, arg1: BlockPos, arg2: Vec3i, arg3: Boolean, arg4: Block) = this.method_15174(arg0, arg1, arg2, arg3, arg4)
@@ -125,6 +129,10 @@ fun StructureTemplate.readNbt(arg0: RegistryEntryLookup<Block>, arg1: NbtCompoun
  * method_15161
  */
 fun StructureTemplate.setAuthor(arg0: String) = this.method_15161(arg0)
+/**
+ * method_64823
+ */
+fun KClass<StructureTemplate>.readJoint(arg0: NbtCompound, arg1: BlockState) = StructureTemplate.method_64823(arg0, arg1)
 /**
  * method_15162
  */

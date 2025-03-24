@@ -17,3 +17,7 @@ fun KClass<SerializableRegistries>.forEachSyncedRegistry(arg0: DynamicOps<NbtEle
  * method_47449
  */
 fun KClass<SerializableRegistries>.streamDynamicEntries(arg0: CombinedDynamicRegistries<ServerDynamicRegistryType>) = SerializableRegistries.method_47449(arg0)
+/**
+ * method_62704
+ */
+fun KClass<SerializableRegistries>.isSynced(arg0: RegistryKey<out Registry<*>>) = SerializableRegistries.method_62704(arg0)

@@ -46,6 +46,10 @@ fun KClass<GameMode>.getOrNull(arg0: Int) = GameMode.method_32762(arg0)
  */
 fun GameMode.getSimpleTranslatableName() = this.method_32763()
 /**
+ * method_64760
+ */
+fun KClass<GameMode>.isValid(arg0: Int) = GameMode.method_64760(arg0)
+/**
  * method_8384
  */
 fun KClass<GameMode>.byId(arg0: Int) = GameMode.method_8384(arg0)

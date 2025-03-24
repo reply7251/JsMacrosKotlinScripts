@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_RealmsMainScreen
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_54806
+ */
+val KClass<RealmsMainScreen>.HARDCORE_ICON_TEXTURE by aliasStatic(RealmsMainScreen::field_54806)
+/**
  * method_53792
  */
 fun KClass<RealmsMainScreen>.resetPendingInvitesCount() = RealmsMainScreen.method_53792()
@@ -17,6 +21,10 @@ fun KClass<RealmsMainScreen>.play(arg0: RealmsServer, arg1: Screen) = RealmsMain
  * method_38505
  */
 fun RealmsMainScreen.removeSelection() = this.method_38505()
+/**
+ * method_64834
+ */
+fun KClass<RealmsMainScreen>.getGameModeText(arg0: Int, arg1: Boolean) = RealmsMainScreen.method_64834(arg0, arg1)
 /**
  * method_53793
  */

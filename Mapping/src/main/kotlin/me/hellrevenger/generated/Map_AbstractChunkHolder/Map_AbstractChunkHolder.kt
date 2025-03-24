@@ -14,10 +14,6 @@ val KClass<AbstractChunkHolder>.UNLOADED by aliasStatic(AbstractChunkHolder::fie
  */
 fun AbstractChunkHolder.enumerateFutures() = this.method_60475()
 /**
- * method_60470
- */
-fun AbstractChunkHolder.getRefCount() = this.method_60470()
-/**
  * method_60471
  */
 fun AbstractChunkHolder.getLatest() = this.method_60471()

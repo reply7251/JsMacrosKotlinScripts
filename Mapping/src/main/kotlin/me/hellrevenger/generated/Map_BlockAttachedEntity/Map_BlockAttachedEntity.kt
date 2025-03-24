@@ -6,10 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun BlockAttachedEntity.getAttachedBlockPos() = this.method_59940()
 /**
- * method_6889
- */
-fun BlockAttachedEntity.onBreak(arg0: Entity) = this.method_6889(arg0)
-/**
  * method_6888
  */
 fun BlockAttachedEntity.canStayAttached() = this.method_6888()
+/**
+ * method_6889
+ */
+fun BlockAttachedEntity.onBreak(arg0: ServerWorld, arg1: Entity) = this.method_6889(arg0, arg1)

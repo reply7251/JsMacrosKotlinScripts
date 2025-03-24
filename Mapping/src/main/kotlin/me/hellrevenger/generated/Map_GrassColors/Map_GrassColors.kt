@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_GrassColors
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_9214
+ */
+val KClass<GrassColors>.colorMap by aliasStatic(GrassColors::field_9214)
+/**
  * method_49724
  */
 fun KClass<GrassColors>.getDefaultColor() = GrassColors.method_49724()

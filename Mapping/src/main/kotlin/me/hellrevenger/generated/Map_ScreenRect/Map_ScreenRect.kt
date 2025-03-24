@@ -50,6 +50,10 @@ fun ScreenRect.overlaps(arg0: ScreenRect, arg1: NavigationAxis) = this.method_48
  */
 fun ScreenRect.overlaps(arg0: ScreenRect) = this.method_48252(arg0)
 /**
+ * method_65185
+ */
+fun ScreenRect.transform(arg0: Matrix4f) = this.method_65185(arg0)
+/**
  * method_49618
  */
 fun ScreenRect.getTop() = this.method_49618()

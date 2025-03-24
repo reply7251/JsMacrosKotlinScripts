@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_10475
  */
-fun ComplexRecipeJsonBuilder.offerTo(arg0: RecipeExporter, arg1: Identifier) = this.method_10475(arg0, arg1)
+fun ComplexRecipeJsonBuilder.offerTo(arg0: RecipeExporter, arg1: RegistryKey<Recipe<*>>) = this.method_10475(arg0, arg1)
 /**
  * method_53820
  */

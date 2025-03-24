@@ -18,10 +18,6 @@ var EnchantmentScreen.pageTurningSpeed by alias(EnchantmentScreen::field_2904)
  */
 var EnchantmentScreen.nextPageAngle by alias(EnchantmentScreen::field_2912)
 /**
- * field_2915
- */
-var EnchantmentScreen.ticks by alias(EnchantmentScreen::field_2915)
-/**
  * field_2905
  */
 var EnchantmentScreen.nextPageTurningSpeed by alias(EnchantmentScreen::field_2905)

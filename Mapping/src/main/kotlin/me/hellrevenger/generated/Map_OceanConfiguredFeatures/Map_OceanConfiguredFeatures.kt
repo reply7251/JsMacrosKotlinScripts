@@ -22,10 +22,6 @@ val KClass<OceanConfiguredFeatures>.SEAGRASS_TALL by aliasStatic(OceanConfigured
  */
 val KClass<OceanConfiguredFeatures>.SEA_PICKLE by aliasStatic(OceanConfiguredFeatures::field_35766)
 /**
- * field_35767
- */
-val KClass<OceanConfiguredFeatures>.SEAGRASS_SIMPLE by aliasStatic(OceanConfiguredFeatures::field_35767)
-/**
  * field_35768
  */
 val KClass<OceanConfiguredFeatures>.KELP by aliasStatic(OceanConfiguredFeatures::field_35768)

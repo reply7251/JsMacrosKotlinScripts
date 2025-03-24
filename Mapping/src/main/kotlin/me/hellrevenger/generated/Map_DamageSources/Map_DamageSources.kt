@@ -46,6 +46,10 @@ fun DamageSources.cactus() = this.method_48826()
  */
 fun DamageSources.dryOut() = this.method_48834()
 /**
+ * method_61399
+ */
+fun DamageSources.enderPearl() = this.method_61399()
+/**
  * method_48822
  */
 fun DamageSources.inWall() = this.method_48822()
@@ -161,6 +165,10 @@ fun DamageSources.mobAttack(arg0: LivingEntity) = this.method_48812(arg0)
  * method_48821
  */
 fun DamageSources.sonicBoom(arg0: Entity) = this.method_48821(arg0)
+/**
+ * method_61398
+ */
+fun DamageSources.maceSmash(arg0: Entity) = this.method_61398(arg0)
 /**
  * method_48830
  */

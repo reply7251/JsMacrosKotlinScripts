@@ -14,10 +14,6 @@ val KClass<SampleType>.TICK_LOOP by aliasEnum(SampleType::class, "field_33877")
  */
 val KClass<SampleType>.CHUNK_RENDERING by aliasEnum(SampleType::class, "field_33879")
 /**
- * field_29552
- */
-val KClass<SampleType>.MAIL_BOXES by aliasEnum(SampleType::class, "field_29552")
-/**
  * field_29551
  */
 val KClass<SampleType>.EVENT_LOOPS by aliasEnum(SampleType::class, "field_29551")
@@ -29,6 +25,10 @@ val KClass<SampleType>.CPU by aliasEnum(SampleType::class, "field_33881")
  * field_33880
  */
 val KClass<SampleType>.CHUNK_RENDERING_DISPATCHING by aliasEnum(SampleType::class, "field_33880")
+/**
+ * field_54068
+ */
+val KClass<SampleType>.CONSECUTIVE_EXECUTORS by aliasEnum(SampleType::class, "field_54068")
 /**
  * field_33876
  */

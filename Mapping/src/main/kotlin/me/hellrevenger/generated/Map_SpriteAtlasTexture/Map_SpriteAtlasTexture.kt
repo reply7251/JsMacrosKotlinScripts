@@ -33,7 +33,3 @@ fun SpriteAtlasTexture.tickAnimatedSprites() = this.method_4612()
  * method_4608
  */
 fun SpriteAtlasTexture.getSprite(arg0: Identifier) = this.method_4608(arg0)
-/**
- * method_24198
- */
-fun SpriteAtlasTexture.applyTextureFilter(arg0: net.minecraft.class_7766.class_7767) = this.method_24198(arg0)

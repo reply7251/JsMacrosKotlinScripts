@@ -6,9 +6,17 @@ import me.hellrevenger.generated.*
  */
 val KClass<PassiveEntity>.BABY_AGE by aliasStatic(PassiveEntity::field_29969)
 /**
+ * method_63606
+ */
+fun PassiveEntity.getHappyTicksRemaining() = this.method_63606()
+/**
  * method_19184
  */
 fun PassiveEntity.isReadyToBreed() = this.method_19184()
+/**
+ * method_63605
+ */
+fun PassiveEntity.getForcedAge() = this.method_63605()
 /**
  * method_5618
  */

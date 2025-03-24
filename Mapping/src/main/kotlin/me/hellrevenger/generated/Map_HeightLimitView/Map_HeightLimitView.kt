@@ -22,25 +22,17 @@ fun HeightLimitView.getSectionIndex(arg0: Int) = this.method_31602(arg0)
  */
 fun HeightLimitView.countVerticalSections() = this.method_32890()
 /**
- * method_31597
+ * method_62871
  */
-fun HeightLimitView.getTopSectionCoord() = this.method_31597()
-/**
- * method_39034
- */
-fun KClass<HeightLimitView>.create(arg0: Int, arg1: Int) = HeightLimitView.method_39034(arg0, arg1)
+fun HeightLimitView.isInHeightLimit(arg0: Int) = this.method_62871(arg0)
 /**
  * method_31600
  */
-fun HeightLimitView.getTopY() = this.method_31600()
+fun HeightLimitView.getTopYInclusive() = this.method_31600()
 /**
  * method_31606
  */
 fun HeightLimitView.isOutOfHeightLimit(arg0: BlockPos) = this.method_31606(arg0)
-/**
- * method_31601
- */
-fun HeightLimitView.isOutOfHeightLimit(arg0: Int) = this.method_31601(arg0)
 /**
  * method_31607
  */
@@ -49,3 +41,15 @@ fun HeightLimitView.getBottomY() = this.method_31607()
  * method_31605
  */
 fun HeightLimitView.getHeight() = this.method_31605()
+/**
+ * method_31597
+ */
+fun HeightLimitView.getTopSectionCoord() = this.method_31597()
+/**
+ * method_39034
+ */
+fun KClass<HeightLimitView>.create(arg0: Int, arg1: Int) = HeightLimitView.method_39034(arg0, arg1)
+/**
+ * method_31601
+ */
+fun HeightLimitView.isOutOfHeightLimit(arg0: Int) = this.method_31601(arg0)

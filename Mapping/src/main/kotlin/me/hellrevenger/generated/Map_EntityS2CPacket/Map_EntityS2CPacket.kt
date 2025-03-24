@@ -2,13 +2,13 @@ package me.hellrevenger.generated.Map_EntityS2CPacket
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_11645
- */
-fun EntityS2CPacket.getEntity(arg0: world_World) = this.method_11645(arg0)
-/**
  * method_11650
  */
 fun EntityS2CPacket.getPitch() = this.method_11650()
+/**
+ * method_11645
+ */
+fun EntityS2CPacket.getEntity(arg0: world_World) = this.method_11645(arg0)
 /**
  * method_11651
  */

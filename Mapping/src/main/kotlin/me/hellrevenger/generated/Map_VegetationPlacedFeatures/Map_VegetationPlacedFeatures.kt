@@ -10,6 +10,10 @@ val KClass<VegetationPlacedFeatures>.TREES_GROVE by aliasStatic(VegetationPlaced
  */
 val KClass<VegetationPlacedFeatures>.TREES_SPARSE_JUNGLE by aliasStatic(VegetationPlacedFeatures::field_36155)
 /**
+ * field_55188
+ */
+val KClass<VegetationPlacedFeatures>.FLOWER_PALE_GARDEN by aliasStatic(VegetationPlacedFeatures::field_55188)
+/**
  * field_36135
  */
 val KClass<VegetationPlacedFeatures>.TREES_PLAINS by aliasStatic(VegetationPlacedFeatures::field_36135)
@@ -85,6 +89,10 @@ val KClass<VegetationPlacedFeatures>.BROWN_MUSHROOM_TAIGA by aliasStatic(Vegetat
  * field_36154
  */
 val KClass<VegetationPlacedFeatures>.TREES_BIRCH_AND_OAK by aliasStatic(VegetationPlacedFeatures::field_36154)
+/**
+ * field_55189
+ */
+val KClass<VegetationPlacedFeatures>.PALE_GARDEN_FLOWERS by aliasStatic(VegetationPlacedFeatures::field_55189)
 /**
  * field_36166
  */
@@ -186,6 +194,10 @@ val KClass<VegetationPlacedFeatures>.BAMBOO by aliasStatic(VegetationPlacedFeatu
  */
 val KClass<VegetationPlacedFeatures>.GRASS_BONEMEAL by aliasStatic(VegetationPlacedFeatures::field_36173)
 /**
+ * field_54889
+ */
+val KClass<VegetationPlacedFeatures>.PALE_GARDEN_VEGETATION by aliasStatic(VegetationPlacedFeatures::field_54889)
+/**
  * field_36141
  */
 val KClass<VegetationPlacedFeatures>.TREES_MEADOW by aliasStatic(VegetationPlacedFeatures::field_36141)
@@ -205,6 +217,10 @@ val KClass<VegetationPlacedFeatures>.PATCH_TALL_GRASS_2 by aliasStatic(Vegetatio
  * field_42964
  */
 val KClass<VegetationPlacedFeatures>.FLOWER_CHERRY by aliasStatic(VegetationPlacedFeatures::field_42964)
+/**
+ * field_55190
+ */
+val KClass<VegetationPlacedFeatures>.PALE_MOSS_PATCH by aliasStatic(VegetationPlacedFeatures::field_55190)
 /**
  * field_36129
  */

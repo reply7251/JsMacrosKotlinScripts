@@ -14,10 +14,6 @@ val <T>KClass<LootDataType<T>>.ITEM_MODIFIERS by aliasStatic({LootDataType.field
  */
 val <T>KClass<LootDataType<T>>.PREDICATES by aliasStatic({LootDataType.field_44496})
 /**
- * method_51204
- */
-fun <T, V>LootDataType<T>.parse(arg0: Identifier, arg1: DynamicOps<V>, arg2: V) = this.method_51204<V>(arg0, arg1, arg2)
-/**
  * method_51209
  */
 fun <T>LootDataType<T>.validate(arg0: LootTableReporter, arg1: RegistryKey<T>, arg2: T) = this.method_51209(arg0, arg1, arg2)

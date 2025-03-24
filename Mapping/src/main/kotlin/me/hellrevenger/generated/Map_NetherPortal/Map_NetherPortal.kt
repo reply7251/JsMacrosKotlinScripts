@@ -22,6 +22,10 @@ fun NetherPortal.isValid() = this.method_10360()
  */
 fun NetherPortal.wasAlreadyValid() = this.method_10362()
 /**
+ * method_10363
+ */
+fun NetherPortal.createPortal(arg0: WorldAccess) = this.method_10363(arg0)
+/**
  * method_47382
  */
 fun KClass<NetherPortal>.findOpenPosition(arg0: Vec3d, arg1: ServerWorld, arg2: Entity, arg3: EntityDimensions) = NetherPortal.method_47382(arg0, arg1, arg2, arg3)
@@ -34,6 +38,6 @@ fun KClass<NetherPortal>.entityPosInPortal(arg0: net.minecraft.class_5459.class_
  */
 fun KClass<NetherPortal>.getNewPortal(arg0: WorldAccess, arg1: BlockPos, arg2: net.minecraft.class_2350.class_2351) = NetherPortal.method_30485(arg0, arg1, arg2)
 /**
- * method_10363
+ * method_64314
  */
-fun NetherPortal.createPortal() = this.method_10363()
+fun KClass<NetherPortal>.getOnAxis(arg0: BlockView, arg1: BlockPos, arg2: net.minecraft.class_2350.class_2351) = NetherPortal.method_64314(arg0, arg1, arg2)

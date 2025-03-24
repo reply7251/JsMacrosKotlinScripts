@@ -10,13 +10,13 @@ fun <R>ThreadExecutor<R>.isOnThread() where R: Runnable = this.method_18854()
  */
 fun <R>ThreadExecutor<R>.submitAndJoin(arg0: Runnable) where R: Runnable = this.method_19537(arg0)
 /**
+ * method_61391
+ */
+fun <R>KClass<ThreadExecutor<R>>.isMemoryError(arg0: Throwable) where R: Runnable = ThreadExecutor.method_61391(arg0)
+/**
  * method_16075
  */
 fun <R>ThreadExecutor<R>.runTask() where R: Runnable = this.method_16075()
-/**
- * method_18858
- */
-fun <R>ThreadExecutor<R>.send(arg0: R) where R: Runnable = this.method_18858(arg0)
 /**
  * method_5385
  */

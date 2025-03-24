@@ -18,10 +18,6 @@ val KClass<Criteria>.TARGET_HIT by aliasStatic(Criteria::field_22450)
  */
 val KClass<Criteria>.RECIPE_CRAFTED by aliasStatic(Criteria::field_44587)
 /**
- * field_1197
- */
-val KClass<Criteria>.KILLED_BY_CROSSBOW by aliasStatic(Criteria::field_1197)
-/**
  * field_1190
  */
 val KClass<Criteria>.BRED_ANIMALS by aliasStatic(Criteria::field_1190)
@@ -73,6 +69,10 @@ val KClass<Criteria>.ENTITY_KILLED_PLAYER by aliasStatic(Criteria::field_1188)
  * field_21628
  */
 val KClass<Criteria>.SLIDE_DOWN_BLOCK by aliasStatic(Criteria::field_21628)
+/**
+ * field_54206
+ */
+val KClass<Criteria>.KILLED_BY_ARROW by aliasStatic(Criteria::field_54206)
 /**
  * field_1198
  */

@@ -2,13 +2,13 @@ package me.hellrevenger.generated.Map_property_EnumProperty
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_11847
- */
-fun <T>KClass<property_EnumProperty<T>>.of(arg0: String, arg1: Class<T>, arg2: Collection<T>) where T: Enum<T>, T: StringIdentifiable = property_EnumProperty.method_11847<T>(arg0, arg1, arg2)
-/**
  * method_11846
  */
 fun <T>property_EnumProperty<T>.name(arg0: T) where T: Enum<T>, T: StringIdentifiable = this.method_11846(arg0)
+/**
+ * method_11847
+ */
+fun <T>KClass<property_EnumProperty<T>>.of(arg0: String, arg1: Class<T>, arg2: MutableList<T>) where T: Enum<T>, T: StringIdentifiable = property_EnumProperty.method_11847<T>(arg0, arg1, arg2)
 /**
  * method_11850
  */
@@ -21,3 +21,7 @@ fun <T>KClass<property_EnumProperty<T>>.of(arg0: String, arg1: Class<T>, arg2: A
  * method_11848
  */
 fun <T>KClass<property_EnumProperty<T>>.of(arg0: String, arg1: Class<T>, arg2: Predicate<T>) where T: Enum<T>, T: StringIdentifiable = property_EnumProperty.method_11848<T>(arg0, arg1, arg2)
+/**
+ * method_64221
+ */
+fun <T>property_EnumProperty<T>.ordinal(arg0: T) where T: Enum<T>, T: StringIdentifiable = this.method_64221(arg0)

@@ -58,10 +58,6 @@ fun BlockEntity.populateCrashReport(arg0: CrashReportSection) = this.method_1100
  */
 fun BlockEntity.removeFromCopiedStackNbt(arg0: NbtCompound) = this.method_57569(arg0)
 /**
- * method_11011
- */
-fun BlockEntity.copyItemDataRequiresOperator() = this.method_11011()
-/**
  * method_11016
  */
 fun BlockEntity.getPos() = this.method_11016()
@@ -110,10 +106,6 @@ fun BlockEntity.hasWorld() = this.method_11002()
  */
 fun BlockEntity.toUpdatePacket() = this.method_38235()
 /**
- * method_38240
- */
-fun BlockEntity.setStackNbt(arg0: ItemStack, arg1: net.minecraft.class_7225.class_7874) = this.method_38240(arg0, arg1)
-/**
  * method_58685
  */
 fun BlockEntity.readComponents(arg0: ComponentMap, arg1: ComponentChanges) = this.method_58685(arg0, arg1)
@@ -133,6 +125,10 @@ fun BlockEntity.createComponentMap() = this.method_57590()
  * method_58691
  */
 fun BlockEntity.readComponentlessNbt(arg0: NbtCompound, arg1: net.minecraft.class_7225.class_7874) = this.method_58691(arg0, arg1)
+/**
+ * method_61176
+ */
+fun BlockEntity.supports(arg0: BlockState) = this.method_61176(arg0)
 /**
  * method_16887
  */

@@ -2,9 +2,21 @@ package me.hellrevenger.generated.Map_InGameHud
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_45304
+ */
+val KClass<InGameHud>.CROSSHAIR_TEXTURE by aliasStatic(InGameHud::field_45304)
+/**
+ * field_52771
+ */
+val KClass<InGameHud>.NAUSEA_TEXTURE by aliasStatic(InGameHud::field_52771)
+/**
  * field_2013
  */
 var InGameHud.vignetteDarkness by alias(InGameHud::field_2013)
+/**
+ * field_2021
+ */
+var InGameHud.chatHud by alias(InGameHud::field_2021)
 /**
  * method_34003
  */
@@ -53,10 +65,6 @@ fun InGameHud.getTicks() = this.method_1738()
  * method_44353
  */
 fun InGameHud.shouldShowChatDisabledScreen() = this.method_44353()
-/**
- * method_1743
- */
-fun InGameHud.getChatHud() = this.method_1743()
 /**
  * method_39191
  */

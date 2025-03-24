@@ -18,6 +18,10 @@ val KClass<TreePlacedFeatures>.FANCY_OAK_CHECKED by aliasStatic(TreePlacedFeatur
  */
 val KClass<TreePlacedFeatures>.BIRCH_BEES_002 by aliasStatic(TreePlacedFeatures::field_36111)
 /**
+ * field_54887
+ */
+val KClass<TreePlacedFeatures>.PALE_OAK_CHECKED by aliasStatic(TreePlacedFeatures::field_54887)
+/**
  * field_36094
  */
 val KClass<TreePlacedFeatures>.SPRUCE_CHECKED by aliasStatic(TreePlacedFeatures::field_36094)
@@ -81,6 +85,10 @@ val KClass<TreePlacedFeatures>.WARPED_FUNGI by aliasStatic(TreePlacedFeatures::f
  * field_36100
  */
 val KClass<TreePlacedFeatures>.JUNGLE_TREE by aliasStatic(TreePlacedFeatures::field_36100)
+/**
+ * field_54888
+ */
+val KClass<TreePlacedFeatures>.PALE_OAK_CREAKING_CHECKED by aliasStatic(TreePlacedFeatures::field_54888)
 /**
  * field_36097
  */

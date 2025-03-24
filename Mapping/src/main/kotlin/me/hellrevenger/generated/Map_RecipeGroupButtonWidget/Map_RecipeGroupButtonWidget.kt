@@ -8,7 +8,7 @@ fun RecipeGroupButtonWidget.getCategory() = this.method_2623()
 /**
  * method_2622
  */
-fun RecipeGroupButtonWidget.checkForNewRecipes(arg0: MinecraftClient) = this.method_2622(arg0)
+fun RecipeGroupButtonWidget.checkForNewRecipes(arg0: ClientRecipeBook, arg1: Boolean) = this.method_2622(arg0, arg1)
 /**
  * method_2624
  */

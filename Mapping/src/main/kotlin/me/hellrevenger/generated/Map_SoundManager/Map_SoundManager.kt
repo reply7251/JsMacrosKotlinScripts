@@ -50,6 +50,10 @@ fun SoundManager.updateSoundVolume(arg0: SoundCategory, arg1: Float) = this.meth
  */
 fun SoundManager.play(arg0: SoundInstance, arg1: Int) = this.method_4872(arg0, arg1)
 /**
+ * method_65258
+ */
+fun SoundManager.setVolume(arg0: SoundInstance, arg1: Float) = this.method_65258(arg0, arg1)
+/**
  * method_4876
  */
 fun SoundManager.updateListenerPosition(arg0: Camera) = this.method_4876(arg0)

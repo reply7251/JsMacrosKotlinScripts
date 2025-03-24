@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_TutorialManager
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_31365
- */
-fun TutorialManager.add(arg0: TutorialToast, arg1: Int) = this.method_31365(arg0, arg1)
-/**
  * method_4914
  */
 fun TutorialManager.getClient() = this.method_4914()
@@ -37,10 +33,6 @@ fun TutorialManager.onUpdateMouse(arg0: Double, arg1: Double) = this.method_4908
  * method_33704
  */
 fun TutorialManager.onPickupSlotClick(arg0: ItemStack, arg1: ItemStack, arg2: ClickType) = this.method_33704(arg0, arg1, arg2)
-/**
- * method_31364
- */
-fun TutorialManager.remove(arg0: TutorialToast) = this.method_31364(arg0)
 /**
  * method_4910
  */

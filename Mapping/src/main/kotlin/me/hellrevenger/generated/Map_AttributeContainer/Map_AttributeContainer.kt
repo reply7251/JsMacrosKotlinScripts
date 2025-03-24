@@ -22,6 +22,14 @@ fun AttributeContainer.getModifierValue(arg0: RegistryEntry<EntityAttribute>, ar
  */
 fun AttributeContainer.getPendingUpdate() = this.method_60498()
 /**
+ * method_61437
+ */
+fun AttributeContainer.addPersistentModifiersFrom(arg0: AttributeContainer) = this.method_61437(arg0)
+/**
+ * method_65115
+ */
+fun AttributeContainer.resetToBaseValue(arg0: RegistryEntry<EntityAttribute>) = this.method_65115(arg0)
+/**
  * method_26851
  */
 fun AttributeContainer.getAttributesToSend() = this.method_26851()

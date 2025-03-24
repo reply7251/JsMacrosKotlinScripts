@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_1985
  */
-fun KClass<RecipeToast>.show(arg0: ToastManager, arg1: RecipeEntry<*>) = RecipeToast.method_1985(arg0, arg1)
+fun KClass<RecipeToast>.show(arg0: ToastManager, arg1: RecipeDisplay) = RecipeToast.method_1985(arg0, arg1)

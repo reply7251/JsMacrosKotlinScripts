@@ -6,42 +6,38 @@ import me.hellrevenger.generated.*
  */
 val KClass<ModelTransformation>.NONE by aliasStatic(ModelTransformation::field_4301)
 /**
- * field_4306
+ * comp_3370
  */
-val ModelTransformation.fixed by alias(ModelTransformation::field_4306)
+fun ModelTransformation.firstPersonLeftHand() = this.comp_3370()
 /**
- * field_4307
+ * comp_3371
  */
-val ModelTransformation.thirdPersonRightHand by alias(ModelTransformation::field_4307)
+fun ModelTransformation.firstPersonRightHand() = this.comp_3371()
 /**
- * field_4304
+ * comp_3372
  */
-val ModelTransformation.firstPersonRightHand by alias(ModelTransformation::field_4304)
-/**
- * field_4305
- */
-val ModelTransformation.thirdPersonLeftHand by alias(ModelTransformation::field_4305)
-/**
- * field_4302
- */
-val ModelTransformation.firstPersonLeftHand by alias(ModelTransformation::field_4302)
-/**
- * field_4303
- */
-val ModelTransformation.ground by alias(ModelTransformation::field_4303)
-/**
- * field_4300
- */
-val ModelTransformation.gui by alias(ModelTransformation::field_4300)
-/**
- * field_4311
- */
-val ModelTransformation.head by alias(ModelTransformation::field_4311)
-/**
- * method_3501
- */
-fun ModelTransformation.isTransformationDefined(arg0: ModelTransformationMode) = this.method_3501(arg0)
+fun ModelTransformation.head() = this.comp_3372()
 /**
  * method_3503
  */
 fun ModelTransformation.getTransformation(arg0: ModelTransformationMode) = this.method_3503(arg0)
+/**
+ * comp_3368
+ */
+fun ModelTransformation.thirdPersonLeftHand() = this.comp_3368()
+/**
+ * comp_3369
+ */
+fun ModelTransformation.thirdPersonRightHand() = this.comp_3369()
+/**
+ * comp_3373
+ */
+fun ModelTransformation.gui() = this.comp_3373()
+/**
+ * comp_3374
+ */
+fun ModelTransformation.ground() = this.comp_3374()
+/**
+ * comp_3375
+ */
+fun ModelTransformation.fixed() = this.comp_3375()

@@ -2,18 +2,22 @@ package me.hellrevenger.generated.Map_TaskExecutor
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_34996
+ * method_63588
  */
-fun <T>TaskExecutor<T>.getQueueSize() = this.method_34996()
+fun <R>TaskExecutor<R>.send(arg0: R) where R: Runnable = this.method_63588(arg0)
 /**
- * method_40001
+ * method_63602
  */
-fun <T>TaskExecutor<T>.hasQueuedTasks() = this.method_40001()
+fun <R>KClass<TaskExecutor<R>>.of(arg0: String, arg1: Executor) where R: Runnable = TaskExecutor.method_63602(arg0, arg1)
 /**
- * method_37477
+ * method_16211
  */
-fun <T>TaskExecutor<T>.awaitAll() = this.method_37477()
+fun <R>TaskExecutor<R>.createTask(arg0: Runnable) where R: Runnable = this.method_16211(arg0)
 /**
- * method_16902
+ * method_63603
  */
-fun <T>KClass<TaskExecutor<T>>.create(arg0: Executor, arg1: String) = TaskExecutor.method_16902(arg0, arg1)
+fun <R, Source>TaskExecutor<R>.executeAsync(arg0: Consumer<CompletableFuture<Source>>) where R: Runnable = this.method_63603<Source>(arg0)
+/**
+ * method_16898
+ */
+fun <R>TaskExecutor<R>.getName() where R: Runnable = this.method_16898()

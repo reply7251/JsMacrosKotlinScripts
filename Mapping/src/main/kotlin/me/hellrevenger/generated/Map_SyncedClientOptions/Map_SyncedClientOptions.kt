@@ -42,6 +42,10 @@ fun SyncedClientOptions.chatVisibility() = this.comp_1953()
  */
 fun SyncedClientOptions.language() = this.comp_1951()
 /**
+ * comp_2906
+ */
+fun SyncedClientOptions.particleStatus() = this.comp_2906()
+/**
  * comp_1952
  */
 fun SyncedClientOptions.viewDistance() = this.comp_1952()

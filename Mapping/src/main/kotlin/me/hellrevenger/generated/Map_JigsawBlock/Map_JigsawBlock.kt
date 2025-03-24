@@ -10,10 +10,10 @@ val KClass<JigsawBlock>.ORIENTATION by aliasStatic(JigsawBlock::field_23262)
  */
 fun KClass<JigsawBlock>.getFacing(arg0: BlockState) = JigsawBlock.method_26378(arg0)
 /**
+ * method_16546
+ */
+fun KClass<JigsawBlock>.attachmentMatches(arg0: net.minecraft.class_3499.class_10326, arg1: net.minecraft.class_3499.class_10326) = JigsawBlock.method_16546(arg0, arg1)
+/**
  * method_26379
  */
 fun KClass<JigsawBlock>.getRotation(arg0: BlockState) = JigsawBlock.method_26379(arg0)
-/**
- * method_16546
- */
-fun KClass<JigsawBlock>.attachmentMatches(arg0: net.minecraft.class_3499.class_3501, arg1: net.minecraft.class_3499.class_3501) = JigsawBlock.method_16546(arg0, arg1)

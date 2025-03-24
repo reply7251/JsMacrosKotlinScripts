@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_293
  */
-fun LootContextAware.getRequiredParameters() = this.method_293()
+fun LootContextAware.getAllowedParameters() = this.method_293()
 /**
  * method_292
  */

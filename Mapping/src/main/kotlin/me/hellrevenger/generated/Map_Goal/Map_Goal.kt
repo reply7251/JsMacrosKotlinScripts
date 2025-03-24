@@ -2,6 +2,14 @@ package me.hellrevenger.generated.Map_Goal
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_38846
+ */
+fun Goal.shouldRunEveryTick() = this.method_38846()
+/**
+ * method_6271
+ */
+fun Goal.getControls() = this.method_6271()
+/**
  * method_6264
  */
 fun Goal.canStart() = this.method_6264()
@@ -18,10 +26,6 @@ fun Goal.shouldContinue() = this.method_6266()
  */
 fun Goal.canStop() = this.method_6267()
 /**
- * method_38846
- */
-fun Goal.shouldRunEveryTick() = this.method_38846()
-/**
  * method_6270
  */
 fun Goal.stop() = this.method_6270()
@@ -33,7 +37,3 @@ fun Goal.tick() = this.method_6268()
  * method_6269
  */
 fun Goal.start() = this.method_6269()
-/**
- * method_6271
- */
-fun Goal.getControls() = this.method_6271()

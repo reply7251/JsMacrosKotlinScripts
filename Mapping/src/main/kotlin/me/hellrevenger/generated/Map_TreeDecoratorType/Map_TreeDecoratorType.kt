@@ -26,6 +26,14 @@ val <P>KClass<TreeDecoratorType<P>>.COCOA where P: TreeDecorator by aliasStatic(
  */
 val <P>KClass<TreeDecoratorType<P>>.BEEHIVE where P: TreeDecorator by aliasStatic({TreeDecoratorType.field_21323})
 /**
+ * field_54802
+ */
+val <P>KClass<TreeDecoratorType<P>>.PALE_MOSS where P: TreeDecorator by aliasStatic({TreeDecoratorType.field_54802})
+/**
+ * field_54803
+ */
+val <P>KClass<TreeDecoratorType<P>>.CREAKING_HEART where P: TreeDecorator by aliasStatic({TreeDecoratorType.field_54803})
+/**
  * method_28894
  */
 fun <P>TreeDecoratorType<P>.getCodec() where P: TreeDecorator = this.method_28894()

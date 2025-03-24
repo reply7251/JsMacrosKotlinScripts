@@ -18,9 +18,17 @@ val KClass<TeleportTarget>.NO_OP by aliasStatic(TeleportTarget::field_52245)
  */
 fun TeleportTarget.pitch() = this.comp_2824()
 /**
+ * method_64829
+ */
+fun TeleportTarget.withPosition(arg0: Vec3d) = this.method_64829(arg0)
+/**
  * comp_2823
  */
 fun TeleportTarget.yaw() = this.comp_2823()
+/**
+ * method_61823
+ */
+fun TeleportTarget.withRotation(arg0: Float, arg1: Float) = this.method_61823(arg0, arg1)
 /**
  * comp_2820
  */
@@ -36,12 +44,20 @@ fun KClass<TeleportTarget>.missingSpawnBlock(arg0: ServerWorld, arg1: Entity, ar
 /**
  * comp_2864
  */
-fun TeleportTarget.postDimensionTransition() = this.comp_2864()
+fun TeleportTarget.postTeleportTransition() = this.comp_2864()
 /**
  * comp_2821
  */
-fun TeleportTarget.pos() = this.comp_2821()
+fun TeleportTarget.position() = this.comp_2821()
 /**
  * comp_2825
  */
 fun TeleportTarget.missingRespawnBlock() = this.comp_2825()
+/**
+ * comp_3183
+ */
+fun TeleportTarget.relatives() = this.comp_3183()
+/**
+ * comp_3285
+ */
+fun TeleportTarget.asPassenger() = this.comp_3285()

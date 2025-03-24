@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_SimpleOption
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_37868
+ */
+var <T>SimpleOption<T>.value by alias(SimpleOption<*>::field_37868)
+/**
  * field_38278
  */
 val <T>KClass<SimpleOption<T>>.BOOLEAN by aliasStatic({SimpleOption.field_38278})
@@ -22,17 +26,9 @@ fun <T>SimpleOption<T>.createWidget(arg0: GameOptions) = this.method_57701(arg0)
  */
 fun <T>SimpleOption<T>.getCodec() = this.method_42404()
 /**
- * method_41753
- */
-fun <T>SimpleOption<T>.getValue() = this.method_41753()
-/**
  * method_47604
  */
 fun <T>KClass<SimpleOption<T>>.ofBoolean(arg0: String, arg1: net.minecraft.class_7172.class_7277<Boolean>, arg2: net.minecraft.class_7172.class_7303<Boolean>, arg3: Boolean, arg4: Consumer<Boolean>) = SimpleOption.method_47604(arg0, arg1, arg2, arg3, arg4)
-/**
- * method_41748
- */
-fun <T>SimpleOption<T>.setValue(arg0: T) = this.method_41748(arg0)
 /**
  * method_47603
  */

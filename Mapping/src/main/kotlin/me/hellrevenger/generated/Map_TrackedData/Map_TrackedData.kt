@@ -4,6 +4,10 @@ import me.hellrevenger.generated.*
 /**
  * comp_2327
  */
+var <T>TrackedData<T>.id by alias(TrackedData<*>::comp_2327)
+/**
+ * comp_2327
+ */
 fun <T>TrackedData<T>.id() = this.comp_2327()
 /**
  * comp_2328

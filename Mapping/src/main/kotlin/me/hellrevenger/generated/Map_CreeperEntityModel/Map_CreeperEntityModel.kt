@@ -4,4 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_31991
  */
-fun <T>KClass<CreeperEntityModel<T>>.getTexturedModelData(arg0: Dilation) where T: Entity = CreeperEntityModel.method_31991(arg0)
+fun KClass<CreeperEntityModel>.getTexturedModelData(arg0: Dilation) = CreeperEntityModel.method_31991(arg0)
+/**
+ * method_62075
+ */
+fun CreeperEntityModel.setAngles(arg0: CreeperEntityRenderState) = this.method_62075(arg0)

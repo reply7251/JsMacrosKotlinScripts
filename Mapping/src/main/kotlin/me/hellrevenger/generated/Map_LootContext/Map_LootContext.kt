@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_LootContext
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_296
- */
-fun <T>LootContext.get(arg0: LootContextParameter<T>) = this.method_296<T>(arg0)
-/**
  * method_297
  */
 fun LootContext.drop(arg0: Identifier, arg1: Consumer<ItemStack>) = this.method_297(arg0, arg1)
@@ -38,9 +34,13 @@ fun LootContext.getLookup() = this.method_51183()
  */
 fun KClass<LootContext>.predicate(arg0: LootCondition) = LootContext.method_51187(arg0)
 /**
+ * method_65013
+ */
+fun <T>LootContext.get(arg0: ContextParameter<T>) = this.method_65013<T>(arg0)
+/**
  * method_300
  */
-fun LootContext.hasParameter(arg0: LootContextParameter<*>) = this.method_300(arg0)
+fun LootContext.hasParameter(arg0: ContextParameter<*>) = this.method_300(arg0)
 /**
  * method_51186
  */
@@ -52,7 +52,7 @@ fun LootContext.getLuck() = this.method_302()
 /**
  * method_35508
  */
-fun <T>LootContext.requireParameter(arg0: LootContextParameter<T>) = this.method_35508<T>(arg0)
+fun <T>LootContext.getOrThrow(arg0: ContextParameter<T>) = this.method_35508<T>(arg0)
 /**
  * method_51185
  */

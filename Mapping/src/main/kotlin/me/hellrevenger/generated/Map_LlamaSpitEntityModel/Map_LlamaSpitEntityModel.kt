@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_32019
  */
-fun <T>KClass<LlamaSpitEntityModel<T>>.getTexturedModelData() where T: Entity = LlamaSpitEntityModel.method_32019()
+fun KClass<LlamaSpitEntityModel>.getTexturedModelData() = LlamaSpitEntityModel.method_32019()

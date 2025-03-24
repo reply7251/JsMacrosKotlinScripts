@@ -10,10 +10,6 @@ val KClass<CraftingRecipeInput>.EMPTY by aliasStatic(CraftingRecipeInput::field_
  */
 fun CraftingRecipeInput.getStacks() = this.method_59989()
 /**
- * method_59988
- */
-fun CraftingRecipeInput.getRecipeMatcher() = this.method_59988()
-/**
  * method_60505
  */
 fun KClass<CraftingRecipeInput>.createPositioned(arg0: Int, arg1: Int, arg2: MutableList<ItemStack>) = CraftingRecipeInput.method_60505(arg0, arg1, arg2)
@@ -29,6 +25,10 @@ fun CraftingRecipeInput.getWidth() = this.method_59991()
  * method_59992
  */
 fun CraftingRecipeInput.getHeight() = this.method_59992()
+/**
+ * method_59988
+ */
+fun CraftingRecipeInput.getRecipeMatcher() = this.method_59988()
 /**
  * method_59985
  */

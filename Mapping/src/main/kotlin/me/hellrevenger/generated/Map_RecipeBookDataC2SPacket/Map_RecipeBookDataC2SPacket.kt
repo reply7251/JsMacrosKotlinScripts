@@ -6,6 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun RecipeBookDataC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12400(arg0)
 /**
- * method_12406
+ * comp_3246
  */
-fun RecipeBookDataC2SPacket.getRecipeId() = this.method_12406()
+fun RecipeBookDataC2SPacket.recipeId() = this.comp_3246()

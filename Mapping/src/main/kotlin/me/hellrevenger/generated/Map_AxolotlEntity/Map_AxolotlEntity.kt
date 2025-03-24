@@ -2,9 +2,17 @@ package me.hellrevenger.generated.Map_AxolotlEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_52481
+ */
+val AxolotlEntity.isMovingFf by alias(AxolotlEntity::field_52481)
+/**
  * field_30390
  */
 val KClass<AxolotlEntity>.BLUE_BABY_CHANCE by aliasStatic(AxolotlEntity::field_30390)
+/**
+ * field_52479
+ */
+val AxolotlEntity.inWaterFf by alias(AxolotlEntity::field_52479)
 /**
  * field_30388
  */
@@ -13,6 +21,14 @@ val KClass<AxolotlEntity>.PLAY_DEAD_TICKS by aliasStatic(AxolotlEntity::field_30
  * field_30391
  */
 val KClass<AxolotlEntity>.VARIANT_KEY by aliasStatic(AxolotlEntity::field_30391)
+/**
+ * field_52480
+ */
+val AxolotlEntity.onGroundFf by alias(AxolotlEntity::field_52480)
+/**
+ * field_52478
+ */
+val AxolotlEntity.playingDeadFf by alias(AxolotlEntity::field_52478)
 /**
  * field_30389
  */
@@ -42,13 +58,13 @@ fun AxolotlEntity.hydrateFromPotion() = this.method_36282()
  */
 fun KClass<AxolotlEntity>.createAxolotlAttributes() = AxolotlEntity.method_33227()
 /**
- * method_35175
- */
-fun KClass<AxolotlEntity>.appreciatePlayer(arg0: AxolotlEntity, arg1: LivingEntity) = AxolotlEntity.method_35175(arg0, arg1)
-/**
  * method_33223
  */
 fun AxolotlEntity.buffPlayer(arg0: PlayerEntity) = this.method_33223(arg0)
+/**
+ * method_35175
+ */
+fun KClass<AxolotlEntity>.appreciatePlayer(arg0: ServerWorld, arg1: AxolotlEntity, arg2: LivingEntity) = AxolotlEntity.method_35175(arg0, arg1, arg2)
 /**
  * method_33219
  */

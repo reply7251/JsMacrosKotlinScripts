@@ -13,3 +13,7 @@ fun Instrument.soundEvent() = this.comp_772()
  * comp_774
  */
 fun Instrument.range() = this.comp_774()
+/**
+ * comp_2929
+ */
+fun Instrument.description() = this.comp_2929()

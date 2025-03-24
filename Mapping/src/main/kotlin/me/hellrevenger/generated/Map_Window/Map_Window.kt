@@ -14,10 +14,6 @@ fun Window.getScaledWidth() = this.method_4486()
  */
 fun Window.getHandle() = this.method_4490()
 /**
- * method_15999
- */
-fun Window.setFramerateLimit(arg0: Int) = this.method_15999(arg0)
-/**
  * method_35642
  */
 fun Window.setFramebufferWidth(arg0: Int) = this.method_35642(arg0)
@@ -28,7 +24,7 @@ fun Window.isFullscreen() = this.method_4498()
 /**
  * method_4505
  */
-fun Window.setVideoMode(arg0: Optional<VideoMode>) = this.method_4505(arg0)
+fun Window.setFullscreenVideoMode(arg0: Optional<VideoMode>) = this.method_4505(arg0)
 /**
  * method_4492
  */
@@ -42,13 +38,13 @@ fun Window.getX() = this.method_4499()
  */
 fun Window.getScaleFactor() = this.method_4495()
 /**
+ * method_61946
+ */
+fun Window.isMinimized() = this.method_61946()
+/**
  * method_4500
  */
 fun Window.toggleFullscreen() = this.method_4500()
-/**
- * method_15998
- */
-fun Window.swapBuffers() = this.method_15998()
 /**
  * method_4474
  */
@@ -56,11 +52,7 @@ fun Window.setPhase(arg0: String) = this.method_4474(arg0)
 /**
  * method_4475
  */
-fun Window.applyVideoMode() = this.method_4475()
-/**
- * method_16000
- */
-fun Window.getFramerateLimit() = this.method_16000()
+fun Window.applyFullscreenVideoMode() = this.method_4475()
 /**
  * method_20831
  */
@@ -86,6 +78,10 @@ fun Window.getWidth() = this.method_4480()
  */
 fun Window.logOnGlError() = this.method_4513()
 /**
+ * method_61943
+ */
+fun Window.setCloseCallback(arg0: Runnable) = this.method_61943(arg0)
+/**
  * method_24286
  */
 fun Window.setTitle(arg0: String) = this.method_24286(arg0)
@@ -100,7 +96,7 @@ fun Window.getRefreshRate() = this.method_22092()
 /**
  * method_4511
  */
-fun Window.getVideoMode() = this.method_4511()
+fun Window.getFullscreenVideoMode() = this.method_4511()
 /**
  * method_4502
  */
@@ -109,6 +105,10 @@ fun Window.getScaledHeight() = this.method_4502()
  * method_4506
  */
 fun Window.getFramebufferHeight() = this.method_4506()
+/**
+ * method_15998
+ */
+fun Window.swapBuffers(arg0: TracyFrameCapturer) = this.method_15998(arg0)
 /**
  * method_4477
  */
@@ -133,6 +133,10 @@ fun Window.setFramebufferHeight(arg0: Int) = this.method_35643(arg0)
  * method_4476
  */
 fun Window.calculateScaleFactor(arg0: Int, arg1: Boolean) = this.method_4476(arg0, arg1)
+/**
+ * method_65966
+ */
+fun Window.hasZeroWidthOrHeight() = this.method_65966()
 /**
  * method_4507
  */

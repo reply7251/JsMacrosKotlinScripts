@@ -6,6 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun CubeMapRenderer.draw(arg0: MinecraftClient, arg1: Float, arg2: Float, arg3: Float) = this.method_3156(arg0, arg1, arg2, arg3)
 /**
- * method_18143
+ * method_65815
  */
-fun CubeMapRenderer.loadTexturesAsync(arg0: TextureManager, arg1: Executor) = this.method_18143(arg0, arg1)
+fun CubeMapRenderer.registerTextures(arg0: TextureManager) = this.method_65815(arg0)

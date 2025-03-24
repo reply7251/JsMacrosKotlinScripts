@@ -16,7 +16,7 @@ fun BeehiveBlockEntity.getBeeCount() = this.method_23903()
 /**
  * method_21848
  */
-fun BeehiveBlockEntity.tryEnterHive(arg0: Entity) = this.method_21848(arg0)
+fun BeehiveBlockEntity.tryEnterHive(arg0: BeeEntity) = this.method_21848(arg0)
 /**
  * method_31656
  */

@@ -2,10 +2,14 @@ package me.hellrevenger.generated.Map_CamelEntityModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_52883
+ */
+val KClass<CamelEntityModel>.BABY_TRANSFORMER by aliasStatic(CamelEntityModel::field_52883)
+/**
  * method_45706
  */
-fun <T>CamelEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: CamelEntity = this.method_45706(arg0, arg1, arg2, arg3, arg4, arg5)
+fun CamelEntityModel.setAngles(arg0: CamelEntityRenderState) = this.method_45706(arg0)
 /**
  * method_45707
  */
-fun <T>KClass<CamelEntityModel<T>>.getTexturedModelData() where T: CamelEntity = CamelEntityModel.method_45707()
+fun KClass<CamelEntityModel>.getTexturedModelData() = CamelEntityModel.method_45707()

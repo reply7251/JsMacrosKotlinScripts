@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_ChatHud
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_2061
+ */
+val ChatHud.messages by alias(ChatHud::field_2061)
+/**
  * method_1808
  */
 fun ChatHud.clear(arg0: Boolean) = this.method_1808(arg0)

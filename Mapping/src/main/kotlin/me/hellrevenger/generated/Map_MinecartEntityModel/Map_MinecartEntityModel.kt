@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_32020
  */
-fun <T>KClass<MinecartEntityModel<T>>.getTexturedModelData() where T: Entity = MinecartEntityModel.method_32020()
+fun KClass<MinecartEntityModel>.getTexturedModelData() = MinecartEntityModel.method_32020()

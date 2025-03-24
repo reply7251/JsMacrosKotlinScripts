@@ -18,6 +18,14 @@ val KClass<BannerPatternTags>.GLOBE_PATTERN_ITEM by aliasStatic(BannerPatternTag
  */
 val KClass<BannerPatternTags>.MOJANG_PATTERN_ITEM by aliasStatic(BannerPatternTags::field_39101)
 /**
+ * field_52379
+ */
+val KClass<BannerPatternTags>.BORDURE_INDENTED_PATTERN_ITEM by aliasStatic(BannerPatternTags::field_52379)
+/**
+ * field_52378
+ */
+val KClass<BannerPatternTags>.FIELD_MASONED_PATTERN_ITEM by aliasStatic(BannerPatternTags::field_52378)
+/**
  * field_49787
  */
 val KClass<BannerPatternTags>.GUSTER_PATTERN_ITEM by aliasStatic(BannerPatternTags::field_49787)

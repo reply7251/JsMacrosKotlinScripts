@@ -12,4 +12,4 @@ val KClass<CrafterBlock>.TRIGGERED by aliasStatic(CrafterBlock::field_46800)
 /**
  * method_54475
  */
-fun KClass<CrafterBlock>.getCraftingRecipe(arg0: world_World, arg1: CraftingRecipeInput) = CrafterBlock.method_54475(arg0, arg1)
+fun KClass<CrafterBlock>.getCraftingRecipe(arg0: ServerWorld, arg1: CraftingRecipeInput) = CrafterBlock.method_54475(arg0, arg1)

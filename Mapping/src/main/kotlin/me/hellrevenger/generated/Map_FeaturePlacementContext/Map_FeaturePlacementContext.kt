@@ -14,10 +14,6 @@ fun FeaturePlacementContext.getTopY(arg0: net.minecraft.class_2902.class_2903, a
  */
 fun FeaturePlacementContext.getWorld() = this.method_34383()
 /**
- * method_30459
- */
-fun FeaturePlacementContext.getOrCreateCarvingMask(arg0: ChunkPos, arg1: net.minecraft.class_2893.class_2894) = this.method_30459(arg0, arg1)
-/**
  * method_39652
  */
 fun FeaturePlacementContext.getPlacedFeature() = this.method_39652()
@@ -29,3 +25,7 @@ fun FeaturePlacementContext.getChunkGenerator() = this.method_39653()
  * method_30461
  */
 fun FeaturePlacementContext.getBlockState(arg0: BlockPos) = this.method_30461(arg0)
+/**
+ * method_30459
+ */
+fun FeaturePlacementContext.getOrCreateCarvingMask(arg0: ChunkPos) = this.method_30459(arg0)

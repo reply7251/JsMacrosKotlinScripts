@@ -18,10 +18,10 @@ fun PointOfInterest.getPos() = this.method_19141()
  */
 fun PointOfInterest.isOccupied() = this.method_19140()
 /**
+ * method_61448
+ */
+fun PointOfInterest.toSerialized() = this.method_61448()
+/**
  * method_19139
  */
 fun PointOfInterest.hasSpace() = this.method_19139()
-/**
- * method_28359
- */
-fun KClass<PointOfInterest>.createCodec(arg0: Runnable) = PointOfInterest.method_28359(arg0)

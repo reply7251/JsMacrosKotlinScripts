@@ -166,6 +166,10 @@ val KClass<TextureKey>.PLANT by aliasStatic(TextureKey::field_23026)
  */
 val KClass<TextureKey>.WOOL by aliasStatic(TextureKey::field_23029)
 /**
+ * field_55182
+ */
+val KClass<TextureKey>.CROSS_EMISSIVE by aliasStatic(TextureKey::field_55182)
+/**
  * field_42234
  */
 val KClass<TextureKey>.LAYER2 by aliasStatic(TextureKey::field_42234)

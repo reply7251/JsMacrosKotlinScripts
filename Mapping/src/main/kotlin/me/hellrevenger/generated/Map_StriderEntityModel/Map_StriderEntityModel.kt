@@ -2,10 +2,14 @@ package me.hellrevenger.generated.Map_StriderEntityModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_26414
+ * field_55115
  */
-fun <T>StriderEntityModel<T>.setAngles(arg0: StriderEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: StriderEntity = this.method_26414(arg0, arg1, arg2, arg3, arg4, arg5)
+val KClass<StriderEntityModel>.BABY_TRANSFORMER by aliasStatic(StriderEntityModel::field_55115)
 /**
  * method_32058
  */
-fun <T>KClass<StriderEntityModel<T>>.getTexturedModelData() where T: StriderEntity = StriderEntityModel.method_32058()
+fun KClass<StriderEntityModel>.getTexturedModelData() = StriderEntityModel.method_32058()
+/**
+ * method_26414
+ */
+fun StriderEntityModel.setAngles(arg0: StriderEntityRenderState) = this.method_26414(arg0)

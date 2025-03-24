@@ -16,7 +16,7 @@ val KClass<LoginPackets>.CUSTOM_QUERY by aliasStatic(LoginPackets::field_48238)
 /**
  * field_48239
  */
-val KClass<LoginPackets>.GAME_PROFILE by aliasStatic(LoginPackets::field_48239)
+val KClass<LoginPackets>.LOGIN_FINISHED by aliasStatic(LoginPackets::field_48239)
 /**
  * field_48241
  */

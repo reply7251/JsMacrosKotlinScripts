@@ -26,13 +26,13 @@ val KClass<MobEntity>.BASE_SPAWN_EQUIPMENT_CHANCE by aliasStatic(MobEntity::fiel
  */
 val KClass<MobEntity>.DEFAULT_DROP_CHANCE by aliasStatic(MobEntity::field_34043)
 /**
- * method_29243
- */
-fun <T>MobEntity.convertTo(arg0: EntityType<T>, arg1: Boolean) where T: MobEntity = this.method_29243<T>(arg0, arg1)
-/**
  * method_5966
  */
 fun MobEntity.playAmbientSound() = this.method_5966()
+/**
+ * method_63631
+ */
+fun <T>MobEntity.convertTo(arg0: EntityType<T>, arg1: EntityConversionContext, arg2: SpawnReason, arg3: net.minecraft.class_10179.class_10180<T>) where T: MobEntity = this.method_63631<T>(arg0, arg1, arg2, arg3)
 /**
  * method_5942
  */
@@ -54,9 +54,17 @@ fun MobEntity.getLookControl() = this.method_5988()
  */
 fun MobEntity.getMaxLookPitchChange() = this.method_5978()
 /**
+ * method_60972
+ */
+fun MobEntity.dropEquipment(arg0: ServerWorld, arg1: Predicate<ItemStack>) = this.method_60972(arg0, arg1)
+/**
  * method_18410
  */
 fun MobEntity.hasPositionTarget() = this.method_18410()
+/**
+ * method_63634
+ */
+fun MobEntity.getHandDropChances() = this.method_63634()
 /**
  * method_25938
  */
@@ -94,6 +102,10 @@ fun MobEntity.isInWalkTargetRange(arg0: BlockPos) = this.method_18407(arg0)
  */
 fun KClass<MobEntity>.getEquipmentForSlot(arg0: EquipmentSlot, arg1: Int) = MobEntity.method_5948(arg0, arg1)
 /**
+ * method_63635
+ */
+fun MobEntity.getArmorDropChances() = this.method_63635()
+/**
  * method_20636
  */
 fun KClass<MobEntity>.canMobSpawn(arg0: EntityType<out MobEntity>, arg1: WorldAccess, arg2: SpawnReason, arg3: BlockPos, arg4: Random) = MobEntity.method_20636(arg0, arg1, arg2, arg3, arg4)
@@ -101,10 +113,6 @@ fun KClass<MobEntity>.canMobSpawn(arg0: EntityType<out MobEntity>, arg1: WorldAc
  * method_35056
  */
 fun MobEntity.clearGoalsAndTasks() = this.method_35056()
-/**
- * method_5936
- */
-fun MobEntity.canPickUpLoot() = this.method_5936()
 /**
  * method_58634
  */
@@ -129,10 +137,6 @@ fun MobEntity.getPositionTargetRange() = this.method_18413()
  * method_17326
  */
 fun MobEntity.cannotDespawn() = this.method_17326()
-/**
- * method_60972
- */
-fun MobEntity.dropEquipment(arg0: Predicate<ItemStack>) = this.method_60972(arg0)
 /**
  * method_5993
  */
@@ -174,6 +178,10 @@ fun MobEntity.onFinishPathfinding() = this.method_51503()
  */
 fun MobEntity.isAttacking() = this.method_6510()
 /**
+ * method_29243
+ */
+fun <T>MobEntity.convertTo(arg0: EntityType<T>, arg1: EntityConversionContext, arg2: net.minecraft.class_10179.class_10180<T>) where T: MobEntity = this.method_29243<T>(arg0, arg1, arg2)
+/**
  * method_5985
  */
 fun MobEntity.getVisibilityCache() = this.method_5985()
@@ -214,6 +222,10 @@ fun MobEntity.canImmediatelyDespawn(arg0: Double) = this.method_5974(arg0)
  */
 fun MobEntity.setAttacking(arg0: Boolean) = this.method_19540(arg0)
 /**
+ * method_20820
+ */
+fun MobEntity.canGather(arg0: ServerWorld, arg1: ItemStack) = this.method_20820(arg0, arg1)
+/**
  * method_5945
  */
 fun MobEntity.getLimitPerChunk() = this.method_5945()
@@ -226,17 +238,9 @@ fun MobEntity.setEquipmentFromTable(arg0: RegistryKey<LootTable>, arg1: Map<Equi
  */
 fun MobEntity.setCanPickUpLoot(arg0: Boolean) = this.method_5952(arg0)
 /**
- * method_6773
- */
-fun MobEntity.isHorseArmor(arg0: ItemStack) = this.method_6773(arg0)
-/**
  * method_5939
  */
 fun MobEntity.canPickupItem(arg0: ItemStack) = this.method_5939(arg0)
-/**
- * method_20820
- */
-fun MobEntity.canGather(arg0: ItemStack) = this.method_20820(arg0)
 /**
  * method_55695
  */
@@ -253,6 +257,10 @@ fun MobEntity.updateDropChances(arg0: EquipmentSlot) = this.method_25939(arg0)
  * method_26320
  */
 fun MobEntity.prefersNewDamageableItem(arg0: ItemStack, arg1: ItemStack) = this.method_26320(arg0, arg1)
+/**
+ * method_60973
+ */
+fun MobEntity.dropAllEquipment(arg0: ServerWorld) = this.method_60973(arg0)
 /**
  * method_5979
  */
@@ -272,7 +280,7 @@ fun MobEntity.onEatingGrass() = this.method_5983()
 /**
  * method_24523
  */
-fun MobEntity.tryEquip(arg0: ItemStack) = this.method_24523(arg0)
+fun MobEntity.tryEquip(arg0: ServerWorld, arg1: ItemStack) = this.method_24523(arg0, arg1)
 /**
  * method_5930
  */
@@ -286,6 +294,10 @@ fun MobEntity.getPathfindingPenalty(arg0: PathNodeType) = this.method_5944(arg0)
  */
 fun MobEntity.setSidewaysSpeed(arg0: Float) = this.method_5938(arg0)
 /**
+ * method_65345
+ */
+fun MobEntity.getPreferredWeapons() = this.method_65345()
+/**
  * method_42150
  */
 fun MobEntity.isInAttackRange(arg0: LivingEntity) = this.method_42150(arg0)
@@ -293,7 +305,3 @@ fun MobEntity.isInAttackRange(arg0: LivingEntity) = this.method_42150(arg0)
  * method_5943
  */
 fun MobEntity.initialize(arg0: ServerWorldAccess, arg1: LocalDifficulty, arg2: SpawnReason, arg3: EntityData) = this.method_5943(arg0, arg1, arg2, arg3)
-/**
- * method_60973
- */
-fun MobEntity.dropAllEquipment() = this.method_60973()

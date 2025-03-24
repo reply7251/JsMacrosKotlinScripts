@@ -8,7 +8,7 @@ fun KClass<VertexSorter>.of(arg0: net.minecraft.class_8251.class_8252) = VertexS
 /**
  * method_49906
  */
-fun KClass<VertexSorter>.byDistance(arg0: Float, arg1: Float, arg2: Float) = VertexSorter.method_49906(arg0, arg1, arg2)
+fun KClass<VertexSorter>.byDistance(x: Float, y: Float, z: Float) = VertexSorter.method_49906(x, y, z)
 /**
  * method_49909
  */

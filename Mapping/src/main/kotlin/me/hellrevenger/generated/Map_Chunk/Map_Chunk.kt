@@ -34,10 +34,6 @@ fun Chunk.getOrCreateChunkNoiseSampler(arg0: function_Function<Chunk, ChunkNoise
  */
 fun Chunk.hasBelowZeroRetrogen() = this.method_39461()
 /**
- * method_12029
- */
-fun Chunk.markBlockForPostProcessing(arg0: Short, arg1: Int) = this.method_12029(arg0, arg1)
-/**
  * method_12042
  */
 fun Chunk.addPendingBlockEntityNbt(arg0: NbtCompound) = this.method_12042(arg0)
@@ -61,6 +57,14 @@ fun Chunk.setLightOn(arg0: Boolean) = this.method_12020(arg0)
  * method_12016
  */
 fun Chunk.getStructureStarts() = this.method_12016()
+/**
+ * method_65063
+ */
+fun Chunk.markNeedsSaving() = this.method_65063()
+/**
+ * method_12029
+ */
+fun Chunk.markBlocksForPostProcessing(arg0: ShortList, arg1: Int) = this.method_12029(arg0, arg1)
 /**
  * method_12044
  */
@@ -114,10 +118,6 @@ fun Chunk.getHeightmap(arg0: net.minecraft.class_2902.class_2903) = this.method_
  */
 fun Chunk.hasHeightmap(arg0: net.minecraft.class_2902.class_2903) = this.method_39295(arg0)
 /**
- * method_39294
- */
-fun Chunk.setBlendingData(arg0: BlendingData) = this.method_39294(arg0)
-/**
  * method_38871
  */
 fun Chunk.hasStructureReferences() = this.method_38871()
@@ -142,6 +142,10 @@ fun Chunk.forEachBlockMatchingPredicate(arg0: Predicate<BlockState>, arg1: BiCon
  */
 fun Chunk.usesOldNoise() = this.method_39297()
 /**
+ * method_39296
+ */
+fun Chunk.getTickSchedulers(arg0: Long) = this.method_39296(arg0)
+/**
  * method_12005
  */
 fun Chunk.sampleHeightmap(arg0: net.minecraft.class_2902.class_2903, arg1: Int, arg2: Int) = this.method_12005(arg0, arg1, arg2)
@@ -162,13 +166,13 @@ fun Chunk.getSection(arg0: Int) = this.method_38259(arg0)
  */
 fun Chunk.getStatus() = this.method_12009()
 /**
- * method_12008
- */
-fun Chunk.setNeedsSaving(arg0: Boolean) = this.method_12008(arg0)
-/**
  * method_38257
  */
 fun Chunk.populateBiomes(arg0: BiomeSupplier, arg1: net.minecraft.class_6544.class_6552) = this.method_38257(arg0, arg1)
+/**
+ * method_65069
+ */
+fun Chunk.isSerializable() = this.method_65069()
 /**
  * method_12011
  */
@@ -202,9 +206,9 @@ fun KClass<Chunk>.getList(arg0: Array<ShortList>, arg1: Int) = Chunk.method_1202
  */
 fun Chunk.getHighestNonEmptySectionYOffset() = this.method_12031()
 /**
- * method_39296
+ * method_65064
  */
-fun Chunk.getTickSchedulers() = this.method_39296()
+fun Chunk.tryMarkSaved() = this.method_65064()
 /**
  * method_51522
  */

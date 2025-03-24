@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val KClass<EntityPredicates>.CAN_COLLIDE by aliasStatic(EntityPredicates::field_35589)
 /**
+ * field_52443
+ */
+val KClass<EntityPredicates>.CAN_HIT by aliasStatic(EntityPredicates::field_52443)
+/**
  * field_6156
  */
 val KClass<EntityPredicates>.EXCEPT_CREATIVE_OR_SPECTATOR by aliasStatic(EntityPredicates::field_6156)

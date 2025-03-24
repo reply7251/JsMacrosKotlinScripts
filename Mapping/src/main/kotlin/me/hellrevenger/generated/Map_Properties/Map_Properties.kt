@@ -14,6 +14,10 @@ val KClass<Properties>.CRACKED by aliasStatic(Properties::field_43307)
  */
 val KClass<Properties>.SLOT_1_OCCUPIED by aliasStatic(Properties::field_41318)
 /**
+ * field_12481
+ */
+val KClass<Properties>.HORIZONTAL_FACING by aliasStatic(Properties::field_12481)
+/**
  * field_12543
  */
 val KClass<Properties>.PICKLES by aliasStatic(Properties::field_12543)
@@ -98,10 +102,6 @@ val KClass<Properties>.HAS_RECORD by aliasStatic(Properties::field_12544)
  */
 val KClass<Properties>.CHARGES_MIN by aliasStatic(Properties::field_31392)
 /**
- * field_12525
- */
-val KClass<Properties>.FACING by aliasStatic(Properties::field_12525)
-/**
  * field_12556
  */
 val KClass<Properties>.AGE_2 by aliasStatic(Properties::field_12556)
@@ -130,6 +130,10 @@ val KClass<Properties>.OCCUPIED by aliasStatic(Properties::field_12528)
  */
 val KClass<Properties>.BOTTOM by aliasStatic(Properties::field_16562)
 /**
+ * field_54794
+ */
+val KClass<Properties>.TIP by aliasStatic(Properties::field_54794)
+/**
  * field_41320
  */
 val KClass<Properties>.SLOT_3_OCCUPIED by aliasStatic(Properties::field_41320)
@@ -149,6 +153,10 @@ val KClass<Properties>.POWERED by aliasStatic(Properties::field_12484)
  * field_12541
  */
 val KClass<Properties>.DISTANCE_1_7 by aliasStatic(Properties::field_12541)
+/**
+ * field_12545
+ */
+val KClass<Properties>.HOPPER_FACING by aliasStatic(Properties::field_12545)
 /**
  * field_12553
  */
@@ -174,9 +182,17 @@ val KClass<Properties>.EGGS by aliasStatic(Properties::field_12509)
  */
 val KClass<Properties>.HONEY_LEVEL by aliasStatic(Properties::field_20432)
 /**
+ * field_28062
+ */
+val KClass<Properties>.VERTICAL_DIRECTION by aliasStatic(Properties::field_28062)
+/**
  * field_31387
  */
-val KClass<Properties>.LEVEL_3_MIN by aliasStatic(Properties::field_31387)
+val KClass<Properties>.LEVEL_8_MIN by aliasStatic(Properties::field_31387)
+/**
+ * field_55088
+ */
+val KClass<Properties>.NATURAL by aliasStatic(Properties::field_55088)
 /**
  * field_12529
  */
@@ -213,10 +229,6 @@ val KClass<Properties>.SLOT_0_OCCUPIED by aliasStatic(Properties::field_41317)
  * field_12492
  */
 val KClass<Properties>.PISTON_TYPE by aliasStatic(Properties::field_12492)
-/**
- * field_12481
- */
-val KClass<Properties>.HORIZONTAL_FACING by aliasStatic(Properties::field_12481)
 /**
  * field_12554
  */
@@ -390,10 +402,6 @@ val KClass<Properties>.DOOR_HINGE by aliasStatic(Properties::field_12520)
  */
 val KClass<Properties>.INSTRUMENT by aliasStatic(Properties::field_12499)
 /**
- * field_12545
- */
-val KClass<Properties>.HOPPER_FACING by aliasStatic(Properties::field_12545)
-/**
  * field_12552
  */
 val KClass<Properties>.EXTENDED by aliasStatic(Properties::field_12552)
@@ -405,6 +413,10 @@ val KClass<Properties>.WATERLOGGED by aliasStatic(Properties::field_12508)
  * field_38423
  */
 val KClass<Properties>.CAN_SUMMON by aliasStatic(Properties::field_38423)
+/**
+ * field_55087
+ */
+val KClass<Properties>.ACTIVE by aliasStatic(Properties::field_55087)
 /**
  * field_42835
  */
@@ -421,10 +433,6 @@ val KClass<Properties>.LIT by aliasStatic(Properties::field_12548)
  * field_12524
  */
 val KClass<Properties>.NOTE by aliasStatic(Properties::field_12524)
-/**
- * field_28062
- */
-val KClass<Properties>.VERTICAL_DIRECTION by aliasStatic(Properties::field_28062)
 /**
  * field_31401
  */
@@ -449,6 +457,10 @@ val KClass<Properties>.NORTH_WIRE_CONNECTION by aliasStatic(Properties::field_12
  * field_12521
  */
 val KClass<Properties>.AGE_1 by aliasStatic(Properties::field_12521)
+/**
+ * field_12525
+ */
+val KClass<Properties>.FACING by aliasStatic(Properties::field_12525)
 /**
  * field_17586
  */

@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_Scoreboard
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_1431
+ */
+var Scoreboard.scores by alias(Scoreboard::field_1431)
+/**
  * method_1157
  */
 fun Scoreboard.removeScoreHolderFromTeam(arg0: String, arg1: Team) = this.method_1157(arg0, arg1)

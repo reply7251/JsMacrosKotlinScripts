@@ -34,6 +34,10 @@ var RealmsServer.expiredTrial by alias(RealmsServer::field_22609)
  */
 var RealmsServer.minigameImage by alias(RealmsServer::field_22615)
 /**
+ * field_54808
+ */
+var RealmsServer.gameMode by alias(RealmsServer::field_54808)
+/**
  * field_22614
  */
 var RealmsServer.minigameId by alias(RealmsServer::field_22614)
@@ -45,6 +49,10 @@ var RealmsServer.daysLeft by alias(RealmsServer::field_22610)
  * field_46693
  */
 var RealmsServer.parentWorldName by alias(RealmsServer::field_46693)
+/**
+ * field_54807
+ */
+var RealmsServer.hardcore by alias(RealmsServer::field_54807)
 /**
  * field_22602
  */
@@ -104,7 +112,7 @@ fun RealmsServer.clone() = this.method_25067()
 /**
  * method_54367
  */
-fun RealmsServer.hasParentWorld() = this.method_54367()
+fun RealmsServer.isPrerelease() = this.method_54367()
 /**
  * method_60315
  */

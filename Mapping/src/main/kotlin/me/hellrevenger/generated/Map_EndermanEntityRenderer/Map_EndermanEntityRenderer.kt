@@ -2,14 +2,18 @@ package me.hellrevenger.generated.Map_EndermanEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_3911
+ * method_62421
  */
-fun EndermanEntityRenderer.render(arg0: EndermanEntity, arg1: Float, arg2: Float, arg3: MatrixStack, arg4: VertexConsumerProvider, arg5: Int) = this.method_3911(arg0, arg1, arg2, arg3, arg4, arg5)
+fun EndermanEntityRenderer.createRenderState() = this.method_62421()
+/**
+ * method_62422
+ */
+fun EndermanEntityRenderer.updateRenderState(arg0: EndermanEntity, arg1: EndermanEntityRenderState, arg2: Float) = this.method_62422(arg0, arg1, arg2)
 /**
  * method_3912
  */
-fun EndermanEntityRenderer.getTexture(arg0: EndermanEntity) = this.method_3912(arg0)
+fun EndermanEntityRenderer.getTexture(arg0: EndermanEntityRenderState) = this.method_3912(arg0)
 /**
  * method_23160
  */
-fun EndermanEntityRenderer.getPositionOffset(arg0: EndermanEntity, arg1: Float) = this.method_23160(arg0, arg1)
+fun EndermanEntityRenderer.getPositionOffset(arg0: EndermanEntityRenderState) = this.method_23160(arg0)

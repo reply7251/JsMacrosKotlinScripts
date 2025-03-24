@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val KClass<LevelStorage>.ALLOWED_SYMLINKS_FILE_NAME by aliasStatic(LevelStorage::field_44950)
 /**
+ * field_36348
+ */
+val KClass<LevelStorage>.DATA_KEY by aliasStatic(LevelStorage::field_36348)
+/**
  * method_27002
  */
 fun LevelStorage.createSessionWithoutSymlinkCheck(arg0: String) = this.method_27002(arg0)
@@ -42,10 +46,6 @@ fun LevelStorage.getBackupsDirectory() = this.method_236()
  */
 fun LevelStorage.loadSummaries(arg0: net.minecraft.class_32.class_7410) = this.method_43417(arg0)
 /**
- * method_54523
- */
-fun KClass<LevelStorage>.parseSaveProperties(arg0: Dynamic<*>, arg1: DataConfiguration, arg2: Registry<DimensionOptions>, arg3: net.minecraft.class_5455.class_6890) = LevelStorage.method_54523(arg0, arg1, arg2, arg3)
-/**
  * method_52238
  */
 fun LevelStorage.resolve(arg0: String) = this.method_52238(arg0)
@@ -57,6 +57,10 @@ fun LevelStorage.getSavesDirectory() = this.method_19636()
  * method_235
  */
 fun LevelStorage.getLevelList() = this.method_235()
+/**
+ * method_54523
+ */
+fun KClass<LevelStorage>.parseSaveProperties(arg0: Dynamic<*>, arg1: DataConfiguration, arg2: Registry<DimensionOptions>, arg3: net.minecraft.class_7225.class_7874) = LevelStorage.method_54523(arg0, arg1, arg2, arg3)
 /**
  * method_54522
  */

@@ -6,14 +6,6 @@ import me.hellrevenger.generated.*
  */
 val <T>KClass<Tick<T>>.HASH_STRATEGY by aliasStatic({Tick.field_35542})
 /**
- * method_39401
- */
-fun <T>KClass<Tick<T>>.orderedTickToNbt(arg0: OrderedTick<T>, arg1: function_Function<T, String>, arg2: Long) = Tick.method_39401<T>(arg0, arg1, arg2)
-/**
- * method_39406
- */
-fun <T>KClass<Tick<T>>.tick(arg0: NbtList, arg1: function_Function<String, Optional<T>>, arg2: ChunkPos, arg3: Consumer<Tick<T>>) = Tick.method_39406<T>(arg0, arg1, arg2, arg3)
-/**
  * method_39402
  */
 fun <T>KClass<Tick<T>>.create(arg0: T, arg1: BlockPos) = Tick.method_39402<T>(arg0, arg1)
@@ -21,6 +13,10 @@ fun <T>KClass<Tick<T>>.create(arg0: T, arg1: BlockPos) = Tick.method_39402<T>(ar
  * method_39400
  */
 fun <T>Tick<T>.createOrderedTick(arg0: Long, arg1: Long) = this.method_39400(arg0, arg1)
+/**
+ * method_39406
+ */
+fun <T>KClass<Tick<T>>.tick(arg0: NbtList, arg1: function_Function<String, Optional<T>>, arg2: ChunkPos) = Tick.method_39406<T>(arg0, arg1, arg2)
 /**
  * method_40559
  */

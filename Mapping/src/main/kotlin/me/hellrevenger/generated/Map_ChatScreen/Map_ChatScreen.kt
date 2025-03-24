@@ -2,6 +2,14 @@ package me.hellrevenger.generated.Map_ChatScreen
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_21616
+ */
+var ChatScreen.chatInputSuggestor by alias(ChatScreen::field_21616)
+/**
+ * field_2382
+ */
+var ChatScreen.chatField by alias(ChatScreen::field_2382)
+/**
  * field_32237
  */
 val KClass<ChatScreen>.SHIFT_SCROLL_AMOUNT by aliasStatic(ChatScreen::field_32237)

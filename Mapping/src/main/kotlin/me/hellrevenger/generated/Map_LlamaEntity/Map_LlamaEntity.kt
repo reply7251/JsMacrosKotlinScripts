@@ -30,10 +30,6 @@ fun LlamaEntity.isTrader() = this.method_6807()
  */
 fun LlamaEntity.isFollowing() = this.method_6805()
 /**
- * method_6800
- */
-fun LlamaEntity.getCarpetColor() = this.method_6800()
-/**
  * method_47874
  */
 fun LlamaEntity.setVariant(arg0: net.minecraft.class_1501.class_7993) = this.method_47874(arg0)

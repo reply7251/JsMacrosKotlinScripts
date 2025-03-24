@@ -66,6 +66,10 @@ val KClass<Urls>.JAVA_ATTRIBUTION by aliasStatic(Urls::field_43119)
  */
 val KClass<Urls>.MINECRAFT_SUPPORT by aliasStatic(Urls::field_46769)
 /**
+ * field_54967
+ */
+val KClass<Urls>.EXTEND_JAVA_REALMS by aliasStatic(Urls::field_54967)
+/**
  * field_43130
  */
 val KClass<Urls>.JAVA_REALMS_TRIAL by aliasStatic(Urls::field_43130)

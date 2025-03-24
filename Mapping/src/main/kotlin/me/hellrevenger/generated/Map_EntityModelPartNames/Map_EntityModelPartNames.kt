@@ -82,6 +82,10 @@ val KClass<EntityModelPartNames>.RIGHT_HORN by aliasStatic(EntityModelPartNames:
  */
 val KClass<EntityModelPartNames>.WIND_BODY by aliasStatic(EntityModelPartNames::field_47446)
 /**
+ * field_53025
+ */
+val KClass<EntityModelPartNames>.CHEST_BOTTOM by aliasStatic(EntityModelPartNames::field_53025)
+/**
  * field_38329
  */
 val KClass<EntityModelPartNames>.RIGHT_TENDRIL by aliasStatic(EntityModelPartNames::field_38329)
@@ -158,6 +162,10 @@ val KClass<EntityModelPartNames>.WIND_BOTTOM by aliasStatic(EntityModelPartNames
  */
 val KClass<EntityModelPartNames>.LEFT_CHEST by aliasStatic(EntityModelPartNames::field_32590)
 /**
+ * field_53024
+ */
+val KClass<EntityModelPartNames>.BOTTOM by aliasStatic(EntityModelPartNames::field_53024)
+/**
  * field_32628
  */
 val KClass<EntityModelPartNames>.RIGHT_WING_TIP by aliasStatic(EntityModelPartNames::field_32628)
@@ -222,6 +230,10 @@ val KClass<EntityModelPartNames>.CUBE by aliasStatic(EntityModelPartNames::field
  */
 val KClass<EntityModelPartNames>.RIGHT_FRONT_FOOT by aliasStatic(EntityModelPartNames::field_32583)
 /**
+ * field_53027
+ */
+val KClass<EntityModelPartNames>.CHEST_LOCK by aliasStatic(EntityModelPartNames::field_53027)
+/**
  * field_32595
  */
 val KClass<EntityModelPartNames>.RIGHT_EYE by aliasStatic(EntityModelPartNames::field_32595)
@@ -233,6 +245,10 @@ val KClass<EntityModelPartNames>.RIGHT_MID_LEG by aliasStatic(EntityModelPartNam
  * field_47448
  */
 val KClass<EntityModelPartNames>.WIND_MID by aliasStatic(EntityModelPartNames::field_47448)
+/**
+ * field_53023
+ */
+val KClass<EntityModelPartNames>.RIGHT_PADDLE by aliasStatic(EntityModelPartNames::field_53023)
 /**
  * field_32591
  */
@@ -274,6 +290,10 @@ val KClass<EntityModelPartNames>.RIGHT_RIBCAGE by aliasStatic(EntityModelPartNam
  */
 val KClass<EntityModelPartNames>.LEFT_ARM by aliasStatic(EntityModelPartNames::field_32621)
 /**
+ * field_53022
+ */
+val KClass<EntityModelPartNames>.LEFT_PADDLE by aliasStatic(EntityModelPartNames::field_53022)
+/**
  * field_32596
  */
 val KClass<EntityModelPartNames>.JAW by aliasStatic(EntityModelPartNames::field_32596)
@@ -289,6 +309,10 @@ val KClass<EntityModelPartNames>.LEFT_GILLS by aliasStatic(EntityModelPartNames:
  * field_32601
  */
 val KClass<EntityModelPartNames>.BEAK by aliasStatic(EntityModelPartNames::field_32601)
+/**
+ * field_54849
+ */
+val KClass<EntityModelPartNames>.UPPER_BODY by aliasStatic(EntityModelPartNames::field_54849)
 /**
  * field_32588
  */
@@ -317,6 +341,10 @@ val KClass<EntityModelPartNames>.LEFT_HIND_LEG_TIP by aliasStatic(EntityModelPar
  * field_47128
  */
 val KClass<EntityModelPartNames>.FEET by aliasStatic(EntityModelPartNames::field_47128)
+/**
+ * field_53026
+ */
+val KClass<EntityModelPartNames>.CHEST_LID by aliasStatic(EntityModelPartNames::field_53026)
 /**
  * field_37950
  */

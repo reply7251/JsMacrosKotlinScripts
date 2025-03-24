@@ -21,3 +21,7 @@ val ModelElement.rotation by alias(ModelElement::field_4232)
  * field_4228
  */
 val ModelElement.from by alias(ModelElement::field_4228)
+/**
+ * field_53159
+ */
+val ModelElement.lightEmission by alias(ModelElement::field_53159)

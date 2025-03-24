@@ -26,10 +26,6 @@ fun RealmsClient.close(arg0: Long) = this.method_21022(arg0)
  */
 fun RealmsClient.agreeToTos() = this.method_21031()
 /**
- * method_20995
- */
-fun RealmsClient.resetWorldWithSeed(arg0: Long, arg1: ResetWorldInfo) = this.method_20995(arg0, arg1)
-/**
  * method_21030
  */
 fun RealmsClient.pendingInvites() = this.method_21030()
@@ -122,10 +118,6 @@ fun RealmsClient.listNotifications() = this.method_49572()
  */
 fun KClass<RealmsClient>.createRealmsClient(arg0: MinecraftClient) = RealmsClient.method_20989(arg0)
 /**
- * method_21026
- */
-fun RealmsClient.upload(arg0: Long, arg1: String) = this.method_21026(arg0, arg1)
-/**
  * method_54361
  */
 fun RealmsClient.getPrereleaseEligibleServers() = this.method_54361()
@@ -145,6 +137,10 @@ fun RealmsClient.switchSlot(arg0: Long, arg1: Int) = this.method_20992(arg0, arg
  * method_21013
  */
 fun RealmsClient.uninviteMyselfFrom(arg0: Long) = this.method_21013(arg0)
+/**
+ * method_21026
+ */
+fun RealmsClient.upload(arg0: Long) = this.method_21026(arg0)
 /**
  * method_49569
  */

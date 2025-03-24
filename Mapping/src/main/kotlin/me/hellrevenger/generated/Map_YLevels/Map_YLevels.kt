@@ -46,6 +46,10 @@ val KClass<YLevels>.OVERWORLD_GENERATION_HEIGHT by aliasStatic(YLevels::field_31
  */
 val KClass<YLevels>.OVERWORLD_LOGICAL_HEIGHT by aliasStatic(YLevels::field_31431)
 /**
+ * field_52652
+ */
+val KClass<YLevels>.DEFAULT_SEA_LEVEL by aliasStatic(YLevels::field_52652)
+/**
  * field_31429
  */
 val KClass<YLevels>.OVERWORLD_HEIGHT by aliasStatic(YLevels::field_31429)

@@ -2,6 +2,14 @@ package me.hellrevenger.generated.Map_ClientWorld
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_23785
+ */
+fun ClientWorld.getCloudsColor(arg0: Float) = this.method_23785(arg0)
+/**
+ * method_65192
+ */
+fun ClientWorld.getEnderDragonParts() = this.method_65192()
+/**
  * method_8441
  */
 fun ClientWorld.tick(arg0: BooleanSupplier) = this.method_8441(arg0)
@@ -9,10 +17,6 @@ fun ClientWorld.tick(arg0: BooleanSupplier) = this.method_8441(arg0)
  * method_18110
  */
 fun ClientWorld.unloadBlockEntities(arg0: WorldChunk) = this.method_18110(arg0)
-/**
- * method_8435
- */
-fun ClientWorld.setTimeOfDay(arg0: Long) = this.method_8435(arg0)
 /**
  * method_38534
  */
@@ -38,6 +42,14 @@ fun ClientWorld.doRandomBlockDisplayTicks(arg0: Int, arg1: Int, arg2: Int) = thi
  */
 fun ClientWorld.setSpawnPos(arg0: BlockPos, arg1: Float) = this.method_27873(arg0, arg1)
 /**
+ * method_62145
+ */
+fun ClientWorld.hasEntity(arg0: Entity) = this.method_62145(arg0)
+/**
+ * method_23777
+ */
+fun ClientWorld.getSkyColor(arg0: Vec3d, arg1: Float) = this.method_23777(arg0, arg1)
+/**
  * method_18112
  */
 fun ClientWorld.getEntities() = this.method_18112()
@@ -49,6 +61,10 @@ fun ClientWorld.handleBlockUpdate(arg0: BlockPos, arg1: BlockState, arg2: Int) =
  * method_47437
  */
 fun ClientWorld.putClientsideMapState(arg0: MapIdComponent, arg1: MapState) = this.method_47437(arg0, arg1)
+/**
+ * method_62146
+ */
+fun ClientWorld.scheduleChunkRenders(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int) = this.method_62146(arg0, arg1, arg2, arg3, arg4, arg5)
 /**
  * method_2945
  */
@@ -70,10 +86,6 @@ fun ClientWorld.addEntity(arg0: Entity) = this.method_53875(arg0)
  */
 fun ClientWorld.scheduleBlockRenders(arg0: Int, arg1: Int, arg2: Int) = this.method_18113(arg0, arg1, arg2)
 /**
- * method_23785
- */
-fun ClientWorld.getCloudsColor(arg0: Float) = this.method_23785(arg0)
-/**
  * method_39024
  */
 fun ClientWorld.getSimulationDistance() = this.method_39024()
@@ -86,10 +98,6 @@ fun ClientWorld.getChunkManager() = this.method_2935()
  */
 fun ClientWorld.setSimulationDistance(arg0: Int) = this.method_39023(arg0)
 /**
- * method_29089
- */
-fun ClientWorld.setTime(arg0: Long) = this.method_29089(arg0)
-/**
  * method_41926
  */
 fun ClientWorld.processPendingUpdate(arg0: BlockPos, arg1: BlockState, arg2: Vec3d) = this.method_41926(arg0, arg1, arg2)
@@ -98,13 +106,17 @@ fun ClientWorld.processPendingUpdate(arg0: BlockPos, arg1: BlockState, arg2: Vec
  */
 fun ClientWorld.getLightningTicksLeft() = this.method_23789()
 /**
+ * method_29089
+ */
+fun ClientWorld.setTime(arg0: Long, arg1: Long, arg2: Boolean) = this.method_29089(arg0, arg1, arg2)
+/**
  * method_18120
  */
 fun ClientWorld.getRegularEntityCount() = this.method_18120()
 /**
- * method_23777
+ * method_62895
  */
-fun ClientWorld.getSkyColor(arg0: Vec3d, arg1: Float) = this.method_23777(arg0, arg1)
+fun ClientWorld.onChunkUnload(arg0: Long) = this.method_62895(arg0)
 /**
  * method_2943
  */
@@ -113,10 +125,6 @@ fun ClientWorld.randomBlockDisplayTick(arg0: Int, arg1: Int, arg2: Int, arg3: In
  * method_23784
  */
 fun ClientWorld.reloadColor() = this.method_23784()
-/**
- * method_38743
- */
-fun ClientWorld.hasNoChunkUpdaters() = this.method_38743()
 /**
  * method_28104
  */

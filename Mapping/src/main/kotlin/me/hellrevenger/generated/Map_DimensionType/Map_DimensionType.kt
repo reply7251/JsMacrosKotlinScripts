@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_DimensionType
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_28135
+ */
+val KClass<DimensionType>.MAX_COLUMN_HEIGHT by aliasStatic(DimensionType::field_28135)
+/**
  * field_24752
  */
 val KClass<DimensionType>.MOON_SIZES by aliasStatic(DimensionType::field_24752)
@@ -14,17 +18,9 @@ val KClass<DimensionType>.SIZE_BITS_Y by aliasStatic(DimensionType::field_28133)
  */
 val KClass<DimensionType>.MIN_HEIGHT by aliasStatic(DimensionType::field_28136)
 /**
- * field_28135
- */
-val KClass<DimensionType>.MAX_COLUMN_HEIGHT by aliasStatic(DimensionType::field_28135)
-/**
  * field_28134
  */
 val KClass<DimensionType>.MAX_HEIGHT by aliasStatic(DimensionType::field_28134)
-/**
- * method_44222
- */
-fun DimensionType.monsterSpawnLightTest() = this.method_44222()
 /**
  * method_31109
  */
@@ -34,10 +30,6 @@ fun KClass<DimensionType>.getCoordinateScaleFactor(arg0: DimensionType, arg1: Di
  */
 fun DimensionType.hasFixedTime() = this.method_29960()
 /**
- * method_28521
- */
-fun KClass<DimensionType>.worldFromDimensionNbt(arg0: Dynamic<*>) = DimensionType.method_28521(arg0)
-/**
  * comp_655
  */
 fun DimensionType.effects() = this.comp_655()
@@ -45,6 +37,30 @@ fun DimensionType.effects() = this.comp_655()
  * method_44220
  */
 fun DimensionType.piglinSafe() = this.method_44220()
+/**
+ * method_28531
+ */
+fun DimensionType.getMoonPhase(arg0: Long) = this.method_28531(arg0)
+/**
+ * comp_644
+ */
+fun DimensionType.ultrawarm() = this.comp_644()
+/**
+ * method_44223
+ */
+fun DimensionType.monsterSpawnBlockLightLimit() = this.method_44223()
+/**
+ * comp_847
+ */
+fun DimensionType.monsterSettings() = this.comp_847()
+/**
+ * method_44222
+ */
+fun DimensionType.monsterSpawnLightTest() = this.method_44222()
+/**
+ * method_28521
+ */
+fun KClass<DimensionType>.worldFromDimensionNbt(arg0: Dynamic<*>) = DimensionType.method_28521(arg0)
 /**
  * method_44221
  */
@@ -54,21 +70,9 @@ fun DimensionType.hasRaids() = this.method_44221()
  */
 fun KClass<DimensionType>.getSaveDirectory(arg0: RegistryKey<world_World>, arg1: file_Path) = DimensionType.method_12488(arg0, arg1)
 /**
- * method_28531
- */
-fun DimensionType.getMoonPhase(arg0: Long) = this.method_28531(arg0)
-/**
  * method_28528
  */
 fun DimensionType.getSkyAngle(arg0: Long) = this.method_28528(arg0)
-/**
- * comp_644
- */
-fun DimensionType.ultrawarm() = this.comp_644()
-/**
- * method_44223
- */
-fun DimensionType.monsterSpawnBlockLightLimit() = this.method_44223()
 /**
  * comp_654
  */
@@ -93,10 +97,6 @@ fun DimensionType.logicalHeight() = this.comp_653()
  * comp_652
  */
 fun DimensionType.height() = this.comp_652()
-/**
- * comp_847
- */
-fun DimensionType.monsterSettings() = this.comp_847()
 /**
  * comp_643
  */

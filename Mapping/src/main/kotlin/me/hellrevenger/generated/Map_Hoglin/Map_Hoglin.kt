@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_26950
  */
-fun KClass<Hoglin>.tryAttack(arg0: LivingEntity, arg1: LivingEntity) = Hoglin.method_26950(arg0, arg1)
+fun KClass<Hoglin>.tryAttack(arg0: ServerWorld, arg1: LivingEntity, arg2: LivingEntity) = Hoglin.method_26950(arg0, arg1, arg2)
 /**
  * method_24657
  */

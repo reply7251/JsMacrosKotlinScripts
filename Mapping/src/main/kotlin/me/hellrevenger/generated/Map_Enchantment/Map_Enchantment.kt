@@ -20,7 +20,7 @@ fun Enchantment.modifyTridentReturnAcceleration(arg0: ServerWorld, arg1: Int, ar
 /**
  * method_60056
  */
-fun Enchantment.modifyRepairWithXp(arg0: ServerWorld, arg1: Int, arg2: ItemStack, arg3: MutableFloat) = this.method_60056(arg0, arg1, arg2, arg3)
+fun Enchantment.modifyRepairWithExperience(arg0: ServerWorld, arg1: Int, arg2: ItemStack, arg3: MutableFloat) = this.method_60056(arg0, arg1, arg2, arg3)
 /**
  * method_60013
  */

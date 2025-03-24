@@ -74,6 +74,10 @@ fun Vec3d.lerp(arg0: Vec3d, arg1: Double) = this.method_35590(arg0, arg1)
  */
 fun Vec3d.floorAlongAxes(arg0: EnumSet<net.minecraft.class_2350.class_2351>) = this.method_1032(arg0)
 /**
+ * method_61889
+ */
+fun Vec3d.add(arg0: Double) = this.method_61889(arg0)
+/**
  * method_1028
  */
 fun Vec3d.squaredDistanceTo(arg0: Double, arg1: Double, arg2: Double) = this.method_1028(arg0, arg1, arg2)
@@ -102,6 +106,10 @@ fun Vec3d.addRandom(arg0: Random, arg1: Float) = this.method_49272(arg0, arg1)
  */
 fun Vec3d.squaredDistanceTo(arg0: Vec3d) = this.method_1025(arg0)
 /**
+ * method_61888
+ */
+fun Vec3d.subtract(arg0: Double) = this.method_61888(arg0)
+/**
  * method_1033
  */
 fun Vec3d.length() = this.method_1033()
@@ -109,6 +117,10 @@ fun Vec3d.length() = this.method_1033()
  * method_1020
  */
 fun Vec3d.subtract(arg0: Vec3d) = this.method_1020(arg0)
+/**
+ * method_64316
+ */
+fun Vec3d.projectOnto(arg0: Vec3d) = this.method_64316(arg0)
 /**
  * method_24457
  */
@@ -125,6 +137,10 @@ fun KClass<Vec3d>.ofCenter(arg0: Vec3i) = Vec3d.method_24953(arg0)
  * method_37267
  */
 fun Vec3d.horizontalLength() = this.method_37267()
+/**
+ * method_61890
+ */
+fun Vec3d.getHorizontal() = this.method_61890()
 /**
  * method_18043
  */

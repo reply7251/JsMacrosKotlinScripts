@@ -2,14 +2,14 @@ package me.hellrevenger.generated.Map_BeeEntityModel
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_22111
+ * field_52871
  */
-fun <T>BeeEntityModel<T>.animateModel(arg0: T, arg1: Float, arg2: Float, arg3: Float) where T: BeeEntity = this.method_22111(arg0, arg1, arg2, arg3)
+val KClass<BeeEntityModel>.BABY_TRANSFORMER by aliasStatic(BeeEntityModel::field_52871)
 /**
  * method_31981
  */
-fun <T>KClass<BeeEntityModel<T>>.getTexturedModelData() where T: BeeEntity = BeeEntityModel.method_31981()
+fun KClass<BeeEntityModel>.getTexturedModelData() = BeeEntityModel.method_31981()
 /**
  * method_22112
  */
-fun <T>BeeEntityModel<T>.setAngles(arg0: T, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) where T: BeeEntity = this.method_22112(arg0, arg1, arg2, arg3, arg4, arg5)
+fun BeeEntityModel.setAngles(arg0: BeeEntityRenderState) = this.method_22112(arg0)

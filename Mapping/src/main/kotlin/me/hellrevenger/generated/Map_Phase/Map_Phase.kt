@@ -22,13 +22,13 @@ fun Phase.getMaxYAcceleration() = this.method_6846()
  */
 fun Phase.getYawAcceleration() = this.method_6847()
 /**
+ * method_6855
+ */
+fun Phase.serverTick(arg0: ServerWorld) = this.method_6855(arg0)
+/**
  * method_6848
  */
 fun Phase.isSittingOrHovering() = this.method_6848()
-/**
- * method_6855
- */
-fun Phase.serverTick() = this.method_6855()
 /**
  * method_6856
  */

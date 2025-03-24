@@ -2,6 +2,50 @@ package me.hellrevenger.generated.Map_SoundEvents
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_14857
+ */
+val KClass<SoundEvents>.ENTITY_COW_DEATH by aliasStatic(SoundEvents::field_14857)
+/**
+ * field_14724
+ */
+val KClass<SoundEvents>.ENTITY_WOLF_AMBIENT by aliasStatic(SoundEvents::field_14724)
+/**
+ * field_48790
+ */
+val KClass<SoundEvents>.BLOCK_VAULT_HIT by aliasStatic(SoundEvents::field_48790)
+/**
+ * field_14896
+ */
+val KClass<SoundEvents>.ITEM_TRIDENT_THUNDER by aliasStatic(SoundEvents::field_14896)
+/**
+ * field_14856
+ */
+val KClass<SoundEvents>.ENTITY_TURTLE_DEATH by aliasStatic(SoundEvents::field_14856)
+/**
+ * field_42574
+ */
+val KClass<SoundEvents>.BLOCK_CHERRY_WOOD_PRESSURE_PLATE_CLICK_ON by aliasStatic(SoundEvents::field_42574)
+/**
+ * field_14723
+ */
+val KClass<SoundEvents>.BLOCK_STONE_FALL by aliasStatic(SoundEvents::field_14723)
+/**
+ * field_18309
+ */
+val KClass<SoundEvents>.BLOCK_NOTE_BLOCK_COW_BELL by aliasStatic(SoundEvents::field_18309)
+/**
+ * field_21930
+ */
+val KClass<SoundEvents>.BLOCK_ANCIENT_DEBRIS_HIT by aliasStatic(SoundEvents::field_21930)
+/**
+ * field_45062
+ */
+val KClass<SoundEvents>.BLOCK_SPONGE_ABSORB by aliasStatic(SoundEvents::field_45062)
+/**
+ * field_21931
+ */
+val KClass<SoundEvents>.BLOCK_SHROOMLIGHT_BREAK by aliasStatic(SoundEvents::field_21931)
+/**
  * field_42573
  */
 val KClass<SoundEvents>.BLOCK_CHERRY_WOOD_BREAK by aliasStatic(SoundEvents::field_42573)
@@ -73,10 +117,6 @@ val KClass<SoundEvents>.BLOCK_VAULT_PLACE by aliasStatic(SoundEvents::field_4879
  * field_14986
  */
 val KClass<SoundEvents>.ENTITY_ZOMBIE_INFECT by aliasStatic(SoundEvents::field_14986)
-/**
- * field_50103
- */
-val KClass<SoundEvents>.ITEM_OMINOUS_BOTTLE_DISPOSE by aliasStatic(SoundEvents::field_50103)
 /**
  * field_14852
  */
@@ -262,6 +302,10 @@ val KClass<SoundEvents>.BLOCK_CORAL_BLOCK_PLACE by aliasStatic(SoundEvents::fiel
  */
 val KClass<SoundEvents>.BLOCK_BEEHIVE_DRIP by aliasStatic(SoundEvents::field_20608)
 /**
+ * field_54547
+ */
+val KClass<SoundEvents>.ENTITY_PARROT_IMITATE_CREAKING by aliasStatic(SoundEvents::field_54547)
+/**
  * field_21932
  */
 val KClass<SoundEvents>.BLOCK_SHROOMLIGHT_STEP by aliasStatic(SoundEvents::field_21932)
@@ -322,6 +366,10 @@ val KClass<SoundEvents>.BLOCK_SMALL_DRIPLEAF_FALL by aliasStatic(SoundEvents::fi
  */
 val KClass<SoundEvents>.MUSIC_DISC_CAT by aliasStatic(SoundEvents::field_14744)
 /**
+ * field_54544
+ */
+val KClass<SoundEvents>.BLOCK_CREAKING_HEART_STEP by aliasStatic(SoundEvents::field_54544)
+/**
  * field_21934
  */
 val KClass<SoundEvents>.BLOCK_SHROOMLIGHT_HIT by aliasStatic(SoundEvents::field_21934)
@@ -346,9 +394,17 @@ val KClass<SoundEvents>.ENTITY_BEE_LOOP by aliasStatic(SoundEvents::field_20605)
  */
 val KClass<SoundEvents>.BLOCK_TRIAL_SPAWNER_PLACE by aliasStatic(SoundEvents::field_47203)
 /**
+ * field_54545
+ */
+val KClass<SoundEvents>.BLOCK_CREAKING_HEART_IDLE by aliasStatic(SoundEvents::field_54545)
+/**
  * field_28612
  */
 val KClass<SoundEvents>.BLOCK_SMALL_DRIPLEAF_BREAK by aliasStatic(SoundEvents::field_28612)
+/**
+ * field_54546
+ */
+val KClass<SoundEvents>.BLOCK_PALE_HANGING_MOSS_IDLE by aliasStatic(SoundEvents::field_54546)
 /**
  * field_21935
  */
@@ -362,6 +418,10 @@ val KClass<SoundEvents>.ENTITY_GOAT_DEATH by aliasStatic(SoundEvents::field_2981
  */
 val KClass<SoundEvents>.UI_STONECUTTER_SELECT_RECIPE by aliasStatic(SoundEvents::field_17711)
 /**
+ * field_54542
+ */
+val KClass<SoundEvents>.BLOCK_CREAKING_HEART_HURT by aliasStatic(SoundEvents::field_54542)
+/**
  * field_17710
  */
 val KClass<SoundEvents>.UI_STONECUTTER_TAKE_RESULT by aliasStatic(SoundEvents::field_17710)
@@ -370,9 +430,21 @@ val KClass<SoundEvents>.UI_STONECUTTER_TAKE_RESULT by aliasStatic(SoundEvents::f
  */
 val KClass<SoundEvents>.MUSIC_CREATIVE by aliasStatic(SoundEvents::field_14995)
 /**
+ * field_54543
+ */
+val KClass<SoundEvents>.BLOCK_CREAKING_HEART_PLACE by aliasStatic(SoundEvents::field_54543)
+/**
+ * field_54540
+ */
+val KClass<SoundEvents>.BLOCK_CREAKING_HEART_FALL by aliasStatic(SoundEvents::field_54540)
+/**
  * field_26979
  */
 val KClass<SoundEvents>.BLOCK_AMETHYST_BLOCK_BREAK by aliasStatic(SoundEvents::field_26979)
+/**
+ * field_54541
+ */
+val KClass<SoundEvents>.BLOCK_CREAKING_HEART_HIT by aliasStatic(SoundEvents::field_54541)
 /**
  * field_15090
  */
@@ -522,6 +594,10 @@ val KClass<SoundEvents>.ENTITY_SHEEP_AMBIENT by aliasStatic(SoundEvents::field_1
  */
 val KClass<SoundEvents>.ENTITY_PHANTOM_FLAP by aliasStatic(SoundEvents::field_14869)
 /**
+ * field_20614
+ */
+val KClass<SoundEvents>.ENTITY_GENERIC_EAT by aliasStatic(SoundEvents::field_20614)
+/**
  * field_21941
  */
 val KClass<SoundEvents>.BLOCK_NETHER_ORE_STEP by aliasStatic(SoundEvents::field_21941)
@@ -529,6 +605,10 @@ val KClass<SoundEvents>.BLOCK_NETHER_ORE_STEP by aliasStatic(SoundEvents::field_
  * field_21942
  */
 val KClass<SoundEvents>.BLOCK_SOUL_SAND_HIT by aliasStatic(SoundEvents::field_21942)
+/**
+ * field_20615
+ */
+val KClass<SoundEvents>.ITEM_HONEY_BOTTLE_DRINK by aliasStatic(SoundEvents::field_20615)
 /**
  * field_42562
  */
@@ -549,6 +629,10 @@ val KClass<SoundEvents>.ENTITY_PARROT_STEP by aliasStatic(SoundEvents::field_146
  * field_28620
  */
 val KClass<SoundEvents>.BLOCK_VINE_PLACE by aliasStatic(SoundEvents::field_28620)
+/**
+ * field_20613
+ */
+val KClass<SoundEvents>.ENTITY_GENERIC_DRINK by aliasStatic(SoundEvents::field_20613)
 /**
  * field_21943
  */
@@ -650,13 +734,13 @@ val KClass<SoundEvents>.ITEM_SPYGLASS_STOP_USING by aliasStatic(SoundEvents::fie
  */
 val KClass<SoundEvents>.BLOCK_SOUL_SOIL_FALL by aliasStatic(SoundEvents::field_21948)
 /**
+ * field_54539
+ */
+val KClass<SoundEvents>.BLOCK_CREAKING_HEART_BREAK by aliasStatic(SoundEvents::field_54539)
+/**
  * field_33435
  */
 val KClass<SoundEvents>.ENTITY_GOAT_SCREAMING_PREPARE_RAM by aliasStatic(SoundEvents::field_33435)
-/**
- * field_20615
- */
-val KClass<SoundEvents>.ITEM_HONEY_BOTTLE_DRINK by aliasStatic(SoundEvents::field_20615)
 /**
  * field_33437
  */
@@ -678,10 +762,6 @@ val KClass<SoundEvents>.BLOCK_SOUL_SAND_BREAK by aliasStatic(SoundEvents::field_
  */
 val KClass<SoundEvents>.ENTITY_GOAT_SCREAMING_RAM_IMPACT by aliasStatic(SoundEvents::field_33436)
 /**
- * field_20614
- */
-val KClass<SoundEvents>.ENTITY_GENERIC_EAT by aliasStatic(SoundEvents::field_20614)
-/**
  * field_26971
  */
 val KClass<SoundEvents>.BLOCK_SMALL_AMETHYST_BUD_PLACE by aliasStatic(SoundEvents::field_26971)
@@ -694,13 +774,13 @@ val KClass<SoundEvents>.ENTITY_LLAMA_CHEST by aliasStatic(SoundEvents::field_150
  */
 val KClass<SoundEvents>.ENTITY_RAVAGER_CELEBRATE by aliasStatic(SoundEvents::field_19148)
 /**
+ * field_54537
+ */
+val KClass<SoundEvents>.ENTITY_CREAKING_SPAWN by aliasStatic(SoundEvents::field_54537)
+/**
  * field_33433
  */
 val KClass<SoundEvents>.ITEM_BONE_MEAL_USE by aliasStatic(SoundEvents::field_33433)
-/**
- * field_20613
- */
-val KClass<SoundEvents>.ENTITY_GENERIC_DRINK by aliasStatic(SoundEvents::field_20613)
 /**
  * field_19149
  */
@@ -714,6 +794,10 @@ val KClass<SoundEvents>.ITEM_SPYGLASS_USE by aliasStatic(SoundEvents::field_2697
  */
 val KClass<SoundEvents>.ENTITY_PARROT_IMITATE_SLIME by aliasStatic(SoundEvents::field_15098)
 /**
+ * field_54538
+ */
+val KClass<SoundEvents>.ENTITY_CREAKING_SWAY by aliasStatic(SoundEvents::field_54538)
+/**
  * field_33434
  */
 val KClass<SoundEvents>.ENTITY_GOAT_SCREAMING_LONG_JUMP by aliasStatic(SoundEvents::field_33434)
@@ -725,6 +809,14 @@ val KClass<SoundEvents>.BLOCK_GRAVEL_PLACE by aliasStatic(SoundEvents::field_146
  * field_15099
  */
 val KClass<SoundEvents>.ENTITY_HORSE_EAT by aliasStatic(SoundEvents::field_15099)
+/**
+ * field_54534
+ */
+val KClass<SoundEvents>.ENTITY_CREAKING_STEP by aliasStatic(SoundEvents::field_54534)
+/**
+ * field_54535
+ */
+val KClass<SoundEvents>.ENTITY_CREAKING_FREEZE by aliasStatic(SoundEvents::field_54535)
 /**
  * field_21944
  */
@@ -738,6 +830,10 @@ val KClass<SoundEvents>.ENTITY_ENDERMAN_DEATH by aliasStatic(SoundEvents::field_
  */
 val KClass<SoundEvents>.BLOCK_SMALL_AMETHYST_BUD_BREAK by aliasStatic(SoundEvents::field_26970)
 /**
+ * field_54536
+ */
+val KClass<SoundEvents>.ENTITY_CREAKING_UNFREEZE by aliasStatic(SoundEvents::field_54536)
+/**
  * field_21945
  */
 val KClass<SoundEvents>.BLOCK_SOUL_SOIL_STEP by aliasStatic(SoundEvents::field_21945)
@@ -750,6 +846,10 @@ val KClass<SoundEvents>.BLOCK_WOOD_FALL by aliasStatic(SoundEvents::field_14607)
  */
 val KClass<SoundEvents>.ENTITY_GOAT_LONG_JUMP by aliasStatic(SoundEvents::field_33438)
 /**
+ * field_54532
+ */
+val KClass<SoundEvents>.ENTITY_CREAKING_ATTACK by aliasStatic(SoundEvents::field_54532)
+/**
  * field_21946
  */
 val KClass<SoundEvents>.BLOCK_SOUL_SOIL_PLACE by aliasStatic(SoundEvents::field_21946)
@@ -761,6 +861,10 @@ val KClass<SoundEvents>.BLOCK_CHORUS_FLOWER_DEATH by aliasStatic(SoundEvents::fi
  * field_33439
  */
 val KClass<SoundEvents>.ENTITY_GOAT_RAM_IMPACT by aliasStatic(SoundEvents::field_33439)
+/**
+ * field_54533
+ */
+val KClass<SoundEvents>.ENTITY_CREAKING_DEATH by aliasStatic(SoundEvents::field_54533)
 /**
  * field_21947
  */
@@ -1305,6 +1409,10 @@ val KClass<SoundEvents>.BLOCK_DECORATED_POT_HIT by aliasStatic(SoundEvents::fiel
  * field_28039
  */
 val KClass<SoundEvents>.BLOCK_DRIPSTONE_BLOCK_STEP by aliasStatic(SoundEvents::field_28039)
+/**
+ * field_50103
+ */
+val KClass<SoundEvents>.ITEM_OMINOUS_BOTTLE_DISPOSE by aliasStatic(SoundEvents::field_50103)
 /**
  * field_15203
  */
@@ -1941,111 +2049,3 @@ val KClass<SoundEvents>.ENTITY_ENDER_DRAGON_DEATH by aliasStatic(SoundEvents::fi
  * field_15226
  */
 val KClass<SoundEvents>.BLOCK_WOOL_PLACE by aliasStatic(SoundEvents::field_15226)
-/**
- * field_14772
- */
-val KClass<SoundEvents>.ENTITY_WOLF_STEP by aliasStatic(SoundEvents::field_14772)
-/**
- * field_15227
- */
-val KClass<SoundEvents>.BLOCK_BAMBOO_SAPLING_HIT by aliasStatic(SoundEvents::field_15227)
-/**
- * field_14771
- */
-val KClass<SoundEvents>.ENTITY_STRAY_DEATH by aliasStatic(SoundEvents::field_14771)
-/**
- * field_15228
- */
-val KClass<SoundEvents>.BLOCK_PISTON_CONTRACT by aliasStatic(SoundEvents::field_15228)
-/**
- * field_14770
- */
-val KClass<SoundEvents>.ENTITY_ITEM_FRAME_REMOVE_ITEM by aliasStatic(SoundEvents::field_14770)
-/**
- * field_14554
- */
-val KClass<SoundEvents>.ENTITY_LLAMA_SWAG by aliasStatic(SoundEvents::field_14554)
-/**
- * field_38370
- */
-val KClass<SoundEvents>.ENTITY_ALLAY_ITEM_GIVEN by aliasStatic(SoundEvents::field_38370)
-/**
- * field_38371
- */
-val KClass<SoundEvents>.ENTITY_ALLAY_ITEM_TAKEN by aliasStatic(SoundEvents::field_38371)
-/**
- * field_14649
- */
-val KClass<SoundEvents>.ENTITY_IRON_GOLEM_ATTACK by aliasStatic(SoundEvents::field_14649)
-/**
- * field_14648
- */
-val KClass<SoundEvents>.ENTITY_GHAST_DEATH by aliasStatic(SoundEvents::field_14648)
-/**
- * field_40078
- */
-val KClass<SoundEvents>.ENTITY_CAMEL_SADDLE by aliasStatic(SoundEvents::field_40078)
-/**
- * field_15230
- */
-val KClass<SoundEvents>.ENTITY_ENDERMITE_DEATH by aliasStatic(SoundEvents::field_15230)
-/**
- * field_14647
- */
-val KClass<SoundEvents>.ENTITY_PARROT_IMITATE_DROWNED by aliasStatic(SoundEvents::field_14647)
-/**
- * field_40079
- */
-val KClass<SoundEvents>.ENTITY_CAMEL_SIT by aliasStatic(SoundEvents::field_40079)
-/**
- * field_15231
- */
-val KClass<SoundEvents>.ENTITY_GHAST_SHOOT by aliasStatic(SoundEvents::field_15231)
-/**
- * field_40076
- */
-val KClass<SoundEvents>.ENTITY_CAMEL_EAT by aliasStatic(SoundEvents::field_40076)
-/**
- * field_14779
- */
-val KClass<SoundEvents>.ITEM_BOTTLE_FILL by aliasStatic(SoundEvents::field_14779)
-/**
- * field_14646
- */
-val KClass<SoundEvents>.BLOCK_LADDER_FALL by aliasStatic(SoundEvents::field_14646)
-/**
- * field_15232
- */
-val KClass<SoundEvents>.ENTITY_GUARDIAN_DEATH_LAND by aliasStatic(SoundEvents::field_15232)
-/**
- * field_40077
- */
-val KClass<SoundEvents>.ENTITY_CAMEL_HURT by aliasStatic(SoundEvents::field_40077)
-/**
- * field_14778
- */
-val KClass<SoundEvents>.ENTITY_PLAYER_SMALL_FALL by aliasStatic(SoundEvents::field_14778)
-/**
- * field_14645
- */
-val KClass<SoundEvents>.ENTITY_WITCH_HURT by aliasStatic(SoundEvents::field_14645)
-/**
- * field_40074
- */
-val KClass<SoundEvents>.ENTITY_CAMEL_DASH_READY by aliasStatic(SoundEvents::field_40074)
-/**
- * field_40075
- */
-val KClass<SoundEvents>.ENTITY_CAMEL_DEATH by aliasStatic(SoundEvents::field_40075)
-/**
- * field_40072
- */
-val KClass<SoundEvents>.ENTITY_CAMEL_AMBIENT by aliasStatic(SoundEvents::field_40072)
-/**
- * field_40073
- */
-val KClass<SoundEvents>.ENTITY_CAMEL_DASH by aliasStatic(SoundEvents::field_40073)
-/**
- * field_40070
- */
-val KClass<SoundEvents>.BLOCK_BAMBOO_WOOD_FENCE_GATE_CLOSE by aliasStatic(SoundEvents::field_40070)

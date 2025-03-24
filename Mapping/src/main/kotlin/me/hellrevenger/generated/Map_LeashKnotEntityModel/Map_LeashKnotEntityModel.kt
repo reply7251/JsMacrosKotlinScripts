@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_32017
  */
-fun <T>KClass<LeashKnotEntityModel<T>>.getTexturedModelData() where T: Entity = LeashKnotEntityModel.method_32017()
+fun KClass<LeashKnotEntityModel>.getTexturedModelData() = LeashKnotEntityModel.method_32017()

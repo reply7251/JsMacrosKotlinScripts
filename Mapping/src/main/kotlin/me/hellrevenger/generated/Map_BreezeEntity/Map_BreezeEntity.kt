@@ -2,13 +2,25 @@ package me.hellrevenger.generated.Map_BreezeEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_47816
+ */
+var BreezeEntity.slidingBackAnimationState by alias(BreezeEntity::field_47816)
+/**
  * field_47280
  */
-var BreezeEntity.inhalingAnimationState by alias(BreezeEntity::field_47280)
+var BreezeEntity.longJumpingAnimationState by alias(BreezeEntity::field_47280)
+/**
+ * field_47270
+ */
+var BreezeEntity.inhalingAnimationState by alias(BreezeEntity::field_47270)
 /**
  * field_47281
  */
 var BreezeEntity.shootingAnimationState by alias(BreezeEntity::field_47281)
+/**
+ * field_47269
+ */
+var BreezeEntity.idleAnimationState by alias(BreezeEntity::field_47269)
 /**
  * field_47277
  */
@@ -30,13 +42,13 @@ fun BreezeEntity.addLongJumpingParticles() = this.method_55008()
  */
 fun BreezeEntity.addBlockParticles(arg0: Int) = this.method_55007(arg0)
 /**
+ * method_62822
+ */
+fun BreezeEntity.getChargeY() = this.method_62822()
+/**
  * method_55015
  */
 fun BreezeEntity.resetLongJumpingParticleAddCount() = this.method_55015()
-/**
- * method_55009
- */
-fun BreezeEntity.getChargeY() = this.method_55009()
 /**
  * method_56562
  */

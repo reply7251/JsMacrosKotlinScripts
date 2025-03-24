@@ -42,17 +42,21 @@ fun Framebuffer.getColorAttachment() = this.method_30277()
  */
 fun Framebuffer.draw(arg0: Int, arg1: Int) = this.method_1237(arg0, arg1)
 /**
+ * method_1233
+ */
+fun Framebuffer.drawInternal(arg0: Int, arg1: Int) = this.method_1233(arg0, arg1)
+/**
  * method_1235
  */
 fun Framebuffer.beginWrite(arg0: Boolean) = this.method_1235(arg0)
 /**
+ * method_1231
+ */
+fun Framebuffer.initFbo(arg0: Int, arg1: Int) = this.method_1231(arg0, arg1)
+/**
  * method_1239
  */
 fun Framebuffer.checkFramebufferStatus() = this.method_1239()
-/**
- * method_1234
- */
-fun Framebuffer.resize(arg0: Int, arg1: Int, arg2: Boolean) = this.method_1234(arg0, arg1, arg2)
 /**
  * method_30278
  */
@@ -62,9 +66,9 @@ fun Framebuffer.getDepthAttachment() = this.method_30278()
  */
 fun Framebuffer.setClearColor(arg0: Float, arg1: Float, arg2: Float, arg3: Float) = this.method_1236(arg0, arg1, arg2, arg3)
 /**
- * method_1230
+ * method_1234
  */
-fun Framebuffer.clear(arg0: Boolean) = this.method_1230(arg0)
+fun Framebuffer.resize(arg0: Int, arg1: Int) = this.method_1234(arg0, arg1)
 /**
  * method_1240
  */
@@ -74,13 +78,9 @@ fun Framebuffer.endWrite() = this.method_1240()
  */
 fun Framebuffer.endRead() = this.method_1242()
 /**
- * method_1231
+ * method_1230
  */
-fun Framebuffer.initFbo(arg0: Int, arg1: Int, arg2: Boolean) = this.method_1231(arg0, arg1, arg2)
-/**
- * method_22594
- */
-fun Framebuffer.draw(arg0: Int, arg1: Int, arg2: Boolean) = this.method_22594(arg0, arg1, arg2)
+fun Framebuffer.clear() = this.method_1230()
 /**
  * method_1238
  */

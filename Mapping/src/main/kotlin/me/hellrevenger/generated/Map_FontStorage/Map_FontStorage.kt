@@ -12,7 +12,7 @@ fun FontStorage.getId() = this.method_57034()
 /**
  * method_2013
  */
-fun FontStorage.getObfuscatedGlyphRenderer(arg0: Glyph) = this.method_2013(arg0)
+fun FontStorage.getObfuscatedBakedGlyph(arg0: Glyph) = this.method_2013(arg0)
 /**
  * method_2011
  */
@@ -20,11 +20,11 @@ fun FontStorage.getGlyph(arg0: Int, arg1: Boolean) = this.method_2011(arg0, arg1
 /**
  * method_22943
  */
-fun FontStorage.getRectangleRenderer() = this.method_22943()
+fun FontStorage.getRectangleBakedGlyph() = this.method_22943()
 /**
  * method_2014
  */
-fun FontStorage.getGlyphRenderer(arg0: Int) = this.method_2014(arg0)
+fun FontStorage.getBaked(arg0: Int) = this.method_2014(arg0)
 /**
  * method_57036
  */

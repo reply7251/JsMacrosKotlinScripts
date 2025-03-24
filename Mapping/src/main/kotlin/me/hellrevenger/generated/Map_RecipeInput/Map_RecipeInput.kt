@@ -12,4 +12,4 @@ fun RecipeInput.getStackInSlot(arg0: Int) = this.method_59984(arg0)
 /**
  * method_59983
  */
-fun RecipeInput.getSize() = this.method_59983()
+fun RecipeInput.size() = this.method_59983()

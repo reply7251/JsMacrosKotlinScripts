@@ -9,7 +9,7 @@ import me.hellrevenger.generated.Map_GameRenderer.*
 import me.hellrevenger.generated.Map_MatrixStack.*
 import me.hellrevenger.generated.Map_MinecraftClient.*
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
-import me.hellrevenger.generated.Map_SimpleOption.getValue
+import me.hellrevenger.generated.Map_SimpleOption.value
 import net.minecraft.class_332
 import org.joml.Vector3d
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
@@ -56,9 +56,9 @@ open class WorldPosWrapper(
         val cam = gameRenderer.getCamera()
         camera = Pos3D(cam.getPos())
 
-        val fov = mc.options.getFov().getValue().toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
+        val fov = (mc.options.getFov().value as Int).toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
         if (fov != lastFov) {
-            projectionMatrix = gameRenderer.getBasicProjectionMatrix(fov)
+            projectionMatrix = gameRenderer.getBasicProjectionMatrix(fov.toFloat())
             lastFov = fov
             pitch = 1000f;
         }

@@ -6,14 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun KClass<RaftEntityModel>.getTexturedModelData() = RaftEntityModel.method_45714()
 /**
- * method_45715
+ * method_62112
  */
-fun RaftEntityModel.getParts() = this.method_45715()
-/**
- * method_45713
- */
-fun KClass<RaftEntityModel>.addParts(arg0: ModelPartData) = RaftEntityModel.method_45713(arg0)
-/**
- * method_45711
- */
-fun RaftEntityModel.setAngles(arg0: BoatEntity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_45711(arg0, arg1, arg2, arg3, arg4, arg5)
+fun KClass<RaftEntityModel>.getChestTexturedModelData() = RaftEntityModel.method_62112()

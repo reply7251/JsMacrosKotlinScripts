@@ -8,7 +8,7 @@ fun KClass<CrossbowPosing>.meleeAttack(arg0: ModelPart, arg1: ModelPart, arg2: B
 /**
  * method_29351
  */
-fun <T>KClass<CrossbowPosing>.meleeAttack(arg0: ModelPart, arg1: ModelPart, arg2: T, arg3: Float, arg4: Float) where T: MobEntity = CrossbowPosing.method_29351<T>(arg0, arg1, arg2, arg3, arg4)
+fun KClass<CrossbowPosing>.meleeAttack(arg0: ModelPart, arg1: ModelPart, arg2: Arm, arg3: Float, arg4: Float) = CrossbowPosing.method_29351(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_32789
  */
@@ -20,7 +20,7 @@ fun KClass<CrossbowPosing>.hold(arg0: ModelPart, arg1: ModelPart, arg2: ModelPar
 /**
  * method_25446
  */
-fun KClass<CrossbowPosing>.charge(arg0: ModelPart, arg1: ModelPart, arg2: LivingEntity, arg3: Boolean) = CrossbowPosing.method_25446(arg0, arg1, arg2, arg3)
+fun KClass<CrossbowPosing>.charge(arg0: ModelPart, arg1: ModelPart, arg2: Float, arg3: Int, arg4: Boolean) = CrossbowPosing.method_25446(arg0, arg1, arg2, arg3, arg4)
 /**
  * method_29350
  */

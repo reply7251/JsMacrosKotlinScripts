@@ -6,10 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun KClass<ResourceMetadata>.create(arg0: InputStream) = ResourceMetadata.method_43042(arg0)
 /**
- * method_43041
- */
-fun <T>ResourceMetadata.decode(arg0: ResourceMetadataReader<T>) = this.method_43041<T>(arg0)
-/**
  * method_52446
  */
-fun ResourceMetadata.copy(arg0: Collection<ResourceMetadataReader<*>>) = this.method_52446(arg0)
+fun ResourceMetadata.copy(arg0: Collection<ResourceMetadataSerializer<*>>) = this.method_52446(arg0)
+/**
+ * method_43041
+ */
+fun <T>ResourceMetadata.decode(arg0: ResourceMetadataSerializer<T>) = this.method_43041<T>(arg0)

@@ -182,13 +182,41 @@ val KClass<DataComponentTypes>.MAP_DECORATIONS by aliasStatic(DataComponentTypes
  */
 val KClass<DataComponentTypes>.MAP_ID by aliasStatic(DataComponentTypes::field_49646)
 /**
+ * field_53964
+ */
+val KClass<DataComponentTypes>.CONSUMABLE by aliasStatic(DataComponentTypes::field_53964)
+/**
  * field_50238
  */
 val KClass<DataComponentTypes>.OMINOUS_BOTTLE_AMPLIFIER by aliasStatic(DataComponentTypes::field_50238)
 /**
+ * field_54198
+ */
+val KClass<DataComponentTypes>.TOOLTIP_STYLE by aliasStatic(DataComponentTypes::field_54198)
+/**
  * field_50239
  */
 val KClass<DataComponentTypes>.ITEM_NAME by aliasStatic(DataComponentTypes::field_50239)
+/**
+ * field_54199
+ */
+val KClass<DataComponentTypes>.ITEM_MODEL by aliasStatic(DataComponentTypes::field_54199)
+/**
+ * field_54196
+ */
+val KClass<DataComponentTypes>.EQUIPPABLE by aliasStatic(DataComponentTypes::field_54196)
+/**
+ * field_53965
+ */
+val KClass<DataComponentTypes>.USE_REMAINDER by aliasStatic(DataComponentTypes::field_53965)
+/**
+ * field_54197
+ */
+val KClass<DataComponentTypes>.GLIDER by aliasStatic(DataComponentTypes::field_54197)
+/**
+ * field_53966
+ */
+val KClass<DataComponentTypes>.USE_COOLDOWN by aliasStatic(DataComponentTypes::field_53966)
 /**
  * field_50071
  */
@@ -210,13 +238,25 @@ val KClass<DataComponentTypes>.HIDE_TOOLTIP by aliasStatic(DataComponentTypes::f
  */
 val KClass<DataComponentTypes>.FOOD by aliasStatic(DataComponentTypes::field_50075)
 /**
- * field_50076
- */
-val KClass<DataComponentTypes>.FIRE_RESISTANT by aliasStatic(DataComponentTypes::field_50076)
-/**
  * field_50077
  */
 val KClass<DataComponentTypes>.TOOL by aliasStatic(DataComponentTypes::field_50077)
+/**
+ * field_54273
+ */
+val KClass<DataComponentTypes>.DAMAGE_RESISTANT by aliasStatic(DataComponentTypes::field_54273)
+/**
+ * field_54274
+ */
+val KClass<DataComponentTypes>.DEATH_PROTECTION by aliasStatic(DataComponentTypes::field_54274)
+/**
+ * field_53695
+ */
+val KClass<DataComponentTypes>.ENCHANTABLE by aliasStatic(DataComponentTypes::field_53695)
+/**
+ * field_53696
+ */
+val KClass<DataComponentTypes>.REPAIRABLE by aliasStatic(DataComponentTypes::field_53696)
 /**
  * field_49653
  */

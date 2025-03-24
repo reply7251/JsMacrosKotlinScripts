@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_MessageArgumentType
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_61182
+ */
+fun <S>MessageArgumentType.parse(arg0: StringReader, arg1: S) = this.method_61182<S>(arg0, arg1)
+/**
  * method_45562
  */
 fun KClass<MessageArgumentType>.getSignedMessage(arg0: CommandContext<ServerCommandSource>, arg1: String, arg2: Consumer<SignedMessage>) = MessageArgumentType.method_45562(arg0, arg1, arg2)

@@ -6,13 +6,13 @@ import me.hellrevenger.generated.*
  */
 val MultifaceGrowthFeatureConfig.spreadChance by alias(MultifaceGrowthFeatureConfig::field_28434)
 /**
- * field_37709
- */
-val MultifaceGrowthFeatureConfig.lichen by alias(MultifaceGrowthFeatureConfig::field_37709)
-/**
  * field_28430
  */
 val MultifaceGrowthFeatureConfig.searchRange by alias(MultifaceGrowthFeatureConfig::field_28430)
+/**
+ * field_37709
+ */
+val MultifaceGrowthFeatureConfig.block by alias(MultifaceGrowthFeatureConfig::field_37709)
 /**
  * field_28435
  */

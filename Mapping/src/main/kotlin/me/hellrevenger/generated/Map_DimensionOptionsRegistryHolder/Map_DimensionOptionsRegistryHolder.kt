@@ -2,9 +2,17 @@ package me.hellrevenger.generated.Map_DimensionOptionsRegistryHolder
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_45520
+ */
+fun KClass<DimensionOptionsRegistryHolder>.createRegistry(arg0: RegistryWrapper<DimensionType>, arg1: Map<RegistryKey<DimensionOptions>, DimensionOptions>, arg2: ChunkGenerator) = DimensionOptionsRegistryHolder.method_45520(arg0, arg1, arg2)
+/**
  * method_45526
  */
 fun DimensionOptionsRegistryHolder.getWorldKeys() = this.method_45526()
+/**
+ * method_45522
+ */
+fun DimensionOptionsRegistryHolder.with(arg0: net.minecraft.class_7225.class_7874, arg1: ChunkGenerator) = this.method_45522(arg0, arg1)
 /**
  * method_45514
  */
@@ -18,17 +26,9 @@ fun DimensionOptionsRegistryHolder.isDebug() = this.method_45531()
  */
 fun DimensionOptionsRegistryHolder.getChunkGenerator() = this.method_45513()
 /**
- * method_45520
- */
-fun KClass<DimensionOptionsRegistryHolder>.createRegistry(arg0: Registry<DimensionType>, arg1: Map<RegistryKey<DimensionOptions>, DimensionOptions>, arg2: ChunkGenerator) = DimensionOptionsRegistryHolder.method_45520(arg0, arg1, arg2)
-/**
  * method_45525
  */
 fun KClass<DimensionOptionsRegistryHolder>.streamAll(arg0: Stream<RegistryKey<DimensionOptions>>) = DimensionOptionsRegistryHolder.method_45525(arg0)
-/**
- * method_45522
- */
-fun DimensionOptionsRegistryHolder.with(arg0: DynamicRegistryManager, arg1: ChunkGenerator) = this.method_45522(arg0, arg1)
 /**
  * method_45518
  */

@@ -50,6 +50,10 @@ fun EntityAttributeInstance.getBaseValue() = this.method_6201()
  */
 fun EntityAttributeInstance.hasModifier(arg0: Identifier) = this.method_6196(arg0)
 /**
+ * method_61434
+ */
+fun EntityAttributeInstance.addPersistentModifiers(arg0: Collection<EntityAttributeModifier>) = this.method_61434(arg0)
+/**
  * method_6195
  */
 fun EntityAttributeInstance.getModifiers() = this.method_6195()
@@ -57,6 +61,10 @@ fun EntityAttributeInstance.getModifiers() = this.method_6195()
  * method_26837
  */
 fun EntityAttributeInstance.addPersistentModifier(arg0: EntityAttributeModifier) = this.method_26837(arg0)
+/**
+ * method_61435
+ */
+fun EntityAttributeInstance.getPersistentModifiers() = this.method_61435()
 /**
  * method_6198
  */

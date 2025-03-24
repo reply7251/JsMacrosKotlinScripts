@@ -2,6 +2,14 @@ package me.hellrevenger.generated.Map_HoglinEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * field_30532
+ */
+val KClass<HoglinEntity>.CONVERSION_TIME by aliasStatic(HoglinEntity::field_30532)
+/**
+ * method_63662
+ */
+fun HoglinEntity.setTimeInOverworld(arg0: Int) = this.method_63662(arg0)
+/**
  * method_26943
  */
 fun KClass<HoglinEntity>.createHoglinAttributes() = HoglinEntity.method_26943()

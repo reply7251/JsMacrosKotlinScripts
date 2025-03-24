@@ -2,26 +2,14 @@ package me.hellrevenger.generated.Map_SignBlockEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_51273
- */
-fun SignBlockEntityRenderer.getTextScale() = this.method_51273()
-/**
  * method_32154
  */
-fun KClass<SignBlockEntityRenderer>.getTexturedModelData() = SignBlockEntityRenderer.method_32154()
+fun KClass<SignBlockEntityRenderer>.getTexturedModelData(arg0: Boolean) = SignBlockEntityRenderer.method_32154(arg0)
 /**
  * method_32157
  */
-fun KClass<SignBlockEntityRenderer>.createSignModel(arg0: EntityModelLoader, arg1: WoodType) = SignBlockEntityRenderer.method_32157(arg0, arg1)
+fun KClass<SignBlockEntityRenderer>.createSignModel(arg0: LoadedEntityModels, arg1: WoodType, arg2: Boolean) = SignBlockEntityRenderer.method_32157(arg0, arg1, arg2)
 /**
- * method_51272
+ * method_45800
  */
-fun SignBlockEntityRenderer.getSignScale() = this.method_51272()
-/**
- * method_37311
- */
-fun KClass<SignBlockEntityRenderer>.getColor(arg0: SignText) = SignBlockEntityRenderer.method_37311(arg0)
-/**
- * method_23083
- */
-fun SignBlockEntityRenderer.render(arg0: SignBlockEntity, arg1: Float, arg2: MatrixStack, arg3: VertexConsumerProvider, arg4: Int, arg5: Int) = this.method_23083(arg0, arg1, arg2, arg3, arg4, arg5)
+fun KClass<SignBlockEntityRenderer>.renderAsItem(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: Int, arg4: model_Model, arg5: SpriteIdentifier) = SignBlockEntityRenderer.method_45800(arg0, arg1, arg2, arg3, arg4, arg5)

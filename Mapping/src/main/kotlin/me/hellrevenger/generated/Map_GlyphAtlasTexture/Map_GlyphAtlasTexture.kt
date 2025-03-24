@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_2022
  */
-fun GlyphAtlasTexture.getGlyphRenderer(arg0: RenderableGlyph) = this.method_2022(arg0)
+fun GlyphAtlasTexture.bake(arg0: RenderableGlyph) = this.method_2022(arg0)

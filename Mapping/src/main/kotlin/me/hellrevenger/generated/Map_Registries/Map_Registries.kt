@@ -42,10 +42,6 @@ val KClass<Registries>.BLOCK_ENTITY_TYPE by aliasStatic(Registries::field_41181)
  */
 val KClass<Registries>.MAP_DECORATION_TYPE by aliasStatic(Registries::field_50078)
 /**
- * field_48976
- */
-val KClass<Registries>.ARMOR_MATERIAL by aliasStatic(Registries::field_48976)
-/**
  * field_41149
  */
 val KClass<Registries>.BLOCK_STATE_PROVIDER_TYPE by aliasStatic(Registries::field_41149)
@@ -154,6 +150,10 @@ val KClass<Registries>.STRUCTURE_TYPE by aliasStatic(Registries::field_41147)
  */
 val KClass<Registries>.ATTRIBUTE by aliasStatic(Registries::field_41190)
 /**
+ * field_53967
+ */
+val KClass<Registries>.CONSUME_EFFECT_TYPE by aliasStatic(Registries::field_53967)
+/**
  * field_41186
  */
 val KClass<Registries>.POS_RULE_TEST by aliasStatic(Registries::field_41186)
@@ -242,6 +242,10 @@ val KClass<Registries>.SOUND_EVENT by aliasStatic(Registries::field_41172)
  */
 val KClass<Registries>.POINT_OF_INTEREST_TYPE by aliasStatic(Registries::field_41128)
 /**
+ * field_54873
+ */
+val KClass<Registries>.SLOT_DISPLAY by aliasStatic(Registries::field_54873)
+/**
  * field_41156
  */
 val KClass<Registries>.BIOME_SOURCE by aliasStatic(Registries::field_41156)
@@ -290,6 +294,10 @@ val KClass<Registries>.CUSTOM_STAT by aliasStatic(Registries::field_41183)
  */
 val KClass<Registries>.FLOAT_PROVIDER_TYPE by aliasStatic(Registries::field_41139)
 /**
+ * field_54874
+ */
+val KClass<Registries>.RECIPE_DISPLAY by aliasStatic(Registries::field_54874)
+/**
  * field_41179
  */
 val KClass<Registries>.POTION by aliasStatic(Registries::field_41179)
@@ -301,6 +309,10 @@ val KClass<Registries>.REGISTRIES by aliasStatic(Registries::field_41167)
  * field_41173
  */
 val KClass<Registries>.FLUID by aliasStatic(Registries::field_41173)
+/**
+ * field_54927
+ */
+val KClass<Registries>.RECIPE_BOOK_CATEGORY by aliasStatic(Registries::field_54927)
 /**
  * field_46591
  */
@@ -314,9 +326,9 @@ val KClass<Registries>.NUMBER_FORMAT_TYPE by aliasStatic(Registries::field_47555
  */
 val KClass<Registries>.BLOCK_PREDICATE_TYPE by aliasStatic(Registries::field_41142)
 /**
- * field_41166
+ * method_62715
  */
-val KClass<Registries>.INSTRUMENT by aliasStatic(Registries::field_41166)
+fun <T>KClass<Registries>.createEntryLookup(arg0: Registry<T>) = Registries.method_62715<T>(arg0)
 /**
  * method_47476
  */

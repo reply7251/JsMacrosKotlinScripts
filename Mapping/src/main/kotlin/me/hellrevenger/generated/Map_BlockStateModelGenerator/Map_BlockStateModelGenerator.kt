@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val BlockStateModelGenerator.blockStateCollector by alias(BlockStateModelGenerator::field_22830)
 /**
+ * field_55238
+ */
+val BlockStateModelGenerator.itemModelOutput by alias(BlockStateModelGenerator::field_55238)
+/**
  * field_28548
  */
 val KClass<BlockStateModelGenerator>.CONNECTION_VARIANT_FUNCTIONS by aliasStatic(BlockStateModelGenerator::field_28548)
@@ -17,6 +21,10 @@ val BlockStateModelGenerator.modelCollector by alias(BlockStateModelGenerator::f
  * method_25619
  */
 fun BlockStateModelGenerator.registerMirrorable(arg0: Block) = this.method_25619(arg0)
+/**
+ * method_65398
+ */
+fun BlockStateModelGenerator.uploadItemModel(arg0: Item) = this.method_65398(arg0)
 /**
  * method_25668
  */
@@ -40,7 +48,7 @@ fun BlockStateModelGenerator.registerPlantPart(arg0: Block, arg1: Block, arg2: n
 /**
  * method_34631
  */
-fun KClass<BlockStateModelGenerator>.createDeepslateState(arg0: Block, arg1: Identifier, arg2: TextureMap, arg3: BiConsumer<Identifier, Supplier<JsonElement>>) = BlockStateModelGenerator.method_34631(arg0, arg1, arg2, arg3)
+fun KClass<BlockStateModelGenerator>.createDeepslateState(arg0: Block, arg1: Identifier, arg2: TextureMap, arg3: BiConsumer<Identifier, ModelSupplier>) = BlockStateModelGenerator.method_34631(arg0, arg1, arg2, arg3)
 /**
  * method_25561
  */
@@ -57,6 +65,10 @@ fun BlockStateModelGenerator.registerGeneric(arg0: Block) = this.method_51463(ar
  * method_25649
  */
 fun KClass<BlockStateModelGenerator>.createAxisRotatedVariantMap() = BlockStateModelGenerator.method_25649()
+/**
+ * method_65402
+ */
+fun BlockStateModelGenerator.registerTintedItemModel(arg0: Block, arg1: Identifier, arg2: TintSource) = this.method_65402(arg0, arg1, arg2)
 /**
  * method_25536
  */
@@ -78,13 +90,21 @@ fun KClass<BlockStateModelGenerator>.createFenceGateBlockState(arg0: Block, arg1
  */
 fun KClass<BlockStateModelGenerator>.createAxisRotatedBlockState(arg0: Block, arg1: Identifier, arg2: Identifier) = BlockStateModelGenerator.method_25667(arg0, arg1, arg2)
 /**
+ * method_65422
+ */
+fun BlockStateModelGenerator.registerBuiltin(arg0: Block) = this.method_65422(arg0)
+/**
  * method_33520
  */
-fun BlockStateModelGenerator.registerWallPlant(arg0: Block) = this.method_33520(arg0)
+fun BlockStateModelGenerator.registerMultifaceBlock(arg0: Block) = this.method_33520(arg0)
 /**
  * method_25641
  */
 fun BlockStateModelGenerator.registerSimpleCubeAll(arg0: Block) = this.method_25641(arg0)
+/**
+ * method_65417
+ */
+fun BlockStateModelGenerator.registerDoubleBlockAndItem(arg0: Block, arg1: net.minecraft.class_4910.class_4913) = this.method_65417(arg0, arg1)
 /**
  * method_25665
  */
@@ -92,7 +112,7 @@ fun BlockStateModelGenerator.registerOrientableTrapdoor(arg0: Block) = this.meth
 /**
  * method_34608
  */
-fun KClass<BlockStateModelGenerator>.createStoneState(arg0: Block, arg1: Identifier, arg2: TextureMap, arg3: BiConsumer<Identifier, Supplier<JsonElement>>) = BlockStateModelGenerator.method_34608(arg0, arg1, arg2, arg3)
+fun KClass<BlockStateModelGenerator>.createStoneState(arg0: Block, arg1: Identifier, arg2: TextureMap, arg3: BiConsumer<Identifier, ModelSupplier>) = BlockStateModelGenerator.method_34608(arg0, arg1, arg2, arg3)
 /**
  * method_25558
  */
@@ -126,6 +146,10 @@ fun KClass<BlockStateModelGenerator>.createButtonBlockState(arg0: Block, arg1: I
  */
 fun BlockStateModelGenerator.registerBuiltinWithParticle(arg0: Block, arg1: Item) = this.method_25542(arg0, arg1)
 /**
+ * method_65409
+ */
+fun BlockStateModelGenerator.registerSpecialItemModel(arg0: Block, arg1: net.minecraft.class_10515.class_10516) = this.method_65409(arg0, arg1)
+/**
  * method_25583
  */
 fun KClass<BlockStateModelGenerator>.buildBlockStateVariants(arg0: MutableList<Identifier>, arg1: UnaryOperator<BlockStateVariant>) = BlockStateModelGenerator.method_25583(arg0, arg1)
@@ -146,13 +170,17 @@ fun KClass<BlockStateModelGenerator>.createCustomFenceBlockState(arg0: Block, ar
  */
 fun <T>KClass<BlockStateModelGenerator>.createValueFencedModelMap(arg0: property_Property<T>, arg1: T, arg2: Identifier, arg3: Identifier) where T: Comparable<T> = BlockStateModelGenerator.method_25566<T>(arg0, arg1, arg2, arg3)
 /**
- * method_25632
+ * method_65421
  */
-fun BlockStateModelGenerator.registerBuiltin(arg0: Block, arg1: Block) = this.method_25632(arg0, arg1)
+fun BlockStateModelGenerator.registerGrassTintedDoubleBlockAndItem(arg0: Block) = this.method_65421(arg0)
 /**
  * method_25645
  */
 fun KClass<BlockStateModelGenerator>.createBlockStateWithTwoModelAndRandomInversion(arg0: Block, arg1: Identifier, arg2: Identifier) = BlockStateModelGenerator.method_25645(arg0, arg1, arg2)
+/**
+ * method_64949
+ */
+fun BlockStateModelGenerator.registerCreakingHeart(arg0: Block) = this.method_64949(arg0)
 /**
  * method_25671
  */
@@ -170,6 +198,10 @@ fun KClass<BlockStateModelGenerator>.createSouthDefaultHorizontalRotationStates(
  */
 fun BlockStateModelGenerator.registerCooker(arg0: Block, arg1: net.minecraft.class_4946.class_4947) = this.method_25652(arg0, arg1)
 /**
+ * method_65295
+ */
+fun BlockStateModelGenerator.registerMultifaceBlock(arg0: Block, arg1: Item) = this.method_65295(arg0, arg1)
+/**
  * method_25537
  */
 fun BlockStateModelGenerator.registerItemModel(arg0: Item) = this.method_25537(arg0)
@@ -177,6 +209,10 @@ fun BlockStateModelGenerator.registerItemModel(arg0: Item) = this.method_25537(a
  * method_25636
  */
 fun KClass<BlockStateModelGenerator>.createWallBlockState(arg0: Block, arg1: Identifier, arg2: Identifier, arg3: Identifier) = BlockStateModelGenerator.method_25636(arg0, arg1, arg2, arg3)
+/**
+ * method_65416
+ */
+fun BlockStateModelGenerator.registerTwoLayerItemModel(arg0: Block, arg1: String) = this.method_65416(arg0, arg1)
 /**
  * method_25666
  */
@@ -198,17 +234,13 @@ fun BlockStateModelGenerator.registerDispenserLikeOrientable(arg0: Block) = this
  */
 fun BlockStateModelGenerator.registerCopperBulb(arg0: Block) = this.method_54826(arg0)
 /**
+ * method_65403
+ */
+fun BlockStateModelGenerator.registerBuiltinWithParticle(arg0: Block, arg1: Block) = this.method_65403(arg0, arg1)
+/**
  * method_25650
  */
 fun BlockStateModelGenerator.registerCubeAllModelTexturePool(arg0: Block) = this.method_25650(arg0)
-/**
- * method_25585
- */
-fun BlockStateModelGenerator.registerBuiltin(arg0: Identifier, arg1: Block) = this.method_25585(arg0, arg1)
-/**
- * method_35868
- */
-fun BlockStateModelGenerator.registerSingleton(arg0: Block, arg1: TextureMap, arg2: Model) = this.method_35868(arg0, arg1, arg2)
 /**
  * method_25534
  */
@@ -220,7 +252,7 @@ fun BlockStateModelGenerator.registerItemModel(arg0: Block, arg1: String) = this
 /**
  * method_25651
  */
-fun BlockStateModelGenerator.registerGlassPane(arg0: Block, arg1: Block) = this.method_25651(arg0, arg1)
+fun BlockStateModelGenerator.registerGlassAndPane(arg0: Block, arg1: Block) = this.method_25651(arg0, arg1)
 /**
  * method_25685
  */
@@ -230,13 +262,13 @@ fun BlockStateModelGenerator.registerTurnableRail(arg0: Block) = this.method_256
  */
 fun BlockStateModelGenerator.getFireFloorModels(arg0: Block) = this.method_25700(arg0)
 /**
- * method_25540
- */
-fun BlockStateModelGenerator.excludeFromSimpleItemModelGeneration(arg0: Block) = this.method_25540(arg0)
-/**
  * method_25550
  */
 fun BlockStateModelGenerator.registerNorthDefaultHorizontalRotatable(arg0: Block, arg1: TextureMap) = this.method_25550(arg0, arg1)
+/**
+ * method_65404
+ */
+fun BlockStateModelGenerator.registerChest(arg0: Block, arg1: Block, arg2: Identifier, arg3: Boolean) = this.method_65404(arg0, arg1, arg2, arg3)
 /**
  * method_49377
  */
@@ -269,6 +301,10 @@ fun BlockStateModelGenerator.registerTopSoil(arg0: Block, arg1: Identifier, arg2
  * method_25698
  */
 fun BlockStateModelGenerator.registerNetherrackBottomCustomTop(arg0: Block) = this.method_25698(arg0)
+/**
+ * method_65408
+ */
+fun BlockStateModelGenerator.registerTintedBlockAndItem(arg0: Block, arg1: net.minecraft.class_4946.class_4947, arg2: Int) = this.method_65408(arg0, arg1, arg2)
 /**
  * method_25549
  */
@@ -306,9 +342,17 @@ fun BlockStateModelGenerator.registerTintableCrossBlockState(arg0: Block, arg1: 
  */
 fun KClass<BlockStateModelGenerator>.createEastDefaultHorizontalRotationStates() = BlockStateModelGenerator.method_25630()
 /**
+ * method_65399
+ */
+fun BlockStateModelGenerator.registerItemModel(arg0: Item, arg1: Identifier) = this.method_65399(arg0, arg1)
+/**
+ * method_65419
+ */
+fun BlockStateModelGenerator.uploadParticleModel(arg0: Block, arg1: Block) = this.method_65419(arg0, arg1)
+/**
  * method_42039
  */
-fun KClass<BlockStateModelGenerator>.createMudBrickState(arg0: Block, arg1: Identifier, arg2: TextureMap, arg3: BiConsumer<Identifier, Supplier<JsonElement>>) = BlockStateModelGenerator.method_42039(arg0, arg1, arg2, arg3)
+fun KClass<BlockStateModelGenerator>.createMudBrickState(arg0: Block, arg1: Identifier, arg2: TextureMap, arg3: BiConsumer<Identifier, ModelSupplier>) = BlockStateModelGenerator.method_42039(arg0, arg1, arg2, arg3)
 /**
  * method_25692
  */
@@ -318,9 +362,17 @@ fun BlockStateModelGenerator.registerAnvil(arg0: Block) = this.method_25692(arg0
  */
 fun BlockStateModelGenerator.registerFlowerPotPlant(arg0: Block, arg1: Block, arg2: net.minecraft.class_4910.class_4913) = this.method_25545(arg0, arg1, arg2)
 /**
+ * method_65414
+ */
+fun BlockStateModelGenerator.uploadTwoLayerBlockItemModel(arg0: Item, arg1: Block, arg2: String) = this.method_65414(arg0, arg1, arg2)
+/**
  * method_49378
  */
 fun BlockStateModelGenerator.registerFlowerbed(arg0: Block) = this.method_49378(arg0)
+/**
+ * method_65405
+ */
+fun BlockStateModelGenerator.registerBanner(arg0: Block, arg1: Block, arg2: DyeColor) = this.method_65405(arg0, arg1, arg2)
 /**
  * method_47812
  */
@@ -358,17 +410,13 @@ fun BlockStateModelGenerator.getFireUpModels(arg0: Block) = this.method_25704(ar
  */
 fun KClass<BlockStateModelGenerator>.createTrapdoorBlockState(arg0: Block, arg1: Identifier, arg2: Identifier, arg3: Identifier) = BlockStateModelGenerator.method_25662(arg0, arg1, arg2, arg3)
 /**
- * method_25710
+ * method_65406
  */
-fun BlockStateModelGenerator.registerShulkerBox(arg0: Block) = this.method_25710(arg0)
+fun BlockStateModelGenerator.registerSkull(arg0: Block, arg1: Block, arg2: net.minecraft.class_2484.class_2485, arg3: Identifier) = this.method_65406(arg0, arg1, arg2, arg3)
 /**
  * method_25553
  */
 fun BlockStateModelGenerator.registerAxisRotated(arg0: Block, arg1: net.minecraft.class_4946.class_4947) = this.method_25553(arg0, arg1)
-/**
- * method_25538
- */
-fun BlockStateModelGenerator.registerParentedItemModel(arg0: Item, arg1: Identifier) = this.method_25538(arg0, arg1)
 /**
  * method_25640
  */
@@ -398,6 +446,10 @@ fun BlockStateModelGenerator.registerMushroomBlock(arg0: Block) = this.method_25
  */
 fun BlockStateModelGenerator.registerCandle(arg0: Block, arg1: Block) = this.method_32228(arg0, arg1)
 /**
+ * method_25710
+ */
+fun BlockStateModelGenerator.registerShulkerBox(arg0: Block, arg1: DyeColor) = this.method_25710(arg0, arg1)
+/**
  * method_25675
  */
 fun BlockStateModelGenerator.createUpDefaultFacingVariantMap() = this.method_25675()
@@ -414,9 +466,21 @@ fun BlockStateModelGenerator.registerWaxedCopperBulb(arg0: Block, arg1: Block) =
  */
 fun BlockStateModelGenerator.registerRotatable(arg0: Block) = this.method_25631(arg0)
 /**
+ * method_64941
+ */
+fun BlockStateModelGenerator.registerHangingMoss(arg0: Block) = this.method_64941(arg0)
+/**
  * method_25708
  */
 fun BlockStateModelGenerator.registerNorthDefaultHorizontalRotation(arg0: Block) = this.method_25708(arg0)
+/**
+ * method_65420
+ */
+fun BlockStateModelGenerator.registerGrassTinted(arg0: Block) = this.method_65420(arg0)
+/**
+ * method_65407
+ */
+fun BlockStateModelGenerator.registerFlowerPotPlantAndItem(arg0: Block, arg1: Block, arg2: net.minecraft.class_4910.class_4913) = this.method_65407(arg0, arg1, arg2)
 /**
  * method_25572
  */
@@ -425,10 +489,6 @@ fun KClass<BlockStateModelGenerator>.fillDoorVariantMap(arg0: net.minecraft.clas
  * method_25535
  */
 fun BlockStateModelGenerator.getBambooBlockStateVariants(arg0: Int) = this.method_25535(arg0)
-/**
- * method_25682
- */
-fun BlockStateModelGenerator.registerBed(arg0: Block, arg1: Block) = this.method_25682(arg0, arg1)
 /**
  * method_25634
  */
@@ -446,9 +506,21 @@ fun BlockStateModelGenerator.createSubModel(arg0: Block, arg1: String, arg2: Mod
  */
 fun KClass<BlockStateModelGenerator>.createBooleanModelMap(arg0: BooleanProperty, arg1: Identifier, arg2: Identifier) = BlockStateModelGenerator.method_25565(arg0, arg1, arg2)
 /**
+ * method_65400
+ */
+fun BlockStateModelGenerator.uploadBlockItemModel(arg0: Item, arg1: Block) = this.method_65400(arg0, arg1)
+/**
+ * method_64940
+ */
+fun BlockStateModelGenerator.registerPaleMossCarpet(arg0: Block) = this.method_64940(arg0)
+/**
  * method_25546
  */
 fun BlockStateModelGenerator.registerCubeWithCustomTextures(arg0: Block, arg1: Block, arg2: BiFunction<Block, Block, TextureMap>) = this.method_25546(arg0, arg1, arg2)
+/**
+ * method_65401
+ */
+fun BlockStateModelGenerator.uploadBlockItemModel(arg0: Item, arg1: Block, arg2: String) = this.method_65401(arg0, arg1, arg2)
 /**
  * method_25660
  */
@@ -480,7 +552,7 @@ fun BlockStateModelGenerator.registerDoubleBlock(arg0: Block, arg1: Identifier, 
 /**
  * method_47519
  */
-fun KClass<BlockStateModelGenerator>.createUvLockedColumnBlockState(arg0: Block, arg1: TextureMap, arg2: BiConsumer<Identifier, Supplier<JsonElement>>) = BlockStateModelGenerator.method_47519(arg0, arg1, arg2)
+fun KClass<BlockStateModelGenerator>.createUvLockedColumnBlockState(arg0: Block, arg1: TextureMap, arg2: BiConsumer<Identifier, ModelSupplier>) = BlockStateModelGenerator.method_47519(arg0, arg1, arg2)
 /**
  * method_54824
  */
@@ -494,9 +566,17 @@ fun BlockStateModelGenerator.registerCommandBlock(arg0: Block) = this.method_256
  */
 fun KClass<BlockStateModelGenerator>.createSingletonBlockState(arg0: Block, arg1: Identifier) = BlockStateModelGenerator.method_25644(arg0, arg1)
 /**
+ * method_65415
+ */
+fun BlockStateModelGenerator.registerBed(arg0: Block, arg1: Block, arg2: DyeColor) = this.method_65415(arg0, arg1, arg2)
+/**
  * method_25658
  */
 fun BlockStateModelGenerator.registerDoor(arg0: Block) = this.method_25658(arg0)
+/**
+ * method_65291
+ */
+fun BlockStateModelGenerator.registerMultifaceBlockModel(arg0: Block) = this.method_65291(arg0)
 /**
  * method_25601
  */

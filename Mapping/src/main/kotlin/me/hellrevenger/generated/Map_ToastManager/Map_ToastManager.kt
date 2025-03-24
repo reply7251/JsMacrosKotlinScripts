@@ -10,6 +10,10 @@ fun <T>ToastManager.getToast(arg0: Class<out T>, arg1: Object) where T: Toast = 
  */
 fun ToastManager.draw(arg0: DrawContext) = this.method_1996(arg0)
 /**
+ * method_61990
+ */
+fun ToastManager.update() = this.method_61990()
+/**
  * method_1999
  */
 fun ToastManager.add(arg0: Toast) = this.method_1999(arg0)

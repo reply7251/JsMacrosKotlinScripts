@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 val TextRenderer.random by alias(TextRenderer::field_2001)
 /**
+ * field_24237
+ */
+val KClass<TextRenderer>.FORWARD_SHIFT by aliasStatic(TextRenderer::field_24237)
+/**
  * field_2000
  */
 val TextRenderer.fontHeight by alias(TextRenderer::field_2000)
@@ -29,14 +33,6 @@ fun TextRenderer.trimToWidth(arg0: StringVisitable, arg1: Int) = this.method_171
  * method_37296
  */
 fun TextRenderer.drawWithOutline(arg0: OrderedText, arg1: Float, arg2: Float, arg3: Int, arg4: Int, arg5: Matrix4f, arg6: VertexConsumerProvider, arg7: Int) = this.method_37296(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-/**
- * method_27522
- */
-fun TextRenderer.draw(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: Boolean, arg5: Matrix4f, arg6: VertexConsumerProvider, arg7: net.minecraft.class_327.class_6415, arg8: Int, arg9: Int, arg10: Boolean) = this.method_27522(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)
-/**
- * method_30882
- */
-fun TextRenderer.draw(arg0: Text, arg1: Float, arg2: Float, arg3: Int, arg4: Boolean, arg5: Matrix4f, arg6: VertexConsumerProvider, arg7: net.minecraft.class_327.class_6415, arg8: Int, arg9: Int) = this.method_30882(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 /**
  * method_27525
  */
@@ -74,6 +70,10 @@ fun TextRenderer.draw(arg0: String, arg1: Float, arg2: Float, arg3: Int, arg4: B
  */
 fun TextRenderer.wrapLines(arg0: StringVisitable, arg1: Int) = this.method_1728(arg0, arg1)
 /**
+ * method_27522
+ */
+fun TextRenderer.draw(arg0: Text, arg1: Float, arg2: Float, arg3: Int, arg4: Boolean, arg5: Matrix4f, arg6: VertexConsumerProvider, arg7: net.minecraft.class_327.class_6415, arg8: Int, arg9: Int) = this.method_27522(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
+/**
  * method_1713
  */
 fun TextRenderer.getWrappedLinesHeight(arg0: String, arg1: Int) = this.method_1713(arg0, arg1)
@@ -81,3 +81,7 @@ fun TextRenderer.getWrappedLinesHeight(arg0: String, arg1: Int) = this.method_17
  * method_1727
  */
 fun TextRenderer.getWidth(arg0: String) = this.method_1727(arg0)
+/**
+ * method_30882
+ */
+fun TextRenderer.draw(arg0: Text, arg1: Float, arg2: Float, arg3: Int, arg4: Boolean, arg5: Matrix4f, arg6: VertexConsumerProvider, arg7: net.minecraft.class_327.class_6415, arg8: Int, arg9: Int, arg10: Boolean) = this.method_30882(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)

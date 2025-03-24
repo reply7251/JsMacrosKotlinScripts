@@ -8,11 +8,11 @@ fun PosArgument.toAbsoluteBlockPos(arg0: ServerCommandSource) = this.method_9704
 /**
  * method_9709
  */
-fun PosArgument.toAbsoluteRotation(arg0: ServerCommandSource) = this.method_9709(arg0)
+fun PosArgument.getRotation(arg0: ServerCommandSource) = this.method_9709(arg0)
 /**
  * method_9708
  */
-fun PosArgument.toAbsolutePos(arg0: ServerCommandSource) = this.method_9708(arg0)
+fun PosArgument.getPos(arg0: ServerCommandSource) = this.method_9708(arg0)
 /**
  * method_9705
  */

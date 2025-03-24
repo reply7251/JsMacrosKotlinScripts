@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_ChunkTicketManager
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_61262
+ */
+fun ChunkTicketManager.iterateChunkPosToTick() = this.method_61262()
+/**
  * method_21683
  */
 fun ChunkTicketManager.toDumpString() = this.method_21683()
@@ -21,6 +25,10 @@ fun <T>ChunkTicketManager.addTicketWithLevel(arg0: ChunkTicketType<T>, arg1: Chu
  * method_38630
  */
 fun ChunkTicketManager.shouldTickEntities(arg0: Long) = this.method_38630(arg0)
+/**
+ * method_61263
+ */
+fun ChunkTicketManager.getChunks() = this.method_61263()
 /**
  * method_20800
  */

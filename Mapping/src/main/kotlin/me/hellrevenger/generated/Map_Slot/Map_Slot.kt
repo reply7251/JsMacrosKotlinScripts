@@ -50,10 +50,6 @@ fun Slot.isEnabled() = this.method_7682()
  */
 fun Slot.setStack(arg0: ItemStack, arg1: ItemStack) = this.method_48931(arg0, arg1)
 /**
- * method_7679
- */
-fun Slot.getBackgroundSprite() = this.method_7679()
-/**
  * method_7680
  */
 fun Slot.canInsert(arg0: ItemStack) = this.method_7680(arg0)
@@ -101,6 +97,10 @@ fun Slot.takeStack(arg0: Int) = this.method_7671(arg0)
  * method_7681
  */
 fun Slot.hasStack() = this.method_7681()
+/**
+ * method_7679
+ */
+fun Slot.getBackgroundSprite() = this.method_7679()
 /**
  * method_7676
  */

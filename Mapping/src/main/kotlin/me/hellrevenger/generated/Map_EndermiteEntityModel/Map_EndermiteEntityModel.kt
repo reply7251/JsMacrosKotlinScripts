@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_31996
  */
-fun <T>KClass<EndermiteEntityModel<T>>.getTexturedModelData() where T: Entity = EndermiteEntityModel.method_31996()
+fun KClass<EndermiteEntityModel>.getTexturedModelData() = EndermiteEntityModel.method_31996()

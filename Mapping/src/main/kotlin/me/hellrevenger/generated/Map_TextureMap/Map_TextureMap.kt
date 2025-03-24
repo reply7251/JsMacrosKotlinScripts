@@ -14,6 +14,14 @@ fun KClass<TextureMap>.pattern(arg0: Block) = TextureMap.method_25890(arg0)
  */
 fun KClass<TextureMap>.trialSpawner(arg0: Block, arg1: String, arg2: String) = TextureMap.method_55307(arg0, arg1, arg2)
 /**
+ * method_65299
+ */
+fun KClass<TextureMap>.crossAndCrossEmissive(arg0: Block) = TextureMap.method_65299(arg0)
+/**
+ * method_65300
+ */
+fun KClass<TextureMap>.plantAndCrossEmissive(arg0: Block) = TextureMap.method_65300(arg0)
+/**
  * method_25875
  */
 fun KClass<TextureMap>.all(arg0: Identifier) = TextureMap.method_25875(arg0)
@@ -249,6 +257,10 @@ fun KClass<TextureMap>.lantern(arg0: Block) = TextureMap.method_25904(arg0)
  * method_56887
  */
 fun KClass<TextureMap>.vault(arg0: Block, arg1: String, arg2: String, arg3: String, arg4: String) = TextureMap.method_56887(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_64950
+ */
+fun KClass<TextureMap>.side(arg0: Block) = TextureMap.method_64950(arg0)
 /**
  * method_25908
  */

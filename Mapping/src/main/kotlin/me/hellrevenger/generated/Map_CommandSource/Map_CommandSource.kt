@@ -110,10 +110,6 @@ fun CommandSource.getPlayerNames() = this.method_9262()
  */
 fun CommandSource.getEnabledFeatures() = this.method_45549()
 /**
- * method_9273
- */
-fun CommandSource.getRecipeIds() = this.method_9273()
-/**
  * method_29310
  */
 fun CommandSource.getWorldKeys() = this.method_29310()

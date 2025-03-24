@@ -218,6 +218,10 @@ val KClass<RegistryKeys>.PARTICLE_TYPE by aliasStatic(RegistryKeys::field_41210)
  */
 val KClass<RegistryKeys>.POINT_OF_INTEREST_TYPE by aliasStatic(RegistryKeys::field_41212)
 /**
+ * field_54032
+ */
+val KClass<RegistryKeys>.TRIAL_SPAWNER by aliasStatic(RegistryKeys::field_54032)
+/**
  * field_41214
  */
 val KClass<RegistryKeys>.POS_RULE_TEST by aliasStatic(RegistryKeys::field_41214)
@@ -278,6 +282,10 @@ val KClass<RegistryKeys>.DECORATED_POT_PATTERN by aliasStatic(RegistryKeys::fiel
  */
 val KClass<RegistryKeys>.FLOAT_PROVIDER_TYPE by aliasStatic(RegistryKeys::field_41269)
 /**
+ * field_54928
+ */
+val KClass<RegistryKeys>.RECIPE_BOOK_CATEGORY by aliasStatic(RegistryKeys::field_54928)
+/**
  * field_41262
  */
 val KClass<RegistryKeys>.COMMAND_ARGUMENT_TYPE by aliasStatic(RegistryKeys::field_41262)
@@ -333,6 +341,10 @@ val KClass<RegistryKeys>.TRIM_MATERIAL by aliasStatic(RegistryKeys::field_42083)
  * field_41241
  */
 val KClass<RegistryKeys>.DIMENSION_TYPE by aliasStatic(RegistryKeys::field_41241)
+/**
+ * field_53968
+ */
+val KClass<RegistryKeys>.CONSUME_EFFECT_TYPE by aliasStatic(RegistryKeys::field_53968)
 /**
  * field_41234
  */
@@ -414,13 +426,17 @@ val KClass<RegistryKeys>.ITEM_MODIFIER by aliasStatic(RegistryKeys::field_50080)
  */
 val KClass<RegistryKeys>.PREDICATE by aliasStatic(RegistryKeys::field_50081)
 /**
+ * field_54875
+ */
+val KClass<RegistryKeys>.RECIPE_DISPLAY by aliasStatic(RegistryKeys::field_54875)
+/**
+ * field_54876
+ */
+val KClass<RegistryKeys>.SLOT_DISPLAY by aliasStatic(RegistryKeys::field_54876)
+/**
  * field_50079
  */
 val KClass<RegistryKeys>.LOOT_TABLE by aliasStatic(RegistryKeys::field_50079)
-/**
- * field_48977
- */
-val KClass<RegistryKeys>.ARMOR_MATERIAL by aliasStatic(RegistryKeys::field_48977)
 /**
  * field_41197
  */

@@ -8,4 +8,4 @@ val KClass<ElderGuardianEntityRenderer>.TEXTURE by aliasStatic(ElderGuardianEnti
 /**
  * method_3976
  */
-fun ElderGuardianEntityRenderer.getTexture(arg0: GuardianEntity) = this.method_3976(arg0)
+fun ElderGuardianEntityRenderer.getTexture(arg0: GuardianEntityRenderState) = this.method_3976(arg0)

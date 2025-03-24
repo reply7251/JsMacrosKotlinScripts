@@ -26,18 +26,18 @@ fun RealmsAcceptRejectButton.getRight() = this.method_21109()
  */
 fun RealmsAcceptRejectButton.handleClick(arg0: Int) = this.method_21110(arg0)
 /**
- * method_21113
- */
-fun KClass<RealmsAcceptRejectButton>.render(arg0: DrawContext, arg1: MutableList<RealmsAcceptRejectButton>, arg2: RealmsObjectSelectionList<*>, arg3: Int, arg4: Int, arg5: Int, arg6: Int) = RealmsAcceptRejectButton.method_21113(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
  * method_21115
  */
 fun RealmsAcceptRejectButton.getBottom() = this.method_21115()
 /**
  * method_21114
  */
-fun KClass<RealmsAcceptRejectButton>.handleClick(arg0: RealmsObjectSelectionList<*>, arg1: net.minecraft.class_4280.class_4281<*>, arg2: MutableList<RealmsAcceptRejectButton>, arg3: Int, arg4: Double, arg5: Double) = RealmsAcceptRejectButton.method_21114(arg0, arg1, arg2, arg3, arg4, arg5)
+fun KClass<RealmsAcceptRejectButton>.handleClick(arg0: EntryListWidget<*>, arg1: net.minecraft.class_4280.class_4281<*>, arg2: MutableList<RealmsAcceptRejectButton>, arg3: Int, arg4: Double, arg5: Double) = RealmsAcceptRejectButton.method_21114(arg0, arg1, arg2, arg3, arg4, arg5)
 /**
  * method_21111
  */
 fun RealmsAcceptRejectButton.render(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Int, arg4: Int) = this.method_21111(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_21113
+ */
+fun KClass<RealmsAcceptRejectButton>.render(arg0: DrawContext, arg1: MutableList<RealmsAcceptRejectButton>, arg2: EntryListWidget<*>, arg3: Int, arg4: Int, arg5: Int, arg6: Int) = RealmsAcceptRejectButton.method_21113(arg0, arg1, arg2, arg3, arg4, arg5, arg6)

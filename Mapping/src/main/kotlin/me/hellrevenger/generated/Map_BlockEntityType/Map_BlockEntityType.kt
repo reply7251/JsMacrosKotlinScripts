@@ -26,6 +26,10 @@ val <T>KClass<BlockEntityType<T>>.SKULL where T: BlockEntity by aliasStatic({Blo
  */
 val <T>KClass<BlockEntityType<T>>.ENCHANTING_TABLE where T: BlockEntity by aliasStatic({BlockEntityType.field_11912})
 /**
+ * field_54774
+ */
+val <T>KClass<BlockEntityType<T>>.CREAKING_HEART where T: BlockEntity by aliasStatic({BlockEntityType.field_54774})
+/**
  * field_11903
  */
 val <T>KClass<BlockEntityType<T>>.FURNACE where T: BlockEntity by aliasStatic({BlockEntityType.field_11903})
@@ -181,6 +185,10 @@ val <T>KClass<BlockEntityType<T>>.CRAFTER where T: BlockEntity by aliasStatic({B
  * method_11032
  */
 fun <T>BlockEntityType<T>.instantiate(arg0: BlockPos, arg1: BlockState) where T: BlockEntity = this.method_11032(arg0, arg1)
+/**
+ * method_65166
+ */
+fun <T>BlockEntityType<T>.canPotentiallyExecuteCommands() where T: BlockEntity = this.method_65166()
 /**
  * method_11033
  */

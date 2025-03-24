@@ -10,6 +10,14 @@ val KClass<DolphinEntity>.CAN_TAKE by aliasStatic(DolphinEntity::field_6748)
  */
 val KClass<DolphinEntity>.MAX_AIR by aliasStatic(DolphinEntity::field_30326)
 /**
+ * field_52467
+ */
+val KClass<DolphinEntity>.BABY_SCALE_FACTOR by aliasStatic(DolphinEntity::field_52467)
+/**
+ * method_61468
+ */
+fun DolphinEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_61468(arg0, arg1)
+/**
  * method_6494
  */
 fun DolphinEntity.getTreasurePos() = this.method_6494()
