@@ -69,7 +69,7 @@ dependencies {
     implementation("org.ow2.asm:asm:9.7")
 
     implementation("net.fabricmc.fabric-api:fabric-api:0.100.4+1.21")
-    implementation(files("../scripts/libs/jars/jsmacros-1.21.4-2.0.0-beta-5f58e14-fabric.jar"))
+    implementation(files("../scripts/libs/jars/jsmacros-1.21.4-2.0.0.jar"))
     implementation(files("../scripts/libs/jars/int-jvm17-open.jar"))
 
 }
