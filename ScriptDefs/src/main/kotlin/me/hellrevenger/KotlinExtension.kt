@@ -2,16 +2,19 @@ package me.hellrevenger
 
 
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
+import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.api.FEventListener
 import me.hellrevenger.library.api.ScriptConfig
-import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
 import me.hellrevenger.mixins.MixinMain
 import net.minecraft.class_310
 import xyz.wagyourtail.jsmacros.client.JsMacros
+import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.extensions.Extension
+import xyz.wagyourtail.jsmacros.core.extensions.LanguageExtension
+import xyz.wagyourtail.jsmacros.core.extensions.LibraryExtension
 import xyz.wagyourtail.jsmacros.core.language.BaseLanguage
 import xyz.wagyourtail.jsmacros.core.language.BaseWrappedException
 import xyz.wagyourtail.jsmacros.core.library.BaseLibrary
@@ -27,11 +30,17 @@ import kotlin.script.experimental.api.onFailure
 import kotlin.script.experimental.host.toScriptSource
 import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 
-class
-KotlinExtension: Extension {
+class KotlinExtension: LanguageExtension, LibraryExtension {
+    companion object {
+        lateinit var runner: Core<*,*>
+    }
+
     private var languageDefinition: KotlinLanguageDefinition? = null
 
-    override fun init() {
+    override fun getExtensionName() = "kotlin"
+
+    override fun init(runner: Core<*,*>) {
+        KotlinExtension.runner = runner
         val compConf = object : ScriptCompilationConfiguration({}) {}
         val evalConf = object : ScriptEvaluationConfiguration({}) {}
         val ret = BasicJvmScriptingHost().eval("println(\"Kotlin Preloaded!\")".toScriptSource(), compConf, evalConf)
@@ -48,20 +57,18 @@ KotlinExtension: Extension {
             }
             throw RuntimeException("Kotlin script failed:\n        ${reports.joinToString("\n        ")}", exceptions.firstOrNull())
         }
-        MixinMain.mixins()
+        MixinMain.mixins(runner)
     }
 
     override fun getPriority() = 0
 
-    override fun getLanguageImplName() = "kotlin"
-
     override fun extensionMatch(file: File) =
         if (file.name.endsWith(".kts")) {
-            if (file.name.contains(languageImplName)) {
-                Extension.ExtMatch.MATCH_WITH_NAME
+            if (file.name.contains(extensionName)) {
+                LanguageExtension.ExtMatch.MATCH_WITH_NAME
             }
-            Extension.ExtMatch.MATCH
-        } else Extension.ExtMatch.NOT_MATCH
+            LanguageExtension.ExtMatch.MATCH
+        } else LanguageExtension.ExtMatch.NOT_MATCH
 
     override fun defaultFileExtension() = "kts"
 
@@ -136,4 +143,9 @@ KotlinExtension: Extension {
     override fun isGuestObject(p0: Any?): Boolean {
         return false
     }
+}
+
+object SharedLibraries {
+    val Chat = FChat(KotlinExtension.runner)
+    val Client = FClient(KotlinScriptContext(KotlinExtension.runner, null, null))
 }

@@ -5,6 +5,7 @@ import com.sun.jna.NativeLibrary
 import com.sun.jna.ptr.IntByReference
 import com.sun.jna.ptr.PointerByReference
 import javassist.ClassPool
+import me.hellrevenger.SharedLibraries
 import net.bytebuddy.ByteBuddy
 import net.bytebuddy.asm.Advice
 import net.bytebuddy.asm.AsmVisitorWrapper
@@ -28,7 +29,6 @@ import net.bytebuddy.utility.OpenedClassReader
 import net.bytebuddy.utility.RandomString
 import org.objectweb.asm.Type
 import org.spongepowered.tools.agent.MixinAgent
-import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import java.io.File
 import java.lang.instrument.ClassDefinition
@@ -103,7 +103,7 @@ class GetByteCode : ClassFileTransformer {
     }
 }
 
-val classInjector = ClassInjector.UsingUnsafe.Factory.resolve(instrumentation).make(FClient(null).minecraft::class.java.classLoader)
+val classInjector = ClassInjector.UsingUnsafe.Factory.resolve(instrumentation).make(SharedLibraries.Client.minecraft::class.java.classLoader)
 
 var classInjectorInited = false
 private fun initClassInjector() {

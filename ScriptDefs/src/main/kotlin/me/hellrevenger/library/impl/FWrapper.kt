@@ -13,6 +13,7 @@ import kotlin.concurrent.thread
 import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 
 
+@Suppress("UNCHECKED_CAST")
 @Library(value = "JavaWrapper", languages = [KotlinLanguageDefinition::class])
 class FWrapper(
     context: KotlinScriptContext,
@@ -78,12 +79,12 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
             try {
                 wrapped()
             } catch (e: Throwable) {
-                Core.getInstance().profile.logError(KotlinLanguageDefinition.KotlinRuntimeException(e, ctx.file))
+                ctx.runner.profile.logError(KotlinLanguageDefinition.KotlinRuntimeException(e, ctx.file))
             } finally {
                 ctx.releaseBoundEventIfPresent(Thread.currentThread())
                 ctx.unbindThread(Thread.currentThread())
 
-                Core.getInstance().profile.joinedThreadStack.remove(Thread.currentThread())
+                ctx.runner.profile.joinedThreadStack.remove(Thread.currentThread())
             }
         }
     }
@@ -91,8 +92,8 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
     private fun call(wrapped: () -> R): R {
         try {
             ctx.bindThread(Thread.currentThread())
-            if (Core.getInstance().profile.checkJoinedThreadStack()) {
-                Core.getInstance().profile.joinedThreadStack.add(Thread.currentThread())
+            if (ctx.runner.profile.checkJoinedThreadStack()) {
+                ctx.runner.profile.joinedThreadStack.add(Thread.currentThread())
             }
             return wrapped()
         } catch (e: Throwable) {
@@ -100,15 +101,15 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
         } finally {
             ctx.releaseBoundEventIfPresent(Thread.currentThread())
             ctx.unbindThread(Thread.currentThread())
-            Core.getInstance().profile.joinedThreadStack.remove(Thread.currentThread())
+            ctx.runner.profile.joinedThreadStack.remove(Thread.currentThread())
         }
     }
 
     private fun <R> call2(wrapped: () -> R): R {
         try {
             ctx.bindThread(Thread.currentThread())
-            if (Core.getInstance().profile.checkJoinedThreadStack()) {
-                Core.getInstance().profile.joinedThreadStack.add(Thread.currentThread())
+            if (ctx.runner.profile.checkJoinedThreadStack()) {
+                ctx.runner.profile.joinedThreadStack.add(Thread.currentThread())
             }
             return wrapped()
         } catch (e: Throwable) {
@@ -116,7 +117,7 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
         } finally {
             ctx.releaseBoundEventIfPresent(Thread.currentThread())
             ctx.unbindThread(Thread.currentThread())
-            Core.getInstance().profile.joinedThreadStack.remove(Thread.currentThread())
+            ctx.runner.profile.joinedThreadStack.remove(Thread.currentThread())
         }
     }
 

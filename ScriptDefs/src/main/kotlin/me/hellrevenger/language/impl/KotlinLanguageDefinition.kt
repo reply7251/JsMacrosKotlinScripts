@@ -95,7 +95,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
     }
 
     override fun createContext(p0: BaseEvent?, p1: File?): KotlinScriptContext {
-        return KotlinScriptContext(p0, p1)
+        return KotlinScriptContext(runner, p0, p1)
     }
 
     class KotlinCompileException(val resultWithDiagnostics: ResultWithDiagnostics<*>) : Exception()
