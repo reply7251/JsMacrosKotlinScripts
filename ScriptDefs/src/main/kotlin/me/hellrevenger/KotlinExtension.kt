@@ -3,6 +3,7 @@ package me.hellrevenger
 
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.library.api.FEventListener
+import me.hellrevenger.library.api.ScriptConfig
 import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
 import me.hellrevenger.mixins.MixinMain
@@ -74,10 +75,7 @@ KotlinExtension: Extension {
         return languageDefinition!!
     }
 
-    override fun getLibraries() =
-        if(FClient(null).mcVersion() == "1.21") mutableSetOf(FWrapper::class.java, FEventListener::class.java, FEventCenter::class.java)
-        else mutableSetOf(FWrapper::class.java, FEventListener::class.java)
-
+    override fun getLibraries() = mutableSetOf(FWrapper::class.java, FEventListener::class.java, ScriptConfig::class.java)
 
     override fun wrapException(p0: Throwable?): BaseWrappedException<*>? {
         if (p0 is KotlinLanguageDefinition.KotlinCompileException) {
