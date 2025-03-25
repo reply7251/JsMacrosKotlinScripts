@@ -1692,17 +1692,12 @@ object CustomInput  {
 
     @Advice.OnMethodExit
     @JvmStatic
-    fun getBlockParticle(@Advice.This(typing = Assigner.Typing.DYNAMIC)zhis: class_743?, @Advice.Argument(0) sneak: Boolean?, @Advice.Argument(1) slow: Float?) {
+    fun getBlockParticle(@Advice.This(typing = Assigner.Typing.DYNAMIC)zhis: class_743?) {
         try {
             if(ClassBuilder.methodWrappers["overrideInput"]?.get() as? Boolean == true) {
-                zhis?.field_3905 = if(sneak == true) {
-                    slow ?: 1f
-                } else {
-                    1f
-                }
+                zhis?.field_3905 = 1f
             }
-        }catch (e: Exception) {}
-
+        } catch (_: Exception) {}
     }
 }
 ClassBuilder.methodWrappers["overrideInput"] = JavaWrapper.methodToJava { ->
