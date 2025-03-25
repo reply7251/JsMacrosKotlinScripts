@@ -14,6 +14,7 @@ import com.wynntils.services.itemfilter.type.ItemProviderType
 import me.hellrevenger.generated.Map_Widget.setY
 import sun.misc.Unsafe
 import org.jetbrains.kotlin.backend.common.pop
+import xyz.wagyourtail.jsmacros.client.JsMacrosClient
 import xyz.wagyourtail.jsmacros.client.access.IInventory
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.core.library.impl.FReflection
@@ -65,7 +66,7 @@ class MyTradeMarketContainer : Container(pattern), SearchableContainerProperty, 
 
     override fun getPreviousItemSlot() = 51
     override fun getBounds(): ContainerBounds? {
-        FReflection(null).getClass<ContainerBounds>("com.wynntils.models.containers.type.ContainerBounds")
+        Class.forName("com.wynntils.models.containers.type.ContainerBounds", true, FReflection.classLoader)
             .constructors.firstOrNull { it.parameterCount == 4 }?.let {
                 return it.newInstance(0, 0, 4, 8) as ContainerBounds
             }
@@ -87,7 +88,8 @@ class MyTradeMarketContainer : Container(pattern), SearchableContainerProperty, 
 class WynncraftServerContainer : LobbyContainer(), SearchableContainerProperty {
 
     override fun getBounds(): ContainerBounds? {
-        FReflection(null).getClass<ContainerBounds>("com.wynntils.models.containers.type.ContainerBounds")
+
+        Class.forName("com.wynntils.models.containers.type.ContainerBounds", true, FReflection.classLoader)
             .constructors.firstOrNull { it.parameterCount == 4 }?.let {
                 return it.newInstance(1, 1, 5, 7) as ContainerBounds
             }
