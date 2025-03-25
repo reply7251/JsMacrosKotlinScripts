@@ -20,7 +20,6 @@ class MixinCompiler {
         fun mixin(runner: Core<*, *>) {
             config = runner.config
             runner.config.addOptions("MixinCompiler", MixinCompiler::class.java)
-            runner.config.loadConfig()
             runner.config.getOptions(MixinCompiler::class.java).let {
                 if(!it.K2Enabled) {
                     it.onDisabled()
@@ -31,9 +30,6 @@ class MixinCompiler {
         fun isK2Enabled() = config?.getOptions(MixinCompiler::class.java)?.K2Enabled ?: true
     }
 
-    @Transient
-    var wasEnabled = true
-
     @JvmField
     @Option(translationKey = "K2", group = ["jsmacros.settings.general"], setter = "setEnabled")
     var K2Enabled = true
@@ -41,7 +37,6 @@ class MixinCompiler {
     @JvmName("setEnabled")
     fun setEnabled(enabled: Boolean) {
         val flag = K2Enabled != enabled
-        wasEnabled = K2Enabled
         K2Enabled = enabled
         if(flag) {
             SharedLibraries.Chat.log("K2 enabled: $K2Enabled")
