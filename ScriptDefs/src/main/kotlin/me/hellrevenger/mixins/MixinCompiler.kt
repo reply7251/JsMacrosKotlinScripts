@@ -20,24 +20,15 @@ class MixinCompiler {
         fun mixin(runner: Core<*, *>) {
             config = runner.config
             runner.config.addOptions("MixinCompiler", MixinCompiler::class.java)
-            isK2Enabled()
+            runner.config.loadConfig()
+            runner.config.getOptions(MixinCompiler::class.java).let {
+                if(!it.K2Enabled) {
+                    it.onDisabled()
+                }
+            }
         }
 
-        fun isK2Enabled(): Boolean {
-            config?.getOptions(MixinCompiler::class.java)?.let {
-                if(it.wasEnabled != it.K2Enabled) {
-                    it.wasEnabled = it.K2Enabled
-                    SharedLibraries.Chat.log("K2 enabled: ${it.K2Enabled}")
-                    if(it.K2Enabled) {
-                        it.onEnabled()
-                    } else {
-                        it.onDisabled()
-                    }
-                }
-                return it.K2Enabled
-            }
-            return true
-        }
+        fun isK2Enabled() = config?.getOptions(MixinCompiler::class.java)?.K2Enabled ?: true
     }
 
     @Transient
@@ -70,10 +61,5 @@ class MixinCompiler {
     fun onDisabled() {
         RuntimeMixin.setIntercept(clazz, matcher, delegate)
         RuntimeMixin.doMixin(clazz)
-    }
-
-    @JvmName("fromV3")
-    fun fromV3(v3: JsonObject) {
-        setEnabled(v3.get("MixinCompiler").asJsonObject.get("K2Enabled").asBoolean)
     }
 }
