@@ -1,11 +1,11 @@
 package me.hellrevenger.mixins
 
+import com.google.gson.JsonObject
 import me.hellrevenger.SharedLibraries
 import me.hellrevenger.library.api.RuntimeMixin
 import net.bytebuddy.description.method.MethodDescription
 import net.bytebuddy.implementation.MethodDelegation
 import net.bytebuddy.matcher.ElementMatchers
-import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.config.ConfigManager
 import xyz.wagyourtail.jsmacros.core.config.Option
@@ -26,6 +26,7 @@ class MixinCompiler {
         fun isK2Enabled(): Boolean {
             config?.getOptions(MixinCompiler::class.java)?.let {
                 if(it.wasEnabled != it.K2Enabled) {
+                    it.wasEnabled = it.K2Enabled
                     SharedLibraries.Chat.log("K2 enabled: ${it.K2Enabled}")
                     if(it.K2Enabled) {
                         it.onEnabled()
@@ -39,6 +40,7 @@ class MixinCompiler {
         }
     }
 
+    @Transient
     var wasEnabled = true
 
     @JvmField
@@ -68,5 +70,10 @@ class MixinCompiler {
     fun onDisabled() {
         RuntimeMixin.setIntercept(clazz, matcher, delegate)
         RuntimeMixin.doMixin(clazz)
+    }
+
+    @JvmName("fromV3")
+    fun fromV3(v3: JsonObject) {
+        setEnabled(v3.get("MixinCompiler").asJsonObject.get("K2Enabled").asBoolean)
     }
 }
