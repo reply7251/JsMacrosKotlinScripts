@@ -888,11 +888,13 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
                 waitSpell(Actions.cast4)
             }
         } else if(mode == Mode.AlterScream) {
-            waitSpell(Actions.cast1)
-            for(i in 1..maxRepeat.value) {
-                waitSpell(Actions.cast4)
+            val trumpet = Models.StatusEffect.statusEffects.find { it.name.stringWithoutFormatting.contains("Heavenly Trumpet") }
+            val trumpetTime = trumpet?.let { it.displayedTime.stringWithoutFormatting.split(":")[1].split(")")[0].toInt() } ?: 0
+            if(AbilityModel.holyPowerBar.barProgress.progress > 0.8 && trumpetTime > 3) {
+                waitSpell(Actions.cast3)
+            } else {
+                waitSpell(Actions.cast1)
             }
-            waitSpell(Actions.cast3)
             for(i in 1..maxRepeat.value) {
                 waitSpell(Actions.cast4)
             }
@@ -1605,9 +1607,9 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
 
         if(fly) {
             var action = global.World.time / spellCooldown.value
-            if(action % 3 == 0L) {
+            if(action % 4 == 0L) {
                 cast1()
-            } else {
+            } else if(action % 4 < 3L) {
                 cast2()
             }
         }

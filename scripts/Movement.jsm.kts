@@ -2,7 +2,7 @@ import me.hellrevenger.generated.Input
 import me.hellrevenger.generated.Map_ClientPlayerEntity.input
 import me.hellrevenger.generated.Map_Input.movementForward
 import me.hellrevenger.generated.Map_Input.movementSideways
-import xyz.wagyourtail.jsmacros.client.api.classes.math.Pos3D
+import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import kotlin.math.cos
 import kotlin.math.roundToInt
 import kotlin.math.sin
@@ -11,7 +11,7 @@ val radian = Math.PI / 180
 class MyInput : Input() {
     var targetDirection = 0f
     var startPos = Pos3D.ZERO
-    override fun method_3129(sneak: Boolean, sneakMulti: Float) {
+    override fun method_3129() {
         val player = Player.player!!
 
         val mag = player.pos.toVector(startPos).magnitude + 1
@@ -23,11 +23,6 @@ class MyInput : Input() {
 
         movementForward = cos(diff).toFloat()
         movementSideways = sin(diff).toFloat()
-
-        if(sneak) {
-            movementForward *= sneakMulti
-            movementSideways *= sneakMulti
-        }
     }
 }
 fun main() {
