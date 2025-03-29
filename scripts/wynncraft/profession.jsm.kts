@@ -5,14 +5,17 @@ import com.wynntils.core.components.Models
 import com.wynntils.core.components.Services
 import com.wynntils.handlers.labels.event.LabelIdentifiedEvent
 import com.wynntils.handlers.labels.event.LabelsRemovedEvent
+import com.wynntils.mc.event.PlayerTeleportEvent
 import com.wynntils.mc.event.TickEvent
 import com.wynntils.models.items.items.game.GatheringToolItem
 import com.wynntils.models.items.items.game.GearItem
 import com.wynntils.models.profession.label.GatheringNodeHarvestLabelInfo
 import com.wynntils.models.profession.label.ProfessionGatheringNodeLabelInfo
 import com.wynntils.models.profession.type.ProfessionType
+import com.wynntils.services.lootrunpaths.LootrunCompiler
 import com.wynntils.services.lootrunpaths.UncompiledLootrunPath
 import com.wynntils.services.lootrunpaths.type.LootrunPath
+import com.wynntils.services.lootrunpaths.type.LootrunState
 import com.wynntils.utils.MathUtils
 import com.wynntils.utils.mc.type.Location
 import me.hellrevenger.generated.*
@@ -25,6 +28,9 @@ import me.hellrevenger.generated.Map_PlayerInput.backward
 import me.hellrevenger.generated.Map_PlayerInput.forward
 import me.hellrevenger.generated.Map_PlayerInput.left
 import me.hellrevenger.generated.Map_PlayerInput.right
+import me.hellrevenger.generated.Map_PlayerInput.sneak
+import me.hellrevenger.generated.Map_PlayerInput.sprint
+import me.hellrevenger.generated.Map_PlayerInput.jump
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
 import net.minecraft.class_332
 import net.neoforged.bus.api.SubscribeEvent
@@ -59,7 +65,7 @@ fun <T> Iterable<T>.findCloset(callback: (T) -> Double): T? {
     }
     return nearest
 }
-fun <K,V> Map<K, V>.findCloset(callback: (Map.Entry<K,V>) -> Double) = asIterable().findCloset(callback)
+fun <K,V> Map<K, V>.findCloset(callback: (Map.Entry<K,V>) -> Double) = asIterable()?.findCloset(callback)
 fun removeBoxAt(block: BlockPosHelper) {
     boxes.remove(block)?.let {
         d3d.removeBox(it)
@@ -76,11 +82,12 @@ fun follow() {
     val points = lootrun.points
     var target = points[pathIndex]
     val player = Player.player ?: return
-
-    if(Pos3D(target).distanceToIgnoreY(player.pos) < 2) {
+    stuckCounter++
+    if(Pos3D(target).distanceToIgnoreY(player.pos) < 1.1 || Pos3D(points[(pathIndex+1)% points.size]).distanceToIgnoreY(player.pos) < 1.1) {
         pathIndex++
         pathIndex %= points.size
         target = points[pathIndex]
+        stuckCounter = 0
     }
     myInput?.targetPos = Pos3D(target)
 }
@@ -126,21 +133,32 @@ class MyInput(val parent: Input) : Input() {
     fun getMovement(positive: Boolean, negative: Boolean) = if(positive == negative) 0f else if(positive) 1f else -1f
     fun roundMovement(value: Double) = if(abs(value) < 0.1) 0.0 else value / abs(value)
     override fun method_3129() {
+        val player = Player.player!!
         if(targetPos.equals(Pos3D.ZERO)) {
             parent.tick()
             playerInput = parent.playerInput
+            val jump = World.getBlock(player.blockPos)?.blockStateHelper?.isLiquid == true
+            val forward = stuckCounter > 8
+            if(shouldOverrideInput() && (jump || forward)) {
+                val inp = Reflection.getClass<Any>("net.minecraft.class_10185").constructors[0]
+                    .newInstance(playerInput.forward() || forward, playerInput.backward(),
+                    playerInput.left(), playerInput.right(), playerInput.jump() || jump, playerInput.sneak(), playerInput.sprint())
+                playerInput = inp as net.minecraft.class_10185
+                stuckCounter = stuckCounter * 2 / 3
+            }
         } else {
-            val player = Player.player!!
             val vec = player.pos.toReverseVector(targetPos)
             val target = atan2(-vec.deltaX, vec.deltaZ) / radian
+            smooth.lookAt(lerpDegrees(player.yaw.toDouble(), target, 0.1), player.pitch.toDouble())
             val diff = (((player.yaw - target) - 22.5) / 45).roundToInt() * radian * 45
-            val forward = roundMovement(cos(diff))
+            val forward = if(stuckCounter > 20) 1.0 else roundMovement(cos(diff))
             val side = roundMovement(sin(diff))
-            val jump = targetPos.y - player.pos.y > 0.5 && player.pos.distanceToIgnoreY(targetPos) < 2 || (World.getBlock(player.blockPos)?.blockStateHelper?.isLiquid == true)
+            val jump = targetPos.y - player.pos.y > 0.501 && player.pos.distanceToIgnoreY(targetPos) < 2
+                    || (World.getBlock(player.blockPos)?.blockStateHelper?.isLiquid == true)
+                    || stuckCounter > 20
             val sneak = false
             val sprint = false
 
-            smooth.lookAt(lerpDegrees(player.yaw.toDouble(), target, 0.1), player.pitch.toDouble())
 
             val inp = Reflection.getClass<Any>("net.minecraft.class_10185").constructors[0]
                 .newInstance(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
@@ -152,8 +170,22 @@ class MyInput(val parent: Input) : Input() {
         movementSideways = getMovement(playerInput.left(), playerInput.right())
     }
 }
-fun lerpDegrees(from: Double, to: Double, lerp: Double) =
-    from + MathHelper::class.wrapDegrees(to - from) * lerp
+fun shouldOverrideInput() = currentState != State.NONE || currentState != State.RECORDING
+fun warpDegree(degree: Double) = ((degree + 720) % 360) + 360
+fun warp180(degree: Double): Double {
+    var v = (degree + 720) % 360
+    if(v > 180) v -= 360
+    if(v < -180) v += 360
+    return v
+}
+fun compareDegree(from: Double, to: Double) = warp180(to - from)
+fun lerpDegrees(from: Double, to: Double, lerp: Double, min: Double = 0.0): Double {
+    val diff0 = warp180(to - from)
+    var diff = diff0 * lerp
+    if(abs(diff) < min) diff *= min / abs(diff)
+    if(abs(diff) > abs(diff0)) diff = diff0
+    return warp180(from + diff)
+}
 
 class RenderGetter(val callback: () -> Unit) : RenderElement3D<RenderGetter> {
     override fun render(p0: class_332?, p1: Float) {
@@ -178,9 +210,9 @@ class Smooth {
     fun lookAt(yaw: Double, pitch: Double, lerp: Double = 1.0) {
         val player = Player.player ?: return
         enabled = true
-        prevYaw = player.yaw.toDouble() % 360
+        prevYaw = warp180(player.yaw.toDouble())
         prevPitch = player.pitch.toDouble()
-        targetYaw = lerpDegrees(prevYaw, yaw, lerp)
+        targetYaw = lerpDegrees(prevYaw, yaw, lerp, 5.0)
         targetPitch = MathUtils.lerp(prevPitch, pitch, lerp)
         tick = World.time
     }
@@ -193,11 +225,20 @@ class Smooth {
         }
 
         val delta = Client.minecraft.getRenderTickCounter().getTickDelta(true)
-        player.lookAt(lerpDegrees(prevYaw, targetYaw, delta.toDouble()) % 360,
+        player.lookAt(lerpDegrees(prevYaw, targetYaw, delta.toDouble()),
             MathUtils.lerp(prevPitch, targetPitch, delta.toDouble()))
     }
 }
-
+fun getFieldValue(obj: Any, field: String): Any? {
+    val f = Reflection.getDeclaredField(obj::class.java, field)
+    f.trySetAccessible()
+    return f.get(obj)
+}
+fun setFieldValue(obj: Any, field: String, value: Any) {
+    val f = Reflection.getDeclaredField(obj::class.java, field)
+    f.trySetAccessible()
+    f.set(obj, value)
+}
 fun makeScreen(): IScreen {
     val screen = Hud.createScreen("", false)
     screen.shouldPause = false
@@ -215,6 +256,7 @@ fun makeScreen(): IScreen {
                 btns[0]?.let {
                     val enabled = currentState == State.NONE
                     if(enabled) {
+                        myInput = setInput()
                         holdTool()
                         getLootrun()?.let {  path ->
                             Player.player?.let { player ->
@@ -257,12 +299,15 @@ fun makeScreen(): IScreen {
                         Services.LootrunPaths.startRecording()
                         State.RECORDING
                     } else {
-                        Services.LootrunPaths.stopRecording()
+                        if(Services.LootrunPaths.state == LootrunState.RECORDING)
+                            Services.LootrunPaths.stopRecording()
                         Services.LootrunPaths.let {  service ->
                             val f = Reflection.getDeclaredField(service::class.java, "uncompiled")
                             f.trySetAccessible()
                             (f.get(service) as? UncompiledLootrunPath)?.let { origin ->
-                                f.set(service, UncompiledLootrunPath(myRecording, origin.chests, origin.notes, origin.file))
+                                val uncompiled = UncompiledLootrunPath(myRecording, origin.chests, origin.notes, origin.file)
+                                setFieldValue(service, "lootrun", LootrunCompiler.compile(uncompiled, false))
+                                f.set(service, uncompiled)
                             }
                         }
                         State.NONE
@@ -288,11 +333,11 @@ fun makeScreen(): IScreen {
 fun holdAndUseWeapon() {
     val inv = Player.openInventory()
     inv.getSlots("hotbar").firstOrNull {
-        (Models.Item.getWynnItem(inv.getSlot(it).raw).getOrNull()as? GearItem)?.meetsActualRequirements() == true
+        (Models.Item.getWynnItem(inv.getSlot(it).raw).getOrNull() as? GearItem)?.meetsActualRequirements() == true
     }?.let {
         val newSelect = it - (inv.totalSlots - 10)
         if(newSelect == inv.selectedHotbarSlotIndex) {
-            if(nextTotem-- < 0 && enableSkill) {
+            if(nextTotem < 0 && enableSkill) {
                 nextTotem = 62
                 thread {
                     KeyBind.pressKeyBind("Cast 1st Spell")
@@ -309,7 +354,7 @@ fun holdTool() {
     val inv = Player.openInventory()
     inv.getSlots("hotbar").firstOrNull {
         (Models.Item.getWynnItem(inv.getSlot(it).raw).getOrNull() as? GatheringToolItem)?.let {
-            if(it.durability.percentageInt > 1) {
+            if(it.durability.percentageInt > 0) {
                 toolType = it.toolProfile.toolType.professionType
                 true
             } else
@@ -318,27 +363,33 @@ fun holdTool() {
     }?.let {
         val newSelect = it - (inv.totalSlots - 10)
         inv.selectedHotbarSlotIndex = newSelect
+        return
     }
+    currentState = State.NONE
 }
 fun isNextNodeCloserTo(pos: Pos3D): Boolean {
     val lr = getLootrun() ?: return false
     val player = Player.player ?: return false
+    if(lr.points.isEmpty()) return false
     val dist1 = player.distanceTo(pos)
-    val dist2 = Pos3D(lr.points[(pathIndex+1) % lr.points.size]).distanceTo(pos)
-    return dist2 < dist1
+    val dist2 = Pos3D(lr.points[pathIndex]).distanceTo(pos)
+    val dist3 = Pos3D(lr.points[(pathIndex+1) % lr.points.size]).distanceTo(pos)
+    val dist4 = Pos3D(lr.points[(pathIndex+2) % lr.points.size]).distanceTo(pos)
+    return dist2 < dist1 || dist3 < dist1 || dist4 < dist1
 }
 class EventListeners {
     @SubscribeEvent
     fun onLabelIdentified(event: LabelIdentifiedEvent) {
         (event.labelInfo as? ProfessionGatheringNodeLabelInfo)?.let {
+
             availableNodes[it.location] = it.professionType
             addBoxAt(it.location.toBlockPosHelper())
         }
         (event.labelInfo as? GatheringNodeHarvestLabelInfo)?.let {
             availableNodes.remove(it.location)
             removeBoxAt(it.location.toBlockPosHelper())
-            if(currentState == State.WAIT) {
-                currentState = State.FIND_NODE
+            if(currentState == State.WAIT || currentState == State.HARVEST) {
+                currentState = State.MOVE
             }
         }
     }
@@ -357,10 +408,13 @@ class EventListeners {
         val player = Player.player ?: return
         val root = player.vehicle ?: player
         val pos = root.pos
-        val last = Pos3D(myRecording.points.last())
-        if(pos.distanceTo(last) >= 1) {
+        if(myRecording.points.size == 0 || pos.distanceTo(Pos3D(myRecording.points.last())) >= 0.7) {
             myRecording.points.add(pos.getRaw())
         }
+    }
+    @SubscribeEvent
+    fun onTeleported(event: PlayerTeleportEvent) {
+        currentState = State.NONE
     }
     @SubscribeEvent
     fun onTick(event: TickEvent) {
@@ -374,88 +428,76 @@ class EventListeners {
                     target
                 else Pos3D.ZERO
             } ?: Pos3D.ZERO
-        val filtered = availableNodes.filter { it.key.toBlockPosHelper().getCenter().distanceTo(player.eyePos) < 3 && it.value == toolType }
+        val filtered = availableNodes.filter { it.key.toBlockPosHelper().getCenter().distanceTo(player.eyePos) < 3.6 && it.value == toolType }
 
-
+        nextHarvest--
+        nextTotem--
         val harvestNode = filtered.findCloset {
             it.key.toBlockPosHelper().getCenter().distanceTo(player.eyePos)
         }?.key
 
         if(currentState == State.MOVE) {
-            if(harvestNode != null && isNextNodeCloserTo(harvestNode.toBlockPosHelper().getCenter())) {
+            if(harvestNode != null && !isNextNodeCloserTo(harvestNode.toBlockPosHelper().getCenter())) {
                 currentState = State.FIND_NODE
-                holdTool()
             } else {
                 follow()
                 holdAndUseWeapon()
             }
         }
 
-        if(currentState == State.FIND_NODE) {
+        if(currentState == State.FIND_NODE || currentState == State.HARVEST) {
+            holdTool()
             if(harvestNode == null) {
-                currentState = State.MOVE
+                currentState = if(currentState == State.FIND_NODE) State.MOVE else State.HARVEST
             } else {
                 val vec = offsetMap[toolType]?.let {
                     player.eyePos.toReverseVector(harvestNode.toBlockPosHelper().getCenter().add(it))
                 } ?: player.eyePos.toReverseVector(harvestNode.toBlockPosHelper().getCenter())
                 val yaw = if(abs(vec.yaw - player.yaw) > 5)
-                    MathUtils.lerp(player.yaw.toDouble(), vec.yaw.toDouble(), 0.2)
+                    lerpDegrees(player.yaw.toDouble(), vec.yaw.toDouble(), 0.2, 5.0)
                 else
                     vec.yaw.toDouble()
                 val pitch = if(abs(vec.pitch - player.pitch) > 5)
-                    MathUtils.lerp(player.pitch.toDouble(), vec.pitch.toDouble(), 0.2)
+                    lerpDegrees(player.pitch.toDouble(), vec.pitch.toDouble(), 0.3, 5.0)
                 else
                     vec.pitch.toDouble()
 
-                smooth.lookAt(yaw, pitch)
-                if(player.yaw == vec.yaw && player.pitch == vec.pitch) {
-                    currentState = State.HARVEST
-                    lastHarvestNode = harvestNode.toBlockPosHelper()
+                if(currentState == State.FIND_NODE) {
+                    smooth.lookAt(yaw, pitch)
+                    if(player.yaw == vec.yaw && player.pitch == vec.pitch) {
+                        currentState = State.HARVEST
+                        lastHarvestNode = harvestNode.toBlockPosHelper()
+                    }
+                }
+                if(currentState == State.HARVEST) {
+                    if(harvestNode.toBlockPosHelper() == lastHarvestNode) {
+                        if(nextHarvest < 0) {
+                            nextHarvest = 3L
+                            if(harvestLeft) {
+                                Player.interactions()?.attack()
+                            } else {
+                                Player.interactions()?.interact()
+                            }
+                            stuckCounter++
+                        }
+                        smooth.lookAt(yaw, pitch + (World.time % 80 - 40) * 1.2, 0.1)
+                    } else {
+                        stuckCounter = 0
+                    }
                 }
             }
         }
-        if(currentState == State.HARVEST) {
-            if(harvestLeft) {
-                Player.interactions()?.interact()
-            } else {
-                Player.interactions()?.attack()
-            }
-            nextHarvest = 10L
-            currentState = State.WAIT
-        }
-        if(currentState == State.WAIT) {
-            if(nextHarvest-- < 0) {
-                nextHarvest = 10L
-                if(harvestNode != null && harvestNode.toBlockPosHelper() == lastHarvestNode) {
-                    val vec = offsetMap[toolType]?.let {
-                        player.eyePos.toReverseVector(harvestNode.toBlockPosHelper().getCenter().add(it))
-                    } ?: player.eyePos.toReverseVector(harvestNode.toBlockPosHelper().getCenter())
-
-                    val yaw = if(abs(vec.yaw - player.yaw) > 5)
-                        MathUtils.lerp(player.yaw.toDouble(), vec.yaw.toDouble(), 0.2)
-                    else
-                        vec.yaw.toDouble()
-                    val pitch = if(abs(vec.pitch - player.pitch) > 5)
-                        MathUtils.lerp(player.pitch.toDouble(), vec.pitch.toDouble(), 0.2)
-                    else
-                        vec.pitch.toDouble()
-                    smooth.lookAt(yaw, pitch + Random.nextDouble() * 15)
-                }
-                if(harvestLeft) {
-                    Player.interactions()?.interact()
-                } else {
-                    Player.interactions()?.attack()
-                }
-            }
-        }
-        info.setText(currentState.name)
+        info?.setText(currentState.name)
     }
 }
 val disableText = Chat.createTextBuilder().withColor(255,0,0).append("Disabled").build()
 val enableText = Chat.createTextBuilder().withColor(0,255,0).append("Enabled").build()
 val eventListeners = EventListeners()
 WynntilsMod.registerEventListener(eventListeners)
-val offsetMap = mapOf(ProfessionType.FISHING to Pos3D(0.0, -3.5, 0.0))
+val offsetMap = mapOf(
+    ProfessionType.FISHING to Pos3D(0.0, -1.5, 0.0),
+    ProfessionType.FARMING to Pos3D(0.0, -1.0, 0.0)
+)
 
 var currentState = State.NONE
 var pathIndex = 0
@@ -466,6 +508,7 @@ var lastHarvestNode = BlockPosHelper(0,0,0)
 var enableSkill = true
 var toolType: ProfessionType? = null
 val myRecording = LootrunPath(mutableListOf())
+var stuckCounter = 0
 
 val availableNodes = mutableMapOf<Location, ProfessionType>()
 val d3d = Hud.createDraw3D()
