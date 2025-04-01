@@ -53,6 +53,7 @@ object Actions {
     val cast2 = "Cast 2nd Spell"
     val cast3 = "Cast 3rd Spell"
     val cast4 = "Cast 4th Spell"
+    val melee = "key.attack"
     val jump = "key.jump"
     val R = 1
     val L = 2
@@ -66,7 +67,6 @@ object Actions {
 
 val skill1Key = "key.keyboard.c"
 val skill2Key = "key.keyboard.x"
-var enableMelee = true
 
 val d2d = Hud.createDraw2D()
 
@@ -91,41 +91,50 @@ object SharedBindData {
     }
 }
 
+interface HasBind {
+    fun addBind(name: String, bind: Bind)
+}
+
 open class Bind(val key: String, val callback: (Bind) -> Unit) {
     val simpleName = key.substring(key.lastIndexOf('.')+1)
+    var bindTo: HasBind? = null
 
     open fun trigger() {
         callback(this)
     }
 }
 
+@JvmName("staticBindTo")
+fun <T : Bind> bindTo(self: T, target: HasBind, name: String = self.simpleName): T {
+    target.addBind(name, self)
+    return self
+}
+fun <T : Bind> T.bindTo(target: HasBind, name: String = this.simpleName): T {
+    target.addBind(name, this)
+    return this
+}
+
 open class BindValue<T>(key: String, var value: T, callback: (Bind) -> Unit) : Bind(key, callback) {
     var onModify: ((BindValue<T>, Boolean) -> Unit)? = null
 
     var _beforeValueChange: ((Bind) -> Unit)? = null
-    var _afterValueChange: ((Bind) -> Unit)? = null
 
     override fun trigger() {
         _beforeValueChange?.invoke(this)
         super.trigger()
-        _afterValueChange?.invoke(this)
     }
 
     fun set(newValue: T) {
         _beforeValueChange?.invoke(this)
         value = newValue
-        _afterValueChange?.invoke(this)
+        callback(this)
     }
 
     open fun modify(positive: Boolean) {
 
     }
-
-    fun <U: BindValue<T>> setAfterValueChange(new: ((Bind) -> Unit)? = null): U {
-        _afterValueChange = new
-        return this as U
-    }
 }
+
 
 open class BindBoolean(key: String, value: Boolean = false, callback: (Bind) -> Unit) : BindValue<Boolean>(key, value, callback) {
     override fun trigger() {
@@ -162,7 +171,7 @@ open class BindNumber<T: Number>(key: String, val configIndex: String, value: T,
     override fun toString(): String {
         var result = if(SharedBindData.currentBind == this) Format.formatChar + "5" else ""
         result += "$configIndex ${Format.formatChar}r(${Format.coloredKey(simpleName)}): " + Format.coloredNumber(value)
-        return  result
+        return result
     }
 
     override fun modify(positive: Boolean) {
@@ -207,10 +216,10 @@ class BindInt(key: String, val configIndex: String, value: Int, val diff: Int = 
 
 class BindPos(key: String, value: Pos3D, callback: (Bind) -> Unit): BindValue<Pos3D>(key, value, callback) {
     override fun trigger() {
-        if(value == Pos3D.ZERO) {
-            value = FPlayer(KotlinExtension.runner).player!!.pos
+        value = if(value == Pos3D.ZERO) {
+            FPlayer(KotlinExtension.runner).player!!.pos
         } else {
-            value = Pos3D.ZERO
+            Pos3D.ZERO
         }
         super.trigger()
     }
@@ -315,7 +324,7 @@ enum class Mode {
 
 
 
-open class WynnClass(val global: Battle_jsm) {
+open class WynnClass(val global: Battle_jsm): HasBind {
 
     var lastAction = ""
     var burstAction = 0
@@ -341,11 +350,10 @@ open class WynnClass(val global: Battle_jsm) {
     var spamCounter = 0
 
     var reverseMouse = false
-    var castQueue = mutableListOf<Int>()
+    var castQueue = mutableListOf<String>()
     lateinit var spellCooldown: BindInt
     var castCooldown = 0
     var rightCooldown = 0
-    var customCastEnabled = false
 
     var blockSwapItem = false
     var blockSwapItemTarget = -1
@@ -359,6 +367,12 @@ open class WynnClass(val global: Battle_jsm) {
     val modeSelectorScreen: ScriptScreen = global.Hud.createScreen("", false)
     open var quickMode = Mode.None
 
+    var manualEscape = false
+    var lastSpell = 0L
+    lateinit var enableMelee: BindBoolean
+    lateinit var maxRepeat: BindInt
+    var nextSpells = mutableListOf<String>()
+
     init {
         onInit()
     }
@@ -368,40 +382,35 @@ open class WynnClass(val global: Battle_jsm) {
     }
 
     open fun onInitOverride() {
-        enabled = BindBoolean("key.keyboard.f") {
+        enabled = global.bindTo(BindBoolean("key.keyboard.f") {
             (it as? BindBoolean)?.let {
                 if(it.value) {
                     main()
                 } else {
                     onDisable()
                 }
+                updateConfig()
             }
-        }.setAfterValueChange { updateConfig() }
-        binds["enabled"] = enabled
+        }, this)
 
+        spellCooldown = global.bindTo(BindInt("key.keyboard.keypad.decimal", "spellCooldown", 10) { updateConfig() }, this)
 
-        spellCooldown = BindInt("key.keyboard.keypad.decimal", "spellCooldown", 10) {
-            (it as? BindInt)?.let {
-                global.setSpellCooldown(it.value)
-            }
-        }.setAfterValueChange { updateConfig() }
-        binds["spellCooldown"] = spellCooldown
+        spamSneak = global.bindTo(BindBoolean("key.keyboard.keypad.0") { updateConfig() }, this)
 
-        spamSneak = BindBoolean("key.keyboard.keypad.0") {}.setAfterValueChange { updateConfig() }
-        binds["spamSneak"] = spamSneak
-
-        binds["addKey"] = Bind("key.keyboard.keypad.add") {
+        global.bindTo(Bind("key.keyboard.keypad.add") {
             SharedBindData.modifyConfig(true)
-        }
-        binds["subKey"] = Bind("key.keyboard.keypad.subtract") {
+        }, this)
+        global.bindTo(Bind("key.keyboard.keypad.subtract") {
             SharedBindData.modifyConfig(false)
-        }
-        binds["modeSelector"] = Bind("key.keyboard.keypad.5") {
+        }, this)
+        global.bindTo(Bind("key.keyboard.keypad.5") {
             openModeSelector()
             updateConfig()
-        }
-        anchor = BindPos("key.keyboard.keypad.2", Pos3D.ZERO) {}.setAfterValueChange { updateConfig() }
-        binds["anchor"] = anchor
+        }, this, "modeSelector")
+        anchor = global.bindTo(BindPos("key.keyboard.keypad.9", Pos3D.ZERO) { updateConfig() }, this)
+        enableMelee = global.bindTo(BindBoolean("key.keyboard.keypad.7", true) { updateConfig() }, this)
+
+        maxRepeat = global.bindTo(BindInt("key.keyboard.keypad.8", "MaxRepeat", 1) { updateConfig() }, this)
     }
 
     open fun getSpellCooldownWithMana() = spellCooldown.value + (if(getMana() > 35) 0 else if(getMana() > 19) 1 else 2)
@@ -423,7 +432,6 @@ open class WynnClass(val global: Battle_jsm) {
 
     fun pressKeyBind(key: String, record: Boolean = false, release: Boolean = true): Boolean {
         if(record) recordAction(key)
-        if(customCastEnabled) return cast(Actions.cast1)
         global.KeyBind.pressKeyBind(key)
         if(release) {
             global.Client.waitTick()
@@ -438,17 +446,6 @@ open class WynnClass(val global: Battle_jsm) {
         global.Client.waitTick(if(ticks <= 0) getSpellCooldownWithMana() else ticks)
         global.KeyBind.releaseKeyBind(key)
         return false
-    }
-
-    fun cast(action: String): Boolean {
-        if(castQueue.size > 3) {
-            return false
-        }
-
-        val queue = Actions.map[action]!!.map { if(reverseMouse) 2 - it else it }
-
-        castQueue.addAll(queue)
-        return true
     }
 
     fun cast1(release: Boolean = true) = pressKeyBind(Actions.cast1, true, release)
@@ -501,24 +498,45 @@ open class WynnClass(val global: Battle_jsm) {
         reset()
         thread {
             while (enabled.value && global.World.isWorldLoaded) {
-                if(!isBlocked())
-                    chooseAction()
+                if(!isBlocked()) {
+                    if(manualEscape) {
+                        manualEscape = false
+                        waitSpell(Actions.cast2)
+                    }
+                    val nextSpell = getSpellCooldownWithMana() - (global.World.time - lastSpell)
+                    if(nextSpell > 0) {
+                        if(nextSpell % 2L == 0L && enableMelee.value) {
+                            melee()
+                        }
+                    } else if(nextSpells.isNotEmpty()) {
+                        waitSpell(nextSpells.pop())
+                    } else {
+                        chooseAction()
+                        if(nextSpells.isNotEmpty()) {
+                            waitSpell(nextSpells.pop())
+                        }
+                    }
+                }
                 global.Client.waitTick()
             }
             enabled.set(false)
         }
     }
 
+    fun addSpell(action: String) = nextSpells.add(action)
+
     open fun chooseAction() { }
 
     open fun updateConfig() {
         texts.forEach { global.d2d.reAddElement(it) }
         resetLineIndex()
-        nextLine().setText("Enabled (${Format.coloredKey(enabled.simpleName)}): " + Format.coloredBoolean(enabled.value))
+        nextLine().setText(enabled.toString("Enabled"))
         nextLine().setText(spellCooldown.toString())
         nextLine().setText("Mode (${Format.coloredKey(binds["modeSelector"]?.simpleName)}): " + mode)
-        nextLine().setText("Spam Shift (${Format.coloredKey(spamSneak.simpleName)}): " + Format.coloredBoolean(spamSneak.value))
+        nextLine().setText(spamSneak.toString("Spam Shift"))
         nextLine().setText(Format.coloredConfig("anchor" ) + "Anchor ${Format.formatChar}r(${Format.coloredKey(anchor.simpleName)}): " + Format.coloredBoolean(anchor.value != Pos3D.ZERO))
+        nextLine().setText(enableMelee.toString("Melee"))
+        nextLine().setText(maxRepeat.toString())
     }
 
     fun resetLineIndex() {
@@ -549,11 +567,24 @@ open class WynnClass(val global: Battle_jsm) {
 
     open fun onKey(e: EventKey) {
         if(e.action != 1) return
-        if(blockSwapItem)
-            global.hotBarRegex.matchEntire(e.key)?.let {
-                blockSwapItemTarget = it.groupValues[1].toInt() - 1
+
+        global.hotBarRegex.matchEntire(e.key)?.let {
+            val index = it.groupValues[1].toInt() - 1
+            if(blockSwapItem) {
+                blockSwapItemTarget = index
+                e.cancel()
+            } else if(enabled.value) {
+                thread {
+                    checkUndoSelectHotbar(index)
+                }
                 e.cancel()
             }
+        }
+
+        if(e.key == global.skill2Key && e.action == 1 && enabled.value) {
+            manualEscape = true
+            e.cancel()
+        }
 
         binds.values.forEach {
             if(it.key == e.key) {
@@ -615,16 +646,7 @@ open class WynnClass(val global: Battle_jsm) {
                 pressKeyBind("key.sneak")
             }
         }
-        castCooldown--
-        if(castCooldown < 0 && castQueue.isNotEmpty()) {
-            if(castQueue.pop() == Actions.L) {
-                melee()
-                castCooldown = 2
-            } else {
-                global.Player.interactions()?.interact()
-                castCooldown = 4
-            }
-        }
+        
         removeBlind()
         val flag = global.getSpellInProgress().isEmpty()
         if(castingSpell && flag) {
@@ -674,17 +696,19 @@ open class WynnClass(val global: Battle_jsm) {
     }
 
     open fun waitSpell(spell: String, extraTick: Int = 0, hotbar: Int = -1) {
+        if(manualEscape) {
+            manualEscape = false
+            waitSpell(Actions.cast2)
+        }
+        lastSpell = global.World.time
         var extraTick = extraTick
         val hotbar = hotbar.coerceAtLeast(blockSwapItemTarget)
         blockSwapItem = true
 
-        val inv = global.Player.openInventory()
-        val oldSelect = inv.selectedHotbarSlotIndex
-
         pressKeyBind(spell, true)
-        global.Client.waitTick(getSpellCooldownWithMana())
+        global.Client.waitTick(5)
         if(hotbar != -1) {
-            inv.selectedHotbarSlotIndex = hotbar
+            checkUndoSelectHotbar(hotbar)
             blockSwapItemTarget = -1
             extraTick = extraTick.coerceAtLeast(1)
         }
@@ -692,16 +716,18 @@ open class WynnClass(val global: Battle_jsm) {
         if(extraTick != 0)
             global.Client.waitTick(extraTick)
 
-        val newSelect = inv.selectedHotbarSlotIndex
-        if(oldSelect != newSelect) {
-            if(isPotion(global.Player.player!!.mainHand)) {
-                global.Player.interactions()?.interact()
-                global.Client.waitTick(2)
-                inv.selectedHotbarSlotIndex = oldSelect
-                global.Client.waitTick()
-            }
-        }
         blockSwapItem = false
+    }
+
+    fun checkUndoSelectHotbar(newSelect: Int) {
+        val inv = global.Player.openInventory()
+        val oldSelect = inv.selectedHotbarSlotIndex
+        inv.selectedHotbarSlotIndex = newSelect
+        if(oldSelect != newSelect && isPotion(global.Player.player!!.mainHand)) {
+            global.Player.interactions()?.interact()
+            global.Client.waitTick(2)
+            inv.selectedHotbarSlotIndex = oldSelect
+        }
     }
 
     fun isPotion(item: ItemStackHelper) =
@@ -747,12 +773,15 @@ open class WynnClass(val global: Battle_jsm) {
         })
         global.Hud.openScreen(iscreen)
     }
+
+    override fun addBind(name: String, bind: Bind) {
+        binds[name] = bind
+    }
 }
 
 inner class Warrior(global: Battle_jsm) : WynnClass(global) {
     var lastBash = 0L
     var lastWarScream = 0L
-    lateinit var keepHeight: BindBoolean
     lateinit var bloodPact: BindBoolean
     var interactCounter = 0
     var attackCounter = 0
@@ -760,8 +789,6 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
     lateinit var meleeInterval: BindInt
     //var quick = true
     var cspam = false
-    lateinit var maxRepeat: BindInt
-
 
     val modes = arrayOf(Mode.BashSurf, Mode.ScreamSurf, Mode.ChargeSpam, Mode.BashScream, Mode.AlterScream, Mode.AlterSurf, Mode.UpperScream)
     override var mode = Mode.BashScream
@@ -769,32 +796,20 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
 
     override fun onInitOverride() {
 
-        keepHeight = BindBoolean("key.keyboard.keypad.7") {}
-
-        targetY = BindNumber("key.keyboard.keypad.8", "TargetY", -1.0, 1.0) {}
-            .setAfterValueChange { updateConfig() }
+        targetY = BindNumber("key.keyboard.keypad.2", "TargetY", -1.0, 1.0) { updateConfig() }.bindTo(this)
         targetY.onModify = { bind, positive ->
             bind.value = if(positive) global.Player.player?.y ?: -1.0 else -1.0
         }
 
-        binds["targetY"] = targetY
+        height = BindInt("key.keyboard.keypad.3", "Height", 5) { updateConfig() }.bindTo(this)
 
-        height = BindInt("key.keyboard.keypad.9", "Height", 5) {}.setAfterValueChange { updateConfig() }
-        binds["height"] = height
+        meleeInterval = BindInt("key.keyboard.keypad.1", "MeleeInterval", 20, 3) { updateConfig() }.bindTo(this)
 
-        meleeInterval = BindInt("key.keyboard.keypad.1", "MeleeInterval", 20, 3) {}.setAfterValueChange { updateConfig() }
-        binds["meleeInterval"] = meleeInterval
-
-
-        maxRepeat = BindInt("key.keyboard.keypad.7", "MaxRepeat", 2) {}.setAfterValueChange { updateConfig() }
-        binds["maxRepeat"] = maxRepeat
-
-        bloodPact = BindBoolean("key.keyboard.keypad.4") { updateConfig() }
-        binds["bloodPact"] = bloodPact
+        bloodPact = BindBoolean("key.keyboard.keypad.4") { updateConfig() }.bindTo(this)
 
         super.onInitOverride()
 
-
+        maxRepeat.set(2)
         spellCooldown.set(8)
     }
 
@@ -802,12 +817,10 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
         super.updateConfig()
 
         if(mode == Mode.ChargeSpam) {
-            nextLine().setText("KeepHeight (${Format.coloredKey(binds["keepHeight"]?.simpleName)}): " + Format.coloredBoolean(keepHeight.value))
             nextLine().setText(targetY.toString())
             nextLine().setText(height.toString())
         }
         nextLine().setText(meleeInterval.toString())
-        nextLine().setText(maxRepeat.toString())
         nextLine().setText(bloodPact.toString("Blood Pact"))
         nextLine().setText("upper: charge charge scream upper")
         nextLine().setText("bash(scream): scream scream")
@@ -857,54 +870,52 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
             waitSpell(Actions.cast3, 1)
             global.KeyBind.releaseKeyBind("key.sneak")
         } else if(mode == Mode.ChargeSpam && isIdol()) {
-            if(!keepHeight.value || heightCheck()) {
-                if(global.World.time % 2L == 0L) {
-                    global.Player.interactions()?.interact()
-                    interactCounter++
-                }
-                if(lastMelee + meleeInterval.value + (Math.random() * 5).toInt() < global.World.time
-                    || burstCharge()) {
-                    melee()
-                    interactCounter = 0
-                }
+            if(global.World.time % 2L == 0L) {
+                global.Player.interactions()?.interact()
+                interactCounter++
+            }
+            if(lastMelee + meleeInterval.value + (Math.random() * 5).toInt() < global.World.time
+                || burstCharge()) {
+                melee()
+                interactCounter = 0
             }
         } else if(mode == Mode.BashSurf || mode == Mode.ScreamSurf) {
-            waitSpell(Actions.cast3)
-            waitSpell(Actions.cast2)
+            addSpell(Actions.cast3)
+            addSpell(Actions.cast2)
             if(global.World.time >= lastWarScream + 200 || (mode == Mode.ScreamSurf && global.World.time - lastBash < 300)) {
-                waitSpell(Actions.cast4)
+                addSpell(Actions.cast4)
                 lastWarScream = global.World.time
             } else {
-                waitSpell(Actions.cast1)
+                addSpell(Actions.cast1)
                 lastBash = global.World.time
             }
         } else if(mode == Mode.BashScream || mode == Mode.UpperScream) {
             if(mode == Mode.BashScream) {
-                waitSpell(Actions.cast1)
+                addSpell(Actions.cast1)
             } else {
-                waitSpell(Actions.cast3)
+                addSpell(Actions.cast3)
             }
             for(i in 1..maxRepeat.value) {
-                waitSpell(Actions.cast4)
+                addSpell(Actions.cast4)
             }
         } else if(mode == Mode.AlterScream) {
             val trumpet = Models.StatusEffect.statusEffects.find { it.name.stringWithoutFormatting.contains("Heavenly Trumpet") }
             val trumpetTime = trumpet?.let { it.displayedTime.stringWithoutFormatting.split(":")[1].split(")")[0].toInt() } ?: 0
             if(AbilityModel.holyPowerBar.barProgress.progress > 0.8 && trumpetTime > 3) {
-                waitSpell(Actions.cast3)
+                addSpell(Actions.cast3)
             } else {
-                waitSpell(Actions.cast1)
+                addSpell(Actions.cast1)
             }
             for(i in 1..maxRepeat.value) {
-                waitSpell(Actions.cast4)
+                addSpell(Actions.cast4)
             }
         } else if(mode == Mode.AlterSurf) {
-            waitSpell(Actions.cast3)
-            waitSpell(Actions.cast2)
-            waitSpell(Actions.cast4)
-            waitSpell(Actions.cast3)
-            waitSpell(Actions.cast2)
-            waitSpell(Actions.cast1)
+            addSpell(Actions.cast3)
+            addSpell(Actions.cast2)
+            addSpell(Actions.cast4)
+            addSpell(Actions.cast3)
+            addSpell(Actions.cast2)
+            addSpell(Actions.cast1)
         }
     }
 
@@ -958,9 +969,9 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
     val modes = arrayOf(Mode.Trickster, Mode.Acrobat, Mode.None)
     override var mode = Mode.Acrobat
 
-    var enableDash = false
-    var enableSmoke = false
-    var enableMultiHit = true
+//    var enableDash = false
+//    var enableSmoke = false
+//    var enableMultiHit = true
 
     var lastSmoke = 0L
     var lastDash = 0L
@@ -969,18 +980,6 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
     var blocking = false
 
     override fun onInitOverride() {
-        binds["enableDash"] = Bind("key.keyboard.keypad.7") {
-            enableDash = !enableDash
-            updateConfig()
-        }
-        binds["enableSmoke"] = Bind("key.keyboard.keypad.8") {
-            enableSmoke = !enableSmoke
-            updateConfig()
-        }
-        binds["enableMultiHit"] = Bind("key.keyboard.keypad.9") {
-            enableMultiHit = !enableMultiHit
-            updateConfig()
-        }
 
         binds["manualFlying"] = Bind(skill1Key) {
             if(enabled.value) return@Bind
@@ -998,13 +997,13 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
             }
         }
 
-        targetY = BindNumber("key.keyboard.keypad.8", "TargetY", -1.0, 1.0) {}.setAfterValueChange { updateConfig() }
+        targetY = BindNumber("key.keyboard.keypad.2", "TargetY", -1.0, 1.0) { updateConfig() }
         targetY.onModify = { bind, positive ->
             bind.value = if(positive) global.Player.player?.y ?: -1.0 else -1.0
         }
         binds["targetY"] = targetY
 
-        height = BindInt("key.keyboard.keypad.6", "Height", 3) {}.setAfterValueChange { updateConfig() }
+        height = BindInt("key.keyboard.keypad.6", "Height", 3) { updateConfig() }
         binds["height"] = height
 
         super.onInitOverride()
@@ -1030,9 +1029,9 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
 
     override fun updateConfig() {
         super.updateConfig()
-        nextLine().setText("Dash (${Format.coloredKey(binds["enableDash"]?.simpleName)}): " + Format.coloredBoolean(enableDash))
-        nextLine().setText("Smoke (${Format.coloredKey(binds["enableSmoke"]?.simpleName)}): " + Format.coloredBoolean(enableSmoke))
-        nextLine().setText("MultiHit (${Format.coloredKey(binds["enableMultiHit"]?.simpleName)}): " + Format.coloredBoolean(enableMultiHit))
+//        nextLine().setText("Dash (${Format.coloredKey(binds["enableDash"]?.simpleName)}): " + Format.coloredBoolean(enableDash))
+//        nextLine().setText("Smoke (${Format.coloredKey(binds["enableSmoke"]?.simpleName)}): " + Format.coloredBoolean(enableSmoke))
+//        nextLine().setText("MultiHit (${Format.coloredKey(binds["enableMultiHit"]?.simpleName)}): " + Format.coloredBoolean(enableMultiHit))
         nextLine().setText(targetY.toString())
         nextLine().setText(height.toString())
     }
@@ -1057,12 +1056,6 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
         return yAboveTarget(dy)
     }
 
-    fun tryMelee() {
-        if(enableMelee && global.World.time - lastMelee > 4) {
-            melee()
-        }
-    }
-
     override fun chooseAction(){
         val player = global.Player.player ?: return
         blocking = true
@@ -1072,13 +1065,13 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
         } else if(mode == Mode.Acrobat) {
             if(lastAction != Actions.cast1) {
                 if(!heightCheck()) {
-                    tryMelee()
+                    melee()
                     blocking = false
                     return
                 }
                 cast1()
                 global.Client.waitTick(getSpellCooldownWithMana())
-                tryMelee()
+                melee()
                 global.Client.waitTick(16 - getSpellCooldownWithMana())
                 val wasJumping = global.KeyBind.pressedKeys.contains(global.KeyBind.keyBindings[Actions.jump])
                 global.KeyBind.releaseKeyBind(Actions.jump)
@@ -1091,18 +1084,10 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
                     global.KeyBind.pressKeyBind(Actions.jump)
                 }
 
-            } else if(enableSmoke && getMana() > 55 && global.World.time - lastSmoke > 100) {
+            } else if(getMana() > 55 && global.World.time - lastSmoke > 100) {
                 smoke()
-            } else if(enableMultiHit && getMana() > 75 && (global.World.time - lastDash < 120 || !enableDash)) {
+            } else if(getMana() > 75 && (global.World.time - lastDash < 120)) {
                 multiHit()
-            } else if(!enableDash) {
-                if(enableSmoke) {
-                    smoke()
-                } else if(enableMultiHit) {
-                    multiHit()
-                } else {
-                    lastAction = ""
-                }
             } else {
                 dash()
             }
@@ -1137,12 +1122,9 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
 
 inner class Mage(global: Battle_jsm) : WynnClass(global) {
     var lastHeal = 0L
-    var enableIceSnake = true
-    var enableMeteor = true
-    lateinit var maxRepeat: BindInt
+    lateinit var enableIceSnake: BindBoolean
+    lateinit var enableMeteor: BindBoolean
     var blocked = false
-    lateinit var enableMelee: BindBoolean
-
 
     val modes = arrayOf(Mode.Arcanist, Mode.LightBender, Mode.RiftWalker)
     override var mode = Mode.Arcanist
@@ -1157,35 +1139,23 @@ inner class Mage(global: Battle_jsm) : WynnClass(global) {
     }
 
     override fun onInitOverride() {
-        binds["enableIceSnake"] = Bind("key.keyboard.keypad.4") {
-            enableIceSnake = !enableIceSnake
+        enableIceSnake = BindBoolean("key.keyboard.keypad.4", true) {
             updateConfig()
-        }
-        binds["enableMeteor"] = Bind("key.keyboard.keypad.1") {
-            enableMeteor = !enableMeteor
+        }.bindTo(this)
+        enableMeteor = BindBoolean("key.keyboard.keypad.1", true) {
             updateConfig()
-        }
-
-
-        maxRepeat = BindInt("key.keyboard.keypad.7", "MaxRepeat", 1) {}.setAfterValueChange { updateConfig() }
-        binds["maxRepeat"] = maxRepeat
-
-        enableMelee = BindBoolean("key.keyboard.keypad.3", true) {}.setAfterValueChange { updateConfig() }
-        binds["enableMelee"] = enableMelee
-
+        }.bindTo(this)
 
         super.onInitOverride()
+        maxRepeat.set(1)
         spellCooldown.set(6)
     }
 
     override fun updateConfig() {
         super.updateConfig()
 
-        nextLine().setText("IceSnake (${Format.coloredKey(binds["enableIceSnake"]?.simpleName)}): " + Format.coloredBoolean(enableIceSnake))
-        nextLine().setText("Meteor (${Format.coloredKey(binds["enableMeteor"]?.simpleName)}): " + Format.coloredBoolean(enableMeteor))
-        nextLine().setText("Melee (${Format.coloredKey(enableMelee.simpleName)}): " + Format.coloredBoolean(enableMelee.value))
-
-        nextLine().setText(maxRepeat.toString())
+        nextLine().setText(enableIceSnake.toString("IceSnake"))
+        nextLine().setText(enableMeteor.toString("Meteor"))
     }
 
     override fun reset() {
@@ -1219,7 +1189,7 @@ inner class Mage(global: Battle_jsm) : WynnClass(global) {
         } else if(global.World.time - lastMelee >= 9 && !player.mainHand.isOnCooldown) {
             melee()
             global.Client.waitTick(1)
-        } else if(enableIceSnake && getMana() > 75 && (lastAction != Actions.cast4 || Models.Spell.repeatedSpellCount < maxRepeat.value) || (notHealthy && getMana() > 55)) {
+        } else if(enableIceSnake.value && getMana() > 75 && (lastAction != Actions.cast4 || Models.Spell.repeatedSpellCount < maxRepeat.value) || (notHealthy && getMana() > 55)) {
 
             waitSpell(Actions.cast4)
         } else if((lastAction == Actions.cast4 && Models.Spell.repeatedSpellCount >= maxRepeat.value) && global.World.time - lastMelee <= 20 && getMana() > 75) {
@@ -1234,12 +1204,12 @@ inner class Mage(global: Battle_jsm) : WynnClass(global) {
         if(health < 90 && lastAction != Actions.cast1) {
             waitSpell(Actions.cast1)
             lastHeal = global.World.time
-        } else if(enableIceSnake && (getMana() > 75 || health < 80)
+        } else if(enableIceSnake.value && (getMana() > 75 || health < 80)
             && (lastAction != Actions.cast4 || Models.Spell.repeatedSpellCount < maxRepeat.value)) {
             waitSpell(Actions.cast4)
-        } else if(enableMeteor && (getMana() > 75 || health < 80) && lastAction != Actions.cast3) {
+        } else if(enableMeteor.value && (getMana() > 75 || health < 80) && lastAction != Actions.cast3) {
             waitSpell(Actions.cast3)
-        } else if(!enableMeteor && lastAction == Actions.cast4) {
+        } else if(!enableMeteor.value && lastAction == Actions.cast4) {
             waitSpell(Actions.cast1)
             lastHeal = global.World.time
         } else if(enableMelee.value && global.World.time - lastMelee > 4 && !player.mainHand.isOnCooldown) {
@@ -1254,11 +1224,11 @@ inner class Mage(global: Battle_jsm) : WynnClass(global) {
             global.Client.waitTick()
         }
         for(i in 1..maxRepeat.value) {
-            waitSpell(Actions.cast3)
-            waitSpell(Actions.cast3)
-            waitSpell(Actions.cast4)
+            addSpell(Actions.cast3)
+            addSpell(Actions.cast3)
+            addSpell(Actions.cast4)
         }
-        waitSpell(Actions.cast1)
+        addSpell(Actions.cast1)
     }
 
     override fun onTick() {
@@ -1281,13 +1251,11 @@ inner class Archer(global: Battle_jsm) : WynnClass(global) {
     var counter = 0
     var lastShield = 0L
     var lastBomb = 0L
-    var manualEscape = 0L
 
     override fun onInitOverride() {
-
         super.onInitOverride()
 
-        spellCooldown.set(15)
+        spellCooldown.set(8)
     }
 
     override fun chooseAction() {
@@ -1298,30 +1266,29 @@ inner class Archer(global: Battle_jsm) : WynnClass(global) {
                 if((global.World.time - lastShield >= 60 || lastAction != Actions.cast4) && shield) {
                     lastShield = global.World.time
                     waitSpell(Actions.cast4)
-                    manualEscape += getSpellCooldownWithMana()
                 } else if(global.World.time - lastBomb >= 260) {
                     lastBomb = global.World.time
                     waitSpell(Actions.cast3)
-                    manualEscape += getSpellCooldownWithMana()
                 }
             }
         } else if(getMana() > 50) {
             melee = false
-            if((global.World.time - lastShield >= 60 || lastAction != Actions.cast4) && shield) {
-                cast4()
-                global.Client.waitTick(getSpellCooldownWithMana())
+            if(global.World.time - lastShield >= 60 && shield) {
+                waitSpell(Actions.cast4)
                 lastShield = global.World.time
             } else if(Models.Spell.repeatedSpellCount < 2) {
-                cast3()
-                global.Client.waitTick(getSpellCooldownWithMana())
+                waitSpell(Actions.cast3)
             } else {
-                cast1()
-                global.Client.waitTick(getSpellCooldownWithMana())
+                waitSpell(Actions.cast1)
             }
         }
-        if(global.World.time % 2L == 0L && melee) {
+        if(global.World.time % 2L == 0L && melee && enableMelee.value) {
             global.Player.interactions()?.interact()
         }
+    }
+
+    override fun updateConfig() {
+        super.updateConfig()
     }
 
     override fun onTick() {
@@ -1336,17 +1303,7 @@ inner class Archer(global: Battle_jsm) : WynnClass(global) {
         counter = 0
         lastShield = 0
         lastBomb = 0
-        manualEscape = 0
     }
-
-    override fun onKey(e: EventKey) {
-        super.onKey(e)
-        if(e.key == skill2Key && e.action == 1) {
-            manualEscape = global.World.time
-        }
-    }
-
-    override fun isBlocked() = global.World.time - manualEscape < 16
 }
 
 inner class Shaman(global: Battle_jsm) : WynnClass(global) {
@@ -1357,7 +1314,6 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
     var lastTimeMask = 0L
     var lastTotem = 0L
     var recordedPitch = 0f
-    lateinit var maxRepeat: BindInt
     var enableAura = true
     var fly = false
     var counter = 0
@@ -1375,19 +1331,17 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
             updateConfig()
         }
 
-        binds["enableAwakened"] = Bind("key.keyboard.keypad.8") {
+        binds["enableAwakened"] = Bind("key.keyboard.keypad.6") {
             enableAwakened = !enableAwakened
             updateConfig()
         }
-        maxRepeat = BindInt("key.keyboard.keypad.7", "maxRepeat", 8) {}.setAfterValueChange { updateConfig() }
-        binds["maxRepeat"] = maxRepeat
 
         binds["fly"] = Bind("key.keyboard.keypad.4") {
             fly = !fly
             updateConfig()
         }
 
-        binds["enableAura"] = Bind("key.keyboard.keypad.9") {
+        binds["enableAura"] = Bind("key.keyboard.keypad.3") {
             enableAura = !enableAura
             updateConfig()
         }
@@ -1395,6 +1349,7 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
 
         super.onInitOverride()
         spellCooldown.set(6)
+        maxRepeat.set(8)
     }
 
     override fun updateConfig() {
@@ -1402,7 +1357,6 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
         nextLine().setText("Mask (${Format.coloredKey(binds["mask"]?.simpleName)}): " + targetMask)
 
         nextLine().setText("Awakened (${Format.coloredKey(binds["enableAwakened"]?.simpleName)}): " + Format.coloredBoolean(enableAwakened))
-        nextLine().setText(Format.coloredConfig("maxRepeat" ) + "Repeat ${Format.formatChar}r(${Format.coloredKey(maxRepeat.simpleName)}): " + Format.coloredNumber(getMaxRepeatValue()))
 
         nextLine().setText("Fly (${Format.coloredKey(binds["fly"]?.simpleName)}): " + Format.coloredBoolean(fly))
         nextLine().setText("Aura (${Format.coloredKey(binds["enableAura"]?.simpleName)}): " + Format.coloredBoolean(enableAura))
@@ -1539,13 +1493,11 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
         inventory.selectedHotbarSlotIndex = 1
         global.Client.waitTick()
         if(progress < 0.34f) {
-            cast1()
-            global.Client.waitTick(getSpellCooldownWithMana()-1)
+            waitSpell(Actions.cast1)
         }
-        cast1()
-        global.Client.waitTick(getSpellCooldownWithMana()-1)
-        cast1()
-        global.Client.waitTick(getSpellCooldownWithMana()-1)
+        for(i in 1..4) {
+            waitSpell(Actions.cast1)
+        }
 
         inventory.selectedHotbarSlotIndex = if(inventory.getSlot(38).name.stringStripFormatting.startsWith("Silent B")) 2 else 1
         global.Client.waitTick()
@@ -1694,7 +1646,7 @@ object CustomInput  {
 
     @Advice.OnMethodExit
     @JvmStatic
-    fun getBlockParticle(@Advice.This(typing = Assigner.Typing.DYNAMIC)zhis: class_743?) {
+    fun tick(@Advice.This(typing = Assigner.Typing.DYNAMIC)zhis: class_743?) {
         try {
             if(ClassBuilder.methodWrappers["overrideInput"]?.get() as? Boolean == true) {
                 zhis?.field_3905 = 1f

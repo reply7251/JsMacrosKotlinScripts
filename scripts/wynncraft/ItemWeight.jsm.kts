@@ -1,18 +1,25 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
+import com.google.gson.GsonBuilder
 import com.google.gson.JsonParser
 import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Managers
 import com.wynntils.core.components.Models
+import com.wynntils.core.components.Services
 import com.wynntils.features.tooltips.ItemStatInfoFeature
 import com.wynntils.mc.event.ItemTooltipRenderEvent
 import com.wynntils.models.gear.type.GearTier
+import com.wynntils.models.items.WynnItem
 import com.wynntils.models.items.items.game.GearItem
 import com.wynntils.models.stats.StatCalculator
+import com.wynntils.services.itemfilter.type.ItemProviderType
+import com.wynntils.services.itemfilter.type.ItemStatProvider
 import com.wynntils.utils.wynn.ColorScaleUtils
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
+import java.io.File
+import java.util.*
 import kotlin.jvm.optionals.getOrNull
 import kotlin.math.roundToInt
 
@@ -21,27 +28,58 @@ import kotlin.math.roundToInt
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")
 }
+val noriFile = File(context.file!!.parentFile, "nori.json")
+val data = if(!noriFile.exists()) {
+    val text = Request.get("https://nori.fish/api/item/mythic").text()
+    noriFile.createNewFile()
+    noriFile.writeText(GsonBuilder().setPrettyPrinting().create().toJson(JsonParser.parseString(text)))
+    text
+} else {
+    noriFile.readText()
+}
 
-val data = """
-{"weights":{"Apocalypse":{"Main":{"lifeSteal":70.0,"healthRegen":15.0,"fireDefence":10.0,"waterDefence":4.0,"3rdSpellCost":1.0}},"Hero":{"Main":{"walkSpeed":85.0,"healthRegen":14.0,"mainAttackDamage":1.0}},"Guardian":{"Main":{"rawHealth":55.0,"healthRegenRaw":40.0,"manaRegen":5.0},"War":{"rawHealth":98.0,"healthRegenRaw":2.0}},"Alkatraz":{"Main":{"earthDamage":49.0,"mainAttackDamage":49.0,"exploding":2.0}},"Idol":{"Main":{"raw2ndSpellCost":47.5,"rawSpellDamage":40.0,"manaRegen":10.0,"reflection":2.5},"Utility":{"raw2ndSpellCost":65.0,"manaRegen":30.0,"reflection":4.0,"rawSpellDamage":1.0}},"Thrundacrack":{"Main":{"raw3rdSpellCost":35.0,"thunderDamage":35.0,"waterDamage":22.5,"walkSpeed":6.5,"healthRegen":1.0}},"Collapse":{"Main":{"manaSteal":85.0,"mainAttackDamage":10.0,"elementalDefence":5.0},"Melee":{"mainAttackDamage":85.0,"manaSteal":14.0,"elementalDefence":1.0}},"Convergence":{"Main":{"3rdSpellCost":60.0,"healthRegen":25.0,"thunderDamage":8.0,"earthDamage":7.0}},"Az":{"Main":{"1stSpellCost":40.0,"fireDamage":30.0,"waterDamage":30.0},"Fire":{"1stSpellCost":60.0,"fireDamage":39.0,"waterDamage":1.0},"Water":{"1stSpellCost":60.0,"waterDamage":39.0,"fireDamage":1.0}},"Freedom":{"Main":{"rawHealth":30.0,"walkSpeed":25.0,"rawSpellDamage":25.0,"manaRegen":20.0}},"Grandmother":{"Main":{"healthRegenRaw":35.0,"spellDamage":35.0,"healthRegen":27.5,"walkSpeed":2.5}},"Ignis":{"Main":{"healthRegenRaw":40.0,"healthRegen":25.0,"rawHealth":25.0,"4thSpellCost":10.0}},"Divzer":{"Main":{"manaSteal":70.0,"lifeSteal":20.0,"rawSpellDamage":10.0}},"Spring":{"Main":{"manaRegen":50.0,"waterDamage":40.0,"weakenEnemy":5.0,"thunderDamage":5.0},"Debuff":{"manaRegen":35.0,"weakenEnemy":25.0,"slowEnemy":19.0,"waterDamage":19.0,"thunderDamage":2.0}},"Stratiformis":{"Main":{"walkSpeed":80.0,"rawHealth":18.0,"spellDamage":2.0}},"Epoch":{"Main":{"rawMainAttackDamage":40.0,"lifeSteal":30.0,"walkSpeed":15.0,"raw4thSpellCost":10.0,"spellDamage":5.0},"Hmelee":{"rawMainAttackDamage":40.0,"lifeSteal":35.0,"raw1stSpellCost":10.0,"raw4thSpellCost":5.0,"spellDamage":5.0,"manaSteal":5.0}},"Pure":{"Main":{"spellDamage":65.0,"manaSteal":22.5,"xpBonus":12.5}},"Lament":{"Main":{"waterDamage":45.0,"healingEfficiency":27.5,"manaSteal":15.0,"1stSpellCost":12.5},"War":{"waterDamage":37.5,"healingEfficiency":30.0,"manaSteal":22.5,"1stSpellCost":10.0}},"Gaia":{"Main":{"rawMainAttackDamage":50.0,"mainAttackDamage":35.0,"poison":15.0},"Spell":{"raw4thSpellCost":80.0,"poison":10.0,"mainAttackDamage":5.0,"rawMainAttackDamage":5.0}},"Monster":{"Main":{"rawHealth":37.5,"manaSteal":27.5,"fireDamage":25.0,"raw1stSpellCost":5.0,"lifeSteal":5.0},"War":{"rawHealth":37.5,"manaSteal":27.5,"fireDamage":17.5,"lifeSteal":12.5,"raw1stSpellCost":5.0}},"Singularity":{"Main":{"rawSpellDamage":40.0,"walkSpeed":25.0,"healthRegenRaw":15.0,"spellDamage":10.0,"rawMainAttackDamage":7.5,"mainAttackDamage":2.5},"Melee":{"rawMainAttackDamage":32.5,"mainAttackDamage":25.0,"walkSpeed":20.0,"healthRegenRaw":15.0,"rawSpellDamage":5.0,"spellDamage":2.5}},"Fatal":{"Main":{"spellDamage":40.0,"1stSpellCost":25.0,"2ndSpellCost":15.0,"manaSteal":10.0,"walkSpeed":10.0},"Arcanist":{"spellDamage":60.0,"walkSpeed":20.0,"2ndSpellCost":15.0,"manaSteal":5.0}},"Warp":{"Main":{"manaRegen":25.0,"healthRegenRaw":20.0,"walkSpeed":17.5,"healingEfficiency":15.0,"healthRegen":10.0,"airDamage":7.5,"raw2ndSpellCost":5.0},"Arcanist":{"manaRegen":30.0,"healthRegenRaw":30.0,"walkSpeed":22.5,"raw2ndSpellCost":10.0,"airDamage":5.0,"healthRegen":2.5}},"Quetzalcoatl":{"Main":{"rawSpellDamage":50.0,"lifeSteal":25.0,"healingEfficiency":15.0,"walkSpeed":10.0}},"Aftershock":{"Main":{"rawHealth":70.0,"earthDamage":25.0,"4thSpellCost":5.0},"Raid":{"earthDamage":60.0,"4thSpellCost":25.0,"rawHealth":15.0}},"Olympic":{"Main":{"jumpHeight":40.0,"walkSpeed":35.0,"airDamage":12.5,"raw1stSpellCost":10.0,"raw2ndSpellCost":2.5}},"Hadal":{"Main":{"spellDamage":50.0,"manaRegen":20.0,"3rdSpellCost":19.0,"4thSpellCost":10.0,"rawMaxMana":1.0}},"Sunstar":{"Main":{"rawMainAttackDamage":60.0,"thunderDamage":30.0,"lifeSteal":10.0}},"Toxoplasmosis":{"Main":{"poison":80.0,"walkSpeed":7.5,"lootBonus":7.5,"manaSteal":2.5,"lifeSteal":2.5}},"Fantasia":{"Main":{"3rdSpellCost":27.5,"spellDamage":22.5,"manaRegen":20.0,"4thSpellCost":15.0,"1stSpellCost":8.0,"manaSteal":6.0,"2ndSpellCost":1.0}},"Absolution":{"Main":{"healingEfficiency":50.0,"rawHealth":22.5,"manaRegen":17.5,"raw1stSpellCost":9.0,"fireDamage":1.0}},"Immolation":{"Main":{"fireDamage":32.5,"airDamage":32.5,"3rdSpellCost":25.0,"healthRegen":10.0}},"Archangel":{"Main":{"walkSpeed":32.5,"rawHealth":22.5,"healthRegen":17.5,"healthRegenRaw":17.5,"mainAttackRange":10.0},"walkspeed":{"walkSpeed":70.0,"rawHealth":10.0,"healthRegen":10.0,"healthRegenRaw":10.0},"Tank":{"healthRegenRaw":32.5,"healthRegen":32.5,"rawHealth":25.0,"walkSpeed":10.0}},"Nullification":{"Main":{"elementalDefence":67.0,"lifeSteal":14.0,"manaSteal":14.0,"reflection":5.0}},"Cataclysm":{"Main":{"rawHealth":50.0,"raw1stSpellCost":30.0,"thunderDamage":19.0,"stealing":1.0},"War":{"raw1stSpellCost":70.0,"thunderDamage":20.0,"rawHealth":10.0}},"Grimtrap":{"Main":{"raw4thSpellCost":70.0,"raw2ndSpellCost":20.0,"poison":5.0,"manaSteal":2.5,"lifeSteal":2.5}},"Weathered":{"Main":{"airDamage":45.0,"walkSpeed":40.0,"manaSteal":15.0}},"Inferno":{"Main":{"rawMainAttackDamage":37.5,"walkSpeed":20.0,"mainAttackDamage":12.5,"fireDamage":10.0,"rawHealth":10.0,"raw1stSpellCost":5.0,"manaRegen":5.0}},"Nirvana":{"Main":{"spellDamage":40.0,"manaRegen":27.5,"rawHealth":22.5,"manaSteal":10.0},"Acrobat":{"spellDamage":45.0,"manaRegen":28.0,"rawHealth":24.5,"manaSteal":2.5}},"Oblivion":{"Main":{"manaRegen":35.0,"raw2ndSpellCost":25.0,"rawSpellDamage":20.0,"manaSteal":15.0,"exploding":5.0}},"Discoverer":{"Main":{"lootBonus":99.0,"xpBonus":1.0}},"Crusade Sabatons":{"Main":{"rawHealth":85.0,"healthRegen":10.0,"walkSpeed":5.0}},"Resurgence":{"Main":{"manaRegen":40.0,"spellDamage":35.0,"healthRegenRaw":15.0,"walkSpeed":10.0},"Utility":{"manaRegen":45.0,"healthRegenRaw":30.0,"spellDamage":20.0,"walkSpeed":5.0}},"Galleon":{"Main":{"manaSteal":30.5,"earthDamage":29.0,"waterDamage":28.0,"poison":10.0,"mainAttackDamage":2.5},"Greed":{"manaSteal":25.0,"earthDamage":24.0,"waterDamage":23.5,"poison":15.0,"stealing":10.0,"lootBonus":2.5,"mainAttackDamage":1.0}},"Boreal":{"Main":{"healthRegen":50.0,"healthRegenRaw":33.0,"manaRegen":10.0,"walkSpeed":5.0,"airDefence":1.0,"fireDefence":1.0}},"Slayer":{"Main":{"3rdSpellCost":47.5,"walkSpeed":25.0,"healthRegenRaw":20.0,"rawMainAttackDamage":5.0,"stealing":2.5},"Melee":{"rawMainAttackDamage":37.5,"walkSpeed":25.0,"healthRegenRaw":20.0,"3rdSpellCost":15.0,"stealing":2.5}},"Moontower":{"Main":{"walkSpeed":95.0,"airDefence":2.5,"waterDefence":2.5}},"Dawnbreak":{"Main":{"rawMainAttackDamage":55.0,"manaSteal":12.5,"thunderDamage":12.5,"fireDamage":12.5,"lifeSteal":7.5},"Spell":{"fireDamage":27.5,"thunderDamage":27.5,"manaSteal":22.5,"lifeSteal":20.0,"rawMainAttackDamage":2.5}},"Stardew":{"Main":{"rawSpellDamage":35.0,"waterDamage":25.0,"manaRegen":20.0,"thunderDamage":20.0},"Spellsteal":{"rawSpellDamage":30.0,"manaSteal":25.0,"waterDamage":18.0,"thunderDamage":16.0,"manaRegen":11.0}},"Warchief":{"Main":{"mainAttackDamage":37.5,"thunderDamage":32.0,"rawMainAttackDamage":17.0,"walkSpeed":12.5,"exploding":1.0},"Earth":{"mainAttackDamage":36.0,"earthDamage":34.0,"rawMainAttackDamage":19.0,"walkSpeed":10.0,"exploding":1.0},"Spell":{"thunderDamage":52.5,"earthDamage":42.5,"walkSpeed":5.0}},"Revenant":{"Main":{"rawMainAttackDamage":35.0,"walkSpeed":15.0,"rawHealth":15.0,"mainAttackDamage":15.0,"airDamage":12.5,"earthDamage":5.0},"Spell":{"earthDamage":25.0,"airDamage":25.0,"walkSpeed":25.0,"4thSpellCost":10.0,"manaSteal":7.5,"rawHealth":6.5,"reflection":1.0}},"Bloodbath":{"Main":{"raw1stSpellCost":40.0,"walkSpeed":30.0,"rawHealth":25.0,"lifeSteal":5.0}},"Trance":{"Main":{"manaSteal":60.0,"rawAttackSpeed":20.0,"walkSpeed":15.0,"lifeSteal":5.0},"Melee":{"manaSteal":40.0,"rawAttackSpeed":35.0,"walkSpeed":12.5,"lifeSteal":12.5}},"Labyrinth":{"Main":{"fireDamage":47.5,"earthDamage":40.0,"3rdSpellCost":10.0,"manaSteal":2.5}},"Hanafubuki":{"Main":{"elementalDamage":75.0,"3rdSpellCost":12.5,"4thSpellCost":7.5,"jumpHeight":5.0}},"Resonance":{"Main":{"elementalSpellDamage":45.0,"4thSpellCost":27.5,"manaRegen":27.5},"Support":{"elementalSpellDamage":40.0,"4thSpellCost":22.5,"manaRegen":22.5,"healthRegen":12.5,"airDefence":2.5}}}}
-"""
 val json = JsonParser.parseString(data).asJsonObject.get("weights").asJsonObject
+
+fun getNoriScale(wynnItem: GearItem): Double {
+    if(wynnItem.gearTier != GearTier.MYTHIC) return -1.0
+    val instance = wynnItem.itemInstance.getOrNull() ?: return -1.0
+    if(!instance.hasOverallValue()) return -1.0
+    val scales = json[wynnItem.name]?.asJsonObject?.get("Main")?.asJsonObject ?: return -1.0
+    var score = 0.0
+    val possibles = wynnItem.possibleValues
+    var match = false
+
+    instance.identifications.forEach { actual ->
+        val possible = possibles.firstOrNull { actual.statType == it.statType } ?: return@forEach
+        if(possible.range.isFixed || !possible.range.inRange(actual.value)) return@forEach
+        val scale = scales[actual.statType.apiName]?.asDouble ?: return@forEach
+        score += scale * StatCalculator.getPercentage(actual, possible)
+        match = true
+    }
+
+    return if(match) score else -1.0
+}
+
+class NoriScaleStatProvider : ItemStatProvider<Int>() {
+    override fun getValue(p0: WynnItem?): Optional<Int> {
+        (p0 as? GearItem)?.let { gear ->
+            val score = getNoriScale(gear)
+            if(score >= 0) return Optional.of(score.roundToInt() / 100)
+        }
+        return Optional.empty()
+    }
+
+    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR_INSTANCE)
+    override fun getName() = "nori"
+    override fun getDisplayName() = "Nori Scale"
+}
 
 class WynnListener {
     @SubscribeEvent
     fun onItemToolTip(event: ItemTooltipRenderEvent.Pre) {
         val wynnItem = Models.Item.asWynnItem(event.itemStack, GearItem::class.java).getOrNull() ?: return
-        if(wynnItem.gearTier != GearTier.MYTHIC) return
-        val instance = wynnItem.itemInstance.getOrNull() ?: return
-        val scales = json[wynnItem.name]?.asJsonObject?.get("Main")?.asJsonObject ?: return
-        var score = 0.0
-        val possibles = wynnItem.possibleValues
-        instance.identifications.forEach { actual ->
-            val possible = possibles.firstOrNull { actual.statType == it.statType } ?: return@forEach
-            if(possible.range.isFixed || !possible.range.inRange(actual.value)) return@forEach
-            val scale = scales[actual.statType.apiName]?.asDouble ?: return@forEach
-            score += scale * StatCalculator.getPercentage(actual, possible)
-        }
+        val score = getNoriScale(wynnItem)
+        if(score < 0) return
         val tooltips = mutableListOf(*event.tooltips.toTypedArray())
         val isif = Managers.Feature.getFeatureInstance(ItemStatInfoFeature::class.java)
         val colored = ColorScaleUtils.getPercentageTextComponent(isif.colorMap, score.roundToInt() / 100f,
@@ -52,9 +90,11 @@ class WynnListener {
     }
 }
 
-
+val noriScaleStatProvider = NoriScaleStatProvider()
+Services.ItemFilter.itemStatProviders.add(noriScaleStatProvider)
 val wynnListener = WynnListener()
 WynntilsMod.registerEventListener(wynnListener)
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
     WynntilsMod.unregisterEventListener(wynnListener)
+    Services.ItemFilter.itemStatProviders.remove(noriScaleStatProvider)
 }

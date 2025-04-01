@@ -1,9 +1,4 @@
-import me.hellrevenger.generated.Map_Nameable.getCustomName
-import me.hellrevenger.library.api.WorldPosWrapper
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventEntityLoad
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventNameChange
-import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
-import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
+
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.specialized.display.TextDisplayEntityHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
@@ -12,11 +7,11 @@ val service = event as EventService
 service.unregisterOnStop(true)
 
 var running = true
-val whitelist = listOf("That Which", "❃", "")
+val whitelist = listOf("That Which", "❃", "") // "\ue02a"
 val custom = arrayListOf<String>()
 val blacklist = listOf("Req:")
 val traced = mutableSetOf<net.minecraft.class_1297>()
-
+val levelPattern = "\ue00b\ue015 ([\ue020-\ue029])".toPattern()
 val d2d = Hud.createDraw2D()
 d2d.register()
 
@@ -36,19 +31,17 @@ fun reCheck() {
     }
     textDisplays.clear()
 }
-
+fun getDisplays() =
+    World.entities?.let {
+        mapOf(*it.filterIsInstance<TextDisplayEntityHelper>()
+            .mapNotNull { it.data?.let { data -> it to data.text } }.toTypedArray())
+    }
 thread {
     while (running) {
-        World.entities?.forEach {
-            if(it is TextDisplayEntityHelper) {
-                if(it !in textDisplays) {
-                    val data = it.data ?: return@forEach
-                    val name = data.text.stringStripFormatting ?: return@forEach
-                    if(nameCheck(name)) {
-                        textDisplays.add(it)
-                        d3d.addEntityTraceLine(it, 0xffffff)
-                    }
-                }
+        getDisplays()?.forEach { (entity, name) ->
+            if(nameCheck(name.stringStripFormatting) || nameCheck(name.string)) {
+                textDisplays.add(entity)
+                d3d.addEntityTraceLine(entity, 0xffffff)
             }
         }
         textDisplays.removeIf { !it.isAlive }
@@ -58,17 +51,22 @@ thread {
 
 Chat.commandManager.createCommandBuilder("/find")
     .literalArg("add").greedyStringArg("name").suggest(JavaWrapper.methodToJava { ctx, builder ->
-        val names = mutableSetOf<String>()
-        World.entities?.forEach {
-            if(it is TextDisplayEntityHelper) {
-                val data = it.data ?: return@forEach
-                val name = data.text.stringStripFormatting ?: return@forEach
-                names.add(name)
+        getDisplays()?.let{
+            it.map { it.value.stringStripFormatting }.toSet().forEach {
+                if(it.contains(builder.remaining, true))
+                    builder.suggest(it)
             }
         }
-        names.forEach {
-            if(it.contains(builder.remaining, true))
-                builder.suggest(it)
+    }).executes(JavaWrapper.methodToJava { ctx ->
+        custom.add(ctx.getArg("name") as String)
+        reCheck()
+    }).or().or()
+    .literalArg("addformat").greedyStringArg("name").suggest(JavaWrapper.methodToJava { ctx, builder ->
+        getDisplays()?.let{
+            it.map { it.value.string }.toSet().forEach {
+                if(it.contains(builder.remaining, true) && levelPattern.matcher(it).find())
+                    builder.suggest(it)
+            }
         }
     }).executes(JavaWrapper.methodToJava { ctx ->
         custom.add(ctx.getArg("name") as String)
