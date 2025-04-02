@@ -6,6 +6,7 @@ import me.hellrevenger.SimpleScript
 import me.hellrevenger.createSimpleScript
 import xyz.wagyourtail.jsmacros.client.JsMacrosClient
 import xyz.wagyourtail.jsmacros.core.Core
+import xyz.wagyourtail.jsmacros.core.config.ConfigManager
 import xyz.wagyourtail.jsmacros.core.config.Option
 import xyz.wagyourtail.jsmacros.core.config.ScriptTrigger
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
@@ -124,13 +125,14 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
 class CompilerSetting {
     companion object {
-        var config = JsMacrosClient.clientCore.config
+        var config: ConfigManager? = null
 
         fun init(runner: Core<*, *>) {
-            config.addOptions("KotlinSetting", CompilerSetting::class.java)
+            runner.config.addOptions("KotlinSetting", CompilerSetting::class.java)
+            config = runner.config
         }
 
-        fun isK2Enabled() = config.getOptions(CompilerSetting::class.java)?.K2Enabled ?: true
+        fun isK2Enabled() = config?.getOptions(CompilerSetting::class.java)?.K2Enabled ?: true
     }
 
     @JvmField
