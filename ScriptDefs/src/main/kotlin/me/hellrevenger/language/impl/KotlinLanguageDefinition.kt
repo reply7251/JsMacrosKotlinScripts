@@ -4,6 +4,7 @@ import me.hellrevenger.EnableK2
 import me.hellrevenger.ImportJar
 import me.hellrevenger.SimpleScript
 import me.hellrevenger.createSimpleScript
+import xyz.wagyourtail.jsmacros.client.JsMacrosClient
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.config.Option
 import xyz.wagyourtail.jsmacros.core.config.ScriptTrigger
@@ -123,9 +124,9 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
 class CompilerSetting {
     companion object {
-        val config = Core.getInstance().config
+        var config = JsMacrosClient.clientCore.config
 
-        fun init() {
+        fun init(runner: Core<*, *>) {
             config.addOptions("KotlinSetting", CompilerSetting::class.java)
         }
 
