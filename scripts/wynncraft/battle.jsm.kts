@@ -1,5 +1,5 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
-@file:EnableK2(false)
+// k2=false
 
 import com.wynntils.core.components.Managers
 import com.wynntils.core.components.Models

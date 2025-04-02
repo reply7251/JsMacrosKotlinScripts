@@ -1,4 +1,4 @@
-@file:EnableK2(false)
+// k2=false
 
 import me.hellrevenger.generated.*
 import me.hellrevenger.generated.Map_MinecraftClient.gameRenderer
