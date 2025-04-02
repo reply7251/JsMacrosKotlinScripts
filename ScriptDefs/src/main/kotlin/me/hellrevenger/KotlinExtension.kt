@@ -38,7 +38,7 @@ class KotlinExtension: LanguageExtension, LibraryExtension {
 
     override fun init(runner: Core<*,*>) {
         KotlinExtension.runner = runner
-        CompilerSetting.init()
+        CompilerSetting.init(runner)
 
         val compConf = object : ScriptCompilationConfiguration({}) {}
         val evalConf = object : ScriptEvaluationConfiguration({}) {}
