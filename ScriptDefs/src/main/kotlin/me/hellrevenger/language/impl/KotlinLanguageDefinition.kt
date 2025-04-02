@@ -1,11 +1,12 @@
 package me.hellrevenger.language.impl
 
+import me.hellrevenger.EnableK2
 import me.hellrevenger.ImportJar
 import me.hellrevenger.SimpleScript
 import me.hellrevenger.createSimpleScript
-import me.hellrevenger.mixins.MixinCompiler
-import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
+import xyz.wagyourtail.jsmacros.client.JsMacrosClient
 import xyz.wagyourtail.jsmacros.core.Core
+import xyz.wagyourtail.jsmacros.core.config.Option
 import xyz.wagyourtail.jsmacros.core.config.ScriptTrigger
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.extensions.Extension
@@ -31,7 +32,11 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
         val libs = retrieveLibs(ctx.ctx)
 
-        val everything = if(MixinCompiler.isK2Enabled()) createSimpleScript(vars + libs) else null
+        var K2 = CompilerSetting.isK2Enabled()
+
+        var everything: SimpleScript? = null
+
+        //val everything = if(K2) createSimpleScript(vars + libs) else null
 
         val compConf = object : ScriptCompilationConfiguration({
             jvm {
@@ -39,24 +44,39 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
                 dependenciesFromCurrentContext(wholeClasspath = true)
                 dependencies.append(JvmDependencyFromClassLoader { KotlinLanguageDefinition::class.java.classLoader })
             }
-            defaultImports(ImportJar::class)
+            defaultImports(ImportJar::class, EnableK2::class)
+
+            refineConfiguration {
+                onAnnotations<EnableK2> { context ->
+                    val annotations = context.collectedData?.get(ScriptCollectedData.collectedAnnotations)
+                        ?.takeIf { it.isNotEmpty() }
+                        ?: return@onAnnotations context.compilationConfiguration.asSuccess()
+                    val enables = annotations.mapNotNull { (it.annotation as? EnableK2)?.enabled }
+                    K2 = enables.any { it }
+                    context.compilationConfiguration.asSuccess()
+                }
+                beforeCompiling {context ->
+                    context.compilationConfiguration.with {
+                        if(!K2) {
+                            compilerOptions.append("-language-version=1.9")
+                        } else {
+                            everything = createSimpleScript(vars + libs)
+                            implicitReceivers.append(KotlinType(everything!!::class))
+                        }
+                    }.asSuccess()
+                }
+            }
 
             providedProperties.replaceOnlyDefault(mapOf(
                 "event" to KotlinType(if (event == null) BaseEvent::class else event::class, isNullable = true),
                 "file" to KotlinType(File::class, isNullable = true),
                 "context" to KotlinType(KotlinScriptContext::class)
             ) + libs.mapValues { KotlinType(it.value::class) })
-
-            if(everything != null) {
-                implicitReceivers.append(KotlinType(everything::class))
-            }
-
         }) {}
         val execConf = object : ScriptEvaluationConfiguration({
             providedProperties(vars + libs)
-
-            if(everything != null) {
-                implicitReceivers.append(everything)
+            everything?.let {
+                implicitReceivers.append(it)
             }
         }) {}
 
@@ -100,4 +120,20 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
     class KotlinCompileException(val resultWithDiagnostics: ResultWithDiagnostics<*>) : Exception()
     class KotlinRuntimeException(val error: Throwable, val file: File?) : Exception(error)
+}
+
+class CompilerSetting {
+    companion object {
+        var config = JsMacrosClient.clientCore.config
+
+        fun init(runner: Core<*, *>) {
+            config.addOptions("KotlinSetting", CompilerSetting::class.java)
+        }
+
+        fun isK2Enabled() = config.getOptions(CompilerSetting::class.java)?.K2Enabled ?: true
+    }
+
+    @JvmField
+    @Option(translationKey = "K2", group = ["jsmacros.settings.general"], setter = "setEnabled")
+    var K2Enabled = false
 }
