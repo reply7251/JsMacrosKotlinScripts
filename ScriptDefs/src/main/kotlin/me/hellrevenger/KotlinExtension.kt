@@ -1,24 +1,17 @@
 package me.hellrevenger
 
 
+import me.hellrevenger.language.impl.CompilerSetting
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.library.api.FEventListener
 import me.hellrevenger.library.api.ScriptConfig
-import me.hellrevenger.library.impl.FEventCenter
 import me.hellrevenger.library.impl.FWrapper
 import me.hellrevenger.mixins.MixinMain
-import net.minecraft.class_310
-import xyz.wagyourtail.jsmacros.client.JsMacros
-import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.extensions.Extension
 import xyz.wagyourtail.jsmacros.core.language.BaseLanguage
 import xyz.wagyourtail.jsmacros.core.language.BaseWrappedException
-import xyz.wagyourtail.jsmacros.core.library.BaseLibrary
 import java.io.File
-import java.io.PrintWriter
-import java.io.StringWriter
-import kotlin.concurrent.thread
 import kotlin.math.min
 import kotlin.script.experimental.api.ScriptCompilationConfiguration
 import kotlin.script.experimental.api.ScriptDiagnostic
@@ -32,6 +25,8 @@ KotlinExtension: Extension {
     private var languageDefinition: KotlinLanguageDefinition? = null
 
     override fun init() {
+        CompilerSetting.init()
+
         val compConf = object : ScriptCompilationConfiguration({}) {}
         val evalConf = object : ScriptEvaluationConfiguration({}) {}
         val ret = BasicJvmScriptingHost().eval("println(\"Kotlin Preloaded!\")".toScriptSource(), compConf, evalConf)

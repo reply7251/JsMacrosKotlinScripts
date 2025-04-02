@@ -65,7 +65,7 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
         dependenciesFromCurrentContext();
     }
 
-    defaultImports(ImportJar::class)
+    defaultImports(ImportJar::class, EnableK2::class)
 
     refineConfiguration {
         onAnnotations<ImportJar> { context ->
@@ -109,3 +109,7 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
  */
 @Target(AnnotationTarget.FILE)
 annotation class ImportJar(vararg val path: String)
+
+
+@Target(AnnotationTarget.FILE)
+annotation class EnableK2(val enabled: Boolean)
