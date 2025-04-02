@@ -1,9 +1,6 @@
 package me.hellrevenger.language.impl
 
-import me.hellrevenger.EnableK2
-import me.hellrevenger.ImportJar
-import me.hellrevenger.SimpleScript
-import me.hellrevenger.createSimpleScript
+import me.hellrevenger.*
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.config.Option
 import xyz.wagyourtail.jsmacros.core.config.ScriptTrigger
@@ -43,18 +40,18 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
                 dependenciesFromCurrentContext(wholeClasspath = true)
                 dependencies.append(JvmDependencyFromClassLoader { KotlinLanguageDefinition::class.java.classLoader })
             }
-            defaultImports(ImportJar::class, EnableK2::class)
+            defaultImports(ImportJar::class)
 
             refineConfiguration {
-                onAnnotations<EnableK2> { context ->
-                    val annotations = context.collectedData?.get(ScriptCollectedData.collectedAnnotations)
-                        ?.takeIf { it.isNotEmpty() }
-                        ?: return@onAnnotations context.compilationConfiguration.asSuccess()
-                    val enables = annotations.mapNotNull { (it.annotation as? EnableK2)?.enabled }
-                    K2 = enables.any { it }
-                    context.compilationConfiguration.asSuccess()
-                }
                 beforeCompiling {context ->
+                    context.script.text.split("\r?\n\r?".toRegex()).forEach {
+                        if(it.startsWith("//")) {
+                            val line = it.substring(2).replace(" ", "")
+                            if(line.lowercase().startsWith("k2=")) {
+                                K2 = line.substring("k2=".length).toBoolean()
+                            }
+                        }
+                    }
                     context.compilationConfiguration.with {
                         if(!K2) {
                             compilerOptions.append("-language-version=1.9")
@@ -133,6 +130,6 @@ class CompilerSetting {
     }
 
     @JvmField
-    @Option(translationKey = "K2", group = ["jsmacros.settings.general"], setter = "setEnabled")
+    @Option(translationKey = "K2", group = ["jsmacros.settings.general"])
     var K2Enabled = false
 }
