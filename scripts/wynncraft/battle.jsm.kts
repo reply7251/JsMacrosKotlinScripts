@@ -372,6 +372,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
     lateinit var enableMelee: BindBoolean
     lateinit var maxRepeat: BindInt
     var nextSpells = mutableListOf<String>()
+    var blockedByHotbar = false
 
     init {
         onInit()
@@ -485,6 +486,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
 
     open fun reset() {
         lastMelee = 0
+        lastSpell = 0
         CustomInput.override = false
     }
 
@@ -494,15 +496,21 @@ open class WynnClass(val global: Battle_jsm): HasBind {
         player.removeStatusEffectInternal(StatusEffects::class.DARKNESS)
     }
 
+    fun checkEscape(): Boolean {
+        if(manualEscape) {
+            manualEscape = false
+            waitSpell(Actions.cast2)
+            return true
+        }
+        return false
+    }
+
     open fun main() {
         reset()
         thread {
             while (enabled.value && global.World.isWorldLoaded) {
                 if(!isBlocked()) {
-                    if(manualEscape) {
-                        manualEscape = false
-                        waitSpell(Actions.cast2)
-                    }
+                    checkEscape()
                     val nextSpell = getSpellCooldownWithMana() - (global.World.time - lastSpell)
                     if(nextSpell > 0) {
                         if(nextSpell % 2L == 0L && enableMelee.value) {
@@ -512,7 +520,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
                         waitSpell(nextSpells.pop())
                     } else {
                         chooseAction()
-                        if(nextSpells.isNotEmpty()) {
+                        if(!checkEscape() && nextSpells.isNotEmpty()) {
                             waitSpell(nextSpells.pop())
                         }
                     }
@@ -638,7 +646,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
 
     open fun onIncompatible() { }
 
-    open fun isBlocked() = false
+    open fun isBlocked() = blockedByHotbar
 
     open fun onTick() {
         if(global.World.time % 2 == 0L) {
@@ -720,6 +728,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
     }
 
     fun checkUndoSelectHotbar(newSelect: Int) {
+        blockedByHotbar = true
         val inv = global.Player.openInventory()
         val oldSelect = inv.selectedHotbarSlotIndex
         inv.selectedHotbarSlotIndex = newSelect
@@ -728,6 +737,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
             global.Client.waitTick(2)
             inv.selectedHotbarSlotIndex = oldSelect
         }
+        blockedByHotbar = false
     }
 
     fun isPotion(item: ItemStackHelper) =
@@ -1095,11 +1105,6 @@ inner class Assassin(global: Battle_jsm) : WynnClass(global) {
         blocking = false
     }
 
-    override fun onSpellCastFinished() {
-        super.onSpellCastFinished()
-        //if(enabled) chooseAction()
-    }
-
     override fun onKey(e: EventKey) {
         if(blocking && e.action == 1 && e.key == skill1Key) {
             e.cancel()
@@ -1124,7 +1129,6 @@ inner class Mage(global: Battle_jsm) : WynnClass(global) {
     var lastHeal = 0L
     lateinit var enableIceSnake: BindBoolean
     lateinit var enableMeteor: BindBoolean
-    var blocked = false
 
     val modes = arrayOf(Mode.Arcanist, Mode.LightBender, Mode.RiftWalker)
     override var mode = Mode.Arcanist
@@ -1240,10 +1244,6 @@ inner class Mage(global: Battle_jsm) : WynnClass(global) {
                 }
             }
         }
-    }
-
-    override fun isBlocked(): Boolean {
-        return blocked
     }
 }
 

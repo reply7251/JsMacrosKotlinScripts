@@ -170,7 +170,7 @@ class MyInput(val parent: Input) : Input() {
         movementSideways = getMovement(playerInput.left(), playerInput.right())
     }
 }
-fun shouldOverrideInput() = currentState != State.NONE || currentState != State.RECORDING
+fun shouldOverrideInput() = currentState != State.NONE && currentState != State.RECORDING
 fun warpDegree(degree: Double) = ((degree + 720) % 360) + 360
 fun warp180(degree: Double): Double {
     var v = (degree + 720) % 360
@@ -321,7 +321,7 @@ fun makeScreen(): IScreen {
             .width(200)
             .message(Chat.createTextBuilder().append("harvest with left click: ").append(if(harvestLeft) enableText else disableText).build())
             .action(JavaWrapper.methodToJava { btn, iscreen ->
-                btns[1]?.let {
+                btns[3]?.let {
                     harvestLeft = !harvestLeft
                     it.label = Chat.createTextBuilder().append("harvest with left click: ")
                         .append(if(harvestLeft) enableText else disableText).build()
@@ -371,10 +371,10 @@ fun isNextNodeCloserTo(pos: Pos3D): Boolean {
     val lr = getLootrun() ?: return false
     val player = Player.player ?: return false
     if(lr.points.isEmpty()) return false
-    val dist1 = player.distanceTo(pos)
-    val dist2 = Pos3D(lr.points[pathIndex]).distanceTo(pos)
-    val dist3 = Pos3D(lr.points[(pathIndex+1) % lr.points.size]).distanceTo(pos)
-    val dist4 = Pos3D(lr.points[(pathIndex+2) % lr.points.size]).distanceTo(pos)
+    val dist1 = player.pos.distanceTo(pos)
+    val dist2 = Pos3D(lr.points[pathIndex]).distanceTo(pos) + 0.1
+    val dist3 = Pos3D(lr.points[(pathIndex+1) % lr.points.size]).distanceTo(pos) + 0.15
+    val dist4 = Pos3D(lr.points[(pathIndex+2) % lr.points.size]).distanceTo(pos) + 0.2
     return dist2 < dist1 || dist3 < dist1 || dist4 < dist1
 }
 class EventListeners {
@@ -419,15 +419,15 @@ class EventListeners {
     @SubscribeEvent
     fun onTick(event: TickEvent) {
         val player = Player.player ?: return
-        myInput?.targetPos = if(currentState == State.NONE || currentState == State.RECORDING)
-            Pos3D.ZERO
-        else
+        myInput?.targetPos = if(shouldOverrideInput())
             getLootrun()?.points?.get(pathIndex)?.let {
                 val target = Pos3D(it)
                 if(player.distanceTo(target) > 5)
                     target
                 else Pos3D.ZERO
             } ?: Pos3D.ZERO
+        else
+            Pos3D.ZERO
         val filtered = availableNodes.filter { it.key.toBlockPosHelper().getCenter().distanceTo(player.eyePos) < 3.6 && it.value == toolType }
 
         nextHarvest--
@@ -437,7 +437,7 @@ class EventListeners {
         }?.key
 
         if(currentState == State.MOVE) {
-            if(harvestNode != null && !isNextNodeCloserTo(harvestNode.toBlockPosHelper().getCenter())) {
+            if(harvestNode != null && (!isNextNodeCloserTo(harvestNode.toBlockPosHelper().getCenter()) || harvestNode.toBlockPosHelper().getCenter().distanceTo(player.eyePos) < 2.7)) {
                 currentState = State.FIND_NODE
             } else {
                 follow()
@@ -448,7 +448,8 @@ class EventListeners {
         if(currentState == State.FIND_NODE || currentState == State.HARVEST) {
             holdTool()
             if(harvestNode == null) {
-                currentState = if(currentState == State.FIND_NODE) State.MOVE else State.HARVEST
+                if(currentState == State.FIND_NODE)
+                    currentState = State.MOVE
             } else {
                 val vec = offsetMap[toolType]?.let {
                     player.eyePos.toReverseVector(harvestNode.toBlockPosHelper().getCenter().add(it))
