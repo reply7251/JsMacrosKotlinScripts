@@ -1,8 +1,10 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
 import com.wynntils.core.WynntilsMod
+import com.wynntils.core.components.Managers
 import com.wynntils.core.components.Models
 import com.wynntils.core.components.Services
+import com.wynntils.features.combat.QuickCastFeature
 import com.wynntils.handlers.labels.event.LabelIdentifiedEvent
 import com.wynntils.handlers.labels.event.LabelsRemovedEvent
 import com.wynntils.mc.event.PlayerTeleportEvent
@@ -18,41 +20,46 @@ import com.wynntils.services.lootrunpaths.type.LootrunPath
 import com.wynntils.services.lootrunpaths.type.LootrunState
 import com.wynntils.utils.MathUtils
 import com.wynntils.utils.mc.type.Location
-import me.hellrevenger.generated.*
+import me.hellrevenger.generated.BlockPos
+import me.hellrevenger.generated.ChunkPos
+import me.hellrevenger.generated.Input
+import me.hellrevenger.generated.Map_BlockPos.ofFloored
+import me.hellrevenger.generated.Map_ChunkPos.toLong
 import me.hellrevenger.generated.Map_ClientPlayerEntity.input
-import me.hellrevenger.generated.Map_Input.*
-import me.hellrevenger.generated.Map_MathHelper.wrapDegrees
+import me.hellrevenger.generated.Map_Input.movementForward
+import me.hellrevenger.generated.Map_Input.movementSideways
+import me.hellrevenger.generated.Map_Input.playerInput
+import me.hellrevenger.generated.Map_Input.tick
 import me.hellrevenger.generated.Map_MinecraftClient.getRenderTickCounter
 import me.hellrevenger.generated.Map_MinecraftClient.player
-import me.hellrevenger.generated.Map_PlayerInput.backward
-import me.hellrevenger.generated.Map_PlayerInput.forward
-import me.hellrevenger.generated.Map_PlayerInput.left
-import me.hellrevenger.generated.Map_PlayerInput.right
-import me.hellrevenger.generated.Map_PlayerInput.sneak
-import me.hellrevenger.generated.Map_PlayerInput.sprint
-import me.hellrevenger.generated.Map_PlayerInput.jump
+import me.hellrevenger.generated.Map_PlayerInput.*
+import me.hellrevenger.generated.Map_Position.getX
+import me.hellrevenger.generated.Map_Position.getY
+import me.hellrevenger.generated.Map_Position.getZ
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
+import me.hellrevenger.generated.Vec3d
 import net.minecraft.class_332
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
-import xyz.wagyourtail.jsmacros.client.api.helper.world.BlockPosHelper
-import xyz.wagyourtail.jsmacros.core.service.EventService
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components3d.Box
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components3d.RenderElement3D
 import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
+import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
 import xyz.wagyourtail.jsmacros.client.api.helper.screen.ButtonWidgetHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.world.BlockPosHelper
+import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 import kotlin.jvm.optionals.getOrNull
 import kotlin.math.*
-import kotlin.random.Random
 
 val radian = Math.PI / 180
 fun Location.toBlockPosHelper() = BlockPosHelper(toBlockPos())
 fun BlockPosHelper.getCenter(): Pos3D = toPos3D().add(0.5, 0.5, 0.5)
 fun Pos3D.getRaw() = Vec3d(x, y, z)
 fun Pos3D.distanceTo(another: Pos3D) = toVector(another).magnitude
-fun Pos3D.distanceToIgnoreY(another: Pos3D) = toVector(another).multiply(1.0,0.0,1.0,1.0,0.0,1.0).magnitude
+fun Pos3D.distanceToIgnoreY(another: Pos3D, yMulti: Double = 0.0) = toVector(another).multiply(1.0,yMulti,1.0,1.0,yMulti,1.0).magnitude
+fun Pos3D.toBlockPos() = BlockPosHelper(BlockPos::class.ofFloored(getRaw()))
 fun <T> Iterable<T>.findCloset(callback: (T) -> Double): T? {
     var nearest: T? = null
     var nearestDistance = Double.MAX_VALUE
@@ -65,7 +72,7 @@ fun <T> Iterable<T>.findCloset(callback: (T) -> Double): T? {
     }
     return nearest
 }
-fun <K,V> Map<K, V>.findCloset(callback: (Map.Entry<K,V>) -> Double) = asIterable()?.findCloset(callback)
+fun <K,V> Map<K, V>.findCloset(callback: (Map.Entry<K,V>) -> Double) = asIterable().findCloset(callback)
 fun removeBoxAt(block: BlockPosHelper) {
     boxes.remove(block)?.let {
         d3d.removeBox(it)
@@ -77,21 +84,69 @@ fun addBoxAt(block: BlockPosHelper) {
     boxes[block] = box
     d3d.addBox(box)
 }
+fun <T> List<T>.getOffset(offset: Int) = this[(pathIndex+offset) % size]
+fun getNode(offset: Int) = getLootrunPath()?.points?.getOffset(offset)
+fun getNoteAt(pos: Pos3D) =
+    getLootrun()?.notes?.get(ChunkPos(pos.toRawBlockPos()).toLong())?.let { it.firstOrNull {
+        Pos3D(it.position.getX(), it.position.getY(), it.position.getZ()).toBlockPos() == pos.toBlockPos()
+    } }?.let { TextHelper.wrap(it.component) }
+fun getSpellCaster(spellOrder: String): () -> Unit {
+    val feat = Managers.Feature.getFeatureInstance(QuickCastFeature::class.java)
+    val m = feat::class.java.getDeclaredMethod("cast${spellOrder}Spell")
+    m.trySetAccessible()
+    return { m.invoke(feat) }
+}
 fun follow() {
-    val lootrun = getLootrun() ?: return
-    val points = lootrun.points
-    var target = points[pathIndex]
+    val lootrun = getLootrunPath() ?: return
     val player = Player.player ?: return
+    val points = lootrun.points
+    if(teleported) {
+        teleported = false
+        setupCurrentPathIndex()
+        if(Pos3D(points[pathIndex]).distanceTo(player.pos) > 30) {
+            currentState = State.NONE
+        }
+    }
+    var target = points[pathIndex]
     stuckCounter++
-    if(Pos3D(target).distanceToIgnoreY(player.pos) < 1.1 || Pos3D(points[(pathIndex+1)% points.size]).distanceToIgnoreY(player.pos) < 1.1) {
+    val pos = Pos3D(target)
+    if(pos.distanceToIgnoreY(player.pos) < 1.1 || Pos3D(points[(pathIndex+1)% points.size]).distanceToIgnoreY(player.pos) < 1.1) {
         pathIndex++
         pathIndex %= points.size
         target = points[pathIndex]
         stuckCounter = 0
     }
+    if(flying) {
+        if(World.time % 7 == 0L) {
+            if(flyCounter % 4 == 0) {
+                if(player.pos.y < pos.y + 10) {
+                    spells[0]()
+                    flyCounter++
+                }
+            } else if(flyCounter % 4 < 3) {
+                spells[1]()
+                flyCounter++
+            }
+        }
+        getNoteAt(pos)?.let {
+            if(pos.distanceToIgnoreY(player.pos) < 5 && it.string.contains(stopFlyingText)) {
+                flying = false
+                pathIndex++
+            }
+        }
+    }
+
+    getNoteAt(pos)?.let {
+        if(it.string.contains(startFlyingText)) {
+            flying = true
+            pathIndex++
+            flyCounter = 0
+        }
+    }
     myInput?.targetPos = Pos3D(target)
 }
-fun getLootrun(): LootrunPath? {
+fun getLootrun() = Services.LootrunPaths.currentLootrun
+fun getLootrunPath(): LootrunPath? {
     Services.LootrunPaths.let {
         it.currentLootrun?.let {
             return it.path
@@ -123,10 +178,10 @@ fun resetInput() {
 enum class State {
     NONE,
     RECORDING,
+    PAUSE_RECORD,
     MOVE,
     FIND_NODE,
-    HARVEST,
-    WAIT
+    HARVEST
 }
 class MyInput(val parent: Input) : Input() {
     var targetPos = Pos3D.ZERO
@@ -137,23 +192,23 @@ class MyInput(val parent: Input) : Input() {
         if(targetPos.equals(Pos3D.ZERO)) {
             parent.tick()
             playerInput = parent.playerInput
-            val jump = World.getBlock(player.blockPos)?.blockStateHelper?.isLiquid == true
-            val forward = stuckCounter > 8
+            val jump = World.getBlock(player.blockPos.up())?.blockStateHelper?.isLiquid == true && currentState != State.FIND_NODE
+            val forward = stuckCounter > 14
             if(shouldOverrideInput() && (jump || forward)) {
                 val inp = Reflection.getClass<Any>("net.minecraft.class_10185").constructors[0]
                     .newInstance(playerInput.forward() || forward, playerInput.backward(),
-                    playerInput.left(), playerInput.right(), playerInput.jump() || jump, playerInput.sneak(), playerInput.sprint())
+                    playerInput.left(), playerInput.right(), playerInput.jump() || jump, playerInput.sneak() || forward, playerInput.sprint())
                 playerInput = inp as net.minecraft.class_10185
-                stuckCounter = stuckCounter * 2 / 3
+                stuckCounter = 0
             }
         } else {
             val vec = player.pos.toReverseVector(targetPos)
             val target = atan2(-vec.deltaX, vec.deltaZ) / radian
-            smooth.lookAt(lerpDegrees(player.yaw.toDouble(), target, 0.1), player.pitch.toDouble())
+            smooth.lookAt(lerpDegrees(player.yaw.toDouble(), target, 0.1), lerpDegrees(player.pitch.toDouble(), 0.0, 0.1))
             val diff = (((player.yaw - target) - 22.5) / 45).roundToInt() * radian * 45
             val forward = if(stuckCounter > 20) 1.0 else roundMovement(cos(diff))
             val side = roundMovement(sin(diff))
-            val jump = targetPos.y - player.pos.y > 0.501 && player.pos.distanceToIgnoreY(targetPos) < 2
+            val jump = (targetPos.y - player.pos.y > 0.501 && player.pos.distanceToIgnoreY(targetPos) < 2)
                     || (World.getBlock(player.blockPos)?.blockStateHelper?.isLiquid == true)
                     || stuckCounter > 20
             val sneak = false
@@ -170,7 +225,7 @@ class MyInput(val parent: Input) : Input() {
         movementSideways = getMovement(playerInput.left(), playerInput.right())
     }
 }
-fun shouldOverrideInput() = currentState != State.NONE && currentState != State.RECORDING
+fun shouldOverrideInput() = currentState != State.NONE && currentState != State.RECORDING && currentState != State.PAUSE_RECORD
 fun warpDegree(degree: Double) = ((degree + 720) % 360) + 360
 fun warp180(degree: Double): Double {
     var v = (degree + 720) % 360
@@ -182,8 +237,10 @@ fun compareDegree(from: Double, to: Double) = warp180(to - from)
 fun lerpDegrees(from: Double, to: Double, lerp: Double, min: Double = 0.0): Double {
     val diff0 = warp180(to - from)
     var diff = diff0 * lerp
-    if(abs(diff) < min) diff *= min / abs(diff)
-    if(abs(diff) > abs(diff0)) diff = diff0
+    if(abs(diff) >= 0.001) {
+        if(abs(diff) < min) diff *= min / abs(diff)
+        if(abs(diff) > abs(diff0)) diff = diff0
+    }
     return warp180(from + diff)
 }
 
@@ -212,8 +269,10 @@ class Smooth {
         enabled = true
         prevYaw = warp180(player.yaw.toDouble())
         prevPitch = player.pitch.toDouble()
-        targetYaw = lerpDegrees(prevYaw, yaw, lerp, 5.0)
+        targetYaw = lerpDegrees(prevYaw, yaw, lerp)
         targetPitch = MathUtils.lerp(prevPitch, pitch, lerp)
+        if(targetPitch > 80) targetPitch = 80.0
+        else if (targetPitch < -80) targetPitch = -80.0
         tick = World.time
     }
     val cameraUpdater = RenderGetter {
@@ -225,8 +284,9 @@ class Smooth {
         }
 
         val delta = Client.minecraft.getRenderTickCounter().getTickDelta(true)
-        player.lookAt(lerpDegrees(prevYaw, targetYaw, delta.toDouble()),
-            MathUtils.lerp(prevPitch, targetPitch, delta.toDouble()))
+        if(delta > 0.01)
+            player.lookAt(lerpDegrees(prevYaw, targetYaw, delta.toDouble()),
+                MathUtils.lerp(prevPitch, targetPitch, delta.toDouble()))
     }
 }
 fun getFieldValue(obj: Any, field: String): Any? {
@@ -239,61 +299,50 @@ fun setFieldValue(obj: Any, field: String, value: Any) {
     f.trySetAccessible()
     f.set(obj, value)
 }
+fun setupCurrentPathIndex() {
+    getLootrunPath()?.let { path ->
+        Player.player?.let { player ->
+            val p = path.points.findCloset { player.distanceTo(Pos3D(it)) }
+            pathIndex = path.points.indexOf(p)
+        }
+    }
+}
 fun makeScreen(): IScreen {
     val screen = Hud.createScreen("", false)
     screen.shouldPause = false
     val iscreen = screen as IScreen
-    iscreen.setOnInit(JavaWrapper.methodToJava { iscreen ->
+    iscreen.setOnInit(JavaWrapper.methodToJava { _ ->
         val hw = iscreen.width / 2
         val hh = iscreen.height / 2
 
-        val btns = arrayOfNulls<ButtonWidgetHelper<*>>(4)
-        btns[0] = iscreen.buttonBuilder()
-            .x(hw - 100).y(hh)
-            .width(200)
-            .message(if(currentState != State.NONE && currentState != State.RECORDING) enableText else disableText)
-            .action(JavaWrapper.methodToJava { btn, iscreen ->
-                btns[0]?.let {
-                    val enabled = currentState == State.NONE
-                    if(enabled) {
-                        myInput = setInput()
-                        holdTool()
-                        getLootrun()?.let {  path ->
-                            Player.player?.let { player ->
-                                var nearestDistance = 1e5
-                                path.points.forEachIndexed { index, class243 ->
-                                    val distance = player.distanceTo(Pos3D(class243))
-                                    if(distance < nearestDistance) {
-                                        pathIndex = index
-                                        nearestDistance = distance
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    it.label = if(enabled) enableText else disableText
-                    currentState = if(enabled) State.MOVE else State.NONE
+        iscreen.buttonBuilder()
+            .x(hw - 100).y(hh).width(200)
+            .message(if(shouldOverrideInput()) enableText else disableText)
+            .action(JavaWrapper.methodToJava { btn, _ ->
+                val enabled = currentState == State.NONE
+                if(enabled) {
+                    myInput = setInput()
+                    holdTool()
+                    setupCurrentPathIndex()
                 }
+                btn.label = if(enabled) enableText else disableText
+                currentState = if(enabled) State.MOVE else State.NONE
             }).build()
 
-        btns[1] = iscreen.buttonBuilder()
-            .x(hw - 100).y(hh + 40)
-            .width(200)
+        iscreen.buttonBuilder()
+            .x(hw - 100).y(hh + 40).width(200)
             .message(Chat.createTextBuilder().append("skill: ").append(if(enableSkill) enableText else disableText).build())
-            .action(JavaWrapper.methodToJava { btn, iscreen ->
-                btns[1]?.let {
-                    enableSkill = !enableSkill
-                    it.label = Chat.createTextBuilder().append("skill: ")
-                        .append(if(enableSkill) enableText else disableText).build()
-                }
+            .action(JavaWrapper.methodToJava { btn, _ ->
+                enableSkill = !enableSkill
+                btn.label = Chat.createTextBuilder().append("skill: ")
+                    .append(if(enableSkill) enableText else disableText).build()
             }).build()
-        btns[2] = iscreen.buttonBuilder()
-            .x(hw - 100).y(hh + 100)
-            .width(200)
-            .message(Chat.createTextBuilder().append("recording: ").append(if(currentState == State.RECORDING) enableText else disableText).build())
-            .action(JavaWrapper.methodToJava { btn, iscreen ->
-                btns[2]?.let {
-                    val enabled = currentState != State.RECORDING
+        iscreen.buttonBuilder()
+            .x(hw - 100).y(hh + 100).width(200)
+            .message(Chat.createTextBuilder().append("recording: ").append(if(currentState == State.RECORDING || currentState == State.PAUSE_RECORD) enableText else disableText).build())
+            .action(JavaWrapper.methodToJava { btn, _ ->
+                btn.let {
+                    val enabled = currentState != State.RECORDING && currentState != State.PAUSE_RECORD
                     currentState = if(enabled) {
                         myRecording.points.clear()
                         Services.LootrunPaths.startRecording()
@@ -312,37 +361,78 @@ fun makeScreen(): IScreen {
                         }
                         State.NONE
                     }
+                    flying = false
                     it.label = Chat.createTextBuilder().append("recording: ")
                         .append(if(enabled) enableText else disableText).build()
                 }
             }).build()
-        btns[3] = iscreen.buttonBuilder()
-            .x(hw - 100).y(hh + 60)
-            .width(200)
+        iscreen.buttonBuilder()
+            .x(hw + 110).y(hh + 100).width(100)
+            .message(Chat.createTextBuilder().append("Paused: ").append(if(currentState == State.PAUSE_RECORD) enableText else disableText).build())
+            .action(JavaWrapper.methodToJava { btn, _ ->
+                if(currentState == State.RECORDING) {
+                    currentState = State.PAUSE_RECORD
+                    record(true)
+                } else if (currentState == State.PAUSE_RECORD) {
+                    currentState = State.RECORDING
+                }
+                btn.label = Chat.createTextBuilder().append("Paused: ")
+                    .append(if(currentState == State.PAUSE_RECORD) enableText else disableText).build()
+            }).build()
+        iscreen.buttonBuilder()
+            .x(hw - 200).y(hh + 100).width(90)
+            .message(Chat.createTextBuilder().append("Fly: ").append(if(flying) enableText else disableText).build())
+            .action(JavaWrapper.methodToJava { btn, _ ->
+                flying = !flying
+                if(flying) {
+                    if(currentState == State.RECORDING) {
+                        currentState = State.PAUSE_RECORD
+                        record(true)
+                    }
+                    startFlyingText
+                } else {
+                    if(currentState == State.PAUSE_RECORD)
+                        currentState = State.RECORDING
+                    stopFlyingText
+                }.let {
+                    Services.LootrunPaths.addNote(Chat.createTextBuilder().append(it).build().raw)
+                }
+                btn.label = Chat.createTextBuilder().append("Fly: ")
+                    .append(if(flying) enableText else disableText).build()
+            }).build()
+        iscreen.buttonBuilder()
+            .x(hw - 100).y(hh + 60).width(200)
             .message(Chat.createTextBuilder().append("harvest with left click: ").append(if(harvestLeft) enableText else disableText).build())
-            .action(JavaWrapper.methodToJava { btn, iscreen ->
-                btns[3]?.let {
+            .action(JavaWrapper.methodToJava { btn, _ ->
+                btn.let {
                     harvestLeft = !harvestLeft
                     it.label = Chat.createTextBuilder().append("harvest with left click: ")
                         .append(if(harvestLeft) enableText else disableText).build()
                 }
             }).build()
+        iscreen.buttonBuilder()
+            .x(hw + 150).y(hh + 60).width(200)
+            .message(Chat.createTextBuilder().append("extend reach: ").append(if(extendReach) enableText else disableText).build())
+            .action(JavaWrapper.methodToJava { btn, _ ->
+                extendReach = !extendReach
+                btn.label = Chat.createTextBuilder().append("extend reach: ")
+                    .append(if(extendReach) enableText else disableText).build()
+            }).build()
     })
     return iscreen
 }
 fun holdAndUseWeapon() {
+    if(!enableSkill) return
     val inv = Player.openInventory()
     inv.getSlots("hotbar").firstOrNull {
         (Models.Item.getWynnItem(inv.getSlot(it).raw).getOrNull() as? GearItem)?.meetsActualRequirements() == true
     }?.let {
         val newSelect = it - (inv.totalSlots - 10)
         if(newSelect == inv.selectedHotbarSlotIndex) {
-            if(nextTotem < 0 && enableSkill) {
-                nextTotem = 62
-                thread {
-                    KeyBind.pressKeyBind("Cast 1st Spell")
-                    Client.waitTick(2)
-                    KeyBind.releaseKeyBind("Cast 1st Spell")
+            if(nextTotem < 0) {
+                nextTotem = 63
+                if(Models.Spell.repeatedBurstSpellCount < 4) {
+                    spells[0]()
                 }
             }
         }
@@ -368,7 +458,7 @@ fun holdTool() {
     currentState = State.NONE
 }
 fun isNextNodeCloserTo(pos: Pos3D): Boolean {
-    val lr = getLootrun() ?: return false
+    val lr = getLootrunPath() ?: return false
     val player = Player.player ?: return false
     if(lr.points.isEmpty()) return false
     val dist1 = player.pos.distanceTo(pos)
@@ -377,6 +467,15 @@ fun isNextNodeCloserTo(pos: Pos3D): Boolean {
     val dist4 = Pos3D(lr.points[(pathIndex+2) % lr.points.size]).distanceTo(pos) + 0.2
     return dist2 < dist1 || dist3 < dist1 || dist4 < dist1
 }
+fun record(force: Boolean = false) {
+    val player = Player.player ?: return
+    val root = player.vehicle ?: player
+    val pos = root.pos
+    if(myRecording.points.size == 0 || pos.distanceTo(Pos3D(myRecording.points.last())) >= 0.7 || force) {
+        myRecording.points.add(pos.getRaw())
+    }
+}
+fun getFilterDistance() = if (extendReach) 5.6 else 3.6
 class EventListeners {
     @SubscribeEvent
     fun onLabelIdentified(event: LabelIdentifiedEvent) {
@@ -388,7 +487,7 @@ class EventListeners {
         (event.labelInfo as? GatheringNodeHarvestLabelInfo)?.let {
             availableNodes.remove(it.location)
             removeBoxAt(it.location.toBlockPosHelper())
-            if(currentState == State.WAIT || currentState == State.HARVEST) {
+            if(currentState == State.HARVEST && !it.materialProfile.isPresent) {
                 currentState = State.MOVE
             }
         }
@@ -405,30 +504,17 @@ class EventListeners {
     @SubscribeEvent
     fun onRecordTick(event: TickEvent) {
         if(currentState != State.RECORDING) return
-        val player = Player.player ?: return
-        val root = player.vehicle ?: player
-        val pos = root.pos
-        if(myRecording.points.size == 0 || pos.distanceTo(Pos3D(myRecording.points.last())) >= 0.7) {
-            myRecording.points.add(pos.getRaw())
-        }
+        record()
     }
     @SubscribeEvent
     fun onTeleported(event: PlayerTeleportEvent) {
-        currentState = State.NONE
+        teleported = true
     }
     @SubscribeEvent
     fun onTick(event: TickEvent) {
         val player = Player.player ?: return
-        myInput?.targetPos = if(shouldOverrideInput())
-            getLootrun()?.points?.get(pathIndex)?.let {
-                val target = Pos3D(it)
-                if(player.distanceTo(target) > 5)
-                    target
-                else Pos3D.ZERO
-            } ?: Pos3D.ZERO
-        else
-            Pos3D.ZERO
-        val filtered = availableNodes.filter { it.key.toBlockPosHelper().getCenter().distanceTo(player.eyePos) < 3.6 && it.value == toolType }
+        myInput?.targetPos = Pos3D.ZERO
+        val filtered = availableNodes.filter { it.key.toBlockPosHelper().getCenter().distanceTo(player.eyePos) < getFilterDistance() && it.value == toolType }
 
         nextHarvest--
         nextTotem--
@@ -437,7 +523,7 @@ class EventListeners {
         }?.key
 
         if(currentState == State.MOVE) {
-            if(harvestNode != null && (!isNextNodeCloserTo(harvestNode.toBlockPosHelper().getCenter()) || harvestNode.toBlockPosHelper().getCenter().distanceTo(player.eyePos) < 2.7)) {
+            if(harvestNode != null && (!isNextNodeCloserTo(harvestNode.toBlockPosHelper().getCenter()) || harvestNode.toBlockPosHelper().getCenter().distanceTo(player.eyePos) < getFilterDistance() - 0.6)) {
                 currentState = State.FIND_NODE
             } else {
                 follow()
@@ -448,8 +534,9 @@ class EventListeners {
         if(currentState == State.FIND_NODE || currentState == State.HARVEST) {
             holdTool()
             if(harvestNode == null) {
-                if(currentState == State.FIND_NODE)
-                    currentState = State.MOVE
+                if(currentState == State.FIND_NODE) {
+                        currentState = State.MOVE
+                }
             } else {
                 val vec = offsetMap[toolType]?.let {
                     player.eyePos.toReverseVector(harvestNode.toBlockPosHelper().getCenter().add(it))
@@ -458,22 +545,24 @@ class EventListeners {
                     lerpDegrees(player.yaw.toDouble(), vec.yaw.toDouble(), 0.2, 5.0)
                 else
                     vec.yaw.toDouble()
-                val pitch = if(abs(vec.pitch - player.pitch) > 5)
-                    lerpDegrees(player.pitch.toDouble(), vec.pitch.toDouble(), 0.3, 5.0)
-                else
-                    vec.pitch.toDouble()
 
                 if(currentState == State.FIND_NODE) {
+                    val pitch = if(abs(vec.pitch - player.pitch) > 5)
+                        lerpDegrees(player.pitch.toDouble(), vec.pitch.toDouble(), 0.3, 5.0)
+                    else
+                        vec.pitch.toDouble()
+                
                     smooth.lookAt(yaw, pitch)
                     if(player.yaw == vec.yaw && player.pitch == vec.pitch) {
-                        currentState = State.HARVEST
+                        stuckCounter = 0
                         lastHarvestNode = harvestNode.toBlockPosHelper()
+                        currentState = State.HARVEST
                     }
                 }
                 if(currentState == State.HARVEST) {
                     if(harvestNode.toBlockPosHelper() == lastHarvestNode) {
                         if(nextHarvest < 0) {
-                            nextHarvest = 3L
+                            nextHarvest = 2L
                             if(harvestLeft) {
                                 Player.interactions()?.attack()
                             } else {
@@ -481,7 +570,7 @@ class EventListeners {
                             }
                             stuckCounter++
                         }
-                        smooth.lookAt(yaw, pitch + (World.time % 80 - 40) * 1.2, 0.1)
+                        smooth.lookAt(yaw, vec.pitch.toDouble() + (World.time % 70 - 40) * 1.5, 0.1)
                     } else {
                         stuckCounter = 0
                     }
@@ -510,7 +599,14 @@ var enableSkill = true
 var toolType: ProfessionType? = null
 val myRecording = LootrunPath(mutableListOf())
 var stuckCounter = 0
+var flying = false
+var flyCounter = 0
+var extendReach = false
+var teleported = false
 
+val startFlyingText = "start flying"
+val stopFlyingText = "stop flying"
+val spells = listOf("First", "Second", "Third", "Fourth").map { getSpellCaster(it) }
 val availableNodes = mutableMapOf<Location, ProfessionType>()
 val d3d = Hud.createDraw3D()
 d3d.register()

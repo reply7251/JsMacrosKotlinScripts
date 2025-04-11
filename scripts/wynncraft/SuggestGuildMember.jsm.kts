@@ -75,8 +75,6 @@ var scrollY = 0
 
 val matcher2 = ElementMatchers.named<MethodDescription>("reloadSuggestedPlayersWidgets")
 val mixin2 = Advice.to(MixinPartyManagementScreen::class.java).on(matcher2)
-RuntimeMixin.addMixin(PartyManagementScreen::class.java, mixin2)
-RuntimeMixin.doMixin(PartyManagementScreen::class.java)
 
 fun PartyManagementScreen.getSuggestions() =
     getPrivateFieldValue("suggestedPlayersWidgets") as List<SuggestionPlayerWidget>
@@ -84,6 +82,8 @@ class WynnListener {
     @SubscribeEvent
     fun onScreen(event: ScreenInitEvent.Pre) {
         (event.screen as? PartyManagementScreen)?.let { screen ->
+            RuntimeMixin.addMixin(PartyManagementScreen::class.java, mixin2)
+            RuntimeMixin.doMixin(PartyManagementScreen::class.java)
             fetchSuggestion()
             val iscreen = screen as IScreen
             iscreen.setOnScroll(JavaWrapper.methodToJava { mouse, scroll ->

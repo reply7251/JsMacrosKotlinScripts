@@ -1,4 +1,5 @@
-
+@file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
+import com.wynntils.core.components.Models
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.specialized.display.TextDisplayEntityHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
@@ -38,10 +39,12 @@ fun getDisplays() =
     }
 thread {
     while (running) {
-        getDisplays()?.forEach { (entity, name) ->
-            if(nameCheck(name.stringStripFormatting) || nameCheck(name.string)) {
-                textDisplays.add(entity)
-                d3d.addEntityTraceLine(entity, 0xffffff)
+        if(Models.Raid.currentRaid == null) {
+            getDisplays()?.forEach { (entity, name) ->
+                if(nameCheck(name.stringStripFormatting) || nameCheck(name.string)) {
+                    textDisplays.add(entity)
+                    d3d.addEntityTraceLine(entity, 0xffffff)
+                }
             }
         }
         textDisplays.removeIf { !it.isAlive }
