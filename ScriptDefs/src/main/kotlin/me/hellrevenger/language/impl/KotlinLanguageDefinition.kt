@@ -30,10 +30,6 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
         var K2 = CompilerSetting.isK2Enabled()
 
-        var everything: SimpleScript? = null
-
-        //val everything = if(K2) createSimpleScript(vars + libs) else null
-
         val compConf = object : ScriptCompilationConfiguration({
             jvm {
                 // Extract the whole classpath from context classloader and use it as dependencies
@@ -55,9 +51,6 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
                     context.compilationConfiguration.with {
                         if(!K2) {
                             compilerOptions.append("-language-version=1.9")
-                        } else {
-                            everything = createSimpleScript(vars + libs)
-                            implicitReceivers.append(KotlinType(everything!!::class))
                         }
                     }.asSuccess()
                 }
@@ -71,9 +64,6 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
         }) {}
         val execConf = object : ScriptEvaluationConfiguration({
             providedProperties(vars + libs)
-            everything?.let {
-                implicitReceivers.append(it)
-            }
         }) {}
 
         val host = BasicJvmScriptingHost()
