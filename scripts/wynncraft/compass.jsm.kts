@@ -15,7 +15,6 @@ Chat.commandManager.unregisterCommand("/compass")
 
 Chat.commandManager.createCommandBuilder("/compass")
     .literalArg("clipboard").executes(JavaWrapper.methodToJava { ctx ->
-
         SelectionManager::class.getClipboard(Client.minecraft).split("\n\r*\n*".toRegex()).forEach {
             LocationUtils.parseFromString(it).ifPresent {
                 MarkerModel.USER_WAYPOINTS_PROVIDER.addLocation(it, null)

@@ -7,15 +7,16 @@ import me.hellrevenger.generated.Map_MinecraftClient.world
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 
-val height = 0.5
+val height = 0.5001
 val edgeDistance = 0.01
 
 var running = true
+var enabled = false
 
 thread {
     while (running) {
         Player.player?.let { player ->
-            if(!player.isOnGround || player.isSneaking) {
+            if(!player.isOnGround || player.isSneaking || !enabled) {
                 return@let
             }
             val box = player.raw.getBoundingBox()
@@ -34,5 +35,10 @@ thread {
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
     running = false
 }
+
+Chat.commandManager.unregisterCommand("/parkour")
+Chat.commandManager.createCommandBuilder("/parkour").executes(JavaWrapper.methodToJava { _ ->
+    enabled = !enabled
+}).register()
 
 Chat.toast("Parkour", "enabled")

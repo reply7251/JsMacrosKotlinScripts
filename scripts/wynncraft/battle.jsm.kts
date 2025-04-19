@@ -62,8 +62,10 @@ object Actions {
 }
 val keyBinds = KeyBind.keyBindings
 
-val skill1Key = keyBinds[Actions.cast1]!!//"key.keyboard.c"
-val skill2Key = keyBinds[Actions.cast2]!!//"key.keyboard.x"
+val skill1Key = keyBinds[Actions.cast1]!!
+val skill2Key = keyBinds[Actions.cast2]!!
+val skill3Key = keyBinds[Actions.cast3]!!
+val skill4Key = keyBinds[Actions.cast4]!!
 
 val d2d = Hud.createDraw2D()
 
@@ -160,6 +162,12 @@ open class BindNumber<T: Number>(key: String, val configIndex: String, value: T,
     override fun toString(): String {
         var result = if(SharedBindData.currentBind == this) Format.formatChar + "5" else ""
         result += "$configIndex ${Format.formatChar}r(${Format.coloredKey(simpleName)}): " + Format.coloredNumber(value)
+        return result
+    }
+
+    fun toString(fixedValue: T): String {
+        var result = if(SharedBindData.currentBind == this) Format.formatChar + "5" else ""
+        result += "$configIndex ${Format.formatChar}r(${Format.coloredKey(simpleName)}): " + Format.coloredNumber(fixedValue)
         return result
     }
 
@@ -338,6 +346,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
     open var quickMode = Mode.None
 
     var manualEscape = false
+    var manualSkill = ""
     var lastSpell = 0L
     lateinit var enableMelee: BindBoolean
     lateinit var maxRepeat: BindInt
@@ -434,7 +443,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
 
     fun cast4() = cast(Actions.cast4)
 
-    fun melee() {
+    open fun melee() {
         lastMelee = global.World.time
         global.attackCooldown.set(global.mc, 0)
         global.Player.interactions()?.attack()
@@ -473,17 +482,28 @@ open class WynnClass(val global: Battle_jsm): HasBind {
         }
         return false
     }
+    
+    fun checkManual(): Boolean {
+        if(manualSkill != "") {
+            val action = manualSkill
+            manualSkill = ""
+            waitSpell(action)
+            return true
+        }
+        return false
+    }
 
     open fun main() {
         reset()
         global.customInput = global.setInput()
         thread {
             while (enabled.value && global.World.isWorldLoaded) {
-                if(!isBlocked() && !checkEscape()) {
+                if(!isBlocked() && !checkManual()) {
                     val nextSpell = getSpellCooldownWithMana() - (global.World.time - lastSpell)
                     if(nextSpell > 0) {
-                        if(nextSpell % 2L == 0L && enableMelee.value) {
+                        if(global.Player.player?.mainHand?.isOnCooldown != true && enableMelee.value) {
                             melee()
+                            global.Client.waitTick()
                         }
                     } else if(nextSpells.isNotEmpty()) {
                         waitSpell(nextSpells.pop())
@@ -491,7 +511,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
                         chooseAction()
                         if(nextSpells.isNotEmpty()) {
                             global.Client.waitTick()
-                            if(!checkEscape()) {
+                            if(!checkManual()) {
                                 waitSpell(nextSpells.pop())
                             }
                         }
@@ -516,7 +536,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
         nextLine().setText(spamSneak.toString("Spam Shift"))
         nextLine().setText(Format.coloredConfig("anchor" ) + "Anchor ${Format.formatChar}r(${Format.coloredKey(anchor.simpleName)}): " + Format.coloredBoolean(anchor.value != Pos3D.ZERO))
         nextLine().setText(enableMelee.toString("Melee"))
-        nextLine().setText(maxRepeat.toString())
+        nextLine().setText(maxRepeat.toString(getMaxRepeatValue()))
     }
 
     fun resetLineIndex() {
@@ -560,12 +580,17 @@ open class WynnClass(val global: Battle_jsm): HasBind {
                 e.cancel()
             }
         }
-
-        if(e.key == global.skill2Key && enabled.value) {
-            manualEscape = true
-            e.cancel()
+        
+        if(enabled.value) {
+            global.spells.keys.forEach {
+                if(e.key == global.keyBinds[it]) {
+                    manualSkill = it
+                    e.cancel()
+                    return@forEach
+                }
+            }
         }
-
+        
         binds.values.forEach {
             if(it.key == e.key) {
                 it.trigger()
@@ -669,7 +694,7 @@ open class WynnClass(val global: Battle_jsm): HasBind {
     open fun onSpellCastFinished() {}
 
     open fun waitSpell(spell: String, extraTick: Int = 0, hotbar: Int = -1) {
-        if(checkEscape()) {
+        if(checkManual()) {
             global.Client.waitTick()
         }
         lastSpell = global.World.time
@@ -751,6 +776,8 @@ open class WynnClass(val global: Battle_jsm): HasBind {
     override fun addBind(name: String, bind: Bind) {
         binds[name] = bind
     }
+    
+    open fun getMaxRepeatValue() = maxRepeat.value
 }
 
 inner class Warrior(global: Battle_jsm) : WynnClass(global) {
@@ -763,6 +790,7 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
     lateinit var meleeInterval: BindInt
     //var quick = true
     var cspam = false
+    lateinit var fly: BindBoolean
 
     val modes = arrayOf(Mode.BashSurf, Mode.ScreamSurf, Mode.ChargeSpam, Mode.BashScream, Mode.AlterScream, Mode.AlterSurf, Mode.UpperScream)
     override var mode = Mode.BashScream
@@ -773,7 +801,8 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
 
         meleeInterval = BindInt("key.keyboard.keypad.1", "MeleeInterval", 20, 3) { updateConfig() }.bind()
 
-        bloodPact = BindBoolean("key.keyboard.keypad.4") { updateConfig() }.bind()
+        bloodPact = BindBoolean("key.keyboard.keypad.6") { updateConfig() }.bind()
+        fly = BindBoolean("key.keyboard.keypad.4") { updateConfig() }.bind()
 
         super.onInitOverride()
 
@@ -789,6 +818,7 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
             nextLine().setText(height.toString())
         }
         nextLine().setText(meleeInterval.toString())
+        nextLine().setText(fly.toString("Fly"))
         nextLine().setText(bloodPact.toString("Blood Pact"))
         nextLine().setText("upper: charge charge scream upper")
         nextLine().setText("bash(scream): scream scream")
@@ -869,12 +899,14 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
         } else if(mode == Mode.AlterScream) {
             val trumpet = Models.StatusEffect.statusEffects.find { it.name.stringWithoutFormatting.contains("Heavenly Trumpet") }
             val trumpetTime = trumpet?.let { it.displayedTime.stringWithoutFormatting.split(":")[1].split(")")[0].toInt() } ?: 0
+            addSpell(Actions.cast1)
+            var repeat = getMaxRepeatValue()
             if(AbilityModel.holyPowerBar.barProgress != null && AbilityModel.holyPowerBar.barProgress.progress > 0.8 && trumpetTime > 3) {
                 addSpell(Actions.cast3)
-            } else {
-                addSpell(Actions.cast1)
+                repeat -= 1
             }
-            for(i in 1..maxRepeat.value) {
+            
+            for(i in 1..repeat) {
                 addSpell(Actions.cast4)
             }
         } else if(mode == Mode.AlterSurf) {
@@ -891,16 +923,25 @@ inner class Warrior(global: Battle_jsm) : WynnClass(global) {
         super.onTick()
 
         if(!isHoldItem("elaborated ")) {
-            if(global.attackKey.method_1434() && (lastMelee + meleeInterval.value + (Math.random() * 5).toInt() < global.World.time || (burstCharge() && attackCounter % 3 != 0))) {
-                melee()
-                interactCounter = 0
-                attackCounter++
+            if(!enabled.value && fly.value && global.World.time % 7 < 3L) {
+                val c = global.World.time / 7
+                if(c % (getMaxRepeatValue()+1) == 0L) {
+                    cast4()
+                } else {
+                    cast2()
+                }
             } else {
-                attackCounter = 0
-            }
-            if(global.interactKey.method_1434() && (global.World.time % 3 == 0L || isIdol())) {
-                global.Player.interactions()?.interact()
-                interactCounter++
+                if(global.attackKey.method_1434() && (lastMelee + meleeInterval.value + (Math.random() * 5).toInt() < global.World.time || (burstCharge() && attackCounter % 3 != 0))) {
+                    melee()
+                    interactCounter = 0
+                    attackCounter++
+                } else {
+                    attackCounter = 0
+                }
+                if(global.interactKey.method_1434() && (global.World.time % 3 == 0L || isIdol())) {
+                    global.Player.interactions()?.interact()
+                    interactCounter++
+                }
             }
         }
         if(enabled.value && abs(global.Player.player!!.pitch) < 45 && (mode == Mode.BashSurf || mode == Mode.ScreamSurf)) {
@@ -1225,14 +1266,20 @@ inner class Archer(global: Battle_jsm) : WynnClass(global) {
             }
         }
         if(global.World.time % 2L == 0L && melee && enableMelee.value) {
-            global.Player.interactions()?.interact()
+            melee()
+            global.Client.waitTick()
         }
+    }
+    
+    override fun melee() {
+        lastMelee = global.World.time
+        global.Player.interactions()?.interact()
     }
 
     override fun onTick() {
         super.onTick()
         if(global.interactKey.method_1434() && global.World.time % 2 == 0L) {
-            global.Player.interactions()?.interact()
+            melee()
         }
     }
 
@@ -1255,6 +1302,7 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
     lateinit var enableAura: BindBoolean
     lateinit var fly: BindBoolean
     var counter = 0
+    var flyCounter = -1
     val maskOrder = arrayOf(ShamanMaskType.LUNATIC, ShamanMaskType.FANATIC, ShamanMaskType.HERETIC, ShamanMaskType.LUNATIC, ShamanMaskType.FANATIC, ShamanMaskType.HERETIC)
     val masks = arrayOf(ShamanMaskType.FANATIC, ShamanMaskType.HERETIC)
     var targetMask = ShamanMaskType.FANATIC
@@ -1269,12 +1317,13 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
             updateConfig()
         }.bind("mask")
 
-        enableAwakened = BindBoolean("key.keyboard.keypad.6", true) {
+        enableAwakened = BindBoolean("key.keyboard.keypad.6") {
             updateConfig()
         }.bind()
 
         fly = BindBoolean("key.keyboard.keypad.4") {
             updateConfig()
+            flyCounter = -1
         }.bind()
 
         enableAura = BindBoolean("key.keyboard.keypad.3", true) {
@@ -1300,7 +1349,7 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
         return (mask == ShamanMaskType.AWAKENED && awakened) || mask == target
     }
 
-    fun getMaxRepeatValue(): Int {
+    override fun getMaxRepeatValue(): Int {
         return if(mode == Mode.TotemSpam || mode == Mode.PuppetBomber) {
             maxRepeat.value - 5
         } else {
@@ -1382,7 +1431,11 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
             }
         } else if(mode == Mode.PuppetBomber) {
             if(!awakened()) {
-                addSpell(Actions.cast3)
+                if(enableAura.value) {
+                    addSpell(Actions.cast3)
+                } else {
+                    addSpell(Actions.cast2)
+                }
             }
             for(i in 1..getMaxRepeatValue()) {
                 addSpell(Actions.cast1)
@@ -1452,7 +1505,10 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
         super.onTick()
 
         if(fly.value) {
-            val action = global.World.time / 7
+            if(flyCounter == -1) {
+                flyCounter = 4 - (global.World.time / 7).toInt() % 4
+            }
+            val action = global.World.time / 7 + flyCounter
             if(action % 4 == 0L) {
                 cast1()
             } else if(action % 4 < 3L) {
@@ -1474,6 +1530,8 @@ inner class Shaman(global: Battle_jsm) : WynnClass(global) {
             mode = Mode.AuraSpam
         } else if(mainItem.contains("a16")) {
             mode = Mode.TotemSpam
+        } else if(mainItem.contains("hadal")) {
+            mode = Mode.PuppetBomber
         }
         super.restart()
     }

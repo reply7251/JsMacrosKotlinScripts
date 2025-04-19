@@ -1,30 +1,42 @@
-@file:ImportJar("../libs/jars/tweakeroo.jar", "../libs/jars/malilib.jar")
+@file:ImportJar("../libs/jars/tweakeroo.jar", "../libs/jars/malilib.jar", "../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
+import com.wynntils.core.components.Managers
+import com.wynntils.core.components.Models
+import com.wynntils.features.players.PlayerViewerFeature
+import com.wynntils.screens.playerviewer.PlayerViewerScreen
 import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.LivingEntityHelper
 import fi.dy.masa.tweakeroo.config.FeatureToggle
 import fi.dy.masa.tweakeroo.util.CameraEntity
-import me.hellrevenger.generated.Map_Nameable.getCustomName
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.EntityHelper
+import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
+import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.PlayerEntityHelper
+
+if(!World.isWorldLoaded) {
+    JsMacros.waitForEvent("ChunkLoad")
+}
+while (Managers.Feature.getFeatureInstance(PlayerViewerFeature::class.java) == null) {
+    Client.waitTick(20)
+}
 
 fun getPlayer() =
     if(FeatureToggle.TWEAK_FREE_CAMERA.booleanValue)
         CameraEntity.getCamera()?.let { EntityHelper.create(it) }
     else
-        Player.player
+        null
 
+val playerView = Managers.Feature.getFeatureInstance(PlayerViewerFeature::class.java)
+val playerViewerScreen = playerView::class.java.getDeclaredField("playerViewerScreen")
+playerViewerScreen.trySetAccessible()
 
 EventListener(EventKey::class.java, { e ->
     if(e.action == 1 && e.key == "key.mouse.middle") {
-        getPlayer()?.let {
-            it.rayTraceEntity(8)?.let {
-                (it as? LivingEntityHelper)?.let {
-                    val item = it.mainHand
-                    Chat.log("entity type: ${it.type}, name: ${it.raw.getCustomName() ?: it.getName()}")
-                    Chat.log("item id: ${item.itemId}, name: ${item.name}")
-                }
-            }
+        (getPlayer()?.rayTraceEntity(8) as? PlayerEntityHelper)?.let {
+            if(!Models.Player.isLocalPlayer(it.raw)) return@let
+            e.cancel()
+            val sc = PlayerViewerScreen.create(it.raw)
+            playerViewerScreen.set(playerView, sc)
+            Hud.openScreen(sc as? IScreen)
         }
     }
-})
-Chat.toast("Item Peeker", "enabled")
+}, true)
+//Chat.toast("Item Peeker", "enabled")
