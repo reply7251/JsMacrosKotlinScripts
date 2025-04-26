@@ -39,10 +39,17 @@ class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, private val even
     override fun trigger(p0: BaseEvent): EventContainer<*> {
         val ctx = EventContainer(KotlinScriptContext(context.runner, p0, context.file))
         try {
-            thread {
+            val call = {
                 callback.invoke(p0 as T)
                 ctx.ctx.closeContext()
                 ctx.releaseLock()
+            }
+            if(joined) {
+                call()
+            } else {
+                thread {
+                    call()
+                }
             }
         } catch (e: Throwable) {
             off()
