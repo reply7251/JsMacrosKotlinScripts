@@ -38,6 +38,10 @@ dependencies {
     jsmacrosExtensionInclude("org.jetbrains.kotlin:kotlin-scripting-jvm-host")
     implementation("net.bytebuddy:byte-buddy:1.15.1")
     jsmacrosExtensionInclude("net.bytebuddy:byte-buddy:1.15.1")
+    implementation("net.lenni0451.classtransform:core:1.14.1")
+    jsmacrosExtensionInclude("net.lenni0451.classtransform:core:1.14.1")
+    implementation("net.lenni0451.classtransform:additionalclassprovider:1.14.1")
+    jsmacrosExtensionInclude("net.lenni0451.classtransform:additionalclassprovider:1.14.1")
 
     implementation(project(":Mapping"))
     jsmacrosExtensionInclude(project(":Mapping"))

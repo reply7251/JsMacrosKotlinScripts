@@ -25,4 +25,8 @@ class KotlinScriptContext(runner: Core<*, *>?, event: BaseEvent?, file: File?) :
             it(this)
         }
     }
+
+    override fun shouldKeepAlive(): Boolean {
+        return super.shouldKeepAlive() || onContextClosedCallbacks.isNotEmpty()
+    }
 }

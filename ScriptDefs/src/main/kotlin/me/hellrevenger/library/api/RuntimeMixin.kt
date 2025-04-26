@@ -27,6 +27,8 @@ import net.bytebuddy.matcher.ElementMatchers
 import net.bytebuddy.pool.TypePool
 import net.bytebuddy.utility.OpenedClassReader
 import net.bytebuddy.utility.RandomString
+import net.lenni0451.classtransform.TransformerManager
+import net.lenni0451.classtransform.additionalclassprovider.InstrumentationClassProvider
 import org.objectweb.asm.Type
 import org.spongepowered.tools.agent.MixinAgent
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
@@ -339,6 +341,15 @@ class RuntimeMixin {
             getProceedByteCode(targetClass)?.let {
                 File(File(context.ctx.containedFolder, "debug"), fileName).writeBytes(it)
             }
+        }
+
+        fun createTransformManager() = TransformerManager(InstrumentationClassProvider(instrumentation))
+
+        fun removeTransformManager(manager: TransformerManager) {
+            instrumentation.removeTransformer(manager)
+            instrumentation.retransformClasses(*instrumentation.allLoadedClasses.filter {
+                manager.transformedClasses.contains(it.name)
+            }.toTypedArray())
         }
     }
 }
