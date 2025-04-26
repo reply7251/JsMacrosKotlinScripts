@@ -7,7 +7,9 @@ val whitelist = arrayOf(
     "otherworldly",
     "downpour",
     "all eyes on me",
-    "monument to loss"
+    "monument to loss",
+    "click here to join",
+    "click here to ready up",
 ).map { it.toRegex() }
 val blacklists = arrayOf("notgrey", ": .+ defense is ", "changed \\d+ \\w+ on .+").map { it.toRegex() }
 

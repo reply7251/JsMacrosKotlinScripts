@@ -13,6 +13,10 @@ val edgeDistance = 0.01
 var running = true
 var enabled = false
 
+if(!World.isWorldLoaded) {
+    JsMacros.waitForEvent("ChunkLoad")
+}
+
 thread {
     while (running) {
         Player.player?.let { player ->
