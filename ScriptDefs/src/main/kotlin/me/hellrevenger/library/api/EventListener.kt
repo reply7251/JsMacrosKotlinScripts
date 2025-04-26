@@ -6,6 +6,7 @@ import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.Event
 import xyz.wagyourtail.jsmacros.core.event.IEventListener
+import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import xyz.wagyourtail.jsmacros.core.library.Library
@@ -15,15 +16,17 @@ import kotlin.concurrent.thread
 
 @Library(value = "EventListener", languages = [KotlinLanguageDefinition::class])
 class FEventListener(val context: BaseScriptContext<*>) : PerExecLibrary(context) {
-    operator fun <T: BaseEvent> invoke(eventClass: Class<T>, callback: (T) -> Unit, joined: Boolean = false)
-        = Listener(context, eventClass, callback, joined)
+    operator fun <T: BaseEvent> invoke(eventClass: Class<T>, callback: (T) -> Unit, joined: Boolean = false) =
+        Listener(context, eventClass.getAnnotation(Event::class.java).value, callback, joined)
+
+    operator fun invoke(eventName: String, callback: (EventCustom) -> Unit, joined: Boolean = false): Listener<EventCustom> {
+        EventCustom(context.runner, eventName).registerEvent()
+        return Listener(context, eventName, callback, joined)
+    }
 }
 
-class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, eventClass: Class<T>, private val callback: (T) -> Unit, private val joined: Boolean) : IEventListener {
-    private val eventName: String = eventClass.getAnnotation(Event::class.java).value
-
+class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, private val eventName: String, private val callback: (T) -> Unit, private val joined: Boolean) : IEventListener {
     init {
-
         context.runner.eventRegistry.addListener(eventName, this)
         context.eventListeners[this] = eventName
 
