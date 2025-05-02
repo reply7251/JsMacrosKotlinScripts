@@ -194,17 +194,12 @@ class MixedDamageStatProvider(val weaponInfo: GearInfo, damageTypeString: String
     override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR)
 }
 
-data class ItemFilterServiceEvent(val name: String, val support: List<ItemProviderType>, val originalResult: ErrorOr<ItemStatProvider<*>>)
 
-ItemFilterServiceEvent("", listOf(), ErrorOr.error(""))
-
-enum class ItemFilterServiceHandler {
-    INSTANCE;
-    lateinit var callback: (ItemFilterServiceEvent) -> ErrorOr<ItemStatProvider<*>>
+object ItemFilterServiceHandler {
+    lateinit var callback: (String, List<ItemProviderType>, ErrorOr<ItemStatProvider<*>>) -> ErrorOr<ItemStatProvider<*>>
 }
 
-ItemFilterServiceHandler.INSTANCE.callback = callback@ { event ->
-    val (name, supportedProviderTypes, originalResult) = event
+ItemFilterServiceHandler.callback = callback@ { name, supportedProviderTypes, originalResult ->
     val split = name.split("/")
 
     if(split.size == 3 && split[0].isEmpty()) {
@@ -254,7 +249,7 @@ class MixinItemFilterService {
     fun getItemStatProvider(name: String, supportedProviderTypes: List<ItemProviderType>, cir: InjectionCallback?) {
         val original = (cir?.returnValue as? ErrorOr<ItemStatProvider<*>>) ?: return
         if(original.hasError()) {
-            cir.returnValue = ItemFilterServiceHandler.INSTANCE.callback(ItemFilterServiceEvent(name, supportedProviderTypes, original))
+            cir.returnValue = ItemFilterServiceHandler.callback(name, supportedProviderTypes, original)
         }
     }
 }

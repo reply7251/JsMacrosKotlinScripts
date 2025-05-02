@@ -8,14 +8,22 @@ import com.wynntils.screens.partymanagement.PartyManagementScreen
 import com.wynntils.screens.partymanagement.widgets.SuggestionPlayerWidget
 import me.hellrevenger.generated.ButtonWidget
 import me.hellrevenger.generated.Map_ClickableWidget.visible
+import me.hellrevenger.generated.Map_ClientPlayNetworkHandler.getPlayerList
+import me.hellrevenger.generated.Map_ClientPlayerEntity.networkHandler
+import me.hellrevenger.generated.Map_InGameHud.getPlayerListHud
+import me.hellrevenger.generated.Map_MinecraftClient.inGameHud
+import me.hellrevenger.generated.Map_MinecraftClient.player
+import me.hellrevenger.generated.Map_PlayerListEntry.getProfile
+import me.hellrevenger.generated.Map_PlayerListHud.getPlayerName
 import me.hellrevenger.generated.Map_Widget.*
+import me.hellrevenger.generated.PlayerListEntry
 import me.hellrevenger.library.api.RuntimeMixin
 import net.bytebuddy.asm.Advice
 import net.bytebuddy.description.method.MethodDescription
 import net.bytebuddy.matcher.ElementMatchers
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
-import xyz.wagyourtail.jsmacros.core.library.impl.classes.ClassBuilder
+import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.math.max
 import kotlin.math.min
@@ -33,20 +41,42 @@ fun Any.getPrivateFieldValue(fieldName: String): Any? {
 fun getOnlineFriendsMap() =
     Models.Friends.getPrivateFieldValue("onlineFriends") as MutableMap<String, String>
 
+object PartyManagementScreenHandler {
+    lateinit var callback: () -> Unit
+}
+PartyManagementScreenHandler.callback = { fetchSuggestion() }
+
 object MixinPartyManagementScreen {
     @Advice.OnMethodEnter
     @JvmStatic
     fun reloadSuggestedPlayersWidgets() {
-        ClassBuilder.methodWrappers["MixinPartyManagementScreen.reloadSuggestedPlayersWidgets"]?.get()
+        PartyManagementScreenHandler.callback()
     }
 }
 
-ClassBuilder.methodWrappers["MixinPartyManagementScreen.reloadSuggestedPlayersWidgets"] = JavaWrapper.methodToJava { ->
-    fetchSuggestion()
+val PLAYER_INFO_COMPARATOR =
+    Comparator.comparing<PlayerListEntry, String> ({ playerInfo -> playerInfo.getProfile().name }) { a, b -> a.compareTo(b, true)}
+
+fun fetchOnlineMembersFromTab(): Boolean {
+    val player = Client.minecraft.player ?: return false
+    val playerList = Client.minecraft.inGameHud.getPlayerListHud()
+    val players = player.networkHandler.getPlayerList().stream().sorted(PLAYER_INFO_COMPARATOR).limit(80).toList()
+    if(players.size < 61) return false
+    val guildMembers = players.subList(61, players.size).mapNotNull {
+        TextHelper.wrap(playerList.getPlayerName(it)).stringStripFormatting.let {
+            if(it.contains("]")) it.substring(it.indexOf("]") + 2) else null
+        }
+    }
+    if(guildMembers.size < 19) {
+        cachedGuildMembers.clear()
+        cachedGuildMembers.addAll(guildMembers)
+        return true
+    }
+    return false
 }
 
 fun fetchSuggestion() {
-    if(Time.time() > lastUpdate + 1e4) {
+    if(!fetchOnlineMembersFromTab() && Time.time() > lastUpdate + 1e4) {
         lastUpdate = Time.time()
         if(Models.Guild.guildName.isEmpty()) return
         val guild = Models.Guild.getGuild(Models.Guild.guildName)
