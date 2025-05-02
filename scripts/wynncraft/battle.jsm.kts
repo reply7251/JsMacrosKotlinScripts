@@ -1,9 +1,13 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
 @file:Suppress("MemberVisibilityCanBePrivate", "ConstPropertyName", "HasPlatformType")
+import com.wynntils.core.components.Handlers
 import com.wynntils.core.components.Managers
 import com.wynntils.core.components.Models
 import com.wynntils.features.combat.QuickCastFeature
+import com.wynntils.handlers.bossbar.TrackedBar
+import com.wynntils.handlers.bossbar.event.BossBarAddedEvent
+import com.wynntils.mc.event.BossHealthUpdateEvent
 import com.wynntils.models.abilities.AbilityModel
 import com.wynntils.models.abilities.type.OphanimOrb
 import com.wynntils.models.abilities.type.ShamanMaskType
@@ -28,6 +32,7 @@ import me.hellrevenger.generated.StatusEffects
 import me.hellrevenger.library.api.KtGlobals
 import net.minecraft.class_10185
 import net.minecraft.class_332
+import net.neoforged.bus.api.SubscribeEvent
 import org.jetbrains.kotlin.backend.common.pop
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
@@ -41,8 +46,18 @@ import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventDimensionChange
 import xyz.wagyourtail.jsmacros.client.api.helper.inventory.ItemStackHelper
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FPlayer
 import xyz.wagyourtail.jsmacros.core.service.EventService
+import java.util.regex.Matcher
 import kotlin.concurrent.thread
 import kotlin.math.*
+
+
+if(!World.isWorldLoaded) {
+    JsMacros.waitForEvent("ChunkLoad")
+}
+
+while(Managers.Feature.getFeatureInstance(QuickCastFeature::class.java) == null) {
+    Client.waitTick(5)
+}
 
 object Actions {
     const val cast1 = "Cast 1st Spell"
@@ -51,6 +66,7 @@ object Actions {
     const val cast4 = "Cast 4th Spell"
     const val melee = "key.attack"
     const val jump = "key.jump"
+    const val sneak = "key.sneak"
     const val R = 1
     const val L = 2
     val map = mapOf(
@@ -62,6 +78,7 @@ object Actions {
 }
 val keyBinds = KeyBind.keyBindings
 
+val jumpKey = keyBinds[Actions.jump]!!
 val skill1Key = keyBinds[Actions.cast1]!!
 val skill2Key = keyBinds[Actions.cast2]!!
 val skill3Key = keyBinds[Actions.cast3]!!
@@ -158,15 +175,17 @@ open class BindNumber<T: Number>(key: String, val configIndex: String, value: T,
         return result
     }
 
+    fun modifier() = if(KeyBind.pressedKeys.contains("key.keyboard.left.control")) 10 else 1
+
     override fun modify(positive: Boolean) {
         if(onModify != null) {
             onModify!!.invoke(this, positive)
         } else {
             val newValue = ((value as? Double)?.let {
-                if(positive) (it + (diff as Double))
+                if(positive) (it + (diff as Double) * modifier())
                 else (it - (diff as Double))
             } ?: (value as? Int)?.let {
-                if(positive) (it + (diff as Int))
+                if(positive) (it + (diff as Int) * modifier())
                 else (it - (diff as Int))
             } ?: value) as T
             set(newValue)
@@ -188,14 +207,6 @@ class BindPos(key: String, value: Pos3D, callback: (Bind) -> Unit): BindValue<Po
         }
         super.trigger()
     }
-}
-
-if(!World.isWorldLoaded) {
-    JsMacros.waitForEvent("ChunkLoad")
-}
-
-while(Managers.Feature.getFeatureInstance(QuickCastFeature::class.java) == null) {
-    Client.waitTick(5)
 }
 
 val mc = Client.minecraft
@@ -289,6 +300,7 @@ enum class Mode {
 
     Acrobat,
     Trickster,
+    Trickshade,
 
     ScreamSurf,
     BashSurf,
@@ -325,7 +337,7 @@ open class WynnClass: HasBind {
     lateinit var targetY: BindDouble
     lateinit var height: BindInt
 
-    var terminated = false
+    var terminated = true
 
     lateinit var spamSneak: BindBoolean
 
@@ -432,8 +444,8 @@ open class WynnClass: HasBind {
 
     fun cast(spell: String) {
         recordAction(spell)
-        spells[spell]?.invoke()
         lastSpells[spell] = World.time
+        spells[spell]?.invoke()
     }
 
     fun cast1() = cast(Actions.cast1)
@@ -449,6 +461,7 @@ open class WynnClass: HasBind {
         attackCooldown.set(mc, 0)
         Player.interactions()?.attack()
         attackCooldown.set(mc, 0)
+        lastSpellPacket = Time.time()
     }
 
     open fun onDisable() { }
@@ -488,13 +501,13 @@ open class WynnClass: HasBind {
                             Client.waitTick()
                         }
                     } else if(nextSpells.isNotEmpty()) {
-                        waitSpell(nextSpells.pop())
+                        waitSpell(nextSpells.removeFirst())
                     } else {
                         chooseAction()
                         if(nextSpells.isNotEmpty()) {
                             Client.waitTick()
                             if(!checkManual()) {
-                                waitSpell(nextSpells.pop())
+                                waitSpell(nextSpells.removeFirst())
                             }
                         }
                     }
@@ -505,7 +518,7 @@ open class WynnClass: HasBind {
         }
     }
 
-    fun addSpell(action: String) = nextSpells.add(action)
+    fun addSpell(action: String) = synchronized(nextSpells) { nextSpells.add(action) }
 
     open fun chooseAction() { }
 
@@ -570,6 +583,7 @@ open class WynnClass: HasBind {
                     e.cancel()
                 } else {
                     lastSpells[it] = World.time
+                    recordAction(it)
                 }
                 return@forEach
             }
@@ -636,7 +650,7 @@ open class WynnClass: HasBind {
     open fun onTick() {
         if(World.time % 2 == 0L) {
             if(spamSneak.value) {
-                pressKeyBind("key.sneak")
+                pressKeyBind(Actions.sneak)
             }
         }
         
@@ -806,6 +820,16 @@ inner class Warrior() : WynnClass() {
         nextLine().setText("upper: charge charge scream upper")
         nextLine().setText("bash(scream): scream scream")
     }
+    
+    override fun main() {
+        if(mode == Mode.ScreamSurf || mode == Mode.AlterSurf || mode == Mode.BashSurf) {
+            addSpell(Actions.cast2)
+            addSpell(Actions.cast2)
+            addSpell(Actions.cast4)
+            addSpell(Actions.cast3)
+        }
+        super.main()
+    }
 
     fun heightCheck(time: Int = 4): Boolean {
         val player = Player.player ?: return false
@@ -841,10 +865,10 @@ inner class Warrior() : WynnClass() {
     override fun chooseAction() {
         if(isHoldItem("elaborated ")) return
         if(isHoldItem("rhythm") || isHoldItem("catamaran")) {
-            KeyBind.pressKeyBind("key.sneak")
-            waitSpell(Actions.cast2, 1)
-            waitSpell(Actions.cast3, 1)
-            KeyBind.releaseKeyBind("key.sneak")
+            KeyBind.pressKeyBind(Actions.sneak)
+            waitSpell(Actions.cast2, 3)
+            waitSpell(Actions.cast3, 3)
+            KeyBind.releaseKeyBind(Actions.sneak)
         } else if(mode == Mode.ChargeSpam && isIdol()) {
             if(World.time % 2L == 0L) {
                 Player.interactions()?.interact()
@@ -858,7 +882,7 @@ inner class Warrior() : WynnClass() {
         } else if(mode == Mode.BashSurf || mode == Mode.ScreamSurf) {
             addSpell(Actions.cast3)
             addSpell(Actions.cast2)
-            if(World.time >= lastWarScream + 200 || (mode == Mode.ScreamSurf && World.time - lastBash < 300)) {
+            if(World.time >= lastWarScream + 200 || mode == Mode.ScreamSurf) {
                 addSpell(Actions.cast4)
             } else {
                 addSpell(Actions.cast1)
@@ -951,39 +975,30 @@ inner class Warrior() : WynnClass() {
 inner class Assassin() : WynnClass() {
     var tickToHop = 20
 
-    val modes = arrayOf(Mode.Trickster, Mode.Acrobat, Mode.None)
-    override var mode = Mode.Acrobat
+    val modes = arrayOf(Mode.Trickster, Mode.Acrobat, Mode.Trickshade, Mode.None)
+    override var mode = Mode.Trickshade
 
-//    var enableDash = false
-//    var enableSmoke = false
-//    var enableMultiHit = true
+    lateinit var slowFall: BindBoolean
+    lateinit var dive: BindBoolean
 
     val lastSmoke get() = lastSpells[Actions.cast4] ?: 0L
     val lastDash get() = lastSpells[Actions.cast2] ?: 0L
+    val lastSpin get() = lastSpells[Actions.cast1] ?: 0L
 
     var counter = 0
     var blocking = false
+    var flyAt = 0L
+
+    val momentumBar = MomentumBar()
 
     override fun onInitOverride() {
-        Bind(skill1Key) {
-            if(enabled.value) return@Bind
-            blocking = true
-            thread {
-                setCrossHairText("Wait !!!")
-                recordAction(Actions.cast1)
-                Client.waitTick(17)
-                pressKeyBind(Actions.jump)
-                Client.waitTick()
-                pressKeyBind(Actions.jump)
-                chooseAction()
-                setCrossHairText("")
-            }
-        }.bind("manualFlying")
-
         height = BindInt("key.keyboard.keypad.6", "Height", 3) { updateConfig() }.bind()
+        slowFall = BindBoolean("key.keyboard.keypad.4", true) { updateConfig() }.bind()
+        dive = BindBoolean("key.keyboard.keypad.1", true) { updateConfig() }.bind()
 
         super.onInitOverride()
         spellCooldown.set(12)
+        maxRepeat.set(2)
     }
 
     fun smoke() {
@@ -1002,6 +1017,10 @@ inner class Assassin() : WynnClass() {
         super.updateConfig()
         nextLine().setText(targetY.toString())
         nextLine().setText(height.toString())
+        nextLine().setText(slowFall.toString("Slow Fall"))
+        if(mode == Mode.Acrobat) {
+            nextLine().setText(dive.toString("Dive"))
+        }
     }
 
     fun heightCheck(): Boolean {
@@ -1010,18 +1029,7 @@ inner class Assassin() : WynnClass() {
         var speed = player.velocity.y
         if(speed < -1) return true
 
-        val delay = 0
-        var dy = 0.0
-        for(tick in -delay..<tickToHop) {
-            if(tick == 10) {
-                speed = 0.22
-            } else {
-                speed -= 0.08
-            }
-            speed *= 0.98
-            dy += speed
-        }
-        return yAboveTarget(dy)
+        return yAboveTarget(0.0)
     }
 
     override fun chooseAction(){
@@ -1031,50 +1039,121 @@ inner class Assassin() : WynnClass() {
             dash()
             smoke()
         } else if(mode == Mode.Acrobat) {
-            if(lastAction != Actions.cast1) {
-                if(!heightCheck()) {
+            if(World.time - lastSpin > 20 && (lastAction != Actions.cast1 || World.time - lastSpin > 62)) {
+                if(heightCheck()) {
+                    flyAt = World.time + 17
+                    waitSpell(Actions.cast1)
+                } else if(enableMelee.value) {
                     melee()
-                    blocking = false
-                    return
-                }
-                waitSpell(Actions.cast1)
-                melee()
-                Client.waitTick(16 - getSpellCooldownWithMana())
-                val wasJumping = KeyBind.pressedKeys.contains(keyBinds[Actions.jump])
-                KeyBind.releaseKeyBind(Actions.jump)
-                Client.waitTick()
-                pressKeyBind(Actions.jump)
-                Client.waitTick()
-                pressKeyBind(Actions.jump)
-                if(wasJumping) {
                     Client.waitTick()
-                    KeyBind.pressKeyBind(Actions.jump)
                 }
-
-            } else if(getMana() > 55 && World.time - lastSmoke > 100) {
+            } else if(getMana() > 30 && World.time - lastSmoke > 100) {
                 smoke()
-            } else if(getMana() > 75 && (World.time - lastDash < 120)) {
-                multiHit()
-            } else {
+            } else if(dive.value && momentumBar.barProgress?.progress?.let { it >= 1f } == true && Models.CharacterStats.blocksAboveGround > 5) {
                 dash()
+            } else if(getMana() > 50 && lastAction != Actions.cast3) {
+                multiHit()
+            } else if(getMana() > 30 && lastAction != Actions.cast2 && player.pitch < 30) {
+                dash()
+            } else if(enableMelee.value) {
+                melee()
+                Client.waitTick()
+            }
+        } else if (mode == Mode.Trickshade) {
+            if(World.time - lastDash > 600) {
+                dash()
+                Client.waitTick()
+                melee()
+                Client.waitTick()
+            } else if(getMana() > 30 && World.time - lastSmoke > 100) {
+                smoke()
+            } else if(getMana() > 30 && (lastAction != Actions.cast3 || burstAction < getMaxRepeatValue())) {
+                multiHit()
+            } else if(getMana() > 30 && lastAction != Actions.cast1) {
+                waitSpell(Actions.cast1)
             }
         }
         blocking = false
     }
 
     override fun onKey(e: EventKey) {
-        if(blocking && e.action == 1 && e.key == skill1Key) {
-            e.cancel()
-            return
+        if(e.action == 1 && e.key == skill1Key) {
+            if(blocking) {
+                e.cancel()
+                return
+            } else if(!enabled.value && mode == Mode.Acrobat) {
+                blocking = true
+                setCrossHairText("Wait !!!")
+                flyAt = World.time + 17
+                thread {
+                    Client.waitTick(6)
+                    chooseAction()
+                }
+            }
         }
         super.onKey(e)
     }
 
-    override fun reset() {
-        super.reset()
+    override fun getAvailableModes() = modes
+
+    override fun restart() {
+        super.restart()
+
+        Handlers.BossBar.registerBar(momentumBar)
+
+        thread {
+            while (!terminated) {
+                if(World.time >= flyAt && flyAt != 0L) {
+                    flyAt = 0L
+                    val wasJump = KeyBind.pressedKeys.contains(jumpKey)
+                    KeyBind.releaseKeyBind(Actions.sneak)
+                    KeyBind.releaseKeyBind(Actions.jump)
+                    Client.waitTick()
+                    pressKeyBind(Actions.jump)
+                    Client.waitTick()
+                    pressKeyBind(Actions.jump)
+                    Client.waitTick()
+                    if(slowFall.value && Models.CharacterStats.blocksAboveGround > 1.25) {
+                        KeyBind.pressKeyBind(Actions.sneak)
+                    }
+                    if(wasJump) {
+                        KeyBind.pressKeyBind(Actions.jump)
+                    }
+                    
+                    setCrossHairText("")
+                    blocking = false
+                }
+                if(slowFall.value && enabled.value) {
+                    KeyBind.keyBind(Actions.sneak, Models.CharacterStats.blocksAboveGround > 1)
+                }
+                Client.waitTick()
+            }
+        }
     }
 
-    override fun getAvailableModes() = modes
+    override fun reset() {
+        super.reset()
+        flyAt = 0
+        KeyBind.releaseKeyBind(Actions.sneak)
+    }
+
+    override fun terminate() {
+        super.terminate()
+
+        val f = Handlers.BossBar::class.java.getDeclaredField("knownBars")
+        f.trySetAccessible()
+        (f.get(Handlers.BossBar) as? MutableList<TrackedBar>)?.let {
+            it.remove(momentumBar)
+        }
+    }
+
+    inner class MomentumBar : TrackedBar(".+?(\\d).+Momentum".toPattern()) {
+        override fun onUpdateName(match: Matcher?) {
+            match?.group(1)?.toInt()?.let {
+                updateValue(it, it)
+            }
+        }
+    }
 }
 
 inner class Mage() : WynnClass() {
@@ -1112,10 +1191,6 @@ inner class Mage() : WynnClass() {
 
         nextLine().setText(enableIceSnake.toString("IceSnake"))
         nextLine().setText(enableMeteor.toString("Meteor"))
-    }
-
-    override fun reset() {
-        super.reset()
     }
 
     override fun chooseAction() {
@@ -1355,13 +1430,13 @@ inner class Shaman() : WynnClass() {
                 waitSpell(Actions.cast3, 2)
             }
             if(shouldUproot || (shouldAura > 20 && tooManyAura)) {
-                val release = !KeyBind.pressedKeys.contains(keyBinds["key.sneak"])
+                val release = !KeyBind.pressedKeys.contains(keyBinds[Actions.sneak])
                 if(shouldUproot)
-                    KeyBind.pressKeyBind("key.sneak")
+                    KeyBind.pressKeyBind(Actions.sneak)
                 waitSpell(Actions.cast4, 2)
 
                 if(release)
-                    KeyBind.releaseKeyBind("key.sneak")
+                    KeyBind.releaseKeyBind(Actions.sneak)
                 if(shouldUproot && enableAura.value) {
                     waitSpell(Actions.cast4, 2)
                 }
@@ -1638,12 +1713,12 @@ thread {
     }
 }
 
+var lastSpellPacket = 0L
 fun setupSpellCaster() {
     val f = quickCastFeature::class.java.getDeclaredField("packetCountdown")
     f.trySetAccessible()
 
     val packetSetter = { f.set(quickCastFeature, 2) }
-    var lastSpellPacket = 0L
     thread {
         while (running) {
             var sleep = 50L

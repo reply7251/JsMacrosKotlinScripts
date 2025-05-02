@@ -1,43 +1,36 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
-import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Models
 import com.wynntils.core.components.Services
-import com.wynntils.mc.event.ScreenInitEvent
 import com.wynntils.models.gear.type.GearAttackSpeed
 import com.wynntils.models.gear.type.GearInfo
-import com.wynntils.models.gear.type.GearType
 import com.wynntils.models.items.WynnItem
 import com.wynntils.models.items.items.game.GearItem
 import com.wynntils.models.stats.builders.SkillStatBuilder
-import com.wynntils.screens.guides.gear.WynntilsItemGuideScreen
+import com.wynntils.overlays.PartyMembersOverlay
+import com.wynntils.services.hades.HadesUser
 import com.wynntils.services.itemfilter.ItemFilterService
 import com.wynntils.services.itemfilter.type.ItemProviderType
 import com.wynntils.services.itemfilter.type.ItemStatProvider
 import com.wynntils.services.itemfilter.type.StatFilter
 import com.wynntils.services.itemfilter.type.StatFilterFactory
+import com.wynntils.utils.render.Texture
+import com.wynntils.utils.render.buffered.BufferedRenderUtils
+import com.wynntils.utils.render.type.HealthTexture
 import com.wynntils.utils.type.ErrorOr
 import com.wynntils.utils.type.Pair
 import com.wynntils.utils.type.RangedValue
-import me.hellrevenger.generated.ItemStack
 import me.hellrevenger.library.api.RuntimeMixin
 import me.hellrevenger.library.api.instrumentation
-import net.bytebuddy.asm.Advice
-import net.bytebuddy.description.method.MethodDescription
-import net.bytebuddy.implementation.bytecode.assign.Assigner
-import net.bytebuddy.matcher.ElementMatchers
 import net.lenni0451.classtransform.InjectionCallback
-import net.lenni0451.classtransform.annotations.CInline
-import net.lenni0451.classtransform.annotations.CReplaceCallback
-import net.lenni0451.classtransform.annotations.CTarget
-import net.lenni0451.classtransform.annotations.CTransformer
+import net.lenni0451.classtransform.annotations.*
 import net.lenni0451.classtransform.annotations.injection.CInject
-import net.lenni0451.classtransform.utils.InjectionCallbackReplacer
-import net.neoforged.bus.api.SubscribeEvent
+import net.minecraft.class_1041
+import net.minecraft.class_4587
+import net.minecraft.class_4597
+import net.minecraft.class_9779
 import xyz.wagyourtail.jsmacros.client.JsMacrosClient
-import xyz.wagyourtail.jsmacros.core.MethodWrapper
 import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
-import xyz.wagyourtail.jsmacros.core.library.impl.classes.ClassBuilder
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.*
 import kotlin.jvm.optionals.getOrNull
@@ -46,7 +39,13 @@ if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")
 }
 
-object AbilityPointStatProvider : ItemStatProvider<Int>() {
+abstract class MyGearItemStatProvider<T : Comparable<T>>(val myName: String) : ItemStatProvider<T>() {
+    override fun getName() = myName
+    override fun getDisplayName() = myName
+    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR)
+}
+
+object AbilityPointStatProvider : MyGearItemStatProvider<Int>("SkillPoints") {
     override fun getValue(p0: WynnItem?): Optional<Int> {
         var hasSkillStat = false
         (p0 as? GearItem)?.let { gear ->
@@ -62,31 +61,19 @@ object AbilityPointStatProvider : ItemStatProvider<Int>() {
         return Optional.empty()
     }
 
-    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR)
-
-    override fun getName() = "SkillPoints"
-
-    override fun getDisplayName() = "Skill Points"
-
     override fun getAliases() = mutableListOf("sp")
 }
 
-object QuestRequestStatProvider: ItemStatProvider<String>() {
+object QuestRequestStatProvider: MyGearItemStatProvider<String>("Quest") {
     override fun getValue(p0: WynnItem?): Optional<String> {
         (p0 as? GearItem)?.let { gear ->
             return gear.itemInfo.requirements.quest
         }
         return Optional.empty()
     }
-
-    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR)
-
-    override fun getName() = "Quest"
-
-    override fun getDisplayName() = "Quest"
 }
 
-object ObtainFromStatProvider: ItemStatProvider<String>() {
+object ObtainFromStatProvider: MyGearItemStatProvider<String>("Obtain") {
     override fun getValue(p0: WynnItem?): Optional<String> {
         (p0 as? GearItem)?.let { gear ->
             return gear.itemInfo.metaInfo.obtainInfo.firstOrNull()?.name ?: Optional.empty()
@@ -94,28 +81,16 @@ object ObtainFromStatProvider: ItemStatProvider<String>() {
         return Optional.empty()
     }
 
-    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR)
-
-    override fun getName() = "Obtain"
-
-    override fun getDisplayName() = "Obtain"
-
     override fun getAliases() = mutableListOf("from")
 }
 
-object WithoutStatProvider: ItemStatProvider<String>() {
+object WithoutStatProvider: MyGearItemStatProvider<String>("Without") {
     override fun getValue(p0: WynnItem?): Optional<String> {
         (p0 as? GearItem)?.let { gear ->
             return Optional.of(gear.itemInfo.requirements.skills.joinToString("/") { it.key().name })
         }
         return Optional.empty()
     }
-
-    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR)
-
-    override fun getName() = "Without"
-
-    override fun getDisplayName() = "Without"
 
     override fun getAliases() = mutableListOf("no")
 }
@@ -226,13 +201,20 @@ EventListener("ItemFilterService#getItemStatProvider", { event ->
 
     val split = name.split("/")
     if(split.size == 3 && split[0].isEmpty()) {
-        val weaponName = split[1].replace("_", " ")
+        val startsWith = split[1].startsWith("^")
+        val weaponName = split[1].replace("_", " ").let {
+            if(startsWith) it.substring(1) else it
+        }
         val type = split[2].lowercase()
-        val matches = Models.Gear.allGearInfos.filter { it.type.isWeapon && it.name.contains(weaponName, true) }.toList()
+        val matches = Models.Gear.allGearInfos.filter {
+            it.type.isWeapon &&
+                if(startsWith) it.name.startsWith(weaponName, true)
+                else it.name.contains(weaponName, true)
+        }.toList()
         if(damageTypes.any { it.contains(type) }) {
             val result = if(matches.size == 1)
                 ErrorOr.of(MixedDamageStatProvider(matches[0], type))
-            else if(matches.size < 5) {
+            else if(matches.size < 6) {
                 ErrorOr.error("found weapons: " + matches.joinToString { it.name })
             } else {
                 ErrorOr.error("found more than 5 weapons: ")
@@ -240,12 +222,28 @@ EventListener("ItemFilterService#getItemStatProvider", { event ->
             event.putObject("result", result)
             event.cancel()
         }
+    } else if(split.size == 1) {
+        val support = event.getObject("support") as? List<ItemProviderType> ?: return@EventListener
+        val unfinished = Services.ItemFilter.itemStatProviders.filter {
+            it.filterTypes.any { support.contains(it) } && (
+                    it.name.startsWith(name, true) || it.aliases.any { it.startsWith(name, true) }
+                    )
+        }
+        val result: ErrorOr<ItemStatProvider<*>> = if(unfinished.size == 1) {
+            ErrorOr.of(unfinished[0])
+        } else if(unfinished.size < 4) {
+            ErrorOr.error("suggest: " + unfinished.joinToString { it.displayName })
+        } else {
+            return@EventListener
+        }
+        event.putObject("result", result)
+        event.cancel()
     }
 }, true)
 
 @CReplaceCallback
 @CTransformer(ItemFilterService::class)
-class MixinItemFilterService2 {
+class MixinItemFilterService {
     @CInline
     @CInject(method = ["getItemStatProvider"], target = [CTarget("RETURN")], cancellable = true)
     fun getItemStatProvider(name: String?, supportedProviderTypes: List<ItemProviderType>?, cir: InjectionCallback?) {
@@ -253,12 +251,37 @@ class MixinItemFilterService2 {
         if(original.hasError()) {
             val event = EventCustom(JsMacrosClient.clientCore, "ItemFilterService#getItemStatProvider")
             event.putString("name", name)
+            event.putObject("support", supportedProviderTypes)
+            event.putObject("result", original)
             event.cancelable = true
             event.trigger()
             if(event.isCanceled) {
                 cir?.returnValue = event.getObject("result")
             }
         }
+    }
+}
+
+
+@CReplaceCallback
+@CTransformer(PartyMembersOverlay.PartyMemberOverlay::class)
+class MixinPartyMemberOverlay {
+    @CShadow("hadesUser")
+    @JvmField
+    var hadesUser: HadesUser? = null
+
+    @CInline
+    @CInject(method = ["render"], target = [CTarget("INVOKE", target = "net/minecraft/class_4587.method_46416(FFF)V", ordinal = 4, shift = CTarget.Shift.BEFORE)])
+    fun render(poseStack: class_4587?, bufferSource: class_4597?, deltaTracker: class_9779?, window: class_1041?, cir: InjectionCallback?) {
+        val user = hadesUser ?: return
+        if(user.health.progress < 1.01) return
+        if(poseStack == null || bufferSource == null) return
+
+        val texture = HealthTexture.A
+        BufferedRenderUtils.drawProgressBar(poseStack, bufferSource, Texture.HEALTH_BAR_OVERFLOW,
+            0f, 0f, 68.85f, texture.height * 0.85f,
+            0, texture.textureY1, 81, texture.textureY2, (user.health.progress - 1).toFloat()
+        )
     }
 }
 
@@ -275,7 +298,8 @@ statFilters.add(statFilters.size - 1, filterPair)
 
 
 val manager = RuntimeMixin.createTransformManager()
-manager.addTransformer(MixinItemFilterService2::class.java.name)
+manager.addTransformer(MixinItemFilterService::class.java.name)
+manager.addTransformer(MixinPartyMemberOverlay::class.java.name)
 manager.hookInstrumentation(instrumentation)
 
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
