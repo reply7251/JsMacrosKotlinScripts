@@ -1,6 +1,7 @@
 package me.hellrevenger.language.impl
 
 import me.hellrevenger.*
+import me.hellrevenger.mixins.MixinClassLoader
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.config.ConfigManager
 import xyz.wagyourtail.jsmacros.core.config.Option
@@ -53,6 +54,8 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
                         if(!K2) {
                             compilerOptions.append("-language-version=1.9")
                         }
+                        compilerOptions.append("-Xno-call-assertions")
+                        compilerOptions.append("-Xno-param-assertions")
                     }.asSuccess()
                 }
             }
@@ -116,12 +119,25 @@ class CompilerSetting {
         fun init(runner: Core<*, *>) {
             runner.config.addOptions("KotlinSetting", CompilerSetting::class.java)
             config = runner.config
-        }
 
+            config?.getOptions(CompilerSetting::class.java)?.setPatchClassloader(shouldPatchClassloader())
+        }
         fun isK2Enabled() = config?.getOptions(CompilerSetting::class.java)?.K2Enabled ?: true
+
+        fun shouldPatchClassloader() = config?.getOptions(CompilerSetting::class.java)?.patchClassloader ?: true
     }
 
     @JvmField
     @Option(translationKey = "K2", group = ["jsmacros.settings.general"])
-    var K2Enabled = false
+    var K2Enabled = true
+
+    @JvmField
+    @Option(translationKey = "Classloader patch", group = ["jsmacros.settings.general"], setter = "setPatchClassloader")
+    var patchClassloader = true
+
+    @JvmName("togglePatchClassloader")
+    fun setPatchClassloader(value: Boolean) {
+        patchClassloader = value
+        MixinClassLoader.setEnabled(value)
+    }
 }
