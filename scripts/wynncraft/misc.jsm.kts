@@ -29,8 +29,6 @@ import net.minecraft.class_1041
 import net.minecraft.class_4587
 import net.minecraft.class_4597
 import net.minecraft.class_9779
-import xyz.wagyourtail.jsmacros.client.JsMacrosClient
-import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.*
 import kotlin.jvm.optionals.getOrNull
@@ -196,10 +194,19 @@ class MixedDamageStatProvider(val weaponInfo: GearInfo, damageTypeString: String
     override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR)
 }
 
-EventListener("ItemFilterService#getItemStatProvider", { event ->
-    val name = event.getString("name") ?: return@EventListener
+data class ItemFilterServiceEvent(val name: String, val support: List<ItemProviderType>, val originalResult: ErrorOr<ItemStatProvider<*>>)
 
+ItemFilterServiceEvent("", listOf(), ErrorOr.error(""))
+
+enum class ItemFilterServiceHandler {
+    INSTANCE;
+    lateinit var callback: (ItemFilterServiceEvent) -> ErrorOr<ItemStatProvider<*>>
+}
+
+ItemFilterServiceHandler.INSTANCE.callback = callback@ { event ->
+    val (name, supportedProviderTypes, originalResult) = event
     val split = name.split("/")
+
     if(split.size == 3 && split[0].isEmpty()) {
         val startsWith = split[1].startsWith("^")
         val weaponName = split[1].replace("_", " ").let {
@@ -208,24 +215,22 @@ EventListener("ItemFilterService#getItemStatProvider", { event ->
         val type = split[2].lowercase()
         val matches = Models.Gear.allGearInfos.filter {
             it.type.isWeapon &&
-                if(startsWith) it.name.startsWith(weaponName, true)
-                else it.name.contains(weaponName, true)
+                    if(startsWith) it.name.startsWith(weaponName, true)
+                    else it.name.contains(weaponName, true)
         }.toList()
         if(damageTypes.any { it.contains(type) }) {
             val result = if(matches.size == 1)
-                ErrorOr.of(MixedDamageStatProvider(matches[0], type))
+                ErrorOr.of(MixedDamageStatProvider(matches[0], type) as ItemStatProvider<*>)
             else if(matches.size < 6) {
                 ErrorOr.error("found weapons: " + matches.joinToString { it.name })
             } else {
                 ErrorOr.error("found more than 5 weapons: ")
             }
-            event.putObject("result", result)
-            event.cancel()
+            return@callback result
         }
     } else if(split.size == 1) {
-        val support = event.getObject("support") as? List<ItemProviderType> ?: return@EventListener
         val unfinished = Services.ItemFilter.itemStatProviders.filter {
-            it.filterTypes.any { support.contains(it) } && (
+            it.filterTypes.any { supportedProviderTypes.contains(it) } && (
                     it.name.startsWith(name, true) || it.aliases.any { it.startsWith(name, true) }
                     )
         }
@@ -234,34 +239,25 @@ EventListener("ItemFilterService#getItemStatProvider", { event ->
         } else if(unfinished.size < 4) {
             ErrorOr.error("suggest: " + unfinished.joinToString { it.displayName })
         } else {
-            return@EventListener
+            originalResult
         }
-        event.putObject("result", result)
-        event.cancel()
+        return@callback result
     }
-}, true)
+    originalResult
+}
 
 @CReplaceCallback
 @CTransformer(ItemFilterService::class)
 class MixinItemFilterService {
     @CInline
     @CInject(method = ["getItemStatProvider"], target = [CTarget("RETURN")], cancellable = true)
-    fun getItemStatProvider(name: String?, supportedProviderTypes: List<ItemProviderType>?, cir: InjectionCallback?) {
+    fun getItemStatProvider(name: String, supportedProviderTypes: List<ItemProviderType>, cir: InjectionCallback?) {
         val original = (cir?.returnValue as? ErrorOr<ItemStatProvider<*>>) ?: return
         if(original.hasError()) {
-            val event = EventCustom(JsMacrosClient.clientCore, "ItemFilterService#getItemStatProvider")
-            event.putString("name", name)
-            event.putObject("support", supportedProviderTypes)
-            event.putObject("result", original)
-            event.cancelable = true
-            event.trigger()
-            if(event.isCanceled) {
-                cir?.returnValue = event.getObject("result")
-            }
+            cir.returnValue = ItemFilterServiceHandler.INSTANCE.callback(ItemFilterServiceEvent(name, supportedProviderTypes, original))
         }
     }
 }
-
 
 @CReplaceCallback
 @CTransformer(PartyMembersOverlay.PartyMemberOverlay::class)
@@ -296,6 +292,7 @@ Services.ItemFilter.itemStatProviders.add(ObtainFromStatProvider)
 Services.ItemFilter.itemStatProviders.add(WithoutStatProvider)
 statFilters.add(statFilters.size - 1, filterPair)
 
+Client.waitTick(20)
 
 val manager = RuntimeMixin.createTransformManager()
 manager.addTransformer(MixinItemFilterService::class.java.name)
