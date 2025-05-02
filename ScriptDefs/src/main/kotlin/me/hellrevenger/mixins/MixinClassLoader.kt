@@ -19,7 +19,8 @@ class MixinKnotClassLoader {
     fun findLoadedClassFwd(name: String?, cir: InjectionCallback?) {
         if(cir == null || name == null || cir.returnValue != null) return
         val contains = java.lang.String::class.java.getMethod("contains", java.lang.CharSequence::class.java)
-        if(!contains.invoke(name, "_jsm$").equals(true)) return
+        val startsWith = java.lang.String::class.java.getMethod("startsWith", java.lang.String::class.java)
+        if(!contains.invoke(name, "_jsm$").equals(true) && !startsWith.invoke(name, "kotlin.").equals(true)) return
         val stackTrace = Thread.currentThread().stackTrace
         if(stackTrace.size < 6) return
         val loaderName = stackTrace[5].classLoaderName
