@@ -4,7 +4,6 @@ package me.hellrevenger.library.api
 import com.sun.jna.NativeLibrary
 import com.sun.jna.ptr.IntByReference
 import com.sun.jna.ptr.PointerByReference
-import javassist.ClassPool
 import me.hellrevenger.SharedLibraries
 import net.bytebuddy.ByteBuddy
 import net.bytebuddy.asm.Advice
@@ -31,6 +30,7 @@ import net.lenni0451.classtransform.TransformerManager
 import net.lenni0451.classtransform.additionalclassprovider.InstrumentationClassProvider
 import org.objectweb.asm.Type
 import org.spongepowered.tools.agent.MixinAgent
+import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import java.io.File
 import java.lang.instrument.ClassDefinition
@@ -41,9 +41,6 @@ import java.security.ProtectionDomain
 import kotlin.jvm.internal.Intrinsics
 
 private fun tryGetInstrumentation(): Instrumentation {
-//    try {
-//        return net.bytebuddy.agent.ByteBuddyAgent.install()
-//    } catch (_: Exception) {}
     val field = MixinAgent::class.java.getDeclaredField("instrumentation")
     if(field.trySetAccessible()) {
         val result = field.get(null)
@@ -338,8 +335,16 @@ class RuntimeMixin {
         }
 
         fun writeResult(context: EventContainer<*>, targetClass: Class<*>, fileName: String = "dump.class") {
+            writeResult(context.ctx, targetClass, fileName)
+        }
+
+        fun writeResult(context: BaseScriptContext<*>, targetClass: Class<*>, fileName: String = "dump.class") {
             getProceedByteCode(targetClass)?.let {
-                File(File(context.ctx.containedFolder, "debug"), fileName).writeBytes(it)
+                val file = File(File(context.containedFolder, "debug"), fileName)
+                if(!file.parentFile.exists()) {
+                    file.parentFile.mkdirs()
+                }
+                file.writeBytes(it)
             }
         }
 
@@ -351,5 +356,7 @@ class RuntimeMixin {
                 manager.transformedClasses.contains(it.name)
             }.toTypedArray())
         }
+
+        fun getInstrumentation() = instrumentation
     }
 }
