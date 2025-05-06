@@ -14,6 +14,7 @@ import com.wynntils.models.abilities.type.ShamanMaskType
 import com.wynntils.models.items.items.game.CraftedConsumableItem
 import com.wynntils.models.items.items.game.MultiHealthPotionItem
 import com.wynntils.models.items.items.game.PotionItem
+import com.wynntils.models.spells.type.SpellDirection
 import me.hellrevenger.KotlinExtension
 import me.hellrevenger.generated.Input
 import me.hellrevenger.generated.Map_ClientPlayerEntity.input
@@ -28,6 +29,7 @@ import me.hellrevenger.generated.Map_PlayerInput.*
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
 import me.hellrevenger.generated.Map_StatusEffects.BLINDNESS
 import me.hellrevenger.generated.Map_StatusEffects.DARKNESS
+import me.hellrevenger.generated.PlayerInput
 import me.hellrevenger.generated.StatusEffects
 import me.hellrevenger.library.api.KtGlobals
 import net.minecraft.class_10185
@@ -1640,7 +1642,6 @@ class CustomInput(val parent: Input) : Input() {
     var targetPos = Pos3D.ZERO
     var forceForward = false
     var stuckCounter = 0
-    val constructor = Reflection.getClass<Any>("net.minecraft.class_10185").constructors[0]
     fun getMovement(positive: Boolean, negative: Boolean) = if(positive == negative) 0f else if(positive) 1f else -1f
     fun roundMovement(value: Double) = if(abs(value) < 0.1) 0.0 else value / abs(value)
     fun resetPos() {
@@ -1665,12 +1666,10 @@ class CustomInput(val parent: Input) : Input() {
             val sneak = false
             val sprint = false
 
-            val inp = constructor.newInstance(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
-
-            playerInput = inp as class_10185
+            playerInput = PlayerInput(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
         }
         if(forceForward) {
-            playerInput = constructor.newInstance(forceForward, playerInput.backward(),
+            playerInput = PlayerInput(forceForward, playerInput.backward(),
                 playerInput.left(), playerInput.right(), playerInput.jump() , playerInput.sneak() , playerInput.sprint())as class_10185
         }
 
@@ -1722,12 +1721,14 @@ fun setupSpellCaster() {
     thread {
         while (running) {
             var sleep = 50L
-            if(World.isWorldLoaded && Player.player != null) {
-                if(!Models.Spell.isSpellQueueEmpty && Time.time() >= lastSpellPacket + 80) {
+            if(World.isWorldLoaded && Player.player != null && !Models.Spell.isSpellQueueEmpty) {
+                val right = Models.Spell.checkNextSpellDirection() == SpellDirection.RIGHT
+                val interval = if(right)  35 else 30
+                if(Time.time() >= lastSpellPacket + 50 + interval) {
                     lastSpellPacket = Time.time()
                     Models.Spell.sendNextSpell()
                     packetSetter()
-                    sleep += 30
+                    sleep += interval
                 }
             }
 

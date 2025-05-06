@@ -103,6 +103,7 @@ val cachedGuildMembers = mutableSetOf<String>()
 var lastUpdate = 0L
 var scrollY = 0
 
+var patched = false
 val matcher2 = ElementMatchers.named<MethodDescription>("reloadSuggestedPlayersWidgets")
 val mixin2 = Advice.to(MixinPartyManagementScreen::class.java).on(matcher2)
 
@@ -112,8 +113,11 @@ class WynnListener {
     @SubscribeEvent
     fun onScreen(event: ScreenInitEvent.Pre) {
         (event.screen as? PartyManagementScreen)?.let { screen ->
-            RuntimeMixin.addMixin(PartyManagementScreen::class.java, mixin2)
-            RuntimeMixin.doMixin(PartyManagementScreen::class.java)
+            if(!patched) {
+                patched = true
+                RuntimeMixin.addMixin(PartyManagementScreen::class.java, mixin2)
+                RuntimeMixin.doMixin(PartyManagementScreen::class.java)
+            }
             fetchSuggestion()
             val iscreen = screen as IScreen
             iscreen.setOnScroll(JavaWrapper.methodToJava { mouse, scroll ->
