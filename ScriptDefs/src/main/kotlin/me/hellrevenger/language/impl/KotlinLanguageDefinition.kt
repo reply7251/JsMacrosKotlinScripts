@@ -128,14 +128,14 @@ class CompilerSetting {
     }
 
     @JvmField
-    @Option(translationKey = "K2", group = ["jsmacros.settings.general"])
+    @Option(translationKey = "jsmacros.settings.languages.kotlin.k2", group = ["jsmacros.settings.languages", "jsmacros.settings.languages.kotlin"])
     var K2Enabled = true
 
     @JvmField
-    @Option(translationKey = "Classloader patch", group = ["jsmacros.settings.general"], setter = "setPatchClassloader")
+    @Option(translationKey = "jsmacros.settings.languages.kotlin.classloaderpatch", group = ["jsmacros.settings.languages", "jsmacros.settings.languages.kotlin"], setter = "setPatchClassloader")
     var patchClassloader = true
 
-    @JvmName("togglePatchClassloader")
+    @JvmName("setPatchClassloader")
     fun setPatchClassloader(value: Boolean) {
         patchClassloader = value
         MixinClassLoader.setEnabled(value)
