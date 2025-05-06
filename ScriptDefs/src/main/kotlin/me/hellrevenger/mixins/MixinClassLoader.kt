@@ -54,12 +54,11 @@ class MixinClassLoader {
         var manager = RuntimeMixin.createTransformManager()
 
         fun setEnabled(enabled: Boolean) {
+            RuntimeMixin.removeTransformManager(manager)
             if(enabled) {
                 manager = RuntimeMixin.createTransformManager()
                 manager.addTransformer(MixinKnotClassLoader::class.java.name)
                 manager.hookInstrumentation(instrumentation)
-            } else {
-                RuntimeMixin.removeTransformManager(manager)
             }
         }
     }
