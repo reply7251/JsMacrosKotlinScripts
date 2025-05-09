@@ -70,6 +70,14 @@ fun Positioner.toImpl() = this.method_46480()
  */
 fun Positioner.alignVerticalCenter() = this.method_46474()
 /**
+ * method_46465
+ */
+fun Positioner.margin(x: Int, y: Int) = this.method_46465(x, y)
+/**
  * method_46470
  */
 fun Positioner.alignRight() = this.method_46470()
+/**
+ * method_46466
+ */
+fun Positioner.margin(left: Int, top: Int, right: Int, bottom: Int) = this.method_46466(left, top, right, bottom)

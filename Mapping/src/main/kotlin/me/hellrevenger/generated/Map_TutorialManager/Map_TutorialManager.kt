@@ -46,6 +46,10 @@ fun TutorialManager.onInventoryOpened() = this.method_4912()
  */
 fun TutorialManager.destroyHandler() = this.method_4915()
 /**
+ * method_4917
+ */
+fun TutorialManager.tick() = this.method_4917()
+/**
  * method_4916
  */
 fun TutorialManager.createHandler() = this.method_4916()

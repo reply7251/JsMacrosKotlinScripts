@@ -19,6 +19,10 @@ object RandomSeedKt {
      */
     fun getSeed() = RandomSeed.method_39001()
     /**
+     * method_39003
+     */
+    fun createXoroshiroSeed(seed: Long) = RandomSeed.method_39003(seed)
+    /**
      * method_52211
      */
     fun createUnmixedXoroshiroSeed(seed: Long) = RandomSeed.method_52211(seed)

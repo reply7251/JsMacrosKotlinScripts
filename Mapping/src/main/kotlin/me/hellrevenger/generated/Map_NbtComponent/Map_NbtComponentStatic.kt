@@ -19,6 +19,10 @@ object NbtComponentKt {
      */
     fun set(type: ComponentType<NbtComponent>, stack: ItemStack, nbtSetter: Consumer<NbtCompound>) = NbtComponent.method_57452(type, stack, nbtSetter)
     /**
+     * method_57453
+     */
+    fun set(type: ComponentType<NbtComponent>, stack: ItemStack, nbt: NbtCompound) = NbtComponent.method_57453(type, stack, nbt)
+    /**
      * method_57456
      */
     fun of(nbt: NbtCompound) = NbtComponent.method_57456(nbt)

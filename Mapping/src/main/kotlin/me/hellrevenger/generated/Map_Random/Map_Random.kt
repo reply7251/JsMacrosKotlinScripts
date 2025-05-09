@@ -30,6 +30,10 @@ fun Random.skip(count: Int) = this.method_33650(count)
  */
 fun Random.split() = this.method_38420()
 /**
+ * method_43048
+ */
+fun Random.nextInt(bound: Int) = this.method_43048(bound)
+/**
  * method_38421
  */
 fun Random.nextSplitter() = this.method_38421()
@@ -41,6 +45,10 @@ fun Random.nextGaussian() = this.method_43059()
  * method_43058
  */
 fun Random.nextDouble() = this.method_43058()
+/**
+ * method_62816
+ */
+fun Random.nextTriangular(mode: Float, deviation: Float) = this.method_62816(mode, deviation)
 /**
  * method_43056
  */

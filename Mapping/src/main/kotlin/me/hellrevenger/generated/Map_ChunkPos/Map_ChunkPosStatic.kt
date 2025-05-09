@@ -23,6 +23,10 @@ object ChunkPosKt {
      */
     fun fromRegionCenter(x: Int, z: Int) = ChunkPos.method_42306(x, z)
     /**
+     * method_8331
+     */
+    fun toLong(chunkX: Int, chunkZ: Int) = ChunkPos.method_8331(chunkX, chunkZ)
+    /**
      * method_8325
      */
     fun getPackedX(pos: Long) = ChunkPos.method_8325(pos)
@@ -35,7 +39,15 @@ object ChunkPosKt {
      */
     fun stream(pos1: ChunkPos, pos2: ChunkPos) = ChunkPos.method_19281(pos1, pos2)
     /**
+     * method_37232
+     */
+    fun toLong(pos: BlockPos) = ChunkPos.method_37232(pos)
+    /**
      * method_8332
      */
     fun getPackedZ(pos: Long) = ChunkPos.method_8332(pos)
+    /**
+     * method_19280
+     */
+    fun stream(center: ChunkPos, radius: Int) = ChunkPos.method_19280(center, radius)
 }

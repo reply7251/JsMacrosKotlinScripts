@@ -13,3 +13,7 @@ fun NeighborUpdater.updateNeighbor(state: BlockState, pos: BlockPos, sourceBlock
  * method_42392
  */
 fun NeighborUpdater.replaceWithStateForNeighborUpdate(direction: Direction, neighborState: BlockState, pos: BlockPos, neighborPos: BlockPos, flags: Int, maxUpdateDepth: Int) = this.method_42392(direction, neighborState, pos, neighborPos, flags, maxUpdateDepth)
+/**
+ * method_41704
+ */
+fun NeighborUpdater.updateNeighbor(pos: BlockPos, sourceBlock: Block, orientation: WireOrientation) = this.method_41704(pos, sourceBlock, orientation)

@@ -22,4 +22,8 @@ object FuzzyTargetingKt {
      * method_31530
      */
     fun find(entity: PathAwareEntity, horizontalRange: Int, verticalRange: Int, scorer: ToDoubleFunction<BlockPos>) = FuzzyTargeting.method_31530(entity, horizontalRange, verticalRange, scorer)
+    /**
+     * method_31527
+     */
+    fun find(entity: PathAwareEntity, horizontalRange: Int, verticalRange: Int) = FuzzyTargeting.method_31527(entity, horizontalRange, verticalRange)
 }

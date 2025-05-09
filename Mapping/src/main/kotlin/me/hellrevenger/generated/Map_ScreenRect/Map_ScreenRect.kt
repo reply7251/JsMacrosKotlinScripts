@@ -38,6 +38,10 @@ fun ScreenRect.getBoundingCoordinate(direction: NavigationDirection) = this.meth
  */
 fun ScreenRect.overlaps(other: ScreenRect, axis: NavigationAxis) = this.method_48253(other, axis)
 /**
+ * method_48252
+ */
+fun ScreenRect.overlaps(other: ScreenRect) = this.method_48252(other)
+/**
  * method_65185
  */
 fun ScreenRect.transform(positionMatrix: Matrix4f) = this.method_65185(positionMatrix)

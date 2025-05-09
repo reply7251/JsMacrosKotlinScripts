@@ -43,9 +43,17 @@ object BlockPosKt {
      */
     fun stream(box: Box) = BlockPos.method_29715(box)
     /**
+     * method_49638
+     */
+    fun ofFloored(pos: Position) = BlockPos.method_49638(pos)
+    /**
      * method_27156
      */
     fun iterateRandomly(random: Random, count: Int, minX: Int, minY: Int, minZ: Int, maxX: Int, maxY: Int, maxZ: Int) = BlockPos.method_27156(random, count, minX, minY, minZ, maxX, maxY, maxZ)
+    /**
+     * method_34848
+     */
+    fun iterateRandomly(random: Random, count: Int, around: BlockPos, range: Int) = BlockPos.method_34848(random, count, around, range)
     /**
      * method_10091
      */
@@ -71,13 +79,33 @@ object BlockPosKt {
      */
     fun iterate(box: Box) = BlockPos.method_62671(box)
     /**
+     * method_20437
+     */
+    fun stream(start: BlockPos, end: BlockPos) = BlockPos.method_20437(start, end)
+    /**
      * method_58249
      */
     fun min(a: BlockPos, b: BlockPos) = BlockPos.method_58249(a, b)
     /**
+     * method_10064
+     */
+    fun asLong(x: Int, y: Int, z: Int) = BlockPos.method_10064(x, y, z)
+    /**
+     * method_10094
+     */
+    fun iterate(startX: Int, startY: Int, startZ: Int, endX: Int, endY: Int, endZ: Int) = BlockPos.method_10094(startX, startY, startZ, endX, endY, endZ)
+    /**
+     * method_23627
+     */
+    fun stream(box: BlockBox) = BlockPos.method_23627(box)
+    /**
      * method_25996
      */
     fun iterateOutwards(center: BlockPos, rangeX: Int, rangeY: Int, rangeZ: Int) = BlockPos.method_25996(center, rangeX, rangeY, rangeZ)
+    /**
+     * method_17962
+     */
+    fun stream(startX: Int, startY: Int, startZ: Int, endX: Int, endY: Int, endZ: Int) = BlockPos.method_17962(startX, startY, startZ, endX, endY, endZ)
     /**
      * method_25997
      */
@@ -87,7 +115,15 @@ object BlockPosKt {
      */
     fun iterateRecursively(pos: BlockPos, maxDepth: Int, maxIterations: Int, nextQueuer: BiConsumer<BlockPos, Consumer<BlockPos>>, callback: function_Function<BlockPos, net.minecraft.class_2338.class_10384>) = BlockPos.method_49925(pos, maxDepth, maxIterations, nextQueuer, callback)
     /**
+     * method_10097
+     */
+    fun iterate(start: BlockPos, end: BlockPos) = BlockPos.method_10097(start, end)
+    /**
      * method_10061
      */
     fun unpackLongX(packedPos: Long) = BlockPos.method_10061(packedPos)
+    /**
+     * method_10060
+     */
+    fun offset(value: Long, arg1: Direction) = BlockPos.method_10060(value, arg1)
 }

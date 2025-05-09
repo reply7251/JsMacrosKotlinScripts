@@ -22,6 +22,10 @@ fun SignText.withMessage(line: Int, message: Text, filteredMessage: Text) = this
  */
 fun SignText.getMessages(filtered: Boolean) = this.method_49877(filtered)
 /**
+ * method_49857
+ */
+fun SignText.withMessage(line: Int, message: Text) = this.method_49857(line, message)
+/**
  * method_49872
  */
 fun SignText.getColor() = this.method_49872()

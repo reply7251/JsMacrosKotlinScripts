@@ -66,6 +66,10 @@ fun EntityAttributeInstance.getPersistentModifiers() = this.method_61435()
  */
 fun EntityAttributeInstance.getAttribute() = this.method_6198()
 /**
+ * method_6202
+ */
+fun EntityAttributeInstance.removeModifier(modifier: EntityAttributeModifier) = this.method_6202(modifier)
+/**
  * method_26835
  */
 fun EntityAttributeInstance.addTemporaryModifier(modifier: EntityAttributeModifier) = this.method_26835(modifier)

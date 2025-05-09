@@ -254,4 +254,8 @@ object MapColorKt {
      * method_38479
      */
     fun get(id: Int) = MapColor.method_38479(id)
+    /**
+     * method_38480
+     */
+    fun getRenderColor(colorByte: Int) = MapColor.method_38480(colorByte)
 }

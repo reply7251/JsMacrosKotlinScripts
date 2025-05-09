@@ -18,9 +18,17 @@ fun CrashReportSection.addStackTrace(crashReportBuilder: StringBuilder) = this.m
  */
 fun CrashReportSection.add(name: String, callable: CrashCallable<String>) = this.method_577(name, callable)
 /**
+ * method_585
+ */
+fun CrashReportSection.add(name: String, throwable: Throwable) = this.method_585(name, throwable)
+/**
  * method_580
  */
 fun CrashReportSection.trimStackTraceEnd(callCount: Int) = this.method_580(callCount)
+/**
+ * method_578
+ */
+fun CrashReportSection.add(name: String, detail: Object) = this.method_578(name, detail)
 /**
  * method_575
  */

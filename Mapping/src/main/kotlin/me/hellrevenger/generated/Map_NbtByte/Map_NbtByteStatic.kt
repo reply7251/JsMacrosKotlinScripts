@@ -18,4 +18,8 @@ object NbtByteKt {
      * method_23234
      */
     fun of(value: Boolean) = NbtByte.method_23234(value)
+    /**
+     * method_23233
+     */
+    fun of(value: Byte) = NbtByte.method_23233(value)
 }

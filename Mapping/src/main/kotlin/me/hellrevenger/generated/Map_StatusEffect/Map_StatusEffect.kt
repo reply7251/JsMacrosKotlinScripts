@@ -66,6 +66,10 @@ fun StatusEffect.onEntityDamage(world: ServerWorld, entity: LivingEntity, amplif
  */
 fun StatusEffect.getFadeTicks() = this.method_55652()
 /**
+ * method_52520
+ */
+fun StatusEffect.onApplied(entity: LivingEntity, amplifier: Int) = this.method_52520(entity, amplifier)
+/**
  * method_5564
  */
 fun StatusEffect.applyInstantEffect(world: ServerWorld, effectEntity: Entity, attacker: Entity, target: LivingEntity, amplifier: Int, proximity: Double) = this.method_5564(world, effectEntity, attacker, target, amplifier, proximity)

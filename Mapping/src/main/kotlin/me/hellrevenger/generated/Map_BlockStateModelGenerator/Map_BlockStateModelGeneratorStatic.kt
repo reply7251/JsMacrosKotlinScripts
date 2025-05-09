@@ -115,6 +115,10 @@ object BlockStateModelGeneratorKt {
      */
     fun createBooleanModelMap(property: BooleanProperty, trueModel: Identifier, falseModel: Identifier) = BlockStateModelGenerator.method_25565(property, trueModel, falseModel)
     /**
+     * method_25653
+     */
+    fun createAxisRotatedBlockState(block: Block, modelId: Identifier) = BlockStateModelGenerator.method_25653(block, modelId)
+    /**
      * method_47519
      */
     fun createUvLockedColumnBlockState(block: Block, textureMap: TextureMap, modelCollector: BiConsumer<Identifier, ModelSupplier>) = BlockStateModelGenerator.method_47519(block, textureMap, modelCollector)

@@ -18,6 +18,10 @@ fun EntityPredicate.distance() = this.comp_1762()
  */
 fun EntityPredicate.type() = this.comp_1761()
 /**
+ * method_8909
+ */
+fun EntityPredicate.test(world: ServerWorld, pos: Vec3d, entity: Entity) = this.method_8909(world, pos, entity)
+/**
  * comp_2446
  */
 fun EntityPredicate.slots() = this.comp_2446()

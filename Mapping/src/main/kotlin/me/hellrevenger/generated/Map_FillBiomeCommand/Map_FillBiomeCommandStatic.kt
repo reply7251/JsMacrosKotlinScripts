@@ -14,4 +14,8 @@ object FillBiomeCommandKt {
      * method_47529
      */
     fun register(dispatcher: CommandDispatcher<ServerCommandSource>, commandRegistryAccess: CommandRegistryAccess) = FillBiomeCommand.method_47529(dispatcher, commandRegistryAccess)
+    /**
+     * method_55339
+     */
+    fun fillBiome(world: ServerWorld, from: BlockPos, to: BlockPos, biome: RegistryEntry<Biome>) = FillBiomeCommand.method_55339(world, from, to, biome)
 }

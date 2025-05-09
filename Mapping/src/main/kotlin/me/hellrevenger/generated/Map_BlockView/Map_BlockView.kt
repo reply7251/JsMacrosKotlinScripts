@@ -22,9 +22,17 @@ fun BlockView.raycast(context: BlockStateRaycastContext) = this.method_32880(con
  */
 fun BlockView.getBlockState(pos: BlockPos) = this.method_8320(pos)
 /**
+ * method_30347
+ */
+fun BlockView.getDismountHeight(pos: BlockPos) = this.method_30347(pos)
+/**
  * method_8316
  */
 fun BlockView.getFluidState(pos: BlockPos) = this.method_8316(pos)
+/**
+ * method_35230
+ */
+fun <T>BlockView.getBlockEntity(pos: BlockPos, type: BlockEntityType<T>) where T: BlockEntity = this.method_35230<T>(pos, type)
 /**
  * method_8317
  */
@@ -33,3 +41,7 @@ fun BlockView.getLuminance(pos: BlockPos) = this.method_8317(pos)
  * method_17745
  */
 fun BlockView.raycastBlock(start: Vec3d, end: Vec3d, pos: BlockPos, shape: VoxelShape, state: BlockState) = this.method_17745(start, end, pos, shape, state)
+/**
+ * method_17742
+ */
+fun BlockView.raycast(context: RaycastContext) = this.method_17742(context)

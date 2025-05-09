@@ -22,4 +22,8 @@ object Vec3ArgumentTypeKt {
      * method_9737
      */
     fun vec3() = Vec3ArgumentType.method_9737()
+    /**
+     * method_9735
+     */
+    fun vec3(centerIntegers: Boolean) = Vec3ArgumentType.method_9735(centerIntegers)
 }

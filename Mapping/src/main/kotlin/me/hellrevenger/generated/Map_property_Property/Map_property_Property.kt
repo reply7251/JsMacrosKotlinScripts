@@ -18,6 +18,10 @@ fun <T>property_Property<T>.computeHashCode() where T: Comparable<T> = this.meth
  */
 fun <T>property_Property<T>.createValue(state: State<*, *>) where T: Comparable<T> = this.method_30041(state)
 /**
+ * method_30042
+ */
+fun <T>property_Property<T>.createValue(value: T) where T: Comparable<T> = this.method_30042(value)
+/**
  * method_11902
  */
 fun <T>property_Property<T>.getType() where T: Comparable<T> = this.method_11902()
@@ -37,6 +41,10 @@ fun <T>property_Property<T>.getValueCodec() where T: Comparable<T> = this.method
  * method_30043
  */
 fun <T>property_Property<T>.stream() where T: Comparable<T> = this.method_30043()
+/**
+ * method_11900
+ */
+fun <T>property_Property<T>.parse(name: String) where T: Comparable<T> = this.method_11900(name)
 /**
  * method_11898
  */

@@ -50,6 +50,10 @@ fun NativeImage.getHeight() = this.method_4323()
  */
 fun NativeImage.mirrorVertically() = this.method_4319()
 /**
+ * method_22619
+ */
+fun NativeImage.upload(level: Int, offsetX: Int, offsetY: Int, unpackSkipPixels: Int, unpackSkipRows: Int, width: Int, height: Int, blur: Boolean) = this.method_22619(level, offsetX, offsetY, unpackSkipPixels, unpackSkipRows, width, height, blur)
+/**
  * method_4311
  */
 fun NativeImage.getOpacity(x: Int, y: Int) = this.method_4311(x, y)
@@ -57,6 +61,10 @@ fun NativeImage.getOpacity(x: Int, y: Int) = this.method_4311(x, y)
  * method_4300
  */
 fun NativeImage.resizeSubRectTo(x: Int, y: Int, width: Int, height: Int, targetImage: NativeImage) = this.method_4300(x, y, width, height, targetImage)
+/**
+ * method_4304
+ */
+fun NativeImage.copyRect(x: Int, y: Int, translateX: Int, translateY: Int, width: Int, height: Int, flipX: Boolean, flipY: Boolean) = this.method_4304(x, y, translateX, translateY, width, height, flipX, flipY)
 /**
  * method_35620
  */
@@ -89,6 +97,10 @@ fun NativeImage.makeGlyphBitmapSubpixel(face: FT_Face, glyphIndex: Int) = this.m
  * method_61941
  */
 fun NativeImage.setColorArgb(x: Int, y: Int, color: Int) = this.method_61941(x, y, color)
+/**
+ * method_4325
+ */
+fun NativeImage.writeTo(path: File) = this.method_4325(path)
 /**
  * method_4317
  */

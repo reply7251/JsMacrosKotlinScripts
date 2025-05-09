@@ -18,6 +18,10 @@ fun <T>CombinedDynamicRegistries<T>.getSucceedingRegistryManagers(type: T) = thi
  */
 fun <T>CombinedDynamicRegistries<T>.getPrecedingRegistryManagers(type: T) = this.method_45935(type)
 /**
+ * method_45930
+ */
+fun <T>CombinedDynamicRegistries<T>.with(type: T, registryManagers: Array<net.minecraft.class_5455.class_6890>) = this.method_45930(type, *registryManagers)
+/**
  * method_45928
  */
 fun <T>CombinedDynamicRegistries<T>.get(index: T) = this.method_45928(index)

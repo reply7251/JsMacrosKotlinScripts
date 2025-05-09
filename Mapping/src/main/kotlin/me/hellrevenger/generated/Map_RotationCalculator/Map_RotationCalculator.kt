@@ -29,3 +29,7 @@ fun RotationCalculator.toDegrees(rotation: Int) = this.method_48122(rotation)
  * method_48125
  */
 fun RotationCalculator.toClampedRotation(degrees: Float) = this.method_48125(degrees)
+/**
+ * method_48121
+ */
+fun RotationCalculator.toRotation(degrees: Float) = this.method_48121(degrees)

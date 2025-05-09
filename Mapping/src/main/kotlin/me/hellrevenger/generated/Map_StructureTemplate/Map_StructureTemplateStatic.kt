@@ -51,6 +51,10 @@ object StructureTemplateKt {
      */
     fun transformAround(point: Vec3d, mirror: BlockMirror, rotation: BlockRotation, pivot: BlockPos) = StructureTemplate.method_15176(point, mirror, rotation, pivot)
     /**
+     * method_15168
+     */
+    fun transformAround(pos: BlockPos, mirror: BlockMirror, rotation: BlockRotation, pivot: BlockPos) = StructureTemplate.method_15168(pos, mirror, rotation, pivot)
+    /**
      * method_20532
      */
     fun updateCorner(world: WorldAccess, flags: Int, set: VoxelSet, startX: Int, startY: Int, startZ: Int) = StructureTemplate.method_20532(world, flags, set, startX, startY, startZ)
@@ -62,6 +66,10 @@ object StructureTemplateKt {
      * method_15171
      */
     fun transform(placementData: StructurePlacementData, pos: BlockPos) = StructureTemplate.method_15171(placementData, pos)
+    /**
+     * method_58190
+     */
+    fun updateCorner(world: WorldAccess, flags: Int, set: VoxelSet, startPos: BlockPos) = StructureTemplate.method_58190(world, flags, set, startPos)
     /**
      * method_64823
      */

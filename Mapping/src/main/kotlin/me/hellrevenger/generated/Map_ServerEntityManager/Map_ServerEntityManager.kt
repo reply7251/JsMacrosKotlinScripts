@@ -50,6 +50,10 @@ fun <T>ServerEntityManager<T>.tick() where T: EntityLike = this.method_31809()
  */
 fun <T>ServerEntityManager<T>.getDebugString() where T: EntityLike = this.method_31845()
 /**
+ * method_31815
+ */
+fun <T>ServerEntityManager<T>.updateTrackingStatus(chunkPos: ChunkPos, levelType: ChunkLevelType) where T: EntityLike = this.method_31815(chunkPos, levelType)
+/**
  * method_31835
  */
 fun <T>ServerEntityManager<T>.addEntities(entities: Stream<T>) where T: EntityLike = this.method_31835(entities)
@@ -57,3 +61,7 @@ fun <T>ServerEntityManager<T>.addEntities(entities: Stream<T>) where T: EntityLi
  * method_31827
  */
 fun <T>ServerEntityManager<T>.has(uuid: UUID) where T: EntityLike = this.method_31827(uuid)
+/**
+ * method_40022
+ */
+fun <T>ServerEntityManager<T>.shouldTick(pos: BlockPos) where T: EntityLike = this.method_40022(pos)

@@ -18,6 +18,10 @@ fun CollisionView.canPlace(state: BlockState, pos: BlockPos, context: ShapeConte
  */
 fun CollisionView.isSpaceEmpty(box: Box) = this.method_18026(box)
 /**
+ * method_61716
+ */
+fun CollisionView.isSpaceEmpty(entity: Entity, box: Box, checkFluid: Boolean) = this.method_61716(entity, box, checkFluid)
+/**
  * method_61717
  */
 fun CollisionView.getCollisionsIncludingWorldBorder(context: RaycastContext) = this.method_61717(context)
@@ -34,6 +38,10 @@ fun CollisionView.isBlockSpaceEmpty(entity: Entity, box: Box) = this.method_5256
  */
 fun CollisionView.getChunkAsView(chunkX: Int, chunkZ: Int) = this.method_22338(chunkX, chunkZ)
 /**
+ * method_8587
+ */
+fun CollisionView.isSpaceEmpty(entity: Entity, box: Box) = this.method_8587(entity, box)
+/**
  * method_8621
  */
 fun CollisionView.getWorldBorder() = this.method_8621()
@@ -42,9 +50,17 @@ fun CollisionView.getWorldBorder() = this.method_8621()
  */
 fun CollisionView.getEntityCollisions(entity: Entity, box: Box) = this.method_20743(entity, box)
 /**
+ * method_17892
+ */
+fun CollisionView.isSpaceEmpty(entity: Entity) = this.method_17892(entity)
+/**
  * method_33594
  */
 fun CollisionView.findClosestCollision(entity: Entity, shape: VoxelShape, target: Vec3d, x: Double, arg4: Double, y: Double) = this.method_33594(entity, shape, target, x, arg4, y)
+/**
+ * method_8606
+ */
+fun CollisionView.doesNotIntersectEntities(entity: Entity) = this.method_8606(entity)
 /**
  * method_61719
  */

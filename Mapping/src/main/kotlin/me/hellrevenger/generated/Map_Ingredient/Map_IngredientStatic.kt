@@ -26,4 +26,8 @@ object IngredientKt {
      * method_61676
      */
     fun matches(ingredient: Optional<Ingredient>, stack: ItemStack) = Ingredient.method_61676(ingredient, stack)
+    /**
+     * method_26964
+     */
+    fun ofItems(stacks: Stream<out ItemConvertible>) = Ingredient.method_26964(stacks)
 }

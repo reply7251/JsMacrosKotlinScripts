@@ -11,6 +11,10 @@ object RegistryOpsKt {
      */
     fun <T>withRegistry(dynamic: Dynamic<T>, registries: net.minecraft.class_7225.class_7874) = RegistryOps.method_56622<T>(dynamic, registries)
     /**
+     * method_46632
+     */
+    fun <T>of(delegate: DynamicOps<T>, registries: net.minecraft.class_7225.class_7874) = RegistryOps.method_46632<T>(delegate, registries)
+    /**
      * method_46637
      */
     fun <T, E, O>getEntryCodec(key: RegistryKey<E>) = RegistryOps.method_46637<E, O>(key)

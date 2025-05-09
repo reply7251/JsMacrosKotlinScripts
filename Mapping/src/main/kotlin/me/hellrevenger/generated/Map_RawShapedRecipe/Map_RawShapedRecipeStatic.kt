@@ -10,4 +10,8 @@ object RawShapedRecipeKt {
      * method_55085
      */
     fun create(key: Map<Char, Ingredient>, pattern: MutableList<String>) = RawShapedRecipe.method_55085(key, pattern)
+    /**
+     * method_55086
+     */
+    fun create(key: Map<Char, Ingredient>, pattern: Array<String>) = RawShapedRecipe.method_55086(key, *pattern)
 }

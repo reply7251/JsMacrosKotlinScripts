@@ -38,4 +38,8 @@ object EnchantmentKt {
      * method_60040
      */
     fun createEnchantedDamageLootContext(world: ServerWorld, level: Int, entity: Entity, damageSource: DamageSource) = Enchantment.method_60040(world, level, entity, damageSource)
+    /**
+     * method_58442
+     */
+    fun definition(supportedItems: RegistryEntryList<Item>, weight: Int, maxLevel: Int, minCost: net.minecraft.class_1887.class_9426, maxCost: net.minecraft.class_1887.class_9426, anvilCost: Int, slots: Array<AttributeModifierSlot>) = Enchantment.method_58442(supportedItems, weight, maxLevel, minCost, maxCost, anvilCost, *slots)
 }

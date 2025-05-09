@@ -210,6 +210,10 @@ fun PlayerEntity.getSculkShriekerWarningManager() = this.method_42272()
  */
 fun PlayerEntity.tryClearCurrentExplosion() = this.method_60983()
 /**
+ * method_7254
+ */
+fun PlayerEntity.unlockRecipes(recipes: Collection<RecipeEntry<*>>) = this.method_7254(recipes)
+/**
  * method_7332
  */
 fun PlayerEntity.canConsume(ignoreHunger: Boolean) = this.method_7332(ignoreHunger)
@@ -334,6 +338,10 @@ fun PlayerEntity.setIgnoreFallDamageFromCurrentExplosion(ignoreFallDamageFromCur
  */
 fun PlayerEntity.interact(entity: Entity, hand: Hand) = this.method_7287(entity, hand)
 /**
+ * method_7339
+ */
+fun PlayerEntity.increaseStat(stat: Identifier, amount: Int) = this.method_7339(stat, amount)
+/**
  * method_61499
  */
 fun PlayerEntity.dropCreativeStack(stack: ItemStack) = this.method_61499(stack)
@@ -406,6 +414,10 @@ fun PlayerEntity.spawnSweepAttackParticles() = this.method_7263()
  */
 fun PlayerEntity.openCommandBlockScreen(commandBlock: CommandBlockBlockEntity) = this.method_7323(commandBlock)
 /**
+ * method_7329
+ */
+fun PlayerEntity.dropItem(stack: ItemStack, throwRandomly: Boolean, retainOwnership: Boolean) = this.method_7329(stack, throwRandomly, retainOwnership)
+/**
  * method_17355
  */
 fun PlayerEntity.openHandledScreen(factory: NamedScreenHandlerFactory) = this.method_17355(factory)
@@ -413,6 +425,10 @@ fun PlayerEntity.openHandledScreen(factory: NamedScreenHandlerFactory) = this.me
  * method_23668
  */
 fun PlayerEntity.checkGliding() = this.method_23668()
+/**
+ * method_7259
+ */
+fun PlayerEntity.incrementStat(stat: Stat<*>) = this.method_7259(stat)
 /**
  * method_43120
  */

@@ -21,3 +21,7 @@ fun NbtSizeTracker.pushStack() = this.method_53900()
  * method_47987
  */
 fun NbtSizeTracker.getAllocatedBytes() = this.method_47987()
+/**
+ * method_53908
+ */
+fun NbtSizeTracker.add(multiplier: Long, arg1: Long) = this.method_53908(multiplier, arg1)

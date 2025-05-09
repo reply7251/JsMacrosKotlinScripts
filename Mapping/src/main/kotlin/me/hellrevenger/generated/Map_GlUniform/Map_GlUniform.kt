@@ -34,6 +34,14 @@ fun GlUniform.getIntData() = this.method_35663()
  */
 fun GlUniform.upload() = this.method_1300()
 /**
+ * method_65016
+ */
+fun GlUniform.set(values: MutableList<Float>, count: Int) = this.method_65016(values, count)
+/**
  * method_1297
  */
 fun GlUniform.setLocation(location: Int) = this.method_1297(location)
+/**
+ * method_35659
+ */
+fun GlUniform.set(index: Int, value: Float) = this.method_35659(index, value)

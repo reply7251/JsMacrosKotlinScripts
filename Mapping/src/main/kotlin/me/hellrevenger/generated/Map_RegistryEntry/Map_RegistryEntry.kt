@@ -30,6 +30,10 @@ fun <T>RegistryEntry<T>.getIdAsString() = this.method_55840()
  */
 fun <T>RegistryEntry<T>.matches(predicate: Predicate<RegistryKey<T>>) = this.method_40224(predicate)
 /**
+ * method_55838
+ */
+fun <T>RegistryEntry<T>.matches(entry: RegistryEntry<T>) = this.method_55838(entry)
+/**
  * method_46745
  */
 fun <T>RegistryEntry<T>.ownerEquals(owner: RegistryEntryOwner<T>) = this.method_46745(owner)

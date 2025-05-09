@@ -17,3 +17,7 @@ fun ShulkerEntityRenderer.createRenderState() = this.method_62527()
  * method_4112
  */
 fun ShulkerEntityRenderer.shouldRender(arg0: ShulkerEntity, arg1: Frustum, arg2: Double, arg3: Double, arg4: Double) = this.method_4112(arg0, arg1, arg2, arg3, arg4)
+/**
+ * method_4111
+ */
+fun ShulkerEntityRenderer.getTexture(arg0: ShulkerEntityRenderState) = this.method_4111(arg0)

@@ -619,6 +619,10 @@ object EntityTypeKt {
      */
     fun <T>getEntityFromNbt(nbt: NbtCompound, world: world_World, reason: SpawnReason) where T: Entity = EntityType.method_5892(nbt, world, reason)
     /**
+     * method_48009
+     */
+    fun <T>copier(world: world_World, stack: ItemStack, player: PlayerEntity) where T: Entity = EntityType.method_48009<T>(world, stack, player)
+    /**
      * method_5890
      */
     fun <T>getId(type: EntityType<*>) where T: Entity = EntityType.method_5890(type)

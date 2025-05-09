@@ -58,6 +58,10 @@ fun ScreenHandler.setPreviousTrackedSlot(slot: Int, stack: ItemStack) = this.met
  */
 fun ScreenHandler.removeListener(listener: ScreenHandlerListener) = this.method_7603(listener)
 /**
+ * method_7613
+ */
+fun ScreenHandler.canInsertIntoSlot(stack: ItemStack, slot: Slot) = this.method_7613(stack, slot)
+/**
  * method_34247
  */
 fun ScreenHandler.copySharedSlots(handler: ScreenHandler) = this.method_34247(handler)

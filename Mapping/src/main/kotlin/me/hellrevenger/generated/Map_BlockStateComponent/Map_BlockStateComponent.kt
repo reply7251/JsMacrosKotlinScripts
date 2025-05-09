@@ -14,6 +14,10 @@ fun BlockStateComponent.isEmpty() = this.method_57414()
  */
 fun BlockStateComponent.applyToState(state: BlockState) = this.method_57415(state)
 /**
+ * method_57419
+ */
+fun <T>BlockStateComponent.with(property: property_Property<T>, fromState: BlockState) where T: Comparable<T> = this.method_57419<T>(property, fromState)
+/**
  * method_57418
  */
 fun <T>BlockStateComponent.getValue(property: property_Property<T>) where T: Comparable<T> = this.method_57418<T>(property)

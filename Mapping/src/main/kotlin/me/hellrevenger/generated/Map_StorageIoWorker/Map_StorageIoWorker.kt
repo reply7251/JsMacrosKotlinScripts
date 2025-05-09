@@ -21,3 +21,7 @@ fun StorageIoWorker.needsBlending(chunkPos: ChunkPos, checkRadius: Int) = this.m
  * method_23703
  */
 fun StorageIoWorker.setResult(pos: ChunkPos, nbt: NbtCompound) = this.method_23703(pos, nbt)
+/**
+ * method_61773
+ */
+fun StorageIoWorker.setResult(pos: ChunkPos, nbtSupplier: Supplier<NbtCompound>) = this.method_61773(pos, nbtSupplier)

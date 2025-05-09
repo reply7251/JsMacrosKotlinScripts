@@ -18,4 +18,8 @@ object LandPathNodeMakerKt {
      * method_60
      */
     fun getFeetY(world: BlockView, pos: BlockPos) = LandPathNodeMaker.method_60(world, pos)
+    /**
+     * method_23476
+     */
+    fun getLandNodeType(context: PathContext, pos: net.minecraft.class_2338.class_2339) = LandPathNodeMaker.method_23476(context, pos)
 }

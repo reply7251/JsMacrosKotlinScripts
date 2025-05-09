@@ -62,6 +62,10 @@ fun EntityRenderDispatcher.setRenderHitboxes(renderHitboxes: Boolean) = this.met
  */
 fun <T>EntityRenderDispatcher.getRenderer(entity: T) where T: Entity = this.method_3953<T>(entity)
 /**
+ * method_3959
+ */
+fun EntityRenderDispatcher.getSquaredDistanceToCamera(x: Double, arg1: Double, y: Double) = this.method_3959(x, arg1, y)
+/**
  * method_3944
  */
 fun EntityRenderDispatcher.setWorld(world: world_World) = this.method_3944(world)

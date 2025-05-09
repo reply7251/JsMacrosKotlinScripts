@@ -158,6 +158,10 @@ fun Enchantment.modifyKnockback(world: ServerWorld, level: Int, stack: ItemStack
  */
 fun Enchantment.modifyBlockExperience(world: ServerWorld, level: Int, stack: ItemStack, blockExperience: MutableFloat) = this.method_60053(world, level, stack, blockExperience)
 /**
+ * comp_2687
+ */
+fun Enchantment.definition() = this.comp_2687()
+/**
  * comp_2688
  */
 fun Enchantment.exclusiveSet() = this.comp_2688()

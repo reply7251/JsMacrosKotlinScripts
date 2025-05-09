@@ -34,4 +34,8 @@ object HopperBlockEntityKt {
      * method_11250
      */
     fun getInventoryAt(world: world_World, pos: BlockPos) = HopperBlockEntity.method_11250(world, pos)
+    /**
+     * method_11241
+     */
+    fun extract(world: world_World, hopper: Hopper) = HopperBlockEntity.method_11241(world, hopper)
 }

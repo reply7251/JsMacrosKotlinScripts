@@ -126,6 +126,10 @@ fun DamageSources.magic() = this.method_48831()
  */
 fun DamageSources.inFire() = this.method_48794()
 /**
+ * method_48796
+ */
+fun DamageSources.create(key: RegistryKey<DamageType>, attacker: Entity) = this.method_48796(key, attacker)
+/**
  * method_48802
  */
 fun DamageSources.playerAttack(attacker: PlayerEntity) = this.method_48802(attacker)
@@ -149,6 +153,10 @@ fun DamageSources.mobProjectile(source: Entity, attacker: LivingEntity) = this.m
  * method_48816
  */
 fun DamageSources.mobAttackNoAggro(attacker: LivingEntity) = this.method_48816(attacker)
+/**
+ * method_48797
+ */
+fun DamageSources.create(key: RegistryKey<DamageType>, source: Entity, attacker: Entity) = this.method_48797(key, source, attacker)
 /**
  * method_48812
  */
@@ -197,3 +205,7 @@ fun DamageSources.sweetBerryBush() = this.method_48835()
  * method_48807
  */
 fun DamageSources.explosion(explosion: Explosion) = this.method_48807(explosion)
+/**
+ * method_48819
+ */
+fun DamageSources.explosion(source: Entity, attacker: Entity) = this.method_48819(source, attacker)

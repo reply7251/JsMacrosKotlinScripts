@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun <T>StatType<T>.getOrCreateStat(key: T, formatter: StatFormatter) = this.method_14955(key, formatter)
 /**
+ * method_14956
+ */
+fun <T>StatType<T>.getOrCreateStat(key: T) = this.method_14956(key)
+/**
  * method_14959
  */
 fun <T>StatType<T>.getRegistry() = this.method_14959()

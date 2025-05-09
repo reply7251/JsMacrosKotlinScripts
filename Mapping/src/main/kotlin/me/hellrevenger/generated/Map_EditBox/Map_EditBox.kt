@@ -90,6 +90,10 @@ fun EditBox.getSelectedText() = this.method_44436()
  */
 fun EditBox.getMaxLength() = this.method_44409()
 /**
+ * method_44410
+ */
+fun EditBox.moveCursor(x: Double, arg1: Double) = this.method_44410(x, arg1)
+/**
  * method_44418
  */
 fun EditBox.hasMaxLength() = this.method_44418()

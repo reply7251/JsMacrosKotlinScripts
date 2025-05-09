@@ -22,6 +22,10 @@ fun <T>AbstractServerCommandSource<T>.isSilent() where T: AbstractServerCommandS
  */
 fun <T>AbstractServerCommandSource<T>.getDispatcher() where T: AbstractServerCommandSource<T> = this.method_54310()
 /**
+ * method_54495
+ */
+fun <T>AbstractServerCommandSource<T>.handleException(exception: CommandSyntaxException, silent: Boolean, tracer: Tracer) where T: AbstractServerCommandSource<T> = this.method_54495(exception, silent, tracer)
+/**
  * method_54307
  */
 fun <T>AbstractServerCommandSource<T>.withReturnValueConsumer(returnValueConsumer: ReturnValueConsumer) where T: AbstractServerCommandSource<T> = this.method_54307(returnValueConsumer)

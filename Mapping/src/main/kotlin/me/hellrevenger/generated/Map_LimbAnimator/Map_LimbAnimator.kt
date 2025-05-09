@@ -22,6 +22,14 @@ fun LimbAnimator.getPos(tickDelta: Float) = this.method_48572(tickDelta)
  */
 fun LimbAnimator.reset() = this.method_61433()
 /**
+ * method_48566
+ */
+fun LimbAnimator.getSpeed() = this.method_48566()
+/**
+ * method_48569
+ */
+fun LimbAnimator.getPos() = this.method_48569()
+/**
  * method_48567
  */
 fun LimbAnimator.setSpeed(speed: Float) = this.method_48567(speed)

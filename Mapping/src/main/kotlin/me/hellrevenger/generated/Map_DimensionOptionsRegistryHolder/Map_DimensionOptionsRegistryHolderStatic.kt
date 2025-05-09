@@ -10,4 +10,8 @@ object DimensionOptionsRegistryHolderKt {
      * method_45525
      */
     fun streamAll(otherKeys: Stream<RegistryKey<DimensionOptions>>) = DimensionOptionsRegistryHolder.method_45525(otherKeys)
+    /**
+     * method_45519
+     */
+    fun createRegistry(dimensionOptions: Map<RegistryKey<DimensionOptions>, DimensionOptions>, overworld: RegistryEntry<DimensionType>, chunkGenerator: ChunkGenerator) = DimensionOptionsRegistryHolder.method_45519(dimensionOptions, overworld, chunkGenerator)
 }

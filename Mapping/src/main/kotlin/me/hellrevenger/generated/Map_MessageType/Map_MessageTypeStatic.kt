@@ -42,4 +42,12 @@ object MessageTypeKt {
      * method_44834
      */
     fun params(typeKey: RegistryKey<MessageType>, registryManager: DynamicRegistryManager, name: Text) = MessageType.method_44834(typeKey, registryManager, name)
+    /**
+     * method_44832
+     */
+    fun params(typeKey: RegistryKey<MessageType>, entity: Entity) = MessageType.method_44832(typeKey, entity)
+    /**
+     * method_44833
+     */
+    fun params(typeKey: RegistryKey<MessageType>, source: ServerCommandSource) = MessageType.method_44833(typeKey, source)
 }

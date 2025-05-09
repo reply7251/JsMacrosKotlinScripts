@@ -22,6 +22,10 @@ fun OptionListWidget.addWidgetEntry(firstWidget: ClickableWidget, secondWidget: 
  */
 fun OptionListWidget.getWidgetFor(option: SimpleOption<*>) = this.method_31046(option)
 /**
+ * method_58227
+ */
+fun OptionListWidget.addAll(widgets: MutableList<ClickableWidget>) = this.method_58227(widgets)
+/**
  * method_59869
  */
 fun OptionListWidget.applyAllPendingValues() = this.method_59869()

@@ -14,6 +14,10 @@ fun StructurePiecesCollector.toList() = this.method_38714()
  */
 fun StructurePiecesCollector.clear() = this.method_38719()
 /**
+ * method_38718
+ */
+fun StructurePiecesCollector.shiftInto(random: Random, baseY: Int, topY: Int) = this.method_38718(random, baseY, topY)
+/**
  * method_38720
  */
 fun StructurePiecesCollector.isEmpty() = this.method_38720()

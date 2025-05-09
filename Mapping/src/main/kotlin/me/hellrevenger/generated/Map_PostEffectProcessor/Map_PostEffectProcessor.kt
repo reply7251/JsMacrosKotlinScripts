@@ -9,3 +9,7 @@ fun PostEffectProcessor.setUniforms(name: String, value: Float) = this.method_57
  * method_1258
  */
 fun PostEffectProcessor.render(framebuffer: Framebuffer, objectAllocator: ObjectAllocator) = this.method_1258(framebuffer, objectAllocator)
+/**
+ * method_62234
+ */
+fun PostEffectProcessor.render(builder: FrameGraphBuilder, textureWidth: Int, textureHeight: Int, framebufferSet: net.minecraft.class_279.class_9961) = this.method_62234(builder, textureWidth, textureHeight, framebufferSet)

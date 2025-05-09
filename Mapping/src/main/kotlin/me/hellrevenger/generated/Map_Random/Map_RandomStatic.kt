@@ -11,6 +11,10 @@ object RandomKt {
      */
     fun create() = Random.method_43047()
     /**
+     * method_43049
+     */
+    fun create(seed: Long) = Random.method_43049(seed)
+    /**
      * method_43050
      */
     fun createThreadSafe() = Random.method_43050()

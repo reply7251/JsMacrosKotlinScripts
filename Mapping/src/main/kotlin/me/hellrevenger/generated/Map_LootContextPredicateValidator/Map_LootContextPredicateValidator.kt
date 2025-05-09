@@ -13,3 +13,11 @@ fun LootContextPredicateValidator.validate(predicates: MutableList<LootContextPr
  * method_54962
  */
 fun LootContextPredicateValidator.validateEntityPredicate(predicate: LootContextPredicate, path: String) = this.method_54962(predicate, path)
+/**
+ * method_54966
+ */
+fun LootContextPredicateValidator.validateEntityPredicate(predicate: Optional<LootContextPredicate>, path: String) = this.method_54966(predicate, path)
+/**
+ * method_54961
+ */
+fun LootContextPredicateValidator.validate(predicate: LootContextPredicate, type: ContextType, path: String) = this.method_54961(predicate, type, path)

@@ -10,4 +10,8 @@ object LocateCommandKt {
      * method_13443
      */
     fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = LocateCommand.method_13443(dispatcher, registryAccess)
+    /**
+     * method_45148
+     */
+    fun sendCoordinates(source: ServerCommandSource, predicate: net.minecraft.class_7737.class_7741<*>, currentPos: BlockPos, result: util_Pair<BlockPos, out RegistryEntry<*>>, successMessage: String, includeY: Boolean, timeTaken: Duration) = LocateCommand.method_45148(source, predicate, currentPos, result, successMessage, includeY, timeTaken)
 }

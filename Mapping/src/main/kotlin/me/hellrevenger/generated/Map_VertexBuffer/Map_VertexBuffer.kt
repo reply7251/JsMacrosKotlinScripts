@@ -14,9 +14,17 @@ fun VertexBuffer.uploadIndexBuffer(buf: net.minecraft.class_9799.class_9800) = t
  */
 fun VertexBuffer.draw(layer: RenderLayer) = this.method_65176(layer)
 /**
+ * method_35665
+ */
+fun VertexBuffer.draw() = this.method_35665()
+/**
  * method_34435
  */
 fun VertexBuffer.getVertexFormat() = this.method_34435()
+/**
+ * method_34427
+ */
+fun VertexBuffer.draw(viewMatrix: Matrix4f, projectionMatrix: Matrix4f, program: ShaderProgram) = this.method_34427(viewMatrix, projectionMatrix, program)
 /**
  * method_43444
  */

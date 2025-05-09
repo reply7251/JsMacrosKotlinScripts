@@ -39,7 +39,15 @@ object ClientConnectionKt {
      */
     fun addLocalValidator(pipeline: ChannelPipeline, side: NetworkSide) = ClientConnection.method_52911(pipeline, side)
     /**
+     * method_10753
+     */
+    fun connect(address: InetSocketAddress, useEpoll: Boolean, packetSizeLog: MultiValueDebugSampleLogImpl) = ClientConnection.method_10753(address, useEpoll, packetSizeLog)
+    /**
      * method_10769
      */
     fun connectLocal(address: SocketAddress) = ClientConnection.method_10769(address)
+    /**
+     * method_52271
+     */
+    fun connect(address: InetSocketAddress, useEpoll: Boolean, connection: ClientConnection) = ClientConnection.method_52271(address, useEpoll, connection)
 }

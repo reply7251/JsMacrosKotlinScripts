@@ -10,4 +10,12 @@ object AllOfEnchantmentEffectsKt {
      * method_60216
      */
     fun allOf(entityEffects: Array<EnchantmentEntityEffect>) = AllOfEnchantmentEffects.method_60216(*entityEffects)
+    /**
+     * method_60217
+     */
+    fun allOf(locationBasedEffects: Array<EnchantmentLocationBasedEffect>) = AllOfEnchantmentEffects.method_60217(*locationBasedEffects)
+    /**
+     * method_60218
+     */
+    fun allOf(valueEffects: Array<EnchantmentValueEffect>) = AllOfEnchantmentEffects.method_60218(*valueEffects)
 }

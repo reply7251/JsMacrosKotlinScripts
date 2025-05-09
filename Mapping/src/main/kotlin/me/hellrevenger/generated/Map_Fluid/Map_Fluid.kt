@@ -49,3 +49,7 @@ fun Fluid.getShape(state: FluidState, world: BlockView, pos: BlockPos) = this.me
  * method_40178
  */
 fun Fluid.getRegistryEntry() = this.method_40178()
+/**
+ * method_20784
+ */
+fun Fluid.getHeight(state: FluidState) = this.method_20784(state)

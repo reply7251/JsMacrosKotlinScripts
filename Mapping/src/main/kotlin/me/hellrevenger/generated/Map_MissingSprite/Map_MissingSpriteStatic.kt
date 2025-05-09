@@ -14,4 +14,8 @@ object MissingSpriteKt {
      * method_45805
      */
     fun createSpriteContents() = MissingSprite.method_45805()
+    /**
+     * method_65855
+     */
+    fun createImage() = MissingSprite.method_65855()
 }

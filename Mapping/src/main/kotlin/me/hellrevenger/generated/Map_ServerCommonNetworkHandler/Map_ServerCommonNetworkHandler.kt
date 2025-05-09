@@ -29,3 +29,7 @@ fun ServerCommonNetworkHandler.enableFlush() = this.method_53047()
  * method_52404
  */
 fun ServerCommonNetworkHandler.getDebugProfile() = this.method_52404()
+/**
+ * method_60673
+ */
+fun ServerCommonNetworkHandler.disconnect(disconnectionInfo: DisconnectionInfo) = this.method_60673(disconnectionInfo)

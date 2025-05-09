@@ -110,6 +110,10 @@ fun PlayerManager.getUserBanList() = this.method_14563()
  */
 fun PlayerManager.areCheatsAllowed() = this.method_14579()
 /**
+ * method_14602
+ */
+fun PlayerManager.getPlayer(uuid: UUID) = this.method_14602(uuid)
+/**
  * method_14582
  */
 fun PlayerManager.addToOperators(profile: GameProfile) = this.method_14582(profile)
@@ -138,6 +142,10 @@ fun PlayerManager.createStatHandler(player: PlayerEntity) = this.method_14583(pl
  */
 fun PlayerManager.setViewDistance(viewDistance: Int) = this.method_14608(viewDistance)
 /**
+ * method_43514
+ */
+fun PlayerManager.broadcast(message: Text, overlay: Boolean) = this.method_43514(message, overlay)
+/**
  * method_14591
  */
 fun PlayerManager.setMainWorld(world: ServerWorld) = this.method_14591(world)
@@ -161,6 +169,10 @@ fun PlayerManager.getServer() = this.method_14561()
  * method_14574
  */
 fun PlayerManager.getCurrentPlayerCount() = this.method_14574()
+/**
+ * method_43512
+ */
+fun PlayerManager.broadcast(message: Text, playerMessageFactory: function_Function<ServerPlayerEntity, Text>, overlay: Boolean) = this.method_43512(message, playerMessageFactory, overlay)
 /**
  * method_14567
  */
@@ -197,6 +209,14 @@ fun PlayerManager.setWhitelistEnabled(whitelistEnabled: Boolean) = this.method_1
  * method_14584
  */
 fun PlayerManager.getOpNames() = this.method_14584()
+/**
+ * method_44166
+ */
+fun PlayerManager.broadcast(message: SignedMessage, source: ServerCommandSource, params: net.minecraft.class_2556.class_7602) = this.method_44166(message, source, params)
+/**
+ * method_60597
+ */
+fun PlayerManager.sendStatusEffects(entity: LivingEntity, networkHandler: ServerPlayNetworkHandler) = this.method_60597(entity, networkHandler)
 /**
  * method_14580
  */

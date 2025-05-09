@@ -67,6 +67,10 @@ object MaterialRulesKt {
      */
     fun noiseThreshold(noise: RegistryKey<net.minecraft.class_5216.class_5487>, min: Double) = MaterialRules.method_39052(noise, min)
     /**
+     * method_39053
+     */
+    fun noiseThreshold(noise: RegistryKey<net.minecraft.class_5216.class_5487>, min: Double, arg2: Double) = MaterialRules.method_39053(noise, min, arg2)
+    /**
      * method_39048
      */
     fun not(target: net.minecraft.class_6686.class_6693) = MaterialRules.method_39048(target)
@@ -90,6 +94,10 @@ object MaterialRulesKt {
      * method_39473
      */
     fun surface() = MaterialRules.method_39473()
+    /**
+     * method_39549
+     */
+    fun stoneDepth(offset: Int, addSurfaceDepth: Boolean, verticalSurfaceType: VerticalSurfaceType) = MaterialRules.method_39549(offset, addSurfaceDepth, verticalSurfaceType)
     /**
      * method_39060
      */

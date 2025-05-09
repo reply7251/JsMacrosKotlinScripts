@@ -14,6 +14,10 @@ fun SimulationDistanceLevelPropagator.getTrackedChunks() = this.method_61279()
  */
 fun SimulationDistanceLevelPropagator.updateLevels() = this.method_38635()
 /**
+ * method_38637
+ */
+fun SimulationDistanceLevelPropagator.add(pos: Long, arg1: ChunkTicket<*>) = this.method_38637(pos, arg1)
+/**
  * method_38640
  */
 fun SimulationDistanceLevelPropagator.getLevel(pos: ChunkPos) = this.method_38640(pos)
@@ -21,6 +25,10 @@ fun SimulationDistanceLevelPropagator.getLevel(pos: ChunkPos) = this.method_3864
  * method_38642
  */
 fun <T>SimulationDistanceLevelPropagator.remove(type: ChunkTicketType<T>, pos: ChunkPos, level: Int, argument: T) = this.method_38642<T>(type, pos, level, argument)
+/**
+ * method_38641
+ */
+fun SimulationDistanceLevelPropagator.remove(pos: Long, arg1: ChunkTicket<*>) = this.method_38641(pos, arg1)
 /**
  * method_38636
  */

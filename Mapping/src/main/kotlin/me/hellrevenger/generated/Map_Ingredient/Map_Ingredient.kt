@@ -17,3 +17,7 @@ fun Ingredient.getMatchingItems() = this.method_8105()
  * method_65799
  */
 fun Ingredient.isEmpty() = this.method_65799()
+/**
+ * method_64673
+ */
+fun Ingredient.toDisplay() = this.method_64673()

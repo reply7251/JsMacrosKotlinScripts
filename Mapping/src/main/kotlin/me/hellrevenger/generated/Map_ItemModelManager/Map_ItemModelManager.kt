@@ -17,3 +17,7 @@ fun ItemModelManager.update(renderState: ItemRenderState, stack: ItemStack, tran
  * method_65912
  */
 fun ItemModelManager.hasHandAnimationOnSwap(stack: ItemStack) = this.method_65912(stack)
+/**
+ * method_65596
+ */
+fun ItemModelManager.update(renderState: ItemRenderState, stack: ItemStack, transformationMode: ModelTransformationMode, world: world_World, entity: LivingEntity, seed: Int) = this.method_65596(renderState, stack, transformationMode, world, entity, seed)

@@ -90,6 +90,10 @@ fun ItemModelGenerator.uploadWithTextureSource(item: Item, textureSourceItem: It
  */
 fun ItemModelGenerator.uploadTwoLayers(item: Item, layer0: Identifier, layer1: Identifier) = this.method_65431(item, layer0, layer1)
 /**
+ * method_65426
+ */
+fun ItemModelGenerator.register(item: Item) = this.method_65426(item)
+/**
  * method_65448
  */
 fun ItemModelGenerator.registerWithBrokenCondition(item: Item) = this.method_65448(item)
@@ -106,6 +110,10 @@ fun ItemModelGenerator.registerRecoveryCompass(item: Item) = this.method_65444(i
  */
 fun ItemModelGenerator.registerTippedArrow(item: Item) = this.method_65456(item)
 /**
+ * method_25731
+ */
+fun ItemModelGenerator.register() = this.method_25731()
+/**
  * method_65427
  */
 fun ItemModelGenerator.registerDyeable(item: Item, defaultColor: Int) = this.method_65427(item, defaultColor)
@@ -121,6 +129,10 @@ fun ItemModelGenerator.registerArmor(item: Item, equipmentKey: RegistryKey<Equip
  * method_65452
  */
 fun ItemModelGenerator.registerShield(item: Item) = this.method_65452(item)
+/**
+ * method_48517
+ */
+fun ItemModelGenerator.uploadArmor(id: Identifier, layer0: Identifier, layer1: Identifier) = this.method_48517(id, layer0, layer1)
 /**
  * method_65454
  */

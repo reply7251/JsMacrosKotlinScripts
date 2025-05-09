@@ -55,9 +55,21 @@ object DirectionKt {
      */
     fun getLookDirectionForAxis(entity: Entity, axis: net.minecraft.class_2350.class_2351) = Direction.method_32801(entity, axis)
     /**
+     * method_58251
+     */
+    fun getFacing(vec: Vec3d) = Direction.method_58251(vec)
+    /**
      * method_10143
      */
     fun byId(id: Int) = Direction.method_10143(id)
+    /**
+     * method_62674
+     */
+    fun fromVector(vec: Vec3i, fallback: Direction) = Direction.method_62674(vec, fallback)
+    /**
+     * method_10142
+     */
+    fun getFacing(x: Double, arg1: Double, y: Double) = Direction.method_10142(x, arg1, y)
     /**
      * method_42013
      */

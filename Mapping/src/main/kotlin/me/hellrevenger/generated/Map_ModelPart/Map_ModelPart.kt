@@ -62,6 +62,10 @@ fun ModelPart.getChild(name: String) = this.method_32086(name)
  */
 fun ModelPart.isEmpty() = this.method_32087()
 /**
+ * method_22698
+ */
+fun ModelPart.render(matrices: MatrixStack, vertices: VertexConsumer, light: Int, overlay: Int) = this.method_22698(matrices, vertices, light, overlay)
+/**
  * method_17138
  */
 fun ModelPart.copyTransform(part: ModelPart) = this.method_17138(part)
@@ -69,6 +73,10 @@ fun ModelPart.copyTransform(part: ModelPart) = this.method_17138(part)
  * method_22703
  */
 fun ModelPart.rotate(matrices: MatrixStack) = this.method_22703(matrices)
+/**
+ * method_41922
+ */
+fun ModelPart.rotate(vec3f: Vector3f) = this.method_41922(vec3f)
 /**
  * method_41920
  */
@@ -101,6 +109,10 @@ fun ModelPart.traverse() = this.method_32088()
  * method_41923
  */
 fun ModelPart.resetTransform() = this.method_41923()
+/**
+ * method_62132
+ */
+fun ModelPart.rotate(quaternion: Quaternionf) = this.method_62132(quaternion)
 /**
  * method_41921
  */

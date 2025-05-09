@@ -10,4 +10,8 @@ object ChargedProjectilesComponentKt {
      * method_57439
      */
     fun of(projectile: ItemStack) = ChargedProjectilesComponent.method_57439(projectile)
+    /**
+     * method_57441
+     */
+    fun of(projectiles: MutableList<ItemStack>) = ChargedProjectilesComponent.method_57441(projectiles)
 }

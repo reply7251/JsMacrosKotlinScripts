@@ -62,6 +62,10 @@ fun Screen.refreshNarrator(previouslyDisabled: Boolean) = this.method_61040(prev
  */
 fun Screen.resize(client: MinecraftClient, width: Int, height: Int) = this.method_25410(client, width, height)
 /**
+ * method_25426
+ */
+fun Screen.init() = this.method_25426()
+/**
  * method_64506
  */
 fun Screen.getTextRenderer() = this.method_64506()

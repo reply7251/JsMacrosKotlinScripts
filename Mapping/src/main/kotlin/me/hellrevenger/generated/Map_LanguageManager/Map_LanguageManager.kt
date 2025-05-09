@@ -10,6 +10,10 @@ fun LanguageManager.getLanguage(code: String) = this.method_4668(code)
  */
 fun LanguageManager.setLanguage(languageCode: String) = this.method_4667(languageCode)
 /**
+ * method_4669
+ */
+fun LanguageManager.getLanguage() = this.method_4669()
+/**
  * method_4665
  */
 fun LanguageManager.getAllLanguages() = this.method_4665()

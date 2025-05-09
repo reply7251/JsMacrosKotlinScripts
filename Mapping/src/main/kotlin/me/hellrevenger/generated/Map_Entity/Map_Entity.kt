@@ -450,6 +450,10 @@ fun Entity.setMovement(onGround: Boolean, movement: Vec3d) = this.method_65342(o
  */
 fun Entity.getCameraPosVec(tickDelta: Float) = this.method_5836(tickDelta)
 /**
+ * method_24516
+ */
+fun Entity.isInRange(entity: Entity, radius: Double) = this.method_24516(entity, radius)
+/**
  * method_5748
  */
 fun Entity.getMaxAir() = this.method_5748()
@@ -538,6 +542,10 @@ fun Entity.getChunkPos() = this.method_31476()
  */
 fun Entity.setBodyYaw(bodyYaw: Float) = this.method_5636(bodyYaw)
 /**
+ * method_60491
+ */
+fun Entity.addVelocity(velocity: Vec3d) = this.method_60491(velocity)
+/**
  * method_32312
  */
 fun Entity.getFrozenTicks() = this.method_32312()
@@ -585,6 +593,10 @@ fun Entity.canModifyAt(world: ServerWorld, pos: BlockPos) = this.method_36971(wo
  * method_32313
  */
 fun Entity.getFreezingScale() = this.method_32313()
+/**
+ * method_5706
+ */
+fun Entity.dropItem(world: ServerWorld, item: ItemConvertible) = this.method_5706(world, item)
 /**
  * method_5685
  */
@@ -649,6 +661,10 @@ fun Entity.handleStatus(status: Byte) = this.method_5711(status)
  * method_61411
  */
 fun Entity.getLastRenderPos() = this.method_61411()
+/**
+ * method_5873
+ */
+fun Entity.startRiding(entity: Entity, force: Boolean) = this.method_5873(entity, force)
 /**
  * method_30229
  */
@@ -786,6 +802,10 @@ fun Entity.dropStack(world: ServerWorld, stack: ItemStack) = this.method_5775(wo
  */
 fun Entity.getRotationVector() = this.method_5720()
 /**
+ * method_5649
+ */
+fun Entity.squaredDistanceTo(x: Double, arg1: Double, y: Double) = this.method_5649(x, arg1, y)
+/**
  * method_23320
  */
 fun Entity.getEyeY() = this.method_23320()
@@ -869,6 +889,10 @@ fun Entity.onLanding() = this.method_38785()
  * method_56071
  */
 fun Entity.getProjectileDeflection(projectile: ProjectileEntity) = this.method_56071(projectile)
+/**
+ * method_5858
+ */
+fun Entity.squaredDistanceTo(entity: Entity) = this.method_5858(entity)
 /**
  * method_60490
  */
@@ -970,9 +994,21 @@ fun Entity.collidesWith(other: Entity) = this.method_30949(other)
  */
 fun Entity.getClientCameraPosVec(tickDelta: Float) = this.method_31166(tickDelta)
 /**
+ * method_36454
+ */
+fun Entity.getYaw() = this.method_36454()
+/**
+ * method_64166
+ */
+fun Entity.tickBlockCollision(lastRenderPos: Vec3d, pos: Vec3d) = this.method_64166(lastRenderPos, pos)
+/**
  * method_23319
  */
 fun Entity.getRandomBodyY() = this.method_23319()
+/**
+ * method_60607
+ */
+fun Entity.setMovement(onGround: Boolean, horizontalCollision: Boolean, movement: Vec3d) = this.method_60607(onGround, horizontalCollision, movement)
 /**
  * method_33572
  */
@@ -993,6 +1029,10 @@ fun Entity.getWorld() = this.method_37908()
  * method_5857
  */
 fun Entity.setBoundingBox(boundingBox: Box) = this.method_5857(boundingBox)
+/**
+ * method_5727
+ */
+fun Entity.shouldRender(cameraX: Double, arg1: Double, cameraY: Double) = this.method_5727(cameraX, arg1, cameraY)
 /**
  * method_5781
  */
@@ -1021,6 +1061,10 @@ fun Entity.getVelocity() = this.method_18798()
  * method_5807
  */
 fun Entity.isCustomNameVisible() = this.method_5807()
+/**
+ * method_5703
+ */
+fun Entity.hasPassenger(predicate: Predicate<Entity>) = this.method_5703(predicate)
 /**
  * method_5742
  */
@@ -1058,6 +1102,10 @@ fun Entity.hasPortalCooldown() = this.method_30230()
  */
 fun Entity.getDefaultPortalCooldown() = this.method_5806()
 /**
+ * method_5814
+ */
+fun Entity.setPosition(x: Double, arg1: Double, y: Double) = this.method_5814(x, arg1, y)
+/**
  * method_5796
  */
 fun Entity.setSwimming(swimming: Boolean) = this.method_5796(swimming)
@@ -1077,6 +1125,10 @@ fun Entity.getUuidAsString() = this.method_5845()
  * method_5663
  */
 fun Entity.getRotationVecClient() = this.method_5663()
+/**
+ * method_5631
+ */
+fun Entity.getRotationVector(pitch: Float, yaw: Float) = this.method_5631(pitch, yaw)
 /**
  * method_5739
  */
@@ -1109,6 +1161,10 @@ fun Entity.updateTrackedHeadRotation(yaw: Float, interpolationSteps: Int) = this
  * method_43260
  */
 fun Entity.getLandingPos() = this.method_43260()
+/**
+ * method_29495
+ */
+fun Entity.refreshPositionAfterTeleport(pos: Vec3d) = this.method_29495(pos)
 /**
  * method_21750
  */
@@ -1150,6 +1206,10 @@ fun Entity.updatePosition(x: Double, arg1: Double, y: Double) = this.method_3063
  */
 fun Entity.setFlag(index: Int, value: Boolean) = this.method_5729(index, value)
 /**
+ * method_5725
+ */
+fun Entity.refreshPositionAndAngles(pos: BlockPos, yaw: Float, pitch: Float) = this.method_5725(pos, yaw, pitch)
+/**
  * method_21751
  */
 fun Entity.isSneaky() = this.method_21751()
@@ -1189,6 +1249,10 @@ fun Entity.getWeaponStack() = this.method_59958()
  * method_61113
  */
 fun Entity.canTeleportBetween(from: world_World, to: world_World) = this.method_61113(from, to)
+/**
+ * method_5699
+ */
+fun Entity.dropStack(world: ServerWorld, stack: ItemStack, yOffset: Float) = this.method_5699(world, stack, yOffset)
 /**
  * method_23314
  */
@@ -1274,6 +1338,10 @@ fun Entity.isCollidable() = this.method_30948()
  */
 fun Entity.getLerpTargetY() = this.method_53827()
 /**
+ * method_60949
+ */
+fun Entity.refreshPositionAndAngles(pos: Vec3d, yaw: Float, pitch: Float) = this.method_60949(pos, yaw, pitch)
+/**
  * method_5774
  */
 fun Entity.getEffectiveExplosionResistance(explosion: Explosion, world: BlockView, pos: BlockPos, blockState: BlockState, fluidState: FluidState, max: Float) = this.method_5774(explosion, world, pos, blockState, fluidState, max)
@@ -1317,6 +1385,10 @@ fun Entity.isCrawling() = this.method_20448()
  * method_51848
  */
 fun Entity.getPortalCooldown() = this.method_51848()
+/**
+ * method_61412
+ */
+fun Entity.setPosition(pos: PlayerPosition, flags: Set<PositionFlag>) = this.method_61412(pos, flags)
 /**
  * method_49694
  */
@@ -1362,13 +1434,25 @@ fun Entity.isDescending() = this.method_21752()
  */
 fun Entity.handleFall(xDifference: Double, arg1: Double, yDifference: Double, arg3: Boolean) = this.method_65942(xDifference, arg1, yDifference, arg3)
 /**
+ * method_18800
+ */
+fun Entity.setVelocity(x: Double, arg1: Double, y: Double) = this.method_18800(x, arg1, y)
+/**
  * method_53829
  */
 fun Entity.getLerpTargetPitch() = this.method_53829()
 /**
+ * method_5695
+ */
+fun Entity.getPitch(tickDelta: Float) = this.method_5695(tickDelta)
+/**
  * method_29239
  */
 fun Entity.dismountVehicle() = this.method_29239()
+/**
+ * method_32875
+ */
+fun Entity.emitGameEvent(event: RegistryEntry<GameEvent>, entity: Entity) = this.method_32875(event, entity)
 /**
  * method_5752
  */

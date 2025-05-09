@@ -38,6 +38,18 @@ fun CrashReport.asString(type: ReportType, extraInfo: MutableList<String>) = thi
  */
 fun CrashReport.getFile() = this.method_572()
 /**
+ * method_60920
+ */
+fun CrashReport.asString(type: ReportType) = this.method_60920(type)
+/**
  * method_564
  */
 fun CrashReport.getCause() = this.method_564()
+/**
+ * method_562
+ */
+fun CrashReport.addElement(name: String) = this.method_562(name)
+/**
+ * method_569
+ */
+fun CrashReport.writeToFile(path: file_Path, type: ReportType, extraInfo: MutableList<String>) = this.method_569(path, type, extraInfo)

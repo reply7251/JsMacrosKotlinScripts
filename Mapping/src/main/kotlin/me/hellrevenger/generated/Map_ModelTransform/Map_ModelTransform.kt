@@ -38,6 +38,10 @@ fun ModelTransform.pivotZ() = this.comp_2999()
  */
 fun ModelTransform.addPivot(pivotX: Float, pivotY: Float, pivotZ: Float) = this.method_62135(pivotX, pivotY, pivotZ)
 /**
+ * method_62136
+ */
+fun ModelTransform.scaled(xScale: Float, yScale: Float, zScale: Float) = this.method_62136(xScale, yScale, zScale)
+/**
  * comp_3003
  */
 fun ModelTransform.xScale() = this.comp_3003()

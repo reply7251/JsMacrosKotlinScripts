@@ -62,6 +62,10 @@ fun VoxelShape.getBoundingBox() = this.method_1107()
  */
 fun VoxelShape.getMin(axis: net.minecraft.class_2350.class_2351) = this.method_1091(axis)
 /**
+ * method_1096
+ */
+fun VoxelShape.offset(x: Double, arg1: Double, y: Double) = this.method_1096(x, arg1, y)
+/**
  * method_35593
  */
 fun VoxelShape.getStartingCoord(axis: net.minecraft.class_2350.class_2351, from: Double, arg2: Double) = this.method_35593(axis, from, arg2)

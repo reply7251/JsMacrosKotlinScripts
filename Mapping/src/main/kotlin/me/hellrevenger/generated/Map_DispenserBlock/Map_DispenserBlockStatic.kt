@@ -26,4 +26,8 @@ object DispenserBlockKt {
      * method_10009
      */
     fun registerBehavior(provider: ItemConvertible, behavior: DispenserBehavior) = DispenserBlock.method_10009(provider, behavior)
+    /**
+     * method_58682
+     */
+    fun getOutputLocation(pointer: BlockPointer) = DispenserBlock.method_58682(pointer)
 }

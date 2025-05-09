@@ -42,6 +42,10 @@ fun <E, U>Brain<E>.getOptionalMemory(type: MemoryModuleType<U>) where E: LivingE
  */
 fun <E>Brain<E>.clear() where E: LivingEntity = this.method_35060()
 /**
+ * method_24529
+ */
+fun <E>Brain<E>.setTaskList(activity: Activity, indexedTasks: ImmutableList<out util_Pair<Int, out Task<in E>>>, requiredMemories: Set<util_Pair<MemoryModuleType<*>, MemoryModuleState>>) where E: LivingEntity = this.method_24529(activity, indexedTasks, requiredMemories)
+/**
  * method_18911
  */
 fun <E>Brain<E>.copy() where E: LivingEntity = this.method_18911()
@@ -54,13 +58,25 @@ fun <E>Brain<E>.getMemories() where E: LivingEntity = this.method_35058()
  */
 fun <E, U>Brain<E>.getMemoryExpiry(type: MemoryModuleType<U>) where E: LivingEntity = this.method_36978<U>(type)
 /**
+ * method_18881
+ */
+fun <E>Brain<E>.setTaskList(activity: Activity, indexedTasks: ImmutableList<out util_Pair<Int, out Task<in E>>>) where E: LivingEntity = this.method_18881(activity, indexedTasks)
+/**
  * method_18897
  */
 fun <E>Brain<E>.setDefaultActivity(activity: Activity) where E: LivingEntity = this.method_18897(activity)
 /**
+ * method_24525
+ */
+fun <E, U>Brain<E>.remember(type: MemoryModuleType<U>, value: U, expiry: Long) where E: LivingEntity = this.method_24525<U>(type, value, expiry)
+/**
  * method_24526
  */
 fun <E>Brain<E>.doExclusively(activity: Activity) where E: LivingEntity = this.method_24526(activity)
+/**
+ * method_24527
+ */
+fun <E>Brain<E>.setTaskList(activity: Activity, begin: Int, tasks: ImmutableList<out Task<in E>>, memoryType: MemoryModuleType<*>) where E: LivingEntity = this.method_24527(activity, begin, tasks, memoryType)
 /**
  * method_27074
  */
@@ -78,9 +94,17 @@ fun <E>Brain<E>.tick(world: ServerWorld, entity: E) where E: LivingEntity = this
  */
 fun <E, U>Brain<E>.getOptionalRegisteredMemory(type: MemoryModuleType<U>) where E: LivingEntity = this.method_18904<U>(type)
 /**
+ * method_24531
+ */
+fun <E>Brain<E>.resetPossibleActivities(activities: MutableList<Activity>) where E: LivingEntity = this.method_24531(activities)
+/**
  * method_18906
  */
 fun <E>Brain<E>.hasActivity(activity: Activity) where E: LivingEntity = this.method_18906(activity)
+/**
+ * method_24530
+ */
+fun <E>Brain<E>.setTaskList(activity: Activity, indexedTasks: ImmutableList<out util_Pair<Int, out Task<in E>>>, requiredMemories: Set<util_Pair<MemoryModuleType<*>, MemoryModuleState>>, forgettingMemories: Set<MemoryModuleType<*>>) where E: LivingEntity = this.method_24530(activity, indexedTasks, requiredMemories, forgettingMemories)
 /**
  * method_18875
  */
@@ -101,6 +125,10 @@ fun <E>Brain<E>.stopAllTasks(world: ServerWorld, entity: E) where E: LivingEntit
  * method_28310
  */
 fun <E, T>Brain<E>.encode(ops: DynamicOps<T>) where E: LivingEntity = this.method_28310<T>(ops)
+/**
+ * method_18879
+ */
+fun <E, U>Brain<E>.remember(type: MemoryModuleType<U>, value: Optional<out U>) where E: LivingEntity = this.method_18879<U>(type, value)
 /**
  * method_49709
  */

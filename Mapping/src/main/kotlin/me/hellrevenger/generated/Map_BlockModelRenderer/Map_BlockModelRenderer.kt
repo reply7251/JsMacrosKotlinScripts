@@ -14,6 +14,10 @@ fun BlockModelRenderer.render(world: BlockRenderView, model: BakedModel, state: 
  */
 fun BlockModelRenderer.renderSmooth(world: BlockRenderView, model: BakedModel, state: BlockState, pos: BlockPos, matrices: MatrixStack, vertexConsumer: VertexConsumer, cull: Boolean, random: Random, seed: Long, arg9: Int) = this.method_3361(world, model, state, pos, matrices, vertexConsumer, cull, random, seed, arg9)
 /**
+ * method_3367
+ */
+fun BlockModelRenderer.render(entry: net.minecraft.class_4587.class_4665, vertexConsumer: VertexConsumer, state: BlockState, bakedModel: BakedModel, red: Float, green: Float, blue: Float, light: Int, overlay: Int) = this.method_3367(entry, vertexConsumer, state, bakedModel, red, green, blue, light, overlay)
+/**
  * method_3364
  */
 fun BlockModelRenderer.getQuadDimensions(world: BlockRenderView, state: BlockState, pos: BlockPos, vertexData: IntArray, face: Direction, box: FloatArray, flags: BitSet) = this.method_3364(world, state, pos, vertexData, face, box, flags)

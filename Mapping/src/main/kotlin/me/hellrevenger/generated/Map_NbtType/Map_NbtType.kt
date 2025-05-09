@@ -29,3 +29,7 @@ fun <T>NbtType<T>.isImmutable() where T: NbtElement = this.method_23263()
  * method_23259
  */
 fun <T>NbtType<T>.getCrashReportName() where T: NbtElement = this.method_23259()
+/**
+ * method_39851
+ */
+fun <T>NbtType<T>.skip(input: DataInput, tracker: NbtSizeTracker) where T: NbtElement = this.method_39851(input, tracker)

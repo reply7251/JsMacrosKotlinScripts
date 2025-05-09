@@ -7,6 +7,10 @@ object CrossbowPosingKt {
      */
     fun meleeAttack(leftArm: ModelPart, rightArm: ModelPart, attacking: Boolean, swingProgress: Float, animationProgress: Float) = CrossbowPosing.method_29352(leftArm, rightArm, attacking, swingProgress, animationProgress)
     /**
+     * method_29351
+     */
+    fun meleeAttack(leftArm: ModelPart, rightArm: ModelPart, arg2: Arm, swingProgress: Float, animationProgress: Float) = CrossbowPosing.method_29351(leftArm, rightArm, arg2, swingProgress, animationProgress)
+    /**
      * method_32789
      */
     fun swingArms(leftArm: ModelPart, rightArm: ModelPart, animationProgress: Float) = CrossbowPosing.method_32789(leftArm, rightArm, animationProgress)

@@ -30,4 +30,8 @@ object MultifaceBlockKt {
      * method_41440
      */
     fun collectDirections(state: BlockState) = MultifaceBlock.method_41440(state)
+    /**
+     * method_65162
+     */
+    fun canGrowOn(world: BlockView, pos: BlockPos, direction: Direction) = MultifaceBlock.method_65162(world, pos, direction)
 }

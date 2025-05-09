@@ -9,3 +9,7 @@ fun <T>ScreenHandlerContext.get(getter: BiFunction<world_World, BlockPos, T>, de
  * method_17393
  */
 fun ScreenHandlerContext.run(function: BiConsumer<world_World, BlockPos>) = this.method_17393(function)
+/**
+ * method_17395
+ */
+fun <T>ScreenHandlerContext.get(getter: BiFunction<world_World, BlockPos, T>) = this.method_17395<T>(getter)

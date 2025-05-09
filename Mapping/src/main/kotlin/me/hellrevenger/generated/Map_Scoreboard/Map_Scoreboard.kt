@@ -62,6 +62,10 @@ fun Scoreboard.removeTeam(team: Team) = this.method_1191(team)
  */
 fun Scoreboard.onScoreHolderRemoved(scoreHolder: ScoreHolder) = this.method_1152(scoreHolder)
 /**
+ * method_55425
+ */
+fun Scoreboard.getOrCreateScore(scoreHolder: ScoreHolder, objective: ScoreboardObjective, forceWritable: Boolean) = this.method_55425(scoreHolder, objective, forceWritable)
+/**
  * method_1170
  */
 fun Scoreboard.getNullableObjective(name: String) = this.method_1170(name)

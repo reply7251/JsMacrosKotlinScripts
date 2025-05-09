@@ -123,6 +123,10 @@ object CodecsKt {
      */
     fun <E>listOrSingle(entryCodec: Codec<E>, listCodec: Codec<MutableList<E>>) = Codecs.method_65320<E>(entryCodec, listCodec)
     /**
+     * method_65313
+     */
+    fun <E>listOrSingle(entryCodec: Codec<E>) = Codecs.method_65313<E>(entryCodec)
+    /**
      * method_40113
      */
     fun <T>nonEmptyEntryList(originalCodec: Codec<RegistryEntryList<T>>) = Codecs.method_40113<T>(originalCodec)
@@ -146,6 +150,10 @@ object CodecsKt {
      * method_65314
      */
     fun <I, E>idChecked(idCodec: Codec<I>, idToElement: function_Function<I, E>, elementToId: function_Function<E, I>) = Codecs.method_65314<I, E>(idCodec, idToElement, elementToId)
+    /**
+     * method_39504
+     */
+    fun <E>withLifecycle(originalCodec: Codec<E>, entryLifecycleGetter: function_Function<E, Lifecycle>, lifecycleGetter: function_Function<E, Lifecycle>) = Codecs.method_39504<E>(originalCodec, entryLifecycleGetter, lifecycleGetter)
     /**
      * method_53700
      */
@@ -178,6 +186,10 @@ object CodecsKt {
      * method_37931
      */
     fun <P, I>createCodecForPairObject(codec: Codec<P>, leftFieldName: String, rightFieldName: String, combineFunction: BiFunction<P, P, DataResult<I>>, leftFunction: function_Function<I, P>, rightFunction: function_Function<I, P>) = Codecs.method_37931<P, I>(codec, leftFieldName, rightFieldName, combineFunction, leftFunction, rightFunction)
+    /**
+     * method_53921
+     */
+    fun <E>orCompressed(uncompressedCodec: MapCodec<E>, compressedCodec: MapCodec<E>) = Codecs.method_53921<E>(uncompressedCodec, compressedCodec)
     /**
      * method_54941
      */

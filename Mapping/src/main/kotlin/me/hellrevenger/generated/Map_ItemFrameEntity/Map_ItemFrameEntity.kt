@@ -26,6 +26,10 @@ fun ItemFrameEntity.getMapId(stack: ItemStack) = this.method_43272(stack)
  */
 fun ItemFrameEntity.setRotation(value: Int) = this.method_6939(value)
 /**
+ * method_6933
+ */
+fun ItemFrameEntity.setHeldItemStack(value: ItemStack, update: Boolean) = this.method_6933(value, update)
+/**
  * method_6940
  */
 fun ItemFrameEntity.getHeldItemStack() = this.method_6940()

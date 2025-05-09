@@ -17,3 +17,7 @@ fun MusicTracker.tick() = this.method_18669()
  * method_50025
  */
 fun MusicTracker.stop(type: MusicSound) = this.method_50025(type)
+/**
+ * method_4859
+ */
+fun MusicTracker.stop() = this.method_4859()

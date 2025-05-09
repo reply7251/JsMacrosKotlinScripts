@@ -34,4 +34,8 @@ object LightmapTextureManagerKt {
      * method_23687
      */
     fun pack(block: Int, sky: Int) = LightmapTextureManager.method_23687(block, sky)
+    /**
+     * method_23284
+     */
+    fun getBrightness(type: DimensionType, lightLevel: Int) = LightmapTextureManager.method_23284(type, lightLevel)
 }

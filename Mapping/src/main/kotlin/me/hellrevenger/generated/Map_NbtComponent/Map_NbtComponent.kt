@@ -38,6 +38,10 @@ fun NbtComponent.getId() = this.method_65131()
  */
 fun NbtComponent.matches(nbt: NbtCompound) = this.method_57460(nbt)
 /**
+ * method_59980
+ */
+fun <T>NbtComponent.get(ops: DynamicOps<NbtElement>, decoder: MapDecoder<T>) = this.method_59980<T>(ops, decoder)
+/**
  * method_57463
  */
 fun NbtComponent.getNbt() = this.method_57463()

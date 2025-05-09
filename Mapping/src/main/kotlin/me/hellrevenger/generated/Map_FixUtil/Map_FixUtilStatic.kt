@@ -19,6 +19,10 @@ object FixUtilKt {
      */
     fun apply(dynamic: Dynamic<*>, fieldName: String, applier: UnaryOperator<String>) = FixUtil.method_61351(dynamic, fieldName, applier)
     /**
+     * method_61356
+     */
+    fun createBlockState(id: String, properties: Map<String, String>) = FixUtil.method_61356(id, properties)
+    /**
      * method_57182
      */
     fun <T, R>withType(arg0: types_Type<R>, arg1: Typed<T>) = FixUtil.method_57182<T, R>(arg0, arg1)

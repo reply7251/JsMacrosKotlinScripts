@@ -14,4 +14,8 @@ object ScreenshotRecorderKt {
      * method_1659
      */
     fun saveScreenshot(gameDirectory: File, framebuffer: Framebuffer, messageReceiver: Consumer<Text>) = ScreenshotRecorder.method_1659(gameDirectory, framebuffer, messageReceiver)
+    /**
+     * method_22690
+     */
+    fun saveScreenshot(gameDirectory: File, fileName: String, framebuffer: Framebuffer, messageReceiver: Consumer<Text>) = ScreenshotRecorder.method_22690(gameDirectory, fileName, framebuffer, messageReceiver)
 }

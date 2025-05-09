@@ -26,6 +26,10 @@ fun ChunkManager.getDebugString() = this.method_12122()
  */
 fun ChunkManager.setChunkForced(pos: ChunkPos, forced: Boolean) = this.method_12124(pos, forced)
 /**
+ * method_21730
+ */
+fun ChunkManager.getWorldChunk(chunkX: Int, chunkZ: Int) = this.method_21730(chunkX, chunkZ)
+/**
  * method_12128
  */
 fun ChunkManager.setMobSpawnOptions(spawnMonsters: Boolean) = this.method_12128(spawnMonsters)

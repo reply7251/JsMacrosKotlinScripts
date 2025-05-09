@@ -10,6 +10,10 @@ fun LecternBlockEntity.setBook(book: ItemStack, player: PlayerEntity) = this.met
  */
 fun LecternBlockEntity.hasBook() = this.method_17522()
 /**
+ * method_17513
+ */
+fun LecternBlockEntity.setBook(book: ItemStack) = this.method_17513(book)
+/**
  * method_17523
  */
 fun LecternBlockEntity.getCurrentPage() = this.method_17523()

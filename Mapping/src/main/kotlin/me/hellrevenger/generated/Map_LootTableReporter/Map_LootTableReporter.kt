@@ -30,6 +30,10 @@ fun LootTableReporter.getErrorReporter() = this.method_60288()
  */
 fun LootTableReporter.makeChild(name: String, key: RegistryKey<*>) = this.method_51219(name, key)
 /**
+ * method_364
+ */
+fun LootTableReporter.makeChild(name: String) = this.method_364(name)
+/**
  * method_22567
  */
 fun LootTableReporter.validateContext(contextAware: LootContextAware) = this.method_22567(contextAware)

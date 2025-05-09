@@ -26,4 +26,8 @@ object UuidsKt {
      * method_44827
      */
     fun toByteArray(uuid: UUID) = Uuids.method_44827(uuid)
+    /**
+     * method_35848
+     */
+    fun toUuid(dynamic: Dynamic<*>) = Uuids.method_35848(dynamic)
 }

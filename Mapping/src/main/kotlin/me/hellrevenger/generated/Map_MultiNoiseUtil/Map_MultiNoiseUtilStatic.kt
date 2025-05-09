@@ -23,6 +23,10 @@ object MultiNoiseUtilKt {
      */
     fun createNoiseHypercube(temperature: Float, humidity: Float, continentalness: Float, erosion: Float, depth: Float, weirdness: Float, offset: Float) = MultiNoiseUtil.method_38117(temperature, humidity, continentalness, erosion, depth, weirdness, offset)
     /**
+     * method_38118
+     */
+    fun createNoiseHypercube(temperature: net.minecraft.class_6544.class_6546, humidity: net.minecraft.class_6544.class_6546, continentalness: net.minecraft.class_6544.class_6546, erosion: net.minecraft.class_6544.class_6546, depth: net.minecraft.class_6544.class_6546, weirdness: net.minecraft.class_6544.class_6546, offset: Float) = MultiNoiseUtil.method_38118(temperature, humidity, continentalness, erosion, depth, weirdness, offset)
+    /**
      * method_38666
      */
     fun toFloat(value: Long) = MultiNoiseUtil.method_38666(value)

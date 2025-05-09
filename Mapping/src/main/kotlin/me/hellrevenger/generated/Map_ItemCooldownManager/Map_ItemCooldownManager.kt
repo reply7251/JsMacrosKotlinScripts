@@ -18,6 +18,10 @@ fun ItemCooldownManager.getCooldownProgress(stack: ItemStack, tickDelta: Float) 
  */
 fun ItemCooldownManager.set(groupId: Identifier, duration: Int) = this.method_7906(groupId, duration)
 /**
+ * method_62835
+ */
+fun ItemCooldownManager.set(stack: ItemStack, duration: Int) = this.method_62835(stack, duration)
+/**
  * method_7903
  */
 fun ItemCooldownManager.update() = this.method_7903()

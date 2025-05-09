@@ -14,6 +14,14 @@ fun <T, U>EntityLookup<T>.forEach(filter: TypeFilter<T, U>, consumer: LazyIterat
  */
 fun <T>EntityLookup<T>.get(uuid: UUID) where T: EntityLike = this.method_31808(uuid)
 /**
+ * method_31807
+ */
+fun <T>EntityLookup<T>.forEachIntersects(box: Box, action: Consumer<T>) where T: EntityLike = this.method_31807(box, action)
+/**
+ * method_31804
+ */
+fun <T>EntityLookup<T>.get(id: Int) where T: EntityLike = this.method_31804(id)
+/**
  * method_31803
  */
 fun <T>EntityLookup<T>.iterate() where T: EntityLike = this.method_31803()

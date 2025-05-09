@@ -18,6 +18,10 @@ fun <T>WorldTickScheduler<T>.addChunkTickScheduler(pos: ChunkPos, scheduler: Chu
  */
 fun <T>WorldTickScheduler<T>.removeChunkTickScheduler(pos: ChunkPos) = this.method_39378(pos)
 /**
+ * method_39383
+ */
+fun <T>WorldTickScheduler<T>.scheduleTicks(box: BlockBox, offset: Vec3i) = this.method_39383(box, offset)
+/**
  * method_39377
  */
 fun <T>WorldTickScheduler<T>.tick(time: Long, arg1: Int, maxTicks: BiConsumer<BlockPos, T>) = this.method_39377(time, arg1, maxTicks)

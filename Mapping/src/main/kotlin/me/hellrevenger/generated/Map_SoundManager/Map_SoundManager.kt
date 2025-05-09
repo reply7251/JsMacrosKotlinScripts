@@ -50,6 +50,10 @@ fun SoundManager.unregisterListener(listener: SoundInstanceListener) = this.meth
  */
 fun SoundManager.stopAbruptly() = this.method_54649()
 /**
+ * method_4873
+ */
+fun SoundManager.play(sound: SoundInstance) = this.method_4873(sound)
+/**
  * method_4877
  */
 fun SoundManager.isPlaying(sound: SoundInstance) = this.method_4877(sound)

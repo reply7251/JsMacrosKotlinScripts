@@ -18,6 +18,10 @@ fun ImmutableBlockBox.move(offset: Vec3i) = this.method_58239(offset)
  */
 fun ImmutableBlockBox.getBlockCountZ() = this.method_58246()
 /**
+ * method_58242
+ */
+fun ImmutableBlockBox.move(direction: Direction, offset: Int) = this.method_58242(direction, offset)
+/**
  * method_58245
  */
 fun ImmutableBlockBox.getBlockCountY() = this.method_58245()

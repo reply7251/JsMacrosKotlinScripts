@@ -171,6 +171,10 @@ object TexturedRenderLayersKt {
      */
     fun createChestTextureId(id: Identifier) = TexturedRenderLayers.method_65530(id)
     /**
+     * method_65526
+     */
+    fun createBedTextureId(id: Identifier) = TexturedRenderLayers.method_65526(id)
+    /**
      * method_24062
      */
     fun getChestTextureId(blockEntity: BlockEntity, type: ChestType, christmas: Boolean) = TexturedRenderLayers.method_24062(blockEntity, type, christmas)
@@ -182,6 +186,10 @@ object TexturedRenderLayersKt {
      * method_65818
      */
     fun createHangingSignTextureId(id: Identifier) = TexturedRenderLayers.method_65818(id)
+    /**
+     * method_65534
+     */
+    fun createShulkerBoxTextureId(color: DyeColor) = TexturedRenderLayers.method_65534(color)
     /**
      * method_24073
      */

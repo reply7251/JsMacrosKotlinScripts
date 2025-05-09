@@ -71,6 +71,10 @@ object MathHelperKt {
      */
     fun binarySearch(min: Int, max: Int, predicate: IntPredicate) = MathHelper.method_15360(min, max, predicate)
     /**
+     * method_33723
+     */
+    fun square(n: Double) = MathHelper.method_33723(n)
+    /**
      * method_15389
      */
     fun hashCode(vec: Vec3i) = MathHelper.method_15389(vec)
@@ -95,6 +99,10 @@ object MathHelperKt {
      */
     fun catmullRom(delta: Float, p0: Float, p1: Float, p2: Float, p3: Float) = MathHelper.method_41303(delta, p0, p1, p2, p3)
     /**
+     * method_34954
+     */
+    fun square(n: Int) = MathHelper.method_34954(n)
+    /**
      * method_53948
      */
     fun rotateAround(axis: Vector3f, rotation: Quaternionf, result: Quaternionf) = MathHelper.method_53948(axis, rotation, result)
@@ -114,6 +122,14 @@ object MathHelperKt {
      * method_62994
      */
     fun unpackDegrees(packedDegrees: Byte) = MathHelper.method_62994(packedDegrees)
+    /**
+     * method_15338
+     */
+    fun wrapDegrees(degrees: Double) = MathHelper.method_15338(degrees)
+    /**
+     * method_15363
+     */
+    fun clamp(value: Float, min: Float, max: Float) = MathHelper.method_15363(value, min, max)
     /**
      * method_20390
      */
@@ -135,6 +151,10 @@ object MathHelperKt {
      */
     fun squaredMagnitude(a: Double, arg1: Double, b: Double) = MathHelper.method_41190(a, arg1, b)
     /**
+     * method_38652
+     */
+    fun square(n: Long) = MathHelper.method_38652(n)
+    /**
      * method_15375
      */
     fun floor(value: Float) = MathHelper.method_15375(value)
@@ -146,6 +166,10 @@ object MathHelperKt {
      * method_15388
      */
     fun stepUnwrappedAngleTowards(from: Float, to: Float, step: Float) = MathHelper.method_15388(from, to, step)
+    /**
+     * method_15387
+     */
+    fun floorMod(dividend: Int, divisor: Int) = MathHelper.method_15387(dividend, divisor)
     /**
      * method_15348
      */
@@ -167,6 +191,10 @@ object MathHelperKt {
      */
     fun lerpAngleRadians(delta: Float, start: Float, end: Float) = MathHelper.method_61345(delta, start, end)
     /**
+     * method_33825
+     */
+    fun magnitude(a: Double, arg1: Double, b: Double) = MathHelper.method_33825(a, arg1, b)
+    /**
      * method_15374
      */
     fun sin(value: Float) = MathHelper.method_15374(value)
@@ -178,6 +206,10 @@ object MathHelperKt {
      * method_41189
      */
     fun squaredHypot(a: Double, arg1: Double) = MathHelper.method_41189(a, arg1)
+    /**
+     * method_15371
+     */
+    fun hashCode(x: Int, y: Int, z: Int) = MathHelper.method_15371(x, y, z)
     /**
      * method_15339
      */
@@ -227,6 +259,10 @@ object MathHelperKt {
      */
     fun nextDouble(random: Random, min: Double, arg2: Double) = MathHelper.method_15366(random, min, arg2)
     /**
+     * method_15350
+     */
+    fun clamp(value: Double, arg1: Double, min: Double) = MathHelper.method_15350(value, arg1, min)
+    /**
      * method_61342
      */
     fun lerp(delta: Double, arg1: Vec3d, start: Vec3d) = MathHelper.method_61342(delta, arg1, start)
@@ -235,6 +271,10 @@ object MathHelperKt {
      */
     fun nextFloat(random: Random, min: Float, max: Float) = MathHelper.method_15344(random, min, max)
     /**
+     * method_16436
+     */
+    fun lerp(delta: Double, arg1: Double, start: Double) = MathHelper.method_16436(delta, arg1, start)
+    /**
      * method_59515
      */
     fun multiplyFraction(fraction: Fraction, multiplier: Int) = MathHelper.method_59515(fraction, multiplier)
@@ -242,6 +282,14 @@ object MathHelperKt {
      * method_38788
      */
     fun ceilDiv(a: Int, b: Int) = MathHelper.method_38788(a, b)
+    /**
+     * method_48781
+     */
+    fun lerp(delta: Float, start: Int, end: Int) = MathHelper.method_48781(delta, start, end)
+    /**
+     * method_37166
+     */
+    fun clampedLerp(start: Float, end: Float, delta: Float) = MathHelper.method_37166(start, end, delta)
     /**
      * method_61346
      */
@@ -255,6 +303,14 @@ object MathHelperKt {
      */
     fun hsvToArgb(hue: Float, saturation: Float, value: Float, alpha: Int) = MathHelper.method_60599(hue, saturation, value, alpha)
     /**
+     * method_16439
+     */
+    fun lerp(delta: Float, start: Float, end: Float) = MathHelper.method_16439(delta, start, end)
+    /**
+     * method_53062
+     */
+    fun clamp(value: Long, arg1: Long, min: Long) = MathHelper.method_53062(value, arg1, min)
+    /**
      * method_20306
      */
     fun clampAngle(value: Float, mean: Float, delta: Float) = MathHelper.method_20306(value, mean, delta)
@@ -263,9 +319,17 @@ object MathHelperKt {
      */
     fun isPowerOfTwo(value: Int) = MathHelper.method_15352(value)
     /**
+     * method_15378
+     */
+    fun randomUuid(random: Random) = MathHelper.method_15378(random)
+    /**
      * method_62995
      */
     fun packDegrees(degrees: Float) = MathHelper.method_62995(degrees)
+    /**
+     * method_15341
+     */
+    fun floorMod(dividend: Float, divisor: Float) = MathHelper.method_15341(dividend, divisor)
     /**
      * method_15391
      */
@@ -283,6 +347,14 @@ object MathHelperKt {
      */
     fun perlinFade(value: Double) = MathHelper.method_16435(value)
     /**
+     * method_42117
+     */
+    fun stream(seed: Int, lowerBound: Int, upperBound: Int, steps: Int) = MathHelper.method_42117(seed, lowerBound, upperBound, steps)
+    /**
+     * method_15379
+     */
+    fun abs(value: Float) = MathHelper.method_15379(value)
+    /**
      * method_48116
      */
     fun floorDiv(dividend: Int, divisor: Int) = MathHelper.method_48116(dividend, divisor)
@@ -295,21 +367,69 @@ object MathHelperKt {
      */
     fun sqrt(value: Float) = MathHelper.method_15355(value)
     /**
+     * method_37958
+     */
+    fun clampedMap(value: Float, oldStart: Float, oldEnd: Float, newStart: Float, newEnd: Float) = MathHelper.method_37958(value, oldStart, oldEnd, newStart, newEnd)
+    /**
+     * method_32750
+     */
+    fun nextBetween(random: Random, min: Float, max: Float) = MathHelper.method_32750(random, min, max)
+    /**
+     * method_15357
+     */
+    fun floor(value: Double) = MathHelper.method_15357(value)
+    /**
+     * method_15385
+     */
+    fun fractionalPart(value: Double) = MathHelper.method_15385(value)
+    /**
      * method_23278
      */
     fun fastInverseCbrt(x: Float) = MathHelper.method_23278(x)
+    /**
+     * method_15347
+     */
+    fun approximatelyEquals(a: Float, b: Float) = MathHelper.method_15347(a, b)
+    /**
+     * method_48118
+     */
+    fun inverseSqrt(x: Double) = MathHelper.method_48118(x)
+    /**
+     * method_15392
+     */
+    fun wrapDegrees(degrees: Int) = MathHelper.method_15392(degrees)
     /**
      * method_53063
      */
     fun lerpPositive(delta: Float, start: Int, end: Int) = MathHelper.method_53063(delta, start, end)
     /**
+     * method_37959
+     */
+    fun map(value: Float, oldStart: Float, oldEnd: Float, newStart: Float, newEnd: Float) = MathHelper.method_37959(value, oldStart, oldEnd, newStart, newEnd)
+    /**
+     * method_37960
+     */
+    fun getLerpProgress(value: Float, start: Float, end: Float) = MathHelper.method_37960(value, start, end)
+    /**
      * method_15351
      */
     fun floorLog2(value: Int) = MathHelper.method_15351(value)
     /**
+     * method_61343
+     */
+    fun wrapDegrees(degrees: Long) = MathHelper.method_61343(degrees)
+    /**
      * method_15369
      */
     fun hsvToRgb(hue: Float, saturation: Float, value: Float) = MathHelper.method_15369(hue, saturation, value)
+    /**
+     * method_17821
+     */
+    fun lerpAngleDegrees(delta: Float, start: Float, end: Float) = MathHelper.method_17821(delta, start, end)
+    /**
+     * method_15384
+     */
+    fun ceil(value: Double) = MathHelper.method_15384(value)
     /**
      * method_61344
      */
@@ -318,4 +438,8 @@ object MathHelperKt {
      * method_15372
      */
     fun lfloor(value: Double) = MathHelper.method_15372(value)
+    /**
+     * method_39241
+     */
+    fun hypot(a: Double, arg1: Double) = MathHelper.method_39241(a, arg1)
 }

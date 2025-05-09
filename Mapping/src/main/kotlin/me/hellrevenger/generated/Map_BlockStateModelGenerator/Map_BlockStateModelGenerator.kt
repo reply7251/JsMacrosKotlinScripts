@@ -138,6 +138,10 @@ fun BlockStateModelGenerator.registerHangingSign(base: Block, hangingSign: Block
  */
 fun BlockStateModelGenerator.registerCooker(cooker: Block, modelFactory: net.minecraft.class_4946.class_4947) = this.method_25652(cooker, modelFactory)
 /**
+ * method_65295
+ */
+fun BlockStateModelGenerator.registerMultifaceBlock(block: Block, item: Item) = this.method_65295(block, item)
+/**
  * method_25537
  */
 fun BlockStateModelGenerator.registerItemModel(item: Item) = this.method_25537(item)
@@ -166,6 +170,10 @@ fun BlockStateModelGenerator.registerDispenserLikeOrientable(block: Block) = thi
  */
 fun BlockStateModelGenerator.registerCopperBulb(copperBulbBlock: Block) = this.method_54826(copperBulbBlock)
 /**
+ * method_65403
+ */
+fun BlockStateModelGenerator.registerBuiltinWithParticle(block: Block, particleSource: Block) = this.method_65403(block, particleSource)
+/**
  * method_25650
  */
 fun BlockStateModelGenerator.registerCubeAllModelTexturePool(block: Block) = this.method_25650(block)
@@ -173,6 +181,10 @@ fun BlockStateModelGenerator.registerCubeAllModelTexturePool(block: Block) = thi
  * method_25534
  */
 fun BlockStateModelGenerator.register() = this.method_25534()
+/**
+ * method_25556
+ */
+fun BlockStateModelGenerator.registerItemModel(block: Block, textureSuffix: String) = this.method_25556(block, textureSuffix)
 /**
  * method_25651
  */
@@ -246,6 +258,10 @@ fun BlockStateModelGenerator.getFireSideModels(texture: Block) = this.method_257
  */
 fun BlockStateModelGenerator.registerTintableCrossBlockState(block: Block, tintType: net.minecraft.class_4910.class_4913) = this.method_25603(block, tintType)
 /**
+ * method_65399
+ */
+fun BlockStateModelGenerator.registerItemModel(item: Item, modelId: Identifier) = this.method_65399(item, modelId)
+/**
  * method_65419
  */
 fun BlockStateModelGenerator.uploadParticleModel(block: Block, particleSource: Block) = this.method_65419(block, particleSource)
@@ -274,6 +290,10 @@ fun BlockStateModelGenerator.registerBanner(block: Block, wallBlock: Block, colo
  */
 fun BlockStateModelGenerator.supplyChiseledBookshelfModels(blockStateSupplier: MultipartBlockStateSupplier, facingCondition: net.minecraft.class_4918.class_4921, rotation: net.minecraft.class_4936.class_4937) = this.method_47812(blockStateSupplier, facingCondition, rotation)
 /**
+ * method_25600
+ */
+fun BlockStateModelGenerator.registerItemModel(block: Block) = this.method_25600(block)
+/**
  * method_25676
  */
 fun BlockStateModelGenerator.registerLog(logBlock: Block) = this.method_25676(logBlock)
@@ -285,6 +305,10 @@ fun BlockStateModelGenerator.registerCoral(coral: Block, deadCoral: Block, coral
  * method_25605
  */
 fun BlockStateModelGenerator.registerNorthDefaultHorizontalRotated(block: Block, modelFactory: net.minecraft.class_4946.class_4947) = this.method_25605(block, modelFactory)
+/**
+ * method_25604
+ */
+fun BlockStateModelGenerator.registerTintableCrossBlockState(block: Block, tintType: net.minecraft.class_4910.class_4913, crossTexture: TextureMap) = this.method_25604(block, tintType, crossTexture)
 /**
  * method_25681
  */
@@ -298,6 +322,10 @@ fun BlockStateModelGenerator.getFireUpModels(texture: Block) = this.method_25704
  */
 fun BlockStateModelGenerator.registerSkull(block: Block, wallBlock: Block, type: net.minecraft.class_2484.class_2485, baseModelId: Identifier) = this.method_65406(block, wallBlock, type, baseModelId)
 /**
+ * method_25553
+ */
+fun BlockStateModelGenerator.registerAxisRotated(block: Block, modelFactory: net.minecraft.class_4946.class_4947) = this.method_25553(block, modelFactory)
+/**
  * method_26433
  */
 fun BlockStateModelGenerator.addJigsawOrientationToVariant(orientation: Orientation, variant: BlockStateVariant) = this.method_26433(orientation, variant)
@@ -309,6 +337,10 @@ fun BlockStateModelGenerator.createCopperBulbBlockState(copperBulbBlock: Block, 
  * method_25620
  */
 fun BlockStateModelGenerator.registerGourd(stemBlock: Block, attachedStemBlock: Block) = this.method_25620(stemBlock, attachedStemBlock)
+/**
+ * method_25554
+ */
+fun BlockStateModelGenerator.registerAxisRotated(block: Block, verticalModelFactory: net.minecraft.class_4946.class_4947, horizontalModelFactory: net.minecraft.class_4946.class_4947) = this.method_25554(block, verticalModelFactory, horizontalModelFactory)
 /**
  * method_25694
  */
@@ -354,6 +386,10 @@ fun BlockStateModelGenerator.registerFlowerPotPlantAndItem(block: Block, flowerP
  */
 fun BlockStateModelGenerator.getBambooBlockStateVariants(age: Int) = this.method_25535(age)
 /**
+ * method_25581
+ */
+fun BlockStateModelGenerator.getTurtleEggModel(eggs: Int, hatch: Int) = this.method_25581(eggs, hatch)
+/**
  * method_25557
  */
 fun BlockStateModelGenerator.createSubModel(block: Block, suffix: String, model: Model, texturesFactory: function_Function<Identifier, TextureMap>) = this.method_25557(block, suffix, model, texturesFactory)
@@ -370,9 +406,21 @@ fun BlockStateModelGenerator.registerPaleMossCarpet(block: Block) = this.method_
  */
 fun BlockStateModelGenerator.registerCubeWithCustomTextures(block: Block, otherTextureSource: Block, texturesFactory: BiFunction<Block, Block, TextureMap>) = this.method_25546(block, otherTextureSource, texturesFactory)
 /**
+ * method_65401
+ */
+fun BlockStateModelGenerator.uploadBlockItemModel(item: Item, block: Block, textureSuffix: String) = this.method_65401(item, block, textureSuffix)
+/**
+ * method_25660
+ */
+fun BlockStateModelGenerator.registerBuiltinWithParticle(block: Block, particleSource: Identifier) = this.method_25660(block, particleSource)
+/**
  * method_54823
  */
 fun BlockStateModelGenerator.registerParentedDoor(parent: Block, doorBlock: Block) = this.method_54823(parent, doorBlock)
+/**
+ * method_25548
+ */
+fun BlockStateModelGenerator.registerTintableCross(block: Block, crossType: net.minecraft.class_4910.class_4913) = this.method_25548(block, crossType)
 /**
  * method_25621
  */
@@ -381,6 +429,10 @@ fun BlockStateModelGenerator.registerDoubleBlock(doubleBlock: Block, tintType: n
  * method_27166
  */
 fun BlockStateModelGenerator.registerCampfire(blocks: Array<Block>) = this.method_27166(*blocks)
+/**
+ * method_25678
+ */
+fun BlockStateModelGenerator.registerDoubleBlock(block: Block, upperHalfModelId: Identifier, lowerHalfModelId: Identifier) = this.method_25678(block, upperHalfModelId, lowerHalfModelId)
 /**
  * method_54824
  */

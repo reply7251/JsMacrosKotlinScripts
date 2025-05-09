@@ -30,6 +30,10 @@ fun WorldUpdater.isDone() = this.method_5403()
  */
 fun WorldUpdater.getProgress(world: RegistryKey<world_World>) = this.method_5393(world)
 /**
+ * method_5401
+ */
+fun WorldUpdater.getProgress() = this.method_5401()
+/**
  * method_5394
  */
 fun WorldUpdater.getStatus() = this.method_5394()

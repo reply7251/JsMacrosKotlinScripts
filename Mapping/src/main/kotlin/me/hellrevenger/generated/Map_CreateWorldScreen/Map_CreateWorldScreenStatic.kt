@@ -15,6 +15,10 @@ object CreateWorldScreenKt {
      */
     fun show(client: MinecraftClient, parent: Screen, callback: CreateWorldCallback) = CreateWorldScreen.method_64368(client, parent, callback)
     /**
+     * method_31130
+     */
+    fun show(client: MinecraftClient, parent: Screen) = CreateWorldScreen.method_31130(client, parent)
+    /**
      * method_64248
      */
     fun showTestWorld(client: MinecraftClient, parent: Screen) = CreateWorldScreen.method_64248(client, parent)

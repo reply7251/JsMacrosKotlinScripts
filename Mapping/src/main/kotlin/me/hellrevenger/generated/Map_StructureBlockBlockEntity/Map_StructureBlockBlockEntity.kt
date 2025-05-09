@@ -58,6 +58,10 @@ fun StructureBlockBlockEntity.loadAndTryPlaceStructure(world: ServerWorld) = thi
  */
 fun StructureBlockBlockEntity.setMode(mode: StructureBlockMode) = this.method_11381(mode)
 /**
+ * method_11366
+ */
+fun StructureBlockBlockEntity.saveStructure(interactive: Boolean) = this.method_11366(interactive)
+/**
  * method_11354
  */
 fun StructureBlockBlockEntity.isPowered() = this.method_11354()
@@ -109,6 +113,10 @@ fun StructureBlockBlockEntity.setShowAir(showAir: Boolean) = this.method_11347(s
  * method_11363
  */
 fun StructureBlockBlockEntity.setMetadata(metadata: String) = this.method_11363(metadata)
+/**
+ * method_11343
+ */
+fun StructureBlockBlockEntity.setTemplateName(templateName: String) = this.method_11343(templateName)
 /**
  * method_11385
  */

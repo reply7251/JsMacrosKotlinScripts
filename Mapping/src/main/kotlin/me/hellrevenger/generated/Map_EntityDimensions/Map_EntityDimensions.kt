@@ -18,6 +18,14 @@ fun EntityDimensions.withEyeHeight(eyeHeight: Float) = this.method_55685(eyeHeig
  */
 fun EntityDimensions.withAttachments(attachments: net.minecraft.class_9066.class_9067) = this.method_55684(attachments)
 /**
+ * method_19539
+ */
+fun EntityDimensions.scaled(widthRatio: Float, heightRatio: Float) = this.method_19539(widthRatio, heightRatio)
+/**
+ * method_30231
+ */
+fun EntityDimensions.getBoxAt(x: Double, arg1: Double, y: Double) = this.method_30231(x, arg1, y)
+/**
  * comp_2187
  */
 fun EntityDimensions.eyeHeight() = this.comp_2187()
@@ -29,6 +37,10 @@ fun EntityDimensions.height() = this.comp_2186()
  * comp_2185
  */
 fun EntityDimensions.width() = this.comp_2185()
+/**
+ * comp_2189
+ */
+fun EntityDimensions.fixed() = this.comp_2189()
 /**
  * comp_2188
  */

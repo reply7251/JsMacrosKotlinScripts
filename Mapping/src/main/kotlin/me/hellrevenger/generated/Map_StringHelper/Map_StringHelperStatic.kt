@@ -15,6 +15,10 @@ object StringHelperKt {
      */
     fun isValidPlayerName(name: String) = StringHelper.method_57179(name)
     /**
+     * method_57177
+     */
+    fun stripInvalidChars(string: String, allowLinebreak: Boolean) = StringHelper.method_57177(string, allowLinebreak)
+    /**
      * method_43681
      */
     fun truncateChat(text: String) = StringHelper.method_43681(text)

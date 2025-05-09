@@ -50,6 +50,10 @@ fun WardenEntity.removeSuspect(entity: Entity) = this.method_42211(entity)
  */
 fun WardenEntity.getHeartAlpha(tickDelta: Float) = this.method_42202(tickDelta)
 /**
+ * method_42213
+ */
+fun WardenEntity.increaseAngerAt(entity: Entity) = this.method_42213(entity)
+/**
  * method_42214
  */
 fun WardenEntity.getAngriness() = this.method_42214()

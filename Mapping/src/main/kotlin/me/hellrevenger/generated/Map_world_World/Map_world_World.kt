@@ -98,6 +98,10 @@ fun world_World.playSoundAtBlockCenter(pos: BlockPos, sound: SoundEvent, categor
  */
 fun world_World.isDirectionSolid(pos: BlockPos, entity: Entity, direction: Direction) = this.method_24368(pos, entity, direction)
 /**
+ * method_55116
+ */
+fun world_World.playSoundFromEntity(entity: Entity, sound: SoundEvent, category: SoundCategory, volume: Float, pitch: Float) = this.method_55116(entity, sound, category, volume, pitch)
+/**
  * method_59547
  */
 fun world_World.getBrewingRecipeRegistry() = this.method_59547()
@@ -146,6 +150,10 @@ fun world_World.getRainGradient(delta: Float) = this.method_8430(delta)
  */
 fun world_World.getThunderGradient(delta: Float) = this.method_8478(delta)
 /**
+ * method_43128
+ */
+fun world_World.playSound(source: PlayerEntity, x: Double, arg2: Double, y: Double, arg4: SoundEvent, z: SoundCategory, arg6: Float, sound: Float) = this.method_43128(source, x, arg2, y, arg4, z, arg6, sound)
+/**
  * method_8428
  */
 fun world_World.getScoreboard() = this.method_8428()
@@ -161,6 +169,14 @@ fun world_World.createExplosion(entity: Entity, damageSource: DamageSource, beha
  * method_31595
  */
 fun world_World.addBlockBreakParticles(pos: BlockPos, state: BlockState) = this.method_31595(pos, state)
+/**
+ * method_47967
+ */
+fun world_World.playSound(source: PlayerEntity, x: Double, arg2: Double, y: Double, arg4: SoundEvent, z: SoundCategory, arg6: Float, sound: Float, category: Long) = this.method_47967(source, x, arg2, y, arg4, z, arg6, sound, category)
+/**
+ * method_8437
+ */
+fun world_World.createExplosion(entity: Entity, x: Double, arg2: Double, y: Double, arg4: Float, z: net.minecraft.class_1937.class_7867) = this.method_8437(entity, x, arg2, y, arg4, z)
 /**
  * method_8427
  */
@@ -194,9 +210,25 @@ fun world_World.onBlockChanged(pos: BlockPos, oldBlock: BlockState, newBlock: Bl
  */
 fun world_World.scheduleBlockRerenderIfNeeded(pos: BlockPos, old: BlockState, updated: BlockState) = this.method_16109(pos, old, updated)
 /**
+ * method_8465
+ */
+fun world_World.playSound(source: PlayerEntity, x: Double, arg2: Double, y: Double, arg4: RegistryEntry<SoundEvent>, z: SoundCategory, arg6: Float, sound: Float, category: Long) = this.method_8465(source, x, arg2, y, arg4, z, arg6, sound, category)
+/**
+ * method_60511
+ */
+fun world_World.playSound(source: PlayerEntity, x: Double, arg2: Double, y: Double, arg4: RegistryEntry<SoundEvent>, z: SoundCategory, arg6: Float, sound: Float) = this.method_60511(source, x, arg2, y, arg4, z, arg6, sound)
+/**
  * method_8546
  */
 fun world_World.isThundering() = this.method_8546()
+/**
+ * method_55117
+ */
+fun world_World.createExplosion(entity: Entity, damageSource: DamageSource, behavior: ExplosionBehavior, x: Double, arg4: Double, y: Double, arg6: Float, z: Boolean, arg8: net.minecraft.class_1937.class_7867) = this.method_55117(entity, damageSource, behavior, x, arg4, y, arg6, z, arg8)
+/**
+ * method_54762
+ */
+fun world_World.playSound(source: PlayerEntity, x: Double, arg2: Double, y: Double, arg4: SoundEvent, z: SoundCategory) = this.method_54762(source, x, arg2, y, arg4, z)
 /**
  * method_8510
  */
@@ -205,6 +237,10 @@ fun world_World.getTime() = this.method_8510()
  * method_8547
  */
 fun world_World.addFireworkParticle(x: Double, arg1: Double, y: Double, arg3: Double, z: Double, arg5: Double, velocityX: MutableList<FireworkExplosionComponent>) = this.method_8547(x, arg1, y, arg3, z, arg5, velocityX)
+/**
+ * method_45445
+ */
+fun world_World.playSound(source: Entity, pos: BlockPos, sound: SoundEvent, category: SoundCategory, volume: Float, pitch: Float) = this.method_45445(source, pos, sound, category, volume, pitch)
 /**
  * method_65097
  */
@@ -234,13 +270,25 @@ fun world_World.getChunk(arg0: Int, arg1: Int) = this.method_8497(arg0, arg1)
  */
 fun world_World.canPlayerModifyAt(player: PlayerEntity, pos: BlockPos) = this.method_8505(player, pos)
 /**
+ * method_8492
+ */
+fun world_World.updateNeighbor(pos: BlockPos, sourceBlock: Block, orientation: WireOrientation) = this.method_8492(pos, sourceBlock, orientation)
+/**
  * method_17452
  */
 fun world_World.addImportantParticle(parameters: ParticleEffect, force: Boolean, x: Double, arg3: Double, y: Double, arg5: Double, z: Double, arg7: Double) = this.method_17452(parameters, force, x, arg3, y, arg5, z, arg7)
 /**
+ * method_8449
+ */
+fun world_World.playSoundFromEntity(source: PlayerEntity, entity: Entity, sound: RegistryEntry<SoundEvent>, category: SoundCategory, volume: Float, pitch: Float, seed: Long) = this.method_8449(source, entity, sound, category, volume, pitch, seed)
+/**
  * method_18472
  */
 fun <T>world_World.tickEntity(tickConsumer: Consumer<T>, entity: T) where T: Entity = this.method_18472<T>(tickConsumer, entity)
+/**
+ * method_8452
+ */
+fun world_World.updateNeighborsAlways(pos: BlockPos, sourceBlock: Block, orientation: WireOrientation) = this.method_8452(pos, sourceBlock, orientation)
 /**
  * method_48760
  */
@@ -249,6 +297,10 @@ fun world_World.sendEntityDamage(entity: Entity, damageSource: DamageSource) = t
  * method_8509
  */
 fun world_World.setLightningTicksLeft(lightningTicksLeft: Int) = this.method_8509(lightningTicksLeft)
+/**
+ * method_46407
+ */
+fun world_World.createExplosion(entity: Entity, damageSource: DamageSource, behavior: ExplosionBehavior, pos: Vec3d, power: Float, createFire: Boolean, explosionSourceType: net.minecraft.class_1937.class_7867) = this.method_46407(entity, damageSource, behavior, pos, power, createFire, explosionSourceType)
 /**
  * method_8500
  */
@@ -289,6 +341,14 @@ fun world_World.addDetailsToCrashReport(report: CrashReport) = this.method_8538(
  * method_8532
  */
 fun world_World.getTimeOfDay() = this.method_8532()
+/**
+ * method_8494
+ */
+fun world_World.addImportantParticle(parameters: ParticleEffect, x: Double, arg2: Double, y: Double, arg4: Double, z: Double, arg6: Double) = this.method_8494(parameters, x, arg2, y, arg4, z, arg6)
+/**
+ * method_8537
+ */
+fun world_World.createExplosion(entity: Entity, x: Double, arg2: Double, y: Double, arg4: Float, z: Boolean, arg6: net.minecraft.class_1937.class_7867) = this.method_8537(entity, x, arg2, y, arg4, z, arg6)
 /**
  * method_8438
  */

@@ -10,4 +10,8 @@ object BucketableKt {
      * method_35169
      */
     fun <T>tryBucket(player: PlayerEntity, hand: Hand, entity: T) where T: LivingEntity, T: Bucketable = Bucketable.method_35169<T>(player, hand, entity)
+    /**
+     * method_35167
+     */
+    fun copyDataToStack(entity: MobEntity, stack: ItemStack) = Bucketable.method_35167(entity, stack)
 }

@@ -18,6 +18,10 @@ fun <R>ThreadExecutor<R>.runTask() where R: Runnable = this.method_16075()
  */
 fun <R, V>ThreadExecutor<R>.submit(task: Supplier<V>) where R: Runnable = this.method_5385<V>(task)
 /**
+ * method_20493
+ */
+fun <R>ThreadExecutor<R>.submit(task: Runnable) where R: Runnable = this.method_20493(task)
+/**
  * method_20813
  */
 fun <R>ThreadExecutor<R>.waitForTasks() where R: Runnable = this.method_20813()

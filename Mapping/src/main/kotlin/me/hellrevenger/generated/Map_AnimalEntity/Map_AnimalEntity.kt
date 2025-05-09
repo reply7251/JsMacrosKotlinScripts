@@ -41,3 +41,7 @@ fun AnimalEntity.isInLove() = this.method_6479()
  * method_29270
  */
 fun AnimalEntity.getLoveTicks() = this.method_29270()
+/**
+ * method_24650
+ */
+fun AnimalEntity.breed(world: ServerWorld, other: AnimalEntity) = this.method_24650(world, other)

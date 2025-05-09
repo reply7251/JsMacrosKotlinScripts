@@ -21,3 +21,7 @@ fun SculkSpreadable.spread(cursor: net.minecraft.class_7128.class_7129, world: W
  * method_41473
  */
 fun SculkSpreadable.getDecay(oldDecay: Int) = this.method_41473(oldDecay)
+/**
+ * method_41469
+ */
+fun SculkSpreadable.spread(world: WorldAccess, pos: BlockPos, state: BlockState, directions: Collection<Direction>, markForPostProcessing: Boolean) = this.method_41469(world, pos, state, directions, markForPostProcessing)

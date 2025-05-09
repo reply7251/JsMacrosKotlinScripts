@@ -30,6 +30,10 @@ fun <T>SectionedEntityCache<T>.getChunkPositions() where T: EntityLike = this.me
  */
 fun <T, U>SectionedEntityCache<T>.forEachIntersects(filter: TypeFilter<T, U>, box: Box, consumer: LazyIterationConsumer<U>) where T: EntityLike, U: T = this.method_31773<U>(filter, box, consumer)
 /**
+ * method_31783
+ */
+fun <T>SectionedEntityCache<T>.forEachIntersects(box: Box, consumer: LazyIterationConsumer<T>) where T: EntityLike = this.method_31783(box, consumer)
+/**
  * method_31782
  */
 fun <T>SectionedEntityCache<T>.getTrackingSections(chunkPos: Long) where T: EntityLike = this.method_31782(chunkPos)

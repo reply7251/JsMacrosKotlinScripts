@@ -18,4 +18,8 @@ object BlockBoxKt {
      * method_35411
      */
     fun encompassPositions(positions: Iterable<BlockPos>) = BlockBox.method_35411(positions)
+    /**
+     * method_35413
+     */
+    fun encompass(boxes: Iterable<BlockBox>) = BlockBox.method_35413(boxes)
 }

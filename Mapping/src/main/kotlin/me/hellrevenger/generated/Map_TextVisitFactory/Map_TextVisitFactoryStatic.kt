@@ -22,4 +22,16 @@ object TextVisitFactoryKt {
      * method_27471
      */
     fun validateSurrogates(text: String) = TextVisitFactory.method_27471(text)
+    /**
+     * method_27476
+     */
+    fun visitFormatted(text: StringVisitable, style: Style, visitor: CharacterVisitor) = TextVisitFactory.method_27476(text, style, visitor)
+    /**
+     * method_27472
+     */
+    fun visitFormatted(text: String, startIndex: Int, style: Style, visitor: CharacterVisitor) = TextVisitFactory.method_27472(text, startIndex, style, visitor)
+    /**
+     * method_27473
+     */
+    fun visitFormatted(text: String, startIndex: Int, startingStyle: Style, resetStyle: Style, visitor: CharacterVisitor) = TextVisitFactory.method_27473(text, startIndex, startingStyle, resetStyle, visitor)
 }

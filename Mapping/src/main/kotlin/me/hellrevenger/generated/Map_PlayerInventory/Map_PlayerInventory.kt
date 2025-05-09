@@ -94,6 +94,10 @@ fun PlayerInventory.getSwappableHotbarSlot() = this.method_7386()
  */
 fun PlayerInventory.dropAll() = this.method_7388()
 /**
+ * method_7382
+ */
+fun PlayerInventory.contains(tag: TagKey<Item>) = this.method_7382(tag)
+/**
  * method_29280
  */
 fun PlayerInventory.remove(shouldRemove: Predicate<ItemStack>, maxCount: Int, craftingInventory: Inventory) = this.method_29280(shouldRemove, maxCount, craftingInventory)
@@ -114,6 +118,10 @@ fun PlayerInventory.getMainHandStack() = this.method_7391()
  */
 fun PlayerInventory.insertStack(stack: ItemStack) = this.method_7394(stack)
 /**
+ * method_55753
+ */
+fun PlayerInventory.contains(predicate: Predicate<ItemStack>) = this.method_55753(predicate)
+/**
  * method_7387
  */
 fun PlayerInventory.populateRecipeFinder(finder: RecipeFinder) = this.method_7387(finder)
@@ -121,3 +129,7 @@ fun PlayerInventory.populateRecipeFinder(finder: RecipeFinder) = this.method_738
  * method_7397
  */
 fun PlayerInventory.readNbt(nbtList: NbtList) = this.method_7397(nbtList)
+/**
+ * method_7367
+ */
+fun PlayerInventory.insertStack(slot: Int, stack: ItemStack) = this.method_7367(slot, stack)

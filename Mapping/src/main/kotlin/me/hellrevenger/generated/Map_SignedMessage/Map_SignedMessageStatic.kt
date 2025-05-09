@@ -18,4 +18,8 @@ object SignedMessageKt {
      * method_46290
      */
     fun update(updater: net.minecraft.class_7498.class_7499, link: MessageLink, body: MessageBody) = SignedMessage.method_46290(updater, link, body)
+    /**
+     * method_45041
+     */
+    fun ofUnsigned(content: String) = SignedMessage.method_45041(content)
 }

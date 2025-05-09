@@ -17,3 +17,11 @@ fun <T>SimpleOption<T>.createWidget(options: GameOptions) = this.method_57701(op
  * method_42404
  */
 fun <T>SimpleOption<T>.getCodec() = this.method_42404()
+/**
+ * method_47603
+ */
+fun <T>SimpleOption<T>.createWidget(options: GameOptions, x: Int, y: Int, width: Int, changeCallback: Consumer<T>) = this.method_47603(options, x, y, width, changeCallback)
+/**
+ * method_18520
+ */
+fun <T>SimpleOption<T>.createWidget(options: GameOptions, x: Int, y: Int, width: Int) = this.method_18520(options, x, y, width)

@@ -10,6 +10,10 @@ fun SystemDetails.addSection(name: String, valueSupplier: Supplier<String>) = th
  */
 fun SystemDetails.writeTo(stringBuilder: StringBuilder) = this.method_37124(stringBuilder)
 /**
+ * method_37122
+ */
+fun SystemDetails.addSection(name: String, value: String) = this.method_37122(name, value)
+/**
  * method_37120
  */
 fun SystemDetails.collect() = this.method_37120()

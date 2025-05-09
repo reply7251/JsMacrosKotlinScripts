@@ -14,6 +14,10 @@ fun MapFrameMarker.getRotation() = this.method_83()
  */
 fun MapFrameMarker.getPos() = this.method_86()
 /**
+ * method_82
+ */
+fun MapFrameMarker.getKey() = this.method_82()
+/**
  * method_84
  */
 fun MapFrameMarker.toNbt() = this.method_84()

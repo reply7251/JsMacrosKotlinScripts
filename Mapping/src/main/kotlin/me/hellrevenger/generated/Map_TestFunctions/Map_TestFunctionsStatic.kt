@@ -39,6 +39,14 @@ object TestFunctionsKt {
      */
     fun getBeforeBatchConsumer(batchId: String) = TestFunctions.method_22198(batchId)
     /**
+     * method_36068
+     */
+    fun register(testClass: Class<*>) = TestFunctions.method_36068(testClass)
+    /**
+     * method_22193
+     */
+    fun getTestFunctions(testClass: String) = TestFunctions.method_22193(testClass)
+    /**
      * method_29406
      */
     fun clearFailedTestFunctions() = TestFunctions.method_29406()

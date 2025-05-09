@@ -10,6 +10,10 @@ fun Bucketable.getBucketFillSound() = this.method_35171()
  */
 fun Bucketable.setFromBucket(fromBucket: Boolean) = this.method_6454(fromBucket)
 /**
+ * method_35170
+ */
+fun Bucketable.copyDataFromNbt(nbt: NbtCompound) = this.method_35170(nbt)
+/**
  * method_6455
  */
 fun Bucketable.copyDataToStack(stack: ItemStack) = this.method_6455(stack)

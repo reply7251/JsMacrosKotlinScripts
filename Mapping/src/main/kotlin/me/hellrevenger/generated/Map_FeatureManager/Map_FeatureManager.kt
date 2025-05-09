@@ -21,3 +21,11 @@ fun FeatureManager.toId(features: FeatureSet) = this.method_45392(features)
  * method_45383
  */
 fun FeatureManager.getFeatureSet() = this.method_45383()
+/**
+ * method_45388
+ */
+fun FeatureManager.featureSetOf(features: Iterable<Identifier>, unknownFlagConsumer: Consumer<Identifier>) = this.method_45388(features, unknownFlagConsumer)
+/**
+ * method_45390
+ */
+fun FeatureManager.featureSetOf(features: Array<FeatureFlag>) = this.method_45390(*features)

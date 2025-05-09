@@ -2003,6 +2003,10 @@ typealias Tick<T> = net.minecraft.class_6759<T>
  */
 typealias SocketAddress = java.net.SocketAddress
 /**
+ * java.lang.Void
+ */
+typealias Void = java.lang.Void
+/**
  * net.minecraft.class_355
  */
 typealias PlayerListHud = net.minecraft.class_355
@@ -2811,13 +2815,29 @@ typealias ScheduleCommand = net.minecraft.class_3112
  */
 typealias FlatLevelGeneratorPresets = net.minecraft.class_7143
 /**
+ * com.mojang.datafixers.util.Function3
+ */
+typealias Function3<T1, T2, T3, R> = com.mojang.datafixers.util.Function3<T1, T2, T3, R>
+/**
  * net.minecraft.class_7497
  */
 typealias ApiServices = net.minecraft.class_7497
 /**
+ * com.mojang.datafixers.util.Function5
+ */
+typealias Function5<T1, T2, T3, T4, T5, R> = com.mojang.datafixers.util.Function5<T1, T2, T3, T4, T5, R>
+/**
+ * com.mojang.datafixers.util.Function4
+ */
+typealias Function4<T1, T2, T3, T4, R> = com.mojang.datafixers.util.Function4<T1, T2, T3, T4, R>
+/**
  * com.mojang.datafixers.util.Function7
  */
 typealias Function7<T1, T2, T3, T4, T5, T6, T7, R> = com.mojang.datafixers.util.Function7<T1, T2, T3, T4, T5, T6, T7, R>
+/**
+ * com.mojang.datafixers.util.Function6
+ */
+typealias Function6<T1, T2, T3, T4, T5, T6, R> = com.mojang.datafixers.util.Function6<T1, T2, T3, T4, T5, T6, R>
 /**
  * net.minecraft.class_592
  */
@@ -2838,6 +2858,10 @@ typealias LanguageResourceMetadata = net.minecraft.class_1082
  * net.minecraft.class_2495
  */
 typealias NbtIntArray = net.minecraft.class_2495
+/**
+ * com.mojang.datafixers.util.Function8
+ */
+typealias Function8<T1, T2, T3, T4, T5, T6, T7, T8, R> = com.mojang.datafixers.util.Function8<T1, T2, T3, T4, T5, T6, T7, T8, R>
 /**
  * net.minecraft.class_3351
  */
@@ -3238,6 +3262,10 @@ typealias ScoreboardEntry = net.minecraft.class_9011
  * net.minecraft.class_2675
  */
 typealias ParticleS2CPacket = net.minecraft.class_2675
+/**
+ * java.net.URI
+ */
+typealias URI = java.net.URI
 /**
  * java.net.URL
  */
@@ -8545,6 +8573,10 @@ typealias AnimationFrameResourceMetadata = net.minecraft.class_1080
  */
 typealias RecipeToast = net.minecraft.class_366
 /**
+ * java.util.function.DoubleSupplier
+ */
+typealias DoubleSupplier = java.util.function.DoubleSupplier
+/**
  * net.minecraft.class_7730
  */
 typealias CamelAnimations = net.minecraft.class_7730
@@ -12808,6 +12840,10 @@ typealias MultiValueDebugSampleLog = net.minecraft.class_9194
  */
 typealias SimpleDefaultedRegistry<T> = net.minecraft.class_2348<T>
 /**
+ * java.io.OutputStream
+ */
+typealias OutputStream = java.io.OutputStream
+/**
  * net.minecraft.class_3697
  */
 typealias GoToBedAndSleepGoal = net.minecraft.class_3697
@@ -14888,6 +14924,10 @@ typealias Schema4070 = net.minecraft.class_10273
  */
 typealias ExperimentalWarningScreen = net.minecraft.class_7745
 /**
+ * it.unimi.dsi.fastutil.ints.IntCollection
+ */
+typealias IntCollection = it.unimi.dsi.fastutil.ints.IntCollection
+/**
  * net.minecraft.class_8152
  */
 typealias Targeter = net.minecraft.class_8152
@@ -15963,6 +16003,10 @@ typealias BlockPos = net.minecraft.class_2338
  * net.minecraft.class_3123
  */
 typealias SetIdleTimeoutCommand = net.minecraft.class_3123
+/**
+ * com.mojang.brigadier.exceptions.CommandSyntaxException
+ */
+typealias CommandSyntaxException = com.mojang.brigadier.exceptions.CommandSyntaxException
 /**
  * net.minecraft.class_8911
  */
@@ -18748,6 +18792,10 @@ typealias InfestedBlock = net.minecraft.class_2384
  * net.minecraft.class_8685
  */
 typealias SkinTextures = net.minecraft.class_8685
+/**
+ * java.math.BigInteger
+ */
+typealias BigInteger = java.math.BigInteger
 /**
  * net.minecraft.class_10548
  */
@@ -21933,6 +21981,10 @@ typealias FeatureContext<FC> = net.minecraft.class_5821<FC>
  * java.lang.Exception
  */
 typealias Exception = java.lang.Exception
+/**
+ * java.math.BigDecimal
+ */
+typealias BigDecimal = java.math.BigDecimal
 /**
  * net.minecraft.class_946
  */

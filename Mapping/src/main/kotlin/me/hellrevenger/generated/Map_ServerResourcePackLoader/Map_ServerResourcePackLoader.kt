@@ -50,6 +50,10 @@ fun ServerResourcePackLoader.onForcedReloadFailure() = this.method_55535()
  */
 fun ServerResourcePackLoader.removeAll() = this.method_55537()
 /**
+ * method_55524
+ */
+fun ServerResourcePackLoader.addResourcePack(id: UUID, path: file_Path) = this.method_55524(id, path)
+/**
  * method_55539
  */
 fun ServerResourcePackLoader.acceptAll() = this.method_55539()

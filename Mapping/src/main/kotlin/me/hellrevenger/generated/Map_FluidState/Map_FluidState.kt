@@ -50,6 +50,10 @@ fun FluidState.canFlowTo(world: BlockView, pos: BlockPos) = this.method_15756(wo
  */
 fun FluidState.getRegistryEntry() = this.method_40180()
 /**
+ * method_15767
+ */
+fun FluidState.isIn(tag: TagKey<Fluid>) = this.method_15767(tag)
+/**
  * method_15770
  */
 fun FluidState.onScheduledTick(world: ServerWorld, pos: BlockPos, state: BlockState) = this.method_15770(world, pos, state)
@@ -61,6 +65,10 @@ fun FluidState.getFluid() = this.method_15772()
  * method_15761
  */
 fun FluidState.getLevel() = this.method_15761()
+/**
+ * method_15763
+ */
+fun FluidState.getHeight(world: BlockView, pos: BlockPos) = this.method_15763(world, pos)
 /**
  * method_15769
  */

@@ -303,6 +303,10 @@ object BlocksKt_3 {
      */
     fun never(state: BlockState, world: BlockView, pos: BlockPos) = Blocks.method_26122(state, world, pos)
     /**
+     * method_63053
+     */
+    fun register(key: RegistryKey<Block>, factory: function_Function<net.minecraft.class_4970.class_2251, Block>, settings: net.minecraft.class_4970.class_2251) = Blocks.method_63053(key, factory, settings)
+    /**
      * method_26113
      */
     fun always(state: BlockState, world: BlockView, pos: BlockPos) = Blocks.method_26113(state, world, pos)
@@ -318,6 +322,14 @@ object BlocksKt_3 {
      * method_26126
      */
     fun canSpawnOnLeaves(state: BlockState, world: BlockView, pos: BlockPos, type: EntityType<*>) = Blocks.method_26126(state, world, pos, type)
+    /**
+     * method_26114
+     */
+    fun never(state: BlockState, world: BlockView, pos: BlockPos, type: EntityType<*>) = Blocks.method_26114(state, world, pos, type)
+    /**
+     * method_26123
+     */
+    fun always(state: BlockState, world: BlockView, pos: BlockPos, type: EntityType<*>) = Blocks.method_26123(state, world, pos, type)
     /**
      * method_63117
      */

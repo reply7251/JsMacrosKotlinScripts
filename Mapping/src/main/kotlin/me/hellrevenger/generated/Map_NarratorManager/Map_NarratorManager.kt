@@ -22,6 +22,10 @@ fun NarratorManager.destroy() = this.method_20371()
  */
 fun NarratorManager.narrate(text: Text) = this.method_37015(text)
 /**
+ * method_19788
+ */
+fun NarratorManager.narrate(text: String) = this.method_19788(text)
+/**
  * method_1792
  */
 fun NarratorManager.onModeChange(mode: NarratorMode) = this.method_1792(mode)

@@ -10,4 +10,8 @@ object CollectionCountsPredicateKt {
      * method_59615
      */
     fun <T, P>create(entries: MutableList<net.minecraft.class_9643.class_9644<T, P>>) where P: Predicate<T> = CollectionCountsPredicate.method_59615<T, P>(entries)
+    /**
+     * method_59616
+     */
+    fun <T, P>create(entries: Array<net.minecraft.class_9643.class_9644<T, P>>) where P: Predicate<T> = CollectionCountsPredicate.method_59616<T, P>(*entries)
 }

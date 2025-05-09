@@ -33,3 +33,7 @@ fun ProjectileEntity.calculateVelocity(x: Double, arg1: Double, y: Double, arg3:
  * method_61546
  */
 fun ProjectileEntity.triggerProjectileSpawned(world: ServerWorld, projectileStack: ItemStack) = this.method_61546(world, projectileStack)
+/**
+ * method_24919
+ */
+fun ProjectileEntity.setVelocity(shooter: Entity, pitch: Float, yaw: Float, roll: Float, speed: Float, divergence: Float) = this.method_24919(shooter, pitch, yaw, roll, speed, divergence)

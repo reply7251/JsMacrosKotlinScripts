@@ -38,6 +38,10 @@ fun BlockLootTableGenerator.seagrassDrops(seagrass: Block) = this.method_46019(s
  */
 fun BlockLootTableGenerator.beehiveDrops(drop: Block) = this.method_46015(drop)
 /**
+ * method_46001
+ */
+fun BlockLootTableGenerator.dropsWithShears(block: Block, loot: net.minecraft.class_79.class_80<*>) = this.method_46001(block, loot)
+/**
  * method_60391
  */
 fun BlockLootTableGenerator.createWithoutSilkTouchCondition() = this.method_60391()
@@ -74,6 +78,10 @@ fun BlockLootTableGenerator.addDrop(block: Block, lootTableFunction: function_Fu
  */
 fun BlockLootTableGenerator.addDropWithSilkTouch(block: Block) = this.method_46024(block)
 /**
+ * method_45989
+ */
+fun BlockLootTableGenerator.dropsWithSilkTouch(block: Block, loot: net.minecraft.class_79.class_80<*>) = this.method_45989(block, loot)
+/**
  * method_46012
  */
 fun BlockLootTableGenerator.redstoneOreDrops(drop: Block) = this.method_46012(drop)
@@ -94,6 +102,10 @@ fun BlockLootTableGenerator.dropsWithSilkTouchOrShears(block: Block, loot: net.m
  */
 fun BlockLootTableGenerator.shulkerBoxDrops(drop: Block) = this.method_46004(drop)
 /**
+ * method_45988
+ */
+fun BlockLootTableGenerator.addDrop(block: Block, lootTable: net.minecraft.class_52.class_53) = this.method_45988(block, lootTable)
+/**
  * method_46016
  */
 fun BlockLootTableGenerator.glowBerryDrops(drop: Block) = this.method_46016(drop)
@@ -102,9 +114,21 @@ fun BlockLootTableGenerator.glowBerryDrops(drop: Block) = this.method_46016(drop
  */
 fun BlockLootTableGenerator.createSilkTouchCondition() = this.method_60390()
 /**
+ * method_46007
+ */
+fun BlockLootTableGenerator.addDropWithSilkTouch(block: Block, drop: Block) = this.method_46007(block, drop)
+/**
+ * method_45983
+ */
+fun BlockLootTableGenerator.drops(withSilkTouch: Block, withoutSilkTouch: ItemConvertible) = this.method_45983(withSilkTouch, withoutSilkTouch)
+/**
  * method_46009
  */
 fun BlockLootTableGenerator.pottedPlantDrops(drop: ItemConvertible) = this.method_46009(drop)
+/**
+ * method_46006
+ */
+fun BlockLootTableGenerator.addDrop(block: Block, drop: ItemConvertible) = this.method_46006(block, drop)
 /**
  * method_49358
  */
@@ -122,6 +146,10 @@ fun <T>BlockLootTableGenerator.dropsWithProperty(drop: Block, property: property
  */
 fun BlockLootTableGenerator.shortPlantDrops(withShears: Block) = this.method_46017(withShears)
 /**
+ * method_46025
+ */
+fun BlockLootTableGenerator.addDrop(block: Block) = this.method_46025(block)
+/**
  * method_46000
  */
 fun BlockLootTableGenerator.oakLeavesDrops(leaves: Block, sapling: Block, saplingChance: FloatArray) = this.method_46000(leaves, sapling, *saplingChance)
@@ -133,6 +161,10 @@ fun <T>BlockLootTableGenerator.addSurvivesExplosionCondition(drop: ItemConvertib
  * method_60393
  */
 fun BlockLootTableGenerator.createWithoutShearsOrSilkTouchCondition() = this.method_60393()
+/**
+ * method_45984
+ */
+fun BlockLootTableGenerator.drops(block: Block, drop: ItemConvertible, count: LootNumberProvider) = this.method_45984(block, drop, count)
 /**
  * method_45977
  */
@@ -166,9 +198,21 @@ fun BlockLootTableGenerator.leavesDrops(leaves: Block, sapling: Block, saplingCh
  */
 fun BlockLootTableGenerator.generate() = this.method_10379()
 /**
+ * method_45990
+ */
+fun BlockLootTableGenerator.multifaceGrowthDrops(drop: Block, condition: net.minecraft.class_5341.class_210) = this.method_45990(drop, condition)
+/**
+ * method_45976
+ */
+fun BlockLootTableGenerator.drops(drop: ItemConvertible) = this.method_45976(drop)
+/**
  * method_46018
  */
 fun BlockLootTableGenerator.mangroveLeavesDrops(leaves: Block) = this.method_46018(leaves)
+/**
+ * method_65053
+ */
+fun BlockLootTableGenerator.dropsWithSilkTouchOrShears(item: ItemConvertible) = this.method_65053(item)
 /**
  * method_46014
  */

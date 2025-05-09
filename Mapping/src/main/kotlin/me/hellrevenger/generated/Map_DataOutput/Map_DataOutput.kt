@@ -10,6 +10,10 @@ fun DataOutput.getTagResolver(registryRef: RegistryKey<out Registry<*>>) = this.
  */
 fun DataOutput.getResolver(outputType: net.minecraft.class_7784.class_7490, directoryName: String) = this.method_45973(outputType, directoryName)
 /**
+ * method_60917
+ */
+fun DataOutput.getResolver(registryRef: RegistryKey<out Registry<*>>) = this.method_60917(registryRef)
+/**
  * method_45971
  */
 fun DataOutput.getPath() = this.method_45971()

@@ -15,6 +15,10 @@ object TextFixesKt {
      */
     fun <T>fixText(dynamic: Dynamic<T>) = TextFixes.method_53958<T>(dynamic)
     /**
+     * method_56629
+     */
+    fun text(dynamic: Dynamic<*>) = TextFixes.method_56629(dynamic)
+    /**
      * method_58596
      */
     fun getTranslate(json: String) = TextFixes.method_58596(json)

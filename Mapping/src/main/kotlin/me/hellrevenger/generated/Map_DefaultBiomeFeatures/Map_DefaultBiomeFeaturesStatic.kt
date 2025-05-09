@@ -279,6 +279,10 @@ object DefaultBiomeFeaturesKt {
      */
     fun addMonsters(builder: net.minecraft.class_5483.class_5496, zombieWeight: Int, zombieVillagerWeight: Int, skeletonWeight: Int, drowned: Boolean) = DefaultBiomeFeatures.method_30578(builder, zombieWeight, zombieVillagerWeight, skeletonWeight, drowned)
     /**
+     * method_30581
+     */
+    fun addBatsAndMonsters(builder: net.minecraft.class_5483.class_5496) = DefaultBiomeFeatures.method_30581(builder)
+    /**
      * method_16990
      */
     fun addFossils(builder: net.minecraft.class_5485.class_5495) = DefaultBiomeFeatures.method_16990(builder)
@@ -326,6 +330,10 @@ object DefaultBiomeFeaturesKt {
      * method_17020
      */
     fun addBirchTrees(builder: net.minecraft.class_5485.class_5495) = DefaultBiomeFeatures.method_17020(builder)
+    /**
+     * method_38568
+     */
+    fun addDefaultOres(builder: net.minecraft.class_5485.class_5495) = DefaultBiomeFeatures.method_38568(builder)
     /**
      * method_16970
      */

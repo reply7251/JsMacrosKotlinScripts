@@ -90,6 +90,10 @@ fun Biome.getWaterFogColor() = this.method_8713()
  */
 fun Biome.getParticleConfig() = this.method_24378()
 /**
+ * method_8705
+ */
+fun Biome.canSetIce(world: WorldView, blockPos: BlockPos) = this.method_8705(world, blockPos)
+/**
  * method_8687
  */
 fun Biome.getWaterColor() = this.method_8687()
