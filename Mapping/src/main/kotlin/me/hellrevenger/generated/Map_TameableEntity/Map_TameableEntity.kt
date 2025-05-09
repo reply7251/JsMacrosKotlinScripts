@@ -12,7 +12,7 @@ fun TameableEntity.isInSittingPose() = this.method_6172()
 /**
  * method_6171
  */
-fun TameableEntity.isOwner(arg0: LivingEntity) = this.method_6171(arg0)
+fun TameableEntity.isOwner(entity: LivingEntity) = this.method_6171(entity)
 /**
  * method_6181
  */
@@ -20,11 +20,11 @@ fun TameableEntity.isTamed() = this.method_6181()
 /**
  * method_6170
  */
-fun TameableEntity.setOwner(arg0: PlayerEntity) = this.method_6170(arg0)
+fun TameableEntity.setOwner(player: PlayerEntity) = this.method_6170(player)
 /**
  * method_24346
  */
-fun TameableEntity.setSitting(arg0: Boolean) = this.method_24346(arg0)
+fun TameableEntity.setSitting(sitting: Boolean) = this.method_24346(sitting)
 /**
  * method_60713
  */
@@ -32,7 +32,7 @@ fun TameableEntity.tryTeleportToOwner() = this.method_60713()
 /**
  * method_6174
  */
-fun TameableEntity.setOwnerUuid(arg0: UUID) = this.method_6174(arg0)
+fun TameableEntity.setOwnerUuid(uuid: UUID) = this.method_6174(uuid)
 /**
  * method_60714
  */
@@ -40,7 +40,7 @@ fun TameableEntity.shouldTryTeleportToOwner() = this.method_60714()
 /**
  * method_6178
  */
-fun TameableEntity.canAttackWithOwner(arg0: LivingEntity, arg1: LivingEntity) = this.method_6178(arg0, arg1)
+fun TameableEntity.canAttackWithOwner(target: LivingEntity, owner: LivingEntity) = this.method_6178(target, owner)
 /**
  * method_60715
  */
@@ -48,8 +48,8 @@ fun TameableEntity.cannotFollowOwner() = this.method_60715()
 /**
  * method_6173
  */
-fun TameableEntity.setTamed(arg0: Boolean, arg1: Boolean) = this.method_6173(arg0, arg1)
+fun TameableEntity.setTamed(tamed: Boolean, updateAttributes: Boolean) = this.method_6173(tamed, updateAttributes)
 /**
  * method_6179
  */
-fun TameableEntity.setInSittingPose(arg0: Boolean) = this.method_6179(arg0)
+fun TameableEntity.setInSittingPose(inSittingPose: Boolean) = this.method_6179(inSittingPose)

@@ -24,4 +24,4 @@ fun BakedModel.isSideLit() = this.method_24304()
 /**
  * method_4707
  */
-fun BakedModel.getQuads(arg0: BlockState, arg1: Direction, arg2: Random) = this.method_4707(arg0, arg1, arg2)
+fun BakedModel.getQuads(state: BlockState, face: Direction, random: Random) = this.method_4707(state, face, random)

@@ -8,7 +8,7 @@ fun FluidPredicate.state() = this.comp_1782()
 /**
  * method_22475
  */
-fun FluidPredicate.test(arg0: ServerWorld, arg1: BlockPos) = this.method_22475(arg0, arg1)
+fun FluidPredicate.test(world: ServerWorld, pos: BlockPos) = this.method_22475(world, pos)
 /**
  * comp_2372
  */

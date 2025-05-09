@@ -40,4 +40,4 @@ var WolfEntityRenderState.inSittingPose by alias(WolfEntityRenderState::field_53
 /**
  * method_62618
  */
-fun WolfEntityRenderState.getRoll(arg0: Float) = this.method_62618(arg0)
+fun WolfEntityRenderState.getRoll(shakeOffset: Float) = this.method_62618(shakeOffset)

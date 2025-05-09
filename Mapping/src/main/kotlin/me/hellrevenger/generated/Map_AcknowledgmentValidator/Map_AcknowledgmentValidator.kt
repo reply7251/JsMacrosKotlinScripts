@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44989
  */
-fun AcknowledgmentValidator.addPending(arg0: MessageSignatureData) = this.method_44989(arg0)
+fun AcknowledgmentValidator.addPending(signature: MessageSignatureData) = this.method_44989(signature)
 /**
  * method_46268
  */
@@ -12,8 +12,8 @@ fun AcknowledgmentValidator.getMessageCount() = this.method_46268()
 /**
  * method_46269
  */
-fun AcknowledgmentValidator.removeUntil(arg0: Int) = this.method_46269(arg0)
+fun AcknowledgmentValidator.removeUntil(index: Int) = this.method_46269(index)
 /**
  * method_46270
  */
-fun AcknowledgmentValidator.validate(arg0: net.minecraft.class_7635.class_7636) = this.method_46270(arg0)
+fun AcknowledgmentValidator.validate(acknowledgment: net.minecraft.class_7635.class_7636) = this.method_46270(acknowledgment)

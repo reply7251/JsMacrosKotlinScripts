@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_15995
  */
-fun WindowEventHandler.onWindowFocusChanged(arg0: Boolean) = this.method_15995(arg0)
+fun WindowEventHandler.onWindowFocusChanged(focused: Boolean) = this.method_15995(focused)
 /**
  * method_30133
  */

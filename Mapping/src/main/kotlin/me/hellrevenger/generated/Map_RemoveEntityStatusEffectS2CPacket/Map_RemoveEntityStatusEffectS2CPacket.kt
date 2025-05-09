@@ -8,7 +8,7 @@ fun RemoveEntityStatusEffectS2CPacket.apply(arg0: ClientPlayPacketListener) = th
 /**
  * method_11767
  */
-fun RemoveEntityStatusEffectS2CPacket.getEntity(arg0: world_World) = this.method_11767(arg0)
+fun RemoveEntityStatusEffectS2CPacket.getEntity(world: world_World) = this.method_11767(world)
 /**
  * comp_2176
  */

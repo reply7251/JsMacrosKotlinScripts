@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_14461
  */
-fun ResourcePackProfile.getInformationText(arg0: Boolean) = this.method_14461(arg0)
+fun ResourcePackProfile.getInformationText(enabled: Boolean) = this.method_14461(enabled)
 /**
  * method_56933
  */
@@ -34,10 +34,6 @@ fun ResourcePackProfile.getCompatibility() = this.method_14460()
  */
 fun ResourcePackProfile.getRequestedFeatures() = this.method_45276()
 /**
- * method_45274
- */
-fun KClass<ResourcePackProfile>.loadMetadata(arg0: ResourcePackInfo, arg1: net.minecraft.class_3288.class_7680, arg2: Int) = ResourcePackProfile.method_45274(arg0, arg1, arg2)
-/**
  * method_29483
  */
 fun ResourcePackProfile.getSource() = this.method_29483()
@@ -49,10 +45,6 @@ fun ResourcePackProfile.getDisplayName() = this.method_14457()
  * method_14464
  */
 fun ResourcePackProfile.isRequired() = this.method_14464()
-/**
- * method_45275
- */
-fun KClass<ResourcePackProfile>.create(arg0: ResourcePackInfo, arg1: net.minecraft.class_3288.class_7680, arg2: ResourceType, arg3: ResourcePackPosition) = ResourcePackProfile.method_45275(arg0, arg1, arg2, arg3)
 /**
  * method_14459
  */

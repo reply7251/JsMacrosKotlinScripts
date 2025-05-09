@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_26784
  */
-fun TagBuilder.add(arg0: Identifier) = this.method_26784(arg0)
+fun TagBuilder.add(id: Identifier) = this.method_26784(id)
 /**
  * method_26782
  */
@@ -12,20 +12,12 @@ fun TagBuilder.build() = this.method_26782()
 /**
  * method_26787
  */
-fun TagBuilder.addTag(arg0: Identifier) = this.method_26787(arg0)
-/**
- * method_27064
- */
-fun TagBuilder.add(arg0: tag_TagEntry) = this.method_27064(arg0)
+fun TagBuilder.addTag(id: Identifier) = this.method_26787(id)
 /**
  * method_34891
  */
-fun TagBuilder.addOptional(arg0: Identifier) = this.method_34891(arg0)
+fun TagBuilder.addOptional(id: Identifier) = this.method_34891(id)
 /**
  * method_34892
  */
-fun TagBuilder.addOptionalTag(arg0: Identifier) = this.method_34892(arg0)
-/**
- * method_26778
- */
-fun KClass<TagBuilder>.create() = TagBuilder.method_26778()
+fun TagBuilder.addOptionalTag(id: Identifier) = this.method_34892(id)

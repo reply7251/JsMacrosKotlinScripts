@@ -12,7 +12,7 @@ var GpuBuffer.size by alias(GpuBuffer::field_54351)
 /**
  * method_64321
  */
-fun GpuBuffer.copyFrom(arg0: ByteBuffer, arg1: Int) = this.method_64321(arg0, arg1)
+fun GpuBuffer.copyFrom(buf: ByteBuffer, offset: Int) = this.method_64321(buf, offset)
 /**
  * method_64318
  */
@@ -20,12 +20,8 @@ fun GpuBuffer.read() = this.method_64318()
 /**
  * method_64319
  */
-fun GpuBuffer.resize(arg0: Int) = this.method_64319(arg0)
+fun GpuBuffer.resize(newSize: Int) = this.method_64319(newSize)
 /**
  * method_64322
  */
 fun GpuBuffer.bind() = this.method_64322()
-/**
- * method_64320
- */
-fun GpuBuffer.read(arg0: Int, arg1: Int) = this.method_64320(arg0, arg1)

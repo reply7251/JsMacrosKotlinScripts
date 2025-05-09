@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_64501
  */
-fun AbstractChestBoatEntity.generateLoot(arg0: PlayerEntity) = this.method_64501(arg0)
+fun AbstractChestBoatEntity.generateLoot(player: PlayerEntity) = this.method_64501(player)

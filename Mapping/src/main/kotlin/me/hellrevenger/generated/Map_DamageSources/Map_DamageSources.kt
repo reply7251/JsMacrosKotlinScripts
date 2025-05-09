@@ -8,27 +8,27 @@ val DamageSources.registry by alias(DamageSources::field_42296)
 /**
  * method_48814
  */
-fun DamageSources.fallingStalactite(arg0: Entity) = this.method_48814(arg0)
+fun DamageSources.fallingStalactite(attacker: Entity) = this.method_48814(attacker)
 /**
  * method_48803
  */
-fun DamageSources.arrow(arg0: PersistentProjectileEntity, arg1: Entity) = this.method_48803(arg0, arg1)
+fun DamageSources.arrow(source: PersistentProjectileEntity, attacker: Entity) = this.method_48803(source, attacker)
 /**
  * method_48801
  */
-fun DamageSources.sting(arg0: LivingEntity) = this.method_48801(arg0)
+fun DamageSources.sting(attacker: LivingEntity) = this.method_48801(attacker)
 /**
  * method_48810
  */
-fun DamageSources.fallingAnvil(arg0: Entity) = this.method_48810(arg0)
+fun DamageSources.fallingAnvil(attacker: Entity) = this.method_48810(attacker)
 /**
  * method_55648
  */
-fun DamageSources.windCharge(arg0: Entity, arg1: LivingEntity) = this.method_55648(arg0, arg1)
+fun DamageSources.windCharge(source: Entity, attacker: LivingEntity) = this.method_55648(source, attacker)
 /**
  * method_48806
  */
-fun DamageSources.witherSkull(arg0: WitherSkullEntity, arg1: Entity) = this.method_48806(arg0, arg1)
+fun DamageSources.witherSkull(source: WitherSkullEntity, attacker: Entity) = this.method_48806(source, attacker)
 /**
  * method_51847
  */
@@ -36,7 +36,7 @@ fun DamageSources.genericKill() = this.method_51847()
 /**
  * method_48818
  */
-fun DamageSources.thorns(arg0: Entity) = this.method_48818(arg0)
+fun DamageSources.thorns(attacker: Entity) = this.method_48818(attacker)
 /**
  * method_48826
  */
@@ -56,11 +56,11 @@ fun DamageSources.inWall() = this.method_48822()
 /**
  * method_48798
  */
-fun DamageSources.fallingBlock(arg0: Entity) = this.method_48798(arg0)
+fun DamageSources.fallingBlock(attacker: Entity) = this.method_48798(attacker)
 /**
  * method_55647
  */
-fun DamageSources.spit(arg0: Entity, arg1: LivingEntity) = this.method_55647(arg0, arg1)
+fun DamageSources.spit(source: Entity, attacker: LivingEntity) = this.method_55647(source, attacker)
 /**
  * method_51846
  */
@@ -76,7 +76,7 @@ fun DamageSources.hotFloor() = this.method_48820()
 /**
  * method_48799
  */
-fun DamageSources.trident(arg0: Entity, arg1: Entity) = this.method_48799(arg0, arg1)
+fun DamageSources.trident(source: Entity, attacker: Entity) = this.method_48799(source, attacker)
 /**
  * method_48837
  */
@@ -104,7 +104,7 @@ fun DamageSources.onFire() = this.method_48813()
 /**
  * method_48805
  */
-fun DamageSources.fireworks(arg0: FireworkRocketEntity, arg1: Entity) = this.method_48805(arg0, arg1)
+fun DamageSources.fireworks(source: FireworkRocketEntity, attacker: Entity) = this.method_48805(source, attacker)
 /**
  * method_48809
  */
@@ -112,11 +112,11 @@ fun DamageSources.lightningBolt() = this.method_48809()
 /**
  * method_48795
  */
-fun DamageSources.create(arg0: RegistryKey<DamageType>) = this.method_48795(arg0)
+fun DamageSources.create(key: RegistryKey<DamageType>) = this.method_48795(key)
 /**
  * method_48804
  */
-fun DamageSources.fireball(arg0: AbstractFireballEntity, arg1: Entity) = this.method_48804(arg0, arg1)
+fun DamageSources.fireball(source: AbstractFireballEntity, attacker: Entity) = this.method_48804(source, attacker)
 /**
  * method_48831
  */
@@ -126,13 +126,9 @@ fun DamageSources.magic() = this.method_48831()
  */
 fun DamageSources.inFire() = this.method_48794()
 /**
- * method_48796
- */
-fun DamageSources.create(arg0: RegistryKey<DamageType>, arg1: Entity) = this.method_48796(arg0, arg1)
-/**
  * method_48802
  */
-fun DamageSources.playerAttack(arg0: PlayerEntity) = this.method_48802(arg0)
+fun DamageSources.playerAttack(attacker: PlayerEntity) = this.method_48802(attacker)
 /**
  * method_48828
  */
@@ -148,27 +144,23 @@ fun DamageSources.drown() = this.method_48824()
 /**
  * method_48800
  */
-fun DamageSources.mobProjectile(arg0: Entity, arg1: LivingEntity) = this.method_48800(arg0, arg1)
+fun DamageSources.mobProjectile(source: Entity, attacker: LivingEntity) = this.method_48800(source, attacker)
 /**
  * method_48816
  */
-fun DamageSources.mobAttackNoAggro(arg0: LivingEntity) = this.method_48816(arg0)
-/**
- * method_48797
- */
-fun DamageSources.create(arg0: RegistryKey<DamageType>, arg1: Entity, arg2: Entity) = this.method_48797(arg0, arg1, arg2)
+fun DamageSources.mobAttackNoAggro(attacker: LivingEntity) = this.method_48816(attacker)
 /**
  * method_48812
  */
-fun DamageSources.mobAttack(arg0: LivingEntity) = this.method_48812(arg0)
+fun DamageSources.mobAttack(attacker: LivingEntity) = this.method_48812(attacker)
 /**
  * method_48821
  */
-fun DamageSources.sonicBoom(arg0: Entity) = this.method_48821(arg0)
+fun DamageSources.sonicBoom(attacker: Entity) = this.method_48821(attacker)
 /**
  * method_61398
  */
-fun DamageSources.maceSmash(arg0: Entity) = this.method_61398(arg0)
+fun DamageSources.maceSmash(attacker: Entity) = this.method_61398(attacker)
 /**
  * method_48830
  */
@@ -176,7 +168,7 @@ fun DamageSources.generic() = this.method_48830()
 /**
  * method_48808
  */
-fun DamageSources.badRespawnPoint(arg0: Vec3d) = this.method_48808(arg0)
+fun DamageSources.badRespawnPoint(position: Vec3d) = this.method_48808(position)
 /**
  * method_48827
  */
@@ -184,7 +176,7 @@ fun DamageSources.fall() = this.method_48827()
 /**
  * method_48811
  */
-fun DamageSources.thrown(arg0: Entity, arg1: Entity) = this.method_48811(arg0, arg1)
+fun DamageSources.thrown(source: Entity, attacker: Entity) = this.method_48811(source, attacker)
 /**
  * method_48823
  */
@@ -196,7 +188,7 @@ fun DamageSources.campfire() = this.method_59917()
 /**
  * method_48815
  */
-fun DamageSources.indirectMagic(arg0: Entity, arg1: Entity) = this.method_48815(arg0, arg1)
+fun DamageSources.indirectMagic(source: Entity, attacker: Entity) = this.method_48815(source, attacker)
 /**
  * method_48835
  */
@@ -204,8 +196,4 @@ fun DamageSources.sweetBerryBush() = this.method_48835()
 /**
  * method_48807
  */
-fun DamageSources.explosion(arg0: Explosion) = this.method_48807(arg0)
-/**
- * method_48819
- */
-fun DamageSources.explosion(arg0: Entity, arg1: Entity) = this.method_48819(arg0, arg1)
+fun DamageSources.explosion(explosion: Explosion) = this.method_48807(explosion)

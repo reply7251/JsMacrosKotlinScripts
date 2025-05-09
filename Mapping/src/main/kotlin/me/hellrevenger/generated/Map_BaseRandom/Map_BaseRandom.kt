@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_43156
  */
-fun BaseRandom.next(arg0: Int) = this.method_43156(arg0)
+fun BaseRandom.next(bits: Int) = this.method_43156(bits)

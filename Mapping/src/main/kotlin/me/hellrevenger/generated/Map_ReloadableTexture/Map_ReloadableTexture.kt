@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_65809
  */
-fun ReloadableTexture.loadContents(arg0: ResourceManager) = this.method_65809(arg0)
+fun ReloadableTexture.loadContents(resourceManager: ResourceManager) = this.method_65809(resourceManager)
 /**
  * method_65857
  */
-fun ReloadableTexture.reload(arg0: TextureContents) = this.method_65857(arg0)
+fun ReloadableTexture.reload(contents: TextureContents) = this.method_65857(contents)
 /**
  * method_65859
  */

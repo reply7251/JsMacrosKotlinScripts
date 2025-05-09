@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_2821
  */
-fun SkullBlockEntityModel.setHeadRotation(arg0: Float, arg1: Float, arg2: Float) = this.method_2821(arg0, arg1, arg2)
+fun SkullBlockEntityModel.setHeadRotation(animationProgress: Float, yaw: Float, pitch: Float) = this.method_2821(animationProgress, yaw, pitch)

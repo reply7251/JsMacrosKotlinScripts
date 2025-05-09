@@ -4,15 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_48251
  */
-fun ScreenRect.add(arg0: NavigationDirection) = this.method_48251(arg0)
+fun ScreenRect.add(direction: NavigationDirection) = this.method_48251(direction)
 /**
  * method_49701
  */
-fun ScreenRect.intersection(arg0: ScreenRect) = this.method_49701(arg0)
-/**
- * method_48250
- */
-fun KClass<ScreenRect>.of(arg0: NavigationAxis, arg1: Int, arg2: Int, arg3: Int, arg4: Int) = ScreenRect.method_48250(arg0, arg1, arg2, arg3, arg4)
+fun ScreenRect.intersection(other: ScreenRect) = this.method_49701(other)
 /**
  * method_49621
  */
@@ -22,37 +18,29 @@ fun ScreenRect.getRight() = this.method_49621()
  */
 fun ScreenRect.getLeft() = this.method_49620()
 /**
- * method_48248
- */
-fun KClass<ScreenRect>.empty() = ScreenRect.method_48248()
-/**
  * method_48256
  */
-fun ScreenRect.getBorder(arg0: NavigationDirection) = this.method_48256(arg0)
+fun ScreenRect.getBorder(direction: NavigationDirection) = this.method_48256(direction)
 /**
  * method_48249
  */
-fun ScreenRect.getLength(arg0: NavigationAxis) = this.method_48249(arg0)
+fun ScreenRect.getLength(axis: NavigationAxis) = this.method_48249(axis)
 /**
  * method_48254
  */
-fun ScreenRect.getCenter(arg0: NavigationAxis) = this.method_48254(arg0)
+fun ScreenRect.getCenter(axis: NavigationAxis) = this.method_48254(axis)
 /**
  * method_48255
  */
-fun ScreenRect.getBoundingCoordinate(arg0: NavigationDirection) = this.method_48255(arg0)
+fun ScreenRect.getBoundingCoordinate(direction: NavigationDirection) = this.method_48255(direction)
 /**
  * method_48253
  */
-fun ScreenRect.overlaps(arg0: ScreenRect, arg1: NavigationAxis) = this.method_48253(arg0, arg1)
-/**
- * method_48252
- */
-fun ScreenRect.overlaps(arg0: ScreenRect) = this.method_48252(arg0)
+fun ScreenRect.overlaps(other: ScreenRect, axis: NavigationAxis) = this.method_48253(other, axis)
 /**
  * method_65185
  */
-fun ScreenRect.transform(arg0: Matrix4f) = this.method_65185(arg0)
+fun ScreenRect.transform(positionMatrix: Matrix4f) = this.method_65185(positionMatrix)
 /**
  * method_49618
  */
@@ -60,7 +48,7 @@ fun ScreenRect.getTop() = this.method_49618()
 /**
  * method_58137
  */
-fun ScreenRect.contains(arg0: Int, arg1: Int) = this.method_58137(arg0, arg1)
+fun ScreenRect.contains(x: Int, y: Int) = this.method_58137(x, y)
 /**
  * method_49619
  */

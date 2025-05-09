@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_4985
  */
-fun EntityShulkerColorFix.fixShulkerColor(arg0: Dynamic<*>) = this.method_4985(arg0)
+fun EntityShulkerColorFix.fixShulkerColor(shulkerDynamic: Dynamic<*>) = this.method_4985(shulkerDynamic)

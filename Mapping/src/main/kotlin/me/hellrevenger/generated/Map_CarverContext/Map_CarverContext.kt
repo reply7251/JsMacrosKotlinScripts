@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_39114
  */
-fun CarverContext.applyMaterialRule(arg0: function_Function<BlockPos, RegistryEntry<Biome>>, arg1: Chunk, arg2: BlockPos, arg3: Boolean) = this.method_39114(arg0, arg1, arg2, arg3)
+fun CarverContext.applyMaterialRule(posToBiome: function_Function<BlockPos, RegistryEntry<Biome>>, chunk: Chunk, pos: BlockPos, hasFluid: Boolean) = this.method_39114(posToBiome, chunk, pos, hasFluid)
 /**
  * method_41570
  */

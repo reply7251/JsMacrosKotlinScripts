@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_39876
  */
-fun NbtElement.accept(arg0: NbtScanner) = this.method_39876(arg0)
+fun NbtElement.accept(visitor: NbtScanner) = this.method_39876(visitor)
 /**
  * method_10714
  */
@@ -24,15 +24,11 @@ fun NbtElement.getType() = this.method_10711()
 /**
  * method_39850
  */
-fun NbtElement.doAccept(arg0: NbtScanner) = this.method_39850(arg0)
+fun NbtElement.doAccept(visitor: NbtScanner) = this.method_39850(visitor)
 /**
  * method_10713
  */
-fun NbtElement.write(arg0: io_DataOutput) = this.method_10713(arg0)
-/**
- * method_32289
- */
-fun NbtElement.accept(arg0: NbtElementVisitor) = this.method_32289(arg0)
+fun NbtElement.write(output: io_DataOutput) = this.method_10713(output)
 /**
  * method_47988
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_62153
  */
-fun PlayerListEntry.setListOrder(arg0: Int) = this.method_62153(arg0)
+fun PlayerListEntry.setListOrder(listOrder: Int) = this.method_62153(listOrder)
 /**
  * method_44817
  */
@@ -28,7 +28,7 @@ fun PlayerListEntry.getDisplayName() = this.method_2971()
 /**
  * method_2962
  */
-fun PlayerListEntry.setDisplayName(arg0: Text) = this.method_2962(arg0)
+fun PlayerListEntry.setDisplayName(displayName: Text) = this.method_2962(displayName)
 /**
  * method_65195
  */
@@ -52,7 +52,7 @@ fun PlayerListEntry.getListOrder() = this.method_62154()
 /**
  * method_65194
  */
-fun PlayerListEntry.setShowHat(arg0: Boolean) = this.method_65194(arg0)
+fun PlayerListEntry.setShowHat(showHat: Boolean) = this.method_65194(showHat)
 /**
  * method_52810
  */

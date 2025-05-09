@@ -2,13 +2,9 @@ package me.hellrevenger.generated.Map_PackOverlaysMetadata
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_45045
- */
-val KClass<PackOverlaysMetadata>.SERIALIZER by aliasStatic(PackOverlaysMetadata::field_45045)
-/**
  * method_52427
  */
-fun PackOverlaysMetadata.getAppliedOverlays(arg0: Int) = this.method_52427(arg0)
+fun PackOverlaysMetadata.getAppliedOverlays(packFormat: Int) = this.method_52427(packFormat)
 /**
  * comp_1577
  */

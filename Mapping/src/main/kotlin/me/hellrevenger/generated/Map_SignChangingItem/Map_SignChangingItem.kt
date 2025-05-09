@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_49798
  */
-fun SignChangingItem.useOnSign(arg0: world_World, arg1: SignBlockEntity, arg2: Boolean, arg3: PlayerEntity) = this.method_49798(arg0, arg1, arg2, arg3)
+fun SignChangingItem.useOnSign(world: world_World, signBlockEntity: SignBlockEntity, front: Boolean, player: PlayerEntity) = this.method_49798(world, signBlockEntity, front, player)
 /**
  * method_49801
  */
-fun SignChangingItem.canUseOnSignText(arg0: SignText, arg1: PlayerEntity) = this.method_49801(arg0, arg1)
+fun SignChangingItem.canUseOnSignText(signText: SignText, player: PlayerEntity) = this.method_49801(signText, player)

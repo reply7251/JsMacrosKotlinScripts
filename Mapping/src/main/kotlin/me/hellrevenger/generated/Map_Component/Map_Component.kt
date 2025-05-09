@@ -4,15 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_57946
  */
-fun <T>Component<T>.apply(arg0: MergedComponentMap) = this.method_57946(arg0)
-/**
- * method_57945
- */
-fun <T>KClass<Component<T>>.of(arg0: ComponentType<T>, arg1: Object) = Component.method_57945<T>(arg0, arg1)
+fun <T>Component<T>.apply(components: MergedComponentMap) = this.method_57946(components)
 /**
  * method_57943
  */
-fun <T, D>Component<T>.encode(arg0: DynamicOps<D>) = this.method_57943<D>(arg0)
+fun <T, D>Component<T>.encode(ops: DynamicOps<D>) = this.method_57943<D>(ops)
 /**
  * comp_2444
  */

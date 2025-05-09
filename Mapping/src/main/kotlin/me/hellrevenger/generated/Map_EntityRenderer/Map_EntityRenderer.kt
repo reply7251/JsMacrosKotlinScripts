@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_62425
  */
-fun <T, S>EntityRenderer<T, S>.getAndUpdateRenderState(arg0: T, arg1: Float) where T: Entity, S: EntityRenderState = this.method_62425(arg0, arg1)
+fun <T, S>EntityRenderer<T, S>.getAndUpdateRenderState(entity: T, tickDelta: Float) where T: Entity, S: EntityRenderState = this.method_62425(entity, tickDelta)
 /**
  * method_55269
  */
@@ -12,23 +12,23 @@ fun <T, S>EntityRenderer<T, S>.createRenderState() where T: Entity, S: EntityRen
 /**
  * method_24088
  */
-fun <T, S>EntityRenderer<T, S>.getLight(arg0: T, arg1: Float) where T: Entity, S: EntityRenderState = this.method_24088(arg0, arg1)
+fun <T, S>EntityRenderer<T, S>.getLight(entity: T, tickDelta: Float) where T: Entity, S: EntityRenderState = this.method_24088(entity, tickDelta)
 /**
  * method_23169
  */
-fun <T, S>EntityRenderer<T, S>.getPositionOffset(arg0: S) where T: Entity, S: EntityRenderState = this.method_23169(arg0)
+fun <T, S>EntityRenderer<T, S>.getPositionOffset(state: S) where T: Entity, S: EntityRenderState = this.method_23169(state)
 /**
  * method_3936
  */
-fun <T, S>EntityRenderer<T, S>.render(arg0: S, arg1: MatrixStack, arg2: VertexConsumerProvider, arg3: Int) where T: Entity, S: EntityRenderState = this.method_3936(arg0, arg1, arg2, arg3)
+fun <T, S>EntityRenderer<T, S>.render(state: S, matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int) where T: Entity, S: EntityRenderState = this.method_3936(state, matrices, vertexConsumers, light)
 /**
  * method_3933
  */
-fun <T, S>EntityRenderer<T, S>.shouldRender(arg0: T, arg1: Frustum, arg2: Double, arg3: Double, arg4: Double) where T: Entity, S: EntityRenderState = this.method_3933(arg0, arg1, arg2, arg3, arg4)
+fun <T, S>EntityRenderer<T, S>.shouldRender(entity: T, frustum: Frustum, x: Double, arg3: Double, y: Double) where T: Entity, S: EntityRenderState = this.method_3933(entity, frustum, x, arg3, y)
 /**
  * method_62354
  */
-fun <T, S>EntityRenderer<T, S>.updateRenderState(arg0: T, arg1: S, arg2: Float) where T: Entity, S: EntityRenderState = this.method_62354(arg0, arg1, arg2)
+fun <T, S>EntityRenderer<T, S>.updateRenderState(entity: T, state: S, tickDelta: Float) where T: Entity, S: EntityRenderState = this.method_62354(entity, state, tickDelta)
 /**
  * method_3932
  */

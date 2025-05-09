@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11800
  */
-fun SetCameraEntityS2CPacket.getEntity(arg0: world_World) = this.method_11800(arg0)
+fun SetCameraEntityS2CPacket.getEntity(world: world_World) = this.method_11800(world)
 /**
  * method_11801
  */

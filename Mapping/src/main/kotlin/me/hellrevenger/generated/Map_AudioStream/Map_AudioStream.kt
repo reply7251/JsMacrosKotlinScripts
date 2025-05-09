@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_19720
  */
-fun AudioStream.read(arg0: Int) = this.method_19720(arg0)
+fun AudioStream.read(size: Int) = this.method_19720(size)
 /**
  * method_19719
  */

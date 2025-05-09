@@ -9,8 +9,6 @@ import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
 import kotlin.concurrent.thread
 
-val global = this
-
 class Mappings(val path: String) {
     val mappings = mutableMapOf<String, ClassData>()
     val methodParts = Pattern.compile("\\((.*?)\\)(.+)");
@@ -47,30 +45,34 @@ class Mappings(val path: String) {
 
     fun parseMappings(rawMappings: String) {
         var currentClass: ClassData? = null
+        var currentMethod: MethodData? = null
         rawMappings.split("\n").forEach { line ->
             try {
                 val parts = line.split("\\s+".toRegex());
                 if (parts[0] == "c") {
                     currentClass = ClassData(parts[2])
+                    currentMethod = null
                     mappings[parts[1]] = currentClass!!
                 } else {
                     when(parts[1]) {
                         "m" -> {
                             assert(currentClass != null)
-                            currentClass!!.methods[parts[3] + parts[2]] =
-                                MethodData(parts[4]) { remapSig(parts[2], mappings) }
+                            currentMethod = MethodData(parts[4]) { remapSig(parts[2], mappings) }
+                            currentClass!!.methods[parts[3] + parts[2]] = currentMethod!!
                         }
                         "f" -> {
                             assert(currentClass != null)
+                            currentMethod = null
                             currentClass!!.fields[parts[3]] = parts[4]
+                        }
+                        "p" -> {
+                            currentMethod?.args?.set(parts[2].toInt(), parts[3])
                         }
                     }
                 }
-
             }catch (ignored: IndexOutOfBoundsException) {
             }
         }
-
     }
 
     fun remapSig(sign: String, mapping: Map<String, ClassData>): String {
@@ -97,8 +99,30 @@ class ClassData(val name: String) {
     val fields = mutableMapOf<String, String>()
 
 }
+
+val kotlinKeywords = setOf("object", "fun", "val", "var")
+
 class MethodData(val name: String, val sig: () -> String) {
     override fun toString() = name + sig()
+
+    val args = mutableMapOf<Int, String>()
+    val hasError by lazy { args.values.toSet().size != args.size }
+
+    fun getArgNameWithSize(i: Int, size: Int): String? {
+        val result = try {
+            if(hasError){
+                null
+            } else if(args.keys.max() >= size && args.keys.min() > 0) {
+                args[i+1]
+            } else {
+                args[i]
+            }
+        } catch (_: NoSuchElementException) {
+            null
+        }
+        if(result in kotlinKeywords) return null
+        return result
+    }
 }
 
 class GenMapping(val folder: File) {
@@ -117,11 +141,25 @@ class GenMapping(val folder: File) {
         "collectEntitiesByType"
         //"getGenerationSettings", "getSpawnSettings"
     )
-    val blackListClasses = setOf(
-        "net.minecraft.class_4597", // VertexConsumerProvider
-        "net.minecraft.class_6302", "net.minecraft.class_6300",
-        "net.minecraft.class_6301",
-        "net.minecraft.class_4516" // TestContext
+    val blackListClasses = setOf<String>(
+    )
+
+    val blackListDeobfClasses = setOf(
+        "BeforeBatch",
+        "AfterBatch",
+        "GameTest",
+
+        "LocalTimeProperty", // ibm TimeZone
+
+        "VertexConsumerProvider",
+        "TestContext",
+        "DisplayEntityRenderer",
+        "InputSlotFiller",
+    )
+
+    val blackListPackages = setOf(
+        "com.mojang",
+        "net.minecraft.util.profiling.jfr.event"
     )
 
     val finalFields = setOf(
@@ -269,9 +307,13 @@ class GenMapping(val folder: File) {
             return builder.toString()
         }
 
-        if(className in blackListClasses) return builder.toString()
+        if(className in blackListClasses ||
+            blackListDeobfClasses.any { classData.name.endsWith(it) } ||
+            blackListPackages.any { classData.name.replace("/", ".").startsWith(it) } ||
+            classData.name.matches(".+class_\\d+".toRegex()))
+            return builder.toString()
 
-        if(clazz.isHidden || !Modifier.isPublic(clazz.modifiers)
+        if(clazz.isAnnotation || clazz.isHidden || !Modifier.isPublic(clazz.modifiers)
             || Modifier.isProtected(clazz.modifiers) || Modifier.isPrivate(clazz.modifiers))
             return builder.toString()
         if(className.matches(".+class_\\d+(\\${'$'}class_\\d+)+".toRegex())) return builder.toString()
@@ -281,7 +323,6 @@ class GenMapping(val folder: File) {
         if(aliasName == "Any") return builder.toString()
         if(aliasName.matches(".+PackageInfo\\d+".toRegex())) return builder.toString()
 
-        val fileName = "Map_$aliasName"
 
         val classGenerics = if(clazz.isInterface) mutableMapOf()
         else mutableMapOf(*getGenerics(clazz.genericSuperclass).map { it.split(":")[0] to it }.toTypedArray())
@@ -299,10 +340,15 @@ class GenMapping(val folder: File) {
             }
         }
 
+        val staticBuilder = StringBuilder()
+        var staticMemberCount = 0
+        var staticSplitCount = 0
+
         var memberCount = 0
         var splitCount = 0
 
         val fields = hashMapOf<String, Boolean>()
+        val methods = hashSetOf<String>()
 
         var simpleClassGenerics = classGenerics.keys.joinToString()
         var wildcardClassGenerics = ""
@@ -323,6 +369,8 @@ class GenMapping(val folder: File) {
                     if((to == "CODEC" || to.endsWith("_CODEC")) && Modifier.isStatic(field.modifiers) && !field.isEnumConstant) return@forEach
 
                     val isStatic = Modifier.isStatic(field.modifiers)
+
+                    val (targetBuilder, indent) = if(isStatic) staticBuilder to 4 else builder to 0
 
                     val byAlias = if(isStatic)
                         if(field.isEnumConstant)
@@ -349,25 +397,32 @@ class GenMapping(val folder: File) {
                     }.filter { it.isNotEmpty() }.joinToString { it }
                     if(bounds.isNotEmpty()) bounds = " where $bounds"
 
-                    builder.append(comment(from)).append("\n")
+
+                    targetBuilder.append(comment(from, indent)).append("\n").append(" ".repeat(indent))
                     if(writable)
-                        builder.append("var ")
+                        targetBuilder.append("var ")
                     else
-                        builder.append("val ")
-                    builder.append(simpleClassGenerics)
+                        targetBuilder.append("val ")
                     if(isStatic) {
-                        builder.append("KClass<$aliasName$simpleClassGenerics>")
+                        targetBuilder.append(to).append(byAlias).append(accessor).append(")\n")
                     } else {
-                        builder.append(aliasName).append(simpleClassGenerics)
+                        targetBuilder.append(simpleClassGenerics).append(aliasName)
+                            .append(simpleClassGenerics).append(".").append(to)
+                            .append(bounds).append(byAlias).append(accessor).append(")\n")
                     }
 
-                    builder.append(".").append(to)
-                        .append(bounds).append(byAlias).append(accessor).append(")\n")
-                    memberCount++
-                    if(memberCount > 511) {
-                        genMappedKt(fileName, builder.toString(), ++splitCount)
-                        builder.clear()
-                        memberCount = 0
+                    if(isStatic) {
+                        if(++staticMemberCount > 511) {
+                            genStaticMappingKt(aliasName, targetBuilder.toString(), ++staticSplitCount)
+                            targetBuilder.clear()
+                            staticMemberCount = 0
+                        }
+                    } else {
+                        if(++memberCount > 511) {
+                            genMappedKt(aliasName, targetBuilder.toString(), ++splitCount)
+                            targetBuilder.clear()
+                            memberCount = 0
+                        }
                     }
 
                 } catch (_: NoSuchFieldException) {}
@@ -389,17 +444,16 @@ class GenMapping(val folder: File) {
                 if(to.name.startsWith("get") && to.name.length > 4 && (to.name[3].lowercase() + to.name.substring(4)) in fields) {
                     return@forEach
                 }
-                if(to.name in blackListDeobfMethods) return@forEach
+                if(to.name in blackListDeobfMethods || to.name in methods) return@forEach
 
                 val isStatic = Modifier.isStatic(method.modifiers)
                 if(isStatic) {
                     if(to.name in blackListStaticMethods) return@forEach
-                    //blackListStaticMethods.add(to.name)
                 }
+                methods.add(to.name)
+
                 val host = if (isStatic) " = ${aliasName}." else " = this."
                 val genericWithBounds = classGenerics.toMutableMap()
-
-                val flag2 = methodName == "method_54317"
 
                 getGenericsFromMethod(method, true).forEach {
                     val key = it.split(":")[0]
@@ -410,9 +464,6 @@ class GenMapping(val folder: File) {
                         val bound = it.substring(key.length+1)
                         if(original.trim() != bound.trim()  && original.split("<")[0] != bound.split("<")[0]) {
                             genericWithBounds[key] += (if(original != key) "," else "") + bound
-                            if(flag2) {
-                                Chat.log("debug method_54317: $bound, $original")
-                            }
                         }
                     }
                 }
@@ -429,40 +480,76 @@ class GenMapping(val folder: File) {
                 }.filter { it.isNotEmpty() }.joinToString { it }
                 if(bounds.isNotEmpty()) bounds = " where $bounds"
 
-                builder.append(comment(methodName)).append("\n")
-                builder.append("fun ").append(simpleAllGenerics)
-                if(isStatic) {
-                    builder.append("KClass<$aliasName$simpleClassGenerics>")
-                } else {
-                    builder.append(aliasName).append(simpleClassGenerics)
-                }
-                builder.append(".").append(to.name).append("(")
+                val (targetBuilder, indent) = if(isStatic) staticBuilder to 4 else builder to 0
 
-                builder.append(method.parameters.joinToString {
-                    return@joinToString it.name.replace("\\$+".toRegex(), "arg") + ": " + getTypeNameFromParameter(it)
-                }).append(")").append(bounds)
-                builder.append(host).append(methodName)
+
+                targetBuilder.append(comment(methodName, indent)).append("\n").append(" ".repeat(indent))
+                targetBuilder.append("fun ").append(simpleAllGenerics)
+                if(isStatic) {
+                } else {
+                    targetBuilder.append(aliasName).append(simpleClassGenerics).append(".")
+                }
+                targetBuilder.append(to.name).append("(")
+
+                val argSize = method.parameterCount
+
+                targetBuilder.append(method.parameters.mapIndexedNotNull { index, parameter ->
+                    (to.getArgNameWithSize(index, argSize) ?: parameter.name.replace("\\$+".toRegex(), "arg")) + ": " + getTypeNameFromParameter(parameter)
+                }.joinToString()).append(")").append(bounds)
+
+
+
+                targetBuilder.append(host).append(methodName)
                     .append(callingGenerics).append("(")
-                    .append(method.parameters.joinToString {
-                        (if (it.isVarArgs) "*" else "") + it.name.replace("\\$+".toRegex(), "arg")
-                    }).append(")\n")
-                memberCount++
-                if(memberCount > 511) {
-                    genMappedKt(fileName, builder.toString(), ++splitCount)
-                    builder.clear()
-                    memberCount = 0
+                    .append(method.parameters.mapIndexedNotNull { index, parameter ->
+                        (if (parameter.isVarArgs) "*" else "") + (to.getArgNameWithSize(index, argSize) ?: parameter.name.replace("\\$+".toRegex(), "arg"))
+                    }.joinToString()).append(")\n")
+                if(isStatic) {
+                    if(++staticMemberCount > 511) {
+                        genStaticMappingKt(aliasName, targetBuilder.toString(), ++staticSplitCount)
+                        targetBuilder.clear()
+                        staticMemberCount = 0
+                    }
+                } else {
+                    if(++memberCount > 511) {
+                        genMappedKt(aliasName, targetBuilder.toString(), ++splitCount)
+                        targetBuilder.clear()
+                        memberCount = 0
+                    }
                 }
             } catch (_: NoSuchMethodException) {
             } catch (_: NoSuchElementException) {}
         }
+        if(staticBuilder.isNotBlank()) {
+            genStaticMappingKt(aliasName, staticBuilder.toString(), if(staticSplitCount == 0) -1 else ++staticSplitCount)
+        }
         if(builder.isBlank()) return ""
-        genMappedKt(fileName, builder.toString(), if(splitCount == 0) -1 else ++splitCount)
+        genMappedKt(aliasName, builder.toString(), if(splitCount == 0) -1 else ++splitCount)
 
         return builder.toString()
     }
 
-    fun genMappedKt(fileName: String, content: String, split: Int = -1) {
+    fun genStaticMappingKt(className: String, content: String, split: Int = -1) {
         val builder = StringBuilder()
+        val fileName = "Map_$className"
+        val splitPostfix = if(split == -1) "" else "_$split"
+        builder.append("package $packageName.").append(fileName).append("\n")
+        builder.append("import kotlin.reflect.*\n")
+        builder.append("import $packageName.*\n")
+        builder.append("object $className").append("Kt$splitPostfix {\n")
+        builder.append(content)
+        builder.append("}")
+        val parent = File(folder, fileName)
+        parent.mkdirs()
+
+        val writer = BufferedWriter(FileWriter(File(parent, fileName + "Static" + splitPostfix + ".kt")))
+        writer.write(builder.toString())
+        writer.close()
+    }
+
+    fun genMappedKt(className: String, content: String, split: Int = -1) {
+        val builder = StringBuilder()
+        val fileName = "Map_$className"
         builder.append("package $packageName.").append(fileName).append("\n")
         builder.append("import kotlin.reflect.*\n")
         builder.append("import $packageName.*\n")
@@ -473,15 +560,14 @@ class GenMapping(val folder: File) {
         val writer = BufferedWriter(FileWriter(File(parent, (if(split == -1) fileName else (fileName + "_$split")) + ".kt")))
         writer.write(builder.toString())
         writer.close()
-
     }
 
-    fun comment(text: String): String {
+    fun comment(text: String, indent: Int = 0): String {
         return """
             /**
              * $text
              */
-        """.trimIndent()
+        """.trimIndent().prependIndent(" ".repeat(indent))
     }
 
     val packageName = "me.hellrevenger.generated"

@@ -8,7 +8,7 @@ fun GeneratorOptionsHolder.initializeIndexedFeaturesLists() = this.method_60345(
 /**
  * method_41864
  */
-fun GeneratorOptionsHolder.with(arg0: GeneratorOptions, arg1: DimensionOptionsRegistryHolder) = this.method_41864(arg0, arg1)
+fun GeneratorOptionsHolder.with(generatorOptions: GeneratorOptions, selectedDimensions: DimensionOptionsRegistryHolder) = this.method_41864(generatorOptions, selectedDimensions)
 /**
  * method_45689
  */
@@ -16,7 +16,7 @@ fun GeneratorOptionsHolder.getCombinedRegistryManager() = this.method_45689()
 /**
  * method_41866
  */
-fun GeneratorOptionsHolder.apply(arg0: net.minecraft.class_7193.class_7195) = this.method_41866(arg0)
+fun GeneratorOptionsHolder.apply(modifier: net.minecraft.class_7193.class_7195) = this.method_41866(modifier)
 /**
  * comp_1027
  */
@@ -33,10 +33,6 @@ fun GeneratorOptionsHolder.generatorOptions() = this.comp_616()
  * comp_1029
  */
 fun GeneratorOptionsHolder.combinedDynamicRegistries() = this.comp_1029()
-/**
- * method_45690
- */
-fun GeneratorOptionsHolder.apply(arg0: net.minecraft.class_7193.class_7194) = this.method_45690(arg0)
 /**
  * comp_3218
  */

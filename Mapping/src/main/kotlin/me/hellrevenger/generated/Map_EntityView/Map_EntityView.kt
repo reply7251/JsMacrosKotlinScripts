@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_8333
  */
-fun EntityView.getOtherEntities(arg0: Entity, arg1: Box, arg2: Predicate<in Entity>) = this.method_8333(arg0, arg1, arg2)
+fun EntityView.getOtherEntities(except: Entity, box: Box, predicate: Predicate<in Entity>) = this.method_8333(except, box, predicate)
 /**
  * method_18456
  */
@@ -12,44 +12,32 @@ fun EntityView.getPlayers() = this.method_18456()
 /**
  * method_18470
  */
-fun EntityView.getPlayerByUuid(arg0: UUID) = this.method_18470(arg0)
+fun EntityView.getPlayerByUuid(uuid: UUID) = this.method_18470(uuid)
 /**
  * method_18023
  */
-fun <T>EntityView.getEntitiesByType(arg0: TypeFilter<Entity, T>, arg1: Box, arg2: Predicate<in T>) where T: Entity = this.method_18023<T>(arg0, arg1, arg2)
+fun <T>EntityView.getEntitiesByType(filter: TypeFilter<Entity, T>, box: Box, predicate: Predicate<in T>) where T: Entity = this.method_18023<T>(filter, box, predicate)
 /**
  * method_20743
  */
-fun EntityView.getEntityCollisions(arg0: Entity, arg1: Box) = this.method_20743(arg0, arg1)
+fun EntityView.getEntityCollisions(entity: Entity, box: Box) = this.method_20743(entity, box)
 /**
  * method_8390
  */
-fun <T>EntityView.getEntitiesByClass(arg0: Class<T>, arg1: Box, arg2: Predicate<in T>) where T: Entity = this.method_8390<T>(arg0, arg1, arg2)
+fun <T>EntityView.getEntitiesByClass(entityClass: Class<T>, box: Box, predicate: Predicate<in T>) where T: Entity = this.method_8390<T>(entityClass, box, predicate)
 /**
  * method_18467
  */
-fun <T>EntityView.getNonSpectatingEntities(arg0: Class<T>, arg1: Box) where T: Entity = this.method_18467<T>(arg0, arg1)
+fun <T>EntityView.getNonSpectatingEntities(entityClass: Class<T>, box: Box) where T: Entity = this.method_18467<T>(entityClass, box)
 /**
  * method_18460
  */
-fun EntityView.getClosestPlayer(arg0: Entity, arg1: Double) = this.method_18460(arg0, arg1)
+fun EntityView.getClosestPlayer(entity: Entity, maxDistance: Double) = this.method_18460(entity, maxDistance)
 /**
  * method_18458
  */
-fun EntityView.isPlayerInRange(arg0: Double, arg1: Double, arg2: Double, arg3: Double) = this.method_18458(arg0, arg1, arg2, arg3)
-/**
- * method_8335
- */
-fun EntityView.getOtherEntities(arg0: Entity, arg1: Box) = this.method_8335(arg0, arg1)
-/**
- * method_8604
- */
-fun EntityView.getClosestPlayer(arg0: Double, arg1: Double, arg2: Double, arg3: Double, arg4: Predicate<Entity>) = this.method_8604(arg0, arg1, arg2, arg3, arg4)
+fun EntityView.isPlayerInRange(x: Double, arg1: Double, y: Double, arg3: Double) = this.method_18458(x, arg1, y, arg3)
 /**
  * method_8611
  */
-fun EntityView.doesNotIntersectEntities(arg0: Entity, arg1: VoxelShape) = this.method_8611(arg0, arg1)
-/**
- * method_18459
- */
-fun EntityView.getClosestPlayer(arg0: Double, arg1: Double, arg2: Double, arg3: Double, arg4: Boolean) = this.method_18459(arg0, arg1, arg2, arg3, arg4)
+fun EntityView.doesNotIntersectEntities(except: Entity, shape: VoxelShape) = this.method_8611(except, shape)

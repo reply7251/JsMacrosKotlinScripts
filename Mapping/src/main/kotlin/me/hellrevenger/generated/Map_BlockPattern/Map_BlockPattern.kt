@@ -12,15 +12,11 @@ fun BlockPattern.getWidth() = this.method_11710()
 /**
  * method_35300
  */
-fun BlockPattern.testTransform(arg0: WorldView, arg1: BlockPos, arg2: Direction, arg3: Direction) = this.method_35300(arg0, arg1, arg2, arg3)
+fun BlockPattern.testTransform(world: WorldView, frontTopLeft: BlockPos, forwards: Direction, up: Direction) = this.method_35300(world, frontTopLeft, forwards, up)
 /**
  * method_11708
  */
-fun BlockPattern.searchAround(arg0: WorldView, arg1: BlockPos) = this.method_11708(arg0, arg1)
-/**
- * method_11709
- */
-fun KClass<BlockPattern>.makeCache(arg0: WorldView, arg1: Boolean) = BlockPattern.method_11709(arg0, arg1)
+fun BlockPattern.searchAround(world: WorldView, pos: BlockPos) = this.method_11708(world, pos)
 /**
  * method_11712
  */

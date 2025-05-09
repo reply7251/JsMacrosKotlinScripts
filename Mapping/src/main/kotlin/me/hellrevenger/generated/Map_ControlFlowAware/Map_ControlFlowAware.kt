@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_54290
  */
-fun <T>ControlFlowAware<T>.execute(arg0: T, arg1: ContextChain<T>, arg2: ExecutionFlags, arg3: ExecutionControl<T>) = this.method_54290(arg0, arg1, arg2, arg3)
+fun <T>ControlFlowAware<T>.execute(source: T, contextChain: ContextChain<T>, flags: ExecutionFlags, control: ExecutionControl<T>) = this.method_54290(source, contextChain, flags, control)

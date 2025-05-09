@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_58648
  */
-fun ProjectileItem.createEntity(arg0: world_World, arg1: Position, arg2: ItemStack, arg3: Direction) = this.method_58648(arg0, arg1, arg2, arg3)
+fun ProjectileItem.createEntity(world: world_World, pos: Position, stack: ItemStack, direction: Direction) = this.method_58648(world, pos, stack, direction)
 /**
  * method_58654
  */
-fun ProjectileItem.initializeProjectile(arg0: ProjectileEntity, arg1: Double, arg2: Double, arg3: Double, arg4: Float, arg5: Float) = this.method_58654(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ProjectileItem.initializeProjectile(entity: ProjectileEntity, x: Double, arg2: Double, y: Double, arg4: Float, z: Float) = this.method_58654(entity, x, arg2, y, arg4, z)
 /**
  * method_58653
  */

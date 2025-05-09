@@ -13,7 +13,3 @@ fun FileIoSample.duration() = this.comp_25()
  * comp_27
  */
 fun FileIoSample.bytes() = this.comp_27()
-/**
- * method_38034
- */
-fun KClass<FileIoSample>.toStatistics(arg0: Duration, arg1: MutableList<FileIoSample>) = FileIoSample.method_38034(arg0, arg1)

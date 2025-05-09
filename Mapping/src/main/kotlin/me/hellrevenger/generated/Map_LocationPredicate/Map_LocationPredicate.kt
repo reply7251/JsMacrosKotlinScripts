@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_9018
  */
-fun LocationPredicate.test(arg0: ServerWorld, arg1: Double, arg2: Double, arg3: Double) = this.method_9018(arg0, arg1, arg2, arg3)
+fun LocationPredicate.test(world: ServerWorld, x: Double, arg2: Double, y: Double) = this.method_9018(world, x, arg2, y)
 /**
  * comp_2771
  */

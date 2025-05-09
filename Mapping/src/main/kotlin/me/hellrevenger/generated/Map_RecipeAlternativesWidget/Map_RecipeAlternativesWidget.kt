@@ -12,11 +12,11 @@ fun RecipeAlternativesWidget.getResults() = this.method_2614()
 /**
  * method_2613
  */
-fun RecipeAlternativesWidget.setVisible(arg0: Boolean) = this.method_2613(arg0)
+fun RecipeAlternativesWidget.setVisible(visible: Boolean) = this.method_2613(visible)
 /**
  * method_2617
  */
-fun RecipeAlternativesWidget.showAlternativesForResult(arg0: RecipeResultCollection, arg1: ContextParameterMap, arg2: Boolean, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Float) = this.method_2617(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun RecipeAlternativesWidget.showAlternativesForResult(resultCollection: RecipeResultCollection, context: ContextParameterMap, filteringCraftable: Boolean, buttonX: Int, buttonY: Int, areaCenterX: Int, areaCenterY: Int, delta: Float) = this.method_2617(resultCollection, context, filteringCraftable, buttonX, buttonY, areaCenterX, areaCenterY, delta)
 /**
  * method_2615
  */

@@ -12,4 +12,4 @@ fun NativeImageBackedTexture.upload() = this.method_4524()
 /**
  * method_4526
  */
-fun NativeImageBackedTexture.setImage(arg0: NativeImage) = this.method_4526(arg0)
+fun NativeImageBackedTexture.setImage(image: NativeImage) = this.method_4526(image)

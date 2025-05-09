@@ -8,4 +8,4 @@ fun VaultServerData.getEjectSoundPitchModifier() = this.method_56785()
 /**
  * method_56775
  */
-fun VaultServerData.markPlayerAsRewarded(arg0: PlayerEntity) = this.method_56775(arg0)
+fun VaultServerData.markPlayerAsRewarded(player: PlayerEntity) = this.method_56775(player)

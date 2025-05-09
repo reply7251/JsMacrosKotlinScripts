@@ -8,7 +8,7 @@ var EndCrystalEntity.endCrystalAge by alias(EndCrystalEntity::field_7034)
 /**
  * method_6837
  */
-fun EndCrystalEntity.setBeamTarget(arg0: BlockPos) = this.method_6837(arg0)
+fun EndCrystalEntity.setBeamTarget(beamTarget: BlockPos) = this.method_6837(beamTarget)
 /**
  * method_6838
  */
@@ -20,4 +20,4 @@ fun EndCrystalEntity.shouldShowBottom() = this.method_6836()
 /**
  * method_6839
  */
-fun EndCrystalEntity.setShowBottom(arg0: Boolean) = this.method_6839(arg0)
+fun EndCrystalEntity.setShowBottom(showBottom: Boolean) = this.method_6839(showBottom)

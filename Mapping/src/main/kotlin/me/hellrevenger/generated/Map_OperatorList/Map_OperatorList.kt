@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_14620
  */
-fun OperatorList.canBypassPlayerLimit(arg0: GameProfile) = this.method_14620(arg0)
+fun OperatorList.canBypassPlayerLimit(profile: GameProfile) = this.method_14620(profile)

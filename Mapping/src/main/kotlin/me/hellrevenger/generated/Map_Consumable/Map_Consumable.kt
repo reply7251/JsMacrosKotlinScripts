@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62831
  */
-fun Consumable.onConsume(arg0: world_World, arg1: LivingEntity, arg2: ItemStack, arg3: ConsumableComponent) = this.method_62831(arg0, arg1, arg2, arg3)
+fun Consumable.onConsume(world: world_World, user: LivingEntity, stack: ItemStack, consumable: ConsumableComponent) = this.method_62831(world, user, stack, consumable)

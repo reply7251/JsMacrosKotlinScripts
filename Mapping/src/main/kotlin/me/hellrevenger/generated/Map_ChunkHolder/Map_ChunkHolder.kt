@@ -2,17 +2,13 @@ package me.hellrevenger.generated.Map_ChunkHolder
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_16427
- */
-val KClass<ChunkHolder>.UNLOADED_WORLD_CHUNK by aliasStatic(ChunkHolder::field_16427)
-/**
  * method_14006
  */
-fun ChunkHolder.flushUpdates(arg0: WorldChunk) = this.method_14006(arg0)
+fun ChunkHolder.flushUpdates(chunk: WorldChunk) = this.method_14006(chunk)
 /**
  * method_53680
  */
-fun ChunkHolder.combinePostProcessingFuture(arg0: CompletableFuture<*>) = this.method_53680(arg0)
+fun ChunkHolder.combinePostProcessingFuture(postProcessingFuture: CompletableFuture<*>) = this.method_53680(postProcessingFuture)
 /**
  * method_16145
  */
@@ -20,7 +16,7 @@ fun ChunkHolder.getTickingFuture() = this.method_16145()
 /**
  * method_14002
  */
-fun ChunkHolder.markForBlockUpdate(arg0: BlockPos) = this.method_14002(arg0)
+fun ChunkHolder.markForBlockUpdate(pos: BlockPos) = this.method_14002(pos)
 /**
  * method_16144
  */
@@ -40,7 +36,7 @@ fun ChunkHolder.getPostProcessingFuture() = this.method_53681()
 /**
  * method_14012
  */
-fun ChunkHolder.markForLightUpdate(arg0: LightType, arg1: Int) = this.method_14012(arg0, arg1)
+fun ChunkHolder.markForLightUpdate(lightType: LightType, y: Int) = this.method_14012(lightType, y)
 /**
  * method_20385
  */
@@ -56,7 +52,7 @@ fun ChunkHolder.hasPendingUpdates() = this.method_65077()
 /**
  * method_15890
  */
-fun ChunkHolder.setLevel(arg0: Int) = this.method_15890(arg0)
+fun ChunkHolder.setLevel(level: Int) = this.method_15890(level)
 /**
  * method_14003
  */

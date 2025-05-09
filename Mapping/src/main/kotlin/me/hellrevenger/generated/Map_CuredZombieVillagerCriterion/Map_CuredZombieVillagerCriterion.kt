@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8831
  */
-fun CuredZombieVillagerCriterion.trigger(arg0: ServerPlayerEntity, arg1: ZombieEntity, arg2: VillagerEntity) = this.method_8831(arg0, arg1, arg2)
+fun CuredZombieVillagerCriterion.trigger(player: ServerPlayerEntity, zombie: ZombieEntity, villager: VillagerEntity) = this.method_8831(player, zombie, villager)

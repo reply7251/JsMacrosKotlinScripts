@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8932
  */
-fun FilledBucketCriterion.trigger(arg0: ServerPlayerEntity, arg1: ItemStack) = this.method_8932(arg0, arg1)
+fun FilledBucketCriterion.trigger(player: ServerPlayerEntity, stack: ItemStack) = this.method_8932(player, stack)

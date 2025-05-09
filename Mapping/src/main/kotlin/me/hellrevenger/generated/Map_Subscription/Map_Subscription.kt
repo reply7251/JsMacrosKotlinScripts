@@ -13,7 +13,3 @@ var Subscription.daysLeft by alias(Subscription::field_22654)
  * field_22653
  */
 var Subscription.startDate by alias(Subscription::field_22653)
-/**
- * method_25085
- */
-fun KClass<Subscription>.parse(arg0: String) = Subscription.method_25085(arg0)

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_16614
  */
-fun SinglePoolElement.getDataStructureBlocks(arg0: StructureTemplateManager, arg1: BlockPos, arg2: BlockRotation, arg3: Boolean) = this.method_16614(arg0, arg1, arg2, arg3)
+fun SinglePoolElement.getDataStructureBlocks(structureTemplateManager: StructureTemplateManager, pos: BlockPos, rotation: BlockRotation, mirroredAndRotated: Boolean) = this.method_16614(structureTemplateManager, pos, rotation, mirroredAndRotated)

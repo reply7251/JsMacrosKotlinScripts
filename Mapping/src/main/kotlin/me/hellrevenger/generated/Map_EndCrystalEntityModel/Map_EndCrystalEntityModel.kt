@@ -21,7 +21,3 @@ val EndCrystalEntityModel.outerGlass by alias(EndCrystalEntityModel::field_52900
  * method_62083
  */
 fun EndCrystalEntityModel.setAngles(arg0: EndCrystalEntityRenderState) = this.method_62083(arg0)
-/**
- * method_62084
- */
-fun KClass<EndCrystalEntityModel>.getTexturedModelData() = EndCrystalEntityModel.method_62084()

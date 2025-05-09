@@ -8,4 +8,4 @@ fun ArrowEntity.getColor() = this.method_7460()
 /**
  * method_7463
  */
-fun ArrowEntity.addEffect(arg0: StatusEffectInstance) = this.method_7463(arg0)
+fun ArrowEntity.addEffect(effect: StatusEffectInstance) = this.method_7463(effect)

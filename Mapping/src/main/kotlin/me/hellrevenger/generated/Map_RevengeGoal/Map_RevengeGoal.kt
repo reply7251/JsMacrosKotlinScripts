@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_6318
  */
-fun RevengeGoal.setGroupRevenge(arg0: Array<Class<*>>) = this.method_6318(*arg0)
+fun RevengeGoal.setGroupRevenge(noHelpTypes: Array<Class<*>>) = this.method_6318(*noHelpTypes)

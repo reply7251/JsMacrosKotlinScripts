@@ -20,12 +20,8 @@ fun EndermanEntity.isAngry() = this.method_7028()
 /**
  * method_7032
  */
-fun EndermanEntity.setCarriedBlock(arg0: BlockState) = this.method_7032(arg0)
+fun EndermanEntity.setCarriedBlock(state: BlockState) = this.method_7032(state)
 /**
  * method_7030
  */
 fun EndermanEntity.playAngrySound() = this.method_7030()
-/**
- * method_26910
- */
-fun KClass<EndermanEntity>.createEndermanAttributes() = EndermanEntity.method_26910()

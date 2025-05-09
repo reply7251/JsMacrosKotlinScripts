@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_51864
  */
-fun LootWorldContext.addDynamicDrops(arg0: Identifier, arg1: Consumer<ItemStack>) = this.method_51864(arg0, arg1)
+fun LootWorldContext.addDynamicDrops(id: Identifier, lootConsumer: Consumer<ItemStack>) = this.method_51864(id, lootConsumer)
 /**
  * method_51863
  */

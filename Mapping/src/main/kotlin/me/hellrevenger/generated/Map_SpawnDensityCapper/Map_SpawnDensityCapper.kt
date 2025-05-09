@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_38084
  */
-fun SpawnDensityCapper.canSpawn(arg0: SpawnGroup, arg1: ChunkPos) = this.method_38084(arg0, arg1)
+fun SpawnDensityCapper.canSpawn(spawnGroup: SpawnGroup, chunkPos: ChunkPos) = this.method_38084(spawnGroup, chunkPos)
 /**
  * method_38087
  */
-fun SpawnDensityCapper.increaseDensity(arg0: ChunkPos, arg1: SpawnGroup) = this.method_38087(arg0, arg1)
+fun SpawnDensityCapper.increaseDensity(chunkPos: ChunkPos, spawnGroup: SpawnGroup) = this.method_38087(chunkPos, spawnGroup)

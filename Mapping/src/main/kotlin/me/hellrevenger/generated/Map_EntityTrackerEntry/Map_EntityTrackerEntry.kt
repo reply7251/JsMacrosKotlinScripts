@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_18760
  */
-fun EntityTrackerEntry.startTracking(arg0: ServerPlayerEntity) = this.method_18760(arg0)
+fun EntityTrackerEntry.startTracking(player: ServerPlayerEntity) = this.method_18760(player)
 /**
  * method_60942
  */
@@ -16,11 +16,11 @@ fun EntityTrackerEntry.tick() = this.method_18756()
 /**
  * method_14302
  */
-fun EntityTrackerEntry.stopTracking(arg0: ServerPlayerEntity) = this.method_14302(arg0)
+fun EntityTrackerEntry.stopTracking(player: ServerPlayerEntity) = this.method_14302(player)
 /**
  * method_18757
  */
-fun EntityTrackerEntry.sendPackets(arg0: ServerPlayerEntity, arg1: Consumer<Packet<ClientPlayPacketListener>>) = this.method_18757(arg0, arg1)
+fun EntityTrackerEntry.sendPackets(player: ServerPlayerEntity, sender: Consumer<Packet<ClientPlayPacketListener>>) = this.method_18757(player, sender)
 /**
  * method_60945
  */

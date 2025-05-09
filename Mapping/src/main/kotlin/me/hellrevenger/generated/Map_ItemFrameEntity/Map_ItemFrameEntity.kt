@@ -16,19 +16,15 @@ fun ItemFrameEntity.getRotateItemSound() = this.method_34244()
 /**
  * method_6935
  */
-fun ItemFrameEntity.setHeldItemStack(arg0: ItemStack) = this.method_6935(arg0)
+fun ItemFrameEntity.setHeldItemStack(stack: ItemStack) = this.method_6935(stack)
 /**
  * method_43272
  */
-fun ItemFrameEntity.getMapId(arg0: ItemStack) = this.method_43272(arg0)
+fun ItemFrameEntity.getMapId(stack: ItemStack) = this.method_43272(stack)
 /**
  * method_6939
  */
-fun ItemFrameEntity.setRotation(arg0: Int) = this.method_6939(arg0)
-/**
- * method_6933
- */
-fun ItemFrameEntity.setHeldItemStack(arg0: ItemStack, arg1: Boolean) = this.method_6933(arg0, arg1)
+fun ItemFrameEntity.setRotation(value: Int) = this.method_6939(value)
 /**
  * method_6940
  */

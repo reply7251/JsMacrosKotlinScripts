@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_44933
  */
-fun ChatInputSuggestor.tryRenderWindow(arg0: DrawContext, arg1: Int, arg2: Int) = this.method_44933(arg0, arg1, arg2)
+fun ChatInputSuggestor.tryRenderWindow(context: DrawContext, mouseX: Int, mouseY: Int) = this.method_44933(context, mouseX, mouseY)
 /**
  * method_53869
  */
-fun ChatInputSuggestor.setCanLeave(arg0: Boolean) = this.method_53869(arg0)
+fun ChatInputSuggestor.setCanLeave(canLeave: Boolean) = this.method_53869(canLeave)
 /**
  * method_53867
  */
@@ -20,19 +20,19 @@ fun ChatInputSuggestor.getSuggestionUsageNarrationText() = this.method_53868()
 /**
  * method_23921
  */
-fun ChatInputSuggestor.mouseScrolled(arg0: Double) = this.method_23921(arg0)
+fun ChatInputSuggestor.mouseScrolled(amount: Double) = this.method_23921(amount)
 /**
  * method_23920
  */
-fun ChatInputSuggestor.show(arg0: Boolean) = this.method_23920(arg0)
+fun ChatInputSuggestor.show(narrateFirstSuggestion: Boolean) = this.method_23920(narrateFirstSuggestion)
 /**
  * method_23924
  */
-fun ChatInputSuggestor.keyPressed(arg0: Int, arg1: Int, arg2: Int) = this.method_23924(arg0, arg1, arg2)
+fun ChatInputSuggestor.keyPressed(keyCode: Int, scanCode: Int, modifiers: Int) = this.method_23924(keyCode, scanCode, modifiers)
 /**
  * method_44932
  */
-fun ChatInputSuggestor.renderMessages(arg0: DrawContext) = this.method_44932(arg0)
+fun ChatInputSuggestor.renderMessages(context: DrawContext) = this.method_44932(context)
 /**
  * method_23934
  */
@@ -44,11 +44,11 @@ fun ChatInputSuggestor.clearWindow() = this.method_44931()
 /**
  * method_23933
  */
-fun ChatInputSuggestor.setWindowActive(arg0: Boolean) = this.method_23933(arg0)
+fun ChatInputSuggestor.setWindowActive(windowActive: Boolean) = this.method_23933(windowActive)
 /**
  * method_23923
  */
-fun ChatInputSuggestor.render(arg0: DrawContext, arg1: Int, arg2: Int) = this.method_23923(arg0, arg1, arg2)
+fun ChatInputSuggestor.render(context: DrawContext, mouseX: Int, mouseY: Int) = this.method_23923(context, mouseX, mouseY)
 /**
  * method_23958
  */
@@ -56,4 +56,4 @@ fun ChatInputSuggestor.getNarration() = this.method_23958()
 /**
  * method_23922
  */
-fun ChatInputSuggestor.mouseClicked(arg0: Double, arg1: Double, arg2: Int) = this.method_23922(arg0, arg1, arg2)
+fun ChatInputSuggestor.mouseClicked(mouseX: Double, arg1: Double, mouseY: Int) = this.method_23922(mouseX, arg1, mouseY)

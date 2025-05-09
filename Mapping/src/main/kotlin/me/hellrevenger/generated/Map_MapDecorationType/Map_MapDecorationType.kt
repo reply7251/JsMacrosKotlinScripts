@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_MapDecorationType
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_50016
- */
-val KClass<MapDecorationType>.NO_MAP_COLOR by aliasStatic(MapDecorationType::field_50016)
-/**
  * method_58452
  */
 fun MapDecorationType.hasMapColor() = this.method_58452()

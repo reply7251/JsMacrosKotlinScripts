@@ -8,4 +8,4 @@ fun LootContextAware.getAllowedParameters() = this.method_293()
 /**
  * method_292
  */
-fun LootContextAware.validate(arg0: LootTableReporter) = this.method_292(arg0)
+fun LootContextAware.validate(reporter: LootTableReporter) = this.method_292(reporter)

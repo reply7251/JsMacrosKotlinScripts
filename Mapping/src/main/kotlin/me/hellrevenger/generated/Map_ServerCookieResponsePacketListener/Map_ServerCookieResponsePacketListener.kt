@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_55851
  */
-fun ServerCookieResponsePacketListener.onCookieResponse(arg0: CookieResponseC2SPacket) = this.method_55851(arg0)
+fun ServerCookieResponsePacketListener.onCookieResponse(packet: CookieResponseC2SPacket) = this.method_55851(packet)

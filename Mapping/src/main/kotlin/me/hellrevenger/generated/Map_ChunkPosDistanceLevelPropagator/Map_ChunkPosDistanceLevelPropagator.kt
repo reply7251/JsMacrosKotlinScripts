@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_14027
  */
-fun ChunkPosDistanceLevelPropagator.updateLevel(arg0: Long, arg1: Int, arg2: Boolean) = this.method_14027(arg0, arg1, arg2)
+fun ChunkPosDistanceLevelPropagator.updateLevel(chunkPos: Long, arg1: Int, distance: Boolean) = this.method_14027(chunkPos, arg1, distance)

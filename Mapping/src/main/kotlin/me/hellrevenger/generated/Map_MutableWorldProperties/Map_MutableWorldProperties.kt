@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_187
  */
-fun MutableWorldProperties.setSpawnPos(arg0: BlockPos, arg1: Float) = this.method_187(arg0, arg1)
+fun MutableWorldProperties.setSpawnPos(pos: BlockPos, angle: Float) = this.method_187(pos, angle)

@@ -21,7 +21,3 @@ fun SaveVersionInfo.getLastPlayed() = this.method_29024()
  * method_29022
  */
 fun SaveVersionInfo.getLevelFormatVersion() = this.method_29022()
-/**
- * method_29023
- */
-fun KClass<SaveVersionInfo>.fromDynamic(arg0: Dynamic<*>) = SaveVersionInfo.method_29023(arg0)

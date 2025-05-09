@@ -2,13 +2,9 @@ package me.hellrevenger.generated.Map_PhantomEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_28641
- */
-val KClass<PhantomEntity>.WING_FLAP_TICKS by aliasStatic(PhantomEntity::field_28641)
-/**
  * method_7091
  */
-fun PhantomEntity.setPhantomSize(arg0: Int) = this.method_7091(arg0)
+fun PhantomEntity.setPhantomSize(size: Int) = this.method_7091(size)
 /**
  * method_7084
  */

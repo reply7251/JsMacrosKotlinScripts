@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_CustomModelDataStringProperty
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_55416
- */
-val KClass<CustomModelDataStringProperty>.TYPE by aliasStatic(CustomModelDataStringProperty::field_55416)
-/**
  * method_65678
  */
 fun CustomModelDataStringProperty.getValue(arg0: ItemStack, arg1: ClientWorld, arg2: LivingEntity, arg3: Int, arg4: ModelTransformationMode) = this.method_65678(arg0, arg1, arg2, arg3, arg4)

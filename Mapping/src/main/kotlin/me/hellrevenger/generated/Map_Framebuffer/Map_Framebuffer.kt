@@ -32,7 +32,7 @@ var Framebuffer.viewportHeight by alias(Framebuffer::field_1477)
 /**
  * method_29329
  */
-fun Framebuffer.copyDepthFrom(arg0: Framebuffer) = this.method_29329(arg0)
+fun Framebuffer.copyDepthFrom(framebuffer: Framebuffer) = this.method_29329(framebuffer)
 /**
  * method_30277
  */
@@ -40,19 +40,19 @@ fun Framebuffer.getColorAttachment() = this.method_30277()
 /**
  * method_1237
  */
-fun Framebuffer.draw(arg0: Int, arg1: Int) = this.method_1237(arg0, arg1)
+fun Framebuffer.draw(width: Int, height: Int) = this.method_1237(width, height)
 /**
  * method_1233
  */
-fun Framebuffer.drawInternal(arg0: Int, arg1: Int) = this.method_1233(arg0, arg1)
+fun Framebuffer.drawInternal(width: Int, height: Int) = this.method_1233(width, height)
 /**
  * method_1235
  */
-fun Framebuffer.beginWrite(arg0: Boolean) = this.method_1235(arg0)
+fun Framebuffer.beginWrite(setViewport: Boolean) = this.method_1235(setViewport)
 /**
  * method_1231
  */
-fun Framebuffer.initFbo(arg0: Int, arg1: Int) = this.method_1231(arg0, arg1)
+fun Framebuffer.initFbo(width: Int, height: Int) = this.method_1231(width, height)
 /**
  * method_1239
  */
@@ -64,11 +64,11 @@ fun Framebuffer.getDepthAttachment() = this.method_30278()
 /**
  * method_1236
  */
-fun Framebuffer.setClearColor(arg0: Float, arg1: Float, arg2: Float, arg3: Float) = this.method_1236(arg0, arg1, arg2, arg3)
+fun Framebuffer.setClearColor(r: Float, g: Float, b: Float, a: Float) = this.method_1236(r, g, b, a)
 /**
  * method_1234
  */
-fun Framebuffer.resize(arg0: Int, arg1: Int) = this.method_1234(arg0, arg1)
+fun Framebuffer.resize(width: Int, height: Int) = this.method_1234(width, height)
 /**
  * method_1240
  */

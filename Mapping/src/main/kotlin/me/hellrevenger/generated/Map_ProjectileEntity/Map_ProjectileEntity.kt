@@ -2,58 +2,34 @@ package me.hellrevenger.generated.Map_ProjectileEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_61549
- */
-fun <T>KClass<ProjectileEntity>.spawnWithVelocity(arg0: net.minecraft.class_1676.class_9876<T>, arg1: ServerWorld, arg2: ItemStack, arg3: LivingEntity, arg4: Float, arg5: Float, arg6: Float) where T: ProjectileEntity = ProjectileEntity.method_61549<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
  * method_59959
  */
-fun ProjectileEntity.getKnockback(arg0: LivingEntity, arg1: DamageSource) = this.method_59959(arg0, arg1)
+fun ProjectileEntity.getKnockback(target: LivingEntity, source: DamageSource) = this.method_59959(target, source)
 /**
  * method_54457
  */
-fun ProjectileEntity.canBreakBlocks(arg0: ServerWorld) = this.method_54457(arg0)
-/**
- * method_61553
- */
-fun <T>KClass<ProjectileEntity>.spawn(arg0: T, arg1: ServerWorld, arg2: ItemStack, arg3: Consumer<T>) where T: ProjectileEntity = ProjectileEntity.method_61553<T>(arg0, arg1, arg2, arg3)
-/**
- * method_61548
- */
-fun <T>KClass<ProjectileEntity>.spawnWithVelocity(arg0: net.minecraft.class_1676.class_9876<T>, arg1: ServerWorld, arg2: ItemStack, arg3: LivingEntity, arg4: Double, arg5: Double, arg6: Double, arg7: Float, arg8: Float) where T: ProjectileEntity = ProjectileEntity.method_61548<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+fun ProjectileEntity.canBreakBlocks(world: ServerWorld) = this.method_54457(world)
 /**
  * method_37225
  */
 fun ProjectileEntity.getEffectCause() = this.method_37225()
 /**
- * method_61551
- */
-fun <T>KClass<ProjectileEntity>.spawn(arg0: T, arg1: ServerWorld, arg2: ItemStack) where T: ProjectileEntity = ProjectileEntity.method_61551<T>(arg0, arg1, arg2)
-/**
  * method_7432
  */
-fun ProjectileEntity.setOwner(arg0: Entity) = this.method_7432(arg0)
+fun ProjectileEntity.setOwner(entity: Entity) = this.method_7432(entity)
 /**
  * method_59859
  */
-fun ProjectileEntity.deflect(arg0: ProjectileDeflection, arg1: Entity, arg2: Entity, arg3: Boolean) = this.method_59859(arg0, arg1, arg2, arg3)
+fun ProjectileEntity.deflect(deflection: ProjectileDeflection, deflector: Entity, owner: Entity, fromAttack: Boolean) = this.method_59859(deflection, deflector, owner, fromAttack)
 /**
  * method_7485
  */
-fun ProjectileEntity.setVelocity(arg0: Double, arg1: Double, arg2: Double, arg3: Float, arg4: Float) = this.method_7485(arg0, arg1, arg2, arg3, arg4)
-/**
- * method_61552
- */
-fun <T>KClass<ProjectileEntity>.spawnWithVelocity(arg0: T, arg1: ServerWorld, arg2: ItemStack, arg3: Double, arg4: Double, arg5: Double, arg6: Float, arg7: Float) where T: ProjectileEntity = ProjectileEntity.method_61552<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun ProjectileEntity.setVelocity(x: Double, arg1: Double, y: Double, arg3: Float, z: Float) = this.method_7485(x, arg1, y, arg3, z)
 /**
  * method_58645
  */
-fun ProjectileEntity.calculateVelocity(arg0: Double, arg1: Double, arg2: Double, arg3: Float, arg4: Float) = this.method_58645(arg0, arg1, arg2, arg3, arg4)
+fun ProjectileEntity.calculateVelocity(x: Double, arg1: Double, y: Double, arg3: Float, z: Float) = this.method_58645(x, arg1, y, arg3, z)
 /**
  * method_61546
  */
-fun ProjectileEntity.triggerProjectileSpawned(arg0: ServerWorld, arg1: ItemStack) = this.method_61546(arg0, arg1)
-/**
- * method_24919
- */
-fun ProjectileEntity.setVelocity(arg0: Entity, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_24919(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ProjectileEntity.triggerProjectileSpawned(world: ServerWorld, projectileStack: ItemStack) = this.method_61546(world, projectileStack)

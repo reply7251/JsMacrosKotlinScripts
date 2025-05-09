@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_17153
  */
-fun <S, M, K>VillagerClothingFeatureRenderer<S, M>.getHatType(arg0: Object2ObjectMap<K, net.minecraft.class_3888.class_3889>, arg1: String, arg2: DefaultedRegistry<K>, arg3: K) where S: LivingEntityRenderState, S: VillagerDataRenderState, M: EntityModel<S>, M: ModelWithHat = this.method_17153<K>(arg0, arg1, arg2, arg3)
+fun <S, M, K>VillagerClothingFeatureRenderer<S, M>.getHatType(hatLookUp: Object2ObjectMap<K, net.minecraft.class_3888.class_3889>, keyType: String, registry: DefaultedRegistry<K>, key: K) where S: LivingEntityRenderState, S: VillagerDataRenderState, M: EntityModel<S>, M: ModelWithHat = this.method_17153<K>(hatLookUp, keyType, registry, key)
 /**
  * method_17151
  */

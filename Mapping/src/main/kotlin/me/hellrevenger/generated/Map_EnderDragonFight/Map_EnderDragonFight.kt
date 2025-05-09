@@ -2,17 +2,13 @@ package me.hellrevenger.generated.Map_EnderDragonFight
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_31442
- */
-val KClass<EnderDragonFight>.SPAWN_Y by aliasStatic(EnderDragonFight::field_31442)
-/**
  * method_12538
  */
 fun EnderDragonFight.tick() = this.method_12538()
 /**
  * method_12526
  */
-fun EnderDragonFight.crystalDestroyed(arg0: EndCrystalEntity, arg1: DamageSource) = this.method_12526(arg0, arg1)
+fun EnderDragonFight.crystalDestroyed(enderCrystal: EndCrystalEntity, source: DamageSource) = this.method_12526(enderCrystal, source)
 /**
  * method_51855
  */
@@ -28,11 +24,11 @@ fun EnderDragonFight.getAliveEndCrystals() = this.method_12517()
 /**
  * method_12532
  */
-fun EnderDragonFight.updateFight(arg0: EnderDragonEntity) = this.method_12532(arg0)
+fun EnderDragonFight.updateFight(dragon: EnderDragonEntity) = this.method_12532(dragon)
 /**
  * method_12528
  */
-fun EnderDragonFight.dragonKilled(arg0: EnderDragonEntity) = this.method_12528(arg0)
+fun EnderDragonFight.dragonKilled(dragon: EnderDragonEntity) = this.method_12528(dragon)
 /**
  * method_12524
  */

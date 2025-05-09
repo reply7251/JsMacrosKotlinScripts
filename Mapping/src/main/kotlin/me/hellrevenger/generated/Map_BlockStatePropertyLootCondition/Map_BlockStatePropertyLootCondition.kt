@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun BlockStatePropertyLootCondition.test(arg0: LootContext) = this.method_899(arg0)
 /**
- * method_900
- */
-fun KClass<BlockStatePropertyLootCondition>.builder(arg0: Block) = BlockStatePropertyLootCondition.method_900(arg0)
-/**
  * comp_1876
  */
 fun BlockStatePropertyLootCondition.block() = this.comp_1876()

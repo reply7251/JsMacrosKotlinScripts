@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_59758
  */
-fun BufferedAudioStream.read(arg0: FloatConsumer) = this.method_59758(arg0)
+fun BufferedAudioStream.read(consumer: FloatConsumer) = this.method_59758(consumer)

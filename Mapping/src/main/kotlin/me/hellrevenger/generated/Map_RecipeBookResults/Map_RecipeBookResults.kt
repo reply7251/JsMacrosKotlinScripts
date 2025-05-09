@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_2634
  */
-fun RecipeBookResults.draw(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Float) = this.method_2634(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RecipeBookResults.draw(context: DrawContext, x: Int, y: Int, mouseX: Int, mouseY: Int, delta: Float) = this.method_2634(context, x, y, mouseX, mouseY, delta)
 /**
  * method_2627
  */
-fun RecipeBookResults.setResults(arg0: MutableList<RecipeResultCollection>, arg1: Boolean, arg2: Boolean) = this.method_2627(arg0, arg1, arg2)
+fun RecipeBookResults.setResults(resultCollections: MutableList<RecipeResultCollection>, resetCurrentPage: Boolean, filteringCraftable: Boolean) = this.method_2627(resultCollections, resetCurrentPage, filteringCraftable)
 /**
  * method_64879
  */
-fun RecipeBookResults.onRecipeDisplayed(arg0: NetworkRecipeId) = this.method_64879(arg0)
+fun RecipeBookResults.onRecipeDisplayed(recipeId: NetworkRecipeId) = this.method_64879(recipeId)
 /**
  * method_2635
  */
@@ -20,7 +20,7 @@ fun RecipeBookResults.getLastClickedResults() = this.method_2635()
 /**
  * method_2632
  */
-fun RecipeBookResults.mouseClicked(arg0: Double, arg1: Double, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int) = this.method_2632(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun RecipeBookResults.mouseClicked(mouseX: Double, arg1: Double, mouseY: Int, arg3: Int, button: Int, areaLeft: Int, areaTop: Int) = this.method_2632(mouseX, arg1, mouseY, arg3, button, areaLeft, areaTop)
 /**
  * method_2633
  */
@@ -32,11 +32,11 @@ fun RecipeBookResults.getLastClickedRecipe() = this.method_64878()
 /**
  * method_2628
  */
-fun RecipeBookResults.drawTooltip(arg0: DrawContext, arg1: Int, arg2: Int) = this.method_2628(arg0, arg1, arg2)
+fun RecipeBookResults.drawTooltip(context: DrawContext, x: Int, y: Int) = this.method_2628(context, x, y)
 /**
  * method_2636
  */
-fun RecipeBookResults.initialize(arg0: MinecraftClient, arg1: Int, arg2: Int) = this.method_2636(arg0, arg1, arg2)
+fun RecipeBookResults.initialize(client: MinecraftClient, parentLeft: Int, parentTop: Int) = this.method_2636(client, parentLeft, parentTop)
 /**
  * method_2638
  */

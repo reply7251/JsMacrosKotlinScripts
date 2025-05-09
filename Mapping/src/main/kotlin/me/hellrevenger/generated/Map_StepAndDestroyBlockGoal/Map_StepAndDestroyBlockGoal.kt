@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_6307
  */
-fun StepAndDestroyBlockGoal.tickStepping(arg0: WorldAccess, arg1: BlockPos) = this.method_6307(arg0, arg1)
+fun StepAndDestroyBlockGoal.tickStepping(world: WorldAccess, pos: BlockPos) = this.method_6307(world, pos)
 /**
  * method_6309
  */
-fun StepAndDestroyBlockGoal.onDestroyBlock(arg0: world_World, arg1: BlockPos) = this.method_6309(arg0, arg1)
+fun StepAndDestroyBlockGoal.onDestroyBlock(world: world_World, pos: BlockPos) = this.method_6309(world, pos)

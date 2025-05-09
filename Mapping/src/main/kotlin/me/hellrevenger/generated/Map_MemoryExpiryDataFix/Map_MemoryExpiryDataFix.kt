@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_24506
  */
-fun MemoryExpiryDataFix.updateBrain(arg0: Dynamic<*>) = this.method_24506(arg0)
+fun MemoryExpiryDataFix.updateBrain(entityDynamic: Dynamic<*>) = this.method_24506(entityDynamic)

@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun ApiServices.userCache() = this.comp_840()
 /**
- * method_44143
- */
-fun KClass<ApiServices>.create(arg0: YggdrasilAuthenticationService, arg1: File) = ApiServices.method_44143(arg0, arg1)
-/**
  * method_55595
  */
 fun ApiServices.providesProfileKeys() = this.method_55595()

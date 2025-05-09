@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_45748
  */
-fun MessageHandler.onChatMessage(arg0: SignedMessage, arg1: GameProfile, arg2: net.minecraft.class_2556.class_7602) = this.method_45748(arg0, arg1, arg2)
+fun MessageHandler.onChatMessage(message: SignedMessage, sender: GameProfile, params: net.minecraft.class_2556.class_7602) = this.method_45748(message, sender, params)
 /**
  * method_44944
  */
@@ -12,7 +12,7 @@ fun MessageHandler.getUnprocessedMessageCount() = this.method_44944()
 /**
  * method_53488
  */
-fun MessageHandler.onUnverifiedMessage(arg0: UUID, arg1: net.minecraft.class_2556.class_7602) = this.method_53488(arg0, arg1)
+fun MessageHandler.onUnverifiedMessage(sender: UUID, parameters: net.minecraft.class_2556.class_7602) = this.method_53488(sender, parameters)
 /**
  * method_44765
  */
@@ -20,15 +20,15 @@ fun MessageHandler.processDelayedMessages() = this.method_44765()
 /**
  * method_44736
  */
-fun MessageHandler.onGameMessage(arg0: Text, arg1: Boolean) = this.method_44736(arg0, arg1)
+fun MessageHandler.onGameMessage(message: Text, overlay: Boolean) = this.method_44736(message, overlay)
 /**
  * method_45746
  */
-fun MessageHandler.onProfilelessMessage(arg0: Text, arg1: net.minecraft.class_2556.class_7602) = this.method_45746(arg0, arg1)
+fun MessageHandler.onProfilelessMessage(content: Text, params: net.minecraft.class_2556.class_7602) = this.method_45746(content, params)
 /**
  * method_44819
  */
-fun MessageHandler.removeDelayedMessage(arg0: MessageSignatureData) = this.method_44819(arg0)
+fun MessageHandler.removeDelayedMessage(signature: MessageSignatureData) = this.method_44819(signature)
 /**
  * method_44769
  */
@@ -40,4 +40,4 @@ fun MessageHandler.processAll() = this.method_44945()
 /**
  * method_44766
  */
-fun MessageHandler.setChatDelay(arg0: Double) = this.method_44766(arg0)
+fun MessageHandler.setChatDelay(chatDelay: Double) = this.method_44766(chatDelay)

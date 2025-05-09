@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_31760
  */
-fun <T>ChunkDataAccess<T>.writeChunkData(arg0: ChunkDataList<T>) = this.method_31760(arg0)
+fun <T>ChunkDataAccess<T>.writeChunkData(dataList: ChunkDataList<T>) = this.method_31760(dataList)
 /**
  * method_31758
  */
-fun <T>ChunkDataAccess<T>.awaitAll(arg0: Boolean) = this.method_31758(arg0)
+fun <T>ChunkDataAccess<T>.awaitAll(sync: Boolean) = this.method_31758(sync)
 /**
  * method_31759
  */
-fun <T>ChunkDataAccess<T>.readChunkData(arg0: ChunkPos) = this.method_31759(arg0)
+fun <T>ChunkDataAccess<T>.readChunkData(pos: ChunkPos) = this.method_31759(pos)

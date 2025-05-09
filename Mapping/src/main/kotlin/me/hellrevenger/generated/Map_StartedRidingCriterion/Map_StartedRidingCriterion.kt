@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_37257
  */
-fun StartedRidingCriterion.trigger(arg0: ServerPlayerEntity) = this.method_37257(arg0)
+fun StartedRidingCriterion.trigger(player: ServerPlayerEntity) = this.method_37257(player)

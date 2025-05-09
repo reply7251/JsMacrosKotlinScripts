@@ -2,69 +2,25 @@ package me.hellrevenger.generated.Map_EquipmentSlot
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_51935
- */
-val KClass<EquipmentSlot>.NO_MAX_COUNT by aliasStatic(EquipmentSlot::field_51935)
-/**
- * field_54086
- */
-val KClass<EquipmentSlot>.VALUES by aliasStatic(EquipmentSlot::field_54086)
-/**
- * field_54087
- */
-val KClass<EquipmentSlot>.FROM_INDEX by aliasStatic(EquipmentSlot::field_54087)
-/**
- * field_6173
- */
-val KClass<EquipmentSlot>.MAINHAND by aliasEnum(EquipmentSlot::class, "field_6173")
-/**
- * field_6174
- */
-val KClass<EquipmentSlot>.CHEST by aliasEnum(EquipmentSlot::class, "field_6174")
-/**
- * field_6171
- */
-val KClass<EquipmentSlot>.OFFHAND by aliasEnum(EquipmentSlot::class, "field_6171")
-/**
- * field_6172
- */
-val KClass<EquipmentSlot>.LEGS by aliasEnum(EquipmentSlot::class, "field_6172")
-/**
- * field_6166
- */
-val KClass<EquipmentSlot>.FEET by aliasEnum(EquipmentSlot::class, "field_6166")
-/**
- * field_6169
- */
-val KClass<EquipmentSlot>.HEAD by aliasEnum(EquipmentSlot::class, "field_6169")
-/**
- * field_48824
- */
-val KClass<EquipmentSlot>.BODY by aliasEnum(EquipmentSlot::class, "field_48824")
-/**
  * method_63622
  */
 fun EquipmentSlot.getIndex() = this.method_63622()
 /**
  * method_63620
  */
-fun EquipmentSlot.getOffsetIndex(arg0: Int) = this.method_63620(arg0)
+fun EquipmentSlot.getOffsetIndex(offset: Int) = this.method_63620(offset)
 /**
  * method_46643
  */
 fun EquipmentSlot.isArmorSlot() = this.method_46643()
 /**
- * method_5924
- */
-fun KClass<EquipmentSlot>.byName(arg0: String) = EquipmentSlot.method_5924(arg0)
-/**
  * method_32320
  */
-fun EquipmentSlot.getOffsetEntitySlotId(arg0: Int) = this.method_32320(arg0)
+fun EquipmentSlot.getOffsetEntitySlotId(offset: Int) = this.method_32320(offset)
 /**
  * method_60610
  */
-fun EquipmentSlot.split(arg0: ItemStack) = this.method_60610(arg0)
+fun EquipmentSlot.split(stack: ItemStack) = this.method_60610(stack)
 /**
  * method_5925
  */

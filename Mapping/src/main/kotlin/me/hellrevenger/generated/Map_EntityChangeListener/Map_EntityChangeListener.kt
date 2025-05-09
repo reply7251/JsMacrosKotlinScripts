@@ -8,4 +8,4 @@ fun EntityChangeListener.updateEntityPosition() = this.method_31749()
 /**
  * method_31750
  */
-fun EntityChangeListener.remove(arg0: net.minecraft.class_1297.class_5529) = this.method_31750(arg0)
+fun EntityChangeListener.remove(reason: net.minecraft.class_1297.class_5529) = this.method_31750(reason)

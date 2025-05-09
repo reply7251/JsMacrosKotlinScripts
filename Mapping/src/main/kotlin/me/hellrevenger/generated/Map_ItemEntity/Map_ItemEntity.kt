@@ -6,21 +6,13 @@ import me.hellrevenger.generated.*
  */
 val ItemEntity.uniqueOffset by alias(ItemEntity::field_7203)
 /**
- * field_7199
- */
-val KClass<ItemEntity>.STACK by aliasStatic(ItemEntity::field_7199)
-/**
  * method_35190
  */
 fun ItemEntity.setNeverDespawn() = this.method_35190()
 /**
  * method_48349
  */
-fun ItemEntity.setOwner(arg0: UUID) = this.method_48349(arg0)
-/**
- * method_24017
- */
-fun KClass<ItemEntity>.canMerge(arg0: ItemStack, arg1: ItemStack) = ItemEntity.method_24017(arg0, arg1)
+fun ItemEntity.setOwner(owner: UUID) = this.method_48349(owner)
 /**
  * method_6976
  */
@@ -28,7 +20,7 @@ fun ItemEntity.setCovetedItem() = this.method_6976()
 /**
  * method_6982
  */
-fun ItemEntity.setPickupDelay(arg0: Int) = this.method_6982(arg0)
+fun ItemEntity.setPickupDelay(pickupDelay: Int) = this.method_6982(pickupDelay)
 /**
  * method_6983
  */
@@ -38,13 +30,9 @@ fun ItemEntity.getStack() = this.method_6983()
  */
 fun ItemEntity.setToDefaultPickupDelay() = this.method_6988()
 /**
- * method_24018
- */
-fun KClass<ItemEntity>.merge(arg0: ItemStack, arg1: ItemStack, arg2: Int) = ItemEntity.method_24018(arg0, arg1, arg2)
-/**
  * method_6981
  */
-fun ItemEntity.setThrower(arg0: Entity) = this.method_6981(arg0)
+fun ItemEntity.setThrower(thrower: Entity) = this.method_6981(thrower)
 /**
  * method_6985
  */
@@ -56,7 +44,7 @@ fun ItemEntity.copy() = this.method_29271()
 /**
  * method_6979
  */
-fun ItemEntity.setStack(arg0: ItemStack) = this.method_6979(arg0)
+fun ItemEntity.setStack(stack: ItemStack) = this.method_6979(stack)
 /**
  * method_6987
  */
@@ -69,10 +57,6 @@ fun ItemEntity.resetPickupDelay() = this.method_6975()
  * method_6989
  */
 fun ItemEntity.setPickupDelayInfinite() = this.method_6989()
-/**
- * method_27314
- */
-fun KClass<ItemEntity>.getRotation(arg0: Float, arg1: Float) = ItemEntity.method_27314(arg0, arg1)
 /**
  * method_6977
  */

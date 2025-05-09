@@ -4,15 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_64503
  */
-fun ArmorMaterial.applyBodyArmorSettings(arg0: net.minecraft.class_1792.class_1793, arg1: RegistryEntry<SoundEvent>, arg2: Boolean, arg3: RegistryEntryList<EntityType<*>>) = this.method_64503(arg0, arg1, arg2, arg3)
-/**
- * method_63992
- */
-fun ArmorMaterial.applyBodyArmorSettings(arg0: net.minecraft.class_1792.class_1793, arg1: RegistryEntryList<EntityType<*>>) = this.method_63992(arg0, arg1)
+fun ArmorMaterial.applyBodyArmorSettings(settings: net.minecraft.class_1792.class_1793, equipSound: RegistryEntry<SoundEvent>, damageOnHurt: Boolean, allowedEntities: RegistryEntryList<EntityType<*>>) = this.method_64503(settings, equipSound, damageOnHurt, allowedEntities)
 /**
  * method_63991
  */
-fun ArmorMaterial.applySettings(arg0: net.minecraft.class_1792.class_1793, arg1: EquipmentType) = this.method_63991(arg0, arg1)
+fun ArmorMaterial.applySettings(settings: net.minecraft.class_1792.class_1793, equipmentType: EquipmentType) = this.method_63991(settings, equipmentType)
 /**
  * comp_3168
  */

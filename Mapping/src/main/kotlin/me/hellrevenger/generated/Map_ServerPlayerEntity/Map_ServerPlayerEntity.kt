@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_ServerPlayerEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_54209
- */
-val KClass<ServerPlayerEntity>.ENDER_PEARLS_KEY by aliasStatic(ServerPlayerEntity::field_54209)
-/**
  * field_13974
  */
 val ServerPlayerEntity.interactionManager by alias(ServerPlayerEntity::field_13974)
@@ -26,10 +22,6 @@ var ServerPlayerEntity.networkHandler by alias(ServerPlayerEntity::field_13987)
  */
 var ServerPlayerEntity.seenCredits by alias(ServerPlayerEntity::field_13969)
 /**
- * field_54210
- */
-val KClass<ServerPlayerEntity>.ENDER_PEARLS_DIMENSION_KEY by aliasStatic(ServerPlayerEntity::field_54210)
-/**
  * method_64128
  */
 fun ServerPlayerEntity.getEnderPearls() = this.method_64128()
@@ -48,7 +40,7 @@ fun ServerPlayerEntity.updateLastActionTime() = this.method_14234()
 /**
  * method_64125
  */
-fun ServerPlayerEntity.readRootVehicle(arg0: Optional<NbtCompound>) = this.method_64125(arg0)
+fun ServerPlayerEntity.readRootVehicle(nbt: Optional<NbtCompound>) = this.method_64125(nbt)
 /**
  * method_51469
  */
@@ -56,11 +48,11 @@ fun ServerPlayerEntity.getServerWorld() = this.method_51469()
 /**
  * method_17668
  */
-fun ServerPlayerEntity.setWatchedSection(arg0: ChunkSectionPos) = this.method_17668(arg0)
+fun ServerPlayerEntity.setWatchedSection(section: ChunkSectionPos) = this.method_17668(section)
 /**
  * method_52208
  */
-fun ServerPlayerEntity.setMovement(arg0: Vec3d) = this.method_52208(arg0)
+fun ServerPlayerEntity.setMovement(movement: Vec3d) = this.method_52208(movement)
 /**
  * method_14209
  */
@@ -70,25 +62,21 @@ fun ServerPlayerEntity.getIp() = this.method_14209()
  */
 fun ServerPlayerEntity.getStartRaidPos() = this.method_58585()
 /**
- * method_64123
- */
-fun KClass<ServerPlayerEntity>.addEnderPearlTicket(arg0: ServerWorld, arg1: ChunkPos) = ServerPlayerEntity.method_64123(arg0, arg1)
-/**
  * method_52373
  */
-fun ServerPlayerEntity.setChunkFilter(arg0: ChunkFilter) = this.method_52373(arg0)
+fun ServerPlayerEntity.setChunkFilter(chunkFilter: ChunkFilter) = this.method_52373(chunkFilter)
 /**
  * method_26284
  */
-fun ServerPlayerEntity.setSpawnPoint(arg0: RegistryKey<world_World>, arg1: BlockPos, arg2: Float, arg3: Boolean, arg4: Boolean) = this.method_26284(arg0, arg1, arg2, arg3, arg4)
+fun ServerPlayerEntity.setSpawnPoint(dimension: RegistryKey<world_World>, pos: BlockPos, angle: Float, forced: Boolean, sendMessage: Boolean) = this.method_26284(dimension, pos, angle, forced, sendMessage)
 /**
  * method_64133
  */
-fun ServerPlayerEntity.handleThrownEnderPearl(arg0: EnderPearlEntity) = this.method_64133(arg0)
+fun ServerPlayerEntity.handleThrownEnderPearl(enderPearl: EnderPearlEntity) = this.method_64133(enderPearl)
 /**
  * method_46364
  */
-fun ServerPlayerEntity.setSession(arg0: PublicPlayerSession) = this.method_46364(arg0)
+fun ServerPlayerEntity.setSession(session: PublicPlayerSession) = this.method_46364(session)
 /**
  * method_14217
  */
@@ -100,11 +88,11 @@ fun ServerPlayerEntity.onSpawn() = this.method_34225()
 /**
  * method_54720
  */
-fun ServerPlayerEntity.increaseTravelMotionStats(arg0: Double, arg1: Double, arg2: Double) = this.method_54720(arg0, arg1, arg2)
+fun ServerPlayerEntity.increaseTravelMotionStats(deltaX: Double, arg1: Double, deltaY: Double) = this.method_54720(deltaX, arg1, deltaY)
 /**
  * method_14224
  */
-fun ServerPlayerEntity.setCameraEntity(arg0: Entity) = this.method_14224(arg0)
+fun ServerPlayerEntity.setCameraEntity(entity: Entity) = this.method_14224(entity)
 /**
  * method_31273
  */
@@ -112,11 +100,11 @@ fun ServerPlayerEntity.getTextStream() = this.method_31273()
 /**
  * method_43505
  */
-fun ServerPlayerEntity.sendChatMessage(arg0: SentMessage, arg1: Boolean, arg2: net.minecraft.class_2556.class_7602) = this.method_43505(arg0, arg1, arg2)
+fun ServerPlayerEntity.sendChatMessage(message: SentMessage, filterMaskEnabled: Boolean, params: net.minecraft.class_2556.class_7602) = this.method_43505(message, filterMaskEnabled, params)
 /**
  * method_64131
  */
-fun ServerPlayerEntity.readEnderPearls(arg0: Optional<NbtCompound>) = this.method_64131(arg0)
+fun ServerPlayerEntity.readEnderPearls(nbt: Optional<NbtCompound>) = this.method_64131(nbt)
 /**
  * method_14208
  */
@@ -132,15 +120,15 @@ fun ServerPlayerEntity.teleportTo(arg0: TeleportTarget) = this.method_61275(arg0
 /**
  * method_14228
  */
-fun ServerPlayerEntity.setExperiencePoints(arg0: Int) = this.method_14228(arg0)
+fun ServerPlayerEntity.setExperiencePoints(points: Int) = this.method_14228(points)
 /**
  * method_64130
  */
-fun ServerPlayerEntity.removeEnderPearl(arg0: EnderPearlEntity) = this.method_64130(arg0)
+fun ServerPlayerEntity.removeEnderPearl(enderPearl: EnderPearlEntity) = this.method_64130(enderPearl)
 /**
  * method_37413
  */
-fun ServerPlayerEntity.dropSelectedItem(arg0: Boolean) = this.method_37413(arg0)
+fun ServerPlayerEntity.dropSelectedItem(entireStack: Boolean) = this.method_37413(entireStack)
 /**
  * method_14219
  */
@@ -152,7 +140,7 @@ fun ServerPlayerEntity.isSpawnForced() = this.method_26282()
 /**
  * method_64398
  */
-fun ServerPlayerEntity.sendMessage(arg0: Text) = this.method_64398(arg0)
+fun ServerPlayerEntity.sendMessage(message: Text) = this.method_64398(message)
 /**
  * method_14253
  */
@@ -168,7 +156,7 @@ fun ServerPlayerEntity.detachForDimensionChange() = this.method_60594()
 /**
  * method_43930
  */
-fun ServerPlayerEntity.sendServerMetadata(arg0: ServerMetadata) = this.method_43930(arg0)
+fun ServerPlayerEntity.sendServerMetadata(metadata: ServerMetadata) = this.method_43930(metadata)
 /**
  * method_63562
  */
@@ -176,7 +164,7 @@ fun ServerPlayerEntity.getPlayerInput() = this.method_63562()
 /**
  * method_14213
  */
-fun ServerPlayerEntity.setClientOptions(arg0: SyncedClientOptions) = this.method_14213(arg0)
+fun ServerPlayerEntity.setClientOptions(clientOptions: SyncedClientOptions) = this.method_14213(clientOptions)
 /**
  * method_14242
  */
@@ -188,7 +176,7 @@ fun ServerPlayerEntity.getSpawnPointPosition() = this.method_26280()
 /**
  * method_58586
  */
-fun ServerPlayerEntity.setStartRaidPos(arg0: BlockPos) = this.method_58586(arg0)
+fun ServerPlayerEntity.setStartRaidPos(startRaidPos: BlockPos) = this.method_58586(startRaidPos)
 /**
  * method_14248
  */
@@ -196,7 +184,7 @@ fun ServerPlayerEntity.getStatHandler() = this.method_14248()
 /**
  * method_32748
  */
-fun ServerPlayerEntity.readGameModeNbt(arg0: NbtCompound) = this.method_32748(arg0)
+fun ServerPlayerEntity.readGameModeNbt(nbt: NbtCompound) = this.method_32748(nbt)
 /**
  * method_38786
  */
@@ -208,11 +196,11 @@ fun ServerPlayerEntity.playerTick() = this.method_14226()
 /**
  * method_52374
  */
-fun ServerPlayerEntity.createCommonPlayerSpawnInfo(arg0: ServerWorld) = this.method_52374(arg0)
+fun ServerPlayerEntity.createCommonPlayerSpawnInfo(world: ServerWorld) = this.method_52374(world)
 /**
  * method_51468
  */
-fun ServerPlayerEntity.setServerWorld(arg0: ServerWorld) = this.method_51468(arg0)
+fun ServerPlayerEntity.setServerWorld(world: ServerWorld) = this.method_51468(world)
 /**
  * method_14206
  */
@@ -220,7 +208,7 @@ fun ServerPlayerEntity.getPlayerListName() = this.method_14206()
 /**
  * method_60592
  */
-fun ServerPlayerEntity.setSpawnPointFrom(arg0: ServerPlayerEntity) = this.method_60592(arg0)
+fun ServerPlayerEntity.setSpawnPointFrom(player: ServerPlayerEntity) = this.method_60592(player)
 /**
  * method_58584
  */
@@ -236,7 +224,7 @@ fun ServerPlayerEntity.getInputVelocityForMinecart() = this.method_63563()
 /**
  * method_64124
  */
-fun ServerPlayerEntity.addEnderPearl(arg0: EnderPearlEntity) = this.method_64124(arg0)
+fun ServerPlayerEntity.addEnderPearl(enderPearl: EnderPearlEntity) = this.method_64124(enderPearl)
 /**
  * method_14240
  */
@@ -248,11 +236,11 @@ fun ServerPlayerEntity.tickVehicleInLavaRiding() = this.method_38787()
 /**
  * method_58143
  */
-fun ServerPlayerEntity.setSpawnExtraParticlesOnFall(arg0: Boolean) = this.method_58143(arg0)
+fun ServerPlayerEntity.setSpawnExtraParticlesOnFall(spawnExtraParticlesOnFall: Boolean) = this.method_58143(spawnExtraParticlesOnFall)
 /**
  * method_63561
  */
-fun ServerPlayerEntity.setPlayerInput(arg0: PlayerInput) = this.method_63561(arg0)
+fun ServerPlayerEntity.setPlayerInput(playerInput: PlayerInput) = this.method_63561(playerInput)
 /**
  * method_14232
  */
@@ -268,7 +256,7 @@ fun ServerPlayerEntity.getChunkFilter() = this.method_52372()
 /**
  * method_14203
  */
-fun ServerPlayerEntity.copyFrom(arg0: ServerPlayerEntity, arg1: Boolean) = this.method_14203(arg0, arg1)
+fun ServerPlayerEntity.copyFrom(oldPlayer: ServerPlayerEntity, alive: Boolean) = this.method_14203(oldPlayer, alive)
 /**
  * method_14231
  */
@@ -276,11 +264,11 @@ fun ServerPlayerEntity.onDisconnect() = this.method_14231()
 /**
  * method_14222
  */
-fun ServerPlayerEntity.lookAtEntity(arg0: net.minecraft.class_2183.class_2184, arg1: Entity, arg2: net.minecraft.class_2183.class_2184) = this.method_14222(arg0, arg1, arg2)
+fun ServerPlayerEntity.lookAtEntity(anchorPoint: net.minecraft.class_2183.class_2184, targetEntity: Entity, targetAnchor: net.minecraft.class_2183.class_2184) = this.method_14222(anchorPoint, targetEntity, targetAnchor)
 /**
  * method_14252
  */
-fun ServerPlayerEntity.setExperienceLevel(arg0: Int) = this.method_14252(arg0)
+fun ServerPlayerEntity.setExperienceLevel(level: Int) = this.method_14252(level)
 /**
  * method_14238
  */
@@ -308,11 +296,11 @@ fun ServerPlayerEntity.getSpawnAngle() = this.method_30631()
 /**
  * method_43502
  */
-fun ServerPlayerEntity.sendMessageToClient(arg0: Text, arg1: Boolean) = this.method_43502(arg0, arg1)
+fun ServerPlayerEntity.sendMessageToClient(message: Text, overlay: Boolean) = this.method_43502(message, overlay)
 /**
  * method_60590
  */
-fun ServerPlayerEntity.getRespawnTarget(arg0: Boolean, arg1: net.minecraft.class_5454.class_9823) = this.method_60590(arg0, arg1)
+fun ServerPlayerEntity.getRespawnTarget(alive: Boolean, postDimensionTransition: net.minecraft.class_5454.class_9823) = this.method_60590(alive, postDimensionTransition)
 /**
  * method_14239
  */
@@ -320,8 +308,8 @@ fun ServerPlayerEntity.isDisconnected() = this.method_14239()
 /**
  * method_33795
  */
-fun ServerPlayerEntity.shouldFilterMessagesSentTo(arg0: ServerPlayerEntity) = this.method_33795(arg0)
+fun ServerPlayerEntity.shouldFilterMessagesSentTo(player: ServerPlayerEntity) = this.method_33795(player)
 /**
  * method_7336
  */
-fun ServerPlayerEntity.changeGameMode(arg0: GameMode) = this.method_7336(arg0)
+fun ServerPlayerEntity.changeGameMode(gameMode: GameMode) = this.method_7336(gameMode)

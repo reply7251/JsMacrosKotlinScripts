@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_65741
  */
-fun SpriteGetter.get(arg0: SpriteIdentifier) = this.method_65741(arg0)
+fun SpriteGetter.get(spriteId: SpriteIdentifier) = this.method_65741(spriteId)
 /**
  * method_65742
  */
-fun SpriteGetter.getMissing(arg0: String) = this.method_65742(arg0)
+fun SpriteGetter.getMissing(textureId: String) = this.method_65742(textureId)

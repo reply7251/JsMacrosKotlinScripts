@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_RandomChanceWithEnchantedBonusLootConditio
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_953
- */
-fun KClass<RandomChanceWithEnchantedBonusLootCondition>.builder(arg0: net.minecraft.class_7225.class_7874, arg1: Float, arg2: Float) = RandomChanceWithEnchantedBonusLootCondition.method_953(arg0, arg1, arg2)
-/**
  * method_950
  */
 fun RandomChanceWithEnchantedBonusLootCondition.test(arg0: LootContext) = this.method_950(arg0)

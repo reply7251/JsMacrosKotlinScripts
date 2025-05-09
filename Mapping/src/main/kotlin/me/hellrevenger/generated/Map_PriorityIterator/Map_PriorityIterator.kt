@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_54726
  */
-fun <T>PriorityIterator<T>.enqueue(arg0: T, arg1: Int) = this.method_54726(arg0, arg1)
+fun <T>PriorityIterator<T>.enqueue(value: T, priority: Int) = this.method_54726(value, priority)

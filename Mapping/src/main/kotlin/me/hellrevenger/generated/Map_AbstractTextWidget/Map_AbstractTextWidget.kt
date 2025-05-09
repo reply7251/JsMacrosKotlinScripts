@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_48978
  */
-fun AbstractTextWidget.setTextColor(arg0: Int) = this.method_48978(arg0)
+fun AbstractTextWidget.setTextColor(textColor: Int) = this.method_48978(textColor)

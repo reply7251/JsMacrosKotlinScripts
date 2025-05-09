@@ -2,25 +2,17 @@ package me.hellrevenger.generated.Map_VillagerEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_18851
- */
-val KClass<VillagerEntity>.POINTS_OF_INTEREST by aliasStatic(VillagerEntity::field_18851)
-/**
- * field_18526
- */
-val KClass<VillagerEntity>.ITEM_FOOD_VALUES by aliasStatic(VillagerEntity::field_18526)
-/**
  * method_7225
  */
 fun VillagerEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_7225(arg0, arg1)
 /**
  * method_19176
  */
-fun VillagerEntity.releaseTicketFor(arg0: MemoryModuleType<GlobalPos>) = this.method_19176(arg0)
+fun VillagerEntity.releaseTicketFor(pos: MemoryModuleType<GlobalPos>) = this.method_19176(pos)
 /**
  * method_16917
  */
-fun VillagerEntity.setOffers(arg0: TradeOfferList) = this.method_16917(arg0)
+fun VillagerEntity.setOffers(offers: TradeOfferList) = this.method_16917(offers)
 /**
  * method_7234
  */
@@ -32,7 +24,7 @@ fun VillagerEntity.hasSeedToPlant() = this.method_19623()
 /**
  * method_21650
  */
-fun VillagerEntity.readGossipDataNbt(arg0: NbtElement) = this.method_21650(arg0)
+fun VillagerEntity.readGossipDataNbt(nbt: NbtElement) = this.method_21650(nbt)
 /**
  * method_19182
  */
@@ -48,11 +40,11 @@ fun VillagerEntity.eatForBreeding() = this.method_20697()
 /**
  * method_19177
  */
-fun VillagerEntity.talkWithVillager(arg0: ServerWorld, arg1: VillagerEntity, arg2: Long) = this.method_19177(arg0, arg1, arg2)
+fun VillagerEntity.talkWithVillager(world: ServerWorld, villager: VillagerEntity, time: Long) = this.method_19177(world, villager, time)
 /**
  * method_19179
  */
-fun VillagerEntity.reinitializeBrain(arg0: ServerWorld) = this.method_19179(arg0)
+fun VillagerEntity.reinitializeBrain(world: ServerWorld) = this.method_19179(world)
 /**
  * method_19183
  */
@@ -60,11 +52,11 @@ fun VillagerEntity.playWorkSound() = this.method_19183()
 /**
  * method_20594
  */
-fun VillagerEntity.getReputation(arg0: PlayerEntity) = this.method_20594(arg0)
+fun VillagerEntity.getReputation(player: PlayerEntity) = this.method_20594(player)
 /**
  * method_19625
  */
-fun VillagerEntity.setExperience(arg0: Int) = this.method_19625(arg0)
+fun VillagerEntity.setExperience(experience: Int) = this.method_19625(experience)
 /**
  * method_20822
  */
@@ -72,15 +64,11 @@ fun VillagerEntity.shouldRestock() = this.method_20822()
 /**
  * method_20687
  */
-fun VillagerEntity.canSummonGolem(arg0: Long) = this.method_20687(arg0)
+fun VillagerEntity.canSummonGolem(time: Long) = this.method_20687(time)
 /**
  * method_20688
  */
-fun VillagerEntity.summonGolem(arg0: ServerWorld, arg1: Long, arg2: Int) = this.method_20688(arg0, arg1, arg2)
-/**
- * method_26955
- */
-fun KClass<VillagerEntity>.createVillagerAttributes() = VillagerEntity.method_26955()
+fun VillagerEntity.summonGolem(world: ServerWorld, time: Long, arg2: Int) = this.method_20688(world, time, arg2)
 /**
  * method_29279
  */

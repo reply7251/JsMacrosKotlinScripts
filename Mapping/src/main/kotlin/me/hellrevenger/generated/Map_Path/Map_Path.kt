@@ -8,19 +8,19 @@ fun Path.getLength() = this.method_38()
 /**
  * method_36
  */
-fun Path.setLength(arg0: Int) = this.method_36(arg0)
+fun Path.setLength(length: Int) = this.method_36(length)
 /**
  * method_35498
  */
-fun Path.toBuf(arg0: PacketByteBuf) = this.method_35498(arg0)
+fun Path.toBuf(buf: PacketByteBuf) = this.method_35498(buf)
 /**
  * method_41
  */
-fun Path.equalsPath(arg0: Path) = this.method_41(arg0)
+fun Path.equalsPath(o: Path) = this.method_41(o)
 /**
  * method_42
  */
-fun Path.setCurrentNodeIndex(arg0: Int) = this.method_42(arg0)
+fun Path.setCurrentNodeIndex(nodeIndex: Int) = this.method_42(nodeIndex)
 /**
  * method_30849
  */
@@ -64,7 +64,7 @@ fun Path.getCurrentNodeIndex() = this.method_39()
 /**
  * method_49
  */
-fun Path.getNodePosition(arg0: Entity) = this.method_49(arg0)
+fun Path.getNodePosition(entity: Entity) = this.method_49(entity)
 /**
  * method_21655
  */
@@ -72,28 +72,20 @@ fun Path.reachesTarget() = this.method_21655()
 /**
  * method_33
  */
-fun Path.setNode(arg0: Int, arg1: PathNode) = this.method_33(arg0, arg1)
+fun Path.setNode(index: Int, node: PathNode) = this.method_33(index, node)
 /**
  * method_31031
  */
-fun Path.getNodePos(arg0: Int) = this.method_31031(arg0)
+fun Path.getNodePos(index: Int) = this.method_31031(index)
 /**
  * method_52604
  */
 fun Path.getDebugNodeInfos() = this.method_52604()
 /**
- * method_34
- */
-fun KClass<Path>.fromBuf(arg0: PacketByteBuf) = Path.method_34(arg0)
-/**
  * method_40
  */
-fun Path.getNode(arg0: Int) = this.method_40(arg0)
+fun Path.getNode(index: Int) = this.method_40(index)
 /**
  * method_52605
  */
 fun Path.copy() = this.method_52605()
-/**
- * method_47
- */
-fun Path.getNodePosition(arg0: Entity, arg1: Int) = this.method_47(arg0, arg1)

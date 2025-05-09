@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_56049
  */
-fun AnyBlockUseCriterion.trigger(arg0: ServerPlayerEntity, arg1: BlockPos, arg2: ItemStack) = this.method_56049(arg0, arg1, arg2)
+fun AnyBlockUseCriterion.trigger(player: ServerPlayerEntity, pos: BlockPos, stack: ItemStack) = this.method_56049(player, pos, stack)

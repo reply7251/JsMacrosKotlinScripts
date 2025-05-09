@@ -8,4 +8,4 @@ fun PrioritizedConsecutiveExecutor.createTask(arg0: Runnable) = this.method_6360
 /**
  * method_63599
  */
-fun <Source>PrioritizedConsecutiveExecutor.executeAsync(arg0: Int, arg1: Consumer<CompletableFuture<Source>>) = this.method_63599<Source>(arg0, arg1)
+fun <Source>PrioritizedConsecutiveExecutor.executeAsync(priority: Int, future: Consumer<CompletableFuture<Source>>) = this.method_63599<Source>(priority, future)

@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_NullOps
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_51366
- */
-val KClass<NullOps>.INSTANCE by aliasStatic(NullOps::field_51366)
-/**
  * method_59561
  */
 fun NullOps.getNumberValue(arg0: util_Unit) = this.method_59561(arg0)
@@ -21,10 +17,6 @@ fun NullOps.createIntList(arg0: IntStream) = this.method_59573(arg0)
  * method_59572
  */
 fun NullOps.createMap(arg0: Map<util_Unit, util_Unit>) = this.method_59572(arg0)
-/**
- * method_59575
- */
-fun NullOps.createMap(arg0: Stream<util_Pair<util_Unit, util_Unit>>) = this.method_59575(arg0)
 /**
  * method_59568
  */
@@ -45,10 +37,6 @@ fun NullOps.createDouble(arg0: Double) = this.method_59557(arg0)
  * method_59569
  */
 fun NullOps.createNumeric(arg0: Number) = this.method_59569(arg0)
-/**
- * method_59567
- */
-fun NullOps.mergeToMap(arg0: util_Unit, arg1: Map<util_Unit, util_Unit>) = this.method_59567(arg0, arg1)
 /**
  * method_59579
  */
@@ -105,14 +93,6 @@ fun NullOps.getIntStream(arg0: util_Unit) = this.method_59596(arg0)
  * method_59586
  */
 fun NullOps.getMapEntries(arg0: util_Unit) = this.method_59586(arg0)
-/**
- * method_59562
- */
-fun NullOps.mergeToList(arg0: util_Unit, arg1: util_Unit) = this.method_59562(arg0, arg1)
-/**
- * method_59563
- */
-fun NullOps.mergeToMap(arg0: util_Unit, arg1: util_Unit, arg2: util_Unit) = this.method_59563(arg0, arg1, arg2)
 /**
  * method_59590
  */

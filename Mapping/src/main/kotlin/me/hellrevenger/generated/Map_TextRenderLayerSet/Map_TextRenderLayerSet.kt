@@ -4,15 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_51642
  */
-fun TextRenderLayerSet.getRenderLayer(arg0: net.minecraft.class_327.class_6415) = this.method_51642(arg0)
-/**
- * method_51641
- */
-fun KClass<TextRenderLayerSet>.ofIntensity(arg0: Identifier) = TextRenderLayerSet.method_51641(arg0)
-/**
- * method_51643
- */
-fun KClass<TextRenderLayerSet>.of(arg0: Identifier) = TextRenderLayerSet.method_51643(arg0)
+fun TextRenderLayerSet.getRenderLayer(layerType: net.minecraft.class_327.class_6415) = this.method_51642(layerType)
 /**
  * comp_1502
  */

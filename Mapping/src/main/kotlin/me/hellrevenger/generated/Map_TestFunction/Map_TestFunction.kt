@@ -24,7 +24,7 @@ fun TestFunction.templateName() = this.comp_2220()
 /**
  * method_22297
  */
-fun TestFunction.start(arg0: TestContext) = this.method_22297(arg0)
+fun TestFunction.start(context: TestContext) = this.method_22297(context)
 /**
  * method_32257
  */

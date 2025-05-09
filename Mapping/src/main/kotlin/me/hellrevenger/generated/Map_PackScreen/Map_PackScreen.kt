@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_48277
  */
-fun PackScreen.switchFocusedList(arg0: PackListWidget) = this.method_48277(arg0)
+fun PackScreen.switchFocusedList(listWidget: PackListWidget) = this.method_48277(listWidget)
 /**
  * method_48278
  */

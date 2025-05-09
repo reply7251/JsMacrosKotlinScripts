@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_60904
  */
-fun SectionBuilder.build(arg0: ChunkSectionPos, arg1: ChunkRendererRegion, arg2: VertexSorter, arg3: BlockBufferAllocatorStorage) = this.method_60904(arg0, arg1, arg2, arg3)
+fun SectionBuilder.build(sectionPos: ChunkSectionPos, renderRegion: ChunkRendererRegion, vertexSorter: VertexSorter, allocatorStorage: BlockBufferAllocatorStorage) = this.method_60904(sectionPos, renderRegion, vertexSorter, allocatorStorage)

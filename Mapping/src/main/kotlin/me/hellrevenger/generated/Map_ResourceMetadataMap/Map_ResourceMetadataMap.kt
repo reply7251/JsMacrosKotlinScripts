@@ -4,16 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_45173
  */
-fun <T>ResourceMetadataMap.get(arg0: ResourceMetadataSerializer<T>) = this.method_45173<T>(arg0)
-/**
- * method_45172
- */
-fun KClass<ResourceMetadataMap>.of() = ResourceMetadataMap.method_45172()
-/**
- * method_45174
- */
-fun <T>KClass<ResourceMetadataMap>.of(arg0: ResourceMetadataSerializer<T>, arg1: T) = ResourceMetadataMap.method_45174<T>(arg0, arg1)
-/**
- * method_45175
- */
-fun <T1, T2>KClass<ResourceMetadataMap>.of(arg0: ResourceMetadataSerializer<T1>, arg1: T1, arg2: ResourceMetadataSerializer<T2>, arg3: T2) = ResourceMetadataMap.method_45175<T1, T2>(arg0, arg1, arg2, arg3)
+fun <T>ResourceMetadataMap.get(serializer: ResourceMetadataSerializer<T>) = this.method_45173<T>(serializer)

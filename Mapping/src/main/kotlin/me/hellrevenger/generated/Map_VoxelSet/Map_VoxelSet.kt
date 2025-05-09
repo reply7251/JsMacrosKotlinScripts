@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_1045
  */
-fun VoxelSet.getMax(arg0: net.minecraft.class_2350.class_2351) = this.method_1045(arg0)
+fun VoxelSet.getMax(axis: net.minecraft.class_2350.class_2351) = this.method_1045(axis)
 /**
  * method_1055
  */
-fun VoxelSet.getMin(arg0: net.minecraft.class_2350.class_2351) = this.method_1055(arg0)
+fun VoxelSet.getMin(axis: net.minecraft.class_2350.class_2351) = this.method_1055(axis)
 /**
  * method_1044
  */
-fun VoxelSet.inBoundsAndContains(arg0: Int, arg1: Int, arg2: Int) = this.method_1044(arg0, arg1, arg2)
+fun VoxelSet.inBoundsAndContains(x: Int, y: Int, z: Int) = this.method_1044(x, y, z)
 /**
  * method_1048
  */
@@ -20,39 +20,31 @@ fun VoxelSet.getZSize() = this.method_1048()
 /**
  * method_1051
  */
-fun VoxelSet.getSize(arg0: net.minecraft.class_2350.class_2351) = this.method_1051(arg0)
+fun VoxelSet.getSize(axis: net.minecraft.class_2350.class_2351) = this.method_1051(axis)
 /**
  * method_1058
  */
-fun VoxelSet.getEndingAxisCoord(arg0: net.minecraft.class_2350.class_2351, arg1: Int, arg2: Int) = this.method_1058(arg0, arg1, arg2)
-/**
- * method_1062
- */
-fun VoxelSet.inBoundsAndContains(arg0: AxisCycleDirection, arg1: Int, arg2: Int, arg3: Int) = this.method_1062(arg0, arg1, arg2, arg3)
+fun VoxelSet.getEndingAxisCoord(axis: net.minecraft.class_2350.class_2351, from: Int, to: Int) = this.method_1058(axis, from, to)
 /**
  * method_1049
  */
-fun VoxelSet.set(arg0: Int, arg1: Int, arg2: Int) = this.method_1049(arg0, arg1, arg2)
+fun VoxelSet.set(x: Int, y: Int, z: Int) = this.method_1049(x, y, z)
 /**
  * method_35592
  */
-fun VoxelSet.getStartingAxisCoord(arg0: net.minecraft.class_2350.class_2351, arg1: Int, arg2: Int) = this.method_35592(arg0, arg1, arg2)
+fun VoxelSet.getStartingAxisCoord(axis: net.minecraft.class_2350.class_2351, from: Int, to: Int) = this.method_35592(axis, from, to)
 /**
  * method_1064
  */
-fun VoxelSet.forEachEdge(arg0: net.minecraft.class_251.class_253, arg1: Boolean) = this.method_1064(arg0, arg1)
+fun VoxelSet.forEachEdge(callback: net.minecraft.class_251.class_253, coalesce: Boolean) = this.method_1064(callback, coalesce)
 /**
  * method_1046
  */
-fun VoxelSet.forEachDirection(arg0: net.minecraft.class_251.class_252) = this.method_1046(arg0)
+fun VoxelSet.forEachDirection(consumer: net.minecraft.class_251.class_252) = this.method_1046(consumer)
 /**
  * method_1057
  */
-fun VoxelSet.contains(arg0: AxisCycleDirection, arg1: Int, arg2: Int, arg3: Int) = this.method_1057(arg0, arg1, arg2, arg3)
-/**
- * method_1063
- */
-fun VoxelSet.contains(arg0: Int, arg1: Int, arg2: Int) = this.method_1063(arg0, arg1, arg2)
+fun VoxelSet.contains(cycle: AxisCycleDirection, x: Int, y: Int, z: Int) = this.method_1057(cycle, x, y, z)
 /**
  * method_1047
  */
@@ -64,7 +56,7 @@ fun VoxelSet.isEmpty() = this.method_1056()
 /**
  * method_1053
  */
-fun VoxelSet.forEachBox(arg0: net.minecraft.class_251.class_253, arg1: Boolean) = this.method_1053(arg0, arg1)
+fun VoxelSet.forEachBox(consumer: net.minecraft.class_251.class_253, coalesce: Boolean) = this.method_1053(consumer, coalesce)
 /**
  * method_1050
  */

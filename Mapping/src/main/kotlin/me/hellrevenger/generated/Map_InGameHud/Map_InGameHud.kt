@@ -2,14 +2,6 @@ package me.hellrevenger.generated.Map_InGameHud
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_45304
- */
-val KClass<InGameHud>.CROSSHAIR_TEXTURE by aliasStatic(InGameHud::field_45304)
-/**
- * field_52771
- */
-val KClass<InGameHud>.NAUSEA_TEXTURE by aliasStatic(InGameHud::field_52771)
-/**
  * field_2013
  */
 var InGameHud.vignetteDarkness by alias(InGameHud::field_2013)
@@ -24,11 +16,11 @@ fun InGameHud.clearTitle() = this.method_34003()
 /**
  * method_39192
  */
-fun InGameHud.renderAutosaveIndicator(arg0: DrawContext, arg1: RenderTickCounter) = this.method_39192(arg0, arg1)
+fun InGameHud.renderAutosaveIndicator(context: DrawContext, tickCounter: RenderTickCounter) = this.method_39192(context, tickCounter)
 /**
  * method_1732
  */
-fun InGameHud.setRecordPlayingOverlay(arg0: Text) = this.method_1732(arg0)
+fun InGameHud.setRecordPlayingOverlay(description: Text) = this.method_1732(description)
 /**
  * method_1747
  */
@@ -48,15 +40,15 @@ fun InGameHud.setDefaultTitleFade() = this.method_1742()
 /**
  * method_1753
  */
-fun InGameHud.render(arg0: DrawContext, arg1: RenderTickCounter) = this.method_1753(arg0, arg1)
+fun InGameHud.render(context: DrawContext, tickCounter: RenderTickCounter) = this.method_1753(context, tickCounter)
 /**
  * method_34001
  */
-fun InGameHud.setTitleTicks(arg0: Int, arg1: Int, arg2: Int) = this.method_34001(arg0, arg1, arg2)
+fun InGameHud.setTitleTicks(fadeInTicks: Int, stayTicks: Int, fadeOutTicks: Int) = this.method_34001(fadeInTicks, stayTicks, fadeOutTicks)
 /**
  * method_34004
  */
-fun InGameHud.setTitle(arg0: Text) = this.method_34004(arg0)
+fun InGameHud.setTitle(title: Text) = this.method_34004(title)
 /**
  * method_1738
  */
@@ -68,19 +60,19 @@ fun InGameHud.shouldShowChatDisabledScreen() = this.method_44353()
 /**
  * method_39191
  */
-fun InGameHud.tick(arg0: Boolean) = this.method_39191(arg0)
+fun InGameHud.tick(paused: Boolean) = this.method_39191(paused)
 /**
  * method_44354
  */
-fun InGameHud.setCanShowChatDisabledScreen(arg0: Boolean) = this.method_44354(arg0)
+fun InGameHud.setCanShowChatDisabledScreen(canShowChatDisabledScreen: Boolean) = this.method_44354(canShowChatDisabledScreen)
 /**
  * method_1758
  */
-fun InGameHud.setOverlayMessage(arg0: Text, arg1: Boolean) = this.method_1758(arg0, arg1)
+fun InGameHud.setOverlayMessage(message: Text, tinted: Boolean) = this.method_1758(message, tinted)
 /**
  * method_34002
  */
-fun InGameHud.setSubtitle(arg0: Text) = this.method_34002(arg0)
+fun InGameHud.setSubtitle(subtitle: Text) = this.method_34002(subtitle)
 /**
  * method_53531
  */

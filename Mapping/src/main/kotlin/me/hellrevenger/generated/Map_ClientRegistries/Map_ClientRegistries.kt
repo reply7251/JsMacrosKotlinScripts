@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_56586
  */
-fun ClientRegistries.putTags(arg0: Map<RegistryKey<out Registry<*>>, net.minecraft.class_6864.class_5748>) = this.method_56586(arg0)
+fun ClientRegistries.putTags(tags: Map<RegistryKey<out Registry<*>>, net.minecraft.class_6864.class_5748>) = this.method_56586(tags)
 /**
  * method_56585
  */
-fun ClientRegistries.createRegistryManager(arg0: ResourceFactory, arg1: net.minecraft.class_5455.class_6890, arg2: Boolean) = this.method_56585(arg0, arg1, arg2)
+fun ClientRegistries.createRegistryManager(resourceFactory: ResourceFactory, registryManager: net.minecraft.class_5455.class_6890, local: Boolean) = this.method_56585(resourceFactory, registryManager, local)
 /**
  * method_56583
  */
-fun ClientRegistries.putDynamicRegistry(arg0: RegistryKey<out Registry<*>>, arg1: MutableList<net.minecraft.class_7782.class_9176>) = this.method_56583(arg0, arg1)
+fun ClientRegistries.putDynamicRegistry(registryRef: RegistryKey<out Registry<*>>, entries: MutableList<net.minecraft.class_7782.class_9176>) = this.method_56583(registryRef, entries)

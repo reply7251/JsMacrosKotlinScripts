@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_61579
  */
-fun MinecartController.setVelocity(arg0: Double, arg1: Double, arg2: Double) = this.method_61579(arg0, arg1, arg2)
+fun MinecartController.setVelocity(x: Double, arg1: Double, y: Double) = this.method_61579(x, arg1, y)
 /**
  * method_61584
  */
-fun MinecartController.limitSpeed(arg0: Vec3d) = this.method_61584(arg0)
+fun MinecartController.limitSpeed(velocity: Vec3d) = this.method_61584(velocity)
 /**
  * method_61599
  */
@@ -24,7 +24,7 @@ fun MinecartController.getHorizontalFacing() = this.method_61597()
 /**
  * method_61577
  */
-fun MinecartController.moveAlongTrack(arg0: BlockPos, arg1: RailShape, arg2: Double) = this.method_61577(arg0, arg1, arg2)
+fun MinecartController.moveAlongTrack(blockPos: BlockPos, railShape: RailShape, remainingMovement: Double) = this.method_61577(blockPos, railShape, remainingMovement)
 /**
  * method_61585
  */
@@ -32,11 +32,11 @@ fun MinecartController.getLerpTargetPitch() = this.method_61585()
 /**
  * method_61573
  */
-fun MinecartController.setLerpTargetVelocity(arg0: Double, arg1: Double, arg2: Double) = this.method_61573(arg0, arg1, arg2)
+fun MinecartController.setLerpTargetVelocity(x: Double, arg1: Double, y: Double) = this.method_61573(x, arg1, y)
 /**
  * method_61583
  */
-fun MinecartController.setPos(arg0: Double, arg1: Double, arg2: Double) = this.method_61583(arg0, arg1, arg2)
+fun MinecartController.setPos(x: Double, arg1: Double, y: Double) = this.method_61583(x, arg1, y)
 /**
  * method_61588
  */
@@ -50,17 +50,13 @@ fun MinecartController.getY() = this.method_61593()
  */
 fun MinecartController.getPitch() = this.method_61595()
 /**
- * method_61581
- */
-fun MinecartController.setPos(arg0: Vec3d) = this.method_61581(arg0)
-/**
  * method_61587
  */
 fun MinecartController.tick() = this.method_61587()
 /**
  * method_61580
  */
-fun MinecartController.setYaw(arg0: Float) = this.method_61580(arg0)
+fun MinecartController.setYaw(yaw: Float) = this.method_61580(yaw)
 /**
  * method_61591
  */
@@ -72,7 +68,7 @@ fun MinecartController.resetLerp() = this.method_64647()
 /**
  * method_61589
  */
-fun MinecartController.moveOnRail(arg0: ServerWorld) = this.method_61589(arg0)
+fun MinecartController.moveOnRail(world: ServerWorld) = this.method_61589(world)
 /**
  * method_61578
  */
@@ -94,10 +90,6 @@ fun MinecartController.getZ() = this.method_61594()
  */
 fun MinecartController.getYaw() = this.method_61596()
 /**
- * method_61574
- */
-fun MinecartController.setPos(arg0: Double, arg1: Double, arg2: Double, arg3: Float, arg4: Float, arg5: Int) = this.method_61574(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
  * method_61582
  */
 fun MinecartController.getLerpTargetZ() = this.method_61582()
@@ -108,16 +100,12 @@ fun MinecartController.getX() = this.method_61592()
 /**
  * method_61575
  */
-fun MinecartController.setPitch(arg0: Float) = this.method_61575(arg0)
+fun MinecartController.setPitch(pitch: Float) = this.method_61575(pitch)
 /**
  * method_61598
  */
-fun MinecartController.getMaxSpeed(arg0: ServerWorld) = this.method_61598(arg0)
+fun MinecartController.getMaxSpeed(world: ServerWorld) = this.method_61598(world)
 /**
  * method_61590
  */
 fun MinecartController.getVelocity() = this.method_61590()
-/**
- * method_61576
- */
-fun MinecartController.setVelocity(arg0: Vec3d) = this.method_61576(arg0)

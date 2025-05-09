@@ -30,14 +30,6 @@ val <S>PiglinBaseEntityModel<S>.jacket where S: BipedEntityRenderState by alias(
  */
 val <S>PiglinBaseEntityModel<S>.rightEar where S: BipedEntityRenderState by alias(PiglinBaseEntityModel<*>::field_52861)
 /**
- * method_62055
- */
-fun <S>KClass<PiglinBaseEntityModel<S>>.getModelData(arg0: Dilation) where S: BipedEntityRenderState = PiglinBaseEntityModel.method_62055(arg0)
-/**
  * method_17087
  */
 fun <S>PiglinBaseEntityModel<S>.setAngles(arg0: S) where S: BipedEntityRenderState = this.method_17087(arg0)
-/**
- * method_62056
- */
-fun <S>KClass<PiglinBaseEntityModel<S>>.getModelPartData(arg0: Dilation, arg1: ModelData) where S: BipedEntityRenderState = PiglinBaseEntityModel.method_62056(arg0, arg1)

@@ -10,10 +10,6 @@ fun VehicleMoveS2CPacket.yaw() = this.comp_3348()
  */
 fun VehicleMoveS2CPacket.pitch() = this.comp_3349()
 /**
- * method_65305
- */
-fun KClass<VehicleMoveS2CPacket>.fromVehicle(arg0: Entity) = VehicleMoveS2CPacket.method_65305(arg0)
-/**
  * method_11672
  */
 fun VehicleMoveS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11672(arg0)

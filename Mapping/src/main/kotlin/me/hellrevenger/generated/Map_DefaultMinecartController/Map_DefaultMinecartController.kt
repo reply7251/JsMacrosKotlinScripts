@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_61620
  */
-fun DefaultMinecartController.snapPositionToRail(arg0: Double, arg1: Double, arg2: Double) = this.method_61620(arg0, arg1, arg2)
+fun DefaultMinecartController.snapPositionToRail(x: Double, arg1: Double, y: Double) = this.method_61620(x, arg1, y)

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_6445
  */
-fun SpecialSpawner.spawn(arg0: ServerWorld, arg1: Boolean, arg2: Boolean) = this.method_6445(arg0, arg1, arg2)
+fun SpecialSpawner.spawn(world: ServerWorld, spawnMonsters: Boolean, spawnAnimals: Boolean) = this.method_6445(world, spawnMonsters, spawnAnimals)

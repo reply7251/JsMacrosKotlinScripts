@@ -2,17 +2,9 @@ package me.hellrevenger.generated.Map_TargetedEnchantmentEffect
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_60203
- */
-fun <T, S>KClass<TargetedEnchantmentEffect<T>>.createPostAttackCodec(arg0: Codec<S>, arg1: ContextType) = TargetedEnchantmentEffect.method_60203<S>(arg0, arg1)
-/**
- * method_60208
- */
-fun <T, S>KClass<TargetedEnchantmentEffect<T>>.createEquipmentDropsCodec(arg0: Codec<S>, arg1: ContextType) = TargetedEnchantmentEffect.method_60208<S>(arg0, arg1)
-/**
  * method_60207
  */
-fun <T>TargetedEnchantmentEffect<T>.test(arg0: LootContext) = this.method_60207(arg0)
+fun <T>TargetedEnchantmentEffect<T>.test(lootContext: LootContext) = this.method_60207(lootContext)
 /**
  * comp_2702
  */

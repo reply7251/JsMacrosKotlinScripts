@@ -22,10 +22,6 @@ fun <T>LongRunningSampleStatistics<T>.secondSlowestSample() where T: LongRunning
  */
 fun <T>LongRunningSampleStatistics<T>.slowestSample() where T: LongRunningSample = this.comp_55()
 /**
- * method_38060
- */
-fun <T>KClass<LongRunningSampleStatistics<T>>.fromSamples(arg0: MutableList<T>) where T: LongRunningSample = LongRunningSampleStatistics.method_38060<T>(arg0)
-/**
  * comp_58
  */
 fun <T>LongRunningSampleStatistics<T>.quantiles() where T: LongRunningSample = this.comp_58()

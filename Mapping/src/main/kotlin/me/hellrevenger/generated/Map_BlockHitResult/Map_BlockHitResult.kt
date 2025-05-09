@@ -4,15 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_17779
  */
-fun BlockHitResult.withSide(arg0: Direction) = this.method_17779(arg0)
+fun BlockHitResult.withSide(side: Direction) = this.method_17779(side)
 /**
  * method_17777
  */
 fun BlockHitResult.getBlockPos() = this.method_17777()
-/**
- * method_17778
- */
-fun KClass<BlockHitResult>.createMissed(arg0: Vec3d, arg1: Direction, arg2: BlockPos) = BlockHitResult.method_17778(arg0, arg1, arg2)
 /**
  * method_17781
  */
@@ -20,7 +16,7 @@ fun BlockHitResult.isInsideBlock() = this.method_17781()
 /**
  * method_29328
  */
-fun BlockHitResult.withBlockPos(arg0: BlockPos) = this.method_29328(arg0)
+fun BlockHitResult.withBlockPos(blockPos: BlockPos) = this.method_29328(blockPos)
 /**
  * method_62877
  */

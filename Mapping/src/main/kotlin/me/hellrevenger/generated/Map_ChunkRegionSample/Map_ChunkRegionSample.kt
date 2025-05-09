@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_ChunkRegionSample
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_56985
- */
-fun KClass<ChunkRegionSample>.fromEvent(arg0: RecordedEvent) = ChunkRegionSample.method_56985(arg0)
-/**
  * comp_2342
  */
 fun ChunkRegionSample.dimension() = this.comp_2342()

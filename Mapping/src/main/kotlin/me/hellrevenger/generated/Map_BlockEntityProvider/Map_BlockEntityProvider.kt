@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_10123
  */
-fun BlockEntityProvider.createBlockEntity(arg0: BlockPos, arg1: BlockState) = this.method_10123(arg0, arg1)
+fun BlockEntityProvider.createBlockEntity(pos: BlockPos, state: BlockState) = this.method_10123(pos, state)
 /**
  * method_31645
  */
-fun <T>BlockEntityProvider.getTicker(arg0: world_World, arg1: BlockState, arg2: BlockEntityType<T>) where T: BlockEntity = this.method_31645<T>(arg0, arg1, arg2)
+fun <T>BlockEntityProvider.getTicker(world: world_World, state: BlockState, type: BlockEntityType<T>) where T: BlockEntity = this.method_31645<T>(world, state, type)
 /**
  * method_32896
  */
-fun <T>BlockEntityProvider.getGameEventListener(arg0: ServerWorld, arg1: T) where T: BlockEntity = this.method_32896<T>(arg0, arg1)
+fun <T>BlockEntityProvider.getGameEventListener(world: ServerWorld, blockEntity: T) where T: BlockEntity = this.method_32896<T>(world, blockEntity)

@@ -37,7 +37,3 @@ var SquidEntity.prevThrustTimer by alias(SquidEntity::field_6902)
  * method_6672
  */
 fun SquidEntity.hasSwimmingVector() = this.method_6672()
-/**
- * method_26895
- */
-fun KClass<SquidEntity>.createSquidAttributes() = SquidEntity.method_26895()

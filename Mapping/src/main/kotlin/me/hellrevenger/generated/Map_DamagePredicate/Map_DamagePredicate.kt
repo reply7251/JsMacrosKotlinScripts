@@ -8,7 +8,7 @@ fun DamagePredicate.dealt() = this.comp_1735()
 /**
  * method_8838
  */
-fun DamagePredicate.test(arg0: ServerPlayerEntity, arg1: DamageSource, arg2: Float, arg3: Float, arg4: Boolean) = this.method_8838(arg0, arg1, arg2, arg3, arg4)
+fun DamagePredicate.test(player: ServerPlayerEntity, source: DamageSource, dealt: Float, taken: Float, blocked: Boolean) = this.method_8838(player, source, dealt, taken, blocked)
 /**
  * comp_1736
  */

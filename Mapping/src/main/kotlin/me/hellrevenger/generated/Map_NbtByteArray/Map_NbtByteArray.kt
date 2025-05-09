@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_NbtByteArray
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_21024
- */
-val KClass<NbtByteArray>.TYPE by aliasStatic(NbtByteArray::field_21024)
-/**
  * method_17804
  */
 fun NbtByteArray.method_10536(arg0: Int) = this.method_17804(arg0)

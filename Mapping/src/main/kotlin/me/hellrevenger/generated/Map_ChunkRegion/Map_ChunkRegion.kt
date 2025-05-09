@@ -8,4 +8,4 @@ fun ChunkRegion.getCenterPos() = this.method_33561()
 /**
  * method_42109
  */
-fun ChunkRegion.needsBlending(arg0: ChunkPos, arg1: Int) = this.method_42109(arg0, arg1)
+fun ChunkRegion.needsBlending(chunkPos: ChunkPos, checkRadius: Int) = this.method_42109(chunkPos, checkRadius)

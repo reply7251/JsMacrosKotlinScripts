@@ -9,7 +9,3 @@ fun AbstractSkeletonEntity.updateAttackType() = this.method_6997()
  * method_35191
  */
 fun AbstractSkeletonEntity.isShaking() = this.method_35191()
-/**
- * method_26905
- */
-fun KClass<AbstractSkeletonEntity>.createAbstractSkeletonAttributes() = AbstractSkeletonEntity.method_26905()

@@ -6,13 +6,9 @@ import me.hellrevenger.generated.*
  */
 fun GenerationShapeConfig.horizontalCellBlockCount() = this.method_39546()
 /**
- * method_32994
- */
-fun KClass<GenerationShapeConfig>.create(arg0: Int, arg1: Int, arg2: Int, arg3: Int) = GenerationShapeConfig.method_32994(arg0, arg1, arg2, arg3)
-/**
  * method_42368
  */
-fun GenerationShapeConfig.trimHeight(arg0: HeightLimitView) = this.method_42368(arg0)
+fun GenerationShapeConfig.trimHeight(world: HeightLimitView) = this.method_42368(world)
 /**
  * method_39545
  */

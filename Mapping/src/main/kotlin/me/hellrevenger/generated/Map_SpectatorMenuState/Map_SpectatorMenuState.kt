@@ -8,4 +8,4 @@ fun SpectatorMenuState.getSelectedSlot() = this.method_2787()
 /**
  * method_2786
  */
-fun SpectatorMenuState.getCommand(arg0: Int) = this.method_2786(arg0)
+fun SpectatorMenuState.getCommand(slot: Int) = this.method_2786(slot)

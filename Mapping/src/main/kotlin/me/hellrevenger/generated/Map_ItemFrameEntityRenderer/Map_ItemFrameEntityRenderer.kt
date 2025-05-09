@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_ItemFrameEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_32932
- */
-val <T>KClass<ItemFrameEntityRenderer<T>>.GLOW_FRAME_BLOCK_LIGHT where T: ItemFrameEntity by aliasStatic({ItemFrameEntityRenderer.field_32932})
-/**
  * method_62473
  */
 fun <T>ItemFrameEntityRenderer<T>.updateRenderState(arg0: T, arg1: ItemFrameEntityRenderState, arg2: Float) where T: ItemFrameEntity = this.method_62473(arg0, arg1, arg2)

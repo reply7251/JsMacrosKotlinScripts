@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_52376
  */
-fun ServerPlayerConfigurationTask.sendPacket(arg0: Consumer<Packet<*>>) = this.method_52376(arg0)
+fun ServerPlayerConfigurationTask.sendPacket(sender: Consumer<Packet<*>>) = this.method_52376(sender)
 /**
  * method_52375
  */

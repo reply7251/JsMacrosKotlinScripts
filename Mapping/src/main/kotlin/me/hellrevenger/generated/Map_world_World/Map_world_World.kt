@@ -2,30 +2,6 @@ package me.hellrevenger.generated.Map_world_World
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_30970
- */
-val KClass<world_World>.MAX_Y by aliasStatic(world_World::field_30970)
-/**
- * field_30966
- */
-val KClass<world_World>.MAX_UPDATE_DEPTH by aliasStatic(world_World::field_30966)
-/**
- * field_30971
- */
-val KClass<world_World>.MIN_Y by aliasStatic(world_World::field_30971)
-/**
- * field_30965
- */
-val KClass<world_World>.HORIZONTAL_LIMIT by aliasStatic(world_World::field_30965)
-/**
- * field_25181
- */
-val KClass<world_World>.END by aliasStatic(world_World::field_25181)
-/**
- * field_25180
- */
-val KClass<world_World>.NETHER by aliasStatic(world_World::field_25180)
-/**
  * field_27082
  */
 var world_World.blockEntityTickers by alias(world_World::field_27082)
@@ -34,17 +10,13 @@ var world_World.blockEntityTickers by alias(world_World::field_27082)
  */
 var world_World.random by alias(world_World::field_9229)
 /**
- * field_25179
- */
-val KClass<world_World>.OVERWORLD by aliasStatic(world_World::field_25179)
-/**
  * field_9236
  */
 val world_World.isClient by alias(world_World::field_9236)
 /**
  * method_8520
  */
-fun world_World.hasRain(arg0: BlockPos) = this.method_8520(arg0)
+fun world_World.hasRain(pos: BlockPos) = this.method_8520(pos)
 /**
  * method_48963
  */
@@ -52,7 +24,7 @@ fun world_World.getDamageSources() = this.method_48963()
 /**
  * method_8544
  */
-fun world_World.removeBlockEntity(arg0: BlockPos) = this.method_8544(arg0)
+fun world_World.removeBlockEntity(pos: BlockPos) = this.method_8544(pos)
 /**
  * method_43127
  */
@@ -60,7 +32,7 @@ fun world_World.getSpawnAngle() = this.method_43127()
 /**
  * method_8508
  */
-fun world_World.updateNeighborsExcept(arg0: BlockPos, arg1: Block, arg2: Direction, arg3: WireOrientation) = this.method_8508(arg0, arg1, arg2, arg3)
+fun world_World.updateNeighborsExcept(pos: BlockPos, sourceBlock: Block, direction: Direction, orientation: WireOrientation) = this.method_8508(pos, sourceBlock, direction, orientation)
 /**
  * method_8530
  */
@@ -72,43 +44,43 @@ fun world_World.getDimensionEntry() = this.method_40134()
 /**
  * method_38989
  */
-fun world_World.shouldUpdatePostDeath(arg0: Entity) = this.method_38989(arg0)
+fun world_World.shouldUpdatePostDeath(entity: Entity) = this.method_38989(entity)
 /**
  * method_41410
  */
-fun world_World.updateNeighbor(arg0: BlockState, arg1: BlockPos, arg2: Block, arg3: WireOrientation, arg4: Boolean) = this.method_41410(arg0, arg1, arg2, arg3, arg4)
+fun world_World.updateNeighbor(state: BlockState, pos: BlockPos, sourceBlock: Block, orientation: WireOrientation, notify: Boolean) = this.method_41410(state, pos, sourceBlock, orientation, notify)
 /**
  * method_8496
  */
-fun world_World.setThunderGradient(arg0: Float) = this.method_8496(arg0)
+fun world_World.setThunderGradient(thunderGradient: Float) = this.method_8496(thunderGradient)
 /**
  * method_61271
  */
-fun world_World.updateNeighborsAlways(arg0: BlockPos, arg1: Block) = this.method_61271(arg0, arg1)
+fun world_World.updateNeighborsAlways(pos: BlockPos, block: Block) = this.method_61271(pos, block)
 /**
  * method_8413
  */
-fun world_World.updateListeners(arg0: BlockPos, arg1: BlockState, arg2: BlockState, arg3: Int) = this.method_8413(arg0, arg1, arg2, arg3)
+fun world_World.updateListeners(pos: BlockPos, oldState: BlockState, newState: BlockState, flags: Int) = this.method_8413(pos, oldState, newState, flags)
 /**
  * method_8424
  */
-fun world_World.setMobSpawnOptions(arg0: Boolean) = this.method_8424(arg0)
+fun world_World.setMobSpawnOptions(spawnMonsters: Boolean) = this.method_8424(spawnMonsters)
 /**
  * method_8522
  */
-fun world_World.sendPacket(arg0: Packet<*>) = this.method_8522(arg0)
+fun world_World.sendPacket(packet: Packet<*>) = this.method_8522(packet)
 /**
  * method_17890
  */
-fun world_World.putMapState(arg0: MapIdComponent, arg1: MapState) = this.method_17890(arg0, arg1)
+fun world_World.putMapState(id: MapIdComponent, state: MapState) = this.method_17890(id, state)
 /**
  * method_43129
  */
-fun world_World.playSoundFromEntity(arg0: PlayerEntity, arg1: Entity, arg2: SoundEvent, arg3: SoundCategory, arg4: Float, arg5: Float) = this.method_43129(arg0, arg1, arg2, arg3, arg4, arg5)
+fun world_World.playSoundFromEntity(source: PlayerEntity, entity: Entity, sound: SoundEvent, category: SoundCategory, volume: Float, pitch: Float) = this.method_43129(source, entity, sound, category, volume, pitch)
 /**
  * method_8477
  */
-fun world_World.isPosLoaded(arg0: BlockPos) = this.method_8477(arg0)
+fun world_World.isPosLoaded(pos: BlockPos) = this.method_8477(pos)
 /**
  * method_8525
  */
@@ -120,15 +92,11 @@ fun world_World.getEntityLookup() = this.method_31592()
 /**
  * method_45446
  */
-fun world_World.playSoundAtBlockCenter(arg0: BlockPos, arg1: SoundEvent, arg2: SoundCategory, arg3: Float, arg4: Float, arg5: Boolean) = this.method_45446(arg0, arg1, arg2, arg3, arg4, arg5)
+fun world_World.playSoundAtBlockCenter(pos: BlockPos, sound: SoundEvent, category: SoundCategory, volume: Float, pitch: Float, useDistance: Boolean) = this.method_45446(pos, sound, category, volume, pitch, useDistance)
 /**
  * method_24368
  */
-fun world_World.isDirectionSolid(arg0: BlockPos, arg1: Entity, arg2: Direction) = this.method_24368(arg0, arg1, arg2)
-/**
- * method_55116
- */
-fun world_World.playSoundFromEntity(arg0: Entity, arg1: SoundEvent, arg2: SoundCategory, arg3: Float, arg4: Float) = this.method_55116(arg0, arg1, arg2, arg3, arg4)
+fun world_World.isDirectionSolid(pos: BlockPos, entity: Entity, direction: Direction) = this.method_24368(pos, entity, direction)
 /**
  * method_59547
  */
@@ -136,7 +104,7 @@ fun world_World.getBrewingRecipeRegistry() = this.method_59547()
 /**
  * method_8469
  */
-fun world_World.getEntityById(arg0: Int) = this.method_8469(arg0)
+fun world_World.getEntityById(id: Int) = this.method_8469(id)
 /**
  * method_31419
  */
@@ -144,15 +112,15 @@ fun world_World.asString() = this.method_31419()
 /**
  * method_8421
  */
-fun world_World.sendEntityStatus(arg0: Entity, arg1: Byte) = this.method_8421(arg0, arg1)
+fun world_World.sendEntityStatus(entity: Entity, status: Byte) = this.method_8421(entity, status)
 /**
  * method_17891
  */
-fun world_World.getMapState(arg0: MapIdComponent) = this.method_17891(arg0)
+fun world_World.getMapState(id: MapIdComponent) = this.method_17891(id)
 /**
  * method_24794
  */
-fun world_World.isInBuildLimit(arg0: BlockPos) = this.method_24794(arg0)
+fun world_World.isInBuildLimit(pos: BlockPos) = this.method_24794(pos)
 /**
  * method_61269
  */
@@ -160,27 +128,23 @@ fun world_World.getFuelRegistry() = this.method_61269()
 /**
  * method_8486
  */
-fun world_World.playSound(arg0: Double, arg1: Double, arg2: Double, arg3: SoundEvent, arg4: SoundCategory, arg5: Float, arg6: Float, arg7: Boolean) = this.method_8486(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun world_World.playSound(x: Double, arg1: Double, y: Double, arg3: SoundEvent, z: SoundCategory, arg5: Float, sound: Float, category: Boolean) = this.method_8486(x, arg1, y, arg3, z, arg5, sound, category)
 /**
  * method_8519
  */
-fun world_World.setRainGradient(arg0: Float) = this.method_8519(arg0)
+fun world_World.setRainGradient(rainGradient: Float) = this.method_8519(rainGradient)
 /**
  * method_8442
  */
-fun world_World.getSkyAngleRadians(arg0: Float) = this.method_8442(arg0)
+fun world_World.getSkyAngleRadians(tickDelta: Float) = this.method_8442(tickDelta)
 /**
  * method_8430
  */
-fun world_World.getRainGradient(arg0: Float) = this.method_8430(arg0)
+fun world_World.getRainGradient(delta: Float) = this.method_8430(delta)
 /**
  * method_8478
  */
-fun world_World.getThunderGradient(arg0: Float) = this.method_8478(arg0)
-/**
- * method_43128
- */
-fun world_World.playSound(arg0: PlayerEntity, arg1: Double, arg2: Double, arg3: Double, arg4: SoundEvent, arg5: SoundCategory, arg6: Float, arg7: Float) = this.method_43128(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun world_World.getThunderGradient(delta: Float) = this.method_8478(delta)
 /**
  * method_8428
  */
@@ -188,35 +152,27 @@ fun world_World.getScoreboard() = this.method_8428()
 /**
  * method_8536
  */
-fun world_World.getRandomPosInChunk(arg0: Int, arg1: Int, arg2: Int, arg3: Int) = this.method_8536(arg0, arg1, arg2, arg3)
+fun world_World.getRandomPosInChunk(arg0: Int, x: Int, y: Int, z: Int) = this.method_8536(arg0, x, y, z)
 /**
  * method_8454
  */
-fun world_World.createExplosion(arg0: Entity, arg1: DamageSource, arg2: ExplosionBehavior, arg3: Double, arg4: Double, arg5: Double, arg6: Float, arg7: Boolean, arg8: net.minecraft.class_1937.class_7867, arg9: ParticleEffect, arg10: ParticleEffect, arg11: RegistryEntry<SoundEvent>) = this.method_8454(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
+fun world_World.createExplosion(entity: Entity, damageSource: DamageSource, behavior: ExplosionBehavior, x: Double, arg4: Double, y: Double, arg6: Float, z: Boolean, arg8: net.minecraft.class_1937.class_7867, power: ParticleEffect, createFire: ParticleEffect, explosionSourceType: RegistryEntry<SoundEvent>) = this.method_8454(entity, damageSource, behavior, x, arg4, y, arg6, z, arg8, power, createFire, explosionSourceType)
 /**
  * method_31595
  */
-fun world_World.addBlockBreakParticles(arg0: BlockPos, arg1: BlockState) = this.method_31595(arg0, arg1)
-/**
- * method_47967
- */
-fun world_World.playSound(arg0: PlayerEntity, arg1: Double, arg2: Double, arg3: Double, arg4: SoundEvent, arg5: SoundCategory, arg6: Float, arg7: Float, arg8: Long) = this.method_47967(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-/**
- * method_8437
- */
-fun world_World.createExplosion(arg0: Entity, arg1: Double, arg2: Double, arg3: Double, arg4: Float, arg5: net.minecraft.class_1937.class_7867) = this.method_8437(arg0, arg1, arg2, arg3, arg4, arg5)
+fun world_World.addBlockBreakParticles(pos: BlockPos, state: BlockState) = this.method_31595(pos, state)
 /**
  * method_8427
  */
-fun world_World.addSyncedBlockEvent(arg0: BlockPos, arg1: Block, arg2: Int, arg3: Int) = this.method_8427(arg0, arg1, arg2, arg3)
+fun world_World.addSyncedBlockEvent(pos: BlockPos, block: Block, type: Int, data: Int) = this.method_8427(pos, block, type, data)
 /**
  * method_8466
  */
-fun world_World.addParticle(arg0: ParticleEffect, arg1: Boolean, arg2: Boolean, arg3: Double, arg4: Double, arg5: Double, arg6: Double, arg7: Double, arg8: Double) = this.method_8466(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+fun world_World.addParticle(parameters: ParticleEffect, force: Boolean, canSpawnOnMinimal: Boolean, x: Double, arg4: Double, y: Double, arg6: Double, z: Double, arg8: Double) = this.method_8466(parameters, force, canSpawnOnMinimal, x, arg4, y, arg6, z, arg8)
 /**
  * method_8501
  */
-fun world_World.setBlockState(arg0: BlockPos, arg1: BlockState) = this.method_8501(arg0, arg1)
+fun world_World.setBlockState(pos: BlockPos, state: BlockState) = this.method_8501(pos, state)
 /**
  * method_17889
  */
@@ -224,39 +180,23 @@ fun world_World.increaseAndGetMapId() = this.method_17889()
 /**
  * method_8517
  */
-fun world_World.setBlockBreakingInfo(arg0: Int, arg1: BlockPos, arg2: Int) = this.method_8517(arg0, arg1, arg2)
+fun world_World.setBlockBreakingInfo(entityId: Int, pos: BlockPos, progress: Int) = this.method_8517(entityId, pos, progress)
 /**
  * method_8524
  */
-fun world_World.markDirty(arg0: BlockPos) = this.method_8524(arg0)
+fun world_World.markDirty(pos: BlockPos) = this.method_8524(pos)
 /**
  * method_19282
  */
-fun world_World.onBlockChanged(arg0: BlockPos, arg1: BlockState, arg2: BlockState) = this.method_19282(arg0, arg1, arg2)
+fun world_World.onBlockChanged(pos: BlockPos, oldBlock: BlockState, newBlock: BlockState) = this.method_19282(pos, oldBlock, newBlock)
 /**
  * method_16109
  */
-fun world_World.scheduleBlockRerenderIfNeeded(arg0: BlockPos, arg1: BlockState, arg2: BlockState) = this.method_16109(arg0, arg1, arg2)
-/**
- * method_8465
- */
-fun world_World.playSound(arg0: PlayerEntity, arg1: Double, arg2: Double, arg3: Double, arg4: RegistryEntry<SoundEvent>, arg5: SoundCategory, arg6: Float, arg7: Float, arg8: Long) = this.method_8465(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-/**
- * method_60511
- */
-fun world_World.playSound(arg0: PlayerEntity, arg1: Double, arg2: Double, arg3: Double, arg4: RegistryEntry<SoundEvent>, arg5: SoundCategory, arg6: Float, arg7: Float) = this.method_60511(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun world_World.scheduleBlockRerenderIfNeeded(pos: BlockPos, old: BlockState, updated: BlockState) = this.method_16109(pos, old, updated)
 /**
  * method_8546
  */
 fun world_World.isThundering() = this.method_8546()
-/**
- * method_55117
- */
-fun world_World.createExplosion(arg0: Entity, arg1: DamageSource, arg2: ExplosionBehavior, arg3: Double, arg4: Double, arg5: Double, arg6: Float, arg7: Boolean, arg8: net.minecraft.class_1937.class_7867) = this.method_55117(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-/**
- * method_54762
- */
-fun world_World.playSound(arg0: PlayerEntity, arg1: Double, arg2: Double, arg3: Double, arg4: SoundEvent, arg5: SoundCategory) = this.method_54762(arg0, arg1, arg2, arg3, arg4, arg5)
 /**
  * method_8510
  */
@@ -264,15 +204,7 @@ fun world_World.getTime() = this.method_8510()
 /**
  * method_8547
  */
-fun world_World.addFireworkParticle(arg0: Double, arg1: Double, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: MutableList<FireworkExplosionComponent>) = this.method_8547(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
- * method_45445
- */
-fun world_World.playSound(arg0: Entity, arg1: BlockPos, arg2: SoundEvent, arg3: SoundCategory, arg4: Float, arg5: Float) = this.method_45445(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
- * method_25953
- */
-fun KClass<world_World>.isValid(arg0: BlockPos) = world_World.method_25953(arg0)
+fun world_World.addFireworkParticle(x: Double, arg1: Double, y: Double, arg3: Double, z: Double, arg5: Double, velocityX: MutableList<FireworkExplosionComponent>) = this.method_8547(x, arg1, y, arg3, z, arg5, velocityX)
 /**
  * method_65097
  */
@@ -280,11 +212,11 @@ fun world_World.getEnderDragonParts() = this.method_65097()
 /**
  * method_8474
  */
-fun world_World.syncGlobalEvent(arg0: Int, arg1: BlockPos, arg2: Int) = this.method_8474(arg0, arg1, arg2)
+fun world_World.syncGlobalEvent(eventId: Int, pos: BlockPos, data: Int) = this.method_8474(eventId, pos, data)
 /**
  * method_31594
  */
-fun world_World.addBlockEntityTicker(arg0: BlockEntityTickInvoker) = this.method_31594(arg0)
+fun world_World.addBlockEntityTicker(ticker: BlockEntityTickInvoker) = this.method_31594(ticker)
 /**
  * method_8533
  */
@@ -300,43 +232,27 @@ fun world_World.getChunk(arg0: Int, arg1: Int) = this.method_8497(arg0, arg1)
 /**
  * method_8505
  */
-fun world_World.canPlayerModifyAt(arg0: PlayerEntity, arg1: BlockPos) = this.method_8505(arg0, arg1)
-/**
- * method_8492
- */
-fun world_World.updateNeighbor(arg0: BlockPos, arg1: Block, arg2: WireOrientation) = this.method_8492(arg0, arg1, arg2)
+fun world_World.canPlayerModifyAt(player: PlayerEntity, pos: BlockPos) = this.method_8505(player, pos)
 /**
  * method_17452
  */
-fun world_World.addImportantParticle(arg0: ParticleEffect, arg1: Boolean, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: Double, arg7: Double) = this.method_17452(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-/**
- * method_8449
- */
-fun world_World.playSoundFromEntity(arg0: PlayerEntity, arg1: Entity, arg2: RegistryEntry<SoundEvent>, arg3: SoundCategory, arg4: Float, arg5: Float, arg6: Long) = this.method_8449(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun world_World.addImportantParticle(parameters: ParticleEffect, force: Boolean, x: Double, arg3: Double, y: Double, arg5: Double, z: Double, arg7: Double) = this.method_17452(parameters, force, x, arg3, y, arg5, z, arg7)
 /**
  * method_18472
  */
-fun <T>world_World.tickEntity(arg0: Consumer<T>, arg1: T) where T: Entity = this.method_18472<T>(arg0, arg1)
-/**
- * method_8452
- */
-fun world_World.updateNeighborsAlways(arg0: BlockPos, arg1: Block, arg2: WireOrientation) = this.method_8452(arg0, arg1, arg2)
+fun <T>world_World.tickEntity(tickConsumer: Consumer<T>, entity: T) where T: Entity = this.method_18472<T>(tickConsumer, entity)
 /**
  * method_48760
  */
-fun world_World.sendEntityDamage(arg0: Entity, arg1: DamageSource) = this.method_48760(arg0, arg1)
+fun world_World.sendEntityDamage(entity: Entity, damageSource: DamageSource) = this.method_48760(entity, damageSource)
 /**
  * method_8509
  */
-fun world_World.setLightningTicksLeft(arg0: Int) = this.method_8509(arg0)
-/**
- * method_46407
- */
-fun world_World.createExplosion(arg0: Entity, arg1: DamageSource, arg2: ExplosionBehavior, arg3: Vec3d, arg4: Float, arg5: Boolean, arg6: net.minecraft.class_1937.class_7867) = this.method_46407(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun world_World.setLightningTicksLeft(lightningTicksLeft: Int) = this.method_8509(lightningTicksLeft)
 /**
  * method_8500
  */
-fun world_World.getWorldChunk(arg0: BlockPos) = this.method_8500(arg0)
+fun world_World.getWorldChunk(pos: BlockPos) = this.method_8500(pos)
 /**
  * method_43126
  */
@@ -348,7 +264,7 @@ fun world_World.getTickManager() = this.method_54719()
 /**
  * method_8455
  */
-fun world_World.updateComparators(arg0: BlockPos, arg1: Block) = this.method_8455(arg0, arg1)
+fun world_World.updateComparators(pos: BlockPos, block: Block) = this.method_8455(pos, block)
 /**
  * method_23886
  */
@@ -364,27 +280,19 @@ fun world_World.isRaining() = this.method_8419()
 /**
  * method_41411
  */
-fun world_World.shouldTickBlockPos(arg0: BlockPos) = this.method_41411(arg0)
+fun world_World.shouldTickBlockPos(pos: BlockPos) = this.method_41411(pos)
 /**
  * method_8538
  */
-fun world_World.addDetailsToCrashReport(arg0: CrashReport) = this.method_8538(arg0)
+fun world_World.addDetailsToCrashReport(report: CrashReport) = this.method_8538(report)
 /**
  * method_8532
  */
 fun world_World.getTimeOfDay() = this.method_8532()
 /**
- * method_8494
- */
-fun world_World.addImportantParticle(arg0: ParticleEffect, arg1: Double, arg2: Double, arg3: Double, arg4: Double, arg5: Double, arg6: Double) = this.method_8494(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
- * method_8537
- */
-fun world_World.createExplosion(arg0: Entity, arg1: Double, arg2: Double, arg3: Double, arg4: Float, arg5: Boolean, arg6: net.minecraft.class_1937.class_7867) = this.method_8537(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
  * method_8438
  */
-fun world_World.addBlockEntity(arg0: BlockEntity) = this.method_8438(arg0)
+fun world_World.addBlockEntity(blockEntity: BlockEntity) = this.method_8438(blockEntity)
 /**
  * method_27982
  */
@@ -392,11 +300,11 @@ fun world_World.isDebugWorld() = this.method_27982()
 /**
  * method_39425
  */
-fun world_World.shouldTickBlocksInChunk(arg0: Long) = this.method_39425(arg0)
+fun world_World.shouldTickBlocksInChunk(chunkPos: Long) = this.method_39425(chunkPos)
 /**
  * method_8515
  */
-fun world_World.isTopSolid(arg0: BlockPos, arg1: Entity) = this.method_8515(arg0, arg1)
+fun world_World.isTopSolid(pos: BlockPos, entity: Entity) = this.method_8515(pos, entity)
 /**
  * method_8458
  */

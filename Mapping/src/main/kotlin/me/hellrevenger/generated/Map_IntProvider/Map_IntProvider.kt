@@ -6,21 +6,13 @@ import me.hellrevenger.generated.*
  */
 fun IntProvider.getMin() = this.method_35009()
 /**
- * method_49103
- */
-fun <T>KClass<IntProvider>.createValidatingCodec(arg0: Int, arg1: Int, arg2: Codec<T>) where T: IntProvider = IntProvider.method_49103<T>(arg0, arg1, arg2)
-/**
  * method_35012
  */
 fun IntProvider.getType() = this.method_35012()
 /**
  * method_35008
  */
-fun IntProvider.get(arg0: Random) = this.method_35008(arg0)
-/**
- * method_35004
- */
-fun KClass<IntProvider>.createValidatingCodec(arg0: Int, arg1: Int) = IntProvider.method_35004(arg0, arg1)
+fun IntProvider.get(random: Random) = this.method_35008(random)
 /**
  * method_35011
  */

@@ -6,14 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun MultiplayerServerListPinger.cancel() = this.method_3004()
 /**
- * method_27647
- */
-fun KClass<MultiplayerServerListPinger>.createPlayerCountText(arg0: Int, arg1: Int) = MultiplayerServerListPinger.method_27647(arg0, arg1)
-/**
  * method_3000
  */
 fun MultiplayerServerListPinger.tick() = this.method_3000()
 /**
  * method_3003
  */
-fun MultiplayerServerListPinger.add(arg0: ServerInfo, arg1: Runnable, arg2: Runnable) = this.method_3003(arg0, arg1, arg2)
+fun MultiplayerServerListPinger.add(entry: ServerInfo, saver: Runnable, pingCallback: Runnable) = this.method_3003(entry, saver, pingCallback)

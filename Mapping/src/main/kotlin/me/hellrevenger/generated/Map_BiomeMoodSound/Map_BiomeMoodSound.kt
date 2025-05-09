@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_BiomeMoodSound
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_23146
- */
-val KClass<BiomeMoodSound>.CAVE by aliasStatic(BiomeMoodSound::field_23146)
-/**
  * method_26102
  */
 fun BiomeMoodSound.getSpawnRange() = this.method_26102()

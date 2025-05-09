@@ -4,19 +4,19 @@ import me.hellrevenger.generated.*
 /**
  * method_21715
  */
-fun PlayerChunkWatchingManager.isWatchInactive(arg0: ServerPlayerEntity) = this.method_21715(arg0)
+fun PlayerChunkWatchingManager.isWatchInactive(player: ServerPlayerEntity) = this.method_21715(player)
 /**
  * method_14084
  */
-fun PlayerChunkWatchingManager.remove(arg0: ServerPlayerEntity) = this.method_14084(arg0)
+fun PlayerChunkWatchingManager.remove(player: ServerPlayerEntity) = this.method_14084(player)
 /**
  * method_14085
  */
-fun PlayerChunkWatchingManager.add(arg0: ServerPlayerEntity, arg1: Boolean) = this.method_14085(arg0, arg1)
+fun PlayerChunkWatchingManager.add(player: ServerPlayerEntity, inactive: Boolean) = this.method_14085(player, inactive)
 /**
  * method_14082
  */
-fun PlayerChunkWatchingManager.isWatchDisabled(arg0: ServerPlayerEntity) = this.method_14082(arg0)
+fun PlayerChunkWatchingManager.isWatchDisabled(player: ServerPlayerEntity) = this.method_14082(player)
 /**
  * method_14083
  */
@@ -24,8 +24,8 @@ fun PlayerChunkWatchingManager.getPlayersWatchingChunk() = this.method_14083()
 /**
  * method_14086
  */
-fun PlayerChunkWatchingManager.disableWatch(arg0: ServerPlayerEntity) = this.method_14086(arg0)
+fun PlayerChunkWatchingManager.disableWatch(player: ServerPlayerEntity) = this.method_14086(player)
 /**
  * method_14087
  */
-fun PlayerChunkWatchingManager.enableWatch(arg0: ServerPlayerEntity) = this.method_14087(arg0)
+fun PlayerChunkWatchingManager.enableWatch(player: ServerPlayerEntity) = this.method_14087(player)

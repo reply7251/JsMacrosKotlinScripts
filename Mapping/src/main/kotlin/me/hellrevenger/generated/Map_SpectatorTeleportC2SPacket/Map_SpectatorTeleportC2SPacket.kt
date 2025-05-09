@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12541
  */
-fun SpectatorTeleportC2SPacket.getTarget(arg0: ServerWorld) = this.method_12541(arg0)
+fun SpectatorTeleportC2SPacket.getTarget(world: ServerWorld) = this.method_12541(world)
 /**
  * method_12542
  */

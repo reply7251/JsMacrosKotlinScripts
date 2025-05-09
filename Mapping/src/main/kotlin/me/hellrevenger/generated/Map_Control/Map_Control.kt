@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_63642
  */
-fun Control.changeAngle(arg0: Float, arg1: Float, arg2: Float) = this.method_63642(arg0, arg1, arg2)
+fun Control.changeAngle(start: Float, end: Float, maxChange: Float) = this.method_63642(start, end, maxChange)

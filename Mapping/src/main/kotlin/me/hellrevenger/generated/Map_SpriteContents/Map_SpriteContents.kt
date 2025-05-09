@@ -12,11 +12,11 @@ fun SpriteContents.createAnimator() = this.method_45818()
 /**
  * method_45809
  */
-fun SpriteContents.upload(arg0: Int, arg1: Int) = this.method_45809(arg0, arg1)
+fun SpriteContents.upload(x: Int, y: Int) = this.method_45809(x, y)
 /**
  * method_45810
  */
-fun SpriteContents.isPixelTransparent(arg0: Int, arg1: Int, arg2: Int) = this.method_45810(arg0, arg1, arg2)
+fun SpriteContents.isPixelTransparent(frame: Int, x: Int, y: Int) = this.method_45810(frame, x, y)
 /**
  * method_45817
  */
@@ -24,4 +24,4 @@ fun SpriteContents.getDistinctFrameCount() = this.method_45817()
 /**
  * method_45808
  */
-fun SpriteContents.generateMipmaps(arg0: Int) = this.method_45808(arg0)
+fun SpriteContents.generateMipmaps(mipmapLevels: Int) = this.method_45808(mipmapLevels)

@@ -12,4 +12,4 @@ fun Glyph.getShadowOffset() = this.method_16800()
 /**
  * method_16798
  */
-fun Glyph.getAdvance(arg0: Boolean) = this.method_16798(arg0)
+fun Glyph.getAdvance(bold: Boolean) = this.method_16798(bold)

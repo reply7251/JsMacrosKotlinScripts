@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12896
  */
-fun ServerAdvancementLoader.get(arg0: Identifier) = this.method_12896(arg0)
+fun ServerAdvancementLoader.get(id: Identifier) = this.method_12896(id)
 /**
  * method_53646
  */

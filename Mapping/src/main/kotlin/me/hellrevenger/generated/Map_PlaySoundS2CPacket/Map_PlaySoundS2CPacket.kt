@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_PlaySoundS2CPacket
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_33353
- */
-val KClass<PlaySoundS2CPacket>.COORDINATE_SCALE by aliasStatic(PlaySoundS2CPacket::field_33353)
-/**
  * method_43236
  */
 fun PlaySoundS2CPacket.getSeed() = this.method_43236()

@@ -2,22 +2,6 @@ package me.hellrevenger.generated.Map_SpawnParticlesEnchantmentEffect
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_60253
- */
-fun KClass<SpawnParticlesEnchantmentEffect>.scaledVelocity(arg0: Float) = SpawnParticlesEnchantmentEffect.method_60253(arg0)
-/**
- * method_60250
- */
-fun KClass<SpawnParticlesEnchantmentEffect>.fixedVelocity(arg0: FloatProvider) = SpawnParticlesEnchantmentEffect.method_60250(arg0)
-/**
- * method_60252
- */
-fun KClass<SpawnParticlesEnchantmentEffect>.withinBoundingBox() = SpawnParticlesEnchantmentEffect.method_60252()
-/**
- * method_60249
- */
-fun KClass<SpawnParticlesEnchantmentEffect>.entityPosition(arg0: Float) = SpawnParticlesEnchantmentEffect.method_60249(arg0)
-/**
  * comp_2756
  */
 fun SpawnParticlesEnchantmentEffect.speed() = this.comp_2756()

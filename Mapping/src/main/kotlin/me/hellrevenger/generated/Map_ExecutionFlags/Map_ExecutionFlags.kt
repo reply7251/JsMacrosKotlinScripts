@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_ExecutionFlags
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_47160
- */
-val KClass<ExecutionFlags>.NONE by aliasStatic(ExecutionFlags::field_47160)
-/**
  * method_54884
  */
 fun ExecutionFlags.isSilent() = this.method_54884()

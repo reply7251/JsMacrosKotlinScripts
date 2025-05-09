@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44532
  */
-fun ChatLog.get(arg0: Int) = this.method_44532(arg0)
+fun ChatLog.get(index: Int) = this.method_44532(index)
 /**
  * method_45751
  */
@@ -16,8 +16,4 @@ fun ChatLog.getMaxIndex() = this.method_45752()
 /**
  * method_44535
  */
-fun ChatLog.add(arg0: ChatLogEntry) = this.method_44535(arg0)
-/**
- * method_46533
- */
-fun KClass<ChatLog>.createCodec(arg0: Int) = ChatLog.method_46533(arg0)
+fun ChatLog.add(entry: ChatLogEntry) = this.method_44535(entry)

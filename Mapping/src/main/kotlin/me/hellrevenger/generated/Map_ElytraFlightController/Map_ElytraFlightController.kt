@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_61406
  */
-fun ElytraFlightController.leftWingRoll(arg0: Float) = this.method_61406(arg0)
+fun ElytraFlightController.leftWingRoll(tickDelta: Float) = this.method_61406(tickDelta)
 /**
  * method_61404
  */
-fun ElytraFlightController.leftWingPitch(arg0: Float) = this.method_61404(arg0)
+fun ElytraFlightController.leftWingPitch(tickDelta: Float) = this.method_61404(tickDelta)
 /**
  * method_61405
  */
-fun ElytraFlightController.leftWingYaw(arg0: Float) = this.method_61405(arg0)
+fun ElytraFlightController.leftWingYaw(tickDelta: Float) = this.method_61405(tickDelta)
 /**
  * method_61403
  */

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_10281
  */
-fun PaneBlock.connectsTo(arg0: BlockState, arg1: Boolean) = this.method_10281(arg0, arg1)
+fun PaneBlock.connectsTo(state: BlockState, sideSolidFullSquare: Boolean) = this.method_10281(state, sideSolidFullSquare)

@@ -2,14 +2,6 @@ package me.hellrevenger.generated.Map_StructureStart
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_16713
- */
-val KClass<StructureStart>.DEFAULT by aliasStatic(StructureStart::field_16713)
-/**
- * field_31662
- */
-val KClass<StructureStart>.INVALID by aliasStatic(StructureStart::field_31662)
-/**
  * method_23676
  */
 fun StructureStart.getReferences() = this.method_23676()
@@ -40,11 +32,7 @@ fun StructureStart.hasChildren() = this.method_16657()
 /**
  * method_14974
  */
-fun StructureStart.place(arg0: StructureWorldAccess, arg1: StructureAccessor, arg2: ChunkGenerator, arg3: Random, arg4: BlockBox, arg5: ChunkPos) = this.method_14974(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
- * method_41621
- */
-fun KClass<StructureStart>.fromNbt(arg0: StructureContext, arg1: NbtCompound, arg2: Long) = StructureStart.method_41621(arg0, arg1, arg2)
+fun StructureStart.place(world: StructureWorldAccess, structureAccessor: StructureAccessor, chunkGenerator: ChunkGenerator, random: Random, chunkBox: BlockBox, chunkPos: ChunkPos) = this.method_14974(world, structureAccessor, chunkGenerator, random, chunkBox, chunkPos)
 /**
  * method_34000
  */
@@ -52,4 +40,4 @@ fun StructureStart.getPos() = this.method_34000()
 /**
  * method_14972
  */
-fun StructureStart.toNbt(arg0: StructureContext, arg1: ChunkPos) = this.method_14972(arg0, arg1)
+fun StructureStart.toNbt(context: StructureContext, chunkPos: ChunkPos) = this.method_14972(context, chunkPos)

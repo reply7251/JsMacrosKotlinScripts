@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_6305
  */
-fun <T>BowAttackGoal<T>.setAttackInterval(arg0: Int) where T: HostileEntity, T: RangedAttackMob = this.method_6305(arg0)
+fun <T>BowAttackGoal<T>.setAttackInterval(attackInterval: Int) where T: HostileEntity, T: RangedAttackMob = this.method_6305(attackInterval)

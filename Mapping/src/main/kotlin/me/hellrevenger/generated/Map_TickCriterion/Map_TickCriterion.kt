@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9141
  */
-fun TickCriterion.trigger(arg0: ServerPlayerEntity) = this.method_9141(arg0)
+fun TickCriterion.trigger(player: ServerPlayerEntity) = this.method_9141(player)

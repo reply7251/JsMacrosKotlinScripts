@@ -4,23 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_56449
  */
-fun <T, B>NetworkStateBuilder<T, B>.build(arg0: function_Function<ByteBuf, B>) where T: PacketListener, B: ByteBuf = this.method_56449(arg0)
-/**
- * method_56455
- */
-fun <T, B>KClass<NetworkStateBuilder<T, B>>.s2c(arg0: NetworkPhase, arg1: Consumer<NetworkStateBuilder<T, B>>) where T: PacketListener, T: ClientPacketListener, B: ByteBuf = NetworkStateBuilder.method_56455<T, B>(arg0, arg1)
-/**
- * method_56451
- */
-fun <T, B>KClass<NetworkStateBuilder<T, B>>.c2s(arg0: NetworkPhase, arg1: Consumer<NetworkStateBuilder<T, B>>) where T: PacketListener, T: ServerPacketListener, B: ByteBuf = NetworkStateBuilder.method_56451<T, B>(arg0, arg1)
+fun <T, B>NetworkStateBuilder<T, B>.build(bufUpgrader: function_Function<ByteBuf, B>) where T: PacketListener, B: ByteBuf = this.method_56449(bufUpgrader)
 /**
  * method_56454
  */
-fun <T, B, P>NetworkStateBuilder<T, B>.add(arg0: PacketType<P>, arg1: PacketCodec<in B, P>) where T: PacketListener, B: ByteBuf, P: Packet<in T> = this.method_56454<P>(arg0, arg1)
+fun <T, B, P>NetworkStateBuilder<T, B>.add(id: PacketType<P>, codec: PacketCodec<in B, P>) where T: PacketListener, B: ByteBuf, P: Packet<in T> = this.method_56454<P>(id, codec)
 /**
  * method_56453
  */
-fun <T, B, P, D>NetworkStateBuilder<T, B>.addBundle(arg0: PacketType<P>, arg1: function_Function<Iterable<Packet<in T>>, P>, arg2: D) where T: PacketListener, B: ByteBuf, P: BundlePacket<in T>, D: BundleSplitterPacket<in T> = this.method_56453<P, D>(arg0, arg1, arg2)
+fun <T, B, P, D>NetworkStateBuilder<T, B>.addBundle(id: PacketType<P>, bundler: function_Function<Iterable<Packet<in T>>, P>, splitter: D) where T: PacketListener, B: ByteBuf, P: BundlePacket<in T>, D: BundleSplitterPacket<in T> = this.method_56453<P, D>(id, bundler, splitter)
 /**
  * method_56447
  */

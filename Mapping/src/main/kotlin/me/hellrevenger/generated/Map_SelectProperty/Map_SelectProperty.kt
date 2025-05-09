@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_65676
  */
-fun <T>SelectProperty<T>.getValue(arg0: ItemStack, arg1: ClientWorld, arg2: LivingEntity, arg3: Int, arg4: ModelTransformationMode) = this.method_65676(arg0, arg1, arg2, arg3, arg4)
+fun <T>SelectProperty<T>.getValue(stack: ItemStack, world: ClientWorld, user: LivingEntity, seed: Int, modelTransformationMode: ModelTransformationMode) = this.method_65676(stack, world, user, seed, modelTransformationMode)
 /**
  * method_65674
  */

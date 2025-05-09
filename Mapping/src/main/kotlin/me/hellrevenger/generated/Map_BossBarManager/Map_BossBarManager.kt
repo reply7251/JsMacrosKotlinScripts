@@ -8,31 +8,31 @@ fun BossBarManager.getIds() = this.method_12968()
 /**
  * method_12970
  */
-fun BossBarManager.add(arg0: Identifier, arg1: Text) = this.method_12970(arg0, arg1)
+fun BossBarManager.add(id: Identifier, displayName: Text) = this.method_12970(id, displayName)
 /**
  * method_12972
  */
-fun BossBarManager.readNbt(arg0: NbtCompound, arg1: net.minecraft.class_7225.class_7874) = this.method_12972(arg0, arg1)
+fun BossBarManager.readNbt(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = this.method_12972(nbt, registries)
 /**
  * method_12975
  */
-fun BossBarManager.onPlayerConnect(arg0: ServerPlayerEntity) = this.method_12975(arg0)
+fun BossBarManager.onPlayerConnect(player: ServerPlayerEntity) = this.method_12975(player)
 /**
  * method_12973
  */
-fun BossBarManager.remove(arg0: CommandBossBar) = this.method_12973(arg0)
+fun BossBarManager.remove(bossBar: CommandBossBar) = this.method_12973(bossBar)
 /**
  * method_12971
  */
-fun BossBarManager.get(arg0: Identifier) = this.method_12971(arg0)
+fun BossBarManager.get(id: Identifier) = this.method_12971(id)
 /**
  * method_12976
  */
-fun BossBarManager.onPlayerDisconnect(arg0: ServerPlayerEntity) = this.method_12976(arg0)
+fun BossBarManager.onPlayerDisconnect(player: ServerPlayerEntity) = this.method_12976(player)
 /**
  * method_12974
  */
-fun BossBarManager.toNbt(arg0: net.minecraft.class_7225.class_7874) = this.method_12974(arg0)
+fun BossBarManager.toNbt(registries: net.minecraft.class_7225.class_7874) = this.method_12974(registries)
 /**
  * method_12969
  */

@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_ResourcePackSendS2CPacket
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_33340
- */
-val KClass<ResourcePackSendS2CPacket>.MAX_HASH_LENGTH by aliasStatic(ResourcePackSendS2CPacket::field_33340)
-/**
  * method_11774
  */
 fun ResourcePackSendS2CPacket.apply(arg0: ClientCommonPacketListener) = this.method_11774(arg0)

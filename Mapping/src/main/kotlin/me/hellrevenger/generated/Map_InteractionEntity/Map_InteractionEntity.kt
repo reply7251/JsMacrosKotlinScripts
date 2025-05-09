@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_49109
  */
-fun InteractionEntity.setInteractionWidth(arg0: Float) = this.method_49109(arg0)
+fun InteractionEntity.setInteractionWidth(width: Float) = this.method_49109(width)
 /**
  * method_49116
  */
@@ -16,7 +16,7 @@ fun InteractionEntity.getInteractionHeight() = this.method_49117()
 /**
  * method_49112
  */
-fun InteractionEntity.setResponse(arg0: Boolean) = this.method_49112(arg0)
+fun InteractionEntity.setResponse(response: Boolean) = this.method_49112(response)
 /**
  * method_49118
  */
@@ -24,4 +24,4 @@ fun InteractionEntity.shouldRespond() = this.method_49118()
 /**
  * method_49113
  */
-fun InteractionEntity.setInteractionHeight(arg0: Float) = this.method_49113(arg0)
+fun InteractionEntity.setInteractionHeight(height: Float) = this.method_49113(height)

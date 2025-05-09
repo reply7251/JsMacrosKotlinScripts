@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_22568
  */
-fun LootTableReporter.withContextType(arg0: ContextType) = this.method_22568(arg0)
+fun LootTableReporter.withContextType(contextType: ContextType) = this.method_22568(contextType)
 /**
  * method_360
  */
-fun LootTableReporter.report(arg0: String) = this.method_360(arg0)
+fun LootTableReporter.report(message: String) = this.method_360(message)
 /**
  * method_61030
  */
@@ -20,7 +20,7 @@ fun LootTableReporter.getDataLookup() = this.method_51220()
 /**
  * method_51218
  */
-fun LootTableReporter.isInStack(arg0: RegistryKey<*>) = this.method_51218(arg0)
+fun LootTableReporter.isInStack(key: RegistryKey<*>) = this.method_51218(key)
 /**
  * method_60288
  */
@@ -28,12 +28,8 @@ fun LootTableReporter.getErrorReporter() = this.method_60288()
 /**
  * method_51219
  */
-fun LootTableReporter.makeChild(arg0: String, arg1: RegistryKey<*>) = this.method_51219(arg0, arg1)
-/**
- * method_364
- */
-fun LootTableReporter.makeChild(arg0: String) = this.method_364(arg0)
+fun LootTableReporter.makeChild(name: String, key: RegistryKey<*>) = this.method_51219(name, key)
 /**
  * method_22567
  */
-fun LootTableReporter.validateContext(arg0: LootContextAware) = this.method_22567(arg0)
+fun LootTableReporter.validateContext(contextAware: LootContextAware) = this.method_22567(contextAware)

@@ -8,7 +8,7 @@ fun WordPackedArray.getAlignedArray() = this.method_28151()
 /**
  * method_28152
  */
-fun WordPackedArray.get(arg0: Int) = this.method_28152(arg0)
+fun WordPackedArray.get(index: Int) = this.method_28152(index)
 /**
  * method_28154
  */
@@ -16,4 +16,4 @@ fun WordPackedArray.getUnitSize() = this.method_28154()
 /**
  * method_28153
  */
-fun WordPackedArray.set(arg0: Int, arg1: Int) = this.method_28153(arg0, arg1)
+fun WordPackedArray.set(index: Int, value: Int) = this.method_28153(index, value)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11004
  */
-fun BlockEntity.onSyncedBlockEvent(arg0: Int, arg1: Int) = this.method_11004(arg0, arg1)
+fun BlockEntity.onSyncedBlockEvent(type: Int, data: Int) = this.method_11004(type, data)
 /**
  * method_5431
  */
@@ -12,15 +12,15 @@ fun BlockEntity.markDirty() = this.method_5431()
 /**
  * method_58684
  */
-fun BlockEntity.setComponents(arg0: ComponentMap) = this.method_58684(arg0)
+fun BlockEntity.setComponents(components: ComponentMap) = this.method_58684(components)
 /**
  * method_58683
  */
-fun BlockEntity.readComponents(arg0: ItemStack) = this.method_58683(arg0)
+fun BlockEntity.readComponents(stack: ItemStack) = this.method_58683(stack)
 /**
  * method_31662
  */
-fun BlockEntity.setWorld(arg0: world_World) = this.method_31662(arg0)
+fun BlockEntity.setWorld(world: world_World) = this.method_31662(world)
 /**
  * method_10997
  */
@@ -28,11 +28,7 @@ fun BlockEntity.getWorld() = this.method_10997()
 /**
  * method_38244
  */
-fun BlockEntity.createNbt(arg0: net.minecraft.class_7225.class_7874) = this.method_38244(arg0)
-/**
- * method_59894
- */
-fun KClass<BlockEntity>.tryParseCustomName(arg0: String, arg1: net.minecraft.class_7225.class_7874) = BlockEntity.method_59894(arg0, arg1)
+fun BlockEntity.createNbt(registries: net.minecraft.class_7225.class_7874) = this.method_38244(registries)
 /**
  * method_11010
  */
@@ -40,11 +36,7 @@ fun BlockEntity.getCachedState() = this.method_11010()
 /**
  * method_31664
  */
-fun BlockEntity.setCachedState(arg0: BlockState) = this.method_31664(arg0)
-/**
- * method_38238
- */
-fun KClass<BlockEntity>.writeIdToNbt(arg0: NbtCompound, arg1: BlockEntityType<*>) = BlockEntity.method_38238(arg0, arg1)
+fun BlockEntity.setCachedState(state: BlockState) = this.method_31664(state)
 /**
  * method_11012
  */
@@ -52,11 +44,11 @@ fun BlockEntity.markRemoved() = this.method_11012()
 /**
  * method_11003
  */
-fun BlockEntity.populateCrashReport(arg0: CrashReportSection) = this.method_11003(arg0)
+fun BlockEntity.populateCrashReport(crashReportSection: CrashReportSection) = this.method_11003(crashReportSection)
 /**
  * method_57569
  */
-fun BlockEntity.removeFromCopiedStackNbt(arg0: NbtCompound) = this.method_57569(arg0)
+fun BlockEntity.removeFromCopiedStackNbt(nbt: NbtCompound) = this.method_57569(nbt)
 /**
  * method_11016
  */
@@ -64,7 +56,7 @@ fun BlockEntity.getPos() = this.method_11016()
 /**
  * method_58692
  */
-fun BlockEntity.createComponentlessNbt(arg0: net.minecraft.class_7225.class_7874) = this.method_58692(arg0)
+fun BlockEntity.createComponentlessNbt(registries: net.minecraft.class_7225.class_7874) = this.method_58692(registries)
 /**
  * method_11015
  */
@@ -82,21 +74,17 @@ fun BlockEntity.cancelRemoval() = this.method_10996()
  */
 fun BlockEntity.getComponents() = this.method_58693()
 /**
- * method_38239
- */
-fun KClass<BlockEntity>.posFromNbt(arg0: NbtCompound) = BlockEntity.method_38239(arg0)
-/**
  * method_38242
  */
-fun BlockEntity.createNbtWithIdentifyingData(arg0: net.minecraft.class_7225.class_7874) = this.method_38242(arg0)
+fun BlockEntity.createNbtWithIdentifyingData(registries: net.minecraft.class_7225.class_7874) = this.method_38242(registries)
 /**
  * method_58690
  */
-fun BlockEntity.read(arg0: NbtCompound, arg1: net.minecraft.class_7225.class_7874) = this.method_58690(arg0, arg1)
+fun BlockEntity.read(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = this.method_58690(nbt, registries)
 /**
  * method_59535
  */
-fun BlockEntity.createComponentlessNbtWithIdentifyingData(arg0: net.minecraft.class_7225.class_7874) = this.method_59535(arg0)
+fun BlockEntity.createComponentlessNbtWithIdentifyingData(registries: net.minecraft.class_7225.class_7874) = this.method_59535(registries)
 /**
  * method_11002
  */
@@ -106,17 +94,9 @@ fun BlockEntity.hasWorld() = this.method_11002()
  */
 fun BlockEntity.toUpdatePacket() = this.method_38235()
 /**
- * method_58685
- */
-fun BlockEntity.readComponents(arg0: ComponentMap, arg1: ComponentChanges) = this.method_58685(arg0, arg1)
-/**
- * method_11005
- */
-fun KClass<BlockEntity>.createFromNbt(arg0: BlockPos, arg1: BlockState, arg2: NbtCompound, arg3: net.minecraft.class_7225.class_7874) = BlockEntity.method_11005(arg0, arg1, arg2, arg3)
-/**
  * method_38243
  */
-fun BlockEntity.createNbtWithId(arg0: net.minecraft.class_7225.class_7874) = this.method_38243(arg0)
+fun BlockEntity.createNbtWithId(registries: net.minecraft.class_7225.class_7874) = this.method_38243(registries)
 /**
  * method_57590
  */
@@ -124,12 +104,12 @@ fun BlockEntity.createComponentMap() = this.method_57590()
 /**
  * method_58691
  */
-fun BlockEntity.readComponentlessNbt(arg0: NbtCompound, arg1: net.minecraft.class_7225.class_7874) = this.method_58691(arg0, arg1)
+fun BlockEntity.readComponentlessNbt(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = this.method_58691(nbt, registries)
 /**
  * method_61176
  */
-fun BlockEntity.supports(arg0: BlockState) = this.method_61176(arg0)
+fun BlockEntity.supports(state: BlockState) = this.method_61176(state)
 /**
  * method_16887
  */
-fun BlockEntity.toInitialChunkDataNbt(arg0: net.minecraft.class_7225.class_7874) = this.method_16887(arg0)
+fun BlockEntity.toInitialChunkDataNbt(registries: net.minecraft.class_7225.class_7874) = this.method_16887(registries)

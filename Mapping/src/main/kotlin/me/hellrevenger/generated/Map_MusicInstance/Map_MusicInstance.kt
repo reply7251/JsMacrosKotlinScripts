@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_65254
  */
-fun MusicInstance.shouldReplace(arg0: SoundInstance) = this.method_65254(arg0)
+fun MusicInstance.shouldReplace(sound: SoundInstance) = this.method_65254(sound)
 /**
  * comp_3344
  */

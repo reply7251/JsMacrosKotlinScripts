@@ -2,29 +2,17 @@ package me.hellrevenger.generated.Map_EntitySelector
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_41524
- */
-val KClass<EntitySelector>.ARBITRARY by aliasStatic(EntitySelector::field_41524)
-/**
- * field_33068
- */
-val KClass<EntitySelector>.MAX_VALUE by aliasStatic(EntitySelector::field_33068)
-/**
  * method_9813
  */
-fun EntitySelector.getPlayers(arg0: ServerCommandSource) = this.method_9813(arg0)
+fun EntitySelector.getPlayers(source: ServerCommandSource) = this.method_9813(source)
 /**
  * method_9811
  */
-fun EntitySelector.getPlayer(arg0: ServerCommandSource) = this.method_9811(arg0)
+fun EntitySelector.getPlayer(source: ServerCommandSource) = this.method_9811(source)
 /**
  * method_9820
  */
 fun EntitySelector.isSenderOnly() = this.method_9820()
-/**
- * method_9822
- */
-fun KClass<EntitySelector>.getNames(arg0: MutableList<out Entity>) = EntitySelector.method_9822(arg0)
 /**
  * method_9815
  */
@@ -32,11 +20,11 @@ fun EntitySelector.getLimit() = this.method_9815()
 /**
  * method_9816
  */
-fun EntitySelector.getEntities(arg0: ServerCommandSource) = this.method_9816(arg0)
+fun EntitySelector.getEntities(source: ServerCommandSource) = this.method_9816(source)
 /**
  * method_9809
  */
-fun EntitySelector.getEntity(arg0: ServerCommandSource) = this.method_9809(arg0)
+fun EntitySelector.getEntity(source: ServerCommandSource) = this.method_9809(source)
 /**
  * method_9821
  */

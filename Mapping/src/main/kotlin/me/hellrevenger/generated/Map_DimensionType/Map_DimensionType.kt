@@ -2,30 +2,6 @@ package me.hellrevenger.generated.Map_DimensionType
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_28135
- */
-val KClass<DimensionType>.MAX_COLUMN_HEIGHT by aliasStatic(DimensionType::field_28135)
-/**
- * field_24752
- */
-val KClass<DimensionType>.MOON_SIZES by aliasStatic(DimensionType::field_24752)
-/**
- * field_28133
- */
-val KClass<DimensionType>.SIZE_BITS_Y by aliasStatic(DimensionType::field_28133)
-/**
- * field_28136
- */
-val KClass<DimensionType>.MIN_HEIGHT by aliasStatic(DimensionType::field_28136)
-/**
- * field_28134
- */
-val KClass<DimensionType>.MAX_HEIGHT by aliasStatic(DimensionType::field_28134)
-/**
- * method_31109
- */
-fun KClass<DimensionType>.getCoordinateScaleFactor(arg0: DimensionType, arg1: DimensionType) = DimensionType.method_31109(arg0, arg1)
-/**
  * method_29960
  */
 fun DimensionType.hasFixedTime() = this.method_29960()
@@ -40,7 +16,7 @@ fun DimensionType.piglinSafe() = this.method_44220()
 /**
  * method_28531
  */
-fun DimensionType.getMoonPhase(arg0: Long) = this.method_28531(arg0)
+fun DimensionType.getMoonPhase(time: Long) = this.method_28531(time)
 /**
  * comp_644
  */
@@ -58,21 +34,13 @@ fun DimensionType.monsterSettings() = this.comp_847()
  */
 fun DimensionType.monsterSpawnLightTest() = this.method_44222()
 /**
- * method_28521
- */
-fun KClass<DimensionType>.worldFromDimensionNbt(arg0: Dynamic<*>) = DimensionType.method_28521(arg0)
-/**
  * method_44221
  */
 fun DimensionType.hasRaids() = this.method_44221()
 /**
- * method_12488
- */
-fun KClass<DimensionType>.getSaveDirectory(arg0: RegistryKey<world_World>, arg1: file_Path) = DimensionType.method_12488(arg0, arg1)
-/**
  * method_28528
  */
-fun DimensionType.getSkyAngle(arg0: Long) = this.method_28528(arg0)
+fun DimensionType.getSkyAngle(time: Long) = this.method_28528(time)
 /**
  * comp_654
  */

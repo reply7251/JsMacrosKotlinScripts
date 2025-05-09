@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60637
  */
-fun RenderTickCounter.getTickDelta(arg0: Boolean) = this.method_60637(arg0)
+fun RenderTickCounter.getTickDelta(ignoreFreeze: Boolean) = this.method_60637(ignoreFreeze)
 /**
  * method_60636
  */

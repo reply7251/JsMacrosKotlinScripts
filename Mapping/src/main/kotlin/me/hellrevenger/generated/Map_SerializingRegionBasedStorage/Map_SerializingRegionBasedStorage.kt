@@ -12,8 +12,8 @@ fun <R, P>SerializingRegionBasedStorage<R, P>.save() = this.method_61775()
 /**
  * method_61780
  */
-fun <R, P>SerializingRegionBasedStorage<R, P>.load(arg0: ChunkPos) = this.method_61780(arg0)
+fun <R, P>SerializingRegionBasedStorage<R, P>.load(chunkPos: ChunkPos) = this.method_61780(chunkPos)
 /**
  * method_20436
  */
-fun <R, P>SerializingRegionBasedStorage<R, P>.saveChunk(arg0: ChunkPos) = this.method_20436(arg0)
+fun <R, P>SerializingRegionBasedStorage<R, P>.saveChunk(pos: ChunkPos) = this.method_20436(pos)

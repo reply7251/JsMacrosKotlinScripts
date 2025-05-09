@@ -9,7 +9,3 @@ fun <S>IllagerEntityModel<S>.setAngles(arg0: S) where S: IllagerEntityRenderStat
  * method_2812
  */
 fun <S>IllagerEntityModel<S>.getHat() where S: IllagerEntityRenderState = this.method_2812()
-/**
- * method_32012
- */
-fun <S>KClass<IllagerEntityModel<S>>.getTexturedModelData() where S: IllagerEntityRenderState = IllagerEntityModel.method_32012()

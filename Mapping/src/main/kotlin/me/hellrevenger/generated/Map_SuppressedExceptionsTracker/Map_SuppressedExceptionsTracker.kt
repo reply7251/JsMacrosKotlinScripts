@@ -8,4 +8,4 @@ fun SuppressedExceptionsTracker.collect() = this.method_61249()
 /**
  * method_61250
  */
-fun SuppressedExceptionsTracker.onSuppressedException(arg0: String, arg1: Throwable) = this.method_61250(arg0, arg1)
+fun SuppressedExceptionsTracker.onSuppressedException(location: String, exception: Throwable) = this.method_61250(location, exception)

@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_33088
  */
-fun GameEventDebugRenderer.addListener(arg0: PositionSource, arg1: Int) = this.method_33088(arg0, arg1)
+fun GameEventDebugRenderer.addListener(positionSource: PositionSource, range: Int) = this.method_33088(positionSource, range)
 /**
  * method_33087
  */
-fun GameEventDebugRenderer.addEvent(arg0: RegistryKey<GameEvent>, arg1: Vec3d) = this.method_33087(arg0, arg1)
+fun GameEventDebugRenderer.addEvent(eventKey: RegistryKey<GameEvent>, pos: Vec3d) = this.method_33087(eventKey, pos)

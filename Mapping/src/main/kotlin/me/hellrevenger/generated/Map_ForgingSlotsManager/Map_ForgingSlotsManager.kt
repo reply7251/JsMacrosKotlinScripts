@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_48367
  */
-fun ForgingSlotsManager.getInputSlot(arg0: Int) = this.method_48367(arg0)
+fun ForgingSlotsManager.getInputSlot(index: Int) = this.method_48367(index)
 /**
  * method_48370
  */
@@ -17,10 +17,6 @@ fun ForgingSlotsManager.getInputSlots() = this.method_48368()
  * method_48369
  */
 fun ForgingSlotsManager.getInputSlotCount() = this.method_48369()
-/**
- * method_48364
- */
-fun KClass<ForgingSlotsManager>.builder() = ForgingSlotsManager.method_48364()
 /**
  * method_48366
  */

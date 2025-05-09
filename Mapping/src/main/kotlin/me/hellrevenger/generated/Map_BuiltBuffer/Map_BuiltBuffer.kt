@@ -16,4 +16,4 @@ fun BuiltBuffer.getBuffer() = this.method_60818()
 /**
  * method_60819
  */
-fun BuiltBuffer.sortQuads(arg0: BufferAllocator, arg1: VertexSorter) = this.method_60819(arg0, arg1)
+fun BuiltBuffer.sortQuads(allocator: BufferAllocator, sorter: VertexSorter) = this.method_60819(allocator, sorter)

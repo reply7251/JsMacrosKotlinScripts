@@ -37,7 +37,3 @@ var WorldTemplate.recommendedPlayers by alias(WorldTemplate::field_22673)
  * field_22672
  */
 var WorldTemplate.trailer by alias(WorldTemplate::field_22672)
-/**
- * method_25096
- */
-fun KClass<WorldTemplate>.parse(arg0: JsonObject) = WorldTemplate.method_25096(arg0)

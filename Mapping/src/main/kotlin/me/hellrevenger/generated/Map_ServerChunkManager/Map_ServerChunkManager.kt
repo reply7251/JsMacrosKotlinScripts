@@ -8,7 +8,7 @@ val ServerChunkManager.chunkLoadingManager by alias(ServerChunkManager::field_17
 /**
  * method_17297
  */
-fun <T>ServerChunkManager.addTicket(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_17297<T>(arg0, arg1, arg2, arg3)
+fun <T>ServerChunkManager.addTicket(ticketType: ChunkTicketType<T>, pos: ChunkPos, radius: Int, argument: T) = this.method_17297<T>(ticketType, pos, radius, argument)
 /**
  * method_39997
  */
@@ -24,11 +24,11 @@ fun ServerChunkManager.getPendingTasks() = this.method_21694()
 /**
  * method_38634
  */
-fun ServerChunkManager.applySimulationDistance(arg0: Int) = this.method_38634(arg0)
+fun ServerChunkManager.applySimulationDistance(simulationDistance: Int) = this.method_38634(simulationDistance)
 /**
  * method_18751
  */
-fun ServerChunkManager.sendToNearbyPlayers(arg0: Entity, arg1: Packet<*>) = this.method_18751(arg0, arg1)
+fun ServerChunkManager.sendToNearbyPlayers(entity: Entity, packet: Packet<*>) = this.method_18751(entity, packet)
 /**
  * method_17301
  */
@@ -36,19 +36,19 @@ fun ServerChunkManager.getTotalChunksLoadedCount() = this.method_17301()
 /**
  * method_17299
  */
-fun ServerChunkManager.getChunkFutureSyncOnMainThread(arg0: Int, arg1: Int, arg2: ChunkStatus, arg3: Boolean) = this.method_17299(arg0, arg1, arg2, arg3)
+fun ServerChunkManager.getChunkFutureSyncOnMainThread(chunkX: Int, chunkZ: Int, leastStatus: ChunkStatus, create: Boolean) = this.method_17299(chunkX, chunkZ, leastStatus, create)
 /**
  * method_18755
  */
-fun ServerChunkManager.loadEntity(arg0: Entity) = this.method_18755(arg0)
+fun ServerChunkManager.loadEntity(entity: Entity) = this.method_18755(entity)
 /**
  * method_14096
  */
-fun ServerChunkManager.updatePosition(arg0: ServerPlayerEntity) = this.method_14096(arg0)
+fun ServerChunkManager.updatePosition(player: ServerPlayerEntity) = this.method_14096(player)
 /**
  * method_18754
  */
-fun ServerChunkManager.sendToOtherNearbyPlayers(arg0: Entity, arg1: Packet<*>) = this.method_18754(arg0, arg1)
+fun ServerChunkManager.sendToOtherNearbyPlayers(entity: Entity, packet: Packet<*>) = this.method_18754(entity, packet)
 /**
  * method_17981
  */
@@ -60,7 +60,7 @@ fun ServerChunkManager.getStructurePlacementCalculator() = this.method_46642()
 /**
  * method_14128
  */
-fun ServerChunkManager.markForUpdate(arg0: BlockPos) = this.method_14128(arg0)
+fun ServerChunkManager.markForUpdate(pos: BlockPos) = this.method_14128(pos)
 /**
  * method_19492
  */
@@ -76,11 +76,11 @@ fun ServerChunkManager.getChunkIoWorker() = this.method_39777()
 /**
  * method_14144
  */
-fun ServerChunkManager.applyViewDistance(arg0: Int) = this.method_14144(arg0)
+fun ServerChunkManager.applyViewDistance(watchDistance: Int) = this.method_14144(watchDistance)
 /**
  * method_23273
  */
-fun ServerChunkManager.getChunkLoadingDebugInfo(arg0: ChunkPos) = this.method_23273(arg0)
+fun ServerChunkManager.getChunkLoadingDebugInfo(pos: ChunkPos) = this.method_23273(pos)
 /**
  * method_27908
  */
@@ -88,7 +88,7 @@ fun ServerChunkManager.getSpawnInfo() = this.method_27908()
 /**
  * method_37114
  */
-fun ServerChunkManager.isTickingFutureReady(arg0: Long) = this.method_37114(arg0)
+fun ServerChunkManager.isTickingFutureReady(pos: Long) = this.method_37114(pos)
 /**
  * method_16434
  */
@@ -100,7 +100,7 @@ fun ServerChunkManager.getChunkGenerator() = this.method_12129()
 /**
  * method_17298
  */
-fun ServerChunkManager.save(arg0: Boolean) = this.method_17298(arg0)
+fun ServerChunkManager.save(flush: Boolean) = this.method_17298(flush)
 /**
  * method_17293
  */
@@ -108,12 +108,8 @@ fun ServerChunkManager.getLightingProvider() = this.method_17293()
 /**
  * method_18753
  */
-fun ServerChunkManager.unloadEntity(arg0: Entity) = this.method_18753(arg0)
-/**
- * method_65078
- */
-fun ServerChunkManager.markForUpdate(arg0: ChunkHolder) = this.method_65078(arg0)
+fun ServerChunkManager.unloadEntity(entity: Entity) = this.method_18753(entity)
 /**
  * method_17300
  */
-fun <T>ServerChunkManager.removeTicket(arg0: ChunkTicketType<T>, arg1: ChunkPos, arg2: Int, arg3: T) = this.method_17300<T>(arg0, arg1, arg2, arg3)
+fun <T>ServerChunkManager.removeTicket(ticketType: ChunkTicketType<T>, pos: ChunkPos, radius: Int, argument: T) = this.method_17300<T>(ticketType, pos, radius, argument)

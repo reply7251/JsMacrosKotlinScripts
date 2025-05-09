@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_64862
  */
-fun RecipeBookProvider.onCraftFailed(arg0: RecipeDisplay) = this.method_64862(arg0)
+fun RecipeBookProvider.onCraftFailed(display: RecipeDisplay) = this.method_64862(display)
 /**
  * method_16891
  */

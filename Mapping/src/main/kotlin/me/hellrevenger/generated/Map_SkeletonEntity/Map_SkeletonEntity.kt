@@ -2,17 +2,13 @@ package me.hellrevenger.generated.Map_SkeletonEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_30495
- */
-val KClass<SkeletonEntity>.STRAY_CONVERSION_TIME_KEY by aliasStatic(SkeletonEntity::field_30495)
-/**
  * method_35193
  */
-fun SkeletonEntity.setConverting(arg0: Boolean) = this.method_35193(arg0)
+fun SkeletonEntity.setConverting(converting: Boolean) = this.method_35193(converting)
 /**
  * method_33589
  */
-fun SkeletonEntity.setConversionTime(arg0: Int) = this.method_33589(arg0)
+fun SkeletonEntity.setConversionTime(time: Int) = this.method_33589(time)
 /**
  * method_33590
  */

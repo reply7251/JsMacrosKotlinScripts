@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_2040
  */
-fun Font.getGlyph(arg0: Int) = this.method_2040(arg0)
+fun Font.getGlyph(codePoint: Int) = this.method_2040(codePoint)
 /**
  * method_27442
  */

@@ -2,17 +2,9 @@ package me.hellrevenger.generated.Map_TrialSpawnerConfig
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_47367
- */
-val KClass<TrialSpawnerConfig>.DEFAULT by aliasStatic(TrialSpawnerConfig::field_47367)
-/**
  * comp_2110
  */
 fun TrialSpawnerConfig.spawnPotentials() = this.comp_2110()
-/**
- * method_63466
- */
-fun KClass<TrialSpawnerConfig>.builder() = TrialSpawnerConfig.method_63466()
 /**
  * method_58712
  */
@@ -20,15 +12,15 @@ fun TrialSpawnerConfig.getCooldownLength() = this.method_58712()
 /**
  * method_55179
  */
-fun TrialSpawnerConfig.getTotalMobs(arg0: Int) = this.method_55179(arg0)
+fun TrialSpawnerConfig.getTotalMobs(additionalPlayers: Int) = this.method_55179(additionalPlayers)
 /**
  * method_65373
  */
-fun TrialSpawnerConfig.withSpawnPotential(arg0: EntityType<*>) = this.method_65373(arg0)
+fun TrialSpawnerConfig.withSpawnPotential(entityType: EntityType<*>) = this.method_65373(entityType)
 /**
  * method_55181
  */
-fun TrialSpawnerConfig.getSimultaneousMobs(arg0: Int) = this.method_55181(arg0)
+fun TrialSpawnerConfig.getSimultaneousMobs(additionalPlayers: Int) = this.method_55181(additionalPlayers)
 /**
  * comp_2111
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_35391
  */
-fun HeightProvider.get(arg0: Random, arg1: HeightContext) = this.method_35391(arg0, arg1)
+fun HeightProvider.get(random: Random, context: HeightContext) = this.method_35391(random, context)
 /**
  * method_35388
  */

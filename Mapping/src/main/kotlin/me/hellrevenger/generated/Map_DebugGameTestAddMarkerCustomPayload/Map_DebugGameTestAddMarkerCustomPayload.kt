@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_DebugGameTestAddMarkerCustomPayload
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_48665
- */
-val KClass<DebugGameTestAddMarkerCustomPayload>.ID by aliasStatic(DebugGameTestAddMarkerCustomPayload::field_48665)
-/**
  * comp_1684
  */
 fun DebugGameTestAddMarkerCustomPayload.color() = this.comp_1684()

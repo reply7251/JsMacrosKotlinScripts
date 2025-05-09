@@ -17,7 +17,3 @@ fun FishingBobberEntityRenderer.updateRenderState(arg0: FishingBobberEntity, arg
  * method_62442
  */
 fun FishingBobberEntityRenderer.shouldRender(arg0: FishingBobberEntity, arg1: Frustum, arg2: Double, arg3: Double, arg4: Double) = this.method_62442(arg0, arg1, arg2, arg3, arg4)
-/**
- * method_65567
- */
-fun KClass<FishingBobberEntityRenderer>.getArmHoldingRod(arg0: PlayerEntity) = FishingBobberEntityRenderer.method_65567(arg0)

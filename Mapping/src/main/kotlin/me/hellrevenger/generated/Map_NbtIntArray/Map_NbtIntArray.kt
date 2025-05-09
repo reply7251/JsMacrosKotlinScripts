@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_NbtIntArray
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_21036
- */
-val KClass<NbtIntArray>.TYPE by aliasStatic(NbtIntArray::field_21036)
-/**
  * method_10591
  */
 fun NbtIntArray.copy() = this.method_10591()

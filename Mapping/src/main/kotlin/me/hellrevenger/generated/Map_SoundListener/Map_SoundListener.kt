@@ -8,11 +8,11 @@ fun SoundListener.getTransform() = this.method_55585()
 /**
  * method_19670
  */
-fun SoundListener.setVolume(arg0: Float) = this.method_19670(arg0)
+fun SoundListener.setVolume(volume: Float) = this.method_19670(volume)
 /**
  * method_55584
  */
-fun SoundListener.setTransform(arg0: SoundListenerTransform) = this.method_55584(arg0)
+fun SoundListener.setTransform(transform: SoundListenerTransform) = this.method_55584(transform)
 /**
  * method_19673
  */

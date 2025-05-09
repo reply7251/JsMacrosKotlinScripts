@@ -2,13 +2,9 @@ package me.hellrevenger.generated.Map_PointOfInterestType
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_39277
- */
-val KClass<PointOfInterestType>.NONE by aliasStatic(PointOfInterestType::field_39277)
-/**
  * method_35159
  */
-fun PointOfInterestType.contains(arg0: BlockState) = this.method_35159(arg0)
+fun PointOfInterestType.contains(state: BlockState) = this.method_35159(state)
 /**
  * comp_817
  */

@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_SlimeEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_4784
- */
-val KClass<SlimeEntityRenderer>.TEXTURE by aliasStatic(SlimeEntityRenderer::field_4784)
-/**
  * method_62532
  */
 fun SlimeEntityRenderer.createRenderState() = this.method_62532()

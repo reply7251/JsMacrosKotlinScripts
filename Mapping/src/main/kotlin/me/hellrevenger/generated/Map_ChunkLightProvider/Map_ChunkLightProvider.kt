@@ -4,28 +4,16 @@ import me.hellrevenger.generated.*
 /**
  * method_51568
  */
-fun <M, S>ChunkLightProvider<M, S>.getStatus(arg0: Long) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_51568(arg0)
-/**
- * method_51562
- */
-fun <M, S>KClass<ChunkLightProvider<M, S>>.getOpaqueShape(arg0: BlockState, arg1: Direction) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = ChunkLightProvider.method_51562(arg0, arg1)
-/**
- * method_20049
- */
-fun <M, S>KClass<ChunkLightProvider<M, S>>.getRealisticOpacity(arg0: BlockState, arg1: BlockState, arg2: Direction, arg3: Int) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = ChunkLightProvider.method_20049(arg0, arg1, arg2, arg3)
+fun <M, S>ChunkLightProvider<M, S>.getStatus(sectionPos: Long) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_51568(sectionPos)
 /**
  * method_20599
  */
-fun <M, S>ChunkLightProvider<M, S>.setRetainColumn(arg0: ChunkPos, arg1: Boolean) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_20599(arg0, arg1)
+fun <M, S>ChunkLightProvider<M, S>.setRetainColumn(pos: ChunkPos, retainData: Boolean) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_20599(pos, retainData)
 /**
  * method_15515
  */
-fun <M, S>ChunkLightProvider<M, S>.enqueueSectionData(arg0: Long, arg1: ChunkNibbleArray) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_15515(arg0, arg1)
+fun <M, S>ChunkLightProvider<M, S>.enqueueSectionData(sectionPos: Long, arg1: ChunkNibbleArray) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_15515(sectionPos, arg1)
 /**
  * method_22875
  */
-fun <M, S>ChunkLightProvider<M, S>.displaySectionLevel(arg0: Long) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_22875(arg0)
-/**
- * method_51561
- */
-fun <M, S>KClass<ChunkLightProvider<M, S>>.needsLightUpdate(arg0: BlockState, arg1: BlockState) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = ChunkLightProvider.method_51561(arg0, arg1)
+fun <M, S>ChunkLightProvider<M, S>.displaySectionLevel(sectionPos: Long) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_22875(sectionPos)

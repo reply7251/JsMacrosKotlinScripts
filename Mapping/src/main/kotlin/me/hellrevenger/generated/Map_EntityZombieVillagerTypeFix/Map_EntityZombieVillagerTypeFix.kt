@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_4990
  */
-fun EntityZombieVillagerTypeFix.fixZombieType(arg0: Dynamic<*>) = this.method_4990(arg0)
+fun EntityZombieVillagerTypeFix.fixZombieType(zombieDynamic: Dynamic<*>) = this.method_4990(zombieDynamic)

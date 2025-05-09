@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8990
  */
-fun OnKilledCriterion.trigger(arg0: ServerPlayerEntity, arg1: Entity, arg2: DamageSource) = this.method_8990(arg0, arg1, arg2)
+fun OnKilledCriterion.trigger(player: ServerPlayerEntity, entity: Entity, killingDamage: DamageSource) = this.method_8990(player, entity, killingDamage)

@@ -2,133 +2,33 @@ package me.hellrevenger.generated.Map_Block
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_10651
- */
-val KClass<Block>.STATE_IDS by aliasStatic(Block::field_10651)
-/**
- * field_31030
- */
-val KClass<Block>.REDRAW_ON_MAIN_THREAD by aliasStatic(Block::field_31030)
-/**
- * field_31022
- */
-val KClass<Block>.NOTIFY_ALL_AND_REDRAW by aliasStatic(Block::field_31022)
-/**
- * field_31029
- */
-val KClass<Block>.NO_REDRAW by aliasStatic(Block::field_31029)
-/**
- * field_31033
- */
-val KClass<Block>.MOVED by aliasStatic(Block::field_31033)
-/**
- * field_31028
- */
-val KClass<Block>.NOTIFY_LISTENERS by aliasStatic(Block::field_31028)
-/**
- * field_31036
- */
-val KClass<Block>.NOTIFY_ALL by aliasStatic(Block::field_31036)
-/**
- * field_53822
- */
-val KClass<Block>.SKIP_REDSTONE_WIRE_STATE_REPLACEMENT by aliasStatic(Block::field_53822)
-/**
- * field_31032
- */
-val KClass<Block>.SKIP_DROPS by aliasStatic(Block::field_31032)
-/**
- * field_31027
- */
-val KClass<Block>.NOTIFY_NEIGHBORS by aliasStatic(Block::field_31027)
-/**
- * field_31031
- */
-val KClass<Block>.FORCE_STATE by aliasStatic(Block::field_31031)
-/**
  * method_9585
  */
-fun Block.onBroken(arg0: WorldAccess, arg1: BlockPos, arg2: BlockState) = this.method_9585(arg0, arg1, arg2)
-/**
- * method_9607
- */
-fun KClass<Block>.shouldDrawSide(arg0: BlockState, arg1: BlockState, arg2: Direction) = Block.method_9607(arg0, arg1, arg2)
-/**
- * method_9503
- */
-fun KClass<Block>.getBlockFromItem(arg0: Item) = Block.method_9503(arg0)
-/**
- * method_9610
- */
-fun KClass<Block>.dropStacks(arg0: BlockState, arg1: WorldAccess, arg2: BlockPos, arg3: BlockEntity) = Block.method_9610(arg0, arg1, arg2, arg3)
+fun Block.onBroken(world: WorldAccess, pos: BlockPos, state: BlockState) = this.method_9585(world, pos, state)
 /**
  * method_23349
  */
 fun Block.getVelocityMultiplier() = this.method_23349()
 /**
- * method_9562
- */
-fun KClass<Block>.getDroppedStacks(arg0: BlockState, arg1: ServerWorld, arg2: BlockPos, arg3: BlockEntity) = Block.method_9562(arg0, arg1, arg2, arg3)
-/**
  * method_9520
  */
 fun Block.getBlastResistance() = this.method_9520()
-/**
- * method_9510
- */
-fun KClass<Block>.postProcessState(arg0: BlockState, arg1: WorldAccess, arg2: BlockPos) = Block.method_9510(arg0, arg1, arg2)
 /**
  * method_9499
  */
 fun Block.getSlipperiness() = this.method_9499()
 /**
- * method_9511
- */
-fun KClass<Block>.dropStacks(arg0: BlockState, arg1: world_World, arg2: BlockPos, arg3: BlockEntity, arg4: Entity, arg5: ItemStack) = Block.method_9511(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
- * method_9611
- */
-fun KClass<Block>.replace(arg0: BlockState, arg1: BlockState, arg2: WorldAccess, arg3: BlockPos, arg4: Int, arg5: Int) = Block.method_9611(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
- * method_9577
- */
-fun KClass<Block>.dropStack(arg0: world_World, arg1: BlockPos, arg2: ItemStack) = Block.method_9577(arg0, arg1, arg2)
-/**
- * method_9541
- */
-fun KClass<Block>.createCuboidShape(arg0: Double, arg1: Double, arg2: Double, arg3: Double, arg4: Double, arg5: Double) = Block.method_9541(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
- * method_9531
- */
-fun KClass<Block>.getStateFromRawId(arg0: Int) = Block.method_9531(arg0)
-/**
- * method_16361
- */
-fun KClass<Block>.hasTopRim(arg0: BlockView, arg1: BlockPos) = Block.method_16361(arg0, arg1)
-/**
- * method_30094
- */
-fun KClass<Block>.replace(arg0: BlockState, arg1: BlockState, arg2: WorldAccess, arg3: BlockPos, arg4: Int) = Block.method_30094(arg0, arg1, arg2, arg3, arg4)
-/**
  * method_9533
  */
-fun Block.shouldDropItemsOnExplosion(arg0: Explosion) = this.method_9533(arg0)
+fun Block.shouldDropItemsOnExplosion(explosion: Explosion) = this.method_9533(explosion)
 /**
  * method_40142
  */
 fun Block.getRegistryEntry() = this.method_40142()
 /**
- * method_9582
- */
-fun KClass<Block>.pushEntitiesUpBeforeBlockChange(arg0: BlockState, arg1: BlockState, arg2: WorldAccess, arg3: BlockPos) = Block.method_9582(arg0, arg1, arg2, arg3)
-/**
- * method_9501
- */
-fun KClass<Block>.isFaceFullSquare(arg0: VoxelShape, arg1: Direction) = Block.method_9501(arg0, arg1)
-/**
  * method_9586
  */
-fun Block.onDestroyedByExplosion(arg0: ServerWorld, arg1: BlockPos, arg2: Explosion) = this.method_9586(arg0, arg1, arg2)
+fun Block.onDestroyedByExplosion(world: ServerWorld, pos: BlockPos, explosion: Explosion) = this.method_9586(world, pos, explosion)
 /**
  * method_9595
  */
@@ -136,11 +36,11 @@ fun Block.getStateManager() = this.method_9595()
 /**
  * method_9496
  */
-fun Block.randomDisplayTick(arg0: BlockState, arg1: world_World, arg2: BlockPos, arg3: Random) = this.method_9496(arg0, arg1, arg2, arg3)
+fun Block.randomDisplayTick(state: BlockState, world: world_World, pos: BlockPos, random: Random) = this.method_9496(state, world, pos, random)
 /**
  * method_9538
  */
-fun Block.canMobSpawnInside(arg0: BlockState) = this.method_9538(arg0)
+fun Block.canMobSpawnInside(state: BlockState) = this.method_9538(state)
 /**
  * method_9564
  */
@@ -148,55 +48,39 @@ fun Block.getDefaultState() = this.method_9564()
 /**
  * method_34725
  */
-fun Block.getStateWithProperties(arg0: BlockState) = this.method_34725(arg0)
-/**
- * method_9609
- */
-fun KClass<Block>.getDroppedStacks(arg0: BlockState, arg1: ServerWorld, arg2: BlockPos, arg3: BlockEntity, arg4: Entity, arg5: ItemStack) = Block.method_9609(arg0, arg1, arg2, arg3, arg4, arg5)
+fun Block.getStateWithProperties(state: BlockState) = this.method_34725(state)
 /**
  * method_9591
  */
-fun Block.onSteppedOn(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: Entity) = this.method_9591(arg0, arg1, arg2, arg3)
+fun Block.onSteppedOn(world: world_World, pos: BlockPos, state: BlockState, entity: Entity) = this.method_9591(world, pos, state, entity)
 /**
  * method_9568
  */
-fun Block.appendTooltip(arg0: ItemStack, arg1: net.minecraft.class_1792.class_9635, arg2: MutableList<Text>, arg3: TooltipType) = this.method_9568(arg0, arg1, arg2, arg3)
-/**
- * method_9507
- */
-fun KClass<Block>.getRawIdFromState(arg0: BlockState) = Block.method_9507(arg0)
+fun Block.appendTooltip(stack: ItemStack, context: net.minecraft.class_1792.class_9635, tooltip: MutableList<Text>, options: TooltipType) = this.method_9568(stack, context, tooltip, options)
 /**
  * method_9567
  */
-fun Block.onPlaced(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: LivingEntity, arg4: ItemStack) = this.method_9567(arg0, arg1, arg2, arg3, arg4)
+fun Block.onPlaced(world: world_World, pos: BlockPos, state: BlockState, placer: LivingEntity, itemStack: ItemStack) = this.method_9567(world, pos, state, placer, itemStack)
 /**
  * method_9504
  */
-fun Block.precipitationTick(arg0: BlockState, arg1: world_World, arg2: BlockPos, arg3: net.minecraft.class_1959.class_1963) = this.method_9504(arg0, arg1, arg2, arg3)
+fun Block.precipitationTick(state: BlockState, world: world_World, pos: BlockPos, precipitation: net.minecraft.class_1959.class_1963) = this.method_9504(state, world, pos, precipitation)
 /**
  * method_9554
  */
-fun Block.onLandedUpon(arg0: world_World, arg1: BlockState, arg2: BlockPos, arg3: Entity, arg4: Float) = this.method_9554(arg0, arg1, arg2, arg3, arg4)
+fun Block.onLandedUpon(world: world_World, state: BlockState, pos: BlockPos, entity: Entity, fallDistance: Float) = this.method_9554(world, state, pos, entity, fallDistance)
 /**
  * method_9605
  */
-fun Block.getPlacementState(arg0: ItemPlacementContext) = this.method_9605(arg0)
-/**
- * method_9614
- */
-fun KClass<Block>.isShapeFullCube(arg0: VoxelShape) = Block.method_9614(arg0)
+fun Block.getPlacementState(ctx: ItemPlacementContext) = this.method_9605(ctx)
 /**
  * method_9502
  */
-fun Block.onEntityLand(arg0: BlockView, arg1: Entity) = this.method_9502(arg0, arg1)
+fun Block.onEntityLand(world: BlockView, entity: Entity) = this.method_9502(world, entity)
 /**
  * method_9543
  */
 fun Block.hasDynamicBounds() = this.method_9543()
-/**
- * method_9581
- */
-fun KClass<Block>.cannotConnect(arg0: BlockState) = Block.method_9581(arg0)
 /**
  * method_9518
  */
@@ -204,24 +88,12 @@ fun Block.getName() = this.method_9518()
 /**
  * method_9556
  */
-fun Block.afterBreak(arg0: world_World, arg1: PlayerEntity, arg2: BlockPos, arg3: BlockState, arg4: BlockEntity, arg5: ItemStack) = this.method_9556(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
- * method_20044
- */
-fun KClass<Block>.sideCoversSmallSquare(arg0: WorldView, arg1: BlockPos, arg2: Direction) = Block.method_20044(arg0, arg1, arg2)
-/**
- * method_36992
- */
-fun KClass<Block>.dropStack(arg0: world_World, arg1: BlockPos, arg2: Direction, arg3: ItemStack) = Block.method_36992(arg0, arg1, arg2, arg3)
+fun Block.afterBreak(world: world_World, player: PlayerEntity, pos: BlockPos, state: BlockState, blockEntity: BlockEntity, tool: ItemStack) = this.method_9556(world, player, pos, state, blockEntity, tool)
 /**
  * method_23350
  */
 fun Block.getJumpVelocityMultiplier() = this.method_23350()
 /**
- * method_9497
- */
-fun KClass<Block>.dropStacks(arg0: BlockState, arg1: world_World, arg2: BlockPos) = Block.method_9497(arg0, arg1, arg2)
-/**
  * method_9576
  */
-fun Block.onBreak(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: PlayerEntity) = this.method_9576(arg0, arg1, arg2, arg3)
+fun Block.onBreak(world: world_World, pos: BlockPos, state: BlockState, player: PlayerEntity) = this.method_9576(world, pos, state, player)

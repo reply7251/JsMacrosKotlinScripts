@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_23909
  */
-fun SlideDownBlockCriterion.trigger(arg0: ServerPlayerEntity, arg1: BlockState) = this.method_23909(arg0, arg1)
+fun SlideDownBlockCriterion.trigger(player: ServerPlayerEntity, state: BlockState) = this.method_23909(player, state)

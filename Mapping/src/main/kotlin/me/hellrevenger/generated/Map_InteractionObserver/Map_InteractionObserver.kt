@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_18870
  */
-fun InteractionObserver.onInteractionWith(arg0: EntityInteraction, arg1: Entity) = this.method_18870(arg0, arg1)
+fun InteractionObserver.onInteractionWith(interaction: EntityInteraction, entity: Entity) = this.method_18870(interaction, entity)

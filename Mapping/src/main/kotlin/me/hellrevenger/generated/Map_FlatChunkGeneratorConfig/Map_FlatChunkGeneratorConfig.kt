@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_46727
  */
-fun FlatChunkGeneratorConfig.with(arg0: MutableList<FlatChunkGeneratorLayer>, arg1: Optional<RegistryEntryList<StructureSet>>, arg2: RegistryEntry<Biome>) = this.method_46727(arg0, arg1, arg2)
+fun FlatChunkGeneratorConfig.with(layers: MutableList<FlatChunkGeneratorLayer>, structureOverrides: Optional<RegistryEntryList<StructureSet>>, biome: RegistryEntry<Biome>) = this.method_46727(layers, structureOverrides, biome)
 /**
  * method_14327
  */
@@ -32,20 +32,8 @@ fun FlatChunkGeneratorConfig.getLayerBlocks() = this.method_14312()
 /**
  * method_44225
  */
-fun FlatChunkGeneratorConfig.createGenerationSettings(arg0: RegistryEntry<Biome>) = this.method_44225(arg0)
-/**
- * method_46726
- */
-fun KClass<FlatChunkGeneratorConfig>.getPlains(arg0: RegistryEntryLookup<Biome>) = FlatChunkGeneratorConfig.method_46726(arg0)
-/**
- * method_14309
- */
-fun KClass<FlatChunkGeneratorConfig>.getDefaultConfig(arg0: RegistryEntryLookup<Biome>, arg1: RegistryEntryLookup<StructureSet>, arg2: RegistryEntryLookup<PlacedFeature>) = FlatChunkGeneratorConfig.method_14309(arg0, arg1, arg2)
+fun FlatChunkGeneratorConfig.createGenerationSettings(biomeEntry: RegistryEntry<Biome>) = this.method_44225(biomeEntry)
 /**
  * method_28916
  */
 fun FlatChunkGeneratorConfig.enableLakes() = this.method_28916()
-/**
- * method_46729
- */
-fun KClass<FlatChunkGeneratorConfig>.getLavaLakes(arg0: RegistryEntryLookup<PlacedFeature>) = FlatChunkGeneratorConfig.method_46729(arg0)

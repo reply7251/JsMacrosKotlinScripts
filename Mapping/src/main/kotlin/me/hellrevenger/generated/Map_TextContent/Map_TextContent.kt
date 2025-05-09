@@ -4,15 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_10890
  */
-fun TextContent.parse(arg0: ServerCommandSource, arg1: Entity, arg2: Int) = this.method_10890(arg0, arg1, arg2)
+fun TextContent.parse(source: ServerCommandSource, sender: Entity, depth: Int) = this.method_10890(source, sender, depth)
 /**
  * method_27660
  */
-fun <T>TextContent.visit(arg0: net.minecraft.class_5348.class_5246<T>, arg1: Style) = this.method_27660<T>(arg0, arg1)
-/**
- * method_27659
- */
-fun <T>TextContent.visit(arg0: net.minecraft.class_5348.class_5245<T>) = this.method_27659<T>(arg0)
+fun <T>TextContent.visit(visitor: net.minecraft.class_5348.class_5246<T>, style: Style) = this.method_27660<T>(visitor, style)
 /**
  * method_54163
  */

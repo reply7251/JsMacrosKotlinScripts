@@ -2,18 +2,6 @@ package me.hellrevenger.generated.Map_Raid
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_30670
- */
-val KClass<Raid>.MAX_DESPAWN_COUNTER by aliasStatic(Raid::field_30670)
-/**
- * field_30675
- */
-val KClass<Raid>.SQUARED_MAX_RAIDER_DISTANCE by aliasStatic(Raid::field_30675)
-/**
- * field_53976
- */
-val KClass<Raid>.RAVAGER_SPAWN_LOCATION by aliasStatic(Raid::field_53976)
-/**
  * method_16514
  */
 fun Raid.getMaxAcceptableBadOmenLevel() = this.method_16514()
@@ -32,7 +20,7 @@ fun Raid.hasStopped() = this.method_20022()
 /**
  * method_16518
  */
-fun Raid.start(arg0: ServerPlayerEntity) = this.method_16518(arg0)
+fun Raid.start(player: ServerPlayerEntity) = this.method_16518(player)
 /**
  * method_16832
  */
@@ -44,7 +32,7 @@ fun Raid.getTotalHealth() = this.method_35212()
 /**
  * method_16491
  */
-fun Raid.setWaveCaptain(arg0: Int, arg1: RaiderEntity) = this.method_16491(arg0, arg1)
+fun Raid.setWaveCaptain(wave: Int, entity: RaiderEntity) = this.method_16491(wave, entity)
 /**
  * method_16490
  */
@@ -60,23 +48,19 @@ fun Raid.getCenter() = this.method_16495()
 /**
  * method_35211
  */
-fun Raid.setBadOmenLevel(arg0: Int) = this.method_35211(arg0)
+fun Raid.setBadOmenLevel(badOmenLevel: Int) = this.method_35211(badOmenLevel)
 /**
  * method_16502
  */
-fun Raid.writeNbt(arg0: NbtCompound) = this.method_16502(arg0)
+fun Raid.writeNbt(nbt: NbtCompound) = this.method_16502(nbt)
 /**
  * method_20021
  */
 fun Raid.hasSpawned() = this.method_20021()
 /**
- * method_61558
- */
-fun KClass<Raid>.createOminousBanner(arg0: RegistryEntryLookup<BannerPattern>) = Raid.method_61558(arg0)
-/**
  * method_16500
  */
-fun Raid.removeLeader(arg0: Int) = this.method_16500(arg0)
+fun Raid.removeLeader(wave: Int) = this.method_16500(wave)
 /**
  * method_20024
  */
@@ -88,7 +72,7 @@ fun Raid.getWorld() = this.method_16831()
 /**
  * method_20017
  */
-fun Raid.addHero(arg0: Entity) = this.method_20017(arg0)
+fun Raid.addHero(entity: Entity) = this.method_20017(entity)
 /**
  * method_16523
  */
@@ -104,7 +88,7 @@ fun Raid.getAllRaiders() = this.method_35213()
 /**
  * method_16510
  */
-fun Raid.removeFromWave(arg0: RaiderEntity, arg1: Boolean) = this.method_16510(arg0, arg1)
+fun Raid.removeFromWave(entity: RaiderEntity, countHealth: Boolean) = this.method_16510(entity, countHealth)
 /**
  * method_20025
  */
@@ -112,15 +96,15 @@ fun Raid.getEnchantmentChance() = this.method_20025()
 /**
  * method_16496
  */
-fun Raid.getCaptain(arg0: Int) = this.method_16496(arg0)
+fun Raid.getCaptain(wave: Int) = this.method_16496(wave)
 /**
  * method_16516
  */
-fun Raid.addRaider(arg0: Int, arg1: RaiderEntity, arg2: BlockPos, arg3: Boolean) = this.method_16516(arg0, arg1, arg2, arg3)
+fun Raid.addRaider(wave: Int, raider: RaiderEntity, pos: BlockPos, existing: Boolean) = this.method_16516(wave, raider, pos, existing)
 /**
  * method_16487
  */
-fun Raid.addToWave(arg0: Int, arg1: RaiderEntity, arg2: Boolean) = this.method_16487(arg0, arg1, arg2)
+fun Raid.addToWave(wave: Int, entity: RaiderEntity, countHealth: Boolean) = this.method_16487(wave, entity, countHealth)
 /**
  * method_16509
  */
@@ -128,7 +112,7 @@ fun Raid.tick() = this.method_16509()
 /**
  * method_20016
  */
-fun Raid.getMaxWaves(arg0: Difficulty) = this.method_20016(arg0)
+fun Raid.getMaxWaves(difficulty: Difficulty) = this.method_20016(difficulty)
 /**
  * method_20023
  */

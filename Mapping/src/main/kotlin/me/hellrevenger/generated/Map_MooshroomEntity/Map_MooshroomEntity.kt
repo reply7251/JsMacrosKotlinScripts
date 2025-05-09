@@ -13,7 +13,3 @@ fun MooshroomEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.m
  * method_47847
  */
 fun MooshroomEntity.getVariant() = this.method_47847()
-/**
- * method_20665
- */
-fun KClass<MooshroomEntity>.canSpawn(arg0: EntityType<MooshroomEntity>, arg1: WorldAccess, arg2: SpawnReason, arg3: BlockPos, arg4: Random) = MooshroomEntity.method_20665(arg0, arg1, arg2, arg3, arg4)

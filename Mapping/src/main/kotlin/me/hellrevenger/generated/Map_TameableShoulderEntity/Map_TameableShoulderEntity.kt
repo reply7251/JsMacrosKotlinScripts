@@ -8,4 +8,4 @@ fun TameableShoulderEntity.isReadyToSitOnPlayer() = this.method_6626()
 /**
  * method_6627
  */
-fun TameableShoulderEntity.mountOnto(arg0: ServerPlayerEntity) = this.method_6627(arg0)
+fun TameableShoulderEntity.mountOnto(player: ServerPlayerEntity) = this.method_6627(player)

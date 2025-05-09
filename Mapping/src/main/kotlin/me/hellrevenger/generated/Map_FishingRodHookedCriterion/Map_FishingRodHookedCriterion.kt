@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8939
  */
-fun FishingRodHookedCriterion.trigger(arg0: ServerPlayerEntity, arg1: ItemStack, arg2: FishingBobberEntity, arg3: Collection<ItemStack>) = this.method_8939(arg0, arg1, arg2, arg3)
+fun FishingRodHookedCriterion.trigger(player: ServerPlayerEntity, rod: ItemStack, bobber: FishingBobberEntity, fishingLoots: Collection<ItemStack>) = this.method_8939(player, rod, bobber, fishingLoots)

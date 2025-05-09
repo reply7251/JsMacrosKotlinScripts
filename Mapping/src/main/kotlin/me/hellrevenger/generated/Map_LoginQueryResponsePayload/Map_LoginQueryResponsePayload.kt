@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_52295
  */
-fun LoginQueryResponsePayload.write(arg0: PacketByteBuf) = this.method_52295(arg0)
+fun LoginQueryResponsePayload.write(buf: PacketByteBuf) = this.method_52295(buf)

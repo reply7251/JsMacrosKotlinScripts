@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_31686
  */
-fun ViewerCountManager.updateViewerCount(arg0: world_World, arg1: BlockPos, arg2: BlockState) = this.method_31686(arg0, arg1, arg2)
+fun ViewerCountManager.updateViewerCount(world: world_World, pos: BlockPos, state: BlockState) = this.method_31686(world, pos, state)
 /**
  * method_31684
  */
-fun ViewerCountManager.openContainer(arg0: PlayerEntity, arg1: world_World, arg2: BlockPos, arg3: BlockState) = this.method_31684(arg0, arg1, arg2, arg3)
+fun ViewerCountManager.openContainer(player: PlayerEntity, world: world_World, pos: BlockPos, state: BlockState) = this.method_31684(player, world, pos, state)
 /**
  * method_31678
  */
@@ -16,4 +16,4 @@ fun ViewerCountManager.getViewerCount() = this.method_31678()
 /**
  * method_31685
  */
-fun ViewerCountManager.closeContainer(arg0: PlayerEntity, arg1: world_World, arg2: BlockPos, arg3: BlockState) = this.method_31685(arg0, arg1, arg2, arg3)
+fun ViewerCountManager.closeContainer(player: PlayerEntity, world: world_World, pos: BlockPos, state: BlockState) = this.method_31685(player, world, pos, state)

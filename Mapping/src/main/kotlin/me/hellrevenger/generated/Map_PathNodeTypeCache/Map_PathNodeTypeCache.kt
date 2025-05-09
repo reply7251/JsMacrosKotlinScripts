@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_57618
  */
-fun PathNodeTypeCache.add(arg0: BlockView, arg1: BlockPos) = this.method_57618(arg0, arg1)
+fun PathNodeTypeCache.add(world: BlockView, pos: BlockPos) = this.method_57618(world, pos)
 /**
  * method_57620
  */
-fun PathNodeTypeCache.invalidate(arg0: BlockPos) = this.method_57620(arg0)
+fun PathNodeTypeCache.invalidate(pos: BlockPos) = this.method_57620(pos)

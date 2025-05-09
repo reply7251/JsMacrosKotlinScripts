@@ -42,10 +42,6 @@ var EnchantingTableBlockEntity.lastBookRotation by alias(EnchantingTableBlockEnt
  */
 var EnchantingTableBlockEntity.pageAngle by alias(EnchantingTableBlockEntity::field_11960)
 /**
- * method_31688
- */
-fun KClass<EnchantingTableBlockEntity>.tick(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: EnchantingTableBlockEntity) = EnchantingTableBlockEntity.method_31688(arg0, arg1, arg2, arg3)
-/**
  * method_11179
  */
-fun EnchantingTableBlockEntity.setCustomName(arg0: Text) = this.method_11179(arg0)
+fun EnchantingTableBlockEntity.setCustomName(customName: Text) = this.method_11179(customName)

@@ -247,10 +247,6 @@ typealias BipedEntityRenderer<T, S, M> = net.minecraft.class_909<T, S, M>
  */
 typealias MacWindowUtil = net.minecraft.class_6417
 /**
- * net.minecraft.class_6037
- */
-typealias FieldsAreNonnullByDefault2 = net.minecraft.class_6037
-/**
  * net.minecraft.class_5154
  */
 typealias DeltaFeature = net.minecraft.class_5154
@@ -790,10 +786,6 @@ typealias BossBarManager = net.minecraft.class_3004
  * net.minecraft.class_2456
  */
 typealias ComplexRecipeJsonBuilder = net.minecraft.class_2456
-/**
- * com.mojang.blaze3d.platform.GlStateManager
- */
-typealias GlStateManager = com.mojang.blaze3d.platform.GlStateManager
 /**
  * net.minecraft.class_8548
  */
@@ -2011,10 +2003,6 @@ typealias Tick<T> = net.minecraft.class_6759<T>
  */
 typealias SocketAddress = java.net.SocketAddress
 /**
- * java.lang.Void
- */
-typealias Void = java.lang.Void
-/**
  * net.minecraft.class_355
  */
 typealias PlayerListHud = net.minecraft.class_355
@@ -2194,10 +2182,6 @@ typealias GameRuleCommand = net.minecraft.class_3065
  * net.minecraft.class_9192
  */
 typealias DebugSampleType = net.minecraft.class_9192
-/**
- * net.minecraft.class_6328
- */
-typealias MethodsReturnNonnullByDefault = net.minecraft.class_6328
 /**
  * net.minecraft.class_4658
  */
@@ -2535,10 +2519,6 @@ typealias CriterionProgress = net.minecraft.class_178
  */
 typealias ChunkHolder = net.minecraft.class_3193
 /**
- * net.minecraft.class_2955
- */
-typealias InputSlotFiller<R> = net.minecraft.class_2955<R>
-/**
  * net.minecraft.class_5561
  */
 typealias ViewerCountManager = net.minecraft.class_5561
@@ -2831,29 +2811,13 @@ typealias ScheduleCommand = net.minecraft.class_3112
  */
 typealias FlatLevelGeneratorPresets = net.minecraft.class_7143
 /**
- * com.mojang.datafixers.util.Function3
- */
-typealias Function3<T1, T2, T3, R> = com.mojang.datafixers.util.Function3<T1, T2, T3, R>
-/**
  * net.minecraft.class_7497
  */
 typealias ApiServices = net.minecraft.class_7497
 /**
- * com.mojang.datafixers.util.Function5
- */
-typealias Function5<T1, T2, T3, T4, T5, R> = com.mojang.datafixers.util.Function5<T1, T2, T3, T4, T5, R>
-/**
- * com.mojang.datafixers.util.Function4
- */
-typealias Function4<T1, T2, T3, T4, R> = com.mojang.datafixers.util.Function4<T1, T2, T3, T4, R>
-/**
  * com.mojang.datafixers.util.Function7
  */
 typealias Function7<T1, T2, T3, T4, T5, T6, T7, R> = com.mojang.datafixers.util.Function7<T1, T2, T3, T4, T5, T6, T7, R>
-/**
- * com.mojang.datafixers.util.Function6
- */
-typealias Function6<T1, T2, T3, T4, T5, T6, R> = com.mojang.datafixers.util.Function6<T1, T2, T3, T4, T5, T6, R>
 /**
  * net.minecraft.class_592
  */
@@ -2874,10 +2838,6 @@ typealias LanguageResourceMetadata = net.minecraft.class_1082
  * net.minecraft.class_2495
  */
 typealias NbtIntArray = net.minecraft.class_2495
-/**
- * com.mojang.datafixers.util.Function8
- */
-typealias Function8<T1, T2, T3, T4, T5, T6, T7, T8, R> = com.mojang.datafixers.util.Function8<T1, T2, T3, T4, T5, T6, T7, T8, R>
 /**
  * net.minecraft.class_3351
  */
@@ -3278,10 +3238,6 @@ typealias ScoreboardEntry = net.minecraft.class_9011
  * net.minecraft.class_2675
  */
 typealias ParticleS2CPacket = net.minecraft.class_2675
-/**
- * java.net.URI
- */
-typealias URI = java.net.URI
 /**
  * java.net.URL
  */
@@ -3899,10 +3855,6 @@ typealias ViewEntityProperty = net.minecraft.class_10546
  */
 typealias BanIpCommand = net.minecraft.class_3012
 /**
- * net.minecraft.class_6179
- */
-typealias ClientMethodsReturnNonnullByDefault = net.minecraft.class_6179
-/**
  * net.minecraft.class_9071
  */
 typealias ArmadilloBrain = net.minecraft.class_9071
@@ -4374,10 +4326,6 @@ typealias NarrationPart = net.minecraft.class_6381
  * net.minecraft.class_3108
  */
 typealias NetherFortressStructure = net.minecraft.class_3108
-/**
- * net.minecraft.class_6216
- */
-typealias MathMethodsReturnNonnullByDefault = net.minecraft.class_6216
 /**
  * net.minecraft.class_2442
  */
@@ -5759,10 +5707,6 @@ typealias PingResult = net.minecraft.class_4873
  */
 typealias TextVisitFactory = net.minecraft.class_5223
 /**
- * net.minecraft.class_10386
- */
-typealias UsesSystemOut = net.minecraft.class_10386
-/**
  * net.minecraft.class_7257
  */
 typealias LookAtDisturbanceTask = net.minecraft.class_7257
@@ -6360,10 +6304,6 @@ typealias Angerable = net.minecraft.class_5354
  */
 typealias SaddleableRenderState = net.minecraft.class_10061
 /**
- * net.minecraft.class_4618
- */
-typealias OutlineVertexConsumerProvider = net.minecraft.class_4618
-/**
  * net.minecraft.class_977
  */
 typealias DolphinHeldItemFeatureRenderer = net.minecraft.class_977
@@ -6856,10 +6796,6 @@ typealias AbstractRailBlock = net.minecraft.class_2241
  */
 typealias NetworkRecipeId = net.minecraft.class_10298
 /**
- * net.minecraft.util.profiling.jfr.event.ChunkGenerationEvent
- */
-typealias ChunkGenerationEvent = net.minecraft.util.profiling.jfr.event.ChunkGenerationEvent
-/**
  * net.minecraft.class_9814
  */
 typealias CustomReportDetailsS2CPacket = net.minecraft.class_9814
@@ -6936,10 +6872,6 @@ typealias SculkSpreadManager = net.minecraft.class_7128
  */
 typealias ServerScoreboard = net.minecraft.class_2995
 /**
- * net.minecraft.util.profiling.jfr.event.NetworkSummaryEvent
- */
-typealias NetworkSummaryEvent = net.minecraft.util.profiling.jfr.event.NetworkSummaryEvent
-/**
  * net.minecraft.class_3286
  */
 typealias VanillaDataPackProvider = net.minecraft.class_3286
@@ -6963,10 +6895,6 @@ typealias AttributeIdPrefixFix = net.minecraft.class_9852
  * net.minecraft.class_3185
  */
 typealias SpringFeature = net.minecraft.class_3185
-/**
- * com.mojang.blaze3d.platform.GLX
- */
-typealias GLX = com.mojang.blaze3d.platform.GLX
 /**
  * net.minecraft.class_3788
  */
@@ -8105,10 +8033,6 @@ typealias Multimap<K, V> = com.google.common.collect.Multimap<K, V>
  */
 typealias SugarCaneBlock = net.minecraft.class_2523
 /**
- * net.minecraft.obfuscate.DontObfuscate
- */
-typealias DontObfuscate = net.minecraft.obfuscate.DontObfuscate
-/**
  * net.minecraft.class_10270
  */
 typealias RotateCommand = net.minecraft.class_10270
@@ -8264,10 +8188,6 @@ typealias EmergeTask<E> = net.minecraft.class_7250<E>
  * net.minecraft.class_10475
  */
 typealias CooldownProperty = net.minecraft.class_10475
-/**
- * com.mojang.blaze3d.platform.TextureUtil
- */
-typealias TextureUtil = com.mojang.blaze3d.platform.TextureUtil
 /**
  * net.minecraft.class_10171
  */
@@ -8624,10 +8544,6 @@ typealias AnimationFrameResourceMetadata = net.minecraft.class_1080
  * net.minecraft.class_366
  */
 typealias RecipeToast = net.minecraft.class_366
-/**
- * java.util.function.DoubleSupplier
- */
-typealias DoubleSupplier = java.util.function.DoubleSupplier
 /**
  * net.minecraft.class_7730
  */
@@ -10114,10 +10030,6 @@ typealias WolfEntity = net.minecraft.class_1493
 typealias ComparatorBlock = net.minecraft.class_2286
 
 /**
- * net.minecraft.class_10366
- */
-typealias ProjectionType = net.minecraft.class_10366
-/**
  * net.minecraft.class_9097
  */
 typealias HandshakeStates = net.minecraft.class_9097
@@ -10181,10 +10093,6 @@ typealias TreePlacedFeatures = net.minecraft.class_6818
  * net.minecraft.class_4651
  */
 typealias BlockStateProvider = net.minecraft.class_4651
-/**
- * com.mojang.blaze3d.systems.RenderSystem
- */
-typealias RenderSystem = com.mojang.blaze3d.systems.RenderSystem
 /**
  * net.minecraft.class_3701
  */
@@ -10681,10 +10589,6 @@ typealias ServerLinks = net.minecraft.class_9782
  * net.minecraft.class_7092
  */
 typealias Schema3076 = net.minecraft.class_7092
-/**
- * net.minecraft.util.profiling.jfr.event.ServerTickTimeEvent
- */
-typealias ServerTickTimeEvent = net.minecraft.util.profiling.jfr.event.ServerTickTimeEvent
 /**
  * net.minecraft.class_1295
  */
@@ -11743,10 +11647,6 @@ typealias ConduitBlockEntityRenderer = net.minecraft.class_829
  */
 typealias EffectsChangedCriterion = net.minecraft.class_2027
 /**
- * net.minecraft.class_8138
- */
-typealias DisplayEntityRenderer<T, S, ST> = net.minecraft.class_8138<T, S, ST>
-/**
  * net.minecraft.class_2767
  */
 typealias PlaySoundS2CPacket = net.minecraft.class_2767
@@ -12524,10 +12424,6 @@ typealias SmokingRecipe = net.minecraft.class_3862
  */
 typealias GrassColormapResourceSupplier = net.minecraft.class_1069
 /**
- * net.minecraft.class_6303
- */
-typealias CustomTestProvider = net.minecraft.class_6303
-/**
  * net.minecraft.class_9090
  */
 typealias ServerCookieResponsePacketListener = net.minecraft.class_9090
@@ -12864,17 +12760,9 @@ typealias PlantBlock = net.minecraft.class_2261
  */
 typealias TransmuteRecipeJsonBuilder = net.minecraft.class_10243
 /**
- * net.minecraft.class_5996
- */
-typealias Debug = net.minecraft.class_5996
-/**
  * net.minecraft.class_7455
  */
 typealias IdentifierSearcher<T> = net.minecraft.class_7455<T>
-/**
- * net.minecraft.util.profiling.jfr.event.StructureGenerationEvent
- */
-typealias StructureGenerationEvent = net.minecraft.util.profiling.jfr.event.StructureGenerationEvent
 /**
  * net.minecraft.class_1661
  */
@@ -12919,10 +12807,6 @@ typealias MultiValueDebugSampleLog = net.minecraft.class_9194
  * net.minecraft.class_2348
  */
 typealias SimpleDefaultedRegistry<T> = net.minecraft.class_2348<T>
-/**
- * java.io.OutputStream
- */
-typealias OutputStream = java.io.OutputStream
 /**
  * net.minecraft.class_3697
  */
@@ -15004,10 +14888,6 @@ typealias Schema4070 = net.minecraft.class_10273
  */
 typealias ExperimentalWarningScreen = net.minecraft.class_7745
 /**
- * it.unimi.dsi.fastutil.ints.IntCollection
- */
-typealias IntCollection = it.unimi.dsi.fastutil.ints.IntCollection
-/**
  * net.minecraft.class_8152
  */
 typealias Targeter = net.minecraft.class_8152
@@ -15439,10 +15319,6 @@ typealias RandomTask<E> = net.minecraft.class_4118<E>
  * net.minecraft.class_4148
  */
 typealias Sensor<E> = net.minecraft.class_4148<E>
-/**
- * net.minecraft.class_4573
- */
-typealias RenderCall = net.minecraft.class_4573
 /**
  * net.minecraft.class_614
  */
@@ -16087,10 +15963,6 @@ typealias BlockPos = net.minecraft.class_2338
  * net.minecraft.class_3123
  */
 typealias SetIdleTimeoutCommand = net.minecraft.class_3123
-/**
- * com.mojang.brigadier.exceptions.CommandSyntaxException
- */
-typealias CommandSyntaxException = com.mojang.brigadier.exceptions.CommandSyntaxException
 /**
  * net.minecraft.class_8911
  */
@@ -17760,10 +17632,6 @@ typealias NavigationConditions = net.minecraft.class_5493
  */
 typealias VindicatorEntityRenderer = net.minecraft.class_962
 /**
- * net.minecraft.class_6509
- */
-typealias PacketEvent = net.minecraft.class_6509
-/**
  * net.minecraft.class_1745
  */
 typealias BannerPatternItem = net.minecraft.class_1745
@@ -17879,10 +17747,6 @@ typealias DonkeyEntityModel = net.minecraft.class_9945
  * com.mojang.serialization.DynamicOps
  */
 typealias DynamicOps<T> = com.mojang.serialization.DynamicOps<T>
-/**
- * net.minecraft.class_6177
- */
-typealias DeobfuscateClass = net.minecraft.class_6177
 /**
  * net.minecraft.class_8209
  */
@@ -18224,10 +18088,6 @@ typealias ResourceReloadLogger = net.minecraft.class_6360
  */
 typealias LifecycledResourceManager = net.minecraft.class_6860
 /**
- * net.minecraft.class_6178
- */
-typealias ClientFieldsAreNonnullByDefault = net.minecraft.class_6178
-/**
  * net.minecraft.class_9298
  */
 typealias SuspiciousStewEffectsComponent = net.minecraft.class_9298
@@ -18427,10 +18287,6 @@ typealias ParrotEntity = net.minecraft.class_1453
  * net.minecraft.class_10257
  */
 typealias ChestRaftEntity = net.minecraft.class_10257
-/**
- * net.minecraft.class_10532
- */
-typealias LocalTimeProperty = net.minecraft.class_10532
 /**
  * net.minecraft.class_4051
  */
@@ -18893,10 +18749,6 @@ typealias InfestedBlock = net.minecraft.class_2384
  */
 typealias SkinTextures = net.minecraft.class_8685
 /**
- * java.math.BigInteger
- */
-typealias BigInteger = java.math.BigInteger
-/**
  * net.minecraft.class_10548
  */
 typealias ContextDimensionProperty = net.minecraft.class_10548
@@ -19044,10 +18896,6 @@ typealias WallWitherSkullBlock = net.minecraft.class_2567
  * net.minecraft.class_1116
  */
 typealias AmbientSoundPlayer = net.minecraft.class_1116
-/**
- * java.nio.Buffer
- */
-typealias Buffer = java.nio.Buffer
 /**
  * net.minecraft.class_4996
  */
@@ -20586,10 +20434,6 @@ typealias ThrowablePotionItem = net.minecraft.class_4537
  */
 typealias BlockHitResult = net.minecraft.class_3965
 /**
- * net.minecraft.class_9232
- */
-typealias ChunkRegionEvent = net.minecraft.class_9232
-/**
  * net.minecraft.class_3246
  */
 typealias ServerHandshakeNetworkHandler = net.minecraft.class_3246
@@ -20765,10 +20609,6 @@ typealias OptionsLowerCaseLanguageFix = net.minecraft.class_1203
  * net.minecraft.class_2544
  */
 typealias WallBlock = net.minecraft.class_2544
-/**
- * net.minecraft.class_4494
- */
-typealias GlDebugInfo = net.minecraft.class_4494
 /**
  * net.minecraft.class_8865
  */
@@ -21061,10 +20901,6 @@ typealias AbstractClientPlayerEntity = net.minecraft.class_742
  * net.minecraft.class_9927
  */
 typealias InactivityFpsLimit = net.minecraft.class_9927
-/**
- * net.minecraft.class_6319
- */
-typealias FieldsAreNonnullByDefault = net.minecraft.class_6319
 /**
  * net.minecraft.class_3141
  */
@@ -22097,10 +21933,6 @@ typealias FeatureContext<FC> = net.minecraft.class_5821<FC>
  * java.lang.Exception
  */
 typealias Exception = java.lang.Exception
-/**
- * java.math.BigDecimal
- */
-typealias BigDecimal = java.math.BigDecimal
 /**
  * net.minecraft.class_946
  */

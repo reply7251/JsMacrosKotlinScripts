@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_54078
  */
-fun SingleStackInventory.decreaseStack(arg0: Int) = this.method_54078(arg0)
+fun SingleStackInventory.decreaseStack(count: Int) = this.method_54078(count)
 /**
  * method_54077
  */
-fun SingleStackInventory.setStack(arg0: ItemStack) = this.method_54077(arg0)
+fun SingleStackInventory.setStack(stack: ItemStack) = this.method_54077(stack)
 /**
  * method_54079
  */

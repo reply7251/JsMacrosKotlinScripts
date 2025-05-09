@@ -4,24 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_48525
  */
-fun Model.upload(arg0: Item, arg1: TextureMap, arg2: BiConsumer<Identifier, ModelSupplier>) = this.method_48525(arg0, arg1, arg2)
-/**
- * method_25852
- */
-fun Model.upload(arg0: Identifier, arg1: TextureMap, arg2: BiConsumer<Identifier, ModelSupplier>) = this.method_25852(arg0, arg1, arg2)
-/**
- * method_25846
- */
-fun Model.upload(arg0: Block, arg1: TextureMap, arg2: BiConsumer<Identifier, ModelSupplier>) = this.method_25846(arg0, arg1, arg2)
+fun Model.upload(item: Item, textures: TextureMap, modelCollector: BiConsumer<Identifier, ModelSupplier>) = this.method_48525(item, textures, modelCollector)
 /**
  * method_25853
  */
-fun Model.uploadWithoutVariant(arg0: Block, arg1: String, arg2: TextureMap, arg3: BiConsumer<Identifier, ModelSupplier>) = this.method_25853(arg0, arg1, arg2, arg3)
+fun Model.uploadWithoutVariant(block: Block, suffix: String, textures: TextureMap, modelCollector: BiConsumer<Identifier, ModelSupplier>) = this.method_25853(block, suffix, textures, modelCollector)
 /**
  * method_54828
  */
-fun Model.getBlockSubModelId(arg0: Block) = this.method_54828(arg0)
-/**
- * method_25847
- */
-fun Model.upload(arg0: Block, arg1: String, arg2: TextureMap, arg3: BiConsumer<Identifier, ModelSupplier>) = this.method_25847(arg0, arg1, arg2, arg3)
+fun Model.getBlockSubModelId(block: Block) = this.method_54828(block)

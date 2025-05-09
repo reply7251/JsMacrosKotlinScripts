@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_38663
  */
-fun JfrListener.stop(arg0: file_Path) = this.method_38663(arg0)
+fun JfrListener.stop(dumpPath: file_Path) = this.method_38663(dumpPath)

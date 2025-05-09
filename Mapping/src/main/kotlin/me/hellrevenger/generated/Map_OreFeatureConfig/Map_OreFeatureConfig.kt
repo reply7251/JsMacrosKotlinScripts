@@ -13,7 +13,3 @@ val OreFeatureConfig.size by alias(OreFeatureConfig::field_13723)
  * field_29064
  */
 val OreFeatureConfig.discardOnAirChance by alias(OreFeatureConfig::field_29064)
-/**
- * method_33994
- */
-fun KClass<OreFeatureConfig>.createTarget(arg0: RuleTest, arg1: BlockState) = OreFeatureConfig.method_33994(arg0, arg1)

@@ -8,23 +8,19 @@ fun AdvancementTab.getIndex() = this.method_35735()
 /**
  * method_2315
  */
-fun AdvancementTab.drawIcon(arg0: DrawContext, arg1: Int, arg2: Int) = this.method_2315(arg0, arg1, arg2)
+fun AdvancementTab.drawIcon(context: DrawContext, x: Int, y: Int) = this.method_2315(context, x, y)
 /**
  * method_2316
  */
-fun AdvancementTab.isClickOnTab(arg0: Int, arg1: Int, arg2: Double, arg3: Double) = this.method_2316(arg0, arg1, arg2, arg3)
+fun AdvancementTab.isClickOnTab(screenX: Int, screenY: Int, mouseX: Double, arg3: Double) = this.method_2316(screenX, screenY, mouseX, arg3)
 /**
  * method_2314
  */
-fun AdvancementTab.drawWidgetTooltip(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Int, arg4: Int) = this.method_2314(arg0, arg1, arg2, arg3, arg4)
-/**
- * method_2317
- */
-fun KClass<AdvancementTab>.create(arg0: MinecraftClient, arg1: AdvancementsScreen, arg2: Int, arg3: PlacedAdvancement) = AdvancementTab.method_2317(arg0, arg1, arg2, arg3)
+fun AdvancementTab.drawWidgetTooltip(context: DrawContext, mouseX: Int, mouseY: Int, x: Int, y: Int) = this.method_2314(context, mouseX, mouseY, x, y)
 /**
  * method_2318
  */
-fun AdvancementTab.addAdvancement(arg0: PlacedAdvancement) = this.method_2318(arg0)
+fun AdvancementTab.addAdvancement(advancement: PlacedAdvancement) = this.method_2318(advancement)
 /**
  * method_2312
  */
@@ -36,7 +32,7 @@ fun AdvancementTab.getTitle() = this.method_2309()
 /**
  * method_2310
  */
-fun AdvancementTab.render(arg0: DrawContext, arg1: Int, arg2: Int) = this.method_2310(arg0, arg1, arg2)
+fun AdvancementTab.render(context: DrawContext, x: Int, y: Int) = this.method_2310(context, x, y)
 /**
  * method_35736
  */
@@ -48,11 +44,11 @@ fun AdvancementTab.getType() = this.method_35734()
 /**
  * method_2313
  */
-fun AdvancementTab.move(arg0: Double, arg1: Double) = this.method_2313(arg0, arg1)
+fun AdvancementTab.move(offsetX: Double, arg1: Double) = this.method_2313(offsetX, arg1)
 /**
  * method_2308
  */
-fun AdvancementTab.getWidget(arg0: AdvancementEntry) = this.method_2308(arg0)
+fun AdvancementTab.getWidget(advancement: AdvancementEntry) = this.method_2308(advancement)
 /**
  * method_53813
  */
@@ -60,4 +56,4 @@ fun AdvancementTab.getRoot() = this.method_53813()
 /**
  * method_2311
  */
-fun AdvancementTab.drawBackground(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Boolean) = this.method_2311(arg0, arg1, arg2, arg3)
+fun AdvancementTab.drawBackground(context: DrawContext, x: Int, y: Int, selected: Boolean) = this.method_2311(context, x, y, selected)

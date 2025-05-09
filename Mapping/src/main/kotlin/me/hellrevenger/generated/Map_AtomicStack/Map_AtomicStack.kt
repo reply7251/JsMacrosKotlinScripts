@@ -8,4 +8,4 @@ fun <T>AtomicStack<T>.toList() = this.method_33720()
 /**
  * method_33721
  */
-fun <T>AtomicStack<T>.push(arg0: T) = this.method_33721(arg0)
+fun <T>AtomicStack<T>.push(value: T) = this.method_33721(value)

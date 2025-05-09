@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_58435
  */
-fun UnbreakableComponent.withShowInTooltip(arg0: Boolean) = this.method_58435(arg0)
+fun UnbreakableComponent.withShowInTooltip(showInTooltip: Boolean) = this.method_58435(showInTooltip)
 /**
  * comp_2417
  */

@@ -12,7 +12,7 @@ fun GameEventListener.getRange() = this.method_32948()
 /**
  * method_32947
  */
-fun GameEventListener.listen(arg0: ServerWorld, arg1: RegistryEntry<GameEvent>, arg2: net.minecraft.class_5712.class_7397, arg3: Vec3d) = this.method_32947(arg0, arg1, arg2, arg3)
+fun GameEventListener.listen(world: ServerWorld, event: RegistryEntry<GameEvent>, emitter: net.minecraft.class_5712.class_7397, emitterPos: Vec3d) = this.method_32947(world, event, emitter, emitterPos)
 /**
  * method_32946
  */

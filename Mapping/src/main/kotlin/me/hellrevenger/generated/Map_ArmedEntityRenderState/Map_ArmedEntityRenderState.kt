@@ -25,7 +25,3 @@ val ArmedEntityRenderState.leftHandItemState by alias(ArmedEntityRenderState::fi
  * method_65578
  */
 fun ArmedEntityRenderState.getMainHandItemState() = this.method_65578()
-/**
- * method_65577
- */
-fun KClass<ArmedEntityRenderState>.updateRenderState(arg0: LivingEntity, arg1: ArmedEntityRenderState, arg2: ItemModelManager) = ArmedEntityRenderState.method_65577(arg0, arg1, arg2)

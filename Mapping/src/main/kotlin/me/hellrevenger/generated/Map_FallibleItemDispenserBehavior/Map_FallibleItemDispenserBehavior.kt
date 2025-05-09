@@ -8,4 +8,4 @@ fun FallibleItemDispenserBehavior.isSuccess() = this.method_27954()
 /**
  * method_27955
  */
-fun FallibleItemDispenserBehavior.setSuccess(arg0: Boolean) = this.method_27955(arg0)
+fun FallibleItemDispenserBehavior.setSuccess(success: Boolean) = this.method_27955(success)

@@ -8,7 +8,7 @@ fun JumpingMount.getJumpCooldown() = this.method_45327()
 /**
  * method_6154
  */
-fun JumpingMount.setJumpStrength(arg0: Int) = this.method_6154(arg0)
+fun JumpingMount.setJumpStrength(strength: Int) = this.method_6154(strength)
 /**
  * method_6156
  */
@@ -20,4 +20,4 @@ fun JumpingMount.canJump() = this.method_6153()
 /**
  * method_6155
  */
-fun JumpingMount.startJumping(arg0: Int) = this.method_6155(arg0)
+fun JumpingMount.startJumping(height: Int) = this.method_6155(height)

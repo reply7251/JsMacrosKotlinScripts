@@ -2,18 +2,6 @@ package me.hellrevenger.generated.Map_Perspective
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_26666
- */
-val KClass<Perspective>.THIRD_PERSON_FRONT by aliasEnum(Perspective::class, "field_26666")
-/**
- * field_26664
- */
-val KClass<Perspective>.FIRST_PERSON by aliasEnum(Perspective::class, "field_26664")
-/**
- * field_26665
- */
-val KClass<Perspective>.THIRD_PERSON_BACK by aliasEnum(Perspective::class, "field_26665")
-/**
  * method_31035
  */
 fun Perspective.isFrontView() = this.method_31035()

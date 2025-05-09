@@ -4,15 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_41560
  */
-fun NoiseConfig.getOrCreateRandomDeriver(arg0: Identifier) = this.method_41560(arg0)
-/**
- * method_41556
- */
-fun KClass<NoiseConfig>.create(arg0: ChunkGeneratorSettings, arg1: RegistryEntryLookup<net.minecraft.class_5216.class_5487>, arg2: Long) = NoiseConfig.method_41556(arg0, arg1, arg2)
-/**
- * method_41557
- */
-fun KClass<NoiseConfig>.create(arg0: net.minecraft.class_7871.class_7872, arg1: RegistryKey<ChunkGeneratorSettings>, arg2: Long) = NoiseConfig.method_41557(arg0, arg1, arg2)
+fun NoiseConfig.getOrCreateRandomDeriver(id: Identifier) = this.method_41560(id)
 /**
  * method_42371
  */
@@ -24,7 +16,7 @@ fun NoiseConfig.getSurfaceBuilder() = this.method_42372()
 /**
  * method_41558
  */
-fun NoiseConfig.getOrCreateSampler(arg0: RegistryKey<net.minecraft.class_5216.class_5487>) = this.method_41558(arg0)
+fun NoiseConfig.getOrCreateSampler(noiseParametersKey: RegistryKey<net.minecraft.class_5216.class_5487>) = this.method_41558(noiseParametersKey)
 /**
  * method_42370
  */

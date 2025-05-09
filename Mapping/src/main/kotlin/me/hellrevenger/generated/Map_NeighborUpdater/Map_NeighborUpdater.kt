@@ -4,24 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_41705
  */
-fun NeighborUpdater.updateNeighbors(arg0: BlockPos, arg1: Block, arg2: Direction, arg3: WireOrientation) = this.method_41705(arg0, arg1, arg2, arg3)
+fun NeighborUpdater.updateNeighbors(pos: BlockPos, sourceBlock: Block, except: Direction, orientation: WireOrientation) = this.method_41705(pos, sourceBlock, except, orientation)
 /**
  * method_41703
  */
-fun NeighborUpdater.updateNeighbor(arg0: BlockState, arg1: BlockPos, arg2: Block, arg3: WireOrientation, arg4: Boolean) = this.method_41703(arg0, arg1, arg2, arg3, arg4)
-/**
- * method_41708
- */
-fun KClass<NeighborUpdater>.tryNeighborUpdate(arg0: world_World, arg1: BlockState, arg2: BlockPos, arg3: Block, arg4: WireOrientation, arg5: Boolean) = NeighborUpdater.method_41708(arg0, arg1, arg2, arg3, arg4, arg5)
+fun NeighborUpdater.updateNeighbor(state: BlockState, pos: BlockPos, sourceBlock: Block, orientation: WireOrientation, notify: Boolean) = this.method_41703(state, pos, sourceBlock, orientation, notify)
 /**
  * method_42392
  */
-fun NeighborUpdater.replaceWithStateForNeighborUpdate(arg0: Direction, arg1: BlockState, arg2: BlockPos, arg3: BlockPos, arg4: Int, arg5: Int) = this.method_42392(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
- * method_41704
- */
-fun NeighborUpdater.updateNeighbor(arg0: BlockPos, arg1: Block, arg2: WireOrientation) = this.method_41704(arg0, arg1, arg2)
-/**
- * method_42393
- */
-fun KClass<NeighborUpdater>.replaceWithStateForNeighborUpdate(arg0: WorldAccess, arg1: Direction, arg2: BlockPos, arg3: BlockPos, arg4: BlockState, arg5: Int, arg6: Int) = NeighborUpdater.method_42393(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun NeighborUpdater.replaceWithStateForNeighborUpdate(direction: Direction, neighborState: BlockState, pos: BlockPos, neighborPos: BlockPos, flags: Int, maxUpdateDepth: Int) = this.method_42392(direction, neighborState, pos, neighborPos, flags, maxUpdateDepth)

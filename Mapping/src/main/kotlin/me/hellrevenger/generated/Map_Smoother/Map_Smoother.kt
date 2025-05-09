@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_15429
  */
-fun Smoother.smooth(arg0: Double, arg1: Double) = this.method_15429(arg0, arg1)
+fun Smoother.smooth(original: Double, arg1: Double) = this.method_15429(original, arg1)
 /**
  * method_15428
  */

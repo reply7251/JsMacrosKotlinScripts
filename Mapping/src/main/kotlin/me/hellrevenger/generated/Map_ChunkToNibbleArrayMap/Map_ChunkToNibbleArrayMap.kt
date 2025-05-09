@@ -8,19 +8,19 @@ fun <M>ChunkToNibbleArrayMap<M>.copy() where M: ChunkToNibbleArrayMap<M> = this.
 /**
  * method_15501
  */
-fun <M>ChunkToNibbleArrayMap<M>.get(arg0: Long) where M: ChunkToNibbleArrayMap<M> = this.method_15501(arg0)
+fun <M>ChunkToNibbleArrayMap<M>.get(chunkPos: Long) where M: ChunkToNibbleArrayMap<M> = this.method_15501(chunkPos)
 /**
  * method_15502
  */
-fun <M>ChunkToNibbleArrayMap<M>.replaceWithCopy(arg0: Long) where M: ChunkToNibbleArrayMap<M> = this.method_15502(arg0)
+fun <M>ChunkToNibbleArrayMap<M>.replaceWithCopy(pos: Long) where M: ChunkToNibbleArrayMap<M> = this.method_15502(pos)
 /**
  * method_15500
  */
-fun <M>ChunkToNibbleArrayMap<M>.removeChunk(arg0: Long) where M: ChunkToNibbleArrayMap<M> = this.method_15500(arg0)
+fun <M>ChunkToNibbleArrayMap<M>.removeChunk(chunkPos: Long) where M: ChunkToNibbleArrayMap<M> = this.method_15500(chunkPos)
 /**
  * method_15499
  */
-fun <M>ChunkToNibbleArrayMap<M>.put(arg0: Long, arg1: ChunkNibbleArray) where M: ChunkToNibbleArrayMap<M> = this.method_15499(arg0, arg1)
+fun <M>ChunkToNibbleArrayMap<M>.put(pos: Long, arg1: ChunkNibbleArray) where M: ChunkToNibbleArrayMap<M> = this.method_15499(pos, arg1)
 /**
  * method_15505
  */
@@ -28,7 +28,7 @@ fun <M>ChunkToNibbleArrayMap<M>.clearCache() where M: ChunkToNibbleArrayMap<M> =
 /**
  * method_15503
  */
-fun <M>ChunkToNibbleArrayMap<M>.containsKey(arg0: Long) where M: ChunkToNibbleArrayMap<M> = this.method_15503(arg0)
+fun <M>ChunkToNibbleArrayMap<M>.containsKey(chunkPos: Long) where M: ChunkToNibbleArrayMap<M> = this.method_15503(chunkPos)
 /**
  * method_16188
  */

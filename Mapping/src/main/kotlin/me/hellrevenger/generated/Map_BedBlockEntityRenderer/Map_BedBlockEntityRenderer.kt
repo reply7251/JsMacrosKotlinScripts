@@ -4,15 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_65557
  */
-fun BedBlockEntityRenderer.renderAsItem(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: Int, arg4: SpriteIdentifier) = this.method_65557(arg0, arg1, arg2, arg3, arg4)
-/**
- * method_32137
- */
-fun KClass<BedBlockEntityRenderer>.getFootTexturedModelData() = BedBlockEntityRenderer.method_32137()
-/**
- * method_32136
- */
-fun KClass<BedBlockEntityRenderer>.getHeadTexturedModelData() = BedBlockEntityRenderer.method_32136()
+fun BedBlockEntityRenderer.renderAsItem(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int, overlay: Int, textureId: SpriteIdentifier) = this.method_65557(matrices, vertexConsumers, light, overlay, textureId)
 /**
  * method_3557
  */

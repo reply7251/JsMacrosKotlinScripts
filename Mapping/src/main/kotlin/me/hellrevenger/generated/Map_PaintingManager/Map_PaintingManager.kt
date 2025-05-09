@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_18345
  */
-fun PaintingManager.getPaintingSprite(arg0: PaintingVariant) = this.method_18345(arg0)
+fun PaintingManager.getPaintingSprite(variant: PaintingVariant) = this.method_18345(variant)
 /**
  * method_18342
  */

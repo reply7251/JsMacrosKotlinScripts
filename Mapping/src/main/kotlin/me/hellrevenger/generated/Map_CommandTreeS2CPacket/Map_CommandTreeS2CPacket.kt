@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11403
  */
-fun CommandTreeS2CPacket.getCommandTree(arg0: CommandRegistryAccess) = this.method_11403(arg0)
+fun CommandTreeS2CPacket.getCommandTree(commandRegistryAccess: CommandRegistryAccess) = this.method_11403(commandRegistryAccess)
 /**
  * method_11404
  */

@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_427
  */
-fun LootChoice.getWeight(arg0: Float) = this.method_427(arg0)
+fun LootChoice.getWeight(luck: Float) = this.method_427(luck)
 /**
  * method_426
  */
-fun LootChoice.generateLoot(arg0: Consumer<ItemStack>, arg1: LootContext) = this.method_426(arg0, arg1)
+fun LootChoice.generateLoot(lootConsumer: Consumer<ItemStack>, context: LootContext) = this.method_426(lootConsumer, context)

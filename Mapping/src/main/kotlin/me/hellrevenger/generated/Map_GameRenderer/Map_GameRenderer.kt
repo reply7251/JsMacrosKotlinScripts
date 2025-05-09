@@ -6,13 +6,9 @@ import me.hellrevenger.generated.*
  */
 val GameRenderer.firstPersonRenderer by alias(GameRenderer::field_4012)
 /**
- * field_32686
- */
-val KClass<GameRenderer>.CAMERA_DEPTH by aliasStatic(GameRenderer::field_32686)
-/**
  * method_34521
  */
-fun GameRenderer.preloadPrograms(arg0: ResourceFactory) = this.method_34521(arg0)
+fun GameRenderer.preloadPrograms(factory: ResourceFactory) = this.method_34521(factory)
 /**
  * method_35772
  */
@@ -20,7 +16,7 @@ fun GameRenderer.getClient() = this.method_35772()
 /**
  * method_3195
  */
-fun GameRenderer.getSkyDarkness(arg0: Float) = this.method_3195(arg0)
+fun GameRenderer.getSkyDarkness(tickDelta: Float) = this.method_3195(tickDelta)
 /**
  * method_22975
  */
@@ -32,7 +28,7 @@ fun GameRenderer.getCamera() = this.method_19418()
 /**
  * method_3167
  */
-fun GameRenderer.onCameraEntitySet(arg0: Entity) = this.method_3167(arg0)
+fun GameRenderer.onCameraEntitySet(entity: Entity) = this.method_3167(entity)
 /**
  * method_3182
  */
@@ -40,7 +36,7 @@ fun GameRenderer.tick() = this.method_3182()
 /**
  * method_35770
  */
-fun GameRenderer.setRenderingPanorama(arg0: Boolean) = this.method_35770(arg0)
+fun GameRenderer.setRenderingPanorama(renderingPanorama: Boolean) = this.method_35770(renderingPanorama)
 /**
  * method_32796
  */
@@ -48,15 +44,11 @@ fun GameRenderer.getFarPlaneDistance() = this.method_32796()
 /**
  * method_3189
  */
-fun GameRenderer.showFloatingItem(arg0: ItemStack) = this.method_3189(arg0)
-/**
- * method_3174
- */
-fun KClass<GameRenderer>.getNightVisionStrength(arg0: LivingEntity, arg1: Float) = GameRenderer.method_3174(arg0, arg1)
+fun GameRenderer.showFloatingItem(floatingItem: ItemStack) = this.method_3189(floatingItem)
 /**
  * method_35766
  */
-fun GameRenderer.renderWithZoom(arg0: Float, arg1: Float, arg2: Float) = this.method_35766(arg0, arg1, arg2)
+fun GameRenderer.renderWithZoom(zoom: Float, zoomX: Float, zoomY: Float) = this.method_35766(zoom, zoomX, zoomY)
 /**
  * method_57796
  */
@@ -72,7 +64,7 @@ fun GameRenderer.isRenderingPanorama() = this.method_35765()
 /**
  * method_35769
  */
-fun GameRenderer.setBlockOutlineEnabled(arg0: Boolean) = this.method_35769(arg0)
+fun GameRenderer.setBlockOutlineEnabled(blockOutlineEnabled: Boolean) = this.method_35769(blockOutlineEnabled)
 /**
  * method_3193
  */
@@ -84,7 +76,7 @@ fun GameRenderer.reset() = this.method_3203()
 /**
  * method_3169
  */
-fun GameRenderer.onResized(arg0: Int, arg1: Int) = this.method_3169(arg0, arg1)
+fun GameRenderer.onResized(width: Int, height: Int) = this.method_3169(width, height)
 /**
  * method_3184
  */
@@ -96,15 +88,15 @@ fun GameRenderer.getLightmapTextureManager() = this.method_22974()
 /**
  * method_35768
  */
-fun GameRenderer.setRenderHand(arg0: Boolean) = this.method_35768(arg0)
+fun GameRenderer.setRenderHand(renderHand: Boolean) = this.method_35768(renderHand)
 /**
  * method_3188
  */
-fun GameRenderer.renderWorld(arg0: RenderTickCounter) = this.method_3188(arg0)
+fun GameRenderer.renderWorld(renderTickCounter: RenderTickCounter) = this.method_3188(renderTickCounter)
 /**
  * method_22973
  */
-fun GameRenderer.getBasicProjectionMatrix(arg0: Float) = this.method_22973(arg0)
+fun GameRenderer.getBasicProjectionMatrix(fovDegrees: Float) = this.method_22973(fovDegrees)
 /**
  * method_62906
  */
@@ -112,8 +104,8 @@ fun GameRenderer.getPostProcessorId() = this.method_62906()
 /**
  * method_3192
  */
-fun GameRenderer.render(arg0: RenderTickCounter, arg1: Boolean) = this.method_3192(arg0, arg1)
+fun GameRenderer.render(tickCounter: RenderTickCounter, tick: Boolean) = this.method_3192(tickCounter, tick)
 /**
  * method_3190
  */
-fun GameRenderer.updateCrosshairTarget(arg0: Float) = this.method_3190(arg0)
+fun GameRenderer.updateCrosshairTarget(tickDelta: Float) = this.method_3190(tickDelta)

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_10184
  */
-fun FenceBlock.canConnect(arg0: BlockState, arg1: Boolean, arg2: Direction) = this.method_10184(arg0, arg1, arg2)
+fun FenceBlock.canConnect(state: BlockState, neighborIsFullSquare: Boolean, dir: Direction) = this.method_10184(state, neighborIsFullSquare, dir)

@@ -8,11 +8,11 @@ fun GenerationDependencies.getDependencies() = this.method_60513()
 /**
  * method_60515
  */
-fun GenerationDependencies.getAdditionalLevel(arg0: ChunkStatus) = this.method_60515(arg0)
+fun GenerationDependencies.getAdditionalLevel(status: ChunkStatus) = this.method_60515(status)
 /**
  * method_60514
  */
-fun GenerationDependencies.get(arg0: Int) = this.method_60514(arg0)
+fun GenerationDependencies.get(index: Int) = this.method_60514(index)
 /**
  * method_60516
  */

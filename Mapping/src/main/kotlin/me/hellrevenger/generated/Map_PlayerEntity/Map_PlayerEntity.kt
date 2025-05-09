@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_PlayerEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_30651
- */
-val KClass<PlayerEntity>.DEFAULT_EYE_HEIGHT by aliasStatic(PlayerEntity::field_30651)
-/**
  * field_49990
  */
 var PlayerEntity.explodedBy by alias(PlayerEntity::field_49990)
@@ -26,10 +22,6 @@ var PlayerEntity.fishHook by alias(PlayerEntity::field_7513)
  */
 var PlayerEntity.experienceLevel by alias(PlayerEntity::field_7520)
 /**
- * field_46174
- */
-val KClass<PlayerEntity>.DEFAULT_MAIN_ARM by aliasStatic(PlayerEntity::field_46174)
-/**
  * field_7499
  */
 var PlayerEntity.capeZ by alias(PlayerEntity::field_7499)
@@ -41,14 +33,6 @@ var PlayerEntity.experiencePickUpDelay by alias(PlayerEntity::field_7504)
  * field_7505
  */
 var PlayerEntity.prevStrideDistance by alias(PlayerEntity::field_7505)
-/**
- * field_18135
- */
-val KClass<PlayerEntity>.STANDING_DIMENSIONS by aliasStatic(PlayerEntity::field_18135)
-/**
- * field_47821
- */
-val KClass<PlayerEntity>.VEHICLE_ATTACHMENT_POS by aliasStatic(PlayerEntity::field_47821)
 /**
  * field_7502
  */
@@ -88,11 +72,11 @@ val PlayerEntity.playerScreenHandler by alias(PlayerEntity::field_7498)
 /**
  * method_7335
  */
-fun PlayerEntity.unlockRecipes(arg0: MutableList<RegistryKey<Recipe<*>>>) = this.method_7335(arg0)
+fun PlayerEntity.unlockRecipes(recipes: MutableList<RegistryKey<Recipe<*>>>) = this.method_7335(recipes)
 /**
  * method_7266
  */
-fun PlayerEntity.resetStat(arg0: Stat<*>) = this.method_7266(arg0)
+fun PlayerEntity.resetStat(stat: Stat<*>) = this.method_7266(stat)
 /**
  * method_45015
  */
@@ -100,7 +84,7 @@ fun PlayerEntity.shouldCloseHandledScreenOnRespawn() = this.method_45015()
 /**
  * method_56094
  */
-fun PlayerEntity.canInteractWithEntity(arg0: Entity, arg1: Double) = this.method_56094(arg0, arg1)
+fun PlayerEntity.canInteractWithEntity(entity: Entity, additionalRange: Double) = this.method_56094(entity, additionalRange)
 /**
  * method_7297
  */
@@ -120,15 +104,15 @@ fun PlayerEntity.shouldRotateWithMinecart() = this.method_61498()
 /**
  * method_7342
  */
-fun PlayerEntity.increaseStat(arg0: Stat<*>, arg1: Int) = this.method_7342(arg0, arg1)
+fun PlayerEntity.increaseStat(stat: Stat<*>, amount: Int) = this.method_7342(stat, amount)
 /**
  * method_21701
  */
-fun PlayerEntity.isBlockBreakingRestricted(arg0: world_World, arg1: BlockPos, arg2: GameMode) = this.method_21701(arg0, arg1, arg2)
+fun PlayerEntity.isBlockBreakingRestricted(world: world_World, pos: BlockPos, gameMode: GameMode) = this.method_21701(world, pos, gameMode)
 /**
  * method_7261
  */
-fun PlayerEntity.getAttackCooldownProgress(arg0: Float) = this.method_7261(arg0)
+fun PlayerEntity.getAttackCooldownProgress(baseTime: Float) = this.method_7261(baseTime)
 /**
  * method_64271
  */
@@ -136,11 +120,11 @@ fun PlayerEntity.canDropItems() = this.method_64271()
 /**
  * method_7269
  */
-fun PlayerEntity.trySleep(arg0: BlockPos) = this.method_7269(arg0)
+fun PlayerEntity.trySleep(pos: BlockPos) = this.method_7269(pos)
 /**
  * method_7315
  */
-fun PlayerEntity.useBook(arg0: ItemStack, arg1: Hand) = this.method_7315(arg0, arg1)
+fun PlayerEntity.useBook(book: ItemStack, hand: Hand) = this.method_7315(book, hand)
 /**
  * method_7355
  */
@@ -152,7 +136,7 @@ fun PlayerEntity.getPermissionLevel() = this.method_5691()
 /**
  * method_65352
  */
-fun PlayerEntity.setLoaded(arg0: Boolean) = this.method_65352(arg0)
+fun PlayerEntity.setLoaded(loaded: Boolean) = this.method_65352(loaded)
 /**
  * method_7331
  */
@@ -160,7 +144,7 @@ fun PlayerEntity.requestRespawn() = this.method_7331()
 /**
  * method_7343
  */
-fun PlayerEntity.canPlaceOn(arg0: BlockPos, arg1: Direction, arg2: ItemStack) = this.method_7343(arg0, arg1, arg2)
+fun PlayerEntity.canPlaceOn(pos: BlockPos, facing: Direction, stack: ItemStack) = this.method_7343(pos, facing, stack)
 /**
  * method_7356
  */
@@ -172,15 +156,15 @@ fun PlayerEntity.canModifyBlocks() = this.method_7294()
 /**
  * method_7304
  */
-fun PlayerEntity.addEnchantedHitParticles(arg0: Entity) = this.method_7304(arg0)
+fun PlayerEntity.addEnchantedHitParticles(target: Entity) = this.method_7304(target)
 /**
  * method_7281
  */
-fun PlayerEntity.incrementStat(arg0: Identifier) = this.method_7281(arg0)
+fun PlayerEntity.incrementStat(stat: Identifier) = this.method_7281(stat)
 /**
  * method_7311
  */
-fun PlayerEntity.openEditSignScreen(arg0: SignBlockEntity, arg1: Boolean) = this.method_7311(arg0, arg1)
+fun PlayerEntity.openEditSignScreen(sign: SignBlockEntity, front: Boolean) = this.method_7311(sign, front)
 /**
  * method_7279
  */
@@ -188,19 +172,19 @@ fun PlayerEntity.getAttackCooldownProgressPerTick() = this.method_7279()
 /**
  * method_7316
  */
-fun PlayerEntity.addExperienceLevels(arg0: Int) = this.method_7316(arg0)
+fun PlayerEntity.addExperienceLevels(levels: Int) = this.method_7316(levels)
 /**
  * method_51283
  */
-fun PlayerEntity.onRecipeCrafted(arg0: RecipeEntry<*>, arg1: MutableList<ItemStack>) = this.method_51283(arg0, arg1)
+fun PlayerEntity.onRecipeCrafted(recipe: RecipeEntry<*>, ingredients: MutableList<ItemStack>) = this.method_51283(recipe, ingredients)
 /**
  * method_7320
  */
-fun PlayerEntity.setScore(arg0: Int) = this.method_7320(arg0)
+fun PlayerEntity.setScore(score: Int) = this.method_7320(score)
 /**
  * method_7328
  */
-fun PlayerEntity.dropItem(arg0: ItemStack, arg1: Boolean) = this.method_7328(arg0, arg1)
+fun PlayerEntity.dropItem(stack: ItemStack, retainOwnership: Boolean) = this.method_7328(stack, retainOwnership)
 /**
  * method_7344
  */
@@ -212,7 +196,7 @@ fun PlayerEntity.getScoreboard() = this.method_7327()
 /**
  * method_7298
  */
-fun PlayerEntity.addShoulderEntity(arg0: NbtCompound) = this.method_7298(arg0)
+fun PlayerEntity.addShoulderEntity(entityNbt: NbtCompound) = this.method_7298(entityNbt)
 /**
  * method_7340
  */
@@ -226,13 +210,9 @@ fun PlayerEntity.getSculkShriekerWarningManager() = this.method_42272()
  */
 fun PlayerEntity.tryClearCurrentExplosion() = this.method_60983()
 /**
- * method_7254
- */
-fun PlayerEntity.unlockRecipes(arg0: Collection<RecipeEntry<*>>) = this.method_7254(arg0)
-/**
  * method_7332
  */
-fun PlayerEntity.canConsume(arg0: Boolean) = this.method_7332(arg0)
+fun PlayerEntity.canConsume(ignoreHunger: Boolean) = this.method_7332(ignoreHunger)
 /**
  * method_7349
  */
@@ -244,11 +224,11 @@ fun PlayerEntity.getEnderChestInventory() = this.method_7274()
 /**
  * method_7283
  */
-fun PlayerEntity.setMainArm(arg0: Arm) = this.method_7283(arg0)
+fun PlayerEntity.setMainArm(arm: Arm) = this.method_7283(arm)
 /**
  * method_7286
  */
-fun PlayerEntity.applyEnchantmentCosts(arg0: ItemStack, arg1: Int) = this.method_7286(arg0, arg1)
+fun PlayerEntity.applyEnchantmentCosts(enchantedItem: ItemStack, experienceLevels: Int) = this.method_7286(enchantedItem, experienceLevels)
 /**
  * method_7272
  */
@@ -256,7 +236,7 @@ fun PlayerEntity.getScore() = this.method_7272()
 /**
  * method_40126
  */
-fun PlayerEntity.useRiptide(arg0: Int, arg1: Float, arg2: ItemStack) = this.method_40126(arg0, arg1, arg2)
+fun PlayerEntity.useRiptide(riptideTicks: Int, riptideAttackDamage: Float, stack: ItemStack) = this.method_40126(riptideTicks, riptideAttackDamage, stack)
 /**
  * method_7337
  */
@@ -268,11 +248,11 @@ fun PlayerEntity.isLoaded() = this.method_65350()
 /**
  * method_7284
  */
-fun PlayerEntity.disableShield(arg0: ItemStack) = this.method_7284(arg0)
+fun PlayerEntity.disableShield(shield: ItemStack) = this.method_7284(shield)
 /**
  * method_7268
  */
-fun PlayerEntity.setReducedDebugInfo(arg0: Boolean) = this.method_7268(arg0)
+fun PlayerEntity.setReducedDebugInfo(reducedDebugInfo: Boolean) = this.method_7268(reducedDebugInfo)
 /**
  * method_7276
  */
@@ -288,19 +268,15 @@ fun PlayerEntity.isUsingSpyglass() = this.method_31550()
 /**
  * method_7277
  */
-fun PlayerEntity.addCritParticles(arg0: Entity) = this.method_7277(arg0)
-/**
- * method_26956
- */
-fun KClass<PlayerEntity>.createPlayerAttributes() = PlayerEntity.method_26956()
+fun PlayerEntity.addCritParticles(target: Entity) = this.method_7277(target)
 /**
  * method_7291
  */
-fun PlayerEntity.openHorseInventory(arg0: AbstractHorseEntity, arg1: Inventory) = this.method_7291(arg0, arg1)
+fun PlayerEntity.openHorseInventory(horse: AbstractHorseEntity, inventory: Inventory) = this.method_7291(horse, inventory)
 /**
  * method_33592
  */
-fun PlayerEntity.onPickupSlotClick(arg0: ItemStack, arg1: ItemStack, arg2: ClickType) = this.method_33592(arg0, arg1, arg2)
+fun PlayerEntity.onPickupSlotClick(cursorStack: ItemStack, slotStack: ItemStack, clickType: ClickType) = this.method_33592(cursorStack, slotStack, clickType)
 /**
  * method_65351
  */
@@ -308,11 +284,11 @@ fun PlayerEntity.tickLoaded() = this.method_65351()
 /**
  * method_7305
  */
-fun PlayerEntity.canHarvest(arg0: BlockState) = this.method_7305(arg0)
+fun PlayerEntity.canHarvest(state: BlockState) = this.method_7305(state)
 /**
  * method_7358
  */
-fun PlayerEntity.wakeUp(arg0: Boolean, arg1: Boolean) = this.method_7358(arg0, arg1)
+fun PlayerEntity.wakeUp(skipSleepTimer: Boolean, updateSleepingPlayers: Boolean) = this.method_7358(skipSleepTimer, updateSleepingPlayers)
 /**
  * method_7334
  */
@@ -320,11 +296,11 @@ fun PlayerEntity.getGameProfile() = this.method_7334()
 /**
  * method_7285
  */
-fun PlayerEntity.addScore(arg0: Int) = this.method_7285(arg0)
+fun PlayerEntity.addScore(score: Int) = this.method_7285(score)
 /**
  * method_7303
  */
-fun PlayerEntity.openStructureBlockScreen(arg0: StructureBlockBlockEntity) = this.method_7303(arg0)
+fun PlayerEntity.openStructureBlockScreen(structureBlock: StructureBlockBlockEntity) = this.method_7303(structureBlock)
 /**
  * method_7350
  */
@@ -332,15 +308,15 @@ fun PlayerEntity.resetLastAttackedTicks() = this.method_7350()
 /**
  * method_56092
  */
-fun PlayerEntity.canInteractWithEntityIn(arg0: Box, arg1: Double) = this.method_56092(arg0, arg1)
+fun PlayerEntity.canInteractWithEntityIn(box: Box, additionalRange: Double) = this.method_56092(box, additionalRange)
 /**
  * method_7333
  */
-fun PlayerEntity.lockRecipes(arg0: Collection<RecipeEntry<*>>) = this.method_7333(arg0)
+fun PlayerEntity.lockRecipes(recipes: Collection<RecipeEntry<*>>) = this.method_7333(recipes)
 /**
  * method_7351
  */
-fun PlayerEntity.getBlockBreakingSpeed(arg0: BlockState) = this.method_7351(arg0)
+fun PlayerEntity.getBlockBreakingSpeed(block: BlockState) = this.method_7351(block)
 /**
  * method_23670
  */
@@ -352,19 +328,15 @@ fun PlayerEntity.getEntityInteractionRange() = this.method_55755()
 /**
  * method_60984
  */
-fun PlayerEntity.setIgnoreFallDamageFromCurrentExplosion(arg0: Boolean) = this.method_60984(arg0)
+fun PlayerEntity.setIgnoreFallDamageFromCurrentExplosion(ignoreFallDamageFromCurrentExplosion: Boolean) = this.method_60984(ignoreFallDamageFromCurrentExplosion)
 /**
  * method_7287
  */
-fun PlayerEntity.interact(arg0: Entity, arg1: Hand) = this.method_7287(arg0, arg1)
-/**
- * method_7339
- */
-fun PlayerEntity.increaseStat(arg0: Identifier, arg1: Int) = this.method_7339(arg0, arg1)
+fun PlayerEntity.interact(entity: Entity, hand: Hand) = this.method_7287(entity, hand)
 /**
  * method_61499
  */
-fun PlayerEntity.dropCreativeStack(arg0: ItemStack) = this.method_61499(arg0)
+fun PlayerEntity.dropCreativeStack(stack: ItemStack) = this.method_61499(stack)
 /**
  * method_7278
  */
@@ -372,7 +344,7 @@ fun PlayerEntity.getEnchantingTableSeed() = this.method_7278()
 /**
  * method_7270
  */
-fun PlayerEntity.giveItemStack(arg0: ItemStack) = this.method_7270(arg0)
+fun PlayerEntity.giveItemStack(stack: ItemStack) = this.method_7270(stack)
 /**
  * method_33793
  */
@@ -380,11 +352,11 @@ fun PlayerEntity.shouldFilterText() = this.method_33793()
 /**
  * method_7322
  */
-fun PlayerEntity.addExhaustion(arg0: Float) = this.method_7322(arg0)
+fun PlayerEntity.addExhaustion(exhaustion: Float) = this.method_7322(exhaustion)
 /**
  * method_56093
  */
-fun PlayerEntity.canInteractWithBlockAt(arg0: BlockPos, arg1: Double) = this.method_56093(arg0, arg1)
+fun PlayerEntity.canInteractWithBlockAt(pos: BlockPos, additionalRange: Double) = this.method_56093(pos, additionalRange)
 /**
  * method_7308
  */
@@ -392,7 +364,7 @@ fun PlayerEntity.getShoulderEntityRight() = this.method_7308()
 /**
  * method_7324
  */
-fun PlayerEntity.attack(arg0: Entity) = this.method_7324(arg0)
+fun PlayerEntity.attack(target: Entity) = this.method_7324(target)
 /**
  * method_55754
  */
@@ -400,7 +372,7 @@ fun PlayerEntity.getBlockInteractionRange() = this.method_55754()
 /**
  * method_7256
  */
-fun PlayerEntity.shouldDamagePlayer(arg0: PlayerEntity) = this.method_7256(arg0)
+fun PlayerEntity.shouldDamagePlayer(player: PlayerEntity) = this.method_7256(player)
 /**
  * method_21823
  */
@@ -408,15 +380,15 @@ fun PlayerEntity.shouldCancelInteraction() = this.method_21823()
 /**
  * method_7255
  */
-fun PlayerEntity.addExperience(arg0: Int) = this.method_7255(arg0)
+fun PlayerEntity.addExperience(experience: Int) = this.method_7255(experience)
 /**
  * method_7348
  */
-fun PlayerEntity.isPartVisible(arg0: PlayerModelPart) = this.method_7348(arg0)
+fun PlayerEntity.isPartVisible(modelPart: PlayerModelPart) = this.method_7348(modelPart)
 /**
  * method_64475
  */
-fun PlayerEntity.hasPermissionLevel(arg0: Int) = this.method_64475(arg0)
+fun PlayerEntity.hasPermissionLevel(level: Int) = this.method_64475(level)
 /**
  * method_61165
  */
@@ -424,7 +396,7 @@ fun PlayerEntity.shouldIgnoreFallDamageFromCurrentExplosion() = this.method_6116
 /**
  * method_7353
  */
-fun PlayerEntity.sendMessage(arg0: Text, arg1: Boolean) = this.method_7353(arg0, arg1)
+fun PlayerEntity.sendMessage(message: Text, overlay: Boolean) = this.method_7353(message, overlay)
 /**
  * method_7263
  */
@@ -432,31 +404,23 @@ fun PlayerEntity.spawnSweepAttackParticles() = this.method_7263()
 /**
  * method_7323
  */
-fun PlayerEntity.openCommandBlockScreen(arg0: CommandBlockBlockEntity) = this.method_7323(arg0)
-/**
- * method_7329
- */
-fun PlayerEntity.dropItem(arg0: ItemStack, arg1: Boolean, arg2: Boolean) = this.method_7329(arg0, arg1, arg2)
+fun PlayerEntity.openCommandBlockScreen(commandBlock: CommandBlockBlockEntity) = this.method_7323(commandBlock)
 /**
  * method_17355
  */
-fun PlayerEntity.openHandledScreen(arg0: NamedScreenHandlerFactory) = this.method_17355(arg0)
+fun PlayerEntity.openHandledScreen(factory: NamedScreenHandlerFactory) = this.method_17355(factory)
 /**
  * method_23668
  */
 fun PlayerEntity.checkGliding() = this.method_23668()
 /**
- * method_7259
- */
-fun PlayerEntity.incrementStat(arg0: Stat<*>) = this.method_7259(arg0)
-/**
  * method_43120
  */
-fun PlayerEntity.setLastDeathPos(arg0: Optional<GlobalPos>) = this.method_43120(arg0)
+fun PlayerEntity.setLastDeathPos(lastDeathPos: Optional<GlobalPos>) = this.method_43120(lastDeathPos)
 /**
  * method_17354
  */
-fun PlayerEntity.sendTradeOffers(arg0: Int, arg1: TradeOfferList, arg2: Int, arg3: Int, arg4: Boolean, arg5: Boolean) = this.method_17354(arg0, arg1, arg2, arg3, arg4, arg5)
+fun PlayerEntity.sendTradeOffers(syncId: Int, offers: TradeOfferList, levelProgress: Int, experience: Int, leveled: Boolean, refreshable: Boolean) = this.method_17354(syncId, offers, levelProgress, experience, leveled, refreshable)
 /**
  * method_7292
  */
@@ -480,7 +444,7 @@ fun PlayerEntity.getItemCooldownManager() = this.method_7357()
 /**
  * method_17356
  */
-fun PlayerEntity.playSoundToPlayer(arg0: SoundEvent, arg1: SoundCategory, arg2: Float, arg3: Float) = this.method_17356(arg0, arg1, arg2, arg3)
+fun PlayerEntity.playSoundToPlayer(sound: SoundEvent, category: SoundCategory, volume: Float, pitch: Float) = this.method_17356(sound, category, volume, pitch)
 /**
  * method_31549
  */
@@ -488,11 +452,11 @@ fun PlayerEntity.getAbilities() = this.method_31549()
 /**
  * method_7257
  */
-fun PlayerEntity.openCommandBlockMinecartScreen(arg0: CommandBlockExecutor) = this.method_7257(arg0)
+fun PlayerEntity.openCommandBlockMinecartScreen(commandBlockExecutor: CommandBlockExecutor) = this.method_7257(commandBlockExecutor)
 /**
  * method_16354
  */
-fun PlayerEntity.openJigsawScreen(arg0: JigsawBlockEntity) = this.method_16354(arg0)
+fun PlayerEntity.openJigsawScreen(jigsaw: JigsawBlockEntity) = this.method_16354(jigsaw)
 /**
  * method_7317
  */

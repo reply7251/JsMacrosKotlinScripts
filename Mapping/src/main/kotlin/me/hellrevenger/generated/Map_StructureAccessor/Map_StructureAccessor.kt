@@ -4,27 +4,27 @@ import me.hellrevenger.generated.*
 /**
  * method_26973
  */
-fun StructureAccessor.addStructureReference(arg0: ChunkSectionPos, arg1: Structure, arg2: Long, arg3: StructureHolder) = this.method_26973(arg0, arg1, arg2, arg3)
+fun StructureAccessor.addStructureReference(pos: ChunkSectionPos, structure: Structure, reference: Long, arg3: StructureHolder) = this.method_26973(pos, structure, reference, arg3)
 /**
  * method_41037
  */
-fun StructureAccessor.getStructureReferences(arg0: BlockPos) = this.method_41037(arg0)
+fun StructureAccessor.getStructureReferences(pos: BlockPos) = this.method_41037(pos)
 /**
  * method_41032
  */
-fun StructureAccessor.acceptStructureStarts(arg0: Structure, arg1: LongSet, arg2: Consumer<StructureStart>) = this.method_41032(arg0, arg1, arg2)
+fun StructureAccessor.acceptStructureStarts(structure: Structure, structureStartPositions: LongSet, consumer: Consumer<StructureStart>) = this.method_41032(structure, structureStartPositions, consumer)
 /**
  * method_41033
  */
-fun StructureAccessor.structureContains(arg0: BlockPos, arg1: StructureStart) = this.method_41033(arg0, arg1)
+fun StructureAccessor.structureContains(pos: BlockPos, structureStart: StructureStart) = this.method_41033(pos, structureStart)
 /**
  * method_28388
  */
-fun StructureAccessor.getStructureAt(arg0: BlockPos, arg1: Structure) = this.method_28388(arg0, arg1)
+fun StructureAccessor.getStructureAt(pos: BlockPos, structure: Structure) = this.method_28388(pos, structure)
 /**
  * method_39783
  */
-fun StructureAccessor.getStructurePresence(arg0: ChunkPos, arg1: Structure, arg2: StructurePlacement, arg3: Boolean) = this.method_39783(arg0, arg1, arg2, arg3)
+fun StructureAccessor.getStructurePresence(chunkPos: ChunkPos, structure: Structure, placement: StructurePlacement, skipReferencedStructures: Boolean) = this.method_39783(chunkPos, structure, placement, skipReferencedStructures)
 /**
  * method_27834
  */
@@ -32,48 +32,32 @@ fun StructureAccessor.shouldGenerateStructures() = this.method_27834()
 /**
  * method_26975
  */
-fun StructureAccessor.getStructureStart(arg0: ChunkSectionPos, arg1: Structure, arg2: StructureHolder) = this.method_26975(arg0, arg1, arg2)
+fun StructureAccessor.getStructureStart(pos: ChunkSectionPos, structure: Structure, holder: StructureHolder) = this.method_26975(pos, structure, holder)
 /**
  * method_26976
  */
-fun StructureAccessor.setStructureStart(arg0: ChunkSectionPos, arg1: Structure, arg2: StructureStart, arg3: StructureHolder) = this.method_26976(arg0, arg1, arg2, arg3)
+fun StructureAccessor.setStructureStart(pos: ChunkSectionPos, structure: Structure, structureStart: StructureStart, holder: StructureHolder) = this.method_26976(pos, structure, structureStart, holder)
 /**
  * method_39784
  */
-fun StructureAccessor.incrementReferences(arg0: StructureStart) = this.method_39784(arg0)
+fun StructureAccessor.incrementReferences(structureStart: StructureStart) = this.method_39784(structureStart)
 /**
  * method_41413
  */
-fun StructureAccessor.getStructureContaining(arg0: BlockPos, arg1: Predicate<RegistryEntry<Structure>>) = this.method_41413(arg0, arg1)
+fun StructureAccessor.getStructureContaining(pos: BlockPos, predicate: Predicate<RegistryEntry<Structure>>) = this.method_41413(pos, predicate)
 /**
  * method_38852
  */
-fun StructureAccessor.hasStructureReferences(arg0: BlockPos) = this.method_38852(arg0)
+fun StructureAccessor.hasStructureReferences(pos: BlockPos) = this.method_38852(pos)
 /**
  * method_29951
  */
-fun StructureAccessor.forRegion(arg0: ChunkRegion) = this.method_29951(arg0)
-/**
- * method_41034
- */
-fun StructureAccessor.getStructureContaining(arg0: BlockPos, arg1: RegistryEntryList<Structure>) = this.method_41034(arg0, arg1)
-/**
- * method_57560
- */
-fun StructureAccessor.getStructureContaining(arg0: BlockPos, arg1: TagKey<Structure>) = this.method_57560(arg0, arg1)
+fun StructureAccessor.forRegion(region: ChunkRegion) = this.method_29951(region)
 /**
  * method_41035
  */
-fun StructureAccessor.getStructureStarts(arg0: ChunkPos, arg1: Predicate<Structure>) = this.method_41035(arg0, arg1)
-/**
- * method_38854
- */
-fun StructureAccessor.getStructureContaining(arg0: BlockPos, arg1: Structure) = this.method_38854(arg0, arg1)
+fun StructureAccessor.getStructureStarts(pos: ChunkPos, predicate: Predicate<Structure>) = this.method_41035(pos, predicate)
 /**
  * method_41036
  */
 fun StructureAccessor.getRegistryManager() = this.method_41036()
-/**
- * method_38853
- */
-fun StructureAccessor.getStructureStarts(arg0: ChunkSectionPos, arg1: Structure) = this.method_38853(arg0, arg1)

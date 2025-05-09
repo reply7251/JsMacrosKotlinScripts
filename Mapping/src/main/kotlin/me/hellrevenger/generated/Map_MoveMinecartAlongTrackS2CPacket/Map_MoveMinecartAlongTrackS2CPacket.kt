@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_61213
  */
-fun MoveMinecartAlongTrackS2CPacket.getEntity(arg0: world_World) = this.method_61213(arg0)
+fun MoveMinecartAlongTrackS2CPacket.getEntity(world: world_World) = this.method_61213(world)
 /**
  * method_61212
  */

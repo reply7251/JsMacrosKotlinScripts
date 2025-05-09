@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_16933
  */
-fun EyeOfEnderEntity.setItem(arg0: ItemStack) = this.method_16933(arg0)
+fun EyeOfEnderEntity.setItem(stack: ItemStack) = this.method_16933(stack)
 /**
  * method_7478
  */
-fun EyeOfEnderEntity.initTargetPos(arg0: BlockPos) = this.method_7478(arg0)
+fun EyeOfEnderEntity.initTargetPos(pos: BlockPos) = this.method_7478(pos)

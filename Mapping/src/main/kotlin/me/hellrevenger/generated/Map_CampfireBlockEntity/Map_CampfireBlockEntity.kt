@@ -8,23 +8,11 @@ fun CampfireBlockEntity.getItemsBeingCooked() = this.method_17505()
 /**
  * method_17503
  */
-fun CampfireBlockEntity.addItem(arg0: ServerWorld, arg1: LivingEntity, arg2: ItemStack) = this.method_17503(arg0, arg1, arg2)
-/**
- * method_31666
- */
-fun KClass<CampfireBlockEntity>.litServerTick(arg0: ServerWorld, arg1: BlockPos, arg2: BlockState, arg3: CampfireBlockEntity, arg4: net.minecraft.class_1863.class_7266<SingleStackRecipeInput, CampfireCookingRecipe>) = CampfireBlockEntity.method_31666(arg0, arg1, arg2, arg3, arg4)
+fun CampfireBlockEntity.addItem(world: ServerWorld, entity: LivingEntity, stack: ItemStack) = this.method_17503(world, entity, stack)
 /**
  * method_17506
  */
 fun CampfireBlockEntity.spawnItemsBeingCooked() = this.method_17506()
-/**
- * method_31668
- */
-fun KClass<CampfireBlockEntity>.clientTick(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: CampfireBlockEntity) = CampfireBlockEntity.method_31668(arg0, arg1, arg2, arg3)
-/**
- * method_31667
- */
-fun KClass<CampfireBlockEntity>.unlitServerTick(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: CampfireBlockEntity) = CampfireBlockEntity.method_31667(arg0, arg1, arg2, arg3)
 /**
  * method_38245
  */

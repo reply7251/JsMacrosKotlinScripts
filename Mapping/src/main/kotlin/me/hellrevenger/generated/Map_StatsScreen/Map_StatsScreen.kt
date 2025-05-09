@@ -16,4 +16,4 @@ fun StatsScreen.onStatsReady() = this.method_2300()
 /**
  * method_19390
  */
-fun StatsScreen.selectStatList(arg0: AlwaysSelectedEntryListWidget<*>) = this.method_19390(arg0)
+fun StatsScreen.selectStatList(list: AlwaysSelectedEntryListWidget<*>) = this.method_19390(list)

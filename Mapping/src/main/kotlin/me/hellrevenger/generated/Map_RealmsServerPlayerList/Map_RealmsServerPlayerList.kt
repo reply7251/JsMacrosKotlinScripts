@@ -8,8 +8,4 @@ var RealmsServerPlayerList.serverIdToPlayers by alias(RealmsServerPlayerList::fi
 /**
  * method_60863
  */
-fun RealmsServerPlayerList.get(arg0: Long) = this.method_60863(arg0)
-/**
- * method_25074
- */
-fun KClass<RealmsServerPlayerList>.parse(arg0: String) = RealmsServerPlayerList.method_25074(arg0)
+fun RealmsServerPlayerList.get(serverId: Long) = this.method_60863(serverId)

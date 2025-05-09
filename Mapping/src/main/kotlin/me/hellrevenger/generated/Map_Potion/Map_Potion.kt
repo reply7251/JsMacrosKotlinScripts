@@ -16,4 +16,4 @@ fun Potion.getEffects() = this.method_8049()
 /**
  * method_58671
  */
-fun Potion.requires(arg0: Array<FeatureFlag>) = this.method_58671(*arg0)
+fun Potion.requires(requiredFeatures: Array<FeatureFlag>) = this.method_58671(*requiredFeatures)

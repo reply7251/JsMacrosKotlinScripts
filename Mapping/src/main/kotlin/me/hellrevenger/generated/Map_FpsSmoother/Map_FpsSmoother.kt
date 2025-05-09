@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_24214
  */
-fun FpsSmoother.getTargetUsedTime(arg0: Long) = this.method_24214(arg0)
+fun FpsSmoother.getTargetUsedTime(time: Long) = this.method_24214(time)

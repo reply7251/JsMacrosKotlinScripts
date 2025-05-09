@@ -8,7 +8,7 @@ val Scores.scores by alias(Scores::field_47529)
 /**
  * method_55395
  */
-fun Scores.remove(arg0: ScoreboardObjective) = this.method_55395(arg0)
+fun Scores.remove(objective: ScoreboardObjective) = this.method_55395(objective)
 /**
  * method_55394
  */
@@ -20,8 +20,8 @@ fun Scores.hasScores() = this.method_55388()
 /**
  * method_55389
  */
-fun Scores.get(arg0: ScoreboardObjective) = this.method_55389(arg0)
+fun Scores.get(objective: ScoreboardObjective) = this.method_55389(objective)
 /**
  * method_55391
  */
-fun Scores.getOrCreate(arg0: ScoreboardObjective, arg1: Consumer<ScoreboardScore>) = this.method_55391(arg0, arg1)
+fun Scores.getOrCreate(objective: ScoreboardObjective, scoreConsumer: Consumer<ScoreboardScore>) = this.method_55391(objective, scoreConsumer)

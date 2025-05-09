@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_64514
  */
-fun StatusEffectsDisplay.drawStatusEffects(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Float) = this.method_64514(arg0, arg1, arg2, arg3)
+fun StatusEffectsDisplay.drawStatusEffects(context: DrawContext, mouseX: Int, mouseY: Int, tickDelta: Float) = this.method_64514(context, mouseX, mouseY, tickDelta)
 /**
  * method_38934
  */

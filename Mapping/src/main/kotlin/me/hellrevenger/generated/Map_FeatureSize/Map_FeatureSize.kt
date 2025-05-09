@@ -8,4 +8,4 @@ fun FeatureSize.getMinClippedHeight() = this.method_27377()
 /**
  * method_27378
  */
-fun FeatureSize.getRadius(arg0: Int, arg1: Int) = this.method_27378(arg0, arg1)
+fun FeatureSize.getRadius(height: Int, y: Int) = this.method_27378(height, y)

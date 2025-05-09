@@ -8,7 +8,7 @@ fun RealmsConnection.tick() = this.method_25481()
 /**
  * method_25480
  */
-fun RealmsConnection.connect(arg0: RealmsServer, arg1: ServerAddress) = this.method_25480(arg0, arg1)
+fun RealmsConnection.connect(server: RealmsServer, address: ServerAddress) = this.method_25480(server, address)
 /**
  * method_25477
  */

@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_NbtLongArray
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_21040
- */
-val KClass<NbtLongArray>.TYPE by aliasStatic(NbtLongArray::field_21040)
-/**
  * method_10616
  */
 fun NbtLongArray.get(arg0: Int) = this.method_10616(arg0)

@@ -4,23 +4,23 @@ import me.hellrevenger.generated.*
 /**
  * method_61933
  */
-fun <T>RenderPass.transfer(arg0: Handle<T>) = this.method_61933<T>(arg0)
+fun <T>RenderPass.transfer(handle: Handle<T>) = this.method_61933<T>(handle)
 /**
  * method_61928
  */
-fun <T>RenderPass.dependsOn(arg0: Handle<T>) = this.method_61928<T>(arg0)
+fun <T>RenderPass.dependsOn(handle: Handle<T>) = this.method_61928<T>(handle)
 /**
  * method_61930
  */
-fun <T>RenderPass.addRequiredResource(arg0: String, arg1: ClosableFactory<T>) = this.method_61930<T>(arg0, arg1)
+fun <T>RenderPass.addRequiredResource(name: String, factory: ClosableFactory<T>) = this.method_61930<T>(name, factory)
 /**
  * method_61929
  */
-fun RenderPass.setRenderer(arg0: Runnable) = this.method_61929(arg0)
+fun RenderPass.setRenderer(renderer: Runnable) = this.method_61929(renderer)
 /**
  * method_61927
  */
-fun RenderPass.addRequired(arg0: RenderPass) = this.method_61927(arg0)
+fun RenderPass.addRequired(pass: RenderPass) = this.method_61927(pass)
 /**
  * method_61924
  */

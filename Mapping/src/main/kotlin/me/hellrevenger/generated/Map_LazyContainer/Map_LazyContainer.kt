@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_9196
  */
-fun LazyContainer.get(arg0: CommandFunctionManager) = this.method_9196(arg0)
+fun LazyContainer.get(commandFunctionManager: CommandFunctionManager) = this.method_9196(commandFunctionManager)
 /**
  * method_9197
  */

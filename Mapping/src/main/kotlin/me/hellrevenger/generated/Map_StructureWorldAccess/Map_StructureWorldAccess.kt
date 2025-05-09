@@ -8,8 +8,8 @@ fun StructureWorldAccess.getSeed() = this.method_8412()
 /**
  * method_37368
  */
-fun StructureWorldAccess.isValidForSetBlock(arg0: BlockPos) = this.method_37368(arg0)
+fun StructureWorldAccess.isValidForSetBlock(pos: BlockPos) = this.method_37368(pos)
 /**
  * method_36972
  */
-fun StructureWorldAccess.setCurrentlyGeneratingStructureName(arg0: Supplier<String>) = this.method_36972(arg0)
+fun StructureWorldAccess.setCurrentlyGeneratingStructureName(structureName: Supplier<String>) = this.method_36972(structureName)

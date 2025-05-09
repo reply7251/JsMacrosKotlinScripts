@@ -8,4 +8,4 @@ fun <T>VariantHolder<T>.getVariant() = this.method_47827()
 /**
  * method_47826
  */
-fun <T>VariantHolder<T>.setVariant(arg0: T) = this.method_47826(arg0)
+fun <T>VariantHolder<T>.setVariant(variant: T) = this.method_47826(variant)

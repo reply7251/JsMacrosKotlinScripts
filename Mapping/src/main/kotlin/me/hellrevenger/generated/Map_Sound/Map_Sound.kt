@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_Sound
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_40575
- */
-val KClass<Sound>.FINDER by aliasStatic(Sound::field_40575)
-/**
  * method_4766
  */
 fun Sound.getLocation() = this.method_4766()

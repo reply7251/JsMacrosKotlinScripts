@@ -4,19 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_12600
  */
-fun Heightmap.setTo(arg0: Chunk, arg1: net.minecraft.class_2902.class_2903, arg2: LongArray) = this.method_12600(arg0, arg1, arg2)
-/**
- * method_16684
- */
-fun KClass<Heightmap>.populateHeightmaps(arg0: Chunk, arg1: Set<net.minecraft.class_2902.class_2903>) = Heightmap.method_16684(arg0, arg1)
+fun Heightmap.setTo(chunk: Chunk, type: net.minecraft.class_2902.class_2903, values: LongArray) = this.method_12600(chunk, type, values)
 /**
  * method_12603
  */
-fun Heightmap.get(arg0: Int, arg1: Int) = this.method_12603(arg0, arg1)
+fun Heightmap.get(x: Int, z: Int) = this.method_12603(x, z)
 /**
  * method_12597
  */
-fun Heightmap.trackUpdate(arg0: Int, arg1: Int, arg2: Int, arg3: BlockState) = this.method_12597(arg0, arg1, arg2, arg3)
+fun Heightmap.trackUpdate(x: Int, y: Int, z: Int, state: BlockState) = this.method_12597(x, y, z, state)
 /**
  * method_12598
  */

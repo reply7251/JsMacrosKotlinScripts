@@ -10,10 +10,6 @@ fun RavagerEntity.getAttackTick() = this.method_7070()
  */
 fun RavagerEntity.getRoarTick() = this.method_7072()
 /**
- * method_26920
- */
-fun KClass<RavagerEntity>.createRavagerAttributes() = RavagerEntity.method_26920()
-/**
  * method_7074
  */
 fun RavagerEntity.getStunTick() = this.method_7074()

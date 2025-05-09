@@ -22,10 +22,6 @@ var ClientPlayerEntity.lastRenderPitch by alias(ClientPlayerEntity::field_3914)
  */
 val ClientPlayerEntity.networkHandler by alias(ClientPlayerEntity::field_3944)
 /**
- * field_39078
- */
-val KClass<ClientPlayerEntity>.LOGGER by aliasStatic(ClientPlayerEntity::field_39078)
-/**
  * field_44911
  */
 var ClientPlayerEntity.nauseaIntensity by alias(ClientPlayerEntity::field_44911)
@@ -52,19 +48,19 @@ fun ClientPlayerEntity.getUnderwaterVisibility() = this.method_3140()
 /**
  * method_7290
  */
-fun ClientPlayerEntity.dropSelectedItem(arg0: Boolean) = this.method_7290(arg0)
+fun ClientPlayerEntity.dropSelectedItem(entireStack: Boolean) = this.method_7290(entireStack)
 /**
  * method_22420
  */
-fun ClientPlayerEntity.setShowsDeathScreen(arg0: Boolean) = this.method_22420(arg0)
+fun ClientPlayerEntity.setShowsDeathScreen(showsDeathScreen: Boolean) = this.method_22420(showsDeathScreen)
 /**
  * method_3138
  */
-fun ClientPlayerEntity.updateHealth(arg0: Float) = this.method_3138(arg0)
+fun ClientPlayerEntity.updateHealth(health: Float) = this.method_3138(health)
 /**
  * method_3147
  */
-fun ClientPlayerEntity.setClientPermissionLevel(arg0: Int) = this.method_3147(arg0)
+fun ClientPlayerEntity.setClientPermissionLevel(clientPermissionLevel: Int) = this.method_3147(clientPermissionLevel)
 /**
  * method_26269
  */
@@ -76,7 +72,7 @@ fun ClientPlayerEntity.getMountJumpStrength() = this.method_3151()
 /**
  * method_51889
  */
-fun ClientPlayerEntity.onGameModeChanged(arg0: GameMode) = this.method_51889(arg0)
+fun ClientPlayerEntity.onGameModeChanged(gameMode: GameMode) = this.method_51889(gameMode)
 /**
  * method_45773
  */
@@ -88,7 +84,7 @@ fun ClientPlayerEntity.getRecipeBook() = this.method_3130()
 /**
  * method_53848
  */
-fun ClientPlayerEntity.setLimitedCraftingEnabled(arg0: Boolean) = this.method_53848(arg0)
+fun ClientPlayerEntity.setLimitedCraftingEnabled(limitedCraftingEnabled: Boolean) = this.method_53848(limitedCraftingEnabled)
 /**
  * method_60886
  */
@@ -128,8 +124,8 @@ fun ClientPlayerEntity.getStatHandler() = this.method_3143()
 /**
  * method_3141
  */
-fun ClientPlayerEntity.onRecipeDisplayed(arg0: NetworkRecipeId) = this.method_3141(arg0)
+fun ClientPlayerEntity.onRecipeDisplayed(recipeId: NetworkRecipeId) = this.method_3141(recipeId)
 /**
  * method_3145
  */
-fun ClientPlayerEntity.setExperience(arg0: Float, arg1: Int, arg2: Int) = this.method_3145(arg0, arg1, arg2)
+fun ClientPlayerEntity.setExperience(progress: Float, total: Int, level: Int) = this.method_3145(progress, total, level)

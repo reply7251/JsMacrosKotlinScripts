@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_43309
  */
-fun RootPlacer.trunkOffset(arg0: BlockPos, arg1: Random) = this.method_43309(arg0, arg1)
+fun RootPlacer.trunkOffset(pos: BlockPos, random: Random) = this.method_43309(pos, random)
 /**
  * method_43168
  */
-fun RootPlacer.generate(arg0: TestableWorld, arg1: BiConsumer<BlockPos, BlockState>, arg2: Random, arg3: BlockPos, arg4: BlockPos, arg5: TreeFeatureConfig) = this.method_43168(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RootPlacer.generate(world: TestableWorld, replacer: BiConsumer<BlockPos, BlockState>, random: Random, pos: BlockPos, trunkPos: BlockPos, config: TreeFeatureConfig) = this.method_43168(world, replacer, random, pos, trunkPos, config)

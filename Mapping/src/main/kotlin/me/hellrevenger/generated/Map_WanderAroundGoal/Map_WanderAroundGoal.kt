@@ -2,13 +2,9 @@ package me.hellrevenger.generated.Map_WanderAroundGoal
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_30226
- */
-val KClass<WanderAroundGoal>.DEFAULT_CHANCE by aliasStatic(WanderAroundGoal::field_30226)
-/**
  * method_6303
  */
-fun WanderAroundGoal.setChance(arg0: Int) = this.method_6303(arg0)
+fun WanderAroundGoal.setChance(chance: Int) = this.method_6303(chance)
 /**
  * method_6304
  */

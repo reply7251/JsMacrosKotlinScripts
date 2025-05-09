@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_262
  */
-fun PlayerSaveHandler.savePlayerData(arg0: PlayerEntity) = this.method_262(arg0)
+fun PlayerSaveHandler.savePlayerData(player: PlayerEntity) = this.method_262(player)
 /**
  * method_55789
  */
-fun PlayerSaveHandler.loadPlayerData(arg0: PlayerEntity) = this.method_55789(arg0)
+fun PlayerSaveHandler.loadPlayerData(player: PlayerEntity) = this.method_55789(player)

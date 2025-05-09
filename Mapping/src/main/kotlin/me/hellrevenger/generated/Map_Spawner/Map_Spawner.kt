@@ -2,14 +2,6 @@ package me.hellrevenger.generated.Map_Spawner
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_55121
- */
-fun KClass<Spawner>.appendSpawnDataToTooltip(arg0: ItemStack, arg1: MutableList<Text>, arg2: String) = Spawner.method_55121(arg0, arg1, arg2)
-/**
- * method_55120
- */
-fun KClass<Spawner>.getSpawnedEntityText(arg0: ItemStack, arg1: String) = Spawner.method_55120(arg0, arg1)
-/**
  * method_46408
  */
-fun Spawner.setEntityType(arg0: EntityType<*>, arg1: Random) = this.method_46408(arg0, arg1)
+fun Spawner.setEntityType(type: EntityType<*>, random: Random) = this.method_46408(type, random)

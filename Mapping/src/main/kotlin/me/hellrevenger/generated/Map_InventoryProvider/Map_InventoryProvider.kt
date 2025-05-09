@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17680
  */
-fun InventoryProvider.getInventory(arg0: BlockState, arg1: WorldAccess, arg2: BlockPos) = this.method_17680(arg0, arg1, arg2)
+fun InventoryProvider.getInventory(state: BlockState, world: WorldAccess, pos: BlockPos) = this.method_17680(state, world, pos)

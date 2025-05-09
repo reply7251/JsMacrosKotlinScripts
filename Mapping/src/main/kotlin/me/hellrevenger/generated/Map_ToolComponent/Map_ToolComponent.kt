@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_58425
  */
-fun ToolComponent.getSpeed(arg0: BlockState) = this.method_58425(arg0)
+fun ToolComponent.getSpeed(state: BlockState) = this.method_58425(state)
 /**
  * method_58426
  */
-fun ToolComponent.isCorrectForDrops(arg0: BlockState) = this.method_58426(arg0)
+fun ToolComponent.isCorrectForDrops(state: BlockState) = this.method_58426(state)
 /**
  * comp_2498
  */

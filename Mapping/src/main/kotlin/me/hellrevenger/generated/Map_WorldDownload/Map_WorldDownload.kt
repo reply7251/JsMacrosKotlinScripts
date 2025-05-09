@@ -13,7 +13,3 @@ var WorldDownload.resourcePackHash by alias(WorldDownload::field_22664)
  * field_22663
  */
 var WorldDownload.resourcePackUrl by alias(WorldDownload::field_22663)
-/**
- * method_25095
- */
-fun KClass<WorldDownload>.parse(arg0: String) = WorldDownload.method_25095(arg0)

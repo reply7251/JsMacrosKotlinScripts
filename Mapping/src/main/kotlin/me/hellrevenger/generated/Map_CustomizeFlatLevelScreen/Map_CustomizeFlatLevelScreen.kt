@@ -8,4 +8,4 @@ fun CustomizeFlatLevelScreen.getConfig() = this.method_29055()
 /**
  * method_29054
  */
-fun CustomizeFlatLevelScreen.setConfig(arg0: FlatChunkGeneratorConfig) = this.method_29054(arg0)
+fun CustomizeFlatLevelScreen.setConfig(config: FlatChunkGeneratorConfig) = this.method_29054(config)

@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_14931
  */
-fun StructurePiece.generate(arg0: StructureWorldAccess, arg1: StructureAccessor, arg2: ChunkGenerator, arg3: Random, arg4: BlockBox, arg5: ChunkPos, arg6: BlockPos) = this.method_14931(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun StructurePiece.generate(world: StructureWorldAccess, structureAccessor: StructureAccessor, chunkGenerator: ChunkGenerator, random: Random, chunkBox: BlockBox, chunkPos: ChunkPos, pivot: BlockPos) = this.method_14931(world, structureAccessor, chunkGenerator, random, chunkBox, chunkPos, pivot)
 /**
  * method_14926
  */
-fun StructurePiece.setOrientation(arg0: Direction) = this.method_14926(arg0)
+fun StructurePiece.setOrientation(orientation: Direction) = this.method_14926(orientation)
 /**
  * method_41620
  */
-fun StructurePiece.setChainLength(arg0: Int) = this.method_41620(arg0)
+fun StructurePiece.setChainLength(chainLength: Int) = this.method_41620(chainLength)
 /**
  * method_16888
  */
@@ -20,11 +20,11 @@ fun StructurePiece.getRotation() = this.method_16888()
 /**
  * method_16654
  */
-fun StructurePiece.intersectsChunk(arg0: ChunkPos, arg1: Int) = this.method_16654(arg0, arg1)
+fun StructurePiece.intersectsChunk(pos: ChunkPos, offset: Int) = this.method_16654(pos, offset)
 /**
  * method_14918
  */
-fun StructurePiece.fillOpenings(arg0: StructurePiece, arg1: StructurePiecesHolder, arg2: Random) = this.method_14918(arg0, arg1, arg2)
+fun StructurePiece.fillOpenings(start: StructurePiece, holder: StructurePiecesHolder, random: Random) = this.method_14918(start, holder, random)
 /**
  * method_14923
  */
@@ -38,17 +38,9 @@ fun StructurePiece.getCenter() = this.method_35458()
  */
 fun StructurePiece.getType() = this.method_16653()
 /**
- * method_14916
- */
-fun KClass<StructurePiece>.orientateChest(arg0: BlockView, arg1: BlockPos, arg2: BlockState) = StructurePiece.method_14916(arg0, arg1, arg2)
-/**
  * method_14922
  */
-fun StructurePiece.translate(arg0: Int, arg1: Int, arg2: Int) = this.method_14922(arg0, arg1, arg2)
-/**
- * method_38702
- */
-fun KClass<StructurePiece>.firstIntersecting(arg0: MutableList<StructurePiece>, arg1: BlockBox) = StructurePiece.method_38702(arg0, arg1)
+fun StructurePiece.translate(x: Int, y: Int, z: Int) = this.method_14922(x, y, z)
 /**
  * method_14935
  */
@@ -60,11 +52,7 @@ fun StructurePiece.getMirror() = this.method_35460()
 /**
  * method_14946
  */
-fun StructurePiece.toNbt(arg0: StructureContext) = this.method_14946(arg0)
-/**
- * method_38703
- */
-fun KClass<StructurePiece>.boundingBox(arg0: Stream<StructurePiece>) = StructurePiece.method_38703(arg0)
+fun StructurePiece.toNbt(context: StructureContext) = this.method_14946(context)
 /**
  * method_14934
  */

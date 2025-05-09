@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_45192
  */
-fun DefaultResourcePack.forEachNamespacedPath(arg0: ResourceType, arg1: Identifier, arg2: Consumer<file_Path>) = this.method_45192(arg0, arg1, arg2)
+fun DefaultResourcePack.forEachNamespacedPath(type: ResourceType, path: Identifier, consumer: Consumer<file_Path>) = this.method_45192(type, path, consumer)
 /**
  * method_43032
  */

@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_24098
  */
-fun SpriteAtlasManager.getAtlas(arg0: Identifier) = this.method_24098(arg0)
+fun SpriteAtlasManager.getAtlas(id: Identifier) = this.method_24098(id)
 /**
  * method_45862
  */
-fun SpriteAtlasManager.reload(arg0: ResourceManager, arg1: Int, arg2: Executor) = this.method_45862(arg0, arg1, arg2)
+fun SpriteAtlasManager.reload(resourceManager: ResourceManager, mipmapLevels: Int, executor: Executor) = this.method_45862(resourceManager, mipmapLevels, executor)

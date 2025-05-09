@@ -2,26 +2,6 @@ package me.hellrevenger.generated.Map_SoundManager
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_5592
- */
-val KClass<SoundManager>.MISSING_SOUND by aliasStatic(SoundManager::field_5592)
-/**
- * field_42935
- */
-val KClass<SoundManager>.INTENTIONALLY_EMPTY_SOUND_SET by aliasStatic(SoundManager::field_42935)
-/**
- * field_42936
- */
-val KClass<SoundManager>.INTENTIONALLY_EMPTY_SOUND by aliasStatic(SoundManager::field_42936)
-/**
- * field_52173
- */
-val KClass<SoundManager>.EMPTY_ID by aliasStatic(SoundManager::field_52173)
-/**
- * field_42934
- */
-val KClass<SoundManager>.INTENTIONALLY_EMPTY_ID by aliasStatic(SoundManager::field_42934)
-/**
  * method_4882
  */
 fun SoundManager.close() = this.method_4882()
@@ -36,47 +16,43 @@ fun SoundManager.reloadSounds() = this.method_38566()
 /**
  * method_4870
  */
-fun SoundManager.stop(arg0: SoundInstance) = this.method_4870(arg0)
+fun SoundManager.stop(sound: SoundInstance) = this.method_4870(sound)
 /**
  * method_22140
  */
-fun SoundManager.playNextTick(arg0: TickableSoundInstance) = this.method_22140(arg0)
+fun SoundManager.playNextTick(sound: TickableSoundInstance) = this.method_22140(sound)
 /**
  * method_4865
  */
-fun SoundManager.updateSoundVolume(arg0: SoundCategory, arg1: Float) = this.method_4865(arg0, arg1)
+fun SoundManager.updateSoundVolume(category: SoundCategory, volume: Float) = this.method_4865(category, volume)
 /**
  * method_4872
  */
-fun SoundManager.play(arg0: SoundInstance, arg1: Int) = this.method_4872(arg0, arg1)
+fun SoundManager.play(sound: SoundInstance, delay: Int) = this.method_4872(sound, delay)
 /**
  * method_65258
  */
-fun SoundManager.setVolume(arg0: SoundInstance, arg1: Float) = this.method_65258(arg0, arg1)
+fun SoundManager.setVolume(sound: SoundInstance, volume: Float) = this.method_65258(sound, volume)
 /**
  * method_4876
  */
-fun SoundManager.updateListenerPosition(arg0: Camera) = this.method_4876(arg0)
+fun SoundManager.updateListenerPosition(camera: Camera) = this.method_4876(camera)
 /**
  * method_4878
  */
-fun SoundManager.registerListener(arg0: SoundInstanceListener) = this.method_4878(arg0)
+fun SoundManager.registerListener(listener: SoundInstanceListener) = this.method_4878(listener)
 /**
  * method_4866
  */
-fun SoundManager.unregisterListener(arg0: SoundInstanceListener) = this.method_4866(arg0)
+fun SoundManager.unregisterListener(listener: SoundInstanceListener) = this.method_4866(listener)
 /**
  * method_54649
  */
 fun SoundManager.stopAbruptly() = this.method_54649()
 /**
- * method_4873
- */
-fun SoundManager.play(arg0: SoundInstance) = this.method_4873(arg0)
-/**
  * method_4877
  */
-fun SoundManager.isPlaying(arg0: SoundInstance) = this.method_4877(arg0)
+fun SoundManager.isPlaying(sound: SoundInstance) = this.method_4877(sound)
 /**
  * method_4881
  */
@@ -84,7 +60,7 @@ fun SoundManager.stopAll() = this.method_4881()
 /**
  * method_4869
  */
-fun SoundManager.get(arg0: Identifier) = this.method_4869(arg0)
+fun SoundManager.get(id: Identifier) = this.method_4869(id)
 /**
  * method_4864
  */
@@ -108,8 +84,8 @@ fun SoundManager.pauseAll() = this.method_4879()
 /**
  * method_18670
  */
-fun SoundManager.tick(arg0: Boolean) = this.method_18670(arg0)
+fun SoundManager.tick(paused: Boolean) = this.method_18670(paused)
 /**
  * method_4875
  */
-fun SoundManager.stopSounds(arg0: Identifier, arg1: SoundCategory) = this.method_4875(arg0, arg1)
+fun SoundManager.stopSounds(id: Identifier, soundCategory: SoundCategory) = this.method_4875(id, soundCategory)

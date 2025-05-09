@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun CpuLoadSample.userJvm() = this.comp_23()
 /**
- * method_38032
- */
-fun KClass<CpuLoadSample>.fromEvent(arg0: RecordedEvent) = CpuLoadSample.method_38032(arg0)
-/**
  * comp_22
  */
 fun CpuLoadSample.jvm() = this.comp_22()

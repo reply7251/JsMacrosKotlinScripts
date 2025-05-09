@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_52729
  */
-fun ButtonTextures.get(arg0: Boolean, arg1: Boolean) = this.method_52729(arg0, arg1)
+fun ButtonTextures.get(enabled: Boolean, focused: Boolean) = this.method_52729(enabled, focused)
 /**
  * comp_1604
  */

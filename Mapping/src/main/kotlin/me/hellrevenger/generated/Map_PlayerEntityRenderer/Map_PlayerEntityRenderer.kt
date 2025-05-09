@@ -20,8 +20,8 @@ fun PlayerEntityRenderer.getPositionOffset(arg0: PlayerEntityRenderState) = this
 /**
  * method_4221
  */
-fun PlayerEntityRenderer.renderLeftArm(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: Identifier, arg4: Boolean) = this.method_4221(arg0, arg1, arg2, arg3, arg4)
+fun PlayerEntityRenderer.renderLeftArm(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int, skinTexture: Identifier, sleeveVisible: Boolean) = this.method_4221(matrices, vertexConsumers, light, skinTexture, sleeveVisible)
 /**
  * method_4220
  */
-fun PlayerEntityRenderer.renderRightArm(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: Identifier, arg4: Boolean) = this.method_4220(arg0, arg1, arg2, arg3, arg4)
+fun PlayerEntityRenderer.renderRightArm(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int, skinTexture: Identifier, sleeveVisible: Boolean) = this.method_4220(matrices, vertexConsumers, light, skinTexture, sleeveVisible)

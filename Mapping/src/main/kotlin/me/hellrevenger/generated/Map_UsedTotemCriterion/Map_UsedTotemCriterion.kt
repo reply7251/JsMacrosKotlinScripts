@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9165
  */
-fun UsedTotemCriterion.trigger(arg0: ServerPlayerEntity, arg1: ItemStack) = this.method_9165(arg0, arg1)
+fun UsedTotemCriterion.trigger(player: ServerPlayerEntity, stack: ItemStack) = this.method_9165(player, stack)

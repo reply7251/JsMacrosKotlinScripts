@@ -16,4 +16,4 @@ fun FishingBobberEntity.getHookedEntity() = this.method_26957()
 /**
  * method_6957
  */
-fun FishingBobberEntity.use(arg0: ItemStack) = this.method_6957(arg0)
+fun FishingBobberEntity.use(usedItem: ItemStack) = this.method_6957(usedItem)

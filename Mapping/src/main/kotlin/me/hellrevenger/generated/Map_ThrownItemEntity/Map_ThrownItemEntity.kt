@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_16940
  */
-fun ThrownItemEntity.setItem(arg0: ItemStack) = this.method_16940(arg0)
+fun ThrownItemEntity.setItem(stack: ItemStack) = this.method_16940(stack)

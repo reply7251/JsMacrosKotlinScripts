@@ -40,8 +40,8 @@ var EnderDragonEntityRenderState.hurt by alias(EnderDragonEntityRenderState::fie
 /**
  * method_62611
  */
-fun EnderDragonEntityRenderState.getLerpedFrame(arg0: Int) = this.method_62611(arg0)
+fun EnderDragonEntityRenderState.getLerpedFrame(age: Int) = this.method_62611(age)
 /**
  * method_62612
  */
-fun EnderDragonEntityRenderState.getNeckPartPitchOffset(arg0: Int, arg1: net.minecraft.class_9871.class_9872, arg2: net.minecraft.class_9871.class_9872) = this.method_62612(arg0, arg1, arg2)
+fun EnderDragonEntityRenderState.getNeckPartPitchOffset(id: Int, bodyFrame: net.minecraft.class_9871.class_9872, neckFrame: net.minecraft.class_9871.class_9872) = this.method_62612(id, bodyFrame, neckFrame)

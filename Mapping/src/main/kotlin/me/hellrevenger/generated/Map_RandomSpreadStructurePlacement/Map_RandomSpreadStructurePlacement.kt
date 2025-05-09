@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_40169
  */
-fun RandomSpreadStructurePlacement.getStartChunk(arg0: Long, arg1: Int, arg2: Int) = this.method_40169(arg0, arg1, arg2)
+fun RandomSpreadStructurePlacement.getStartChunk(seed: Long, arg1: Int, chunkX: Int) = this.method_40169(seed, arg1, chunkX)
 /**
  * method_41632
  */

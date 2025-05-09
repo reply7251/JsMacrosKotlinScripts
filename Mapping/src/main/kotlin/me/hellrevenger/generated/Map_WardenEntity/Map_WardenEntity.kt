@@ -36,7 +36,7 @@ fun WardenEntity.getAnger() = this.method_42222()
 /**
  * method_42212
  */
-fun WardenEntity.increaseAngerAt(arg0: Entity, arg1: Int, arg2: Boolean) = this.method_42212(arg0, arg1, arg2)
+fun WardenEntity.increaseAngerAt(entity: Entity, amount: Int, listening: Boolean) = this.method_42212(entity, amount, listening)
 /**
  * method_42216
  */
@@ -44,19 +44,11 @@ fun WardenEntity.getAngerManager() = this.method_42216()
 /**
  * method_42211
  */
-fun WardenEntity.removeSuspect(arg0: Entity) = this.method_42211(arg0)
+fun WardenEntity.removeSuspect(entity: Entity) = this.method_42211(entity)
 /**
  * method_42202
  */
-fun WardenEntity.getHeartAlpha(arg0: Float) = this.method_42202(arg0)
-/**
- * method_42213
- */
-fun WardenEntity.increaseAngerAt(arg0: Entity) = this.method_42213(arg0)
-/**
- * method_42204
- */
-fun KClass<WardenEntity>.addDarknessToClosePlayers(arg0: ServerWorld, arg1: Vec3d, arg2: Entity, arg3: Int) = WardenEntity.method_42204(arg0, arg1, arg2, arg3)
+fun WardenEntity.getHeartAlpha(tickDelta: Float) = this.method_42202(tickDelta)
 /**
  * method_42214
  */
@@ -64,16 +56,12 @@ fun WardenEntity.getAngriness() = this.method_42214()
 /**
  * method_43274
  */
-fun WardenEntity.updateAttackTarget(arg0: LivingEntity) = this.method_43274(arg0)
-/**
- * method_42221
- */
-fun KClass<WardenEntity>.addAttributes() = WardenEntity.method_42221()
+fun WardenEntity.updateAttackTarget(target: LivingEntity) = this.method_43274(target)
 /**
  * method_42223
  */
-fun WardenEntity.getTendrilAlpha(arg0: Float) = this.method_42223(arg0)
+fun WardenEntity.getTendrilAlpha(tickDelta: Float) = this.method_42223(tickDelta)
 /**
  * method_42206
  */
-fun WardenEntity.isValidTarget(arg0: Entity) = this.method_42206(arg0)
+fun WardenEntity.isValidTarget(entity: Entity) = this.method_42206(entity)

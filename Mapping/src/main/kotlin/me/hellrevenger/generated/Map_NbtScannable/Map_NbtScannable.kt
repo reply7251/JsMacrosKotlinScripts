@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_39795
  */
-fun NbtScannable.scanChunk(arg0: ChunkPos, arg1: NbtScanner) = this.method_39795(arg0, arg1)
+fun NbtScannable.scanChunk(pos: ChunkPos, scanner: NbtScanner) = this.method_39795(pos, scanner)

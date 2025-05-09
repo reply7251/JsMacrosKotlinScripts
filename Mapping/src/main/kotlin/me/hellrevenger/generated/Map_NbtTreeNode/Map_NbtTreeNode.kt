@@ -2,17 +2,13 @@ package me.hellrevenger.generated.Map_NbtTreeNode
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_40060
- */
-fun KClass<NbtTreeNode>.createRoot() = NbtTreeNode.method_40060()
-/**
  * method_40061
  */
-fun NbtTreeNode.isTypeEqual(arg0: NbtType<*>, arg1: String) = this.method_40061(arg0, arg1)
+fun NbtTreeNode.isTypeEqual(type: NbtType<*>, key: String) = this.method_40061(type, key)
 /**
  * method_39881
  */
-fun NbtTreeNode.add(arg0: NbtScanQuery) = this.method_39881(arg0)
+fun NbtTreeNode.add(query: NbtScanQuery) = this.method_39881(query)
 /**
  * comp_315
  */

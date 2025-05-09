@@ -2,22 +2,6 @@ package me.hellrevenger.generated.Map_MinecraftServer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_33211
- */
-val KClass<MinecraftServer>.MAX_WORLD_BORDER_RADIUS by aliasStatic(MinecraftServer::field_33211)
-/**
- * field_34982
- */
-val KClass<MinecraftServer>.VANILLA by aliasStatic(MinecraftServer::field_34982)
-/**
- * field_35641
- */
-val KClass<MinecraftServer>.ANONYMOUS_PLAYER_PROFILE by aliasStatic(MinecraftServer::field_35641)
-/**
- * field_17704
- */
-val KClass<MinecraftServer>.DEMO_LEVEL_INFO by aliasStatic(MinecraftServer::field_17704)
-/**
  * field_25318
  */
 var MinecraftServer.resourceManagerHolder by alias(MinecraftServer::field_25318)
@@ -32,7 +16,7 @@ fun MinecraftServer.acceptsStatusQuery() = this.method_27902()
 /**
  * method_3730
  */
-fun MinecraftServer.setDemo(arg0: Boolean) = this.method_3730(arg0)
+fun MinecraftServer.setDemo(demo: Boolean) = this.method_3730(demo)
 /**
  * method_3767
  */
@@ -40,15 +24,15 @@ fun MinecraftServer.getGameRules() = this.method_3767()
 /**
  * method_31371
  */
-fun MinecraftServer.createFilterer(arg0: ServerPlayerEntity) = this.method_31371(arg0)
+fun MinecraftServer.createFilterer(player: ServerPlayerEntity) = this.method_31371(player)
 /**
  * method_3779
  */
-fun MinecraftServer.setServerPort(arg0: Int) = this.method_3779(arg0)
+fun MinecraftServer.setServerPort(serverPort: Int) = this.method_3779(serverPort)
 /**
  * method_37113
  */
-fun MinecraftServer.dumpProperties(arg0: file_Path) = this.method_37113(arg0)
+fun MinecraftServer.dumpProperties(file: file_Path) = this.method_37113(file)
 /**
  * method_37321
  */
@@ -56,7 +40,7 @@ fun MinecraftServer.isRecorderActive() = this.method_37321()
 /**
  * method_3742
  */
-fun MinecraftServer.addServerGuiTickable(arg0: Runnable) = this.method_3742(arg0)
+fun MinecraftServer.addServerGuiTickable(tickable: Runnable) = this.method_3742(tickable)
 /**
  * method_3832
  */
@@ -80,19 +64,15 @@ fun MinecraftServer.isLoading() = this.method_3820()
 /**
  * method_3731
  */
-fun MinecraftServer.setEnforceWhitelist(arg0: Boolean) = this.method_3731(arg0)
+fun MinecraftServer.setEnforceWhitelist(enforceWhitelist: Boolean) = this.method_3731(enforceWhitelist)
 /**
  * method_3835
  */
-fun MinecraftServer.getPermissionLevel(arg0: GameProfile) = this.method_3835(arg0)
+fun MinecraftServer.getPermissionLevel(profile: GameProfile) = this.method_3835(profile)
 /**
  * method_3864
  */
-fun MinecraftServer.setOnlineMode(arg0: Boolean) = this.method_3864(arg0)
-/**
- * method_29736
- */
-fun KClass<MinecraftServer>.loadDataPacks(arg0: ResourcePackManager, arg1: DataConfiguration, arg2: Boolean, arg3: Boolean) = MinecraftServer.method_29736(arg0, arg1, arg2, arg3)
+fun MinecraftServer.setOnlineMode(onlineMode: Boolean) = this.method_3864(onlineMode)
 /**
  * method_37322
  */
@@ -100,7 +80,7 @@ fun MinecraftServer.resetRecorder() = this.method_37322()
 /**
  * method_19467
  */
-fun MinecraftServer.setDifficultyLocked(arg0: Boolean) = this.method_19467(arg0)
+fun MinecraftServer.setDifficultyLocked(locked: Boolean) = this.method_19467(locked)
 /**
  * method_3841
  */
@@ -120,19 +100,15 @@ fun MinecraftServer.shouldBroadcastRconToOps() = this.method_3732()
 /**
  * method_3728
  */
-fun MinecraftServer.kickNonWhitelistedPlayers(arg0: ServerCommandSource) = this.method_3728(arg0)
+fun MinecraftServer.kickNonWhitelistedPlayers(source: ServerCommandSource) = this.method_3728(source)
 /**
  * method_3764
  */
-fun MinecraftServer.setPreventProxyConnections(arg0: Boolean) = this.method_3764(arg0)
+fun MinecraftServer.setPreventProxyConnections(preventProxyConnections: Boolean) = this.method_3764(preventProxyConnections)
 /**
  * method_39219
  */
 fun MinecraftServer.isSaving() = this.method_39219()
-/**
- * method_60584
- */
-fun KClass<MinecraftServer>.checkWorldGenException() = MinecraftServer.method_60584()
 /**
  * method_56626
  */
@@ -148,11 +124,11 @@ fun MinecraftServer.hideOnlinePlayers() = this.method_39424()
 /**
  * method_3838
  */
-fun MinecraftServer.setDefaultGameMode(arg0: GameMode) = this.method_3838(arg0)
+fun MinecraftServer.setDefaultGameMode(gameMode: GameMode) = this.method_3838(gameMode)
 /**
  * method_3776
  */
-fun MinecraftServer.setDifficulty(arg0: Difficulty, arg1: Boolean) = this.method_3776(arg0, arg1)
+fun MinecraftServer.setDifficulty(difficulty: Difficulty, forceUpdate: Boolean) = this.method_3776(difficulty, forceUpdate)
 /**
  * method_3719
  */
@@ -160,19 +136,19 @@ fun MinecraftServer.getGameProfileRepo() = this.method_3719()
 /**
  * method_3803
  */
-fun MinecraftServer.setPlayerIdleTimeout(arg0: Int) = this.method_3803(arg0)
+fun MinecraftServer.setPlayerIdleTimeout(playerIdleTimeout: Int) = this.method_3803(playerIdleTimeout)
 /**
  * method_3842
  */
-fun MinecraftServer.setServerIp(arg0: String) = this.method_3842(arg0)
+fun MinecraftServer.setServerIp(serverIp: String) = this.method_3842(serverIp)
 /**
  * method_3723
  */
-fun MinecraftServer.save(arg0: Boolean, arg1: Boolean, arg2: Boolean) = this.method_3723(arg0, arg1, arg2)
+fun MinecraftServer.save(suppressLogs: Boolean, flush: Boolean, force: Boolean) = this.method_3723(suppressLogs, flush, force)
 /**
  * method_3815
  */
-fun MinecraftServer.setPvpEnabled(arg0: Boolean) = this.method_3815(arg0)
+fun MinecraftServer.setPvpEnabled(pvpEnabled: Boolean) = this.method_3815(pvpEnabled)
 /**
  * method_24307
  */
@@ -188,7 +164,7 @@ fun MinecraftServer.isHardcore() = this.method_3754()
 /**
  * method_27050
  */
-fun MinecraftServer.getSavePath(arg0: WorldSavePath) = this.method_27050(arg0)
+fun MinecraftServer.getSavePath(worldSavePath: WorldSavePath) = this.method_27050(worldSavePath)
 /**
  * method_32303
  */
@@ -220,7 +196,7 @@ fun MinecraftServer.isPvpEnabled() = this.method_3852()
 /**
  * method_27903
  */
-fun MinecraftServer.adjustTrackingDistance(arg0: Int) = this.method_27903(arg0)
+fun MinecraftServer.adjustTrackingDistance(initialDistance: Int) = this.method_27903(initialDistance)
 /**
  * method_3756
  */
@@ -228,11 +204,11 @@ fun MinecraftServer.getServerPort() = this.method_3756()
 /**
  * method_43614
  */
-fun MinecraftServer.logChatMessage(arg0: Text, arg1: net.minecraft.class_2556.class_7602, arg2: String) = this.method_43614(arg0, arg1, arg2)
+fun MinecraftServer.logChatMessage(message: Text, params: net.minecraft.class_2556.class_7602, prefix: String) = this.method_43614(message, params, prefix)
 /**
  * method_19466
  */
-fun MinecraftServer.isHost(arg0: GameProfile) = this.method_19466(arg0)
+fun MinecraftServer.isHost(profile: GameProfile) = this.method_19466(profile)
 /**
  * method_3772
  */
@@ -248,15 +224,15 @@ fun MinecraftServer.acceptsTransfers() = this.method_56040()
 /**
  * method_29439
  */
-fun MinecraftServer.reloadResources(arg0: Collection<String>) = this.method_29439(arg0)
+fun MinecraftServer.reloadResources(dataPacks: Collection<String>) = this.method_29439(dataPacks)
 /**
  * method_3829
  */
-fun MinecraftServer.getSpawnRadius(arg0: ServerWorld) = this.method_3829(arg0)
+fun MinecraftServer.getSpawnRadius(world: ServerWorld) = this.method_3829(world)
 /**
  * method_3846
  */
-fun MinecraftServer.setPlayerManager(arg0: PlayerManager) = this.method_3846(arg0)
+fun MinecraftServer.setPlayerManager(playerManager: PlayerManager) = this.method_3846(playerManager)
 /**
  * method_43500
  */
@@ -288,7 +264,7 @@ fun MinecraftServer.getCombinedDynamicRegistries() = this.method_46221()
 /**
  * method_60671
  */
-fun MinecraftServer.isWorldAllowed(arg0: world_World) = this.method_60671(arg0)
+fun MinecraftServer.isWorldAllowed(world: world_World) = this.method_60671(world)
 /**
  * method_3725
  */
@@ -300,7 +276,7 @@ fun MinecraftServer.getTickManager() = this.method_54833()
 /**
  * method_3834
  */
-fun MinecraftServer.setMotd(arg0: String) = this.method_3834(arg0)
+fun MinecraftServer.setMotd(motd: String) = this.method_3834(motd)
 /**
  * method_3765
  */
@@ -332,7 +308,7 @@ fun MinecraftServer.isStopped() = this.method_3750()
 /**
  * method_3785
  */
-fun MinecraftServer.isSpawnProtected(arg0: ServerWorld, arg1: BlockPos, arg2: PlayerEntity) = this.method_3785(arg0, arg1, arg2)
+fun MinecraftServer.isSpawnProtected(world: ServerWorld, pos: BlockPos, player: PlayerEntity) = this.method_3785(world, pos, player)
 /**
  * method_3828
  */
@@ -344,7 +320,7 @@ fun MinecraftServer.isDedicated() = this.method_3816()
 /**
  * method_43825
  */
-fun MinecraftServer.setHostProfile(arg0: GameProfile) = this.method_43825(arg0)
+fun MinecraftServer.setHostProfile(hostProfile: GameProfile) = this.method_43825(hostProfile)
 /**
  * method_62735
  */
@@ -376,7 +352,7 @@ fun MinecraftServer.updateAutosaveTicks() = this.method_54831()
 /**
  * method_39218
  */
-fun MinecraftServer.saveAll(arg0: Boolean, arg1: Boolean, arg2: Boolean) = this.method_39218(arg0, arg1, arg2)
+fun MinecraftServer.saveAll(suppressLogs: Boolean, flush: Boolean, force: Boolean) = this.method_39218(suppressLogs, flush, force)
 /**
  * method_16209
  */
@@ -408,11 +384,7 @@ fun MinecraftServer.getTimeReference() = this.method_3826()
 /**
  * method_32816
  */
-fun MinecraftServer.getPlayerInteractionManager(arg0: ServerPlayerEntity) = this.method_32816(arg0)
-/**
- * method_29740
- */
-fun <S>KClass<MinecraftServer>.startServer(arg0: function_Function<Thread, S>) where S: MinecraftServer = MinecraftServer.method_29740<S>(arg0)
+fun MinecraftServer.getPlayerInteractionManager(player: ServerPlayerEntity) = this.method_32816(player)
 /**
  * method_3773
  */
@@ -432,7 +404,7 @@ fun MinecraftServer.isEnforceWhitelist() = this.method_3729()
 /**
  * method_37324
  */
-fun MinecraftServer.addSystemDetails(arg0: SystemDetails) = this.method_37324(arg0)
+fun MinecraftServer.addSystemDetails(details: SystemDetails) = this.method_37324(details)
 /**
  * method_3760
  */
@@ -440,7 +412,7 @@ fun MinecraftServer.getPlayerManager() = this.method_3760()
 /**
  * method_3859
  */
-fun MinecraftServer.addExtraSystemDetails(arg0: SystemDetails) = this.method_3859(arg0)
+fun MinecraftServer.addExtraSystemDetails(details: SystemDetails) = this.method_3859(details)
 /**
  * method_3739
  */
@@ -453,10 +425,6 @@ fun MinecraftServer.getCommandFunctionManager() = this.method_3740()
  * method_27051
  */
 fun MinecraftServer.syncChunkWrites() = this.method_27051()
-/**
- * method_60582
- */
-fun KClass<MinecraftServer>.setWorldGenException(arg0: RuntimeException) = MinecraftServer.method_60582(arg0)
 /**
  * method_3798
  */
@@ -476,7 +444,7 @@ fun MinecraftServer.getAverageNanosPerTick() = this.method_54834()
 /**
  * method_37320
  */
-fun MinecraftServer.setupRecorder(arg0: Consumer<ProfileResult>, arg1: Consumer<file_Path>) = this.method_37320(arg0, arg1)
+fun MinecraftServer.setupRecorder(resultConsumer: Consumer<ProfileResult>, dumpConsumer: Consumer<file_Path>) = this.method_37320(resultConsumer, dumpConsumer)
 /**
  * method_3782
  */
@@ -484,7 +452,7 @@ fun MinecraftServer.shutdown() = this.method_3782()
 /**
  * method_3758
  */
-fun MinecraftServer.getPath(arg0: String) = this.method_3758(arg0)
+fun MinecraftServer.getPath(path: String) = this.method_3758(path)
 /**
  * method_52344
  */
@@ -504,7 +472,7 @@ fun MinecraftServer.getRateLimit() = this.method_30612()
 /**
  * method_56625
  */
-fun MinecraftServer.subscribeToDebugSample(arg0: ServerPlayerEntity, arg1: DebugSampleType) = this.method_56625(arg0, arg1)
+fun MinecraftServer.subscribeToDebugSample(player: ServerPlayerEntity, type: DebugSampleType) = this.method_56625(player, type)
 /**
  * method_30002
  */
@@ -524,7 +492,7 @@ fun MinecraftServer.areCommandBlocksEnabled() = this.method_3812()
 /**
  * method_3747
  */
-fun MinecraftServer.stop(arg0: Boolean) = this.method_3747(arg0)
+fun MinecraftServer.stop(waitForShutdown: Boolean) = this.method_3747(waitForShutdown)
 /**
  * method_3783
  */
@@ -548,7 +516,7 @@ fun MinecraftServer.forceStopRecorder() = this.method_42062()
 /**
  * method_3744
  */
-fun MinecraftServer.setCrashReport(arg0: CrashReport) = this.method_3744(arg0)
+fun MinecraftServer.setCrashReport(report: CrashReport) = this.method_3744(report)
 /**
  * method_3724
  */
@@ -572,7 +540,7 @@ fun MinecraftServer.getMaxWorldBorderRadius() = this.method_3749()
 /**
  * method_3763
  */
-fun MinecraftServer.openToLan(arg0: GameMode, arg1: Boolean, arg2: Int) = this.method_3763(arg0, arg1, arg2)
+fun MinecraftServer.openToLan(gameMode: GameMode, cheatsAllowed: Boolean, port: Int) = this.method_3763(gameMode, cheatsAllowed, port)
 /**
  * method_37323
  */
@@ -580,19 +548,19 @@ fun MinecraftServer.stopRecorder() = this.method_37323()
 /**
  * method_62733
  */
-fun MinecraftServer.onPacketException(arg0: Throwable, arg1: PacketType<*>) = this.method_62733(arg0, arg1)
+fun MinecraftServer.onPacketException(exception: Throwable, type: PacketType<*>) = this.method_62733(exception, type)
 /**
  * method_3748
  */
-fun MinecraftServer.tick(arg0: BooleanSupplier) = this.method_3748(arg0)
+fun MinecraftServer.tick(shouldKeepTicking: BooleanSupplier) = this.method_3748(shouldKeepTicking)
 /**
  * method_3847
  */
-fun MinecraftServer.getWorld(arg0: RegistryKey<world_World>) = this.method_3847(arg0)
+fun MinecraftServer.getWorld(key: RegistryKey<world_World>) = this.method_3847(key)
 /**
  * method_3745
  */
-fun MinecraftServer.setFlightEnabled(arg0: Boolean) = this.method_3745(arg0)
+fun MinecraftServer.setFlightEnabled(flightEnabled: Boolean) = this.method_3745(flightEnabled)
 /**
  * method_3858
  */

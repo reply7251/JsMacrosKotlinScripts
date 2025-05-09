@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_41544
  */
-fun NoiseRouter.apply(arg0: net.minecraft.class_6910.class_6915) = this.method_41544(arg0)
+fun NoiseRouter.apply(visitor: net.minecraft.class_6910.class_6915) = this.method_41544(visitor)
 /**
  * comp_417
  */

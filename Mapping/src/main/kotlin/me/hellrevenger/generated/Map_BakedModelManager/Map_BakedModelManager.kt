@@ -16,15 +16,15 @@ fun BakedModelManager.getMissingBlockModel() = this.method_4744()
 /**
  * method_4742
  */
-fun BakedModelManager.getModel(arg0: ModelIdentifier) = this.method_4742(arg0)
+fun BakedModelManager.getModel(id: ModelIdentifier) = this.method_4742(id)
 /**
  * method_24153
  */
-fun BakedModelManager.getAtlas(arg0: Identifier) = this.method_24153(arg0)
+fun BakedModelManager.getAtlas(id: Identifier) = this.method_24153(id)
 /**
  * method_21611
  */
-fun BakedModelManager.shouldRerender(arg0: BlockState, arg1: BlockState) = this.method_21611(arg0, arg1)
+fun BakedModelManager.shouldRerender(from: BlockState, to: BlockState) = this.method_21611(from, to)
 /**
  * method_65756
  */
@@ -32,12 +32,12 @@ fun BakedModelManager.getBlockEntityModelsSupplier() = this.method_65756()
 /**
  * method_24152
  */
-fun BakedModelManager.setMipmapLevels(arg0: Int) = this.method_24152(arg0)
+fun BakedModelManager.setMipmapLevels(mipmapLevels: Int) = this.method_24152(mipmapLevels)
 /**
  * method_65934
  */
-fun BakedModelManager.getItemProperties(arg0: Identifier) = this.method_65934(arg0)
+fun BakedModelManager.getItemProperties(id: Identifier) = this.method_65934(id)
 /**
  * method_65746
  */
-fun BakedModelManager.getItemModel(arg0: Identifier) = this.method_65746(arg0)
+fun BakedModelManager.getItemModel(id: Identifier) = this.method_65746(id)

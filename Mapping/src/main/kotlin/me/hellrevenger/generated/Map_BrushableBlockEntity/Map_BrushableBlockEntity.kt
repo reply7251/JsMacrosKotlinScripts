@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_49216
  */
-fun BrushableBlockEntity.setLootTable(arg0: RegistryKey<LootTable>, arg1: Long) = this.method_49216(arg0, arg1)
+fun BrushableBlockEntity.setLootTable(lootTable: RegistryKey<LootTable>, seed: Long) = this.method_49216(lootTable, seed)
 /**
  * method_49224
  */
@@ -12,11 +12,11 @@ fun BrushableBlockEntity.getHitDirection() = this.method_49224()
 /**
  * method_49215
  */
-fun BrushableBlockEntity.brush(arg0: Long, arg1: ServerWorld, arg2: PlayerEntity, arg3: Direction, arg4: ItemStack) = this.method_49215(arg0, arg1, arg2, arg3, arg4)
+fun BrushableBlockEntity.brush(worldTime: Long, arg1: ServerWorld, world: PlayerEntity, player: Direction, hitDirection: ItemStack) = this.method_49215(worldTime, arg1, world, player, hitDirection)
 /**
  * method_49219
  */
-fun BrushableBlockEntity.scheduledTick(arg0: ServerWorld) = this.method_49219(arg0)
+fun BrushableBlockEntity.scheduledTick(world: ServerWorld) = this.method_49219(world)
 /**
  * method_49225
  */

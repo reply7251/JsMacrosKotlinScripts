@@ -8,7 +8,7 @@ fun UpdateCommandBlockMinecartC2SPacket.getCommand() = this.method_12475()
 /**
  * method_12476
  */
-fun UpdateCommandBlockMinecartC2SPacket.getMinecartCommandExecutor(arg0: world_World) = this.method_12476(arg0)
+fun UpdateCommandBlockMinecartC2SPacket.getMinecartCommandExecutor(world: world_World) = this.method_12476(world)
 /**
  * method_12477
  */

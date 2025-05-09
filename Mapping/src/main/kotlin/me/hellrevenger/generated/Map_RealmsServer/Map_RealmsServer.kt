@@ -96,11 +96,7 @@ var RealmsServer.expired by alias(RealmsServer::field_22608)
 /**
  * method_25061
  */
-fun RealmsServer.cloneSlots(arg0: Map<Int, RealmsWorldOptions>) = this.method_25061(arg0)
-/**
- * method_25066
- */
-fun KClass<RealmsServer>.parse(arg0: String) = RealmsServer.method_25066(arg0)
+fun RealmsServer.cloneSlots(slots: Map<Int, RealmsWorldOptions>) = this.method_25061(slots)
 /**
  * method_54363
  */
@@ -120,19 +116,15 @@ fun RealmsServer.isMinigame() = this.method_60315()
 /**
  * method_25054
  */
-fun RealmsServer.getWorldName(arg0: Int) = this.method_25054(arg0)
+fun RealmsServer.getWorldName(slotId: Int) = this.method_25054(slotId)
 /**
  * method_54364
  */
 fun RealmsServer.needsUpgrade() = this.method_54364()
 /**
- * method_25056
- */
-fun KClass<RealmsServer>.parse(arg0: JsonObject) = RealmsServer.method_25056(arg0)
-/**
  * method_31403
  */
-fun RealmsServer.createServerInfo(arg0: String) = this.method_31403(arg0)
+fun RealmsServer.createServerInfo(address: String) = this.method_31403(address)
 /**
  * method_54365
  */

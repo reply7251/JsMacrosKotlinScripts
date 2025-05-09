@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9115
  */
-fun ShotCrossbowCriterion.trigger(arg0: ServerPlayerEntity, arg1: ItemStack) = this.method_9115(arg0, arg1)
+fun ShotCrossbowCriterion.trigger(player: ServerPlayerEntity, stack: ItemStack) = this.method_9115(player, stack)

@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_DebugStructuresCustomPayload
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_48685
- */
-val KClass<DebugStructuresCustomPayload>.ID by aliasStatic(DebugStructuresCustomPayload::field_48685)
-/**
  * comp_1711
  */
 fun DebugStructuresCustomPayload.dimension() = this.comp_1711()

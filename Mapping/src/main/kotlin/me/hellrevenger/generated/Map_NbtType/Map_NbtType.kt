@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_39877
  */
-fun <T>NbtType<T>.accept(arg0: DataInput, arg1: NbtScanner, arg2: NbtSizeTracker) where T: NbtElement = this.method_39877(arg0, arg1, arg2)
+fun <T>NbtType<T>.accept(input: DataInput, visitor: NbtScanner, tracker: NbtSizeTracker) where T: NbtElement = this.method_39877(input, visitor, tracker)
 /**
  * method_39852
  */
-fun <T>NbtType<T>.doAccept(arg0: DataInput, arg1: NbtScanner, arg2: NbtSizeTracker) where T: NbtElement = this.method_39852(arg0, arg1, arg2)
+fun <T>NbtType<T>.doAccept(input: DataInput, visitor: NbtScanner, tracker: NbtSizeTracker) where T: NbtElement = this.method_39852(input, visitor, tracker)
 /**
  * method_23261
  */
@@ -16,11 +16,11 @@ fun <T>NbtType<T>.getCommandFeedbackName() where T: NbtElement = this.method_232
 /**
  * method_23262
  */
-fun <T>NbtType<T>.read(arg0: DataInput, arg1: NbtSizeTracker) where T: NbtElement = this.method_23262(arg0, arg1)
+fun <T>NbtType<T>.read(input: DataInput, tracker: NbtSizeTracker) where T: NbtElement = this.method_23262(input, tracker)
 /**
  * method_39854
  */
-fun <T>NbtType<T>.skip(arg0: DataInput, arg1: Int, arg2: NbtSizeTracker) where T: NbtElement = this.method_39854(arg0, arg1, arg2)
+fun <T>NbtType<T>.skip(input: DataInput, count: Int, tracker: NbtSizeTracker) where T: NbtElement = this.method_39854(input, count, tracker)
 /**
  * method_23263
  */
@@ -29,11 +29,3 @@ fun <T>NbtType<T>.isImmutable() where T: NbtElement = this.method_23263()
  * method_23259
  */
 fun <T>NbtType<T>.getCrashReportName() where T: NbtElement = this.method_23259()
-/**
- * method_23260
- */
-fun <T>KClass<NbtType<T>>.createInvalid(arg0: Int) where T: NbtElement = NbtType.method_23260(arg0)
-/**
- * method_39851
- */
-fun <T>NbtType<T>.skip(arg0: DataInput, arg1: NbtSizeTracker) where T: NbtElement = this.method_39851(arg0, arg1)

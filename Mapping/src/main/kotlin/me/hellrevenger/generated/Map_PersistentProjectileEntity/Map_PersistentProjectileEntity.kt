@@ -12,7 +12,7 @@ var PersistentProjectileEntity.pickupType by alias(PersistentProjectileEntity::f
 /**
  * method_59955
  */
-fun PersistentProjectileEntity.applyDamageModifier(arg0: Float) = this.method_59955(arg0)
+fun PersistentProjectileEntity.applyDamageModifier(damageModifier: Float) = this.method_59955(damageModifier)
 /**
  * method_7448
  */
@@ -20,15 +20,15 @@ fun PersistentProjectileEntity.getDamage() = this.method_7448()
 /**
  * method_7444
  */
-fun PersistentProjectileEntity.setSound(arg0: SoundEvent) = this.method_7444(arg0)
+fun PersistentProjectileEntity.setSound(sound: SoundEvent) = this.method_7444(sound)
 /**
  * method_7438
  */
-fun PersistentProjectileEntity.setDamage(arg0: Double) = this.method_7438(arg0)
+fun PersistentProjectileEntity.setDamage(damage: Double) = this.method_7438(damage)
 /**
  * method_7433
  */
-fun PersistentProjectileEntity.setNoClip(arg0: Boolean) = this.method_7433(arg0)
+fun PersistentProjectileEntity.setNoClip(noClip: Boolean) = this.method_7433(noClip)
 /**
  * method_7441
  */
@@ -48,4 +48,4 @@ fun PersistentProjectileEntity.isCritical() = this.method_7443()
 /**
  * method_7439
  */
-fun PersistentProjectileEntity.setCritical(arg0: Boolean) = this.method_7439(arg0)
+fun PersistentProjectileEntity.setCritical(critical: Boolean) = this.method_7439(critical)

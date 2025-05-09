@@ -16,4 +16,4 @@ fun SculkSensorBlockEntity.getLastVibrationFrequency() = this.method_32912()
 /**
  * method_44213
  */
-fun SculkSensorBlockEntity.setLastVibrationFrequency(arg0: Int) = this.method_44213(arg0)
+fun SculkSensorBlockEntity.setLastVibrationFrequency(lastVibrationFrequency: Int) = this.method_44213(lastVibrationFrequency)

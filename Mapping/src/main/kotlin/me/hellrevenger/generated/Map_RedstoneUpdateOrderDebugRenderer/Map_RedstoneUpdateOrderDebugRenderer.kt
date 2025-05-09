@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62352
  */
-fun RedstoneUpdateOrderDebugRenderer.addUpdateOrder(arg0: DebugRedstoneUpdateOrderCustomPayload) = this.method_62352(arg0)
+fun RedstoneUpdateOrderDebugRenderer.addUpdateOrder(updateOrder: DebugRedstoneUpdateOrderCustomPayload) = this.method_62352(updateOrder)

@@ -34,13 +34,9 @@ fun LlamaEntity.isFollowing() = this.method_6805()
  */
 fun LlamaEntity.setVariant(arg0: net.minecraft.class_1501.class_7993) = this.method_47874(arg0)
 /**
- * method_26900
- */
-fun KClass<LlamaEntity>.createLlamaAttributes() = LlamaEntity.method_26900()
-/**
  * method_6791
  */
-fun LlamaEntity.follow(arg0: LlamaEntity) = this.method_6791(arg0)
+fun LlamaEntity.follow(llama: LlamaEntity) = this.method_6791(llama)
 /**
  * method_6797
  */

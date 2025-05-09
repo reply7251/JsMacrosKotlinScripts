@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_1964
  */
-fun ToggleButtonWidget.setToggled(arg0: Boolean) = this.method_1964(arg0)
+fun ToggleButtonWidget.setToggled(toggled: Boolean) = this.method_1964(toggled)
 /**
  * method_1962
  */
-fun ToggleButtonWidget.setTextures(arg0: ButtonTextures) = this.method_1962(arg0)
+fun ToggleButtonWidget.setTextures(textures: ButtonTextures) = this.method_1962(textures)
 /**
  * method_1965
  */

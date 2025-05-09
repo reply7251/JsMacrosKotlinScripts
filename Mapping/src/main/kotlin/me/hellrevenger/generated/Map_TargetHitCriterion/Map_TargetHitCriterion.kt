@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_24861
  */
-fun TargetHitCriterion.trigger(arg0: ServerPlayerEntity, arg1: Entity, arg2: Vec3d, arg3: Int) = this.method_24861(arg0, arg1, arg2, arg3)
+fun TargetHitCriterion.trigger(player: ServerPlayerEntity, projectile: Entity, hitPos: Vec3d, signalStrength: Int) = this.method_24861(player, projectile, hitPos, signalStrength)

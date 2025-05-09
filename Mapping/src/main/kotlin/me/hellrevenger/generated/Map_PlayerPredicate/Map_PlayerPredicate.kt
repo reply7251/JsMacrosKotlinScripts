@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_PlayerPredicate
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_33928
- */
-val KClass<PlayerPredicate>.LOOKING_AT_DISTANCE by aliasStatic(PlayerPredicate::field_33928)
-/**
  * comp_1818
  */
 fun PlayerPredicate.gameMode() = this.comp_1818()

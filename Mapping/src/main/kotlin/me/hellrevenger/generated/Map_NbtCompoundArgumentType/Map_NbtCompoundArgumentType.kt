@@ -5,11 +5,3 @@ import me.hellrevenger.generated.*
  * method_9286
  */
 fun NbtCompoundArgumentType.parse(arg0: StringReader) = this.method_9286(arg0)
-/**
- * method_9285
- */
-fun <S>KClass<NbtCompoundArgumentType>.getNbtCompound(arg0: CommandContext<S>, arg1: String) = NbtCompoundArgumentType.method_9285<S>(arg0, arg1)
-/**
- * method_9284
- */
-fun KClass<NbtCompoundArgumentType>.nbtCompound() = NbtCompoundArgumentType.method_9284()

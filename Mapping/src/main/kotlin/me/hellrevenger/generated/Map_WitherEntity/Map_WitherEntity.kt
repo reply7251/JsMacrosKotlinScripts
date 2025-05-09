@@ -8,7 +8,7 @@ fun WitherEntity.shouldRenderOverlay() = this.method_6872()
 /**
  * method_6876
  */
-fun WitherEntity.setTrackedEntityId(arg0: Int, arg1: Int) = this.method_6876(arg0, arg1)
+fun WitherEntity.setTrackedEntityId(headIndex: Int, id: Int) = this.method_6876(headIndex, id)
 /**
  * method_6885
  */
@@ -20,23 +20,15 @@ fun WitherEntity.getSideHeadYaws() = this.method_61488()
 /**
  * method_6875
  */
-fun WitherEntity.setInvulTimer(arg0: Int) = this.method_6875(arg0)
+fun WitherEntity.setInvulTimer(ticks: Int) = this.method_6875(ticks)
 /**
  * method_6882
  */
-fun WitherEntity.getTrackedEntityId(arg0: Int) = this.method_6882(arg0)
+fun WitherEntity.getTrackedEntityId(headIndex: Int) = this.method_6882(headIndex)
 /**
  * method_6884
  */
 fun WitherEntity.getInvulnerableTimer() = this.method_6884()
-/**
- * method_6883
- */
-fun KClass<WitherEntity>.canDestroy(arg0: BlockState) = WitherEntity.method_6883(arg0)
-/**
- * method_26904
- */
-fun KClass<WitherEntity>.createWitherAttributes() = WitherEntity.method_26904()
 /**
  * method_61487
  */

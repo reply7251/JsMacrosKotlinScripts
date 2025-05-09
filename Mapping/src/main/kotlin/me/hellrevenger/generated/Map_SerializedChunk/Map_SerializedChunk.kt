@@ -2,53 +2,13 @@ package me.hellrevenger.generated.Map_SerializedChunk
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_37664
- */
-val KClass<SerializedChunk>.BLOCK_LIGHT_KEY by aliasStatic(SerializedChunk::field_37664)
-/**
- * field_37662
- */
-val KClass<SerializedChunk>.IS_LIGHT_ON_KEY by aliasStatic(SerializedChunk::field_37662)
-/**
- * field_37660
- */
-val KClass<SerializedChunk>.Z_POS_KEY by aliasStatic(SerializedChunk::field_37660)
-/**
- * field_37663
- */
-val KClass<SerializedChunk>.SECTIONS_KEY by aliasStatic(SerializedChunk::field_37663)
-/**
- * field_37661
- */
-val KClass<SerializedChunk>.HEIGHTMAPS_KEY by aliasStatic(SerializedChunk::field_37661)
-/**
- * field_37665
- */
-val KClass<SerializedChunk>.SKY_LIGHT_KEY by aliasStatic(SerializedChunk::field_37665)
-/**
- * field_37659
- */
-val KClass<SerializedChunk>.X_POS_KEY by aliasStatic(SerializedChunk::field_37659)
-/**
- * method_61793
- */
-fun KClass<SerializedChunk>.fromChunk(arg0: ServerWorld, arg1: Chunk) = SerializedChunk.method_61793(arg0, arg1)
-/**
- * method_61794
- */
-fun KClass<SerializedChunk>.fromNbt(arg0: HeightLimitView, arg1: DynamicRegistryManager, arg2: NbtCompound) = SerializedChunk.method_61794(arg0, arg1, arg2)
-/**
- * method_12377
- */
-fun KClass<SerializedChunk>.getChunkType(arg0: NbtCompound) = SerializedChunk.method_12377(arg0)
-/**
  * method_12410
  */
 fun SerializedChunk.serialize() = this.method_12410()
 /**
  * method_12395
  */
-fun SerializedChunk.convert(arg0: ServerWorld, arg1: PointOfInterestStorage, arg2: StorageKey, arg3: ChunkPos) = this.method_12395(arg0, arg1, arg2, arg3)
+fun SerializedChunk.convert(world: ServerWorld, poiStorage: PointOfInterestStorage, key: StorageKey, expectedPos: ChunkPos) = this.method_12395(world, poiStorage, key, expectedPos)
 /**
  * comp_2949
  */

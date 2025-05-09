@@ -48,55 +48,47 @@ var ModelPart.zScale by alias(ModelPart::field_37940)
 /**
  * method_22699
  */
-fun ModelPart.render(arg0: MatrixStack, arg1: VertexConsumer, arg2: Int, arg3: Int, arg4: Int) = this.method_22699(arg0, arg1, arg2, arg3, arg4)
+fun ModelPart.render(matrices: MatrixStack, vertices: VertexConsumer, light: Int, overlay: Int, color: Int) = this.method_22699(matrices, vertices, light, overlay, color)
 /**
  * method_35745
  */
-fun ModelPart.forEachCuboid(arg0: MatrixStack, arg1: net.minecraft.class_630.class_6229) = this.method_35745(arg0, arg1)
+fun ModelPart.forEachCuboid(matrices: MatrixStack, consumer: net.minecraft.class_630.class_6229) = this.method_35745(matrices, consumer)
 /**
  * method_32086
  */
-fun ModelPart.getChild(arg0: String) = this.method_32086(arg0)
+fun ModelPart.getChild(name: String) = this.method_32086(name)
 /**
  * method_32087
  */
 fun ModelPart.isEmpty() = this.method_32087()
 /**
- * method_22698
- */
-fun ModelPart.render(arg0: MatrixStack, arg1: VertexConsumer, arg2: Int, arg3: Int) = this.method_22698(arg0, arg1, arg2, arg3)
-/**
  * method_17138
  */
-fun ModelPart.copyTransform(arg0: ModelPart) = this.method_17138(arg0)
+fun ModelPart.copyTransform(part: ModelPart) = this.method_17138(part)
 /**
  * method_22703
  */
-fun ModelPart.rotate(matrixStack: MatrixStack) = this.method_22703(matrixStack)
-/**
- * method_41922
- */
-fun ModelPart.rotate(arg0: Vector3f) = this.method_41922(arg0)
+fun ModelPart.rotate(matrices: MatrixStack) = this.method_22703(matrices)
 /**
  * method_41920
  */
-fun ModelPart.translate(arg0: Vector3f) = this.method_41920(arg0)
+fun ModelPart.translate(vec3f: Vector3f) = this.method_41920(vec3f)
 /**
  * method_41919
  */
-fun ModelPart.hasChild(arg0: String) = this.method_41919(arg0)
+fun ModelPart.hasChild(child: String) = this.method_41919(child)
 /**
  * method_22700
  */
-fun ModelPart.getRandomCuboid(arg0: Random) = this.method_22700(arg0)
+fun ModelPart.getRandomCuboid(random: Random) = this.method_22700(random)
 /**
  * method_33425
  */
-fun ModelPart.setAngles(arg0: Float, arg1: Float, arg2: Float) = this.method_33425(arg0, arg1, arg2)
+fun ModelPart.setAngles(pitch: Float, yaw: Float, roll: Float) = this.method_33425(pitch, yaw, roll)
 /**
  * method_41924
  */
-fun ModelPart.scale(arg0: Vector3f) = this.method_41924(arg0)
+fun ModelPart.scale(vec3f: Vector3f) = this.method_41924(vec3f)
 /**
  * method_32084
  */
@@ -110,22 +102,18 @@ fun ModelPart.traverse() = this.method_32088()
  */
 fun ModelPart.resetTransform() = this.method_41923()
 /**
- * method_62132
- */
-fun ModelPart.rotate(arg0: Quaternionf) = this.method_62132(arg0)
-/**
  * method_41921
  */
 fun ModelPart.getDefaultTransform() = this.method_41921()
 /**
  * method_32085
  */
-fun ModelPart.setTransform(arg0: ModelTransform) = this.method_32085(arg0)
+fun ModelPart.setTransform(rotationData: ModelTransform) = this.method_32085(rotationData)
 /**
  * method_41918
  */
-fun ModelPart.setDefaultTransform(arg0: ModelTransform) = this.method_41918(arg0)
+fun ModelPart.setDefaultTransform(transform: ModelTransform) = this.method_41918(transform)
 /**
  * method_2851
  */
-fun ModelPart.setPivot(arg0: Float, arg1: Float, arg2: Float) = this.method_2851(arg0, arg1, arg2)
+fun ModelPart.setPivot(x: Float, y: Float, z: Float) = this.method_2851(x, y, z)

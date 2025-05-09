@@ -26,33 +26,21 @@ val MapState.scale by alias(MapState::field_119)
  */
 val MapState.centerX by alias(MapState::field_116)
 /**
- * field_31831
- */
-val KClass<MapState>.MAX_SCALE by aliasStatic(MapState::field_31831)
-/**
- * field_33991
- */
-val KClass<MapState>.MAX_DECORATIONS by aliasStatic(MapState::field_33991)
-/**
  * method_102
  */
-fun MapState.update(arg0: PlayerEntity, arg1: ItemStack) = this.method_102(arg0, arg1)
-/**
- * method_52611
- */
-fun KClass<MapState>.getPersistentStateType() = MapState.method_52611()
+fun MapState.update(player: PlayerEntity, stack: ItemStack) = this.method_102(player, stack)
 /**
  * method_109
  */
-fun MapState.removeBanner(arg0: BlockView, arg1: Int, arg2: Int) = this.method_109(arg0, arg1, arg2)
+fun MapState.removeBanner(world: BlockView, x: Int, z: Int) = this.method_109(world, x, z)
 /**
  * method_101
  */
-fun MapState.getPlayerSyncData(arg0: PlayerEntity) = this.method_101(arg0)
+fun MapState.getPlayerSyncData(player: PlayerEntity) = this.method_101(player)
 /**
  * method_32370
  */
-fun MapState.setColor(arg0: Int, arg1: Int, arg2: Byte) = this.method_32370(arg0, arg1, arg2)
+fun MapState.setColor(x: Int, z: Int, color: Byte) = this.method_32370(x, z, color)
 /**
  * method_35503
  */
@@ -64,7 +52,7 @@ fun MapState.zoomOut() = this.method_32364()
 /**
  * method_100
  */
-fun MapState.getPlayerMarkerPacket(arg0: MapIdComponent, arg1: PlayerEntity) = this.method_100(arg0, arg1)
+fun MapState.getPlayerMarkerPacket(mapId: MapIdComponent, player: PlayerEntity) = this.method_100(mapId, player)
 /**
  * method_32372
  */
@@ -72,31 +60,19 @@ fun MapState.hasExplorationMapDecoration() = this.method_32372()
 /**
  * method_108
  */
-fun MapState.addBanner(arg0: WorldAccess, arg1: BlockPos) = this.method_108(arg0, arg1)
-/**
- * method_32362
- */
-fun KClass<MapState>.of(arg0: Byte, arg1: Boolean, arg2: RegistryKey<world_World>) = MapState.method_32362(arg0, arg1, arg2)
-/**
- * method_32363
- */
-fun KClass<MapState>.of(arg0: Double, arg1: Double, arg2: Byte, arg3: Boolean, arg4: Boolean, arg5: RegistryKey<world_World>) = MapState.method_32363(arg0, arg1, arg2, arg3, arg4, arg5)
+fun MapState.addBanner(world: WorldAccess, pos: BlockPos) = this.method_108(world, pos)
 /**
  * method_37343
  */
-fun MapState.decorationCountNotLessThan(arg0: Int) = this.method_37343(arg0)
-/**
- * method_110
- */
-fun KClass<MapState>.addDecorationsNbt(arg0: ItemStack, arg1: BlockPos, arg2: String, arg3: RegistryEntry<MapDecorationType>) = MapState.method_110(arg0, arg1, arg2, arg3)
+fun MapState.decorationCountNotLessThan(decorationCount: Int) = this.method_37343(decorationCount)
 /**
  * method_32369
  */
-fun MapState.replaceDecorations(arg0: MutableList<MapDecoration>) = this.method_32369(arg0)
+fun MapState.replaceDecorations(decorations: MutableList<MapDecoration>) = this.method_32369(decorations)
 /**
  * method_32365
  */
-fun MapState.putColor(arg0: Int, arg1: Int, arg2: Byte) = this.method_32365(arg0, arg1, arg2)
+fun MapState.putColor(x: Int, z: Int, color: Byte) = this.method_32365(x, z, color)
 /**
  * method_32373
  */
@@ -104,11 +80,7 @@ fun MapState.getDecorations() = this.method_32373()
 /**
  * method_104
  */
-fun MapState.removeFrame(arg0: BlockPos, arg1: Int) = this.method_104(arg0, arg1)
-/**
- * method_32371
- */
-fun KClass<MapState>.fromNbt(arg0: NbtCompound, arg1: net.minecraft.class_7225.class_7874) = MapState.method_32371(arg0, arg1)
+fun MapState.removeFrame(pos: BlockPos, id: Int) = this.method_104(pos, id)
 /**
  * method_32361
  */

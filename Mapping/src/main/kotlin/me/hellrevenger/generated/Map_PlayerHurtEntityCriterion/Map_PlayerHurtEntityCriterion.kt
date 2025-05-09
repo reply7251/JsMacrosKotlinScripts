@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9097
  */
-fun PlayerHurtEntityCriterion.trigger(arg0: ServerPlayerEntity, arg1: Entity, arg2: DamageSource, arg3: Float, arg4: Float, arg5: Boolean) = this.method_9097(arg0, arg1, arg2, arg3, arg4, arg5)
+fun PlayerHurtEntityCriterion.trigger(player: ServerPlayerEntity, entity: Entity, damage: DamageSource, dealt: Float, taken: Float, blocked: Boolean) = this.method_9097(player, entity, damage, dealt, taken, blocked)

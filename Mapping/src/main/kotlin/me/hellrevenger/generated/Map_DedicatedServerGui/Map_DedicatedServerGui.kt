@@ -4,11 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_16746
  */
-fun DedicatedServerGui.addStopTask(arg0: Runnable) = this.method_16746(arg0)
-/**
- * method_13969
- */
-fun KClass<DedicatedServerGui>.create(arg0: MinecraftDedicatedServer) = DedicatedServerGui.method_13969(arg0)
+fun DedicatedServerGui.addStopTask(task: Runnable) = this.method_16746(task)
 /**
  * method_13974
  */
@@ -16,7 +12,7 @@ fun DedicatedServerGui.start() = this.method_13974()
 /**
  * method_13970
  */
-fun DedicatedServerGui.appendToConsole(arg0: JTextArea, arg1: JScrollPane, arg2: String) = this.method_13970(arg0, arg1, arg2)
+fun DedicatedServerGui.appendToConsole(textArea: JTextArea, scrollPane: JScrollPane, message: String) = this.method_13970(textArea, scrollPane, message)
 /**
  * method_16750
  */

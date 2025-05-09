@@ -1,0 +1,9 @@
+package me.hellrevenger.generated.Map_LavaSubmergedBlockStructureProcessor
+import kotlin.reflect.*
+import me.hellrevenger.generated.*
+object LavaSubmergedBlockStructureProcessorKt {
+    /**
+     * field_25619
+     */
+    val INSTANCE by aliasStatic(LavaSubmergedBlockStructureProcessor::field_25619)
+}

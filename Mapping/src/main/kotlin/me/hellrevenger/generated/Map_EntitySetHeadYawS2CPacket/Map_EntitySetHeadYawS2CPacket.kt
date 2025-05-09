@@ -12,4 +12,4 @@ fun EntitySetHeadYawS2CPacket.getHeadYaw() = this.method_11787()
 /**
  * method_11786
  */
-fun EntitySetHeadYawS2CPacket.getEntity(arg0: world_World) = this.method_11786(arg0)
+fun EntitySetHeadYawS2CPacket.getEntity(world: world_World) = this.method_11786(world)

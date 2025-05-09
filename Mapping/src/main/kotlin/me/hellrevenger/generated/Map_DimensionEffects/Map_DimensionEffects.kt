@@ -4,15 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_28112
  */
-fun DimensionEffects.adjustFogColor(arg0: Vec3d, arg1: Float) = this.method_28112(arg0, arg1)
-/**
- * method_28111
- */
-fun KClass<DimensionEffects>.byDimensionType(arg0: DimensionType) = DimensionEffects.method_28111(arg0)
+fun DimensionEffects.adjustFogColor(color: Vec3d, sunHeight: Float) = this.method_28112(color, sunHeight)
 /**
  * method_62184
  */
-fun DimensionEffects.getSkyColor(arg0: Float) = this.method_62184(arg0)
+fun DimensionEffects.getSkyColor(skyAngle: Float) = this.method_62184(skyAngle)
 /**
  * method_29993
  */
@@ -24,7 +20,7 @@ fun DimensionEffects.getSkyType() = this.method_29992()
 /**
  * method_28110
  */
-fun DimensionEffects.useThickFog(arg0: Int, arg1: Int) = this.method_28110(arg0, arg1)
+fun DimensionEffects.useThickFog(camX: Int, camY: Int) = this.method_28110(camX, camY)
 /**
  * method_28108
  */
@@ -32,7 +28,7 @@ fun DimensionEffects.getCloudsHeight() = this.method_28108()
 /**
  * method_62183
  */
-fun DimensionEffects.isSunRisingOrSetting(arg0: Float) = this.method_62183(arg0)
+fun DimensionEffects.isSunRisingOrSetting(skyAngle: Float) = this.method_62183(skyAngle)
 /**
  * method_28114
  */

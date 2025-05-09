@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_14906
  */
-fun ServerStatHandler.parse(arg0: DataFixer, arg1: String) = this.method_14906(arg0, arg1)
+fun ServerStatHandler.parse(dataFixer: DataFixer, json: String) = this.method_14906(dataFixer, json)
 /**
  * method_14910
  */
-fun ServerStatHandler.sendStats(arg0: ServerPlayerEntity) = this.method_14910(arg0)
+fun ServerStatHandler.sendStats(player: ServerPlayerEntity) = this.method_14910(player)
 /**
  * method_14912
  */

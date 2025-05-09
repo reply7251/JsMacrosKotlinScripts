@@ -4,27 +4,23 @@ import me.hellrevenger.generated.*
 /**
  * method_20408
  */
-fun OptionListWidget.addAll(arg0: Array<SimpleOption<*>>) = this.method_20408(*arg0)
+fun OptionListWidget.addAll(options: Array<SimpleOption<*>>) = this.method_20408(*options)
 /**
  * method_29624
  */
-fun OptionListWidget.getHoveredWidget(arg0: Double, arg1: Double) = this.method_29624(arg0, arg1)
+fun OptionListWidget.getHoveredWidget(mouseX: Double, arg1: Double) = this.method_29624(mouseX, arg1)
 /**
  * method_20406
  */
-fun OptionListWidget.addSingleOptionEntry(arg0: SimpleOption<*>) = this.method_20406(arg0)
+fun OptionListWidget.addSingleOptionEntry(option: SimpleOption<*>) = this.method_20406(option)
 /**
  * method_20407
  */
-fun OptionListWidget.addWidgetEntry(arg0: ClickableWidget, arg1: ClickableWidget) = this.method_20407(arg0, arg1)
+fun OptionListWidget.addWidgetEntry(firstWidget: ClickableWidget, secondWidget: ClickableWidget) = this.method_20407(firstWidget, secondWidget)
 /**
  * method_31046
  */
-fun OptionListWidget.getWidgetFor(arg0: SimpleOption<*>) = this.method_31046(arg0)
-/**
- * method_58227
- */
-fun OptionListWidget.addAll(arg0: MutableList<ClickableWidget>) = this.method_58227(arg0)
+fun OptionListWidget.getWidgetFor(option: SimpleOption<*>) = this.method_31046(option)
 /**
  * method_59869
  */

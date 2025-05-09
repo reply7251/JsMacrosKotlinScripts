@@ -12,7 +12,7 @@ fun ReferencedModelsCollector.resolveAll() = this.method_62630()
 /**
  * method_65744
  */
-fun ReferencedModelsCollector.add(arg0: ResolvableModel) = this.method_65744(arg0)
+fun ReferencedModelsCollector.add(model: ResolvableModel) = this.method_65744(model)
 /**
  * method_65743
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_57622
  */
-fun PathContext.getNodeType(arg0: Int, arg1: Int, arg2: Int) = this.method_57622(arg0, arg1, arg2)
+fun PathContext.getNodeType(x: Int, y: Int, z: Int) = this.method_57622(x, y, z)
 /**
  * method_57621
  */
@@ -12,7 +12,7 @@ fun PathContext.getWorld() = this.method_57621()
 /**
  * method_57623
  */
-fun PathContext.getBlockState(arg0: BlockPos) = this.method_57623(arg0)
+fun PathContext.getBlockState(pos: BlockPos) = this.method_57623(pos)
 /**
  * method_57624
  */

@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_60770
  */
-fun Portal.createTeleportTarget(arg0: ServerWorld, arg1: Entity, arg2: BlockPos) = this.method_60770(arg0, arg1, arg2)
+fun Portal.createTeleportTarget(world: ServerWorld, entity: Entity, pos: BlockPos) = this.method_60770(world, entity, pos)
 /**
  * method_60772
  */
-fun Portal.getPortalDelay(arg0: ServerWorld, arg1: Entity) = this.method_60772(arg0, arg1)
+fun Portal.getPortalDelay(world: ServerWorld, entity: Entity) = this.method_60772(world, entity)
 /**
  * method_60778
  */

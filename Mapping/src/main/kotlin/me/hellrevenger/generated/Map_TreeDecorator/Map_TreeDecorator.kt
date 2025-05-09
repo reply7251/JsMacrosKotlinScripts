@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_23469
  */
-fun TreeDecorator.generate(arg0: net.minecraft.class_4662.class_7402) = this.method_23469(arg0)
+fun TreeDecorator.generate(generator: net.minecraft.class_4662.class_7402) = this.method_23469(generator)

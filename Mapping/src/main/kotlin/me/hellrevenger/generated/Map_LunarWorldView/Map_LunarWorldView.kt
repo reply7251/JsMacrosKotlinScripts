@@ -16,4 +16,4 @@ fun LunarWorldView.getMoonSize() = this.method_30272()
 /**
  * method_30274
  */
-fun LunarWorldView.getSkyAngle(arg0: Float) = this.method_30274(arg0)
+fun LunarWorldView.getSkyAngle(tickDelta: Float) = this.method_30274(tickDelta)

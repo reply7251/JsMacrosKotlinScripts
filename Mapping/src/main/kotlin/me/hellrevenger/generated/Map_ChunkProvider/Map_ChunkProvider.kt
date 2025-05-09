@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12247
  */
-fun ChunkProvider.onLightUpdate(arg0: LightType, arg1: ChunkSectionPos) = this.method_12247(arg0, arg1)
+fun ChunkProvider.onLightUpdate(type: LightType, pos: ChunkSectionPos) = this.method_12247(type, pos)
 /**
  * method_16399
  */
@@ -12,4 +12,4 @@ fun ChunkProvider.getWorld() = this.method_16399()
 /**
  * method_12246
  */
-fun ChunkProvider.getChunk(arg0: Int, arg1: Int) = this.method_12246(arg0, arg1)
+fun ChunkProvider.getChunk(chunkX: Int, chunkZ: Int) = this.method_12246(chunkX, chunkZ)

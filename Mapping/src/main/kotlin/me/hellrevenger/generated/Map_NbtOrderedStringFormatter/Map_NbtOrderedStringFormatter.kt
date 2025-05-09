@@ -8,4 +8,4 @@ fun NbtOrderedStringFormatter.joinPath() = this.method_32280()
 /**
  * method_32283
  */
-fun NbtOrderedStringFormatter.apply(arg0: NbtElement) = this.method_32283(arg0)
+fun NbtOrderedStringFormatter.apply(element: NbtElement) = this.method_32283(element)

@@ -17,7 +17,3 @@ fun EndCrystalEntityRenderer.updateRenderState(arg0: EndCrystalEntity, arg1: End
  * method_62416
  */
 fun EndCrystalEntityRenderer.createRenderState() = this.method_62416()
-/**
- * method_23155
- */
-fun KClass<EndCrystalEntityRenderer>.getYOffset(arg0: Float) = EndCrystalEntityRenderer.method_23155(arg0)

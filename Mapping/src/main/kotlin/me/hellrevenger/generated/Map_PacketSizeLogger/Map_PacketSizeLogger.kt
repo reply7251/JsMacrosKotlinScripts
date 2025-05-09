@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_53504
  */
-fun PacketSizeLogger.increment(arg0: Int) = this.method_53504(arg0)
+fun PacketSizeLogger.increment(bytes: Int) = this.method_53504(bytes)
 /**
  * method_53503
  */

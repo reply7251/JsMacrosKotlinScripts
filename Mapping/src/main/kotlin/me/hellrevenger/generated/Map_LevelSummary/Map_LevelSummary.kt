@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_LevelSummary
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_46832
- */
-val KClass<LevelSummary>.SELECT_WORLD_TEXT by aliasStatic(LevelSummary::field_46832)
-/**
  * method_56127
  */
 fun LevelSummary.isImmediatelyLoadable() = this.method_56127()

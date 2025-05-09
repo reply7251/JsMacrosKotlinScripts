@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_61938
  */
-fun InactivityFpsLimiter.setMaxFps(arg0: Int) = this.method_61938(arg0)
+fun InactivityFpsLimiter.setMaxFps(maxFps: Int) = this.method_61938(maxFps)
 /**
  * method_61937
  */

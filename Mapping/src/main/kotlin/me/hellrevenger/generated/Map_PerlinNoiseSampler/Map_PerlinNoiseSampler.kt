@@ -16,16 +16,12 @@ val PerlinNoiseSampler.originX by alias(PerlinNoiseSampler::field_16591)
 /**
  * method_33658
  */
-fun PerlinNoiseSampler.sample(arg0: Double, arg1: Double, arg2: Double) = this.method_33658(arg0, arg1, arg2)
+fun PerlinNoiseSampler.sample(x: Double, arg1: Double, y: Double) = this.method_33658(x, arg1, y)
 /**
  * method_39118
  */
-fun PerlinNoiseSampler.addDebugInfo(arg0: StringBuilder) = this.method_39118(arg0)
+fun PerlinNoiseSampler.addDebugInfo(info: StringBuilder) = this.method_39118(info)
 /**
  * method_35477
  */
-fun PerlinNoiseSampler.sampleDerivative(arg0: Double, arg1: Double, arg2: Double, arg3: DoubleArray) = this.method_35477(arg0, arg1, arg2, arg3)
-/**
- * method_16447
- */
-fun PerlinNoiseSampler.sample(arg0: Double, arg1: Double, arg2: Double, arg3: Double, arg4: Double) = this.method_16447(arg0, arg1, arg2, arg3, arg4)
+fun PerlinNoiseSampler.sampleDerivative(x: Double, arg1: Double, y: Double, arg3: DoubleArray) = this.method_35477(x, arg1, y, arg3)

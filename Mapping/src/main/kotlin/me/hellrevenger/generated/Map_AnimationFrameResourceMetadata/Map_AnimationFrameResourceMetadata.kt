@@ -12,4 +12,4 @@ fun AnimationFrameResourceMetadata.index() = this.comp_3451()
 /**
  * method_4691
  */
-fun AnimationFrameResourceMetadata.getTime(arg0: Int) = this.method_4691(arg0)
+fun AnimationFrameResourceMetadata.getTime(defaultTime: Int) = this.method_4691(defaultTime)
