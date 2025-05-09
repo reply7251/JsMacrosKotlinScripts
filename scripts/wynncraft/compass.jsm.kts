@@ -3,8 +3,7 @@
 import com.wynntils.models.marker.MarkerModel
 import com.wynntils.utils.mc.type.Location
 import com.wynntils.utils.wynn.LocationUtils
-import me.hellrevenger.generated.Map_SelectionManager.getClipboard
-import me.hellrevenger.generated.SelectionManager
+import me.hellrevenger.generated.Map_SelectionManager.SelectionManagerKt
 import xyz.wagyourtail.jsmacros.client.api.helper.world.BlockPosHelper
 
 if(!World.isWorldLoaded) {
@@ -15,7 +14,7 @@ Chat.commandManager.unregisterCommand("/compass")
 
 Chat.commandManager.createCommandBuilder("/compass")
     .literalArg("clipboard").executes(JavaWrapper.methodToJava { ctx ->
-        SelectionManager::class.getClipboard(Client.minecraft).split("\n\r*\n*".toRegex()).forEach {
+        SelectionManagerKt.getClipboard(Client.minecraft).split("\n\r*\n*".toRegex()).forEach {
             LocationUtils.parseFromString(it).ifPresent {
                 MarkerModel.USER_WAYPOINTS_PROVIDER.addLocation(it, null)
             }

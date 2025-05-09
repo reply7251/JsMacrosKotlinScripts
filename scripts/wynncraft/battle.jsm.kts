@@ -27,8 +27,7 @@ import me.hellrevenger.generated.Map_MinecraftClient.getRenderTickCounter
 import me.hellrevenger.generated.Map_MinecraftClient.player
 import me.hellrevenger.generated.Map_PlayerInput.*
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
-import me.hellrevenger.generated.Map_StatusEffects.BLINDNESS
-import me.hellrevenger.generated.Map_StatusEffects.DARKNESS
+import me.hellrevenger.generated.Map_StatusEffects.StatusEffectsKt
 import me.hellrevenger.generated.PlayerInput
 import me.hellrevenger.generated.StatusEffects
 import me.hellrevenger.library.api.KtGlobals
@@ -476,8 +475,8 @@ open class WynnClass: HasBind {
 
     fun removeBlind() {
         val player = Player.player?.raw ?: return
-        player.removeStatusEffectInternal(StatusEffects::class.BLINDNESS)
-        player.removeStatusEffectInternal(StatusEffects::class.DARKNESS)
+        player.removeStatusEffectInternal(StatusEffectsKt.BLINDNESS)
+        player.removeStatusEffectInternal(StatusEffectsKt.DARKNESS)
     }
     
     open fun checkManual(): Boolean {

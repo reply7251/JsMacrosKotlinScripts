@@ -23,7 +23,7 @@ import com.wynntils.utils.mc.type.Location
 import me.hellrevenger.generated.BlockPos
 import me.hellrevenger.generated.ChunkPos
 import me.hellrevenger.generated.Input
-import me.hellrevenger.generated.Map_BlockPos.ofFloored
+import me.hellrevenger.generated.Map_BlockPos.BlockPosKt
 import me.hellrevenger.generated.Map_ChunkPos.toLong
 import me.hellrevenger.generated.Map_ClientPlayerEntity.input
 import me.hellrevenger.generated.Map_Input.movementForward
@@ -59,7 +59,7 @@ fun BlockPosHelper.getCenter(): Pos3D = toPos3D().add(0.5, 0.5, 0.5)
 fun Pos3D.getRaw() = Vec3d(x, y, z)
 fun Pos3D.distanceTo(another: Pos3D) = toVector(another).magnitude
 fun Pos3D.distanceToIgnoreY(another: Pos3D, yMulti: Double = 0.0) = toVector(another).multiply(1.0,yMulti,1.0,1.0,yMulti,1.0).magnitude
-fun Pos3D.toBlockPos() = BlockPosHelper(BlockPos::class.ofFloored(getRaw()))
+fun Pos3D.toBlockPos() = BlockPosHelper(BlockPosKt.ofFloored(getRaw()))
 fun <T> Iterable<T>.findCloset(callback: (T) -> Double): T? {
     var nearest: T? = null
     var nearestDistance = Double.MAX_VALUE

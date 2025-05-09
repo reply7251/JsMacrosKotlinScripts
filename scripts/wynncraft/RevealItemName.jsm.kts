@@ -1,6 +1,6 @@
 
 import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventEntityLoad
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.EntityHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 
