@@ -35,6 +35,10 @@ object PacketByteBufKt {
      */
     fun writeChunkPos(buf: ByteBuf, pos: ChunkPos) = PacketByteBuf.method_64263(buf, pos)
     /**
+     * method_56343
+     */
+    fun readQuaternionf(buf: ByteBuf) = PacketByteBuf.method_56343(buf)
+    /**
      * method_56337
      */
     fun writeUuid(buf: ByteBuf, uuid: UUID) = PacketByteBuf.method_56337(buf, uuid)
@@ -42,6 +46,18 @@ object PacketByteBufKt {
      * method_56344
      */
     fun readUuid(buf: ByteBuf) = PacketByteBuf.method_56344(buf)
+    /**
+     * method_56345
+     */
+    fun readNbt(buf: ByteBuf) = PacketByteBuf.method_56345(buf)
+    /**
+     * method_56336
+     */
+    fun writeBlockPos(buf: ByteBuf, pos: BlockPos) = PacketByteBuf.method_56336(buf, pos)
+    /**
+     * method_62783
+     */
+    fun writeVec3d(buf: ByteBuf, vec: Vec3d) = PacketByteBuf.method_62783(buf, vec)
     /**
      * method_56893
      */
@@ -55,9 +71,21 @@ object PacketByteBufKt {
      */
     fun <T>getMaxValidator(applier: IntFunction<T>, max: Int) = PacketByteBuf.method_37453<T>(applier, max)
     /**
+     * method_56890
+     */
+    fun readByteArray(buf: ByteBuf) = PacketByteBuf.method_56890(buf)
+    /**
+     * method_56894
+     */
+    fun writeByteArray(buf: ByteBuf, array: ByteArray) = PacketByteBuf.method_56894(buf, array)
+    /**
      * method_64264
      */
     fun readChunkPos(buf: ByteBuf) = PacketByteBuf.method_64264(buf)
+    /**
+     * method_56340
+     */
+    fun readNbt(buf: ByteBuf, sizeTracker: NbtSizeTracker) = PacketByteBuf.method_56340(buf, sizeTracker)
     /**
      * method_62784
      */
@@ -66,4 +94,16 @@ object PacketByteBufKt {
      * method_56335
      */
     fun readBlockPos(buf: ByteBuf) = PacketByteBuf.method_56335(buf)
+    /**
+     * method_56891
+     */
+    fun readByteArray(buf: ByteBuf, maxSize: Int) = PacketByteBuf.method_56891(buf, maxSize)
+    /**
+     * method_56338
+     */
+    fun writeQuaternionf(buf: ByteBuf, quaternion: Quaternionf) = PacketByteBuf.method_56338(buf, quaternion)
+    /**
+     * method_56342
+     */
+    fun readVector3f(buf: ByteBuf) = PacketByteBuf.method_56342(buf)
 }

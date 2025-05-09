@@ -22,4 +22,8 @@ object StructurePoolsKt {
      * method_46844
      */
     fun ofVanilla(id: String) = StructurePools.method_46844(id)
+    /**
+     * method_64955
+     */
+    fun of(id: Identifier) = StructurePools.method_64955(id)
 }

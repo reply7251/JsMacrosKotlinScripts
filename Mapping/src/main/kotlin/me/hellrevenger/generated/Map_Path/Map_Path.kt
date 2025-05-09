@@ -89,3 +89,7 @@ fun Path.getNode(index: Int) = this.method_40(index)
  * method_52605
  */
 fun Path.copy() = this.method_52605()
+/**
+ * method_47
+ */
+fun Path.getNodePosition(entity: Entity, index: Int) = this.method_47(entity, index)

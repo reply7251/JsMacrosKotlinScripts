@@ -78,6 +78,14 @@ fun <T>EntityType<T>.getDimensions() where T: Entity = this.method_18386()
  */
 fun <T>EntityType<T>.getMaxTrackDistance() where T: Entity = this.method_18387()
 /**
+ * method_47821
+ */
+fun <T>EntityType<T>.spawn(world: ServerWorld, pos: BlockPos, reason: SpawnReason) where T: Entity = this.method_47821(world, pos, reason)
+/**
+ * method_5883
+ */
+fun <T>EntityType<T>.create(world: world_World, reason: SpawnReason) where T: Entity = this.method_5883(world, reason)
+/**
  * method_35050
  */
 fun <T>EntityType<T>.getUntranslatedName() where T: Entity = this.method_35050()
@@ -85,6 +93,10 @@ fun <T>EntityType<T>.getUntranslatedName() where T: Entity = this.method_35050()
  * method_5893
  */
 fun <T>EntityType<T>.isSaveable() where T: Entity = this.method_5893()
+/**
+ * method_20210
+ */
+fun <T>EntityType<T>.isIn(tag: TagKey<EntityType<*>>) where T: Entity = this.method_20210(tag)
 /**
  * method_18388
  */

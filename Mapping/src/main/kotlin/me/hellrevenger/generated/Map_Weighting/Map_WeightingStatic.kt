@@ -11,6 +11,10 @@ object WeightingKt {
      */
     fun <T>getRandom(random: Random, pool: MutableList<T>) where T: Weighted = Weighting.method_34986<T>(random, pool)
     /**
+     * method_34987
+     */
+    fun <T>getRandom(random: Random, pool: MutableList<T>, totalWeight: Int) where T: Weighted = Weighting.method_34987<T>(random, pool, totalWeight)
+    /**
      * method_34984
      */
     fun getWeightSum(pool: MutableList<out Weighted>) = Weighting.method_34984(pool)

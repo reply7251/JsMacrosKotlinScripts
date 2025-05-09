@@ -26,6 +26,10 @@ fun <K, V>ServerConfigList<K, V>.remove(entry: ServerConfigEntry<K>) where V: Se
  */
 fun <K, V>ServerConfigList<K, V>.save() where V: ServerConfigEntry<K> = this.method_14629()
 /**
+ * method_14635
+ */
+fun <K, V>ServerConfigList<K, V>.remove(key: K) where V: ServerConfigEntry<K> = this.method_14635(key)
+/**
  * method_14633
  */
 fun <K, V>ServerConfigList<K, V>.add(entry: V) where V: ServerConfigEntry<K> = this.method_14633(entry)

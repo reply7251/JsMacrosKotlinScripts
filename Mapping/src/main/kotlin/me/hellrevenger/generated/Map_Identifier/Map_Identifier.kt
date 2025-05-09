@@ -34,6 +34,18 @@ fun Identifier.getPath() = this.method_12832()
  */
 fun Identifier.toTranslationKey(prefix: String, suffix: String) = this.method_48747(prefix, suffix)
 /**
+ * method_45136
+ */
+fun Identifier.withPath(path: String) = this.method_45136(path)
+/**
+ * method_42094
+ */
+fun Identifier.toTranslationKey() = this.method_42094()
+/**
+ * method_42093
+ */
+fun Identifier.toTranslationKey(prefix: String) = this.method_42093(prefix)
+/**
  * method_36181
  */
 fun Identifier.toUnderscoreSeparatedString() = this.method_36181()

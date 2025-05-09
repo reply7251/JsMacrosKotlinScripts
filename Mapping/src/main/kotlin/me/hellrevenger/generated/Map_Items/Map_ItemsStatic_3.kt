@@ -1450,4 +1450,48 @@ object ItemsKt_3 {
      * method_63748
      */
     fun register(block: Block, factory: BiFunction<Block, net.minecraft.class_1792.class_1793, Item>, settings: net.minecraft.class_1792.class_1793) = Items.method_63748(block, factory, settings)
+    /**
+     * method_7991
+     */
+    fun register(id: String, settings: net.minecraft.class_1792.class_1793) = Items.method_7991(id, settings)
+    /**
+     * method_63750
+     */
+    fun register(id: String, factory: function_Function<net.minecraft.class_1792.class_1793, Item>, settings: net.minecraft.class_1792.class_1793) = Items.method_63750(id, factory, settings)
+    /**
+     * method_7993
+     */
+    fun register(block: Block, factory: BiFunction<Block, net.minecraft.class_1792.class_1793, Item>) = Items.method_7993(block, factory)
+    /**
+     * method_7989
+     */
+    fun register(block: Block) = Items.method_7989(block)
+    /**
+     * method_7992
+     */
+    fun register(block: Block, settings: net.minecraft.class_1792.class_1793) = Items.method_7992(block, settings)
+    /**
+     * method_7990
+     */
+    fun register(id: String) = Items.method_7990(id)
+    /**
+     * method_63747
+     */
+    fun register(key: RegistryKey<Item>, factory: function_Function<net.minecraft.class_1792.class_1793, Item>) = Items.method_63747(key, factory)
+    /**
+     * method_35220
+     */
+    fun register(block: Block, blocks: Array<Block>) = Items.method_35220(block, *blocks)
+    /**
+     * method_51348
+     */
+    fun register(key: RegistryKey<Item>, factory: function_Function<net.minecraft.class_1792.class_1793, Item>, settings: net.minecraft.class_1792.class_1793) = Items.method_51348(key, factory, settings)
+    /**
+     * method_58096
+     */
+    fun register(block: Block, settingsOperator: UnaryOperator<net.minecraft.class_1792.class_1793>) = Items.method_58096(block, settingsOperator)
+    /**
+     * method_63749
+     */
+    fun register(id: String, factory: function_Function<net.minecraft.class_1792.class_1793, Item>) = Items.method_63749(id, factory)
 }

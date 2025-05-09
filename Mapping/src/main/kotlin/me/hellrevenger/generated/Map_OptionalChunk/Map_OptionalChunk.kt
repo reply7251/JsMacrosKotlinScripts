@@ -2,6 +2,10 @@ package me.hellrevenger.generated.Map_OptionalChunk
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
+ * method_57130
+ */
+fun <T>OptionalChunk<T>.orElse(other: T) = this.method_57130(other)
+/**
  * method_57122
  */
 fun <T>OptionalChunk<T>.isPresent() = this.method_57122()

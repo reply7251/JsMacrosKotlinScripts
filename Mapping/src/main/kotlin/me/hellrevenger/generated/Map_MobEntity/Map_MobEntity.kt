@@ -74,6 +74,10 @@ fun MobEntity.canSpawn(world: WorldView) = this.method_5957(world)
  */
 fun MobEntity.clearGoals(predicate: Predicate<Goal>) = this.method_47825(predicate)
 /**
+ * method_18407
+ */
+fun MobEntity.isInWalkTargetRange(pos: BlockPos) = this.method_18407(pos)
+/**
  * method_63635
  */
 fun MobEntity.getArmorDropChances() = this.method_63635()
@@ -142,6 +146,10 @@ fun MobEntity.onFinishPathfinding() = this.method_51503()
  */
 fun MobEntity.isAttacking() = this.method_6510()
 /**
+ * method_29243
+ */
+fun <T>MobEntity.convertTo(entityType: EntityType<T>, context: EntityConversionContext, finalizer: net.minecraft.class_10179.class_10180<T>) where T: MobEntity = this.method_29243<T>(entityType, context, finalizer)
+/**
  * method_5985
  */
 fun MobEntity.getVisibilityCache() = this.method_5985()
@@ -190,6 +198,10 @@ fun MobEntity.canGather(world: ServerWorld, stack: ItemStack) = this.method_2082
  */
 fun MobEntity.getLimitPerChunk() = this.method_5945()
 /**
+ * method_59665
+ */
+fun MobEntity.setEquipmentFromTable(lootTable: RegistryKey<LootTable>, slotDropChances: Map<EquipmentSlot, Float>) = this.method_59665(lootTable, slotDropChances)
+/**
  * method_5952
  */
 fun MobEntity.setCanPickUpLoot(canPickUpLoot: Boolean) = this.method_5952(canPickUpLoot)
@@ -217,6 +229,10 @@ fun MobEntity.prefersNewDamageableItem(newStack: ItemStack, oldStack: ItemStack)
  * method_60973
  */
 fun MobEntity.dropAllEquipment(world: ServerWorld) = this.method_60973(world)
+/**
+ * method_5979
+ */
+fun MobEntity.canSpawn(world: WorldAccess, spawnReason: SpawnReason) = this.method_5979(world, spawnReason)
 /**
  * method_5980
  */

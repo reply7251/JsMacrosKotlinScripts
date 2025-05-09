@@ -34,6 +34,10 @@ fun LootableInventory.generateLoot(player: PlayerEntity) = this.method_54873(pla
  */
 fun LootableInventory.getWorld() = this.method_10997()
 /**
+ * method_54867
+ */
+fun LootableInventory.setLootTable(lootTableId: RegistryKey<LootTable>, lootTableSeed: Long) = this.method_54867(lootTableId, lootTableSeed)
+/**
  * method_54866
  */
 fun LootableInventory.setLootTableSeed(lootTableSeed: Long) = this.method_54866(lootTableSeed)

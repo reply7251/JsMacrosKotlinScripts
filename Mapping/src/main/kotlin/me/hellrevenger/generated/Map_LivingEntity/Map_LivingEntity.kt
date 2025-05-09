@@ -330,6 +330,10 @@ fun LivingEntity.onDeath(damageSource: DamageSource) = this.method_6078(damageSo
  */
 fun LivingEntity.getFallSounds() = this.method_39760()
 /**
+ * method_18395
+ */
+fun LivingEntity.canTarget(target: LivingEntity) = this.method_18395(target)
+/**
  * method_6100
  */
 fun LivingEntity.setJumping(jumping: Boolean) = this.method_6100(jumping)
@@ -417,6 +421,10 @@ fun LivingEntity.getSleepingPosition() = this.method_18398()
  * method_6039
  */
 fun LivingEntity.isBlocking() = this.method_6039()
+/**
+ * method_6104
+ */
+fun LivingEntity.swingHand(hand: Hand) = this.method_6104(hand)
 /**
  * method_6019
  */
@@ -578,6 +586,10 @@ fun LivingEntity.canSee(entity: Entity) = this.method_6057(entity)
  */
 fun LivingEntity.getGlidingTicks() = this.method_6003()
 /**
+ * method_24518
+ */
+fun LivingEntity.isHolding(item: Item) = this.method_24518(item)
+/**
  * method_6112
  */
 fun LivingEntity.getStatusEffect(effect: RegistryEntry<StatusEffect>) = this.method_6112(effect)
@@ -630,6 +642,10 @@ fun LivingEntity.onEquipStack(slot: EquipmentSlot, oldStack: ItemStack, newStack
  */
 fun LivingEntity.getActiveItem() = this.method_6030()
 /**
+ * method_64618
+ */
+fun LivingEntity.canSee(entity: Entity, shapeType: net.minecraft.class_3959.class_3960, fluidHandling: net.minecraft.class_3959.class_242, entityY: Double) = this.method_64618(entity, shapeType, fluidHandling, entityY)
+/**
  * method_37416
  */
 fun LivingEntity.getJumpBoostVelocityModifier() = this.method_37416()
@@ -657,6 +673,10 @@ fun LivingEntity.getLastAttackedTime() = this.method_6117()
  * method_6128
  */
 fun LivingEntity.isGliding() = this.method_6128()
+/**
+ * method_6092
+ */
+fun LivingEntity.addStatusEffect(effect: StatusEffectInstance) = this.method_6092(effect)
 /**
  * method_36549
  */

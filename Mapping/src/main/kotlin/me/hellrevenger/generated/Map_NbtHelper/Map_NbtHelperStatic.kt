@@ -15,6 +15,10 @@ object NbtHelperKt {
      */
     fun toFormattedString(nbt: NbtElement) = NbtHelper.method_36118(nbt)
     /**
+     * method_36117
+     */
+    fun toFormattedString(nbt: NbtElement, withArrayContents: Boolean) = NbtHelper.method_36117(nbt, withArrayContents)
+    /**
      * method_10691
      */
     fun toBlockPos(nbt: NbtCompound, key: String) = NbtHelper.method_10691(nbt, key)
@@ -46,6 +50,10 @@ object NbtHelperKt {
      * method_25929
      */
     fun fromUuid(uuid: UUID) = NbtHelper.method_25929(uuid)
+    /**
+     * method_48308
+     */
+    fun putDataVersion(nbt: NbtCompound, dataVersion: Int) = NbtHelper.method_48308(nbt, dataVersion)
     /**
      * method_25930
      */

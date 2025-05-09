@@ -14,6 +14,10 @@ fun model_Model.getLayer(texture: Identifier) = this.method_23500(texture)
  */
 fun model_Model.render(matrices: MatrixStack, vertices: VertexConsumer, light: Int, overlay: Int) = this.method_60879(matrices, vertices, light, overlay)
 /**
+ * method_62100
+ */
+fun model_Model.render(matrices: MatrixStack, vertices: VertexConsumer, light: Int, overlay: Int, color: Int) = this.method_62100(matrices, vertices, light, overlay, color)
+/**
  * method_63512
  */
 fun model_Model.getRootPart() = this.method_63512()

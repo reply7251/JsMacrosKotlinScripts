@@ -54,6 +54,10 @@ fun PointOfInterestStorage.getInSquare(typePredicate: Predicate<RegistryEntry<Po
  */
 fun PointOfInterestStorage.getPosition(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, positionPredicate: Predicate<BlockPos>, occupationStatus: net.minecraft.class_4153.class_4155, pos: BlockPos, radius: Int, random: Random) = this.method_20005(typePredicate, positionPredicate, occupationStatus, pos, radius, random)
 /**
+ * method_34712
+ */
+fun PointOfInterestStorage.getNearestPosition(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, posPredicate: Predicate<BlockPos>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_34712(typePredicate, posPredicate, pos, radius, occupationStatus)
+/**
  * method_19116
  */
 fun PointOfInterestStorage.test(pos: BlockPos, predicate: Predicate<RegistryEntry<PointOfInterestType>>) = this.method_19116(pos, predicate)
@@ -61,6 +65,10 @@ fun PointOfInterestStorage.test(pos: BlockPos, predicate: Predicate<RegistryEntr
  * method_35155
  */
 fun PointOfInterestStorage.getFreeTickets(pos: BlockPos) = this.method_35155(pos)
+/**
+ * method_19127
+ */
+fun PointOfInterestStorage.getPosition(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, posPredicate: Predicate<BlockPos>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_19127(typePredicate, posPredicate, pos, radius, occupationStatus)
 /**
  * method_19510
  */
@@ -77,6 +85,10 @@ fun PointOfInterestStorage.getInChunk(typePredicate: Predicate<RegistryEntry<Poi
  * method_19115
  */
 fun PointOfInterestStorage.add(pos: BlockPos, type: RegistryEntry<PointOfInterestType>) = this.method_19115(pos, type)
+/**
+ * method_19126
+ */
+fun PointOfInterestStorage.getPosition(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, posPredicate: BiPredicate<RegistryEntry<PointOfInterestType>, BlockPos>, pos: BlockPos, radius: Int) = this.method_19126(typePredicate, posPredicate, pos, radius)
 /**
  * method_43983
  */

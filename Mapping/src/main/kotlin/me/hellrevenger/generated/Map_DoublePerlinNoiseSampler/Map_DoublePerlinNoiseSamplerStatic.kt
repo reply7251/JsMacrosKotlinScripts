@@ -10,4 +10,8 @@ object DoublePerlinNoiseSamplerKt {
      * method_31927
      */
     fun create(random: Random, offset: Int, octaves: DoubleArray) = DoublePerlinNoiseSampler.method_31927(random, offset, *octaves)
+    /**
+     * method_38476
+     */
+    fun create(random: Random, parameters: net.minecraft.class_5216.class_5487) = DoublePerlinNoiseSampler.method_38476(random, parameters)
 }

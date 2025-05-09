@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun predicate_BlockPredicate.test(pos: CachedBlockPosition) = this.method_57147(pos)
 /**
+ * method_22454
+ */
+fun predicate_BlockPredicate.test(world: ServerWorld, pos: BlockPos) = this.method_22454(world, pos)
+/**
  * comp_1733
  */
 fun predicate_BlockPredicate.state() = this.comp_1733()

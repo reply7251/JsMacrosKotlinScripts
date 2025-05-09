@@ -30,6 +30,10 @@ fun NbtElement.doAccept(visitor: NbtScanner) = this.method_39850(visitor)
  */
 fun NbtElement.write(output: io_DataOutput) = this.method_10713(output)
 /**
+ * method_32289
+ */
+fun NbtElement.accept(visitor: NbtElementVisitor) = this.method_32289(visitor)
+/**
  * method_47988
  */
 fun NbtElement.getSizeInBytes() = this.method_47988()

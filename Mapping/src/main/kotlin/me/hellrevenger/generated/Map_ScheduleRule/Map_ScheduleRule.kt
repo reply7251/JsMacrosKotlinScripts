@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun ScheduleRule.add(entries: Collection<ScheduleRuleEntry>) = this.method_35215(entries)
 /**
+ * method_19227
+ */
+fun ScheduleRule.add(startTime: Int, priority: Float) = this.method_19227(startTime, priority)
+/**
  * method_35214
  */
 fun ScheduleRule.getEntries() = this.method_35214()

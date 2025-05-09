@@ -55,6 +55,14 @@ object VoxelShapesKt {
      */
     fun unionCoversFullCube(one: VoxelShape, two: VoxelShape) = VoxelShapes.method_20713(one, two)
     /**
+     * method_1084
+     */
+    fun union(first: VoxelShape, second: VoxelShape) = VoxelShapes.method_1084(first, second)
+    /**
+     * method_1078
+     */
+    fun cuboid(box: Box) = VoxelShapes.method_1078(box)
+    /**
      * method_1083
      */
     fun isSideCovered(shape: VoxelShape, neighbor: VoxelShape, direction: Direction) = VoxelShapes.method_1083(shape, neighbor, direction)

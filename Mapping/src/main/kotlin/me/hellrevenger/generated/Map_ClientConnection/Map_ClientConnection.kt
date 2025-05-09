@@ -58,6 +58,10 @@ fun ClientConnection.flush() = this.method_52915()
  */
 fun ClientConnection.transitionOutbound(newState: NetworkState<*>) = this.method_56329(newState)
 /**
+ * method_10747
+ */
+fun ClientConnection.disconnect(disconnectReason: Text) = this.method_10747(disconnectReason)
+/**
  * method_52905
  */
 fun ClientConnection.submit(task: Consumer<ClientConnection>) = this.method_52905(task)
@@ -74,6 +78,14 @@ fun ClientConnection.setInitialPacketListener(packetListener: PacketListener) = 
  */
 fun ClientConnection.handleDisconnection() = this.method_10768()
 /**
+ * method_56326
+ */
+fun <S, C>ClientConnection.connect(address: String, port: Int, outboundState: NetworkState<S>, inboundState: NetworkState<C>, prePlayStateListener: C, transfer: Boolean) where S: ServerPacketListener, C: ClientPacketListener = this.method_56326<S, C>(address, port, outboundState, inboundState, prePlayStateListener, transfer)
+/**
+ * method_10743
+ */
+fun ClientConnection.send(packet: Packet<*>) = this.method_10743(packet)
+/**
  * method_53859
  */
 fun ClientConnection.addFlowControlHandler(pipeline: ChannelPipeline) = this.method_53859(pipeline)
@@ -82,6 +94,10 @@ fun ClientConnection.addFlowControlHandler(pipeline: ChannelPipeline) = this.met
  */
 fun ClientConnection.setupEncryption(decryptionCipher: Cipher, encryptionCipher: Cipher) = this.method_10746(decryptionCipher, encryptionCipher)
 /**
+ * method_52903
+ */
+fun ClientConnection.connect(address: String, port: Int, listener: ClientQueryPacketListener) = this.method_52903(address, port, listener)
+/**
  * method_10760
  */
 fun ClientConnection.setCompressionThreshold(compressionThreshold: Int, rejectsBadPackets: Boolean) = this.method_10760(compressionThreshold, rejectsBadPackets)
@@ -89,6 +105,10 @@ fun ClientConnection.setCompressionThreshold(compressionThreshold: Int, rejectsB
  * method_10762
  */
 fun ClientConnection.getAveragePacketsReceived() = this.method_10762()
+/**
+ * method_52906
+ */
+fun ClientConnection.send(packet: Packet<*>, callbacks: PacketCallbacks, flush: Boolean) = this.method_52906(packet, callbacks, flush)
 /**
  * method_36122
  */

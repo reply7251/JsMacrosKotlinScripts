@@ -26,6 +26,10 @@ fun AdvancementManager.addAll(advancements: Collection<AdvancementEntry>) = this
  */
 fun AdvancementManager.getAdvancements() = this.method_53693()
 /**
+ * method_716
+ */
+fun AdvancementManager.get(id: Identifier) = this.method_716(id)
+/**
  * method_717
  */
 fun AdvancementManager.setListener(listener: net.minecraft.class_163.class_164) = this.method_717(listener)

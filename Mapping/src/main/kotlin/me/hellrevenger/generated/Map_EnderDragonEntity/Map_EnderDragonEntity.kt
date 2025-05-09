@@ -74,6 +74,10 @@ fun EnderDragonEntity.getFight() = this.method_6829()
  */
 fun EnderDragonEntity.getNearestPathNodeIndex(x: Double, arg1: Double, y: Double) = this.method_6822(x, arg1, y)
 /**
+ * method_6818
+ */
+fun EnderDragonEntity.getNearestPathNodeIndex() = this.method_6818()
+/**
  * method_5690
  */
 fun EnderDragonEntity.getBodyParts() = this.method_5690()

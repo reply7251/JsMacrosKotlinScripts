@@ -26,6 +26,10 @@ fun VoxelSet.getSize(axis: net.minecraft.class_2350.class_2351) = this.method_10
  */
 fun VoxelSet.getEndingAxisCoord(axis: net.minecraft.class_2350.class_2351, from: Int, to: Int) = this.method_1058(axis, from, to)
 /**
+ * method_1062
+ */
+fun VoxelSet.inBoundsAndContains(cycle: AxisCycleDirection, x: Int, y: Int, z: Int) = this.method_1062(cycle, x, y, z)
+/**
  * method_1049
  */
 fun VoxelSet.set(x: Int, y: Int, z: Int) = this.method_1049(x, y, z)
@@ -45,6 +49,10 @@ fun VoxelSet.forEachDirection(consumer: net.minecraft.class_251.class_252) = thi
  * method_1057
  */
 fun VoxelSet.contains(cycle: AxisCycleDirection, x: Int, y: Int, z: Int) = this.method_1057(cycle, x, y, z)
+/**
+ * method_1063
+ */
+fun VoxelSet.contains(x: Int, y: Int, z: Int) = this.method_1063(x, y, z)
 /**
  * method_1047
  */

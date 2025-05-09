@@ -18,6 +18,10 @@ fun SaddledComponent.writeNbt(nbt: NbtCompound) = this.method_26309(nbt)
  */
 fun SaddledComponent.boost() = this.method_26307()
 /**
+ * method_26308
+ */
+fun SaddledComponent.boost(random: Random) = this.method_26308(random)
+/**
  * method_49478
  */
 fun SaddledComponent.tickBoost() = this.method_49478()

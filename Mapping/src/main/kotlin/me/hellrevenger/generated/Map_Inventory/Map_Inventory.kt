@@ -30,6 +30,14 @@ fun Inventory.count(item: Item) = this.method_18861(item)
  */
 fun Inventory.containsAny(items: Set<Item>) = this.method_18862(items)
 /**
+ * method_5443
+ */
+fun Inventory.canPlayerUse(player: PlayerEntity) = this.method_5443(player)
+/**
+ * method_43256
+ */
+fun Inventory.containsAny(predicate: Predicate<ItemStack>) = this.method_43256(predicate)
+/**
  * method_5439
  */
 fun Inventory.size() = this.method_5439()
@@ -53,6 +61,10 @@ fun Inventory.getMaxCountPerStack() = this.method_5444()
  * method_5437
  */
 fun Inventory.isValid(slot: Int, stack: ItemStack) = this.method_5437(slot, stack)
+/**
+ * method_5441
+ */
+fun Inventory.removeStack(slot: Int) = this.method_5441(slot)
 /**
  * method_5447
  */

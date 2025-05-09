@@ -14,6 +14,10 @@ fun WorldBorder.contains(pos: BlockPos) = this.method_11952(pos)
  */
 fun WorldBorder.setWarningTime(warningTime: Int) = this.method_11975(warningTime)
 /**
+ * method_11951
+ */
+fun WorldBorder.contains(chunkPos: ChunkPos) = this.method_11951(chunkPos)
+/**
  * method_11983
  */
 fun WorldBorder.addListener(listener: WorldBorderListener) = this.method_11983(listener)
@@ -21,6 +25,10 @@ fun WorldBorder.addListener(listener: WorldBorderListener) = this.method_11983(l
  * method_11967
  */
 fun WorldBorder.setWarningBlocks(warningBlocks: Int) = this.method_11967(warningBlocks)
+/**
+ * method_61115
+ */
+fun WorldBorder.contains(pos: Vec3d) = this.method_61115(pos)
 /**
  * method_11971
  */
@@ -38,9 +46,21 @@ fun WorldBorder.getMaxRadius() = this.method_11959()
  */
 fun WorldBorder.getBoundEast() = this.method_11963()
 /**
+ * method_35317
+ */
+fun WorldBorder.contains(x: Double, arg1: Double) = this.method_35317(x, arg1)
+/**
+ * method_11966
+ */
+fun WorldBorder.contains(box: Box) = this.method_11966(box)
+/**
  * method_17905
  */
 fun WorldBorder.load(properties: net.minecraft.class_2784.class_5200) = this.method_17905(properties)
+/**
+ * method_39458
+ */
+fun WorldBorder.contains(x: Double, arg1: Double, z: Double) = this.method_39458(x, arg1, z)
 /**
  * method_11981
  */
@@ -49,6 +69,10 @@ fun WorldBorder.setSafeZone(safeZone: Double) = this.method_11981(safeZone)
  * method_17903
  */
 fun WorldBorder.asVoxelShape() = this.method_17903()
+/**
+ * method_39538
+ */
+fun WorldBorder.clampFloored(x: Double, arg1: Double, y: Double) = this.method_39538(x, arg1, y)
 /**
  * method_27355
  */
@@ -74,6 +98,10 @@ fun WorldBorder.getWarningBlocks() = this.method_11972()
  */
 fun WorldBorder.getWarningTime() = this.method_11956()
 /**
+ * method_11979
+ */
+fun WorldBorder.getDistanceInsideBorder(entity: Entity) = this.method_11979(entity)
+/**
  * method_11976
  */
 fun WorldBorder.getBoundWest() = this.method_11976()
@@ -89,6 +117,10 @@ fun WorldBorder.clamp(pos: Vec3d) = this.method_61770(pos)
  * method_11973
  */
 fun WorldBorder.setMaxRadius(maxRadius: Int) = this.method_11973(maxRadius)
+/**
+ * method_61769
+ */
+fun WorldBorder.clamp(x: Double, arg1: Double, y: Double) = this.method_61769(x, arg1, y)
 /**
  * method_35318
  */
@@ -125,6 +157,10 @@ fun WorldBorder.setDamagePerBlock(damagePerBlock: Double) = this.method_11955(da
  * method_11962
  */
 fun WorldBorder.getSizeLerpTime() = this.method_11962()
+/**
+ * method_61116
+ */
+fun WorldBorder.clampFloored(pos: Vec3d) = this.method_61116(pos)
 /**
  * method_11954
  */

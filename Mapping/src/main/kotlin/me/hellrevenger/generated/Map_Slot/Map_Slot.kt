@@ -58,9 +58,17 @@ fun Slot.canInsert(stack: ItemStack) = this.method_7680(stack)
  */
 fun Slot.insertStack(stack: ItemStack) = this.method_32756(stack)
 /**
+ * method_32755
+ */
+fun Slot.insertStack(stack: ItemStack, count: Int) = this.method_32755(stack, count)
+/**
  * method_32754
  */
 fun Slot.canTakePartial(player: PlayerEntity) = this.method_32754(player)
+/**
+ * method_53512
+ */
+fun Slot.setStack(stack: ItemStack) = this.method_53512(stack)
 /**
  * method_55059
  */
@@ -93,6 +101,10 @@ fun Slot.hasStack() = this.method_7681()
  * method_7679
  */
 fun Slot.getBackgroundSprite() = this.method_7679()
+/**
+ * method_7676
+ */
+fun Slot.getMaxItemCount(stack: ItemStack) = this.method_7676(stack)
 /**
  * method_7674
  */

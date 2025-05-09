@@ -23,6 +23,10 @@ object StructureTestUtilKt {
      */
     fun findStructureBlocks(pos: BlockPos, radius: Int, world: ServerWorld) = StructureTestUtil.method_22258(pos, radius, world)
     /**
+     * method_59782
+     */
+    fun findStructureBlocks(pos: BlockPos, radius: Int, world: ServerWorld, templateName: String) = StructureTestUtil.method_59782(pos, radius, world, templateName)
+    /**
      * method_62774
      */
     fun getPlacementPos(state: GameTestState, pos: BlockPos, rotation: BlockRotation, world: ServerWorld) = StructureTestUtil.method_62774(state, pos, rotation, world)
@@ -38,6 +42,10 @@ object StructureTestUtilKt {
      * method_54903
      */
     fun initStructure(state: GameTestState, pos: BlockPos, rotation: BlockRotation, world: ServerWorld) = StructureTestUtil.method_54903(state, pos, rotation, world)
+    /**
+     * method_29410
+     */
+    fun getStructureBlockBox(structureBlockEntity: StructureBlockBlockEntity) = StructureTestUtil.method_29410(structureBlockEntity)
     /**
      * method_57102
      */

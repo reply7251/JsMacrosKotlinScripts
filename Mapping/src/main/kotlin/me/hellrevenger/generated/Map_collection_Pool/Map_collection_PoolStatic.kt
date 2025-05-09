@@ -14,4 +14,8 @@ object collection_PoolKt {
      * method_34990
      */
     fun <E>empty() where E: Weighted = collection_Pool.method_34990<E>()
+    /**
+     * method_34989
+     */
+    fun <E>of(entries: Array<E>) where E: Weighted = collection_Pool.method_34989<E>(*entries)
 }

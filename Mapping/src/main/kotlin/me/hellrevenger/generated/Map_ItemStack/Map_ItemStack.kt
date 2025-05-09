@@ -82,6 +82,10 @@ fun ItemStack.getEnchantments() = this.method_58657()
  */
 fun ItemStack.getFrame() = this.method_7945()
 /**
+ * method_7956
+ */
+fun ItemStack.damage(amount: Int, world: ServerWorld, player: ServerPlayerEntity, breakCallback: Consumer<Item>) = this.method_7956(amount, world, player, breakCallback)
+/**
  * method_57351
  */
 fun ItemStack.getBreakSound() = this.method_57351()
@@ -134,6 +138,10 @@ fun ItemStack.hasEnchantments() = this.method_7942()
  */
 fun ItemStack.willBreakNextUse() = this.method_63692()
 /**
+ * method_61653
+ */
+fun ItemStack.damage(amount: Int, player: PlayerEntity) = this.method_61653(amount, player)
+/**
  * method_7914
  */
 fun ItemStack.getMaxCount() = this.method_7914()
@@ -149,6 +157,10 @@ fun ItemStack.decrement(amount: Int) = this.method_7934(amount)
  * method_7954
  */
 fun ItemStack.toHoverableText() = this.method_7954()
+/**
+ * method_57368
+ */
+fun <T>ItemStack.apply(type: ComponentType<T>, defaultValue: T, applier: UnaryOperator<T>) = this.method_57368<T>(type, defaultValue, applier)
 /**
  * method_63015
  */
@@ -205,6 +217,14 @@ fun ItemStack.applyAttributeModifier(slot: AttributeModifierSlot, attributeModif
  * method_31575
  */
 fun ItemStack.onStackClicked(slot: Slot, clickType: ClickType, player: PlayerEntity) = this.method_31575(slot, clickType, player)
+/**
+ * method_41406
+ */
+fun ItemStack.itemMatches(itemEntry: RegistryEntry<Item>) = this.method_41406(itemEntry)
+/**
+ * method_57358
+ */
+fun ItemStack.toNbt(registries: net.minecraft.class_7225.class_7874) = this.method_57358(registries)
 /**
  * method_57380
  */
@@ -278,6 +298,10 @@ fun ItemStack.increment(amount: Int) = this.method_7933(amount)
  */
 fun ItemStack.setHolder(holder: Entity) = this.method_27320(holder)
 /**
+ * method_53187
+ */
+fun ItemStack.isIn(registryEntryList: RegistryEntryList<Item>) = this.method_53187(registryEntryList)
+/**
  * method_7965
  */
 fun ItemStack.getBobbingAnimationTime() = this.method_7965()
@@ -349,6 +373,10 @@ fun ItemStack.postDamageEntity(target: LivingEntity, user: LivingEntity) = this.
  * method_57375
  */
 fun ItemStack.toNbtAllowEmpty(registries: net.minecraft.class_7225.class_7874) = this.method_57375(registries)
+/**
+ * method_60986
+ */
+fun ItemStack.damage(amount: Int, itemAfterBreaking: ItemConvertible, entity: LivingEntity, slot: EquipmentSlot) = this.method_60986(amount, itemAfterBreaking, entity, slot)
 /**
  * method_7923
  */

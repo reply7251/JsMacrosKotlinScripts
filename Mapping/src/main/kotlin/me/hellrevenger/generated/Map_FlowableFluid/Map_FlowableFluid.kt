@@ -9,3 +9,11 @@ fun FlowableFluid.getStill() = this.method_15751()
  * method_15728
  */
 fun FlowableFluid.getFlowing(level: Int, falling: Boolean) = this.method_15728(level, falling)
+/**
+ * method_15729
+ */
+fun FlowableFluid.getStill(falling: Boolean) = this.method_15729(falling)
+/**
+ * method_15750
+ */
+fun FlowableFluid.getFlowing() = this.method_15750()

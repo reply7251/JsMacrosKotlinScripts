@@ -266,4 +266,8 @@ object FeatureKt {
      * method_33981
      */
     fun <FC>isExposedToAir(posToState: function_Function<BlockPos, BlockState>, pos: BlockPos) where FC: FeatureConfig = Feature.method_33981(posToState, pos)
+    /**
+     * method_27368
+     */
+    fun <FC>isSoil(world: TestableWorld, pos: BlockPos) where FC: FeatureConfig = Feature.method_27368(world, pos)
 }

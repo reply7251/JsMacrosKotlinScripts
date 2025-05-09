@@ -7,6 +7,10 @@ object StructurePoolElementKt {
      */
     fun ofProcessedSingle(id: String, processorListEntry: RegistryEntry<StructureProcessorList>, liquidSettings: StructureLiquidSettings) = StructurePoolElement.method_61016(id, processorListEntry, liquidSettings)
     /**
+     * method_30435
+     */
+    fun ofProcessedSingle(id: String, processorListEntry: RegistryEntry<StructureProcessorList>) = StructurePoolElement.method_30435(id, processorListEntry)
+    /**
      * method_30434
      */
     fun ofSingle(id: String) = StructurePoolElement.method_30434(id)
@@ -18,6 +22,10 @@ object StructurePoolElementKt {
      * method_30426
      */
     fun ofProcessedLegacySingle(id: String, processorListEntry: RegistryEntry<StructureProcessorList>) = StructurePoolElement.method_30426(id, processorListEntry)
+    /**
+     * method_61014
+     */
+    fun ofSingle(id: String, liquidSettings: StructureLiquidSettings) = StructurePoolElement.method_61014(id, liquidSettings)
     /**
      * method_30421
      */

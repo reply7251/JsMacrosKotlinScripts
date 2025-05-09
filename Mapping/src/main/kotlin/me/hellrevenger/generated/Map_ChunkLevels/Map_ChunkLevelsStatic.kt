@@ -35,6 +35,10 @@ object ChunkLevelsKt {
      */
     fun getStatusForAdditionalLevel(additionalLevel: Int, emptyStatus: ChunkStatus) = ChunkLevels.method_60437(additionalLevel, emptyStatus)
     /**
+     * method_60438
+     */
+    fun getStatusForAdditionalLevel(level: Int) = ChunkLevels.method_60438(level)
+    /**
      * method_51827
      */
     fun getStatus(level: Int) = ChunkLevels.method_51827(level)

@@ -53,3 +53,7 @@ fun TestSet.isDone() = this.method_22239()
  * method_22230
  */
 fun TestSet.add(test: GameTestState) = this.method_22230(test)
+/**
+ * method_22231
+ */
+fun TestSet.addListener(listener: TestListener) = this.method_22231(listener)

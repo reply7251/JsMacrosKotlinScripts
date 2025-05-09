@@ -22,6 +22,10 @@ fun NbtOps.createMap(arg0: Stream<util_Pair<NbtElement, NbtElement>>) = this.met
  */
 fun NbtOps.getMap(arg0: NbtElement) = this.method_29163(arg0)
 /**
+ * method_29157
+ */
+fun NbtOps.mergeToMap(arg0: NbtElement, arg1: NbtElement, arg2: NbtElement) = this.method_29157(arg0, arg1, arg2)
+/**
  * method_10643
  */
 fun NbtOps.createLongList(arg0: LongStream) = this.method_10643(arg0)
@@ -37,6 +41,10 @@ fun NbtOps.getStream(arg0: NbtElement) = this.method_10664(arg0)
  * method_10635
  */
 fun NbtOps.createShort(arg0: Short) = this.method_10635(arg0)
+/**
+ * method_59877
+ */
+fun NbtOps.mergeToMap(arg0: NbtElement, arg1: Map<NbtElement, NbtElement>) = this.method_59877(arg0, arg1)
 /**
  * method_10648
  */
@@ -77,6 +85,10 @@ fun NbtOps.createBoolean(arg0: Boolean) = this.method_23253(arg0)
  * method_10639
  */
 fun NbtOps.createString(arg0: String) = this.method_10639(arg0)
+/**
+ * method_29155
+ */
+fun NbtOps.mergeToList(arg0: NbtElement, arg1: MutableList<NbtElement>) = this.method_29155(arg0, arg1)
 /**
  * method_10668
  */

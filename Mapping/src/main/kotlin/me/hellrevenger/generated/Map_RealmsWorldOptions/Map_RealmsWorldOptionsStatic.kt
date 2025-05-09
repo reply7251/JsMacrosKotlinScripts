@@ -18,4 +18,8 @@ object RealmsWorldOptionsKt {
      * method_25080
      */
     fun getEmptyDefaults() = RealmsWorldOptions.method_25080()
+    /**
+     * method_64353
+     */
+    fun create(levelInfo: LevelInfo, version: String) = RealmsWorldOptions.method_64353(levelInfo, version)
 }

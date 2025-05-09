@@ -38,6 +38,18 @@ fun EntityView.getClosestPlayer(entity: Entity, maxDistance: Double) = this.meth
  */
 fun EntityView.isPlayerInRange(x: Double, arg1: Double, y: Double, arg3: Double) = this.method_18458(x, arg1, y, arg3)
 /**
+ * method_8335
+ */
+fun EntityView.getOtherEntities(except: Entity, box: Box) = this.method_8335(except, box)
+/**
+ * method_8604
+ */
+fun EntityView.getClosestPlayer(x: Double, arg1: Double, y: Double, arg3: Double, z: Predicate<Entity>) = this.method_8604(x, arg1, y, arg3, z)
+/**
  * method_8611
  */
 fun EntityView.doesNotIntersectEntities(except: Entity, shape: VoxelShape) = this.method_8611(except, shape)
+/**
+ * method_18459
+ */
+fun EntityView.getClosestPlayer(x: Double, arg1: Double, y: Double, arg3: Double, z: Boolean) = this.method_18459(x, arg1, y, arg3, z)

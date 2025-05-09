@@ -90,4 +90,8 @@ object UrlsKt {
      * method_49719
      */
     fun getExtendJavaRealmsUrl(subscriptionId: String, uuid: UUID) = Urls.method_49719(subscriptionId, uuid)
+    /**
+     * method_49720
+     */
+    fun getExtendJavaRealmsUrl(subscriptionId: String, uuid: UUID, trial: Boolean) = Urls.method_49720(subscriptionId, uuid, trial)
 }

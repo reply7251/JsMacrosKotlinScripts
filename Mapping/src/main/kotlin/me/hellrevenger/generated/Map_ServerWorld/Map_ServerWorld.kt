@@ -170,6 +170,10 @@ fun ServerWorld.setChunkForced(x: Int, z: Int, forced: Boolean) = this.method_17
  */
 fun ServerWorld.onDimensionChanged(entity: Entity) = this.method_18769(entity)
 /**
+ * method_19500
+ */
+fun ServerWorld.isNearOccupiedPointOfInterest(pos: BlockPos) = this.method_19500(pos)
+/**
  * method_18765
  */
 fun ServerWorld.tick(shouldKeepTicking: BooleanSupplier) = this.method_18765(shouldKeepTicking)
@@ -198,9 +202,17 @@ fun <T>ServerWorld.getEntitiesByType(filter: TypeFilter<Entity, T>, predicate: P
  */
 fun ServerWorld.tickChunk(chunk: WorldChunk, randomTickSpeed: Int) = this.method_18203(chunk, randomTickSpeed)
 /**
+ * method_14199
+ */
+fun <T>ServerWorld.spawnParticles(parameters: T, force: Boolean, important: Boolean, x: Double, arg4: Double, y: Double, arg6: Int, z: Double, arg8: Double, count: Double, offsetX: Double) where T: ParticleEffect = this.method_14199<T>(parameters, force, important, x, arg4, y, arg6, z, arg8, count, offsetX)
+/**
  * method_52370
  */
 fun ServerWorld.tickIceAndSnow(pos: BlockPos) = this.method_52370(pos)
+/**
+ * method_14166
+ */
+fun <T>ServerWorld.spawnParticles(viewer: ServerPlayerEntity, parameters: T, force: Boolean, important: Boolean, x: Double, arg5: Double, y: Double, arg7: Int, z: Double, arg9: Double, count: Double, offsetX: Double) where T: ParticleEffect = this.method_14166<T>(viewer, parameters, force, important, x, arg5, y, arg7, z, arg9, count, offsetX)
 /**
  * method_51836
  */
@@ -226,9 +238,21 @@ fun ServerWorld.setTimeOfDay(timeOfDay: Long) = this.method_29199(timeOfDay)
  */
 fun ServerWorld.locateStructure(structureTag: TagKey<Structure>, pos: BlockPos, radius: Int, skipReferencedStructures: Boolean) = this.method_8487(structureTag, pos, radius, skipReferencedStructures)
 /**
+ * method_19497
+ */
+fun ServerWorld.isNearOccupiedPointOfInterest(pos: BlockPos, maxDistance: Int) = this.method_19497(pos, maxDistance)
+/**
  * method_18213
  */
 fun ServerWorld.onPlayerConnected(player: ServerPlayerEntity) = this.method_18213(player)
+/**
+ * method_39999
+ */
+fun ServerWorld.shouldTick(pos: BlockPos) = this.method_39999(pos)
+/**
+ * method_47540
+ */
+fun ServerWorld.getPlayers(predicate: Predicate<in ServerPlayerEntity>, limit: Int) = this.method_47540(predicate, limit)
 /**
  * method_14196
  */

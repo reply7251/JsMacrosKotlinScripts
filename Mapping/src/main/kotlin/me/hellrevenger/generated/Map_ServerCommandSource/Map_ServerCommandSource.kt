@@ -126,6 +126,10 @@ fun ServerCommandSource.getSignedArguments() = this.method_43738()
  */
 fun ServerCommandSource.sendChatMessage(message: SentMessage, filterMaskEnabled: Boolean, params: net.minecraft.class_2556.class_7602) = this.method_44749(message, filterMaskEnabled, params)
 /**
+ * method_9221
+ */
+fun ServerCommandSource.withLookingAt(position: Vec3d) = this.method_9221(position)
+/**
  * method_9219
  */
 fun ServerCommandSource.getEntityAnchor() = this.method_9219()

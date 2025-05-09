@@ -15,6 +15,18 @@ object ProjectileUtilKt {
      */
     fun getEntityCollision(world: world_World, entity: Entity, min: Vec3d, max: Vec3d, box: Box, predicate: Predicate<Entity>) = ProjectileUtil.method_18077(world, entity, min, max, box, predicate)
     /**
+     * method_37226
+     */
+    fun getEntityCollision(world: world_World, entity: Entity, min: Vec3d, max: Vec3d, box: Box, predicate: Predicate<Entity>, margin: Float) = ProjectileUtil.method_37226(world, entity, min, max, box, predicate, margin)
+    /**
+     * method_49997
+     */
+    fun getCollision(entity: Entity, predicate: Predicate<Entity>) = ProjectileUtil.method_49997(entity, predicate)
+    /**
+     * method_55054
+     */
+    fun getCollision(entity: Entity, predicate: Predicate<Entity>, raycastShapeType: net.minecraft.class_3959.class_3960) = ProjectileUtil.method_55054(entity, predicate, raycastShapeType)
+    /**
      * method_18812
      */
     fun getHandPossiblyHolding(entity: LivingEntity, item: Item) = ProjectileUtil.method_18812(entity, item)

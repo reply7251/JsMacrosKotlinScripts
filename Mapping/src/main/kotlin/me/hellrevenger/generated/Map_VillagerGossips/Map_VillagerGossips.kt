@@ -30,6 +30,10 @@ fun VillagerGossips.getReputationCount(type: VillageGossipType, predicate: Doubl
  */
 fun VillagerGossips.shareGossipFrom(from: VillagerGossips, random: Random, count: Int) = this.method_19061(from, random, count)
 /**
+ * method_35124
+ */
+fun VillagerGossips.remove(target: UUID, type: VillageGossipType) = this.method_35124(target, type)
+/**
  * method_20651
  */
 fun VillagerGossips.decay() = this.method_20651()

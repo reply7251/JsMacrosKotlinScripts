@@ -21,3 +21,15 @@ fun <T>ScheduledTickView.createOrderedTick(pos: BlockPos, type: T, delay: Int, p
  * method_8405
  */
 fun ScheduledTickView.getFluidTickScheduler() = this.method_8405()
+/**
+ * method_64310
+ */
+fun ScheduledTickView.scheduleBlockTick(pos: BlockPos, block: Block, delay: Int) = this.method_64310(pos, block, delay)
+/**
+ * method_39283
+ */
+fun <T>ScheduledTickView.createOrderedTick(pos: BlockPos, type: T, delay: Int) = this.method_39283<T>(pos, type, delay)
+/**
+ * method_64312
+ */
+fun ScheduledTickView.scheduleFluidTick(pos: BlockPos, fluid: Fluid, delay: Int) = this.method_64312(pos, fluid, delay)

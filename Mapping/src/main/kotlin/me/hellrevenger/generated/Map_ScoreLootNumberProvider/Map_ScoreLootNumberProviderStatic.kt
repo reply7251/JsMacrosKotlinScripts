@@ -6,4 +6,8 @@ object ScoreLootNumberProviderKt {
      * method_35570
      */
     fun create(target: net.minecraft.class_47.class_50, score: String, scale: Float) = ScoreLootNumberProvider.method_35570(target, score, scale)
+    /**
+     * method_35569
+     */
+    fun create(target: net.minecraft.class_47.class_50, score: String) = ScoreLootNumberProvider.method_35569(target, score)
 }

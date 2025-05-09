@@ -23,6 +23,10 @@ object blockpredicate_BlockPredicateKt {
      */
     fun hasSturdyFace(offset: Vec3i, face: Direction) = blockpredicate_BlockPredicate.method_39909(offset, face)
     /**
+     * method_39585
+     */
+    fun solid() = blockpredicate_BlockPredicate.method_39585()
+    /**
      * method_39009
      */
     fun wouldSurvive(state: BlockState, offset: Vec3i) = blockpredicate_BlockPredicate.method_39009(state, offset)
@@ -47,9 +51,17 @@ object blockpredicate_BlockPredicateKt {
      */
     fun eitherOf(first: blockpredicate_BlockPredicate, second: blockpredicate_BlockPredicate) = blockpredicate_BlockPredicate.method_38884(first, second)
     /**
+     * method_38881
+     */
+    fun matchingBlocks(offset: Vec3i, blocks: MutableList<Block>) = blockpredicate_BlockPredicate.method_38881(offset, blocks)
+    /**
      * method_38883
      */
     fun replaceable() = blockpredicate_BlockPredicate.method_38883()
+    /**
+     * method_39010
+     */
+    fun replaceable(offset: Vec3i) = blockpredicate_BlockPredicate.method_39010(offset)
     /**
      * method_39011
      */
@@ -59,11 +71,51 @@ object blockpredicate_BlockPredicateKt {
      */
     fun matchingFluids(offset: Vec3i, fluids: Array<Fluid>) = blockpredicate_BlockPredicate.method_43289(offset, *fluids)
     /**
+     * method_43291
+     */
+    fun matchingFluids(fluids: Array<Fluid>) = blockpredicate_BlockPredicate.method_43291(*fluids)
+    /**
      * method_39908
      */
     fun matchingBlockTag(offset: Vec3i, tag: TagKey<Block>) = blockpredicate_BlockPredicate.method_39908(offset, tag)
     /**
+     * method_60284
+     */
+    fun unobstructed(offset: Vec3i) = blockpredicate_BlockPredicate.method_60284(offset)
+    /**
+     * method_38885
+     */
+    fun anyOf(predicates: MutableList<blockpredicate_BlockPredicate>) = blockpredicate_BlockPredicate.method_38885(predicates)
+    /**
+     * method_39930
+     */
+    fun hasSturdyFace(face: Direction) = blockpredicate_BlockPredicate.method_39930(face)
+    /**
      * method_38877
      */
     fun not(predicate: blockpredicate_BlockPredicate) = blockpredicate_BlockPredicate.method_38877(predicate)
+    /**
+     * method_38882
+     */
+    fun allOf(predicates: Array<blockpredicate_BlockPredicate>) = blockpredicate_BlockPredicate.method_38882(*predicates)
+    /**
+     * method_38886
+     */
+    fun matchingFluids(offset: Vec3i, fluids: MutableList<Fluid>) = blockpredicate_BlockPredicate.method_38886(offset, fluids)
+    /**
+     * method_39907
+     */
+    fun matchingBlockTag(offset: TagKey<Block>) = blockpredicate_BlockPredicate.method_39907(offset)
+    /**
+     * method_39910
+     */
+    fun matchingBlocks(blocks: MutableList<Block>) = blockpredicate_BlockPredicate.method_39910(blocks)
+    /**
+     * method_45544
+     */
+    fun noFluid() = blockpredicate_BlockPredicate.method_45544()
+    /**
+     * method_43290
+     */
+    fun matchingBlocks(blocks: Array<Block>) = blockpredicate_BlockPredicate.method_43290(*blocks)
 }

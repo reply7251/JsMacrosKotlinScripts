@@ -42,6 +42,10 @@ fun Vec3d.withAxis(axis: net.minecraft.class_2350.class_2351, value: Double) = t
  */
 fun Vec3d.offset(direction: Direction, value: Double) = this.method_43206(direction, value)
 /**
+ * method_18806
+ */
+fun Vec3d.multiply(vec: Vec3d) = this.method_18806(vec)
+/**
  * method_31033
  */
 fun Vec3d.rotateZ(angle: Float) = this.method_31033(angle)
@@ -70,6 +74,10 @@ fun Vec3d.rotateX(angle: Float) = this.method_1037(angle)
  */
 fun Vec3d.addRandom(random: Random, multiplier: Float) = this.method_49272(random, multiplier)
 /**
+ * method_1025
+ */
+fun Vec3d.squaredDistanceTo(vec: Vec3d) = this.method_1025(vec)
+/**
  * method_61888
  */
 fun Vec3d.subtract(value: Double) = this.method_61888(value)
@@ -77,6 +85,10 @@ fun Vec3d.subtract(value: Double) = this.method_61888(value)
  * method_1033
  */
 fun Vec3d.length() = this.method_1033()
+/**
+ * method_1020
+ */
+fun Vec3d.subtract(vec: Vec3d) = this.method_1020(vec)
 /**
  * method_64316
  */
@@ -102,9 +114,17 @@ fun Vec3d.getComponentAlongAxis(axis: net.minecraft.class_2350.class_2351) = thi
  */
 fun Vec3d.isWithinRangeOf(vec: Vec3d, horizontalRange: Double, arg2: Double) = this.method_55230(vec, horizontalRange, arg2)
 /**
+ * method_1023
+ */
+fun Vec3d.subtract(x: Double, arg1: Double, y: Double) = this.method_1023(x, arg1, y)
+/**
  * method_1026
  */
 fun Vec3d.dotProduct(vec: Vec3d) = this.method_1026(vec)
+/**
+ * method_1031
+ */
+fun Vec3d.add(x: Double, arg1: Double, y: Double) = this.method_1031(x, arg1, y)
 /**
  * method_1022
  */
@@ -121,6 +141,14 @@ fun Vec3d.relativize(vec: Vec3d) = this.method_1035(vec)
  * method_37268
  */
 fun Vec3d.horizontalLengthSquared() = this.method_37268()
+/**
+ * method_1019
+ */
+fun Vec3d.add(vec: Vec3d) = this.method_1019(vec)
+/**
+ * method_1021
+ */
+fun Vec3d.multiply(value: Double) = this.method_1021(value)
 /**
  * method_46409
  */

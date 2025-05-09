@@ -18,6 +18,10 @@ fun MultilineText.drawCenterWithShadow(context: DrawContext, x: Int, y: Int, lin
  */
 fun MultilineText.getMaxWidth() = this.method_44048()
 /**
+ * method_30888
+ */
+fun MultilineText.drawCenterWithShadow(context: DrawContext, x: Int, y: Int) = this.method_30888(context, x, y)
+/**
  * method_30893
  */
 fun MultilineText.drawWithShadow(context: DrawContext, x: Int, y: Int, lineHeight: Int, color: Int) = this.method_30893(context, x, y, lineHeight, color)

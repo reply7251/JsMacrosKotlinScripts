@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun ChunkCompressionFormat.wrap(inputStream: InputStream) = this.method_21885(inputStream)
 /**
+ * method_21886
+ */
+fun ChunkCompressionFormat.wrap(outputStream: OutputStream) = this.method_21886(outputStream)
+/**
  * method_21882
  */
 fun ChunkCompressionFormat.getId() = this.method_21882()

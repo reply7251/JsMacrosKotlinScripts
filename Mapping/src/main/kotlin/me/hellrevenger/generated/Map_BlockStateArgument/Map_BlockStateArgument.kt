@@ -17,3 +17,7 @@ fun BlockStateArgument.getProperties() = this.method_35759()
  * method_9493
  */
 fun BlockStateArgument.test(arg0: CachedBlockPosition) = this.method_9493(arg0)
+/**
+ * method_35758
+ */
+fun BlockStateArgument.test(world: ServerWorld, pos: BlockPos) = this.method_35758(world, pos)

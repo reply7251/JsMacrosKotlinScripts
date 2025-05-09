@@ -67,6 +67,10 @@ object BlockKt {
      */
     fun postProcessState(state: BlockState, world: WorldAccess, pos: BlockPos) = Block.method_9510(state, world, pos)
     /**
+     * method_9511
+     */
+    fun dropStacks(state: BlockState, world: world_World, pos: BlockPos, blockEntity: BlockEntity, entity: Entity, tool: ItemStack) = Block.method_9511(state, world, pos, blockEntity, entity, tool)
+    /**
      * method_9611
      */
     fun replace(state: BlockState, newState: BlockState, world: WorldAccess, pos: BlockPos, flags: Int, maxUpdateDepth: Int) = Block.method_9611(state, newState, world, pos, flags, maxUpdateDepth)
@@ -87,6 +91,10 @@ object BlockKt {
      */
     fun hasTopRim(world: BlockView, pos: BlockPos) = Block.method_16361(world, pos)
     /**
+     * method_30094
+     */
+    fun replace(state: BlockState, newState: BlockState, world: WorldAccess, pos: BlockPos, flags: Int) = Block.method_30094(state, newState, world, pos, flags)
+    /**
      * method_9582
      */
     fun pushEntitiesUpBeforeBlockChange(from: BlockState, to: BlockState, world: WorldAccess, pos: BlockPos) = Block.method_9582(from, to, world, pos)
@@ -94,6 +102,10 @@ object BlockKt {
      * method_9501
      */
     fun isFaceFullSquare(shape: VoxelShape, side: Direction) = Block.method_9501(shape, side)
+    /**
+     * method_9609
+     */
+    fun getDroppedStacks(state: BlockState, world: ServerWorld, pos: BlockPos, blockEntity: BlockEntity, entity: Entity, stack: ItemStack) = Block.method_9609(state, world, pos, blockEntity, entity, stack)
     /**
      * method_9507
      */
@@ -110,4 +122,12 @@ object BlockKt {
      * method_20044
      */
     fun sideCoversSmallSquare(world: WorldView, pos: BlockPos, side: Direction) = Block.method_20044(world, pos, side)
+    /**
+     * method_36992
+     */
+    fun dropStack(world: world_World, pos: BlockPos, direction: Direction, stack: ItemStack) = Block.method_36992(world, pos, direction, stack)
+    /**
+     * method_9497
+     */
+    fun dropStacks(state: BlockState, world: world_World, pos: BlockPos) = Block.method_9497(state, world, pos)
 }

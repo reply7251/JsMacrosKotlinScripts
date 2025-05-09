@@ -26,4 +26,8 @@ object ScoreHolderArgumentTypeKt {
      * method_9450
      */
     fun getScoreHolders(context: CommandContext<ServerCommandSource>, name: String, players: Supplier<Collection<ScoreHolder>>) = ScoreHolderArgumentType.method_9450(context, name, players)
+    /**
+     * method_9458
+     */
+    fun getScoreHolders(context: CommandContext<ServerCommandSource>, name: String) = ScoreHolderArgumentType.method_9458(context, name)
 }

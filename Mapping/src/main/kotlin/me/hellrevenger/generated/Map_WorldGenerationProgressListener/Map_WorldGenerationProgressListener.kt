@@ -10,6 +10,10 @@ fun WorldGenerationProgressListener.start(spawnPos: ChunkPos) = this.method_1766
  */
 fun WorldGenerationProgressListener.stop() = this.method_17671()
 /**
+ * method_17675
+ */
+fun WorldGenerationProgressListener.start() = this.method_17675()
+/**
  * method_17670
  */
 fun WorldGenerationProgressListener.setChunkStatus(pos: ChunkPos, status: ChunkStatus) = this.method_17670(pos, status)

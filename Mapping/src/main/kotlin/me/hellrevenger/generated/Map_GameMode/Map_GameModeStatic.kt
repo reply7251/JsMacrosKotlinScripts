@@ -38,4 +38,12 @@ object GameModeKt {
      * method_8384
      */
     fun byId(id: Int) = GameMode.method_8384(id)
+    /**
+     * method_8385
+     */
+    fun byName(name: String) = GameMode.method_8385(name)
+    /**
+     * method_32761
+     */
+    fun getId(gameMode: GameMode) = GameMode.method_32761(gameMode)
 }

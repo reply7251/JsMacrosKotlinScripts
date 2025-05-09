@@ -13,3 +13,7 @@ fun AxisCycleDirection.cycle(axis: net.minecraft.class_2350.class_2351) = this.m
  * method_10055
  */
 fun AxisCycleDirection.opposite() = this.method_10055()
+/**
+ * method_35819
+ */
+fun AxisCycleDirection.choose(x: Double, arg1: Double, y: Double, arg3: net.minecraft.class_2350.class_2351) = this.method_35819(x, arg1, y, arg3)

@@ -58,6 +58,10 @@ fun <T>Registry<T>.createEntry(value: T) = this.method_40269(value)
  */
 fun <T>Registry<T>.getKeys() = this.method_42021()
 /**
+ * method_47983
+ */
+fun <T>Registry<T>.getEntry(value: T) = this.method_47983(value)
+/**
  * method_29722
  */
 fun <T>Registry<T>.getEntrySet() = this.method_29722()
@@ -66,9 +70,17 @@ fun <T>Registry<T>.getEntrySet() = this.method_29722()
  */
 fun <T>Registry<T>.get(id: Identifier) = this.method_63535(id)
 /**
+ * method_17966
+ */
+fun <T>Registry<T>.getOptionalValue(id: Identifier) = this.method_17966(id)
+/**
  * method_10240
  */
 fun <T>Registry<T>.getRandom(random: Random) = this.method_10240(random)
+/**
+ * method_40265
+ */
+fun <T>Registry<T>.getEntry(rawId: Int) = this.method_40265(rawId)
 /**
  * method_60385
  */
@@ -85,6 +97,10 @@ fun <T>Registry<T>.getRandomEntry(tag: TagKey<T>, random: Random) = this.method_
  * method_29113
  */
 fun <T>Registry<T>.getKey(entry: T) = this.method_29113(entry)
+/**
+ * method_29107
+ */
+fun <T>Registry<T>.get(key: RegistryKey<T>) = this.method_29107(key)
 /**
  * method_10221
  */

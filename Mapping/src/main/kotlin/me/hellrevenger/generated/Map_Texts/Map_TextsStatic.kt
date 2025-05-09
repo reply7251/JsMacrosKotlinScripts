@@ -27,13 +27,25 @@ object TextsKt {
      */
     fun bracketed(text: Text) = Texts.method_10885(text)
     /**
+     * method_10888
+     */
+    fun joinOrdered(strings: Collection<String>) = Texts.method_10888(strings)
+    /**
      * method_36330
      */
     fun parse(source: ServerCommandSource, text: Optional<Text>, sender: Entity, depth: Int) = Texts.method_36330(source, text, sender, depth)
     /**
+     * method_36332
+     */
+    fun <T>join(elements: Collection<out T>, separator: Text, transformer: function_Function<T, Text>) = Texts.method_36332<T>(elements, separator, transformer)
+    /**
      * method_47523
      */
     fun bracketedCopyable(string: String) = Texts.method_47523(string)
+    /**
+     * method_10881
+     */
+    fun parse(source: ServerCommandSource, text: Text, sender: Entity, depth: Int) = Texts.method_10881(source, text, sender, depth)
     /**
      * method_10889
      */
@@ -42,6 +54,14 @@ object TextsKt {
      * method_10883
      */
     fun toText(message: Message) = Texts.method_10883(message)
+    /**
+     * method_36331
+     */
+    fun <T>join(elements: Collection<out T>, separator: Optional<out Text>, transformer: function_Function<T, Text>) = Texts.method_36331<T>(elements, separator, transformer)
+    /**
+     * method_37112
+     */
+    fun join(texts: Collection<out Text>, separator: Text) = Texts.method_37112(texts, separator)
     /**
      * method_43476
      */

@@ -70,6 +70,10 @@ fun VehicleInventory.writeInventoryToNbt(nbt: NbtCompound, registries: net.minec
  */
 fun VehicleInventory.isInventoryEmpty() = this.method_42295()
 /**
+ * method_42286
+ */
+fun VehicleInventory.removeInventoryStack(slot: Int, amount: Int) = this.method_42286(slot, amount)
+/**
  * method_42292
  */
 fun VehicleInventory.getInventoryStackReference(slot: Int) = this.method_42292(slot)

@@ -17,3 +17,7 @@ val SimplexNoiseSampler.originX by alias(SimplexNoiseSampler::field_15763)
  * method_15433
  */
 fun SimplexNoiseSampler.sample(x: Double, arg1: Double) = this.method_15433(x, arg1)
+/**
+ * method_22416
+ */
+fun SimplexNoiseSampler.sample(x: Double, arg1: Double, y: Double) = this.method_22416(x, arg1, y)

@@ -10,4 +10,8 @@ object WitherSkullBlockKt {
      * method_10899
      */
     fun canDispense(world: world_World, pos: BlockPos, stack: ItemStack) = WitherSkullBlock.method_10899(world, pos, stack)
+    /**
+     * method_56119
+     */
+    fun onPlaced(world: world_World, pos: BlockPos) = WitherSkullBlock.method_56119(world, pos)
 }

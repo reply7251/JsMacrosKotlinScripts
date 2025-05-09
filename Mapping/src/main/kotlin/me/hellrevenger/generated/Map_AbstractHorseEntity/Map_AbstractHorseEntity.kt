@@ -86,6 +86,10 @@ fun AbstractHorseEntity.eatsGrass() = this.method_6762()
  */
 fun AbstractHorseEntity.setTame(tame: Boolean) = this.method_6766(tame)
 /**
+ * method_6750
+ */
+fun AbstractHorseEntity.getInventorySize() = this.method_6750()
+/**
  * method_6763
  */
 fun AbstractHorseEntity.isInAir() = this.method_6763()

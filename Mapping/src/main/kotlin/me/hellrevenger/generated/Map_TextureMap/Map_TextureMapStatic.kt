@@ -55,6 +55,10 @@ object TextureMapKt {
      */
     fun sideEnd(block: Block) = TextureMap.method_25894(block)
     /**
+     * method_25911
+     */
+    fun layer0(block: Block) = TextureMap.method_25911(block)
+    /**
      * method_27168
      */
     fun wallSideEnd(block: Block) = TextureMap.method_27168(block)
@@ -66,6 +70,10 @@ object TextureMapKt {
      * method_32231
      */
     fun candleCake(block: Block, lit: Boolean) = TextureMap.method_32231(block, lit)
+    /**
+     * method_25862
+     */
+    fun particle(item: Item) = TextureMap.method_25862(item)
     /**
      * method_25865
      */
@@ -82,6 +90,10 @@ object TextureMapKt {
      * method_46201
      */
     fun textureParticle(block: Block) = TextureMap.method_46201(block)
+    /**
+     * method_25884
+     */
+    fun plant(id: Identifier) = TextureMap.method_25884(id)
     /**
      * method_25902
      */
@@ -111,9 +123,17 @@ object TextureMapKt {
      */
     fun top(top: Block) = TextureMap.method_25910(top)
     /**
+     * method_25877
+     */
+    fun cross(block: Block) = TextureMap.method_25877(block)
+    /**
      * method_25897
      */
     fun sideAndEndForTop(block: Block) = TextureMap.method_25897(block)
+    /**
+     * method_25871
+     */
+    fun layer0(item: Item) = TextureMap.method_25871(item)
     /**
      * method_25892
      */
@@ -139,6 +159,10 @@ object TextureMapKt {
      */
     fun pottedAzaleaBush(block: Block) = TextureMap.method_50028(block)
     /**
+     * method_25866
+     */
+    fun getSubId(block: Block, suffix: String) = TextureMap.method_25866(block, suffix)
+    /**
      * method_25878
      */
     fun frontSideWithCustomBottom(block: Block, bottom: Block) = TextureMap.method_25878(block, bottom)
@@ -147,9 +171,17 @@ object TextureMapKt {
      */
     fun of(key: TextureKey, id: Identifier) = TextureMap.method_25883(key, id)
     /**
+     * method_25901
+     */
+    fun particle(block: Block) = TextureMap.method_25901(block)
+    /**
      * method_25893
      */
     fun torch(id: Identifier) = TextureMap.method_25893(id)
+    /**
+     * method_25905
+     */
+    fun torch(block: Block) = TextureMap.method_25905(block)
     /**
      * method_25896
      */
@@ -159,6 +191,10 @@ object TextureMapKt {
      */
     fun texture(block: Block) = TextureMap.method_25872(block)
     /**
+     * method_25869
+     */
+    fun texture(id: Identifier) = TextureMap.method_25869(id)
+    /**
      * method_25888
      */
     fun stem(block: Block) = TextureMap.method_25888(block)
@@ -167,9 +203,25 @@ object TextureMapKt {
      */
     fun crop(id: Identifier) = TextureMap.method_25889(id)
     /**
+     * method_25864
+     */
+    fun all(block: Block) = TextureMap.method_25864(block)
+    /**
      * method_25909
      */
     fun sideFrontEnd(block: Block) = TextureMap.method_25909(block)
+    /**
+     * method_25860
+     */
+    fun getId(block: Block) = TextureMap.method_25860(block)
+    /**
+     * method_48529
+     */
+    fun layered(layer0: Identifier, layer1: Identifier) = TextureMap.method_48529(layer0, layer1)
+    /**
+     * method_25886
+     */
+    fun rail(id: Identifier) = TextureMap.method_25886(id)
     /**
      * method_25904
      */
@@ -187,6 +239,10 @@ object TextureMapKt {
      */
     fun sideFrontTop(block: Block) = TextureMap.method_25908(block)
     /**
+     * method_25870
+     */
+    fun sideEnd(side: Identifier, end: Identifier) = TextureMap.method_25870(side, end)
+    /**
      * method_49379
      */
     fun flowerbed(block: Block) = TextureMap.method_49379(block)
@@ -198,6 +254,14 @@ object TextureMapKt {
      * method_25899
      */
     fun wallSideTopBottom(block: Block) = TextureMap.method_25899(block)
+    /**
+     * method_25900
+     */
+    fun topBottom(block: Block) = TextureMap.method_25900(block)
+    /**
+     * method_25887
+     */
+    fun wool(block: Block) = TextureMap.method_25887(block)
     /**
      * method_42753
      */

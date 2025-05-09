@@ -135,6 +135,10 @@ object EnchantmentHelperKt {
      */
     fun getPossibleEntries(level: Int, stack: ItemStack, possibleEnchantments: Stream<RegistryEntry<Enchantment>>) = EnchantmentHelper.method_8229(level, stack, possibleEnchantments)
     /**
+     * method_60111
+     */
+    fun applyLocationBasedEffects(world: ServerWorld, user: LivingEntity) = EnchantmentHelper.method_60111(world, user)
+    /**
      * method_60138
      */
     fun hasAnyEnchantmentsIn(stack: ItemStack, tag: TagKey<Enchantment>) = EnchantmentHelper.method_60138(stack, tag)
@@ -147,6 +151,10 @@ object EnchantmentHelperKt {
      */
     fun apply(stack: ItemStack, applier: Consumer<net.minecraft.class_9304.class_9305>) = EnchantmentHelper.method_57531(stack, applier)
     /**
+     * method_60141
+     */
+    fun removeLocationBasedEffects(stack: ItemStack, user: LivingEntity, slot: EquipmentSlot) = EnchantmentHelper.method_60141(stack, user, slot)
+    /**
      * method_60159
      */
     fun getCrossbowChargeTime(stack: ItemStack, user: LivingEntity, baseCrossbowChargeTime: Float) = EnchantmentHelper.method_60159(stack, user, baseCrossbowChargeTime)
@@ -155,9 +163,21 @@ object EnchantmentHelperKt {
      */
     fun onTick(world: ServerWorld, user: LivingEntity) = EnchantmentHelper.method_60154(world, user)
     /**
+     * method_8233
+     */
+    fun enchant(random: Random, stack: ItemStack, level: Int, possibleEnchantments: Stream<RegistryEntry<Enchantment>>) = EnchantmentHelper.method_8233(random, stack, level, possibleEnchantments)
+    /**
+     * method_60107
+     */
+    fun onTargetDamaged(world: ServerWorld, target: Entity, damageSource: DamageSource) = EnchantmentHelper.method_60107(world, target, damageSource)
+    /**
      * method_8204
      */
     fun chooseEquipmentWith(componentType: ComponentType<*>, entity: LivingEntity, stackPredicate: Predicate<ItemStack>) = EnchantmentHelper.method_8204(componentType, entity, stackPredicate)
+    /**
+     * method_60619
+     */
+    fun onTargetDamaged(world: ServerWorld, target: Entity, damageSource: DamageSource, weapon: ItemStack) = EnchantmentHelper.method_60619(world, target, damageSource, weapon)
     /**
      * method_60174
      */
@@ -166,6 +186,10 @@ object EnchantmentHelperKt {
      * method_60168
      */
     fun getRepairWithExperience(world: ServerWorld, stack: ItemStack, baseRepairWithExperience: Int) = EnchantmentHelper.method_60168(world, stack, baseRepairWithExperience)
+    /**
+     * method_60140
+     */
+    fun applyAttributeModifiers(stack: ItemStack, slot: EquipmentSlot, attributeModifierConsumer: BiConsumer<RegistryEntry<EntityAttribute>, EntityAttributeModifier>) = EnchantmentHelper.method_60140(stack, slot, attributeModifierConsumer)
     /**
      * method_60175
      */

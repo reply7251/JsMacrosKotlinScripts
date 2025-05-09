@@ -41,3 +41,7 @@ fun ServerPlayNetworkHandler.reconfigure() = this.method_52414()
  * method_45168
  */
 fun ServerPlayNetworkHandler.sendProfilelessChatMessage(message: Text, params: net.minecraft.class_2556.class_7602) = this.method_45168(message, params)
+/**
+ * method_14363
+ */
+fun ServerPlayNetworkHandler.requestTeleport(x: Double, arg1: Double, y: Double, arg3: Float, z: Float) = this.method_14363(x, arg1, y, arg3, z)

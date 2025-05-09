@@ -55,6 +55,14 @@ object PlacedFeaturesKt {
      */
     fun <FC, F>createEntry(feature: F, featureConfig: FC, modifiers: Array<PlacementModifier>) where FC: FeatureConfig, F: Feature<FC> = PlacedFeatures.method_40368<FC, F>(feature, featureConfig, *modifiers)
     /**
+     * method_40367
+     */
+    fun <FC, F>createEntry(feature: F, featureConfig: FC, predicate: blockpredicate_BlockPredicate) where FC: FeatureConfig, F: Feature<FC> = PlacedFeatures.method_40367<FC, F>(feature, featureConfig, predicate)
+    /**
+     * method_40369
+     */
+    fun createEntry(feature: RegistryEntry<ConfiguredFeature<*, *>>, modifiers: Array<PlacementModifier>) = PlacedFeatures.method_40369(feature, *modifiers)
+    /**
      * method_39735
      */
     fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = PlacedFeatures.method_39735(featureRegisterable)
@@ -66,6 +74,14 @@ object PlacedFeaturesKt {
      * method_39737
      */
     fun register(featureRegisterable: Registerable<PlacedFeature>, key: RegistryKey<PlacedFeature>, feature: RegistryEntry<ConfiguredFeature<*, *>>, modifiers: MutableList<PlacementModifier>) = PlacedFeatures.method_39737(featureRegisterable, key, feature, modifiers)
+    /**
+     * method_40370
+     */
+    fun register(featureRegisterable: Registerable<PlacedFeature>, key: RegistryKey<PlacedFeature>, feature: RegistryEntry<ConfiguredFeature<*, *>>, modifiers: Array<PlacementModifier>) = PlacedFeatures.method_40370(featureRegisterable, key, feature, *modifiers)
+    /**
+     * method_40366
+     */
+    fun <FC, F>createEntry(feature: F, featureConfig: FC) where FC: FeatureConfig, F: Feature<FC> = PlacedFeatures.method_40366<FC, F>(feature, featureConfig)
     /**
      * method_46865
      */

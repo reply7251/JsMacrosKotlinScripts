@@ -58,9 +58,17 @@ fun ChunkPos.getBlockPos(offsetX: Int, y: Int, offsetZ: Int) = this.method_35231
  */
 fun ChunkPos.getOffsetX(offset: Int) = this.method_33939(offset)
 /**
+ * method_52567
+ */
+fun ChunkPos.getSquaredDistance(pos: Long) = this.method_52567(pos)
+/**
  * method_33941
  */
 fun ChunkPos.getOffsetZ(offset: Int) = this.method_33941(offset)
+/**
+ * method_60510
+ */
+fun ChunkPos.getChebyshevDistance(x: Int, z: Int) = this.method_60510(x, z)
 /**
  * method_17888
  */

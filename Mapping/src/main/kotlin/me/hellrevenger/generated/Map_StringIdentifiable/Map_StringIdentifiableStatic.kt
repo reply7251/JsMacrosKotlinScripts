@@ -11,6 +11,10 @@ object StringIdentifiableKt {
      */
     fun <T>createBasicCodec(values: Supplier<Array<T>>) where T: StringIdentifiable = StringIdentifiable.method_53955<T>(values)
     /**
+     * method_28140
+     */
+    fun <E>createCodec(enumValues: Supplier<Array<E>>) where E: Enum<E>, E: StringIdentifiable = StringIdentifiable.method_28140<E>(enumValues)
+    /**
      * method_53953
      */
     fun <T>createMapper(values: Array<T>, valueNameTransformer: function_Function<String, String>) where T: StringIdentifiable = StringIdentifiable.method_53953<T>(values, valueNameTransformer)

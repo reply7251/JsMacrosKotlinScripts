@@ -10,6 +10,18 @@ fun DistancePredicate.test(x0: Double, arg1: Double, y0: Double, arg3: Double, z
  */
 fun DistancePredicate.x() = this.comp_1743()
 /**
+ * comp_1744
+ */
+fun DistancePredicate.y() = this.comp_1744()
+/**
  * comp_1745
  */
 fun DistancePredicate.z() = this.comp_1745()
+/**
+ * comp_1746
+ */
+fun DistancePredicate.horizontal() = this.comp_1746()
+/**
+ * comp_1747
+ */
+fun DistancePredicate.absolute() = this.comp_1747()

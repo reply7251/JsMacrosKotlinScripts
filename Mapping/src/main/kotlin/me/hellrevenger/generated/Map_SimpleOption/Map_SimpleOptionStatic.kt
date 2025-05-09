@@ -19,6 +19,22 @@ object SimpleOptionKt {
      */
     fun <T>emptyTooltip() = SimpleOption.method_42399<T>()
     /**
+     * method_41749
+     */
+    fun <T>ofBoolean(key: String, tooltipFactory: net.minecraft.class_7172.class_7277<Boolean>, defaultValue: Boolean) = SimpleOption.method_41749(key, tooltipFactory, defaultValue)
+    /**
+     * method_41751
+     */
+    fun <T>ofBoolean(key: String, defaultValue: Boolean, changeCallback: Consumer<Boolean>) = SimpleOption.method_41751(key, defaultValue, changeCallback)
+    /**
+     * method_42402
+     */
+    fun <T>ofBoolean(key: String, defaultValue: Boolean) = SimpleOption.method_42402(key, defaultValue)
+    /**
+     * method_41750
+     */
+    fun <T>ofBoolean(key: String, tooltipFactory: net.minecraft.class_7172.class_7277<Boolean>, defaultValue: Boolean, changeCallback: Consumer<Boolean>) = SimpleOption.method_41750(key, tooltipFactory, defaultValue, changeCallback)
+    /**
      * method_42720
      */
     fun <T>enumValueText() where T: TranslatableOption = SimpleOption.method_42720<T>()

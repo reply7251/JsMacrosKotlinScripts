@@ -338,6 +338,10 @@ fun GameOptions.getDarknessEffectScale() = this.method_42472()
  */
 fun GameOptions.refreshResourcePacks(resourcePackManager: ResourcePackManager) = this.method_49598(resourcePackManager)
 /**
+ * method_19344
+ */
+fun GameOptions.getTextBackgroundColor(fallbackColor: Int) = this.method_19344(fallbackColor)
+/**
  * method_57703
  */
 fun GameOptions.getMenuBackgroundBlurrinessValue() = this.method_57703()
@@ -461,6 +465,10 @@ fun GameOptions.getSoundDevice() = this.method_42477()
  * method_42441
  */
 fun GameOptions.getAllowServerListing() = this.method_42441()
+/**
+ * method_42550
+ */
+fun GameOptions.getTextBackgroundOpacity() = this.method_42550()
 /**
  * method_42453
  */

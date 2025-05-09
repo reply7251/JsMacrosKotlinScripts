@@ -5,3 +5,7 @@ import me.hellrevenger.generated.*
  * method_54114
  */
 fun RealmsText.toText() = this.method_54114()
+/**
+ * method_49583
+ */
+fun RealmsText.toText(fallback: Text) = this.method_49583(fallback)

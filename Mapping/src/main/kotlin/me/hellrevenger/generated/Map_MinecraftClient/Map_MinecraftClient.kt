@@ -182,6 +182,10 @@ fun MinecraftClient.disconnect(disconnectionScreen: Screen, transferring: Boolea
  */
 fun MinecraftClient.getGpuUtilizationPercentage() = this.method_41734()
 /**
+ * method_56134
+ */
+fun MinecraftClient.disconnect(disconnectionScreen: Screen) = this.method_56134(disconnectionScreen)
+/**
  * method_34745
  */
 fun MinecraftClient.toggleDebugProfiler(chatMessageSender: Consumer<Text>) = this.method_34745(chatMessageSender)
@@ -297,6 +301,10 @@ fun MinecraftClient.setScreenAndRender(screen: Screen) = this.method_29970(scree
  * method_1513
  */
 fun MinecraftClient.reloadResourcesConcurrently() = this.method_1513()
+/**
+ * method_54580
+ */
+fun MinecraftClient.printCrashReport(crashReport: CrashReport) = this.method_54580(crashReport)
 /**
  * method_1558
  */
@@ -505,6 +513,10 @@ fun MinecraftClient.run() = this.method_1514()
  * method_44647
  */
 fun MinecraftClient.getMultiplayerBanDetails() = this.method_44647()
+/**
+ * method_18099
+ */
+fun MinecraftClient.disconnect() = this.method_18099()
 /**
  * method_1538
  */

@@ -35,13 +35,33 @@ object TargetUtilKt {
      */
     fun canSee(brain: Brain<*>, target: LivingEntity) = TargetUtil.method_19550(brain, target)
     /**
+     * method_19949
+     */
+    fun give(entity: LivingEntity, stack: ItemStack, targetLocation: Vec3d) = TargetUtil.method_19949(entity, stack, targetLocation)
+    /**
+     * method_24559
+     */
+    fun getCloserEntity(source: LivingEntity, first: LivingEntity, second: LivingEntity) = TargetUtil.method_24559(source, first, second)
+    /**
      * method_33193
      */
     fun find(entity: PathAwareEntity, horizontalRange: Int, verticalRange: Int) = TargetUtil.method_33193(entity, horizontalRange, verticalRange)
     /**
+     * method_24561
+     */
+    fun walkTowards(entity: LivingEntity, target: BlockPos, speed: Float, completionRange: Int) = TargetUtil.method_24561(entity, target, speed, completionRange)
+    /**
+     * method_19551
+     */
+    fun canSee(brain: Brain<*>, memoryModuleType: MemoryModuleType<out LivingEntity>, entityType: EntityType<*>) = TargetUtil.method_19551(brain, memoryModuleType, entityType)
+    /**
      * method_25940
      */
     fun isTargetWithinAttackRange(mob: MobEntity, target: LivingEntity, rangedWeaponReachReduction: Int) = TargetUtil.method_25940(mob, target, rangedWeaponReachReduction)
+    /**
+     * method_24557
+     */
+    fun walkTowards(entity: LivingEntity, target: Entity, speed: Float, completionRange: Int) = TargetUtil.method_24557(entity, target, speed, completionRange)
     /**
      * method_24560
      */

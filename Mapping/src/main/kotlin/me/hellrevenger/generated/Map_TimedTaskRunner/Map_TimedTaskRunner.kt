@@ -30,6 +30,10 @@ fun TimedTaskRunner.runSilently(tick: Long) = this.method_23643(tick)
  */
 fun TimedTaskRunner.createAndAddReported(task: Runnable) = this.method_36085(task)
 /**
+ * method_36079
+ */
+fun TimedTaskRunner.createAndAdd(task: Runnable) = this.method_36079(task)
+/**
  * method_36075
  */
 fun TimedTaskRunner.completeIfSuccessful() = this.method_36075()

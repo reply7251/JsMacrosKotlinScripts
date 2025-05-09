@@ -50,6 +50,10 @@ fun PathNodeMaker.getSuccessors(successors: Array<PathNode>, node: PathNode) = t
  */
 fun PathNodeMaker.getDefaultNodeType(context: PathContext, x: Int, y: Int, z: Int) = this.method_17(context, x, y, z)
 /**
+ * method_57615
+ */
+fun PathNodeMaker.getDefaultNodeType(entity: MobEntity, pos: BlockPos) = this.method_57615(entity, pos)
+/**
  * method_15
  */
 fun PathNodeMaker.setCanEnterOpenDoors(canEnterOpenDoors: Boolean) = this.method_15(canEnterOpenDoors)

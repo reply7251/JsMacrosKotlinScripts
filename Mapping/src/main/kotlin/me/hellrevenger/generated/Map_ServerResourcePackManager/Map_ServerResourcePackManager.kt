@@ -26,6 +26,10 @@ fun ServerResourcePackManager.update() = this.method_55566()
  */
 fun ServerResourcePackManager.removeAll() = this.method_55552()
 /**
+ * method_55559
+ */
+fun ServerResourcePackManager.addResourcePack(id: UUID, path: file_Path) = this.method_55559(id, path)
+/**
  * method_55556
  */
 fun ServerResourcePackManager.remove(id: UUID) = this.method_55556(id)

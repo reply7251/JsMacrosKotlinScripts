@@ -33,3 +33,7 @@ fun <T>EntityTrackingSection<T>.swapStatus(status: EntityTrackingStatus) where T
  * method_31761
  */
 fun <T>EntityTrackingSection<T>.isEmpty() where T: EntityLike = this.method_31761()
+/**
+ * method_31762
+ */
+fun <T, U>EntityTrackingSection<T>.forEach(type: TypeFilter<T, U>, box: Box, consumer: LazyIterationConsumer<in U>) where T: EntityLike, U: T = this.method_31762<U>(type, box, consumer)

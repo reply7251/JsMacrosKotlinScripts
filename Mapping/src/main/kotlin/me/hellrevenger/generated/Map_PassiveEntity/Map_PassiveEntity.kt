@@ -26,6 +26,10 @@ fun PassiveEntity.growUp(age: Int, overGrow: Boolean) = this.method_5620(age, ov
  */
 fun PassiveEntity.setBreedingAge(age: Int) = this.method_5614(age)
 /**
+ * method_5615
+ */
+fun PassiveEntity.growUp(age: Int) = this.method_5615(age)
+/**
  * method_5613
  */
 fun PassiveEntity.createChild(world: ServerWorld, entity: PassiveEntity) = this.method_5613(world, entity)

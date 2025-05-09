@@ -37,3 +37,7 @@ fun ServerList.set(index: Int, serverInfo: ServerInfo) = this.method_2980(index,
  * method_44296
  */
 fun ServerList.tryUnhide(address: String) = this.method_44296(address)
+/**
+ * method_44295
+ */
+fun ServerList.get(address: String) = this.method_44295(address)

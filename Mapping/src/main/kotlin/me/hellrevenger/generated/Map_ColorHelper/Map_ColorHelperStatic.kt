@@ -39,6 +39,10 @@ object ColorHelperKt {
      */
     fun getBlueFloat(argb: Int) = ColorHelper.method_65103(argb)
     /**
+     * method_61324
+     */
+    fun getArgb(alpha: Int, red: Int, green: Int, blue: Int) = ColorHelper.method_61324(alpha, red, green, blue)
+    /**
      * method_61329
      */
     fun getGreen(argb: Int) = ColorHelper.method_61329(argb)
@@ -71,6 +75,10 @@ object ColorHelperKt {
      */
     fun getBlue(argb: Int) = ColorHelper.method_61331(argb)
     /**
+     * method_64602
+     */
+    fun scaleRgb(argb: Int, redScale: Float, greenScale: Float, blueScale: Float) = ColorHelper.method_64602(argb, redScale, greenScale, blueScale)
+    /**
      * method_61332
      */
     fun average(first: Int, second: Int) = ColorHelper.method_61332(first, second)
@@ -83,9 +91,17 @@ object ColorHelperKt {
      */
     fun withAlpha(alpha: Int, rgb: Int) = ColorHelper.method_61330(alpha, rgb)
     /**
+     * method_61321
+     */
+    fun scaleRgb(argb: Int, scale: Float) = ColorHelper.method_61321(argb, scale)
+    /**
      * method_65102
      */
     fun getGreenFloat(argb: Int) = ColorHelper.method_65102(argb)
+    /**
+     * method_61323
+     */
+    fun getArgb(red: Int, green: Int, blue: Int) = ColorHelper.method_61323(red, green, blue)
     /**
      * method_61318
      */

@@ -14,4 +14,8 @@ object EntityEffectParticleEffectKt {
      * method_58254
      */
     fun createCodec(type: ParticleType<EntityEffectParticleEffect>) = EntityEffectParticleEffect.method_58254(type)
+    /**
+     * method_58255
+     */
+    fun create(type: ParticleType<EntityEffectParticleEffect>, r: Float, g: Float, b: Float) = EntityEffectParticleEffect.method_58255(type, r, g, b)
 }

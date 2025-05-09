@@ -14,9 +14,17 @@ fun PotionContentsComponent.getColor(defaultColor: Int) = this.method_65361(defa
  */
 fun PotionContentsComponent.getName(prefix: String) = this.method_64195(prefix)
 /**
+ * method_57398
+ */
+fun PotionContentsComponent.with(customEffect: StatusEffectInstance) = this.method_57398(customEffect)
+/**
  * method_57402
  */
 fun PotionContentsComponent.forEachEffect(effectConsumer: Consumer<StatusEffectInstance>) = this.method_57402(effectConsumer)
+/**
+ * method_47372
+ */
+fun PotionContentsComponent.buildTooltip(textConsumer: Consumer<Text>, durationMultiplier: Float, tickRate: Float) = this.method_47372(textConsumer, durationMultiplier, tickRate)
 /**
  * method_57397
  */
@@ -25,6 +33,10 @@ fun PotionContentsComponent.getEffects() = this.method_57397()
  * method_57401
  */
 fun PotionContentsComponent.matches(potion: RegistryEntry<Potion>) = this.method_57401(potion)
+/**
+ * method_8064
+ */
+fun PotionContentsComponent.getColor() = this.method_8064()
 /**
  * method_57405
  */

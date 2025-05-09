@@ -11,6 +11,10 @@ object SplineKt {
      */
     fun <C, I>builder(locationFunction: I, amplifier: ToFloatFunction<Float>) where I: ToFloatFunction<C> = Spline.method_39502<C, I>(locationFunction, amplifier)
     /**
+     * method_37918
+     */
+    fun <C, I>builder(locationFunction: I) where I: ToFloatFunction<C> = Spline.method_37918<C, I>(locationFunction)
+    /**
      * method_39427
      */
     fun <C, I>fixedFloatFunction(value: Float) where I: ToFloatFunction<C> = Spline.method_39427<C, I>(value)

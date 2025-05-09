@@ -14,6 +14,10 @@ fun TexturedModel.upload(block: Block, writer: BiConsumer<Identifier, ModelSuppl
  */
 fun TexturedModel.textures(texturesConsumer: Consumer<TextureMap>) = this.method_25917(texturesConsumer)
 /**
+ * method_25915
+ */
+fun TexturedModel.upload(block: Block, suffix: String, writer: BiConsumer<Identifier, ModelSupplier>) = this.method_25915(block, suffix, writer)
+/**
  * method_25921
  */
 fun TexturedModel.getTextures() = this.method_25921()

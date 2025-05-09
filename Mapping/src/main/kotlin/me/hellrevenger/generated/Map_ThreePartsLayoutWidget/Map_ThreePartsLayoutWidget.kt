@@ -14,6 +14,10 @@ fun <T>ThreePartsLayoutWidget.addBody(widget: T) where T: Widget = this.method_4
  */
 fun <T>ThreePartsLayoutWidget.addFooter(widget: T, callback: Consumer<Positioner>) where T: Widget = this.method_48997<T>(widget, callback)
 /**
+ * method_49000
+ */
+fun <T>ThreePartsLayoutWidget.addBody(widget: T, callback: Consumer<Positioner>) where T: Widget = this.method_49000<T>(widget, callback)
+/**
  * method_48995
  */
 fun ThreePartsLayoutWidget.setHeaderHeight(headerHeight: Int) = this.method_48995(headerHeight)
@@ -33,3 +37,15 @@ fun ThreePartsLayoutWidget.setFooterHeight(footerHeight: Int) = this.method_4899
  * method_57727
  */
 fun ThreePartsLayoutWidget.getContentHeight() = this.method_57727()
+/**
+ * method_48993
+ */
+fun <T>ThreePartsLayoutWidget.addHeader(widget: T, callback: Consumer<Positioner>) where T: Widget = this.method_48993<T>(widget, callback)
+/**
+ * method_48992
+ */
+fun <T>ThreePartsLayoutWidget.addHeader(widget: T) where T: Widget = this.method_48992<T>(widget)
+/**
+ * method_48996
+ */
+fun <T>ThreePartsLayoutWidget.addFooter(widget: T) where T: Widget = this.method_48996<T>(widget)

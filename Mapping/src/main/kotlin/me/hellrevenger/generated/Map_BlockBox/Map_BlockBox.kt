@@ -62,6 +62,18 @@ fun BlockBox.offset(x: Int, y: Int, z: Int) = this.method_19311(x, y, z)
  */
 fun BlockBox.encompass(pos: BlockPos) = this.method_34389(pos)
 /**
+ * method_59718
+ */
+fun BlockBox.expand(x: Int, y: Int, z: Int) = this.method_59718(x, y, z)
+/**
+ * method_14662
+ */
+fun BlockBox.contains(pos: Vec3i) = this.method_14662(pos)
+/**
+ * method_29299
+ */
+fun BlockBox.move(vec: Vec3i) = this.method_29299(vec)
+/**
  * method_35417
  */
 fun BlockBox.getMinZ() = this.method_35417()
@@ -73,6 +85,10 @@ fun BlockBox.getBlockCountY() = this.method_14660()
  * method_35419
  */
 fun BlockBox.getMaxY() = this.method_35419()
+/**
+ * method_35412
+ */
+fun BlockBox.encompass(box: BlockBox) = this.method_35412(box)
 /**
  * method_22874
  */

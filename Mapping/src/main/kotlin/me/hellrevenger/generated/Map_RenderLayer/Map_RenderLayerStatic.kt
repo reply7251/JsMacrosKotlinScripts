@@ -259,6 +259,10 @@ object RenderLayerKt {
      */
     fun getEntityTranslucentEmissiveNoOutline(texture: Identifier) = RenderLayer.method_55252(texture)
     /**
+     * method_42599
+     */
+    fun getEntityTranslucentEmissive(texture: Identifier, affectsOutline: Boolean) = RenderLayer.method_42599(texture, affectsOutline)
+    /**
      * method_29379
      */
     fun getItemEntityTranslucentCull(texture: Identifier) = RenderLayer.method_29379(texture)
@@ -282,6 +286,10 @@ object RenderLayerKt {
      * method_62290
      */
     fun getEntitySolidZOffsetForward(texture: Identifier) = RenderLayer.method_62290(texture)
+    /**
+     * method_24048
+     */
+    fun of(name: String, vertexFormat: VertexFormat, drawMode: net.minecraft.class_293.class_5596, expectedBufferSize: Int, phaseData: net.minecraft.class_1921.class_4688) = RenderLayer.method_24048(name, vertexFormat, drawMode, expectedBufferSize, phaseData)
     /**
      * method_51786
      */
@@ -315,9 +323,17 @@ object RenderLayerKt {
      */
     fun getGuiOverlay() = RenderLayer.method_51785()
     /**
+     * method_24294
+     */
+    fun getEntityTranslucent(texture: Identifier, affectsOutline: Boolean) = RenderLayer.method_24294(texture, affectsOutline)
+    /**
      * method_56849
      */
     fun getFastClouds() = RenderLayer.method_56849()
+    /**
+     * method_28115
+     */
+    fun getEntityCutoutNoCullZOffset(texture: Identifier, affectsOutline: Boolean) = RenderLayer.method_28115(texture, affectsOutline)
     /**
      * method_62280
      */
@@ -330,6 +346,10 @@ object RenderLayerKt {
      * method_23577
      */
     fun getSolid() = RenderLayer.method_23577()
+    /**
+     * method_34569
+     */
+    fun of(program: net.minecraft.class_4668.class_5942) = RenderLayer.method_34569(program)
     /**
      * method_53491
      */
@@ -350,6 +370,10 @@ object RenderLayerKt {
      * method_23589
      */
     fun getWaterMask() = RenderLayer.method_23589()
+    /**
+     * method_24293
+     */
+    fun getEntityCutoutNoCull(texture: Identifier, affectsOutline: Boolean) = RenderLayer.method_24293(texture, affectsOutline)
     /**
      * method_30676
      */

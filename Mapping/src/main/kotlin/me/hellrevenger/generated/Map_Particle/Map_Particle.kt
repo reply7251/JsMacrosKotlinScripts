@@ -38,6 +38,10 @@ fun Particle.renderCustom(matrices: MatrixStack, vertexConsumers: VertexConsumer
  */
 fun Particle.getBoundingBox() = this.method_3064()
 /**
+ * method_3069
+ */
+fun Particle.move(dx: Double, arg1: Double, dy: Double) = this.method_3069(dx, arg1, dy)
+/**
  * method_3084
  */
 fun Particle.setColor(red: Float, green: Float, blue: Float) = this.method_3084(red, green, blue)

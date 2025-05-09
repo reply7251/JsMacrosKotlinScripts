@@ -13,3 +13,7 @@ fun SoundLoader.loadStreamed(id: Identifier, repeatInstantly: Boolean) = this.me
  * method_19738
  */
 fun SoundLoader.close() = this.method_19738()
+/**
+ * method_19741
+ */
+fun SoundLoader.loadStatic(sounds: Collection<Sound>) = this.method_19741(sounds)

@@ -23,6 +23,10 @@ object BlockPosArgumentTypeKt {
      */
     fun getLoadedBlockPos(context: CommandContext<ServerCommandSource>, world: ServerWorld, name: String) = BlockPosArgumentType.method_48298(context, world, name)
     /**
+     * method_9696
+     */
+    fun getLoadedBlockPos(context: CommandContext<ServerCommandSource>, name: String) = BlockPosArgumentType.method_9696(context, name)
+    /**
      * method_48299
      */
     fun getBlockPos(context: CommandContext<ServerCommandSource>, name: String) = BlockPosArgumentType.method_48299(context, name)

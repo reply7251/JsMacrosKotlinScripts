@@ -106,7 +106,7 @@ open class WorldPosWrapper(
         )
 
         matrixStack.push()
-        matrixStack.translate(clip2.x().toFloat(), clip2.y().toFloat(), clip2.z().toFloat())
+        matrixStack.translate(clip2.x(), clip2.y(), clip2.z())
         draw2d.render(context)
         matrixStack.pop()
     }

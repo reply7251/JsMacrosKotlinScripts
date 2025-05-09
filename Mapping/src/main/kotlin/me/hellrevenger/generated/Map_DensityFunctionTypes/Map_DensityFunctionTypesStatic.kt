@@ -35,6 +35,10 @@ object DensityFunctionTypesKt {
      */
     fun noise(noiseParameters: RegistryEntry<net.minecraft.class_5216.class_5487>, scaleXz: Double, arg2: Double) = DensityFunctionTypes.method_40502(noiseParameters, scaleXz, arg2)
     /**
+     * method_40493
+     */
+    fun noise(noiseParameters: RegistryEntry<net.minecraft.class_5216.class_5487>) = DensityFunctionTypes.method_40493(noiseParameters)
+    /**
      * method_40507
      */
     fun cacheOnce(inputFunction: DensityFunction) = DensityFunctionTypes.method_40507(inputFunction)
@@ -91,6 +95,14 @@ object DensityFunctionTypesKt {
      */
     fun shiftedNoise(shiftX: DensityFunction, shiftZ: DensityFunction, xzScale: Double, arg3: RegistryEntry<net.minecraft.class_5216.class_5487>) = DensityFunctionTypes.method_40487(shiftX, shiftZ, xzScale, arg3)
     /**
+     * method_40488
+     */
+    fun lerp(delta: DensityFunction, start: DensityFunction, end: DensityFunction) = DensityFunctionTypes.method_40488(delta, start, end)
+    /**
+     * method_40494
+     */
+    fun noise(noiseParameters: RegistryEntry<net.minecraft.class_5216.class_5487>, scaleY: Double) = DensityFunctionTypes.method_40494(noiseParameters, scaleY)
+    /**
      * method_41528
      */
     fun spline(spline: Spline<net.minecraft.class_6916.class_7076.class_7136, net.minecraft.class_6916.class_7076.class_7135>) = DensityFunctionTypes.method_41528(spline)
@@ -110,6 +122,14 @@ object DensityFunctionTypesKt {
      * method_40486
      */
     fun add(a: DensityFunction, b: DensityFunction) = DensityFunctionTypes.method_40486(a, b)
+    /**
+     * method_40496
+     */
+    fun noiseInRange(noiseParameters: RegistryEntry<net.minecraft.class_5216.class_5487>, scaleXz: Double, arg2: Double, scaleY: Double, arg4: Double) = DensityFunctionTypes.method_40496(noiseParameters, scaleXz, arg2, scaleY, arg4)
+    /**
+     * method_40497
+     */
+    fun noiseInRange(noiseParameters: RegistryEntry<net.minecraft.class_5216.class_5487>, scaleY: Double, arg2: Double, min: Double) = DensityFunctionTypes.method_40497(noiseParameters, scaleY, arg2, min)
     /**
      * method_40509
      */

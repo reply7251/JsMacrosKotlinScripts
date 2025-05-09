@@ -38,6 +38,10 @@ fun <O, S, T, V>State<O, S>.with(property: property_Property<T>, value: V) where
  */
 fun <O, S, T>State<O, S>.cycle(property: property_Property<T>) where T: Comparable<T> = this.method_28493<T>(property)
 /**
+ * method_61767
+ */
+fun <O, S, T>State<O, S>.get(property: property_Property<T>, fallback: T) where T: Comparable<T> = this.method_61767<T>(property, fallback)
+/**
  * method_47968
  */
 fun <O, S, T, V>State<O, S>.withIfExists(property: property_Property<T>, value: V) where T: Comparable<T>, V: T = this.method_47968<T, V>(property, value)

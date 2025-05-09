@@ -7,6 +7,10 @@ object WorldRendererKt {
      */
     fun getLightmapCoordinates(world: BlockRenderView, state: BlockState, pos: BlockPos) = WorldRenderer.method_23793(world, state, pos)
     /**
+     * method_23794
+     */
+    fun getLightmapCoordinates(world: BlockRenderView, pos: BlockPos) = WorldRenderer.method_23794(world, pos)
+    /**
      * method_52816
      */
     fun offsetFrustum(frustum: Frustum) = WorldRenderer.method_52816(frustum)

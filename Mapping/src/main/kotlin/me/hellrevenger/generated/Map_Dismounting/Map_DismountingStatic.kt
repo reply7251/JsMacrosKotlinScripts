@@ -23,6 +23,10 @@ object DismountingKt {
      */
     fun canPlaceEntityAt(world: CollisionView, offset: Vec3d, entity: LivingEntity, pose: EntityPose) = Dismounting.method_33353(world, offset, entity, pose)
     /**
+     * method_27933
+     */
+    fun canPlaceEntityAt(world: CollisionView, entity: LivingEntity, targetBox: Box) = Dismounting.method_27933(world, entity, targetBox)
+    /**
      * method_27934
      */
     fun getDismountOffsets(movementDirection: Direction) = Dismounting.method_27934(movementDirection)

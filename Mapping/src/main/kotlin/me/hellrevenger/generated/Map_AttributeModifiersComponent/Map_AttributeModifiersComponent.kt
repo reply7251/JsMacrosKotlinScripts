@@ -10,6 +10,10 @@ fun AttributeModifiersComponent.applyModifiers(slot: AttributeModifierSlot, attr
  */
 fun AttributeModifiersComponent.applyOperations(base: Double, arg1: EquipmentSlot) = this.method_57481(base, arg1)
 /**
+ * method_57482
+ */
+fun AttributeModifiersComponent.applyModifiers(slot: EquipmentSlot, attributeConsumer: BiConsumer<RegistryEntry<EntityAttribute>, EntityAttributeModifier>) = this.method_57482(slot, attributeConsumer)
+/**
  * method_57484
  */
 fun AttributeModifiersComponent.with(attribute: RegistryEntry<EntityAttribute>, modifier: EntityAttributeModifier, slot: AttributeModifierSlot) = this.method_57484(attribute, modifier, slot)

@@ -22,4 +22,12 @@ object TaskTriggererKt {
      * method_47215
      */
     fun <E, M>newContext() where E: LivingEntity = TaskTriggerer.method_47215<E>()
+    /**
+     * method_47225
+     */
+    fun <E, M>predicate(predicate: Predicate<E>) where E: LivingEntity = TaskTriggerer.method_47225<E>(predicate)
+    /**
+     * method_47217
+     */
+    fun <E, M>runIf(predicate: TaskRunnable<in E>, task: TaskRunnable<in E>) where E: LivingEntity = TaskTriggerer.method_47217<E>(predicate, task)
 }

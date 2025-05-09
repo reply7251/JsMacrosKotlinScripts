@@ -50,6 +50,10 @@ fun MinecartController.getY() = this.method_61593()
  */
 fun MinecartController.getPitch() = this.method_61595()
 /**
+ * method_61581
+ */
+fun MinecartController.setPos(pos: Vec3d) = this.method_61581(pos)
+/**
  * method_61587
  */
 fun MinecartController.tick() = this.method_61587()
@@ -90,6 +94,10 @@ fun MinecartController.getZ() = this.method_61594()
  */
 fun MinecartController.getYaw() = this.method_61596()
 /**
+ * method_61574
+ */
+fun MinecartController.setPos(x: Double, arg1: Double, y: Double, arg3: Float, z: Float, arg5: Int) = this.method_61574(x, arg1, y, arg3, z, arg5)
+/**
  * method_61582
  */
 fun MinecartController.getLerpTargetZ() = this.method_61582()
@@ -109,3 +117,7 @@ fun MinecartController.getMaxSpeed(world: ServerWorld) = this.method_61598(world
  * method_61590
  */
 fun MinecartController.getVelocity() = this.method_61590()
+/**
+ * method_61576
+ */
+fun MinecartController.setVelocity(velocity: Vec3d) = this.method_61576(velocity)

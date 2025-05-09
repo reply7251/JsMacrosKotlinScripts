@@ -26,6 +26,10 @@ fun ChunkSection.setBlockState(x: Int, y: Int, z: Int, state: BlockState, lock: 
  */
 fun ChunkSection.populateBiomes(biomeSupplier: BiomeSupplier, sampler: net.minecraft.class_6544.class_6552, x: Int, y: Int, z: Int) = this.method_38291(biomeSupplier, sampler, x, y, z)
 /**
+ * method_16675
+ */
+fun ChunkSection.setBlockState(x: Int, y: Int, z: Int, state: BlockState) = this.method_16675(x, y, z, state)
+/**
  * method_12260
  */
 fun ChunkSection.getPacketSize() = this.method_12260()

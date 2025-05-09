@@ -38,6 +38,10 @@ fun Vec2f.equals(other: Vec2f) = this.method_1016(other)
  */
 fun Vec2f.normalize() = this.method_35581()
 /**
+ * method_35586
+ */
+fun Vec2f.add(vec: Vec2f) = this.method_35586(vec)
+/**
  * method_35584
  */
 fun Vec2f.length() = this.method_35584()

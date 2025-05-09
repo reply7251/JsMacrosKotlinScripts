@@ -25,3 +25,7 @@ fun <T>EntityIndex<T>.remove(entity: T) where T: EntityLike = this.method_31757(
  * method_31751
  */
 fun <T>EntityIndex<T>.iterate() where T: EntityLike = this.method_31751()
+/**
+ * method_31752
+ */
+fun <T>EntityIndex<T>.get(id: Int) where T: EntityLike = this.method_31752(id)

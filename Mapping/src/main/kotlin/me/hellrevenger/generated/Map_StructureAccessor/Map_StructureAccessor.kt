@@ -54,10 +54,26 @@ fun StructureAccessor.hasStructureReferences(pos: BlockPos) = this.method_38852(
  */
 fun StructureAccessor.forRegion(region: ChunkRegion) = this.method_29951(region)
 /**
+ * method_41034
+ */
+fun StructureAccessor.getStructureContaining(pos: BlockPos, structures: RegistryEntryList<Structure>) = this.method_41034(pos, structures)
+/**
+ * method_57560
+ */
+fun StructureAccessor.getStructureContaining(pos: BlockPos, tag: TagKey<Structure>) = this.method_57560(pos, tag)
+/**
  * method_41035
  */
 fun StructureAccessor.getStructureStarts(pos: ChunkPos, predicate: Predicate<Structure>) = this.method_41035(pos, predicate)
 /**
+ * method_38854
+ */
+fun StructureAccessor.getStructureContaining(pos: BlockPos, structure: Structure) = this.method_38854(pos, structure)
+/**
  * method_41036
  */
 fun StructureAccessor.getRegistryManager() = this.method_41036()
+/**
+ * method_38853
+ */
+fun StructureAccessor.getStructureStarts(sectionPos: ChunkSectionPos, structure: Structure) = this.method_38853(sectionPos, structure)

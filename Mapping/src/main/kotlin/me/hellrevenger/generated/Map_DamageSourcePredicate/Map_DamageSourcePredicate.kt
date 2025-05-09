@@ -6,6 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun DamageSourcePredicate.test(player: ServerPlayerEntity, damageSource: DamageSource) = this.method_8847(player, damageSource)
 /**
+ * method_8845
+ */
+fun DamageSourcePredicate.test(world: ServerWorld, pos: Vec3d, damageSource: DamageSource) = this.method_8845(world, pos, damageSource)
+/**
  * comp_2793
  */
 fun DamageSourcePredicate.isDirect() = this.comp_2793()

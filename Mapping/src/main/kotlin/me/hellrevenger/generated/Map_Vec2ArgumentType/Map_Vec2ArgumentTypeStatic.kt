@@ -11,6 +11,10 @@ object Vec2ArgumentTypeKt {
      */
     fun vec2(centerIntegers: Boolean) = Vec2ArgumentType.method_35802(centerIntegers)
     /**
+     * method_9723
+     */
+    fun vec2() = Vec2ArgumentType.method_9723()
+    /**
      * method_9724
      */
     fun getVec2(context: CommandContext<ServerCommandSource>, name: String) = Vec2ArgumentType.method_9724(context, name)

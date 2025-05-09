@@ -14,6 +14,10 @@ fun TagBuilder.build() = this.method_26782()
  */
 fun TagBuilder.addTag(id: Identifier) = this.method_26787(id)
 /**
+ * method_27064
+ */
+fun TagBuilder.add(entry: tag_TagEntry) = this.method_27064(entry)
+/**
  * method_34891
  */
 fun TagBuilder.addOptional(id: Identifier) = this.method_34891(id)

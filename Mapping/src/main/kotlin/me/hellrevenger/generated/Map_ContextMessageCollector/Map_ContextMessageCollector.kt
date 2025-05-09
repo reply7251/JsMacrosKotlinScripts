@@ -13,3 +13,7 @@ fun ContextMessageCollector.add(message: SignedMessage) = this.method_45760(mess
  * method_45761
  */
 fun ContextMessageCollector.tryLink(message: SignedMessage) = this.method_45761(message)
+/**
+ * method_45759
+ */
+fun ContextMessageCollector.add(log: ChatLog, selections: IntCollection, consumer: net.minecraft.class_7757.class_7632) = this.method_45759(log, selections, consumer)

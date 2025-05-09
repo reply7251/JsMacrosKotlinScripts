@@ -46,6 +46,10 @@ fun Style.withFont(font: Identifier) = this.method_27704(font)
  */
 fun Style.withParent(parent: Style) = this.method_27702(parent)
 /**
+ * method_27705
+ */
+fun Style.withFormatting(formattings: Array<Formatting>) = this.method_27705(*formattings)
+/**
  * method_36141
  */
 fun Style.withObfuscated(obfuscated: Boolean) = this.method_36141(obfuscated)
@@ -90,9 +94,17 @@ fun Style.withExclusiveFormatting(formatting: Formatting) = this.method_27707(fo
  */
 fun Style.withItalic(italic: Boolean) = this.method_10978(italic)
 /**
+ * method_36139
+ */
+fun Style.withColor(rgbColor: Int) = this.method_36139(rgbColor)
+/**
  * method_10982
  */
 fun Style.withBold(bold: Boolean) = this.method_10982(bold)
+/**
+ * method_10977
+ */
+fun Style.withColor(color: Formatting) = this.method_10977(color)
 /**
  * method_36140
  */

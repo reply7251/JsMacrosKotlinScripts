@@ -111,6 +111,10 @@ object ScreenTextsKt {
      */
     fun space() = ScreenTexts.method_48320()
     /**
+     * method_37110
+     */
+    fun joinLines(texts: Array<Text>) = ScreenTexts.method_37110(*texts)
+    /**
      * method_44682
      */
     fun days(days: Long) = ScreenTexts.method_44682(days)

@@ -10,4 +10,8 @@ object EntityPropertiesLootConditionKt {
      * method_15972
      */
     fun create(entity: net.minecraft.class_47.class_50) = EntityPropertiesLootCondition.method_15972(entity)
+    /**
+     * method_27865
+     */
+    fun builder(entity: net.minecraft.class_47.class_50, predicate: EntityPredicate) = EntityPropertiesLootCondition.method_27865(entity, predicate)
 }

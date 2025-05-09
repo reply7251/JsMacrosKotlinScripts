@@ -118,6 +118,10 @@ fun ClientPlayerInteractionManager.isFlyingLocked() = this.method_2928()
  */
 fun ClientPlayerInteractionManager.slotChangedState(slot: Int, screenHandlerId: Int, newState: Boolean) = this.method_54634(slot, screenHandlerId, newState)
 /**
+ * method_2901
+ */
+fun ClientPlayerInteractionManager.createPlayer(world: ClientWorld, statHandler: StatHandler, recipeBook: ClientRecipeBook, lastSneaking: Boolean, lastSprinting: Boolean) = this.method_2901(world, statHandler, recipeBook, lastSneaking, lastSprinting)
+/**
  * method_2908
  */
 fun ClientPlayerInteractionManager.hasStatusBars() = this.method_2908()

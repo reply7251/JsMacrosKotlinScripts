@@ -33,3 +33,7 @@ fun ChunkNibbleArray.copy() = this.method_12144()
  * method_51380
  */
 fun ChunkNibbleArray.isArrayUninitialized() = this.method_51380()
+/**
+ * method_12146
+ */
+fun ChunkNibbleArray.isUninitialized() = this.method_12146()

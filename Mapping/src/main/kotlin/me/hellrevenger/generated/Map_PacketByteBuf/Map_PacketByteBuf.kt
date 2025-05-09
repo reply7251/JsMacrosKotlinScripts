@@ -10,9 +10,17 @@ fun PacketByteBuf.getBytes(arg0: Int, arg1: ByteBuffer) = this.method_52950(arg0
  */
 fun PacketByteBuf.writeBitSet(bitSet: BitSet) = this.method_33557(bitSet)
 /**
+ * method_52953
+ */
+fun PacketByteBuf.getBytes(arg0: Int, arg1: ByteArray, arg2: Int, arg3: Int) = this.method_52953(arg0, arg1, arg2, arg3)
+/**
  * method_52968
  */
 fun PacketByteBuf.setBytes(arg0: Int, arg1: ByteBuf) = this.method_52968(arg0, arg1)
+/**
+ * method_52949
+ */
+fun PacketByteBuf.getBytes(arg0: Int, arg1: OutputStream, arg2: Int) = this.method_52949(arg0, arg1, arg2)
 /**
  * method_10807
  */
@@ -50,9 +58,17 @@ fun PacketByteBuf.writeDouble(arg0: Double) = this.method_52940(arg0)
  */
 fun PacketByteBuf.readVarInt() = this.method_10816()
 /**
+ * method_52952
+ */
+fun PacketByteBuf.getBytes(arg0: Int, arg1: ByteArray) = this.method_52952(arg0, arg1)
+/**
  * method_53001
  */
 fun PacketByteBuf.writeMediumLE(arg0: Int) = this.method_53001(arg0)
+/**
+ * method_49068
+ */
+fun PacketByteBuf.writeVector3f(vector3f: Vector3f) = this.method_49068(vector3f)
 /**
  * method_52945
  */
@@ -70,6 +86,10 @@ fun <T>PacketByteBuf.readOptional(reader: PacketDecoder<in PacketByteBuf, T>) = 
  */
 fun PacketByteBuf.setIntLE(arg0: Int, arg1: Int) = this.method_52991(arg0, arg1)
 /**
+ * method_52976
+ */
+fun PacketByteBuf.writeBytes(arg0: ByteBuf, arg1: Int) = this.method_52976(arg0, arg1)
+/**
  * method_30616
  */
 fun PacketByteBuf.readNbt(sizeTracker: NbtSizeTracker) = this.method_30616(sizeTracker)
@@ -77,6 +97,10 @@ fun PacketByteBuf.readNbt(sizeTracker: NbtSizeTracker) = this.method_30616(sizeT
  * method_53004
  */
 fun PacketByteBuf.writeChar(arg0: Int) = this.method_53004(arg0)
+/**
+ * method_46252
+ */
+fun PacketByteBuf.writeBitSet(bitSet: BitSet, size: Int) = this.method_46252(bitSet, size)
 /**
  * method_34069
  */
@@ -94,6 +118,10 @@ fun PacketByteBuf.readDate() = this.method_10802()
  */
 fun PacketByteBuf.writeChunkSectionPos(pos: ChunkSectionPos) = this.method_36131(pos)
 /**
+ * method_52962
+ */
+fun <T>PacketByteBuf.decode(idToValue: IntFunction<T>) = this.method_52962<T>(idToValue)
+/**
  * method_49070
  */
 fun PacketByteBuf.readQuaternionf() = this.method_49070()
@@ -105,6 +133,10 @@ fun PacketByteBuf.writeIntLE(arg0: Int) = this.method_53003(arg0)
  * method_44118
  */
 fun PacketByteBuf.readInstant() = this.method_44118()
+/**
+ * method_10798
+ */
+fun PacketByteBuf.readNbt() = this.method_10798()
 /**
  * method_52997
  */
@@ -146,6 +178,14 @@ fun <T>PacketByteBuf.readRegistryKey(registryRef: RegistryKey<out Registry<T>>) 
  */
 fun PacketByteBuf.setByte(arg0: Int, arg1: Int) = this.method_52966(arg0, arg1)
 /**
+ * method_52970
+ */
+fun PacketByteBuf.setBytes(arg0: Int, arg1: ByteBuf, arg2: Int, arg3: Int) = this.method_52970(arg0, arg1, arg2, arg3)
+/**
+ * method_52972
+ */
+fun PacketByteBuf.setBytes(arg0: Int, arg1: ByteArray) = this.method_52972(arg0, arg1)
+/**
  * method_29172
  */
 fun <T>PacketByteBuf.encode(ops: DynamicOps<NbtElement>, codec: Codec<T>, value: T) = this.method_29172<T>(ops, codec, value)
@@ -153,6 +193,10 @@ fun <T>PacketByteBuf.encode(ops: DynamicOps<NbtElement>, codec: Codec<T>, value:
  * method_34062
  */
 fun <T>PacketByteBuf.writeCollection(collection: Collection<T>, writer: PacketEncoder<in PacketByteBuf, T>) = this.method_34062<T>(collection, writer)
+/**
+ * method_52980
+ */
+fun PacketByteBuf.writeBytes(arg0: ByteArray, arg1: Int, arg2: Int) = this.method_52980(arg0, arg1, arg2)
 /**
  * method_52955
  */
@@ -182,9 +226,21 @@ fun PacketByteBuf.writeMedium(arg0: Int) = this.method_53000(arg0)
  */
 fun <T, C>PacketByteBuf.readCollection(collectionFactory: IntFunction<C>, reader: PacketDecoder<in PacketByteBuf, T>) where C: Collection<T> = this.method_34068<T, C>(collectionFactory, reader)
 /**
+ * method_10790
+ */
+fun PacketByteBuf.readUuid() = this.method_10790()
+/**
  * method_52956
  */
 fun PacketByteBuf.readBytes(arg0: ByteBuf) = this.method_52956(arg0)
+/**
+ * method_52948
+ */
+fun PacketByteBuf.getBytes(arg0: Int, arg1: ByteBuf, arg2: Int, arg3: Int) = this.method_52948(arg0, arg1, arg2, arg3)
+/**
+ * method_10814
+ */
+fun PacketByteBuf.writeString(string: String) = this.method_10814(string)
 /**
  * method_10817
  */
@@ -198,6 +254,10 @@ fun PacketByteBuf.writeByteArray(array: ByteArray) = this.method_10813(array)
  */
 fun PacketByteBuf.setIndex(arg0: Int, arg1: Int) = this.method_52944(arg0, arg1)
 /**
+ * method_52979
+ */
+fun PacketByteBuf.readBytes(arg0: ByteArray) = this.method_52979(arg0)
+/**
  * method_44113
  */
 fun PacketByteBuf.writeGlobalPos(pos: GlobalPos) = this.method_44113(pos)
@@ -206,9 +266,17 @@ fun PacketByteBuf.writeGlobalPos(pos: GlobalPos) = this.method_44113(pos)
  */
 fun PacketByteBuf.setLongLE(arg0: Int, arg1: Long) = this.method_52967(arg0, arg1)
 /**
+ * method_52947
+ */
+fun PacketByteBuf.getBytes(arg0: Int, arg1: ByteBuf, arg2: Int) = this.method_52947(arg0, arg1, arg2)
+/**
  * method_34065
  */
 fun PacketByteBuf.forEachInCollection(consumer: Consumer<PacketByteBuf>) = this.method_34065(consumer)
+/**
+ * method_52996
+ */
+fun PacketByteBuf.readVec3d() = this.method_52996()
 /**
  * method_52985
  */
@@ -258,13 +326,41 @@ fun PacketByteBuf.readString() = this.method_19772()
  */
 fun PacketByteBuf.readVarLong() = this.method_10792()
 /**
+ * method_43827
+ */
+fun <T>PacketByteBuf.readNullable(reader: PacketDecoder<in PacketByteBuf, T>) = this.method_43827<T>(reader)
+/**
  * method_10787
  */
 fun PacketByteBuf.readIntArray() = this.method_10787()
 /**
+ * method_52957
+ */
+fun PacketByteBuf.readBytes(arg0: ByteBuf, arg1: Int) = this.method_52957(arg0, arg1)
+/**
  * method_52935
  */
 fun PacketByteBuf.resetWriterIndex() = this.method_52935()
+/**
+ * method_36130
+ */
+fun PacketByteBuf.writeChunkPos(pos: ChunkPos) = this.method_36130(pos)
+/**
+ * method_52969
+ */
+fun PacketByteBuf.setBytes(arg0: Int, arg1: ByteBuf, arg2: Int) = this.method_52969(arg0, arg1, arg2)
+/**
+ * method_36133
+ */
+fun PacketByteBuf.readChunkPos() = this.method_36133()
+/**
+ * method_52961
+ */
+fun PacketByteBuf.readBytes(arg0: ByteBuffer) = this.method_52961(arg0)
+/**
+ * method_46254
+ */
+fun PacketByteBuf.readBitSet(size: Int) = this.method_46254(size)
 /**
  * method_52987
  */
@@ -274,6 +370,10 @@ fun PacketByteBuf.setMediumLE(arg0: Int, arg1: Int) = this.method_52987(arg0, ar
  */
 fun <T>PacketByteBuf.readEnumConstant(enumClass: Class<T>) where T: Enum<T> = this.method_10818<T>(enumClass)
 /**
+ * method_52965
+ */
+fun PacketByteBuf.readBytes(arg0: ByteArray, arg1: Int, arg2: Int) = this.method_52965(arg0, arg1, arg2)
+/**
  * method_10789
  */
 fun PacketByteBuf.writeLongArray(array: LongArray) = this.method_10789(array)
@@ -281,6 +381,10 @@ fun PacketByteBuf.writeLongArray(array: LongArray) = this.method_10789(array)
  * method_10804
  */
 fun PacketByteBuf.writeVarInt(value: Int) = this.method_10804(value)
+/**
+ * method_29171
+ */
+fun <T>PacketByteBuf.decode(ops: DynamicOps<NbtElement>, codec: Codec<T>, sizeTracker: NbtSizeTracker) = this.method_29171<T>(ops, codec, sizeTracker)
 /**
  * method_49395
  */
@@ -302,6 +406,10 @@ fun PacketByteBuf.setFloat(arg0: Int, arg1: Float) = this.method_52943(arg0, arg
  */
 fun PacketByteBuf.writeDate(date: Date) = this.method_10796(date)
 /**
+ * method_10801
+ */
+fun PacketByteBuf.readLongArray(toArray: LongArray) = this.method_10801(toArray)
+/**
  * method_52951
  */
 fun PacketByteBuf.setBoolean(arg0: Int, arg1: Boolean) = this.method_52951(arg0, arg1)
@@ -310,9 +418,21 @@ fun PacketByteBuf.setBoolean(arg0: Int, arg1: Boolean) = this.method_52951(arg0,
  */
 fun PacketByteBuf.discardSomeReadBytes() = this.method_52937()
 /**
+ * method_52975
+ */
+fun PacketByteBuf.writeBytes(arg0: ByteBuf) = this.method_52975(arg0)
+/**
+ * method_52973
+ */
+fun PacketByteBuf.setBytes(arg0: Int, arg1: ByteArray, arg2: Int, arg3: Int) = this.method_52973(arg0, arg1, arg2, arg3)
+/**
  * method_49067
  */
 fun PacketByteBuf.writeQuaternionf(quaternionf: Quaternionf) = this.method_49067(quaternionf)
+/**
+ * method_10794
+ */
+fun PacketByteBuf.writeNbt(nbt: NbtElement) = this.method_10794(nbt)
 /**
  * method_52981
  */
@@ -321,6 +441,10 @@ fun PacketByteBuf.setShort(arg0: Int, arg1: Int) = this.method_52981(arg0, arg1)
  * method_52993
  */
 fun PacketByteBuf.setChar(arg0: Int, arg1: Int) = this.method_52993(arg0, arg1)
+/**
+ * method_62788
+ */
+fun PacketByteBuf.readSyncId() = this.method_62788()
 /**
  * method_52941
  */
@@ -334,9 +458,17 @@ fun <K, V>PacketByteBuf.writeMap(map: Map<K, V>, keyWriter: PacketEncoder<in Pac
  */
 fun PacketByteBuf.capacity(arg0: Int) = this.method_52986(arg0)
 /**
+ * method_52960
+ */
+fun PacketByteBuf.touch(arg0: Object) = this.method_52960(arg0)
+/**
  * method_52998
  */
 fun PacketByteBuf.writeShort(arg0: Int) = this.method_52998(arg0)
+/**
+ * method_10797
+ */
+fun PacketByteBuf.writeUuid(uuid: UUID) = this.method_10797(uuid)
 /**
  * method_46253
  */
@@ -350,13 +482,29 @@ fun PacketByteBuf.clear() = this.method_52931()
  */
 fun PacketByteBuf.readVector3f() = this.method_49069()
 /**
+ * method_10799
+ */
+fun PacketByteBuf.readIntArray(maxSize: Int) = this.method_10799(maxSize)
+/**
+ * method_10800
+ */
+fun PacketByteBuf.readString(maxLength: Int) = this.method_10800(maxLength)
+/**
  * method_53005
  */
 fun PacketByteBuf.writeZero(arg0: Int) = this.method_53005(arg0)
 /**
+ * method_34067
+ */
+fun <K, V>PacketByteBuf.readMap(keyReader: PacketDecoder<in PacketByteBuf, K>, valueReader: PacketDecoder<in PacketByteBuf, V>) = this.method_34067<K, V>(keyReader, valueReader)
+/**
  * method_10791
  */
 fun PacketByteBuf.writeVarLong(value: Long) = this.method_10791(value)
+/**
+ * method_33134
+ */
+fun PacketByteBuf.readLongArray() = this.method_33134()
 /**
  * method_52974
  */
@@ -366,6 +514,10 @@ fun PacketByteBuf.writeLong(arg0: Long) = this.method_52974(arg0)
  */
 fun PacketByteBuf.writeShortLE(arg0: Int) = this.method_52999(arg0)
 /**
+ * method_52963
+ */
+fun <T>PacketByteBuf.encode(valueToId: ToIntFunction<T>, value: T) = this.method_52963<T>(valueToId, value)
+/**
  * method_44116
  */
 fun PacketByteBuf.writeRegistryKey(key: RegistryKey<*>) = this.method_44116(key)
@@ -373,6 +525,14 @@ fun PacketByteBuf.writeRegistryKey(key: RegistryKey<*>) = this.method_44116(key)
  * method_52932
  */
 fun PacketByteBuf.markReaderIndex() = this.method_52932()
+/**
+ * method_52946
+ */
+fun PacketByteBuf.getBytes(arg0: Int, arg1: ByteBuf) = this.method_52946(arg0, arg1)
+/**
+ * method_52959
+ */
+fun PacketByteBuf.readBytes(arg0: OutputStream, arg1: Int) = this.method_52959(arg0, arg1)
 /**
  * method_17814
  */
@@ -390,6 +550,14 @@ fun PacketByteBuf.setZero(arg0: Int, arg1: Int) = this.method_52995(arg0, arg1)
  */
 fun <E>PacketByteBuf.readEnumSet(type: Class<E>) where E: Enum<E> = this.method_46251<E>(type)
 /**
+ * method_43826
+ */
+fun <T>PacketByteBuf.writeNullable(value: T, writer: PacketEncoder<in PacketByteBuf, T>) = this.method_43826<T>(value, writer)
+/**
+ * method_62786
+ */
+fun PacketByteBuf.writeSyncId(syncId: Int) = this.method_62786(syncId)
+/**
  * method_53006
  */
 fun <T>PacketByteBuf.readRegistryRefKey() = this.method_53006<T>()
@@ -398,13 +566,41 @@ fun <T>PacketByteBuf.readRegistryRefKey() = this.method_53006<T>()
  */
 fun PacketByteBuf.readerIndex(arg0: Int) = this.method_52988(arg0)
 /**
+ * method_52978
+ */
+fun PacketByteBuf.writeBytes(arg0: ByteBuffer) = this.method_52978(arg0)
+/**
  * method_52933
  */
 fun PacketByteBuf.resetReaderIndex() = this.method_52933()
 /**
+ * method_52983
+ */
+fun PacketByteBuf.writeBytes(arg0: ByteArray) = this.method_52983(arg0)
+/**
+ * method_10811
+ */
+fun PacketByteBuf.readBlockPos() = this.method_10811()
+/**
+ * method_10803
+ */
+fun PacketByteBuf.readByteArray(maxSize: Int) = this.method_10803(maxSize)
+/**
  * method_52984
  */
 fun PacketByteBuf.setShortLE(arg0: Int, arg1: Int) = this.method_52984(arg0, arg1)
+/**
+ * method_53007
+ */
+fun PacketByteBuf.retain(arg0: Int) = this.method_53007(arg0)
+/**
+ * method_52971
+ */
+fun PacketByteBuf.setBytes(arg0: Int, arg1: ByteBuffer) = this.method_52971(arg0, arg1)
+/**
+ * method_52958
+ */
+fun PacketByteBuf.readBytes(arg0: ByteBuf, arg1: Int, arg2: Int) = this.method_52958(arg0, arg1, arg2)
 /**
  * method_44115
  */

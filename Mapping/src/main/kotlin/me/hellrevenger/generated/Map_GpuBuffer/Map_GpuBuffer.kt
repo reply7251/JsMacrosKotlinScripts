@@ -25,3 +25,7 @@ fun GpuBuffer.resize(newSize: Int) = this.method_64319(newSize)
  * method_64322
  */
 fun GpuBuffer.bind() = this.method_64322()
+/**
+ * method_64320
+ */
+fun GpuBuffer.read(offset: Int, bytes: Int) = this.method_64320(offset, bytes)

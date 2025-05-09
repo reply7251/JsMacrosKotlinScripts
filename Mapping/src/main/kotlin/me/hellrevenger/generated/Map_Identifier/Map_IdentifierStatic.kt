@@ -43,6 +43,14 @@ object IdentifierKt {
      */
     fun tryParse(id: String) = Identifier.method_12829(id)
     /**
+     * method_60655
+     */
+    fun of(namespace: String, path: String) = Identifier.method_60655(namespace, path)
+    /**
+     * method_43902
+     */
+    fun tryParse(namespace: String, path: String) = Identifier.method_43902(namespace, path)
+    /**
      * method_60935
      */
     fun trySplitOn(id: String, delimiter: Char) = Identifier.method_60935(id, delimiter)

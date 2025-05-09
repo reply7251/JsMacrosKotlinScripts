@@ -94,6 +94,10 @@ fun BlockEntity.hasWorld() = this.method_11002()
  */
 fun BlockEntity.toUpdatePacket() = this.method_38235()
 /**
+ * method_58685
+ */
+fun BlockEntity.readComponents(defaultComponents: ComponentMap, components: ComponentChanges) = this.method_58685(defaultComponents, components)
+/**
  * method_38243
  */
 fun BlockEntity.createNbtWithId(registries: net.minecraft.class_7225.class_7874) = this.method_38243(registries)

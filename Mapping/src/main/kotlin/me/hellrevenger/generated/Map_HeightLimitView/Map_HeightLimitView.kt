@@ -45,3 +45,7 @@ fun HeightLimitView.getHeight() = this.method_31605()
  * method_31597
  */
 fun HeightLimitView.getTopSectionCoord() = this.method_31597()
+/**
+ * method_31601
+ */
+fun HeightLimitView.isOutOfHeightLimit(y: Int) = this.method_31601(y)

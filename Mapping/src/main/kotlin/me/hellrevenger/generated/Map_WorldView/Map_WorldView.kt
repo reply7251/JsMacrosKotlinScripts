@@ -14,6 +14,10 @@ fun WorldView.getLightLevel(pos: BlockPos, ambientDarkness: Int) = this.method_2
  */
 fun WorldView.getDimension() = this.method_8597()
 /**
+ * method_22339
+ */
+fun WorldView.getLightLevel(pos: BlockPos) = this.method_22339(pos)
+/**
  * method_22345
  */
 fun WorldView.containsFluid(box: Box) = this.method_22345(box)
@@ -62,6 +66,10 @@ fun WorldView.getEnabledFeatures() = this.method_45162()
  */
 fun <T>WorldView.createCommandRegistryWrapper(registryRef: RegistryKey<out Registry<out T>>) = this.method_45448<T>(registryRef)
 /**
+ * method_22341
+ */
+fun WorldView.isRegionLoaded(minX: Int, minY: Int, minZ: Int, maxX: Int, maxY: Int, maxZ: Int) = this.method_22341(minX, minY, minZ, maxX, maxY, maxZ)
+/**
  * method_8393
  */
 fun WorldView.isChunkLoaded(chunkX: Int, chunkZ: Int) = this.method_8393(chunkX, chunkZ)
@@ -78,6 +86,14 @@ fun WorldView.getTopY(heightmap: net.minecraft.class_2902.class_2903, x: Int, z:
  */
 fun WorldView.isSkyVisibleAllowingSea(pos: BlockPos) = this.method_22348(pos)
 /**
+ * method_22343
+ */
+fun WorldView.isRegionLoaded(min: BlockPos, max: BlockPos) = this.method_22343(min, max)
+/**
+ * method_8402
+ */
+fun WorldView.getChunk(chunkX: Int, chunkZ: Int, leastStatus: ChunkStatus, create: Boolean) = this.method_8402(chunkX, chunkZ, leastStatus, create)
+/**
  * method_8608
  */
 fun WorldView.isClient() = this.method_8608()
@@ -86,13 +102,25 @@ fun WorldView.isClient() = this.method_8608()
  */
 fun WorldView.getGeneratorStoredBiome(biomeX: Int, biomeY: Int, biomeZ: Int) = this.method_22387(biomeX, biomeY, biomeZ)
 /**
+ * method_8392
+ */
+fun WorldView.getChunk(chunkX: Int, chunkZ: Int) = this.method_8392(chunkX, chunkZ)
+/**
  * method_8598
  */
 fun WorldView.getTopPosition(heightmap: net.minecraft.class_2902.class_2903, pos: BlockPos) = this.method_8598(heightmap, pos)
 /**
+ * method_22340
+ */
+fun WorldView.isChunkLoaded(pos: BlockPos) = this.method_22340(pos)
+/**
  * method_30349
  */
 fun WorldView.getRegistryManager() = this.method_30349()
+/**
+ * method_22350
+ */
+fun WorldView.getChunk(pos: BlockPos) = this.method_22350(pos)
 /**
  * method_29556
  */

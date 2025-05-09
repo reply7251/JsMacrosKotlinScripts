@@ -106,6 +106,14 @@ fun NbtCompound.put(key: String, element: NbtElement) = this.method_10566(key, e
  */
 fun NbtCompound.getBoolean(key: String) = this.method_10577(key)
 /**
+ * method_10545
+ */
+fun NbtCompound.contains(key: String) = this.method_10545(key)
+/**
+ * method_10539
+ */
+fun NbtCompound.putIntArray(key: String, value: IntArray) = this.method_10539(key, value)
+/**
  * method_10540
  */
 fun NbtCompound.getType(key: String) = this.method_10540(key)
@@ -145,6 +153,14 @@ fun NbtCompound.getList(key: String, type: Int) = this.method_10554(key, type)
  * method_10567
  */
 fun NbtCompound.putByte(key: String, value: Byte) = this.method_10567(key, value)
+/**
+ * method_10570
+ */
+fun NbtCompound.putByteArray(key: String, value: ByteArray) = this.method_10570(key, value)
+/**
+ * method_10538
+ */
+fun NbtCompound.putLongArray(key: String, value: MutableList<Long>) = this.method_10538(key, value)
 /**
  * method_10556
  */

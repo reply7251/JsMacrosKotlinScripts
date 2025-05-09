@@ -178,4 +178,8 @@ object TextureKeyKt {
      * method_27043
      */
     fun of(name: String) = TextureKey.method_27043(name)
+    /**
+     * method_27044
+     */
+    fun of(name: String, parent: TextureKey) = TextureKey.method_27044(name, parent)
 }

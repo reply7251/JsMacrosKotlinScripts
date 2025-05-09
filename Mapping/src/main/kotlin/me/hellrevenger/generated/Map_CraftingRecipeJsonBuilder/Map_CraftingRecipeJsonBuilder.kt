@@ -17,3 +17,11 @@ fun CraftingRecipeJsonBuilder.getOutputItem() = this.method_36441()
  * method_33529
  */
 fun CraftingRecipeJsonBuilder.group(group: String) = this.method_33529(group)
+/**
+ * method_10431
+ */
+fun CraftingRecipeJsonBuilder.offerTo(exporter: RecipeExporter) = this.method_10431(exporter)
+/**
+ * method_36443
+ */
+fun CraftingRecipeJsonBuilder.offerTo(exporter: RecipeExporter, recipePath: String) = this.method_36443(exporter, recipePath)

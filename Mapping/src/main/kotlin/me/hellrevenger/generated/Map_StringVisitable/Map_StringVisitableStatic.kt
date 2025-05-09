@@ -11,6 +11,10 @@ object StringVisitableKt {
      */
     fun concat(visitables: Array<StringVisitable>) = StringVisitable.method_29433(*visitables)
     /**
+     * method_29432
+     */
+    fun concat(visitables: MutableList<out StringVisitable>) = StringVisitable.method_29432(visitables)
+    /**
      * method_29430
      */
     fun plain(string: String) = StringVisitable.method_29430(string)

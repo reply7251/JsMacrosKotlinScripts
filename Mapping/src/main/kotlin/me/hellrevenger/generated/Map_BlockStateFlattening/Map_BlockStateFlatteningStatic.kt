@@ -18,4 +18,8 @@ object BlockStateFlatteningKt {
      * method_15598
      */
     fun parseState(stateStr: String) = BlockStateFlattening.method_15598(stateStr)
+    /**
+     * method_15597
+     */
+    fun lookupState(arg0: Dynamic<*>) = BlockStateFlattening.method_15597(arg0)
 }

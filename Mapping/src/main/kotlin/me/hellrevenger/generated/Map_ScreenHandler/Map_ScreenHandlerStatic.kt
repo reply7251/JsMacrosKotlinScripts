@@ -11,6 +11,10 @@ object ScreenHandlerKt {
      */
     fun calculateComparatorOutput(entity: BlockEntity) = ScreenHandler.method_7608(entity)
     /**
+     * method_7618
+     */
+    fun calculateComparatorOutput(inventory: Inventory) = ScreenHandler.method_7618(inventory)
+    /**
      * method_7620
      */
     fun unpackQuickCraftButton(quickCraftData: Int) = ScreenHandler.method_7620(quickCraftData)

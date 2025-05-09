@@ -14,6 +14,10 @@ fun MutableText.setStyle(style: Style) = this.method_10862(style)
  */
 fun MutableText.withColor(color: Int) = this.method_54663(color)
 /**
+ * method_27693
+ */
+fun MutableText.append(text: String) = this.method_27693(text)
+/**
  * method_27694
  */
 fun MutableText.styled(styleUpdater: UnaryOperator<Style>) = this.method_27694(styleUpdater)
@@ -25,3 +29,7 @@ fun MutableText.formatted(formatting: Formatting) = this.method_27692(formatting
  * method_27696
  */
 fun MutableText.fillStyle(styleOverride: Style) = this.method_27696(styleOverride)
+/**
+ * method_27695
+ */
+fun MutableText.formatted(formattings: Array<Formatting>) = this.method_27695(*formattings)

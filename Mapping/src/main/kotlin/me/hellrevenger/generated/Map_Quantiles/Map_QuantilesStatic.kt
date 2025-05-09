@@ -10,4 +10,8 @@ object QuantilesKt {
      * method_37998
      */
     fun create(values: DoubleArray) = Quantiles.method_37998(values)
+    /**
+     * method_37999
+     */
+    fun create(values: LongArray) = Quantiles.method_37999(values)
 }

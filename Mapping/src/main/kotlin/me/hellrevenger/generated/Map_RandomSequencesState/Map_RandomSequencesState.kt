@@ -21,3 +21,7 @@ fun RandomSequencesState.forEachSequence(consumer: BiConsumer<Identifier, Random
  * method_51843
  */
 fun RandomSequencesState.getOrCreate(id: Identifier) = this.method_51843(id)
+/**
+ * method_52512
+ */
+fun RandomSequencesState.reset(id: Identifier, salt: Int, includeWorldSeed: Boolean, includeSequenceId: Boolean) = this.method_52512(id, salt, includeWorldSeed, includeSequenceId)

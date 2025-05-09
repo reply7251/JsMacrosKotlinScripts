@@ -79,9 +79,17 @@ object UtilKt {
      */
     fun getRandom(array: IntArray, random: Random) = Util.method_27172(array, random)
     /**
+     * method_61190
+     */
+    fun <T>and(a: Predicate<in T>, b: Predicate<in T>) = Util.method_61190<T>(a, b)
+    /**
      * method_43027
      */
     fun <T>copyShuffled(list: ObjectArrayList<T>, random: Random) = Util.method_43027<T>(list, random)
+    /**
+     * method_61196
+     */
+    fun <T>and(a: Predicate<in T>, b: Predicate<in T>, c: Predicate<in T>, d: Predicate<in T>, e: Predicate<in T>) = Util.method_61196<T>(a, b, c, d, e)
     /**
      * method_43658
      */
@@ -139,6 +147,14 @@ object UtilKt {
      */
     fun startTimerHack() = Util.method_29476()
     /**
+     * method_61192
+     */
+    fun <T>and(a: Predicate<in T>, b: Predicate<in T>, c: Predicate<in T>) = Util.method_61192<T>(a, b, c)
+    /**
+     * method_43253
+     */
+    fun <T>copyShuffled(array: Array<T>, random: Random) = Util.method_43253<T>(array, random)
+    /**
      * method_48746
      */
     fun <K, V>cachedMapper(mapper: function_Function<K, V>) = Util.method_48746<K, V>(mapper)
@@ -159,9 +175,17 @@ object UtilKt {
      */
     fun getDownloadWorkerExecutor() = Util.method_55473()
     /**
+     * method_27173
+     */
+    fun <T>getRandom(array: Array<T>, random: Random) = Util.method_27173<T>(array, random)
+    /**
      * method_38646
      */
     fun setMissingBreakpointHandler(missingBreakpointHandler: Consumer<String>) = Util.method_38646(missingBreakpointHandler)
+    /**
+     * method_61208
+     */
+    fun <T>or(predicates: Array<Predicate<in T>>) = Util.method_61208<T>(*predicates)
     /**
      * method_59901
      */
@@ -186,6 +210,22 @@ object UtilKt {
      * method_39977
      */
     fun logErrorOrPause(message: String, throwable: Throwable) = Util.method_39977(message, throwable)
+    /**
+     * method_61204
+     */
+    fun <T>or(a: Predicate<in T>, b: Predicate<in T>, c: Predicate<in T>, d: Predicate<in T>) = Util.method_61204<T>(a, b, c, d)
+    /**
+     * method_61211
+     */
+    fun <T>or() = Util.method_61211<T>()
+    /**
+     * method_43028
+     */
+    fun <T>shuffle(list: MutableList<T>, random: Random) = Util.method_43028<T>(list, random)
+    /**
+     * method_33559
+     */
+    fun logErrorOrPause(message: String) = Util.method_33559(message)
     /**
      * method_18350
      */
@@ -215,21 +255,53 @@ object UtilKt {
      */
     fun runInNamedZone(runnable: Runnable, name: String) = Util.method_64122(runnable, name)
     /**
+     * method_29190
+     */
+    fun decodeFixedLengthArray(stream: IntStream, length: Int) = Util.method_29190(stream, length)
+    /**
+     * method_34866
+     */
+    fun <T, R>memoize(function: function_Function<T, R>) = Util.method_34866<T, R>(function)
+    /**
+     * method_32309
+     */
+    fun <T>getRandom(list: MutableList<T>, random: Random) = Util.method_32309<T>(list, random)
+    /**
      * method_40083
      */
     fun <T>getRandomOrEmpty(list: MutableList<T>, random: Random) = Util.method_40083<T>(list, random)
+    /**
+     * method_61200
+     */
+    fun <T>or(a: Predicate<in T>, b: Predicate<in T>) = Util.method_61200<T>(a, b)
     /**
      * method_56613
      */
     fun <T>allOf(predicates: MutableList<out Predicate<in T>>) = Util.method_56613<T>(predicates)
     /**
+     * method_43252
+     */
+    fun <T>copyShuffled(stream: Stream<T>, random: Random) = Util.method_43252<T>(stream, random)
+    /**
      * method_18349
      */
     fun getMainWorkerExecutor() = Util.method_18349()
     /**
+     * method_61189
+     */
+    fun <T>and(a: Predicate<in T>) = Util.method_61189<T>(a)
+    /**
      * method_30309
      */
     fun replaceInvalidChars(string: String, predicate: CharPredicate) = Util.method_30309(string, predicate)
+    /**
+     * method_61206
+     */
+    fun <T>or(a: Predicate<in T>, b: Predicate<in T>, c: Predicate<in T>, d: Predicate<in T>, e: Predicate<in T>) = Util.method_61206<T>(a, b, c, d, e)
+    /**
+     * method_30626
+     */
+    fun backupAndReplace(current: file_Path, newPath: file_Path, backup: file_Path) = Util.method_30626(current, newPath, backup)
     /**
      * method_57107
      */
@@ -251,6 +323,18 @@ object UtilKt {
      */
     fun moveCursor(string: String, cursor: Int, delta: Int) = Util.method_27761(string, cursor, delta)
     /**
+     * method_654
+     */
+    fun <T>make(arg0: T, initializer: Consumer<in T>) = Util.method_654<T>(arg0, initializer)
+    /**
+     * method_55333
+     */
+    fun <T>readTyped(type: types_Type<T>, value: Dynamic<*>, allowPartial: Boolean) = Util.method_55333<T>(type, value, allowPartial)
+    /**
+     * method_61198
+     */
+    fun <T>and(predicates: Array<Predicate<in T>>) = Util.method_61198<T>(*predicates)
+    /**
      * method_664
      */
     fun <K, V>toMap() = Util.method_664<K, V>()
@@ -263,7 +347,19 @@ object UtilKt {
      */
     fun getFormattedCurrentTime() = Util.method_44893()
     /**
+     * method_43498
+     */
+    fun <T>waitAndApply(resultFactory: function_Function<Executor, T>, donePredicate: Predicate<T>) = Util.method_43498<T>(resultFactory, donePredicate)
+    /**
+     * method_61210
+     */
+    fun <T>and() = Util.method_61210<T>()
+    /**
      * method_646
      */
     fun createTranslationKey(type: String, id: Identifier) = Util.method_646(type, id)
+    /**
+     * method_61202
+     */
+    fun <T>or(a: Predicate<in T>, b: Predicate<in T>, c: Predicate<in T>) = Util.method_61202<T>(a, b, c)
 }

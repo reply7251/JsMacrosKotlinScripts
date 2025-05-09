@@ -10,4 +10,12 @@ object CarverDebugConfigKt {
      * method_33972
      */
     fun create(debugMode: Boolean, debugState: BlockState) = CarverDebugConfig.method_33972(debugMode, debugState)
+    /**
+     * method_36412
+     */
+    fun create(airState: BlockState, waterState: BlockState, lavaState: BlockState, barrierState: BlockState) = CarverDebugConfig.method_36412(airState, waterState, lavaState, barrierState)
+    /**
+     * method_36413
+     */
+    fun create(debugMode: Boolean, airState: BlockState, waterState: BlockState, lavaState: BlockState, barrierState: BlockState) = CarverDebugConfig.method_36413(debugMode, airState, waterState, lavaState, barrierState)
 }

@@ -46,9 +46,21 @@ fun Box.contains(x: Double, arg1: Double, y: Double) = this.method_1008(x, arg1,
  */
 fun Box.intersects(pos1: Vec3d, pos2: Vec3d) = this.method_993(pos1, pos2)
 /**
+ * method_994
+ */
+fun Box.intersects(box: Box) = this.method_994(box)
+/**
  * method_17939
  */
 fun Box.getLengthX() = this.method_17939()
+/**
+ * method_996
+ */
+fun Box.offset(blockPos: BlockPos) = this.method_996(blockPos)
+/**
+ * method_992
+ */
+fun Box.raycast(from: Vec3d, to: Vec3d) = this.method_992(from, to)
 /**
  * method_61125
  */
@@ -90,6 +102,10 @@ fun Box.collides(arg0: Vec3d, boundingBoxes: MutableList<Box>) = this.method_640
  */
 fun Box.isNaN() = this.method_1013()
 /**
+ * method_1006
+ */
+fun Box.contains(pos: Vec3d) = this.method_1006(pos)
+/**
  * method_991
  */
 fun Box.union(box: Box) = this.method_991(box)
@@ -97,6 +113,14 @@ fun Box.union(box: Box) = this.method_991(box)
  * method_17941
  */
 fun Box.getLengthZ() = this.method_17941()
+/**
+ * method_1003
+ */
+fun Box.intersects(minX: Double, arg1: Double, minY: Double, arg3: Double, minZ: Double, arg5: Double) = this.method_1003(minX, arg1, minY, arg3, minZ, arg5)
+/**
+ * method_60314
+ */
+fun Box.offset(offset: Vector3f) = this.method_60314(offset)
 /**
  * method_999
  */
@@ -122,6 +146,18 @@ fun Box.contract(value: Double) = this.method_1011(value)
  */
 fun Box.getHorizontalCenter() = this.method_64033()
 /**
+ * method_989
+ */
+fun Box.offset(x: Double, arg1: Double, y: Double) = this.method_989(x, arg1, y)
+/**
+ * method_35580
+ */
+fun Box.contract(x: Double, arg1: Double, y: Double) = this.method_35580(x, arg1, y)
+/**
+ * method_1009
+ */
+fun Box.expand(x: Double, arg1: Double, y: Double) = this.method_1009(x, arg1, y)
+/**
  * method_1005
  */
 fun Box.getCenter() = this.method_1005()
@@ -129,6 +165,10 @@ fun Box.getCenter() = this.method_1005()
  * method_49271
  */
 fun Box.squaredMagnitude(pos: Vec3d) = this.method_49271(pos)
+/**
+ * method_1012
+ */
+fun Box.stretch(x: Double, arg1: Double, y: Double) = this.method_1012(x, arg1, y)
 /**
  * method_35579
  */

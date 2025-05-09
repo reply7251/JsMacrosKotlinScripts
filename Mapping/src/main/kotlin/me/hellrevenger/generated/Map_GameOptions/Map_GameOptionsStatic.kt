@@ -15,6 +15,10 @@ object GameOptionsKt {
      */
     fun getGenericValueText(prefix: Text, value: Int) = GameOptions.method_41782(prefix, value)
     /**
+     * method_41783
+     */
+    fun getGenericValueText(prefix: Text, value: Text) = GameOptions.method_41783(prefix, value)
+    /**
      * method_60648
      */
     fun getGenericValueOrOffText(prefix: Text, value: Int) = GameOptions.method_60648(prefix, value)

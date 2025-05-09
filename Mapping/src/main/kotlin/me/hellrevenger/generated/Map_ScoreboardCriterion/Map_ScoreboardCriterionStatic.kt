@@ -66,4 +66,8 @@ object ScoreboardCriterionKt {
      * method_37270
      */
     fun create(name: String) = ScoreboardCriterion.method_37270(name)
+    /**
+     * method_37269
+     */
+    fun create(name: String, readOnly: Boolean, defaultRenderType: net.minecraft.class_274.class_275) = ScoreboardCriterion.method_37269(name, readOnly, defaultRenderType)
 }

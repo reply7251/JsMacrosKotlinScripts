@@ -14,6 +14,10 @@ fun <E>EntryListWidget<E>.setSelected(index: Int) where E: net.minecraft.class_3
  */
 fun <E>EntryListWidget<E>.getRowBottom(index: Int) where E: net.minecraft.class_350.class_351<E> = this.method_25319(index)
 /**
+ * method_25313
+ */
+fun <E>EntryListWidget<E>.setSelected(entry: E) where E: net.minecraft.class_350.class_351<E> = this.method_25313(entry)
+/**
  * method_25334
  */
 fun <E>EntryListWidget<E>.getSelectedOrNull() where E: net.minecraft.class_350.class_351<E> = this.method_25334()
@@ -41,6 +45,10 @@ fun <E>EntryListWidget<E>.getRowTop(index: Int) where E: net.minecraft.class_350
  * method_48200
  */
 fun <E>EntryListWidget<E>.getFirst() where E: net.minecraft.class_350.class_351<E> = this.method_48200()
+/**
+ * method_57714
+ */
+fun <E>EntryListWidget<E>.position(width: Int, height: Int, y: Int) where E: net.minecraft.class_350.class_351<E> = this.method_57714(width, height, y)
 /**
  * method_25336
  */

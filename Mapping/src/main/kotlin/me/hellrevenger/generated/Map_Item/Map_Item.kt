@@ -161,3 +161,7 @@ fun Item.postMine(stack: ItemStack, world: world_World, state: BlockState, pos: 
  * method_57347
  */
 fun Item.getComponents() = this.method_57347()
+/**
+ * method_63680
+ */
+fun Item.getName() = this.method_63680()

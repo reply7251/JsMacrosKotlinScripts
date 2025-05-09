@@ -23,6 +23,14 @@ object GenericContainerScreenHandlerKt {
      */
     fun createGeneric9x2(syncId: Int, playerInventory: PlayerInventory) = GenericContainerScreenHandler.method_19246(syncId, playerInventory)
     /**
+     * method_19251
+     */
+    fun createGeneric9x6(syncId: Int, playerInventory: PlayerInventory) = GenericContainerScreenHandler.method_19251(syncId, playerInventory)
+    /**
+     * method_19245
+     */
+    fun createGeneric9x3(syncId: Int, playerInventory: PlayerInventory, inventory: Inventory) = GenericContainerScreenHandler.method_19245(syncId, playerInventory, inventory)
+    /**
      * method_19250
      */
     fun createGeneric9x5(syncId: Int, playerInventory: PlayerInventory) = GenericContainerScreenHandler.method_19250(syncId, playerInventory)

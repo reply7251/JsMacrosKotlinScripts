@@ -42,9 +42,17 @@ fun StructureTemplate.getAuthor() = this.method_15181()
  */
 fun StructureTemplate.writeNbt(nbt: NbtCompound) = this.method_15175(nbt)
 /**
+ * method_16445
+ */
+fun StructureTemplate.getInfosForBlock(pos: BlockPos, placementData: StructurePlacementData, block: Block) = this.method_16445(pos, placementData, block)
+/**
  * method_15167
  */
 fun StructureTemplate.offsetByTransformedSize(pos: BlockPos, mirror: BlockMirror, rotation: BlockRotation) = this.method_15167(pos, mirror, rotation)
+/**
+ * method_27267
+ */
+fun StructureTemplate.calculateBoundingBox(pos: BlockPos, rotation: BlockRotation, pivot: BlockPos, mirror: BlockMirror) = this.method_27267(pos, rotation, pivot, mirror)
 /**
  * method_15183
  */

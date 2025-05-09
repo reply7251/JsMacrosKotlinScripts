@@ -22,6 +22,10 @@ fun SoundSystem.updateListenerPosition(camera: Camera) = this.method_4840(camera
  */
 fun SoundSystem.getListenerTransform() = this.method_55592()
 /**
+ * method_4856
+ */
+fun SoundSystem.stop() = this.method_4856()
+/**
  * method_19762
  */
 fun SoundSystem.resumeAll() = this.method_19762()
@@ -77,6 +81,10 @@ fun SoundSystem.stopAbruptly() = this.method_54648()
  * method_22139
  */
 fun SoundSystem.playNextTick(sound: TickableSoundInstance) = this.method_22139(sound)
+/**
+ * method_4854
+ */
+fun SoundSystem.play(sound: SoundInstance) = this.method_4854(sound)
 /**
  * method_4843
  */

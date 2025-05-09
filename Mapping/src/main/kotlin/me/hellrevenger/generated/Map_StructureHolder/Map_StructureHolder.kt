@@ -21,3 +21,7 @@ fun StructureHolder.setStructureReferences(structureReferences: Map<Structure, L
  * method_12179
  */
 fun StructureHolder.getStructureReferences() = this.method_12179()
+/**
+ * method_12180
+ */
+fun StructureHolder.getStructureReferences(structure: Structure) = this.method_12180(structure)

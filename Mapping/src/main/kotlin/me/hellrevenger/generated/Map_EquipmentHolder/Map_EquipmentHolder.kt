@@ -21,3 +21,11 @@ fun EquipmentHolder.setEquipmentDropChance(slot: EquipmentSlot, dropChance: Floa
  * method_5673
  */
 fun EquipmentHolder.equipStack(slot: EquipmentSlot, stack: ItemStack) = this.method_5673(slot, stack)
+/**
+ * method_58632
+ */
+fun EquipmentHolder.setEquipmentFromTable(lootTable: RegistryKey<LootTable>, parameters: LootWorldContext, seed: Long, arg3: Map<EquipmentSlot, Float>) = this.method_58632(lootTable, parameters, seed, arg3)
+/**
+ * method_59663
+ */
+fun EquipmentHolder.setEquipmentFromTable(lootTable: RegistryKey<LootTable>, parameters: LootWorldContext, slotDropChances: Map<EquipmentSlot, Float>) = this.method_59663(lootTable, parameters, slotDropChances)

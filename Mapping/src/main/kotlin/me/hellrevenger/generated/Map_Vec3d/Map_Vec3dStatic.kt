@@ -19,6 +19,14 @@ object Vec3dKt {
      */
     fun ofCenter(vec: Vec3i, deltaY: Double) = Vec3d.method_26410(vec, deltaY)
     /**
+     * method_1030
+     */
+    fun fromPolar(pitch: Float, yaw: Float) = Vec3d.method_1030(pitch, yaw)
+    /**
+     * method_49273
+     */
+    fun add(vec: Vec3i, deltaX: Double, arg2: Double, deltaY: Double) = Vec3d.method_49273(vec, deltaX, arg2, deltaY)
+    /**
      * method_24954
      */
     fun of(vec: Vec3i) = Vec3d.method_24954(vec)
@@ -26,4 +34,8 @@ object Vec3dKt {
      * method_24457
      */
     fun unpackRgb(rgb: Int) = Vec3d.method_24457(rgb)
+    /**
+     * method_24953
+     */
+    fun ofCenter(vec: Vec3i) = Vec3d.method_24953(vec)
 }

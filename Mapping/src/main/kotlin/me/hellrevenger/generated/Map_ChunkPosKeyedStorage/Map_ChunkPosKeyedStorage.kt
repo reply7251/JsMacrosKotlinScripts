@@ -21,3 +21,7 @@ fun ChunkPosKeyedStorage.completeAll(sync: Boolean) = this.method_56574(sync)
  * method_61007
  */
 fun ChunkPosKeyedStorage.getStorageKey() = this.method_61007()
+/**
+ * method_56571
+ */
+fun ChunkPosKeyedStorage.update(nbt: Dynamic<NbtElement>, oldVersion: Int) = this.method_56571(nbt, oldVersion)

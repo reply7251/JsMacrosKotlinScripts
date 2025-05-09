@@ -10,6 +10,14 @@ fun ParticleManager.addParticle(parameters: ParticleEffect, x: Double, arg2: Dou
  */
 fun ParticleManager.addEmitter(entity: Entity, parameters: ParticleEffect, maxAge: Int) = this.method_3051(entity, parameters, maxAge)
 /**
+ * method_3058
+ */
+fun ParticleManager.addParticle(particle: Particle) = this.method_3058(particle)
+/**
+ * method_3061
+ */
+fun ParticleManager.addEmitter(entity: Entity, parameters: ParticleEffect) = this.method_3061(entity, parameters)
+/**
  * method_18829
  */
 fun ParticleManager.clearAtlas() = this.method_18829()

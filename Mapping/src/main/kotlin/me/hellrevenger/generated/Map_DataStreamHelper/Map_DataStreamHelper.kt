@@ -29,3 +29,7 @@ fun DataStreamHelper.write(value: Int) = this.method_14692(value)
  * method_34886
  */
 fun DataStreamHelper.writeFloat(value: Float) = this.method_34886(value)
+/**
+ * method_14694
+ */
+fun DataStreamHelper.write(values: ByteArray) = this.method_14694(values)

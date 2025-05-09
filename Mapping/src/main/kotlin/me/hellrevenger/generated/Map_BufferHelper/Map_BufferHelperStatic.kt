@@ -19,6 +19,10 @@ object BufferHelperKt {
      */
     fun getString(buf: ByteArray, arg1: Int, arg2: Int) = BufferHelper.method_14697(buf, arg1, arg2)
     /**
+     * method_14695
+     */
+    fun getIntLE(buf: ByteArray, start: Int) = BufferHelper.method_14695(buf, start)
+    /**
      * method_14699
      */
     fun toHex(b: Byte) = BufferHelper.method_14699(b)

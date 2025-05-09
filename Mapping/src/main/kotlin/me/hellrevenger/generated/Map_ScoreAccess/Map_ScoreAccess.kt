@@ -38,6 +38,10 @@ fun ScoreAccess.unlock() = this.method_55417()
  */
 fun ScoreAccess.setDisplayText(text: Text) = this.method_55411(text)
 /**
+ * method_55414
+ */
+fun ScoreAccess.incrementScore(amount: Int) = this.method_55414(amount)
+/**
  * method_55418
  */
 fun ScoreAccess.lock() = this.method_55418()

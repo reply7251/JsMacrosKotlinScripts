@@ -22,4 +22,8 @@ object FilledMapItemKt {
      * method_8002
      */
     fun fillExplorationMap(world: ServerWorld, map: ItemStack) = FilledMapItem.method_8002(world, map)
+    /**
+     * method_7997
+     */
+    fun getMapState(id: MapIdComponent, world: world_World) = FilledMapItem.method_7997(id, world)
 }

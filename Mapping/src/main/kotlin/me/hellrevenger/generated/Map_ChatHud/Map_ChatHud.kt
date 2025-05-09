@@ -46,9 +46,17 @@ fun ChatHud.getMessageHistory() = this.method_1809()
  */
 fun ChatHud.getIndicatorAt(mouseX: Double, arg1: Double) = this.method_44723(mouseX, arg1)
 /**
+ * method_44811
+ */
+fun ChatHud.addMessage(message: Text, signatureData: MessageSignatureData, indicator: MessageIndicator) = this.method_44811(message, signatureData, indicator)
+/**
  * method_1819
  */
 fun ChatHud.isChatFocused() = this.method_1819()
+/**
+ * method_1811
+ */
+fun ChatHud.getWidth() = this.method_1811()
 /**
  * method_27146
  */
@@ -61,6 +69,10 @@ fun ChatHud.toChatState() = this.method_58745()
  * method_1802
  */
 fun ChatHud.scroll(scroll: Int) = this.method_1802(scroll)
+/**
+ * method_1810
+ */
+fun ChatHud.getHeight() = this.method_1810()
 /**
  * method_1805
  */

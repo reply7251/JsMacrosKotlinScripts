@@ -25,3 +25,7 @@ fun DataTracker.getDirtyEntries() = this.method_12781()
  * method_12778
  */
 fun <T>DataTracker.set(key: TrackedData<T>, value: T) = this.method_12778<T>(key, value)
+/**
+ * method_49743
+ */
+fun <T>DataTracker.set(key: TrackedData<T>, value: T, force: Boolean) = this.method_49743<T>(key, value, force)

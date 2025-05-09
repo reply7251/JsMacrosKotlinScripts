@@ -11,9 +11,33 @@ object DebugRendererKt {
      */
     fun drawString(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, string: String, x: Double, arg4: Double, y: Double, arg6: Int) = DebugRenderer.method_23105(matrices, vertexConsumers, string, x, arg4, y, arg6)
     /**
+     * method_23102
+     */
+    fun drawBox(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, box: Box, red: Float, green: Float, blue: Float, alpha: Float) = DebugRenderer.method_23102(matrices, vertexConsumers, box, red, green, blue, alpha)
+    /**
      * method_23101
      */
     fun getTargetedEntity(entity: Entity, maxDistance: Int) = DebugRenderer.method_23101(entity, maxDistance)
+    /**
+     * method_23107
+     */
+    fun drawString(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, string: String, x: Double, arg4: Double, y: Double, arg6: Int, z: Float, arg8: Boolean, color: Float, size: Boolean) = DebugRenderer.method_23107(matrices, vertexConsumers, string, x, arg4, y, arg6, z, arg8, color, size)
+    /**
+     * method_23098
+     */
+    fun drawBox(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, minX: Double, arg3: Double, minY: Double, arg5: Double, minZ: Double, arg7: Double, maxX: Float, arg9: Float, maxY: Float, arg11: Float) = DebugRenderer.method_23098(matrices, vertexConsumers, minX, arg3, minY, arg5, minZ, arg7, maxX, arg9, maxY, arg11)
+    /**
+     * method_23106
+     */
+    fun drawString(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, string: String, x: Double, arg4: Double, y: Double, arg6: Int, z: Float) = DebugRenderer.method_23106(matrices, vertexConsumers, string, x, arg4, y, arg6, z)
+    /**
+     * method_23108
+     */
+    fun drawString(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, string: String, x: Int, y: Int, z: Int, color: Int) = DebugRenderer.method_23108(matrices, vertexConsumers, string, x, y, z, color)
+    /**
+     * method_23104
+     */
+    fun drawBox(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, pos1: BlockPos, pos2: BlockPos, red: Float, green: Float, blue: Float, alpha: Float) = DebugRenderer.method_23104(matrices, vertexConsumers, pos1, pos2, red, green, blue, alpha)
     /**
      * method_62350
      */

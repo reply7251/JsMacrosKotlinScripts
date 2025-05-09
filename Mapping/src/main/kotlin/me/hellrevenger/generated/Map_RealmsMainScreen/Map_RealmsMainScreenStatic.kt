@@ -27,6 +27,14 @@ object RealmsMainScreenKt {
      */
     fun resetServerList() = RealmsMainScreen.method_53793()
     /**
+     * method_54561
+     */
+    fun getVersionText(version: String, color: Int) = RealmsMainScreen.method_54561(version, color)
+    /**
+     * method_54327
+     */
+    fun play(server: RealmsServer, parent: Screen, needsPreparation: Boolean) = RealmsMainScreen.method_54327(server, parent, needsPreparation)
+    /**
      * method_54330
      */
     fun isSnapshotRealmsEligible() = RealmsMainScreen.method_54330()

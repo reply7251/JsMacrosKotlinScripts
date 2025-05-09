@@ -11,6 +11,10 @@ object SpawnHelperKt {
      */
     fun spawnEntitiesInChunk(group: SpawnGroup, world: ServerWorld, chunk: Chunk, pos: BlockPos, checker: net.minecraft.class_1948.class_5261, runner: net.minecraft.class_1948.class_5259) = SpawnHelper.method_24930(group, world, chunk, pos, checker, runner)
     /**
+     * method_8663
+     */
+    fun spawnEntitiesInChunk(group: SpawnGroup, world: ServerWorld, chunk: WorldChunk, checker: net.minecraft.class_1948.class_5261, runner: net.minecraft.class_1948.class_5259) = SpawnHelper.method_8663(group, world, chunk, checker, runner)
+    /**
      * method_61729
      */
     fun collectSpawnableGroups(info: net.minecraft.class_1948.class_5262, spawnAnimals: Boolean, spawnMonsters: Boolean, rare: Boolean) = SpawnHelper.method_61729(info, spawnAnimals, spawnMonsters, rare)
@@ -30,4 +34,8 @@ object SpawnHelperKt {
      * method_27821
      */
     fun spawn(world: ServerWorld, chunk: WorldChunk, info: net.minecraft.class_1948.class_5262, spawnableGroups: MutableList<SpawnGroup>) = SpawnHelper.method_27821(world, chunk, info, spawnableGroups)
+    /**
+     * method_35240
+     */
+    fun spawnEntitiesInChunk(group: SpawnGroup, world: ServerWorld, pos: BlockPos) = SpawnHelper.method_35240(group, world, pos)
 }

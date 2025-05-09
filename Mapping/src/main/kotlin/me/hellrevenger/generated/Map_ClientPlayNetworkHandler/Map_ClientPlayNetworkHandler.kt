@@ -82,6 +82,10 @@ fun ClientPlayNetworkHandler.getPlayerList() = this.method_2880()
  */
 fun ClientPlayNetworkHandler.getSearchManager() = this.method_60347()
 /**
+ * method_2874
+ */
+fun ClientPlayNetworkHandler.getPlayerListEntry(profileName: String) = this.method_2874(profileName)
+/**
  * method_29356
  */
 fun ClientPlayNetworkHandler.getWorldKeys() = this.method_29356()

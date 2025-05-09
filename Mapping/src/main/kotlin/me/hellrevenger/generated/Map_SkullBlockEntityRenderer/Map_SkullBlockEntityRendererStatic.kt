@@ -14,4 +14,8 @@ object SkullBlockEntityRendererKt {
      * method_3578
      */
     fun getRenderLayer(type: net.minecraft.class_2484.class_2485, profile: ProfileComponent, texture: Identifier) = SkullBlockEntityRenderer.method_3578(type, profile, texture)
+    /**
+     * method_65832
+     */
+    fun getRenderLayer(type: net.minecraft.class_2484.class_2485, profile: ProfileComponent) = SkullBlockEntityRenderer.method_65832(type, profile)
 }

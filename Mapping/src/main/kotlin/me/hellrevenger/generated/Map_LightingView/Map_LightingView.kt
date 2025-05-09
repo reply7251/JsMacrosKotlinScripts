@@ -25,3 +25,7 @@ fun LightingView.doLightUpdates() = this.method_15516()
  * method_15513
  */
 fun LightingView.checkBlock(pos: BlockPos) = this.method_15513(pos)
+/**
+ * method_15551
+ */
+fun LightingView.setSectionStatus(pos: ChunkSectionPos, notReady: Boolean) = this.method_15551(pos, notReady)

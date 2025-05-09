@@ -138,6 +138,10 @@ fun WorldRenderer.scheduleChunkRenders(minX: Int, minY: Int, minZ: Int, maxX: In
  */
 fun WorldRenderer.onResized(width: Int, height: Int) = this.method_3242(width, height)
 /**
+ * method_3276
+ */
+fun <T>WorldRenderer.addParticle(parameters: T, x: Double, arg2: Double, y: Double, arg4: Double, z: Double, arg6: Double) where T: ParticleEffect = this.method_3276<T>(parameters, x, arg2, y, arg4, z, arg6)
+/**
  * method_3272
  */
 fun WorldRenderer.getEntitiesDebugString() = this.method_3272()
@@ -169,3 +173,7 @@ fun WorldRenderer.scheduleNeighborUpdates(chunkPos: ChunkPos) = this.method_6520
  * method_29362
  */
 fun WorldRenderer.getParticlesFramebuffer() = this.method_29362()
+/**
+ * method_8568
+ */
+fun WorldRenderer.addParticle(parameters: ParticleEffect, force: Boolean, x: Double, arg3: Double, y: Double, arg5: Double, z: Double, arg7: Double) = this.method_8568(parameters, force, x, arg3, y, arg5, z, arg7)

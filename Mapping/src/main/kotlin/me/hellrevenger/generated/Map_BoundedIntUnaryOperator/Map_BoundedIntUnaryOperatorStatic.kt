@@ -14,4 +14,8 @@ object BoundedIntUnaryOperatorKt {
      * method_280
      */
     fun createMin(min: Int) = BoundedIntUnaryOperator.method_280(min)
+    /**
+     * method_32387
+     */
+    fun create(value: Int) = BoundedIntUnaryOperator.method_32387(value)
 }

@@ -6,4 +6,8 @@ object RealmsServerKt {
      * method_25066
      */
     fun parse(json: String) = RealmsServer.method_25066(json)
+    /**
+     * method_25056
+     */
+    fun parse(node: JsonObject) = RealmsServer.method_25056(node)
 }

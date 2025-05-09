@@ -14,4 +14,8 @@ object ChunkFilterKt {
      * method_52362
      */
     fun cylindrical(center: ChunkPos, viewDistance: Int) = ChunkFilter.method_52362(center, viewDistance)
+    /**
+     * method_52358
+     */
+    fun isWithinDistance(centerX: Int, centerZ: Int, viewDistance: Int, x: Int, z: Int, includeEdge: Boolean) = ChunkFilter.method_52358(centerX, centerZ, viewDistance, x, z, includeEdge)
 }

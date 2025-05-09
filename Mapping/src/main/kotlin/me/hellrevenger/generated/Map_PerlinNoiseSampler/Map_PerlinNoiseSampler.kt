@@ -25,3 +25,7 @@ fun PerlinNoiseSampler.addDebugInfo(info: StringBuilder) = this.method_39118(inf
  * method_35477
  */
 fun PerlinNoiseSampler.sampleDerivative(x: Double, arg1: Double, y: Double, arg3: DoubleArray) = this.method_35477(x, arg1, y, arg3)
+/**
+ * method_16447
+ */
+fun PerlinNoiseSampler.sample(x: Double, arg1: Double, y: Double, arg3: Double, z: Double) = this.method_16447(x, arg1, y, arg3, z)
