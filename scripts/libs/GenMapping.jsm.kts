@@ -138,7 +138,8 @@ class GenMapping(val folder: File) {
     val blackListStaticMethods = hashSetOf<String>(
     )
     val blackListDeobfMethods = setOf<String>(
-        "collectEntitiesByType"
+        "collectEntitiesByType",
+        "asPassenger"
         //"getGenerationSettings", "getSpawnSettings"
     )
     val blackListClasses = setOf<String>(
@@ -444,13 +445,13 @@ class GenMapping(val folder: File) {
                 if(to.name.startsWith("get") && to.name.length > 4 && (to.name[3].lowercase() + to.name.substring(4)) in fields) {
                     return@forEach
                 }
-                if(to.name in blackListDeobfMethods || to.name in methods) return@forEach
+                if(to.name in blackListDeobfMethods || to.toString() in methods) return@forEach
 
                 val isStatic = Modifier.isStatic(method.modifiers)
                 if(isStatic) {
                     if(to.name in blackListStaticMethods) return@forEach
                 }
-                methods.add(to.name)
+                methods.add(to.toString())
 
                 val host = if (isStatic) " = ${aliasName}." else " = this."
                 val genericWithBounds = classGenerics.toMutableMap()
