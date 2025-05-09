@@ -1568,7 +1568,7 @@ inner class Shaman() : WynnClass() {
 
         if(e.action != 1) return
         if(!enabled.value && e.key == skill2Key && (mode == Mode.PuppetBomber || mode == Mode.AuraSpam)) {
-            if(World.time - lastTotem > 60) {
+            if(World.time - lastTotem > 60 && Player.player?.isSneaking != true) {
                 e.cancel()
                 thread {
                     waitSpell(Actions.cast1)
