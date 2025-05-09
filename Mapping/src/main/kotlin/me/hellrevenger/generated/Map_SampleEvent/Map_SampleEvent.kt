@@ -24,8 +24,8 @@ fun SampleEvent.shouldSend() = this.method_47780()
 /**
  * method_47778
  */
-fun SampleEvent.tick(arg0: TelemetrySender) = this.method_47778(arg0)
+fun SampleEvent.tick(sender: TelemetrySender) = this.method_47778(sender)
 /**
  * method_47784
  */
-fun SampleEvent.send(arg0: TelemetrySender) = this.method_47784(arg0)
+fun SampleEvent.send(sender: TelemetrySender) = this.method_47784(sender)

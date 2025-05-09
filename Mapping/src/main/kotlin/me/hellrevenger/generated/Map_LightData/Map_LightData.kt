@@ -12,7 +12,7 @@ fun LightData.getUninitedSky() = this.method_38604()
 /**
  * method_38603
  */
-fun LightData.write(arg0: PacketByteBuf) = this.method_38603(arg0)
+fun LightData.write(buf: PacketByteBuf) = this.method_38603(buf)
 /**
  * method_38610
  */

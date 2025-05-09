@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun IronGolemEntity.getCrackLevel() = this.method_23347()
 /**
- * method_26886
- */
-fun KClass<IronGolemEntity>.createIronGolemAttributes() = IronGolemEntity.method_26886()
-/**
  * method_6501
  */
 fun IronGolemEntity.getAttackTicksLeft() = this.method_6501()
@@ -20,7 +16,7 @@ fun IronGolemEntity.getLookingAtVillagerTicks() = this.method_6502()
 /**
  * method_6499
  */
-fun IronGolemEntity.setPlayerCreated(arg0: Boolean) = this.method_6499(arg0)
+fun IronGolemEntity.setPlayerCreated(playerCreated: Boolean) = this.method_6499(playerCreated)
 /**
  * method_6496
  */
@@ -28,4 +24,4 @@ fun IronGolemEntity.isPlayerCreated() = this.method_6496()
 /**
  * method_6497
  */
-fun IronGolemEntity.setLookingAtVillager(arg0: Boolean) = this.method_6497(arg0)
+fun IronGolemEntity.setLookingAtVillager(lookingAtVillager: Boolean) = this.method_6497(lookingAtVillager)

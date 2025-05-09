@@ -2,25 +2,9 @@ package me.hellrevenger.generated.Map_OrderedTick
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_35551
- */
-val <T>KClass<OrderedTick<T>>.HASH_STRATEGY by aliasStatic({OrderedTick.field_35551})
-/**
- * field_35550
- */
-val <T>KClass<OrderedTick<T>>.BASIC_COMPARATOR by aliasStatic({OrderedTick.field_35550})
-/**
- * field_35549
- */
-val <T>KClass<OrderedTick<T>>.TRIGGER_TICK_COMPARATOR by aliasStatic({OrderedTick.field_35549})
-/**
  * method_61899
  */
-fun <T>OrderedTick<T>.toTick(arg0: Long) = this.method_61899(arg0)
-/**
- * method_39410
- */
-fun <T>KClass<OrderedTick<T>>.create(arg0: T, arg1: BlockPos) = OrderedTick.method_39410<T>(arg0, arg1)
+fun <T>OrderedTick<T>.toTick(time: Long) = this.method_61899(time)
 /**
  * comp_252
  */

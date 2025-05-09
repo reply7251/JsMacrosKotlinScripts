@@ -12,4 +12,4 @@ fun ChunkBatchSizeCalculator.getDesiredChunksPerTick() = this.method_53485()
 /**
  * method_53484
  */
-fun ChunkBatchSizeCalculator.onChunkSent(arg0: Int) = this.method_53484(arg0)
+fun ChunkBatchSizeCalculator.onChunkSent(batchSize: Int) = this.method_53484(batchSize)

@@ -8,4 +8,4 @@ fun BiomeParticleConfig.getParticle() = this.method_24369()
 /**
  * method_24370
  */
-fun BiomeParticleConfig.shouldAddParticle(arg0: Random) = this.method_24370(arg0)
+fun BiomeParticleConfig.shouldAddParticle(random: Random) = this.method_24370(random)

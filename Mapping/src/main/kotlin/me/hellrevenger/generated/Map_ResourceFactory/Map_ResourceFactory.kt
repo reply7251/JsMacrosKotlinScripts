@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_14486
  */
-fun ResourceFactory.getResource(arg0: Identifier) = this.method_14486(arg0)
+fun ResourceFactory.getResource(id: Identifier) = this.method_14486(id)

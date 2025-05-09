@@ -22,10 +22,6 @@ var LivingEntity.handSwinging by alias(LivingEntity::field_6252)
  */
 var LivingEntity.headYaw by alias(LivingEntity::field_6241)
 /**
- * field_30068
- */
-val KClass<LivingEntity>.BABY_SCALE_FACTOR by aliasStatic(LivingEntity::field_30068)
-/**
  * field_52447
  */
 val LivingEntity.elytraFlightController by alias(LivingEntity::field_52447)
@@ -66,10 +62,6 @@ val LivingEntity.limbAnimator by alias(LivingEntity::field_42108)
  */
 var LivingEntity.stuckStingerTimer by alias(LivingEntity::field_20347)
 /**
- * field_54564
- */
-val KClass<LivingEntity>.NOT_WEARING_GAZE_DISGUISE_PREDICATE by aliasStatic(LivingEntity::field_54564)
-/**
  * field_6259
  */
 var LivingEntity.prevHeadYaw by alias(LivingEntity::field_6259)
@@ -78,17 +70,9 @@ var LivingEntity.prevHeadYaw by alias(LivingEntity::field_6259)
  */
 var LivingEntity.hurtTime by alias(LivingEntity::field_6235)
 /**
- * field_30073
- */
-val KClass<LivingEntity>.GLOWING_FLAG by aliasStatic(LivingEntity::field_30073)
-/**
  * field_6213
  */
 var LivingEntity.deathTime by alias(LivingEntity::field_6213)
-/**
- * field_30071
- */
-val KClass<LivingEntity>.EQUIPMENT_SLOT_ID by aliasStatic(LivingEntity::field_30071)
 /**
  * field_6212
  */
@@ -98,10 +82,6 @@ var LivingEntity.sidewaysSpeed by alias(LivingEntity::field_6212)
  */
 var LivingEntity.upwardSpeed by alias(LivingEntity::field_6227)
 /**
- * field_30077
- */
-val KClass<LivingEntity>.DEATH_TICKS by aliasStatic(LivingEntity::field_30077)
-/**
  * field_6266
  */
 var LivingEntity.preferredHand by alias(LivingEntity::field_6266)
@@ -110,25 +90,13 @@ var LivingEntity.preferredHand by alias(LivingEntity::field_6266)
  */
 var LivingEntity.lastHandSwingProgress by alias(LivingEntity::field_6229)
 /**
- * field_30076
- */
-val KClass<LivingEntity>.GRAVITY by aliasStatic(LivingEntity::field_30076)
-/**
- * field_51995
- */
-val KClass<LivingEntity>.ATTRIBUTES_NBT_KEY by aliasStatic(LivingEntity::field_51995)
-/**
  * method_18400
  */
 fun LivingEntity.wakeUp() = this.method_18400()
 /**
  * method_59923
  */
-fun LivingEntity.getExperienceToDrop(arg0: ServerWorld, arg1: Entity) = this.method_59923(arg0, arg1)
-/**
- * method_63624
- */
-fun KClass<LivingEntity>.canGlideWith(arg0: ItemStack, arg1: EquipmentSlot) = LivingEntity.method_63624(arg0, arg1)
+fun LivingEntity.getExperienceToDrop(world: ServerWorld, attacker: Entity) = this.method_59923(world, attacker)
 /**
  * method_18401
  */
@@ -140,11 +108,11 @@ fun LivingEntity.getArmor() = this.method_6096()
 /**
  * method_63625
  */
-fun LivingEntity.canEquipFromDispenser(arg0: ItemStack) = this.method_63625(arg0)
+fun LivingEntity.canEquipFromDispenser(stack: ItemStack) = this.method_63625(stack)
 /**
  * method_5679
  */
-fun LivingEntity.isInvulnerableTo(arg0: ServerWorld, arg1: DamageSource) = this.method_5679(arg0, arg1)
+fun LivingEntity.isInvulnerableTo(world: ServerWorld, source: DamageSource) = this.method_5679(world, source)
 /**
  * method_51851
  */
@@ -152,47 +120,43 @@ fun LivingEntity.getLootTableSeed() = this.method_51851()
 /**
  * method_45324
  */
-fun LivingEntity.areItemsDifferent(arg0: ItemStack, arg1: ItemStack) = this.method_45324(arg0, arg1)
+fun LivingEntity.areItemsDifferent(stack: ItemStack, stack2: ItemStack) = this.method_45324(stack, stack2)
 /**
  * method_21755
  */
-fun LivingEntity.setStingerCount(arg0: Int) = this.method_21755(arg0)
+fun LivingEntity.setStingerCount(stingerCount: Int) = this.method_21755(stingerCount)
 /**
  * method_48761
  */
-fun LivingEntity.tiltScreen(arg0: Double, arg1: Double) = this.method_48761(arg0, arg1)
+fun LivingEntity.tiltScreen(deltaX: Double, arg1: Double) = this.method_48761(deltaX, arg1)
 /**
  * method_24833
  */
-fun LivingEntity.getBoundingBox(arg0: EntityPose) = this.method_24833(arg0)
+fun LivingEntity.getBoundingBox(pose: EntityPose) = this.method_24833(pose)
 /**
  * method_35054
  */
-fun LivingEntity.setNoDrag(arg0: Boolean) = this.method_35054(arg0)
+fun LivingEntity.setNoDrag(noDrag: Boolean) = this.method_35054(noDrag)
 /**
  * method_6086
  */
 fun LivingEntity.isAffectedBySplashPotions() = this.method_6086()
 /**
- * method_31079
- */
-fun KClass<LivingEntity>.positionInPortal(arg0: Vec3d) = LivingEntity.method_31079(arg0)
-/**
  * method_63623
  */
-fun LivingEntity.canEquip(arg0: ItemStack, arg1: EquipmentSlot) = this.method_63623(arg0, arg1)
+fun LivingEntity.canEquip(stack: ItemStack, slot: EquipmentSlot) = this.method_63623(stack, slot)
 /**
  * method_29499
  */
-fun LivingEntity.triggerItemPickedUpByEntityCriteria(arg0: ItemEntity) = this.method_29499(arg0)
+fun LivingEntity.triggerItemPickedUpByEntityCriteria(item: ItemEntity) = this.method_29499(item)
 /**
  * method_6073
  */
-fun LivingEntity.setAbsorptionAmount(arg0: Float) = this.method_6073(arg0)
+fun LivingEntity.setAbsorptionAmount(absorptionAmount: Float) = this.method_6073(absorptionAmount)
 /**
  * method_6049
  */
-fun LivingEntity.canHaveStatusEffect(arg0: StatusEffectInstance) = this.method_6049(arg0)
+fun LivingEntity.canHaveStatusEffect(effect: StatusEffectInstance) = this.method_6049(effect)
 /**
  * method_56675
  */
@@ -224,7 +188,7 @@ fun LivingEntity.getMainHandStack() = this.method_6047()
 /**
  * method_6082
  */
-fun LivingEntity.teleport(arg0: Double, arg1: Double, arg2: Double, arg3: Boolean) = this.method_6082(arg0, arg1, arg2, arg3)
+fun LivingEntity.teleport(x: Double, arg1: Double, y: Double, arg3: Boolean) = this.method_6082(x, arg1, y, arg3)
 /**
  * method_41330
  */
@@ -244,11 +208,7 @@ fun LivingEntity.hasInvertedHealingAndHarm() = this.method_5999()
 /**
  * method_6103
  */
-fun LivingEntity.sendPickup(arg0: Entity, arg1: Int) = this.method_6103(arg0, arg1)
-/**
- * method_26827
- */
-fun KClass<LivingEntity>.createLivingAttributes() = LivingEntity.method_26827()
+fun LivingEntity.sendPickup(item: Entity, count: Int) = this.method_6103(item, count)
 /**
  * method_6052
  */
@@ -260,7 +220,7 @@ fun LivingEntity.canBeNameTagged() = this.method_65897()
 /**
  * method_5973
  */
-fun LivingEntity.canTarget(arg0: EntityType<*>) = this.method_5973(arg0)
+fun LivingEntity.canTarget(type: EntityType<*>) = this.method_5973(type)
 /**
  * method_6081
  */
@@ -268,7 +228,7 @@ fun LivingEntity.getRecentDamageSource() = this.method_6081()
 /**
  * method_45326
  */
-fun LivingEntity.getAttributeBaseValue(arg0: RegistryEntry<EntityAttribute>) = this.method_45326(arg0)
+fun LivingEntity.getAttributeBaseValue(attribute: RegistryEntry<EntityAttribute>) = this.method_45326(attribute)
 /**
  * method_29504
  */
@@ -276,11 +236,11 @@ fun LivingEntity.isDead() = this.method_29504()
 /**
  * method_16826
  */
-fun LivingEntity.setDespawnCounter(arg0: Int) = this.method_16826(arg0)
+fun LivingEntity.setDespawnCounter(despawnCounter: Int) = this.method_16826(despawnCounter)
 /**
  * method_45325
  */
-fun LivingEntity.getAttributeValue(arg0: RegistryEntry<EntityAttribute>) = this.method_45325(arg0)
+fun LivingEntity.getAttributeValue(attribute: RegistryEntry<EntityAttribute>) = this.method_45325(attribute)
 /**
  * method_6094
  */
@@ -292,7 +252,7 @@ fun LivingEntity.getLastAttackTime() = this.method_6083()
 /**
  * method_29242
  */
-fun LivingEntity.updateLimbs(arg0: Boolean) = this.method_29242(arg0)
+fun LivingEntity.updateLimbs(flutter: Boolean) = this.method_29242(flutter)
 /**
  * method_6043
  */
@@ -300,11 +260,11 @@ fun LivingEntity.jump() = this.method_6043()
 /**
  * method_24520
  */
-fun LivingEntity.isHolding(arg0: Predicate<ItemStack>) = this.method_24520(arg0)
+fun LivingEntity.isHolding(predicate: Predicate<ItemStack>) = this.method_24520(predicate)
 /**
  * method_26082
  */
-fun LivingEntity.setStatusEffect(arg0: StatusEffectInstance, arg1: Entity) = this.method_26082(arg0, arg1)
+fun LivingEntity.setStatusEffect(effect: StatusEffectInstance, source: Entity) = this.method_26082(effect, source)
 /**
  * method_6032
  */
@@ -320,7 +280,7 @@ fun LivingEntity.endCombat() = this.method_6044()
 /**
  * method_23667
  */
-fun LivingEntity.swingHand(arg0: Hand, arg1: Boolean) = this.method_23667(arg0, arg1)
+fun LivingEntity.swingHand(hand: Hand, fromServerPlayer: Boolean) = this.method_23667(hand, fromServerPlayer)
 /**
  * method_42149
  */
@@ -328,7 +288,7 @@ fun LivingEntity.disablesShield() = this.method_42149()
 /**
  * method_6056
  */
-fun LivingEntity.damageShield(arg0: Float) = this.method_6056(arg0)
+fun LivingEntity.damageShield(amount: Float) = this.method_6056(amount)
 /**
  * method_35053
  */
@@ -340,7 +300,7 @@ fun LivingEntity.clearActiveItem() = this.method_6021()
 /**
  * method_6033
  */
-fun LivingEntity.setHealth(arg0: Float) = this.method_6033(arg0)
+fun LivingEntity.setHealth(health: Float) = this.method_6033(health)
 /**
  * method_36608
  */
@@ -360,23 +320,19 @@ fun LivingEntity.getDespawnCounter() = this.method_6131()
 /**
  * method_64169
  */
-fun LivingEntity.forEachGiftedItem(arg0: ServerWorld, arg1: RegistryKey<LootTable>, arg2: BiConsumer<ServerWorld, ItemStack>) = this.method_64169(arg0, arg1, arg2)
+fun LivingEntity.forEachGiftedItem(world: ServerWorld, lootTableKey: RegistryKey<LootTable>, lootConsumer: BiConsumer<ServerWorld, ItemStack>) = this.method_64169(world, lootTableKey, lootConsumer)
 /**
  * method_6078
  */
-fun LivingEntity.onDeath(arg0: DamageSource) = this.method_6078(arg0)
+fun LivingEntity.onDeath(damageSource: DamageSource) = this.method_6078(damageSource)
 /**
  * method_39760
  */
 fun LivingEntity.getFallSounds() = this.method_39760()
 /**
- * method_18395
- */
-fun LivingEntity.canTarget(arg0: LivingEntity) = this.method_18395(arg0)
-/**
  * method_6100
  */
-fun LivingEntity.setJumping(arg0: Boolean) = this.method_6100(arg0)
+fun LivingEntity.setJumping(jumping: Boolean) = this.method_6100(jumping)
 /**
  * method_5936
  */
@@ -392,23 +348,23 @@ fun LivingEntity.stopUsingItem() = this.method_6075()
 /**
  * method_36977
  */
-fun LivingEntity.damageHelmet(arg0: DamageSource, arg1: Float) = this.method_36977(arg0, arg1)
+fun LivingEntity.damageHelmet(source: DamageSource, amount: Float) = this.method_36977(source, amount)
 /**
  * method_6006
  */
-fun LivingEntity.setNearbySongPlaying(arg0: BlockPos, arg1: Boolean) = this.method_6006(arg0, arg1)
+fun LivingEntity.setNearbySongPlaying(songPosition: BlockPos, playing: Boolean) = this.method_6006(songPosition, playing)
 /**
  * method_6097
  */
-fun LivingEntity.setStuckArrowCount(arg0: Int) = this.method_6097(arg0)
+fun LivingEntity.setStuckArrowCount(stuckArrowCount: Int) = this.method_6097(stuckArrowCount)
 /**
  * method_37222
  */
-fun LivingEntity.addStatusEffect(arg0: StatusEffectInstance, arg1: Entity) = this.method_37222(arg0, arg1)
+fun LivingEntity.addStatusEffect(effect: StatusEffectInstance, source: Entity) = this.method_37222(effect, source)
 /**
  * method_6118
  */
-fun LivingEntity.getEquippedStack(arg0: EquipmentSlot) = this.method_6118(arg0)
+fun LivingEntity.getEquippedStack(slot: EquipmentSlot) = this.method_6118(slot)
 /**
  * method_24831
  */
@@ -420,19 +376,19 @@ fun LivingEntity.getPrimeAdversary() = this.method_6124()
 /**
  * method_59926
  */
-fun LivingEntity.getLocationBasedEnchantmentEffects(arg0: EquipmentSlot) = this.method_59926(arg0)
+fun LivingEntity.getLocationBasedEnchantmentEffects(slot: EquipmentSlot) = this.method_59926(slot)
 /**
  * method_61420
  */
-fun LivingEntity.getStackInArm(arg0: Arm) = this.method_61420(arg0)
+fun LivingEntity.getStackInArm(arm: Arm) = this.method_61420(arm)
 /**
  * method_26319
  */
-fun LivingEntity.canWalkOnFluid(arg0: FluidState) = this.method_26319(arg0)
+fun LivingEntity.canWalkOnFluid(state: FluidState) = this.method_26319(state)
 /**
  * method_18390
  */
-fun LivingEntity.getAttackDistanceScalingFactor(arg0: Entity) = this.method_18390(arg0)
+fun LivingEntity.getAttackDistanceScalingFactor(entity: Entity) = this.method_18390(entity)
 /**
  * method_6054
  */
@@ -440,19 +396,15 @@ fun LivingEntity.shouldDropExperience() = this.method_6054()
 /**
  * method_6114
  */
-fun LivingEntity.onAttacking(arg0: Entity) = this.method_6114(arg0)
+fun LivingEntity.onAttacking(target: Entity) = this.method_6114(target)
 /**
  * method_6066
  */
 fun LivingEntity.getDamageTracker() = this.method_6066()
 /**
- * method_56079
- */
-fun KClass<LivingEntity>.getSlotForHand(arg0: Hand) = LivingEntity.method_56079(arg0)
-/**
  * method_64399
  */
-fun LivingEntity.giveOrDropStack(arg0: ItemStack) = this.method_64399(arg0)
+fun LivingEntity.giveOrDropStack(stack: ItemStack) = this.method_64399(stack)
 /**
  * method_6067
  */
@@ -466,17 +418,13 @@ fun LivingEntity.getSleepingPosition() = this.method_18398()
  */
 fun LivingEntity.isBlocking() = this.method_6039()
 /**
- * method_6104
- */
-fun LivingEntity.swingHand(arg0: Hand) = this.method_6104(arg0)
-/**
  * method_6019
  */
-fun LivingEntity.setCurrentHand(arg0: Hand) = this.method_6019(arg0)
+fun LivingEntity.setCurrentHand(hand: Hand) = this.method_6019(hand)
 /**
  * method_6061
  */
-fun LivingEntity.blockedByShield(arg0: DamageSource) = this.method_6061(arg0)
+fun LivingEntity.blockedByShield(source: DamageSource) = this.method_6061(source)
 /**
  * method_6029
  */
@@ -500,19 +448,19 @@ fun LivingEntity.isClimbing() = this.method_6101()
 /**
  * method_6084
  */
-fun LivingEntity.hasStackEquipped(arg0: EquipmentSlot) = this.method_6084(arg0)
+fun LivingEntity.hasStackEquipped(slot: EquipmentSlot) = this.method_6084(slot)
 /**
  * method_6125
  */
-fun LivingEntity.setMovementSpeed(arg0: Float) = this.method_6125(arg0)
+fun LivingEntity.setMovementSpeed(movementSpeed: Float) = this.method_6125(movementSpeed)
 /**
  * method_56078
  */
-fun LivingEntity.playSound(arg0: SoundEvent) = this.method_56078(arg0)
+fun LivingEntity.playSound(sound: SoundEvent) = this.method_56078(sound)
 /**
  * method_20235
  */
-fun LivingEntity.sendEquipmentBreakStatus(arg0: Item, arg1: EquipmentSlot) = this.method_20235(arg0, arg1)
+fun LivingEntity.sendEquipmentBreakStatus(item: Item, slot: EquipmentSlot) = this.method_20235(item, slot)
 /**
  * method_6102
  */
@@ -520,7 +468,7 @@ fun LivingEntity.isMobOrPlayer() = this.method_6102()
 /**
  * method_6122
  */
-fun LivingEntity.setStackInHand(arg0: Hand, arg1: ItemStack) = this.method_6122(arg0, arg1)
+fun LivingEntity.setStackInHand(hand: Hand, stack: ItemStack) = this.method_6122(hand, stack)
 /**
  * method_5661
  */
@@ -528,7 +476,7 @@ fun LivingEntity.getArmorItems() = this.method_5661()
 /**
  * method_6005
  */
-fun LivingEntity.takeKnockback(arg0: Double, arg1: Double, arg2: Double) = this.method_6005(arg0, arg1, arg2)
+fun LivingEntity.takeKnockback(strength: Double, arg1: Double, x: Double) = this.method_6005(strength, arg1, x)
 /**
  * method_6115
  */
@@ -540,7 +488,7 @@ fun LivingEntity.getActiveHand() = this.method_6058()
 /**
  * method_6037
  */
-fun LivingEntity.spawnItemParticles(arg0: ItemStack, arg1: Int) = this.method_6037(arg0, arg1)
+fun LivingEntity.spawnItemParticles(stack: ItemStack, count: Int) = this.method_6037(stack, count)
 /**
  * method_6007
  */
@@ -548,7 +496,7 @@ fun LivingEntity.tickMovement() = this.method_6007()
 /**
  * method_64619
  */
-fun LivingEntity.isEntityLookingAtMe(arg0: LivingEntity, arg1: Double, arg2: Boolean, arg3: Boolean, arg4: DoubleArray) = this.method_64619(arg0, arg1, arg2, arg3, *arg4)
+fun LivingEntity.isEntityLookingAtMe(entity: LivingEntity, arg1: Double, arg2: Boolean, arg3: Boolean, visualShape: DoubleArray) = this.method_64619(entity, arg1, arg2, arg3, *visualShape)
 /**
  * method_52541
  */
@@ -560,7 +508,7 @@ fun LivingEntity.clearSleepingPosition() = this.method_18399()
 /**
  * method_6015
  */
-fun LivingEntity.setAttacker(arg0: LivingEntity) = this.method_6015(arg0)
+fun LivingEntity.setAttacker(attacker: LivingEntity) = this.method_6015(attacker)
 /**
  * method_6048
  */
@@ -568,11 +516,11 @@ fun LivingEntity.getItemUseTime() = this.method_6048()
 /**
  * method_6091
  */
-fun LivingEntity.travel(arg0: Vec3d) = this.method_6091(arg0)
+fun LivingEntity.travel(movementInput: Vec3d) = this.method_6091(movementInput)
 /**
  * method_6024
  */
-fun LivingEntity.getLeaningPitch(arg0: Float) = this.method_6024(arg0)
+fun LivingEntity.getLeaningPitch(tickDelta: Float) = this.method_6024(tickDelta)
 /**
  * method_6000
  */
@@ -584,19 +532,19 @@ fun LivingEntity.clearStatusEffects() = this.method_6012()
 /**
  * method_52197
  */
-fun LivingEntity.sendEffectToControllingPlayer(arg0: StatusEffectInstance) = this.method_52197(arg0)
+fun LivingEntity.sendEffectToControllingPlayer(effect: StatusEffectInstance) = this.method_52197(effect)
 /**
  * method_6105
  */
-fun LivingEntity.damageArmor(arg0: DamageSource, arg1: Float) = this.method_6105(arg0, arg1)
+fun LivingEntity.damageArmor(source: DamageSource, amount: Float) = this.method_6105(source, amount)
 /**
  * method_18808
  */
-fun LivingEntity.getProjectileType(arg0: ItemStack) = this.method_18808(arg0)
+fun LivingEntity.getProjectileType(stack: ItemStack) = this.method_18808(stack)
 /**
  * method_6025
  */
-fun LivingEntity.heal(arg0: Float) = this.method_6025(arg0)
+fun LivingEntity.heal(amount: Float) = this.method_6025(amount)
 /**
  * method_6014
  */
@@ -608,7 +556,7 @@ fun LivingEntity.getPlayerHitTimer() = this.method_63627()
 /**
  * method_5998
  */
-fun LivingEntity.getStackInHand(arg0: Hand) = this.method_5998(arg0)
+fun LivingEntity.getStackInHand(hand: Hand) = this.method_5998(hand)
 /**
  * method_59925
  */
@@ -624,23 +572,19 @@ fun LivingEntity.getBrain() = this.method_18868()
 /**
  * method_6057
  */
-fun LivingEntity.canSee(arg0: Entity) = this.method_6057(arg0)
+fun LivingEntity.canSee(entity: Entity) = this.method_6057(entity)
 /**
  * method_6003
  */
 fun LivingEntity.getGlidingTicks() = this.method_6003()
 /**
- * method_24518
- */
-fun LivingEntity.isHolding(arg0: Item) = this.method_24518(arg0)
-/**
  * method_6112
  */
-fun LivingEntity.getStatusEffect(arg0: RegistryEntry<StatusEffect>) = this.method_6112(arg0)
+fun LivingEntity.getStatusEffect(effect: RegistryEntry<StatusEffect>) = this.method_6112(effect)
 /**
  * method_6059
  */
-fun LivingEntity.hasStatusEffect(arg0: RegistryEntry<StatusEffect>) = this.method_6059(arg0)
+fun LivingEntity.hasStatusEffect(effect: RegistryEntry<StatusEffect>) = this.method_6059(effect)
 /**
  * method_21753
  */
@@ -652,11 +596,11 @@ fun LivingEntity.getOffHandStack() = this.method_6079()
 /**
  * method_26317
  */
-fun LivingEntity.applyFluidMovingSpeed(arg0: Double, arg1: Boolean, arg2: Vec3d) = this.method_26317(arg0, arg1, arg2)
+fun LivingEntity.applyFluidMovingSpeed(gravity: Double, arg1: Boolean, falling: Vec3d) = this.method_26317(gravity, arg1, falling)
 /**
  * method_18402
  */
-fun LivingEntity.setSleepingPosition(arg0: BlockPos) = this.method_18402(arg0)
+fun LivingEntity.setSleepingPosition(pos: BlockPos) = this.method_18402(pos)
 /**
  * method_6109
  */
@@ -668,11 +612,11 @@ fun LivingEntity.getBlockingItem() = this.method_62821()
 /**
  * method_6111
  */
-fun LivingEntity.removeStatusEffectInternal(arg0: RegistryEntry<StatusEffect>) = this.method_6111(arg0)
+fun LivingEntity.removeStatusEffectInternal(effect: RegistryEntry<StatusEffect>) = this.method_6111(effect)
 /**
  * method_32326
  */
-fun LivingEntity.getPreferredEquipmentSlot(arg0: ItemStack) = this.method_32326(arg0)
+fun LivingEntity.getPreferredEquipmentSlot(stack: ItemStack) = this.method_32326(stack)
 /**
  * method_29503
  */
@@ -680,15 +624,11 @@ fun LivingEntity.hurtByWater() = this.method_29503()
 /**
  * method_6116
  */
-fun LivingEntity.onEquipStack(arg0: EquipmentSlot, arg1: ItemStack, arg2: ItemStack) = this.method_6116(arg0, arg1, arg2)
+fun LivingEntity.onEquipStack(slot: EquipmentSlot, oldStack: ItemStack, newStack: ItemStack) = this.method_6116(slot, oldStack, newStack)
 /**
  * method_6030
  */
 fun LivingEntity.getActiveItem() = this.method_6030()
-/**
- * method_64618
- */
-fun LivingEntity.canSee(arg0: Entity, arg1: net.minecraft.class_3959.class_3960, arg2: net.minecraft.class_3959.class_242, arg3: Double) = this.method_64618(arg0, arg1, arg2, arg3)
 /**
  * method_37416
  */
@@ -700,7 +640,7 @@ fun LivingEntity.disableExperienceDropping() = this.method_41329()
 /**
  * method_6121
  */
-fun LivingEntity.tryAttack(arg0: ServerWorld, arg1: Entity) = this.method_6121(arg0, arg1)
+fun LivingEntity.tryAttack(world: ServerWorld, target: Entity) = this.method_6121(world, target)
 /**
  * method_48157
  */
@@ -708,7 +648,7 @@ fun LivingEntity.getDamageTiltYaw() = this.method_48157()
 /**
  * method_18403
  */
-fun LivingEntity.sleep(arg0: BlockPos) = this.method_18403(arg0)
+fun LivingEntity.sleep(pos: BlockPos) = this.method_18403(pos)
 /**
  * method_6117
  */
@@ -718,17 +658,13 @@ fun LivingEntity.getLastAttackedTime() = this.method_6117()
  */
 fun LivingEntity.isGliding() = this.method_6128()
 /**
- * method_6092
- */
-fun LivingEntity.addStatusEffect(arg0: StatusEffectInstance) = this.method_6092(arg0)
-/**
  * method_36549
  */
 fun LivingEntity.addDeathParticles() = this.method_36549()
 /**
  * method_29505
  */
-fun LivingEntity.setAttacking(arg0: PlayerEntity) = this.method_29505(arg0)
+fun LivingEntity.setAttacking(attacking: PlayerEntity) = this.method_29505(attacking)
 /**
  * method_56992
  */
@@ -736,11 +672,11 @@ fun LivingEntity.isInCreativeMode() = this.method_56992()
 /**
  * method_6016
  */
-fun LivingEntity.removeStatusEffect(arg0: RegistryEntry<StatusEffect>) = this.method_6016(arg0)
+fun LivingEntity.removeStatusEffect(effect: RegistryEntry<StatusEffect>) = this.method_6016(effect)
 /**
  * method_56991
  */
-fun LivingEntity.canUseSlot(arg0: EquipmentSlot) = this.method_56991(arg0)
+fun LivingEntity.canUseSlot(slot: EquipmentSlot) = this.method_56991(slot)
 /**
  * method_24832
  */
@@ -754,14 +690,10 @@ fun LivingEntity.isHoldingOntoLadder() = this.method_21754()
  */
 fun LivingEntity.getScaleFactor() = this.method_17825()
 /**
- * method_6089
- */
-fun KClass<LivingEntity>.containsOnlyAmbientEffects(arg0: Collection<StatusEffectInstance>) = LivingEntity.method_6089(arg0)
-/**
  * method_5673
  */
-fun LivingEntity.equipStack(arg0: EquipmentSlot, arg1: ItemStack) = this.method_5673(arg0, arg1)
+fun LivingEntity.equipStack(slot: EquipmentSlot, stack: ItemStack) = this.method_5673(slot, stack)
 /**
  * method_5996
  */
-fun LivingEntity.getAttributeInstance(arg0: RegistryEntry<EntityAttribute>) = this.method_5996(arg0)
+fun LivingEntity.getAttributeInstance(attribute: RegistryEntry<EntityAttribute>) = this.method_5996(attribute)

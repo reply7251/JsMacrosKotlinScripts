@@ -8,4 +8,4 @@ fun NumberFormat.getType() = this.method_55456()
 /**
  * method_55457
  */
-fun NumberFormat.format(arg0: Int) = this.method_55457(arg0)
+fun NumberFormat.format(number: Int) = this.method_55457(number)

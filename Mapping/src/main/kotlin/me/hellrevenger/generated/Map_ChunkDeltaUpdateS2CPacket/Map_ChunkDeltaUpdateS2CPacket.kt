@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_30621
  */
-fun ChunkDeltaUpdateS2CPacket.visitUpdates(arg0: BiConsumer<BlockPos, BlockState>) = this.method_30621(arg0)
+fun ChunkDeltaUpdateS2CPacket.visitUpdates(visitor: BiConsumer<BlockPos, BlockState>) = this.method_30621(visitor)
 /**
  * method_11392
  */

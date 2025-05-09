@@ -8,7 +8,7 @@ fun LoomScreenHandler.getOutputSlot() = this.method_17431()
 /**
  * method_17423
  */
-fun LoomScreenHandler.setInventoryChangeListener(arg0: Runnable) = this.method_17423(arg0)
+fun LoomScreenHandler.setInventoryChangeListener(inventoryChangeListener: Runnable) = this.method_17423(inventoryChangeListener)
 /**
  * method_17428
  */

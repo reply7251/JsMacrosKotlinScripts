@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_51487
  */
-fun <K, V>DependencyTracker<K, V>.traverse(arg0: BiConsumer<K, V>) where V: net.minecraft.class_8523.class_8524<K> = this.method_51487(arg0)
+fun <K, V>DependencyTracker<K, V>.traverse(callback: BiConsumer<K, V>) where V: net.minecraft.class_8523.class_8524<K> = this.method_51487(callback)
 /**
  * method_51486
  */
-fun <K, V>DependencyTracker<K, V>.add(arg0: K, arg1: V) where V: net.minecraft.class_8523.class_8524<K> = this.method_51486(arg0, arg1)
+fun <K, V>DependencyTracker<K, V>.add(key: K, value: V) where V: net.minecraft.class_8523.class_8524<K> = this.method_51486(key, value)

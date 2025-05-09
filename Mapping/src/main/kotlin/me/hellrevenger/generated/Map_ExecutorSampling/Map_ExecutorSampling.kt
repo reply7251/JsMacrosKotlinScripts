@@ -2,13 +2,9 @@ package me.hellrevenger.generated.Map_ExecutorSampling
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_29555
- */
-val KClass<ExecutorSampling>.INSTANCE by aliasStatic(ExecutorSampling::field_29555)
-/**
  * method_34702
  */
-fun ExecutorSampling.add(arg0: SampleableExecutor) = this.method_34702(arg0)
+fun ExecutorSampling.add(executor: SampleableExecutor) = this.method_34702(executor)
 /**
  * method_37178
  */

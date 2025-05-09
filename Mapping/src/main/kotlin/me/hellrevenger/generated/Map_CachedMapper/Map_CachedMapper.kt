@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_48782
  */
-fun <K, V>CachedMapper<K, V>.map(arg0: K) = this.method_48782(arg0)
+fun <K, V>CachedMapper<K, V>.map(input: K) = this.method_48782(input)

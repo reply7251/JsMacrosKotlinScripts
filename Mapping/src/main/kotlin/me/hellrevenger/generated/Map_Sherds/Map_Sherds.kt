@@ -2,21 +2,13 @@ package me.hellrevenger.generated.Map_Sherds
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_44707
- */
-val KClass<Sherds>.DEFAULT by aliasStatic(Sherds::field_44707)
-/**
  * method_51512
  */
 fun Sherds.toList() = this.method_51512()
 /**
  * method_51513
  */
-fun Sherds.toNbt(arg0: NbtCompound) = this.method_51513(arg0)
-/**
- * method_51516
- */
-fun KClass<Sherds>.fromNbt(arg0: NbtCompound) = Sherds.method_51516(arg0)
+fun Sherds.toNbt(nbt: NbtCompound) = this.method_51513(nbt)
 /**
  * comp_1487
  */

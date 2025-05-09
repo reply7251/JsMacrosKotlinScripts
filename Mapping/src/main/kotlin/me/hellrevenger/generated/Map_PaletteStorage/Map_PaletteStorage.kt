@@ -12,15 +12,15 @@ fun PaletteStorage.getData() = this.method_15212()
 /**
  * method_15214
  */
-fun PaletteStorage.swap(arg0: Int, arg1: Int) = this.method_15214(arg0, arg1)
+fun PaletteStorage.swap(index: Int, value: Int) = this.method_15214(index, value)
 /**
  * method_15210
  */
-fun PaletteStorage.set(arg0: Int, arg1: Int) = this.method_15210(arg0, arg1)
+fun PaletteStorage.set(index: Int, value: Int) = this.method_15210(index, value)
 /**
  * method_15211
  */
-fun PaletteStorage.get(arg0: Int) = this.method_15211(arg0)
+fun PaletteStorage.get(index: Int) = this.method_15211(index)
 /**
  * method_34896
  */
@@ -28,11 +28,11 @@ fun PaletteStorage.getElementBits() = this.method_34896()
 /**
  * method_21739
  */
-fun PaletteStorage.forEach(arg0: IntConsumer) = this.method_21739(arg0)
+fun PaletteStorage.forEach(action: IntConsumer) = this.method_21739(action)
 /**
  * method_39892
  */
-fun PaletteStorage.writePaletteIndices(arg0: IntArray) = this.method_39892(arg0)
+fun PaletteStorage.writePaletteIndices(out: IntArray) = this.method_39892(out)
 /**
  * method_15215
  */

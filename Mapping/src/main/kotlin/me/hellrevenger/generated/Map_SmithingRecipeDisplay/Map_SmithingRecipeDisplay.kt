@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_SmithingRecipeDisplay
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_54701
- */
-val KClass<SmithingRecipeDisplay>.SERIALIZER by aliasStatic(SmithingRecipeDisplay::field_54701)
-/**
  * comp_3302
  */
 fun SmithingRecipeDisplay.template() = this.comp_3302()

@@ -8,11 +8,11 @@ fun RaycastContext.getStart() = this.method_17750()
 /**
  * method_17749
  */
-fun RaycastContext.getFluidShape(arg0: FluidState, arg1: BlockView, arg2: BlockPos) = this.method_17749(arg0, arg1, arg2)
+fun RaycastContext.getFluidShape(state: FluidState, world: BlockView, pos: BlockPos) = this.method_17749(state, world, pos)
 /**
  * method_17748
  */
-fun RaycastContext.getBlockShape(arg0: BlockState, arg1: BlockView, arg2: BlockPos) = this.method_17748(arg0, arg1, arg2)
+fun RaycastContext.getBlockShape(state: BlockState, world: BlockView, pos: BlockPos) = this.method_17748(state, world, pos)
 /**
  * method_17747
  */

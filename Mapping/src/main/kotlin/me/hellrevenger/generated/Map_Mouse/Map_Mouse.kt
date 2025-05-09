@@ -44,7 +44,7 @@ fun Mouse.wasRightButtonClicked() = this.method_1609()
 /**
  * method_1607
  */
-fun Mouse.setup(arg0: Long) = this.method_1607(arg0)
+fun Mouse.setup(window: Long) = this.method_1607(window)
 /**
  * method_1604
  */

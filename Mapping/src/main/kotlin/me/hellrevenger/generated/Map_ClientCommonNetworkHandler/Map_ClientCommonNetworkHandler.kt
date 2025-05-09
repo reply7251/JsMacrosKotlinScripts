@@ -8,4 +8,4 @@ fun ClientCommonNetworkHandler.getBrand() = this.method_52790()
 /**
  * method_52787
  */
-fun ClientCommonNetworkHandler.sendPacket(arg0: Packet<*>) = this.method_52787(arg0)
+fun ClientCommonNetworkHandler.sendPacket(packet: Packet<*>) = this.method_52787(packet)

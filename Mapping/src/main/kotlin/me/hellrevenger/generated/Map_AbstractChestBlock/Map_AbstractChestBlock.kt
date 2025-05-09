@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_24167
  */
-fun <E>AbstractChestBlock<E>.getBlockEntitySource(arg0: BlockState, arg1: world_World, arg2: BlockPos, arg3: Boolean) where E: BlockEntity = this.method_24167(arg0, arg1, arg2, arg3)
+fun <E>AbstractChestBlock<E>.getBlockEntitySource(state: BlockState, world: world_World, pos: BlockPos, ignoreBlocked: Boolean) where E: BlockEntity = this.method_24167(state, world, pos, ignoreBlocked)

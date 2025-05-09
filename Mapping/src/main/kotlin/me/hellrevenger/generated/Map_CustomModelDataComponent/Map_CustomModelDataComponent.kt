@@ -2,25 +2,21 @@ package me.hellrevenger.generated.Map_CustomModelDataComponent
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_55212
- */
-val KClass<CustomModelDataComponent>.DEFAULT by aliasStatic(CustomModelDataComponent::field_55212)
-/**
  * method_65362
  */
-fun CustomModelDataComponent.getFloat(arg0: Int) = this.method_65362(arg0)
+fun CustomModelDataComponent.getFloat(index: Int) = this.method_65362(index)
 /**
  * method_65365
  */
-fun CustomModelDataComponent.getFlag(arg0: Int) = this.method_65365(arg0)
+fun CustomModelDataComponent.getFlag(index: Int) = this.method_65365(index)
 /**
  * method_65366
  */
-fun CustomModelDataComponent.getString(arg0: Int) = this.method_65366(arg0)
+fun CustomModelDataComponent.getString(index: Int) = this.method_65366(index)
 /**
  * method_65367
  */
-fun CustomModelDataComponent.getColor(arg0: Int) = this.method_65367(arg0)
+fun CustomModelDataComponent.getColor(index: Int) = this.method_65367(index)
 /**
  * comp_3354
  */

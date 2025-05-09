@@ -14,10 +14,6 @@ fun ChunkLoader.markPendingDisposal() = this.method_60429()
  */
 fun ChunkLoader.run() = this.method_60424()
 /**
- * method_60426
- */
-fun KClass<ChunkLoader>.create(arg0: ChunkLoadingManager, arg1: ChunkStatus, arg2: ChunkPos) = ChunkLoader.method_60426(arg0, arg1, arg2)
-/**
  * method_60431
  */
 fun ChunkLoader.getHolder() = this.method_60431()

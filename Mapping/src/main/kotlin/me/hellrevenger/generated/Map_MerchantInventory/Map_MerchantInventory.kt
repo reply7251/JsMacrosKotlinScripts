@@ -8,7 +8,7 @@ fun MerchantInventory.getMerchantRewardedExperience() = this.method_19252()
 /**
  * method_7643
  */
-fun MerchantInventory.setOfferIndex(arg0: Int) = this.method_7643(arg0)
+fun MerchantInventory.setOfferIndex(index: Int) = this.method_7643(index)
 /**
  * method_7645
  */

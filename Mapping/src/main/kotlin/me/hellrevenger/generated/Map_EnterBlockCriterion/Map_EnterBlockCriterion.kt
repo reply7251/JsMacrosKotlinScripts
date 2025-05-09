@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8885
  */
-fun EnterBlockCriterion.trigger(arg0: ServerPlayerEntity, arg1: BlockState) = this.method_8885(arg0, arg1)
+fun EnterBlockCriterion.trigger(player: ServerPlayerEntity, state: BlockState) = this.method_8885(player, state)

@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_9704
  */
-fun PosArgument.toAbsoluteBlockPos(arg0: ServerCommandSource) = this.method_9704(arg0)
+fun PosArgument.toAbsoluteBlockPos(source: ServerCommandSource) = this.method_9704(source)
 /**
  * method_9709
  */
-fun PosArgument.getRotation(arg0: ServerCommandSource) = this.method_9709(arg0)
+fun PosArgument.getRotation(source: ServerCommandSource) = this.method_9709(source)
 /**
  * method_9708
  */
-fun PosArgument.getPos(arg0: ServerCommandSource) = this.method_9708(arg0)
+fun PosArgument.getPos(source: ServerCommandSource) = this.method_9708(source)
 /**
  * method_9705
  */

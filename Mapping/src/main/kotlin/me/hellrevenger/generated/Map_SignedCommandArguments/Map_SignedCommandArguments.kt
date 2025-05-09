@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_44907
  */
-fun SignedCommandArguments.getMessage(arg0: String) = this.method_44907(arg0)
+fun SignedCommandArguments.getMessage(argumentName: String) = this.method_44907(argumentName)

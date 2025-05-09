@@ -8,4 +8,4 @@ fun LightSourceView.getChunkSkyLight() = this.method_12018()
 /**
  * method_51524
  */
-fun LightSourceView.forEachLightSource(arg0: BiConsumer<BlockPos, BlockState>) = this.method_51524(arg0)
+fun LightSourceView.forEachLightSource(callback: BiConsumer<BlockPos, BlockState>) = this.method_51524(callback)

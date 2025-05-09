@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_42348
  */
-fun Vibration.getEntity(arg0: ServerWorld) = this.method_42348(arg0)
+fun Vibration.getEntity(world: ServerWorld) = this.method_42348(world)
 /**
  * method_42687
  */
-fun Vibration.getOwner(arg0: ServerWorld) = this.method_42687(arg0)
+fun Vibration.getOwner(world: ServerWorld) = this.method_42687(world)
 /**
  * comp_681
  */

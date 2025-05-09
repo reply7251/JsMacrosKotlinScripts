@@ -8,15 +8,11 @@ fun ReadableScoreboardScore.getNumberFormat() = this.method_55400()
 /**
  * method_55399
  */
-fun ReadableScoreboardScore.getFormattedScore(arg0: NumberFormat) = this.method_55399(arg0)
+fun ReadableScoreboardScore.getFormattedScore(fallbackFormat: NumberFormat) = this.method_55399(fallbackFormat)
 /**
  * method_55397
  */
 fun ReadableScoreboardScore.getScore() = this.method_55397()
-/**
- * method_55398
- */
-fun KClass<ReadableScoreboardScore>.getFormattedScore(arg0: ReadableScoreboardScore, arg1: NumberFormat) = ReadableScoreboardScore.method_55398(arg0, arg1)
 /**
  * method_1131
  */

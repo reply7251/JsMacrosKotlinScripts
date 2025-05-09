@@ -8,28 +8,24 @@ fun RotationCalculator.getMax() = this.method_48120()
 /**
  * method_48124
  */
-fun RotationCalculator.toRotation(arg0: Direction) = this.method_48124(arg0)
+fun RotationCalculator.toRotation(direction: Direction) = this.method_48124(direction)
 /**
  * method_48123
  */
-fun RotationCalculator.areRotationsParallel(arg0: Int, arg1: Int) = this.method_48123(arg0, arg1)
+fun RotationCalculator.areRotationsParallel(alpha: Int, beta: Int) = this.method_48123(alpha, beta)
 /**
  * method_48126
  */
-fun RotationCalculator.toWrappedDegrees(arg0: Int) = this.method_48126(arg0)
+fun RotationCalculator.toWrappedDegrees(rotation: Int) = this.method_48126(rotation)
 /**
  * method_48127
  */
-fun RotationCalculator.clamp(arg0: Int) = this.method_48127(arg0)
+fun RotationCalculator.clamp(rotationBits: Int) = this.method_48127(rotationBits)
 /**
  * method_48122
  */
-fun RotationCalculator.toDegrees(arg0: Int) = this.method_48122(arg0)
+fun RotationCalculator.toDegrees(rotation: Int) = this.method_48122(rotation)
 /**
  * method_48125
  */
-fun RotationCalculator.toClampedRotation(arg0: Float) = this.method_48125(arg0)
-/**
- * method_48121
- */
-fun RotationCalculator.toRotation(arg0: Float) = this.method_48121(arg0)
+fun RotationCalculator.toClampedRotation(degrees: Float) = this.method_48125(degrees)

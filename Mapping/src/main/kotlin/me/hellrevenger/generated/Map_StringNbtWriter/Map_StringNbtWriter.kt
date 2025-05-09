@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_32288
  */
-fun StringNbtWriter.apply(arg0: NbtElement) = this.method_32288(arg0)
+fun StringNbtWriter.apply(element: NbtElement) = this.method_32288(element)

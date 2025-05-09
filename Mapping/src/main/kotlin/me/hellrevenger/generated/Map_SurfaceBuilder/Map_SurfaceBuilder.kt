@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_39106
  */
-fun SurfaceBuilder.buildSurface(arg0: NoiseConfig, arg1: BiomeAccess, arg2: Registry<Biome>, arg3: Boolean, arg4: HeightContext, arg5: Chunk, arg6: ChunkNoiseSampler, arg7: net.minecraft.class_6686.class_6708) = this.method_39106(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun SurfaceBuilder.buildSurface(noiseConfig: NoiseConfig, biomeAccess: BiomeAccess, biomeRegistry: Registry<Biome>, useLegacyRandom: Boolean, heightContext: HeightContext, chunk: Chunk, chunkNoiseSampler: ChunkNoiseSampler, materialRule: net.minecraft.class_6686.class_6708) = this.method_39106(noiseConfig, biomeAccess, biomeRegistry, useLegacyRandom, heightContext, chunk, chunkNoiseSampler, materialRule)
 /**
  * method_39110
  */
-fun SurfaceBuilder.applyMaterialRule(arg0: net.minecraft.class_6686.class_6708, arg1: CarverContext, arg2: function_Function<BlockPos, RegistryEntry<Biome>>, arg3: Chunk, arg4: ChunkNoiseSampler, arg5: BlockPos, arg6: Boolean) = this.method_39110(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun SurfaceBuilder.applyMaterialRule(rule: net.minecraft.class_6686.class_6708, context: CarverContext, posToBiome: function_Function<BlockPos, RegistryEntry<Biome>>, chunk: Chunk, chunkNoiseSampler: ChunkNoiseSampler, pos: BlockPos, hasFluid: Boolean) = this.method_39110(rule, context, posToBiome, chunk, chunkNoiseSampler, pos, hasFluid)
 /**
  * method_61805
  */

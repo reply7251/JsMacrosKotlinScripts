@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_16768
  */
-fun RuleTest.test(arg0: BlockState, arg1: Random) = this.method_16768(arg0, arg1)
+fun RuleTest.test(state: BlockState, random: Random) = this.method_16768(state, random)

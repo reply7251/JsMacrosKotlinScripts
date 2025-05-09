@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_54270
  */
-fun <T>Forkable<T>.execute(arg0: T, arg1: MutableList<T>, arg2: ContextChain<T>, arg3: ExecutionFlags, arg4: ExecutionControl<T>) = this.method_54270(arg0, arg1, arg2, arg3, arg4)
+fun <T>Forkable<T>.execute(baseSource: T, sources: MutableList<T>, contextChain: ContextChain<T>, flags: ExecutionFlags, control: ExecutionControl<T>) = this.method_54270(baseSource, sources, contextChain, flags, control)

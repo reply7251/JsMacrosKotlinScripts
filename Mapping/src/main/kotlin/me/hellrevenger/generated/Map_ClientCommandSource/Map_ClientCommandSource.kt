@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_44764
  */
-fun ClientCommandSource.onChatSuggestions(arg0: net.minecraft.class_7597.class_7598, arg1: MutableList<String>) = this.method_44764(arg0, arg1)
+fun ClientCommandSource.onChatSuggestions(action: net.minecraft.class_7597.class_7598, suggestions: MutableList<String>) = this.method_44764(action, suggestions)
 /**
  * method_2931
  */
-fun ClientCommandSource.onCommandSuggestions(arg0: Int, arg1: Suggestions) = this.method_2931(arg0, arg1)
+fun ClientCommandSource.onCommandSuggestions(completionId: Int, suggestions: Suggestions) = this.method_2931(completionId, suggestions)

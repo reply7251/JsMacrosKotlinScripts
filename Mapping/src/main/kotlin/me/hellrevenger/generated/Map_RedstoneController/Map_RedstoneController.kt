@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_61824
  */
-fun RedstoneController.update(arg0: world_World, arg1: BlockPos, arg2: BlockState, arg3: WireOrientation, arg4: Boolean) = this.method_61824(arg0, arg1, arg2, arg3, arg4)
+fun RedstoneController.update(world: world_World, pos: BlockPos, state: BlockState, orientation: WireOrientation, blockAdded: Boolean) = this.method_61824(world, pos, state, orientation, blockAdded)

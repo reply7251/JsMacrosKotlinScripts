@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_62316
  */
-fun WeatherRendering.renderPrecipitation(arg0: world_World, arg1: VertexConsumerProvider, arg2: Int, arg3: Float, arg4: Vec3d) = this.method_62316(arg0, arg1, arg2, arg3, arg4)
+fun WeatherRendering.renderPrecipitation(world: world_World, vertexConsumers: VertexConsumerProvider, ticks: Int, delta: Float, pos: Vec3d) = this.method_62316(world, vertexConsumers, ticks, delta, pos)
 /**
  * method_62319
  */
-fun WeatherRendering.addParticlesAndSound(arg0: ClientWorld, arg1: Camera, arg2: Int, arg3: ParticlesMode) = this.method_62319(arg0, arg1, arg2, arg3)
+fun WeatherRendering.addParticlesAndSound(world: ClientWorld, camera: Camera, ticks: Int, particlesMode: ParticlesMode) = this.method_62319(world, camera, ticks, particlesMode)

@@ -20,7 +20,7 @@ fun BlockBreakingInfo.getStage() = this.method_13988()
 /**
  * method_13989
  */
-fun BlockBreakingInfo.setLastUpdateTick(arg0: Int) = this.method_13989(arg0)
+fun BlockBreakingInfo.setLastUpdateTick(lastUpdateTick: Int) = this.method_13989(lastUpdateTick)
 /**
  * method_13991
  */
@@ -28,4 +28,4 @@ fun BlockBreakingInfo.getPos() = this.method_13991()
 /**
  * method_13987
  */
-fun BlockBreakingInfo.setStage(arg0: Int) = this.method_13987(arg0)
+fun BlockBreakingInfo.setStage(stage: Int) = this.method_13987(stage)

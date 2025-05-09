@@ -4,11 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_45282
  */
-fun ResourcePackSource.decorate(arg0: Text) = this.method_45282(arg0)
-/**
- * method_45281
- */
-fun KClass<ResourcePackSource>.create(arg0: UnaryOperator<Text>, arg1: Boolean) = ResourcePackSource.method_45281(arg0, arg1)
+fun ResourcePackSource.decorate(packDisplayName: Text) = this.method_45282(packDisplayName)
 /**
  * method_45279
  */

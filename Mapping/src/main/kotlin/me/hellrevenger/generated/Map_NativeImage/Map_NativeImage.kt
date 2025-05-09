@@ -8,11 +8,11 @@ fun NativeImage.copyPixelsArgb() = this.method_61942()
 /**
  * method_48462
  */
-fun NativeImage.applyToCopy(arg0: IntUnaryOperator) = this.method_48462(arg0)
+fun NativeImage.applyToCopy(operator: IntUnaryOperator) = this.method_48462(operator)
 /**
  * method_47594
  */
-fun NativeImage.copyRect(arg0: NativeImage, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Boolean, arg8: Boolean) = this.method_47594(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+fun NativeImage.copyRect(image: NativeImage, x: Int, y: Int, destX: Int, destY: Int, width: Int, height: Int, flipX: Boolean, flipY: Boolean) = this.method_47594(image, x, y, destX, destY, width, height, flipX, flipY)
 /**
  * method_4322
  */
@@ -20,7 +20,7 @@ fun NativeImage.makePixelArray() = this.method_4322()
 /**
  * method_51596
  */
-fun NativeImage.apply(arg0: IntUnaryOperator) = this.method_51596(arg0)
+fun NativeImage.apply(operator: IntUnaryOperator) = this.method_51596(operator)
 /**
  * method_4302
  */
@@ -29,10 +29,6 @@ fun NativeImage.untrack() = this.method_4302()
  * method_35627
  */
 fun NativeImage.drawPixels() = this.method_35627()
-/**
- * method_4303
- */
-fun KClass<NativeImage>.read(arg0: net.minecraft.class_1011.class_1012, arg1: ByteBuffer) = NativeImage.method_4303(arg0, arg1)
 /**
  * method_48463
  */
@@ -44,7 +40,7 @@ fun NativeImage.getWidth() = this.method_4307()
 /**
  * method_4301
  */
-fun NativeImage.upload(arg0: Int, arg1: Int, arg2: Int, arg3: Boolean) = this.method_4301(arg0, arg1, arg2, arg3)
+fun NativeImage.upload(level: Int, offsetX: Int, offsetY: Int, close: Boolean) = this.method_4301(level, offsetX, offsetY, close)
 /**
  * method_4323
  */
@@ -54,74 +50,46 @@ fun NativeImage.getHeight() = this.method_4323()
  */
 fun NativeImage.mirrorVertically() = this.method_4319()
 /**
- * method_4310
- */
-fun KClass<NativeImage>.read(arg0: net.minecraft.class_1011.class_1012, arg1: InputStream) = NativeImage.method_4310(arg0, arg1)
-/**
- * method_22619
- */
-fun NativeImage.upload(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Int, arg7: Boolean) = this.method_22619(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-/**
  * method_4311
  */
-fun NativeImage.getOpacity(arg0: Int, arg1: Int) = this.method_4311(arg0, arg1)
+fun NativeImage.getOpacity(x: Int, y: Int) = this.method_4311(x, y)
 /**
  * method_4300
  */
-fun NativeImage.resizeSubRectTo(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: NativeImage) = this.method_4300(arg0, arg1, arg2, arg3, arg4)
-/**
- * method_4304
- */
-fun NativeImage.copyRect(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int, arg6: Boolean, arg7: Boolean) = this.method_4304(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-/**
- * method_49277
- */
-fun KClass<NativeImage>.read(arg0: ByteArray) = NativeImage.method_49277(arg0)
-/**
- * method_4309
- */
-fun KClass<NativeImage>.read(arg0: InputStream) = NativeImage.method_4309(arg0)
+fun NativeImage.resizeSubRectTo(x: Int, y: Int, width: Int, height: Int, targetImage: NativeImage) = this.method_4300(x, y, width, height, targetImage)
 /**
  * method_35620
  */
-fun NativeImage.readDepthComponent(arg0: Float) = this.method_35620(arg0)
+fun NativeImage.readDepthComponent(unused: Float) = this.method_35620(unused)
 /**
  * method_4327
  */
-fun NativeImage.loadFromTextureImage(arg0: Int, arg1: Boolean) = this.method_4327(arg0, arg1)
+fun NativeImage.loadFromTextureImage(level: Int, removeAlpha: Boolean) = this.method_4327(level, removeAlpha)
 /**
  * method_4318
  */
 fun NativeImage.getFormat() = this.method_4318()
 /**
- * method_4324
- */
-fun KClass<NativeImage>.read(arg0: ByteBuffer) = NativeImage.method_4324(arg0)
-/**
  * method_4314
  */
-fun NativeImage.writeTo(arg0: file_Path) = this.method_4314(arg0)
+fun NativeImage.writeTo(path: file_Path) = this.method_4314(path)
 /**
  * method_4326
  */
-fun NativeImage.fillRect(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int) = this.method_4326(arg0, arg1, arg2, arg3, arg4)
+fun NativeImage.fillRect(x: Int, y: Int, width: Int, height: Int, color: Int) = this.method_4326(x, y, width, height, color)
 /**
  * method_61940
  */
-fun NativeImage.getColorArgb(arg0: Int, arg1: Int) = this.method_61940(arg0, arg1)
+fun NativeImage.getColorArgb(x: Int, y: Int) = this.method_61940(x, y)
 /**
  * method_4316
  */
-fun NativeImage.makeGlyphBitmapSubpixel(arg0: FT_Face, arg1: Int) = this.method_4316(arg0, arg1)
+fun NativeImage.makeGlyphBitmapSubpixel(face: FT_Face, glyphIndex: Int) = this.method_4316(face, glyphIndex)
 /**
  * method_61941
  */
-fun NativeImage.setColorArgb(arg0: Int, arg1: Int, arg2: Int) = this.method_61941(arg0, arg1, arg2)
-/**
- * method_4325
- */
-fun NativeImage.writeTo(arg0: File) = this.method_4325(arg0)
+fun NativeImage.setColorArgb(x: Int, y: Int, color: Int) = this.method_61941(x, y, color)
 /**
  * method_4317
  */
-fun NativeImage.copyFrom(arg0: NativeImage) = this.method_4317(arg0)
+fun NativeImage.copyFrom(image: NativeImage) = this.method_4317(image)

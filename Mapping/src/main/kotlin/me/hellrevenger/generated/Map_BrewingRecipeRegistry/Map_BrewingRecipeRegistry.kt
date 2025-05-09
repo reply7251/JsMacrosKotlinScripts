@@ -2,46 +2,34 @@ package me.hellrevenger.generated.Map_BrewingRecipeRegistry
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_51402
- */
-val KClass<BrewingRecipeRegistry>.EMPTY by aliasStatic(BrewingRecipeRegistry::field_51402)
-/**
  * method_20361
  */
-fun BrewingRecipeRegistry.isBrewable(arg0: RegistryEntry<Potion>) = this.method_20361(arg0)
+fun BrewingRecipeRegistry.isBrewable(potion: RegistryEntry<Potion>) = this.method_20361(potion)
 /**
  * method_8069
  */
-fun BrewingRecipeRegistry.isPotionRecipeIngredient(arg0: ItemStack) = this.method_8069(arg0)
+fun BrewingRecipeRegistry.isPotionRecipeIngredient(stack: ItemStack) = this.method_8069(stack)
 /**
  * method_8077
  */
-fun BrewingRecipeRegistry.isValidIngredient(arg0: ItemStack) = this.method_8077(arg0)
-/**
- * method_8076
- */
-fun KClass<BrewingRecipeRegistry>.create(arg0: FeatureSet) = BrewingRecipeRegistry.method_8076(arg0)
+fun BrewingRecipeRegistry.isValidIngredient(stack: ItemStack) = this.method_8077(stack)
 /**
  * method_8079
  */
-fun BrewingRecipeRegistry.isItemRecipeIngredient(arg0: ItemStack) = this.method_8079(arg0)
-/**
- * method_59699
- */
-fun KClass<BrewingRecipeRegistry>.registerDefaults(arg0: net.minecraft.class_1845.class_9665) = BrewingRecipeRegistry.method_59699(arg0)
+fun BrewingRecipeRegistry.isItemRecipeIngredient(stack: ItemStack) = this.method_8079(stack)
 /**
  * method_8078
  */
-fun BrewingRecipeRegistry.craft(arg0: ItemStack, arg1: ItemStack) = this.method_8078(arg0, arg1)
+fun BrewingRecipeRegistry.craft(ingredient: ItemStack, input: ItemStack) = this.method_8078(ingredient, input)
 /**
  * method_8070
  */
-fun BrewingRecipeRegistry.hasItemRecipe(arg0: ItemStack, arg1: ItemStack) = this.method_8070(arg0, arg1)
+fun BrewingRecipeRegistry.hasItemRecipe(input: ItemStack, ingredient: ItemStack) = this.method_8070(input, ingredient)
 /**
  * method_8072
  */
-fun BrewingRecipeRegistry.hasRecipe(arg0: ItemStack, arg1: ItemStack) = this.method_8072(arg0, arg1)
+fun BrewingRecipeRegistry.hasRecipe(input: ItemStack, ingredient: ItemStack) = this.method_8072(input, ingredient)
 /**
  * method_8075
  */
-fun BrewingRecipeRegistry.hasPotionRecipe(arg0: ItemStack, arg1: ItemStack) = this.method_8075(arg0, arg1)
+fun BrewingRecipeRegistry.hasPotionRecipe(input: ItemStack, ingredient: ItemStack) = this.method_8075(input, ingredient)

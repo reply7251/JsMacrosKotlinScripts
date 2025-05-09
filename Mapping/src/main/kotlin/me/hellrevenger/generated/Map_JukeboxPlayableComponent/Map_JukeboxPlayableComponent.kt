@@ -4,11 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60749
  */
-fun JukeboxPlayableComponent.withShowInTooltip(arg0: Boolean) = this.method_60749(arg0)
-/**
- * method_60747
- */
-fun KClass<JukeboxPlayableComponent>.tryPlayStack(arg0: world_World, arg1: BlockPos, arg2: ItemStack, arg3: PlayerEntity) = JukeboxPlayableComponent.method_60747(arg0, arg1, arg2, arg3)
+fun JukeboxPlayableComponent.withShowInTooltip(showInTooltip: Boolean) = this.method_60749(showInTooltip)
 /**
  * comp_2834
  */

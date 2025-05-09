@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_15230
  */
-fun <K>Int2ObjectBiMap<K>.put(arg0: K, arg1: Int) = this.method_15230(arg0, arg1)
+fun <K>Int2ObjectBiMap<K>.put(value: K, id: Int) = this.method_15230(value, id)
 /**
  * method_34904
  */
-fun <K>Int2ObjectBiMap<K>.contains(arg0: K) = this.method_34904(arg0)
+fun <K>Int2ObjectBiMap<K>.contains(value: K) = this.method_34904(value)
 /**
  * method_39940
  */
@@ -16,16 +16,12 @@ fun <K>Int2ObjectBiMap<K>.copy() = this.method_39940()
 /**
  * method_34903
  */
-fun <K>Int2ObjectBiMap<K>.containsKey(arg0: Int) = this.method_34903(arg0)
+fun <K>Int2ObjectBiMap<K>.containsKey(index: Int) = this.method_34903(index)
 /**
  * method_15225
  */
-fun <K>Int2ObjectBiMap<K>.add(arg0: K) = this.method_15225(arg0)
+fun <K>Int2ObjectBiMap<K>.add(value: K) = this.method_15225(value)
 /**
  * method_15229
  */
 fun <K>Int2ObjectBiMap<K>.clear() = this.method_15229()
-/**
- * method_37913
- */
-fun <K, A>KClass<Int2ObjectBiMap<K>>.create(arg0: Int) = Int2ObjectBiMap.method_37913<A>(arg0)

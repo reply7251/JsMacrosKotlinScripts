@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_24809
  */
-fun VillageSectionsDebugRenderer.removeSection(arg0: ChunkSectionPos) = this.method_24809(arg0)
+fun VillageSectionsDebugRenderer.removeSection(pos: ChunkSectionPos) = this.method_24809(pos)
 /**
  * method_24808
  */
-fun VillageSectionsDebugRenderer.addSection(arg0: ChunkSectionPos) = this.method_24808(arg0)
+fun VillageSectionsDebugRenderer.addSection(pos: ChunkSectionPos) = this.method_24808(pos)

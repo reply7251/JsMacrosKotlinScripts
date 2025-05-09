@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_TridentEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_4796
- */
-val KClass<TridentEntityRenderer>.TEXTURE by aliasStatic(TridentEntityRenderer::field_4796)
-/**
  * method_62552
  */
 fun TridentEntityRenderer.updateRenderState(arg0: TridentEntity, arg1: TridentEntityRenderState, arg2: Float) = this.method_62552(arg0, arg1, arg2)

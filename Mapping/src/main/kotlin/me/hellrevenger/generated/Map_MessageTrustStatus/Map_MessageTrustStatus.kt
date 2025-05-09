@@ -2,25 +2,9 @@ package me.hellrevenger.generated.Map_MessageTrustStatus
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_39782
- */
-val KClass<MessageTrustStatus>.NOT_SECURE by aliasEnum(MessageTrustStatus::class, "field_39782")
-/**
- * field_39780
- */
-val KClass<MessageTrustStatus>.SECURE by aliasEnum(MessageTrustStatus::class, "field_39780")
-/**
- * field_39781
- */
-val KClass<MessageTrustStatus>.MODIFIED by aliasEnum(MessageTrustStatus::class, "field_39781")
-/**
- * method_44742
- */
-fun KClass<MessageTrustStatus>.getStatus(arg0: SignedMessage, arg1: Text, arg2: Instant) = MessageTrustStatus.method_44742(arg0, arg1, arg2)
-/**
  * method_44741
  */
-fun MessageTrustStatus.createIndicator(arg0: SignedMessage) = this.method_44741(arg0)
+fun MessageTrustStatus.createIndicator(message: SignedMessage) = this.method_44741(message)
 /**
  * method_44740
  */

@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_Address
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_36899
- */
-fun KClass<Address>.create(arg0: InetSocketAddress) = Address.method_36899(arg0)
-/**
  * method_36902
  */
 fun Address.getInetSocketAddress() = this.method_36902()

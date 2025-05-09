@@ -12,4 +12,4 @@ fun LootScoreProvider.getRequiredParameters() = this.method_32477()
 /**
  * method_55379
  */
-fun LootScoreProvider.getScoreHolder(arg0: LootContext) = this.method_55379(arg0)
+fun LootScoreProvider.getScoreHolder(context: LootContext) = this.method_55379(context)

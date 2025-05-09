@@ -4,15 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_16612
  */
-fun <T>JigsawJunction.serialize(arg0: DynamicOps<T>) = this.method_16612<T>(arg0)
+fun <T>JigsawJunction.serialize(ops: DynamicOps<T>) = this.method_16612<T>(ops)
 /**
  * method_35368
  */
 fun JigsawJunction.getDestProjection() = this.method_35368()
-/**
- * method_28873
- */
-fun <T>KClass<JigsawJunction>.deserialize(arg0: Dynamic<T>) = JigsawJunction.method_28873<T>(arg0)
 /**
  * method_16609
  */

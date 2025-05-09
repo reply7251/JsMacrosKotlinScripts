@@ -8,7 +8,7 @@ fun EntityS2CPacket.getPitch() = this.method_11650()
 /**
  * method_11645
  */
-fun EntityS2CPacket.getEntity(arg0: world_World) = this.method_11645(arg0)
+fun EntityS2CPacket.getEntity(world: world_World) = this.method_11645(world)
 /**
  * method_11651
  */

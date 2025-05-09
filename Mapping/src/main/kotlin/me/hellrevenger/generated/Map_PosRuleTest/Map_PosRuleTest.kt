@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_26406
  */
-fun PosRuleTest.test(arg0: BlockPos, arg1: BlockPos, arg2: BlockPos, arg3: Random) = this.method_26406(arg0, arg1, arg2, arg3)
+fun PosRuleTest.test(originalPos: BlockPos, currentPos: BlockPos, pivot: BlockPos, random: Random) = this.method_26406(originalPos, currentPos, pivot, random)

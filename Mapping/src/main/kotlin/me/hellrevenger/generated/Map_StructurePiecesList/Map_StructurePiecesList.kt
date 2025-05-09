@@ -10,17 +10,13 @@ fun StructurePiecesList.isEmpty() = this.method_38708()
  */
 fun StructurePiecesList.getBoundingBox() = this.method_38712()
 /**
- * method_38711
- */
-fun KClass<StructurePiecesList>.fromNbt(arg0: NbtList, arg1: StructureContext) = StructurePiecesList.method_38711(arg0, arg1)
-/**
  * method_38709
  */
-fun StructurePiecesList.toNbt(arg0: StructureContext) = this.method_38709(arg0)
+fun StructurePiecesList.toNbt(context: StructureContext) = this.method_38709(context)
 /**
  * method_38710
  */
-fun StructurePiecesList.contains(arg0: BlockPos) = this.method_38710(arg0)
+fun StructurePiecesList.contains(pos: BlockPos) = this.method_38710(pos)
 /**
  * comp_132
  */

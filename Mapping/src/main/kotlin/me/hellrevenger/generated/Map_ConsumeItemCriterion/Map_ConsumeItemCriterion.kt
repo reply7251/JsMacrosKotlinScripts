@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8821
  */
-fun ConsumeItemCriterion.trigger(arg0: ServerPlayerEntity, arg1: ItemStack) = this.method_8821(arg0, arg1)
+fun ConsumeItemCriterion.trigger(player: ServerPlayerEntity, stack: ItemStack) = this.method_8821(player, stack)

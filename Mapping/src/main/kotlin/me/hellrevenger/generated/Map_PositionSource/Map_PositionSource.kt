@@ -8,4 +8,4 @@ fun PositionSource.getType() = this.method_32955()
 /**
  * method_32956
  */
-fun PositionSource.getPos(arg0: world_World) = this.method_32956(arg0)
+fun PositionSource.getPos(world: world_World) = this.method_32956(world)

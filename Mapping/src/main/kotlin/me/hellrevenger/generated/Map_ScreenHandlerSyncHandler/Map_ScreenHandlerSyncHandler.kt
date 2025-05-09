@@ -4,16 +4,16 @@ import me.hellrevenger.generated.*
 /**
  * method_34262
  */
-fun ScreenHandlerSyncHandler.updateCursorStack(arg0: ScreenHandler, arg1: ItemStack) = this.method_34262(arg0, arg1)
+fun ScreenHandlerSyncHandler.updateCursorStack(handler: ScreenHandler, stack: ItemStack) = this.method_34262(handler, stack)
 /**
  * method_34261
  */
-fun ScreenHandlerSyncHandler.updateSlot(arg0: ScreenHandler, arg1: Int, arg2: ItemStack) = this.method_34261(arg0, arg1, arg2)
+fun ScreenHandlerSyncHandler.updateSlot(handler: ScreenHandler, slot: Int, stack: ItemStack) = this.method_34261(handler, slot, stack)
 /**
  * method_34260
  */
-fun ScreenHandlerSyncHandler.updateProperty(arg0: ScreenHandler, arg1: Int, arg2: Int) = this.method_34260(arg0, arg1, arg2)
+fun ScreenHandlerSyncHandler.updateProperty(handler: ScreenHandler, property: Int, value: Int) = this.method_34260(handler, property, value)
 /**
  * method_34263
  */
-fun ScreenHandlerSyncHandler.updateState(arg0: ScreenHandler, arg1: DefaultedList<ItemStack>, arg2: ItemStack, arg3: IntArray) = this.method_34263(arg0, arg1, arg2, arg3)
+fun ScreenHandlerSyncHandler.updateState(handler: ScreenHandler, stacks: DefaultedList<ItemStack>, cursorStack: ItemStack, properties: IntArray) = this.method_34263(handler, stacks, cursorStack, properties)

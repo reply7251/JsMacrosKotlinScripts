@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_38010
  */
-fun JfrJsonReport.toString(arg0: JfrProfile) = this.method_38010(arg0)
+fun JfrJsonReport.toString(profile: JfrProfile) = this.method_38010(profile)

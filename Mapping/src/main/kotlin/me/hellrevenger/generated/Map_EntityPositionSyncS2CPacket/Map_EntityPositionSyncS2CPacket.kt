@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun EntityPositionSyncS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_64557(arg0)
 /**
- * method_64558
- */
-fun KClass<EntityPositionSyncS2CPacket>.create(arg0: Entity) = EntityPositionSyncS2CPacket.method_64558(arg0)
-/**
  * comp_3223
  */
 fun EntityPositionSyncS2CPacket.id() = this.comp_3223()

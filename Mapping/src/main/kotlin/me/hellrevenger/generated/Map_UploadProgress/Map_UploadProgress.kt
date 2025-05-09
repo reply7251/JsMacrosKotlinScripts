@@ -16,7 +16,7 @@ fun UploadProgress.hasWrittenBytes() = this.method_64329()
 /**
  * method_64326
  */
-fun UploadProgress.setTotalBytes(arg0: Long) = this.method_64326(arg0)
+fun UploadProgress.setTotalBytes(totalBytes: Long) = this.method_64326(totalBytes)
 /**
  * method_64333
  */
@@ -32,7 +32,7 @@ fun UploadProgress.getTotalBytes() = this.method_64325()
 /**
  * method_64328
  */
-fun UploadProgress.addBytesWritten(arg0: Long) = this.method_64328(arg0)
+fun UploadProgress.addBytesWritten(bytesWritten: Long) = this.method_64328(bytesWritten)
 /**
  * method_64327
  */

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_21429
  */
-fun RealmsSelectWorldTemplateScreen.setWarning(arg0: Array<Text>) = this.method_21429(*arg0)
+fun RealmsSelectWorldTemplateScreen.setWarning(warning: Array<Text>) = this.method_21429(*warning)

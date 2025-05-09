@@ -4,11 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_54912
  */
-fun Advancement.validate(arg0: ErrorReporter, arg1: net.minecraft.class_7871.class_7872) = this.method_54912(arg0, arg1)
-/**
- * method_53622
- */
-fun KClass<Advancement>.getNameFromIdentity(arg0: AdvancementEntry) = Advancement.method_53622(arg0)
+fun Advancement.validate(errorReporter: ErrorReporter, lookup: net.minecraft.class_7871.class_7872) = this.method_54912(errorReporter, lookup)
 /**
  * method_53630
  */

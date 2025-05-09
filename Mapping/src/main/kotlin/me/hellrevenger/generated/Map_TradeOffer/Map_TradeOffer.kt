@@ -60,7 +60,7 @@ fun TradeOffer.copySellItem() = this.method_18019()
 /**
  * method_16953
  */
-fun TradeOffer.depleteBuyItems(arg0: ItemStack, arg1: ItemStack) = this.method_16953(arg0, arg1)
+fun TradeOffer.depleteBuyItems(firstBuyStack: ItemStack, secondBuyStack: ItemStack) = this.method_16953(firstBuyStack, secondBuyStack)
 /**
  * method_19274
  */
@@ -72,11 +72,11 @@ fun TradeOffer.getOriginalFirstBuyItem() = this.method_8246()
 /**
  * method_8245
  */
-fun TradeOffer.increaseSpecialPrice(arg0: Int) = this.method_8245(arg0)
+fun TradeOffer.increaseSpecialPrice(increment: Int) = this.method_8245(increment)
 /**
  * method_19273
  */
-fun TradeOffer.setSpecialPrice(arg0: Int) = this.method_19273(arg0)
+fun TradeOffer.setSpecialPrice(specialPrice: Int) = this.method_19273(specialPrice)
 /**
  * method_57556
  */
@@ -96,15 +96,11 @@ fun TradeOffer.getPriceMultiplier() = this.method_19278()
 /**
  * method_16952
  */
-fun TradeOffer.matchesBuyItems(arg0: ItemStack, arg1: ItemStack) = this.method_16952(arg0, arg1)
+fun TradeOffer.matchesBuyItems(stack: ItemStack, buyItem: ItemStack) = this.method_16952(stack, buyItem)
 /**
  * method_8244
  */
 fun TradeOffer.use() = this.method_8244()
-/**
- * method_56110
- */
-fun KClass<TradeOffer>.read(arg0: RegistryByteBuf) = TradeOffer.method_56110(arg0)
 /**
  * method_8256
  */

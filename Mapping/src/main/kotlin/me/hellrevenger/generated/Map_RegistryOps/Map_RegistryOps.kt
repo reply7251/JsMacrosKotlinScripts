@@ -4,32 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_46634
  */
-fun <T, E>RegistryOps<T>.getEntryLookup(arg0: RegistryKey<out Registry<out E>>) = this.method_46634<E>(arg0)
-/**
- * method_40414
- */
-fun <T>KClass<RegistryOps<T>>.of(arg0: DynamicOps<T>, arg1: net.minecraft.class_6903.class_7863) = RegistryOps.method_40414<T>(arg0, arg1)
+fun <T, E>RegistryOps<T>.getEntryLookup(registryRef: RegistryKey<out Registry<out E>>) = this.method_46634<E>(registryRef)
 /**
  * method_57110
  */
-fun <T, U>RegistryOps<T>.withDelegate(arg0: DynamicOps<U>) = this.method_57110<U>(arg0)
-/**
- * method_56622
- */
-fun <T>KClass<RegistryOps<T>>.withRegistry(arg0: Dynamic<T>, arg1: net.minecraft.class_7225.class_7874) = RegistryOps.method_56622<T>(arg0, arg1)
-/**
- * method_46632
- */
-fun <T>KClass<RegistryOps<T>>.of(arg0: DynamicOps<T>, arg1: net.minecraft.class_7225.class_7874) = RegistryOps.method_46632<T>(arg0, arg1)
+fun <T, U>RegistryOps<T>.withDelegate(delegate: DynamicOps<U>) = this.method_57110<U>(delegate)
 /**
  * method_46628
  */
-fun <T, E>RegistryOps<T>.getOwner(arg0: RegistryKey<out Registry<out E>>) = this.method_46628<E>(arg0)
-/**
- * method_46637
- */
-fun <T, E, O>KClass<RegistryOps<T>>.getEntryCodec(arg0: RegistryKey<E>) = RegistryOps.method_46637<E, O>(arg0)
-/**
- * method_46636
- */
-fun <T, E, O>KClass<RegistryOps<T>>.getEntryLookupCodec(arg0: RegistryKey<out Registry<out E>>) = RegistryOps.method_46636<E, O>(arg0)
+fun <T, E>RegistryOps<T>.getOwner(registryRef: RegistryKey<out Registry<out E>>) = this.method_46628<E>(registryRef)

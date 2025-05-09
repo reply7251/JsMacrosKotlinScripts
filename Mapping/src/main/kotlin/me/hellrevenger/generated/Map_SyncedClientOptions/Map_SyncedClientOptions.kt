@@ -2,17 +2,9 @@ package me.hellrevenger.generated.Map_SyncedClientOptions
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_46155
- */
-val KClass<SyncedClientOptions>.MAX_LANGUAGE_CODE_LENGTH by aliasStatic(SyncedClientOptions::field_46155)
-/**
  * comp_1956
  */
 fun SyncedClientOptions.mainArm() = this.comp_1956()
-/**
- * method_53821
- */
-fun KClass<SyncedClientOptions>.createDefault() = SyncedClientOptions.method_53821()
 /**
  * comp_1954
  */
@@ -28,7 +20,7 @@ fun SyncedClientOptions.allowsServerListing() = this.comp_1958()
 /**
  * method_53822
  */
-fun SyncedClientOptions.write(arg0: PacketByteBuf) = this.method_53822(arg0)
+fun SyncedClientOptions.write(buf: PacketByteBuf) = this.method_53822(buf)
 /**
  * comp_1955
  */

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_27789
  */
-fun StriderGravityFix.updateNoGravityNbt(arg0: Dynamic<*>) = this.method_27789(arg0)
+fun StriderGravityFix.updateNoGravityNbt(striderDynamic: Dynamic<*>) = this.method_27789(striderDynamic)

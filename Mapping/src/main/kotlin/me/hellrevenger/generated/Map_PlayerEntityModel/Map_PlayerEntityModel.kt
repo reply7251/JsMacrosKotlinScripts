@@ -24,11 +24,7 @@ val PlayerEntityModel.leftPants by alias(PlayerEntityModel::field_3482)
 /**
  * method_22697
  */
-fun PlayerEntityModel.getRandomPart(arg0: Random) = this.method_22697(arg0)
-/**
- * method_32028
- */
-fun KClass<PlayerEntityModel>.getTexturedModelData(arg0: Dilation, arg1: Boolean) = PlayerEntityModel.method_32028(arg0, arg1)
+fun PlayerEntityModel.getRandomPart(random: Random) = this.method_22697(random)
 /**
  * method_62110
  */

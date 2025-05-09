@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_35189
  */
-fun TraderLlamaEntity.setDespawnDelay(arg0: Int) = this.method_35189(arg0)
+fun TraderLlamaEntity.setDespawnDelay(despawnDelay: Int) = this.method_35189(despawnDelay)

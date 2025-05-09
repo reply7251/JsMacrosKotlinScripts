@@ -4,28 +4,16 @@ import me.hellrevenger.generated.*
 /**
  * method_8651
  */
-fun ModifiableWorld.breakBlock(arg0: BlockPos, arg1: Boolean, arg2: Entity) = this.method_8651(arg0, arg1, arg2)
-/**
- * method_22352
- */
-fun ModifiableWorld.breakBlock(arg0: BlockPos, arg1: Boolean) = this.method_22352(arg0, arg1)
-/**
- * method_30093
- */
-fun ModifiableWorld.breakBlock(arg0: BlockPos, arg1: Boolean, arg2: Entity, arg3: Int) = this.method_30093(arg0, arg1, arg2, arg3)
+fun ModifiableWorld.breakBlock(pos: BlockPos, drop: Boolean, breakingEntity: Entity) = this.method_8651(pos, drop, breakingEntity)
 /**
  * method_8650
  */
-fun ModifiableWorld.removeBlock(arg0: BlockPos, arg1: Boolean) = this.method_8650(arg0, arg1)
+fun ModifiableWorld.removeBlock(pos: BlockPos, move: Boolean) = this.method_8650(pos, move)
 /**
  * method_8649
  */
-fun ModifiableWorld.spawnEntity(arg0: Entity) = this.method_8649(arg0)
+fun ModifiableWorld.spawnEntity(entity: Entity) = this.method_8649(entity)
 /**
  * method_30092
  */
-fun ModifiableWorld.setBlockState(arg0: BlockPos, arg1: BlockState, arg2: Int, arg3: Int) = this.method_30092(arg0, arg1, arg2, arg3)
-/**
- * method_8652
- */
-fun ModifiableWorld.setBlockState(arg0: BlockPos, arg1: BlockState, arg2: Int) = this.method_8652(arg0, arg1, arg2)
+fun ModifiableWorld.setBlockState(pos: BlockPos, state: BlockState, flags: Int, maxUpdateDepth: Int) = this.method_30092(pos, state, flags, maxUpdateDepth)

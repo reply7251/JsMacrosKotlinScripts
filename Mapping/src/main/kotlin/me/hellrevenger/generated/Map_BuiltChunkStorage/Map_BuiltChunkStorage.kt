@@ -8,7 +8,7 @@ var BuiltChunkStorage.chunks by alias(BuiltChunkStorage::field_4150)
 /**
  * method_3330
  */
-fun BuiltChunkStorage.updateCameraPosition(arg0: ChunkSectionPos) = this.method_3330(arg0)
+fun BuiltChunkStorage.updateCameraPosition(sectionPos: ChunkSectionPos) = this.method_3330(sectionPos)
 /**
  * method_52840
  */
@@ -28,4 +28,4 @@ fun BuiltChunkStorage.clear() = this.method_3327()
 /**
  * method_16040
  */
-fun BuiltChunkStorage.scheduleRebuild(arg0: Int, arg1: Int, arg2: Int, arg3: Boolean) = this.method_16040(arg0, arg1, arg2, arg3)
+fun BuiltChunkStorage.scheduleRebuild(x: Int, y: Int, z: Int, important: Boolean) = this.method_16040(x, y, z, important)

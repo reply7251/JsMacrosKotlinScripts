@@ -2,77 +2,9 @@ package me.hellrevenger.generated.Map_ArmorStandEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_7107
- */
-val KClass<ArmorStandEntity>.ARMOR_STAND_FLAGS by aliasStatic(ArmorStandEntity::field_7107)
-/**
- * field_7123
- */
-val KClass<ArmorStandEntity>.TRACKER_HEAD_ROTATION by aliasStatic(ArmorStandEntity::field_7123)
-/**
- * field_7127
- */
-val KClass<ArmorStandEntity>.TRACKER_LEFT_LEG_ROTATION by aliasStatic(ArmorStandEntity::field_7127)
-/**
- * field_7119
- */
-val KClass<ArmorStandEntity>.DEFAULT_BODY_ROTATION by aliasStatic(ArmorStandEntity::field_7119)
-/**
- * field_7115
- */
-val KClass<ArmorStandEntity>.DEFAULT_RIGHT_ARM_ROTATION by aliasStatic(ArmorStandEntity::field_7115)
-/**
- * field_30452
- */
-val KClass<ArmorStandEntity>.SMALL_FLAG by aliasStatic(ArmorStandEntity::field_30452)
-/**
- * field_30444
- */
-val KClass<ArmorStandEntity>.MARKER_FLAG by aliasStatic(ArmorStandEntity::field_30444)
-/**
- * field_7116
- */
-val KClass<ArmorStandEntity>.TRACKER_LEFT_ARM_ROTATION by aliasStatic(ArmorStandEntity::field_7116)
-/**
- * field_30453
- */
-val KClass<ArmorStandEntity>.SHOW_ARMS_FLAG by aliasStatic(ArmorStandEntity::field_30453)
-/**
  * field_7112
  */
 var ArmorStandEntity.lastHitTime by alias(ArmorStandEntity::field_7112)
-/**
- * field_7125
- */
-val KClass<ArmorStandEntity>.TRACKER_RIGHT_LEG_ROTATION by aliasStatic(ArmorStandEntity::field_7125)
-/**
- * field_7105
- */
-val KClass<ArmorStandEntity>.TRACKER_RIGHT_ARM_ROTATION by aliasStatic(ArmorStandEntity::field_7105)
-/**
- * field_7124
- */
-val KClass<ArmorStandEntity>.DEFAULT_LEFT_ARM_ROTATION by aliasStatic(ArmorStandEntity::field_7124)
-/**
- * field_30442
- */
-val KClass<ArmorStandEntity>.HIDE_BASE_PLATE_FLAG by aliasStatic(ArmorStandEntity::field_30442)
-/**
- * field_7122
- */
-val KClass<ArmorStandEntity>.TRACKER_BODY_ROTATION by aliasStatic(ArmorStandEntity::field_7122)
-/**
- * field_7117
- */
-val KClass<ArmorStandEntity>.DEFAULT_RIGHT_LEG_ROTATION by aliasStatic(ArmorStandEntity::field_7117)
-/**
- * field_7121
- */
-val KClass<ArmorStandEntity>.DEFAULT_LEFT_LEG_ROTATION by aliasStatic(ArmorStandEntity::field_7121)
-/**
- * field_7113
- */
-val KClass<ArmorStandEntity>.DEFAULT_HEAD_ROTATION by aliasStatic(ArmorStandEntity::field_7113)
 /**
  * method_6917
  */
@@ -82,21 +14,17 @@ fun ArmorStandEntity.getLeftLegRotation() = this.method_6917()
  */
 fun ArmorStandEntity.shouldShowArms() = this.method_6929()
 /**
- * method_55745
- */
-fun KClass<ArmorStandEntity>.createArmorStandAttributes() = ArmorStandEntity.method_55745()
-/**
  * method_6921
  */
 fun ArmorStandEntity.getHeadRotation() = this.method_6921()
 /**
  * method_6909
  */
-fun ArmorStandEntity.setLeftLegRotation(arg0: EulerAngle) = this.method_6909(arg0)
+fun ArmorStandEntity.setLeftLegRotation(angle: EulerAngle) = this.method_6909(angle)
 /**
  * method_6925
  */
-fun ArmorStandEntity.setRightArmRotation(arg0: EulerAngle) = this.method_6925(arg0)
+fun ArmorStandEntity.setRightArmRotation(angle: EulerAngle) = this.method_6925(angle)
 /**
  * method_61489
  */
@@ -104,7 +32,7 @@ fun ArmorStandEntity.shouldShowBasePlate() = this.method_61489()
 /**
  * method_6913
  */
-fun ArmorStandEntity.setShowArms(arg0: Boolean) = this.method_6913(arg0)
+fun ArmorStandEntity.setShowArms(showArms: Boolean) = this.method_6913(showArms)
 /**
  * method_6900
  */
@@ -112,7 +40,7 @@ fun ArmorStandEntity.getRightLegRotation() = this.method_6900()
 /**
  * method_6926
  */
-fun ArmorStandEntity.setRightLegRotation(arg0: EulerAngle) = this.method_6926(arg0)
+fun ArmorStandEntity.setRightLegRotation(angle: EulerAngle) = this.method_6926(angle)
 /**
  * method_6912
  */
@@ -120,7 +48,7 @@ fun ArmorStandEntity.isMarker() = this.method_6912()
 /**
  * method_6910
  */
-fun ArmorStandEntity.setLeftArmRotation(arg0: EulerAngle) = this.method_6910(arg0)
+fun ArmorStandEntity.setLeftArmRotation(angle: EulerAngle) = this.method_6910(angle)
 /**
  * method_6903
  */
@@ -132,15 +60,15 @@ fun ArmorStandEntity.getBodyRotation() = this.method_6923()
 /**
  * method_6919
  */
-fun ArmorStandEntity.setHeadRotation(arg0: EulerAngle) = this.method_6919(arg0)
+fun ArmorStandEntity.setHeadRotation(angle: EulerAngle) = this.method_6919(angle)
 /**
  * method_6927
  */
-fun ArmorStandEntity.setBodyRotation(arg0: EulerAngle) = this.method_6927(arg0)
+fun ArmorStandEntity.setBodyRotation(angle: EulerAngle) = this.method_6927(angle)
 /**
  * method_6907
  */
-fun ArmorStandEntity.setHideBasePlate(arg0: Boolean) = this.method_6907(arg0)
+fun ArmorStandEntity.setHideBasePlate(hideBasePlate: Boolean) = this.method_6907(hideBasePlate)
 /**
  * method_6930
  */

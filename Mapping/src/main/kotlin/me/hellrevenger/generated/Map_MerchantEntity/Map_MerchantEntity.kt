@@ -16,4 +16,4 @@ fun MerchantEntity.getHeadRollingTimeLeft() = this.method_20506()
 /**
  * method_20507
  */
-fun MerchantEntity.setHeadRollingTimeLeft(arg0: Int) = this.method_20507(arg0)
+fun MerchantEntity.setHeadRollingTimeLeft(ticks: Int) = this.method_20507(ticks)

@@ -2,17 +2,13 @@ package me.hellrevenger.generated.Map_MoveControl
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_30198
- */
-val KClass<MoveControl>.REACHED_DESTINATION_DISTANCE_SQUARED by aliasStatic(MoveControl::field_30198)
-/**
  * method_6242
  */
 fun MoveControl.getSpeed() = this.method_6242()
 /**
  * method_6239
  */
-fun MoveControl.moveTo(arg0: Double, arg1: Double, arg2: Double, arg3: Double) = this.method_6239(arg0, arg1, arg2, arg3)
+fun MoveControl.moveTo(x: Double, arg1: Double, y: Double, arg3: Double) = this.method_6239(x, arg1, y, arg3)
 /**
  * method_6241
  */
@@ -36,4 +32,4 @@ fun MoveControl.tick() = this.method_6240()
 /**
  * method_6243
  */
-fun MoveControl.strafeTo(arg0: Float, arg1: Float) = this.method_6243(arg0, arg1)
+fun MoveControl.strafeTo(forward: Float, sideways: Float) = this.method_6243(forward, sideways)

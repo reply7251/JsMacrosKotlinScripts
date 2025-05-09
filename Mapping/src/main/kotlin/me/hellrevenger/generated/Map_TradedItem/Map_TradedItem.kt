@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_57552
  */
-fun TradedItem.matches(arg0: ItemStack) = this.method_57552(arg0)
+fun TradedItem.matches(stack: ItemStack) = this.method_57552(stack)
 /**
  * method_57554
  */
-fun TradedItem.withComponents(arg0: UnaryOperator<net.minecraft.class_9329.class_9330>) = this.method_57554(arg0)
+fun TradedItem.withComponents(builderCallback: UnaryOperator<net.minecraft.class_9329.class_9330>) = this.method_57554(builderCallback)
 /**
  * comp_2427
  */

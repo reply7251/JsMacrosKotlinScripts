@@ -16,11 +16,7 @@ fun <T>property_Property<T>.computeHashCode() where T: Comparable<T> = this.meth
 /**
  * method_30041
  */
-fun <T>property_Property<T>.createValue(arg0: State<*, *>) where T: Comparable<T> = this.method_30041(arg0)
-/**
- * method_30042
- */
-fun <T>property_Property<T>.createValue(arg0: T) where T: Comparable<T> = this.method_30042(arg0)
+fun <T>property_Property<T>.createValue(state: State<*, *>) where T: Comparable<T> = this.method_30041(state)
 /**
  * method_11902
  */
@@ -28,11 +24,11 @@ fun <T>property_Property<T>.getType() where T: Comparable<T> = this.method_11902
 /**
  * method_35307
  */
-fun <T, U, S>property_Property<T>.parse(arg0: DynamicOps<U>, arg1: S, arg2: U) where T: Comparable<T>, S: State<*, S> = this.method_35307<U, S>(arg0, arg1, arg2)
+fun <T, U, S>property_Property<T>.parse(ops: DynamicOps<U>, state: S, input: U) where T: Comparable<T>, S: State<*, S> = this.method_35307<U, S>(ops, state, input)
 /**
  * method_64218
  */
-fun <T>property_Property<T>.ordinal(arg0: T) where T: Comparable<T> = this.method_64218(arg0)
+fun <T>property_Property<T>.ordinal(value: T) where T: Comparable<T> = this.method_64218(value)
 /**
  * method_30044
  */
@@ -42,14 +38,10 @@ fun <T>property_Property<T>.getValueCodec() where T: Comparable<T> = this.method
  */
 fun <T>property_Property<T>.stream() where T: Comparable<T> = this.method_30043()
 /**
- * method_11900
- */
-fun <T>property_Property<T>.parse(arg0: String) where T: Comparable<T> = this.method_11900(arg0)
-/**
  * method_11898
  */
 fun <T>property_Property<T>.getValues() where T: Comparable<T> = this.method_11898()
 /**
  * method_11901
  */
-fun <T>property_Property<T>.name(arg0: T) where T: Comparable<T> = this.method_11901(arg0)
+fun <T>property_Property<T>.name(value: T) where T: Comparable<T> = this.method_11901(value)

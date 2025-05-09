@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_13947
  */
-fun MinecraftDedicatedServer.enqueueCommand(arg0: String, arg1: ServerCommandSource) = this.method_13947(arg0, arg1)
+fun MinecraftDedicatedServer.enqueueCommand(command: String, commandSource: ServerCommandSource) = this.method_13947(command, commandSource)
 /**
  * method_16712
  */
-fun MinecraftDedicatedServer.setUseWhitelist(arg0: Boolean) = this.method_16712(arg0)
+fun MinecraftDedicatedServer.setUseWhitelist(useWhitelist: Boolean) = this.method_16712(useWhitelist)
 /**
  * method_13948
  */

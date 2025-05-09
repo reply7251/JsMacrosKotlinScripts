@@ -4,23 +4,23 @@ import me.hellrevenger.generated.*
 /**
  * method_25404
  */
-fun Element.keyPressed(arg0: Int, arg1: Int, arg2: Int) = this.method_25404(arg0, arg1, arg2)
+fun Element.keyPressed(keyCode: Int, scanCode: Int, modifiers: Int) = this.method_25404(keyCode, scanCode, modifiers)
 /**
  * method_25406
  */
-fun Element.mouseReleased(arg0: Double, arg1: Double, arg2: Int) = this.method_25406(arg0, arg1, arg2)
+fun Element.mouseReleased(mouseX: Double, arg1: Double, mouseY: Int) = this.method_25406(mouseX, arg1, mouseY)
 /**
  * method_16014
  */
-fun Element.mouseMoved(arg0: Double, arg1: Double) = this.method_16014(arg0, arg1)
+fun Element.mouseMoved(mouseX: Double, arg1: Double) = this.method_16014(mouseX, arg1)
 /**
  * method_25403
  */
-fun Element.mouseDragged(arg0: Double, arg1: Double, arg2: Int, arg3: Double, arg4: Double) = this.method_25403(arg0, arg1, arg2, arg3, arg4)
+fun Element.mouseDragged(mouseX: Double, arg1: Double, mouseY: Int, arg3: Double, button: Double) = this.method_25403(mouseX, arg1, mouseY, arg3, button)
 /**
  * method_25401
  */
-fun Element.mouseScrolled(arg0: Double, arg1: Double, arg2: Double, arg3: Double) = this.method_25401(arg0, arg1, arg2, arg3)
+fun Element.mouseScrolled(mouseX: Double, arg1: Double, mouseY: Double, arg3: Double) = this.method_25401(mouseX, arg1, mouseY, arg3)
 /**
  * method_48218
  */
@@ -28,23 +28,23 @@ fun Element.getFocusedPath() = this.method_48218()
 /**
  * method_65515
  */
-fun Element.getBorder(arg0: NavigationDirection) = this.method_65515(arg0)
+fun Element.getBorder(direction: NavigationDirection) = this.method_65515(direction)
 /**
  * method_48205
  */
-fun Element.getNavigationPath(arg0: GuiNavigation) = this.method_48205(arg0)
+fun Element.getNavigationPath(navigation: GuiNavigation) = this.method_48205(navigation)
 /**
  * method_25405
  */
-fun Element.isMouseOver(arg0: Double, arg1: Double) = this.method_25405(arg0, arg1)
+fun Element.isMouseOver(mouseX: Double, arg1: Double) = this.method_25405(mouseX, arg1)
 /**
  * method_25400
  */
-fun Element.charTyped(arg0: Char, arg1: Int) = this.method_25400(arg0, arg1)
+fun Element.charTyped(chr: Char, modifiers: Int) = this.method_25400(chr, modifiers)
 /**
  * method_16803
  */
-fun Element.keyReleased(arg0: Int, arg1: Int, arg2: Int) = this.method_16803(arg0, arg1, arg2)
+fun Element.keyReleased(keyCode: Int, scanCode: Int, modifiers: Int) = this.method_16803(keyCode, scanCode, modifiers)
 /**
  * method_25370
  */
@@ -52,11 +52,11 @@ fun Element.isFocused() = this.method_25370()
 /**
  * method_25365
  */
-fun Element.setFocused(arg0: Boolean) = this.method_25365(arg0)
+fun Element.setFocused(focused: Boolean) = this.method_25365(focused)
 /**
  * method_25402
  */
-fun Element.mouseClicked(arg0: Double, arg1: Double, arg2: Int) = this.method_25402(arg0, arg1, arg2)
+fun Element.mouseClicked(mouseX: Double, arg1: Double, mouseY: Int) = this.method_25402(mouseX, arg1, mouseY)
 /**
  * method_48202
  */

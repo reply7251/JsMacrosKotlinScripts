@@ -12,8 +12,8 @@ fun DataGenerator.run() = this.method_10315()
 /**
  * method_46564
  */
-fun DataGenerator.createVanillaPack(arg0: Boolean) = this.method_46564(arg0)
+fun DataGenerator.createVanillaPack(shouldRun: Boolean) = this.method_46564(shouldRun)
 /**
  * method_46565
  */
-fun DataGenerator.createVanillaSubPack(arg0: Boolean, arg1: String) = this.method_46565(arg0, arg1)
+fun DataGenerator.createVanillaSubPack(shouldRun: Boolean, packName: String) = this.method_46565(shouldRun, packName)

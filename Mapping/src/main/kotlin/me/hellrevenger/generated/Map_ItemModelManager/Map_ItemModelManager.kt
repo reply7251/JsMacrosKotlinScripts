@@ -4,20 +4,16 @@ import me.hellrevenger.generated.*
 /**
  * method_65597
  */
-fun ItemModelManager.updateForLivingEntity(arg0: ItemRenderState, arg1: ItemStack, arg2: ModelTransformationMode, arg3: Boolean, arg4: LivingEntity) = this.method_65597(arg0, arg1, arg2, arg3, arg4)
+fun ItemModelManager.updateForLivingEntity(renderState: ItemRenderState, stack: ItemStack, transformationMode: ModelTransformationMode, leftHand: Boolean, entity: LivingEntity) = this.method_65597(renderState, stack, transformationMode, leftHand, entity)
 /**
  * method_65595
  */
-fun ItemModelManager.updateForNonLivingEntity(arg0: ItemRenderState, arg1: ItemStack, arg2: ModelTransformationMode, arg3: Entity) = this.method_65595(arg0, arg1, arg2, arg3)
+fun ItemModelManager.updateForNonLivingEntity(renderState: ItemRenderState, stack: ItemStack, transformationMode: ModelTransformationMode, entity: Entity) = this.method_65595(renderState, stack, transformationMode, entity)
 /**
  * method_65598
  */
-fun ItemModelManager.update(arg0: ItemRenderState, arg1: ItemStack, arg2: ModelTransformationMode, arg3: Boolean, arg4: world_World, arg5: LivingEntity, arg6: Int) = this.method_65598(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun ItemModelManager.update(renderState: ItemRenderState, stack: ItemStack, transformationMode: ModelTransformationMode, leftHand: Boolean, world: world_World, entity: LivingEntity, seed: Int) = this.method_65598(renderState, stack, transformationMode, leftHand, world, entity, seed)
 /**
  * method_65912
  */
-fun ItemModelManager.hasHandAnimationOnSwap(arg0: ItemStack) = this.method_65912(arg0)
-/**
- * method_65596
- */
-fun ItemModelManager.update(arg0: ItemRenderState, arg1: ItemStack, arg2: ModelTransformationMode, arg3: world_World, arg4: LivingEntity, arg5: Int) = this.method_65596(arg0, arg1, arg2, arg3, arg4, arg5)
+fun ItemModelManager.hasHandAnimationOnSwap(stack: ItemStack) = this.method_65912(stack)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_58119
  */
-fun SlotsPredicate.matches(arg0: Entity) = this.method_58119(arg0)
+fun SlotsPredicate.matches(entity: Entity) = this.method_58119(entity)
 /**
  * comp_2455
  */

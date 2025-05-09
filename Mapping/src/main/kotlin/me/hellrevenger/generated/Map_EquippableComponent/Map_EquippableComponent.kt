@@ -2,21 +2,13 @@ package me.hellrevenger.generated.Map_EquippableComponent
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_64017
- */
-fun KClass<EquippableComponent>.ofCarpet(arg0: DyeColor) = EquippableComponent.method_64017(arg0)
-/**
- * method_64202
- */
-fun KClass<EquippableComponent>.builder(arg0: EquipmentSlot) = EquippableComponent.method_64202(arg0)
-/**
  * method_64015
  */
-fun EquippableComponent.allows(arg0: EntityType<*>) = this.method_64015(arg0)
+fun EquippableComponent.allows(entityType: EntityType<*>) = this.method_64015(entityType)
 /**
  * method_64018
  */
-fun EquippableComponent.equip(arg0: ItemStack, arg1: PlayerEntity) = this.method_64018(arg0, arg1)
+fun EquippableComponent.equip(stack: ItemStack, player: PlayerEntity) = this.method_64018(stack, player)
 /**
  * comp_3177
  */

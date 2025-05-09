@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_47637
  */
-fun TelemetryEventWidget.setScrollConsumer(arg0: DoubleConsumer) = this.method_47637(arg0)
+fun TelemetryEventWidget.setScrollConsumer(scrollConsumer: DoubleConsumer) = this.method_47637(scrollConsumer)
 /**
  * method_47638
  */
-fun TelemetryEventWidget.refresh(arg0: Boolean) = this.method_47638(arg0)
+fun TelemetryEventWidget.refresh(optionalTelemetryEnabled: Boolean) = this.method_47638(optionalTelemetryEnabled)
 /**
  * method_57767
  */

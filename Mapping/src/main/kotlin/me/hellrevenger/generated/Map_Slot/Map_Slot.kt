@@ -20,7 +20,7 @@ val Slot.x by alias(Slot::field_7873)
 /**
  * method_32753
  */
-fun Slot.takeStackRange(arg0: Int, arg1: Int, arg2: PlayerEntity) = this.method_32753(arg0, arg1, arg2)
+fun Slot.takeStackRange(min: Int, max: Int, player: PlayerEntity) = this.method_32753(min, max, player)
 /**
  * method_7675
  */
@@ -28,11 +28,11 @@ fun Slot.getMaxItemCount() = this.method_7675()
 /**
  * method_34264
  */
-fun Slot.tryTakeStackRange(arg0: Int, arg1: Int, arg2: PlayerEntity) = this.method_34264(arg0, arg1, arg2)
+fun Slot.tryTakeStackRange(min: Int, max: Int, player: PlayerEntity) = this.method_34264(min, max, player)
 /**
  * method_7670
  */
-fun Slot.onQuickTransfer(arg0: ItemStack, arg1: ItemStack) = this.method_7670(arg0, arg1)
+fun Slot.onQuickTransfer(newItem: ItemStack, original: ItemStack) = this.method_7670(newItem, original)
 /**
  * method_51306
  */
@@ -40,7 +40,7 @@ fun Slot.canBeHighlighted() = this.method_51306()
 /**
  * method_7673
  */
-fun Slot.setStackNoCallbacks(arg0: ItemStack) = this.method_7673(arg0)
+fun Slot.setStackNoCallbacks(stack: ItemStack) = this.method_7673(stack)
 /**
  * method_7682
  */
@@ -48,27 +48,19 @@ fun Slot.isEnabled() = this.method_7682()
 /**
  * method_48931
  */
-fun Slot.setStack(arg0: ItemStack, arg1: ItemStack) = this.method_48931(arg0, arg1)
+fun Slot.setStack(stack: ItemStack, previousStack: ItemStack) = this.method_48931(stack, previousStack)
 /**
  * method_7680
  */
-fun Slot.canInsert(arg0: ItemStack) = this.method_7680(arg0)
+fun Slot.canInsert(stack: ItemStack) = this.method_7680(stack)
 /**
  * method_32756
  */
-fun Slot.insertStack(arg0: ItemStack) = this.method_32756(arg0)
-/**
- * method_32755
- */
-fun Slot.insertStack(arg0: ItemStack, arg1: Int) = this.method_32755(arg0, arg1)
+fun Slot.insertStack(stack: ItemStack) = this.method_32756(stack)
 /**
  * method_32754
  */
-fun Slot.canTakePartial(arg0: PlayerEntity) = this.method_32754(arg0)
-/**
- * method_53512
- */
-fun Slot.setStack(arg0: ItemStack) = this.method_53512(arg0)
+fun Slot.canTakePartial(player: PlayerEntity) = this.method_32754(player)
 /**
  * method_55059
  */
@@ -84,7 +76,7 @@ fun Slot.getIndex() = this.method_34266()
 /**
  * method_7667
  */
-fun Slot.onTakeItem(arg0: PlayerEntity, arg1: ItemStack) = this.method_7667(arg0, arg1)
+fun Slot.onTakeItem(player: PlayerEntity, stack: ItemStack) = this.method_7667(player, stack)
 /**
  * method_7677
  */
@@ -92,7 +84,7 @@ fun Slot.getStack() = this.method_7677()
 /**
  * method_7671
  */
-fun Slot.takeStack(arg0: Int) = this.method_7671(arg0)
+fun Slot.takeStack(amount: Int) = this.method_7671(amount)
 /**
  * method_7681
  */
@@ -102,10 +94,6 @@ fun Slot.hasStack() = this.method_7681()
  */
 fun Slot.getBackgroundSprite() = this.method_7679()
 /**
- * method_7676
- */
-fun Slot.getMaxItemCount(arg0: ItemStack) = this.method_7676(arg0)
-/**
  * method_7674
  */
-fun Slot.canTakeItems(arg0: PlayerEntity) = this.method_7674(arg0)
+fun Slot.canTakeItems(playerEntity: PlayerEntity) = this.method_7674(playerEntity)

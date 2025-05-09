@@ -4,16 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_19743
  */
-fun SoundLoader.loadStatic(arg0: Identifier) = this.method_19743(arg0)
+fun SoundLoader.loadStatic(id: Identifier) = this.method_19743(id)
 /**
  * method_19744
  */
-fun SoundLoader.loadStreamed(arg0: Identifier, arg1: Boolean) = this.method_19744(arg0, arg1)
+fun SoundLoader.loadStreamed(id: Identifier, repeatInstantly: Boolean) = this.method_19744(id, repeatInstantly)
 /**
  * method_19738
  */
 fun SoundLoader.close() = this.method_19738()
-/**
- * method_19741
- */
-fun SoundLoader.loadStatic(arg0: Collection<Sound>) = this.method_19741(arg0)

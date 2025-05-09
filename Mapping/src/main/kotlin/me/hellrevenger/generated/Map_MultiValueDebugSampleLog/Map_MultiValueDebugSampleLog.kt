@@ -12,11 +12,7 @@ fun MultiValueDebugSampleLog.getDimension() = this.method_56662()
 /**
  * method_56660
  */
-fun MultiValueDebugSampleLog.get(arg0: Int, arg1: Int) = this.method_56660(arg0, arg1)
-/**
- * method_56659
- */
-fun MultiValueDebugSampleLog.get(arg0: Int) = this.method_56659(arg0)
+fun MultiValueDebugSampleLog.get(index: Int, dimension: Int) = this.method_56660(index, dimension)
 /**
  * method_56664
  */

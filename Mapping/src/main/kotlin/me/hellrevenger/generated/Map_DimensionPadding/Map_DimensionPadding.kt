@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_DimensionPadding
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_51953
- */
-val KClass<DimensionPadding>.NONE by aliasStatic(DimensionPadding::field_51953)
-/**
  * method_60629
  */
 fun DimensionPadding.paddedBySameDistance() = this.method_60629()

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_20126
  */
-fun MultiplayerServerListWidget.setLanServers(arg0: MutableList<LanServerInfo>) = this.method_20126(arg0)
+fun MultiplayerServerListWidget.setLanServers(lanServers: MutableList<LanServerInfo>) = this.method_20126(lanServers)
 /**
  * method_52204
  */
@@ -12,7 +12,7 @@ fun MultiplayerServerListWidget.onRemoved() = this.method_52204()
 /**
  * method_20125
  */
-fun MultiplayerServerListWidget.setServers(arg0: ServerList) = this.method_20125(arg0)
+fun MultiplayerServerListWidget.setServers(servers: ServerList) = this.method_20125(servers)
 /**
  * method_20122
  */

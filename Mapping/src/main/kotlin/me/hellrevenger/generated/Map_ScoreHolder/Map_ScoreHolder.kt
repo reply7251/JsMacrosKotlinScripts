@@ -6,14 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun ScoreHolder.getNameForScoreboard() = this.method_5820()
 /**
- * method_55420
- */
-fun KClass<ScoreHolder>.fromProfile(arg0: GameProfile) = ScoreHolder.method_55420(arg0)
-/**
- * method_55422
- */
-fun KClass<ScoreHolder>.fromName(arg0: String) = ScoreHolder.method_55422(arg0)
-/**
  * method_55423
  */
 fun ScoreHolder.getStyledDisplayName() = this.method_55423()

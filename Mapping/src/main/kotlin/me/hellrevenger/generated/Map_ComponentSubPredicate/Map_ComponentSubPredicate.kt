@@ -8,4 +8,4 @@ fun <T>ComponentSubPredicate<T>.getComponentType() = this.method_58163()
 /**
  * method_58167
  */
-fun <T>ComponentSubPredicate<T>.test(arg0: ItemStack, arg1: T) = this.method_58167(arg0, arg1)
+fun <T>ComponentSubPredicate<T>.test(stack: ItemStack, component: T) = this.method_58167(stack, component)

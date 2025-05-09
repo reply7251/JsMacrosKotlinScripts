@@ -4,11 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60751
  */
-fun JukeboxSong.shouldStopPlaying(arg0: Long) = this.method_60751(arg0)
-/**
- * method_60753
- */
-fun KClass<JukeboxSong>.getSongEntryFromStack(arg0: net.minecraft.class_7225.class_7874, arg1: ItemStack) = JukeboxSong.method_60753(arg0, arg1)
+fun JukeboxSong.shouldStopPlaying(ticksSinceSongStarted: Long) = this.method_60751(ticksSinceSongStarted)
 /**
  * method_60750
  */

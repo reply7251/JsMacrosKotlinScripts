@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_11274
  */
-fun LidOpenable.getAnimationProgress(arg0: Float) = this.method_11274(arg0)
+fun LidOpenable.getAnimationProgress(tickDelta: Float) = this.method_11274(tickDelta)

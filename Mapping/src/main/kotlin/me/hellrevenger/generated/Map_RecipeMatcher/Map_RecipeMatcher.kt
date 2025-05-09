@@ -8,11 +8,11 @@ val <T>RecipeMatcher<T>.available by alias(RecipeMatcher<*>::field_52504)
 /**
  * method_65796
  */
-fun <T>RecipeMatcher<T>.getMaximumCrafts(arg0: MutableList<out net.minecraft.class_1662.class_10528<T>>) = this.method_65796(arg0)
+fun <T>RecipeMatcher<T>.getMaximumCrafts(ingredients: MutableList<out net.minecraft.class_1662.class_10528<T>>) = this.method_65796(ingredients)
 /**
  * method_61504
  */
-fun <T>RecipeMatcher<T>.countCrafts(arg0: MutableList<out net.minecraft.class_1662.class_10528<T>>, arg1: Int, arg2: net.minecraft.class_1662.class_9874<T>) = this.method_61504(arg0, arg1, arg2)
+fun <T>RecipeMatcher<T>.countCrafts(ingredients: MutableList<out net.minecraft.class_1662.class_10528<T>>, max: Int, itemCallback: net.minecraft.class_1662.class_9874<T>) = this.method_61504(ingredients, max, itemCallback)
 /**
  * method_7409
  */
@@ -20,8 +20,8 @@ fun <T>RecipeMatcher<T>.clear() = this.method_7409()
 /**
  * method_61501
  */
-fun <T>RecipeMatcher<T>.add(arg0: T, arg1: Int) = this.method_61501(arg0, arg1)
+fun <T>RecipeMatcher<T>.add(input: T, count: Int) = this.method_61501(input, count)
 /**
  * method_61502
  */
-fun <T>RecipeMatcher<T>.match(arg0: MutableList<out net.minecraft.class_1662.class_10528<T>>, arg1: Int, arg2: net.minecraft.class_1662.class_9874<T>) = this.method_61502(arg0, arg1, arg2)
+fun <T>RecipeMatcher<T>.match(ingredients: MutableList<out net.minecraft.class_1662.class_10528<T>>, quantity: Int, itemCallback: net.minecraft.class_1662.class_9874<T>) = this.method_61502(ingredients, quantity, itemCallback)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_54895
  */
-fun Frame.succeed(arg0: Int) = this.method_54895(arg0)
+fun Frame.succeed(returnValue: Int) = this.method_54895(returnValue)
 /**
  * method_54896
  */

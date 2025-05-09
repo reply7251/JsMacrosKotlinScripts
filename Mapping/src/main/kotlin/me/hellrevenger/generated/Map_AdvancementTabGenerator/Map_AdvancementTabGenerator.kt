@@ -4,8 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_10335
  */
-fun AdvancementTabGenerator.accept(arg0: net.minecraft.class_7225.class_7874, arg1: Consumer<AdvancementEntry>) = this.method_10335(arg0, arg1)
-/**
- * method_55578
- */
-fun KClass<AdvancementTabGenerator>.reference(arg0: String) = AdvancementTabGenerator.method_55578(arg0)
+fun AdvancementTabGenerator.accept(registries: net.minecraft.class_7225.class_7874, exporter: Consumer<AdvancementEntry>) = this.method_10335(registries, exporter)

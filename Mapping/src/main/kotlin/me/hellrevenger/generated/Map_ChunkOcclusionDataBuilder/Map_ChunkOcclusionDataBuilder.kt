@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_3682
  */
-fun ChunkOcclusionDataBuilder.markClosed(arg0: BlockPos) = this.method_3682(arg0)
+fun ChunkOcclusionDataBuilder.markClosed(pos: BlockPos) = this.method_3682(pos)
 /**
  * method_3679
  */

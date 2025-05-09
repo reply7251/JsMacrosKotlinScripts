@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_25836
  */
-fun <T>VariantSetting<T>.evaluate(arg0: T) = this.method_25836(arg0)
+fun <T>VariantSetting<T>.evaluate(value: T) = this.method_25836(value)

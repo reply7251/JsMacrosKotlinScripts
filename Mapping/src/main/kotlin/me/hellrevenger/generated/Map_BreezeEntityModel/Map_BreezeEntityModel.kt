@@ -21,7 +21,3 @@ fun BreezeEntityModel.setAngles(arg0: BreezeEntityRenderState) = this.method_552
  * method_55819
  */
 fun BreezeEntityModel.getHead() = this.method_55819()
-/**
- * method_55233
- */
-fun KClass<BreezeEntityModel>.getTexturedModelData(arg0: Int, arg1: Int) = BreezeEntityModel.method_55233(arg0, arg1)

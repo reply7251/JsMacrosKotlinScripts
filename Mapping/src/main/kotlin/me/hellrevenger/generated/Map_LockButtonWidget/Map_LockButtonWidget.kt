@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_1895
  */
-fun LockButtonWidget.setLocked(arg0: Boolean) = this.method_1895(arg0)
+fun LockButtonWidget.setLocked(locked: Boolean) = this.method_1895(locked)
 /**
  * method_1896
  */

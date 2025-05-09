@@ -4,12 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_2480
  */
-fun EnchantingPhrases.setSeed(arg0: Long) = this.method_2480(arg0)
+fun EnchantingPhrases.setSeed(seed: Long) = this.method_2480(seed)
 /**
  * method_2479
  */
-fun EnchantingPhrases.generatePhrase(arg0: TextRenderer, arg1: Int) = this.method_2479(arg0, arg1)
-/**
- * method_2481
- */
-fun KClass<EnchantingPhrases>.getInstance() = EnchantingPhrases.method_2481()
+fun EnchantingPhrases.generatePhrase(textRenderer: TextRenderer, width: Int) = this.method_2479(textRenderer, width)

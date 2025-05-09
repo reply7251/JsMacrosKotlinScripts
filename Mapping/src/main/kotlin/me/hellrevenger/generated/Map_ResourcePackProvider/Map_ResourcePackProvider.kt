@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_14453
  */
-fun ResourcePackProvider.register(arg0: Consumer<ResourcePackProfile>) = this.method_14453(arg0)
+fun ResourcePackProvider.register(profileAdder: Consumer<ResourcePackProfile>) = this.method_14453(profileAdder)

@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_35841
  */
-fun <T>IdList<T>.containsKey(arg0: Int) = this.method_35841(arg0)
+fun <T>IdList<T>.containsKey(index: Int) = this.method_35841(index)
 /**
  * method_10205
  */
-fun <T>IdList<T>.add(arg0: T) = this.method_10205(arg0)
+fun <T>IdList<T>.add(value: T) = this.method_10205(value)
 /**
  * method_10203
  */
-fun <T>IdList<T>.set(arg0: T, arg1: Int) = this.method_10203(arg0, arg1)
+fun <T>IdList<T>.set(value: T, id: Int) = this.method_10203(value, id)

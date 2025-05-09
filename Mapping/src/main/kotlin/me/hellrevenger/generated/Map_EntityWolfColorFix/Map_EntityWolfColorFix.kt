@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_4988
  */
-fun EntityWolfColorFix.fixCollarColor(arg0: Dynamic<*>) = this.method_4988(arg0)
+fun EntityWolfColorFix.fixCollarColor(wolfDynamic: Dynamic<*>) = this.method_4988(wolfDynamic)

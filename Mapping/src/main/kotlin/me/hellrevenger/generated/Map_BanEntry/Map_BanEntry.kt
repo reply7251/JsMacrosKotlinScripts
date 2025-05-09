@@ -2,14 +2,6 @@ package me.hellrevenger.generated.Map_BanEntry
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_29787
- */
-val <T>KClass<BanEntry<T>>.FOREVER by aliasStatic({BanEntry.field_29787})
-/**
- * field_14308
- */
-val <T>KClass<BanEntry<T>>.DATE_FORMAT by aliasStatic({BanEntry.field_14308})
-/**
  * method_14501
  */
 fun <T>BanEntry<T>.getSource() = this.method_14501()

@@ -20,7 +20,7 @@ fun ServerTickManager.stopSprinting() = this.method_54678()
 /**
  * method_54672
  */
-fun ServerTickManager.step(arg0: Int) = this.method_54672(arg0)
+fun ServerTickManager.step(ticks: Int) = this.method_54672(ticks)
 /**
  * method_54679
  */
@@ -28,8 +28,8 @@ fun ServerTickManager.sprint() = this.method_54679()
 /**
  * method_54677
  */
-fun ServerTickManager.startSprint(arg0: Int) = this.method_54677(arg0)
+fun ServerTickManager.startSprint(ticks: Int) = this.method_54677(ticks)
 /**
  * method_54674
  */
-fun ServerTickManager.sendPackets(arg0: ServerPlayerEntity) = this.method_54674(arg0)
+fun ServerTickManager.sendPackets(player: ServerPlayerEntity) = this.method_54674(player)

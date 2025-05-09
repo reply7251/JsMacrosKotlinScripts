@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_ServerCommonNetworkHandler
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_45011
- */
-val KClass<ServerCommonNetworkHandler>.KEEP_ALIVE_INTERVAL by aliasStatic(ServerCommonNetworkHandler::field_45011)
-/**
  * method_52405
  */
 fun ServerCommonNetworkHandler.getLatency() = this.method_52405()
@@ -16,15 +12,15 @@ fun ServerCommonNetworkHandler.disableFlush() = this.method_53046()
 /**
  * method_14364
  */
-fun ServerCommonNetworkHandler.sendPacket(arg0: Packet<*>) = this.method_14364(arg0)
+fun ServerCommonNetworkHandler.sendPacket(packet: Packet<*>) = this.method_14364(packet)
 /**
  * method_52391
  */
-fun ServerCommonNetworkHandler.send(arg0: Packet<*>, arg1: PacketCallbacks) = this.method_52391(arg0, arg1)
+fun ServerCommonNetworkHandler.send(packet: Packet<*>, callbacks: PacketCallbacks) = this.method_52391(packet, callbacks)
 /**
  * method_52396
  */
-fun ServerCommonNetworkHandler.disconnect(arg0: Text) = this.method_52396(arg0)
+fun ServerCommonNetworkHandler.disconnect(reason: Text) = this.method_52396(reason)
 /**
  * method_53047
  */
@@ -33,7 +29,3 @@ fun ServerCommonNetworkHandler.enableFlush() = this.method_53047()
  * method_52404
  */
 fun ServerCommonNetworkHandler.getDebugProfile() = this.method_52404()
-/**
- * method_60673
- */
-fun ServerCommonNetworkHandler.disconnect(arg0: DisconnectionInfo) = this.method_60673(arg0)

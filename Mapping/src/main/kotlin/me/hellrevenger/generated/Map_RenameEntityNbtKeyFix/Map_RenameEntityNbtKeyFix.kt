@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_65104
  */
-fun RenameEntityNbtKeyFix.fix(arg0: Dynamic<*>) = this.method_65104(arg0)
+fun RenameEntityNbtKeyFix.fix(dynamic: Dynamic<*>) = this.method_65104(dynamic)

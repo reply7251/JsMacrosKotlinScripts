@@ -4,11 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_6149
  */
-fun PathAwareEntity.getPathfindingFavor(arg0: BlockPos) = this.method_6149(arg0)
-/**
- * method_6144
- */
-fun PathAwareEntity.getPathfindingFavor(arg0: BlockPos, arg1: WorldView) = this.method_6144(arg0, arg1)
+fun PathAwareEntity.getPathfindingFavor(pos: BlockPos) = this.method_6149(pos)
 /**
  * method_52546
  */

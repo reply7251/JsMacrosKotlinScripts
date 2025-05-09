@@ -20,7 +20,7 @@ fun AffineTransformation.getMatrix() = this.method_22936()
 /**
  * method_22933
  */
-fun AffineTransformation.multiply(arg0: AffineTransformation) = this.method_22933(arg0)
+fun AffineTransformation.multiply(other: AffineTransformation) = this.method_22933(other)
 /**
  * method_22935
  */
@@ -30,10 +30,6 @@ fun AffineTransformation.invert() = this.method_22935()
  */
 fun AffineTransformation.getTranslation() = this.method_35865()
 /**
- * method_22931
- */
-fun KClass<AffineTransformation>.identity() = AffineTransformation.method_22931()
-/**
  * method_35864
  */
-fun AffineTransformation.interpolate(arg0: AffineTransformation, arg1: Float) = this.method_35864(arg0, arg1)
+fun AffineTransformation.interpolate(target: AffineTransformation, factor: Float) = this.method_35864(target, factor)

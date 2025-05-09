@@ -36,7 +36,7 @@ fun Camera.isReady() = this.method_19332()
 /**
  * method_19321
  */
-fun Camera.update(arg0: BlockView, arg1: Entity, arg2: Boolean, arg3: Boolean, arg4: Float) = this.method_19321(arg0, arg1, arg2, arg3, arg4)
+fun Camera.update(area: BlockView, focusedEntity: Entity, thirdPerson: Boolean, inverseView: Boolean, tickDelta: Float) = this.method_19321(area, focusedEntity, thirdPerson, inverseView, tickDelta)
 /**
  * method_55437
  */

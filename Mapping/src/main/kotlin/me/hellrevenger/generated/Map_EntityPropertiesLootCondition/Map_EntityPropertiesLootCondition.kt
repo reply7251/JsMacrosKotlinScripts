@@ -10,18 +10,6 @@ fun EntityPropertiesLootCondition.test(arg0: LootContext) = this.method_914(arg0
  */
 fun EntityPropertiesLootCondition.entity() = this.comp_1880()
 /**
- * method_917
- */
-fun KClass<EntityPropertiesLootCondition>.builder(arg0: net.minecraft.class_47.class_50, arg1: net.minecraft.class_2048.class_2049) = EntityPropertiesLootCondition.method_917(arg0, arg1)
-/**
- * method_15972
- */
-fun KClass<EntityPropertiesLootCondition>.create(arg0: net.minecraft.class_47.class_50) = EntityPropertiesLootCondition.method_15972(arg0)
-/**
- * method_27865
- */
-fun KClass<EntityPropertiesLootCondition>.builder(arg0: net.minecraft.class_47.class_50, arg1: EntityPredicate) = EntityPropertiesLootCondition.method_27865(arg0, arg1)
-/**
  * comp_1879
  */
 fun EntityPropertiesLootCondition.predicate() = this.comp_1879()

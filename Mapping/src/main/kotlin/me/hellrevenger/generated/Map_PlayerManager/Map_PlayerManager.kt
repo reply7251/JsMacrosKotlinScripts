@@ -2,65 +2,41 @@ package me.hellrevenger.generated.Map_PlayerManager
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_14343
- */
-val KClass<PlayerManager>.WHITELIST_FILE by aliasStatic(PlayerManager::field_14343)
-/**
- * field_14355
- */
-val KClass<PlayerManager>.BANNED_PLAYERS_FILE by aliasStatic(PlayerManager::field_14355)
-/**
- * field_14364
- */
-val KClass<PlayerManager>.BANNED_IPS_FILE by aliasStatic(PlayerManager::field_14364)
-/**
- * field_14348
- */
-val KClass<PlayerManager>.OPERATORS_FILE by aliasStatic(PlayerManager::field_14348)
-/**
- * field_39921
- */
-val KClass<PlayerManager>.FILTERED_FULL_TEXT by aliasStatic(PlayerManager::field_39921)
-/**
- * field_45061
- */
-val KClass<PlayerManager>.DUPLICATE_LOGIN_TEXT by aliasStatic(PlayerManager::field_45061)
-/**
  * method_14614
  */
 fun PlayerManager.isWhitelistEnabled() = this.method_14614()
 /**
  * method_52449
  */
-fun PlayerManager.disconnectDuplicateLogins(arg0: GameProfile) = this.method_52449(arg0)
+fun PlayerManager.disconnectDuplicateLogins(profile: GameProfile) = this.method_52449(profile)
 /**
  * method_14605
  */
-fun PlayerManager.sendToAround(arg0: PlayerEntity, arg1: Double, arg2: Double, arg3: Double, arg4: Double, arg5: RegistryKey<world_World>, arg6: Packet<*>) = this.method_14605(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun PlayerManager.sendToAround(player: PlayerEntity, x: Double, arg2: Double, y: Double, arg4: Double, z: RegistryKey<world_World>, arg6: Packet<*>) = this.method_14605(player, x, arg2, y, arg4, z, arg6)
 /**
  * method_43673
  */
-fun PlayerManager.broadcast(arg0: SignedMessage, arg1: ServerPlayerEntity, arg2: net.minecraft.class_2556.class_7602) = this.method_43673(arg0, arg1, arg2)
+fun PlayerManager.broadcast(message: SignedMessage, sender: ServerPlayerEntity, params: net.minecraft.class_2556.class_7602) = this.method_43673(message, sender, params)
 /**
  * method_14609
  */
-fun PlayerManager.canBypassPlayerLimit(arg0: GameProfile) = this.method_14609(arg0)
+fun PlayerManager.canBypassPlayerLimit(profile: GameProfile) = this.method_14609(profile)
 /**
  * method_14581
  */
-fun PlayerManager.sendToAll(arg0: Packet<*>) = this.method_14581(arg0)
+fun PlayerManager.sendToAll(packet: Packet<*>) = this.method_14581(packet)
 /**
  * method_14611
  */
-fun PlayerManager.remove(arg0: ServerPlayerEntity) = this.method_14611(arg0)
+fun PlayerManager.remove(player: ServerPlayerEntity) = this.method_14611(player)
 /**
  * method_14606
  */
-fun PlayerManager.sendWorldInfo(arg0: ServerPlayerEntity, arg1: ServerWorld) = this.method_14606(arg0, arg1)
+fun PlayerManager.sendWorldInfo(player: ServerPlayerEntity, world: ServerWorld) = this.method_14606(player, world)
 /**
  * method_14594
  */
-fun PlayerManager.sendPlayerStatus(arg0: ServerPlayerEntity) = this.method_14594(arg0)
+fun PlayerManager.sendPlayerStatus(player: ServerPlayerEntity) = this.method_14594(player)
 /**
  * method_14571
  */
@@ -68,7 +44,7 @@ fun PlayerManager.getPlayerList() = this.method_14571()
 /**
  * method_38650
  */
-fun PlayerManager.setSimulationDistance(arg0: Int) = this.method_38650(arg0)
+fun PlayerManager.setSimulationDistance(simulationDistance: Int) = this.method_38650(simulationDistance)
 /**
  * method_14572
  */
@@ -76,7 +52,7 @@ fun PlayerManager.onDataPacksReloaded() = this.method_14572()
 /**
  * method_14613
  */
-fun PlayerManager.createPlayer(arg0: GameProfile, arg1: SyncedClientOptions) = this.method_14613(arg0, arg1)
+fun PlayerManager.createPlayer(profile: GameProfile, syncedOptions: SyncedClientOptions) = this.method_14613(profile, syncedOptions)
 /**
  * method_14601
  */
@@ -84,7 +60,7 @@ fun PlayerManager.updatePlayerLatency() = this.method_14601()
 /**
  * method_14569
  */
-fun PlayerManager.isOperator(arg0: GameProfile) = this.method_14569(arg0)
+fun PlayerManager.isOperator(profile: GameProfile) = this.method_14569(profile)
 /**
  * method_14592
  */
@@ -96,19 +72,19 @@ fun PlayerManager.saveAllPlayerData() = this.method_14617()
 /**
  * method_14559
  */
-fun PlayerManager.getPlayersByIp(arg0: String) = this.method_14559(arg0)
+fun PlayerManager.getPlayersByIp(ip: String) = this.method_14559(ip)
 /**
  * method_14564
  */
-fun PlayerManager.sendToTeam(arg0: PlayerEntity, arg1: Text) = this.method_14564(arg0, arg1)
+fun PlayerManager.sendToTeam(source: PlayerEntity, message: Text) = this.method_14564(source, message)
 /**
  * method_14586
  */
-fun PlayerManager.checkCanJoin(arg0: SocketAddress, arg1: GameProfile) = this.method_14586(arg0, arg1)
+fun PlayerManager.checkCanJoin(address: SocketAddress, profile: GameProfile) = this.method_14586(address, profile)
 /**
  * method_14566
  */
-fun PlayerManager.getPlayer(arg0: String) = this.method_14566(arg0)
+fun PlayerManager.getPlayer(name: String) = this.method_14566(name)
 /**
  * method_14568
  */
@@ -120,11 +96,11 @@ fun PlayerManager.getIpBanList() = this.method_14585()
 /**
  * method_14556
  */
-fun PlayerManager.respawnPlayer(arg0: ServerPlayerEntity, arg1: Boolean, arg2: net.minecraft.class_1297.class_5529) = this.method_14556(arg0, arg1, arg2)
+fun PlayerManager.respawnPlayer(player: ServerPlayerEntity, alive: Boolean, removalReason: net.minecraft.class_1297.class_5529) = this.method_14556(player, alive, removalReason)
 /**
  * method_14600
  */
-fun PlayerManager.loadPlayerData(arg0: ServerPlayerEntity) = this.method_14600(arg0)
+fun PlayerManager.loadPlayerData(player: ServerPlayerEntity) = this.method_14600(player)
 /**
  * method_14563
  */
@@ -134,13 +110,9 @@ fun PlayerManager.getUserBanList() = this.method_14563()
  */
 fun PlayerManager.areCheatsAllowed() = this.method_14579()
 /**
- * method_14602
- */
-fun PlayerManager.getPlayer(arg0: UUID) = this.method_14602(arg0)
-/**
  * method_14582
  */
-fun PlayerManager.addToOperators(arg0: GameProfile) = this.method_14582(arg0)
+fun PlayerManager.addToOperators(profile: GameProfile) = this.method_14582(profile)
 /**
  * method_14599
  */
@@ -148,39 +120,35 @@ fun PlayerManager.reloadWhitelist() = this.method_14599()
 /**
  * method_14570
  */
-fun PlayerManager.onPlayerConnect(arg0: ClientConnection, arg1: ServerPlayerEntity, arg2: ConnectedClientData) = this.method_14570(arg0, arg1, arg2)
+fun PlayerManager.onPlayerConnect(connection: ClientConnection, player: ServerPlayerEntity, clientData: ConnectedClientData) = this.method_14570(connection, player, clientData)
 /**
  * method_14576
  */
-fun PlayerManager.sendCommandTree(arg0: ServerPlayerEntity) = this.method_14576(arg0)
+fun PlayerManager.sendCommandTree(player: ServerPlayerEntity) = this.method_14576(player)
 /**
  * method_14565
  */
-fun PlayerManager.sendToOtherTeams(arg0: PlayerEntity, arg1: Text) = this.method_14565(arg0, arg1)
+fun PlayerManager.sendToOtherTeams(source: PlayerEntity, message: Text) = this.method_14565(source, message)
 /**
  * method_14583
  */
-fun PlayerManager.createStatHandler(arg0: PlayerEntity) = this.method_14583(arg0)
+fun PlayerManager.createStatHandler(player: PlayerEntity) = this.method_14583(player)
 /**
  * method_14608
  */
-fun PlayerManager.setViewDistance(arg0: Int) = this.method_14608(arg0)
-/**
- * method_43514
- */
-fun PlayerManager.broadcast(arg0: Text, arg1: Boolean) = this.method_43514(arg0, arg1)
+fun PlayerManager.setViewDistance(viewDistance: Int) = this.method_14608(viewDistance)
 /**
  * method_14591
  */
-fun PlayerManager.setMainWorld(arg0: ServerWorld) = this.method_14591(arg0)
+fun PlayerManager.setMainWorld(world: ServerWorld) = this.method_14591(world)
 /**
  * method_14587
  */
-fun PlayerManager.isWhitelisted(arg0: GameProfile) = this.method_14587(arg0)
+fun PlayerManager.isWhitelisted(profile: GameProfile) = this.method_14587(profile)
 /**
  * method_14607
  */
-fun PlayerManager.setCheatsAllowed(arg0: Boolean) = this.method_14607(arg0)
+fun PlayerManager.setCheatsAllowed(cheatsAllowed: Boolean) = this.method_14607(cheatsAllowed)
 /**
  * method_14590
  */
@@ -194,17 +162,13 @@ fun PlayerManager.getServer() = this.method_14561()
  */
 fun PlayerManager.getCurrentPlayerCount() = this.method_14574()
 /**
- * method_43512
- */
-fun PlayerManager.broadcast(arg0: Text, arg1: function_Function<ServerPlayerEntity, Text>, arg2: Boolean) = this.method_43512(arg0, arg1, arg2)
-/**
  * method_14567
  */
 fun PlayerManager.getUserData() = this.method_14567()
 /**
  * method_14604
  */
-fun PlayerManager.removeFromOperators(arg0: GameProfile) = this.method_14604(arg0)
+fun PlayerManager.removeFromOperators(profile: GameProfile) = this.method_14604(profile)
 /**
  * method_14603
  */
@@ -216,7 +180,7 @@ fun PlayerManager.getSimulationDistance() = this.method_38651()
 /**
  * method_60598
  */
-fun PlayerManager.sendStatusEffects(arg0: ServerPlayerEntity) = this.method_60598(arg0)
+fun PlayerManager.sendStatusEffects(player: ServerPlayerEntity) = this.method_60598(player)
 /**
  * method_14560
  */
@@ -224,23 +188,15 @@ fun PlayerManager.getWhitelistedNames() = this.method_14560()
 /**
  * method_14578
  */
-fun PlayerManager.getAdvancementTracker(arg0: ServerPlayerEntity) = this.method_14578(arg0)
+fun PlayerManager.getAdvancementTracker(player: ServerPlayerEntity) = this.method_14578(player)
 /**
  * method_14557
  */
-fun PlayerManager.setWhitelistEnabled(arg0: Boolean) = this.method_14557(arg0)
+fun PlayerManager.setWhitelistEnabled(whitelistEnabled: Boolean) = this.method_14557(whitelistEnabled)
 /**
  * method_14584
  */
 fun PlayerManager.getOpNames() = this.method_14584()
-/**
- * method_44166
- */
-fun PlayerManager.broadcast(arg0: SignedMessage, arg1: ServerCommandSource, arg2: net.minecraft.class_2556.class_7602) = this.method_44166(arg0, arg1, arg2)
-/**
- * method_60597
- */
-fun PlayerManager.sendStatusEffects(arg0: LivingEntity, arg1: ServerPlayNetworkHandler) = this.method_60597(arg0, arg1)
 /**
  * method_14580
  */
@@ -248,7 +204,7 @@ fun PlayerManager.getPlayerNames() = this.method_14580()
 /**
  * method_14589
  */
-fun PlayerManager.sendToDimension(arg0: Packet<*>, arg1: RegistryKey<world_World>) = this.method_14589(arg0, arg1)
+fun PlayerManager.sendToDimension(packet: Packet<*>, dimension: RegistryKey<world_World>) = this.method_14589(packet, dimension)
 /**
  * method_14597
  */

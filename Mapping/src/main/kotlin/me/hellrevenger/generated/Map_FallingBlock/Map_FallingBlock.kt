@@ -4,8 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_10130
  */
-fun FallingBlock.getColor(arg0: BlockState, arg1: BlockView, arg2: BlockPos) = this.method_10130(arg0, arg1, arg2)
-/**
- * method_10128
- */
-fun KClass<FallingBlock>.canFallThrough(arg0: BlockState) = FallingBlock.method_10128(arg0)
+fun FallingBlock.getColor(state: BlockState, world: BlockView, pos: BlockPos) = this.method_10130(state, world, pos)

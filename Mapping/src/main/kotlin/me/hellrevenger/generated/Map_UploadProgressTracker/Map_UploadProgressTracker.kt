@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun UploadProgressTracker.getUploadProgress() = this.method_64349()
 /**
- * method_64351
- */
-fun KClass<UploadProgressTracker>.create() = UploadProgressTracker.method_64351()
-/**
  * method_64350
  */
 fun UploadProgressTracker.updateProgressDisplay() = this.method_64350()

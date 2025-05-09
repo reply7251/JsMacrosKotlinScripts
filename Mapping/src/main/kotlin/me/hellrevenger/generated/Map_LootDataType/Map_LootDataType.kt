@@ -2,25 +2,9 @@ package me.hellrevenger.generated.Map_LootDataType
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_44498
- */
-val <T>KClass<LootDataType<T>>.LOOT_TABLES by aliasStatic({LootDataType.field_44498})
-/**
- * field_44497
- */
-val <T>KClass<LootDataType<T>>.ITEM_MODIFIERS by aliasStatic({LootDataType.field_44497})
-/**
- * field_44496
- */
-val <T>KClass<LootDataType<T>>.PREDICATES by aliasStatic({LootDataType.field_44496})
-/**
  * method_51209
  */
-fun <T>LootDataType<T>.validate(arg0: LootTableReporter, arg1: RegistryKey<T>, arg2: T) = this.method_51209(arg0, arg1, arg2)
-/**
- * method_51215
- */
-fun <T>KClass<LootDataType<T>>.stream() = LootDataType.method_51215()
+fun <T>LootDataType<T>.validate(reporter: LootTableReporter, key: RegistryKey<T>, value: T) = this.method_51209(reporter, key, value)
 /**
  * comp_2522
  */

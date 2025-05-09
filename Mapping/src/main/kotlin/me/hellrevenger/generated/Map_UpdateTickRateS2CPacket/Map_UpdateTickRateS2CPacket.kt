@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun UpdateTickRateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_54665(arg0)
 /**
- * method_54664
- */
-fun KClass<UpdateTickRateS2CPacket>.create(arg0: TickManager) = UpdateTickRateS2CPacket.method_54664(arg0)
-/**
  * comp_2015
  */
 fun UpdateTickRateS2CPacket.isFrozen() = this.comp_2015()

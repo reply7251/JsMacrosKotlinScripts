@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_37161
  */
-fun ZipCompressor.copyAll(arg0: file_Path) = this.method_37161(arg0)
+fun ZipCompressor.copyAll(source: file_Path) = this.method_37161(source)
 /**
  * method_37163
  */
-fun ZipCompressor.write(arg0: file_Path, arg1: String) = this.method_37163(arg0, arg1)
+fun ZipCompressor.write(target: file_Path, content: String) = this.method_37163(target, content)
 /**
  * method_37162
  */
-fun ZipCompressor.copy(arg0: file_Path, arg1: File) = this.method_37162(arg0, arg1)
+fun ZipCompressor.copy(target: file_Path, source: File) = this.method_37162(target, source)

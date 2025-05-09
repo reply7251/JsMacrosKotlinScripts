@@ -8,23 +8,23 @@ fun HungerManager.getFoodLevel() = this.method_7586()
 /**
  * method_7580
  */
-fun HungerManager.setFoodLevel(arg0: Int) = this.method_7580(arg0)
+fun HungerManager.setFoodLevel(foodLevel: Int) = this.method_7580(foodLevel)
 /**
  * method_7583
  */
-fun HungerManager.addExhaustion(arg0: Float) = this.method_7583(arg0)
+fun HungerManager.addExhaustion(exhaustion: Float) = this.method_7583(exhaustion)
 /**
  * method_7581
  */
-fun HungerManager.setSaturationLevel(arg0: Float) = this.method_7581(arg0)
+fun HungerManager.setSaturationLevel(saturationLevel: Float) = this.method_7581(saturationLevel)
 /**
  * method_7584
  */
-fun HungerManager.readNbt(arg0: NbtCompound) = this.method_7584(arg0)
+fun HungerManager.readNbt(nbt: NbtCompound) = this.method_7584(nbt)
 /**
  * method_7585
  */
-fun HungerManager.add(arg0: Int, arg1: Float) = this.method_7585(arg0, arg1)
+fun HungerManager.add(food: Int, saturationModifier: Float) = this.method_7585(food, saturationModifier)
 /**
  * method_7587
  */
@@ -32,7 +32,7 @@ fun HungerManager.isNotFull() = this.method_7587()
 /**
  * method_7582
  */
-fun HungerManager.writeNbt(arg0: NbtCompound) = this.method_7582(arg0)
+fun HungerManager.writeNbt(nbt: NbtCompound) = this.method_7582(nbt)
 /**
  * method_7589
  */
@@ -40,8 +40,8 @@ fun HungerManager.getSaturationLevel() = this.method_7589()
 /**
  * method_7579
  */
-fun HungerManager.eat(arg0: FoodComponent) = this.method_7579(arg0)
+fun HungerManager.eat(foodComponent: FoodComponent) = this.method_7579(foodComponent)
 /**
  * method_7588
  */
-fun HungerManager.update(arg0: ServerPlayerEntity) = this.method_7588(arg0)
+fun HungerManager.update(player: ServerPlayerEntity) = this.method_7588(player)

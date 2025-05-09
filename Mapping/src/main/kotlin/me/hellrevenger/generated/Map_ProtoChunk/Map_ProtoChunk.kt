@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12308
  */
-fun ProtoChunk.setStatus(arg0: ChunkStatus) = this.method_12308(arg0)
+fun ProtoChunk.setStatus(status: ChunkStatus) = this.method_12308(status)
 /**
  * method_12316
  */
@@ -20,11 +20,7 @@ fun ProtoChunk.getOrCreateCarvingMask() = this.method_28510()
 /**
  * method_17032
  */
-fun ProtoChunk.setLightingProvider(arg0: LightingProvider) = this.method_17032(arg0)
-/**
- * method_12300
- */
-fun KClass<ProtoChunk>.getPackedSectionRelative(arg0: BlockPos) = ProtoChunk.method_12300(arg0)
+fun ProtoChunk.setLightingProvider(lightingProvider: LightingProvider) = this.method_17032(lightingProvider)
 /**
  * method_12309
  */
@@ -44,16 +40,12 @@ fun ProtoChunk.getFluidProtoTickScheduler() = this.method_39308()
 /**
  * method_12302
  */
-fun ProtoChunk.addEntity(arg0: NbtCompound) = this.method_12302(arg0)
-/**
- * method_12314
- */
-fun KClass<ProtoChunk>.joinBlockPos(arg0: Short, arg1: Int, arg2: ChunkPos) = ProtoChunk.method_12314(arg0, arg1, arg2)
+fun ProtoChunk.addEntity(entityNbt: NbtCompound) = this.method_12302(entityNbt)
 /**
  * method_39309
  */
-fun ProtoChunk.setBelowZeroRetrogen(arg0: BelowZeroRetrogen) = this.method_39309(arg0)
+fun ProtoChunk.setBelowZeroRetrogen(belowZeroRetrogen: BelowZeroRetrogen) = this.method_39309(belowZeroRetrogen)
 /**
  * method_12307
  */
-fun ProtoChunk.setCarvingMask(arg0: CarvingMask) = this.method_12307(arg0)
+fun ProtoChunk.setCarvingMask(carvingMask: CarvingMask) = this.method_12307(carvingMask)

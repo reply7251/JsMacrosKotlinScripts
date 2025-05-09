@@ -8,4 +8,4 @@ fun NumericProperty.getCodec() = this.method_65643()
 /**
  * method_65644
  */
-fun NumericProperty.getValue(arg0: ItemStack, arg1: ClientWorld, arg2: LivingEntity, arg3: Int) = this.method_65644(arg0, arg1, arg2, arg3)
+fun NumericProperty.getValue(stack: ItemStack, world: ClientWorld, holder: LivingEntity, seed: Int) = this.method_65644(stack, world, holder, seed)

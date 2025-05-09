@@ -8,4 +8,4 @@ fun FlowerPotBlock.getContent() = this.method_16231()
 /**
  * method_65160
  */
-fun FlowerPotBlock.getToggledState(arg0: BlockState) = this.method_65160(arg0)
+fun FlowerPotBlock.getToggledState(state: BlockState) = this.method_65160(state)

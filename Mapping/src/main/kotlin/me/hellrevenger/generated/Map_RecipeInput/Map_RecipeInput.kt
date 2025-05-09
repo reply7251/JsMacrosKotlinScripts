@@ -8,7 +8,7 @@ fun RecipeInput.isEmpty() = this.method_59987()
 /**
  * method_59984
  */
-fun RecipeInput.getStackInSlot(arg0: Int) = this.method_59984(arg0)
+fun RecipeInput.getStackInSlot(slot: Int) = this.method_59984(slot)
 /**
  * method_59983
  */

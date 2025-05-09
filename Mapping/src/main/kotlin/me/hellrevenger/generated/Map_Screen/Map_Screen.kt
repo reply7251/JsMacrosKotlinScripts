@@ -6,18 +6,6 @@ import me.hellrevenger.generated.*
  */
 var Screen.tooltip by alias(Screen::field_41685)
 /**
- * field_49896
- */
-val KClass<Screen>.FOOTER_SEPARATOR_TEXTURE by aliasStatic(Screen::field_49896)
-/**
- * field_49897
- */
-val KClass<Screen>.INWORLD_HEADER_SEPARATOR_TEXTURE by aliasStatic(Screen::field_49897)
-/**
- * field_49895
- */
-val KClass<Screen>.HEADER_SEPARATOR_TEXTURE by aliasStatic(Screen::field_49895)
-/**
  * field_22790
  */
 var Screen.height by alias(Screen::field_22790)
@@ -34,29 +22,21 @@ val Screen.children by alias(Screen::field_22786)
  */
 val Screen.drawables by alias(Screen::field_33816)
 /**
- * field_49898
- */
-val KClass<Screen>.INWORLD_FOOTER_SEPARATOR_TEXTURE by aliasStatic(Screen::field_49898)
-/**
- * field_49511
- */
-val KClass<Screen>.MENU_BACKGROUND_TEXTURE by aliasStatic(Screen::field_49511)
-/**
  * field_22789
  */
 var Screen.width by alias(Screen::field_22789)
 /**
  * method_29638
  */
-fun Screen.onFilesDropped(arg0: MutableList<file_Path>) = this.method_29638(arg0)
+fun Screen.onFilesDropped(paths: MutableList<file_Path>) = this.method_29638(paths)
 /**
  * method_25423
  */
-fun Screen.init(arg0: MinecraftClient, arg1: Int, arg2: Int) = this.method_25423(arg0, arg1, arg2)
+fun Screen.init(client: MinecraftClient, width: Int, height: Int) = this.method_25423(client, width, height)
 /**
  * method_47413
  */
-fun Screen.renderWithTooltip(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Float) = this.method_47413(arg0, arg1, arg2, arg3)
+fun Screen.renderWithTooltip(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) = this.method_47413(context, mouseX, mouseY, delta)
 /**
  * method_49589
  */
@@ -64,7 +44,7 @@ fun Screen.onDisplayed() = this.method_49589()
 /**
  * method_25430
  */
-fun Screen.handleTextClick(arg0: Style) = this.method_25430(arg0)
+fun Screen.handleTextClick(style: Style) = this.method_25430(style)
 /**
  * method_50024
  */
@@ -76,23 +56,11 @@ fun Screen.applyMousePressScrollNarratorDelay() = this.method_37069()
 /**
  * method_61040
  */
-fun Screen.refreshNarrator(arg0: Boolean) = this.method_61040(arg0)
-/**
- * method_25441
- */
-fun KClass<Screen>.hasControlDown() = Screen.method_25441()
+fun Screen.refreshNarrator(previouslyDisabled: Boolean) = this.method_61040(previouslyDisabled)
 /**
  * method_25410
  */
-fun Screen.resize(arg0: MinecraftClient, arg1: Int, arg2: Int) = this.method_25410(arg0, arg1, arg2)
-/**
- * method_57737
- */
-fun KClass<Screen>.renderBackgroundTexture(arg0: DrawContext, arg1: Identifier, arg2: Int, arg3: Int, arg4: Float, arg5: Float, arg6: Int, arg7: Int) = Screen.method_57737(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-/**
- * method_25426
- */
-fun Screen.init() = this.method_25426()
+fun Screen.resize(client: MinecraftClient, width: Int, height: Int) = this.method_25410(client, width, height)
 /**
  * method_64506
  */
@@ -100,11 +68,7 @@ fun Screen.getTextRenderer() = this.method_64506()
 /**
  * method_37063
  */
-fun <T>Screen.addDrawableChild(arg0: T) where T: Element, T: Drawable, T: Selectable = this.method_37063<T>(arg0)
-/**
- * method_25442
- */
-fun KClass<Screen>.hasShiftDown() = Screen.method_25442()
+fun <T>Screen.addDrawableChild(drawableElement: T) where T: Element, T: Drawable, T: Selectable = this.method_37063<T>(drawableElement)
 /**
  * method_37071
  */
@@ -112,27 +76,15 @@ fun Screen.updateNarrator() = this.method_37071()
 /**
  * method_37066
  */
-fun Screen.remove(arg0: Element) = this.method_37066(arg0)
-/**
- * method_25408
- */
-fun KClass<Screen>.getTooltipFromItem(arg0: MinecraftClient, arg1: ItemStack) = Screen.method_25408(arg0, arg1)
+fun Screen.remove(child: Element) = this.method_37066(child)
 /**
  * method_37067
  */
 fun Screen.clearChildren() = this.method_37067()
 /**
- * method_25443
- */
-fun KClass<Screen>.hasAltDown() = Screen.method_25443()
-/**
  * method_37064
  */
-fun Screen.narrateScreenIfNarrationEnabled(arg0: Boolean) = this.method_37064(arg0)
-/**
- * method_25436
- */
-fun KClass<Screen>.isCut(arg0: Int) = Screen.method_25436(arg0)
+fun Screen.narrateScreenIfNarrationEnabled(onlyChangedNarrations: Boolean) = this.method_37064(onlyChangedNarrations)
 /**
  * method_37068
  */
@@ -146,33 +98,21 @@ fun Screen.getTitle() = this.method_25440()
  */
 fun Screen.removed() = this.method_25432()
 /**
- * method_25437
- */
-fun KClass<Screen>.isPaste(arg0: Int) = Screen.method_25437(arg0)
-/**
- * method_37061
- */
-fun KClass<Screen>.findSelectedElementData(arg0: MutableList<out Selectable>, arg1: Selectable) = Screen.method_37061(arg0, arg1)
-/**
  * method_25421
  */
 fun Screen.shouldPause() = this.method_25421()
 /**
  * method_52752
  */
-fun Screen.renderInGameBackground(arg0: DrawContext) = this.method_52752(arg0)
+fun Screen.renderInGameBackground(context: DrawContext) = this.method_52752(context)
 /**
  * method_37070
  */
 fun Screen.applyKeyPressNarratorDelay() = this.method_37070()
 /**
- * method_25438
- */
-fun KClass<Screen>.isCopy(arg0: Int) = Screen.method_25438(arg0)
-/**
  * method_37060
  */
-fun <T>Screen.addDrawable(arg0: T) where T: Drawable = this.method_37060<T>(arg0)
+fun <T>Screen.addDrawable(drawable: T) where T: Drawable = this.method_37060<T>(drawable)
 /**
  * method_25393
  */
@@ -186,10 +126,6 @@ fun Screen.shouldCloseOnEsc() = this.method_25422()
  */
 fun Screen.getNarratedTitle() = this.method_25435()
 /**
- * method_25439
- */
-fun KClass<Screen>.isSelectAll(arg0: Int) = Screen.method_25439(arg0)
-/**
  * method_25419
  */
 fun Screen.close() = this.method_25419()
@@ -200,11 +136,11 @@ fun Screen.shouldHideStatusEffectHud() = this.method_64507()
 /**
  * method_25420
  */
-fun Screen.renderBackground(arg0: DrawContext, arg1: Int, arg2: Int, arg3: Float) = this.method_25420(arg0, arg1, arg2, arg3)
+fun Screen.renderBackground(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) = this.method_25420(context, mouseX, mouseY, delta)
 /**
  * method_65027
  */
-fun Screen.addCrashReportSection(arg0: CrashReport) = this.method_65027(arg0)
+fun Screen.addCrashReportSection(report: CrashReport) = this.method_65027(report)
 /**
  * method_48267
  */

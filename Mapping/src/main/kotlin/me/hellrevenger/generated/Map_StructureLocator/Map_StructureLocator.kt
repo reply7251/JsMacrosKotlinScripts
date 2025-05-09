@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_39833
  */
-fun StructureLocator.cache(arg0: ChunkPos, arg1: Map<Structure, StructureStart>) = this.method_39833(arg0, arg1)
+fun StructureLocator.cache(pos: ChunkPos, structureStarts: Map<Structure, StructureStart>) = this.method_39833(pos, structureStarts)
 /**
  * method_39830
  */
-fun StructureLocator.incrementReferences(arg0: ChunkPos, arg1: Structure) = this.method_39830(arg0, arg1)
+fun StructureLocator.incrementReferences(pos: ChunkPos, structure: Structure) = this.method_39830(pos, structure)
 /**
  * method_39831
  */
-fun StructureLocator.getStructurePresence(arg0: ChunkPos, arg1: Structure, arg2: StructurePlacement, arg3: Boolean) = this.method_39831(arg0, arg1, arg2, arg3)
+fun StructureLocator.getStructurePresence(pos: ChunkPos, type: Structure, placement: StructurePlacement, skipReferencedStructures: Boolean) = this.method_39831(pos, type, placement, skipReferencedStructures)

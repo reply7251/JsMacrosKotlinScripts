@@ -12,15 +12,15 @@ fun ChunkBuilder.getDebugString() = this.method_3622()
 /**
  * method_22756
  */
-fun ChunkBuilder.send(arg0: net.minecraft.class_846.class_851.class_4577) = this.method_22756(arg0)
+fun ChunkBuilder.send(task: net.minecraft.class_846.class_851.class_4577) = this.method_22756(task)
 /**
  * method_3627
  */
-fun ChunkBuilder.rebuild(arg0: net.minecraft.class_846.class_851, arg1: ChunkRendererRegionBuilder) = this.method_3627(arg0, arg1)
+fun ChunkBuilder.rebuild(chunk: net.minecraft.class_846.class_851, builder: ChunkRendererRegionBuilder) = this.method_3627(chunk, builder)
 /**
  * method_3635
  */
-fun ChunkBuilder.scheduleUpload(arg0: BuiltBuffer, arg1: VertexBuffer) = this.method_3635(arg0, arg1)
+fun ChunkBuilder.scheduleUpload(builtBuffer: BuiltBuffer, glBuffer: VertexBuffer) = this.method_3635(builtBuffer, glBuffer)
 /**
  * method_3630
  */
@@ -48,15 +48,15 @@ fun ChunkBuilder.getFreeBufferCount() = this.method_34847()
 /**
  * method_19419
  */
-fun ChunkBuilder.setCameraPosition(arg0: Vec3d) = this.method_19419(arg0)
+fun ChunkBuilder.setCameraPosition(cameraPosition: Vec3d) = this.method_19419(cameraPosition)
 /**
  * method_22752
  */
-fun ChunkBuilder.setWorld(arg0: ClientWorld) = this.method_22752(arg0)
+fun ChunkBuilder.setWorld(world: ClientWorld) = this.method_22752(world)
 /**
  * method_60906
  */
-fun ChunkBuilder.scheduleIndexBufferUpload(arg0: net.minecraft.class_9799.class_9800, arg1: VertexBuffer) = this.method_60906(arg0, arg1)
+fun ChunkBuilder.scheduleIndexBufferUpload(indexBuffer: net.minecraft.class_9799.class_9800, vertexBuffer: VertexBuffer) = this.method_60906(indexBuffer, vertexBuffer)
 /**
  * method_22761
  */

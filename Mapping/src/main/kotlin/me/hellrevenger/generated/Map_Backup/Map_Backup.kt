@@ -24,12 +24,8 @@ var Backup.backupId by alias(Backup::field_22569)
 /**
  * method_25035
  */
-fun Backup.setUploadedVersion(arg0: Boolean) = this.method_25035(arg0)
+fun Backup.setUploadedVersion(uploadedVersion: Boolean) = this.method_25035(uploadedVersion)
 /**
  * method_25032
  */
 fun Backup.isUploadedVersion() = this.method_25032()
-/**
- * method_25033
- */
-fun KClass<Backup>.parse(arg0: JsonElement) = Backup.method_25033(arg0)

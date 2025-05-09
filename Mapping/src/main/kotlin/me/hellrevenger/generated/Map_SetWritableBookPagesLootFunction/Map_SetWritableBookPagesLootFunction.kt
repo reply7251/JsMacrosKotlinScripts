@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_58217
  */
-fun SetWritableBookPagesLootFunction.apply(arg0: WritableBookContentComponent) = this.method_58217(arg0)
+fun SetWritableBookPagesLootFunction.apply(current: WritableBookContentComponent) = this.method_58217(current)

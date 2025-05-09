@@ -8,7 +8,7 @@ fun AdvancementDisplay.shouldAnnounceToChat() = this.method_808()
 /**
  * method_816
  */
-fun AdvancementDisplay.setPos(arg0: Float, arg1: Float) = this.method_816(arg0, arg1)
+fun AdvancementDisplay.setPos(x: Float, y: Float) = this.method_816(x, y)
 /**
  * method_815
  */

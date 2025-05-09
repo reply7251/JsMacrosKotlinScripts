@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_4817
  */
-fun IntegratedServer.setLocalPlayerUuid(arg0: UUID) = this.method_4817(arg0)
+fun IntegratedServer.setLocalPlayerUuid(localPlayerUuid: UUID) = this.method_4817(localPlayerUuid)

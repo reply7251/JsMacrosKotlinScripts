@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_48705
  */
-fun WorldCreator.setWorldType(arg0: net.minecraft.class_8100.class_8101) = this.method_48705(arg0)
+fun WorldCreator.setWorldType(worldType: net.minecraft.class_8100.class_8101) = this.method_48705(worldType)
 /**
  * method_48733
  */
@@ -28,11 +28,11 @@ fun WorldCreator.getDifficulty() = this.method_48722()
 /**
  * method_48720
  */
-fun WorldCreator.setBonusChestEnabled(arg0: Boolean) = this.method_48720(arg0)
+fun WorldCreator.setBonusChestEnabled(bonusChestEnabled: Boolean) = this.method_48720(bonusChestEnabled)
 /**
  * method_48716
  */
-fun WorldCreator.setSeed(arg0: String) = this.method_48716(arg0)
+fun WorldCreator.setSeed(seed: String) = this.method_48716(seed)
 /**
  * method_48721
  */
@@ -48,27 +48,27 @@ fun WorldCreator.isDebug() = this.method_48729()
 /**
  * method_48700
  */
-fun WorldCreator.applyModifier(arg0: net.minecraft.class_7193.class_7195) = this.method_48700(arg0)
+fun WorldCreator.applyModifier(modifier: net.minecraft.class_7193.class_7195) = this.method_48700(modifier)
 /**
  * method_48696
  */
-fun WorldCreator.setDifficulty(arg0: Difficulty) = this.method_48696(arg0)
+fun WorldCreator.setDifficulty(difficulty: Difficulty) = this.method_48696(difficulty)
 /**
  * method_48712
  */
-fun WorldCreator.addListener(arg0: Consumer<WorldCreator>) = this.method_48712(arg0)
+fun WorldCreator.addListener(listener: Consumer<WorldCreator>) = this.method_48712(listener)
 /**
  * method_48717
  */
-fun WorldCreator.setGenerateStructures(arg0: Boolean) = this.method_48717(arg0)
+fun WorldCreator.setGenerateStructures(generateStructures: Boolean) = this.method_48717(generateStructures)
 /**
  * method_48701
  */
-fun WorldCreator.setGeneratorOptionsHolder(arg0: GeneratorOptionsHolder) = this.method_48701(arg0)
+fun WorldCreator.setGeneratorOptionsHolder(generatorOptionsHolder: GeneratorOptionsHolder) = this.method_48701(generatorOptionsHolder)
 /**
  * method_48713
  */
-fun WorldCreator.setCheatsEnabled(arg0: Boolean) = this.method_48713(arg0)
+fun WorldCreator.setCheatsEnabled(cheatsEnabled: Boolean) = this.method_48713(cheatsEnabled)
 /**
  * method_48734
  */
@@ -88,11 +88,11 @@ fun WorldCreator.getSeed() = this.method_48725()
 /**
  * method_48704
  */
-fun WorldCreator.setGameMode(arg0: net.minecraft.class_8100.class_4539) = this.method_48704(arg0)
+fun WorldCreator.setGameMode(gameMode: net.minecraft.class_8100.class_4539) = this.method_48704(gameMode)
 /**
  * method_48697
  */
-fun WorldCreator.setGameRules(arg0: GameRules) = this.method_48697(arg0)
+fun WorldCreator.setGameRules(gameRules: GameRules) = this.method_48697(gameRules)
 /**
  * method_49703
  */
@@ -100,7 +100,7 @@ fun WorldCreator.getWorldDirectoryName() = this.method_49703()
 /**
  * method_48710
  */
-fun WorldCreator.setWorldName(arg0: String) = this.method_48710(arg0)
+fun WorldCreator.setWorldName(worldName: String) = this.method_48710(worldName)
 /**
  * method_48727
  */

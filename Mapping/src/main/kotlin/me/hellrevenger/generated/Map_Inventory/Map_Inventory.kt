@@ -2,17 +2,13 @@ package me.hellrevenger.generated.Map_Inventory
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_49106
- */
-fun KClass<Inventory>.canPlayerUse(arg0: BlockEntity, arg1: PlayerEntity, arg2: Float) = Inventory.method_49106(arg0, arg1, arg2)
-/**
  * method_5432
  */
-fun Inventory.onClose(arg0: PlayerEntity) = this.method_5432(arg0)
+fun Inventory.onClose(player: PlayerEntity) = this.method_5432(player)
 /**
  * method_5435
  */
-fun Inventory.onOpen(arg0: PlayerEntity) = this.method_5435(arg0)
+fun Inventory.onOpen(player: PlayerEntity) = this.method_5435(player)
 /**
  * method_5431
  */
@@ -20,7 +16,7 @@ fun Inventory.markDirty() = this.method_5431()
 /**
  * method_5438
  */
-fun Inventory.getStack(arg0: Int) = this.method_5438(arg0)
+fun Inventory.getStack(slot: Int) = this.method_5438(slot)
 /**
  * method_5442
  */
@@ -28,19 +24,11 @@ fun Inventory.isEmpty() = this.method_5442()
 /**
  * method_18861
  */
-fun Inventory.count(arg0: Item) = this.method_18861(arg0)
+fun Inventory.count(item: Item) = this.method_18861(item)
 /**
  * method_18862
  */
-fun Inventory.containsAny(arg0: Set<Item>) = this.method_18862(arg0)
-/**
- * method_5443
- */
-fun Inventory.canPlayerUse(arg0: PlayerEntity) = this.method_5443(arg0)
-/**
- * method_43256
- */
-fun Inventory.containsAny(arg0: Predicate<ItemStack>) = this.method_43256(arg0)
+fun Inventory.containsAny(items: Set<Item>) = this.method_18862(items)
 /**
  * method_5439
  */
@@ -48,15 +36,15 @@ fun Inventory.size() = this.method_5439()
 /**
  * method_58350
  */
-fun Inventory.getMaxCount(arg0: ItemStack) = this.method_58350(arg0)
+fun Inventory.getMaxCount(stack: ItemStack) = this.method_58350(stack)
 /**
  * method_49104
  */
-fun Inventory.canTransferTo(arg0: Inventory, arg1: Int, arg2: ItemStack) = this.method_49104(arg0, arg1, arg2)
+fun Inventory.canTransferTo(hopperInventory: Inventory, slot: Int, stack: ItemStack) = this.method_49104(hopperInventory, slot, stack)
 /**
  * method_5434
  */
-fun Inventory.removeStack(arg0: Int, arg1: Int) = this.method_5434(arg0, arg1)
+fun Inventory.removeStack(slot: Int, amount: Int) = this.method_5434(slot, amount)
 /**
  * method_5444
  */
@@ -64,16 +52,8 @@ fun Inventory.getMaxCountPerStack() = this.method_5444()
 /**
  * method_5437
  */
-fun Inventory.isValid(arg0: Int, arg1: ItemStack) = this.method_5437(arg0, arg1)
-/**
- * method_49105
- */
-fun KClass<Inventory>.canPlayerUse(arg0: BlockEntity, arg1: PlayerEntity) = Inventory.method_49105(arg0, arg1)
-/**
- * method_5441
- */
-fun Inventory.removeStack(arg0: Int) = this.method_5441(arg0)
+fun Inventory.isValid(slot: Int, stack: ItemStack) = this.method_5437(slot, stack)
 /**
  * method_5447
  */
-fun Inventory.setStack(arg0: Int, arg1: ItemStack) = this.method_5447(arg0, arg1)
+fun Inventory.setStack(slot: Int, stack: ItemStack) = this.method_5447(slot, stack)

@@ -10,17 +10,13 @@ fun ItemGroup.getDisplayName() = this.method_7737()
  */
 fun ItemGroup.getSearchTabStacks() = this.method_45414()
 /**
- * method_47307
- */
-fun KClass<ItemGroup>.create(arg0: net.minecraft.class_1761.class_7915, arg1: Int) = ItemGroup.method_47307(arg0, arg1)
-/**
  * method_47312
  */
 fun ItemGroup.getType() = this.method_47312()
 /**
  * method_45412
  */
-fun ItemGroup.contains(arg0: ItemStack) = this.method_45412(arg0)
+fun ItemGroup.contains(stack: ItemStack) = this.method_45412(stack)
 /**
  * method_47310
  */
@@ -37,10 +33,6 @@ fun ItemGroup.getRow() = this.method_47309()
  * method_7742
  */
 fun ItemGroup.getTexture() = this.method_7742()
-/**
- * method_60733
- */
-fun KClass<ItemGroup>.getTabTextureId(arg0: String) = ItemGroup.method_60733(arg0)
 /**
  * method_7756
  */
@@ -68,4 +60,4 @@ fun ItemGroup.getIcon() = this.method_7747()
 /**
  * method_47306
  */
-fun ItemGroup.updateEntries(arg0: net.minecraft.class_1761.class_8128) = this.method_47306(arg0)
+fun ItemGroup.updateEntries(displayContext: net.minecraft.class_1761.class_8128) = this.method_47306(displayContext)

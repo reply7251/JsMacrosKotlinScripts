@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_40469
  */
-fun DensityFunction.apply(arg0: net.minecraft.class_6910.class_6915) = this.method_40469(arg0)
+fun DensityFunction.apply(visitor: net.minecraft.class_6910.class_6915) = this.method_40469(visitor)
 /**
  * method_41062
  */
@@ -12,7 +12,7 @@ fun DensityFunction.getCodecHolder() = this.method_41062()
 /**
  * method_40470
  */
-fun DensityFunction.fill(arg0: DoubleArray, arg1: net.minecraft.class_6910.class_6911) = this.method_40470(arg0, arg1)
+fun DensityFunction.fill(densities: DoubleArray, applier: net.minecraft.class_6910.class_6911) = this.method_40470(densities, applier)
 /**
  * method_40473
  */
@@ -28,11 +28,11 @@ fun DensityFunction.abs() = this.method_40471()
 /**
  * method_40468
  */
-fun DensityFunction.clamp(arg0: Double, arg1: Double) = this.method_40468(arg0, arg1)
+fun DensityFunction.clamp(min: Double, arg1: Double) = this.method_40468(min, arg1)
 /**
  * method_40464
  */
-fun DensityFunction.sample(arg0: net.minecraft.class_6910.class_6912) = this.method_40464(arg0)
+fun DensityFunction.sample(pos: net.minecraft.class_6910.class_6912) = this.method_40464(pos)
 /**
  * method_40476
  */

@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_PackResourceMetadata
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_14202
- */
-val KClass<PackResourceMetadata>.SERIALIZER by aliasStatic(PackResourceMetadata::field_14202)
-/**
  * comp_1580
  */
 fun PackResourceMetadata.description() = this.comp_1580()

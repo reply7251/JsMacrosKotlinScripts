@@ -12,7 +12,7 @@ fun MultiplayerScreen.getServerList() = this.method_2529()
 /**
  * method_2531
  */
-fun MultiplayerScreen.select(arg0: net.minecraft.class_4267.class_504) = this.method_2531(arg0)
+fun MultiplayerScreen.select(entry: net.minecraft.class_4267.class_504) = this.method_2531(entry)
 /**
  * method_2536
  */

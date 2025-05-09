@@ -14,10 +14,6 @@ var <T>HandledScreen<T>.backgroundHeight where T: ScreenHandler by alias(Handled
  */
 var <T>HandledScreen<T>.playerInventoryTitleY where T: ScreenHandler by alias(HandledScreen<*>::field_25270)
 /**
- * field_2801
- */
-val <T>KClass<HandledScreen<T>>.BACKGROUND_TEXTURE where T: ScreenHandler by aliasStatic({HandledScreen.field_2801})
-/**
  * field_2798
  */
 var <T>HandledScreen<T>.cancelNextRelease where T: ScreenHandler by alias(HandledScreen<*>::field_2798)
@@ -48,11 +44,11 @@ var <T>HandledScreen<T>.backgroundWidth where T: ScreenHandler by alias(HandledS
 /**
  * method_64240
  */
-fun <T>HandledScreen<T>.getSlotAt(arg0: Double, arg1: Double) where T: ScreenHandler = this.method_64240(arg0, arg1)
+fun <T>HandledScreen<T>.getSlotAt(mouseX: Double, arg1: Double) where T: ScreenHandler = this.method_64240(mouseX, arg1)
 /**
  * method_2380
  */
-fun <T>HandledScreen<T>.drawMouseoverTooltip(arg0: DrawContext, arg1: Int, arg2: Int) where T: ScreenHandler = this.method_2380(arg0, arg1, arg2)
+fun <T>HandledScreen<T>.drawMouseoverTooltip(drawContext: DrawContext, x: Int, y: Int) where T: ScreenHandler = this.method_2380(drawContext, x, y)
 /**
  * method_44339
  */

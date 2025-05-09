@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_59856
  */
-fun <A>CodecCache.wrap(arg0: Codec<A>) = this.method_59856<A>(arg0)
+fun <A>CodecCache.wrap(codec: Codec<A>) = this.method_59856<A>(codec)

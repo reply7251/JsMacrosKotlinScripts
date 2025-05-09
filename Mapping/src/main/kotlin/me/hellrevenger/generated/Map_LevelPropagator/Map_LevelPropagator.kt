@@ -8,4 +8,4 @@ fun LevelPropagator.getPendingUpdateCount() = this.method_24208()
 /**
  * method_24206
  */
-fun LevelPropagator.removePendingUpdateIf(arg0: LongPredicate) = this.method_24206(arg0)
+fun LevelPropagator.removePendingUpdateIf(predicate: LongPredicate) = this.method_24206(predicate)

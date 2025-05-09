@@ -16,4 +16,4 @@ fun TextWidget.alignRight() = this.method_48599()
 /**
  * method_46438
  */
-fun TextWidget.setTextColor(arg0: Int) = this.method_46438(arg0)
+fun TextWidget.setTextColor(textColor: Int) = this.method_46438(textColor)

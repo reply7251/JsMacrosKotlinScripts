@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_1405
  */
-fun DataQueryHandler.queryEntityNbt(arg0: Int, arg1: Consumer<NbtCompound>) = this.method_1405(arg0, arg1)
+fun DataQueryHandler.queryEntityNbt(entityNetworkId: Int, callback: Consumer<NbtCompound>) = this.method_1405(entityNetworkId, callback)
 /**
  * method_1404
  */
-fun DataQueryHandler.handleQueryResponse(arg0: Int, arg1: NbtCompound) = this.method_1404(arg0, arg1)
+fun DataQueryHandler.handleQueryResponse(transactionId: Int, nbt: NbtCompound) = this.method_1404(transactionId, nbt)
 /**
  * method_1403
  */
-fun DataQueryHandler.queryBlockNbt(arg0: BlockPos, arg1: Consumer<NbtCompound>) = this.method_1403(arg0, arg1)
+fun DataQueryHandler.queryBlockNbt(pos: BlockPos, callback: Consumer<NbtCompound>) = this.method_1403(pos, callback)

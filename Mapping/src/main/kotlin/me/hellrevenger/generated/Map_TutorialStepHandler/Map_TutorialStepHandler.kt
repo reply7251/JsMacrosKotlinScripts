@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_4900
  */
-fun TutorialStepHandler.onBlockBreaking(arg0: ClientWorld, arg1: BlockPos, arg2: BlockState, arg3: Float) = this.method_4900(arg0, arg1, arg2, arg3)
+fun TutorialStepHandler.onBlockBreaking(client: ClientWorld, pos: BlockPos, state: BlockState, progress: Float) = this.method_4900(client, pos, state, progress)
 /**
  * method_4903
  */
-fun TutorialStepHandler.onMovement(arg0: Input) = this.method_4903(arg0)
+fun TutorialStepHandler.onMovement(input: Input) = this.method_4903(input)
 /**
  * method_4899
  */
@@ -16,7 +16,7 @@ fun TutorialStepHandler.tick() = this.method_4899()
 /**
  * method_4901
  */
-fun TutorialStepHandler.onMouseUpdate(arg0: Double, arg1: Double) = this.method_4901(arg0, arg1)
+fun TutorialStepHandler.onMouseUpdate(deltaX: Double, arg1: Double) = this.method_4901(deltaX, arg1)
 /**
  * method_4902
  */
@@ -24,11 +24,11 @@ fun TutorialStepHandler.destroy() = this.method_4902()
 /**
  * method_4898
  */
-fun TutorialStepHandler.onTarget(arg0: ClientWorld, arg1: HitResult) = this.method_4898(arg0, arg1)
+fun TutorialStepHandler.onTarget(world: ClientWorld, hitResult: HitResult) = this.method_4898(world, hitResult)
 /**
  * method_4897
  */
-fun TutorialStepHandler.onSlotUpdate(arg0: ItemStack) = this.method_4897(arg0)
+fun TutorialStepHandler.onSlotUpdate(stack: ItemStack) = this.method_4897(stack)
 /**
  * method_4904
  */

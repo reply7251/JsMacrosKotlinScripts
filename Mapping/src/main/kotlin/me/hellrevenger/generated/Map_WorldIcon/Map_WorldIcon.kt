@@ -6,18 +6,10 @@ import me.hellrevenger.generated.*
  */
 fun WorldIcon.destroy() = this.method_52198()
 /**
- * method_52202
- */
-fun KClass<WorldIcon>.forServer(arg0: TextureManager, arg1: String) = WorldIcon.method_52202(arg0, arg1)
-/**
  * method_52199
  */
-fun WorldIcon.load(arg0: NativeImage) = this.method_52199(arg0)
+fun WorldIcon.load(image: NativeImage) = this.method_52199(image)
 /**
  * method_52201
  */
 fun WorldIcon.getTextureId() = this.method_52201()
-/**
- * method_52200
- */
-fun KClass<WorldIcon>.forWorld(arg0: TextureManager, arg1: String) = WorldIcon.method_52200(arg0, arg1)

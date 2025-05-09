@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_54470
  */
-fun RecipeCache.getRecipe(arg0: ServerWorld, arg1: CraftingRecipeInput) = this.method_54470(arg0, arg1)
+fun RecipeCache.getRecipe(world: ServerWorld, input: CraftingRecipeInput) = this.method_54470(world, input)

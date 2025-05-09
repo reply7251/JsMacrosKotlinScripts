@@ -8,4 +8,4 @@ fun ComparatorBlockEntity.getOutputSignal() = this.method_11071()
 /**
  * method_11070
  */
-fun ComparatorBlockEntity.setOutputSignal(arg0: Int) = this.method_11070(arg0)
+fun ComparatorBlockEntity.setOutputSignal(outputSignal: Int) = this.method_11070(outputSignal)

@@ -12,7 +12,7 @@ fun <T>TextureStitcher<T>.getHeight() where T: net.minecraft.class_1055.class_77
 /**
  * method_4553
  */
-fun <T>TextureStitcher<T>.add(arg0: T) where T: net.minecraft.class_1055.class_7769 = this.method_4553(arg0)
+fun <T>TextureStitcher<T>.add(info: T) where T: net.minecraft.class_1055.class_7769 = this.method_4553(info)
 /**
  * method_4557
  */
@@ -20,4 +20,4 @@ fun <T>TextureStitcher<T>.stitch() where T: net.minecraft.class_1055.class_7769 
 /**
  * method_4549
  */
-fun <T>TextureStitcher<T>.getStitchedSprites(arg0: net.minecraft.class_1055.class_4726<T>) where T: net.minecraft.class_1055.class_7769 = this.method_4549(arg0)
+fun <T>TextureStitcher<T>.getStitchedSprites(consumer: net.minecraft.class_1055.class_4726<T>) where T: net.minecraft.class_1055.class_7769 = this.method_4549(consumer)

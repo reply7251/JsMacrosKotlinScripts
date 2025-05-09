@@ -18,7 +18,7 @@ import xyz.wagyourtail.jsmacros.client.api.classes.render.components.RenderEleme
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.PlayerEntityHelper
 
-val mc get() = MinecraftClient::class.getInstance()
+val mc get() = MinecraftClientKt.getInstance()
 
 val methodFov = net.minecraft.class_757::class.java.declaredMethods.first { it.name == "method_3196" }
 open class WorldPosWrapper(
@@ -106,7 +106,7 @@ open class WorldPosWrapper(
         )
 
         matrixStack.push()
-        matrixStack.translate(clip2.x(), clip2.y(), clip2.z())
+        matrixStack.translate(clip2.x().toFloat(), clip2.y().toFloat(), clip2.z().toFloat())
         draw2d.render(context)
         matrixStack.pop()
     }

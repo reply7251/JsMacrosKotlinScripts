@@ -16,23 +16,19 @@ fun <K, V>ServerConfigList<K, V>.getNames() where V: ServerConfigEntry<K> = this
 /**
  * method_14640
  */
-fun <K, V>ServerConfigList<K, V>.get(arg0: K) where V: ServerConfigEntry<K> = this.method_14640(arg0)
+fun <K, V>ServerConfigList<K, V>.get(key: K) where V: ServerConfigEntry<K> = this.method_14640(key)
 /**
  * method_14638
  */
-fun <K, V>ServerConfigList<K, V>.remove(arg0: ServerConfigEntry<K>) where V: ServerConfigEntry<K> = this.method_14638(arg0)
+fun <K, V>ServerConfigList<K, V>.remove(entry: ServerConfigEntry<K>) where V: ServerConfigEntry<K> = this.method_14638(entry)
 /**
  * method_14629
  */
 fun <K, V>ServerConfigList<K, V>.save() where V: ServerConfigEntry<K> = this.method_14629()
 /**
- * method_14635
- */
-fun <K, V>ServerConfigList<K, V>.remove(arg0: K) where V: ServerConfigEntry<K> = this.method_14635(arg0)
-/**
  * method_14633
  */
-fun <K, V>ServerConfigList<K, V>.add(arg0: V) where V: ServerConfigEntry<K> = this.method_14633(arg0)
+fun <K, V>ServerConfigList<K, V>.add(entry: V) where V: ServerConfigEntry<K> = this.method_14633(entry)
 /**
  * method_14643
  */

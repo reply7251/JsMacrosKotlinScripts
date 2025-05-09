@@ -8,7 +8,7 @@ fun ReadableProfiler.getSampleTargets() = this.method_37168()
 /**
  * method_34696
  */
-fun ReadableProfiler.getInfo(arg0: String) = this.method_34696(arg0)
+fun ReadableProfiler.getInfo(name: String) = this.method_34696(name)
 /**
  * method_16064
  */

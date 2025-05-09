@@ -8,4 +8,4 @@ fun HoverEvent.getAction() = this.method_10892()
 /**
  * method_10891
  */
-fun <T>HoverEvent.getValue(arg0: net.minecraft.class_2568.class_5247<T>) = this.method_10891<T>(arg0)
+fun <T>HoverEvent.getValue(action: net.minecraft.class_2568.class_5247<T>) = this.method_10891<T>(action)

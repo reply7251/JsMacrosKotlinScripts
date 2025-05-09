@@ -8,7 +8,7 @@ fun EntityDamageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_49
 /**
  * method_49071
  */
-fun EntityDamageS2CPacket.createDamageSource(arg0: world_World) = this.method_49071(arg0)
+fun EntityDamageS2CPacket.createDamageSource(world: world_World) = this.method_49071(world)
 /**
  * comp_1269
  */

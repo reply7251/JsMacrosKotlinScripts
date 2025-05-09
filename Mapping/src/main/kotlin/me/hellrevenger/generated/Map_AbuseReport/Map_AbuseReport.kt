@@ -8,8 +8,8 @@ fun AbuseReport.copy() = this.method_46547()
 /**
  * method_53596
  */
-fun AbuseReport.createReportScreen(arg0: Screen, arg1: AbuseReportContext) = this.method_53596(arg0, arg1)
+fun AbuseReport.createReportScreen(parent: Screen, context: AbuseReportContext) = this.method_53596(parent, context)
 /**
  * method_46549
  */
-fun AbuseReport.playerUuidEquals(arg0: UUID) = this.method_46549(arg0)
+fun AbuseReport.playerUuidEquals(uuid: UUID) = this.method_46549(uuid)

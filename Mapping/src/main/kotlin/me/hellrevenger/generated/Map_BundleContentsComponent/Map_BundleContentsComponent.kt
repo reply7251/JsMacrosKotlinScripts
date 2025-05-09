@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_BundleContentsComponent
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_49289
- */
-val KClass<BundleContentsComponent>.DEFAULT by aliasStatic(BundleContentsComponent::field_49289)
-/**
  * method_61669
  */
 fun BundleContentsComponent.hasSelectedStack() = this.method_61669()
@@ -24,7 +20,7 @@ fun BundleContentsComponent.getNumberOfStacksShown() = this.method_61666()
 /**
  * method_57422
  */
-fun BundleContentsComponent.get(arg0: Int) = this.method_57422(arg0)
+fun BundleContentsComponent.get(index: Int) = this.method_57422(index)
 /**
  * method_61668
  */
@@ -33,10 +29,6 @@ fun BundleContentsComponent.getSelectedStackIndex() = this.method_61668()
  * method_57428
  */
 fun BundleContentsComponent.getOccupancy() = this.method_57428()
-/**
- * method_61667
- */
-fun KClass<BundleContentsComponent>.canBeBundled(arg0: ItemStack) = BundleContentsComponent.method_61667(arg0)
 /**
  * method_57429
  */

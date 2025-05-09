@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_VehicleMoveC2SPacket
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_65307
- */
-fun KClass<VehicleMoveC2SPacket>.fromVehicle(arg0: Entity) = VehicleMoveC2SPacket.method_65307(arg0)
-/**
  * method_12278
  */
 fun VehicleMoveC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12278(arg0)

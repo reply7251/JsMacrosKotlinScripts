@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_6332
  */
-fun BirdNavigation.setCanPathThroughDoors(arg0: Boolean) = this.method_6332(arg0)
+fun BirdNavigation.setCanPathThroughDoors(canPathThroughDoors: Boolean) = this.method_6332(canPathThroughDoors)

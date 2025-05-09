@@ -26,25 +26,17 @@ fun ArmadilloEntity.isNotIdle() = this.method_55723()
  */
 fun ArmadilloEntity.brushScute() = this.method_55716()
 /**
- * method_55722
- */
-fun KClass<ArmadilloEntity>.createArmadilloAttributes() = ArmadilloEntity.method_55722()
-/**
  * method_55714
  */
 fun ArmadilloEntity.shouldSwitchToScaredState() = this.method_55714()
 /**
  * method_55721
  */
-fun ArmadilloEntity.isEntityThreatening(arg0: LivingEntity) = this.method_55721(arg0)
+fun ArmadilloEntity.isEntityThreatening(entity: LivingEntity) = this.method_55721(entity)
 /**
  * method_55713
  */
-fun ArmadilloEntity.setState(arg0: net.minecraft.class_9069.class_9070) = this.method_55713(arg0)
-/**
- * method_56083
- */
-fun KClass<ArmadilloEntity>.canSpawn(arg0: EntityType<ArmadilloEntity>, arg1: WorldAccess, arg2: SpawnReason, arg3: BlockPos, arg4: Random) = ArmadilloEntity.method_56083(arg0, arg1, arg2, arg3, arg4)
+fun ArmadilloEntity.setState(state: net.minecraft.class_9069.class_9070) = this.method_55713(state)
 /**
  * method_55715
  */

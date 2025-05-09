@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_GameTestBatch
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_33145
- */
-val KClass<GameTestBatch>.DEFAULT_BATCH by aliasStatic(GameTestBatch::field_33145)
-/**
  * comp_2210
  */
 fun GameTestBatch.states() = this.comp_2210()

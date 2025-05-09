@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_20700
  */
-fun MerchantScreenHandler.setCanRefreshTrades(arg0: Boolean) = this.method_20700(arg0)
+fun MerchantScreenHandler.setCanRefreshTrades(canRefreshTrades: Boolean) = this.method_20700(canRefreshTrades)
 /**
  * method_7650
  */
-fun MerchantScreenHandler.setRecipeIndex(arg0: Int) = this.method_7650(arg0)
+fun MerchantScreenHandler.setRecipeIndex(index: Int) = this.method_7650(index)
 /**
  * method_19256
  */
@@ -28,7 +28,7 @@ fun MerchantScreenHandler.isLeveled() = this.method_19259()
 /**
  * method_19253
  */
-fun MerchantScreenHandler.setLeveled(arg0: Boolean) = this.method_19253(arg0)
+fun MerchantScreenHandler.setLeveled(leveled: Boolean) = this.method_19253(leveled)
 /**
  * method_20701
  */
@@ -36,15 +36,15 @@ fun MerchantScreenHandler.canRefreshTrades() = this.method_20701()
 /**
  * method_20215
  */
-fun MerchantScreenHandler.switchTo(arg0: Int) = this.method_20215(arg0)
+fun MerchantScreenHandler.switchTo(recipeIndex: Int) = this.method_20215(recipeIndex)
 /**
  * method_19257
  */
-fun MerchantScreenHandler.setLevelProgress(arg0: Int) = this.method_19257(arg0)
+fun MerchantScreenHandler.setLevelProgress(levelProgress: Int) = this.method_19257(levelProgress)
 /**
  * method_17437
  */
-fun MerchantScreenHandler.setOffers(arg0: TradeOfferList) = this.method_17437(arg0)
+fun MerchantScreenHandler.setOffers(offers: TradeOfferList) = this.method_17437(offers)
 /**
  * method_17438
  */
@@ -52,4 +52,4 @@ fun MerchantScreenHandler.getRecipes() = this.method_17438()
 /**
  * method_19255
  */
-fun MerchantScreenHandler.setExperienceFromServer(arg0: Int) = this.method_19255(arg0)
+fun MerchantScreenHandler.setExperienceFromServer(experience: Int) = this.method_19255(experience)

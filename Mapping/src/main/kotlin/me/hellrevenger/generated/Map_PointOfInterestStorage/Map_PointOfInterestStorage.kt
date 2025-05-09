@@ -4,92 +4,80 @@ import me.hellrevenger.generated.*
 /**
  * method_43985
  */
-fun PointOfInterestStorage.getNearestTypeAndPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_43985(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.getNearestTypeAndPosition(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_43985(typePredicate, pos, radius, occupationStatus)
 /**
  * method_19118
  */
-fun PointOfInterestStorage.getDistanceFromNearestOccupied(arg0: ChunkSectionPos) = this.method_19118(arg0)
+fun PointOfInterestStorage.getDistanceFromNearestOccupied(pos: ChunkSectionPos) = this.method_19118(pos)
 /**
  * method_19129
  */
-fun PointOfInterestStorage.releaseTicket(arg0: BlockPos) = this.method_19129(arg0)
+fun PointOfInterestStorage.releaseTicket(pos: BlockPos) = this.method_19129(pos)
 /**
  * method_20252
  */
-fun PointOfInterestStorage.count(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_20252(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.count(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_20252(typePredicate, pos, radius, occupationStatus)
 /**
  * method_20006
  */
-fun PointOfInterestStorage.getNearestPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_20006(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.getNearestPosition(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_20006(typePredicate, pos, radius, occupationStatus)
 /**
  * method_19132
  */
-fun PointOfInterestStorage.getType(arg0: BlockPos) = this.method_19132(arg0)
+fun PointOfInterestStorage.getType(pos: BlockPos) = this.method_19132(pos)
 /**
  * method_19125
  */
-fun PointOfInterestStorage.getInCircle(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_19125(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.getInCircle(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_19125(typePredicate, pos, radius, occupationStatus)
 /**
  * method_19112
  */
-fun PointOfInterestStorage.remove(arg0: BlockPos) = this.method_19112(arg0)
+fun PointOfInterestStorage.remove(pos: BlockPos) = this.method_19112(pos)
 /**
  * method_22439
  */
-fun PointOfInterestStorage.preloadChunks(arg0: WorldView, arg1: BlockPos, arg2: Int) = this.method_22439(arg0, arg1, arg2)
+fun PointOfInterestStorage.preloadChunks(world: WorldView, pos: BlockPos, radius: Int) = this.method_22439(world, pos, radius)
 /**
  * method_30957
  */
-fun PointOfInterestStorage.getSortedTypesAndPositions(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_30957(arg0, arg1, arg2, arg3, arg4)
+fun PointOfInterestStorage.getSortedTypesAndPositions(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, posPredicate: Predicate<BlockPos>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_30957(typePredicate, posPredicate, pos, radius, occupationStatus)
 /**
  * method_26339
  */
-fun PointOfInterestStorage.hasTypeAt(arg0: RegistryKey<PointOfInterestType>, arg1: BlockPos) = this.method_26339(arg0, arg1)
+fun PointOfInterestStorage.hasTypeAt(type: RegistryKey<PointOfInterestType>, pos: BlockPos) = this.method_26339(type, pos)
 /**
  * method_22383
  */
-fun PointOfInterestStorage.getInSquare(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BlockPos, arg2: Int, arg3: net.minecraft.class_4153.class_4155) = this.method_22383(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.getInSquare(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_22383(typePredicate, pos, radius, occupationStatus)
 /**
  * method_20005
  */
-fun PointOfInterestStorage.getPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: net.minecraft.class_4153.class_4155, arg3: BlockPos, arg4: Int, arg5: Random) = this.method_20005(arg0, arg1, arg2, arg3, arg4, arg5)
-/**
- * method_34712
- */
-fun PointOfInterestStorage.getNearestPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_34712(arg0, arg1, arg2, arg3, arg4)
+fun PointOfInterestStorage.getPosition(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, positionPredicate: Predicate<BlockPos>, occupationStatus: net.minecraft.class_4153.class_4155, pos: BlockPos, radius: Int, random: Random) = this.method_20005(typePredicate, positionPredicate, occupationStatus, pos, radius, random)
 /**
  * method_19116
  */
-fun PointOfInterestStorage.test(arg0: BlockPos, arg1: Predicate<RegistryEntry<PointOfInterestType>>) = this.method_19116(arg0, arg1)
+fun PointOfInterestStorage.test(pos: BlockPos, predicate: Predicate<RegistryEntry<PointOfInterestType>>) = this.method_19116(pos, predicate)
 /**
  * method_35155
  */
-fun PointOfInterestStorage.getFreeTickets(arg0: BlockPos) = this.method_35155(arg0)
-/**
- * method_19127
- */
-fun PointOfInterestStorage.getPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_19127(arg0, arg1, arg2, arg3, arg4)
+fun PointOfInterestStorage.getFreeTickets(pos: BlockPos) = this.method_35155(pos)
 /**
  * method_19510
  */
-fun PointOfInterestStorage.initForPalette(arg0: ChunkSectionPos, arg1: ChunkSection) = this.method_19510(arg0, arg1)
+fun PointOfInterestStorage.initForPalette(sectionPos: ChunkSectionPos, chunkSection: ChunkSection) = this.method_19510(sectionPos, chunkSection)
 /**
  * method_21647
  */
-fun PointOfInterestStorage.getPositions(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_21647(arg0, arg1, arg2, arg3, arg4)
+fun PointOfInterestStorage.getPositions(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, posPredicate: Predicate<BlockPos>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_21647(typePredicate, posPredicate, pos, radius, occupationStatus)
 /**
  * method_19123
  */
-fun PointOfInterestStorage.getInChunk(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: ChunkPos, arg2: net.minecraft.class_4153.class_4155) = this.method_19123(arg0, arg1, arg2)
+fun PointOfInterestStorage.getInChunk(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, chunkPos: ChunkPos, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_19123(typePredicate, chunkPos, occupationStatus)
 /**
  * method_19115
  */
-fun PointOfInterestStorage.add(arg0: BlockPos, arg1: RegistryEntry<PointOfInterestType>) = this.method_19115(arg0, arg1)
-/**
- * method_19126
- */
-fun PointOfInterestStorage.getPosition(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: BiPredicate<RegistryEntry<PointOfInterestType>, BlockPos>, arg2: BlockPos, arg3: Int) = this.method_19126(arg0, arg1, arg2, arg3)
+fun PointOfInterestStorage.add(pos: BlockPos, type: RegistryEntry<PointOfInterestType>) = this.method_19115(pos, type)
 /**
  * method_43983
  */
-fun PointOfInterestStorage.getTypesAndPositions(arg0: Predicate<RegistryEntry<PointOfInterestType>>, arg1: Predicate<BlockPos>, arg2: BlockPos, arg3: Int, arg4: net.minecraft.class_4153.class_4155) = this.method_43983(arg0, arg1, arg2, arg3, arg4)
+fun PointOfInterestStorage.getTypesAndPositions(typePredicate: Predicate<RegistryEntry<PointOfInterestType>>, posPredicate: Predicate<BlockPos>, pos: BlockPos, radius: Int, occupationStatus: net.minecraft.class_4153.class_4155) = this.method_43983(typePredicate, posPredicate, pos, radius, occupationStatus)

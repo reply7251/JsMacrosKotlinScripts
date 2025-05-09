@@ -8,7 +8,7 @@ fun Particle.markDead() = this.method_3085()
 /**
  * method_3077
  */
-fun Particle.setMaxAge(arg0: Int) = this.method_3077(arg0)
+fun Particle.setMaxAge(maxAge: Int) = this.method_3077(maxAge)
 /**
  * method_18122
  */
@@ -16,7 +16,7 @@ fun Particle.getType() = this.method_18122()
 /**
  * method_3067
  */
-fun Particle.setBoundingBox(arg0: Box) = this.method_3067(arg0)
+fun Particle.setBoundingBox(boundingBox: Box) = this.method_3067(boundingBox)
 /**
  * method_34019
  */
@@ -24,31 +24,27 @@ fun Particle.getGroup() = this.method_34019()
 /**
  * method_3087
  */
-fun Particle.scale(arg0: Float) = this.method_3087(arg0)
+fun Particle.scale(scale: Float) = this.method_3087(scale)
 /**
  * method_3075
  */
-fun Particle.move(arg0: Float) = this.method_3075(arg0)
+fun Particle.move(speed: Float) = this.method_3075(speed)
 /**
  * method_65198
  */
-fun Particle.renderCustom(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Camera, arg3: Float) = this.method_65198(arg0, arg1, arg2, arg3)
+fun Particle.renderCustom(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, camera: Camera, tickDelta: Float) = this.method_65198(matrices, vertexConsumers, camera, tickDelta)
 /**
  * method_3064
  */
 fun Particle.getBoundingBox() = this.method_3064()
 /**
- * method_3069
- */
-fun Particle.move(arg0: Double, arg1: Double, arg2: Double) = this.method_3069(arg0, arg1, arg2)
-/**
  * method_3084
  */
-fun Particle.setColor(arg0: Float, arg1: Float, arg2: Float) = this.method_3084(arg0, arg1, arg2)
+fun Particle.setColor(red: Float, green: Float, blue: Float) = this.method_3084(red, green, blue)
 /**
  * method_34753
  */
-fun Particle.setVelocity(arg0: Double, arg1: Double, arg2: Double) = this.method_34753(arg0, arg1, arg2)
+fun Particle.setVelocity(velocityX: Double, arg1: Double, velocityY: Double) = this.method_34753(velocityX, arg1, velocityY)
 /**
  * method_3070
  */
@@ -64,8 +60,8 @@ fun Particle.getMaxAge() = this.method_3082()
 /**
  * method_3063
  */
-fun Particle.setPos(arg0: Double, arg1: Double, arg2: Double) = this.method_3063(arg0, arg1, arg2)
+fun Particle.setPos(x: Double, arg1: Double, y: Double) = this.method_3063(x, arg1, y)
 /**
  * method_3074
  */
-fun Particle.render(arg0: VertexConsumer, arg1: Camera, arg2: Float) = this.method_3074(arg0, arg1, arg2)
+fun Particle.render(vertexConsumer: VertexConsumer, camera: Camera, tickDelta: Float) = this.method_3074(vertexConsumer, camera, tickDelta)

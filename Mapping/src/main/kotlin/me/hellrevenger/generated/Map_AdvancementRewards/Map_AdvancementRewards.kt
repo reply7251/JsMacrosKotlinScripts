@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_AdvancementRewards
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_1167
- */
-val KClass<AdvancementRewards>.NONE by aliasStatic(AdvancementRewards::field_1167)
-/**
  * comp_2025
  */
 fun AdvancementRewards.experience() = this.comp_2025()
@@ -24,4 +20,4 @@ fun AdvancementRewards.function() = this.comp_2028()
 /**
  * method_748
  */
-fun AdvancementRewards.apply(arg0: ServerPlayerEntity) = this.method_748(arg0)
+fun AdvancementRewards.apply(player: ServerPlayerEntity) = this.method_748(player)

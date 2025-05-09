@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_3872
  */
-fun WorldGenAttemptDebugRenderer.addBox(arg0: BlockPos, arg1: Float, arg2: Float, arg3: Float, arg4: Float, arg5: Float) = this.method_3872(arg0, arg1, arg2, arg3, arg4, arg5)
+fun WorldGenAttemptDebugRenderer.addBox(pos: BlockPos, size: Float, red: Float, green: Float, blue: Float, alpha: Float) = this.method_3872(pos, size, red, green, blue, alpha)

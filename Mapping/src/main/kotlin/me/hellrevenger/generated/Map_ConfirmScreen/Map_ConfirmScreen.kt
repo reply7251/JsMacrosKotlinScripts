@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_2125
  */
-fun ConfirmScreen.disableButtons(arg0: Int) = this.method_2125(arg0)
+fun ConfirmScreen.disableButtons(ticks: Int) = this.method_2125(ticks)

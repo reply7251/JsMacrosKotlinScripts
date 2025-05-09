@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_61898
  */
-fun <T>SerializableTickScheduler<T>.collectTicks(arg0: Long) = this.method_61898(arg0)
+fun <T>SerializableTickScheduler<T>.collectTicks(time: Long) = this.method_61898(time)

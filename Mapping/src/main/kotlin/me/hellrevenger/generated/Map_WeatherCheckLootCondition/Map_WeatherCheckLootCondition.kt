@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun WeatherCheckLootCondition.raining() = this.comp_1889()
 /**
- * method_35564
- */
-fun KClass<WeatherCheckLootCondition>.create() = WeatherCheckLootCondition.method_35564()
-/**
  * method_957
  */
 fun WeatherCheckLootCondition.test(arg0: LootContext) = this.method_957(arg0)

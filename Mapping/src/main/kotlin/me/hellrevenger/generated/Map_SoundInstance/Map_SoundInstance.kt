@@ -16,7 +16,7 @@ fun SoundInstance.isRelative() = this.method_4787()
 /**
  * method_4783
  */
-fun SoundInstance.getSoundSet(arg0: SoundManager) = this.method_4783(arg0)
+fun SoundInstance.getSoundSet(soundManager: SoundManager) = this.method_4783(soundManager)
 /**
  * method_4776
  */
@@ -49,10 +49,6 @@ fun SoundInstance.getCategory() = this.method_4774()
  * method_4782
  */
 fun SoundInstance.getPitch() = this.method_4782()
-/**
- * method_43221
- */
-fun KClass<SoundInstance>.createRandom() = SoundInstance.method_43221()
 /**
  * method_4781
  */

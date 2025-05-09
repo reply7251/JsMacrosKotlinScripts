@@ -34,18 +34,14 @@ fun SnifferEntity.isDiggingOrSearching() = this.method_49150()
  */
 fun SnifferEntity.isSearching() = this.method_51301()
 /**
- * method_49146
- */
-fun KClass<SnifferEntity>.createSnifferAttributes() = SnifferEntity.method_49146()
-/**
  * method_51155
  */
 fun SnifferEntity.canTryToDig() = this.method_51155()
 /**
  * method_49132
  */
-fun SnifferEntity.startState(arg0: net.minecraft.class_8153.class_8154) = this.method_49132(arg0)
+fun SnifferEntity.startState(state: net.minecraft.class_8153.class_8154) = this.method_49132(state)
 /**
  * method_49149
  */
-fun SnifferEntity.finishDigging(arg0: Boolean) = this.method_49149(arg0)
+fun SnifferEntity.finishDigging(explored: Boolean) = this.method_49149(explored)

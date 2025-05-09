@@ -8,8 +8,8 @@ fun LoginKeyC2SPacket.apply(arg0: ServerLoginPacketListener) = this.method_12653
 /**
  * method_12654
  */
-fun LoginKeyC2SPacket.decryptSecretKey(arg0: PrivateKey) = this.method_12654(arg0)
+fun LoginKeyC2SPacket.decryptSecretKey(privateKey: PrivateKey) = this.method_12654(privateKey)
 /**
  * method_43643
  */
-fun LoginKeyC2SPacket.verifySignedNonce(arg0: ByteArray, arg1: PrivateKey) = this.method_43643(arg0, arg1)
+fun LoginKeyC2SPacket.verifySignedNonce(nonce: ByteArray, privateKey: PrivateKey) = this.method_43643(nonce, privateKey)

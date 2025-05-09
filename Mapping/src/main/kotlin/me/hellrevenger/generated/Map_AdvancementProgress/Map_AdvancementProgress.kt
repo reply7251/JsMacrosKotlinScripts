@@ -12,11 +12,7 @@ fun AdvancementProgress.getProgressBarPercentage() = this.method_735()
 /**
  * method_727
  */
-fun AdvancementProgress.init(arg0: AdvancementRequirements) = this.method_727(arg0)
-/**
- * method_732
- */
-fun KClass<AdvancementProgress>.fromPacket(arg0: PacketByteBuf) = AdvancementProgress.method_732(arg0)
+fun AdvancementProgress.init(requirements: AdvancementRequirements) = this.method_727(requirements)
 /**
  * method_734
  */
@@ -24,11 +20,11 @@ fun AdvancementProgress.getObtainedCriteria() = this.method_734()
 /**
  * method_729
  */
-fun AdvancementProgress.reset(arg0: String) = this.method_729(arg0)
+fun AdvancementProgress.reset(name: String) = this.method_729(name)
 /**
  * method_733
  */
-fun AdvancementProgress.toPacket(arg0: PacketByteBuf) = this.method_733(arg0)
+fun AdvancementProgress.toPacket(buf: PacketByteBuf) = this.method_733(buf)
 /**
  * method_741
  */
@@ -52,8 +48,8 @@ fun AdvancementProgress.isDone() = this.method_740()
 /**
  * method_737
  */
-fun AdvancementProgress.getCriterionProgress(arg0: String) = this.method_737(arg0)
+fun AdvancementProgress.getCriterionProgress(name: String) = this.method_737(name)
 /**
  * method_743
  */
-fun AdvancementProgress.obtain(arg0: String) = this.method_743(arg0)
+fun AdvancementProgress.obtain(name: String) = this.method_743(name)

@@ -8,7 +8,7 @@ fun RecipeDisplay.serializer() = this.method_64726()
 /**
  * method_64728
  */
-fun RecipeDisplay.isEnabled(arg0: FeatureSet) = this.method_64728(arg0)
+fun RecipeDisplay.isEnabled(features: FeatureSet) = this.method_64728(features)
 /**
  * comp_3259
  */

@@ -14,17 +14,13 @@ fun FileDownload.isError() = this.method_20961()
  */
 fun FileDownload.isExtracting() = this.method_20964()
 /**
- * method_20960
- */
-fun KClass<FileDownload>.findAvailableFolderName(arg0: String) = FileDownload.method_20960(arg0)
-/**
  * method_20955
  */
-fun FileDownload.contentLength(arg0: String) = this.method_20955(arg0)
+fun FileDownload.contentLength(downloadLink: String) = this.method_20955(downloadLink)
 /**
  * method_22100
  */
-fun FileDownload.downloadWorld(arg0: WorldDownload, arg1: String, arg2: net.minecraft.class_4392.class_4393, arg3: LevelStorage) = this.method_22100(arg0, arg1, arg2, arg3)
+fun FileDownload.downloadWorld(download: WorldDownload, message: String, status: net.minecraft.class_4392.class_4393, storage: LevelStorage) = this.method_22100(download, message, status, storage)
 /**
  * method_20948
  */

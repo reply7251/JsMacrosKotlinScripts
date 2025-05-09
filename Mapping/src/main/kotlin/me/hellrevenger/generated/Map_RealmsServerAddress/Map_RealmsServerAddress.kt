@@ -13,7 +13,3 @@ var RealmsServerAddress.resourcePackUrl by alias(RealmsServerAddress::field_2261
  * field_22618
  */
 var RealmsServerAddress.address by alias(RealmsServerAddress::field_22618)
-/**
- * method_25071
- */
-fun KClass<RealmsServerAddress>.parse(arg0: String) = RealmsServerAddress.method_25071(arg0)

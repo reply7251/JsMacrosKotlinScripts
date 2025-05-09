@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_63643
  */
-fun InputPredicate.matches(arg0: PlayerInput) = this.method_63643(arg0)
+fun InputPredicate.matches(playerInput: PlayerInput) = this.method_63643(playerInput)
 /**
  * comp_3154
  */

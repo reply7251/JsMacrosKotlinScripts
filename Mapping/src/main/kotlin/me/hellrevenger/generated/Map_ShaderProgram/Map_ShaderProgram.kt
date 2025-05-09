@@ -64,11 +64,11 @@ var ShaderProgram.gameTime by alias(ShaderProgram::field_29481)
 /**
  * method_65028
  */
-fun ShaderProgram.getUniformDefinition(arg0: String) = this.method_65028(arg0)
+fun ShaderProgram.getUniformDefinition(name: String) = this.method_65028(name)
 /**
  * method_60897
  */
-fun ShaderProgram.initializeUniforms(arg0: net.minecraft.class_293.class_5596, arg1: Matrix4f, arg2: Matrix4f, arg3: Window) = this.method_60897(arg0, arg1, arg2, arg3)
+fun ShaderProgram.initializeUniforms(drawMode: net.minecraft.class_293.class_5596, viewMatrix: Matrix4f, projectionMatrix: Matrix4f, window: Window) = this.method_60897(drawMode, viewMatrix, projectionMatrix, window)
 /**
  * method_34586
  */
@@ -76,15 +76,15 @@ fun ShaderProgram.bind() = this.method_34586()
 /**
  * method_62899
  */
-fun ShaderProgram.addSamplerTexture(arg0: String, arg1: Int) = this.method_62899(arg0, arg1)
+fun ShaderProgram.addSamplerTexture(name: String, texture: Int) = this.method_62899(name, texture)
 /**
  * method_62900
  */
-fun ShaderProgram.set(arg0: MutableList<net.minecraft.class_10157.class_10159>, arg1: MutableList<net.minecraft.class_10157.class_10158>) = this.method_62900(arg0, arg1)
+fun ShaderProgram.set(uniforms: MutableList<net.minecraft.class_10157.class_10159>, samplers: MutableList<net.minecraft.class_10157.class_10158>) = this.method_62900(uniforms, samplers)
 /**
  * method_62897
  */
-fun ShaderProgram.addUniform(arg0: GlUniform) = this.method_62897(arg0)
+fun ShaderProgram.addUniform(uniform: GlUniform) = this.method_62897(uniform)
 /**
  * method_1270
  */
@@ -96,12 +96,8 @@ fun ShaderProgram.unbind() = this.method_34585()
 /**
  * method_34582
  */
-fun ShaderProgram.getUniform(arg0: String) = this.method_34582(arg0)
+fun ShaderProgram.getUniform(name: String) = this.method_34582(name)
 /**
  * method_35785
  */
-fun ShaderProgram.getUniformOrDefault(arg0: String) = this.method_35785(arg0)
-/**
- * method_62896
- */
-fun KClass<ShaderProgram>.create(arg0: CompiledShader, arg1: CompiledShader, arg2: VertexFormat) = ShaderProgram.method_62896(arg0, arg1, arg2)
+fun ShaderProgram.getUniformOrDefault(name: String) = this.method_35785(name)

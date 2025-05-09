@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_3
  */
-fun PathMinHeap.setNodeWeight(arg0: PathNode, arg1: Float) = this.method_3(arg0, arg1)
+fun PathMinHeap.setNodeWeight(node: PathNode, weight: Float) = this.method_3(node, weight)
 /**
  * method_6
  */
@@ -20,7 +20,7 @@ fun PathMinHeap.getStart() = this.method_35490()
 /**
  * method_2
  */
-fun PathMinHeap.push(arg0: PathNode) = this.method_2(arg0)
+fun PathMinHeap.push(node: PathNode) = this.method_2(node)
 /**
  * method_8
  */
@@ -36,4 +36,4 @@ fun PathMinHeap.getCount() = this.method_35492()
 /**
  * method_35491
  */
-fun PathMinHeap.popNode(arg0: PathNode) = this.method_35491(arg0)
+fun PathMinHeap.popNode(node: PathNode) = this.method_35491(node)

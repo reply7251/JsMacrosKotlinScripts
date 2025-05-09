@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_4885
  */
-fun WeightedSoundSet.add(arg0: SoundContainer<Sound>) = this.method_4885(arg0)
+fun WeightedSoundSet.add(container: SoundContainer<Sound>) = this.method_4885(container)
 /**
  * method_4887
  */

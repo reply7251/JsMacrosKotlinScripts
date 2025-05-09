@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_147
  */
-fun ServerWorldProperties.setThundering(arg0: Boolean) = this.method_147(arg0)
+fun ServerWorldProperties.setThundering(thundering: Boolean) = this.method_147(thundering)
 /**
  * method_18038
  */
@@ -16,7 +16,7 @@ fun ServerWorldProperties.getWanderingTraderSpawnChance() = this.method_18039()
 /**
  * method_223
  */
-fun ServerWorldProperties.setInitialized(arg0: Boolean) = this.method_223(arg0)
+fun ServerWorldProperties.setInitialized(initialized: Boolean) = this.method_223(initialized)
 /**
  * method_194
  */
@@ -32,11 +32,11 @@ fun ServerWorldProperties.getGameRules() = this.method_146()
 /**
  * method_193
  */
-fun ServerWorldProperties.setGameMode(arg0: GameMode) = this.method_193(arg0)
+fun ServerWorldProperties.setGameMode(gameMode: GameMode) = this.method_193(gameMode)
 /**
  * method_27415
  */
-fun ServerWorldProperties.setWorldBorder(arg0: net.minecraft.class_2784.class_5200) = this.method_27415(arg0)
+fun ServerWorldProperties.setWorldBorder(worldBorder: net.minecraft.class_2784.class_5200) = this.method_27415(worldBorder)
 /**
  * method_150
  */
@@ -44,7 +44,7 @@ fun ServerWorldProperties.getLevelName() = this.method_150()
 /**
  * method_18042
  */
-fun ServerWorldProperties.setWanderingTraderSpawnChance(arg0: Int) = this.method_18042(arg0)
+fun ServerWorldProperties.setWanderingTraderSpawnChance(wanderingTraderSpawnChance: Int) = this.method_18042(wanderingTraderSpawnChance)
 /**
  * method_145
  */
@@ -52,7 +52,7 @@ fun ServerWorldProperties.getThunderTime() = this.method_145()
 /**
  * method_29034
  */
-fun ServerWorldProperties.setTime(arg0: Long) = this.method_29034(arg0)
+fun ServerWorldProperties.setTime(time: Long) = this.method_29034(time)
 /**
  * method_155
  */
@@ -60,27 +60,27 @@ fun ServerWorldProperties.getClearWeatherTime() = this.method_155()
 /**
  * method_29035
  */
-fun ServerWorldProperties.setTimeOfDay(arg0: Long) = this.method_29035(arg0)
+fun ServerWorldProperties.setTimeOfDay(timeOfDay: Long) = this.method_29035(timeOfDay)
 /**
  * method_18041
  */
-fun ServerWorldProperties.setWanderingTraderSpawnDelay(arg0: Int) = this.method_18041(arg0)
+fun ServerWorldProperties.setWanderingTraderSpawnDelay(wanderingTraderSpawnDelay: Int) = this.method_18041(wanderingTraderSpawnDelay)
 /**
  * method_18040
  */
-fun ServerWorldProperties.setWanderingTraderId(arg0: UUID) = this.method_18040(arg0)
+fun ServerWorldProperties.setWanderingTraderId(wanderingTraderId: UUID) = this.method_18040(wanderingTraderId)
 /**
  * method_167
  */
-fun ServerWorldProperties.setClearWeatherTime(arg0: Int) = this.method_167(arg0)
+fun ServerWorldProperties.setClearWeatherTime(clearWeatherTime: Int) = this.method_167(clearWeatherTime)
 /**
  * method_164
  */
-fun ServerWorldProperties.setRainTime(arg0: Int) = this.method_164(arg0)
+fun ServerWorldProperties.setRainTime(rainTime: Int) = this.method_164(rainTime)
 /**
  * method_173
  */
-fun ServerWorldProperties.setThunderTime(arg0: Int) = this.method_173(arg0)
+fun ServerWorldProperties.setThunderTime(thunderTime: Int) = this.method_173(thunderTime)
 /**
  * method_190
  */

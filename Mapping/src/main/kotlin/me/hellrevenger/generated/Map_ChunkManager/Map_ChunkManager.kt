@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12126
  */
-fun ChunkManager.getWorldChunk(arg0: Int, arg1: Int, arg2: Boolean) = this.method_12126(arg0, arg1, arg2)
+fun ChunkManager.getWorldChunk(chunkX: Int, chunkZ: Int, create: Boolean) = this.method_12126(chunkX, chunkZ, create)
 /**
  * method_14151
  */
@@ -16,7 +16,7 @@ fun ChunkManager.getLightingProvider() = this.method_12130()
 /**
  * method_62872
  */
-fun ChunkManager.onSectionStatusChanged(arg0: Int, arg1: Int, arg2: Int, arg3: Boolean) = this.method_62872(arg0, arg1, arg2, arg3)
+fun ChunkManager.onSectionStatusChanged(x: Int, sectionY: Int, z: Int, previouslyEmpty: Boolean) = this.method_62872(x, sectionY, z, previouslyEmpty)
 /**
  * method_12122
  */
@@ -24,24 +24,20 @@ fun ChunkManager.getDebugString() = this.method_12122()
 /**
  * method_12124
  */
-fun ChunkManager.setChunkForced(arg0: ChunkPos, arg1: Boolean) = this.method_12124(arg0, arg1)
-/**
- * method_21730
- */
-fun ChunkManager.getWorldChunk(arg0: Int, arg1: Int) = this.method_21730(arg0, arg1)
+fun ChunkManager.setChunkForced(pos: ChunkPos, forced: Boolean) = this.method_12124(pos, forced)
 /**
  * method_12128
  */
-fun ChunkManager.setMobSpawnOptions(arg0: Boolean) = this.method_12128(arg0)
+fun ChunkManager.setMobSpawnOptions(spawnMonsters: Boolean) = this.method_12128(spawnMonsters)
 /**
  * method_12121
  */
-fun ChunkManager.getChunk(arg0: Int, arg1: Int, arg2: ChunkStatus, arg3: Boolean) = this.method_12121(arg0, arg1, arg2, arg3)
+fun ChunkManager.getChunk(x: Int, z: Int, leastStatus: ChunkStatus, create: Boolean) = this.method_12121(x, z, leastStatus, create)
 /**
  * method_12123
  */
-fun ChunkManager.isChunkLoaded(arg0: Int, arg1: Int) = this.method_12123(arg0, arg1)
+fun ChunkManager.isChunkLoaded(x: Int, z: Int) = this.method_12123(x, z)
 /**
  * method_12127
  */
-fun ChunkManager.tick(arg0: BooleanSupplier, arg1: Boolean) = this.method_12127(arg0, arg1)
+fun ChunkManager.tick(shouldKeepTicking: BooleanSupplier, tickChunks: Boolean) = this.method_12127(shouldKeepTicking, tickChunks)

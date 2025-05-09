@@ -4,11 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11663
  */
-fun <O, S>StateManager<O, S>.getProperty(arg0: String) where S: State<O, S> = this.method_11663(arg0)
-/**
- * method_30040
- */
-fun <O, S, T>KClass<StateManager<O, S>>.addFieldToMapCodec(arg0: MapCodec<S>, arg1: Supplier<S>, arg2: String, arg3: property_Property<T>) where S: State<O, S>, T: Comparable<T> = StateManager.method_30040<S, T>(arg0, arg1, arg2, arg3)
+fun <O, S>StateManager<O, S>.getProperty(name: String) where S: State<O, S> = this.method_11663(name)
 /**
  * method_11660
  */

@@ -32,7 +32,7 @@ fun BreezeEntity.playWhirlSound() = this.method_55747()
 /**
  * method_55013
  */
-fun BreezeEntity.isWithinShortRange(arg0: Vec3d) = this.method_55013(arg0)
+fun BreezeEntity.isWithinShortRange(pos: Vec3d) = this.method_55013(pos)
 /**
  * method_55008
  */
@@ -40,7 +40,7 @@ fun BreezeEntity.addLongJumpingParticles() = this.method_55008()
 /**
  * method_55007
  */
-fun BreezeEntity.addBlockParticles(arg0: Int) = this.method_55007(arg0)
+fun BreezeEntity.addBlockParticles(count: Int) = this.method_55007(count)
 /**
  * method_62822
  */
@@ -53,7 +53,3 @@ fun BreezeEntity.resetLongJumpingParticleAddCount() = this.method_55015()
  * method_56562
  */
 fun BreezeEntity.getHurtBy() = this.method_56562()
-/**
- * method_55014
- */
-fun KClass<BreezeEntity>.createBreezeAttributes() = BreezeEntity.method_55014()

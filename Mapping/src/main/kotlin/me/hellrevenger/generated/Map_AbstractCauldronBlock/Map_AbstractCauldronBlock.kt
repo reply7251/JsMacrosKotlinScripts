@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_32766
  */
-fun AbstractCauldronBlock.isFull(arg0: BlockState) = this.method_32766(arg0)
+fun AbstractCauldronBlock.isFull(state: BlockState) = this.method_32766(state)

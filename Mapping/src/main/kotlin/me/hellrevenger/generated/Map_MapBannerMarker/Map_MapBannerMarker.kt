@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_MapBannerMarker
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_73
- */
-fun KClass<MapBannerMarker>.fromWorldBlock(arg0: BlockView, arg1: BlockPos) = MapBannerMarker.method_73(arg0, arg1)
-/**
  * method_72
  */
 fun MapBannerMarker.getDecorationType() = this.method_72()

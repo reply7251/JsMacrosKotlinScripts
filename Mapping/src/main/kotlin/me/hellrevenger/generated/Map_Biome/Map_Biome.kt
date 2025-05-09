@@ -14,17 +14,13 @@ val Biome.generationSettings by alias(Biome::field_26635)
  */
 val Biome.spawnSettings by alias(Biome::field_26395)
 /**
- * field_9324
- */
-val KClass<Biome>.FOLIAGE_NOISE by aliasStatic(Biome::field_9324)
-/**
  * method_24935
  */
 fun Biome.getLoopSound() = this.method_24935()
 /**
  * method_48162
  */
-fun Biome.getPrecipitation(arg0: BlockPos, arg1: Int) = this.method_48162(arg0, arg1)
+fun Biome.getPrecipitation(pos: BlockPos, seaLevel: Int) = this.method_48162(pos, seaLevel)
 /**
  * method_8698
  */
@@ -36,7 +32,7 @@ fun Biome.hasPrecipitation() = this.method_48163()
 /**
  * method_8696
  */
-fun Biome.canSetSnow(arg0: WorldView, arg1: BlockPos) = this.method_8696(arg0, arg1)
+fun Biome.canSetSnow(world: WorldView, pos: BlockPos) = this.method_8696(world, pos)
 /**
  * method_24936
  */
@@ -52,7 +48,7 @@ fun Biome.getSkyColor() = this.method_8697()
 /**
  * method_39928
  */
-fun Biome.shouldGenerateLowerFrozenOceanSurface(arg0: BlockPos, arg1: Int) = this.method_39928(arg0, arg1)
+fun Biome.shouldGenerateLowerFrozenOceanSurface(pos: BlockPos, seaLevel: Int) = this.method_39928(pos, seaLevel)
 /**
  * method_8711
  */
@@ -64,7 +60,7 @@ fun Biome.getEffects() = this.method_24377()
 /**
  * method_33599
  */
-fun Biome.isCold(arg0: BlockPos, arg1: Int) = this.method_33599(arg0, arg1)
+fun Biome.isCold(pos: BlockPos, seaLevel: Int) = this.method_33599(pos, seaLevel)
 /**
  * method_24376
  */
@@ -80,11 +76,11 @@ fun Biome.getMusicVolume() = this.method_65133()
 /**
  * method_8685
  */
-fun Biome.canSetIce(arg0: WorldView, arg1: BlockPos, arg2: Boolean) = this.method_8685(arg0, arg1, arg2)
+fun Biome.canSetIce(world: WorldView, pos: BlockPos, doWaterCheck: Boolean) = this.method_8685(world, pos, doWaterCheck)
 /**
  * method_39927
  */
-fun Biome.doesNotSnow(arg0: BlockPos, arg1: Int) = this.method_39927(arg0, arg1)
+fun Biome.doesNotSnow(pos: BlockPos, seaLevel: Int) = this.method_39927(pos, seaLevel)
 /**
  * method_8713
  */
@@ -93,10 +89,6 @@ fun Biome.getWaterFogColor() = this.method_8713()
  * method_24378
  */
 fun Biome.getParticleConfig() = this.method_24378()
-/**
- * method_8705
- */
-fun Biome.canSetIce(arg0: WorldView, arg1: BlockPos) = this.method_8705(arg0, arg1)
 /**
  * method_8687
  */

@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_FurnaceRecipeDisplay
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_54660
- */
-val KClass<FurnaceRecipeDisplay>.SERIALIZER by aliasStatic(FurnaceRecipeDisplay::field_54660)
-/**
  * comp_3295
  */
 fun FurnaceRecipeDisplay.duration() = this.comp_3295()

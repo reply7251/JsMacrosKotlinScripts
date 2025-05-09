@@ -4,8 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62063
  */
-fun BellBlockModel.update(arg0: BellBlockEntity, arg1: Float) = this.method_62063(arg0, arg1)
-/**
- * method_62064
- */
-fun KClass<BellBlockModel>.getTexturedModelData() = BellBlockModel.method_62064()
+fun BellBlockModel.update(blockEntity: BellBlockEntity, tickDelta: Float) = this.method_62063(blockEntity, tickDelta)

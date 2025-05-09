@@ -16,7 +16,7 @@ fun DebugHud.shouldRenderTickCharts() = this.method_56829()
 /**
  * method_53534
  */
-fun DebugHud.pushToFrameLog(arg0: Long) = this.method_53534(arg0)
+fun DebugHud.pushToFrameLog(value: Long) = this.method_53534(value)
 /**
  * method_53543
  */
@@ -40,11 +40,11 @@ fun DebugHud.getTickNanosLog() = this.method_56577()
 /**
  * method_1846
  */
-fun DebugHud.render(arg0: DrawContext) = this.method_1846(arg0)
+fun DebugHud.render(context: DrawContext) = this.method_1846(context)
 /**
  * method_56828
  */
-fun DebugHud.set(arg0: LongArray, arg1: DebugSampleType) = this.method_56828(arg0, arg1)
+fun DebugHud.set(values: LongArray, type: DebugSampleType) = this.method_56828(values, type)
 /**
  * method_53536
  */

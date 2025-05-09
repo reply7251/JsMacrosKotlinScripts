@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_32093
  */
-fun ModelCuboidData.createCuboid(arg0: Int, arg1: Int) = this.method_32093(arg0, arg1)
+fun ModelCuboidData.createCuboid(textureWidth: Int, textureHeight: Int) = this.method_32093(textureWidth, textureHeight)

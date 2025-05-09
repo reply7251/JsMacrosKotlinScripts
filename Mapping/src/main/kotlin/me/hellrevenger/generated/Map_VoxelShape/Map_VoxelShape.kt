@@ -8,15 +8,15 @@ fun VoxelShape.simplify() = this.method_1097()
 /**
  * method_1108
  */
-fun VoxelShape.calculateMaxDistance(arg0: net.minecraft.class_2350.class_2351, arg1: Box, arg2: Double) = this.method_1108(arg0, arg1, arg2)
+fun VoxelShape.calculateMaxDistance(axis: net.minecraft.class_2350.class_2351, box: Box, maxDist: Double) = this.method_1108(axis, box, maxDist)
 /**
  * method_20538
  */
-fun VoxelShape.getFace(arg0: Direction) = this.method_20538(arg0)
+fun VoxelShape.getFace(facing: Direction) = this.method_20538(facing)
 /**
  * method_1105
  */
-fun VoxelShape.getMax(arg0: net.minecraft.class_2350.class_2351) = this.method_1105(arg0)
+fun VoxelShape.getMax(axis: net.minecraft.class_2350.class_2351) = this.method_1105(axis)
 /**
  * method_1090
  */
@@ -24,15 +24,15 @@ fun VoxelShape.getBoundingBoxes() = this.method_1090()
 /**
  * method_64034
  */
-fun VoxelShape.offset(arg0: Vec3d) = this.method_64034(arg0)
+fun VoxelShape.offset(vec3d: Vec3d) = this.method_64034(vec3d)
 /**
  * method_1089
  */
-fun VoxelShape.forEachBox(arg0: net.minecraft.class_259.class_260) = this.method_1089(arg0)
+fun VoxelShape.forEachBox(consumer: net.minecraft.class_259.class_260) = this.method_1089(consumer)
 /**
  * method_1092
  */
-fun VoxelShape.raycast(arg0: Vec3d, arg1: Vec3d, arg2: BlockPos) = this.method_1092(arg0, arg1, arg2)
+fun VoxelShape.raycast(start: Vec3d, end: Vec3d, pos: BlockPos) = this.method_1092(start, end, pos)
 /**
  * method_52620
  */
@@ -40,15 +40,15 @@ fun VoxelShape.asCuboid() = this.method_52620()
 /**
  * method_1104
  */
-fun VoxelShape.forEachEdge(arg0: net.minecraft.class_259.class_260) = this.method_1104(arg0)
+fun VoxelShape.forEachEdge(consumer: net.minecraft.class_259.class_260) = this.method_1104(consumer)
 /**
  * method_1102
  */
-fun VoxelShape.getEndingCoord(arg0: net.minecraft.class_2350.class_2351, arg1: Double, arg2: Double) = this.method_1102(arg0, arg1, arg2)
+fun VoxelShape.getEndingCoord(axis: net.minecraft.class_2350.class_2351, from: Double, arg2: Double) = this.method_1102(axis, from, arg2)
 /**
  * method_1109
  */
-fun VoxelShape.getPointPositions(arg0: net.minecraft.class_2350.class_2351) = this.method_1109(arg0)
+fun VoxelShape.getPointPositions(axis: net.minecraft.class_2350.class_2351) = this.method_1109(axis)
 /**
  * method_1110
  */
@@ -60,16 +60,12 @@ fun VoxelShape.getBoundingBox() = this.method_1107()
 /**
  * method_1091
  */
-fun VoxelShape.getMin(arg0: net.minecraft.class_2350.class_2351) = this.method_1091(arg0)
-/**
- * method_1096
- */
-fun VoxelShape.offset(arg0: Double, arg1: Double, arg2: Double) = this.method_1096(arg0, arg1, arg2)
+fun VoxelShape.getMin(axis: net.minecraft.class_2350.class_2351) = this.method_1091(axis)
 /**
  * method_35593
  */
-fun VoxelShape.getStartingCoord(arg0: net.minecraft.class_2350.class_2351, arg1: Double, arg2: Double) = this.method_35593(arg0, arg1, arg2)
+fun VoxelShape.getStartingCoord(axis: net.minecraft.class_2350.class_2351, from: Double, arg2: Double) = this.method_35593(axis, from, arg2)
 /**
  * method_33661
  */
-fun VoxelShape.getClosestPointTo(arg0: Vec3d) = this.method_33661(arg0)
+fun VoxelShape.getClosestPointTo(target: Vec3d) = this.method_33661(target)

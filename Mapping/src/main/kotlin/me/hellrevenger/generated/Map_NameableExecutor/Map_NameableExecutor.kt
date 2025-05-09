@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_64116
  */
-fun NameableExecutor.named(arg0: String) = this.method_64116(arg0)
+fun NameableExecutor.named(name: String) = this.method_64116(name)
 /**
  * method_64114
  */
-fun NameableExecutor.shutdown(arg0: Long, arg1: TimeUnit) = this.method_64114(arg0, arg1)
+fun NameableExecutor.shutdown(time: Long, arg1: TimeUnit) = this.method_64114(time, arg1)
 /**
  * comp_3205
  */

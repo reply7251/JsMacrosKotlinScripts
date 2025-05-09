@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_StructureGenerationSample
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_65114
- */
-fun KClass<StructureGenerationSample>.fromEvent(arg0: RecordedEvent) = StructureGenerationSample.method_65114(arg0)
-/**
  * comp_3334
  */
 fun StructureGenerationSample.success() = this.comp_3334()

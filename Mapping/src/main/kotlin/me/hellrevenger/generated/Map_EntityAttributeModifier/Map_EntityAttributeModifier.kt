@@ -12,11 +12,7 @@ fun EntityAttributeModifier.value() = this.comp_2449()
 /**
  * method_60718
  */
-fun EntityAttributeModifier.idMatches(arg0: Identifier) = this.method_60718(arg0)
-/**
- * method_26859
- */
-fun KClass<EntityAttributeModifier>.fromNbt(arg0: NbtCompound) = EntityAttributeModifier.method_26859(arg0)
+fun EntityAttributeModifier.idMatches(id: Identifier) = this.method_60718(id)
 /**
  * comp_2447
  */

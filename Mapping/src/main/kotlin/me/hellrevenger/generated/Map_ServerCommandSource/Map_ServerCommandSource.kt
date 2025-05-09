@@ -2,37 +2,29 @@ package me.hellrevenger.generated.Map_ServerCommandSource
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_9824
- */
-val KClass<ServerCommandSource>.REQUIRES_PLAYER_EXCEPTION by aliasStatic(ServerCommandSource::field_9824)
-/**
- * field_9827
- */
-val KClass<ServerCommandSource>.REQUIRES_ENTITY_EXCEPTION by aliasStatic(ServerCommandSource::field_9827)
-/**
  * method_9207
  */
 fun ServerCommandSource.getPlayerOrThrow() = this.method_9207()
 /**
  * method_9232
  */
-fun ServerCommandSource.withEntity(arg0: Entity) = this.method_9232(arg0)
+fun ServerCommandSource.withEntity(entity: Entity) = this.method_9232(entity)
 /**
  * method_9227
  */
-fun ServerCommandSource.withWorld(arg0: ServerWorld) = this.method_9227(arg0)
+fun ServerCommandSource.withWorld(world: ServerWorld) = this.method_9227(world)
 /**
  * method_9216
  */
-fun ServerCommandSource.withRotation(arg0: Vec2f) = this.method_9216(arg0)
+fun ServerCommandSource.withRotation(rotation: Vec2f) = this.method_9216(rotation)
 /**
  * method_9208
  */
-fun ServerCommandSource.withPosition(arg0: Vec3d) = this.method_9208(arg0)
+fun ServerCommandSource.withPosition(position: Vec3d) = this.method_9208(position)
 /**
  * method_45068
  */
-fun ServerCommandSource.sendMessage(arg0: Text) = this.method_45068(arg0)
+fun ServerCommandSource.sendMessage(message: Text) = this.method_45068(message)
 /**
  * method_9223
  */
@@ -44,15 +36,15 @@ fun ServerCommandSource.getRotation() = this.method_9210()
 /**
  * method_36321
  */
-fun ServerCommandSource.withOutput(arg0: CommandOutput) = this.method_36321(arg0)
+fun ServerCommandSource.withOutput(output: CommandOutput) = this.method_36321(output)
 /**
  * method_9226
  */
-fun ServerCommandSource.sendFeedback(arg0: Supplier<Text>, arg1: Boolean) = this.method_9226(arg0, arg1)
+fun ServerCommandSource.sendFeedback(feedbackSupplier: Supplier<Text>, broadcastToOps: Boolean) = this.method_9226(feedbackSupplier, broadcastToOps)
 /**
  * method_9209
  */
-fun ServerCommandSource.mergeReturnValueConsumers(arg0: ReturnValueConsumer, arg1: BinaryOperator<ReturnValueConsumer>) = this.method_9209(arg0, arg1)
+fun ServerCommandSource.mergeReturnValueConsumers(returnValueConsumer: ReturnValueConsumer, merger: BinaryOperator<ReturnValueConsumer>) = this.method_9209(returnValueConsumer, merger)
 /**
  * method_9217
  */
@@ -64,11 +56,11 @@ fun ServerCommandSource.isExecutedByPlayer() = this.method_43737()
 /**
  * method_43735
  */
-fun ServerCommandSource.withSignedArguments(arg0: SignedCommandArguments, arg1: FutureQueue) = this.method_43735(arg0, arg1)
+fun ServerCommandSource.withSignedArguments(signedArguments: SignedCommandArguments, messageChainTaskQueue: FutureQueue) = this.method_43735(signedArguments, messageChainTaskQueue)
 /**
  * method_9218
  */
-fun ServerCommandSource.withEntityAnchor(arg0: net.minecraft.class_2183.class_2184) = this.method_9218(arg0)
+fun ServerCommandSource.withEntityAnchor(anchor: net.minecraft.class_2183.class_2184) = this.method_9218(anchor)
 /**
  * method_9229
  */
@@ -80,19 +72,19 @@ fun ServerCommandSource.getPlayer() = this.method_44023()
 /**
  * method_9206
  */
-fun ServerCommandSource.withLevel(arg0: Int) = this.method_9206(arg0)
+fun ServerCommandSource.withLevel(level: Int) = this.method_9206(level)
 /**
  * method_45067
  */
-fun ServerCommandSource.shouldFilterText(arg0: ServerPlayerEntity) = this.method_45067(arg0)
+fun ServerCommandSource.shouldFilterText(recipient: ServerPlayerEntity) = this.method_45067(recipient)
 /**
  * method_9230
  */
-fun ServerCommandSource.withMaxLevel(arg0: Int) = this.method_9230(arg0)
+fun ServerCommandSource.withMaxLevel(level: Int) = this.method_9230(level)
 /**
  * method_9220
  */
-fun ServerCommandSource.withLookingAt(arg0: Entity, arg1: net.minecraft.class_2183.class_2184) = this.method_9220(arg0, arg1)
+fun ServerCommandSource.withLookingAt(entity: Entity, anchor: net.minecraft.class_2183.class_2184) = this.method_9220(entity, anchor)
 /**
  * method_9225
  */
@@ -120,7 +112,7 @@ fun ServerCommandSource.getServer() = this.method_9211()
 /**
  * method_9213
  */
-fun ServerCommandSource.sendError(arg0: Text) = this.method_9213(arg0)
+fun ServerCommandSource.sendError(message: Text) = this.method_9213(message)
 /**
  * method_9222
  */
@@ -132,11 +124,7 @@ fun ServerCommandSource.getSignedArguments() = this.method_43738()
 /**
  * method_44749
  */
-fun ServerCommandSource.sendChatMessage(arg0: SentMessage, arg1: Boolean, arg2: net.minecraft.class_2556.class_7602) = this.method_44749(arg0, arg1, arg2)
-/**
- * method_9221
- */
-fun ServerCommandSource.withLookingAt(arg0: Vec3d) = this.method_9221(arg0)
+fun ServerCommandSource.sendChatMessage(message: SentMessage, filterMaskEnabled: Boolean, params: net.minecraft.class_2556.class_7602) = this.method_44749(message, filterMaskEnabled, params)
 /**
  * method_9219
  */

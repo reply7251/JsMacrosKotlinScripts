@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_38865
  */
-fun CarvingMask.set(arg0: Int, arg1: Int, arg2: Int) = this.method_38865(arg0, arg1, arg2)
+fun CarvingMask.set(offsetX: Int, y: Int, offsetZ: Int) = this.method_38865(offsetX, y, offsetZ)
 /**
  * method_38868
  */
-fun CarvingMask.get(arg0: Int, arg1: Int, arg2: Int) = this.method_38868(arg0, arg1, arg2)
+fun CarvingMask.get(offsetX: Int, y: Int, offsetZ: Int) = this.method_38868(offsetX, y, offsetZ)
 /**
  * method_39785
  */
-fun CarvingMask.setMaskPredicate(arg0: net.minecraft.class_6643.class_6828) = this.method_39785(arg0)
+fun CarvingMask.setMaskPredicate(maskPredicate: net.minecraft.class_6643.class_6828) = this.method_39785(maskPredicate)
 /**
  * method_38864
  */
@@ -20,4 +20,4 @@ fun CarvingMask.getMask() = this.method_38864()
 /**
  * method_38866
  */
-fun CarvingMask.streamBlockPos(arg0: ChunkPos) = this.method_38866(arg0)
+fun CarvingMask.streamBlockPos(chunkPos: ChunkPos) = this.method_38866(chunkPos)

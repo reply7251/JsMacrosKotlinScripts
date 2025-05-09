@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun ConnectedClientData.syncedOptions() = this.comp_1961()
 /**
- * method_53824
- */
-fun KClass<ConnectedClientData>.createDefault(arg0: GameProfile, arg1: Boolean) = ConnectedClientData.method_53824(arg0, arg1)
-/**
  * comp_1959
  */
 fun ConnectedClientData.gameProfile() = this.comp_1959()

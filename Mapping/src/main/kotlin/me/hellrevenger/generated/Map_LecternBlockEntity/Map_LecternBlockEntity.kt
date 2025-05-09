@@ -4,15 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_17514
  */
-fun LecternBlockEntity.setBook(arg0: ItemStack, arg1: PlayerEntity) = this.method_17514(arg0, arg1)
+fun LecternBlockEntity.setBook(book: ItemStack, player: PlayerEntity) = this.method_17514(book, player)
 /**
  * method_17522
  */
 fun LecternBlockEntity.hasBook() = this.method_17522()
-/**
- * method_17513
- */
-fun LecternBlockEntity.setBook(arg0: ItemStack) = this.method_17513(arg0)
 /**
  * method_17523
  */

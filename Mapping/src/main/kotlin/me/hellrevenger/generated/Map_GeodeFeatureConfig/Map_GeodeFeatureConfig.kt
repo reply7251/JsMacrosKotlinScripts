@@ -42,10 +42,6 @@ val GeodeFeatureConfig.maxGenOffset by alias(GeodeFeatureConfig::field_27329)
  */
 val GeodeFeatureConfig.invalidBlocksThreshold by alias(GeodeFeatureConfig::field_29062)
 /**
- * field_27314
- */
-val KClass<GeodeFeatureConfig>.RANGE by aliasStatic(GeodeFeatureConfig::field_27314)
-/**
  * field_27317
  */
 val GeodeFeatureConfig.layerThicknessConfig by alias(GeodeFeatureConfig::field_27317)

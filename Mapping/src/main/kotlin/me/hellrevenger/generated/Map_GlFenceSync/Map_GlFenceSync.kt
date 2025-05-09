@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_64324
  */
-fun GlFenceSync.wait(arg0: Long) = this.method_64324(arg0)
+fun GlFenceSync.wait(timeoutNanos: Long) = this.method_64324(timeoutNanos)

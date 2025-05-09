@@ -2,18 +2,10 @@ package me.hellrevenger.generated.Map_BoggedEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_49240
- */
-val KClass<BoggedEntity>.SHEARED_KEY by aliasStatic(BoggedEntity::field_49240)
-/**
  * method_57310
  */
-fun BoggedEntity.setSheared(arg0: Boolean) = this.method_57310(arg0)
+fun BoggedEntity.setSheared(sheared: Boolean) = this.method_57310(sheared)
 /**
  * method_57308
  */
 fun BoggedEntity.isSheared() = this.method_57308()
-/**
- * method_57080
- */
-fun KClass<BoggedEntity>.createBoggedAttributes() = BoggedEntity.method_57080()

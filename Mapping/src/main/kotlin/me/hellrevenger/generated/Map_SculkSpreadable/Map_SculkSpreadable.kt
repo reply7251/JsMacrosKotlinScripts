@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_41468
  */
-fun SculkSpreadable.spreadAtSamePosition(arg0: WorldAccess, arg1: BlockState, arg2: BlockPos, arg3: Random) = this.method_41468(arg0, arg1, arg2, arg3)
+fun SculkSpreadable.spreadAtSamePosition(world: WorldAccess, state: BlockState, pos: BlockPos, random: Random) = this.method_41468(world, state, pos, random)
 /**
  * method_41472
  */
@@ -16,12 +16,8 @@ fun SculkSpreadable.getUpdate() = this.method_41467()
 /**
  * method_41471
  */
-fun SculkSpreadable.spread(arg0: net.minecraft.class_7128.class_7129, arg1: WorldAccess, arg2: BlockPos, arg3: Random, arg4: SculkSpreadManager, arg5: Boolean) = this.method_41471(arg0, arg1, arg2, arg3, arg4, arg5)
+fun SculkSpreadable.spread(cursor: net.minecraft.class_7128.class_7129, world: WorldAccess, catalystPos: BlockPos, random: Random, spreadManager: SculkSpreadManager, shouldConvertToBlock: Boolean) = this.method_41471(cursor, world, catalystPos, random, spreadManager, shouldConvertToBlock)
 /**
  * method_41473
  */
-fun SculkSpreadable.getDecay(arg0: Int) = this.method_41473(arg0)
-/**
- * method_41469
- */
-fun SculkSpreadable.spread(arg0: WorldAccess, arg1: BlockPos, arg2: BlockState, arg3: Collection<Direction>, arg4: Boolean) = this.method_41469(arg0, arg1, arg2, arg3, arg4)
+fun SculkSpreadable.getDecay(oldDecay: Int) = this.method_41473(oldDecay)

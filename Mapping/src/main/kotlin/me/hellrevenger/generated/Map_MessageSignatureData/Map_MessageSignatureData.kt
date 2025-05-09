@@ -2,17 +2,13 @@ package me.hellrevenger.generated.Map_MessageSignatureData
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_40683
- */
-val KClass<MessageSignatureData>.SIZE by aliasStatic(MessageSignatureData::field_40683)
-/**
  * method_46277
  */
-fun MessageSignatureData.pack(arg0: MessageSignatureStorage) = this.method_46277(arg0)
+fun MessageSignatureData.pack(storage: MessageSignatureStorage) = this.method_46277(storage)
 /**
  * method_44843
  */
-fun MessageSignatureData.verify(arg0: SignatureVerifier, arg1: SignatureUpdatable) = this.method_44843(arg0, arg1)
+fun MessageSignatureData.verify(verifier: SignatureVerifier, updatable: SignatureUpdatable) = this.method_44843(verifier, updatable)
 /**
  * method_44994
  */
@@ -21,11 +17,3 @@ fun MessageSignatureData.toByteBuffer() = this.method_44994()
  * comp_925
  */
 fun MessageSignatureData.data() = this.comp_925()
-/**
- * method_44845
- */
-fun KClass<MessageSignatureData>.write(arg0: PacketByteBuf, arg1: MessageSignatureData) = MessageSignatureData.method_44845(arg0, arg1)
-/**
- * method_46276
- */
-fun KClass<MessageSignatureData>.fromBuf(arg0: PacketByteBuf) = MessageSignatureData.method_46276(arg0)

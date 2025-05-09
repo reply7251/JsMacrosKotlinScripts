@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_2803
  */
-fun ModelWithArms.setArmAngle(arg0: Arm, arg1: MatrixStack) = this.method_2803(arg0, arg1)
+fun ModelWithArms.setArmAngle(arm: Arm, matrices: MatrixStack) = this.method_2803(arm, matrices)

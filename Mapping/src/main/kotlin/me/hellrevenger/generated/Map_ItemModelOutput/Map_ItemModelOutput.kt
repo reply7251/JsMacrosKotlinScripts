@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_65460
  */
-fun ItemModelOutput.accept(arg0: Item, arg1: net.minecraft.class_10439.class_10441) = this.method_65460(arg0, arg1)
+fun ItemModelOutput.accept(item: Item, model: net.minecraft.class_10439.class_10441) = this.method_65460(item, model)
 /**
  * method_65459
  */
-fun ItemModelOutput.acceptAlias(arg0: Item, arg1: Item) = this.method_65459(arg0, arg1)
+fun ItemModelOutput.acceptAlias(base: Item, alias: Item) = this.method_65459(base, alias)

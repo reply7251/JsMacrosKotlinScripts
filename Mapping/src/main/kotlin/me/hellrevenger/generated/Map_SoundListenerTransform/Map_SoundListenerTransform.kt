@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_SoundListenerTransform
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_47671
- */
-val KClass<SoundListenerTransform>.DEFAULT by aliasStatic(SoundListenerTransform::field_47671)
-/**
  * method_55586
  */
 fun SoundListenerTransform.right() = this.method_55586()

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_12666
  */
-fun ClientPingResultPacketListener.onPingResult(arg0: PingResultS2CPacket) = this.method_12666(arg0)
+fun ClientPingResultPacketListener.onPingResult(packet: PingResultS2CPacket) = this.method_12666(packet)

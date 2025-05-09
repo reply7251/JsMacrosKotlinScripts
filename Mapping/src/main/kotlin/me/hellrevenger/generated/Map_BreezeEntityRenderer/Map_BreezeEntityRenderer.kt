@@ -14,10 +14,6 @@ fun BreezeEntityRenderer.getTexture(arg0: BreezeEntityRenderState) = this.method
  */
 fun BreezeEntityRenderer.createRenderState() = this.method_62390()
 /**
- * method_55830
- */
-fun KClass<BreezeEntityRenderer>.updatePartVisibility(arg0: BreezeEntityModel, arg1: Array<ModelPart>) = BreezeEntityRenderer.method_55830(arg0, *arg1)
-/**
  * method_62391
  */
 fun BreezeEntityRenderer.updateRenderState(arg0: BreezeEntity, arg1: BreezeEntityRenderState, arg2: Float) = this.method_62391(arg0, arg1, arg2)

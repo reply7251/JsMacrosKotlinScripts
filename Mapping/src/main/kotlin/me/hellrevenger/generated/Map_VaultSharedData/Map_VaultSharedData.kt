@@ -8,7 +8,7 @@ fun VaultSharedData.getDisplayItem() = this.method_56787()
 /**
  * method_56790
  */
-fun VaultSharedData.setDisplayItem(arg0: ItemStack) = this.method_56790(arg0)
+fun VaultSharedData.setDisplayItem(stack: ItemStack) = this.method_56790(stack)
 /**
  * method_56793
  */

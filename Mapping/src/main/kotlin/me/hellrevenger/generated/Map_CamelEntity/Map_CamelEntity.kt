@@ -10,10 +10,6 @@ val CamelEntity.standingTransitionAnimationState by alias(CamelEntity::field_401
  */
 val CamelEntity.dashingAnimationState by alias(CamelEntity::field_40145)
 /**
- * field_40139
- */
-val KClass<CamelEntity>.DASHING by aliasStatic(CamelEntity::field_40139)
-/**
  * field_40144
  */
 val CamelEntity.idlingAnimationState by alias(CamelEntity::field_40144)
@@ -25,10 +21,6 @@ val CamelEntity.sittingTransitionAnimationState by alias(CamelEntity::field_4014
  * field_40734
  */
 val CamelEntity.sittingAnimationState by alias(CamelEntity::field_40734)
-/**
- * field_40140
- */
-val KClass<CamelEntity>.LAST_POSE_TICK by aliasStatic(CamelEntity::field_40140)
 /**
  * method_45347
  */
@@ -56,15 +48,11 @@ fun CamelEntity.canChangePose() = this.method_52548()
 /**
  * method_45362
  */
-fun CamelEntity.setDashing(arg0: Boolean) = this.method_45362(arg0)
+fun CamelEntity.setDashing(dashing: Boolean) = this.method_45362(dashing)
 /**
  * method_45350
  */
 fun CamelEntity.isSitting() = this.method_45350()
-/**
- * method_45360
- */
-fun KClass<CamelEntity>.createCamelAttributes() = CamelEntity.method_45360()
 /**
  * method_48573
  */
@@ -84,4 +72,4 @@ fun CamelEntity.getLastPoseTickDelta() = this.method_45355()
 /**
  * method_45344
  */
-fun CamelEntity.setLastPoseTick(arg0: Long) = this.method_45344(arg0)
+fun CamelEntity.setLastPoseTick(lastPoseTick: Long) = this.method_45344(lastPoseTick)

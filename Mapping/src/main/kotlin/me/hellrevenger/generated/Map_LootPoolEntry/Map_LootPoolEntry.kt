@@ -8,4 +8,4 @@ fun LootPoolEntry.getType() = this.method_29318()
 /**
  * method_415
  */
-fun LootPoolEntry.validate(arg0: LootTableReporter) = this.method_415(arg0)
+fun LootPoolEntry.validate(reporter: LootTableReporter) = this.method_415(reporter)

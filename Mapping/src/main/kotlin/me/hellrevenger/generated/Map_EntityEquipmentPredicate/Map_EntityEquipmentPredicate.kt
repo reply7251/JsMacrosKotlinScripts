@@ -2,13 +2,9 @@ package me.hellrevenger.generated.Map_EntityEquipmentPredicate
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_58057
- */
-fun KClass<EntityEquipmentPredicate>.ominousBannerOnHead(arg0: RegistryEntryLookup<Item>, arg1: RegistryEntryLookup<BannerPattern>) = EntityEquipmentPredicate.method_58057(arg0, arg1)
-/**
  * method_16226
  */
-fun EntityEquipmentPredicate.test(arg0: Entity) = this.method_16226(arg0)
+fun EntityEquipmentPredicate.test(entity: Entity) = this.method_16226(entity)
 /**
  * comp_2620
  */

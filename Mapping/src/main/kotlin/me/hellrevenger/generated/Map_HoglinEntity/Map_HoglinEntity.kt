@@ -2,21 +2,9 @@ package me.hellrevenger.generated.Map_HoglinEntity
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_30532
- */
-val KClass<HoglinEntity>.CONVERSION_TIME by aliasStatic(HoglinEntity::field_30532)
-/**
  * method_63662
  */
-fun HoglinEntity.setTimeInOverworld(arg0: Int) = this.method_63662(arg0)
-/**
- * method_26943
- */
-fun KClass<HoglinEntity>.createHoglinAttributes() = HoglinEntity.method_26943()
-/**
- * method_24349
- */
-fun KClass<HoglinEntity>.canSpawn(arg0: EntityType<HoglinEntity>, arg1: WorldAccess, arg2: SpawnReason, arg3: BlockPos, arg4: Random) = HoglinEntity.method_24349(arg0, arg1, arg2, arg3, arg4)
+fun HoglinEntity.setTimeInOverworld(timeInOverworld: Int) = this.method_63662(timeInOverworld)
 /**
  * method_26945
  */
@@ -28,7 +16,7 @@ fun HoglinEntity.canConvert() = this.method_26944()
 /**
  * method_26948
  */
-fun HoglinEntity.setImmuneToZombification(arg0: Boolean) = this.method_26948(arg0)
+fun HoglinEntity.setImmuneToZombification(immuneToZombification: Boolean) = this.method_26948(immuneToZombification)
 /**
  * method_24658
  */

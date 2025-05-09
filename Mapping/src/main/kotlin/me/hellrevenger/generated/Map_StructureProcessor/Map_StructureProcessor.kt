@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_15110
  */
-fun StructureProcessor.process(arg0: WorldView, arg1: BlockPos, arg2: BlockPos, arg3: net.minecraft.class_3499.class_3501, arg4: net.minecraft.class_3499.class_3501, arg5: StructurePlacementData) = this.method_15110(arg0, arg1, arg2, arg3, arg4, arg5)
+fun StructureProcessor.process(world: WorldView, pos: BlockPos, pivot: BlockPos, originalBlockInfo: net.minecraft.class_3499.class_3501, currentBlockInfo: net.minecraft.class_3499.class_3501, data: StructurePlacementData) = this.method_15110(world, pos, pivot, originalBlockInfo, currentBlockInfo, data)
 /**
  * method_49887
  */
-fun StructureProcessor.reprocess(arg0: ServerWorldAccess, arg1: BlockPos, arg2: BlockPos, arg3: MutableList<net.minecraft.class_3499.class_3501>, arg4: MutableList<net.minecraft.class_3499.class_3501>, arg5: StructurePlacementData) = this.method_49887(arg0, arg1, arg2, arg3, arg4, arg5)
+fun StructureProcessor.reprocess(world: ServerWorldAccess, pos: BlockPos, pivot: BlockPos, originalBlockInfos: MutableList<net.minecraft.class_3499.class_3501>, currentBlockInfos: MutableList<net.minecraft.class_3499.class_3501>, data: StructurePlacementData) = this.method_49887(world, pos, pivot, originalBlockInfos, currentBlockInfos, data)

@@ -2,14 +2,6 @@ package me.hellrevenger.generated.Map_AbstractChunkHolder
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_51867
- */
-val KClass<AbstractChunkHolder>.UNLOADED_FUTURE by aliasStatic(AbstractChunkHolder::field_51867)
-/**
- * field_51866
- */
-val KClass<AbstractChunkHolder>.UNLOADED by aliasStatic(AbstractChunkHolder::field_51866)
-/**
  * method_60475
  */
 fun AbstractChunkHolder.enumerateFutures() = this.method_60475()
@@ -28,11 +20,11 @@ fun AbstractChunkHolder.getPos() = this.method_60473()
 /**
  * method_60457
  */
-fun AbstractChunkHolder.getUncheckedOrNull(arg0: ChunkStatus) = this.method_60457(arg0)
+fun AbstractChunkHolder.getUncheckedOrNull(requestedStatus: ChunkStatus) = this.method_60457(requestedStatus)
 /**
  * method_60463
  */
-fun AbstractChunkHolder.getOrNull(arg0: ChunkStatus) = this.method_60463(arg0)
+fun AbstractChunkHolder.getOrNull(requestedStatus: ChunkStatus) = this.method_60463(requestedStatus)
 /**
  * method_60469
  */
@@ -40,7 +32,7 @@ fun AbstractChunkHolder.decrementRefCount() = this.method_60469()
 /**
  * method_60456
  */
-fun AbstractChunkHolder.replaceWith(arg0: WrapperProtoChunk) = this.method_60456(arg0)
+fun AbstractChunkHolder.replaceWith(chunk: WrapperProtoChunk) = this.method_60456(chunk)
 /**
  * method_17208
  */
@@ -56,7 +48,7 @@ fun AbstractChunkHolder.getLevel() = this.method_14005()
 /**
  * method_60458
  */
-fun AbstractChunkHolder.load(arg0: ChunkStatus, arg1: ServerChunkLoadingManager) = this.method_60458(arg0, arg1)
+fun AbstractChunkHolder.load(requestedStatus: ChunkStatus, chunkLoadingManager: ServerChunkLoadingManager) = this.method_60458(requestedStatus, chunkLoadingManager)
 /**
  * method_60474
  */

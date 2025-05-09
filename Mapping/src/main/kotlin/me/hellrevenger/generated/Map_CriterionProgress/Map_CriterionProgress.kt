@@ -6,13 +6,9 @@ import me.hellrevenger.generated.*
  */
 fun CriterionProgress.isObtained() = this.method_784()
 /**
- * method_785
- */
-fun KClass<CriterionProgress>.fromPacket(arg0: PacketByteBuf) = CriterionProgress.method_785(arg0)
-/**
  * method_787
  */
-fun CriterionProgress.toPacket(arg0: PacketByteBuf) = this.method_787(arg0)
+fun CriterionProgress.toPacket(buf: PacketByteBuf) = this.method_787(buf)
 /**
  * method_790
  */

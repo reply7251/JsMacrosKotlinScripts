@@ -18,10 +18,6 @@ var WorldTemplatePaginatedList.size by alias(WorldTemplatePaginatedList::field_2
  */
 var WorldTemplatePaginatedList.page by alias(WorldTemplatePaginatedList::field_22677)
 /**
- * method_25097
- */
-fun KClass<WorldTemplatePaginatedList>.parse(arg0: String) = WorldTemplatePaginatedList.method_25097(arg0)
-/**
  * method_35688
  */
 fun WorldTemplatePaginatedList.isLastPage() = this.method_35688()

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8803
  */
-fun ChanneledLightningCriterion.trigger(arg0: ServerPlayerEntity, arg1: Collection<out Entity>) = this.method_8803(arg0, arg1)
+fun ChanneledLightningCriterion.trigger(player: ServerPlayerEntity, victims: Collection<out Entity>) = this.method_8803(player, victims)

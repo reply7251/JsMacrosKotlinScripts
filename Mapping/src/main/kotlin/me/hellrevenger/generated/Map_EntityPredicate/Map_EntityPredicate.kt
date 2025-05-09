@@ -2,25 +2,13 @@ package me.hellrevenger.generated.Map_EntityPredicate
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_53137
- */
-fun KClass<EntityPredicate>.contextPredicateFromEntityPredicate(arg0: Optional<EntityPredicate>) = EntityPredicate.method_53137(arg0)
-/**
- * method_53134
- */
-fun KClass<EntityPredicate>.contextPredicateFromEntityPredicate(arg0: net.minecraft.class_2048.class_2049) = EntityPredicate.method_53134(arg0)
-/**
  * comp_1769
  */
 fun EntityPredicate.typeSpecific() = this.comp_1769()
 /**
- * method_27802
- */
-fun KClass<EntityPredicate>.createAdvancementEntityLootContext(arg0: ServerPlayerEntity, arg1: Entity) = EntityPredicate.method_27802(arg0, arg1)
-/**
  * method_8914
  */
-fun EntityPredicate.test(arg0: ServerPlayerEntity, arg1: Entity) = this.method_8914(arg0, arg1)
+fun EntityPredicate.test(player: ServerPlayerEntity, entity: Entity) = this.method_8914(player, entity)
 /**
  * comp_1762
  */
@@ -29,18 +17,6 @@ fun EntityPredicate.distance() = this.comp_1762()
  * comp_1761
  */
 fun EntityPredicate.type() = this.comp_1761()
-/**
- * method_53139
- */
-fun KClass<EntityPredicate>.contextPredicateFromEntityPredicates(arg0: Array<net.minecraft.class_2048.class_2049>) = EntityPredicate.method_53139(*arg0)
-/**
- * method_8909
- */
-fun EntityPredicate.test(arg0: ServerWorld, arg1: Vec3d, arg2: Entity) = this.method_8909(arg0, arg1, arg2)
-/**
- * method_51704
- */
-fun KClass<EntityPredicate>.asLootContextPredicate(arg0: EntityPredicate) = EntityPredicate.method_51704(arg0)
 /**
  * comp_2446
  */

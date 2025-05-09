@@ -25,7 +25,3 @@ fun AbstractBlock.getTranslationKey() = this.method_63499()
  * method_36555
  */
 fun AbstractBlock.getHardness() = this.method_36555()
-/**
- * method_54094
- */
-fun <B>KClass<AbstractBlock>.createCodec(arg0: function_Function<net.minecraft.class_4970.class_2251, B>) where B: Block = AbstractBlock.method_54094<B>(arg0)

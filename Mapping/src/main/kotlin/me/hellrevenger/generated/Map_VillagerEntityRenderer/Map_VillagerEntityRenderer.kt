@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_VillagerEntityRenderer
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_53204
- */
-val KClass<VillagerEntityRenderer>.HEAD_TRANSFORMATION by aliasStatic(VillagerEntityRenderer::field_53204)
-/**
  * method_4151
  */
 fun VillagerEntityRenderer.getTexture(arg0: VillagerEntityRenderState) = this.method_4151(arg0)

@@ -2,33 +2,21 @@ package me.hellrevenger.generated.Map_VersionedChunkStorage
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_36219
- */
-val KClass<VersionedChunkStorage>.FEATURE_UPDATING_VERSION by aliasStatic(VersionedChunkStorage::field_36219)
-/**
  * method_17910
  */
-fun VersionedChunkStorage.setNbt(arg0: ChunkPos, arg1: Supplier<NbtCompound>) = this.method_17910(arg0, arg1)
+fun VersionedChunkStorage.setNbt(chunkPos: ChunkPos, nbtSupplier: Supplier<NbtCompound>) = this.method_17910(chunkPos, nbtSupplier)
 /**
  * method_23696
  */
-fun VersionedChunkStorage.getNbt(arg0: ChunkPos) = this.method_23696(arg0)
-/**
- * method_17908
- */
-fun KClass<VersionedChunkStorage>.getDataVersion(arg0: NbtCompound) = VersionedChunkStorage.method_17908(arg0)
+fun VersionedChunkStorage.getNbt(chunkPos: ChunkPos) = this.method_23696(chunkPos)
 /**
  * method_17907
  */
-fun VersionedChunkStorage.updateChunkNbt(arg0: RegistryKey<world_World>, arg1: Supplier<PersistentStateManager>, arg2: NbtCompound, arg3: Optional<RegistryKey<MapCodec<out ChunkGenerator>>>) = this.method_17907(arg0, arg1, arg2, arg3)
-/**
- * method_39799
- */
-fun KClass<VersionedChunkStorage>.saveContextToNbt(arg0: NbtCompound, arg1: RegistryKey<world_World>, arg2: Optional<RegistryKey<MapCodec<out ChunkGenerator>>>) = VersionedChunkStorage.method_39799(arg0, arg1, arg2)
+fun VersionedChunkStorage.updateChunkNbt(worldKey: RegistryKey<world_World>, persistentStateManagerFactory: Supplier<PersistentStateManager>, nbt: NbtCompound, generatorCodecKey: Optional<RegistryKey<MapCodec<out ChunkGenerator>>>) = this.method_17907(worldKey, persistentStateManagerFactory, nbt, generatorCodecKey)
 /**
  * method_42328
  */
-fun VersionedChunkStorage.needsBlending(arg0: ChunkPos, arg1: Int) = this.method_42328(arg0, arg1)
+fun VersionedChunkStorage.needsBlending(chunkPos: ChunkPos, checkRadius: Int) = this.method_42328(chunkPos, checkRadius)
 /**
  * method_39800
  */

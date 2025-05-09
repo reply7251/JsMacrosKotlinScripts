@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8677
  */
-fun <T>QueryableTickScheduler<T>.isTicking(arg0: BlockPos, arg1: T) = this.method_8677(arg0, arg1)
+fun <T>QueryableTickScheduler<T>.isTicking(pos: BlockPos, type: T) = this.method_8677(pos, type)

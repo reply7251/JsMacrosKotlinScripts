@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44619
  */
-fun RealmsNewsUpdater.updateNews(arg0: RealmsNews) = this.method_44619(arg0)
+fun RealmsNewsUpdater.updateNews(news: RealmsNews) = this.method_44619(news)
 /**
  * method_44620
  */

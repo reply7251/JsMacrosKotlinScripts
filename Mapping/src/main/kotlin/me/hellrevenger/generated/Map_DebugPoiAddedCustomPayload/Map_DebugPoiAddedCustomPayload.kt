@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_DebugPoiAddedCustomPayload
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_48677
- */
-val KClass<DebugPoiAddedCustomPayload>.ID by aliasStatic(DebugPoiAddedCustomPayload::field_48677)
-/**
  * comp_1706
  */
 fun DebugPoiAddedCustomPayload.freeTicketCount() = this.comp_1706()

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_47944
  */
-fun TooltipPositioner.getPosition(arg0: Int, arg1: Int, arg2: Int, arg3: Int, arg4: Int, arg5: Int) = this.method_47944(arg0, arg1, arg2, arg3, arg4, arg5)
+fun TooltipPositioner.getPosition(screenWidth: Int, screenHeight: Int, x: Int, y: Int, width: Int, height: Int) = this.method_47944(screenWidth, screenHeight, x, y, width, height)

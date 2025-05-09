@@ -28,11 +28,11 @@ fun ItemRenderState.newLayer() = this.method_65601()
 /**
  * method_65603
  */
-fun ItemRenderState.getParticleSprite(arg0: Random) = this.method_65603(arg0)
+fun ItemRenderState.getParticleSprite(random: Random) = this.method_65603(random)
 /**
  * method_65604
  */
-fun ItemRenderState.render(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: Int) = this.method_65604(arg0, arg1, arg2, arg3)
+fun ItemRenderState.render(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int, overlay: Int) = this.method_65604(matrices, vertexConsumers, light, overlay)
 /**
  * method_65609
  */
@@ -40,4 +40,4 @@ fun ItemRenderState.getTransformation() = this.method_65609()
 /**
  * method_65602
  */
-fun ItemRenderState.addLayers(arg0: Int) = this.method_65602(arg0)
+fun ItemRenderState.addLayers(add: Int) = this.method_65602(add)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_48446
  */
-fun ArmorTrimPattern.getDescription(arg0: RegistryEntry<ArmorTrimMaterial>) = this.method_48446(arg0)
+fun ArmorTrimPattern.getDescription(material: RegistryEntry<ArmorTrimMaterial>) = this.method_48446(material)
 /**
  * comp_1905
  */

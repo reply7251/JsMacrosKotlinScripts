@@ -10,10 +10,6 @@ fun VideoMode.getRefreshRate() = this.method_1671()
  */
 fun VideoMode.getBlueBits() = this.method_1672()
 /**
- * method_1665
- */
-fun KClass<VideoMode>.fromString(arg0: String) = VideoMode.method_1665(arg0)
-/**
  * method_1668
  */
 fun VideoMode.getWidth() = this.method_1668()

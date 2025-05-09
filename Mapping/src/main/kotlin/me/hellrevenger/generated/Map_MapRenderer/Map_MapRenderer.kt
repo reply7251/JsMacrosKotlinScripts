@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_62230
  */
-fun MapRenderer.update(arg0: MapIdComponent, arg1: MapState, arg2: MapRenderState) = this.method_62230(arg0, arg1, arg2)
+fun MapRenderer.update(mapId: MapIdComponent, mapState: MapState, renderState: MapRenderState) = this.method_62230(mapId, mapState, renderState)
 /**
  * method_1773
  */
-fun MapRenderer.draw(arg0: MapRenderState, arg1: MatrixStack, arg2: VertexConsumerProvider, arg3: Boolean, arg4: Int) = this.method_1773(arg0, arg1, arg2, arg3, arg4)
+fun MapRenderer.draw(state: MapRenderState, matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, arg3: Boolean, light: Int) = this.method_1773(state, matrices, vertexConsumers, arg3, light)

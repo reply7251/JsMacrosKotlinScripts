@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_35461
  */
-fun StructurePiecesHolder.getIntersecting(arg0: BlockBox) = this.method_35461(arg0)
+fun StructurePiecesHolder.getIntersecting(box: BlockBox) = this.method_35461(box)
 /**
  * method_35462
  */
-fun StructurePiecesHolder.addPiece(arg0: StructurePiece) = this.method_35462(arg0)
+fun StructurePiecesHolder.addPiece(piece: StructurePiece) = this.method_35462(piece)

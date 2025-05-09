@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_10399
  */
-fun LootTableGenerator.accept(arg0: BiConsumer<RegistryKey<LootTable>, net.minecraft.class_52.class_53>) = this.method_10399(arg0)
+fun LootTableGenerator.accept(lootTableBiConsumer: BiConsumer<RegistryKey<LootTable>, net.minecraft.class_52.class_53>) = this.method_10399(lootTableBiConsumer)

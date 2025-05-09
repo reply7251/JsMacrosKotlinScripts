@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_7702
  */
-fun ArrowItem.createArrow(arg0: world_World, arg1: ItemStack, arg2: LivingEntity, arg3: ItemStack) = this.method_7702(arg0, arg1, arg2, arg3)
+fun ArrowItem.createArrow(world: world_World, stack: ItemStack, shooter: LivingEntity, shotFrom: ItemStack) = this.method_7702(world, stack, shooter, shotFrom)

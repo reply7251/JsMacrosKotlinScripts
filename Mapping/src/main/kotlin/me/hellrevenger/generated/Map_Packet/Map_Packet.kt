@@ -4,11 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_65081
  */
-fun <T>Packet<T>.apply(arg0: T) where T: PacketListener = this.method_65081(arg0)
-/**
- * method_56443
- */
-fun <T, B>KClass<Packet<T>>.createCodec(arg0: ValueFirstEncoder<B, T>, arg1: PacketDecoder<B, T>) where T: PacketListener, T: Packet<*>, B: ByteBuf = Packet.method_56443<B, T>(arg0, arg1)
+fun <T>Packet<T>.apply(listener: T) where T: PacketListener = this.method_65081(listener)
 /**
  * method_55943
  */

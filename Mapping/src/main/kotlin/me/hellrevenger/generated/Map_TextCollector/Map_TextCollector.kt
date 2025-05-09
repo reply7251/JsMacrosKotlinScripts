@@ -16,4 +16,4 @@ fun TextCollector.getRawCombined() = this.method_27461()
 /**
  * method_27462
  */
-fun TextCollector.add(arg0: StringVisitable) = this.method_27462(arg0)
+fun TextCollector.add(text: StringVisitable) = this.method_27462(text)

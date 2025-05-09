@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_47786
  */
-fun WorldUnloadedEvent.send(arg0: TelemetrySender) = this.method_47786(arg0)
+fun WorldUnloadedEvent.send(sender: TelemetrySender) = this.method_47786(sender)
 /**
  * method_47798
  */
-fun WorldUnloadedEvent.setTick(arg0: Long) = this.method_47798(arg0)
+fun WorldUnloadedEvent.setTick(tick: Long) = this.method_47798(tick)
 /**
  * method_47982
  */

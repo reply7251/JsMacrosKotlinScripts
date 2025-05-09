@@ -2,41 +2,9 @@ package me.hellrevenger.generated.Map_ChunkGeneratorSettings
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_26359
- */
-val KClass<ChunkGeneratorSettings>.CAVES by aliasStatic(ChunkGeneratorSettings::field_26359)
-/**
- * field_26357
- */
-val KClass<ChunkGeneratorSettings>.NETHER by aliasStatic(ChunkGeneratorSettings::field_26357)
-/**
- * field_35051
- */
-val KClass<ChunkGeneratorSettings>.LARGE_BIOMES by aliasStatic(ChunkGeneratorSettings::field_35051)
-/**
- * field_26360
- */
-val KClass<ChunkGeneratorSettings>.FLOATING_ISLANDS by aliasStatic(ChunkGeneratorSettings::field_26360)
-/**
- * field_26358
- */
-val KClass<ChunkGeneratorSettings>.END by aliasStatic(ChunkGeneratorSettings::field_26358)
-/**
- * field_26356
- */
-val KClass<ChunkGeneratorSettings>.AMPLIFIED by aliasStatic(ChunkGeneratorSettings::field_26356)
-/**
- * field_26355
- */
-val KClass<ChunkGeneratorSettings>.OVERWORLD by aliasStatic(ChunkGeneratorSettings::field_26355)
-/**
  * comp_479
  */
 fun ChunkGeneratorSettings.seaLevel() = this.comp_479()
-/**
- * method_44323
- */
-fun KClass<ChunkGeneratorSettings>.createMissingSettings() = ChunkGeneratorSettings.method_44323()
 /**
  * comp_476
  */
@@ -69,10 +37,6 @@ fun ChunkGeneratorSettings.aquifers() = this.comp_481()
  * comp_475
  */
 fun ChunkGeneratorSettings.defaultBlock() = this.comp_475()
-/**
- * method_31111
- */
-fun KClass<ChunkGeneratorSettings>.bootstrap(arg0: Registerable<ChunkGeneratorSettings>) = ChunkGeneratorSettings.method_31111(arg0)
 /**
  * comp_478
  */

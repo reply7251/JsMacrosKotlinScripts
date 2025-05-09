@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_22123
  */
-fun GameTestDebugRenderer.addMarker(arg0: BlockPos, arg1: Int, arg2: String, arg3: Int) = this.method_22123(arg0, arg1, arg2, arg3)
+fun GameTestDebugRenderer.addMarker(pos: BlockPos, color: Int, message: String, duration: Int) = this.method_22123(pos, color, message, duration)

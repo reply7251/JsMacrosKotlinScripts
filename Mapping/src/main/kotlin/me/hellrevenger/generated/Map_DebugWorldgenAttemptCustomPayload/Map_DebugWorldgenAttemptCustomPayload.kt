@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_DebugWorldgenAttemptCustomPayload
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_48689
- */
-val KClass<DebugWorldgenAttemptCustomPayload>.ID by aliasStatic(DebugWorldgenAttemptCustomPayload::field_48689)
-/**
  * comp_1719
  */
 fun DebugWorldgenAttemptCustomPayload.scale() = this.comp_1719()

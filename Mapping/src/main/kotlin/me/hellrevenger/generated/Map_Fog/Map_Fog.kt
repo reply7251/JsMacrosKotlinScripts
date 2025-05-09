@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_Fog
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_53065
- */
-val KClass<Fog>.DUMMY by aliasStatic(Fog::field_53065)
-/**
  * comp_3010
  */
 fun Fog.end() = this.comp_3010()

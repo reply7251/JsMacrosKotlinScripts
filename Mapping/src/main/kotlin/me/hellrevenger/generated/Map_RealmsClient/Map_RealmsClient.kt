@@ -2,25 +2,21 @@ package me.hellrevenger.generated.Map_RealmsClient
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_45232
- */
-val KClass<RealmsClient>.ENVIRONMENT by aliasStatic(RealmsClient::field_45232)
-/**
  * method_21016
  */
-fun RealmsClient.backupsFor(arg0: Long) = this.method_21016(arg0)
+fun RealmsClient.backupsFor(worldId: Long) = this.method_21016(worldId)
 /**
  * method_21004
  */
-fun RealmsClient.invite(arg0: Long, arg1: String) = this.method_21004(arg0, arg1)
+fun RealmsClient.invite(worldId: Long, arg1: String) = this.method_21004(worldId, arg1)
 /**
  * method_21025
  */
-fun RealmsClient.subscriptionFor(arg0: Long) = this.method_21025(arg0)
+fun RealmsClient.subscriptionFor(worldId: Long) = this.method_21025(worldId)
 /**
  * method_21022
  */
-fun RealmsClient.close(arg0: Long) = this.method_21022(arg0)
+fun RealmsClient.close(worldId: Long) = this.method_21022(worldId)
 /**
  * method_21031
  */
@@ -32,23 +28,23 @@ fun RealmsClient.pendingInvites() = this.method_21030()
 /**
  * method_20994
  */
-fun RealmsClient.uninvite(arg0: Long, arg1: UUID) = this.method_20994(arg0, arg1)
+fun RealmsClient.uninvite(worldId: Long, arg1: UUID) = this.method_20994(worldId, arg1)
 /**
  * method_20999
  */
-fun RealmsClient.acceptInvitation(arg0: String) = this.method_20999(arg0)
+fun RealmsClient.acceptInvitation(invitationId: String) = this.method_20999(invitationId)
 /**
  * method_21019
  */
-fun RealmsClient.open(arg0: Long) = this.method_21019(arg0)
+fun RealmsClient.open(worldId: Long) = this.method_21019(worldId)
 /**
  * method_21006
  */
-fun RealmsClient.rejectInvitation(arg0: String) = this.method_21006(arg0)
+fun RealmsClient.rejectInvitation(invitationId: String) = this.method_21006(invitationId)
 /**
  * method_20996
  */
-fun RealmsClient.initializeWorld(arg0: Long, arg1: String, arg2: String) = this.method_20996(arg0, arg1, arg2)
+fun RealmsClient.initializeWorld(worldId: Long, arg1: String, name: String) = this.method_20996(worldId, arg1, name)
 /**
  * method_21015
  */
@@ -56,11 +52,11 @@ fun RealmsClient.listWorlds() = this.method_21015()
 /**
  * method_21003
  */
-fun RealmsClient.download(arg0: Long, arg1: Int) = this.method_21003(arg0, arg1)
+fun RealmsClient.download(worldId: Long, arg1: Int) = this.method_21003(worldId, arg1)
 /**
  * method_21010
  */
-fun RealmsClient.restoreWorld(arg0: Long, arg1: String) = this.method_21010(arg0, arg1)
+fun RealmsClient.restoreWorld(worldId: Long, arg1: String) = this.method_21010(worldId, arg1)
 /**
  * method_52655
  */
@@ -68,11 +64,11 @@ fun RealmsClient.mcoEnabled() = this.method_52655()
 /**
  * method_35684
  */
-fun RealmsClient.getPlayerActivities(arg0: Long) = this.method_35684(arg0)
+fun RealmsClient.getPlayerActivities(worldId: Long) = this.method_35684(worldId)
 /**
  * method_20991
  */
-fun RealmsClient.getOwnWorld(arg0: Long) = this.method_20991(arg0)
+fun RealmsClient.getOwnWorld(worldId: Long) = this.method_20991(worldId)
 /**
  * method_21032
  */
@@ -80,19 +76,19 @@ fun RealmsClient.getNews() = this.method_21032()
 /**
  * method_49570
  */
-fun RealmsClient.dismissNotifications(arg0: MutableList<UUID>) = this.method_49570(arg0)
+fun RealmsClient.dismissNotifications(notifications: MutableList<UUID>) = this.method_49570(notifications)
 /**
  * method_20993
  */
-fun RealmsClient.updateSlot(arg0: Long, arg1: Int, arg2: RealmsWorldOptions) = this.method_20993(arg0, arg1, arg2)
+fun RealmsClient.updateSlot(worldId: Long, arg1: Int, slot: RealmsWorldOptions) = this.method_20993(worldId, arg1, slot)
 /**
  * method_21028
  */
-fun RealmsClient.deleteWorld(arg0: Long) = this.method_21028(arg0)
+fun RealmsClient.deleteWorld(worldId: Long) = this.method_21028(worldId)
 /**
  * method_21023
  */
-fun RealmsClient.resetWorldWithTemplate(arg0: Long, arg1: String) = this.method_21023(arg0, arg1)
+fun RealmsClient.resetWorldWithTemplate(worldId: Long, arg1: String) = this.method_21023(worldId, arg1)
 /**
  * method_21027
  */
@@ -100,23 +96,15 @@ fun RealmsClient.clientCompatible() = this.method_21027()
 /**
  * method_21017
  */
-fun RealmsClient.op(arg0: Long, arg1: UUID) = this.method_21017(arg0, arg1)
-/**
- * method_44616
- */
-fun KClass<RealmsClient>.create() = RealmsClient.method_44616()
+fun RealmsClient.op(worldId: Long, arg1: UUID) = this.method_21017(worldId, arg1)
 /**
  * method_20997
  */
-fun RealmsClient.sendPingResults(arg0: PingResult) = this.method_20997(arg0)
+fun RealmsClient.sendPingResults(pingResult: PingResult) = this.method_20997(pingResult)
 /**
  * method_49572
  */
 fun RealmsClient.listNotifications() = this.method_49572()
-/**
- * method_20989
- */
-fun KClass<RealmsClient>.createRealmsClient(arg0: MinecraftClient) = RealmsClient.method_20989(arg0)
 /**
  * method_54361
  */
@@ -132,35 +120,35 @@ fun RealmsClient.trialAvailable() = this.method_21033()
 /**
  * method_20992
  */
-fun RealmsClient.switchSlot(arg0: Long, arg1: Int) = this.method_20992(arg0, arg1)
+fun RealmsClient.switchSlot(worldId: Long, arg1: Int) = this.method_20992(worldId, arg1)
 /**
  * method_21013
  */
-fun RealmsClient.uninviteMyselfFrom(arg0: Long) = this.method_21013(arg0)
+fun RealmsClient.uninviteMyselfFrom(worldId: Long) = this.method_21013(worldId)
 /**
  * method_21026
  */
-fun RealmsClient.upload(arg0: Long) = this.method_21026(arg0)
+fun RealmsClient.upload(worldId: Long) = this.method_21026(worldId)
 /**
  * method_49569
  */
-fun RealmsClient.markNotificationsAsSeen(arg0: MutableList<UUID>) = this.method_49569(arg0)
+fun RealmsClient.markNotificationsAsSeen(notifications: MutableList<UUID>) = this.method_49569(notifications)
 /**
  * method_21014
  */
-fun RealmsClient.putIntoMinigameMode(arg0: Long, arg1: String) = this.method_21014(arg0, arg1)
+fun RealmsClient.putIntoMinigameMode(worldId: Long, arg1: String) = this.method_21014(worldId, arg1)
 /**
  * method_21009
  */
-fun RealmsClient.join(arg0: Long) = this.method_21009(arg0)
+fun RealmsClient.join(worldId: Long) = this.method_21009(worldId)
 /**
  * method_21020
  */
-fun RealmsClient.deop(arg0: Long, arg1: UUID) = this.method_21020(arg0, arg1)
+fun RealmsClient.deop(worldId: Long, arg1: UUID) = this.method_21020(worldId, arg1)
 /**
  * method_21005
  */
-fun RealmsClient.update(arg0: Long, arg1: String, arg2: String) = this.method_21005(arg0, arg1, arg2)
+fun RealmsClient.update(worldId: Long, arg1: String, name: String) = this.method_21005(worldId, arg1, name)
 /**
  * method_21029
  */
@@ -168,8 +156,8 @@ fun RealmsClient.pendingInvitesCount() = this.method_21029()
 /**
  * method_20990
  */
-fun RealmsClient.fetchWorldTemplates(arg0: Int, arg1: Int, arg2: net.minecraft.class_4877.class_4321) = this.method_20990(arg0, arg1, arg2)
+fun RealmsClient.fetchWorldTemplates(page: Int, pageSize: Int, type: net.minecraft.class_4877.class_4321) = this.method_20990(page, pageSize, type)
 /**
  * method_54360
  */
-fun RealmsClient.createPrereleaseServer(arg0: Long) = this.method_54360(arg0)
+fun RealmsClient.createPrereleaseServer(parentWorldId: Long) = this.method_54360(parentWorldId)

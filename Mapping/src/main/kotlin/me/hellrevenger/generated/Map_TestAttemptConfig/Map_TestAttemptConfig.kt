@@ -8,15 +8,11 @@ fun TestAttemptConfig.isDisabled() = this.method_56247()
 /**
  * method_56246
  */
-fun TestAttemptConfig.shouldTestAgain(arg0: Int, arg1: Int) = this.method_56246(arg0, arg1)
+fun TestAttemptConfig.shouldTestAgain(attempt: Int, successes: Int) = this.method_56246(attempt, successes)
 /**
  * method_56248
  */
 fun TestAttemptConfig.needsMultipleAttempts() = this.method_56248()
-/**
- * method_56245
- */
-fun KClass<TestAttemptConfig>.once() = TestAttemptConfig.method_56245()
 /**
  * comp_2213
  */

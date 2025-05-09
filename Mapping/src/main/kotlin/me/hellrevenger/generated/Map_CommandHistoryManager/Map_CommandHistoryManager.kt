@@ -8,4 +8,4 @@ fun CommandHistoryManager.getHistory() = this.method_52696()
 /**
  * method_52697
  */
-fun CommandHistoryManager.add(arg0: String) = this.method_52697(arg0)
+fun CommandHistoryManager.add(command: String) = this.method_52697(command)

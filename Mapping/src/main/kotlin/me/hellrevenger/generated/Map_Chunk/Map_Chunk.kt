@@ -2,33 +2,29 @@ package me.hellrevenger.generated.Map_Chunk
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_44632
- */
-val KClass<Chunk>.MISSING_SECTION by aliasStatic(Chunk::field_44632)
-/**
  * method_12002
  */
-fun Chunk.addEntity(arg0: Entity) = this.method_12002(arg0)
+fun Chunk.addEntity(entity: Entity) = this.method_12002(entity)
 /**
  * method_12034
  */
-fun Chunk.setStructureStarts(arg0: Map<Structure, StructureStart>) = this.method_12034(arg0)
+fun Chunk.setStructureStarts(structureStarts: Map<Structure, StructureStart>) = this.method_12034(structureStarts)
 /**
  * method_60791
  */
-fun Chunk.isSectionEmpty(arg0: Int) = this.method_60791(arg0)
+fun Chunk.isSectionEmpty(sectionCoord: Int) = this.method_60791(sectionCoord)
 /**
  * method_20598
  */
-fun Chunk.getPackedBlockEntityNbt(arg0: BlockPos, arg1: net.minecraft.class_7225.class_7874) = this.method_20598(arg0, arg1)
+fun Chunk.getPackedBlockEntityNbt(pos: BlockPos, registries: net.minecraft.class_7225.class_7874) = this.method_20598(pos, registries)
 /**
  * method_12039
  */
-fun Chunk.markBlockForPostProcessing(arg0: BlockPos) = this.method_12039(arg0)
+fun Chunk.markBlockForPostProcessing(pos: BlockPos) = this.method_12039(pos)
 /**
  * method_38255
  */
-fun Chunk.getOrCreateChunkNoiseSampler(arg0: function_Function<Chunk, ChunkNoiseSampler>) = this.method_38255(arg0)
+fun Chunk.getOrCreateChunkNoiseSampler(chunkNoiseSamplerCreator: function_Function<Chunk, ChunkNoiseSampler>) = this.method_38255(chunkNoiseSamplerCreator)
 /**
  * method_39461
  */
@@ -36,7 +32,7 @@ fun Chunk.hasBelowZeroRetrogen() = this.method_39461()
 /**
  * method_12042
  */
-fun Chunk.addPendingBlockEntityNbt(arg0: NbtCompound) = this.method_12042(arg0)
+fun Chunk.addPendingBlockEntityNbt(nbt: NbtCompound) = this.method_12042(nbt)
 /**
  * method_12038
  */
@@ -52,7 +48,7 @@ fun Chunk.getBlockEntityPositions() = this.method_12021()
 /**
  * method_12020
  */
-fun Chunk.setLightOn(arg0: Boolean) = this.method_12020(arg0)
+fun Chunk.setLightOn(lightOn: Boolean) = this.method_12020(lightOn)
 /**
  * method_12016
  */
@@ -64,7 +60,7 @@ fun Chunk.markNeedsSaving() = this.method_65063()
 /**
  * method_12029
  */
-fun Chunk.markBlocksForPostProcessing(arg0: ShortList, arg1: Int) = this.method_12029(arg0, arg1)
+fun Chunk.markBlocksForPostProcessing(packedPositions: ShortList, index: Int) = this.method_12029(packedPositions, index)
 /**
  * method_12044
  */
@@ -76,7 +72,7 @@ fun Chunk.getMaxStatus() = this.method_51526()
 /**
  * method_12028
  */
-fun Chunk.setInhabitedTime(arg0: Long) = this.method_12028(arg0)
+fun Chunk.setInhabitedTime(inhabitedTime: Long) = this.method_12028(inhabitedTime)
 /**
  * method_12003
  */
@@ -84,7 +80,7 @@ fun Chunk.getUpgradeData() = this.method_12003()
 /**
  * method_12010
  */
-fun Chunk.setBlockState(arg0: BlockPos, arg1: BlockState, arg2: Boolean) = this.method_12010(arg0, arg1, arg2)
+fun Chunk.setBlockState(pos: BlockPos, state: BlockState, moved: Boolean) = this.method_12010(pos, state, moved)
 /**
  * method_39299
  */
@@ -92,7 +88,7 @@ fun Chunk.getBlendingData() = this.method_39299()
 /**
  * method_32914
  */
-fun Chunk.getGameEventDispatcher(arg0: Int) = this.method_32914(arg0)
+fun Chunk.getGameEventDispatcher(ySectionCoord: Int) = this.method_32914(ySectionCoord)
 /**
  * method_12033
  */
@@ -108,15 +104,15 @@ fun Chunk.getPos() = this.method_12004()
 /**
  * method_12007
  */
-fun Chunk.setBlockEntity(arg0: BlockEntity) = this.method_12007(arg0)
+fun Chunk.setBlockEntity(blockEntity: BlockEntity) = this.method_12007(blockEntity)
 /**
  * method_12032
  */
-fun Chunk.getHeightmap(arg0: net.minecraft.class_2902.class_2903) = this.method_12032(arg0)
+fun Chunk.getHeightmap(type: net.minecraft.class_2902.class_2903) = this.method_12032(type)
 /**
  * method_39295
  */
-fun Chunk.hasHeightmap(arg0: net.minecraft.class_2902.class_2903) = this.method_39295(arg0)
+fun Chunk.hasHeightmap(type: net.minecraft.class_2902.class_2903) = this.method_39295(type)
 /**
  * method_38871
  */
@@ -124,11 +120,11 @@ fun Chunk.hasStructureReferences() = this.method_38871()
 /**
  * method_44214
  */
-fun Chunk.getOrCreateGenerationSettings(arg0: Supplier<GenerationSettings>) = this.method_44214(arg0)
+fun Chunk.getOrCreateGenerationSettings(generationSettingsCreator: Supplier<GenerationSettings>) = this.method_44214(generationSettingsCreator)
 /**
  * method_12037
  */
-fun Chunk.setHeightmap(arg0: net.minecraft.class_2902.class_2903, arg1: LongArray) = this.method_12037(arg0, arg1)
+fun Chunk.setHeightmap(type: net.minecraft.class_2902.class_2903, heightmap: LongArray) = this.method_12037(type, heightmap)
 /**
  * method_12013
  */
@@ -136,7 +132,7 @@ fun Chunk.getBlockTickScheduler() = this.method_12013()
 /**
  * method_51525
  */
-fun Chunk.forEachBlockMatchingPredicate(arg0: Predicate<BlockState>, arg1: BiConsumer<BlockPos, BlockState>) = this.method_51525(arg0, arg1)
+fun Chunk.forEachBlockMatchingPredicate(predicate: Predicate<BlockState>, consumer: BiConsumer<BlockPos, BlockState>) = this.method_51525(predicate, consumer)
 /**
  * method_39297
  */
@@ -144,11 +140,11 @@ fun Chunk.usesOldNoise() = this.method_39297()
 /**
  * method_39296
  */
-fun Chunk.getTickSchedulers(arg0: Long) = this.method_39296(arg0)
+fun Chunk.getTickSchedulers(time: Long) = this.method_39296(time)
 /**
  * method_12005
  */
-fun Chunk.sampleHeightmap(arg0: net.minecraft.class_2902.class_2903, arg1: Int, arg2: Int) = this.method_12005(arg0, arg1, arg2)
+fun Chunk.sampleHeightmap(type: net.minecraft.class_2902.class_2903, x: Int, z: Int) = this.method_12005(type, x, z)
 /**
  * method_12040
  */
@@ -156,11 +152,11 @@ fun Chunk.getHighestNonEmptySection() = this.method_12040()
 /**
  * method_12041
  */
-fun Chunk.removeBlockEntity(arg0: BlockPos) = this.method_12041(arg0)
+fun Chunk.removeBlockEntity(pos: BlockPos) = this.method_12041(pos)
 /**
  * method_38259
  */
-fun Chunk.getSection(arg0: Int) = this.method_38259(arg0)
+fun Chunk.getSection(yIndex: Int) = this.method_38259(yIndex)
 /**
  * method_12009
  */
@@ -168,7 +164,7 @@ fun Chunk.getStatus() = this.method_12009()
 /**
  * method_38257
  */
-fun Chunk.populateBiomes(arg0: BiomeSupplier, arg1: net.minecraft.class_6544.class_6552) = this.method_38257(arg0, arg1)
+fun Chunk.populateBiomes(biomeSupplier: BiomeSupplier, sampler: net.minecraft.class_6544.class_6552) = this.method_38257(biomeSupplier, sampler)
 /**
  * method_65069
  */
@@ -188,7 +184,7 @@ fun Chunk.getFluidTickScheduler() = this.method_12014()
 /**
  * method_12228
  */
-fun Chunk.areSectionsEmptyBetween(arg0: Int, arg1: Int) = this.method_12228(arg0, arg1)
+fun Chunk.areSectionsEmptyBetween(lowerHeight: Int, upperHeight: Int) = this.method_12228(lowerHeight, upperHeight)
 /**
  * method_12006
  */
@@ -196,11 +192,7 @@ fun Chunk.getSectionArray() = this.method_12006()
 /**
  * method_12024
  */
-fun Chunk.getBlockEntityNbt(arg0: BlockPos) = this.method_12024(arg0)
-/**
- * method_12026
- */
-fun KClass<Chunk>.getList(arg0: Array<ShortList>, arg1: Int) = Chunk.method_12026(arg0, arg1)
+fun Chunk.getBlockEntityNbt(pos: BlockPos) = this.method_12024(pos)
 /**
  * method_12031
  */
@@ -216,4 +208,4 @@ fun Chunk.refreshSurfaceY() = this.method_51522()
 /**
  * method_38870
  */
-fun Chunk.increaseInhabitedTime(arg0: Long) = this.method_38870(arg0)
+fun Chunk.increaseInhabitedTime(delta: Long) = this.method_38870(delta)

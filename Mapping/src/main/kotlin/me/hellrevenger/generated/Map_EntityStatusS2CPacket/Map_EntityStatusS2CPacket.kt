@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11469
  */
-fun EntityStatusS2CPacket.getEntity(arg0: world_World) = this.method_11469(arg0)
+fun EntityStatusS2CPacket.getEntity(world: world_World) = this.method_11469(world)
 /**
  * method_11470
  */

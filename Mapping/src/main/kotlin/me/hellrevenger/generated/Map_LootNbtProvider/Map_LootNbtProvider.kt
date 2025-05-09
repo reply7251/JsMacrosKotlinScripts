@@ -12,4 +12,4 @@ fun LootNbtProvider.getRequiredParameters() = this.method_32441()
 /**
  * method_32440
  */
-fun LootNbtProvider.getNbt(arg0: LootContext) = this.method_32440(arg0)
+fun LootNbtProvider.getNbt(context: LootContext) = this.method_32440(context)

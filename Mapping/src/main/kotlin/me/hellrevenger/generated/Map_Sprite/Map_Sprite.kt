@@ -8,7 +8,7 @@ fun Sprite.getY() = this.method_35807()
 /**
  * method_35804
  */
-fun Sprite.getFrameFromU(arg0: Float) = this.method_35804(arg0)
+fun Sprite.getFrameFromU(u: Float) = this.method_35804(u)
 /**
  * method_45852
  */
@@ -24,15 +24,15 @@ fun Sprite.upload() = this.method_4584()
 /**
  * method_24108
  */
-fun Sprite.getTextureSpecificVertexConsumer(arg0: VertexConsumer) = this.method_24108(arg0)
+fun Sprite.getTextureSpecificVertexConsumer(consumer: VertexConsumer) = this.method_24108(consumer)
 /**
  * method_4570
  */
-fun Sprite.getFrameV(arg0: Float) = this.method_4570(arg0)
+fun Sprite.getFrameV(frame: Float) = this.method_4570(frame)
 /**
  * method_4580
  */
-fun Sprite.getFrameU(arg0: Float) = this.method_4580(arg0)
+fun Sprite.getFrameU(frame: Float) = this.method_4580(frame)
 /**
  * method_35806
  */
@@ -44,7 +44,7 @@ fun Sprite.getMaxV() = this.method_4575()
 /**
  * method_35805
  */
-fun Sprite.getFrameFromV(arg0: Float) = this.method_35805(arg0)
+fun Sprite.getFrameFromV(v: Float) = this.method_35805(v)
 /**
  * method_45851
  */

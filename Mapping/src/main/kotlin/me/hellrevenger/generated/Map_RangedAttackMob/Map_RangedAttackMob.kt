@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_7105
  */
-fun RangedAttackMob.shootAt(arg0: LivingEntity, arg1: Float) = this.method_7105(arg0, arg1)
+fun RangedAttackMob.shootAt(target: LivingEntity, pullProgress: Float) = this.method_7105(target, pullProgress)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_64678
  */
-fun RecipeManager.getPropertySet(arg0: RegistryKey<RecipePropertySet>) = this.method_64678(arg0)
+fun RecipeManager.getPropertySet(key: RegistryKey<RecipePropertySet>) = this.method_64678(key)
 /**
  * method_64677
  */

@@ -21,7 +21,3 @@ var PendingInvite.worldOwnerUuid by alias(PendingInvite::field_22583)
  * field_22584
  */
 var PendingInvite.date by alias(PendingInvite::field_22584)
-/**
- * method_25040
- */
-fun KClass<PendingInvite>.parse(arg0: JsonObject) = PendingInvite.method_25040(arg0)

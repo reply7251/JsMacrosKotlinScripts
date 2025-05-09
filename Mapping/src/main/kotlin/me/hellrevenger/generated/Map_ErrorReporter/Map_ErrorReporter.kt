@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_54946
  */
-fun ErrorReporter.makeChild(arg0: String) = this.method_54946(arg0)
+fun ErrorReporter.makeChild(name: String) = this.method_54946(name)
 /**
  * method_54947
  */
-fun ErrorReporter.report(arg0: String) = this.method_54947(arg0)
+fun ErrorReporter.report(message: String) = this.method_54947(message)

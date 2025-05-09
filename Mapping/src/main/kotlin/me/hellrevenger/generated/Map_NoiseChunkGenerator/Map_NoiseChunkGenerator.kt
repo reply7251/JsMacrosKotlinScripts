@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_41538
  */
-fun NoiseChunkGenerator.buildSurface(arg0: Chunk, arg1: HeightContext, arg2: NoiseConfig, arg3: StructureAccessor, arg4: BiomeAccess, arg5: Registry<Biome>, arg6: Blender) = this.method_41538(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun NoiseChunkGenerator.buildSurface(chunk: Chunk, heightContext: HeightContext, noiseConfig: NoiseConfig, structureAccessor: StructureAccessor, biomeAccess: BiomeAccess, biomeRegistry: Registry<Biome>, blender: Blender) = this.method_41538(chunk, heightContext, noiseConfig, structureAccessor, biomeAccess, biomeRegistry, blender)
 /**
  * method_28548
  */
-fun NoiseChunkGenerator.matchesSettings(arg0: RegistryKey<ChunkGeneratorSettings>) = this.method_28548(arg0)
+fun NoiseChunkGenerator.matchesSettings(settings: RegistryKey<ChunkGeneratorSettings>) = this.method_28548(settings)
 /**
  * method_41541
  */

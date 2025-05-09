@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_6276
  */
-fun GoalSelector.setControlEnabled(arg0: net.minecraft.class_1352.class_4134, arg1: Boolean) = this.method_6276(arg0, arg1)
+fun GoalSelector.setControlEnabled(control: net.minecraft.class_1352.class_4134, enabled: Boolean) = this.method_6276(control, enabled)
 /**
  * method_35113
  */
-fun GoalSelector.clear(arg0: Predicate<Goal>) = this.method_35113(arg0)
+fun GoalSelector.clear(predicate: Predicate<Goal>) = this.method_35113(predicate)
 /**
  * method_6273
  */
-fun GoalSelector.enableControl(arg0: net.minecraft.class_1352.class_4134) = this.method_6273(arg0)
+fun GoalSelector.enableControl(control: net.minecraft.class_1352.class_4134) = this.method_6273(control)
 /**
  * method_6275
  */
@@ -20,11 +20,11 @@ fun GoalSelector.tick() = this.method_6275()
 /**
  * method_6274
  */
-fun GoalSelector.disableControl(arg0: net.minecraft.class_1352.class_4134) = this.method_6274(arg0)
+fun GoalSelector.disableControl(control: net.minecraft.class_1352.class_4134) = this.method_6274(control)
 /**
  * method_6277
  */
-fun GoalSelector.add(arg0: Int, arg1: Goal) = this.method_6277(arg0, arg1)
+fun GoalSelector.add(priority: Int, goal: Goal) = this.method_6277(priority, goal)
 /**
  * method_35115
  */
@@ -32,8 +32,8 @@ fun GoalSelector.getGoals() = this.method_35115()
 /**
  * method_38849
  */
-fun GoalSelector.tickGoals(arg0: Boolean) = this.method_38849(arg0)
+fun GoalSelector.tickGoals(tickAll: Boolean) = this.method_38849(tickAll)
 /**
  * method_6280
  */
-fun GoalSelector.remove(arg0: Goal) = this.method_6280(arg0)
+fun GoalSelector.remove(goal: Goal) = this.method_6280(goal)

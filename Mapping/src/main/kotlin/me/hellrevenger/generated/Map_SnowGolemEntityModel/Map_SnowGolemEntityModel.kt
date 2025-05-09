@@ -9,7 +9,3 @@ fun SnowGolemEntityModel.setAngles(arg0: LivingEntityRenderState) = this.method_
  * method_2834
  */
 fun SnowGolemEntityModel.getHead() = this.method_2834()
-/**
- * method_32053
- */
-fun KClass<SnowGolemEntityModel>.getTexturedModelData() = SnowGolemEntityModel.method_32053()

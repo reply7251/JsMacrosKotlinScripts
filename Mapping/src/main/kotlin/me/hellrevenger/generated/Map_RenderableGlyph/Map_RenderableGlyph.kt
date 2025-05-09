@@ -16,7 +16,7 @@ fun RenderableGlyph.getBearingX() = this.method_56129()
 /**
  * method_2030
  */
-fun RenderableGlyph.upload(arg0: Int, arg1: Int) = this.method_2030(arg0, arg1)
+fun RenderableGlyph.upload(x: Int, y: Int) = this.method_2030(x, y)
 /**
  * method_56130
  */

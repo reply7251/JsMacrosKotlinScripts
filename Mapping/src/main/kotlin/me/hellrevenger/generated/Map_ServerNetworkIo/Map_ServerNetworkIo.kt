@@ -2,14 +2,6 @@ package me.hellrevenger.generated.Map_ServerNetworkIo
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_14105
- */
-val KClass<ServerNetworkIo>.EPOLL_CHANNEL by aliasStatic(ServerNetworkIo::field_14105)
-/**
- * field_14111
- */
-val KClass<ServerNetworkIo>.DEFAULT_CHANNEL by aliasStatic(ServerNetworkIo::field_14111)
-/**
  * field_14108
  */
 val ServerNetworkIo.active by alias(ServerNetworkIo::field_14108)
@@ -28,7 +20,7 @@ fun ServerNetworkIo.stop() = this.method_14356()
 /**
  * method_14354
  */
-fun ServerNetworkIo.bind(arg0: InetAddress, arg1: Int) = this.method_14354(arg0, arg1)
+fun ServerNetworkIo.bind(address: InetAddress, port: Int) = this.method_14354(address, port)
 /**
  * method_14351
  */

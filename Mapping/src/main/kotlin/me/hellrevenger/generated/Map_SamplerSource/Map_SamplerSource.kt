@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_37189
  */
-fun SamplerSource.getSamplers(arg0: Supplier<ReadableProfiler>) = this.method_37189(arg0)
+fun SamplerSource.getSamplers(profilerSupplier: Supplier<ReadableProfiler>) = this.method_37189(profilerSupplier)

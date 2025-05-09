@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_15679
  */
-fun EntityArmorStandSilentFix.fixSilent(arg0: Dynamic<*>) = this.method_15679(arg0)
+fun EntityArmorStandSilentFix.fixSilent(armorStandDynamic: Dynamic<*>) = this.method_15679(armorStandDynamic)

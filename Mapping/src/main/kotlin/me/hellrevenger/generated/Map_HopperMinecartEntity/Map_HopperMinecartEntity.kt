@@ -12,4 +12,4 @@ fun HopperMinecartEntity.isEnabled() = this.method_7572()
 /**
  * method_7570
  */
-fun HopperMinecartEntity.setEnabled(arg0: Boolean) = this.method_7570(arg0)
+fun HopperMinecartEntity.setEnabled(enabled: Boolean) = this.method_7570(enabled)

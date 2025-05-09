@@ -8,4 +8,4 @@ fun <T>ThrowableDeliverer<T>.deliver() where T: Throwable = this.method_26806()
 /**
  * method_26807
  */
-fun <T>ThrowableDeliverer<T>.add(arg0: T) where T: Throwable = this.method_26807(arg0)
+fun <T>ThrowableDeliverer<T>.add(throwable: T) where T: Throwable = this.method_26807(throwable)

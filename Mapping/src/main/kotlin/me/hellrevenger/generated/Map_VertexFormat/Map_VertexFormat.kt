@@ -8,7 +8,7 @@ fun VertexFormat.setupState() = this.method_22649()
 /**
  * method_60837
  */
-fun VertexFormat.getName(arg0: VertexFormatElement) = this.method_60837(arg0)
+fun VertexFormat.getName(element: VertexFormatElement) = this.method_60837(element)
 /**
  * method_22651
  */
@@ -24,7 +24,7 @@ fun VertexFormat.getOffsetsByElementId() = this.method_60838()
 /**
  * method_60835
  */
-fun VertexFormat.getOffset(arg0: VertexFormatElement) = this.method_60835(arg0)
+fun VertexFormat.getOffset(element: VertexFormatElement) = this.method_60835(element)
 /**
  * method_1362
  */
@@ -40,11 +40,7 @@ fun VertexFormat.getAttributeNames() = this.method_34445()
 /**
  * method_60836
  */
-fun VertexFormat.has(arg0: VertexFormatElement) = this.method_60836(arg0)
-/**
- * method_60833
- */
-fun KClass<VertexFormat>.builder() = VertexFormat.method_60833()
+fun VertexFormat.has(element: VertexFormatElement) = this.method_60836(element)
 /**
  * method_60839
  */
@@ -52,4 +48,4 @@ fun VertexFormat.getRequiredMask() = this.method_60839()
 /**
  * method_62886
  */
-fun VertexFormat.bindAttributes(arg0: Int) = this.method_62886(arg0)
+fun VertexFormat.bindAttributes(program: Int) = this.method_62886(program)

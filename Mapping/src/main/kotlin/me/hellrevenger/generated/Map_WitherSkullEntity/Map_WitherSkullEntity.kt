@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_7502
  */
-fun WitherSkullEntity.setCharged(arg0: Boolean) = this.method_7502(arg0)
+fun WitherSkullEntity.setCharged(charged: Boolean) = this.method_7502(charged)
 /**
  * method_7503
  */

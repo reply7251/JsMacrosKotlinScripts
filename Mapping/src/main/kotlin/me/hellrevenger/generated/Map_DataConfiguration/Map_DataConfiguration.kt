@@ -2,17 +2,9 @@ package me.hellrevenger.generated.Map_DataConfiguration
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_40258
- */
-val KClass<DataConfiguration>.ENABLED_FEATURES_KEY by aliasStatic(DataConfiguration::field_40258)
-/**
- * field_40260
- */
-val KClass<DataConfiguration>.SAFE_MODE by aliasStatic(DataConfiguration::field_40260)
-/**
  * method_45449
  */
-fun DataConfiguration.withFeaturesAdded(arg0: FeatureSet) = this.method_45449(arg0)
+fun DataConfiguration.withFeaturesAdded(features: FeatureSet) = this.method_45449(features)
 /**
  * comp_1011
  */

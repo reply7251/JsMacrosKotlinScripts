@@ -12,7 +12,7 @@ fun LightningEntity.getChanneler() = this.method_35052()
 /**
  * method_6961
  */
-fun LightningEntity.setChanneler(arg0: ServerPlayerEntity) = this.method_6961(arg0)
+fun LightningEntity.setChanneler(channeler: ServerPlayerEntity) = this.method_6961(channeler)
 /**
  * method_37221
  */
@@ -24,4 +24,4 @@ fun LightningEntity.getBlocksSetOnFire() = this.method_37220()
 /**
  * method_29498
  */
-fun LightningEntity.setCosmetic(arg0: Boolean) = this.method_29498(arg0)
+fun LightningEntity.setCosmetic(cosmetic: Boolean) = this.method_29498(cosmetic)

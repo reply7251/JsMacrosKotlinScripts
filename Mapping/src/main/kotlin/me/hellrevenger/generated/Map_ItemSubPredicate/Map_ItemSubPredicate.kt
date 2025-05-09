@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_58161
  */
-fun ItemSubPredicate.test(arg0: ItemStack) = this.method_58161(arg0)
+fun ItemSubPredicate.test(stack: ItemStack) = this.method_58161(stack)

@@ -28,11 +28,11 @@ var AbstractClientPlayerEntity.lastDistanceMoved by alias(AbstractClientPlayerEn
 /**
  * method_3118
  */
-fun AbstractClientPlayerEntity.getFovMultiplier(arg0: Boolean, arg1: Float) = this.method_3118(arg0, arg1)
+fun AbstractClientPlayerEntity.getFovMultiplier(firstPerson: Boolean, fovEffectScale: Float) = this.method_3118(firstPerson, fovEffectScale)
 /**
  * method_49339
  */
-fun AbstractClientPlayerEntity.lerpVelocity(arg0: Float) = this.method_49339(arg0)
+fun AbstractClientPlayerEntity.lerpVelocity(tickDelta: Float) = this.method_49339(tickDelta)
 /**
  * method_52814
  */

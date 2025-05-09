@@ -12,12 +12,12 @@ var ModelElementTexture.uvs by alias(ModelElementTexture::field_4235)
 /**
  * method_3415
  */
-fun ModelElementTexture.getU(arg0: Int) = this.method_3415(arg0)
+fun ModelElementTexture.getU(rotation: Int) = this.method_3415(rotation)
 /**
  * method_3416
  */
-fun ModelElementTexture.getV(arg0: Int) = this.method_3416(arg0)
+fun ModelElementTexture.getV(rotation: Int) = this.method_3416(rotation)
 /**
  * method_3414
  */
-fun ModelElementTexture.getDirectionIndex(arg0: Int) = this.method_3414(arg0)
+fun ModelElementTexture.getDirectionIndex(offset: Int) = this.method_3414(offset)

@@ -4,16 +4,16 @@ import me.hellrevenger.generated.*
 /**
  * method_61986
  */
-fun PieChart.render(arg0: DrawContext) = this.method_61986(arg0)
+fun PieChart.render(context: DrawContext) = this.method_61986(context)
 /**
  * method_61987
  */
-fun PieChart.select(arg0: Int) = this.method_61987(arg0)
+fun PieChart.select(index: Int) = this.method_61987(index)
 /**
  * method_61984
  */
-fun PieChart.setBottomMargin(arg0: Int) = this.method_61984(arg0)
+fun PieChart.setBottomMargin(bottomMargin: Int) = this.method_61984(bottomMargin)
 /**
  * method_61985
  */
-fun PieChart.setProfileResult(arg0: ProfileResult) = this.method_61985(arg0)
+fun PieChart.setProfileResult(profileResult: ProfileResult) = this.method_61985(profileResult)

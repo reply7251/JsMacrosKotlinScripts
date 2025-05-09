@@ -12,4 +12,4 @@ fun Baker.getSpriteGetter() = this.method_65732()
 /**
  * method_45873
  */
-fun Baker.bake(arg0: Identifier, arg1: ModelBakeSettings) = this.method_45873(arg0, arg1)
+fun Baker.bake(id: Identifier, settings: ModelBakeSettings) = this.method_45873(id, settings)

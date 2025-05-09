@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_43346
  */
-fun DataWriter.write(arg0: file_Path, arg1: ByteArray, arg2: HashCode) = this.method_43346(arg0, arg1, arg2)
+fun DataWriter.write(path: file_Path, data: ByteArray, hashCode: HashCode) = this.method_43346(path, data, hashCode)

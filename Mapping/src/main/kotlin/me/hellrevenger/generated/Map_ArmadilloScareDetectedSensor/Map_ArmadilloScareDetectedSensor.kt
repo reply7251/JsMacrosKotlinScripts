@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_55702
  */
-fun <T>ArmadilloScareDetectedSensor<T>.tryDetectThreat(arg0: T) where T: LivingEntity = this.method_55702(arg0)
+fun <T>ArmadilloScareDetectedSensor<T>.tryDetectThreat(entity: T) where T: LivingEntity = this.method_55702(entity)
 /**
  * method_55705
  */
-fun <T>ArmadilloScareDetectedSensor<T>.clear(arg0: T) where T: LivingEntity = this.method_55705(arg0)
+fun <T>ArmadilloScareDetectedSensor<T>.clear(entity: T) where T: LivingEntity = this.method_55705(entity)
 /**
  * method_55704
  */
-fun <T>ArmadilloScareDetectedSensor<T>.onDetected(arg0: T) where T: LivingEntity = this.method_55704(arg0)
+fun <T>ArmadilloScareDetectedSensor<T>.onDetected(entity: T) where T: LivingEntity = this.method_55704(entity)

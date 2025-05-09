@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_DebugPathCustomPayload
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_48675
- */
-val KClass<DebugPathCustomPayload>.ID by aliasStatic(DebugPathCustomPayload::field_48675)
-/**
  * comp_1703
  */
 fun DebugPathCustomPayload.maxNodeDistance() = this.comp_1703()

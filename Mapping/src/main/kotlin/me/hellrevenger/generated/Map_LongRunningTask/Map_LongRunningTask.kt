@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 fun LongRunningTask.tick() = this.method_21068()
 /**
- * method_25289
- */
-fun KClass<LongRunningTask>.setScreen(arg0: Screen) = LongRunningTask.method_25289(arg0)
-/**
  * method_21071
  */
 fun LongRunningTask.abortTask() = this.method_21071()

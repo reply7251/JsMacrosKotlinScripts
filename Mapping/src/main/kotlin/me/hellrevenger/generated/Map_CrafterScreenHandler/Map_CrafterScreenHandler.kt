@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_54461
  */
-fun CrafterScreenHandler.isSlotDisabled(arg0: Int) = this.method_54461(arg0)
+fun CrafterScreenHandler.isSlotDisabled(slot: Int) = this.method_54461(slot)
 /**
  * method_54462
  */
@@ -12,7 +12,7 @@ fun CrafterScreenHandler.isTriggered() = this.method_54462()
 /**
  * method_54458
  */
-fun CrafterScreenHandler.setSlotEnabled(arg0: Int, arg1: Boolean) = this.method_54458(arg0, arg1)
+fun CrafterScreenHandler.setSlotEnabled(slot: Int, enabled: Boolean) = this.method_54458(slot, enabled)
 /**
  * method_54463
  */

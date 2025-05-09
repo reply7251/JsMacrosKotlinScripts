@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_2819
  */
-fun <T>EntityModel<T>.setAngles(arg0: T) where T: EntityRenderState = this.method_2819(arg0)
+fun <T>EntityModel<T>.setAngles(state: T) where T: EntityRenderState = this.method_2819(state)

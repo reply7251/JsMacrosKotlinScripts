@@ -4,19 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_63588
  */
-fun <R>TaskExecutor<R>.send(arg0: R) where R: Runnable = this.method_63588(arg0)
-/**
- * method_63602
- */
-fun <R>KClass<TaskExecutor<R>>.of(arg0: String, arg1: Executor) where R: Runnable = TaskExecutor.method_63602(arg0, arg1)
+fun <R>TaskExecutor<R>.send(runnable: R) where R: Runnable = this.method_63588(runnable)
 /**
  * method_16211
  */
-fun <R>TaskExecutor<R>.createTask(arg0: Runnable) where R: Runnable = this.method_16211(arg0)
+fun <R>TaskExecutor<R>.createTask(runnable: Runnable) where R: Runnable = this.method_16211(runnable)
 /**
  * method_63603
  */
-fun <R, Source>TaskExecutor<R>.executeAsync(arg0: Consumer<CompletableFuture<Source>>) where R: Runnable = this.method_63603<Source>(arg0)
+fun <R, Source>TaskExecutor<R>.executeAsync(future: Consumer<CompletableFuture<Source>>) where R: Runnable = this.method_63603<Source>(future)
 /**
  * method_16898
  */

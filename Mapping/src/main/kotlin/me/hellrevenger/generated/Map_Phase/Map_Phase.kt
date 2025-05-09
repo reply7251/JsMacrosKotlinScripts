@@ -8,7 +8,7 @@ fun Phase.getType() = this.method_6849()
 /**
  * method_6852
  */
-fun Phase.modifyDamageTaken(arg0: DamageSource, arg1: Float) = this.method_6852(arg0, arg1)
+fun Phase.modifyDamageTaken(damageSource: DamageSource, damage: Float) = this.method_6852(damageSource, damage)
 /**
  * method_6851
  */
@@ -24,7 +24,7 @@ fun Phase.getYawAcceleration() = this.method_6847()
 /**
  * method_6855
  */
-fun Phase.serverTick(arg0: ServerWorld) = this.method_6855(arg0)
+fun Phase.serverTick(world: ServerWorld) = this.method_6855(world)
 /**
  * method_6848
  */
@@ -36,7 +36,7 @@ fun Phase.beginPhase() = this.method_6856()
 /**
  * method_6850
  */
-fun Phase.crystalDestroyed(arg0: EndCrystalEntity, arg1: BlockPos, arg2: DamageSource, arg3: PlayerEntity) = this.method_6850(arg0, arg1, arg2, arg3)
+fun Phase.crystalDestroyed(crystal: EndCrystalEntity, pos: BlockPos, source: DamageSource, player: PlayerEntity) = this.method_6850(crystal, pos, source, player)
 /**
  * method_6853
  */

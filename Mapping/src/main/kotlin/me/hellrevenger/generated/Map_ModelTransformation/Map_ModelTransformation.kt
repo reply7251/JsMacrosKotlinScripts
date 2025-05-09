@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_ModelTransformation
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_4301
- */
-val KClass<ModelTransformation>.NONE by aliasStatic(ModelTransformation::field_4301)
-/**
  * comp_3370
  */
 fun ModelTransformation.firstPersonLeftHand() = this.comp_3370()
@@ -20,7 +16,7 @@ fun ModelTransformation.head() = this.comp_3372()
 /**
  * method_3503
  */
-fun ModelTransformation.getTransformation(arg0: ModelTransformationMode) = this.method_3503(arg0)
+fun ModelTransformation.getTransformation(renderMode: ModelTransformationMode) = this.method_3503(renderMode)
 /**
  * comp_3368
  */

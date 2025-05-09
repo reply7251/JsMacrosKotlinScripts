@@ -12,4 +12,4 @@ fun LookAtS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11731(ar
 /**
  * method_11732
  */
-fun LookAtS2CPacket.getTargetPosition(arg0: world_World) = this.method_11732(arg0)
+fun LookAtS2CPacket.getTargetPosition(world: world_World) = this.method_11732(world)

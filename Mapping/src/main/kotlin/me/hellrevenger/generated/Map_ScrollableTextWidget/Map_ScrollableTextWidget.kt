@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_52234
  */
-fun ScrollableTextWidget.textColor(arg0: Int) = this.method_52234(arg0)
+fun ScrollableTextWidget.textColor(textColor: Int) = this.method_52234(textColor)
 /**
  * method_53546
  */

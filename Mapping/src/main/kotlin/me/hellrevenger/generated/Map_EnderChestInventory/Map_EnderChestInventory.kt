@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_7661
  */
-fun EnderChestInventory.setActiveBlockEntity(arg0: EnderChestBlockEntity) = this.method_7661(arg0)
+fun EnderChestInventory.setActiveBlockEntity(blockEntity: EnderChestBlockEntity) = this.method_7661(blockEntity)
 /**
  * method_31556
  */
-fun EnderChestInventory.isActiveBlockEntity(arg0: EnderChestBlockEntity) = this.method_31556(arg0)
+fun EnderChestInventory.isActiveBlockEntity(blockEntity: EnderChestBlockEntity) = this.method_31556(blockEntity)

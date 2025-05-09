@@ -4,15 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60006
  */
-fun <T>EnchantmentEffectEntry<T>.test(arg0: LootContext) = this.method_60006(arg0)
-/**
- * method_60004
- */
-fun <T>KClass<EnchantmentEffectEntry<T>>.createCodec(arg0: Codec<T>, arg1: ContextType) = EnchantmentEffectEntry.method_60004<T>(arg0, arg1)
-/**
- * method_60007
- */
-fun <T>KClass<EnchantmentEffectEntry<T>>.createRequirementsCodec(arg0: ContextType) = EnchantmentEffectEntry.method_60007(arg0)
+fun <T>EnchantmentEffectEntry<T>.test(context: LootContext) = this.method_60006(context)
 /**
  * comp_2680
  */

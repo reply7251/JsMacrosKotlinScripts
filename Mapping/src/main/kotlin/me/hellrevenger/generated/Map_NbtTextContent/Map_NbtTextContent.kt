@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_NbtTextContent
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_46622
- */
-val KClass<NbtTextContent>.TYPE by aliasStatic(NbtTextContent::field_46622)
-/**
  * method_43485
  */
 fun NbtTextContent.getDataSource() = this.method_43485()

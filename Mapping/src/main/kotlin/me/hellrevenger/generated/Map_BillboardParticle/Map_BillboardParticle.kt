@@ -8,4 +8,4 @@ fun BillboardParticle.getRotator() = this.method_55245()
 /**
  * method_18132
  */
-fun BillboardParticle.getSize(arg0: Float) = this.method_18132(arg0)
+fun BillboardParticle.getSize(tickDelta: Float) = this.method_18132(tickDelta)

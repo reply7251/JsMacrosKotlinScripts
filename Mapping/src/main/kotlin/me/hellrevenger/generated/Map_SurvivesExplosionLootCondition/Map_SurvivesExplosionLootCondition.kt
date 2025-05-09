@@ -5,7 +5,3 @@ import me.hellrevenger.generated.*
  * method_869
  */
 fun SurvivesExplosionLootCondition.test(arg0: LootContext) = this.method_869(arg0)
-/**
- * method_871
- */
-fun KClass<SurvivesExplosionLootCondition>.builder() = SurvivesExplosionLootCondition.method_871()

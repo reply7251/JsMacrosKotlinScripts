@@ -8,8 +8,8 @@ fun ChestLidAnimator.step() = this.method_31672()
 /**
  * method_31673
  */
-fun ChestLidAnimator.getProgress(arg0: Float) = this.method_31673(arg0)
+fun ChestLidAnimator.getProgress(delta: Float) = this.method_31673(delta)
 /**
  * method_31674
  */
-fun ChestLidAnimator.setOpen(arg0: Boolean) = this.method_31674(arg0)
+fun ChestLidAnimator.setOpen(open: Boolean) = this.method_31674(open)

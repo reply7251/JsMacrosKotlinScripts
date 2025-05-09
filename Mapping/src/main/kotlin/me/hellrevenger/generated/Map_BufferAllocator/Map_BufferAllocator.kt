@@ -12,7 +12,7 @@ fun BufferAllocator.clear() = this.method_60809()
 /**
  * method_60808
  */
-fun BufferAllocator.allocate(arg0: Int) = this.method_60808(arg0)
+fun BufferAllocator.allocate(size: Int) = this.method_60808(size)
 /**
  * method_60807
  */

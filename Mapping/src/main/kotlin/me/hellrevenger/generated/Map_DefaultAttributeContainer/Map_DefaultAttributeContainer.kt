@@ -4,28 +4,24 @@ import me.hellrevenger.generated.*
 /**
  * method_27309
  */
-fun DefaultAttributeContainer.hasModifier(arg0: RegistryEntry<EntityAttribute>, arg1: Identifier) = this.method_27309(arg0, arg1)
+fun DefaultAttributeContainer.hasModifier(attribute: RegistryEntry<EntityAttribute>, id: Identifier) = this.method_27309(attribute, id)
 /**
  * method_26862
  */
-fun DefaultAttributeContainer.getValue(arg0: RegistryEntry<EntityAttribute>) = this.method_26862(arg0)
+fun DefaultAttributeContainer.getValue(attribute: RegistryEntry<EntityAttribute>) = this.method_26862(attribute)
 /**
  * method_27308
  */
-fun DefaultAttributeContainer.getModifierValue(arg0: RegistryEntry<EntityAttribute>, arg1: Identifier) = this.method_27308(arg0, arg1)
+fun DefaultAttributeContainer.getModifierValue(attribute: RegistryEntry<EntityAttribute>, id: Identifier) = this.method_27308(attribute, id)
 /**
  * method_26864
  */
-fun DefaultAttributeContainer.getBaseValue(arg0: RegistryEntry<EntityAttribute>) = this.method_26864(arg0)
-/**
- * method_26861
- */
-fun KClass<DefaultAttributeContainer>.builder() = DefaultAttributeContainer.method_26861()
+fun DefaultAttributeContainer.getBaseValue(attribute: RegistryEntry<EntityAttribute>) = this.method_26864(attribute)
 /**
  * method_26863
  */
-fun DefaultAttributeContainer.createOverride(arg0: Consumer<EntityAttributeInstance>, arg1: RegistryEntry<EntityAttribute>) = this.method_26863(arg0, arg1)
+fun DefaultAttributeContainer.createOverride(updateCallback: Consumer<EntityAttributeInstance>, attribute: RegistryEntry<EntityAttribute>) = this.method_26863(updateCallback, attribute)
 /**
  * method_27310
  */
-fun DefaultAttributeContainer.has(arg0: RegistryEntry<EntityAttribute>) = this.method_27310(arg0)
+fun DefaultAttributeContainer.has(attribute: RegistryEntry<EntityAttribute>) = this.method_27310(attribute)

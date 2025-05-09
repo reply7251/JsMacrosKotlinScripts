@@ -8,11 +8,11 @@ fun SoundEngine.close() = this.method_19664()
 /**
  * method_19662
  */
-fun SoundEngine.release(arg0: Source) = this.method_19662(arg0)
+fun SoundEngine.release(source: Source) = this.method_19662(source)
 /**
  * method_19663
  */
-fun SoundEngine.createSource(arg0: net.minecraft.class_4225.class_4105) = this.method_19663(arg0)
+fun SoundEngine.createSource(mode: net.minecraft.class_4225.class_4105) = this.method_19663(mode)
 /**
  * method_38502
  */
@@ -28,15 +28,11 @@ fun SoundEngine.updateDeviceSpecifier() = this.method_38723()
 /**
  * method_19661
  */
-fun SoundEngine.init(arg0: String, arg1: Boolean) = this.method_19661(arg0, arg1)
+fun SoundEngine.init(deviceSpecifier: String, directionalAudio: Boolean) = this.method_19661(deviceSpecifier, directionalAudio)
 /**
  * method_20296
  */
 fun SoundEngine.getDebugString() = this.method_20296()
-/**
- * method_38500
- */
-fun KClass<SoundEngine>.findAvailableDeviceSpecifier() = SoundEngine.method_38500()
 /**
  * method_38722
  */

@@ -13,7 +13,3 @@ fun ParrotEntityRenderer.updateRenderState(arg0: ParrotEntity, arg1: ParrotEntit
  * method_62503
  */
 fun ParrotEntityRenderer.createRenderState() = this.method_62503()
-/**
- * method_47906
- */
-fun KClass<ParrotEntityRenderer>.getTexture(arg0: net.minecraft.class_1453.class_7989) = ParrotEntityRenderer.method_47906(arg0)

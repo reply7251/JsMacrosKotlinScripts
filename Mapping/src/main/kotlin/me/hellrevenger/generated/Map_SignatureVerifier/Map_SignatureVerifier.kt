@@ -4,12 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_44177
  */
-fun SignatureVerifier.validate(arg0: ByteArray, arg1: ByteArray) = this.method_44177(arg0, arg1)
-/**
- * method_44172
- */
-fun KClass<SignatureVerifier>.create(arg0: ServicesKeySet, arg1: ServicesKeyType) = SignatureVerifier.method_44172(arg0, arg1)
-/**
- * method_44175
- */
-fun KClass<SignatureVerifier>.create(arg0: PublicKey, arg1: String) = SignatureVerifier.method_44175(arg0, arg1)
+fun SignatureVerifier.validate(signedData: ByteArray, signatureData: ByteArray) = this.method_44177(signedData, signatureData)

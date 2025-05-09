@@ -8,12 +8,12 @@ fun ResourceReloadLogger.finish() = this.method_36562()
 /**
  * method_36564
  */
-fun ResourceReloadLogger.recover(arg0: Throwable) = this.method_36564(arg0)
+fun ResourceReloadLogger.recover(throwable: Throwable) = this.method_36564(throwable)
 /**
  * method_36565
  */
-fun ResourceReloadLogger.addReloadSection(arg0: CrashReport) = this.method_36565(arg0)
+fun ResourceReloadLogger.addReloadSection(report: CrashReport) = this.method_36565(report)
 /**
  * method_36563
  */
-fun ResourceReloadLogger.reload(arg0: net.minecraft.class_6360.class_6362, arg1: MutableList<ResourcePack>) = this.method_36563(arg0, arg1)
+fun ResourceReloadLogger.reload(reason: net.minecraft.class_6360.class_6362, packs: MutableList<ResourcePack>) = this.method_36563(reason, packs)

@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_10311
  */
-fun FluidFillable.tryFillWithFluid(arg0: WorldAccess, arg1: BlockPos, arg2: BlockState, arg3: FluidState) = this.method_10311(arg0, arg1, arg2, arg3)
+fun FluidFillable.tryFillWithFluid(world: WorldAccess, pos: BlockPos, state: BlockState, fluidState: FluidState) = this.method_10311(world, pos, state, fluidState)
 /**
  * method_10310
  */
-fun FluidFillable.canFillWithFluid(arg0: PlayerEntity, arg1: BlockView, arg2: BlockPos, arg3: BlockState, arg4: Fluid) = this.method_10310(arg0, arg1, arg2, arg3, arg4)
+fun FluidFillable.canFillWithFluid(player: PlayerEntity, world: BlockView, pos: BlockPos, state: BlockState, fluid: Fluid) = this.method_10310(player, world, pos, state, fluid)

@@ -12,7 +12,7 @@ fun LocalDifficulty.getLocalDifficulty() = this.method_5457()
 /**
  * method_5455
  */
-fun LocalDifficulty.isHarderThan(arg0: Float) = this.method_5455(arg0)
+fun LocalDifficulty.isHarderThan(difficulty: Float) = this.method_5455(difficulty)
 /**
  * method_35020
  */

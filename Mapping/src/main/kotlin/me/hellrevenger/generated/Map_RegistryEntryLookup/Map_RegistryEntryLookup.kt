@@ -4,16 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_46733
  */
-fun <T>RegistryEntryLookup<T>.getOptional(arg0: TagKey<T>) = this.method_46733(arg0)
-/**
- * method_46746
- */
-fun <T>RegistryEntryLookup<T>.getOptional(arg0: RegistryKey<T>) = this.method_46746(arg0)
+fun <T>RegistryEntryLookup<T>.getOptional(tag: TagKey<T>) = this.method_46733(tag)
 /**
  * method_46747
  */
-fun <T>RegistryEntryLookup<T>.getOrThrow(arg0: RegistryKey<T>) = this.method_46747(arg0)
-/**
- * method_46735
- */
-fun <T>RegistryEntryLookup<T>.getOrThrow(arg0: TagKey<T>) = this.method_46735(arg0)
+fun <T>RegistryEntryLookup<T>.getOrThrow(key: RegistryKey<T>) = this.method_46747(key)

@@ -5,7 +5,3 @@ import me.hellrevenger.generated.*
  * method_17091
  */
 fun RavagerEntityModel.setAngles(arg0: RavagerEntityRenderState) = this.method_17091(arg0)
-/**
- * method_32035
- */
-fun KClass<RavagerEntityModel>.getTexturedModelData() = RavagerEntityModel.method_32035()

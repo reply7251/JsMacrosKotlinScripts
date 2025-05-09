@@ -4,23 +4,19 @@ import me.hellrevenger.generated.*
 /**
  * method_58244
  */
-fun ImmutableBlockBox.includes(arg0: BlockPos) = this.method_58244(arg0)
+fun ImmutableBlockBox.includes(pos: BlockPos) = this.method_58244(pos)
 /**
  * method_58238
  */
-fun ImmutableBlockBox.expand(arg0: Direction, arg1: Int) = this.method_58238(arg0, arg1)
+fun ImmutableBlockBox.expand(direction: Direction, offset: Int) = this.method_58238(direction, offset)
 /**
  * method_58239
  */
-fun ImmutableBlockBox.move(arg0: Vec3i) = this.method_58239(arg0)
+fun ImmutableBlockBox.move(offset: Vec3i) = this.method_58239(offset)
 /**
  * method_58246
  */
 fun ImmutableBlockBox.getBlockCountZ() = this.method_58246()
-/**
- * method_58242
- */
-fun ImmutableBlockBox.move(arg0: Direction, arg1: Int) = this.method_58242(arg0, arg1)
 /**
  * method_58245
  */
@@ -30,17 +26,9 @@ fun ImmutableBlockBox.getBlockCountY() = this.method_58245()
  */
 fun ImmutableBlockBox.getBlockCountX() = this.method_58243()
 /**
- * method_58236
- */
-fun KClass<ImmutableBlockBox>.of(arg0: BlockPos) = ImmutableBlockBox.method_58236(arg0)
-/**
- * method_58237
- */
-fun KClass<ImmutableBlockBox>.of(arg0: BlockPos, arg1: BlockPos) = ImmutableBlockBox.method_58237(arg0, arg1)
-/**
  * method_58241
  */
-fun ImmutableBlockBox.encompass(arg0: BlockPos) = this.method_58241(arg0)
+fun ImmutableBlockBox.encompass(pos: BlockPos) = this.method_58241(pos)
 /**
  * method_58235
  */

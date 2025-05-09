@@ -4,23 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_31805
  */
-fun <T, U>EntityLookup<T>.forEachIntersects(arg0: TypeFilter<T, U>, arg1: Box, arg2: LazyIterationConsumer<U>) where T: EntityLike, U: T = this.method_31805<U>(arg0, arg1, arg2)
+fun <T, U>EntityLookup<T>.forEachIntersects(filter: TypeFilter<T, U>, box: Box, consumer: LazyIterationConsumer<U>) where T: EntityLike, U: T = this.method_31805<U>(filter, box, consumer)
 /**
  * method_31806
  */
-fun <T, U>EntityLookup<T>.forEach(arg0: TypeFilter<T, U>, arg1: LazyIterationConsumer<U>) where T: EntityLike, U: T = this.method_31806<U>(arg0, arg1)
+fun <T, U>EntityLookup<T>.forEach(filter: TypeFilter<T, U>, consumer: LazyIterationConsumer<U>) where T: EntityLike, U: T = this.method_31806<U>(filter, consumer)
 /**
  * method_31808
  */
-fun <T>EntityLookup<T>.get(arg0: UUID) where T: EntityLike = this.method_31808(arg0)
-/**
- * method_31807
- */
-fun <T>EntityLookup<T>.forEachIntersects(arg0: Box, arg1: Consumer<T>) where T: EntityLike = this.method_31807(arg0, arg1)
-/**
- * method_31804
- */
-fun <T>EntityLookup<T>.get(arg0: Int) where T: EntityLike = this.method_31804(arg0)
+fun <T>EntityLookup<T>.get(uuid: UUID) where T: EntityLike = this.method_31808(uuid)
 /**
  * method_31803
  */

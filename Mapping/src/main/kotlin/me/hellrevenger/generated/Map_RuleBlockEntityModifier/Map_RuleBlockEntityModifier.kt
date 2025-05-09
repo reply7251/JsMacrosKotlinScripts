@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_49892
  */
-fun RuleBlockEntityModifier.modifyBlockEntityNbt(arg0: Random, arg1: NbtCompound) = this.method_49892(arg0, arg1)
+fun RuleBlockEntityModifier.modifyBlockEntityNbt(random: Random, nbt: NbtCompound) = this.method_49892(random, nbt)
 /**
  * method_49891
  */

@@ -8,4 +8,4 @@ fun PacketDeflater.getCompressionThreshold() = this.method_36120()
 /**
  * method_10742
  */
-fun PacketDeflater.setCompressionThreshold(arg0: Int) = this.method_10742(arg0)
+fun PacketDeflater.setCompressionThreshold(compressionThreshold: Int) = this.method_10742(compressionThreshold)

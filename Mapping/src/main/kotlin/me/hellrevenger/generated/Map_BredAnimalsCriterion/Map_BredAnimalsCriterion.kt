@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_855
  */
-fun BredAnimalsCriterion.trigger(arg0: ServerPlayerEntity, arg1: AnimalEntity, arg2: AnimalEntity, arg3: PassiveEntity) = this.method_855(arg0, arg1, arg2, arg3)
+fun BredAnimalsCriterion.trigger(player: ServerPlayerEntity, parent: AnimalEntity, partner: AnimalEntity, child: PassiveEntity) = this.method_855(player, parent, partner, child)

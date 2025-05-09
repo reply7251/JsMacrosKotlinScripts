@@ -32,8 +32,4 @@ val MultifaceGrowthFeatureConfig.placeOnWalls by alias(MultifaceGrowthFeatureCon
 /**
  * method_43296
  */
-fun MultifaceGrowthFeatureConfig.shuffleDirections(arg0: Random, arg1: Direction) = this.method_43296(arg0, arg1)
-/**
- * method_43295
- */
-fun MultifaceGrowthFeatureConfig.shuffleDirections(arg0: Random) = this.method_43295(arg0)
+fun MultifaceGrowthFeatureConfig.shuffleDirections(random: Random, excluded: Direction) = this.method_43296(random, excluded)

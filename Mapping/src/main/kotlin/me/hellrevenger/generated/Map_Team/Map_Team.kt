@@ -4,19 +4,19 @@ import me.hellrevenger.generated.*
 /**
  * method_1137
  */
-fun Team.setDisplayName(arg0: Text) = this.method_1137(arg0)
+fun Team.setDisplayName(displayName: Text) = this.method_1137(displayName)
 /**
  * method_1143
  */
-fun Team.setShowFriendlyInvisibles(arg0: Boolean) = this.method_1143(arg0)
+fun Team.setShowFriendlyInvisibles(showFriendlyInvisible: Boolean) = this.method_1143(showFriendlyInvisible)
 /**
  * method_1135
  */
-fun Team.setFriendlyFireAllowed(arg0: Boolean) = this.method_1135(arg0)
+fun Team.setFriendlyFireAllowed(friendlyFire: Boolean) = this.method_1135(friendlyFire)
 /**
  * method_1139
  */
-fun Team.setSuffix(arg0: Text) = this.method_1139(arg0)
+fun Team.setSuffix(suffix: Text) = this.method_1139(suffix)
 /**
  * method_1148
  */
@@ -32,7 +32,7 @@ fun Team.getDisplayName() = this.method_1140()
 /**
  * method_1141
  */
-fun Team.setColor(arg0: Formatting) = this.method_1141(arg0)
+fun Team.setColor(color: Formatting) = this.method_1141(color)
 /**
  * method_1144
  */
@@ -42,13 +42,9 @@ fun Team.getPrefix() = this.method_1144()
  */
 fun Team.getScoreboard() = this.method_35594()
 /**
- * method_1142
- */
-fun KClass<Team>.decorateName(arg0: AbstractTeam, arg1: Text) = Team.method_1142(arg0, arg1)
-/**
  * method_1138
  */
-fun Team.setPrefix(arg0: Text) = this.method_1138(arg0)
+fun Team.setPrefix(prefix: Text) = this.method_1138(prefix)
 /**
  * method_1136
  */
@@ -56,16 +52,16 @@ fun Team.getSuffix() = this.method_1136()
 /**
  * method_1149
  */
-fun Team.setNameTagVisibilityRule(arg0: net.minecraft.class_270.class_272) = this.method_1149(arg0)
+fun Team.setNameTagVisibilityRule(nameTagVisibilityRule: net.minecraft.class_270.class_272) = this.method_1149(nameTagVisibilityRule)
 /**
  * method_1145
  */
-fun Team.setCollisionRule(arg0: net.minecraft.class_270.class_271) = this.method_1145(arg0)
+fun Team.setCollisionRule(collisionRule: net.minecraft.class_270.class_271) = this.method_1145(collisionRule)
 /**
  * method_1146
  */
-fun Team.setFriendlyFlagsBitwise(arg0: Int) = this.method_1146(arg0)
+fun Team.setFriendlyFlagsBitwise(flags: Int) = this.method_1146(flags)
 /**
  * method_1133
  */
-fun Team.setDeathMessageVisibilityRule(arg0: net.minecraft.class_270.class_272) = this.method_1133(arg0)
+fun Team.setDeathMessageVisibilityRule(deathMessageVisibilityRule: net.minecraft.class_270.class_272) = this.method_1133(deathMessageVisibilityRule)

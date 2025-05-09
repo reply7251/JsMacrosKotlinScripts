@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_56927
  */
-fun ResourcePackInfo.getInformationText(arg0: Boolean, arg1: Text) = this.method_56927(arg0, arg1)
+fun ResourcePackInfo.getInformationText(enabled: Boolean, description: Text) = this.method_56927(enabled, description)
 /**
  * comp_2332
  */

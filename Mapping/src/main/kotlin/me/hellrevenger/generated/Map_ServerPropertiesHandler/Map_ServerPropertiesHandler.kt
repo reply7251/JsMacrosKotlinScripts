@@ -218,10 +218,6 @@ val ServerPropertiesHandler.difficulty by alias(ServerPropertiesHandler::field_1
  */
 val ServerPropertiesHandler.useNativeTransport by alias(ServerPropertiesHandler::field_16832)
 /**
- * method_16714
- */
-fun KClass<ServerPropertiesHandler>.load(arg0: file_Path) = ServerPropertiesHandler.method_16714(arg0)
-/**
  * method_45157
  */
-fun ServerPropertiesHandler.createDimensionsRegistryHolder(arg0: net.minecraft.class_7225.class_7874) = this.method_45157(arg0)
+fun ServerPropertiesHandler.createDimensionsRegistryHolder(registries: net.minecraft.class_7225.class_7874) = this.method_45157(registries)

@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_AnimationResourceMetadata
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_55537
- */
-val KClass<AnimationResourceMetadata>.SERIALIZER by aliasStatic(AnimationResourceMetadata::field_55537)
-/**
  * comp_3454
  */
 fun AnimationResourceMetadata.width() = this.comp_3454()
@@ -20,7 +16,7 @@ fun AnimationResourceMetadata.interpolate() = this.comp_3457()
 /**
  * method_24143
  */
-fun AnimationResourceMetadata.getSize(arg0: Int, arg1: Int) = this.method_24143(arg0, arg1)
+fun AnimationResourceMetadata.getSize(defaultWidth: Int, defaultHeight: Int) = this.method_24143(defaultWidth, defaultHeight)
 /**
  * comp_3456
  */

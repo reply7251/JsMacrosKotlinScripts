@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_55546
  */
-fun DownloadQueuer.enqueue(arg0: Map<UUID, net.minecraft.class_9028.class_9031>, arg1: Consumer<net.minecraft.class_9028.class_9030>) = this.method_55546(arg0, arg1)
+fun DownloadQueuer.enqueue(entries: Map<UUID, net.minecraft.class_9028.class_9031>, callback: Consumer<net.minecraft.class_9028.class_9030>) = this.method_55546(entries, callback)

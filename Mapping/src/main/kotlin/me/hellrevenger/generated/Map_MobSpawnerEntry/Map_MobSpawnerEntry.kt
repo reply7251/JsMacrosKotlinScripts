@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_MobSpawnerEntry
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_40893
- */
-val KClass<MobSpawnerEntry>.ENTITY_KEY by aliasStatic(MobSpawnerEntry::field_40893)
-/**
  * comp_64
  */
 fun MobSpawnerEntry.entity() = this.comp_64()

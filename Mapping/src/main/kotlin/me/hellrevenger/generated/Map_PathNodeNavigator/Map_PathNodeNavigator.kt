@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_61822
  */
-fun PathNodeNavigator.setRange(arg0: Int) = this.method_61822(arg0)
+fun PathNodeNavigator.setRange(range: Int) = this.method_61822(range)
 /**
  * method_52
  */
-fun PathNodeNavigator.findPathToAny(arg0: ChunkCache, arg1: MobEntity, arg2: Set<BlockPos>, arg3: Float, arg4: Int, arg5: Float) = this.method_52(arg0, arg1, arg2, arg3, arg4, arg5)
+fun PathNodeNavigator.findPathToAny(world: ChunkCache, mob: MobEntity, positions: Set<BlockPos>, followRange: Float, distance: Int, rangeMultiplier: Float) = this.method_52(world, mob, positions, followRange, distance, rangeMultiplier)

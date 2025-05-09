@@ -6,10 +6,6 @@ import me.hellrevenger.generated.*
  */
 var GenerationSettings.features by alias(GenerationSettings::field_26416)
 /**
- * field_26639
- */
-val KClass<GenerationSettings>.INSTANCE by aliasStatic(GenerationSettings::field_26639)
-/**
  * field_34465
  */
 var GenerationSettings.allowedFeatures by alias(GenerationSettings::field_34465)
@@ -24,7 +20,7 @@ var GenerationSettings.carvers by alias(GenerationSettings::field_26415)
 /**
  * method_38105
  */
-fun GenerationSettings.isFeatureAllowed(arg0: PlacedFeature) = this.method_38105(arg0)
+fun GenerationSettings.isFeatureAllowed(feature: PlacedFeature) = this.method_38105(feature)
 /**
  * method_30976
  */

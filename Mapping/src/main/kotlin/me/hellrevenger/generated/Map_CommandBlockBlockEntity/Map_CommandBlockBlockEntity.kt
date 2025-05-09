@@ -8,7 +8,7 @@ fun CommandBlockBlockEntity.isConditionalCommandBlock() = this.method_11046()
 /**
  * method_11038
  */
-fun CommandBlockBlockEntity.setPowered(arg0: Boolean) = this.method_11038(arg0)
+fun CommandBlockBlockEntity.setPowered(powered: Boolean) = this.method_11038(powered)
 /**
  * method_11045
  */
@@ -28,7 +28,7 @@ fun CommandBlockBlockEntity.getCommandBlockType() = this.method_11039()
 /**
  * method_11041
  */
-fun CommandBlockBlockEntity.setAuto(arg0: Boolean) = this.method_11041(arg0)
+fun CommandBlockBlockEntity.setAuto(auto: Boolean) = this.method_11041(auto)
 /**
  * method_23359
  */

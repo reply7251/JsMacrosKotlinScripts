@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_46304
  */
-fun MessageBody.update(arg0: net.minecraft.class_7498.class_7499) = this.method_46304(arg0)
+fun MessageBody.update(updater: net.minecraft.class_7498.class_7499) = this.method_46304(updater)
 /**
  * comp_930
  */
@@ -12,11 +12,7 @@ fun MessageBody.timestamp() = this.comp_930()
 /**
  * method_46306
  */
-fun MessageBody.toSerialized(arg0: MessageSignatureStorage) = this.method_46306(arg0)
-/**
- * method_46305
- */
-fun KClass<MessageBody>.ofUnsigned(arg0: String) = MessageBody.method_46305(arg0)
+fun MessageBody.toSerialized(storage: MessageSignatureStorage) = this.method_46306(storage)
 /**
  * comp_932
  */

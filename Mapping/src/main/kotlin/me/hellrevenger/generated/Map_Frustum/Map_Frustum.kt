@@ -2,13 +2,9 @@ package me.hellrevenger.generated.Map_Frustum
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_34820
- */
-val KClass<Frustum>.RECESSION_SCALE by aliasStatic(Frustum::field_34820)
-/**
  * method_38557
  */
-fun Frustum.coverBoxAroundSetPosition(arg0: Int) = this.method_38557(arg0)
+fun Frustum.coverBoxAroundSetPosition(boxSize: Int) = this.method_38557(boxSize)
 /**
  * method_62342
  */
@@ -28,12 +24,12 @@ fun Frustum.getX() = this.method_62343()
 /**
  * method_62978
  */
-fun Frustum.intersectAab(arg0: BlockBox) = this.method_62978(arg0)
+fun Frustum.intersectAab(box: BlockBox) = this.method_62978(box)
 /**
  * method_23088
  */
-fun Frustum.setPosition(arg0: Double, arg1: Double, arg2: Double) = this.method_23088(arg0, arg1, arg2)
+fun Frustum.setPosition(cameraX: Double, arg1: Double, cameraY: Double) = this.method_23088(cameraX, arg1, cameraY)
 /**
  * method_23093
  */
-fun Frustum.isVisible(arg0: Box) = this.method_23093(arg0)
+fun Frustum.isVisible(box: Box) = this.method_23093(box)

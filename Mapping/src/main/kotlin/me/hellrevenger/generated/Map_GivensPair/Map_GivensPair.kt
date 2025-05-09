@@ -18,10 +18,6 @@ fun GivensPair.setRotationX(arg0: Matrix3f) = this.method_49728(arg0)
  */
 fun GivensPair.setXRotation(arg0: Quaternionf) = this.method_49729(arg0)
 /**
- * method_49726
- */
-fun KClass<GivensPair>.fromAngle(arg0: Float) = GivensPair.method_49726(arg0)
-/**
  * method_49731
  */
 fun GivensPair.setRotationY(arg0: Matrix3f) = this.method_49731(arg0)
@@ -37,10 +33,6 @@ fun GivensPair.negateSin() = this.method_49725()
  * method_49730
  */
 fun GivensPair.cosDouble() = this.method_49730()
-/**
- * method_49727
- */
-fun KClass<GivensPair>.normalize(arg0: Float, arg1: Float) = GivensPair.method_49727(arg0, arg1)
 /**
  * method_49734
  */

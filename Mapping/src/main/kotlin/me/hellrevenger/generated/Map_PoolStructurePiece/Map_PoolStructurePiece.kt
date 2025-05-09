@@ -8,7 +8,7 @@ fun PoolStructurePiece.getPos() = this.method_16648()
 /**
  * method_27236
  */
-fun PoolStructurePiece.generate(arg0: StructureWorldAccess, arg1: StructureAccessor, arg2: ChunkGenerator, arg3: Random, arg4: BlockBox, arg5: BlockPos, arg6: Boolean) = this.method_27236(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+fun PoolStructurePiece.generate(world: StructureWorldAccess, structureAccessor: StructureAccessor, chunkGenerator: ChunkGenerator, random: Random, boundingBox: BlockBox, pivot: BlockPos, keepJigsaws: Boolean) = this.method_27236(world, structureAccessor, chunkGenerator, random, boundingBox, pivot, keepJigsaws)
 /**
  * method_16644
  */
@@ -20,7 +20,7 @@ fun PoolStructurePiece.getJunctions() = this.method_16645()
 /**
  * method_16647
  */
-fun PoolStructurePiece.addJunction(arg0: JigsawJunction) = this.method_16647(arg0)
+fun PoolStructurePiece.addJunction(junction: JigsawJunction) = this.method_16647(junction)
 /**
  * method_16646
  */

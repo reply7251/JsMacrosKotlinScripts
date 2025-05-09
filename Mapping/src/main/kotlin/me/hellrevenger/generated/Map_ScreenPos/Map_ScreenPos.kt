@@ -2,17 +2,13 @@ package me.hellrevenger.generated.Map_ScreenPos
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * method_48246
- */
-fun KClass<ScreenPos>.of(arg0: NavigationAxis, arg1: Int, arg2: Int) = ScreenPos.method_48246(arg0, arg1, arg2)
-/**
  * method_48245
  */
-fun ScreenPos.getComponent(arg0: NavigationAxis) = this.method_48245(arg0)
+fun ScreenPos.getComponent(axis: NavigationAxis) = this.method_48245(axis)
 /**
  * method_48247
  */
-fun ScreenPos.add(arg0: NavigationDirection) = this.method_48247(arg0)
+fun ScreenPos.add(direction: NavigationDirection) = this.method_48247(direction)
 /**
  * comp_1193
  */

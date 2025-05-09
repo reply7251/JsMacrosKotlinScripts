@@ -74,10 +74,6 @@ val GameOptions.advancementsKey by alias(GameOptions::field_1844)
  */
 val GameOptions.sneakKey by alias(GameOptions::field_1832)
 /**
- * field_34785
- */
-val KClass<GameOptions>.EMPTY_STRING by aliasStatic(GameOptions::field_34785)
-/**
  * field_1869
  */
 val GameOptions.dropKey by alias(GameOptions::field_1869)
@@ -138,10 +134,6 @@ val GameOptions.rightKey by alias(GameOptions::field_1849)
  */
 var GameOptions.allKeys by alias(GameOptions::field_1839)
 /**
- * field_38300
- */
-val KClass<GameOptions>.MAX_FPS_LIMIT by aliasStatic(GameOptions::field_38300)
-/**
  * field_1881
  */
 val GameOptions.backKey by alias(GameOptions::field_1881)
@@ -200,7 +192,7 @@ fun GameOptions.getSneakToggled() = this.method_42449()
 /**
  * method_1627
  */
-fun GameOptions.addResourcePackProfilesToManager(arg0: ResourcePackManager) = this.method_1627(arg0)
+fun GameOptions.addResourcePackProfilesToManager(manager: ResourcePackManager) = this.method_1627(manager)
 /**
  * method_42546
  */
@@ -218,10 +210,6 @@ fun GameOptions.getPerspective() = this.method_31044()
  */
 fun GameOptions.getForceUnicodeFont() = this.method_42437()
 /**
- * method_41782
- */
-fun KClass<GameOptions>.getGenericValueText(arg0: Text, arg1: Int) = GameOptions.method_41782(arg0, arg1)
-/**
  * method_41801
  */
 fun GameOptions.getChatHeightUnfocused() = this.method_41801()
@@ -236,7 +224,7 @@ fun GameOptions.getNarratorHotkey() = this.method_53530()
 /**
  * method_45578
  */
-fun GameOptions.getSoundVolumeOption(arg0: SoundCategory) = this.method_45578(arg0)
+fun GameOptions.getSoundVolumeOption(category: SoundCategory) = this.method_45578(category)
 /**
  * method_42448
  */
@@ -248,7 +236,7 @@ fun GameOptions.collectProfiledOptions() = this.method_37295()
 /**
  * method_19343
  */
-fun GameOptions.getTextBackgroundOpacity(arg0: Float) = this.method_19343(arg0)
+fun GameOptions.getTextBackgroundOpacity(fallback: Float) = this.method_19343(fallback)
 /**
  * method_42423
  */
@@ -257,10 +245,6 @@ fun GameOptions.getAutoJump() = this.method_42423()
  * method_42435
  */
 fun GameOptions.getEntityShadows() = this.method_42435()
-/**
- * method_41783
- */
-fun KClass<GameOptions>.getGenericValueText(arg0: Text, arg1: Text) = GameOptions.method_41783(arg0, arg1)
 /**
  * method_42556
  */
@@ -292,7 +276,7 @@ fun GameOptions.getChunkBuilderMode() = this.method_41798()
 /**
  * method_1635
  */
-fun GameOptions.setPlayerModelPart(arg0: PlayerModelPart, arg1: Boolean) = this.method_1635(arg0, arg1)
+fun GameOptions.setPlayerModelPart(part: PlayerModelPart, enabled: Boolean) = this.method_1635(part, enabled)
 /**
  * method_41803
  */
@@ -308,7 +292,7 @@ fun GameOptions.getInvertYMouse() = this.method_42438()
 /**
  * method_38520
  */
-fun GameOptions.setServerViewDistance(arg0: Int) = this.method_38520(arg0)
+fun GameOptions.setServerViewDistance(serverViewDistance: Int) = this.method_38520(serverViewDistance)
 /**
  * method_1632
  */
@@ -324,7 +308,7 @@ fun GameOptions.getMonochromeLogo() = this.method_41772()
 /**
  * method_19345
  */
-fun GameOptions.getTextBackgroundColor(arg0: Float) = this.method_19345(arg0)
+fun GameOptions.getTextBackgroundColor(fallbackOpacity: Float) = this.method_19345(fallbackOpacity)
 /**
  * method_42534
  */
@@ -352,11 +336,7 @@ fun GameOptions.getDarknessEffectScale() = this.method_42472()
 /**
  * method_49598
  */
-fun GameOptions.refreshResourcePacks(arg0: ResourcePackManager) = this.method_49598(arg0)
-/**
- * method_19344
- */
-fun GameOptions.getTextBackgroundColor(arg0: Int) = this.method_19344(arg0)
+fun GameOptions.refreshResourcePacks(resourcePackManager: ResourcePackManager) = this.method_49598(resourcePackManager)
 /**
  * method_57703
  */
@@ -364,7 +344,7 @@ fun GameOptions.getMenuBackgroundBlurrinessValue() = this.method_57703()
 /**
  * method_1630
  */
-fun GameOptions.getSoundVolume(arg0: SoundCategory) = this.method_1630(arg0)
+fun GameOptions.getSoundVolume(category: SoundCategory) = this.method_1630(category)
 /**
  * method_42495
  */
@@ -482,10 +462,6 @@ fun GameOptions.getSoundDevice() = this.method_42477()
  */
 fun GameOptions.getAllowServerListing() = this.method_42441()
 /**
- * method_42550
- */
-fun GameOptions.getTextBackgroundOpacity() = this.method_42550()
-/**
  * method_42453
  */
 fun GameOptions.getDistortionEffectScale() = this.method_42453()
@@ -496,7 +472,7 @@ fun GameOptions.getNotificationDisplayTime() = this.method_48191()
 /**
  * method_31043
  */
-fun GameOptions.setPerspective(arg0: Perspective) = this.method_31043(arg0)
+fun GameOptions.setPerspective(perspective: Perspective) = this.method_31043(perspective)
 /**
  * method_38521
  */
@@ -538,10 +514,6 @@ fun GameOptions.getChatLinksPrompt() = this.method_42431()
  */
 fun GameOptions.getMainArm() = this.method_42552()
 /**
- * method_60648
- */
-fun KClass<GameOptions>.getGenericValueOrOffText(arg0: Text, arg1: Int) = GameOptions.method_60648(arg0, arg1)
-/**
  * method_42447
  */
 fun GameOptions.getFullscreen() = this.method_42447()
@@ -564,7 +536,7 @@ fun GameOptions.getAo() = this.method_41792()
 /**
  * method_32594
  */
-fun GameOptions.isPlayerModelPartEnabled(arg0: PlayerModelPart) = this.method_32594(arg0)
+fun GameOptions.isPlayerModelPartEnabled(part: PlayerModelPart) = this.method_32594(part)
 /**
  * method_37294
  */

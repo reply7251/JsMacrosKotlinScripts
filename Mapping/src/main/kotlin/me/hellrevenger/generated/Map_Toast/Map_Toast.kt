@@ -12,7 +12,7 @@ fun Toast.getWidth() = this.method_29049()
 /**
  * method_1986
  */
-fun Toast.draw(arg0: DrawContext, arg1: TextRenderer, arg2: Long) = this.method_1986(arg0, arg1, arg2)
+fun Toast.draw(context: DrawContext, textRenderer: TextRenderer, startTime: Long) = this.method_1986(context, textRenderer, startTime)
 /**
  * method_1987
  */
@@ -24,7 +24,7 @@ fun Toast.getHeight() = this.method_29050()
 /**
  * method_61989
  */
-fun Toast.update(arg0: ToastManager, arg1: Long) = this.method_61989(arg0, arg1)
+fun Toast.update(manager: ToastManager, time: Long) = this.method_61989(manager, time)
 /**
  * method_45072
  */

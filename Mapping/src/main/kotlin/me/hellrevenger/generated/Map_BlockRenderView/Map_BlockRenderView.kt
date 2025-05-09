@@ -4,19 +4,19 @@ import me.hellrevenger.generated.*
 /**
  * method_8314
  */
-fun BlockRenderView.getLightLevel(arg0: LightType, arg1: BlockPos) = this.method_8314(arg0, arg1)
+fun BlockRenderView.getLightLevel(type: LightType, pos: BlockPos) = this.method_8314(type, pos)
 /**
  * method_23752
  */
-fun BlockRenderView.getColor(arg0: BlockPos, arg1: ColorResolver) = this.method_23752(arg0, arg1)
+fun BlockRenderView.getColor(pos: BlockPos, colorResolver: ColorResolver) = this.method_23752(pos, colorResolver)
 /**
  * method_22335
  */
-fun BlockRenderView.getBaseLightLevel(arg0: BlockPos, arg1: Int) = this.method_22335(arg0, arg1)
+fun BlockRenderView.getBaseLightLevel(pos: BlockPos, ambientDarkness: Int) = this.method_22335(pos, ambientDarkness)
 /**
  * method_24852
  */
-fun BlockRenderView.getBrightness(arg0: Direction, arg1: Boolean) = this.method_24852(arg0, arg1)
+fun BlockRenderView.getBrightness(direction: Direction, shaded: Boolean) = this.method_24852(direction, shaded)
 /**
  * method_22336
  */
@@ -24,4 +24,4 @@ fun BlockRenderView.getLightingProvider() = this.method_22336()
 /**
  * method_8311
  */
-fun BlockRenderView.isSkyVisible(arg0: BlockPos) = this.method_8311(arg0)
+fun BlockRenderView.isSkyVisible(pos: BlockPos) = this.method_8311(pos)

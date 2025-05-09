@@ -8,8 +8,4 @@ fun AbstractDonkeyEntity.hasChest() = this.method_6703()
 /**
  * method_6704
  */
-fun AbstractDonkeyEntity.setHasChest(arg0: Boolean) = this.method_6704(arg0)
-/**
- * method_26898
- */
-fun KClass<AbstractDonkeyEntity>.createAbstractDonkeyAttributes() = AbstractDonkeyEntity.method_26898()
+fun AbstractDonkeyEntity.setHasChest(hasChest: Boolean) = this.method_6704(hasChest)

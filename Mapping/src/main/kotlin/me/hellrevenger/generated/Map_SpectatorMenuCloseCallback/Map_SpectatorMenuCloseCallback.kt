@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_2782
  */
-fun SpectatorMenuCloseCallback.close(arg0: SpectatorMenu) = this.method_2782(arg0)
+fun SpectatorMenuCloseCallback.close(menu: SpectatorMenu) = this.method_2782(menu)

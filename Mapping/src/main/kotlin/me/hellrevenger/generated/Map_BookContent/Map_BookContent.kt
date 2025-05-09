@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_58186
  */
-fun <T, C>BookContent<T, C>.withPages(arg0: MutableList<RawFilteredPair<T>>) = this.method_58186(arg0)
+fun <T, C>BookContent<T, C>.withPages(pages: MutableList<RawFilteredPair<T>>) = this.method_58186(pages)
 /**
  * comp_2422
  */

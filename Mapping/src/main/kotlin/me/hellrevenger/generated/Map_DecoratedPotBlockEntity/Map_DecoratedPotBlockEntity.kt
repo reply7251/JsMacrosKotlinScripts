@@ -6,14 +6,6 @@ import me.hellrevenger.generated.*
  */
 var DecoratedPotBlockEntity.lastWobbleType by alias(DecoratedPotBlockEntity::field_46662)
 /**
- * field_46659
- */
-val KClass<DecoratedPotBlockEntity>.ITEM_NBT_KEY by aliasStatic(DecoratedPotBlockEntity::field_46659)
-/**
- * field_42782
- */
-val KClass<DecoratedPotBlockEntity>.SHERDS_NBT_KEY by aliasStatic(DecoratedPotBlockEntity::field_42782)
-/**
  * field_46661
  */
 var DecoratedPotBlockEntity.lastWobbleTime by alias(DecoratedPotBlockEntity::field_46661)
@@ -28,12 +20,8 @@ fun DecoratedPotBlockEntity.toUpdatePacket() = this.method_49200()
 /**
  * method_54301
  */
-fun DecoratedPotBlockEntity.wobble(arg0: net.minecraft.class_8172.class_8837) = this.method_54301(arg0)
+fun DecoratedPotBlockEntity.wobble(wobbleType: net.minecraft.class_8172.class_8837) = this.method_54301(wobbleType)
 /**
  * method_49204
  */
 fun DecoratedPotBlockEntity.getHorizontalFacing() = this.method_49204()
-/**
- * method_52577
- */
-fun KClass<DecoratedPotBlockEntity>.getStackWith(arg0: Sherds) = DecoratedPotBlockEntity.method_52577(arg0)

@@ -4,127 +4,115 @@ import me.hellrevenger.generated.*
 /**
  * method_32811
  */
-fun RecipeGenerator.offerCutCopperRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible) = this.method_32811(arg0, arg1, arg2)
+fun RecipeGenerator.offerCutCopperRecipe(category: RecipeCategory, output: ItemConvertible, input: ItemConvertible) = this.method_32811(category, output, input)
 /**
  * method_36232
  */
-fun <T>RecipeGenerator.offerMultipleOptions(arg0: RecipeSerializer<T>, arg1: net.minecraft.class_1874.class_3958<T>, arg2: MutableList<ItemConvertible>, arg3: RecipeCategory, arg4: ItemConvertible, arg5: Float, arg6: Int, arg7: String, arg8: String) where T: AbstractCookingRecipe = this.method_36232<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+fun <T>RecipeGenerator.offerMultipleOptions(serializer: RecipeSerializer<T>, recipeFactory: net.minecraft.class_1874.class_3958<T>, inputs: MutableList<ItemConvertible>, category: RecipeCategory, output: ItemConvertible, experience: Float, cookingTime: Int, group: String, suffix: String) where T: AbstractCookingRecipe = this.method_36232<T>(serializer, recipeFactory, inputs, category, output, experience, cookingTime, group, suffix)
 /**
  * method_36449
  */
-fun RecipeGenerator.offerReversibleCompactingRecipesWithReverseRecipeGroup(arg0: RecipeCategory, arg1: ItemConvertible, arg2: RecipeCategory, arg3: ItemConvertible, arg4: String, arg5: String) = this.method_36449(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RecipeGenerator.offerReversibleCompactingRecipesWithReverseRecipeGroup(reverseCategory: RecipeCategory, baseItem: ItemConvertible, compactingCategory: RecipeCategory, compactItem: ItemConvertible, reverseId: String, reverseGroup: String) = this.method_36449(reverseCategory, baseItem, compactingCategory, compactItem, reverseId, reverseGroup)
 /**
  * method_62744
  */
-fun RecipeGenerator.offerDyeablesRecipes(arg0: MutableList<Item>, arg1: MutableList<Item>, arg2: Item, arg3: String, arg4: RecipeCategory) = this.method_62744(arg0, arg1, arg2, arg3, arg4)
+fun RecipeGenerator.offerDyeablesRecipes(dyes: MutableList<Item>, dyeables: MutableList<Item>, undyed: Item, group: String, category: RecipeCategory) = this.method_62744(dyes, dyeables, undyed, group, category)
 /**
  * method_17585
  */
-fun <T>RecipeGenerator.generateCookingRecipes(arg0: String, arg1: RecipeSerializer<T>, arg2: net.minecraft.class_1874.class_3958<T>, arg3: Int) where T: AbstractCookingRecipe = this.method_17585<T>(arg0, arg1, arg2, arg3)
+fun <T>RecipeGenerator.generateCookingRecipes(cooker: String, serializer: RecipeSerializer<T>, recipeFactory: net.minecraft.class_1874.class_3958<T>, cookingTime: Int) where T: AbstractCookingRecipe = this.method_17585<T>(cooker, serializer, recipeFactory, cookingTime)
 /**
  * method_32808
  */
-fun RecipeGenerator.createStairsRecipe(arg0: ItemConvertible, arg1: Ingredient) = this.method_32808(arg0, arg1)
+fun RecipeGenerator.createStairsRecipe(output: ItemConvertible, input: Ingredient) = this.method_32808(output, input)
 /**
  * method_24478
  */
-fun RecipeGenerator.offerBoatRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24478(arg0, arg1)
+fun RecipeGenerator.offerBoatRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_24478(output, input)
 /**
  * method_62749
  */
-fun RecipeGenerator.createShapeless(arg0: RecipeCategory, arg1: ItemConvertible) = this.method_62749(arg0, arg1)
+fun RecipeGenerator.createShapeless(category: RecipeCategory, output: ItemConvertible) = this.method_62749(category, output)
 /**
  * method_33546
  */
-fun RecipeGenerator.createFenceRecipe(arg0: ItemConvertible, arg1: Ingredient) = this.method_33546(arg0, arg1)
+fun RecipeGenerator.createFenceRecipe(output: ItemConvertible, input: Ingredient) = this.method_33546(output, input)
 /**
  * method_32810
  */
-fun RecipeGenerator.offerPolishedStoneRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible) = this.method_32810(arg0, arg1, arg2)
+fun RecipeGenerator.offerPolishedStoneRecipe(category: RecipeCategory, output: ItemConvertible, input: ItemConvertible) = this.method_32810(category, output, input)
 /**
  * method_47522
  */
-fun RecipeGenerator.offerCompactingRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible) = this.method_47522(arg0, arg1, arg2)
-/**
- * method_36450
- */
-fun KClass<RecipeGenerator>.getRecipeName(arg0: ItemConvertible) = RecipeGenerator.method_36450(arg0)
+fun RecipeGenerator.offerCompactingRecipe(category: RecipeCategory, output: ItemConvertible, input: ItemConvertible) = this.method_47522(category, output, input)
 /**
  * method_62743
  */
-fun RecipeGenerator.offerSuspiciousStewRecipe(arg0: Item, arg1: SuspiciousStewIngredient) = this.method_62743(arg0, arg1)
+fun RecipeGenerator.offerSuspiciousStewRecipe(input: Item, stewIngredient: SuspiciousStewIngredient) = this.method_62743(input, stewIngredient)
 /**
  * method_24475
  */
-fun RecipeGenerator.offerPlanksRecipe2(arg0: ItemConvertible, arg1: TagKey<Item>, arg2: Int) = this.method_24475(arg0, arg1, arg2)
+fun RecipeGenerator.offerPlanksRecipe2(output: ItemConvertible, logTag: TagKey<Item>, count: Int) = this.method_24475(output, logTag, count)
 /**
  * method_10420
  */
-fun RecipeGenerator.conditionsFromTag(arg0: TagKey<Item>) = this.method_10420(arg0)
+fun RecipeGenerator.conditionsFromTag(tag: TagKey<Item>) = this.method_10420(tag)
 /**
  * method_24476
  */
-fun RecipeGenerator.offerBarkBlockRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24476(arg0, arg1)
+fun RecipeGenerator.offerBarkBlockRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_24476(output, input)
 /**
  * method_32805
  */
-fun RecipeGenerator.createChiseledBlockRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: Ingredient) = this.method_32805(arg0, arg1, arg2)
+fun RecipeGenerator.createChiseledBlockRecipe(category: RecipeCategory, output: ItemConvertible, input: Ingredient) = this.method_32805(category, output, input)
 /**
  * method_36547
  */
-fun RecipeGenerator.createCutCopperRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: Ingredient) = this.method_36547(arg0, arg1, arg2)
+fun RecipeGenerator.createCutCopperRecipe(category: RecipeCategory, output: ItemConvertible, input: Ingredient) = this.method_36547(category, output, input)
 /**
  * method_24885
  */
-fun RecipeGenerator.offerCarpetRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24885(arg0, arg1)
+fun RecipeGenerator.offerCarpetRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_24885(output, input)
 /**
  * method_34854
  */
-fun RecipeGenerator.offerWaxingRecipes(arg0: FeatureSet) = this.method_34854(arg0)
-/**
- * method_33714
- */
-fun KClass<RecipeGenerator>.convertBetween(arg0: ItemConvertible, arg1: ItemConvertible) = RecipeGenerator.method_33714(arg0, arg1)
+fun RecipeGenerator.offerWaxingRecipes(enabledFeatures: FeatureSet) = this.method_34854(enabledFeatures)
 /**
  * method_62748
  */
-fun RecipeGenerator.ingredientFromTag(arg0: TagKey<Item>) = this.method_62748(arg0)
+fun RecipeGenerator.ingredientFromTag(tag: TagKey<Item>) = this.method_62748(tag)
 /**
  * method_33717
  */
-fun RecipeGenerator.offerStonecuttingRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible) = this.method_33717(arg0, arg1, arg2)
+fun RecipeGenerator.offerStonecuttingRecipe(category: RecipeCategory, output: ItemConvertible, input: ItemConvertible) = this.method_33717(category, output, input)
 /**
  * method_32804
  */
-fun RecipeGenerator.createSlabRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: Ingredient) = this.method_32804(arg0, arg1, arg2)
-/**
- * method_36451
- */
-fun KClass<RecipeGenerator>.getSmeltingItemPath(arg0: ItemConvertible) = RecipeGenerator.method_36451(arg0)
+fun RecipeGenerator.createSlabRecipe(category: RecipeCategory, output: ItemConvertible, input: Ingredient) = this.method_32804(category, output, input)
 /**
  * method_24891
  */
-fun RecipeGenerator.offerStainedGlassPaneRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24891(arg0, arg1)
+fun RecipeGenerator.offerStainedGlassPaneRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_24891(output, input)
 /**
  * method_51890
  */
-fun RecipeGenerator.offerDyeableRecipes(arg0: MutableList<Item>, arg1: MutableList<Item>, arg2: String) = this.method_51890(arg0, arg1, arg2)
+fun RecipeGenerator.offerDyeableRecipes(dyes: MutableList<Item>, dyeables: MutableList<Item>, group: String) = this.method_51890(dyes, dyeables, group)
 /**
  * method_35914
  */
-fun RecipeGenerator.conditionsFromItem(arg0: net.minecraft.class_2096.class_2100, arg1: ItemConvertible) = this.method_35914(arg0, arg1)
+fun RecipeGenerator.conditionsFromItem(count: net.minecraft.class_2096.class_2100, item: ItemConvertible) = this.method_35914(count, item)
 /**
  * method_46207
  */
-fun RecipeGenerator.generateFamilies(arg0: FeatureSet) = this.method_46207(arg0)
+fun RecipeGenerator.generateFamilies(enabledFeatures: FeatureSet) = this.method_46207(enabledFeatures)
 /**
  * method_33535
  */
-fun RecipeGenerator.generateFamily(arg0: BlockFamily, arg1: FeatureSet) = this.method_33535(arg0, arg1)
+fun RecipeGenerator.generateFamily(family: BlockFamily, enabledFeatures: FeatureSet) = this.method_33535(family, enabledFeatures)
 /**
  * method_33537
  */
-fun RecipeGenerator.createCondensingRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: Ingredient) = this.method_33537(arg0, arg1, arg2)
+fun RecipeGenerator.createCondensingRecipe(category: RecipeCategory, output: ItemConvertible, input: Ingredient) = this.method_33537(category, output, input)
 /**
  * method_10419
  */
@@ -132,208 +120,152 @@ fun RecipeGenerator.generate() = this.method_10419()
 /**
  * method_62747
  */
-fun RecipeGenerator.createShaped(arg0: RecipeCategory, arg1: ItemConvertible, arg2: Int) = this.method_62747(arg0, arg1, arg2)
-/**
- * method_32807
- */
-fun KClass<RecipeGenerator>.hasItem(arg0: ItemConvertible) = RecipeGenerator.method_32807(arg0)
+fun RecipeGenerator.createShaped(category: RecipeCategory, output: ItemConvertible, count: Int) = this.method_62747(category, output, count)
 /**
  * method_33548
  */
-fun RecipeGenerator.createFenceGateRecipe(arg0: ItemConvertible, arg1: Ingredient) = this.method_33548(arg0, arg1)
+fun RecipeGenerator.createFenceGateRecipe(output: ItemConvertible, input: Ingredient) = this.method_33548(output, input)
 /**
  * method_36234
  */
-fun RecipeGenerator.offerBlasting(arg0: MutableList<ItemConvertible>, arg1: RecipeCategory, arg2: ItemConvertible, arg3: Float, arg4: Int, arg5: String) = this.method_36234(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RecipeGenerator.offerBlasting(inputs: MutableList<ItemConvertible>, category: RecipeCategory, output: ItemConvertible, experience: Float, cookingTime: Int, group: String) = this.method_36234(inputs, category, output, experience, cookingTime, group)
 /**
  * method_33533
  */
-fun RecipeGenerator.getVariantRecipeInput(arg0: BlockFamily, arg1: net.minecraft.class_5794.class_5796) = this.method_33533(arg0, arg1)
-/**
- * method_10426
- */
-fun RecipeGenerator.conditionsFromItem(arg0: ItemConvertible) = this.method_10426(arg0)
+fun RecipeGenerator.getVariantRecipeInput(family: BlockFamily, variant: net.minecraft.class_5794.class_5796) = this.method_33533(family, variant)
 /**
  * method_36325
  */
-fun RecipeGenerator.offerReversibleCompactingRecipes(arg0: RecipeCategory, arg1: ItemConvertible, arg2: RecipeCategory, arg3: ItemConvertible) = this.method_36325(arg0, arg1, arg2, arg3)
-/**
- * method_10423
- */
-fun KClass<RecipeGenerator>.conditionsFromItemPredicates(arg0: Array<ItemPredicate>) = RecipeGenerator.method_10423(*arg0)
-/**
- * method_36452
- */
-fun KClass<RecipeGenerator>.getBlastingItemPath(arg0: ItemConvertible) = RecipeGenerator.method_36452(arg0)
+fun RecipeGenerator.offerReversibleCompactingRecipes(reverseCategory: RecipeCategory, baseItem: ItemConvertible, compactingCategory: RecipeCategory, compactItem: ItemConvertible) = this.method_36325(reverseCategory, baseItem, compactingCategory, compactItem)
 /**
  * method_32812
  */
-fun RecipeGenerator.offerChiseledBlockRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible) = this.method_32812(arg0, arg1, arg2)
+fun RecipeGenerator.offerChiseledBlockRecipe(category: RecipeCategory, output: ItemConvertible, input: ItemConvertible) = this.method_32812(category, output, input)
 /**
  * method_24890
  */
-fun RecipeGenerator.offerStainedGlassDyeingRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24890(arg0, arg1)
+fun RecipeGenerator.offerStainedGlassDyeingRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_24890(output, input)
 /**
  * method_32809
  */
-fun RecipeGenerator.offerWallRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible) = this.method_32809(arg0, arg1, arg2)
-/**
- * method_33716
- */
-fun KClass<RecipeGenerator>.getItemPath(arg0: ItemConvertible) = RecipeGenerator.method_33716(arg0)
+fun RecipeGenerator.offerWallRecipe(category: RecipeCategory, output: ItemConvertible, input: ItemConvertible) = this.method_32809(category, output, input)
 /**
  * method_24887
  */
-fun RecipeGenerator.offerBedRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24887(arg0, arg1)
+fun RecipeGenerator.offerBedRecipe(output: ItemConvertible, inputWool: ItemConvertible) = this.method_24887(output, inputWool)
 /**
  * method_29728
  */
-fun RecipeGenerator.offerNetheriteUpgradeRecipe(arg0: Item, arg1: RecipeCategory, arg2: Item) = this.method_29728(arg0, arg1, arg2)
+fun RecipeGenerator.offerNetheriteUpgradeRecipe(input: Item, category: RecipeCategory, result: Item) = this.method_29728(input, category, result)
 /**
  * method_36233
  */
-fun RecipeGenerator.offerSmelting(arg0: MutableList<ItemConvertible>, arg1: RecipeCategory, arg2: ItemConvertible, arg3: Float, arg4: Int, arg5: String) = this.method_36233(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RecipeGenerator.offerSmelting(inputs: MutableList<ItemConvertible>, category: RecipeCategory, output: ItemConvertible, experience: Float, cookingTime: Int, group: String) = this.method_36233(inputs, category, output, experience, cookingTime, group)
 /**
  * method_32806
  */
-fun RecipeGenerator.createPressurePlateRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: Ingredient) = this.method_32806(arg0, arg1, arg2)
+fun RecipeGenerator.createPressurePlateRecipe(category: RecipeCategory, output: ItemConvertible, input: Ingredient) = this.method_32806(category, output, input)
 /**
  * method_54830
  */
-fun RecipeGenerator.offerBulbRecipe(arg0: Block, arg1: Block) = this.method_54830(arg0, arg1)
+fun RecipeGenerator.offerBulbRecipe(output: Block, input: Block) = this.method_54830(output, input)
 /**
  * method_36445
  */
-fun RecipeGenerator.offerShapelessRecipe(arg0: ItemConvertible, arg1: ItemConvertible, arg2: String, arg3: Int) = this.method_36445(arg0, arg1, arg2, arg3)
+fun RecipeGenerator.offerShapelessRecipe(output: ItemConvertible, input: ItemConvertible, group: String, outputCount: Int) = this.method_36445(output, input, group, outputCount)
 /**
  * method_24893
  */
-fun RecipeGenerator.offerTerracottaDyeingRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24893(arg0, arg1)
+fun RecipeGenerator.offerTerracottaDyeingRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_24893(output, input)
 /**
  * method_48533
  */
-fun RecipeGenerator.offerSmithingTemplateCopyingRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_48533(arg0, arg1)
+fun RecipeGenerator.offerSmithingTemplateCopyingRecipe(template: ItemConvertible, resource: ItemConvertible) = this.method_48533(template, resource)
 /**
  * method_54829
  */
-fun RecipeGenerator.offerGrateRecipe(arg0: Block, arg1: Block) = this.method_54829(arg0, arg1)
+fun RecipeGenerator.offerGrateRecipe(output: Block, input: Block) = this.method_54829(output, input)
 /**
  * method_33542
  */
-fun RecipeGenerator.createButtonRecipe(arg0: ItemConvertible, arg1: Ingredient) = this.method_33542(arg0, arg1)
+fun RecipeGenerator.createButtonRecipe(output: ItemConvertible, input: Ingredient) = this.method_33542(output, input)
 /**
  * method_36444
  */
-fun RecipeGenerator.offerSingleOutputShapelessRecipe(arg0: ItemConvertible, arg1: ItemConvertible, arg2: String) = this.method_36444(arg0, arg1, arg2)
+fun RecipeGenerator.offerSingleOutputShapelessRecipe(output: ItemConvertible, input: ItemConvertible, group: String) = this.method_36444(output, input, group)
 /**
  * method_48530
  */
-fun RecipeGenerator.offerSmithingTrimRecipe(arg0: Item, arg1: RegistryKey<Recipe<*>>) = this.method_48530(arg0, arg1)
+fun RecipeGenerator.offerSmithingTrimRecipe(arg0: Item, input: RegistryKey<Recipe<*>>) = this.method_48530(arg0, input)
 /**
  * method_33531
  */
-fun RecipeGenerator.getWallRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: Ingredient) = this.method_33531(arg0, arg1, arg2)
-/**
- * method_53499
- */
-fun KClass<RecipeGenerator>.conditionsFromPredicates(arg0: Array<net.minecraft.class_2073.class_2074>) = RecipeGenerator.method_53499(*arg0)
+fun RecipeGenerator.getWallRecipe(category: RecipeCategory, output: ItemConvertible, input: Ingredient) = this.method_33531(category, output, input)
 /**
  * method_32814
  */
-fun RecipeGenerator.offerSlabRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible) = this.method_32814(arg0, arg1, arg2)
+fun RecipeGenerator.offerSlabRecipe(category: RecipeCategory, output: ItemConvertible, input: ItemConvertible) = this.method_32814(category, output, input)
 /**
  * method_46212
  */
-fun RecipeGenerator.offerMosaicRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible) = this.method_46212(arg0, arg1, arg2)
-/**
- * method_62750
- */
-fun RecipeGenerator.createShapeless(arg0: RecipeCategory, arg1: ItemConvertible, arg2: Int) = this.method_62750(arg0, arg1, arg2)
-/**
- * method_33715
- */
-fun RecipeGenerator.offerStonecuttingRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible, arg3: Int) = this.method_33715(arg0, arg1, arg2, arg3)
+fun RecipeGenerator.offerMosaicRecipe(category: RecipeCategory, output: ItemConvertible, input: ItemConvertible) = this.method_46212(category, output, input)
 /**
  * method_24892
  */
-fun RecipeGenerator.offerStainedGlassPaneDyeingRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24892(arg0, arg1)
-/**
- * method_60922
- */
-fun RecipeGenerator.offerSmithingTemplateCopyingRecipe(arg0: ItemConvertible, arg1: Ingredient) = this.method_60922(arg0, arg1)
+fun RecipeGenerator.offerStainedGlassPaneDyeingRecipe(output: ItemConvertible, inputDye: ItemConvertible) = this.method_24892(output, inputDye)
 /**
  * method_36446
  */
-fun RecipeGenerator.offerReversibleCompactingRecipesWithCompactingRecipeGroup(arg0: RecipeCategory, arg1: ItemConvertible, arg2: RecipeCategory, arg3: ItemConvertible, arg4: String, arg5: String) = this.method_36446(arg0, arg1, arg2, arg3, arg4, arg5)
+fun RecipeGenerator.offerReversibleCompactingRecipesWithCompactingRecipeGroup(reverseCategory: RecipeCategory, baseItem: ItemConvertible, compactingCategory: RecipeCategory, compactItem: ItemConvertible, compactingId: String, compactingGroup: String) = this.method_36446(reverseCategory, baseItem, compactingCategory, compactItem, compactingId, compactingGroup)
 /**
  * method_33553
  */
-fun RecipeGenerator.createTrapdoorRecipe(arg0: ItemConvertible, arg1: Ingredient) = this.method_33553(arg0, arg1)
+fun RecipeGenerator.createTrapdoorRecipe(output: ItemConvertible, input: Ingredient) = this.method_33553(output, input)
 /**
  * method_24889
  */
-fun RecipeGenerator.offerBannerRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24889(arg0, arg1)
+fun RecipeGenerator.offerBannerRecipe(output: ItemConvertible, inputWool: ItemConvertible) = this.method_24889(output, inputWool)
 /**
  * method_32233
  */
-fun RecipeGenerator.offerCandleDyeingRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_32233(arg0, arg1)
+fun RecipeGenerator.offerCandleDyeingRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_32233(output, input)
 /**
  * method_34662
  */
-fun RecipeGenerator.offerCrackingRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_34662(arg0, arg1)
+fun RecipeGenerator.offerCrackingRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_34662(output, input)
 /**
  * method_46208
  */
-fun RecipeGenerator.offerHangingSignRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_46208(arg0, arg1)
+fun RecipeGenerator.offerHangingSignRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_46208(output, input)
 /**
  * method_33544
  */
-fun RecipeGenerator.createDoorRecipe(arg0: ItemConvertible, arg1: Ingredient) = this.method_33544(arg0, arg1)
+fun RecipeGenerator.createDoorRecipe(output: ItemConvertible, input: Ingredient) = this.method_33544(output, input)
 /**
  * method_46209
  */
-fun RecipeGenerator.offer2x2CompactingRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible) = this.method_46209(arg0, arg1, arg2)
-/**
- * method_47521
- */
-fun RecipeGenerator.offerCompactingRecipe(arg0: RecipeCategory, arg1: ItemConvertible, arg2: ItemConvertible, arg3: String) = this.method_47521(arg0, arg1, arg2, arg3)
+fun RecipeGenerator.offer2x2CompactingRecipe(category: RecipeCategory, output: ItemConvertible, input: ItemConvertible) = this.method_46209(category, output, input)
 /**
  * method_36448
  */
-fun <T>RecipeGenerator.offerFoodCookingRecipe(arg0: String, arg1: RecipeSerializer<T>, arg2: net.minecraft.class_1874.class_3958<T>, arg3: Int, arg4: ItemConvertible, arg5: ItemConvertible, arg6: Float) where T: AbstractCookingRecipe = this.method_36448<T>(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
-/**
- * method_62746
- */
-fun RecipeGenerator.createShaped(arg0: RecipeCategory, arg1: ItemConvertible) = this.method_62746(arg0, arg1)
-/**
- * method_36447
- */
-fun RecipeGenerator.offerReversibleCompactingRecipes(arg0: RecipeCategory, arg1: ItemConvertible, arg2: RecipeCategory, arg3: ItemConvertible, arg4: String, arg5: String, arg6: String, arg7: String) = this.method_36447(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun <T>RecipeGenerator.offerFoodCookingRecipe(cooker: String, serializer: RecipeSerializer<T>, recipeFactory: net.minecraft.class_1874.class_3958<T>, cookingTime: Int, input: ItemConvertible, output: ItemConvertible, experience: Float) where T: AbstractCookingRecipe = this.method_36448<T>(cooker, serializer, recipeFactory, cookingTime, input, output, experience)
 /**
  * method_42754
  */
-fun RecipeGenerator.offerChestBoatRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_42754(arg0, arg1)
+fun RecipeGenerator.offerChestBoatRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_42754(output, input)
 /**
  * method_24477
  */
-fun RecipeGenerator.offerPlanksRecipe(arg0: ItemConvertible, arg1: TagKey<Item>, arg2: Int) = this.method_24477(arg0, arg1, arg2)
+fun RecipeGenerator.offerPlanksRecipe(output: ItemConvertible, logTag: TagKey<Item>, count: Int) = this.method_24477(output, logTag, count)
 /**
  * method_24894
  */
-fun RecipeGenerator.offerConcretePowderDyeingRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_24894(arg0, arg1)
-/**
- * method_10422
- */
-fun KClass<RecipeGenerator>.requireEnteringFluid(arg0: Block) = RecipeGenerator.method_10422(arg0)
+fun RecipeGenerator.offerConcretePowderDyeingRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_24894(output, input)
 /**
  * method_32813
  */
-fun RecipeGenerator.offerPressurePlateRecipe(arg0: ItemConvertible, arg1: ItemConvertible) = this.method_32813(arg0, arg1)
+fun RecipeGenerator.offerPressurePlateRecipe(output: ItemConvertible, input: ItemConvertible) = this.method_32813(output, input)
 /**
  * method_33555
  */
-fun RecipeGenerator.createSignRecipe(arg0: ItemConvertible, arg1: Ingredient) = this.method_33555(arg0, arg1)
-/**
- * method_62745
- */
-fun RecipeGenerator.createShapeless(arg0: RecipeCategory, arg1: ItemStack) = this.method_62745(arg0, arg1)
+fun RecipeGenerator.createSignRecipe(output: ItemConvertible, input: Ingredient) = this.method_33555(output, input)

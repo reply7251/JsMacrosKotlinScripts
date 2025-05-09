@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_7654
  */
-fun AbstractRecipeScreenHandler.populateRecipeFinder(arg0: RecipeFinder) = this.method_7654(arg0)
+fun AbstractRecipeScreenHandler.populateRecipeFinder(finder: RecipeFinder) = this.method_7654(finder)
 /**
  * method_30264
  */
@@ -12,4 +12,4 @@ fun AbstractRecipeScreenHandler.getCategory() = this.method_30264()
 /**
  * method_17697
  */
-fun AbstractRecipeScreenHandler.fillInputSlots(arg0: Boolean, arg1: Boolean, arg2: RecipeEntry<*>, arg3: ServerWorld, arg4: PlayerInventory) = this.method_17697(arg0, arg1, arg2, arg3, arg4)
+fun AbstractRecipeScreenHandler.fillInputSlots(craftAll: Boolean, creative: Boolean, recipe: RecipeEntry<*>, world: ServerWorld, inventory: PlayerInventory) = this.method_17697(craftAll, creative, recipe, world, inventory)

@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_31772
  */
-fun <T>SectionedEntityCache<T>.getSections(arg0: Long) where T: EntityLike = this.method_31772(arg0)
+fun <T>SectionedEntityCache<T>.getSections(chunkPos: Long) where T: EntityLike = this.method_31772(chunkPos)
 /**
  * method_31785
  */
-fun <T>SectionedEntityCache<T>.findTrackingSection(arg0: Long) where T: EntityLike = this.method_31785(arg0)
+fun <T>SectionedEntityCache<T>.findTrackingSection(sectionPos: Long) where T: EntityLike = this.method_31785(sectionPos)
 /**
  * method_31777
  */
-fun <T>SectionedEntityCache<T>.forEachInBox(arg0: Box, arg1: LazyIterationConsumer<EntityTrackingSection<T>>) where T: EntityLike = this.method_31777(arg0, arg1)
+fun <T>SectionedEntityCache<T>.forEachInBox(box: Box, consumer: LazyIterationConsumer<EntityTrackingSection<T>>) where T: EntityLike = this.method_31777(box, consumer)
 /**
  * method_31781
  */
@@ -20,7 +20,7 @@ fun <T>SectionedEntityCache<T>.sectionCount() where T: EntityLike = this.method_
 /**
  * method_31786
  */
-fun <T>SectionedEntityCache<T>.removeSection(arg0: Long) where T: EntityLike = this.method_31786(arg0)
+fun <T>SectionedEntityCache<T>.removeSection(sectionPos: Long) where T: EntityLike = this.method_31786(sectionPos)
 /**
  * method_31770
  */
@@ -28,16 +28,12 @@ fun <T>SectionedEntityCache<T>.getChunkPositions() where T: EntityLike = this.me
 /**
  * method_31773
  */
-fun <T, U>SectionedEntityCache<T>.forEachIntersects(arg0: TypeFilter<T, U>, arg1: Box, arg2: LazyIterationConsumer<U>) where T: EntityLike, U: T = this.method_31773<U>(arg0, arg1, arg2)
-/**
- * method_31783
- */
-fun <T>SectionedEntityCache<T>.forEachIntersects(arg0: Box, arg1: LazyIterationConsumer<T>) where T: EntityLike = this.method_31783(arg0, arg1)
+fun <T, U>SectionedEntityCache<T>.forEachIntersects(filter: TypeFilter<T, U>, box: Box, consumer: LazyIterationConsumer<U>) where T: EntityLike, U: T = this.method_31773<U>(filter, box, consumer)
 /**
  * method_31782
  */
-fun <T>SectionedEntityCache<T>.getTrackingSections(arg0: Long) where T: EntityLike = this.method_31782(arg0)
+fun <T>SectionedEntityCache<T>.getTrackingSections(chunkPos: Long) where T: EntityLike = this.method_31782(chunkPos)
 /**
  * method_31784
  */
-fun <T>SectionedEntityCache<T>.getTrackingSection(arg0: Long) where T: EntityLike = this.method_31784(arg0)
+fun <T>SectionedEntityCache<T>.getTrackingSection(sectionPos: Long) where T: EntityLike = this.method_31784(sectionPos)

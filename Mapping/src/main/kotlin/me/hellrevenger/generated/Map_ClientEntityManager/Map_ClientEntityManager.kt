@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_31875
  */
-fun <T>ClientEntityManager<T>.stopTicking(arg0: ChunkPos) where T: EntityLike = this.method_31875(arg0)
+fun <T>ClientEntityManager<T>.stopTicking(pos: ChunkPos) where T: EntityLike = this.method_31875(pos)
 /**
  * method_31869
  */
-fun <T>ClientEntityManager<T>.startTicking(arg0: ChunkPos) where T: EntityLike = this.method_31869(arg0)
+fun <T>ClientEntityManager<T>.startTicking(pos: ChunkPos) where T: EntityLike = this.method_31869(pos)
 /**
  * method_31879
  */
@@ -20,7 +20,7 @@ fun <T>ClientEntityManager<T>.getLookup() where T: EntityLike = this.method_3186
 /**
  * method_31870
  */
-fun <T>ClientEntityManager<T>.addEntity(arg0: T) where T: EntityLike = this.method_31870(arg0)
+fun <T>ClientEntityManager<T>.addEntity(entity: T) where T: EntityLike = this.method_31870(entity)
 /**
  * method_31874
  */

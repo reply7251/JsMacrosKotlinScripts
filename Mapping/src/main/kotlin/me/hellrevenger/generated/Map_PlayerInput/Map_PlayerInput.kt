@@ -2,10 +2,6 @@ package me.hellrevenger.generated.Map_PlayerInput
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_54098
- */
-val KClass<PlayerInput>.DEFAULT by aliasStatic(PlayerInput::field_54098)
-/**
  * comp_3164
  */
 fun PlayerInput.sneak() = this.comp_3164()

@@ -12,11 +12,11 @@ fun WorldProperties.getDifficulty() = this.method_207()
 /**
  * method_151
  */
-fun WorldProperties.populateCrashReport(arg0: CrashReportSection, arg1: HeightLimitView) = this.method_151(arg0, arg1)
+fun WorldProperties.populateCrashReport(reportSection: CrashReportSection, world: HeightLimitView) = this.method_151(reportSection, world)
 /**
  * method_157
  */
-fun WorldProperties.setRaining(arg0: Boolean) = this.method_157(arg0)
+fun WorldProperties.setRaining(raining: Boolean) = this.method_157(raining)
 /**
  * method_197
  */

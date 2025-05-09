@@ -8,7 +8,7 @@ fun UseCooldownComponent.getCooldownTicks() = this.method_62860()
 /**
  * method_62862
  */
-fun UseCooldownComponent.set(arg0: ItemStack, arg1: LivingEntity) = this.method_62862(arg0, arg1)
+fun UseCooldownComponent.set(stack: ItemStack, user: LivingEntity) = this.method_62862(stack, user)
 /**
  * comp_3092
  */

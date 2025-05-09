@@ -8,8 +8,8 @@ fun PostEffectPass.getProgram() = this.method_62922()
 /**
  * method_62255
  */
-fun PostEffectPass.render(arg0: FrameGraphBuilder, arg1: Map<Identifier, Handle<Framebuffer>>, arg2: Matrix4f) = this.method_62255(arg0, arg1, arg2)
+fun PostEffectPass.render(builder: FrameGraphBuilder, handles: Map<Identifier, Handle<Framebuffer>>, projectionMatrix: Matrix4f) = this.method_62255(builder, handles, projectionMatrix)
 /**
  * method_62258
  */
-fun PostEffectPass.addSampler(arg0: net.minecraft.class_283.class_9971) = this.method_62258(arg0)
+fun PostEffectPass.addSampler(sampler: net.minecraft.class_283.class_9971) = this.method_62258(sampler)

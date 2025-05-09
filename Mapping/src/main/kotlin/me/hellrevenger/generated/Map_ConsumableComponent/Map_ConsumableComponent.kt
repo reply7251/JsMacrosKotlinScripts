@@ -2,17 +2,9 @@ package me.hellrevenger.generated.Map_ConsumableComponent
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_53769
- */
-val KClass<ConsumableComponent>.DEFAULT_CONSUME_SECONDS by aliasStatic(ConsumableComponent::field_53769)
-/**
  * method_62841
  */
 fun ConsumableComponent.getConsumeTicks() = this.method_62841()
-/**
- * method_62850
- */
-fun KClass<ConsumableComponent>.builder() = ConsumableComponent.method_62850()
 /**
  * comp_3086
  */
@@ -20,23 +12,23 @@ fun ConsumableComponent.useAction() = this.comp_3086()
 /**
  * method_62843
  */
-fun ConsumableComponent.spawnParticlesAndPlaySound(arg0: Random, arg1: LivingEntity, arg2: ItemStack, arg3: Int) = this.method_62843(arg0, arg1, arg2, arg3)
+fun ConsumableComponent.spawnParticlesAndPlaySound(random: Random, user: LivingEntity, stack: ItemStack, particleCount: Int) = this.method_62843(random, user, stack, particleCount)
 /**
  * method_62847
  */
-fun ConsumableComponent.finishConsumption(arg0: world_World, arg1: LivingEntity, arg2: ItemStack) = this.method_62847(arg0, arg1, arg2)
+fun ConsumableComponent.finishConsumption(world: world_World, user: LivingEntity, stack: ItemStack) = this.method_62847(world, user, stack)
 /**
  * method_62845
  */
-fun ConsumableComponent.consume(arg0: LivingEntity, arg1: ItemStack, arg2: Hand) = this.method_62845(arg0, arg1, arg2)
+fun ConsumableComponent.consume(user: LivingEntity, stack: ItemStack, hand: Hand) = this.method_62845(user, stack, hand)
 /**
  * method_62842
  */
-fun ConsumableComponent.shouldSpawnParticlesAndPlaySounds(arg0: Int) = this.method_62842(arg0)
+fun ConsumableComponent.shouldSpawnParticlesAndPlaySounds(remainingUseTicks: Int) = this.method_62842(remainingUseTicks)
 /**
  * method_62844
  */
-fun ConsumableComponent.canConsume(arg0: LivingEntity, arg1: ItemStack) = this.method_62844(arg0, arg1)
+fun ConsumableComponent.canConsume(user: LivingEntity, stack: ItemStack) = this.method_62844(user, stack)
 /**
  * comp_3089
  */

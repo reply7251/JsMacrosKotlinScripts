@@ -2,21 +2,17 @@ package me.hellrevenger.generated.Map_FunctionLoader
 import kotlin.reflect.*
 import me.hellrevenger.generated.*
 /**
- * field_51976
- */
-val KClass<FunctionLoader>.FUNCTION_REGISTRY_KEY by aliasStatic(FunctionLoader::field_51976)
-/**
  * method_29458
  */
 fun FunctionLoader.getTags() = this.method_29458()
 /**
  * method_29459
  */
-fun FunctionLoader.getTagOrEmpty(arg0: Identifier) = this.method_29459(arg0)
+fun FunctionLoader.getTagOrEmpty(id: Identifier) = this.method_29459(id)
 /**
  * method_29456
  */
-fun FunctionLoader.get(arg0: Identifier) = this.method_29456(arg0)
+fun FunctionLoader.get(id: Identifier) = this.method_29456(id)
 /**
  * method_29447
  */

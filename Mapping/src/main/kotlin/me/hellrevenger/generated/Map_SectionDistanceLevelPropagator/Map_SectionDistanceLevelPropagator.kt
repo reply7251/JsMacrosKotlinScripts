@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_18750
  */
-fun SectionDistanceLevelPropagator.update(arg0: Long, arg1: Int, arg2: Boolean) = this.method_18750(arg0, arg1, arg2)
+fun SectionDistanceLevelPropagator.update(id: Long, arg1: Int, level: Boolean) = this.method_18750(id, arg1, level)

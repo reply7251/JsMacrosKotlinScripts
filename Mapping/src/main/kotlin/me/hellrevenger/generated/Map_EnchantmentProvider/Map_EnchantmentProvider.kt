@@ -8,4 +8,4 @@ fun EnchantmentProvider.getCodec() = this.method_60265()
 /**
  * method_60266
  */
-fun EnchantmentProvider.provideEnchantments(arg0: ItemStack, arg1: net.minecraft.class_9304.class_9305, arg2: Random, arg3: LocalDifficulty) = this.method_60266(arg0, arg1, arg2, arg3)
+fun EnchantmentProvider.provideEnchantments(stack: ItemStack, componentBuilder: net.minecraft.class_9304.class_9305, random: Random, localDifficulty: LocalDifficulty) = this.method_60266(stack, componentBuilder, random, localDifficulty)

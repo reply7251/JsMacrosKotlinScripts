@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_65941
  */
-fun BlockEntityFurnaceBurnTimeFix.fix(arg0: Dynamic<*>) = this.method_65941(arg0)
+fun BlockEntityFurnaceBurnTimeFix.fix(dynamic: Dynamic<*>) = this.method_65941(dynamic)

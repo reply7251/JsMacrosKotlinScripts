@@ -4,19 +4,19 @@ import me.hellrevenger.generated.*
 /**
  * method_52413
  */
-fun PacketListener.accepts(arg0: Packet<*>) = this.method_52413(arg0)
+fun PacketListener.accepts(packet: Packet<*>) = this.method_52413(packet)
 /**
  * method_55597
  */
-fun PacketListener.addCustomCrashReportInfo(arg0: CrashReport, arg1: CrashReportSection) = this.method_55597(arg0, arg1)
+fun PacketListener.addCustomCrashReportInfo(report: CrashReport, section: CrashReportSection) = this.method_55597(report, section)
 /**
  * method_55622
  */
-fun PacketListener.fillCrashReport(arg0: CrashReport) = this.method_55622(arg0)
+fun PacketListener.fillCrashReport(report: CrashReport) = this.method_55622(report)
 /**
  * method_10839
  */
-fun PacketListener.onDisconnected(arg0: DisconnectionInfo) = this.method_10839(arg0)
+fun PacketListener.onDisconnected(info: DisconnectionInfo) = this.method_10839(info)
 /**
  * method_52280
  */
@@ -32,4 +32,4 @@ fun PacketListener.getSide() = this.method_52895()
 /**
  * method_60881
  */
-fun PacketListener.createDisconnectionInfo(arg0: Text, arg1: Throwable) = this.method_60881(arg0, arg1)
+fun PacketListener.createDisconnectionInfo(reason: Text, exception: Throwable) = this.method_60881(reason, exception)

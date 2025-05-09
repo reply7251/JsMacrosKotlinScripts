@@ -8,7 +8,7 @@ fun HitResult.getType() = this.method_17783()
 /**
  * method_24801
  */
-fun HitResult.squaredDistanceTo(arg0: Entity) = this.method_24801(arg0)
+fun HitResult.squaredDistanceTo(entity: Entity) = this.method_24801(entity)
 /**
  * method_17784
  */

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_32305
  */
-fun NbtTextFormatter.apply(arg0: NbtElement) = this.method_32305(arg0)
+fun NbtTextFormatter.apply(element: NbtElement) = this.method_32305(element)

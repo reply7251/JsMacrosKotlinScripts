@@ -20,11 +20,11 @@ var EntityRenderDispatcher.targetedEntity by alias(EntityRenderDispatcher::field
 /**
  * method_3948
  */
-fun EntityRenderDispatcher.setRenderShadows(arg0: Boolean) = this.method_3948(arg0)
+fun EntityRenderDispatcher.setRenderShadows(renderShadows: Boolean) = this.method_3948(renderShadows)
 /**
  * method_23839
  */
-fun <E>EntityRenderDispatcher.getLight(arg0: E, arg1: Float) where E: Entity = this.method_23839<E>(arg0, arg1)
+fun <E>EntityRenderDispatcher.getLight(entity: E, tickDelta: Float) where E: Entity = this.method_23839<E>(entity, tickDelta)
 /**
  * method_43336
  */
@@ -32,23 +32,23 @@ fun EntityRenderDispatcher.getHeldItemRenderer() = this.method_43336()
 /**
  * method_62424
  */
-fun <E>EntityRenderDispatcher.render(arg0: E, arg1: Double, arg2: Double, arg3: Double, arg4: Float, arg5: MatrixStack, arg6: VertexConsumerProvider, arg7: Int) where E: Entity = this.method_62424<E>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+fun <E>EntityRenderDispatcher.render(entity: E, x: Double, arg2: Double, y: Double, arg4: Float, z: MatrixStack, arg6: VertexConsumerProvider, tickDelta: Int) where E: Entity = this.method_62424<E>(entity, x, arg2, y, arg4, z, arg6, tickDelta)
 /**
  * method_23168
  */
-fun EntityRenderDispatcher.getSquaredDistanceToCamera(arg0: Entity) = this.method_23168(arg0)
+fun EntityRenderDispatcher.getSquaredDistanceToCamera(entity: Entity) = this.method_23168(entity)
 /**
  * method_24196
  */
-fun EntityRenderDispatcher.setRotation(arg0: Quaternionf) = this.method_24196(arg0)
+fun EntityRenderDispatcher.setRotation(rotation: Quaternionf) = this.method_24196(rotation)
 /**
  * method_3950
  */
-fun <E>EntityRenderDispatcher.shouldRender(arg0: E, arg1: Frustum, arg2: Double, arg3: Double, arg4: Double) where E: Entity = this.method_3950<E>(arg0, arg1, arg2, arg3, arg4)
+fun <E>EntityRenderDispatcher.shouldRender(entity: E, frustum: Frustum, x: Double, arg3: Double, y: Double) where E: Entity = this.method_3950<E>(entity, frustum, x, arg3, y)
 /**
  * method_3941
  */
-fun EntityRenderDispatcher.configure(arg0: world_World, arg1: Camera, arg2: Entity) = this.method_3941(arg0, arg1, arg2)
+fun EntityRenderDispatcher.configure(world: world_World, camera: Camera, target: Entity) = this.method_3941(world, camera, target)
 /**
  * method_3958
  */
@@ -56,19 +56,15 @@ fun EntityRenderDispatcher.shouldRenderHitboxes() = this.method_3958()
 /**
  * method_3955
  */
-fun EntityRenderDispatcher.setRenderHitboxes(arg0: Boolean) = this.method_3955(arg0)
+fun EntityRenderDispatcher.setRenderHitboxes(renderHitboxes: Boolean) = this.method_3955(renderHitboxes)
 /**
  * method_3953
  */
-fun <T>EntityRenderDispatcher.getRenderer(arg0: T) where T: Entity = this.method_3953<T>(arg0)
-/**
- * method_3959
- */
-fun EntityRenderDispatcher.getSquaredDistanceToCamera(arg0: Double, arg1: Double, arg2: Double) = this.method_3959(arg0, arg1, arg2)
+fun <T>EntityRenderDispatcher.getRenderer(entity: T) where T: Entity = this.method_3953<T>(entity)
 /**
  * method_3944
  */
-fun EntityRenderDispatcher.setWorld(arg0: world_World) = this.method_3944(arg0)
+fun EntityRenderDispatcher.setWorld(world: world_World) = this.method_3944(world)
 /**
  * method_24197
  */

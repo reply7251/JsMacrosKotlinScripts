@@ -8,4 +8,4 @@ fun PlayerAssociatedNetworkHandler.getPlayer() = this.method_32311()
 /**
  * method_14364
  */
-fun PlayerAssociatedNetworkHandler.sendPacket(arg0: Packet<*>) = this.method_14364(arg0)
+fun PlayerAssociatedNetworkHandler.sendPacket(packet: Packet<*>) = this.method_14364(packet)
