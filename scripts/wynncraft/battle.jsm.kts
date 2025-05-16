@@ -6,8 +6,6 @@ import com.wynntils.core.components.Managers
 import com.wynntils.core.components.Models
 import com.wynntils.features.combat.QuickCastFeature
 import com.wynntils.handlers.bossbar.TrackedBar
-import com.wynntils.handlers.bossbar.event.BossBarAddedEvent
-import com.wynntils.mc.event.BossHealthUpdateEvent
 import com.wynntils.models.abilities.AbilityModel
 import com.wynntils.models.abilities.type.OphanimOrb
 import com.wynntils.models.abilities.type.ShamanMaskType
@@ -29,12 +27,9 @@ import me.hellrevenger.generated.Map_PlayerInput.*
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
 import me.hellrevenger.generated.Map_StatusEffects.StatusEffectsKt
 import me.hellrevenger.generated.PlayerInput
-import me.hellrevenger.generated.StatusEffects
 import me.hellrevenger.library.api.KtGlobals
 import net.minecraft.class_10185
 import net.minecraft.class_332
-import net.neoforged.bus.api.SubscribeEvent
-import org.jetbrains.kotlin.backend.common.pop
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.ScriptScreen
@@ -298,6 +293,7 @@ val hotBarRegex = "key.keyboard.(\\d)".toRegex()
 
 enum class Mode {
     None,
+    Melee,
 
     Acrobat,
     Trickster,
@@ -1159,8 +1155,10 @@ inner class Assassin() : WynnClass() {
 
 inner class Mage() : WynnClass() {
     val lastHeal get() = lastSpells[Actions.cast1] ?: 0L
+    val lastIceSnake get() = lastSpells[Actions.cast4] ?: 0L
     lateinit var enableIceSnake: BindBoolean
     lateinit var enableMeteor: BindBoolean
+    var lastTimeLock = 0L
 
     val modes = arrayOf(Mode.Arcanist, Mode.LightBender, Mode.RiftWalker)
     override var mode = Mode.Arcanist
@@ -1212,15 +1210,14 @@ inner class Mage() : WynnClass() {
         val health = getHealth()
         val notHealthy = health < 60 || orbNotHealthy()
         val timeSinceLastHeal = World.time - lastHeal
-        val inHealPulse = abs(timeSinceLastHeal - 24) < 12 || abs(timeSinceLastHeal - 54) < 12 || abs(timeSinceLastHeal - 84) < 12
+        val inHealPulse = abs(timeSinceLastHeal - 12) < 12 || abs(timeSinceLastHeal - 42) < 12 || abs(timeSinceLastHeal - 72) < 12
 
-        if(notHealthy && (lastAction != Actions.cast1 || !inHealPulse) && getMana() > 40) {
+        if(notHealthy && (lastAction != Actions.cast1 || (!inHealPulse && Models.Spell.repeatedSpellCount < 3)) && getMana() > 40) {
             waitSpell(Actions.cast1)
         } else if(World.time - lastMelee >= 9 && !player.mainHand.isOnCooldown) {
             melee()
             Client.waitTick(1)
         } else if(enableIceSnake.value && getMana() > 75 && (lastAction != Actions.cast4 || Models.Spell.repeatedSpellCount < maxRepeat.value) || (notHealthy && getMana() > 55)) {
-
             waitSpell(Actions.cast4)
         } else if((lastAction == Actions.cast4 && Models.Spell.repeatedSpellCount >= maxRepeat.value) && World.time - lastMelee <= 20 && getMana() > 75) {
             waitSpell(Actions.cast1)
@@ -1230,14 +1227,25 @@ inner class Mage() : WynnClass() {
     fun rw() {
         val player = Player.player ?: return
         val health = getHealth()
-        if(health < 90 && lastAction != Actions.cast1) {
+        val timeLocked = findEffect("Timelocked") != null
+        val manaFlag = getMana() > 25 || timeLocked
+        val repeatFlag = Models.Spell.repeatedSpellCount < maxRepeat.value
+        if(player.isSneaking && World.time - lastTimeLock > 100 && !timeLocked) {
+            lastTimeLock = World.time
             waitSpell(Actions.cast1)
-        } else if(enableIceSnake.value && (getMana() > 75 || health < 80)
-            && (lastAction != Actions.cast4 || Models.Spell.repeatedSpellCount < maxRepeat.value)) {
+        } else if((health < 90) && lastAction != Actions.cast1) {
+            if(player.isSneaking)
+                lastTimeLock = World.time
+            waitSpell(Actions.cast1)
+        } else if(enableIceSnake.value && (manaFlag || health < 80)
+            && (lastAction != Actions.cast4 || World.time - lastIceSnake > 62 || (repeatFlag && !timeLocked))) {
             waitSpell(Actions.cast4)
-        } else if(enableMeteor.value && (getMana() > 75 || health < 80) && lastAction != Actions.cast3) {
+        } else if(enableMeteor.value && (manaFlag || health < 80)
+            && (lastAction != Actions.cast3 || (repeatFlag && timeLocked))) {
             waitSpell(Actions.cast3)
-        } else if(!enableMeteor.value && lastAction == Actions.cast4) {
+        } else if(!enableMeteor.value && lastAction == Actions.cast4 && manaFlag) {
+            if(player.isSneaking)
+                lastTimeLock = World.time
             waitSpell(Actions.cast1)
         } else if(enableMelee.value && World.time - lastMelee > 4 && !player.mainHand.isOnCooldown) {
             melee()
@@ -1268,22 +1276,42 @@ inner class Mage() : WynnClass() {
             }
         }
     }
+
+    override fun reset() {
+        super.reset()
+
+        lastTimeLock = 0L
+    }
 }
 
 inner class Archer() : WynnClass() {
     val lastShield get() = lastSpells[Actions.cast4] ?: 0L
     val lastBomb get() = lastSpells[Actions.cast3] ?: 0L
+    val lastEscape get() = lastSpells[Actions.cast2] ?: 0L
+    lateinit var autoEscape: BindBoolean
 
     override fun onInitOverride() {
+        autoEscape = BindBoolean("key.keyboard.keypad.1") {
+            updateConfig()
+        }.bind("escape")
+
         super.onInitOverride()
 
         spellCooldown.set(8)
     }
 
+    override fun updateConfig() {
+        super.updateConfig()
+        nextLine().setText(autoEscape.toString("Auto Escape"))
+    }
+
     override fun chooseAction() {
         var melee = true
         val shield = Models.Shield.shieldCharge < 3
-        if(isHoldItem("anthracite")) {
+        if(autoEscape.value && Player.player!!.pitch > 45
+            && Models.CharacterStats.blocksAboveGround < 2 && (World.time - lastEscape >= 20 || lastAction != Actions.cast2)) {
+            waitSpell(Actions.cast2)
+        } else if(isHoldItem("anthracite")) {
             if(getMana() > 80) {
                 if((World.time - lastShield >= 60 || lastAction != Actions.cast4) && shield) {
                     waitSpell(Actions.cast4)
@@ -1340,8 +1368,10 @@ inner class Shaman() : WynnClass() {
     val masks = arrayOf(ShamanMaskType.FANATIC, ShamanMaskType.HERETIC)
     var targetMask = ShamanMaskType.FANATIC
     override var mode = Mode.TotemSpam
-    val modes = arrayOf(Mode.None, Mode.TotemSpam, Mode.Acolyte, Mode.AuraSpam, Mode.PuppetBomber)
+    val modes = arrayOf(Mode.None, Mode.TotemSpam, Mode.Acolyte, Mode.AuraSpam, Mode.PuppetBomber, Mode.Melee)
     override var quickMode = Mode.PuppetBomber
+    
+    val awakenedProgress = AbilityModel.awakenedBar.barProgress?.progress ?: 0f
 
     override fun onInitOverride() {
 
@@ -1469,14 +1499,16 @@ inner class Shaman() : WynnClass() {
             for(i in 1..getMaxRepeatValue()) {
                 addSpell(Actions.cast1)
             }
-        }else if(World.time % 2L == 0L) {
+        } else if(mode == Mode.Melee) {
+            awakened()
+        } else if(World.time % 2L == 0L) {
             melee()
         }
     }
 
     fun awakened(cancelMask: Boolean = false): Boolean {
         if(!enableAwakened.value) return false
-        val progress = AbilityModel.awakenedBar.barProgress?.progress ?: 0f
+        val progress = awakenedProgress
         if(findEffect("Awakened") != null || World.time - lastTimeMask < 15) {
             return false
         }
@@ -1495,11 +1527,13 @@ inner class Shaman() : WynnClass() {
         Client.waitTick()
         if(progress < 0.34f) {
             waitSpell(Actions.cast1)
-        Client.waitTick()
+            Client.waitTick()
         }
         for(i in 1..4) {
             waitSpell(Actions.cast1)
-        Client.waitTick()
+            Client.waitTick()
+            if(awakenedProgress >= 1f)
+                break
         }
 
         inventory.selectedHotbarSlotIndex = if(inventory.getSlot(38).name.stringStripFormatting.startsWith("Silent B")) 2 else 1
@@ -1567,7 +1601,7 @@ inner class Shaman() : WynnClass() {
         super.onKey(e)
 
         if(e.action != 1) return
-        if(!enabled.value && e.key == skill2Key && (mode == Mode.PuppetBomber || mode == Mode.AuraSpam)) {
+        if(!enabled.value && e.key == skill2Key) { // && (mode == Mode.PuppetBomber || mode == Mode.AuraSpam)
             if(World.time - lastTotem > 60 && Player.player?.isSneaking != true) {
                 e.cancel()
                 thread {

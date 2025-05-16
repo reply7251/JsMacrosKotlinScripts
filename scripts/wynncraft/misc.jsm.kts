@@ -5,18 +5,14 @@ import com.wynntils.core.components.Services
 import com.wynntils.models.gear.type.GearAttackSpeed
 import com.wynntils.models.gear.type.GearInfo
 import com.wynntils.models.items.WynnItem
+import com.wynntils.models.items.items.game.CraftedConsumableItem
 import com.wynntils.models.items.items.game.GearItem
 import com.wynntils.models.stats.builders.SkillStatBuilder
-import com.wynntils.overlays.PartyMembersOverlay
-import com.wynntils.services.hades.HadesUser
 import com.wynntils.services.itemfilter.ItemFilterService
 import com.wynntils.services.itemfilter.type.ItemProviderType
 import com.wynntils.services.itemfilter.type.ItemStatProvider
 import com.wynntils.services.itemfilter.type.StatFilter
 import com.wynntils.services.itemfilter.type.StatFilterFactory
-import com.wynntils.utils.render.Texture
-import com.wynntils.utils.render.buffered.BufferedRenderUtils
-import com.wynntils.utils.render.type.HealthTexture
 import com.wynntils.utils.type.ErrorOr
 import com.wynntils.utils.type.Pair
 import com.wynntils.utils.type.RangedValue
@@ -25,10 +21,6 @@ import me.hellrevenger.library.api.instrumentation
 import net.lenni0451.classtransform.InjectionCallback
 import net.lenni0451.classtransform.annotations.*
 import net.lenni0451.classtransform.annotations.injection.CInject
-import net.minecraft.class_1041
-import net.minecraft.class_4587
-import net.minecraft.class_4597
-import net.minecraft.class_9779
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.*
 import kotlin.jvm.optionals.getOrNull
@@ -40,7 +32,7 @@ if(!World.isWorldLoaded) {
 abstract class MyGearItemStatProvider<T : Comparable<T>>(val myName: String) : ItemStatProvider<T>() {
     override fun getName() = myName
     override fun getDisplayName() = myName
-    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR)
+    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR, ItemProviderType.GEAR_INSTANCE)
 }
 
 object AbilityPointStatProvider : MyGearItemStatProvider<Int>("SkillPoints") {
@@ -51,6 +43,16 @@ object AbilityPointStatProvider : MyGearItemStatProvider<Int>("SkillPoints") {
             SkillStatBuilder().buildStats {
                 val possibleValue = gear.itemInfo.getPossibleValues(it) ?: return@buildStats
                 result += possibleValue.baseValue
+                hasSkillStat = true
+            }
+            if(hasSkillStat)
+                return Optional.of(result)
+        }
+        (p0 as? CraftedConsumableItem)?.let { cons ->
+            var result = 0
+            SkillStatBuilder().buildStats { stat ->
+                val value = cons.identifications.firstOrNull { it.statType.key == stat.key } ?: return@buildStats
+                result += value.value
                 hasSkillStat = true
             }
             if(hasSkillStat)
@@ -254,27 +256,6 @@ class MixinItemFilterService {
     }
 }
 
-@CReplaceCallback
-@CTransformer(PartyMembersOverlay.PartyMemberOverlay::class)
-class MixinPartyMemberOverlay {
-    @CShadow("hadesUser")
-    @JvmField
-    var hadesUser: HadesUser? = null
-
-    @CInline
-    @CInject(method = ["render"], target = [CTarget("INVOKE", target = "net/minecraft/class_4587.method_46416(FFF)V", ordinal = 4, shift = CTarget.Shift.BEFORE)])
-    fun render(poseStack: class_4587?, bufferSource: class_4597?, deltaTracker: class_9779?, window: class_1041?, cir: InjectionCallback?) {
-        val user = hadesUser ?: return
-        if(user.health.progress < 1.01) return
-        if(poseStack == null || bufferSource == null) return
-
-        val texture = HealthTexture.A
-        BufferedRenderUtils.drawProgressBar(poseStack, bufferSource, Texture.HEALTH_BAR_OVERFLOW,
-            0f, 0f, 68.85f, texture.height * 0.85f,
-            0, texture.textureY1, 81, texture.textureY2, (user.health.progress - 1).toFloat()
-        )
-    }
-}
 
 val statFiltersField = Reflection.getDeclaredField(Services.ItemFilter::class.java, "statFilters")
 statFiltersField.trySetAccessible()
@@ -291,7 +272,6 @@ Client.waitTick(20)
 
 val manager = RuntimeMixin.createTransformManager()
 manager.addTransformer(MixinItemFilterService::class.java.name)
-manager.addTransformer(MixinPartyMemberOverlay::class.java.name)
 manager.hookInstrumentation(instrumentation)
 
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->

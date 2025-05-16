@@ -8,7 +8,7 @@ import com.wynntils.mc.event.ScreenInitEvent
 import com.wynntils.models.containers.Container
 import com.wynntils.models.containers.ContainerModel
 import com.wynntils.models.containers.containers.LobbyContainer
-import com.wynntils.models.containers.containers.TradeMarketContainer
+import com.wynntils.models.containers.containers.trademarket.TradeMarketContainer
 import com.wynntils.models.containers.type.ContainerBounds
 import com.wynntils.models.containers.type.HighlightableProfessionProperty
 import com.wynntils.models.containers.type.ScrollableContainerProperty
@@ -58,15 +58,7 @@ fun getContainerBounds(startRow: Int, startCol: Int, endRow: Int, endCol: Int): 
             return it.newInstance(startRow, startCol, endRow, endCol) as ContainerBounds
         }
 
-class MyTradeMarketContainer : Container(pattern), SearchableContainerProperty, ScrollableContainerProperty, HighlightableProfessionProperty {
-    override fun getNextItemPattern() = NEXT_PAGE_PATTERN
-    override fun getPreviousItemPattern() = PREVIOUS_PAGE_PATTERN
-
-    override fun getNextItemSlot() = 53
-    override fun getPreviousItemSlot() = 51
-
-    override fun getBounds() = getContainerBounds(0, 0, 4, 8)
-
+class MyTradeMarketContainer : TradeMarketContainer(), SearchableContainerProperty {
     override fun supportedProviderTypes(): MutableList<ItemProviderType> {
         return ItemProviderType.normalTypes()
     }
