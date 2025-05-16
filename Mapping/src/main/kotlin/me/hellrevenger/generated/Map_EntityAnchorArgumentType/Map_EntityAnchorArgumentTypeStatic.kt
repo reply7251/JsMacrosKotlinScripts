@@ -5,7 +5,7 @@ object EntityAnchorArgumentTypeKt {
     /**
      * method_9294
      */
-    fun getEntityAnchor(context: CommandContext<ServerCommandSource>, name: String) = EntityAnchorArgumentType.method_9294(context, name)
+    fun getEntityAnchor(context: CommandContext<ServerCommandSource>?, name: String?) = EntityAnchorArgumentType.method_9294(context, name)
     /**
      * method_9295
      */

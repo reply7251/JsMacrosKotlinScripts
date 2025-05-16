@@ -9,5 +9,5 @@ object ChaseCommandKt {
     /**
      * method_38770
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = ChaseCommand.method_38770(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = ChaseCommand.method_38770(dispatcher)
 }

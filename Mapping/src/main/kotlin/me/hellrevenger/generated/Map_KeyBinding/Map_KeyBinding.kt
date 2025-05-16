@@ -40,7 +40,7 @@ fun KeyBinding.getDefaultKey() = this.method_1429()
 /**
  * method_1435
  */
-fun KeyBinding.equals(other: KeyBinding) = this.method_1435(other)
+fun KeyBinding.equals(other: KeyBinding?) = this.method_1435(other)
 /**
  * method_1417
  */
@@ -52,7 +52,7 @@ fun KeyBinding.setPressed(pressed: Boolean) = this.method_23481(pressed)
 /**
  * method_1430
  */
-fun KeyBinding.compareTo(arg0: KeyBinding) = this.method_1430(arg0)
+fun KeyBinding.compareTo(arg0: KeyBinding?) = this.method_1430(arg0)
 /**
  * method_1434
  */

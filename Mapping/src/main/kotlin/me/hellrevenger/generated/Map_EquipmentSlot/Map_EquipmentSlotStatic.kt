@@ -45,5 +45,5 @@ object EquipmentSlotKt {
     /**
      * method_5924
      */
-    fun byName(name: String) = EquipmentSlot.method_5924(name)
+    fun byName(name: String?) = EquipmentSlot.method_5924(name)
 }

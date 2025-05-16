@@ -5,5 +5,5 @@ object GoatHornItemKt {
     /**
      * method_43558
      */
-    fun getStackForInstrument(item: Item, instrument: RegistryEntry<Instrument>) = GoatHornItem.method_43558(item, instrument)
+    fun getStackForInstrument(item: Item?, instrument: RegistryEntry<Instrument>?) = GoatHornItem.method_43558(item, instrument)
 }

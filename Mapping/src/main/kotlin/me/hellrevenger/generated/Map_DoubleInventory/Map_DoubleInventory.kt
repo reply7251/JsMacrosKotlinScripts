@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_5405
  */
-fun DoubleInventory.isPart(inventory: Inventory) = this.method_5405(inventory)
+fun DoubleInventory.isPart(inventory: Inventory?) = this.method_5405(inventory)

@@ -16,16 +16,16 @@ val tag_TagEntry.id by alias(tag_TagEntry::field_15584)
 /**
  * method_32832
  */
-fun tag_TagEntry.canAdd(directEntryPredicate: Predicate<Identifier>, tagEntryPredicate: Predicate<Identifier>) = this.method_32832(directEntryPredicate, tagEntryPredicate)
+fun tag_TagEntry.canAdd(directEntryPredicate: Predicate<Identifier>?, tagEntryPredicate: Predicate<Identifier>?) = this.method_32832(directEntryPredicate, tagEntryPredicate)
 /**
  * method_32831
  */
-fun tag_TagEntry.forEachRequiredTagId(idConsumer: Consumer<Identifier>) = this.method_32831(idConsumer)
+fun tag_TagEntry.forEachRequiredTagId(idConsumer: Consumer<Identifier>?) = this.method_32831(idConsumer)
 /**
  * method_43944
  */
-fun tag_TagEntry.forEachOptionalTagId(idConsumer: Consumer<Identifier>) = this.method_43944(idConsumer)
+fun tag_TagEntry.forEachOptionalTagId(idConsumer: Consumer<Identifier>?) = this.method_43944(idConsumer)
 /**
  * method_26790
  */
-fun <T>tag_TagEntry.resolve(valueGetter: net.minecraft.class_3497.class_7474<T>, idConsumer: Consumer<T>) = this.method_26790<T>(valueGetter, idConsumer)
+fun <T>tag_TagEntry.resolve(valueGetter: net.minecraft.class_3497.class_7474<T>?, idConsumer: Consumer<T>?) = this.method_26790<T>(valueGetter, idConsumer)

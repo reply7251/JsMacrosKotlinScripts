@@ -21,5 +21,5 @@ object MessageIndicatorKt {
     /**
      * method_44710
      */
-    fun modified(originalText: String) = MessageIndicator.method_44710(originalText)
+    fun modified(originalText: String?) = MessageIndicator.method_44710(originalText)
 }

@@ -5,7 +5,7 @@ object PolarBearEntityKt {
     /**
      * method_20668
      */
-    fun canSpawn(type: EntityType<PolarBearEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = PolarBearEntity.method_20668(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<PolarBearEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = PolarBearEntity.method_20668(type, world, spawnReason, pos, random)
     /**
      * method_26891
      */

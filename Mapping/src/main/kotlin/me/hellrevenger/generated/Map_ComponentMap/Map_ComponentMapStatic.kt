@@ -5,11 +5,11 @@ object ComponentMapKt {
     /**
      * method_60388
      */
-    fun createCodecFromValueMap(typeToValueMapCodec: Codec<Map<ComponentType<*>, *>>) = ComponentMap.method_60388(typeToValueMapCodec)
+    fun createCodecFromValueMap(typeToValueMapCodec: Codec<Map<ComponentType<*>, *>>?) = ComponentMap.method_60388(typeToValueMapCodec)
     /**
      * method_60386
      */
-    fun createCodec(componentTypeCodec: Codec<ComponentType<*>>) = ComponentMap.method_60386(componentTypeCodec)
+    fun createCodec(componentTypeCodec: Codec<ComponentType<*>>?) = ComponentMap.method_60386(componentTypeCodec)
     /**
      * method_57827
      */
@@ -17,5 +17,5 @@ object ComponentMapKt {
     /**
      * method_59771
      */
-    fun of(base: ComponentMap, overrides: ComponentMap) = ComponentMap.method_59771(base, overrides)
+    fun of(base: ComponentMap?, overrides: ComponentMap?) = ComponentMap.method_59771(base, overrides)
 }

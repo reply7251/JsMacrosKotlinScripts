@@ -5,5 +5,5 @@ object HelpCommandKt {
     /**
      * method_13405
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = HelpCommand.method_13405(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = HelpCommand.method_13405(dispatcher)
 }

@@ -37,9 +37,9 @@ object FallLocationKt {
     /**
      * method_52195
      */
-    fun fromEntity(entity: LivingEntity) = FallLocation.method_52195(entity)
+    fun fromEntity(entity: LivingEntity?) = FallLocation.method_52195(entity)
     /**
      * method_52196
      */
-    fun fromBlockState(state: BlockState) = FallLocation.method_52196(state)
+    fun fromBlockState(state: BlockState?) = FallLocation.method_52196(state)
 }

@@ -5,5 +5,5 @@ object CodecHolderKt {
     /**
      * method_42116
      */
-    fun <A>of(mapCodec: MapCodec<A>) = CodecHolder.method_42116<A>(mapCodec)
+    fun <A>of(mapCodec: MapCodec<A>?) = CodecHolder.method_42116<A>(mapCodec)
 }

@@ -21,5 +21,5 @@ object MaceItemKt {
     /**
      * method_58659
      */
-    fun shouldDealAdditionalDamage(attacker: LivingEntity) = MaceItem.method_58659(attacker)
+    fun shouldDealAdditionalDamage(attacker: LivingEntity?) = MaceItem.method_58659(attacker)
 }

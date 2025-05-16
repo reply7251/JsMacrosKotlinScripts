@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_52754
  */
-fun AdvancementObtainedStatus.getFrameTexture(frame: AdvancementFrame) = this.method_52754(frame)
+fun AdvancementObtainedStatus.getFrameTexture(frame: AdvancementFrame?) = this.method_52754(frame)
 /**
  * method_52753
  */

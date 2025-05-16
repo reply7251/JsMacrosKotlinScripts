@@ -5,5 +5,5 @@ object TickCommandKt {
     /**
      * method_54687
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = TickCommand.method_54687(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = TickCommand.method_54687(dispatcher)
 }

@@ -12,4 +12,4 @@ fun FontManager.createAdvanceValidatingTextRenderer() = this.method_45078()
 /**
  * method_57024
  */
-fun FontManager.setActiveFilters(options: GameOptions) = this.method_57024(options)
+fun FontManager.setActiveFilters(options: GameOptions?) = this.method_57024(options)

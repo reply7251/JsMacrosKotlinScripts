@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_23269
  */
-fun BlockBreakingInfo.compareTo(arg0: BlockBreakingInfo) = this.method_23269(arg0)
+fun BlockBreakingInfo.compareTo(arg0: BlockBreakingInfo?) = this.method_23269(arg0)
 /**
  * method_34868
  */

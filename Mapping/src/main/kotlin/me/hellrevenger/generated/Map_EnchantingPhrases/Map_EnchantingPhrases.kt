@@ -8,4 +8,4 @@ fun EnchantingPhrases.setSeed(seed: Long) = this.method_2480(seed)
 /**
  * method_2479
  */
-fun EnchantingPhrases.generatePhrase(textRenderer: TextRenderer, width: Int) = this.method_2479(textRenderer, width)
+fun EnchantingPhrases.generatePhrase(textRenderer: TextRenderer?, width: Int) = this.method_2479(textRenderer, width)

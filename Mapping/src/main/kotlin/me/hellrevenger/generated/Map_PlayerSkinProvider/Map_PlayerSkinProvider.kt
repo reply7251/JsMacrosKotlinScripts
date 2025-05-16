@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_52858
  */
-fun PlayerSkinProvider.getSkinTexturesSupplier(profile: GameProfile) = this.method_52858(profile)
+fun PlayerSkinProvider.getSkinTexturesSupplier(profile: GameProfile?) = this.method_52858(profile)
 /**
  * method_52863
  */
-fun PlayerSkinProvider.fetchSkinTextures(profile: GameProfile) = this.method_52863(profile)
+fun PlayerSkinProvider.fetchSkinTextures(profile: GameProfile?) = this.method_52863(profile)
 /**
  * method_52862
  */
-fun PlayerSkinProvider.getSkinTextures(profile: GameProfile) = this.method_52862(profile)
+fun PlayerSkinProvider.getSkinTextures(profile: GameProfile?) = this.method_52862(profile)

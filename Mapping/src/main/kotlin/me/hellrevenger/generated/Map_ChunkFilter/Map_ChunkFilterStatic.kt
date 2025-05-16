@@ -9,11 +9,11 @@ object ChunkFilterKt {
     /**
      * method_52360
      */
-    fun forEachChangedChunk(oldFilter: ChunkFilter, newFilter: ChunkFilter, newlyIncluded: Consumer<ChunkPos>, justRemoved: Consumer<ChunkPos>) = ChunkFilter.method_52360(oldFilter, newFilter, newlyIncluded, justRemoved)
+    fun forEachChangedChunk(oldFilter: ChunkFilter?, newFilter: ChunkFilter?, newlyIncluded: Consumer<ChunkPos>?, justRemoved: Consumer<ChunkPos>?) = ChunkFilter.method_52360(oldFilter, newFilter, newlyIncluded, justRemoved)
     /**
      * method_52362
      */
-    fun cylindrical(center: ChunkPos, viewDistance: Int) = ChunkFilter.method_52362(center, viewDistance)
+    fun cylindrical(center: ChunkPos?, viewDistance: Int) = ChunkFilter.method_52362(center, viewDistance)
     /**
      * method_52358
      */

@@ -16,8 +16,8 @@ fun NbtByteArray.get(arg0: Int) = this.method_10523(arg0)
 /**
  * method_17805
  */
-fun NbtByteArray.method_10531(arg0: Int, arg1: NbtByte) = this.method_17805(arg0, arg1)
+fun NbtByteArray.method_10531(arg0: Int, arg1: NbtByte?) = this.method_17805(arg0, arg1)
 /**
  * method_17803
  */
-fun NbtByteArray.set(arg0: Int, arg1: NbtByte) = this.method_17803(arg0, arg1)
+fun NbtByteArray.set(arg0: Int, arg1: NbtByte?) = this.method_17803(arg0, arg1)

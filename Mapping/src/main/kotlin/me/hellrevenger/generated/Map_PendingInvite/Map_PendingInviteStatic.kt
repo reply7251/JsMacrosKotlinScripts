@@ -5,5 +5,5 @@ object PendingInviteKt {
     /**
      * method_25040
      */
-    fun parse(json: JsonObject) = PendingInvite.method_25040(json)
+    fun parse(json: JsonObject?) = PendingInvite.method_25040(json)
 }

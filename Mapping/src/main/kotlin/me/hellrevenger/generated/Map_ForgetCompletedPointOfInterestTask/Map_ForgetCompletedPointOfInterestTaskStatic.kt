@@ -5,5 +5,5 @@ object ForgetCompletedPointOfInterestTaskKt {
     /**
      * method_47190
      */
-    fun create(poiTypePredicate: Predicate<RegistryEntry<PointOfInterestType>>, poiPosModule: MemoryModuleType<GlobalPos>) = ForgetCompletedPointOfInterestTask.method_47190(poiTypePredicate, poiPosModule)
+    fun create(poiTypePredicate: Predicate<RegistryEntry<PointOfInterestType>>?, poiPosModule: MemoryModuleType<GlobalPos>?) = ForgetCompletedPointOfInterestTask.method_47190(poiTypePredicate, poiPosModule)
 }

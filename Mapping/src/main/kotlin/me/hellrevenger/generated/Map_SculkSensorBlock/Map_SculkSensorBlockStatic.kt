@@ -17,17 +17,17 @@ object SculkSensorBlockKt {
     /**
      * method_32909
      */
-    fun isInactive(state: BlockState) = SculkSensorBlock.method_32909(state)
+    fun isInactive(state: BlockState?) = SculkSensorBlock.method_32909(state)
     /**
      * method_32903
      */
-    fun setCooldown(world: world_World, pos: BlockPos, state: BlockState) = SculkSensorBlock.method_32903(world, pos, state)
+    fun setCooldown(world: world_World?, pos: BlockPos?, state: BlockState?) = SculkSensorBlock.method_32903(world, pos, state)
     /**
      * method_32908
      */
-    fun getPhase(state: BlockState) = SculkSensorBlock.method_32908(state)
+    fun getPhase(state: BlockState?) = SculkSensorBlock.method_32908(state)
     /**
      * method_49822
      */
-    fun tryResonate(sourceEntity: Entity, world: world_World, pos: BlockPos, frequency: Int) = SculkSensorBlock.method_49822(sourceEntity, world, pos, frequency)
+    fun tryResonate(sourceEntity: Entity?, world: world_World?, pos: BlockPos?, frequency: Int) = SculkSensorBlock.method_49822(sourceEntity, world, pos, frequency)
 }

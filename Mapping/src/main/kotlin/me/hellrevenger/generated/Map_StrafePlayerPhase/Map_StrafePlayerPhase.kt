@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_6862
  */
-fun StrafePlayerPhase.setTargetEntity(targetEntity: LivingEntity) = this.method_6862(targetEntity)
+fun StrafePlayerPhase.setTargetEntity(targetEntity: LivingEntity?) = this.method_6862(targetEntity)

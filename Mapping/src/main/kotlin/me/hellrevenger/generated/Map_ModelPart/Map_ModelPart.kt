@@ -48,15 +48,15 @@ var ModelPart.zScale by alias(ModelPart::field_37940)
 /**
  * method_22699
  */
-fun ModelPart.render(matrices: MatrixStack, vertices: VertexConsumer, light: Int, overlay: Int, color: Int) = this.method_22699(matrices, vertices, light, overlay, color)
+fun ModelPart.render(matrices: MatrixStack?, vertices: VertexConsumer?, light: Int, overlay: Int, color: Int) = this.method_22699(matrices, vertices, light, overlay, color)
 /**
  * method_35745
  */
-fun ModelPart.forEachCuboid(matrices: MatrixStack, consumer: net.minecraft.class_630.class_6229) = this.method_35745(matrices, consumer)
+fun ModelPart.forEachCuboid(matrices: MatrixStack?, consumer: net.minecraft.class_630.class_6229?) = this.method_35745(matrices, consumer)
 /**
  * method_32086
  */
-fun ModelPart.getChild(name: String) = this.method_32086(name)
+fun ModelPart.getChild(name: String?) = this.method_32086(name)
 /**
  * method_32087
  */
@@ -64,31 +64,31 @@ fun ModelPart.isEmpty() = this.method_32087()
 /**
  * method_22698
  */
-fun ModelPart.render(matrices: MatrixStack, vertices: VertexConsumer, light: Int, overlay: Int) = this.method_22698(matrices, vertices, light, overlay)
+fun ModelPart.render(matrices: MatrixStack?, vertices: VertexConsumer?, light: Int, overlay: Int) = this.method_22698(matrices, vertices, light, overlay)
 /**
  * method_17138
  */
-fun ModelPart.copyTransform(part: ModelPart) = this.method_17138(part)
+fun ModelPart.copyTransform(part: ModelPart?) = this.method_17138(part)
 /**
  * method_22703
  */
-fun ModelPart.rotate(matrices: MatrixStack) = this.method_22703(matrices)
+fun ModelPart.rotate(matrices: MatrixStack?) = this.method_22703(matrices)
 /**
  * method_41922
  */
-fun ModelPart.rotate(vec3f: Vector3f) = this.method_41922(vec3f)
+fun ModelPart.rotate(vec3f: Vector3f?) = this.method_41922(vec3f)
 /**
  * method_41920
  */
-fun ModelPart.translate(vec3f: Vector3f) = this.method_41920(vec3f)
+fun ModelPart.translate(vec3f: Vector3f?) = this.method_41920(vec3f)
 /**
  * method_41919
  */
-fun ModelPart.hasChild(child: String) = this.method_41919(child)
+fun ModelPart.hasChild(child: String?) = this.method_41919(child)
 /**
  * method_22700
  */
-fun ModelPart.getRandomCuboid(random: Random) = this.method_22700(random)
+fun ModelPart.getRandomCuboid(random: Random?) = this.method_22700(random)
 /**
  * method_33425
  */
@@ -96,7 +96,7 @@ fun ModelPart.setAngles(pitch: Float, yaw: Float, roll: Float) = this.method_334
 /**
  * method_41924
  */
-fun ModelPart.scale(vec3f: Vector3f) = this.method_41924(vec3f)
+fun ModelPart.scale(vec3f: Vector3f?) = this.method_41924(vec3f)
 /**
  * method_32084
  */
@@ -112,7 +112,7 @@ fun ModelPart.resetTransform() = this.method_41923()
 /**
  * method_62132
  */
-fun ModelPart.rotate(quaternion: Quaternionf) = this.method_62132(quaternion)
+fun ModelPart.rotate(quaternion: Quaternionf?) = this.method_62132(quaternion)
 /**
  * method_41921
  */
@@ -120,11 +120,11 @@ fun ModelPart.getDefaultTransform() = this.method_41921()
 /**
  * method_32085
  */
-fun ModelPart.setTransform(rotationData: ModelTransform) = this.method_32085(rotationData)
+fun ModelPart.setTransform(rotationData: ModelTransform?) = this.method_32085(rotationData)
 /**
  * method_41918
  */
-fun ModelPart.setDefaultTransform(transform: ModelTransform) = this.method_41918(transform)
+fun ModelPart.setDefaultTransform(transform: ModelTransform?) = this.method_41918(transform)
 /**
  * method_2851
  */

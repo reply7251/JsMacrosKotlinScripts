@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_59625
  */
-fun <T, P>CollectionPredicate<T, P>.test(arg0: Iterable<T>) where P: Predicate<T> = this.method_59625(arg0)
+fun <T, P>CollectionPredicate<T, P>.test(arg0: Iterable<T>?) where P: Predicate<T> = this.method_59625(arg0)
 /**
  * comp_2617
  */

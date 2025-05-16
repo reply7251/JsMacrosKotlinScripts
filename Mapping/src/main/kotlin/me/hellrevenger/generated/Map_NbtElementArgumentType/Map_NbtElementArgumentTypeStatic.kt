@@ -9,5 +9,5 @@ object NbtElementArgumentTypeKt {
     /**
      * method_9390
      */
-    fun <S>getNbtElement(context: CommandContext<S>, name: String) = NbtElementArgumentType.method_9390<S>(context, name)
+    fun <S>getNbtElement(context: CommandContext<S>?, name: String?) = NbtElementArgumentType.method_9390<S>(context, name)
 }

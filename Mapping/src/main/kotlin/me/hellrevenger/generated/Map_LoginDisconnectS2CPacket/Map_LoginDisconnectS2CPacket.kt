@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12637
  */
-fun LoginDisconnectS2CPacket.apply(arg0: ClientLoginPacketListener) = this.method_12637(arg0)
+fun LoginDisconnectS2CPacket.apply(arg0: ClientLoginPacketListener?) = this.method_12637(arg0)
 /**
  * method_12638
  */

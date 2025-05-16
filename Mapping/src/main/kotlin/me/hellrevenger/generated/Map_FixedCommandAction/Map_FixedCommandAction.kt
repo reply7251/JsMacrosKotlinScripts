@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_54416
  */
-fun <T>FixedCommandAction<T>.execute(arg0: T, arg1: CommandExecutionContext<T>, arg2: Frame) where T: AbstractServerCommandSource<T> = this.method_54416(arg0, arg1, arg2)
+fun <T>FixedCommandAction<T>.execute(arg0: T, arg1: CommandExecutionContext<T>?, arg2: Frame?) where T: AbstractServerCommandSource<T> = this.method_54416(arg0, arg1, arg2)

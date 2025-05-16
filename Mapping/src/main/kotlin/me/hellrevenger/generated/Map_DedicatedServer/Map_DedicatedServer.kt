@@ -20,7 +20,7 @@ fun DedicatedServer.getHostname() = this.method_12929()
 /**
  * method_12934
  */
-fun DedicatedServer.executeRconCommand(command: String) = this.method_12934(command)
+fun DedicatedServer.executeRconCommand(command: String?) = this.method_12934(command)
 /**
  * method_16705
  */

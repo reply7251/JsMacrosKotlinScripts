@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_8847
  */
-fun DamageSourcePredicate.test(player: ServerPlayerEntity, damageSource: DamageSource) = this.method_8847(player, damageSource)
+fun DamageSourcePredicate.test(player: ServerPlayerEntity?, damageSource: DamageSource?) = this.method_8847(player, damageSource)
 /**
  * method_8845
  */
-fun DamageSourcePredicate.test(world: ServerWorld, pos: Vec3d, damageSource: DamageSource) = this.method_8845(world, pos, damageSource)
+fun DamageSourcePredicate.test(world: ServerWorld?, pos: Vec3d?, damageSource: DamageSource?) = this.method_8845(world, pos, damageSource)
 /**
  * comp_2793
  */

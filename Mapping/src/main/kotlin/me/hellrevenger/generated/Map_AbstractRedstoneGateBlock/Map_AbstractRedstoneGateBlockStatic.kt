@@ -9,5 +9,5 @@ object AbstractRedstoneGateBlockKt {
     /**
      * method_9999
      */
-    fun isRedstoneGate(state: BlockState) = AbstractRedstoneGateBlock.method_9999(state)
+    fun isRedstoneGate(state: BlockState?) = AbstractRedstoneGateBlock.method_9999(state)
 }

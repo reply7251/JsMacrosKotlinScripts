@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_4791
  */
-fun SoundEntryDeserializer.deserialize(arg0: JsonElement, arg1: Type, arg2: JsonDeserializationContext) = this.method_4791(arg0, arg1, arg2)
+fun SoundEntryDeserializer.deserialize(arg0: JsonElement?, arg1: Type?, arg2: JsonDeserializationContext?) = this.method_4791(arg0, arg1, arg2)

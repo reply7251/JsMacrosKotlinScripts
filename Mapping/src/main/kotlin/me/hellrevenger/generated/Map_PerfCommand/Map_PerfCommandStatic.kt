@@ -5,5 +5,5 @@ object PerfCommandKt {
     /**
      * method_37331
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = PerfCommand.method_37331(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = PerfCommand.method_37331(dispatcher)
 }

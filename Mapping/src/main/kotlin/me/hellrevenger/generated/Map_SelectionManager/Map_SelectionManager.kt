@@ -68,7 +68,7 @@ fun SelectionManager.moveCursorToStart(shiftDown: Boolean) = this.method_27553(s
 /**
  * method_42574
  */
-fun SelectionManager.delete(offset: Int, selectionType: net.minecraft.class_3728.class_7279) = this.method_42574(offset, selectionType)
+fun SelectionManager.delete(offset: Int, selectionType: net.minecraft.class_3728.class_7279?) = this.method_42574(offset, selectionType)
 /**
  * method_27560
  */
@@ -76,7 +76,7 @@ fun SelectionManager.moveCursorTo(position: Int, shiftDown: Boolean) = this.meth
 /**
  * method_42575
  */
-fun SelectionManager.moveCursor(offset: Int, shiftDown: Boolean, selectionType: net.minecraft.class_3728.class_7279) = this.method_42575(offset, shiftDown, selectionType)
+fun SelectionManager.moveCursor(offset: Int, shiftDown: Boolean, selectionType: net.minecraft.class_3728.class_7279?) = this.method_42575(offset, shiftDown, selectionType)
 /**
  * method_35730
  */
@@ -96,7 +96,7 @@ fun SelectionManager.setSelection(start: Int, end: Int) = this.method_27548(star
 /**
  * method_16197
  */
-fun SelectionManager.insert(string: String) = this.method_16197(string)
+fun SelectionManager.insert(string: String?) = this.method_16197(string)
 /**
  * method_35728
  */

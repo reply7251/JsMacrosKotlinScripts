@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_56468
  */
-fun StoreCookieS2CPacket.apply(arg0: ClientCommonPacketListener) = this.method_56468(arg0)
+fun StoreCookieS2CPacket.apply(arg0: ClientCommonPacketListener?) = this.method_56468(arg0)
 /**
  * comp_2238
  */

@@ -5,5 +5,5 @@ object AdvancementCommandKt {
     /**
      * method_12980
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = AdvancementCommand.method_12980(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = AdvancementCommand.method_12980(dispatcher)
 }

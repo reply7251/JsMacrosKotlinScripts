@@ -5,5 +5,5 @@ object TabNavigationWidgetKt {
     /**
      * method_48623
      */
-    fun builder(tabManager: TabManager, width: Int) = TabNavigationWidget.method_48623(tabManager, width)
+    fun builder(tabManager: TabManager?, width: Int) = TabNavigationWidget.method_48623(tabManager, width)
 }

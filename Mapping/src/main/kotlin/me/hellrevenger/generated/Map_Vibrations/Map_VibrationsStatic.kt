@@ -9,11 +9,11 @@ object VibrationsKt {
     /**
      * method_51385
      */
-    fun getFrequency(gameEvent: RegistryKey<GameEvent>) = Vibrations.method_51385(gameEvent)
+    fun getFrequency(gameEvent: RegistryKey<GameEvent>?) = Vibrations.method_51385(gameEvent)
     /**
      * method_55783
      */
-    fun getFrequency(gameEvent: RegistryEntry<GameEvent>) = Vibrations.method_55783(gameEvent)
+    fun getFrequency(gameEvent: RegistryEntry<GameEvent>?) = Vibrations.method_55783(gameEvent)
     /**
      * method_51386
      */

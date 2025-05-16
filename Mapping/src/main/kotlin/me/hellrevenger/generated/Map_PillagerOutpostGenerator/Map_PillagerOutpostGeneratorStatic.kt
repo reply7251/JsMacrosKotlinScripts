@@ -9,5 +9,5 @@ object PillagerOutpostGeneratorKt {
     /**
      * method_27235
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = PillagerOutpostGenerator.method_27235(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = PillagerOutpostGenerator.method_27235(poolRegisterable)
 }

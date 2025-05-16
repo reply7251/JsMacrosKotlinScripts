@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9733
  */
-fun CarvedPumpkinBlock.canDispense(world: WorldView, pos: BlockPos) = this.method_9733(world, pos)
+fun CarvedPumpkinBlock.canDispense(world: WorldView?, pos: BlockPos?) = this.method_9733(world, pos)

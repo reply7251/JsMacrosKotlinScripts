@@ -5,5 +5,5 @@ object ReturnCommandKt {
     /**
      * method_51277
      */
-    fun <T>register(dispatcher: CommandDispatcher<T>) where T: AbstractServerCommandSource<T> = ReturnCommand.method_51277<T>(dispatcher)
+    fun <T>register(dispatcher: CommandDispatcher<T>?) where T: AbstractServerCommandSource<T> = ReturnCommand.method_51277<T>(dispatcher)
 }

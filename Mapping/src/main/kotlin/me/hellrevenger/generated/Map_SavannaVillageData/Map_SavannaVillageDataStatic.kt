@@ -9,5 +9,5 @@ object SavannaVillageDataKt {
     /**
      * method_16844
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = SavannaVillageData.method_16844(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = SavannaVillageData.method_16844(poolRegisterable)
 }

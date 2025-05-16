@@ -5,7 +5,7 @@ object PropertyKt {
     /**
      * method_17406
      */
-    fun create(array: IntArray, index: Int) = Property.method_17406(array, index)
+    fun create(array: IntArray?, index: Int) = Property.method_17406(array, index)
     /**
      * method_17403
      */
@@ -13,5 +13,5 @@ object PropertyKt {
     /**
      * method_17405
      */
-    fun create(delegate: PropertyDelegate, index: Int) = Property.method_17405(delegate, index)
+    fun create(delegate: PropertyDelegate?, index: Int) = Property.method_17405(delegate, index)
 }

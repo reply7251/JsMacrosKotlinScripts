@@ -85,5 +85,5 @@ object NetherPlacedFeaturesKt {
     /**
      * method_46863
      */
-    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = NetherPlacedFeatures.method_46863(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>?) = NetherPlacedFeatures.method_46863(featureRegisterable)
 }

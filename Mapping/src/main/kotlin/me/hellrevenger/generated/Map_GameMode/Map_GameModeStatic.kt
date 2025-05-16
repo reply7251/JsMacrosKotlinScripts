@@ -25,7 +25,7 @@ object GameModeKt {
     /**
      * method_8378
      */
-    fun byName(name: String, defaultMode: GameMode) = GameMode.method_8378(name, defaultMode)
+    fun byName(name: String?, defaultMode: GameMode?) = GameMode.method_8378(name, defaultMode)
     /**
      * method_32762
      */
@@ -41,9 +41,9 @@ object GameModeKt {
     /**
      * method_8385
      */
-    fun byName(name: String) = GameMode.method_8385(name)
+    fun byName(name: String?) = GameMode.method_8385(name)
     /**
      * method_32761
      */
-    fun getId(gameMode: GameMode) = GameMode.method_32761(gameMode)
+    fun getId(gameMode: GameMode?) = GameMode.method_32761(gameMode)
 }

@@ -9,7 +9,7 @@ object NetworkUtilsKt {
     /**
      * method_55496
      */
-    fun download(path: file_Path, url: URL, headers: Map<String, String>, hashFunction: HashFunction, hashCode: HashCode, maxBytes: Int, proxy: Proxy, listener: net.minecraft.class_3521.class_9034) = NetworkUtils.method_55496(path, url, headers, hashFunction, hashCode, maxBytes, proxy, listener)
+    fun download(path: file_Path?, url: URL?, headers: Map<String, String>?, hashFunction: HashFunction?, hashCode: HashCode?, maxBytes: Int, proxy: Proxy?, listener: net.minecraft.class_3521.class_9034?) = NetworkUtils.method_55496(path, url, headers, hashFunction, hashCode, maxBytes, proxy, listener)
     /**
      * method_46872
      */

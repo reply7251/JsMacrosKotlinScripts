@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_64729
  */
-fun RecipeDisplayEntry.isCraftable(finder: RecipeFinder) = this.method_64729(finder)
+fun RecipeDisplayEntry.isCraftable(finder: RecipeFinder?) = this.method_64729(finder)
 /**
  * method_64730
  */
-fun RecipeDisplayEntry.getStacks(context: ContextParameterMap) = this.method_64730(context)
+fun RecipeDisplayEntry.getStacks(context: ContextParameterMap?) = this.method_64730(context)
 /**
  * comp_3264
  */

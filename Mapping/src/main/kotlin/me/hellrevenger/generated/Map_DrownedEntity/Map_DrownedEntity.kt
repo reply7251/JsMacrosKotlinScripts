@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_7012
  */
-fun DrownedEntity.canDrownedAttackTarget(target: LivingEntity) = this.method_7012(target)
+fun DrownedEntity.canDrownedAttackTarget(target: LivingEntity?) = this.method_7012(target)
 /**
  * method_7013
  */

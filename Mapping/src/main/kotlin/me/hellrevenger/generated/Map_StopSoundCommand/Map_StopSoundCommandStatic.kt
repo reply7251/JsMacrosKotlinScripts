@@ -5,5 +5,5 @@ object StopSoundCommandKt {
     /**
      * method_13681
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = StopSoundCommand.method_13681(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = StopSoundCommand.method_13681(dispatcher)
 }

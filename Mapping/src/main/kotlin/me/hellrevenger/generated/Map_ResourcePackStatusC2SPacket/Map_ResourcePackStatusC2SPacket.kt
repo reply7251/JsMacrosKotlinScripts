@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12409
  */
-fun ResourcePackStatusC2SPacket.apply(arg0: ServerCommonPacketListener) = this.method_12409(arg0)
+fun ResourcePackStatusC2SPacket.apply(arg0: ServerCommonPacketListener?) = this.method_12409(arg0)
 /**
  * comp_2164
  */

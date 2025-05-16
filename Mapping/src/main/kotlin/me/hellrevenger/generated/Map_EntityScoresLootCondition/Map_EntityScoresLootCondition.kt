@@ -8,7 +8,7 @@ fun EntityScoresLootCondition.entity() = this.comp_1872()
 /**
  * method_864
  */
-fun EntityScoresLootCondition.test(arg0: LootContext) = this.method_864(arg0)
+fun EntityScoresLootCondition.test(arg0: LootContext?) = this.method_864(arg0)
 /**
  * comp_1871
  */

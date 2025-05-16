@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_1121
  */
-fun ScoreboardObjective.setDisplayName(name: Text) = this.method_1121(name)
+fun ScoreboardObjective.setDisplayName(name: Text?) = this.method_1121(name)
 /**
  * method_1120
  */
@@ -12,7 +12,7 @@ fun ScoreboardObjective.toHoverableText() = this.method_1120()
 /**
  * method_55380
  */
-fun ScoreboardObjective.getNumberFormatOr(format: NumberFormat) = this.method_55380(format)
+fun ScoreboardObjective.getNumberFormatOr(format: NumberFormat?) = this.method_55380(format)
 /**
  * method_55384
  */
@@ -28,11 +28,11 @@ fun ScoreboardObjective.shouldDisplayAutoUpdate() = this.method_55383()
 /**
  * method_1115
  */
-fun ScoreboardObjective.setRenderType(renderType: net.minecraft.class_274.class_275) = this.method_1115(renderType)
+fun ScoreboardObjective.setRenderType(renderType: net.minecraft.class_274.class_275?) = this.method_1115(renderType)
 /**
  * method_55382
  */
-fun ScoreboardObjective.setNumberFormat(numberFormat: NumberFormat) = this.method_55382(numberFormat)
+fun ScoreboardObjective.setNumberFormat(numberFormat: NumberFormat?) = this.method_55382(numberFormat)
 /**
  * method_1118
  */

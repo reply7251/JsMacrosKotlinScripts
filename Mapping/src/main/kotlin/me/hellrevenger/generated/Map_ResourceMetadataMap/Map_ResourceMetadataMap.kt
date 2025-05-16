@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_45173
  */
-fun <T>ResourceMetadataMap.get(serializer: ResourceMetadataSerializer<T>) = this.method_45173<T>(serializer)
+fun <T>ResourceMetadataMap.get(serializer: ResourceMetadataSerializer<T>?) = this.method_45173<T>(serializer)

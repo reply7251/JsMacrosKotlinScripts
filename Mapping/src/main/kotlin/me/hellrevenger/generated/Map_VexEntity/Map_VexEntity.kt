@@ -20,7 +20,7 @@ fun VexEntity.getOwner() = this.method_7182()
 /**
  * method_7188
  */
-fun VexEntity.setBounds(bounds: BlockPos) = this.method_7188(bounds)
+fun VexEntity.setBounds(bounds: BlockPos?) = this.method_7188(bounds)
 /**
  * method_7181
  */
@@ -28,4 +28,4 @@ fun VexEntity.setLifeTicks(lifeTicks: Int) = this.method_7181(lifeTicks)
 /**
  * method_7178
  */
-fun VexEntity.setOwner(owner: MobEntity) = this.method_7178(owner)
+fun VexEntity.setOwner(owner: MobEntity?) = this.method_7178(owner)

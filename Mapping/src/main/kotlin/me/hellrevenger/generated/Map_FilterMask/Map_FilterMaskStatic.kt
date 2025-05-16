@@ -17,9 +17,9 @@ object FilterMaskKt {
     /**
      * method_45091
      */
-    fun writeMask(buf: PacketByteBuf, mask: FilterMask) = FilterMask.method_45091(buf, mask)
+    fun writeMask(buf: PacketByteBuf?, mask: FilterMask?) = FilterMask.method_45091(buf, mask)
     /**
      * method_45090
      */
-    fun readMask(buf: PacketByteBuf) = FilterMask.method_45090(buf)
+    fun readMask(buf: PacketByteBuf?) = FilterMask.method_45090(buf)
 }

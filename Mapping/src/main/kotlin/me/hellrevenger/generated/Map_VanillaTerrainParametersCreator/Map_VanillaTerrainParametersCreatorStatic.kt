@@ -9,7 +9,7 @@ object VanillaTerrainParametersCreatorKt {
     /**
      * method_42051
      */
-    fun <C, I>createContinentalOffsetSpline(erosion: I, ridgesFolded: I, continentalness: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Float, arg7: Float, arg8: Boolean, arg9: Boolean, amplifier: ToFloatFunction<Float>) where I: ToFloatFunction<C> = VanillaTerrainParametersCreator.method_42051<C, I>(erosion, ridgesFolded, continentalness, arg3, arg4, arg5, arg6, arg7, arg8, arg9, amplifier)
+    fun <C, I>createContinentalOffsetSpline(erosion: I, ridgesFolded: I, continentalness: Float, arg3: Float, arg4: Float, arg5: Float, arg6: Float, arg7: Float, arg8: Boolean, arg9: Boolean, amplifier: ToFloatFunction<Float>?) where I: ToFloatFunction<C> = VanillaTerrainParametersCreator.method_42051<C, I>(erosion, ridgesFolded, continentalness, arg3, arg4, arg5, arg6, arg7, arg8, arg9, amplifier)
     /**
      * method_42058
      */

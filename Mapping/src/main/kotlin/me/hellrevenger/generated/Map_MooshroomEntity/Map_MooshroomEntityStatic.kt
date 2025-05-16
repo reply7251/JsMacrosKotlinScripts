@@ -5,5 +5,5 @@ object MooshroomEntityKt {
     /**
      * method_20665
      */
-    fun canSpawn(type: EntityType<MooshroomEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = MooshroomEntity.method_20665(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<MooshroomEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = MooshroomEntity.method_20665(type, world, spawnReason, pos, random)
 }

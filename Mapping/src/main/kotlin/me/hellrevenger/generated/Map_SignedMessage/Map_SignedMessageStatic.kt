@@ -13,13 +13,13 @@ object SignedMessageKt {
     /**
      * method_45098
      */
-    fun ofUnsigned(sender: UUID, content: String) = SignedMessage.method_45098(sender, content)
+    fun ofUnsigned(sender: UUID?, content: String?) = SignedMessage.method_45098(sender, content)
     /**
      * method_46290
      */
-    fun update(updater: net.minecraft.class_7498.class_7499, link: MessageLink, body: MessageBody) = SignedMessage.method_46290(updater, link, body)
+    fun update(updater: net.minecraft.class_7498.class_7499?, link: MessageLink?, body: MessageBody?) = SignedMessage.method_46290(updater, link, body)
     /**
      * method_45041
      */
-    fun ofUnsigned(content: String) = SignedMessage.method_45041(content)
+    fun ofUnsigned(content: String?) = SignedMessage.method_45041(content)
 }

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_7473
  */
-fun EvokerFangsEntity.setOwner(owner: LivingEntity) = this.method_7473(owner)
+fun EvokerFangsEntity.setOwner(owner: LivingEntity?) = this.method_7473(owner)
 /**
  * method_7470
  */

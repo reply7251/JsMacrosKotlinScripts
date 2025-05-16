@@ -5,5 +5,5 @@ object ProfilerKt {
     /**
      * method_64154
      */
-    fun union(first: Profiler, second: Profiler) = Profiler.method_64154(first, second)
+    fun union(first: Profiler?, second: Profiler?) = Profiler.method_64154(first, second)
 }

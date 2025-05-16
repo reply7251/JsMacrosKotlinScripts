@@ -165,5 +165,5 @@ object StructureProcessorListsKt {
     /**
      * method_46846
      */
-    fun bootstrap(processorListRegisterable: Registerable<StructureProcessorList>) = StructureProcessorLists.method_46846(processorListRegisterable)
+    fun bootstrap(processorListRegisterable: Registerable<StructureProcessorList>?) = StructureProcessorLists.method_46846(processorListRegisterable)
 }

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_38092
  */
-fun BlockColumn.setState(y: Int, state: BlockState) = this.method_38092(y, state)
+fun BlockColumn.setState(y: Int, state: BlockState?) = this.method_38092(y, state)
 /**
  * method_32892
  */

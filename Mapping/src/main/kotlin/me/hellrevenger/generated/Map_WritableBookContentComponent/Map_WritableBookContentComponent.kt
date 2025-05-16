@@ -8,4 +8,4 @@ fun WritableBookContentComponent.stream(shouldFilter: Boolean) = this.method_575
 /**
  * method_58187
  */
-fun WritableBookContentComponent.withPages(arg0: MutableList<RawFilteredPair<String>>) = this.method_58187(arg0)
+fun WritableBookContentComponent.withPages(arg0: MutableList<RawFilteredPair<String>>?) = this.method_58187(arg0)

@@ -8,11 +8,11 @@ val EntityLootTableGenerator.lootTables by alias(EntityLootTableGenerator::field
 /**
  * method_46028
  */
-fun EntityLootTableGenerator.register(entityType: EntityType<*>, tableKey: RegistryKey<LootTable>, lootTable: net.minecraft.class_52.class_53) = this.method_46028(entityType, tableKey, lootTable)
+fun EntityLootTableGenerator.register(entityType: EntityType<*>?, tableKey: RegistryKey<LootTable>?, lootTable: net.minecraft.class_52.class_53?) = this.method_46028(entityType, tableKey, lootTable)
 /**
  * method_46029
  */
-fun EntityLootTableGenerator.register(entityType: EntityType<*>, lootTable: net.minecraft.class_52.class_53) = this.method_46029(entityType, lootTable)
+fun EntityLootTableGenerator.register(entityType: EntityType<*>?, lootTable: net.minecraft.class_52.class_53?) = this.method_46029(entityType, lootTable)
 /**
  * method_10400
  */

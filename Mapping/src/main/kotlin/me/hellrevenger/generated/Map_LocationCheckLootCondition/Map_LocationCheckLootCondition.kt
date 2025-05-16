@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_881
  */
-fun LocationCheckLootCondition.test(arg0: LootContext) = this.method_881(arg0)
+fun LocationCheckLootCondition.test(arg0: LootContext?) = this.method_881(arg0)
 /**
  * comp_1875
  */

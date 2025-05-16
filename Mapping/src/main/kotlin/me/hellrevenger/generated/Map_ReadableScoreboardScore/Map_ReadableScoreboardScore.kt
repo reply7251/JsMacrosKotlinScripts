@@ -8,7 +8,7 @@ fun ReadableScoreboardScore.getNumberFormat() = this.method_55400()
 /**
  * method_55399
  */
-fun ReadableScoreboardScore.getFormattedScore(fallbackFormat: NumberFormat) = this.method_55399(fallbackFormat)
+fun ReadableScoreboardScore.getFormattedScore(fallbackFormat: NumberFormat?) = this.method_55399(fallbackFormat)
 /**
  * method_55397
  */

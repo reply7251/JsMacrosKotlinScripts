@@ -5,5 +5,5 @@ object ServerPropertiesHandlerKt {
     /**
      * method_16714
      */
-    fun load(path: file_Path) = ServerPropertiesHandler.method_16714(path)
+    fun load(path: file_Path?) = ServerPropertiesHandler.method_16714(path)
 }

@@ -205,5 +205,5 @@ object PaintingVariantsKt {
     /**
      * method_43406
      */
-    fun bootstrap(registry: Registerable<PaintingVariant>) = PaintingVariants.method_43406(registry)
+    fun bootstrap(registry: Registerable<PaintingVariant>?) = PaintingVariants.method_43406(registry)
 }

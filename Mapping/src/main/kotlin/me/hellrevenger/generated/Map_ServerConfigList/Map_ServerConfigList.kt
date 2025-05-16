@@ -20,7 +20,7 @@ fun <K, V>ServerConfigList<K, V>.get(key: K) where V: ServerConfigEntry<K> = thi
 /**
  * method_14638
  */
-fun <K, V>ServerConfigList<K, V>.remove(entry: ServerConfigEntry<K>) where V: ServerConfigEntry<K> = this.method_14638(entry)
+fun <K, V>ServerConfigList<K, V>.remove(entry: ServerConfigEntry<K>?) where V: ServerConfigEntry<K> = this.method_14638(entry)
 /**
  * method_14629
  */

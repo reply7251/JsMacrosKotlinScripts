@@ -9,5 +9,5 @@ object BundleContentsComponentKt {
     /**
      * method_61667
      */
-    fun canBeBundled(stack: ItemStack) = BundleContentsComponent.method_61667(stack)
+    fun canBeBundled(stack: ItemStack?) = BundleContentsComponent.method_61667(stack)
 }

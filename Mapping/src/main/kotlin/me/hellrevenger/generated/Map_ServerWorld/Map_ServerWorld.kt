@@ -8,15 +8,15 @@ var ServerWorld.savingDisabled by alias(ServerWorld::field_13957)
 /**
  * method_20588
  */
-fun ServerWorld.isNearOccupiedPointOfInterest(sectionPos: ChunkSectionPos) = this.method_20588(sectionPos)
+fun ServerWorld.isNearOccupiedPointOfInterest(sectionPos: ChunkSectionPos?) = this.method_20588(sectionPos)
 /**
  * method_19503
  */
-fun ServerWorld.hasRaidAt(pos: BlockPos) = this.method_19503(pos)
+fun ServerWorld.hasRaidAt(pos: BlockPos?) = this.method_19503(pos)
 /**
  * method_23658
  */
-fun ServerWorld.clearUpdatesInArea(box: BlockBox) = this.method_23658(box)
+fun ServerWorld.clearUpdatesInArea(box: BlockBox?) = this.method_23658(box)
 /**
  * method_33144
  */
@@ -32,7 +32,7 @@ fun ServerWorld.getChunkManager() = this.method_14178()
 /**
  * method_18215
  */
-fun ServerWorld.onPlayerRespawned(player: ServerPlayerEntity) = this.method_18215(player)
+fun ServerWorld.onPlayerRespawned(player: ServerPlayerEntity?) = this.method_18215(player)
 /**
  * method_31424
  */
@@ -40,7 +40,7 @@ fun ServerWorld.getDragonPart(id: Int) = this.method_31424(id)
 /**
  * method_19502
  */
-fun ServerWorld.getRaidAt(pos: BlockPos) = this.method_19502(pos)
+fun ServerWorld.getRaidAt(pos: BlockPos?) = this.method_19502(pos)
 /**
  * method_29202
  */
@@ -48,7 +48,7 @@ fun ServerWorld.tickSpawners(spawnMonsters: Boolean, spawnAnimals: Boolean) = th
 /**
  * method_31423
  */
-fun ServerWorld.loadEntities(entities: Stream<Entity>) = this.method_31423(entities)
+fun ServerWorld.loadEntities(entities: Stream<Entity>?) = this.method_31423(entities)
 /**
  * method_19494
  */
@@ -60,15 +60,15 @@ fun ServerWorld.getDebugString() = this.method_31268()
 /**
  * method_42108
  */
-fun ServerWorld.locateBiome(predicate: Predicate<RegistryEntry<Biome>>, pos: BlockPos, radius: Int, horizontalBlockCheckInterval: Int, verticalBlockCheckInterval: Int) = this.method_42108(predicate, pos, radius, horizontalBlockCheckInterval, verticalBlockCheckInterval)
+fun ServerWorld.locateBiome(predicate: Predicate<RegistryEntry<Biome>>?, pos: BlockPos?, radius: Int, horizontalBlockCheckInterval: Int, verticalBlockCheckInterval: Int) = this.method_42108(predicate, pos, radius, horizontalBlockCheckInterval, verticalBlockCheckInterval)
 /**
  * method_39223
  */
-fun ServerWorld.disableTickSchedulers(chunk: WorldChunk) = this.method_39223(chunk)
+fun ServerWorld.disableTickSchedulers(chunk: WorldChunk?) = this.method_39223(chunk)
 /**
  * method_51837
  */
-fun ServerWorld.setEnderDragonFight(enderDragonFight: EnderDragonFight) = this.method_51837(enderDragonFight)
+fun ServerWorld.setEnderDragonFight(enderDragonFight: EnderDragonFight?) = this.method_51837(enderDragonFight)
 /**
  * method_14177
  */
@@ -84,35 +84,35 @@ fun ServerWorld.getForcedChunks() = this.method_17984()
 /**
  * method_18766
  */
-fun ServerWorld.getPlayers(predicate: Predicate<in ServerPlayerEntity>) = this.method_18766(predicate)
+fun ServerWorld.getPlayers(predicate: Predicate<in ServerPlayerEntity>?) = this.method_18766(predicate)
 /**
  * method_31426
  */
-fun ServerWorld.addEntities(entities: Stream<Entity>) = this.method_31426(entities)
+fun ServerWorld.addEntities(entities: Stream<Entity>?) = this.method_31426(entities)
 /**
  * method_39778
  */
-fun ServerWorld.cacheStructures(chunk: Chunk) = this.method_39778(chunk)
+fun ServerWorld.cacheStructures(chunk: Chunk?) = this.method_39778(chunk)
 /**
  * method_37118
  */
-fun ServerWorld.shouldTickEntity(pos: BlockPos) = this.method_37118(pos)
+fun ServerWorld.shouldTickEntity(pos: BlockPos?) = this.method_37118(pos)
 /**
  * method_18762
  */
-fun ServerWorld.tickEntity(entity: Entity) = this.method_18762(entity)
+fun ServerWorld.tickEntity(entity: Entity?) = this.method_18762(entity)
 /**
  * method_39998
  */
-fun ServerWorld.shouldTick(pos: ChunkPos) = this.method_39998(pos)
+fun ServerWorld.shouldTick(pos: ChunkPos?) = this.method_39998(pos)
 /**
  * method_19496
  */
-fun ServerWorld.handleInteraction(interaction: EntityInteraction, entity: Entity, observer: InteractionObserver) = this.method_19496(interaction, entity, observer)
+fun ServerWorld.handleInteraction(interaction: EntityInteraction?, entity: Entity?, observer: InteractionObserver?) = this.method_19496(interaction, entity, observer)
 /**
  * method_14191
  */
-fun ServerWorld.sendToPlayerIfNearby(player: ServerPlayerEntity, force: Boolean, x: Double, arg3: Double, y: Double, arg5: Packet<*>) = this.method_14191(player, force, x, arg3, y, arg5)
+fun ServerWorld.sendToPlayerIfNearby(player: ServerPlayerEntity?, force: Boolean, x: Double, arg3: Double, y: Double, arg5: Packet<*>?) = this.method_14191(player, force, x, arg3, y, arg5)
 /**
  * method_64577
  */
@@ -132,7 +132,7 @@ fun ServerWorld.getStructureAccessor() = this.method_27056()
 /**
  * method_8554
  */
-fun ServerWorld.setSpawnPos(pos: BlockPos, angle: Float) = this.method_8554(pos, angle)
+fun ServerWorld.setSpawnPos(pos: BlockPos?, angle: Float) = this.method_8554(pos, angle)
 /**
  * method_18779
  */
@@ -144,7 +144,7 @@ fun ServerWorld.getPersistentStateManager() = this.method_17983()
 /**
  * method_18764
  */
-fun ServerWorld.unloadEntities(chunk: WorldChunk) = this.method_18764(chunk)
+fun ServerWorld.unloadEntities(chunk: WorldChunk?) = this.method_18764(chunk)
 /**
  * method_18776
  */
@@ -152,7 +152,7 @@ fun ServerWorld.getAliveEnderDragons() = this.method_18776()
 /**
  * method_19498
  */
-fun ServerWorld.getOccupiedPointOfInterestDistance(pos: ChunkSectionPos) = this.method_19498(pos)
+fun ServerWorld.getOccupiedPointOfInterestDistance(pos: ChunkSectionPos?) = this.method_19498(pos)
 /**
  * method_32819
  */
@@ -160,7 +160,7 @@ fun ServerWorld.getLogicalHeight() = this.method_32819()
 /**
  * method_18768
  */
-fun ServerWorld.tryLoadEntity(entity: Entity) = this.method_18768(entity)
+fun ServerWorld.tryLoadEntity(entity: Entity?) = this.method_18768(entity)
 /**
  * method_17988
  */
@@ -168,15 +168,15 @@ fun ServerWorld.setChunkForced(x: Int, z: Int, forced: Boolean) = this.method_17
 /**
  * method_18769
  */
-fun ServerWorld.onDimensionChanged(entity: Entity) = this.method_18769(entity)
+fun ServerWorld.onDimensionChanged(entity: Entity?) = this.method_18769(entity)
 /**
  * method_19500
  */
-fun ServerWorld.isNearOccupiedPointOfInterest(pos: BlockPos) = this.method_19500(pos)
+fun ServerWorld.isNearOccupiedPointOfInterest(pos: BlockPos?) = this.method_19500(pos)
 /**
  * method_18765
  */
-fun ServerWorld.tick(shouldKeepTicking: BooleanSupplier) = this.method_18765(shouldKeepTicking)
+fun ServerWorld.tick(shouldKeepTicking: BooleanSupplier?) = this.method_18765(shouldKeepTicking)
 /**
  * method_27910
  */
@@ -188,7 +188,7 @@ fun ServerWorld.iterateEntities() = this.method_27909()
 /**
  * method_14190
  */
-fun ServerWorld.getEntity(uuid: UUID) = this.method_14190(uuid)
+fun ServerWorld.getEntity(uuid: UUID?) = this.method_14190(uuid)
 /**
  * method_19495
  */
@@ -196,11 +196,11 @@ fun ServerWorld.getRaidManager() = this.method_19495()
 /**
  * method_18198
  */
-fun <T>ServerWorld.getEntitiesByType(filter: TypeFilter<Entity, T>, predicate: Predicate<in T>) where T: Entity = this.method_18198<T>(filter, predicate)
+fun <T>ServerWorld.getEntitiesByType(filter: TypeFilter<Entity, T>?, predicate: Predicate<in T>?) where T: Entity = this.method_18198<T>(filter, predicate)
 /**
  * method_18203
  */
-fun ServerWorld.tickChunk(chunk: WorldChunk, randomTickSpeed: Int) = this.method_18203(chunk, randomTickSpeed)
+fun ServerWorld.tickChunk(chunk: WorldChunk?, randomTickSpeed: Int) = this.method_18203(chunk, randomTickSpeed)
 /**
  * method_14199
  */
@@ -208,15 +208,15 @@ fun <T>ServerWorld.spawnParticles(parameters: T, force: Boolean, important: Bool
 /**
  * method_52370
  */
-fun ServerWorld.tickIceAndSnow(pos: BlockPos) = this.method_52370(pos)
+fun ServerWorld.tickIceAndSnow(pos: BlockPos?) = this.method_52370(pos)
 /**
  * method_14166
  */
-fun <T>ServerWorld.spawnParticles(viewer: ServerPlayerEntity, parameters: T, force: Boolean, important: Boolean, x: Double, arg5: Double, y: Double, arg7: Int, z: Double, arg9: Double, count: Double, offsetX: Double) where T: ParticleEffect = this.method_14166<T>(viewer, parameters, force, important, x, arg5, y, arg7, z, arg9, count, offsetX)
+fun <T>ServerWorld.spawnParticles(viewer: ServerPlayerEntity?, parameters: T, force: Boolean, important: Boolean, x: Double, arg5: Double, y: Double, arg7: Int, z: Double, arg9: Double, count: Double, offsetX: Double) where T: ParticleEffect = this.method_14166<T>(viewer, parameters, force, important, x, arg5, y, arg7, z, arg9, count, offsetX)
 /**
  * method_51836
  */
-fun ServerWorld.getOrCreateRandom(id: Identifier) = this.method_51836(id)
+fun ServerWorld.getOrCreateRandom(id: Identifier?) = this.method_51836(id)
 /**
  * method_14197
  */
@@ -224,11 +224,11 @@ fun ServerWorld.resetIdleTimeout() = this.method_14197()
 /**
  * method_14176
  */
-fun ServerWorld.save(progressListener: ProgressListener, flush: Boolean, savingDisabled: Boolean) = this.method_14176(progressListener, flush, savingDisabled)
+fun ServerWorld.save(progressListener: ProgressListener?, flush: Boolean, savingDisabled: Boolean) = this.method_14176(progressListener, flush, savingDisabled)
 /**
  * method_30736
  */
-fun ServerWorld.spawnNewEntityAndPassengers(entity: Entity) = this.method_30736(entity)
+fun ServerWorld.spawnNewEntityAndPassengers(entity: Entity?) = this.method_30736(entity)
 /**
  * method_29199
  */
@@ -236,23 +236,23 @@ fun ServerWorld.setTimeOfDay(timeOfDay: Long) = this.method_29199(timeOfDay)
 /**
  * method_8487
  */
-fun ServerWorld.locateStructure(structureTag: TagKey<Structure>, pos: BlockPos, radius: Int, skipReferencedStructures: Boolean) = this.method_8487(structureTag, pos, radius, skipReferencedStructures)
+fun ServerWorld.locateStructure(structureTag: TagKey<Structure>?, pos: BlockPos?, radius: Int, skipReferencedStructures: Boolean) = this.method_8487(structureTag, pos, radius, skipReferencedStructures)
 /**
  * method_19497
  */
-fun ServerWorld.isNearOccupiedPointOfInterest(pos: BlockPos, maxDistance: Int) = this.method_19497(pos, maxDistance)
+fun ServerWorld.isNearOccupiedPointOfInterest(pos: BlockPos?, maxDistance: Int) = this.method_19497(pos, maxDistance)
 /**
  * method_18213
  */
-fun ServerWorld.onPlayerConnected(player: ServerPlayerEntity) = this.method_18213(player)
+fun ServerWorld.onPlayerConnected(player: ServerPlayerEntity?) = this.method_18213(player)
 /**
  * method_39999
  */
-fun ServerWorld.shouldTick(pos: BlockPos) = this.method_39999(pos)
+fun ServerWorld.shouldTick(pos: BlockPos?) = this.method_39999(pos)
 /**
  * method_47540
  */
-fun ServerWorld.getPlayers(predicate: Predicate<in ServerPlayerEntity>, limit: Int) = this.method_47540(predicate, limit)
+fun ServerWorld.getPlayers(predicate: Predicate<in ServerPlayerEntity>?, limit: Int) = this.method_47540(predicate, limit)
 /**
  * method_14196
  */
@@ -280,7 +280,7 @@ fun ServerWorld.getEnderDragonFight() = this.method_29198()
 /**
  * method_18770
  */
-fun ServerWorld.removePlayer(player: ServerPlayerEntity, reason: net.minecraft.class_1297.class_5529) = this.method_18770(player, reason)
+fun ServerWorld.removePlayer(player: ServerPlayerEntity?, reason: net.minecraft.class_1297.class_5529?) = this.method_18770(player, reason)
 /**
  * method_64395
  */
@@ -292,7 +292,7 @@ fun ServerWorld.getRandomSequences() = this.method_52168()
 /**
  * method_21625
  */
-fun ServerWorld.dump(path: file_Path) = this.method_21625(path)
+fun ServerWorld.dump(path: file_Path?) = this.method_21625(path)
 /**
  * method_14183
  */

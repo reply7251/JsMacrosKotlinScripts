@@ -37,5 +37,5 @@ object StringNbtReaderKt {
     /**
      * method_10718
      */
-    fun parse(string: String) = StringNbtReader.method_10718(string)
+    fun parse(string: String?) = StringNbtReader.method_10718(string)
 }

@@ -5,5 +5,5 @@ object SetIdleTimeoutCommandKt {
     /**
      * method_13631
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = SetIdleTimeoutCommand.method_13631(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = SetIdleTimeoutCommand.method_13631(dispatcher)
 }

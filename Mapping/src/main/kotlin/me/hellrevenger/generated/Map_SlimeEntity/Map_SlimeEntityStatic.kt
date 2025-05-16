@@ -13,5 +13,5 @@ object SlimeEntityKt {
     /**
      * method_20685
      */
-    fun canSpawn(type: EntityType<SlimeEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = SlimeEntity.method_20685(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<SlimeEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = SlimeEntity.method_20685(type, world, spawnReason, pos, random)
 }

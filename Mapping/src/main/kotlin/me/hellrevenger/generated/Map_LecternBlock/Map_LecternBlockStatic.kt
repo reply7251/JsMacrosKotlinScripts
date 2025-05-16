@@ -53,13 +53,13 @@ object LecternBlockKt {
     /**
      * method_17471
      */
-    fun setPowered(world: world_World, pos: BlockPos, state: BlockState) = LecternBlock.method_17471(world, pos, state)
+    fun setPowered(world: world_World?, pos: BlockPos?, state: BlockState?) = LecternBlock.method_17471(world, pos, state)
     /**
      * method_17473
      */
-    fun setHasBook(user: Entity, world: world_World, pos: BlockPos, state: BlockState, hasBook: Boolean) = LecternBlock.method_17473(user, world, pos, state, hasBook)
+    fun setHasBook(user: Entity?, world: world_World?, pos: BlockPos?, state: BlockState?, hasBook: Boolean) = LecternBlock.method_17473(user, world, pos, state, hasBook)
     /**
      * method_17472
      */
-    fun putBookIfAbsent(user: LivingEntity, world: world_World, pos: BlockPos, state: BlockState, stack: ItemStack) = LecternBlock.method_17472(user, world, pos, state, stack)
+    fun putBookIfAbsent(user: LivingEntity?, world: world_World?, pos: BlockPos?, state: BlockState?, stack: ItemStack?) = LecternBlock.method_17472(user, world, pos, state, stack)
 }

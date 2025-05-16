@@ -12,7 +12,7 @@ fun Direction.getId() = this.method_10146()
 /**
  * method_35833
  */
-fun Direction.rotateClockwise(axis: net.minecraft.class_2350.class_2351) = this.method_35833(axis)
+fun Direction.rotateClockwise(axis: net.minecraft.class_2350.class_2351?) = this.method_35833(axis)
 /**
  * method_10166
  */
@@ -36,7 +36,7 @@ fun Direction.getName() = this.method_10151()
 /**
  * method_35834
  */
-fun Direction.rotateCounterclockwise(axis: net.minecraft.class_2350.class_2351) = this.method_35834(axis)
+fun Direction.rotateCounterclockwise(axis: net.minecraft.class_2350.class_2351?) = this.method_35834(axis)
 /**
  * method_10160
  */

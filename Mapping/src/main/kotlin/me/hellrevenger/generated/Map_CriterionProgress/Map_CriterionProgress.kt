@@ -8,7 +8,7 @@ fun CriterionProgress.isObtained() = this.method_784()
 /**
  * method_787
  */
-fun CriterionProgress.toPacket(buf: PacketByteBuf) = this.method_787(buf)
+fun CriterionProgress.toPacket(buf: PacketByteBuf?) = this.method_787(buf)
 /**
  * method_790
  */

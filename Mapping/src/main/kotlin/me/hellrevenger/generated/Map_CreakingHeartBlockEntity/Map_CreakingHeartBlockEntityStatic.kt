@@ -5,5 +5,5 @@ object CreakingHeartBlockEntityKt {
     /**
      * method_64804
      */
-    fun tick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: CreakingHeartBlockEntity) = CreakingHeartBlockEntity.method_64804(world, pos, state, blockEntity)
+    fun tick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: CreakingHeartBlockEntity?) = CreakingHeartBlockEntity.method_64804(world, pos, state, blockEntity)
 }

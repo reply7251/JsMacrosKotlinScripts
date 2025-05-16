@@ -129,11 +129,11 @@ object TrackedDataHandlerRegistryKt {
     /**
      * method_12719
      */
-    fun getId(handler: TrackedDataHandler<*>) = TrackedDataHandlerRegistry.method_12719(handler)
+    fun getId(handler: TrackedDataHandler<*>?) = TrackedDataHandlerRegistry.method_12719(handler)
     /**
      * method_12720
      */
-    fun register(handler: TrackedDataHandler<*>) = TrackedDataHandlerRegistry.method_12720(handler)
+    fun register(handler: TrackedDataHandler<*>?) = TrackedDataHandlerRegistry.method_12720(handler)
     /**
      * method_12721
      */

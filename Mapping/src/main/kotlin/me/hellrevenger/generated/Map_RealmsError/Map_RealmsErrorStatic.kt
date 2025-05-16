@@ -5,5 +5,5 @@ object RealmsErrorKt {
     /**
      * method_30162
      */
-    fun ofHttp(statusCode: Int, response: String) = RealmsError.method_30162(statusCode, response)
+    fun ofHttp(statusCode: Int, response: String?) = RealmsError.method_30162(statusCode, response)
 }

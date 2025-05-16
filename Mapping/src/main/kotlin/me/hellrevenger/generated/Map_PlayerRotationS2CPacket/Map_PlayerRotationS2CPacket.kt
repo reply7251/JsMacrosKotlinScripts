@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_64559
  */
-fun PlayerRotationS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_64559(arg0)
+fun PlayerRotationS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_64559(arg0)
 /**
  * comp_3230
  */

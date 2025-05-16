@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_62138
  */
-fun ModelData.transform(transformer: UnaryOperator<ModelTransform>) = this.method_62138(transformer)
+fun ModelData.transform(transformer: UnaryOperator<ModelTransform>?) = this.method_62138(transformer)
 /**
  * method_32111
  */

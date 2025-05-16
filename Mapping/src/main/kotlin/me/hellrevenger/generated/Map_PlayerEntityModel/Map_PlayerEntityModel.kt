@@ -24,8 +24,8 @@ val PlayerEntityModel.leftPants by alias(PlayerEntityModel::field_3482)
 /**
  * method_22697
  */
-fun PlayerEntityModel.getRandomPart(random: Random) = this.method_22697(random)
+fun PlayerEntityModel.getRandomPart(random: Random?) = this.method_22697(random)
 /**
  * method_62110
  */
-fun PlayerEntityModel.setAngles(arg0: PlayerEntityRenderState) = this.method_62110(arg0)
+fun PlayerEntityModel.setAngles(arg0: PlayerEntityRenderState?) = this.method_62110(arg0)

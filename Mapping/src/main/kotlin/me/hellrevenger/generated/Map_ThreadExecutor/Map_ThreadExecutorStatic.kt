@@ -5,5 +5,5 @@ object ThreadExecutorKt {
     /**
      * method_61391
      */
-    fun <R>isMemoryError(exception: Throwable) where R: Runnable = ThreadExecutor.method_61391(exception)
+    fun <R>isMemoryError(exception: Throwable?) where R: Runnable = ThreadExecutor.method_61391(exception)
 }

@@ -20,7 +20,7 @@ fun RealmsConfigureWorldScreen.closeTheWorld() = this.method_21217()
 /**
  * method_21208
  */
-fun RealmsConfigureWorldScreen.saveSlotSettings(options: RealmsWorldOptions) = this.method_21208(options)
+fun RealmsConfigureWorldScreen.saveSlotSettings(options: RealmsWorldOptions?) = this.method_21208(options)
 /**
  * method_21204
  */
@@ -28,4 +28,4 @@ fun RealmsConfigureWorldScreen.fetchServerData(worldId: Long) = this.method_2120
 /**
  * method_21215
  */
-fun RealmsConfigureWorldScreen.saveSettings(name: String, desc: String) = this.method_21215(name, desc)
+fun RealmsConfigureWorldScreen.saveSettings(name: String?, desc: String?) = this.method_21215(name, desc)

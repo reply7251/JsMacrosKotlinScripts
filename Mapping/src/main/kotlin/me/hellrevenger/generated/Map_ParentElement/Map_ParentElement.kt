@@ -8,7 +8,7 @@ fun ParentElement.getFocused() = this.method_25399()
 /**
  * method_25395
  */
-fun ParentElement.setFocused(focused: Element) = this.method_25395(focused)
+fun ParentElement.setFocused(focused: Element?) = this.method_25395(focused)
 /**
  * method_25396
  */

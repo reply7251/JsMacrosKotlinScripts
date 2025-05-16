@@ -13,5 +13,5 @@ object TranslatableTextContentKt {
     /**
      * method_54238
      */
-    fun isPrimitive(argument: Object) = TranslatableTextContent.method_54238(argument)
+    fun isPrimitive(argument: Object?) = TranslatableTextContent.method_54238(argument)
 }

@@ -112,7 +112,7 @@ fun MinecraftClient.getWindow() = this.method_22683()
 /**
  * method_52701
  */
-fun MinecraftClient.uuidEquals(uuid: UUID) = this.method_52701(uuid)
+fun MinecraftClient.uuidEquals(uuid: UUID?) = this.method_52701(uuid)
 /**
  * method_1541
  */
@@ -144,7 +144,7 @@ fun MinecraftClient.getResourcePackDir() = this.method_1479()
 /**
  * method_29042
  */
-fun MinecraftClient.shouldBlockMessages(sender: UUID) = this.method_29042(sender)
+fun MinecraftClient.shouldBlockMessages(sender: UUID?) = this.method_29042(sender)
 /**
  * method_1586
  */
@@ -156,7 +156,7 @@ fun MinecraftClient.getWorldGenerationProgressTracker() = this.method_35703()
 /**
  * method_1481
  */
-fun MinecraftClient.joinWorld(world: ClientWorld, worldEntryReason: net.minecraft.class_434.class_9678) = this.method_1481(world, worldEntryReason)
+fun MinecraftClient.joinWorld(world: ClientWorld?, worldEntryReason: net.minecraft.class_434.class_9678?) = this.method_1481(world, worldEntryReason)
 /**
  * method_1515
  */
@@ -176,7 +176,7 @@ fun MinecraftClient.getShaderLoader() = this.method_62887()
 /**
  * method_18096
  */
-fun MinecraftClient.disconnect(disconnectionScreen: Screen, transferring: Boolean) = this.method_18096(disconnectionScreen, transferring)
+fun MinecraftClient.disconnect(disconnectionScreen: Screen?, transferring: Boolean) = this.method_18096(disconnectionScreen, transferring)
 /**
  * method_41734
  */
@@ -184,15 +184,15 @@ fun MinecraftClient.getGpuUtilizationPercentage() = this.method_41734()
 /**
  * method_56134
  */
-fun MinecraftClient.disconnect(disconnectionScreen: Screen) = this.method_56134(disconnectionScreen)
+fun MinecraftClient.disconnect(disconnectionScreen: Screen?) = this.method_56134(disconnectionScreen)
 /**
  * method_34745
  */
-fun MinecraftClient.toggleDebugProfiler(chatMessageSender: Consumer<Text>) = this.method_34745(chatMessageSender)
+fun MinecraftClient.toggleDebugProfiler(chatMessageSender: Consumer<Text>?) = this.method_34745(chatMessageSender)
 /**
  * method_35698
  */
-fun MinecraftClient.takePanorama(directory: File, width: Int, height: Int) = this.method_35698(directory, width, height)
+fun MinecraftClient.takePanorama(directory: File?, width: Int, height: Int) = this.method_35698(directory, width, height)
 /**
  * method_53526
  */
@@ -200,7 +200,7 @@ fun MinecraftClient.getDebugHud() = this.method_53526()
 /**
  * method_27022
  */
-fun MinecraftClient.hasOutline(entity: Entity) = this.method_27022(entity)
+fun MinecraftClient.hasOutline(entity: Entity?) = this.method_27022(entity)
 /**
  * method_53518
  */
@@ -232,7 +232,7 @@ fun MinecraftClient.hasReducedDebugInfo() = this.method_1555()
 /**
  * method_29610
  */
-fun MinecraftClient.startIntegratedServer(session: net.minecraft.class_32.class_5143, dataPackManager: ResourcePackManager, saveLoader: SaveLoader, newWorld: Boolean) = this.method_29610(session, dataPackManager, saveLoader, newWorld)
+fun MinecraftClient.startIntegratedServer(session: net.minecraft.class_32.class_5143?, dataPackManager: ResourcePackManager?, saveLoader: SaveLoader?, newWorld: Boolean) = this.method_29610(session, dataPackManager, saveLoader, newWorld)
 /**
  * method_1544
  */
@@ -288,7 +288,7 @@ fun MinecraftClient.providesProfileKeys() = this.method_55606()
 /**
  * method_31186
  */
-fun MinecraftClient.onResourceReloadFailure(exception: Throwable, resourceName: Text, loadingContext: net.minecraft.class_310.class_8764) = this.method_31186(exception, resourceName, loadingContext)
+fun MinecraftClient.onResourceReloadFailure(exception: Throwable?, resourceName: Text?, loadingContext: net.minecraft.class_310.class_8764?) = this.method_31186(exception, resourceName, loadingContext)
 /**
  * method_24288
  */
@@ -296,7 +296,7 @@ fun MinecraftClient.updateWindowTitle() = this.method_24288()
 /**
  * method_29970
  */
-fun MinecraftClient.setScreenAndRender(screen: Screen) = this.method_29970(screen)
+fun MinecraftClient.setScreenAndRender(screen: Screen?) = this.method_29970(screen)
 /**
  * method_1513
  */
@@ -304,7 +304,7 @@ fun MinecraftClient.reloadResourcesConcurrently() = this.method_1513()
 /**
  * method_54580
  */
-fun MinecraftClient.printCrashReport(crashReport: CrashReport) = this.method_54580(crashReport)
+fun MinecraftClient.printCrashReport(crashReport: CrashReport?) = this.method_54580(crashReport)
 /**
  * method_1558
  */
@@ -352,7 +352,7 @@ fun MinecraftClient.isRunning() = this.method_22108()
 /**
  * method_18502
  */
-fun MinecraftClient.setOverlay(overlay: Overlay) = this.method_18502(overlay)
+fun MinecraftClient.setOverlay(overlay: Overlay?) = this.method_18502(overlay)
 /**
  * method_1571
  */
@@ -368,15 +368,15 @@ fun MinecraftClient.isTelemetryEnabledByApi() = this.method_47596()
 /**
  * method_63507
  */
-fun MinecraftClient.onShaderResourceReloadFailure(exception: Exception) = this.method_63507(exception)
+fun MinecraftClient.onShaderResourceReloadFailure(exception: Exception?) = this.method_63507(exception)
 /**
  * method_48185
  */
-fun MinecraftClient.setNavigationType(navigationType: GuiNavigationType) = this.method_48185(navigationType)
+fun MinecraftClient.setNavigationType(navigationType: GuiNavigationType?) = this.method_48185(navigationType)
 /**
  * method_1549
  */
-fun MinecraftClient.getSpriteAtlas(id: Identifier) = this.method_1549(id)
+fun MinecraftClient.getSpriteAtlas(id: Identifier?) = this.method_1549(id)
 /**
  * method_47602
  */
@@ -388,7 +388,7 @@ fun MinecraftClient.isPaused() = this.method_1493()
 /**
  * method_52703
  */
-fun MinecraftClient.enterReconfiguration(reconfigurationScreen: Screen) = this.method_52703(reconfigurationScreen)
+fun MinecraftClient.enterReconfiguration(reconfigurationScreen: Screen?) = this.method_52703(reconfigurationScreen)
 /**
  * method_44646
  */
@@ -472,7 +472,7 @@ fun MinecraftClient.getCommandHistoryManager() = this.method_52700()
 /**
  * method_1494
  */
-fun MinecraftClient.setCrashReportSupplierAndAddDetails(crashReport: CrashReport) = this.method_1494(crashReport)
+fun MinecraftClient.setCrashReportSupplierAndAddDetails(crashReport: CrashReport?) = this.method_1494(crashReport)
 /**
  * method_1516
  */
@@ -500,11 +500,11 @@ fun MinecraftClient.getTextureManager() = this.method_1531()
 /**
  * method_1507
  */
-fun MinecraftClient.setScreen(screen: Screen) = this.method_1507(screen)
+fun MinecraftClient.setScreen(screen: Screen?) = this.method_1507(screen)
 /**
  * method_1587
  */
-fun MinecraftClient.addDetailsToCrashReport(report: CrashReport) = this.method_1587(report)
+fun MinecraftClient.addDetailsToCrashReport(report: CrashReport?) = this.method_1587(report)
 /**
  * method_1514
  */
@@ -556,7 +556,7 @@ fun MinecraftClient.forcesUnicodeFont() = this.method_1573()
 /**
  * method_44376
  */
-fun MinecraftClient.ensureAbuseReportContext(environment: ReporterEnvironment) = this.method_44376(environment)
+fun MinecraftClient.ensureAbuseReportContext(environment: ReporterEnvironment?) = this.method_44376(environment)
 /**
  * method_18506
  */
@@ -584,7 +584,7 @@ fun MinecraftClient.getInactivityFpsLimiter() = this.method_61964()
 /**
  * method_43587
  */
-fun MinecraftClient.setCrashReportSupplier(crashReport: CrashReport) = this.method_43587(crashReport)
+fun MinecraftClient.setCrashReportSupplier(crashReport: CrashReport?) = this.method_43587(crashReport)
 /**
  * method_33884
  */

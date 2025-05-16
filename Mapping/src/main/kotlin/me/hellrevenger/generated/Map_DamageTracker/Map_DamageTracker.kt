@@ -16,4 +16,4 @@ fun DamageTracker.update() = this.method_5539()
 /**
  * method_5547
  */
-fun DamageTracker.onDamage(damageSource: DamageSource, damage: Float) = this.method_5547(damageSource, damage)
+fun DamageTracker.onDamage(damageSource: DamageSource?, damage: Float) = this.method_5547(damageSource, damage)

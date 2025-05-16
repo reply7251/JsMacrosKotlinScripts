@@ -8,7 +8,7 @@ fun ServerMetadataS2CPacket.favicon() = this.comp_2278()
 /**
  * method_44131
  */
-fun ServerMetadataS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_44131(arg0)
+fun ServerMetadataS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_44131(arg0)
 /**
  * comp_2277
  */

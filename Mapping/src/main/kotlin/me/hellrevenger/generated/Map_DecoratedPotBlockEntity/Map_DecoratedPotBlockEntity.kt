@@ -20,7 +20,7 @@ fun DecoratedPotBlockEntity.toUpdatePacket() = this.method_49200()
 /**
  * method_54301
  */
-fun DecoratedPotBlockEntity.wobble(wobbleType: net.minecraft.class_8172.class_8837) = this.method_54301(wobbleType)
+fun DecoratedPotBlockEntity.wobble(wobbleType: net.minecraft.class_8172.class_8837?) = this.method_54301(wobbleType)
 /**
  * method_49204
  */

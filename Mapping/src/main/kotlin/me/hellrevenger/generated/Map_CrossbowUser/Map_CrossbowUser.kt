@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_24654
  */
-fun CrossbowUser.shoot(entity: LivingEntity, speed: Float) = this.method_24654(entity, speed)
+fun CrossbowUser.shoot(entity: LivingEntity?, speed: Float) = this.method_24654(entity, speed)
 /**
  * method_7110
  */

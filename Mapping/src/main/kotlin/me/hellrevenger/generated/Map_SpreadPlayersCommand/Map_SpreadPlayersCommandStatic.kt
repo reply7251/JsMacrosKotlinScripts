@@ -5,5 +5,5 @@ object SpreadPlayersCommandKt {
     /**
      * method_13654
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = SpreadPlayersCommand.method_13654(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = SpreadPlayersCommand.method_13654(dispatcher)
 }

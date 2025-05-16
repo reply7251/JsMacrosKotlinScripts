@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_33470
  */
-fun BlockFamily.getVariant(variant: net.minecraft.class_5794.class_5796) = this.method_33470(variant)
+fun BlockFamily.getVariant(variant: net.minecraft.class_5794.class_5796?) = this.method_33470(variant)
 /**
  * method_33480
  */

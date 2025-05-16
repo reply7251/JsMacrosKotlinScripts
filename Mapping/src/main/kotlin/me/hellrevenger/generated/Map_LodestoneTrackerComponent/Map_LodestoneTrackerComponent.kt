@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_58115
  */
-fun LodestoneTrackerComponent.forWorld(world: ServerWorld) = this.method_58115(world)
+fun LodestoneTrackerComponent.forWorld(world: ServerWorld?) = this.method_58115(world)
 /**
  * comp_2402
  */

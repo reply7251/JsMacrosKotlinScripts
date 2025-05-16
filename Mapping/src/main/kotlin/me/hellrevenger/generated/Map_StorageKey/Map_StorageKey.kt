@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_57013
  */
-fun StorageKey.withSuffix(suffix: String) = this.method_57013(suffix)
+fun StorageKey.withSuffix(suffix: String?) = this.method_57013(suffix)
 /**
  * comp_2345
  */

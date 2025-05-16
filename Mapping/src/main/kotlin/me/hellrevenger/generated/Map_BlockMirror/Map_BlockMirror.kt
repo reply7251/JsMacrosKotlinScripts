@@ -8,11 +8,11 @@ fun BlockMirror.getDirectionTransformation() = this.method_26380()
 /**
  * method_10343
  */
-fun BlockMirror.apply(direction: Direction) = this.method_10343(direction)
+fun BlockMirror.apply(direction: Direction?) = this.method_10343(direction)
 /**
  * method_10345
  */
-fun BlockMirror.getRotation(direction: Direction) = this.method_10345(direction)
+fun BlockMirror.getRotation(direction: Direction?) = this.method_10345(direction)
 /**
  * method_32354
  */

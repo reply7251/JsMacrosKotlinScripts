@@ -5,5 +5,5 @@ object ExperienceCommandKt {
     /**
      * method_13330
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = ExperienceCommand.method_13330(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = ExperienceCommand.method_13330(dispatcher)
 }

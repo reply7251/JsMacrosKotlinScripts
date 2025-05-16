@@ -5,11 +5,11 @@ object VanillaDataPackProviderKt {
     /**
      * method_45286
      */
-    fun createManager(dataPacksPath: file_Path, symlinkFinder: SymlinkFinder) = VanillaDataPackProvider.method_45286(dataPacksPath, symlinkFinder)
+    fun createManager(dataPacksPath: file_Path?, symlinkFinder: SymlinkFinder?) = VanillaDataPackProvider.method_45286(dataPacksPath, symlinkFinder)
     /**
      * method_45285
      */
-    fun createManager(session: net.minecraft.class_32.class_5143) = VanillaDataPackProvider.method_45285(session)
+    fun createManager(session: net.minecraft.class_32.class_5143?) = VanillaDataPackProvider.method_45285(session)
     /**
      * method_52443
      */

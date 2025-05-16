@@ -5,5 +5,5 @@ object RealmsServerAddressKt {
     /**
      * method_25071
      */
-    fun parse(json: String) = RealmsServerAddress.method_25071(json)
+    fun parse(json: String?) = RealmsServerAddress.method_25071(json)
 }

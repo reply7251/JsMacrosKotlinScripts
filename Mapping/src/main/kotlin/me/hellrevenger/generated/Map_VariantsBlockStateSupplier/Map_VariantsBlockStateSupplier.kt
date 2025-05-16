@@ -8,4 +8,4 @@ fun VariantsBlockStateSupplier.get() = this.method_25780()
 /**
  * method_25775
  */
-fun VariantsBlockStateSupplier.coordinate(map: BlockStateVariantMap) = this.method_25775(map)
+fun VariantsBlockStateSupplier.coordinate(map: BlockStateVariantMap?) = this.method_25775(map)

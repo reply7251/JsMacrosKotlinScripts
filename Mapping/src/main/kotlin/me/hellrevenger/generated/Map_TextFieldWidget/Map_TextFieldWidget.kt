@@ -8,7 +8,7 @@ fun TextFieldWidget.isVisible() = this.method_1885()
 /**
  * method_1852
  */
-fun TextFieldWidget.setText(text: String) = this.method_1852(text)
+fun TextFieldWidget.setText(text: String?) = this.method_1852(text)
 /**
  * method_1881
  */
@@ -36,7 +36,7 @@ fun TextFieldWidget.setFocusUnlocked(focusUnlocked: Boolean) = this.method_1856(
 /**
  * method_1863
  */
-fun TextFieldWidget.setChangedListener(changedListener: Consumer<String>) = this.method_1863(changedListener)
+fun TextFieldWidget.setChangedListener(changedListener: Consumer<String>?) = this.method_1863(changedListener)
 /**
  * method_1880
  */
@@ -88,11 +88,11 @@ fun TextFieldWidget.setSelectionStart(cursor: Int) = this.method_1875(cursor)
 /**
  * method_1887
  */
-fun TextFieldWidget.setSuggestion(suggestion: String) = this.method_1887(suggestion)
+fun TextFieldWidget.setSuggestion(suggestion: String?) = this.method_1887(suggestion)
 /**
  * method_1867
  */
-fun TextFieldWidget.write(text: String) = this.method_1867(text)
+fun TextFieldWidget.write(text: String?) = this.method_1867(text)
 /**
  * method_1868
  */
@@ -100,11 +100,11 @@ fun TextFieldWidget.setEditableColor(editableColor: Int) = this.method_1868(edit
 /**
  * method_1890
  */
-fun TextFieldWidget.setTextPredicate(textPredicate: Predicate<String>) = this.method_1890(textPredicate)
+fun TextFieldWidget.setTextPredicate(textPredicate: Predicate<String>?) = this.method_1890(textPredicate)
 /**
  * method_47404
  */
-fun TextFieldWidget.setPlaceholder(placeholder: Text) = this.method_47404(placeholder)
+fun TextFieldWidget.setPlaceholder(placeholder: Text?) = this.method_47404(placeholder)
 /**
  * method_1858
  */
@@ -116,7 +116,7 @@ fun TextFieldWidget.getText() = this.method_1882()
 /**
  * method_1854
  */
-fun TextFieldWidget.setRenderTextProvider(renderTextProvider: BiFunction<String, Int, OrderedText>) = this.method_1854(renderTextProvider)
+fun TextFieldWidget.setRenderTextProvider(renderTextProvider: BiFunction<String, Int, OrderedText>?) = this.method_1854(renderTextProvider)
 /**
  * method_1859
  */

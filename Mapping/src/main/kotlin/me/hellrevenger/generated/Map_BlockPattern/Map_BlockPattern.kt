@@ -12,11 +12,11 @@ fun BlockPattern.getWidth() = this.method_11710()
 /**
  * method_35300
  */
-fun BlockPattern.testTransform(world: WorldView, frontTopLeft: BlockPos, forwards: Direction, up: Direction) = this.method_35300(world, frontTopLeft, forwards, up)
+fun BlockPattern.testTransform(world: WorldView?, frontTopLeft: BlockPos?, forwards: Direction?, up: Direction?) = this.method_35300(world, frontTopLeft, forwards, up)
 /**
  * method_11708
  */
-fun BlockPattern.searchAround(world: WorldView, pos: BlockPos) = this.method_11708(world, pos)
+fun BlockPattern.searchAround(world: WorldView?, pos: BlockPos?) = this.method_11708(world, pos)
 /**
  * method_11712
  */

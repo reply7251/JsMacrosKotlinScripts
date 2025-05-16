@@ -8,7 +8,7 @@ fun ClientCommandC2SPacket.getEntityId() = this.method_36173()
 /**
  * method_12364
  */
-fun ClientCommandC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12364(arg0)
+fun ClientCommandC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12364(arg0)
 /**
  * method_12366
  */

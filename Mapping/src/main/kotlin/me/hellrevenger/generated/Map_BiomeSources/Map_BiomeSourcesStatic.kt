@@ -5,5 +5,5 @@ object BiomeSourcesKt {
     /**
      * method_44207
      */
-    fun registerAndGetDefault(registry: Registry<MapCodec<out BiomeSource>>) = BiomeSources.method_44207(registry)
+    fun registerAndGetDefault(registry: Registry<MapCodec<out BiomeSource>>?) = BiomeSources.method_44207(registry)
 }

@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_41940
  */
-fun PendingUpdateManager.hasPendingUpdate(pos: BlockPos, state: BlockState) = this.method_41940(pos, state)
+fun PendingUpdateManager.hasPendingUpdate(pos: BlockPos?, state: BlockState?) = this.method_41940(pos, state)
 /**
  * method_41938
  */
-fun PendingUpdateManager.processPendingUpdates(maxProcessableSequence: Int, world: ClientWorld) = this.method_41938(maxProcessableSequence, world)
+fun PendingUpdateManager.processPendingUpdates(maxProcessableSequence: Int, world: ClientWorld?) = this.method_41938(maxProcessableSequence, world)
 /**
  * method_41941
  */
-fun PendingUpdateManager.addPendingUpdate(pos: BlockPos, state: BlockState, player: ClientPlayerEntity) = this.method_41941(pos, state, player)
+fun PendingUpdateManager.addPendingUpdate(pos: BlockPos?, state: BlockState?, player: ClientPlayerEntity?) = this.method_41941(pos, state, player)
 /**
  * method_41937
  */

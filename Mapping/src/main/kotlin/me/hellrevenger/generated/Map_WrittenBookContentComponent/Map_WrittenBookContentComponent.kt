@@ -16,11 +16,11 @@ fun WrittenBookContentComponent.getPages(shouldFilter: Boolean) = this.method_57
 /**
  * method_58188
  */
-fun WrittenBookContentComponent.withPages(arg0: MutableList<RawFilteredPair<Text>>) = this.method_58188(arg0)
+fun WrittenBookContentComponent.withPages(arg0: MutableList<RawFilteredPair<Text>>?) = this.method_58188(arg0)
 /**
  * method_57521
  */
-fun WrittenBookContentComponent.resolve(source: ServerCommandSource, player: PlayerEntity) = this.method_57521(source, player)
+fun WrittenBookContentComponent.resolve(source: ServerCommandSource?, player: PlayerEntity?) = this.method_57521(source, player)
 /**
  * comp_2420
  */

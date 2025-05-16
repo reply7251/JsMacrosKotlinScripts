@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_37039
  */
-fun <T>Narration<T>.forEachSentence(consumer: Consumer<String>) = this.method_37039(consumer)
+fun <T>Narration<T>.forEachSentence(consumer: Consumer<String>?) = this.method_37039(consumer)

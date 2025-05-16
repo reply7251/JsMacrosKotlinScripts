@@ -12,11 +12,11 @@ fun <T>ThreePartsLayoutWidget.addBody(widget: T) where T: Widget = this.method_4
 /**
  * method_48997
  */
-fun <T>ThreePartsLayoutWidget.addFooter(widget: T, callback: Consumer<Positioner>) where T: Widget = this.method_48997<T>(widget, callback)
+fun <T>ThreePartsLayoutWidget.addFooter(widget: T, callback: Consumer<Positioner>?) where T: Widget = this.method_48997<T>(widget, callback)
 /**
  * method_49000
  */
-fun <T>ThreePartsLayoutWidget.addBody(widget: T, callback: Consumer<Positioner>) where T: Widget = this.method_49000<T>(widget, callback)
+fun <T>ThreePartsLayoutWidget.addBody(widget: T, callback: Consumer<Positioner>?) where T: Widget = this.method_49000<T>(widget, callback)
 /**
  * method_48995
  */
@@ -28,7 +28,7 @@ fun ThreePartsLayoutWidget.getFooterHeight() = this.method_48994()
 /**
  * method_57726
  */
-fun ThreePartsLayoutWidget.addHeader(text: Text, textRenderer: TextRenderer) = this.method_57726(text, textRenderer)
+fun ThreePartsLayoutWidget.addHeader(text: Text?, textRenderer: TextRenderer?) = this.method_57726(text, textRenderer)
 /**
  * method_48991
  */
@@ -40,7 +40,7 @@ fun ThreePartsLayoutWidget.getContentHeight() = this.method_57727()
 /**
  * method_48993
  */
-fun <T>ThreePartsLayoutWidget.addHeader(widget: T, callback: Consumer<Positioner>) where T: Widget = this.method_48993<T>(widget, callback)
+fun <T>ThreePartsLayoutWidget.addHeader(widget: T, callback: Consumer<Positioner>?) where T: Widget = this.method_48993<T>(widget, callback)
 /**
  * method_48992
  */

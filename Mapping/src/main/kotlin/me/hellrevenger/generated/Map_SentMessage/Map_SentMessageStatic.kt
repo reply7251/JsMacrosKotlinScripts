@@ -5,5 +5,5 @@ object SentMessageKt {
     /**
      * method_44857
      */
-    fun of(message: SignedMessage) = SentMessage.method_44857(message)
+    fun of(message: SignedMessage?) = SentMessage.method_44857(message)
 }

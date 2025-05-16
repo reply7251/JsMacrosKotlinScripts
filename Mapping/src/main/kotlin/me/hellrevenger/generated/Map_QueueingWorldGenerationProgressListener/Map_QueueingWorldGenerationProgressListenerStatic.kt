@@ -5,5 +5,5 @@ object QueueingWorldGenerationProgressListenerKt {
     /**
      * method_34228
      */
-    fun create(progressListener: WorldGenerationProgressListener, executor: Executor) = QueueingWorldGenerationProgressListener.method_34228(progressListener, executor)
+    fun create(progressListener: WorldGenerationProgressListener?, executor: Executor?) = QueueingWorldGenerationProgressListener.method_34228(progressListener, executor)
 }

@@ -5,5 +5,5 @@ object CriterionProgressKt {
     /**
      * method_785
      */
-    fun fromPacket(buf: PacketByteBuf) = CriterionProgress.method_785(buf)
+    fun fromPacket(buf: PacketByteBuf?) = CriterionProgress.method_785(buf)
 }

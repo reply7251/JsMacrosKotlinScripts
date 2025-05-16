@@ -13,17 +13,17 @@ object NbtComponentKt {
     /**
      * method_57454
      */
-    fun createPredicate(type: ComponentType<NbtComponent>, nbt: NbtCompound) = NbtComponent.method_57454(type, nbt)
+    fun createPredicate(type: ComponentType<NbtComponent>?, nbt: NbtCompound?) = NbtComponent.method_57454(type, nbt)
     /**
      * method_57452
      */
-    fun set(type: ComponentType<NbtComponent>, stack: ItemStack, nbtSetter: Consumer<NbtCompound>) = NbtComponent.method_57452(type, stack, nbtSetter)
+    fun set(type: ComponentType<NbtComponent>?, stack: ItemStack?, nbtSetter: Consumer<NbtCompound>?) = NbtComponent.method_57452(type, stack, nbtSetter)
     /**
      * method_57453
      */
-    fun set(type: ComponentType<NbtComponent>, stack: ItemStack, nbt: NbtCompound) = NbtComponent.method_57453(type, stack, nbt)
+    fun set(type: ComponentType<NbtComponent>?, stack: ItemStack?, nbt: NbtCompound?) = NbtComponent.method_57453(type, stack, nbt)
     /**
      * method_57456
      */
-    fun of(nbt: NbtCompound) = NbtComponent.method_57456(nbt)
+    fun of(nbt: NbtCompound?) = NbtComponent.method_57456(nbt)
 }

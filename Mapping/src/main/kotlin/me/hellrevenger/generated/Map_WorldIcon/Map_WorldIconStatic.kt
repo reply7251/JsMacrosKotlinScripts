@@ -5,9 +5,9 @@ object WorldIconKt {
     /**
      * method_52202
      */
-    fun forServer(textureManager: TextureManager, serverAddress: String) = WorldIcon.method_52202(textureManager, serverAddress)
+    fun forServer(textureManager: TextureManager?, serverAddress: String?) = WorldIcon.method_52202(textureManager, serverAddress)
     /**
      * method_52200
      */
-    fun forWorld(textureManager: TextureManager, worldName: String) = WorldIcon.method_52200(textureManager, worldName)
+    fun forWorld(textureManager: TextureManager?, worldName: String?) = WorldIcon.method_52200(textureManager, worldName)
 }

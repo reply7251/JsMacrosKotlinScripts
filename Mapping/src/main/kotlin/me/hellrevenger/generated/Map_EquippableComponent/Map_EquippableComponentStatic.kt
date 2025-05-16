@@ -5,9 +5,9 @@ object EquippableComponentKt {
     /**
      * method_64017
      */
-    fun ofCarpet(color: DyeColor) = EquippableComponent.method_64017(color)
+    fun ofCarpet(color: DyeColor?) = EquippableComponent.method_64017(color)
     /**
      * method_64202
      */
-    fun builder(slot: EquipmentSlot) = EquippableComponent.method_64202(slot)
+    fun builder(slot: EquipmentSlot?) = EquippableComponent.method_64202(slot)
 }

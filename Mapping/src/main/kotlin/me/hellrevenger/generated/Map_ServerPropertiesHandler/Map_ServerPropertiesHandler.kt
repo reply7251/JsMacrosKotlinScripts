@@ -220,4 +220,4 @@ val ServerPropertiesHandler.useNativeTransport by alias(ServerPropertiesHandler:
 /**
  * method_45157
  */
-fun ServerPropertiesHandler.createDimensionsRegistryHolder(registries: net.minecraft.class_7225.class_7874) = this.method_45157(registries)
+fun ServerPropertiesHandler.createDimensionsRegistryHolder(registries: net.minecraft.class_7225.class_7874?) = this.method_45157(registries)

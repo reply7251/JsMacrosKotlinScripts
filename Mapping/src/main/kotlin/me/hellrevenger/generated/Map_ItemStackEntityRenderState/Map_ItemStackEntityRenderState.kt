@@ -16,4 +16,4 @@ val ItemStackEntityRenderState.itemRenderState by alias(ItemStackEntityRenderSta
 /**
  * method_65581
  */
-fun ItemStackEntityRenderState.update(entity: Entity, stack: ItemStack, itemModelManager: ItemModelManager) = this.method_65581(entity, stack, itemModelManager)
+fun ItemStackEntityRenderState.update(entity: Entity?, stack: ItemStack?, itemModelManager: ItemModelManager?) = this.method_65581(entity, stack, itemModelManager)

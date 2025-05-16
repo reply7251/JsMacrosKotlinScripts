@@ -5,5 +5,5 @@ object ReferenceLootConditionKt {
     /**
      * method_35555
      */
-    fun builder(key: RegistryKey<LootCondition>) = ReferenceLootCondition.method_35555(key)
+    fun builder(key: RegistryKey<LootCondition>?) = ReferenceLootCondition.method_35555(key)
 }

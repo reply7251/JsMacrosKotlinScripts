@@ -13,5 +13,5 @@ object StructureStartKt {
     /**
      * method_41621
      */
-    fun fromNbt(context: StructureContext, nbt: NbtCompound, seed: Long) = StructureStart.method_41621(context, nbt, seed)
+    fun fromNbt(context: StructureContext?, nbt: NbtCompound?, seed: Long) = StructureStart.method_41621(context, nbt, seed)
 }

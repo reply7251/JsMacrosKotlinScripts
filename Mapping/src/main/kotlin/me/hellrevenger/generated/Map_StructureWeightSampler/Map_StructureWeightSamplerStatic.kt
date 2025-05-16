@@ -9,5 +9,5 @@ object StructureWeightSamplerKt {
     /**
      * method_42695
      */
-    fun createStructureWeightSampler(world: StructureAccessor, pos: ChunkPos) = StructureWeightSampler.method_42695(world, pos)
+    fun createStructureWeightSampler(world: StructureAccessor?, pos: ChunkPos?) = StructureWeightSampler.method_42695(world, pos)
 }

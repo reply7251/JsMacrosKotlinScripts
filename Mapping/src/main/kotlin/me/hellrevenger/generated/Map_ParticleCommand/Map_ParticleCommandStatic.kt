@@ -5,5 +5,5 @@ object ParticleCommandKt {
     /**
      * method_13486
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = ParticleCommand.method_13486(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = ParticleCommand.method_13486(dispatcher, registryAccess)
 }

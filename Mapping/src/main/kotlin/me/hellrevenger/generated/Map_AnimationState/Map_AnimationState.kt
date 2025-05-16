@@ -8,7 +8,7 @@ fun AnimationState.getTimeInMilliseconds(age: Float) = this.method_61400(age)
 /**
  * method_61401
  */
-fun AnimationState.copyFrom(state: AnimationState) = this.method_61401(state)
+fun AnimationState.copyFrom(state: AnimationState?) = this.method_61401(state)
 /**
  * method_45317
  */
@@ -28,7 +28,7 @@ fun AnimationState.stop() = this.method_41325()
 /**
  * method_41323
  */
-fun AnimationState.run(consumer: Consumer<AnimationState>) = this.method_41323(consumer)
+fun AnimationState.run(consumer: Consumer<AnimationState>?) = this.method_41323(consumer)
 /**
  * method_41322
  */

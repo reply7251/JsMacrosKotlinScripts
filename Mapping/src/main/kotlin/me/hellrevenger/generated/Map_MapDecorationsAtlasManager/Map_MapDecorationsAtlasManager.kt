@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_58516
  */
-fun MapDecorationsAtlasManager.getSprite(decoration: MapDecoration) = this.method_58516(decoration)
+fun MapDecorationsAtlasManager.getSprite(decoration: MapDecoration?) = this.method_58516(decoration)

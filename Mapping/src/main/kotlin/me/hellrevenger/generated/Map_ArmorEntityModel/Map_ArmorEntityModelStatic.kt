@@ -5,5 +5,5 @@ object ArmorEntityModelKt {
     /**
      * method_49032
      */
-    fun <S>getModelData(dilation: Dilation) where S: BipedEntityRenderState = ArmorEntityModel.method_49032(dilation)
+    fun <S>getModelData(dilation: Dilation?) where S: BipedEntityRenderState = ArmorEntityModel.method_49032(dilation)
 }

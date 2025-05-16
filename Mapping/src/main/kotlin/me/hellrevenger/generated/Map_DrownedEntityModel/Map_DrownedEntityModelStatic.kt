@@ -5,5 +5,5 @@ object DrownedEntityModelKt {
     /**
      * method_31993
      */
-    fun getTexturedModelData(dilation: Dilation) = DrownedEntityModel.method_31993(dilation)
+    fun getTexturedModelData(dilation: Dilation?) = DrownedEntityModel.method_31993(dilation)
 }

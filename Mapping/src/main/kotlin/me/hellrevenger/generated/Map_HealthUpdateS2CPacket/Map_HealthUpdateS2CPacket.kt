@@ -8,7 +8,7 @@ fun HealthUpdateS2CPacket.getSaturation() = this.method_11834()
 /**
  * method_11832
  */
-fun HealthUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11832(arg0)
+fun HealthUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11832(arg0)
 /**
  * method_11833
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12199
  */
-fun CustomPayloadC2SPacket.apply(arg0: ServerCommonPacketListener) = this.method_12199(arg0)
+fun CustomPayloadC2SPacket.apply(arg0: ServerCommonPacketListener?) = this.method_12199(arg0)
 /**
  * comp_1647
  */

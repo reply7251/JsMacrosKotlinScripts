@@ -53,5 +53,5 @@ object OceanPlacedFeaturesKt {
     /**
      * method_46859
      */
-    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = OceanPlacedFeatures.method_46859(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>?) = OceanPlacedFeatures.method_46859(featureRegisterable)
 }

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12670
  */
-fun PingResultS2CPacket.apply(arg0: ClientPingResultPacketListener) = this.method_12670(arg0)
+fun PingResultS2CPacket.apply(arg0: ClientPingResultPacketListener?) = this.method_12670(arg0)
 /**
  * comp_2201
  */

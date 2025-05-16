@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_7562
  */
-fun StorageMinecartEntity.setLootTable(lootTable: RegistryKey<LootTable>, lootSeed: Long) = this.method_7562(lootTable, lootSeed)
+fun StorageMinecartEntity.setLootTable(lootTable: RegistryKey<LootTable>?, lootSeed: Long) = this.method_7562(lootTable, lootSeed)

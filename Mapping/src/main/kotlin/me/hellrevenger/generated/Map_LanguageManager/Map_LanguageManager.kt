@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_4668
  */
-fun LanguageManager.getLanguage(code: String) = this.method_4668(code)
+fun LanguageManager.getLanguage(code: String?) = this.method_4668(code)
 /**
  * method_4667
  */
-fun LanguageManager.setLanguage(languageCode: String) = this.method_4667(languageCode)
+fun LanguageManager.setLanguage(languageCode: String?) = this.method_4667(languageCode)
 /**
  * method_4669
  */

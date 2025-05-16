@@ -5,5 +5,5 @@ object FillCommandKt {
     /**
      * method_13347
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, commandRegistryAccess: CommandRegistryAccess) = FillCommand.method_13347(dispatcher, commandRegistryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, commandRegistryAccess: CommandRegistryAccess?) = FillCommand.method_13347(dispatcher, commandRegistryAccess)
 }

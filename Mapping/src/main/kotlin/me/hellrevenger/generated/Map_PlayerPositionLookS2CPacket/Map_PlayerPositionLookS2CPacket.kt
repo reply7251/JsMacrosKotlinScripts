@@ -8,7 +8,7 @@ fun PlayerPositionLookS2CPacket.teleportId() = this.comp_3133()
 /**
  * method_11740
  */
-fun PlayerPositionLookS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11740(arg0)
+fun PlayerPositionLookS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11740(arg0)
 /**
  * comp_3229
  */

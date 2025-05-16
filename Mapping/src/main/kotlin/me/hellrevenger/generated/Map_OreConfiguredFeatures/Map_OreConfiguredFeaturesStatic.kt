@@ -133,5 +133,5 @@ object OreConfiguredFeaturesKt {
     /**
      * method_46855
      */
-    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>) = OreConfiguredFeatures.method_46855(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>?) = OreConfiguredFeatures.method_46855(featureRegisterable)
 }

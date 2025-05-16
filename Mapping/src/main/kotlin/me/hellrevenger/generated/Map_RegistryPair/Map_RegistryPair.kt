@@ -8,11 +8,11 @@ fun <T>RegistryPair<T>.entry() = this.comp_2831()
 /**
  * method_60739
  */
-fun <T>RegistryPair<T>.getEntry(registries: net.minecraft.class_7225.class_7874) = this.method_60739(registries)
+fun <T>RegistryPair<T>.getEntry(registries: net.minecraft.class_7225.class_7874?) = this.method_60739(registries)
 /**
  * method_60740
  */
-fun <T>RegistryPair<T>.getValue(registry: Registry<T>) = this.method_60740(registry)
+fun <T>RegistryPair<T>.getValue(registry: Registry<T>?) = this.method_60740(registry)
 /**
  * method_60734
  */

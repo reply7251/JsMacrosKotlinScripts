@@ -5,5 +5,5 @@ object ServerTickTimeSampleKt {
     /**
      * method_38058
      */
-    fun fromEvent(event: RecordedEvent) = ServerTickTimeSample.method_38058(event)
+    fun fromEvent(event: RecordedEvent?) = ServerTickTimeSample.method_38058(event)
 }

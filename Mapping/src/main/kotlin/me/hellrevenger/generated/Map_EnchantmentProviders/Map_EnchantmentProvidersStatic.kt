@@ -5,9 +5,9 @@ object EnchantmentProvidersKt {
     /**
      * method_60272
      */
-    fun of(id: String) = EnchantmentProviders.method_60272(id)
+    fun of(id: String?) = EnchantmentProviders.method_60272(id)
     /**
      * method_60273
      */
-    fun bootstrap(registry: Registerable<EnchantmentProvider>) = EnchantmentProviders.method_60273(registry)
+    fun bootstrap(registry: Registerable<EnchantmentProvider>?) = EnchantmentProviders.method_60273(registry)
 }

@@ -5,5 +5,5 @@ object SpawnPointCommandKt {
     /**
      * method_13641
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = SpawnPointCommand.method_13641(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = SpawnPointCommand.method_13641(dispatcher)
 }

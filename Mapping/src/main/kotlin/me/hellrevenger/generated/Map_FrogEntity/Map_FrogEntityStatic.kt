@@ -9,7 +9,7 @@ object FrogEntityKt {
     /**
      * method_43398
      */
-    fun canSpawn(type: EntityType<out AnimalEntity>, world: WorldAccess, reason: SpawnReason, pos: BlockPos, random: Random) = FrogEntity.method_43398(type, world, reason, pos, random)
+    fun canSpawn(type: EntityType<out AnimalEntity>?, world: WorldAccess?, reason: SpawnReason?, pos: BlockPos?, random: Random?) = FrogEntity.method_43398(type, world, reason, pos, random)
     /**
      * method_41355
      */
@@ -17,5 +17,5 @@ object FrogEntityKt {
     /**
      * method_41358
      */
-    fun isValidFrogFood(entity: LivingEntity) = FrogEntity.method_41358(entity)
+    fun isValidFrogFood(entity: LivingEntity?) = FrogEntity.method_41358(entity)
 }

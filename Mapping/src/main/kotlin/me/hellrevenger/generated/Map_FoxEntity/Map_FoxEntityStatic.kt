@@ -21,9 +21,9 @@ object FoxEntityKt {
     /**
      * method_39449
      */
-    fun canSpawn(type: EntityType<FoxEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = FoxEntity.method_39449(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<FoxEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = FoxEntity.method_39449(type, world, spawnReason, pos, random)
     /**
      * method_18257
      */
-    fun canJumpChase(fox: FoxEntity, chasedEntity: LivingEntity) = FoxEntity.method_18257(fox, chasedEntity)
+    fun canJumpChase(fox: FoxEntity?, chasedEntity: LivingEntity?) = FoxEntity.method_18257(fox, chasedEntity)
 }

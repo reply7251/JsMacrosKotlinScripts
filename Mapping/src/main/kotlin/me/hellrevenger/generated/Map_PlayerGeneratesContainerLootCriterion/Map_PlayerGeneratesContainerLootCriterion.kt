@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_27993
  */
-fun PlayerGeneratesContainerLootCriterion.trigger(player: ServerPlayerEntity, lootTable: RegistryKey<LootTable>) = this.method_27993(player, lootTable)
+fun PlayerGeneratesContainerLootCriterion.trigger(player: ServerPlayerEntity?, lootTable: RegistryKey<LootTable>?) = this.method_27993(player, lootTable)

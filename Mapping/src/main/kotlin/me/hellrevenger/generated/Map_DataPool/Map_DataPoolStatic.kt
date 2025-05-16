@@ -5,7 +5,7 @@ object DataPoolKt {
     /**
      * method_39521
      */
-    fun <E>createEmptyAllowedCodec(dataCodec: Codec<E>) = DataPool.method_39521<E>(dataCodec)
+    fun <E>createEmptyAllowedCodec(dataCodec: Codec<E>?) = DataPool.method_39521<E>(dataCodec)
     /**
      * method_38061
      */
@@ -13,7 +13,7 @@ object DataPoolKt {
     /**
      * method_34972
      */
-    fun <E>createCodec(dataCodec: Codec<E>) = DataPool.method_34972<E>(dataCodec)
+    fun <E>createCodec(dataCodec: Codec<E>?) = DataPool.method_34972<E>(dataCodec)
     /**
      * method_34971
      */

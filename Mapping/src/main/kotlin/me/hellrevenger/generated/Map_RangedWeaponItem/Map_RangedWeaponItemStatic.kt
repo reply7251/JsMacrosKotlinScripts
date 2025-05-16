@@ -13,5 +13,5 @@ object RangedWeaponItemKt {
     /**
      * method_18815
      */
-    fun getHeldProjectile(entity: LivingEntity, predicate: Predicate<ItemStack>) = RangedWeaponItem.method_18815(entity, predicate)
+    fun getHeldProjectile(entity: LivingEntity?, predicate: Predicate<ItemStack>?) = RangedWeaponItem.method_18815(entity, predicate)
 }

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44358
  */
-fun AllayEntity.updateJukeboxPos(jukeboxPos: BlockPos, playing: Boolean) = this.method_44358(jukeboxPos, playing)
+fun AllayEntity.updateJukeboxPos(jukeboxPos: BlockPos?, playing: Boolean) = this.method_44358(jukeboxPos, playing)
 /**
  * method_43396
  */

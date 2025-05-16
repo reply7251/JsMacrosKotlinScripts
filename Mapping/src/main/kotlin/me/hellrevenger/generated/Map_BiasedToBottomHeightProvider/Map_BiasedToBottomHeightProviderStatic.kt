@@ -5,5 +5,5 @@ object BiasedToBottomHeightProviderKt {
     /**
      * method_35377
      */
-    fun create(minOffset: YOffset, maxOffset: YOffset, inner: Int) = BiasedToBottomHeightProvider.method_35377(minOffset, maxOffset, inner)
+    fun create(minOffset: YOffset?, maxOffset: YOffset?, inner: Int) = BiasedToBottomHeightProvider.method_35377(minOffset, maxOffset, inner)
 }

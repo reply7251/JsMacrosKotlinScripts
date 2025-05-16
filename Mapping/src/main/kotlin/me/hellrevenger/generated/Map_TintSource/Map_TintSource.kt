@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_65389
  */
-fun TintSource.getTint(stack: ItemStack, world: ClientWorld, user: LivingEntity) = this.method_65389(stack, world, user)
+fun TintSource.getTint(stack: ItemStack?, world: ClientWorld?, user: LivingEntity?) = this.method_65389(stack, world, user)
 /**
  * method_65387
  */

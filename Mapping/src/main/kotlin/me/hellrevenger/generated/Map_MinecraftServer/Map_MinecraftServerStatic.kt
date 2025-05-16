@@ -21,7 +21,7 @@ object MinecraftServerKt {
     /**
      * method_29736
      */
-    fun loadDataPacks(resourcePackManager: ResourcePackManager, dataConfiguration: DataConfiguration, initMode: Boolean, safeMode: Boolean) = MinecraftServer.method_29736(resourcePackManager, dataConfiguration, initMode, safeMode)
+    fun loadDataPacks(resourcePackManager: ResourcePackManager?, dataConfiguration: DataConfiguration?, initMode: Boolean, safeMode: Boolean) = MinecraftServer.method_29736(resourcePackManager, dataConfiguration, initMode, safeMode)
     /**
      * method_60584
      */
@@ -29,9 +29,9 @@ object MinecraftServerKt {
     /**
      * method_29740
      */
-    fun <S>startServer(serverFactory: function_Function<Thread, S>) where S: MinecraftServer = MinecraftServer.method_29740<S>(serverFactory)
+    fun <S>startServer(serverFactory: function_Function<Thread, S>?) where S: MinecraftServer = MinecraftServer.method_29740<S>(serverFactory)
     /**
      * method_60582
      */
-    fun setWorldGenException(exception: RuntimeException) = MinecraftServer.method_60582(exception)
+    fun setWorldGenException(exception: RuntimeException?) = MinecraftServer.method_60582(exception)
 }

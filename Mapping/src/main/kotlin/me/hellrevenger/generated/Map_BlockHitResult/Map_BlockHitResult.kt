@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_17779
  */
-fun BlockHitResult.withSide(side: Direction) = this.method_17779(side)
+fun BlockHitResult.withSide(side: Direction?) = this.method_17779(side)
 /**
  * method_17777
  */
@@ -16,7 +16,7 @@ fun BlockHitResult.isInsideBlock() = this.method_17781()
 /**
  * method_29328
  */
-fun BlockHitResult.withBlockPos(blockPos: BlockPos) = this.method_29328(blockPos)
+fun BlockHitResult.withBlockPos(blockPos: BlockPos?) = this.method_29328(blockPos)
 /**
  * method_62877
  */

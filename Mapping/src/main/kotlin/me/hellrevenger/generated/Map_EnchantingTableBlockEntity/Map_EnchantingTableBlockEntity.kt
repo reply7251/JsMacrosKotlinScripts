@@ -44,4 +44,4 @@ var EnchantingTableBlockEntity.pageAngle by alias(EnchantingTableBlockEntity::fi
 /**
  * method_11179
  */
-fun EnchantingTableBlockEntity.setCustomName(customName: Text) = this.method_11179(customName)
+fun EnchantingTableBlockEntity.setCustomName(customName: Text?) = this.method_11179(customName)

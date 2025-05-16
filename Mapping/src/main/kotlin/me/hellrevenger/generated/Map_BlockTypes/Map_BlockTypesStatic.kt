@@ -5,5 +5,5 @@ object BlockTypesKt {
     /**
      * method_53979
      */
-    fun registerAndGetDefault(registry: Registry<MapCodec<out Block>>) = BlockTypes.method_53979(registry)
+    fun registerAndGetDefault(registry: Registry<MapCodec<out Block>>?) = BlockTypes.method_53979(registry)
 }

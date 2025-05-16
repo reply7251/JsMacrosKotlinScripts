@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44998
  */
-fun MessageAcknowledgmentC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_44998(arg0)
+fun MessageAcknowledgmentC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_44998(arg0)
 /**
  * comp_1114
  */

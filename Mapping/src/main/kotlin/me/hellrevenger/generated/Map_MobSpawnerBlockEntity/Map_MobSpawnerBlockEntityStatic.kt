@@ -5,9 +5,9 @@ object MobSpawnerBlockEntityKt {
     /**
      * method_31697
      */
-    fun serverTick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: MobSpawnerBlockEntity) = MobSpawnerBlockEntity.method_31697(world, pos, state, blockEntity)
+    fun serverTick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: MobSpawnerBlockEntity?) = MobSpawnerBlockEntity.method_31697(world, pos, state, blockEntity)
     /**
      * method_31696
      */
-    fun clientTick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: MobSpawnerBlockEntity) = MobSpawnerBlockEntity.method_31696(world, pos, state, blockEntity)
+    fun clientTick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: MobSpawnerBlockEntity?) = MobSpawnerBlockEntity.method_31696(world, pos, state, blockEntity)
 }

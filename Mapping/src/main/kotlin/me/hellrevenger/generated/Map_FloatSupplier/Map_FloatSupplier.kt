@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_33920
  */
-fun FloatSupplier.get(random: Random) = this.method_33920(random)
+fun FloatSupplier.get(random: Random?) = this.method_33920(random)

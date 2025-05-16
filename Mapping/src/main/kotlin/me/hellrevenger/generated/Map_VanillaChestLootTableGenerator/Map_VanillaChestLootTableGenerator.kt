@@ -20,7 +20,7 @@ fun VanillaChestLootTableGenerator.createNetherBridgeChestTableBuilder() = this.
 /**
  * method_55304
  */
-fun VanillaChestLootTableGenerator.acceptTrialSpawnerTables(lootTableBiConsumer: BiConsumer<RegistryKey<LootTable>, net.minecraft.class_52.class_53>) = this.method_55304(lootTableBiConsumer)
+fun VanillaChestLootTableGenerator.acceptTrialSpawnerTables(lootTableBiConsumer: BiConsumer<RegistryKey<LootTable>, net.minecraft.class_52.class_53>?) = this.method_55304(lootTableBiConsumer)
 /**
  * method_48503
  */

@@ -205,5 +205,5 @@ object VegetationConfiguredFeaturesKt {
     /**
      * method_46858
      */
-    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>) = VegetationConfiguredFeatures.method_46858(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>?) = VegetationConfiguredFeatures.method_46858(featureRegisterable)
 }

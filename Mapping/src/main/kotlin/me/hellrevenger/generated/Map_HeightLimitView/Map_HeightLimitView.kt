@@ -32,7 +32,7 @@ fun HeightLimitView.getTopYInclusive() = this.method_31600()
 /**
  * method_31606
  */
-fun HeightLimitView.isOutOfHeightLimit(pos: BlockPos) = this.method_31606(pos)
+fun HeightLimitView.isOutOfHeightLimit(pos: BlockPos?) = this.method_31606(pos)
 /**
  * method_31607
  */

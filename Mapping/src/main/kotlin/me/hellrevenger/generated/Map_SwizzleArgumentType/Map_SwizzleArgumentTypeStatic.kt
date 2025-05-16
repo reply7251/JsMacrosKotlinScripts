@@ -5,7 +5,7 @@ object SwizzleArgumentTypeKt {
     /**
      * method_9720
      */
-    fun getSwizzle(context: CommandContext<ServerCommandSource>, name: String) = SwizzleArgumentType.method_9720(context, name)
+    fun getSwizzle(context: CommandContext<ServerCommandSource>?, name: String?) = SwizzleArgumentType.method_9720(context, name)
     /**
      * method_9721
      */

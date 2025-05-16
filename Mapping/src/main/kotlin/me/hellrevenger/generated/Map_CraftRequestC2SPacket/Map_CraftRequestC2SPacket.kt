@@ -16,4 +16,4 @@ fun CraftRequestC2SPacket.recipeId() = this.comp_3244()
 /**
  * method_12317
  */
-fun CraftRequestC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12317(arg0)
+fun CraftRequestC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12317(arg0)

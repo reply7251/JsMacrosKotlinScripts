@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_49074
  */
-fun EntityDamageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_49074(arg0)
+fun EntityDamageS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_49074(arg0)
 /**
  * method_49071
  */
-fun EntityDamageS2CPacket.createDamageSource(world: world_World) = this.method_49071(world)
+fun EntityDamageS2CPacket.createDamageSource(world: world_World?) = this.method_49071(world)
 /**
  * comp_1269
  */

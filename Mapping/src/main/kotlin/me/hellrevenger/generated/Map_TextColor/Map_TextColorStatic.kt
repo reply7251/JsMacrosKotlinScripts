@@ -5,11 +5,11 @@ object TextColorKt {
     /**
      * method_27718
      */
-    fun fromFormatting(formatting: Formatting) = TextColor.method_27718(formatting)
+    fun fromFormatting(formatting: Formatting?) = TextColor.method_27718(formatting)
     /**
      * method_27719
      */
-    fun parse(name: String) = TextColor.method_27719(name)
+    fun parse(name: String?) = TextColor.method_27719(name)
     /**
      * method_27717
      */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_799
  */
-fun TableBonusLootCondition.test(arg0: LootContext) = this.method_799(arg0)
+fun TableBonusLootCondition.test(arg0: LootContext?) = this.method_799(arg0)
 /**
  * comp_1868
  */

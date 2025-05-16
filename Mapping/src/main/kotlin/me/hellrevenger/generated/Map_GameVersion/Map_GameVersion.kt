@@ -8,7 +8,7 @@ fun GameVersion.getId() = this.method_48018()
 /**
  * method_48017
  */
-fun GameVersion.getResourceVersion(type: ResourceType) = this.method_48017(type)
+fun GameVersion.getResourceVersion(type: ResourceType?) = this.method_48017(type)
 /**
  * method_48019
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_16216
  */
-fun PatrolEntity.setPatrolTarget(targetPos: BlockPos) = this.method_16216(targetPos)
+fun PatrolEntity.setPatrolTarget(targetPos: BlockPos?) = this.method_16216(targetPos)
 /**
  * method_16218
  */

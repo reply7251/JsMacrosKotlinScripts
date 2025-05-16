@@ -12,7 +12,7 @@ fun InventoryS2CPacket.getContents() = this.method_11441()
 /**
  * method_11439
  */
-fun InventoryS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11439(arg0)
+fun InventoryS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11439(arg0)
 /**
  * method_37437
  */

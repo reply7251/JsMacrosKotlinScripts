@@ -5,5 +5,5 @@ object FindTreeTutorialStepHandlerKt {
     /**
      * method_4896
      */
-    fun hasBrokenTreeBlocks(player: ClientPlayerEntity) = FindTreeTutorialStepHandler.method_4896(player)
+    fun hasBrokenTreeBlocks(player: ClientPlayerEntity?) = FindTreeTutorialStepHandler.method_4896(player)
 }

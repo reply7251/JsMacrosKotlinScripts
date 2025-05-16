@@ -5,5 +5,5 @@ object TitleCommandKt {
     /**
      * method_13804
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = TitleCommand.method_13804(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = TitleCommand.method_13804(dispatcher, registryAccess)
 }

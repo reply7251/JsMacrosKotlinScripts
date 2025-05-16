@@ -9,5 +9,5 @@ object ProfilersKt {
     /**
      * method_64147
      */
-    fun using(profiler: Profiler) = Profilers.method_64147(profiler)
+    fun using(profiler: Profiler?) = Profilers.method_64147(profiler)
 }

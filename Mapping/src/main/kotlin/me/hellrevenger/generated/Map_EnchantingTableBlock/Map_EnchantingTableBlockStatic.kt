@@ -9,5 +9,5 @@ object EnchantingTableBlockKt {
     /**
      * method_40445
      */
-    fun canAccessPowerProvider(world: world_World, tablePos: BlockPos, providerOffset: BlockPos) = EnchantingTableBlock.method_40445(world, tablePos, providerOffset)
+    fun canAccessPowerProvider(world: world_World?, tablePos: BlockPos?, providerOffset: BlockPos?) = EnchantingTableBlock.method_40445(world, tablePos, providerOffset)
 }

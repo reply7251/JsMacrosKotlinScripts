@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_9842
  */
-fun EntitySelectorReader.setEntityType(entityType: EntityType<*>) = this.method_9842(entityType)
+fun EntitySelectorReader.setEntityType(entityType: EntityType<*>?) = this.method_9842(entityType)
 /**
  * method_9845
  */
-fun EntitySelectorReader.setSorter(sorter: BiConsumer<Vec3d, MutableList<out Entity>>) = this.method_9845(sorter)
+fun EntitySelectorReader.setSorter(sorter: BiConsumer<Vec3d, MutableList<out Entity>>?) = this.method_9845(sorter)
 /**
  * method_9841
  */
@@ -36,7 +36,7 @@ fun EntitySelectorReader.setDx(dx: Double) = this.method_9891(dx)
 /**
  * method_9908
  */
-fun EntitySelectorReader.listSuggestions(builder: SuggestionsBuilder, consumer: Consumer<SuggestionsBuilder>) = this.method_9908(builder, consumer)
+fun EntitySelectorReader.listSuggestions(builder: SuggestionsBuilder?, consumer: Consumer<SuggestionsBuilder>?) = this.method_9908(builder, consumer)
 /**
  * method_9915
  */
@@ -52,7 +52,7 @@ fun EntitySelectorReader.getDz() = this.method_9907()
 /**
  * method_9855
  */
-fun EntitySelectorReader.setYawRange(yawRange: FloatRangeArgument) = this.method_9855(yawRange)
+fun EntitySelectorReader.setYawRange(yawRange: FloatRangeArgument?) = this.method_9855(yawRange)
 /**
  * method_9850
  */
@@ -128,7 +128,7 @@ fun EntitySelectorReader.getX() = this.method_9902()
 /**
  * method_9875
  */
-fun EntitySelectorReader.setSuggestionProvider(suggestionProvider: BiFunction<SuggestionsBuilder, Consumer<SuggestionsBuilder>, CompletableFuture<Suggestions>>) = this.method_9875(suggestionProvider)
+fun EntitySelectorReader.setSuggestionProvider(suggestionProvider: BiFunction<SuggestionsBuilder, Consumer<SuggestionsBuilder>, CompletableFuture<Suggestions>>?) = this.method_9875(suggestionProvider)
 /**
  * method_9866
  */
@@ -172,11 +172,11 @@ fun EntitySelectorReader.setDz(dz: Double) = this.method_9918(dz)
 /**
  * method_9898
  */
-fun EntitySelectorReader.setPitchRange(pitchRange: FloatRangeArgument) = this.method_9898(pitchRange)
+fun EntitySelectorReader.setPitchRange(pitchRange: FloatRangeArgument?) = this.method_9898(pitchRange)
 /**
  * method_9916
  */
-fun EntitySelectorReader.addPredicate(predicate: Predicate<Entity>) = this.method_9916(predicate)
+fun EntitySelectorReader.addPredicate(predicate: Predicate<Entity>?) = this.method_9916(predicate)
 /**
  * method_9852
  */
@@ -212,7 +212,7 @@ fun EntitySelectorReader.setDy(dy: Double) = this.method_9905(dy)
 /**
  * method_9846
  */
-fun EntitySelectorReader.setLevelRange(levelRange: net.minecraft.class_2096.class_2100) = this.method_9846(levelRange)
+fun EntitySelectorReader.setLevelRange(levelRange: net.minecraft.class_2096.class_2100?) = this.method_9846(levelRange)
 /**
  * method_9884
  */
@@ -220,7 +220,7 @@ fun EntitySelectorReader.getY() = this.method_9884()
 /**
  * method_9870
  */
-fun EntitySelectorReader.setDistance(distance: net.minecraft.class_2096.class_2099) = this.method_9870(distance)
+fun EntitySelectorReader.setDistance(distance: net.minecraft.class_2096.class_2099?) = this.method_9870(distance)
 /**
  * method_9882
  */

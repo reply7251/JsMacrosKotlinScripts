@@ -13,5 +13,5 @@ object BeaconBlockEntityRendererKt {
     /**
      * method_3545
      */
-    fun renderBeam(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, textureId: Identifier, tickDelta: Float, heightScale: Float, worldTime: Long, arg6: Int, yOffset: Int, maxY: Int, color: Float, innerRadius: Float) = BeaconBlockEntityRenderer.method_3545(matrices, vertexConsumers, textureId, tickDelta, heightScale, worldTime, arg6, yOffset, maxY, color, innerRadius)
+    fun renderBeam(matrices: MatrixStack?, vertexConsumers: VertexConsumerProvider?, textureId: Identifier?, tickDelta: Float, heightScale: Float, worldTime: Long, arg6: Int, yOffset: Int, maxY: Int, color: Float, innerRadius: Float) = BeaconBlockEntityRenderer.method_3545(matrices, vertexConsumers, textureId, tickDelta, heightScale, worldTime, arg6, yOffset, maxY, color, innerRadius)
 }

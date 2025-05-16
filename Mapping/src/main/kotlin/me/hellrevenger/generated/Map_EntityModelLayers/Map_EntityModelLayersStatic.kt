@@ -1077,7 +1077,7 @@ object EntityModelLayersKt {
     /**
      * method_62130
      */
-    fun createStandingSign(type: WoodType) = EntityModelLayers.method_62130(type)
+    fun createStandingSign(type: WoodType?) = EntityModelLayers.method_62130(type)
     /**
      * method_32076
      */
@@ -1085,9 +1085,9 @@ object EntityModelLayersKt {
     /**
      * method_62131
      */
-    fun createWallSign(type: WoodType) = EntityModelLayers.method_62131(type)
+    fun createWallSign(type: WoodType?) = EntityModelLayers.method_62131(type)
     /**
      * method_45719
      */
-    fun createHangingSign(type: WoodType, attachmentType: net.minecraft.class_7761.class_10381) = EntityModelLayers.method_45719(type, attachmentType)
+    fun createHangingSign(type: WoodType?, attachmentType: net.minecraft.class_7761.class_10381?) = EntityModelLayers.method_45719(type, attachmentType)
 }

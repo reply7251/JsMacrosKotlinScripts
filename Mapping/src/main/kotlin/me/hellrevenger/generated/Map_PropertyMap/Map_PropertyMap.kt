@@ -8,4 +8,4 @@ fun PropertyMap.keySet() = this.method_47762()
 /**
  * method_47760
  */
-fun <T>PropertyMap.get(property: TelemetryEventProperty<T>) = this.method_47760<T>(property)
+fun <T>PropertyMap.get(property: TelemetryEventProperty<T>?) = this.method_47760<T>(property)

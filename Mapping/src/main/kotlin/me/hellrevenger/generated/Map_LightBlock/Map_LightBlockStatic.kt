@@ -17,5 +17,5 @@ object LightBlockKt {
     /**
      * method_47377
      */
-    fun addNbtForLevel(stack: ItemStack, level: Int) = LightBlock.method_47377(stack, level)
+    fun addNbtForLevel(stack: ItemStack?, level: Int) = LightBlock.method_47377(stack, level)
 }

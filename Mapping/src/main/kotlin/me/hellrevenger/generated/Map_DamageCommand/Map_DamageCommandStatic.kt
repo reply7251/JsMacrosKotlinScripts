@@ -5,5 +5,5 @@ object DamageCommandKt {
     /**
      * method_48748
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = DamageCommand.method_48748(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = DamageCommand.method_48748(dispatcher, registryAccess)
 }

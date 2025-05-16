@@ -16,8 +16,8 @@ var SpawnSettings.creatureSpawnProbability by alias(SpawnSettings::field_26404)
 /**
  * method_31003
  */
-fun SpawnSettings.getSpawnDensity(entityType: EntityType<*>) = this.method_31003(entityType)
+fun SpawnSettings.getSpawnDensity(entityType: EntityType<*>?) = this.method_31003(entityType)
 /**
  * method_31004
  */
-fun SpawnSettings.getSpawnEntries(spawnGroup: SpawnGroup) = this.method_31004(spawnGroup)
+fun SpawnSettings.getSpawnEntries(spawnGroup: SpawnGroup?) = this.method_31004(spawnGroup)

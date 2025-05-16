@@ -5,5 +5,5 @@ object ProfileResultKt {
     /**
      * method_21721
      */
-    fun getHumanReadableName(path: String) = ProfileResult.method_21721(path)
+    fun getHumanReadableName(path: String?) = ProfileResult.method_21721(path)
 }

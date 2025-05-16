@@ -16,4 +16,4 @@ fun TargetPathNode.isReached() = this.method_35501()
 /**
  * method_21662
  */
-fun TargetPathNode.updateNearestNode(distance: Float, node: PathNode) = this.method_21662(distance, node)
+fun TargetPathNode.updateNearestNode(distance: Float, node: PathNode?) = this.method_21662(distance, node)

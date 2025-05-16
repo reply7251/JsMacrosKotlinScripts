@@ -5,11 +5,11 @@ object ShapeContextKt {
     /**
      * method_61893
      */
-    fun of(entity: Entity, collidesWithFluid: Boolean) = ShapeContext.method_61893(entity, collidesWithFluid)
+    fun of(entity: Entity?, collidesWithFluid: Boolean) = ShapeContext.method_61893(entity, collidesWithFluid)
     /**
      * method_16195
      */
-    fun of(entity: Entity) = ShapeContext.method_16195(entity)
+    fun of(entity: Entity?) = ShapeContext.method_16195(entity)
     /**
      * method_16194
      */

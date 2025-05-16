@@ -20,7 +20,7 @@ var GenerationSettings.carvers by alias(GenerationSettings::field_26415)
 /**
  * method_38105
  */
-fun GenerationSettings.isFeatureAllowed(feature: PlacedFeature) = this.method_38105(feature)
+fun GenerationSettings.isFeatureAllowed(feature: PlacedFeature?) = this.method_38105(feature)
 /**
  * method_30976
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12671
  */
-fun QueryResponseS2CPacket.apply(arg0: ClientQueryPacketListener) = this.method_12671(arg0)
+fun QueryResponseS2CPacket.apply(arg0: ClientQueryPacketListener?) = this.method_12671(arg0)
 /**
  * comp_1272
  */

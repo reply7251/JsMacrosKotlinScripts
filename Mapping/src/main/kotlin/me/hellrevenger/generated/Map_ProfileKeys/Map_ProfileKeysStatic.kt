@@ -5,5 +5,5 @@ object ProfileKeysKt {
     /**
      * method_46532
      */
-    fun create(userApiService: UserApiService, session: Session, root: file_Path) = ProfileKeys.method_46532(userApiService, session, root)
+    fun create(userApiService: UserApiService?, session: Session?, root: file_Path?) = ProfileKeys.method_46532(userApiService, session, root)
 }

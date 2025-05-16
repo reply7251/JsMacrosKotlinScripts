@@ -9,13 +9,13 @@ object NbtStringKt {
     /**
      * method_10706
      */
-    fun escape(value: String) = NbtString.method_10706(value)
+    fun escape(value: String?) = NbtString.method_10706(value)
     /**
      * method_39875
      */
-    fun skip(input: DataInput) = NbtString.method_39875(input)
+    fun skip(input: DataInput?) = NbtString.method_39875(input)
     /**
      * method_23256
      */
-    fun of(value: String) = NbtString.method_23256(value)
+    fun of(value: String?) = NbtString.method_23256(value)
 }

@@ -8,7 +8,7 @@ fun LookTarget.getBlockPos() = this.method_18989()
 /**
  * method_18990
  */
-fun LookTarget.isSeenBy(entity: LivingEntity) = this.method_18990(entity)
+fun LookTarget.isSeenBy(entity: LivingEntity?) = this.method_18990(entity)
 /**
  * method_18991
  */

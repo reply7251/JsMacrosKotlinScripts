@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_46727
  */
-fun FlatChunkGeneratorConfig.with(layers: MutableList<FlatChunkGeneratorLayer>, structureOverrides: Optional<RegistryEntryList<StructureSet>>, biome: RegistryEntry<Biome>) = this.method_46727(layers, structureOverrides, biome)
+fun FlatChunkGeneratorConfig.with(layers: MutableList<FlatChunkGeneratorLayer>?, structureOverrides: Optional<RegistryEntryList<StructureSet>>?, biome: RegistryEntry<Biome>?) = this.method_46727(layers, structureOverrides, biome)
 /**
  * method_14327
  */
@@ -32,7 +32,7 @@ fun FlatChunkGeneratorConfig.getLayerBlocks() = this.method_14312()
 /**
  * method_44225
  */
-fun FlatChunkGeneratorConfig.createGenerationSettings(biomeEntry: RegistryEntry<Biome>) = this.method_44225(biomeEntry)
+fun FlatChunkGeneratorConfig.createGenerationSettings(biomeEntry: RegistryEntry<Biome>?) = this.method_44225(biomeEntry)
 /**
  * method_28916
  */

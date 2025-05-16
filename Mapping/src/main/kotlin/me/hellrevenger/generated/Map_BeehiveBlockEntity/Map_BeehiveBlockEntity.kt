@@ -8,15 +8,15 @@ fun BeehiveBlockEntity.getBeeCount() = this.method_23903()
 /**
  * method_21848
  */
-fun BeehiveBlockEntity.tryEnterHive(entity: BeeEntity) = this.method_21848(entity)
+fun BeehiveBlockEntity.tryEnterHive(entity: BeeEntity?) = this.method_21848(entity)
 /**
  * method_35292
  */
-fun BeehiveBlockEntity.addBee(bee: net.minecraft.class_4482.class_9309) = this.method_35292(bee)
+fun BeehiveBlockEntity.addBee(bee: net.minecraft.class_4482.class_9309?) = this.method_35292(bee)
 /**
  * method_21850
  */
-fun BeehiveBlockEntity.angerBees(player: PlayerEntity, state: BlockState, beeState: net.minecraft.class_4482.class_4484) = this.method_21850(player, state, beeState)
+fun BeehiveBlockEntity.angerBees(player: PlayerEntity?, state: BlockState?, beeState: net.minecraft.class_4482.class_4484?) = this.method_21850(player, state, beeState)
 /**
  * method_21856
  */

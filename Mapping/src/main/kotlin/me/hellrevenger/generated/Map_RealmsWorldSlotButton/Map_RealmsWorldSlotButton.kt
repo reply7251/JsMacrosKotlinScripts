@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_54571
  */
-fun RealmsWorldSlotButton.setServer(server: RealmsServer) = this.method_54571(server)
+fun RealmsWorldSlotButton.setServer(server: RealmsServer?) = this.method_54571(server)
 /**
  * method_25099
  */

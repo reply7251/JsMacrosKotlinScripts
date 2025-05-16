@@ -5,11 +5,11 @@ object collection_PoolKt {
     /**
      * method_34991
      */
-    fun <E>createCodec(entryCodec: Codec<E>) where E: Weighted = collection_Pool.method_34991<E>(entryCodec)
+    fun <E>createCodec(entryCodec: Codec<E>?) where E: Weighted = collection_Pool.method_34991<E>(entryCodec)
     /**
      * method_34988
      */
-    fun <E>of(entries: MutableList<E>) where E: Weighted = collection_Pool.method_34988<E>(entries)
+    fun <E>of(entries: MutableList<E>?) where E: Weighted = collection_Pool.method_34988<E>(entries)
     /**
      * method_34990
      */

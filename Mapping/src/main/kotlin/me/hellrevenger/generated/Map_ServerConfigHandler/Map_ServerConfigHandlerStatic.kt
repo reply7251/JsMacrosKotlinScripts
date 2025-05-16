@@ -21,29 +21,29 @@ object ServerConfigHandlerKt {
     /**
      * method_14539
      */
-    fun convertOperators(server: MinecraftServer) = ServerConfigHandler.method_14539(server)
+    fun convertOperators(server: MinecraftServer?) = ServerConfigHandler.method_14539(server)
     /**
      * method_14547
      */
-    fun convertBannedPlayers(server: MinecraftServer) = ServerConfigHandler.method_14547(server)
+    fun convertBannedPlayers(server: MinecraftServer?) = ServerConfigHandler.method_14547(server)
     /**
      * method_14545
      */
-    fun convertBannedIps(server: MinecraftServer) = ServerConfigHandler.method_14545(server)
+    fun convertBannedIps(server: MinecraftServer?) = ServerConfigHandler.method_14545(server)
     /**
      * method_14533
      */
-    fun convertWhitelist(server: MinecraftServer) = ServerConfigHandler.method_14533(server)
+    fun convertWhitelist(server: MinecraftServer?) = ServerConfigHandler.method_14533(server)
     /**
      * method_14550
      */
-    fun convertPlayerFiles(minecraftServer: MinecraftDedicatedServer) = ServerConfigHandler.method_14550(minecraftServer)
+    fun convertPlayerFiles(minecraftServer: MinecraftDedicatedServer?) = ServerConfigHandler.method_14550(minecraftServer)
     /**
      * method_14540
      */
-    fun checkSuccess(server: MinecraftServer) = ServerConfigHandler.method_14540(server)
+    fun checkSuccess(server: MinecraftServer?) = ServerConfigHandler.method_14540(server)
     /**
      * method_14546
      */
-    fun getPlayerUuidByName(server: MinecraftServer, name: String) = ServerConfigHandler.method_14546(server, name)
+    fun getPlayerUuidByName(server: MinecraftServer?, name: String?) = ServerConfigHandler.method_14546(server, name)
 }

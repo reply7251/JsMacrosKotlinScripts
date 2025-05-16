@@ -9,5 +9,5 @@ object BlockMirrorArgumentTypeKt {
     /**
      * method_44101
      */
-    fun getBlockMirror(context: CommandContext<ServerCommandSource>, id: String) = BlockMirrorArgumentType.method_44101(context, id)
+    fun getBlockMirror(context: CommandContext<ServerCommandSource>?, id: String?) = BlockMirrorArgumentType.method_44101(context, id)
 }

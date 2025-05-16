@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_8305
  */
-fun CommandBlockExecutor.readNbt(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = this.method_8305(nbt, registries)
+fun CommandBlockExecutor.readNbt(nbt: NbtCompound?, registries: net.minecraft.class_7225.class_7874?) = this.method_8305(nbt, registries)
 /**
  * method_8287
  */
@@ -12,11 +12,11 @@ fun CommandBlockExecutor.setTrackOutput(trackOutput: Boolean) = this.method_8287
 /**
  * method_8291
  */
-fun CommandBlockExecutor.setLastOutput(lastOutput: Text) = this.method_8291(lastOutput)
+fun CommandBlockExecutor.setLastOutput(lastOutput: Text?) = this.method_8291(lastOutput)
 /**
  * method_8288
  */
-fun CommandBlockExecutor.interact(player: PlayerEntity) = this.method_8288(player)
+fun CommandBlockExecutor.interact(player: PlayerEntity?) = this.method_8288(player)
 /**
  * method_8303
  */
@@ -36,7 +36,7 @@ fun CommandBlockExecutor.getCustomName() = this.method_57558()
 /**
  * method_8301
  */
-fun CommandBlockExecutor.execute(world: world_World) = this.method_8301(world)
+fun CommandBlockExecutor.execute(world: world_World?) = this.method_8301(world)
 /**
  * method_8293
  */
@@ -44,7 +44,7 @@ fun CommandBlockExecutor.getWorld() = this.method_8293()
 /**
  * method_8286
  */
-fun CommandBlockExecutor.setCommand(command: String) = this.method_8286(command)
+fun CommandBlockExecutor.setCommand(command: String?) = this.method_8286(command)
 /**
  * method_8300
  */
@@ -52,7 +52,7 @@ fun CommandBlockExecutor.getPos() = this.method_8300()
 /**
  * method_8290
  */
-fun CommandBlockExecutor.setCustomName(customName: Text) = this.method_8290(customName)
+fun CommandBlockExecutor.setCustomName(customName: Text?) = this.method_8290(customName)
 /**
  * method_8289
  */
@@ -72,7 +72,7 @@ fun CommandBlockExecutor.isTrackingOutput() = this.method_8296()
 /**
  * method_8297
  */
-fun CommandBlockExecutor.writeNbt(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = this.method_8297(nbt, registries)
+fun CommandBlockExecutor.writeNbt(nbt: NbtCompound?, registries: net.minecraft.class_7225.class_7874?) = this.method_8297(nbt, registries)
 /**
  * method_8298
  */

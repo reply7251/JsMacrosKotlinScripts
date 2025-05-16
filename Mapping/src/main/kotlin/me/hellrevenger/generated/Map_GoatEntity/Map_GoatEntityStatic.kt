@@ -17,7 +17,7 @@ object GoatEntityKt {
     /**
      * method_38067
      */
-    fun canSpawn(entityType: EntityType<out AnimalEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = GoatEntity.method_38067(entityType, world, spawnReason, pos, random)
+    fun canSpawn(entityType: EntityType<out AnimalEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = GoatEntity.method_38067(entityType, world, spawnReason, pos, random)
     /**
      * method_35179
      */

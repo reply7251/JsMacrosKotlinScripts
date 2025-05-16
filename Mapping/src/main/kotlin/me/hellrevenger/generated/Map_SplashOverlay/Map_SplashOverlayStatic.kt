@@ -17,5 +17,5 @@ object SplashOverlayKt {
     /**
      * method_18819
      */
-    fun init(textureManager: TextureManager) = SplashOverlay.method_18819(textureManager)
+    fun init(textureManager: TextureManager?) = SplashOverlay.method_18819(textureManager)
 }

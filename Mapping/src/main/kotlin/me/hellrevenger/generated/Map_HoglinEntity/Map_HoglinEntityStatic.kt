@@ -13,5 +13,5 @@ object HoglinEntityKt {
     /**
      * method_24349
      */
-    fun canSpawn(type: EntityType<HoglinEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = HoglinEntity.method_24349(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<HoglinEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = HoglinEntity.method_24349(type, world, spawnReason, pos, random)
 }

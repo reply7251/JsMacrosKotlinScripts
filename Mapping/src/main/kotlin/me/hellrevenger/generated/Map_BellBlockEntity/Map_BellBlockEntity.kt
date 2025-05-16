@@ -16,4 +16,4 @@ var BellBlockEntity.ringing by alias(BellBlockEntity::field_17096)
 /**
  * method_17031
  */
-fun BellBlockEntity.activate(direction: Direction) = this.method_17031(direction)
+fun BellBlockEntity.activate(direction: Direction?) = this.method_17031(direction)

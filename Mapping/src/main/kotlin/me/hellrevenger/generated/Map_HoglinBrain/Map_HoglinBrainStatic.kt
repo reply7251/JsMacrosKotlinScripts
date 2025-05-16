@@ -5,5 +5,5 @@ object HoglinBrainKt {
     /**
      * method_30083
      */
-    fun getSoundEvent(hoglin: HoglinEntity) = HoglinBrain.method_30083(hoglin)
+    fun getSoundEvent(hoglin: HoglinEntity?) = HoglinBrain.method_30083(hoglin)
 }

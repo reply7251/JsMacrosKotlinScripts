@@ -12,7 +12,7 @@ fun <T>SectionedEntityCache<T>.findTrackingSection(sectionPos: Long) where T: En
 /**
  * method_31777
  */
-fun <T>SectionedEntityCache<T>.forEachInBox(box: Box, consumer: LazyIterationConsumer<EntityTrackingSection<T>>) where T: EntityLike = this.method_31777(box, consumer)
+fun <T>SectionedEntityCache<T>.forEachInBox(box: Box?, consumer: LazyIterationConsumer<EntityTrackingSection<T>>?) where T: EntityLike = this.method_31777(box, consumer)
 /**
  * method_31781
  */
@@ -28,11 +28,11 @@ fun <T>SectionedEntityCache<T>.getChunkPositions() where T: EntityLike = this.me
 /**
  * method_31773
  */
-fun <T, U>SectionedEntityCache<T>.forEachIntersects(filter: TypeFilter<T, U>, box: Box, consumer: LazyIterationConsumer<U>) where T: EntityLike, U: T = this.method_31773<U>(filter, box, consumer)
+fun <T, U>SectionedEntityCache<T>.forEachIntersects(filter: TypeFilter<T, U>?, box: Box?, consumer: LazyIterationConsumer<U>?) where T: EntityLike, U: T = this.method_31773<U>(filter, box, consumer)
 /**
  * method_31783
  */
-fun <T>SectionedEntityCache<T>.forEachIntersects(box: Box, consumer: LazyIterationConsumer<T>) where T: EntityLike = this.method_31783(box, consumer)
+fun <T>SectionedEntityCache<T>.forEachIntersects(box: Box?, consumer: LazyIterationConsumer<T>?) where T: EntityLike = this.method_31783(box, consumer)
 /**
  * method_31782
  */

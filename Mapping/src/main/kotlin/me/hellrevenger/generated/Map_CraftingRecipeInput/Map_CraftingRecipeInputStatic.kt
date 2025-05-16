@@ -9,9 +9,9 @@ object CraftingRecipeInputKt {
     /**
      * method_60505
      */
-    fun createPositioned(width: Int, height: Int, stacks: MutableList<ItemStack>) = CraftingRecipeInput.method_60505(width, height, stacks)
+    fun createPositioned(width: Int, height: Int, stacks: MutableList<ItemStack>?) = CraftingRecipeInput.method_60505(width, height, stacks)
     /**
      * method_59986
      */
-    fun create(width: Int, height: Int, stacks: MutableList<ItemStack>) = CraftingRecipeInput.method_59986(width, height, stacks)
+    fun create(width: Int, height: Int, stacks: MutableList<ItemStack>?) = CraftingRecipeInput.method_59986(width, height, stacks)
 }

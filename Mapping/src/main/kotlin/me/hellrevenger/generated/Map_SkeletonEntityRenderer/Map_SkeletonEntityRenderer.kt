@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_62529
  */
-fun SkeletonEntityRenderer.getTexture(arg0: SkeletonEntityRenderState) = this.method_62529(arg0)
+fun SkeletonEntityRenderer.getTexture(arg0: SkeletonEntityRenderState?) = this.method_62529(arg0)
 /**
  * method_62530
  */

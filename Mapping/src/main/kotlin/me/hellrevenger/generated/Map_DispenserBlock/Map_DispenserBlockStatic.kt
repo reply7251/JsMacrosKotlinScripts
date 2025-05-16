@@ -17,17 +17,17 @@ object DispenserBlockKt {
     /**
      * method_58681
      */
-    fun registerProjectileBehavior(projectile: ItemConvertible) = DispenserBlock.method_58681(projectile)
+    fun registerProjectileBehavior(projectile: ItemConvertible?) = DispenserBlock.method_58681(projectile)
     /**
      * method_10010
      */
-    fun getOutputLocation(pointer: BlockPointer, facingOffset: Double, arg2: Vec3d) = DispenserBlock.method_10010(pointer, facingOffset, arg2)
+    fun getOutputLocation(pointer: BlockPointer?, facingOffset: Double, arg2: Vec3d?) = DispenserBlock.method_10010(pointer, facingOffset, arg2)
     /**
      * method_10009
      */
-    fun registerBehavior(provider: ItemConvertible, behavior: DispenserBehavior) = DispenserBlock.method_10009(provider, behavior)
+    fun registerBehavior(provider: ItemConvertible?, behavior: DispenserBehavior?) = DispenserBlock.method_10009(provider, behavior)
     /**
      * method_58682
      */
-    fun getOutputLocation(pointer: BlockPointer) = DispenserBlock.method_58682(pointer)
+    fun getOutputLocation(pointer: BlockPointer?) = DispenserBlock.method_58682(pointer)
 }

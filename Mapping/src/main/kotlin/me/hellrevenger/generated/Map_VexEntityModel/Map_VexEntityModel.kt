@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17127
  */
-fun VexEntityModel.setAngles(arg0: VexEntityRenderState) = this.method_17127(arg0)
+fun VexEntityModel.setAngles(arg0: VexEntityRenderState?) = this.method_17127(arg0)

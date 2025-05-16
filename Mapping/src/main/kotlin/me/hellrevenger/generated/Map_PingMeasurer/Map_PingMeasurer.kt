@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_53487
  */
-fun PingMeasurer.onPingResult(packet: PingResultS2CPacket) = this.method_53487(packet)
+fun PingMeasurer.onPingResult(packet: PingResultS2CPacket?) = this.method_53487(packet)
 /**
  * method_53486
  */

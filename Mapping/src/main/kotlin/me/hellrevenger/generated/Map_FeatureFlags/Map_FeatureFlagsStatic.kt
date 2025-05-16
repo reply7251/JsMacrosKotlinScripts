@@ -33,13 +33,13 @@ object FeatureFlagsKt {
     /**
      * method_45405
      */
-    fun printMissingFlags(featureManager: FeatureManager, featuresToCheck: FeatureSet, features: FeatureSet) = FeatureFlags.method_45405(featureManager, featuresToCheck, features)
+    fun printMissingFlags(featureManager: FeatureManager?, featuresToCheck: FeatureSet?, features: FeatureSet?) = FeatureFlags.method_45405(featureManager, featuresToCheck, features)
     /**
      * method_45407
      */
-    fun printMissingFlags(featuresToCheck: FeatureSet, features: FeatureSet) = FeatureFlags.method_45407(featuresToCheck, features)
+    fun printMissingFlags(featuresToCheck: FeatureSet?, features: FeatureSet?) = FeatureFlags.method_45407(featuresToCheck, features)
     /**
      * method_45406
      */
-    fun isNotVanilla(features: FeatureSet) = FeatureFlags.method_45406(features)
+    fun isNotVanilla(features: FeatureSet?) = FeatureFlags.method_45406(features)
 }

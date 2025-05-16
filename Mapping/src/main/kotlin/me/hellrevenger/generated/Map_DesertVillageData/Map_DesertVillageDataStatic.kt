@@ -9,5 +9,5 @@ object DesertVillageDataKt {
     /**
      * method_17037
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = DesertVillageData.method_17037(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = DesertVillageData.method_17037(poolRegisterable)
 }

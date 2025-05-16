@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_46348
  */
-fun FeaturesS2CPacket.apply(arg0: ClientConfigurationPacketListener) = this.method_46348(arg0)
+fun FeaturesS2CPacket.apply(arg0: ClientConfigurationPacketListener?) = this.method_46348(arg0)
 /**
  * comp_1113
  */

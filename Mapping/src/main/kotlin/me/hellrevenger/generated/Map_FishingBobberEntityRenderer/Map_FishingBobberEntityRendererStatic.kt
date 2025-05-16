@@ -5,5 +5,5 @@ object FishingBobberEntityRendererKt {
     /**
      * method_65567
      */
-    fun getArmHoldingRod(player: PlayerEntity) = FishingBobberEntityRenderer.method_65567(player)
+    fun getArmHoldingRod(player: PlayerEntity?) = FishingBobberEntityRenderer.method_65567(player)
 }

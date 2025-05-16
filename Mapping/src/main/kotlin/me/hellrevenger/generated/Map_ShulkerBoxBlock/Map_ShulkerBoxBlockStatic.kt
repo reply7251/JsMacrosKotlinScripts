@@ -13,9 +13,9 @@ object ShulkerBoxBlockKt {
     /**
      * method_10525
      */
-    fun get(dyeColor: DyeColor) = ShulkerBoxBlock.method_10525(dyeColor)
+    fun get(dyeColor: DyeColor?) = ShulkerBoxBlock.method_10525(dyeColor)
     /**
      * method_10529
      */
-    fun getItemStack(color: DyeColor) = ShulkerBoxBlock.method_10529(color)
+    fun getItemStack(color: DyeColor?) = ShulkerBoxBlock.method_10529(color)
 }

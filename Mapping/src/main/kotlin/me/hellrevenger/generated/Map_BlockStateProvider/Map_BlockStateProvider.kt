@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_23455
  */
-fun BlockStateProvider.get(random: Random, pos: BlockPos) = this.method_23455(random, pos)
+fun BlockStateProvider.get(random: Random?, pos: BlockPos?) = this.method_23455(random, pos)

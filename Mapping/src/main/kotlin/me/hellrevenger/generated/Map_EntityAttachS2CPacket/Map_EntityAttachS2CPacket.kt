@@ -12,4 +12,4 @@ fun EntityAttachS2CPacket.getAttachedEntityId() = this.method_11812()
 /**
  * method_11811
  */
-fun EntityAttachS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11811(arg0)
+fun EntityAttachS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11811(arg0)

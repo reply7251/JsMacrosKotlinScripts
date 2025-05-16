@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8863
  */
-fun EffectsChangedCriterion.trigger(player: ServerPlayerEntity, source: Entity) = this.method_8863(player, source)
+fun EffectsChangedCriterion.trigger(player: ServerPlayerEntity?, source: Entity?) = this.method_8863(player, source)

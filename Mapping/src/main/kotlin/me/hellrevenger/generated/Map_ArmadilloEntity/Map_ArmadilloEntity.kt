@@ -32,11 +32,11 @@ fun ArmadilloEntity.shouldSwitchToScaredState() = this.method_55714()
 /**
  * method_55721
  */
-fun ArmadilloEntity.isEntityThreatening(entity: LivingEntity) = this.method_55721(entity)
+fun ArmadilloEntity.isEntityThreatening(entity: LivingEntity?) = this.method_55721(entity)
 /**
  * method_55713
  */
-fun ArmadilloEntity.setState(state: net.minecraft.class_9069.class_9070) = this.method_55713(state)
+fun ArmadilloEntity.setState(state: net.minecraft.class_9069.class_9070?) = this.method_55713(state)
 /**
  * method_55715
  */

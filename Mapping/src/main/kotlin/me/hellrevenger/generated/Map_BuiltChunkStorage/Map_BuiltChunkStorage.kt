@@ -8,7 +8,7 @@ var BuiltChunkStorage.chunks by alias(BuiltChunkStorage::field_4150)
 /**
  * method_3330
  */
-fun BuiltChunkStorage.updateCameraPosition(sectionPos: ChunkSectionPos) = this.method_3330(sectionPos)
+fun BuiltChunkStorage.updateCameraPosition(sectionPos: ChunkSectionPos?) = this.method_3330(sectionPos)
 /**
  * method_52840
  */

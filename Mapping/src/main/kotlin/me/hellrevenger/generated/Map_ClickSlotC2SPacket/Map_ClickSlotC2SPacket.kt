@@ -20,7 +20,7 @@ fun ClickSlotC2SPacket.getSlot() = this.method_12192()
 /**
  * method_12191
  */
-fun ClickSlotC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12191(arg0)
+fun ClickSlotC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12191(arg0)
 /**
  * method_12190
  */

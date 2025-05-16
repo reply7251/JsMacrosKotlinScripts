@@ -5,7 +5,7 @@ object VarLongsKt {
     /**
      * method_53021
      */
-    fun write(buf: ByteBuf, l: Long) = VarLongs.method_53021(buf, l)
+    fun write(buf: ByteBuf?, l: Long) = VarLongs.method_53021(buf, l)
     /**
      * method_53019
      */
@@ -17,5 +17,5 @@ object VarLongsKt {
     /**
      * method_53020
      */
-    fun read(buf: ByteBuf) = VarLongs.method_53020(buf)
+    fun read(buf: ByteBuf?) = VarLongs.method_53020(buf)
 }

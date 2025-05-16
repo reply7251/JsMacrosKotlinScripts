@@ -8,7 +8,7 @@ fun TropicalFishEntity.getBaseColorComponents() = this.method_6658()
 /**
  * method_47860
  */
-fun TropicalFishEntity.setVariant(arg0: net.minecraft.class_1474.class_1475) = this.method_47860(arg0)
+fun TropicalFishEntity.setVariant(arg0: net.minecraft.class_1474.class_1475?) = this.method_47860(arg0)
 /**
  * method_6655
  */

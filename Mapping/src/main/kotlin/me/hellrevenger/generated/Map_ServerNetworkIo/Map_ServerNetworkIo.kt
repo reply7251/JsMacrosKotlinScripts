@@ -20,7 +20,7 @@ fun ServerNetworkIo.stop() = this.method_14356()
 /**
  * method_14354
  */
-fun ServerNetworkIo.bind(address: InetAddress, port: Int) = this.method_14354(address, port)
+fun ServerNetworkIo.bind(address: InetAddress?, port: Int) = this.method_14354(address, port)
 /**
  * method_14351
  */

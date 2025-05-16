@@ -5,5 +5,5 @@ object EntityInteractionKt {
     /**
      * method_19109
      */
-    fun create(key: String) = EntityInteraction.method_19109(key)
+    fun create(key: String?) = EntityInteraction.method_19109(key)
 }

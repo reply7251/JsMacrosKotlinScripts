@@ -8,15 +8,15 @@ fun CommandBossBar.toHoverableText() = this.method_12965()
 /**
  * method_12964
  */
-fun CommandBossBar.addPlayer(uuid: UUID) = this.method_12964(uuid)
+fun CommandBossBar.addPlayer(uuid: UUID?) = this.method_12964(uuid)
 /**
  * method_12962
  */
-fun CommandBossBar.addPlayers(players: Collection<ServerPlayerEntity>) = this.method_12962(players)
+fun CommandBossBar.addPlayers(players: Collection<ServerPlayerEntity>?) = this.method_12962(players)
 /**
  * method_12963
  */
-fun CommandBossBar.toNbt(registries: net.minecraft.class_7225.class_7874) = this.method_12963(registries)
+fun CommandBossBar.toNbt(registries: net.minecraft.class_7225.class_7874?) = this.method_12963(registries)
 /**
  * method_12955
  */
@@ -36,7 +36,7 @@ fun CommandBossBar.getMaxValue() = this.method_12960()
 /**
  * method_12961
  */
-fun CommandBossBar.onPlayerDisconnect(player: ServerPlayerEntity) = this.method_12961(player)
+fun CommandBossBar.onPlayerDisconnect(player: ServerPlayerEntity?) = this.method_12961(player)
 /**
  * method_12959
  */
@@ -44,4 +44,4 @@ fun CommandBossBar.getId() = this.method_12959()
 /**
  * method_12957
  */
-fun CommandBossBar.onPlayerConnect(player: ServerPlayerEntity) = this.method_12957(player)
+fun CommandBossBar.onPlayerConnect(player: ServerPlayerEntity?) = this.method_12957(player)

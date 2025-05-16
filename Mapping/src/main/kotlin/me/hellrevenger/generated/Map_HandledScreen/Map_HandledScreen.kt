@@ -48,7 +48,7 @@ fun <T>HandledScreen<T>.getSlotAt(mouseX: Double, arg1: Double) where T: ScreenH
 /**
  * method_2380
  */
-fun <T>HandledScreen<T>.drawMouseoverTooltip(drawContext: DrawContext, x: Int, y: Int) where T: ScreenHandler = this.method_2380(drawContext, x, y)
+fun <T>HandledScreen<T>.drawMouseoverTooltip(drawContext: DrawContext?, x: Int, y: Int) where T: ScreenHandler = this.method_2380(drawContext, x, y)
 /**
  * method_44339
  */

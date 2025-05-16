@@ -8,12 +8,12 @@ fun <A, T>ArgumentSerializer<A, T>.getArgumentTypeProperties(argumentType: A) wh
 /**
  * method_10005
  */
-fun <A, T>ArgumentSerializer<A, T>.fromPacket(buf: PacketByteBuf) where A: ArgumentType<*>, T: net.minecraft.class_2314.class_7217<A> = this.method_10005(buf)
+fun <A, T>ArgumentSerializer<A, T>.fromPacket(buf: PacketByteBuf?) where A: ArgumentType<*>, T: net.minecraft.class_2314.class_7217<A> = this.method_10005(buf)
 /**
  * method_10006
  */
-fun <A, T>ArgumentSerializer<A, T>.writeJson(properties: T, json: JsonObject) where A: ArgumentType<*>, T: net.minecraft.class_2314.class_7217<A> = this.method_10006(properties, json)
+fun <A, T>ArgumentSerializer<A, T>.writeJson(properties: T, json: JsonObject?) where A: ArgumentType<*>, T: net.minecraft.class_2314.class_7217<A> = this.method_10006(properties, json)
 /**
  * method_10007
  */
-fun <A, T>ArgumentSerializer<A, T>.writePacket(properties: T, buf: PacketByteBuf) where A: ArgumentType<*>, T: net.minecraft.class_2314.class_7217<A> = this.method_10007(properties, buf)
+fun <A, T>ArgumentSerializer<A, T>.writePacket(properties: T, buf: PacketByteBuf?) where A: ArgumentType<*>, T: net.minecraft.class_2314.class_7217<A> = this.method_10007(properties, buf)

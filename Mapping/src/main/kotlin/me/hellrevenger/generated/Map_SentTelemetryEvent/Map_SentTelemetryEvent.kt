@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_47711
  */
-fun SentTelemetryEvent.createEvent(session: TelemetrySession) = this.method_47711(session)
+fun SentTelemetryEvent.createEvent(session: TelemetrySession?) = this.method_47711(session)
 /**
  * comp_1170
  */

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_22958
  */
-fun MagmaCubeEntityModel.setAngles(arg0: SlimeEntityRenderState) = this.method_22958(arg0)
+fun MagmaCubeEntityModel.setAngles(arg0: SlimeEntityRenderState?) = this.method_22958(arg0)

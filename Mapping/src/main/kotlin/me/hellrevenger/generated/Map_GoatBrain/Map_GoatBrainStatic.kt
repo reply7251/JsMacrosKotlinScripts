@@ -33,7 +33,7 @@ object GoatBrainKt {
     /**
      * method_35186
      */
-    fun updateActivities(goat: GoatEntity) = GoatBrain.method_35186(goat)
+    fun updateActivities(goat: GoatEntity?) = GoatBrain.method_35186(goat)
     /**
      * method_35181
      */

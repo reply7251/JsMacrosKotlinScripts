@@ -5,9 +5,9 @@ object PacketCallbacksKt {
     /**
      * method_45085
      */
-    fun of(failurePacket: Supplier<Packet<*>>) = PacketCallbacks.method_45085(failurePacket)
+    fun of(failurePacket: Supplier<Packet<*>>?) = PacketCallbacks.method_45085(failurePacket)
     /**
      * method_45084
      */
-    fun always(runnable: Runnable) = PacketCallbacks.method_45084(runnable)
+    fun always(runnable: Runnable?) = PacketCallbacks.method_45084(runnable)
 }

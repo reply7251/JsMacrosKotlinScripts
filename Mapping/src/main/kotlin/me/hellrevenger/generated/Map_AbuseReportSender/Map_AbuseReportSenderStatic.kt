@@ -5,5 +5,5 @@ object AbuseReportSenderKt {
     /**
      * method_44562
      */
-    fun create(environment: ReporterEnvironment, userApiService: UserApiService) = AbuseReportSender.method_44562(environment, userApiService)
+    fun create(environment: ReporterEnvironment?, userApiService: UserApiService?) = AbuseReportSender.method_44562(environment, userApiService)
 }

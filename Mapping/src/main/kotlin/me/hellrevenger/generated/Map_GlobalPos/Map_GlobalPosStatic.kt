@@ -5,5 +5,5 @@ object GlobalPosKt {
     /**
      * method_19443
      */
-    fun create(dimension: RegistryKey<world_World>, pos: BlockPos) = GlobalPos.method_19443(dimension, pos)
+    fun create(dimension: RegistryKey<world_World>?, pos: BlockPos?) = GlobalPos.method_19443(dimension, pos)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_15711
  */
-fun EntityItemFrameDirectionFix.fixDirection(itemFrameDynamic: Dynamic<*>) = this.method_15711(itemFrameDynamic)
+fun EntityItemFrameDirectionFix.fixDirection(itemFrameDynamic: Dynamic<*>?) = this.method_15711(itemFrameDynamic)

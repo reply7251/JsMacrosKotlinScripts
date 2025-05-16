@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_14491
  */
-fun SynchronousResourceReloader.reload(manager: ResourceManager) = this.method_14491(manager)
+fun SynchronousResourceReloader.reload(manager: ResourceManager?) = this.method_14491(manager)

@@ -9,5 +9,5 @@ object BannerBlockKt {
     /**
      * method_9398
      */
-    fun getForColor(color: DyeColor) = BannerBlock.method_9398(color)
+    fun getForColor(color: DyeColor?) = BannerBlock.method_9398(color)
 }

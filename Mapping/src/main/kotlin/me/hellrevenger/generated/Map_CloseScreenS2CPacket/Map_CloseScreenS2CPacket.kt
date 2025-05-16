@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11427
  */
-fun CloseScreenS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11427(arg0)
+fun CloseScreenS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11427(arg0)
 /**
  * method_36148
  */

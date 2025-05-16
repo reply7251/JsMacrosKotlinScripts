@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_47981
  */
-fun WorldLoadTimesEvent.send(sender: TelemetrySender) = this.method_47981(sender)
+fun WorldLoadTimesEvent.send(sender: TelemetrySender?) = this.method_47981(sender)

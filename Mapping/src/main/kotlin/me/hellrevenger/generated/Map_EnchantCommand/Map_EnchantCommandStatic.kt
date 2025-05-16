@@ -5,5 +5,5 @@ object EnchantCommandKt {
     /**
      * method_13243
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = EnchantCommand.method_13243(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = EnchantCommand.method_13243(dispatcher, registryAccess)
 }

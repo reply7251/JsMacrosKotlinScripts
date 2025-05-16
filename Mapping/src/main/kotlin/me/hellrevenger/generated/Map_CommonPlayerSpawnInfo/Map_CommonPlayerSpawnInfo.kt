@@ -12,7 +12,7 @@ fun CommonPlayerSpawnInfo.prevGameMode() = this.comp_1557()
 /**
  * method_52274
  */
-fun CommonPlayerSpawnInfo.write(buf: RegistryByteBuf) = this.method_52274(buf)
+fun CommonPlayerSpawnInfo.write(buf: RegistryByteBuf?) = this.method_52274(buf)
 /**
  * comp_1554
  */

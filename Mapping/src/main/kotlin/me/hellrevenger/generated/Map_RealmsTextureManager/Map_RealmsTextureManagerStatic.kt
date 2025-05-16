@@ -5,5 +5,5 @@ object RealmsTextureManagerKt {
     /**
      * method_48971
      */
-    fun getTextureId(id: String, image: String) = RealmsTextureManager.method_48971(id, image)
+    fun getTextureId(id: String?, image: String?) = RealmsTextureManager.method_48971(id, image)
 }

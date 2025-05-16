@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_3869
  */
-fun PathfindingDebugRenderer.addPath(id: Int, path: Path, nodeSize: Float) = this.method_3869(id, path, nodeSize)
+fun PathfindingDebugRenderer.addPath(id: Int, path: Path?, nodeSize: Float) = this.method_3869(id, path, nodeSize)

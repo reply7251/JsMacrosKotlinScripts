@@ -17,5 +17,5 @@ object StatusEffectInstanceKt {
     /**
      * method_5583
      */
-    fun fromNbt(nbt: NbtCompound) = StatusEffectInstance.method_5583(nbt)
+    fun fromNbt(nbt: NbtCompound?) = StatusEffectInstance.method_5583(nbt)
 }

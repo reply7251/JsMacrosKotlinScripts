@@ -72,7 +72,7 @@ fun ClientPlayerEntity.getMountJumpStrength() = this.method_3151()
 /**
  * method_51889
  */
-fun ClientPlayerEntity.onGameModeChanged(gameMode: GameMode) = this.method_51889(gameMode)
+fun ClientPlayerEntity.onGameModeChanged(gameMode: GameMode?) = this.method_51889(gameMode)
 /**
  * method_45773
  */
@@ -124,7 +124,7 @@ fun ClientPlayerEntity.getStatHandler() = this.method_3143()
 /**
  * method_3141
  */
-fun ClientPlayerEntity.onRecipeDisplayed(recipeId: NetworkRecipeId) = this.method_3141(recipeId)
+fun ClientPlayerEntity.onRecipeDisplayed(recipeId: NetworkRecipeId?) = this.method_3141(recipeId)
 /**
  * method_3145
  */

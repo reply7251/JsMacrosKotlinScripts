@@ -12,7 +12,7 @@ fun SkullBlockEntity.getOwner() = this.method_11334()
 /**
  * method_11333
  */
-fun SkullBlockEntity.setOwner(profile: ProfileComponent) = this.method_11333(profile)
+fun SkullBlockEntity.setOwner(profile: ProfileComponent?) = this.method_11333(profile)
 /**
  * method_38250
  */

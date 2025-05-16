@@ -8,7 +8,7 @@ fun StopSoundS2CPacket.getCategory() = this.method_11903()
 /**
  * method_11905
  */
-fun StopSoundS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11905(arg0)
+fun StopSoundS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11905(arg0)
 /**
  * method_11904
  */

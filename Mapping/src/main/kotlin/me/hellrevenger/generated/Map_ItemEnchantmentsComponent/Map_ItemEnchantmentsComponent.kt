@@ -12,7 +12,7 @@ fun ItemEnchantmentsComponent.withShowInTooltip(showInTooltip: Boolean) = this.m
 /**
  * method_57536
  */
-fun ItemEnchantmentsComponent.getLevel(enchantment: RegistryEntry<Enchantment>) = this.method_57536(enchantment)
+fun ItemEnchantmentsComponent.getLevel(enchantment: RegistryEntry<Enchantment>?) = this.method_57536(enchantment)
 /**
  * method_57534
  */

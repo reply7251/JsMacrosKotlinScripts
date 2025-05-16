@@ -37,5 +37,5 @@ object VillagerTypeKt {
     /**
      * method_16930
      */
-    fun forBiome(biomeEntry: RegistryEntry<Biome>) = VillagerType.method_16930(biomeEntry)
+    fun forBiome(biomeEntry: RegistryEntry<Biome>?) = VillagerType.method_16930(biomeEntry)
 }

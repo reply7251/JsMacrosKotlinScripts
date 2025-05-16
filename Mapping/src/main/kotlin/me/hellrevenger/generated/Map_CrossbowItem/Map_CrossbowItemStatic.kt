@@ -9,9 +9,9 @@ object CrossbowItemKt {
     /**
      * method_7781
      */
-    fun isCharged(stack: ItemStack) = CrossbowItem.method_7781(stack)
+    fun isCharged(stack: ItemStack?) = CrossbowItem.method_7781(stack)
     /**
      * method_7775
      */
-    fun getPullTime(stack: ItemStack, user: LivingEntity) = CrossbowItem.method_7775(stack, user)
+    fun getPullTime(stack: ItemStack?, user: LivingEntity?) = CrossbowItem.method_7775(stack, user)
 }

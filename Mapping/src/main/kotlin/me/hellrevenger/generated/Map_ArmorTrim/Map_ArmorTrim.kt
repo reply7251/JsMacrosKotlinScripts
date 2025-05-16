@@ -8,7 +8,7 @@ fun ArmorTrim.pattern() = this.comp_3180()
 /**
  * method_48427
  */
-fun ArmorTrim.equals(pattern: RegistryEntry<ArmorTrimPattern>, material: RegistryEntry<ArmorTrimMaterial>) = this.method_48427(pattern, material)
+fun ArmorTrim.equals(pattern: RegistryEntry<ArmorTrimPattern>?, material: RegistryEntry<ArmorTrimMaterial>?) = this.method_48427(pattern, material)
 /**
  * comp_3181
  */

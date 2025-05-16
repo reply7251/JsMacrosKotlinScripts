@@ -20,11 +20,11 @@ fun EntityLike.getBoundingBox() = this.method_5829()
 /**
  * method_31745
  */
-fun EntityLike.setRemoved(reason: net.minecraft.class_1297.class_5529) = this.method_31745(reason)
+fun EntityLike.setRemoved(reason: net.minecraft.class_1297.class_5529?) = this.method_31745(reason)
 /**
  * method_31744
  */
-fun EntityLike.setChangeListener(changeListener: EntityChangeListener) = this.method_31744(changeListener)
+fun EntityLike.setChangeListener(changeListener: EntityChangeListener?) = this.method_31744(changeListener)
 /**
  * method_5667
  */

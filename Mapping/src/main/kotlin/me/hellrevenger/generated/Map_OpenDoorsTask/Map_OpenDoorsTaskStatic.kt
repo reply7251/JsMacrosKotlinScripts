@@ -9,5 +9,5 @@ object OpenDoorsTaskKt {
     /**
      * method_30760
      */
-    fun pathToDoor(world: ServerWorld, entity: LivingEntity, lastNode: PathNode, currentNode: PathNode, doors: Set<GlobalPos>, otherMobs: Optional<MutableList<LivingEntity>>) = OpenDoorsTask.method_30760(world, entity, lastNode, currentNode, doors, otherMobs)
+    fun pathToDoor(world: ServerWorld?, entity: LivingEntity?, lastNode: PathNode?, currentNode: PathNode?, doors: Set<GlobalPos>?, otherMobs: Optional<MutableList<LivingEntity>>?) = OpenDoorsTask.method_30760(world, entity, lastNode, currentNode, doors, otherMobs)
 }

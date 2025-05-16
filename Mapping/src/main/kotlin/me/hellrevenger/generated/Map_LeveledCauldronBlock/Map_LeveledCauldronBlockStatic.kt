@@ -17,5 +17,5 @@ object LeveledCauldronBlockKt {
     /**
      * method_31650
      */
-    fun decrementFluidLevel(state: BlockState, world: world_World, pos: BlockPos) = LeveledCauldronBlock.method_31650(state, world, pos)
+    fun decrementFluidLevel(state: BlockState?, world: world_World?, pos: BlockPos?) = LeveledCauldronBlock.method_31650(state, world, pos)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_14653
  */
-fun Whitelist.isAllowed(profile: GameProfile) = this.method_14653(profile)
+fun Whitelist.isAllowed(profile: GameProfile?) = this.method_14653(profile)

@@ -32,11 +32,11 @@ fun ServerWorldProperties.getGameRules() = this.method_146()
 /**
  * method_193
  */
-fun ServerWorldProperties.setGameMode(gameMode: GameMode) = this.method_193(gameMode)
+fun ServerWorldProperties.setGameMode(gameMode: GameMode?) = this.method_193(gameMode)
 /**
  * method_27415
  */
-fun ServerWorldProperties.setWorldBorder(worldBorder: net.minecraft.class_2784.class_5200) = this.method_27415(worldBorder)
+fun ServerWorldProperties.setWorldBorder(worldBorder: net.minecraft.class_2784.class_5200?) = this.method_27415(worldBorder)
 /**
  * method_150
  */
@@ -68,7 +68,7 @@ fun ServerWorldProperties.setWanderingTraderSpawnDelay(wanderingTraderSpawnDelay
 /**
  * method_18040
  */
-fun ServerWorldProperties.setWanderingTraderId(wanderingTraderId: UUID) = this.method_18040(wanderingTraderId)
+fun ServerWorldProperties.setWanderingTraderId(wanderingTraderId: UUID?) = this.method_18040(wanderingTraderId)
 /**
  * method_167
  */

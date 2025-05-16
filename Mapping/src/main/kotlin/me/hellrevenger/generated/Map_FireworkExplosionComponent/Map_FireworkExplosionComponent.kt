@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_57477
  */
-fun FireworkExplosionComponent.appendOptionalTooltip(textConsumer: Consumer<Text>) = this.method_57477(textConsumer)
+fun FireworkExplosionComponent.appendOptionalTooltip(textConsumer: Consumer<Text>?) = this.method_57477(textConsumer)
 /**
  * method_57475
  */
-fun FireworkExplosionComponent.appendShapeTooltip(textConsumer: Consumer<Text>) = this.method_57475(textConsumer)
+fun FireworkExplosionComponent.appendShapeTooltip(textConsumer: Consumer<Text>?) = this.method_57475(textConsumer)
 /**
  * method_57474
  */
-fun FireworkExplosionComponent.withFadeColors(fadeColors: IntList) = this.method_57474(fadeColors)
+fun FireworkExplosionComponent.withFadeColors(fadeColors: IntList?) = this.method_57474(fadeColors)
 /**
  * comp_2386
  */

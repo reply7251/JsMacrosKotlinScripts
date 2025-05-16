@@ -12,7 +12,7 @@ fun VaultBlockEntity.getConfig() = this.method_56737()
 /**
  * method_56730
  */
-fun VaultBlockEntity.setConfig(config: VaultConfig) = this.method_56730(config)
+fun VaultBlockEntity.setConfig(config: VaultConfig?) = this.method_56730(config)
 /**
  * method_56736
  */

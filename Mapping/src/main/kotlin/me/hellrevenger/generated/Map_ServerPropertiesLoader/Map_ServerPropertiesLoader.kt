@@ -12,4 +12,4 @@ fun ServerPropertiesLoader.getPropertiesHandler() = this.method_16717()
 /**
  * method_16718
  */
-fun ServerPropertiesLoader.apply(applier: UnaryOperator<ServerPropertiesHandler>) = this.method_16718(applier)
+fun ServerPropertiesLoader.apply(applier: UnaryOperator<ServerPropertiesHandler>?) = this.method_16718(applier)

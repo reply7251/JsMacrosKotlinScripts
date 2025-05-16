@@ -9,13 +9,13 @@ object JigsawBlockKt {
     /**
      * method_26378
      */
-    fun getFacing(state: BlockState) = JigsawBlock.method_26378(state)
+    fun getFacing(state: BlockState?) = JigsawBlock.method_26378(state)
     /**
      * method_16546
      */
-    fun attachmentMatches(info1: net.minecraft.class_3499.class_10326, info2: net.minecraft.class_3499.class_10326) = JigsawBlock.method_16546(info1, info2)
+    fun attachmentMatches(info1: net.minecraft.class_3499.class_10326?, info2: net.minecraft.class_3499.class_10326?) = JigsawBlock.method_16546(info1, info2)
     /**
      * method_26379
      */
-    fun getRotation(state: BlockState) = JigsawBlock.method_26379(state)
+    fun getRotation(state: BlockState?) = JigsawBlock.method_26379(state)
 }

@@ -5,5 +5,5 @@ object ReadableScoreboardScoreKt {
     /**
      * method_55398
      */
-    fun getFormattedScore(score: ReadableScoreboardScore, fallbackFormat: NumberFormat) = ReadableScoreboardScore.method_55398(score, fallbackFormat)
+    fun getFormattedScore(score: ReadableScoreboardScore?, fallbackFormat: NumberFormat?) = ReadableScoreboardScore.method_55398(score, fallbackFormat)
 }

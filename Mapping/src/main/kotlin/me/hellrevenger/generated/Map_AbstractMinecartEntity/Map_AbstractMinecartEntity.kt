@@ -8,7 +8,7 @@ fun AbstractMinecartEntity.setYawFlipped(yawFlipped: Boolean) = this.method_6156
 /**
  * method_61563
  */
-fun AbstractMinecartEntity.getLaunchDirection(railPos: BlockPos) = this.method_61563(railPos)
+fun AbstractMinecartEntity.getLaunchDirection(railPos: BlockPos?) = this.method_61563(railPos)
 /**
  * method_61565
  */
@@ -24,11 +24,11 @@ fun AbstractMinecartEntity.setCustomBlockOffset(offset: Int) = this.method_7515(
 /**
  * method_18803
  */
-fun AbstractMinecartEntity.willHitBlockAt(pos: BlockPos) = this.method_18803(pos)
+fun AbstractMinecartEntity.willHitBlockAt(pos: BlockPos?) = this.method_18803(pos)
 /**
  * method_7527
  */
-fun AbstractMinecartEntity.setCustomBlock(state: BlockState) = this.method_7527(state)
+fun AbstractMinecartEntity.setCustomBlock(state: BlockState?) = this.method_7527(state)
 /**
  * method_64273
  */

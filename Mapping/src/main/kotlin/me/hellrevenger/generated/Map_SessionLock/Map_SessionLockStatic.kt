@@ -9,9 +9,9 @@ object SessionLockKt {
     /**
      * method_26803
      */
-    fun create(path: file_Path) = SessionLock.method_26803(path)
+    fun create(path: file_Path?) = SessionLock.method_26803(path)
     /**
      * method_26804
      */
-    fun isLocked(path: file_Path) = SessionLock.method_26804(path)
+    fun isLocked(path: file_Path?) = SessionLock.method_26804(path)
 }

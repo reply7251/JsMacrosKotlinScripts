@@ -5,5 +5,5 @@ object PendingInvitesListKt {
     /**
      * method_25041
      */
-    fun parse(json: String) = PendingInvitesList.method_25041(json)
+    fun parse(json: String?) = PendingInvitesList.method_25041(json)
 }

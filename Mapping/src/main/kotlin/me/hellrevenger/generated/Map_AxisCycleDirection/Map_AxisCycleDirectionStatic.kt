@@ -25,5 +25,5 @@ object AxisCycleDirectionKt {
     /**
      * method_10057
      */
-    fun between(from: net.minecraft.class_2350.class_2351, to: net.minecraft.class_2350.class_2351) = AxisCycleDirection.method_10057(from, to)
+    fun between(from: net.minecraft.class_2350.class_2351?, to: net.minecraft.class_2350.class_2351?) = AxisCycleDirection.method_10057(from, to)
 }

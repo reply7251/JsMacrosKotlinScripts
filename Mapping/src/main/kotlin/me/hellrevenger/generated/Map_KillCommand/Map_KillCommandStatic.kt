@@ -5,5 +5,5 @@ object KillCommandKt {
     /**
      * method_13429
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = KillCommand.method_13429(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = KillCommand.method_13429(dispatcher)
 }

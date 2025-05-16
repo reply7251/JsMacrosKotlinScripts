@@ -5,5 +5,5 @@ object ChunkGeneratorsKt {
     /**
      * method_44219
      */
-    fun registerAndGetDefault(registry: Registry<MapCodec<out ChunkGenerator>>) = ChunkGenerators.method_44219(registry)
+    fun registerAndGetDefault(registry: Registry<MapCodec<out ChunkGenerator>>?) = ChunkGenerators.method_44219(registry)
 }

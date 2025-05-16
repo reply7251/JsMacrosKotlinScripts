@@ -37,5 +37,5 @@ object LightmapTextureManagerKt {
     /**
      * method_23284
      */
-    fun getBrightness(type: DimensionType, lightLevel: Int) = LightmapTextureManager.method_23284(type, lightLevel)
+    fun getBrightness(type: DimensionType?, lightLevel: Int) = LightmapTextureManager.method_23284(type, lightLevel)
 }

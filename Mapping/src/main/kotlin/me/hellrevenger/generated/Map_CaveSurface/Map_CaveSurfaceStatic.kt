@@ -9,11 +9,11 @@ object CaveSurfaceKt {
     /**
      * method_32984
      */
-    fun create(ceilingHeight: OptionalInt, floorHeight: OptionalInt) = CaveSurface.method_32984(ceilingHeight, floorHeight)
+    fun create(ceilingHeight: OptionalInt?, floorHeight: OptionalInt?) = CaveSurface.method_32984(ceilingHeight, floorHeight)
     /**
      * method_32982
      */
-    fun create(world: TestableWorld, pos: BlockPos, height: Int, canGenerate: Predicate<BlockState>, canReplace: Predicate<BlockState>) = CaveSurface.method_32982(world, pos, height, canGenerate, canReplace)
+    fun create(world: TestableWorld?, pos: BlockPos?, height: Int, canGenerate: Predicate<BlockState>?, canReplace: Predicate<BlockState>?) = CaveSurface.method_32982(world, pos, height, canGenerate, canReplace)
     /**
      * method_32980
      */

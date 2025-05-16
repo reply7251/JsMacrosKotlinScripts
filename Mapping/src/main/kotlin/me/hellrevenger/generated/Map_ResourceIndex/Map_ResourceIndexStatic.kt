@@ -9,5 +9,5 @@ object ResourceIndexKt {
     /**
      * method_45858
      */
-    fun buildFileSystem(assetsDir: file_Path, indexName: String) = ResourceIndex.method_45858(assetsDir, indexName)
+    fun buildFileSystem(assetsDir: file_Path?, indexName: String?) = ResourceIndex.method_45858(assetsDir, indexName)
 }

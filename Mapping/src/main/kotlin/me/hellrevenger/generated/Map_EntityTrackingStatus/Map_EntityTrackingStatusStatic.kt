@@ -17,5 +17,5 @@ object EntityTrackingStatusKt {
     /**
      * method_31884
      */
-    fun fromLevelType(levelType: ChunkLevelType) = EntityTrackingStatus.method_31884(levelType)
+    fun fromLevelType(levelType: ChunkLevelType?) = EntityTrackingStatus.method_31884(levelType)
 }

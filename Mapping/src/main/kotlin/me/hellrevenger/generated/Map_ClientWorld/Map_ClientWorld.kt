@@ -12,11 +12,11 @@ fun ClientWorld.getEnderDragonParts() = this.method_65192()
 /**
  * method_8441
  */
-fun ClientWorld.tick(shouldKeepTicking: BooleanSupplier) = this.method_8441(shouldKeepTicking)
+fun ClientWorld.tick(shouldKeepTicking: BooleanSupplier?) = this.method_8441(shouldKeepTicking)
 /**
  * method_18110
  */
-fun ClientWorld.unloadBlockEntities(chunk: WorldChunk) = this.method_18110(chunk)
+fun ClientWorld.unloadBlockEntities(chunk: WorldChunk?) = this.method_18110(chunk)
 /**
  * method_38534
  */
@@ -24,11 +24,11 @@ fun ClientWorld.runQueuedChunkUpdates() = this.method_38534()
 /**
  * method_18646
  */
-fun ClientWorld.tickEntity(entity: Entity) = this.method_18646(entity)
+fun ClientWorld.tickEntity(entity: Entity?) = this.method_18646(entity)
 /**
  * method_23782
  */
-fun ClientWorld.resetChunkColor(chunkPos: ChunkPos) = this.method_23782(chunkPos)
+fun ClientWorld.resetChunkColor(chunkPos: ChunkPos?) = this.method_23782(chunkPos)
 /**
  * method_18116
  */
@@ -40,15 +40,15 @@ fun ClientWorld.doRandomBlockDisplayTicks(centerX: Int, centerY: Int, centerZ: I
 /**
  * method_27873
  */
-fun ClientWorld.setSpawnPos(pos: BlockPos, angle: Float) = this.method_27873(pos, angle)
+fun ClientWorld.setSpawnPos(pos: BlockPos?, angle: Float) = this.method_27873(pos, angle)
 /**
  * method_62145
  */
-fun ClientWorld.hasEntity(entity: Entity) = this.method_62145(entity)
+fun ClientWorld.hasEntity(entity: Entity?) = this.method_62145(entity)
 /**
  * method_23777
  */
-fun ClientWorld.getSkyColor(cameraPos: Vec3d, tickDelta: Float) = this.method_23777(cameraPos, tickDelta)
+fun ClientWorld.getSkyColor(cameraPos: Vec3d?, tickDelta: Float) = this.method_23777(cameraPos, tickDelta)
 /**
  * method_18112
  */
@@ -56,11 +56,11 @@ fun ClientWorld.getEntities() = this.method_18112()
 /**
  * method_41928
  */
-fun ClientWorld.handleBlockUpdate(pos: BlockPos, state: BlockState, flags: Int) = this.method_41928(pos, state, flags)
+fun ClientWorld.handleBlockUpdate(pos: BlockPos?, state: BlockState?, flags: Int) = this.method_41928(pos, state, flags)
 /**
  * method_47437
  */
-fun ClientWorld.putClientsideMapState(id: MapIdComponent, state: MapState) = this.method_47437(id, state)
+fun ClientWorld.putClientsideMapState(id: MapIdComponent?, state: MapState?) = this.method_47437(id, state)
 /**
  * method_62146
  */
@@ -68,7 +68,7 @@ fun ClientWorld.scheduleChunkRenders(minX: Int, minY: Int, minZ: Int, maxX: Int,
 /**
  * method_2945
  */
-fun ClientWorld.removeEntity(entityId: Int, removalReason: net.minecraft.class_1297.class_5529) = this.method_2945(entityId, removalReason)
+fun ClientWorld.removeEntity(entityId: Int, removalReason: net.minecraft.class_1297.class_5529?) = this.method_2945(entityId, removalReason)
 /**
  * method_23783
  */
@@ -80,7 +80,7 @@ fun ClientWorld.getStarBrightness(tickDelta: Float) = this.method_23787(tickDelt
 /**
  * method_53875
  */
-fun ClientWorld.addEntity(entity: Entity) = this.method_53875(entity)
+fun ClientWorld.addEntity(entity: Entity?) = this.method_53875(entity)
 /**
  * method_18113
  */
@@ -100,7 +100,7 @@ fun ClientWorld.setSimulationDistance(simulationDistance: Int) = this.method_390
 /**
  * method_41926
  */
-fun ClientWorld.processPendingUpdate(pos: BlockPos, state: BlockState, playerPos: Vec3d) = this.method_41926(pos, state, playerPos)
+fun ClientWorld.processPendingUpdate(pos: BlockPos?, state: BlockState?, playerPos: Vec3d?) = this.method_41926(pos, state, playerPos)
 /**
  * method_23789
  */
@@ -120,7 +120,7 @@ fun ClientWorld.onChunkUnload(sectionPos: Long) = this.method_62895(sectionPos)
 /**
  * method_2943
  */
-fun ClientWorld.randomBlockDisplayTick(centerX: Int, centerY: Int, centerZ: Int, radius: Int, random: Random, block: Block, pos: net.minecraft.class_2338.class_2339) = this.method_2943(centerX, centerY, centerZ, radius, random, block, pos)
+fun ClientWorld.randomBlockDisplayTick(centerX: Int, centerY: Int, centerZ: Int, radius: Int, random: Random?, block: Block?, pos: net.minecraft.class_2338.class_2339?) = this.method_2943(centerX, centerY, centerZ, radius, random, block, pos)
 /**
  * method_23784
  */
@@ -140,8 +140,8 @@ fun ClientWorld.getDimensionEffects() = this.method_28103()
 /**
  * method_38536
  */
-fun ClientWorld.enqueueChunkUpdate(updater: Runnable) = this.method_38536(updater)
+fun ClientWorld.enqueueChunkUpdate(updater: Runnable?) = this.method_38536(updater)
 /**
  * method_23780
  */
-fun ClientWorld.calculateColor(pos: BlockPos, colorResolver: ColorResolver) = this.method_23780(pos, colorResolver)
+fun ClientWorld.calculateColor(pos: BlockPos?, colorResolver: ColorResolver?) = this.method_23780(pos, colorResolver)

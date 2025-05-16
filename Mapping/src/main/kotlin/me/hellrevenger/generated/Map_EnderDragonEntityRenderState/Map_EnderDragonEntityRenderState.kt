@@ -44,4 +44,4 @@ fun EnderDragonEntityRenderState.getLerpedFrame(age: Int) = this.method_62611(ag
 /**
  * method_62612
  */
-fun EnderDragonEntityRenderState.getNeckPartPitchOffset(id: Int, bodyFrame: net.minecraft.class_9871.class_9872, neckFrame: net.minecraft.class_9871.class_9872) = this.method_62612(id, bodyFrame, neckFrame)
+fun EnderDragonEntityRenderState.getNeckPartPitchOffset(id: Int, bodyFrame: net.minecraft.class_9871.class_9872?, neckFrame: net.minecraft.class_9871.class_9872?) = this.method_62612(id, bodyFrame, neckFrame)

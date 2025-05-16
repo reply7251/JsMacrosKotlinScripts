@@ -12,7 +12,7 @@ fun IntProvider.getType() = this.method_35012()
 /**
  * method_35008
  */
-fun IntProvider.get(random: Random) = this.method_35008(random)
+fun IntProvider.get(random: Random?) = this.method_35008(random)
 /**
  * method_35011
  */

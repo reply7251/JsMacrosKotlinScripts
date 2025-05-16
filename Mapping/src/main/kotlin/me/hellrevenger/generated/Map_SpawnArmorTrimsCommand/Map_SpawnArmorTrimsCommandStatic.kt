@@ -5,5 +5,5 @@ object SpawnArmorTrimsCommandKt {
     /**
      * method_48333
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = SpawnArmorTrimsCommand.method_48333(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = SpawnArmorTrimsCommand.method_48333(dispatcher)
 }

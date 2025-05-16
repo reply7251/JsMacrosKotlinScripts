@@ -9,9 +9,9 @@ object VersionedChunkStorageKt {
     /**
      * method_17908
      */
-    fun getDataVersion(nbt: NbtCompound) = VersionedChunkStorage.method_17908(nbt)
+    fun getDataVersion(nbt: NbtCompound?) = VersionedChunkStorage.method_17908(nbt)
     /**
      * method_39799
      */
-    fun saveContextToNbt(nbt: NbtCompound, worldKey: RegistryKey<world_World>, generatorCodecKey: Optional<RegistryKey<MapCodec<out ChunkGenerator>>>) = VersionedChunkStorage.method_39799(nbt, worldKey, generatorCodecKey)
+    fun saveContextToNbt(nbt: NbtCompound?, worldKey: RegistryKey<world_World>?, generatorCodecKey: Optional<RegistryKey<MapCodec<out ChunkGenerator>>>?) = VersionedChunkStorage.method_39799(nbt, worldKey, generatorCodecKey)
 }

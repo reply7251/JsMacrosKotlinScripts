@@ -5,5 +5,5 @@ object LeashKnotEntityKt {
     /**
      * method_6932
      */
-    fun getOrCreate(world: world_World, pos: BlockPos) = LeashKnotEntity.method_6932(world, pos)
+    fun getOrCreate(world: world_World?, pos: BlockPos?) = LeashKnotEntity.method_6932(world, pos)
 }

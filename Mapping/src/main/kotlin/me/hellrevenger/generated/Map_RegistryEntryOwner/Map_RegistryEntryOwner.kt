@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_46767
  */
-fun <T>RegistryEntryOwner<T>.ownerEquals(other: RegistryEntryOwner<T>) = this.method_46767(other)
+fun <T>RegistryEntryOwner<T>.ownerEquals(other: RegistryEntryOwner<T>?) = this.method_46767(other)

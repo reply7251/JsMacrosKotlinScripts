@@ -5,5 +5,5 @@ object DefaultGameModeCommandKt {
     /**
      * method_13166
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = DefaultGameModeCommand.method_13166(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = DefaultGameModeCommand.method_13166(dispatcher)
 }

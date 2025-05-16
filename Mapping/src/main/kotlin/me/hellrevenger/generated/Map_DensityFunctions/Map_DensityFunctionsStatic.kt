@@ -45,7 +45,7 @@ object DensityFunctionsKt {
     /**
      * method_41100
      */
-    fun bootstrap(densityFunctionRegisterable: Registerable<DensityFunction>) = DensityFunctions.method_41100(densityFunctionRegisterable)
+    fun bootstrap(densityFunctionRegisterable: Registerable<DensityFunction>?) = DensityFunctions.method_41100(densityFunctionRegisterable)
     /**
      * method_41546
      */

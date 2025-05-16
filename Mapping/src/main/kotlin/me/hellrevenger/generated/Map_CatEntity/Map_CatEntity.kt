@@ -8,7 +8,7 @@ fun CatEntity.getSleepAnimationProgress(tickDelta: Float) = this.method_16082(ti
 /**
  * method_6573
  */
-fun CatEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6573(arg0, arg1)
+fun CatEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_6573(arg0, arg1)
 /**
  * method_16088
  */
@@ -24,7 +24,7 @@ fun CatEntity.isInSleepingPose() = this.method_16086()
 /**
  * method_47842
  */
-fun CatEntity.setVariant(arg0: RegistryEntry<CatVariant>) = this.method_47842(arg0)
+fun CatEntity.setVariant(arg0: RegistryEntry<CatVariant>?) = this.method_47842(arg0)
 /**
  * method_16091
  */

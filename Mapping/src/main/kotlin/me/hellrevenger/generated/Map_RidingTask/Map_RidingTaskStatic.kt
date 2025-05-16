@@ -5,5 +5,5 @@ object RidingTaskKt {
     /**
      * method_46915
      */
-    fun <E>create(range: Int, alternativeRideCondition: BiPredicate<E, Entity>) where E: LivingEntity = RidingTask.method_46915<E>(range, alternativeRideCondition)
+    fun <E>create(range: Int, alternativeRideCondition: BiPredicate<E, Entity>?) where E: LivingEntity = RidingTask.method_46915<E>(range, alternativeRideCondition)
 }

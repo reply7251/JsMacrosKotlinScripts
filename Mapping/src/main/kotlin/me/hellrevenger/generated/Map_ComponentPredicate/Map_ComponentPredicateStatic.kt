@@ -13,9 +13,9 @@ object ComponentPredicateKt {
     /**
      * method_57865
      */
-    fun of(components: ComponentMap) = ComponentPredicate.method_57865(components)
+    fun of(components: ComponentMap?) = ComponentPredicate.method_57865(components)
     /**
      * method_64096
      */
-    fun ofFiltered(components: ComponentMap, types: Array<ComponentType<*>>) = ComponentPredicate.method_64096(components, *types)
+    fun ofFiltered(components: ComponentMap?, types: Array<ComponentType<*>>) = ComponentPredicate.method_64096(components, *types)
 }

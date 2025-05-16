@@ -5,5 +5,5 @@ object RandomCommandKt {
     /**
      * method_52318
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = RandomCommand.method_52318(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = RandomCommand.method_52318(dispatcher)
 }

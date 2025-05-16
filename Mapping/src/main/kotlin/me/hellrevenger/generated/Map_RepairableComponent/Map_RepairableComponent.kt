@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_61713
  */
-fun RepairableComponent.matches(stack: ItemStack) = this.method_61713(stack)
+fun RepairableComponent.matches(stack: ItemStack?) = this.method_61713(stack)
 /**
  * comp_2939
  */

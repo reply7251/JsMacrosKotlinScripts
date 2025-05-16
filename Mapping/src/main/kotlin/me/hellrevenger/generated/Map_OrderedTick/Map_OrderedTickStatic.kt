@@ -17,5 +17,5 @@ object OrderedTickKt {
     /**
      * method_39410
      */
-    fun <T>create(type: T, pos: BlockPos) = OrderedTick.method_39410<T>(type, pos)
+    fun <T>create(type: T, pos: BlockPos?) = OrderedTick.method_39410<T>(type, pos)
 }

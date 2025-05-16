@@ -12,4 +12,4 @@ fun EntityEquipmentUpdateS2CPacket.getEntityId() = this.method_11820()
 /**
  * method_11823
  */
-fun EntityEquipmentUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11823(arg0)
+fun EntityEquipmentUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11823(arg0)

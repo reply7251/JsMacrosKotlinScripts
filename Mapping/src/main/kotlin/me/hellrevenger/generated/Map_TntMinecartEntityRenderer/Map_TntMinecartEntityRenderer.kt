@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_62556
  */
-fun TntMinecartEntityRenderer.updateRenderState(arg0: TntMinecartEntity, arg1: TntMinecartEntityRenderState, arg2: Float) = this.method_62556(arg0, arg1, arg2)
+fun TntMinecartEntityRenderer.updateRenderState(arg0: TntMinecartEntity?, arg1: TntMinecartEntityRenderState?, arg2: Float) = this.method_62556(arg0, arg1, arg2)
 /**
  * method_62555
  */

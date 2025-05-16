@@ -20,4 +20,4 @@ fun CommandOutput.shouldTrackOutput() = this.method_9202()
 /**
  * method_43496
  */
-fun CommandOutput.sendMessage(message: Text) = this.method_43496(message)
+fun CommandOutput.sendMessage(message: Text?) = this.method_43496(message)

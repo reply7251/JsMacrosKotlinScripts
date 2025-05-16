@@ -12,15 +12,15 @@ fun ConsumableComponent.useAction() = this.comp_3086()
 /**
  * method_62843
  */
-fun ConsumableComponent.spawnParticlesAndPlaySound(random: Random, user: LivingEntity, stack: ItemStack, particleCount: Int) = this.method_62843(random, user, stack, particleCount)
+fun ConsumableComponent.spawnParticlesAndPlaySound(random: Random?, user: LivingEntity?, stack: ItemStack?, particleCount: Int) = this.method_62843(random, user, stack, particleCount)
 /**
  * method_62847
  */
-fun ConsumableComponent.finishConsumption(world: world_World, user: LivingEntity, stack: ItemStack) = this.method_62847(world, user, stack)
+fun ConsumableComponent.finishConsumption(world: world_World?, user: LivingEntity?, stack: ItemStack?) = this.method_62847(world, user, stack)
 /**
  * method_62845
  */
-fun ConsumableComponent.consume(user: LivingEntity, stack: ItemStack, hand: Hand) = this.method_62845(user, stack, hand)
+fun ConsumableComponent.consume(user: LivingEntity?, stack: ItemStack?, hand: Hand?) = this.method_62845(user, stack, hand)
 /**
  * method_62842
  */
@@ -28,7 +28,7 @@ fun ConsumableComponent.shouldSpawnParticlesAndPlaySounds(remainingUseTicks: Int
 /**
  * method_62844
  */
-fun ConsumableComponent.canConsume(user: LivingEntity, stack: ItemStack) = this.method_62844(user, stack)
+fun ConsumableComponent.canConsume(user: LivingEntity?, stack: ItemStack?) = this.method_62844(user, stack)
 /**
  * comp_3089
  */

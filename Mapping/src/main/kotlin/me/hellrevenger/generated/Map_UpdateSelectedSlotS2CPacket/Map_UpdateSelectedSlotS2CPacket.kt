@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11802
  */
-fun UpdateSelectedSlotS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11802(arg0)
+fun UpdateSelectedSlotS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11802(arg0)
 /**
  * comp_3325
  */

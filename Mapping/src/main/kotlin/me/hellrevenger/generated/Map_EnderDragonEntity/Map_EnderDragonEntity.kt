@@ -36,19 +36,19 @@ var EnderDragonEntity.yawAcceleration by alias(EnderDragonEntity::field_20865)
 /**
  * method_51853
  */
-fun EnderDragonEntity.setFightOrigin(fightOrigin: BlockPos) = this.method_51853(fightOrigin)
+fun EnderDragonEntity.setFightOrigin(fightOrigin: BlockPos?) = this.method_51853(fightOrigin)
 /**
  * method_6833
  */
-fun EnderDragonEntity.findPath(from: Int, to: Int, pathNode: PathNode) = this.method_6833(from, to, pathNode)
+fun EnderDragonEntity.findPath(from: Int, to: Int, pathNode: PathNode?) = this.method_6833(from, to, pathNode)
 /**
  * method_51852
  */
-fun EnderDragonEntity.setFight(fight: EnderDragonFight) = this.method_51852(fight)
+fun EnderDragonEntity.setFight(fight: EnderDragonFight?) = this.method_51852(fight)
 /**
  * method_6816
  */
-fun EnderDragonEntity.damagePart(world: ServerWorld, part: EnderDragonPart, source: DamageSource, amount: Float) = this.method_6816(world, part, source, amount)
+fun EnderDragonEntity.damagePart(world: ServerWorld?, part: EnderDragonPart?, source: DamageSource?, amount: Float) = this.method_6816(world, part, source, amount)
 /**
  * method_6831
  */
@@ -64,7 +64,7 @@ fun EnderDragonEntity.getFightOrigin() = this.method_51854()
 /**
  * method_6828
  */
-fun EnderDragonEntity.crystalDestroyed(world: ServerWorld, crystal: EndCrystalEntity, pos: BlockPos, source: DamageSource) = this.method_6828(world, crystal, pos, source)
+fun EnderDragonEntity.crystalDestroyed(world: ServerWorld?, crystal: EndCrystalEntity?, pos: BlockPos?, source: DamageSource?) = this.method_6828(world, crystal, pos, source)
 /**
  * method_6829
  */

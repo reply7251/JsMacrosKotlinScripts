@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17114
  */
-fun PolarBearEntityModel.setAngles(arg0: PolarBearEntityRenderState) = this.method_17114(arg0)
+fun PolarBearEntityModel.setAngles(arg0: PolarBearEntityRenderState?) = this.method_17114(arg0)

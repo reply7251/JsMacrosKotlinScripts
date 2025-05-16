@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8870
  */
-fun EnchantedItemCriterion.trigger(player: ServerPlayerEntity, stack: ItemStack, levels: Int) = this.method_8870(player, stack, levels)
+fun EnchantedItemCriterion.trigger(player: ServerPlayerEntity?, stack: ItemStack?, levels: Int) = this.method_8870(player, stack, levels)

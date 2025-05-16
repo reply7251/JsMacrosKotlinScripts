@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9286
  */
-fun NbtCompoundArgumentType.parse(arg0: StringReader) = this.method_9286(arg0)
+fun NbtCompoundArgumentType.parse(arg0: StringReader?) = this.method_9286(arg0)

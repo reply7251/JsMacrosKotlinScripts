@@ -8,7 +8,7 @@ fun ChatMessageS2CPacket.serializedParameters() = this.comp_943()
 /**
  * method_43629
  */
-fun ChatMessageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_43629(arg0)
+fun ChatMessageS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_43629(arg0)
 /**
  * comp_1103
  */

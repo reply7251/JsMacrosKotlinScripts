@@ -5,5 +5,5 @@ object BlockPredicateKt {
     /**
      * method_11766
      */
-    fun make(block: Block) = BlockPredicate.method_11766(block)
+    fun make(block: Block?) = BlockPredicate.method_11766(block)
 }

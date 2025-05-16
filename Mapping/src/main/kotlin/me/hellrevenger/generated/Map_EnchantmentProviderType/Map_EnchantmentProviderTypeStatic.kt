@@ -5,5 +5,5 @@ object EnchantmentProviderTypeKt {
     /**
      * method_60267
      */
-    fun registerAndGetDefault(registry: Registry<MapCodec<out EnchantmentProvider>>) = EnchantmentProviderType.method_60267(registry)
+    fun registerAndGetDefault(registry: Registry<MapCodec<out EnchantmentProvider>>?) = EnchantmentProviderType.method_60267(registry)
 }

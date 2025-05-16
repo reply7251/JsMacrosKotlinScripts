@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_13947
  */
-fun MinecraftDedicatedServer.enqueueCommand(command: String, commandSource: ServerCommandSource) = this.method_13947(command, commandSource)
+fun MinecraftDedicatedServer.enqueueCommand(command: String?, commandSource: ServerCommandSource?) = this.method_13947(command, commandSource)
 /**
  * method_16712
  */

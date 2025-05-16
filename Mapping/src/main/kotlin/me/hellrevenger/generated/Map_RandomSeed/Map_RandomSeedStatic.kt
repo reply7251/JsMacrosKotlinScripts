@@ -13,7 +13,7 @@ object RandomSeedKt {
     /**
      * method_52180
      */
-    fun createXoroshiroSeed(seed: String) = RandomSeed.method_52180(seed)
+    fun createXoroshiroSeed(seed: String?) = RandomSeed.method_52180(seed)
     /**
      * method_39001
      */

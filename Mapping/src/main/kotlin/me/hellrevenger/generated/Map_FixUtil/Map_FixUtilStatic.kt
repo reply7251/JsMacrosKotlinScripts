@@ -5,7 +5,7 @@ object FixUtilKt {
     /**
      * method_61355
      */
-    fun createBlockState(id: String) = FixUtil.method_61355(id)
+    fun createBlockState(id: String?) = FixUtil.method_61355(id)
     /**
      * method_59907
      */
@@ -13,21 +13,21 @@ object FixUtilKt {
     /**
      * method_61350
      */
-    fun withTypeChanged(arg0: types_Type<*>, oldType: types_Type<*>, newType: types_Type<*>) = FixUtil.method_61350(arg0, oldType, newType)
+    fun withTypeChanged(arg0: types_Type<*>?, oldType: types_Type<*>?, newType: types_Type<*>?) = FixUtil.method_61350(arg0, oldType, newType)
     /**
      * method_61351
      */
-    fun apply(dynamic: Dynamic<*>, fieldName: String, applier: UnaryOperator<String>) = FixUtil.method_61351(dynamic, fieldName, applier)
+    fun apply(dynamic: Dynamic<*>?, fieldName: String?, applier: UnaryOperator<String>?) = FixUtil.method_61351(dynamic, fieldName, applier)
     /**
      * method_61356
      */
-    fun createBlockState(id: String, properties: Map<String, String>) = FixUtil.method_61356(id, properties)
+    fun createBlockState(id: String?, properties: Map<String, String>?) = FixUtil.method_61356(id, properties)
     /**
      * method_57182
      */
-    fun <T, R>withType(arg0: types_Type<R>, arg1: Typed<T>) = FixUtil.method_57182<T, R>(arg0, arg1)
+    fun <T, R>withType(arg0: types_Type<R>?, arg1: Typed<T>?) = FixUtil.method_57182<T, R>(arg0, arg1)
     /**
      * method_56943
      */
-    fun fixBlockPos(dynamic: Dynamic<*>) = FixUtil.method_56943(dynamic)
+    fun fixBlockPos(dynamic: Dynamic<*>?) = FixUtil.method_56943(dynamic)
 }

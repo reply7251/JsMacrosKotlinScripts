@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_33293
  */
-fun AxolotlEntityModel.setAngles(arg0: AxolotlEntityRenderState) = this.method_33293(arg0)
+fun AxolotlEntityModel.setAngles(arg0: AxolotlEntityRenderState?) = this.method_33293(arg0)

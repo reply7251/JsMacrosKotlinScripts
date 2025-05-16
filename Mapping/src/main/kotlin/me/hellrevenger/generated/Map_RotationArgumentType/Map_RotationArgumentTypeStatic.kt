@@ -9,7 +9,7 @@ object RotationArgumentTypeKt {
     /**
      * method_9716
      */
-    fun getRotation(context: CommandContext<ServerCommandSource>, name: String) = RotationArgumentType.method_9716(context, name)
+    fun getRotation(context: CommandContext<ServerCommandSource>?, name: String?) = RotationArgumentType.method_9716(context, name)
     /**
      * method_9717
      */

@@ -5,5 +5,5 @@ object ChunkGenerationSampleKt {
     /**
      * method_38031
      */
-    fun fromEvent(event: RecordedEvent) = ChunkGenerationSample.method_38031(event)
+    fun fromEvent(event: RecordedEvent?) = ChunkGenerationSample.method_38031(event)
 }

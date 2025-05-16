@@ -5,5 +5,5 @@ object DyeItemKt {
     /**
      * method_7803
      */
-    fun byColor(color: DyeColor) = DyeItem.method_7803(color)
+    fun byColor(color: DyeColor?) = DyeItem.method_7803(color)
 }

@@ -28,7 +28,7 @@ fun <T>CommandExecutionContext<T>.getForkLimit() = this.method_54398()
 /**
  * method_54392
  */
-fun <T>CommandExecutionContext<T>.enqueueCommand(entry: CommandQueueEntry<T>) = this.method_54392(entry)
+fun <T>CommandExecutionContext<T>.enqueueCommand(entry: CommandQueueEntry<T>?) = this.method_54392(entry)
 /**
  * method_54397
  */
@@ -36,4 +36,4 @@ fun <T>CommandExecutionContext<T>.getProfiler() = this.method_54397()
 /**
  * method_54394
  */
-fun <T>CommandExecutionContext<T>.setTracer(tracer: Tracer) = this.method_54394(tracer)
+fun <T>CommandExecutionContext<T>.setTracer(tracer: Tracer?) = this.method_54394(tracer)

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17091
  */
-fun RavagerEntityModel.setAngles(arg0: RavagerEntityRenderState) = this.method_17091(arg0)
+fun RavagerEntityModel.setAngles(arg0: RavagerEntityRenderState?) = this.method_17091(arg0)

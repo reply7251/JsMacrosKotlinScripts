@@ -5,5 +5,5 @@ object RandomSequenceKt {
     /**
      * method_52171
      */
-    fun createSeed(id: Identifier) = RandomSequence.method_52171(id)
+    fun createSeed(id: Identifier?) = RandomSequence.method_52171(id)
 }

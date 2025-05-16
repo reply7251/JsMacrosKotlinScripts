@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11686
  */
-fun CraftFailedResponseS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11686(arg0)
+fun CraftFailedResponseS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11686(arg0)
 /**
  * comp_3226
  */

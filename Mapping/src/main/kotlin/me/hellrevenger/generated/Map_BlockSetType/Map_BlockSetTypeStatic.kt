@@ -77,5 +77,5 @@ object BlockSetTypeKt {
     /**
      * method_49233
      */
-    fun register(blockSetType: BlockSetType) = BlockSetType.method_49233(blockSetType)
+    fun register(blockSetType: BlockSetType?) = BlockSetType.method_49233(blockSetType)
 }

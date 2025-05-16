@@ -9,9 +9,9 @@ object PaleMossCarpetBlockKt {
     /**
      * method_64795
      */
-    fun getWallShape(face: Direction) = PaleMossCarpetBlock.method_64795(face)
+    fun getWallShape(face: Direction?) = PaleMossCarpetBlock.method_64795(face)
     /**
      * method_64792
      */
-    fun placeAt(world: WorldAccess, pos: BlockPos, random: Random, flags: Int) = PaleMossCarpetBlock.method_64792(world, pos, random, flags)
+    fun placeAt(world: WorldAccess?, pos: BlockPos?, random: Random?, flags: Int) = PaleMossCarpetBlock.method_64792(world, pos, random, flags)
 }

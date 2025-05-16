@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_2634
  */
-fun RecipeBookResults.draw(context: DrawContext, x: Int, y: Int, mouseX: Int, mouseY: Int, delta: Float) = this.method_2634(context, x, y, mouseX, mouseY, delta)
+fun RecipeBookResults.draw(context: DrawContext?, x: Int, y: Int, mouseX: Int, mouseY: Int, delta: Float) = this.method_2634(context, x, y, mouseX, mouseY, delta)
 /**
  * method_2627
  */
-fun RecipeBookResults.setResults(resultCollections: MutableList<RecipeResultCollection>, resetCurrentPage: Boolean, filteringCraftable: Boolean) = this.method_2627(resultCollections, resetCurrentPage, filteringCraftable)
+fun RecipeBookResults.setResults(resultCollections: MutableList<RecipeResultCollection>?, resetCurrentPage: Boolean, filteringCraftable: Boolean) = this.method_2627(resultCollections, resetCurrentPage, filteringCraftable)
 /**
  * method_64879
  */
-fun RecipeBookResults.onRecipeDisplayed(recipeId: NetworkRecipeId) = this.method_64879(recipeId)
+fun RecipeBookResults.onRecipeDisplayed(recipeId: NetworkRecipeId?) = this.method_64879(recipeId)
 /**
  * method_2635
  */
@@ -32,11 +32,11 @@ fun RecipeBookResults.getLastClickedRecipe() = this.method_64878()
 /**
  * method_2628
  */
-fun RecipeBookResults.drawTooltip(context: DrawContext, x: Int, y: Int) = this.method_2628(context, x, y)
+fun RecipeBookResults.drawTooltip(context: DrawContext?, x: Int, y: Int) = this.method_2628(context, x, y)
 /**
  * method_2636
  */
-fun RecipeBookResults.initialize(client: MinecraftClient, parentLeft: Int, parentTop: Int) = this.method_2636(client, parentLeft, parentTop)
+fun RecipeBookResults.initialize(client: MinecraftClient?, parentLeft: Int, parentTop: Int) = this.method_2636(client, parentLeft, parentTop)
 /**
  * method_2638
  */

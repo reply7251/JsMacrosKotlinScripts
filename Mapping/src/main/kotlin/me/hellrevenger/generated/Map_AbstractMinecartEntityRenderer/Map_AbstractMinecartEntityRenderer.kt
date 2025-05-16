@@ -8,7 +8,7 @@ fun <T, S>AbstractMinecartEntityRenderer<T, S>.updateRenderState(arg0: T, arg1: 
 /**
  * method_4063
  */
-fun <T, S>AbstractMinecartEntityRenderer<T, S>.render(arg0: S, arg1: MatrixStack, arg2: VertexConsumerProvider, arg3: Int) where T: AbstractMinecartEntity, S: MinecartEntityRenderState = this.method_4063(arg0, arg1, arg2, arg3)
+fun <T, S>AbstractMinecartEntityRenderer<T, S>.render(arg0: S, arg1: MatrixStack?, arg2: VertexConsumerProvider?, arg3: Int) where T: AbstractMinecartEntity, S: MinecartEntityRenderState = this.method_4063(arg0, arg1, arg2, arg3)
 /**
  * method_62364
  */

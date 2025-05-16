@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_52294
  */
-fun EnterConfigurationC2SPacket.apply(arg0: ServerLoginPacketListener) = this.method_52294(arg0)
+fun EnterConfigurationC2SPacket.apply(arg0: ServerLoginPacketListener?) = this.method_52294(arg0)

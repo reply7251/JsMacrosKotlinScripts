@@ -13,7 +13,7 @@ object SimpleOptionKt {
     /**
      * method_47604
      */
-    fun <T>ofBoolean(key: String, tooltipFactory: net.minecraft.class_7172.class_7277<Boolean>, valueTextGetter: net.minecraft.class_7172.class_7303<Boolean>, defaultValue: Boolean, changeCallback: Consumer<Boolean>) = SimpleOption.method_47604(key, tooltipFactory, valueTextGetter, defaultValue, changeCallback)
+    fun <T>ofBoolean(key: String?, tooltipFactory: net.minecraft.class_7172.class_7277<Boolean>?, valueTextGetter: net.minecraft.class_7172.class_7303<Boolean>?, defaultValue: Boolean, changeCallback: Consumer<Boolean>?) = SimpleOption.method_47604(key, tooltipFactory, valueTextGetter, defaultValue, changeCallback)
     /**
      * method_42399
      */
@@ -21,19 +21,19 @@ object SimpleOptionKt {
     /**
      * method_41749
      */
-    fun <T>ofBoolean(key: String, tooltipFactory: net.minecraft.class_7172.class_7277<Boolean>, defaultValue: Boolean) = SimpleOption.method_41749(key, tooltipFactory, defaultValue)
+    fun <T>ofBoolean(key: String?, tooltipFactory: net.minecraft.class_7172.class_7277<Boolean>?, defaultValue: Boolean) = SimpleOption.method_41749(key, tooltipFactory, defaultValue)
     /**
      * method_41751
      */
-    fun <T>ofBoolean(key: String, defaultValue: Boolean, changeCallback: Consumer<Boolean>) = SimpleOption.method_41751(key, defaultValue, changeCallback)
+    fun <T>ofBoolean(key: String?, defaultValue: Boolean, changeCallback: Consumer<Boolean>?) = SimpleOption.method_41751(key, defaultValue, changeCallback)
     /**
      * method_42402
      */
-    fun <T>ofBoolean(key: String, defaultValue: Boolean) = SimpleOption.method_42402(key, defaultValue)
+    fun <T>ofBoolean(key: String?, defaultValue: Boolean) = SimpleOption.method_42402(key, defaultValue)
     /**
      * method_41750
      */
-    fun <T>ofBoolean(key: String, tooltipFactory: net.minecraft.class_7172.class_7277<Boolean>, defaultValue: Boolean, changeCallback: Consumer<Boolean>) = SimpleOption.method_41750(key, tooltipFactory, defaultValue, changeCallback)
+    fun <T>ofBoolean(key: String?, tooltipFactory: net.minecraft.class_7172.class_7277<Boolean>?, defaultValue: Boolean, changeCallback: Consumer<Boolean>?) = SimpleOption.method_41750(key, tooltipFactory, defaultValue, changeCallback)
     /**
      * method_42720
      */
@@ -41,5 +41,5 @@ object SimpleOptionKt {
     /**
      * method_42717
      */
-    fun <T>constantTooltip(text: Text) = SimpleOption.method_42717<T>(text)
+    fun <T>constantTooltip(text: Text?) = SimpleOption.method_42717<T>(text)
 }

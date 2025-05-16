@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62076
  */
-fun DolphinEntityModel.setAngles(arg0: DolphinEntityRenderState) = this.method_62076(arg0)
+fun DolphinEntityModel.setAngles(arg0: DolphinEntityRenderState?) = this.method_62076(arg0)

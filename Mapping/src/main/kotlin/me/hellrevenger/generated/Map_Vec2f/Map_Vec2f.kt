@@ -28,11 +28,11 @@ fun Vec2f.lengthSquared() = this.method_35587()
 /**
  * method_35583
  */
-fun Vec2f.dot(vec: Vec2f) = this.method_35583(vec)
+fun Vec2f.dot(vec: Vec2f?) = this.method_35583(vec)
 /**
  * method_1016
  */
-fun Vec2f.equals(other: Vec2f) = this.method_1016(other)
+fun Vec2f.equals(other: Vec2f?) = this.method_1016(other)
 /**
  * method_35581
  */
@@ -40,7 +40,7 @@ fun Vec2f.normalize() = this.method_35581()
 /**
  * method_35586
  */
-fun Vec2f.add(vec: Vec2f) = this.method_35586(vec)
+fun Vec2f.add(vec: Vec2f?) = this.method_35586(vec)
 /**
  * method_35584
  */
@@ -48,4 +48,4 @@ fun Vec2f.length() = this.method_35584()
 /**
  * method_35589
  */
-fun Vec2f.distanceSquared(vec: Vec2f) = this.method_35589(vec)
+fun Vec2f.distanceSquared(vec: Vec2f?) = this.method_35589(vec)

@@ -20,7 +20,7 @@ fun ServerList.saveFile() = this.method_2987()
 /**
  * method_2983
  */
-fun ServerList.remove(serverInfo: ServerInfo) = this.method_2983(serverInfo)
+fun ServerList.remove(serverInfo: ServerInfo?) = this.method_2983(serverInfo)
 /**
  * method_2984
  */
@@ -28,16 +28,16 @@ fun ServerList.size() = this.method_2984()
 /**
  * method_2988
  */
-fun ServerList.add(serverInfo: ServerInfo, hidden: Boolean) = this.method_2988(serverInfo, hidden)
+fun ServerList.add(serverInfo: ServerInfo?, hidden: Boolean) = this.method_2988(serverInfo, hidden)
 /**
  * method_2980
  */
-fun ServerList.set(index: Int, serverInfo: ServerInfo) = this.method_2980(index, serverInfo)
+fun ServerList.set(index: Int, serverInfo: ServerInfo?) = this.method_2980(index, serverInfo)
 /**
  * method_44296
  */
-fun ServerList.tryUnhide(address: String) = this.method_44296(address)
+fun ServerList.tryUnhide(address: String?) = this.method_44296(address)
 /**
  * method_44295
  */
-fun ServerList.get(address: String) = this.method_44295(address)
+fun ServerList.get(address: String?) = this.method_44295(address)

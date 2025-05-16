@@ -17,5 +17,5 @@ object BeehiveBlockKt {
     /**
      * method_21842
      */
-    fun dropHoneycomb(world: world_World, pos: BlockPos) = BeehiveBlock.method_21842(world, pos)
+    fun dropHoneycomb(world: world_World?, pos: BlockPos?) = BeehiveBlock.method_21842(world, pos)
 }

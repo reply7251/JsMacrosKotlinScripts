@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_24948
  */
-fun AbstractPlantPartBlock.getRandomGrowthState(random: Random) = this.method_24948(random)
+fun AbstractPlantPartBlock.getRandomGrowthState(random: Random?) = this.method_24948(random)

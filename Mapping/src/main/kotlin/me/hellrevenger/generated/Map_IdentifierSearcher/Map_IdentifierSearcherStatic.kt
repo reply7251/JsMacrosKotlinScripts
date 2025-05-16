@@ -9,5 +9,5 @@ object IdentifierSearcherKt {
     /**
      * method_43802
      */
-    fun <T>of(values: MutableList<T>, identifiersGetter: function_Function<T, Stream<Identifier>>) = IdentifierSearcher.method_43802<T>(values, identifiersGetter)
+    fun <T>of(values: MutableList<T>?, identifiersGetter: function_Function<T, Stream<Identifier>>?) = IdentifierSearcher.method_43802<T>(values, identifiersGetter)
 }

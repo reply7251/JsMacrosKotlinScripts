@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_9813
  */
-fun EntitySelector.getPlayers(source: ServerCommandSource) = this.method_9813(source)
+fun EntitySelector.getPlayers(source: ServerCommandSource?) = this.method_9813(source)
 /**
  * method_9811
  */
-fun EntitySelector.getPlayer(source: ServerCommandSource) = this.method_9811(source)
+fun EntitySelector.getPlayer(source: ServerCommandSource?) = this.method_9811(source)
 /**
  * method_9820
  */
@@ -20,11 +20,11 @@ fun EntitySelector.getLimit() = this.method_9815()
 /**
  * method_9816
  */
-fun EntitySelector.getEntities(source: ServerCommandSource) = this.method_9816(source)
+fun EntitySelector.getEntities(source: ServerCommandSource?) = this.method_9816(source)
 /**
  * method_9809
  */
-fun EntitySelector.getEntity(source: ServerCommandSource) = this.method_9809(source)
+fun EntitySelector.getEntity(source: ServerCommandSource?) = this.method_9809(source)
 /**
  * method_9821
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_56470
  */
-fun ServerTransferS2CPacket.apply(arg0: ClientCommonPacketListener) = this.method_56470(arg0)
+fun ServerTransferS2CPacket.apply(arg0: ClientCommonPacketListener?) = this.method_56470(arg0)
 /**
  * comp_2240
  */

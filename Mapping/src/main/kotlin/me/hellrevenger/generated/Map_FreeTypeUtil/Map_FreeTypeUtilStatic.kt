@@ -9,15 +9,15 @@ object FreeTypeUtilKt {
     /**
      * method_59837
      */
-    fun checkFatalError(code: Int, description: String) = FreeTypeUtil.method_59837(code, description)
+    fun checkFatalError(code: Int, description: String?) = FreeTypeUtil.method_59837(code, description)
     /**
      * method_56146
      */
-    fun getX(vec: FT_Vector) = FreeTypeUtil.method_56146(vec)
+    fun getX(vec: FT_Vector?) = FreeTypeUtil.method_56146(vec)
     /**
      * method_56147
      */
-    fun set(vec: FT_Vector, x: Float, y: Float) = FreeTypeUtil.method_56147(vec, x, y)
+    fun set(vec: FT_Vector?, x: Float, y: Float) = FreeTypeUtil.method_56147(vec, x, y)
     /**
      * method_56143
      */
@@ -25,7 +25,7 @@ object FreeTypeUtilKt {
     /**
      * method_56145
      */
-    fun checkError(code: Int, description: String) = FreeTypeUtil.method_56145(code, description)
+    fun checkError(code: Int, description: String?) = FreeTypeUtil.method_56145(code, description)
     /**
      * method_56148
      */

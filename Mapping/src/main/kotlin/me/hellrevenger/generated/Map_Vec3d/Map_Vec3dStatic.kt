@@ -9,15 +9,15 @@ object Vec3dKt {
     /**
      * method_24955
      */
-    fun ofBottomCenter(vec: Vec3i) = Vec3d.method_24955(vec)
+    fun ofBottomCenter(vec: Vec3i?) = Vec3d.method_24955(vec)
     /**
      * method_1034
      */
-    fun fromPolar(polar: Vec2f) = Vec3d.method_1034(polar)
+    fun fromPolar(polar: Vec2f?) = Vec3d.method_1034(polar)
     /**
      * method_26410
      */
-    fun ofCenter(vec: Vec3i, deltaY: Double) = Vec3d.method_26410(vec, deltaY)
+    fun ofCenter(vec: Vec3i?, deltaY: Double) = Vec3d.method_26410(vec, deltaY)
     /**
      * method_1030
      */
@@ -25,11 +25,11 @@ object Vec3dKt {
     /**
      * method_49273
      */
-    fun add(vec: Vec3i, deltaX: Double, arg2: Double, deltaY: Double) = Vec3d.method_49273(vec, deltaX, arg2, deltaY)
+    fun add(vec: Vec3i?, deltaX: Double, arg2: Double, deltaY: Double) = Vec3d.method_49273(vec, deltaX, arg2, deltaY)
     /**
      * method_24954
      */
-    fun of(vec: Vec3i) = Vec3d.method_24954(vec)
+    fun of(vec: Vec3i?) = Vec3d.method_24954(vec)
     /**
      * method_24457
      */
@@ -37,5 +37,5 @@ object Vec3dKt {
     /**
      * method_24953
      */
-    fun ofCenter(vec: Vec3i) = Vec3d.method_24953(vec)
+    fun ofCenter(vec: Vec3i?) = Vec3d.method_24953(vec)
 }

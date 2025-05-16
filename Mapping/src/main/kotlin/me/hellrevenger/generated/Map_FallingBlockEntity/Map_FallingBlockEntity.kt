@@ -28,7 +28,7 @@ fun FallingBlockEntity.getFallingBlockPos() = this.method_6964()
 /**
  * method_6963
  */
-fun FallingBlockEntity.setFallingBlockPos(pos: BlockPos) = this.method_6963(pos)
+fun FallingBlockEntity.setFallingBlockPos(pos: BlockPos?) = this.method_6963(pos)
 /**
  * method_6962
  */
@@ -40,4 +40,4 @@ fun FallingBlockEntity.setDestroyedOnLanding() = this.method_49181()
 /**
  * method_32752
  */
-fun FallingBlockEntity.onDestroyedOnLanding(block: Block, pos: BlockPos) = this.method_32752(block, pos)
+fun FallingBlockEntity.onDestroyedOnLanding(block: Block?, pos: BlockPos?) = this.method_32752(block, pos)

@@ -8,7 +8,7 @@ fun EntityPredicate.typeSpecific() = this.comp_1769()
 /**
  * method_8914
  */
-fun EntityPredicate.test(player: ServerPlayerEntity, entity: Entity) = this.method_8914(player, entity)
+fun EntityPredicate.test(player: ServerPlayerEntity?, entity: Entity?) = this.method_8914(player, entity)
 /**
  * comp_1762
  */
@@ -20,7 +20,7 @@ fun EntityPredicate.type() = this.comp_1761()
 /**
  * method_8909
  */
-fun EntityPredicate.test(world: ServerWorld, pos: Vec3d, entity: Entity) = this.method_8909(world, pos, entity)
+fun EntityPredicate.test(world: ServerWorld?, pos: Vec3d?, entity: Entity?) = this.method_8909(world, pos, entity)
 /**
  * comp_2446
  */

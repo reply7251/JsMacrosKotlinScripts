@@ -13,5 +13,5 @@ object EntitySelectorKt {
     /**
      * method_9822
      */
-    fun getNames(entities: MutableList<out Entity>) = EntitySelector.method_9822(entities)
+    fun getNames(entities: MutableList<out Entity>?) = EntitySelector.method_9822(entities)
 }

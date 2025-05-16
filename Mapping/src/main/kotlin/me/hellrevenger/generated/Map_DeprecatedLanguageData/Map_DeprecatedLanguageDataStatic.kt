@@ -9,7 +9,7 @@ object DeprecatedLanguageDataKt {
     /**
      * method_62778
      */
-    fun fromInputStream(stream: InputStream) = DeprecatedLanguageData.method_62778(stream)
+    fun fromInputStream(stream: InputStream?) = DeprecatedLanguageData.method_62778(stream)
     /**
      * method_62776
      */
@@ -17,5 +17,5 @@ object DeprecatedLanguageDataKt {
     /**
      * method_62779
      */
-    fun fromPath(path: String) = DeprecatedLanguageData.method_62779(path)
+    fun fromPath(path: String?) = DeprecatedLanguageData.method_62779(path)
 }

@@ -8,4 +8,4 @@ fun AnvilScreenHandler.getLevelCost() = this.method_17369()
 /**
  * method_7625
  */
-fun AnvilScreenHandler.setNewItemName(newItemName: String) = this.method_7625(newItemName)
+fun AnvilScreenHandler.setNewItemName(newItemName: String?) = this.method_7625(newItemName)

@@ -8,12 +8,12 @@ fun CommandManager.getDispatcher() = this.method_9235()
 /**
  * method_44252
  */
-fun CommandManager.executeWithPrefix(source: ServerCommandSource, command: String) = this.method_44252(source, command)
+fun CommandManager.executeWithPrefix(source: ServerCommandSource?, command: String?) = this.method_44252(source, command)
 /**
  * method_9249
  */
-fun CommandManager.execute(parseResults: brigadier_ParseResults<ServerCommandSource>, command: String) = this.method_9249(parseResults, command)
+fun CommandManager.execute(parseResults: brigadier_ParseResults<ServerCommandSource>?, command: String?) = this.method_9249(parseResults, command)
 /**
  * method_9241
  */
-fun CommandManager.sendCommandTree(player: ServerPlayerEntity) = this.method_9241(player)
+fun CommandManager.sendCommandTree(player: ServerPlayerEntity?) = this.method_9241(player)

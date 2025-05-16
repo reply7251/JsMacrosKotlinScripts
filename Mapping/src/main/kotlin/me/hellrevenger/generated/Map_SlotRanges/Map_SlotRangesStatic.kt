@@ -5,7 +5,7 @@ object SlotRangesKt {
     /**
      * method_58080
      */
-    fun fromName(name: String) = SlotRanges.method_58080(name)
+    fun fromName(name: String?) = SlotRanges.method_58080(name)
     /**
      * method_58088
      */

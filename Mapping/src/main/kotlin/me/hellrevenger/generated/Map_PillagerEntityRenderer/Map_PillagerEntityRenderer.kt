@@ -8,4 +8,4 @@ fun PillagerEntityRenderer.createRenderState() = this.method_62510()
 /**
  * method_4092
  */
-fun PillagerEntityRenderer.getTexture(arg0: IllagerEntityRenderState) = this.method_4092(arg0)
+fun PillagerEntityRenderer.getTexture(arg0: IllagerEntityRenderState?) = this.method_4092(arg0)

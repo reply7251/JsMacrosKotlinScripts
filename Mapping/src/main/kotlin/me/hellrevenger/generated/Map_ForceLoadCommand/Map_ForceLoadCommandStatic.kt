@@ -5,5 +5,5 @@ object ForceLoadCommandKt {
     /**
      * method_13365
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = ForceLoadCommand.method_13365(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = ForceLoadCommand.method_13365(dispatcher)
 }

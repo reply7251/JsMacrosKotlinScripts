@@ -17,13 +17,13 @@ object BiomeColorsKt {
     /**
      * method_4961
      */
-    fun getWaterColor(world: BlockRenderView, pos: BlockPos) = BiomeColors.method_4961(world, pos)
+    fun getWaterColor(world: BlockRenderView?, pos: BlockPos?) = BiomeColors.method_4961(world, pos)
     /**
      * method_4962
      */
-    fun getGrassColor(world: BlockRenderView, pos: BlockPos) = BiomeColors.method_4962(world, pos)
+    fun getGrassColor(world: BlockRenderView?, pos: BlockPos?) = BiomeColors.method_4962(world, pos)
     /**
      * method_4966
      */
-    fun getFoliageColor(world: BlockRenderView, pos: BlockPos) = BiomeColors.method_4966(world, pos)
+    fun getFoliageColor(world: BlockRenderView?, pos: BlockPos?) = BiomeColors.method_4966(world, pos)
 }

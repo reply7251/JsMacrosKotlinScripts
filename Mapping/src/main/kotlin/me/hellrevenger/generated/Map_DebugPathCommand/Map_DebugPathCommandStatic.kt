@@ -5,5 +5,5 @@ object DebugPathCommandKt {
     /**
      * method_36187
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = DebugPathCommand.method_36187(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = DebugPathCommand.method_36187(dispatcher)
 }

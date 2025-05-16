@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9287
  */
-fun DimensionArgumentType.parse(arg0: StringReader) = this.method_9287(arg0)
+fun DimensionArgumentType.parse(arg0: StringReader?) = this.method_9287(arg0)

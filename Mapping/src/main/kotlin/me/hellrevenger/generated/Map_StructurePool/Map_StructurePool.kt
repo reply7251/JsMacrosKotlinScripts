@@ -8,15 +8,15 @@ fun StructurePool.getElementCount() = this.method_16632()
 /**
  * method_16633
  */
-fun StructurePool.getElementIndicesInRandomOrder(random: Random) = this.method_16633(random)
+fun StructurePool.getElementIndicesInRandomOrder(random: Random?) = this.method_16633(random)
 /**
  * method_16631
  */
-fun StructurePool.getRandomElement(random: Random) = this.method_16631(random)
+fun StructurePool.getRandomElement(random: Random?) = this.method_16631(random)
 /**
  * method_19309
  */
-fun StructurePool.getHighestY(structureTemplateManager: StructureTemplateManager) = this.method_19309(structureTemplateManager)
+fun StructurePool.getHighestY(structureTemplateManager: StructureTemplateManager?) = this.method_19309(structureTemplateManager)
 /**
  * method_46736
  */

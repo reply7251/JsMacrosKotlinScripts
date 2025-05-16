@@ -17,21 +17,21 @@ object ChestBlockKt {
     /**
      * method_17458
      */
-    fun getInventory(block: ChestBlock, state: BlockState, world: world_World, pos: BlockPos, ignoreBlocked: Boolean) = ChestBlock.method_17458(block, state, world, pos, ignoreBlocked)
+    fun getInventory(block: ChestBlock?, state: BlockState?, world: world_World?, pos: BlockPos?, ignoreBlocked: Boolean) = ChestBlock.method_17458(block, state, world, pos, ignoreBlocked)
     /**
      * method_9758
      */
-    fun getFacing(state: BlockState) = ChestBlock.method_9758(state)
+    fun getFacing(state: BlockState?) = ChestBlock.method_9758(state)
     /**
      * method_24166
      */
-    fun getAnimationProgressRetriever(progress: LidOpenable) = ChestBlock.method_24166(progress)
+    fun getAnimationProgressRetriever(progress: LidOpenable?) = ChestBlock.method_24166(progress)
     /**
      * method_24169
      */
-    fun getDoubleBlockType(state: BlockState) = ChestBlock.method_24169(state)
+    fun getDoubleBlockType(state: BlockState?) = ChestBlock.method_24169(state)
     /**
      * method_9756
      */
-    fun isChestBlocked(world: WorldAccess, pos: BlockPos) = ChestBlock.method_9756(world, pos)
+    fun isChestBlocked(world: WorldAccess?, pos: BlockPos?) = ChestBlock.method_9756(world, pos)
 }

@@ -133,5 +133,5 @@ object EntityAttributesKt {
     /**
      * method_55699
      */
-    fun registerAndGetDefault(registry: Registry<EntityAttribute>) = EntityAttributes.method_55699(registry)
+    fun registerAndGetDefault(registry: Registry<EntityAttribute>?) = EntityAttributes.method_55699(registry)
 }

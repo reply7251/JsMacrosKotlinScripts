@@ -5,5 +5,5 @@ object OreFeatureConfigKt {
     /**
      * method_33994
      */
-    fun createTarget(test: RuleTest, state: BlockState) = OreFeatureConfig.method_33994(test, state)
+    fun createTarget(test: RuleTest?, state: BlockState?) = OreFeatureConfig.method_33994(test, state)
 }

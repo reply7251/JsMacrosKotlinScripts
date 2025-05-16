@@ -145,5 +145,5 @@ object MapDecorationTypesKt {
     /**
      * method_58455
      */
-    fun getDefault(registry: Registry<MapDecorationType>) = MapDecorationTypes.method_58455(registry)
+    fun getDefault(registry: Registry<MapDecorationType>?) = MapDecorationTypes.method_58455(registry)
 }

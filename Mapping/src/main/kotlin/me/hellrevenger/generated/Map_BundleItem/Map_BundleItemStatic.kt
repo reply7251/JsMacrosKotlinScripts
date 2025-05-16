@@ -25,29 +25,29 @@ object BundleItemKt {
     /**
      * method_61637
      */
-    fun setSelectedStackIndex(stack: ItemStack, selectedStackIndex: Int) = BundleItem.method_61637(stack, selectedStackIndex)
+    fun setSelectedStackIndex(stack: ItemStack?, selectedStackIndex: Int) = BundleItem.method_61637(stack, selectedStackIndex)
     /**
      * method_64277
      */
-    fun getBundle(color: DyeColor) = BundleItem.method_64277(color)
+    fun getBundle(color: DyeColor?) = BundleItem.method_64277(color)
     /**
      * method_31561
      */
-    fun getAmountFilled(stack: ItemStack) = BundleItem.method_31561(stack)
+    fun getAmountFilled(stack: ItemStack?) = BundleItem.method_31561(stack)
     /**
      * method_61644
      */
-    fun getSelectedStack(stack: ItemStack) = BundleItem.method_61644(stack)
+    fun getSelectedStack(stack: ItemStack?) = BundleItem.method_61644(stack)
     /**
      * method_61645
      */
-    fun getNumberOfStacksShown(stack: ItemStack) = BundleItem.method_61645(stack)
+    fun getNumberOfStacksShown(stack: ItemStack?) = BundleItem.method_61645(stack)
     /**
      * method_61643
      */
-    fun getSelectedStackIndex(stack: ItemStack) = BundleItem.method_61643(stack)
+    fun getSelectedStackIndex(stack: ItemStack?) = BundleItem.method_61643(stack)
     /**
      * method_61642
      */
-    fun hasSelectedStack(stack: ItemStack) = BundleItem.method_61642(stack)
+    fun hasSelectedStack(stack: ItemStack?) = BundleItem.method_61642(stack)
 }

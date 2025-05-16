@@ -8,7 +8,7 @@ fun <T>Criterion<T>.create(conditions: T) where T: CriterionConditions = this.me
 /**
  * method_791
  */
-fun <T>Criterion<T>.endTracking(tracker: PlayerAdvancementTracker) where T: CriterionConditions = this.method_791(tracker)
+fun <T>Criterion<T>.endTracking(tracker: PlayerAdvancementTracker?) where T: CriterionConditions = this.method_791(tracker)
 /**
  * method_54937
  */
@@ -16,8 +16,8 @@ fun <T>Criterion<T>.getConditionsCodec() where T: CriterionConditions = this.met
 /**
  * method_793
  */
-fun <T>Criterion<T>.endTrackingCondition(manager: PlayerAdvancementTracker, conditions: net.minecraft.class_179.class_180<T>) where T: CriterionConditions = this.method_793(manager, conditions)
+fun <T>Criterion<T>.endTrackingCondition(manager: PlayerAdvancementTracker?, conditions: net.minecraft.class_179.class_180<T>?) where T: CriterionConditions = this.method_793(manager, conditions)
 /**
  * method_792
  */
-fun <T>Criterion<T>.beginTrackingCondition(manager: PlayerAdvancementTracker, conditions: net.minecraft.class_179.class_180<T>) where T: CriterionConditions = this.method_792(manager, conditions)
+fun <T>Criterion<T>.beginTrackingCondition(manager: PlayerAdvancementTracker?, conditions: net.minecraft.class_179.class_180<T>?) where T: CriterionConditions = this.method_792(manager, conditions)

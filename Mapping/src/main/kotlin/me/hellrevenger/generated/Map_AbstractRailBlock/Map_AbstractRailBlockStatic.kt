@@ -9,9 +9,9 @@ object AbstractRailBlockKt {
     /**
      * method_9476
      */
-    fun isRail(state: BlockState) = AbstractRailBlock.method_9476(state)
+    fun isRail(state: BlockState?) = AbstractRailBlock.method_9476(state)
     /**
      * method_9479
      */
-    fun isRail(world: world_World, pos: BlockPos) = AbstractRailBlock.method_9479(world, pos)
+    fun isRail(world: world_World?, pos: BlockPos?) = AbstractRailBlock.method_9479(world, pos)
 }

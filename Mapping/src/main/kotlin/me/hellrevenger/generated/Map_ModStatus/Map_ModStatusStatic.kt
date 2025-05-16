@@ -5,5 +5,5 @@ object ModStatusKt {
     /**
      * method_39031
      */
-    fun check(vanillaBrand: String, brandSupplier: Supplier<String>, environment: String, clazz: Class<*>) = ModStatus.method_39031(vanillaBrand, brandSupplier, environment, clazz)
+    fun check(vanillaBrand: String?, brandSupplier: Supplier<String>?, environment: String?, clazz: Class<*>?) = ModStatus.method_39031(vanillaBrand, brandSupplier, environment, clazz)
 }

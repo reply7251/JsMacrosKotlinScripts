@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_34154
  */
-fun OverlayMessageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34154(arg0)
+fun OverlayMessageS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_34154(arg0)
 /**
  * comp_2279
  */

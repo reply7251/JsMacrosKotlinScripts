@@ -5,5 +5,5 @@ object CraftingRecipeKt {
     /**
      * method_64671
      */
-    fun collectRecipeRemainders(input: CraftingRecipeInput) = CraftingRecipe.method_64671(input)
+    fun collectRecipeRemainders(input: CraftingRecipeInput?) = CraftingRecipe.method_64671(input)
 }

@@ -20,7 +20,7 @@ fun <M>ChunkToNibbleArrayMap<M>.removeChunk(chunkPos: Long) where M: ChunkToNibb
 /**
  * method_15499
  */
-fun <M>ChunkToNibbleArrayMap<M>.put(pos: Long, arg1: ChunkNibbleArray) where M: ChunkToNibbleArrayMap<M> = this.method_15499(pos, arg1)
+fun <M>ChunkToNibbleArrayMap<M>.put(pos: Long, arg1: ChunkNibbleArray?) where M: ChunkToNibbleArrayMap<M> = this.method_15499(pos, arg1)
 /**
  * method_15505
  */

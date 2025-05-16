@@ -5,5 +5,5 @@ object TimeCheckLootConditionKt {
     /**
      * method_35559
      */
-    fun create(value: BoundedIntUnaryOperator) = TimeCheckLootCondition.method_35559(value)
+    fun create(value: BoundedIntUnaryOperator?) = TimeCheckLootCondition.method_35559(value)
 }

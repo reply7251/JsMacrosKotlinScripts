@@ -5,5 +5,5 @@ object TickStepS2CPacketKt {
     /**
      * method_54666
      */
-    fun create(tickManager: TickManager) = TickStepS2CPacket.method_54666(tickManager)
+    fun create(tickManager: TickManager?) = TickStepS2CPacket.method_54666(tickManager)
 }

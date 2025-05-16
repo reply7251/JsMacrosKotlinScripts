@@ -36,4 +36,4 @@ fun RenderLayer.getExpectedBufferSize() = this.method_22722()
 /**
  * method_60895
  */
-fun RenderLayer.draw(buffer: BuiltBuffer) = this.method_60895(buffer)
+fun RenderLayer.draw(buffer: BuiltBuffer?) = this.method_60895(buffer)

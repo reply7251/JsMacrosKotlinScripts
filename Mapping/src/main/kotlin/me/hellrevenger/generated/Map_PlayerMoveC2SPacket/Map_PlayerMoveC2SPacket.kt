@@ -24,7 +24,7 @@ fun PlayerMoveC2SPacket.getPitch(currentPitch: Float) = this.method_12270(curren
 /**
  * method_12272
  */
-fun PlayerMoveC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12272(arg0)
+fun PlayerMoveC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12272(arg0)
 /**
  * method_12269
  */

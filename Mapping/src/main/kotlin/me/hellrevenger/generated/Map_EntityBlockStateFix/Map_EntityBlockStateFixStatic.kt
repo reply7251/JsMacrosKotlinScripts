@@ -5,5 +5,5 @@ object EntityBlockStateFixKt {
     /**
      * method_15686
      */
-    fun getNumericalBlockId(blockId: String) = EntityBlockStateFix.method_15686(blockId)
+    fun getNumericalBlockId(blockId: String?) = EntityBlockStateFix.method_15686(blockId)
 }

@@ -5,11 +5,11 @@ object LookAtMobTaskKt {
     /**
      * method_47057
      */
-    fun create(type: EntityType<*>, maxDistance: Float) = LookAtMobTask.method_47057(type, maxDistance)
+    fun create(type: EntityType<*>?, maxDistance: Float) = LookAtMobTask.method_47057(type, maxDistance)
     /**
      * method_47061
      */
-    fun create(spawnGroup: SpawnGroup, maxDistance: Float) = LookAtMobTask.method_47061(spawnGroup, maxDistance)
+    fun create(spawnGroup: SpawnGroup?, maxDistance: Float) = LookAtMobTask.method_47061(spawnGroup, maxDistance)
     /**
      * method_47056
      */
@@ -17,5 +17,5 @@ object LookAtMobTaskKt {
     /**
      * method_47065
      */
-    fun create(predicate: Predicate<LivingEntity>, maxDistance: Float) = LookAtMobTask.method_47065(predicate, maxDistance)
+    fun create(predicate: Predicate<LivingEntity>?, maxDistance: Float) = LookAtMobTask.method_47065(predicate, maxDistance)
 }

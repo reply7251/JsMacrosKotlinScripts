@@ -5,5 +5,5 @@ object FluidRendererKt {
     /**
      * method_29708
      */
-    fun shouldRenderSide(arg0: FluidState, arg1: BlockState, arg2: Direction, arg3: FluidState) = FluidRenderer.method_29708(arg0, arg1, arg2, arg3)
+    fun shouldRenderSide(arg0: FluidState?, arg1: BlockState?, arg2: Direction?, arg3: FluidState?) = FluidRenderer.method_29708(arg0, arg1, arg2, arg3)
 }

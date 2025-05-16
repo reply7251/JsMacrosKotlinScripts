@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9157
  */
-fun UsedEnderEyeCriterion.trigger(player: ServerPlayerEntity, strongholdPos: BlockPos) = this.method_9157(player, strongholdPos)
+fun UsedEnderEyeCriterion.trigger(player: ServerPlayerEntity?, strongholdPos: BlockPos?) = this.method_9157(player, strongholdPos)

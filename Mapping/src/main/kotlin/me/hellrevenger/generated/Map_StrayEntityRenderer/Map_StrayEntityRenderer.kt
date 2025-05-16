@@ -8,4 +8,4 @@ fun StrayEntityRenderer.createRenderState() = this.method_62543()
 /**
  * method_57817
  */
-fun StrayEntityRenderer.getTexture(arg0: SkeletonEntityRenderState) = this.method_57817(arg0)
+fun StrayEntityRenderer.getTexture(arg0: SkeletonEntityRenderState?) = this.method_57817(arg0)

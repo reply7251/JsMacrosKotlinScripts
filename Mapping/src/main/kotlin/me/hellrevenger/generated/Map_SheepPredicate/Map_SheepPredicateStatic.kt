@@ -5,5 +5,5 @@ object SheepPredicateKt {
     /**
      * method_63498
      */
-    fun unsheared(color: DyeColor) = SheepPredicate.method_63498(color)
+    fun unsheared(color: DyeColor?) = SheepPredicate.method_63498(color)
 }

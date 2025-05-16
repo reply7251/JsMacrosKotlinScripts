@@ -5,5 +5,5 @@ object BlockFilterPlacementModifierKt {
     /**
      * method_39618
      */
-    fun of(predicate: blockpredicate_BlockPredicate) = BlockFilterPlacementModifier.method_39618(predicate)
+    fun of(predicate: blockpredicate_BlockPredicate?) = BlockFilterPlacementModifier.method_39618(predicate)
 }

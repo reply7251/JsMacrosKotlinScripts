@@ -5,9 +5,9 @@ object IconWidgetKt {
     /**
      * method_52720
      */
-    fun create(width: Int, height: Int, texture: Identifier) = IconWidget.method_52720(width, height, texture)
+    fun create(width: Int, height: Int, texture: Identifier?) = IconWidget.method_52720(width, height, texture)
     /**
      * method_52721
      */
-    fun create(width: Int, height: Int, texture: Identifier, textureWidth: Int, textureHeight: Int) = IconWidget.method_52721(width, height, texture, textureWidth, textureHeight)
+    fun create(width: Int, height: Int, texture: Identifier?, textureWidth: Int, textureHeight: Int) = IconWidget.method_52721(width, height, texture, textureWidth, textureHeight)
 }

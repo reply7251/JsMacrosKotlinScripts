@@ -9,5 +9,5 @@ object PlainsVillageDataKt {
     /**
      * method_16754
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = PlainsVillageData.method_16754(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = PlainsVillageData.method_16754(poolRegisterable)
 }

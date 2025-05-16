@@ -8,7 +8,7 @@ fun RecipeExporter.addRootAdvancement() = this.method_62738()
 /**
  * method_53819
  */
-fun RecipeExporter.accept(key: RegistryKey<Recipe<*>>, recipe: Recipe<*>, advancement: AdvancementEntry) = this.method_53819(key, recipe, advancement)
+fun RecipeExporter.accept(key: RegistryKey<Recipe<*>>?, recipe: Recipe<*>?, advancement: AdvancementEntry?) = this.method_53819(key, recipe, advancement)
 /**
  * method_53818
  */

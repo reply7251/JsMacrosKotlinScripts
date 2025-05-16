@@ -13,11 +13,11 @@ object RealmsMainScreenKt {
     /**
      * method_54562
      */
-    fun getVersionText(version: String, compatible: Boolean) = RealmsMainScreen.method_54562(version, compatible)
+    fun getVersionText(version: String?, compatible: Boolean) = RealmsMainScreen.method_54562(version, compatible)
     /**
      * method_20853
      */
-    fun play(serverData: RealmsServer, parent: Screen) = RealmsMainScreen.method_20853(serverData, parent)
+    fun play(serverData: RealmsServer?, parent: Screen?) = RealmsMainScreen.method_20853(serverData, parent)
     /**
      * method_64834
      */
@@ -29,11 +29,11 @@ object RealmsMainScreenKt {
     /**
      * method_54561
      */
-    fun getVersionText(version: String, color: Int) = RealmsMainScreen.method_54561(version, color)
+    fun getVersionText(version: String?, color: Int) = RealmsMainScreen.method_54561(version, color)
     /**
      * method_54327
      */
-    fun play(server: RealmsServer, parent: Screen, needsPreparation: Boolean) = RealmsMainScreen.method_54327(server, parent, needsPreparation)
+    fun play(server: RealmsServer?, parent: Screen?, needsPreparation: Boolean) = RealmsMainScreen.method_54327(server, parent, needsPreparation)
     /**
      * method_54330
      */

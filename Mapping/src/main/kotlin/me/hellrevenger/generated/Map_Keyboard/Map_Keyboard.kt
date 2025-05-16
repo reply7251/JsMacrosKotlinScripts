@@ -12,7 +12,7 @@ fun Keyboard.setup(window: Long) = this.method_1472(window)
 /**
  * method_1455
  */
-fun Keyboard.setClipboard(clipboard: String) = this.method_1455(clipboard)
+fun Keyboard.setClipboard(clipboard: String?) = this.method_1455(clipboard)
 /**
  * method_1460
  */

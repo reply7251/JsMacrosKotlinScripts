@@ -9,17 +9,17 @@ object FindPointOfInterestTaskKt {
     /**
      * method_43965
      */
-    fun findPathToPoi(entity: MobEntity, pois: Set<util_Pair<RegistryEntry<PointOfInterestType>, BlockPos>>) = FindPointOfInterestTask.method_43965(entity, pois)
+    fun findPathToPoi(entity: MobEntity?, pois: Set<util_Pair<RegistryEntry<PointOfInterestType>, BlockPos>>?) = FindPointOfInterestTask.method_43965(entity, pois)
     /**
      * method_65945
      */
-    fun create(poiPredicate: Predicate<RegistryEntry<PointOfInterestType>>, poiPosModule: MemoryModuleType<GlobalPos>, onlyRunIfChild: Boolean, entityStatus: Optional<Byte>, worldPosBiPredicate: BiPredicate<ServerWorld, BlockPos>) = FindPointOfInterestTask.method_65945(poiPredicate, poiPosModule, onlyRunIfChild, entityStatus, worldPosBiPredicate)
+    fun create(poiPredicate: Predicate<RegistryEntry<PointOfInterestType>>?, poiPosModule: MemoryModuleType<GlobalPos>?, onlyRunIfChild: Boolean, entityStatus: Optional<Byte>?, worldPosBiPredicate: BiPredicate<ServerWorld, BlockPos>?) = FindPointOfInterestTask.method_65945(poiPredicate, poiPosModule, onlyRunIfChild, entityStatus, worldPosBiPredicate)
     /**
      * method_46883
      */
-    fun create(poiPredicate: Predicate<RegistryEntry<PointOfInterestType>>, poiPosModule: MemoryModuleType<GlobalPos>, potentialPoiPosModule: MemoryModuleType<GlobalPos>, onlyRunIfChild: Boolean, entityStatus: Optional<Byte>, worldPosBiPredicate: BiPredicate<ServerWorld, BlockPos>) = FindPointOfInterestTask.method_46883(poiPredicate, poiPosModule, potentialPoiPosModule, onlyRunIfChild, entityStatus, worldPosBiPredicate)
+    fun create(poiPredicate: Predicate<RegistryEntry<PointOfInterestType>>?, poiPosModule: MemoryModuleType<GlobalPos>?, potentialPoiPosModule: MemoryModuleType<GlobalPos>?, onlyRunIfChild: Boolean, entityStatus: Optional<Byte>?, worldPosBiPredicate: BiPredicate<ServerWorld, BlockPos>?) = FindPointOfInterestTask.method_46883(poiPredicate, poiPosModule, potentialPoiPosModule, onlyRunIfChild, entityStatus, worldPosBiPredicate)
     /**
      * method_46884
      */
-    fun create(poiPredicate: Predicate<RegistryEntry<PointOfInterestType>>, poiPosModule: MemoryModuleType<GlobalPos>, onlyRunIfChild: Boolean, entityStatus: Optional<Byte>) = FindPointOfInterestTask.method_46884(poiPredicate, poiPosModule, onlyRunIfChild, entityStatus)
+    fun create(poiPredicate: Predicate<RegistryEntry<PointOfInterestType>>?, poiPosModule: MemoryModuleType<GlobalPos>?, onlyRunIfChild: Boolean, entityStatus: Optional<Byte>?) = FindPointOfInterestTask.method_46884(poiPredicate, poiPosModule, onlyRunIfChild, entityStatus)
 }

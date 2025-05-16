@@ -21,9 +21,9 @@ object BlockRotationKt {
     /**
      * method_16548
      */
-    fun random(random: Random) = BlockRotation.method_16548(random)
+    fun random(random: Random?) = BlockRotation.method_16548(random)
     /**
      * method_16547
      */
-    fun randomRotationOrder(random: Random) = BlockRotation.method_16547(random)
+    fun randomRotationOrder(random: Random?) = BlockRotation.method_16547(random)
 }

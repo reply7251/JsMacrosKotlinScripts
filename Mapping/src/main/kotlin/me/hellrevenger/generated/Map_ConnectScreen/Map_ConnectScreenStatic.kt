@@ -13,5 +13,5 @@ object ConnectScreenKt {
     /**
      * method_36877
      */
-    fun connect(screen: Screen, client: MinecraftClient, address: ServerAddress, info: ServerInfo, quickPlay: Boolean, cookieStorage: CookieStorage) = ConnectScreen.method_36877(screen, client, address, info, quickPlay, cookieStorage)
+    fun connect(screen: Screen?, client: MinecraftClient?, address: ServerAddress?, info: ServerInfo?, quickPlay: Boolean, cookieStorage: CookieStorage?) = ConnectScreen.method_36877(screen, client, address, info, quickPlay, cookieStorage)
 }

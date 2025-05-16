@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_33844
  */
-fun YOffset.getY(context: HeightContext) = this.method_33844(context)
+fun YOffset.getY(context: HeightContext?) = this.method_33844(context)

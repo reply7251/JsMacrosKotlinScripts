@@ -96,7 +96,7 @@ var RealmsServer.expired by alias(RealmsServer::field_22608)
 /**
  * method_25061
  */
-fun RealmsServer.cloneSlots(slots: Map<Int, RealmsWorldOptions>) = this.method_25061(slots)
+fun RealmsServer.cloneSlots(slots: Map<Int, RealmsWorldOptions>?) = this.method_25061(slots)
 /**
  * method_54363
  */
@@ -124,7 +124,7 @@ fun RealmsServer.needsUpgrade() = this.method_54364()
 /**
  * method_31403
  */
-fun RealmsServer.createServerInfo(address: String) = this.method_31403(address)
+fun RealmsServer.createServerInfo(address: String?) = this.method_31403(address)
 /**
  * method_54365
  */

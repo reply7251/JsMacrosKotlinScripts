@@ -17,7 +17,7 @@ object NbtPathArgumentTypeKt {
     /**
      * method_9358
      */
-    fun getNbtPath(context: CommandContext<ServerCommandSource>, name: String) = NbtPathArgumentType.method_9358(context, name)
+    fun getNbtPath(context: CommandContext<ServerCommandSource>?, name: String?) = NbtPathArgumentType.method_9358(context, name)
     /**
      * method_9360
      */

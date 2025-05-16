@@ -9,9 +9,9 @@ object DebugRecorderKt {
     /**
      * method_35762
      */
-    fun setGlobalDumpConsumer(consumer: Consumer<file_Path>) = DebugRecorder.method_35762(consumer)
+    fun setGlobalDumpConsumer(consumer: Consumer<file_Path>?) = DebugRecorder.method_35762(consumer)
     /**
      * method_37191
      */
-    fun of(source: SamplerSource, timeGetter: LongSupplier, dumpExecutor: Executor, dumper: RecordDumper, resultConsumer: Consumer<ProfileResult>, dumpConsumer: Consumer<file_Path>) = DebugRecorder.method_37191(source, timeGetter, dumpExecutor, dumper, resultConsumer, dumpConsumer)
+    fun of(source: SamplerSource?, timeGetter: LongSupplier?, dumpExecutor: Executor?, dumper: RecordDumper?, resultConsumer: Consumer<ProfileResult>?, dumpConsumer: Consumer<file_Path>?) = DebugRecorder.method_37191(source, timeGetter, dumpExecutor, dumper, resultConsumer, dumpConsumer)
 }

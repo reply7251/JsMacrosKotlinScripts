@@ -5,5 +5,5 @@ object MeCommandKt {
     /**
      * method_13237
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = MeCommand.method_13237(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = MeCommand.method_13237(dispatcher)
 }

@@ -12,7 +12,7 @@ fun ModStatus.isModded() = this.method_39029()
 /**
  * method_39030
  */
-fun ModStatus.combine(brand: ModStatus) = this.method_39030(brand)
+fun ModStatus.combine(brand: ModStatus?) = this.method_39030(brand)
 /**
  * comp_172
  */

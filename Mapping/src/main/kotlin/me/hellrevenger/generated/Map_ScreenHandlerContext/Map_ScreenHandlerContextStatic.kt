@@ -5,5 +5,5 @@ object ScreenHandlerContextKt {
     /**
      * method_17392
      */
-    fun create(world: world_World, pos: BlockPos) = ScreenHandlerContext.method_17392(world, pos)
+    fun create(world: world_World?, pos: BlockPos?) = ScreenHandlerContext.method_17392(world, pos)
 }

@@ -29,9 +29,9 @@ object VineBlockKt {
     /**
      * method_10821
      */
-    fun shouldConnectTo(world: BlockView, pos: BlockPos, direction: Direction) = VineBlock.method_10821(world, pos, direction)
+    fun shouldConnectTo(world: BlockView?, pos: BlockPos?, direction: Direction?) = VineBlock.method_10821(world, pos, direction)
     /**
      * method_10828
      */
-    fun getFacingProperty(direction: Direction) = VineBlock.method_10828(direction)
+    fun getFacingProperty(direction: Direction?) = VineBlock.method_10828(direction)
 }

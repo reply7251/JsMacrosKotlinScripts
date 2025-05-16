@@ -5,5 +5,5 @@ object BastionDataKt {
     /**
      * method_27203
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = BastionData.method_27203(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = BastionData.method_27203(poolRegisterable)
 }

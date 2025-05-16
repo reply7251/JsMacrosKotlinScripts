@@ -17,9 +17,9 @@ object RegistryLoaderKt {
     /**
      * method_56519
      */
-    fun loadFromNetwork(data: Map<RegistryKey<out Registry<*>>, net.minecraft.class_7655.class_9841>, factory: ResourceFactory, registries: MutableList<net.minecraft.class_7225.class_7226<*>>, entries: MutableList<net.minecraft.class_7655.class_7657<*>>) = RegistryLoader.method_56519(data, factory, registries, entries)
+    fun loadFromNetwork(data: Map<RegistryKey<out Registry<*>>, net.minecraft.class_7655.class_9841>?, factory: ResourceFactory?, registries: MutableList<net.minecraft.class_7225.class_7226<*>>?, entries: MutableList<net.minecraft.class_7655.class_7657<*>>?) = RegistryLoader.method_56519(data, factory, registries, entries)
     /**
      * method_56515
      */
-    fun loadFromResource(resourceManager: ResourceManager, registries: MutableList<net.minecraft.class_7225.class_7226<*>>, entries: MutableList<net.minecraft.class_7655.class_7657<*>>) = RegistryLoader.method_56515(resourceManager, registries, entries)
+    fun loadFromResource(resourceManager: ResourceManager?, registries: MutableList<net.minecraft.class_7225.class_7226<*>>?, entries: MutableList<net.minecraft.class_7655.class_7657<*>>?) = RegistryLoader.method_56515(resourceManager, registries, entries)
 }

@@ -5,5 +5,5 @@ object TitleScreenKt {
     /**
      * method_65810
      */
-    fun registerTextures(textureManager: TextureManager) = TitleScreen.method_65810(textureManager)
+    fun registerTextures(textureManager: TextureManager?) = TitleScreen.method_65810(textureManager)
 }

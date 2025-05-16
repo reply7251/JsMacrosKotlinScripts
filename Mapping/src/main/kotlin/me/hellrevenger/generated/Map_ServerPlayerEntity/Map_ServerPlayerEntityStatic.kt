@@ -13,5 +13,5 @@ object ServerPlayerEntityKt {
     /**
      * method_64123
      */
-    fun addEnderPearlTicket(world: ServerWorld, chunkPos: ChunkPos) = ServerPlayerEntity.method_64123(world, chunkPos)
+    fun addEnderPearlTicket(world: ServerWorld?, chunkPos: ChunkPos?) = ServerPlayerEntity.method_64123(world, chunkPos)
 }

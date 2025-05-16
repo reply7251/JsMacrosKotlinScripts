@@ -9,5 +9,5 @@ object BuiltinNoiseParametersKt {
     /**
      * method_39216
      */
-    fun bootstrap(noiseParametersRegisterable: Registerable<net.minecraft.class_5216.class_5487>) = BuiltinNoiseParameters.method_39216(noiseParametersRegisterable)
+    fun bootstrap(noiseParametersRegisterable: Registerable<net.minecraft.class_5216.class_5487>?) = BuiltinNoiseParameters.method_39216(noiseParametersRegisterable)
 }

@@ -5,5 +5,5 @@ object StructureUpdateEntrypointKt {
     /**
      * method_53856
      */
-    fun main(args: Array<String>) = StructureUpdateEntrypoint.method_53856(args)
+    fun main(args: Array<String>?) = StructureUpdateEntrypoint.method_53856(args)
 }

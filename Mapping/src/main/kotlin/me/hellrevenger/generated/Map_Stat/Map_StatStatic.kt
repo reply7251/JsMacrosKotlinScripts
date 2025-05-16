@@ -5,5 +5,5 @@ object StatKt {
     /**
      * method_14950
      */
-    fun <T>getName(type: StatType<T>, value: T) = Stat.method_14950<T>(type, value)
+    fun <T>getName(type: StatType<T>?, value: T) = Stat.method_14950<T>(type, value)
 }

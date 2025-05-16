@@ -12,7 +12,7 @@ fun ServerLinks.getLinks() = this.method_60938()
 /**
  * method_60658
  */
-fun ServerLinks.getEntryFor(known: net.minecraft.class_9782.class_9784) = this.method_60658(known)
+fun ServerLinks.getEntryFor(known: net.minecraft.class_9782.class_9784?) = this.method_60658(known)
 /**
  * comp_2826
  */

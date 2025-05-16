@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_61702
  */
-fun SmithingRecipe.matches(arg0: SmithingRecipeInput, arg1: world_World) = this.method_61702(arg0, arg1)
+fun SmithingRecipe.matches(arg0: SmithingRecipeInput?, arg1: world_World?) = this.method_61702(arg0, arg1)
 /**
  * method_64723
  */

@@ -5,5 +5,5 @@ object CopyNameLootFunctionKt {
     /**
      * method_473
      */
-    fun builder(source: net.minecraft.class_101.class_102) = CopyNameLootFunction.method_473(source)
+    fun builder(source: net.minecraft.class_101.class_102?) = CopyNameLootFunction.method_473(source)
 }

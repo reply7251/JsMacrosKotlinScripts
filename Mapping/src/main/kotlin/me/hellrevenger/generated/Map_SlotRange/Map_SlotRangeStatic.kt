@@ -5,5 +5,5 @@ object SlotRangeKt {
     /**
      * method_58076
      */
-    fun create(name: String, slotIds: IntList) = SlotRange.method_58076(name, slotIds)
+    fun create(name: String?, slotIds: IntList?) = SlotRange.method_58076(name, slotIds)
 }

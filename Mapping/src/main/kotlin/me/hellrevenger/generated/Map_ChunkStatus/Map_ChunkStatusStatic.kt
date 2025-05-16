@@ -61,9 +61,9 @@ object ChunkStatusKt {
     /**
      * method_60545
      */
-    fun max(a: ChunkStatus, b: ChunkStatus) = ChunkStatus.method_60545(a, b)
+    fun max(a: ChunkStatus?, b: ChunkStatus?) = ChunkStatus.method_60545(a, b)
     /**
      * method_12168
      */
-    fun byId(id: String) = ChunkStatus.method_12168(id)
+    fun byId(id: String?) = ChunkStatus.method_12168(id)
 }

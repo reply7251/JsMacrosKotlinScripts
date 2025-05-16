@@ -12,15 +12,15 @@ fun <T>OptionalChunk<T>.isPresent() = this.method_57122()
 /**
  * method_57127
  */
-fun <T, R>OptionalChunk<T>.map(mapper: function_Function<T, R>) = this.method_57127<R>(mapper)
+fun <T, R>OptionalChunk<T>.map(mapper: function_Function<T, R>?) = this.method_57127<R>(mapper)
 /**
  * method_57132
  */
-fun <T, E>OptionalChunk<T>.orElseThrow(exceptionSupplier: Supplier<E>) where E: Throwable = this.method_57132<E>(exceptionSupplier)
+fun <T, E>OptionalChunk<T>.orElseThrow(exceptionSupplier: Supplier<E>?) where E: Throwable = this.method_57132<E>(exceptionSupplier)
 /**
  * method_57126
  */
-fun <T>OptionalChunk<T>.ifPresent(callback: Consumer<T>) = this.method_57126(callback)
+fun <T>OptionalChunk<T>.ifPresent(callback: Consumer<T>?) = this.method_57126(callback)
 /**
  * method_57129
  */

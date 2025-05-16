@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_61213
  */
-fun MoveMinecartAlongTrackS2CPacket.getEntity(world: world_World) = this.method_61213(world)
+fun MoveMinecartAlongTrackS2CPacket.getEntity(world: world_World?) = this.method_61213(world)
 /**
  * method_61212
  */
-fun MoveMinecartAlongTrackS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_61212(arg0)
+fun MoveMinecartAlongTrackS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_61212(arg0)
 /**
  * comp_2887
  */

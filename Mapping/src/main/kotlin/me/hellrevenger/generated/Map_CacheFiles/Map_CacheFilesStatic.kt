@@ -5,5 +5,5 @@ object CacheFilesKt {
     /**
      * method_55600
      */
-    fun clear(directory: file_Path, maxRetained: Int) = CacheFiles.method_55600(directory, maxRetained)
+    fun clear(directory: file_Path?, maxRetained: Int) = CacheFiles.method_55600(directory, maxRetained)
 }

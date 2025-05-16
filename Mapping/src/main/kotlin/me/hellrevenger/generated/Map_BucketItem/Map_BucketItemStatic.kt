@@ -5,5 +5,5 @@ object BucketItemKt {
     /**
      * method_7732
      */
-    fun getEmptiedStack(stack: ItemStack, player: PlayerEntity) = BucketItem.method_7732(stack, player)
+    fun getEmptiedStack(stack: ItemStack?, player: PlayerEntity?) = BucketItem.method_7732(stack, player)
 }

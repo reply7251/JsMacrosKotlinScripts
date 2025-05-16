@@ -8,4 +8,4 @@ fun TeleportConfirmC2SPacket.getTeleportId() = this.method_12086()
 /**
  * method_12085
  */
-fun TeleportConfirmC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12085(arg0)
+fun TeleportConfirmC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12085(arg0)

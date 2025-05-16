@@ -61,5 +61,5 @@ object ItemSubPredicateTypesKt {
     /**
      * method_58181
      */
-    fun getDefault(registry: Registry<net.minecraft.class_9360.class_8745<*>>) = ItemSubPredicateTypes.method_58181(registry)
+    fun getDefault(registry: Registry<net.minecraft.class_9360.class_8745<*>>?) = ItemSubPredicateTypes.method_58181(registry)
 }

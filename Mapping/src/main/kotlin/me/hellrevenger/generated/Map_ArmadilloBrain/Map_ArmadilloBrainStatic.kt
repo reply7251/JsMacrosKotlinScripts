@@ -9,7 +9,7 @@ object ArmadilloBrainKt {
     /**
      * method_55734
      */
-    fun updateActivities(armadillo: ArmadilloEntity) = ArmadilloBrain.method_55734(armadillo)
+    fun updateActivities(armadillo: ArmadilloEntity?) = ArmadilloBrain.method_55734(armadillo)
     /**
      * method_55728
      */

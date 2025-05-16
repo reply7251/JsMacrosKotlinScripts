@@ -9,9 +9,9 @@ object ModelVariantMapKt {
     /**
      * method_45787
      */
-    fun fromJson(json: JsonElement) = ModelVariantMap.method_45787(json)
+    fun fromJson(json: JsonElement?) = ModelVariantMap.method_45787(json)
     /**
      * method_3424
      */
-    fun fromJson(reader: Reader) = ModelVariantMap.method_3424(reader)
+    fun fromJson(reader: Reader?) = ModelVariantMap.method_3424(reader)
 }

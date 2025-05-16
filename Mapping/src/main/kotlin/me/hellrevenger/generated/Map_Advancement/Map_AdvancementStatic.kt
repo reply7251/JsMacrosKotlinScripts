@@ -5,5 +5,5 @@ object AdvancementKt {
     /**
      * method_53622
      */
-    fun getNameFromIdentity(identifiedAdvancement: AdvancementEntry) = Advancement.method_53622(identifiedAdvancement)
+    fun getNameFromIdentity(identifiedAdvancement: AdvancementEntry?) = Advancement.method_53622(identifiedAdvancement)
 }

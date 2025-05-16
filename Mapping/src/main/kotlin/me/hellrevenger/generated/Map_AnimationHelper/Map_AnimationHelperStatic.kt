@@ -13,7 +13,7 @@ object AnimationHelperKt {
     /**
      * method_41827
      */
-    fun animate(model: model_Model, animation: Animation, runningTime: Long, arg3: Float, scale: Vector3f) = AnimationHelper.method_41827(model, animation, runningTime, arg3, scale)
+    fun animate(model: model_Model?, animation: Animation?, runningTime: Long, arg3: Float, scale: Vector3f?) = AnimationHelper.method_41827(model, animation, runningTime, arg3, scale)
     /**
      * method_41829
      */

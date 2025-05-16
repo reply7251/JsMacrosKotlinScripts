@@ -32,7 +32,7 @@ fun BreezeEntity.playWhirlSound() = this.method_55747()
 /**
  * method_55013
  */
-fun BreezeEntity.isWithinShortRange(pos: Vec3d) = this.method_55013(pos)
+fun BreezeEntity.isWithinShortRange(pos: Vec3d?) = this.method_55013(pos)
 /**
  * method_55008
  */

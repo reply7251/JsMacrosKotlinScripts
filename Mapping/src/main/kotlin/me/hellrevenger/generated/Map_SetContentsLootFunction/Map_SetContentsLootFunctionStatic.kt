@@ -5,5 +5,5 @@ object SetContentsLootFunctionKt {
     /**
      * method_601
      */
-    fun builder(componentModifier: ContainerComponentModifier<*>) = SetContentsLootFunction.method_601(componentModifier)
+    fun builder(componentModifier: ContainerComponentModifier<*>?) = SetContentsLootFunction.method_601(componentModifier)
 }

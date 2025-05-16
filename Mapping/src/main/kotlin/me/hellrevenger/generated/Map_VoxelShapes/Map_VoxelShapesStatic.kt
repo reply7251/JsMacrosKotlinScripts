@@ -13,11 +13,11 @@ object VoxelShapesKt {
     /**
      * method_1085
      */
-    fun calculateMaxOffset(axis: net.minecraft.class_2350.class_2351, box: Box, shapes: Iterable<VoxelShape>, maxDist: Double) = VoxelShapes.method_1085(axis, box, shapes, maxDist)
+    fun calculateMaxOffset(axis: net.minecraft.class_2350.class_2351?, box: Box?, shapes: Iterable<VoxelShape>?, maxDist: Double) = VoxelShapes.method_1085(axis, box, shapes, maxDist)
     /**
      * method_17786
      */
-    fun union(first: VoxelShape, others: Array<VoxelShape>) = VoxelShapes.method_17786(first, *others)
+    fun union(first: VoxelShape?, others: Array<VoxelShape>) = VoxelShapes.method_17786(first, *others)
     /**
      * method_1081
      */
@@ -25,19 +25,19 @@ object VoxelShapesKt {
     /**
      * method_1080
      */
-    fun adjacentSidesCoverSquare(one: VoxelShape, two: VoxelShape, direction: Direction) = VoxelShapes.method_1080(one, two, direction)
+    fun adjacentSidesCoverSquare(one: VoxelShape?, two: VoxelShape?, direction: Direction?) = VoxelShapes.method_1080(one, two, direction)
     /**
      * method_1082
      */
-    fun combine(one: VoxelShape, two: VoxelShape, function: BooleanBiFunction) = VoxelShapes.method_1082(one, two, function)
+    fun combine(one: VoxelShape?, two: VoxelShape?, function: BooleanBiFunction?) = VoxelShapes.method_1082(one, two, function)
     /**
      * method_1072
      */
-    fun combineAndSimplify(first: VoxelShape, second: VoxelShape, function: BooleanBiFunction) = VoxelShapes.method_1072(first, second, function)
+    fun combineAndSimplify(first: VoxelShape?, second: VoxelShape?, function: BooleanBiFunction?) = VoxelShapes.method_1072(first, second, function)
     /**
      * method_1074
      */
-    fun matchesAnywhere(shape1: VoxelShape, shape2: VoxelShape, predicate: BooleanBiFunction) = VoxelShapes.method_1074(shape1, shape2, predicate)
+    fun matchesAnywhere(shape1: VoxelShape?, shape2: VoxelShape?, predicate: BooleanBiFunction?) = VoxelShapes.method_1074(shape1, shape2, predicate)
     /**
      * method_31943
      */
@@ -53,17 +53,17 @@ object VoxelShapesKt {
     /**
      * method_20713
      */
-    fun unionCoversFullCube(one: VoxelShape, two: VoxelShape) = VoxelShapes.method_20713(one, two)
+    fun unionCoversFullCube(one: VoxelShape?, two: VoxelShape?) = VoxelShapes.method_20713(one, two)
     /**
      * method_1084
      */
-    fun union(first: VoxelShape, second: VoxelShape) = VoxelShapes.method_1084(first, second)
+    fun union(first: VoxelShape?, second: VoxelShape?) = VoxelShapes.method_1084(first, second)
     /**
      * method_1078
      */
-    fun cuboid(box: Box) = VoxelShapes.method_1078(box)
+    fun cuboid(box: Box?) = VoxelShapes.method_1078(box)
     /**
      * method_1083
      */
-    fun isSideCovered(shape: VoxelShape, neighbor: VoxelShape, direction: Direction) = VoxelShapes.method_1083(shape, neighbor, direction)
+    fun isSideCovered(shape: VoxelShape?, neighbor: VoxelShape?, direction: Direction?) = VoxelShapes.method_1083(shape, neighbor, direction)
 }

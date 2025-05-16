@@ -8,7 +8,7 @@ fun ReceivedMessage.getContent() = this.method_44551()
 /**
  * method_44553
  */
-fun ReceivedMessage.isSentFrom(uuid: UUID) = this.method_44553(uuid)
+fun ReceivedMessage.isSentFrom(uuid: UUID?) = this.method_44553(uuid)
 /**
  * method_44555
  */

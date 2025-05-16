@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_57466
  */
-fun DebugStickStateComponent.with(block: RegistryEntry<Block>, property: property_Property<*>) = this.method_57466(block, property)
+fun DebugStickStateComponent.with(block: RegistryEntry<Block>?, property: property_Property<*>?) = this.method_57466(block, property)
 /**
  * comp_2383
  */

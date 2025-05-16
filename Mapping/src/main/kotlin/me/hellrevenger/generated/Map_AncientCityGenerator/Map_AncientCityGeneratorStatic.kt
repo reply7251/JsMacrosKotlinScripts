@@ -9,5 +9,5 @@ object AncientCityGeneratorKt {
     /**
      * method_42755
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = AncientCityGenerator.method_42755(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = AncientCityGenerator.method_42755(poolRegisterable)
 }

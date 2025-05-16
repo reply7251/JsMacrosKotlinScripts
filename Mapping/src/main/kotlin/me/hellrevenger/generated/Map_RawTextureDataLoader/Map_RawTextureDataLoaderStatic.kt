@@ -5,5 +5,5 @@ object RawTextureDataLoaderKt {
     /**
      * method_16049
      */
-    fun loadRawTextureData(resourceManager: ResourceManager, id: Identifier) = RawTextureDataLoader.method_16049(resourceManager, id)
+    fun loadRawTextureData(resourceManager: ResourceManager?, id: Identifier?) = RawTextureDataLoader.method_16049(resourceManager, id)
 }

@@ -277,5 +277,5 @@ object DataComponentTypesKt {
     /**
      * method_57905
      */
-    fun getDefault(registry: Registry<ComponentType<*>>) = DataComponentTypes.method_57905(registry)
+    fun getDefault(registry: Registry<ComponentType<*>>?) = DataComponentTypes.method_57905(registry)
 }

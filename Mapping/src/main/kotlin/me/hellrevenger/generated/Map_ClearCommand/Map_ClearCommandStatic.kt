@@ -5,5 +5,5 @@ object ClearCommandKt {
     /**
      * method_13076
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, commandRegistryAccess: CommandRegistryAccess) = ClearCommand.method_13076(dispatcher, commandRegistryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, commandRegistryAccess: CommandRegistryAccess?) = ClearCommand.method_13076(dispatcher, commandRegistryAccess)
 }

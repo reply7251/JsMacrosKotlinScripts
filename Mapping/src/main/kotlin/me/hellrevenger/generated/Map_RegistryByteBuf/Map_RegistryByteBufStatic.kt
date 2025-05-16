@@ -5,5 +5,5 @@ object RegistryByteBufKt {
     /**
      * method_56350
      */
-    fun makeFactory(registryManager: DynamicRegistryManager) = RegistryByteBuf.method_56350(registryManager)
+    fun makeFactory(registryManager: DynamicRegistryManager?) = RegistryByteBuf.method_56350(registryManager)
 }

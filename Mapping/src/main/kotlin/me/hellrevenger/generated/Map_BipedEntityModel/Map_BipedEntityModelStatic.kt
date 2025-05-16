@@ -9,5 +9,5 @@ object BipedEntityModelKt {
     /**
      * method_32011
      */
-    fun <T>getModelData(dilation: Dilation, pivotOffsetY: Float) where T: BipedEntityRenderState = BipedEntityModel.method_32011(dilation, pivotOffsetY)
+    fun <T>getModelData(dilation: Dilation?, pivotOffsetY: Float) where T: BipedEntityRenderState = BipedEntityModel.method_32011(dilation, pivotOffsetY)
 }

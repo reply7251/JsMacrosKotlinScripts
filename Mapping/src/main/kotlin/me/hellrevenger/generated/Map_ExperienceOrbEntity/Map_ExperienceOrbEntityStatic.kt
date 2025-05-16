@@ -9,5 +9,5 @@ object ExperienceOrbEntityKt {
     /**
      * method_31493
      */
-    fun spawn(world: ServerWorld, pos: Vec3d, amount: Int) = ExperienceOrbEntity.method_31493(world, pos, amount)
+    fun spawn(world: ServerWorld?, pos: Vec3d?, amount: Int) = ExperienceOrbEntity.method_31493(world, pos, amount)
 }

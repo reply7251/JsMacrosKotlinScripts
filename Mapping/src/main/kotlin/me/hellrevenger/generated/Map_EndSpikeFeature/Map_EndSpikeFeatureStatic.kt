@@ -9,5 +9,5 @@ object EndSpikeFeatureKt {
     /**
      * method_14506
      */
-    fun getSpikes(world: StructureWorldAccess) = EndSpikeFeature.method_14506(world)
+    fun getSpikes(world: StructureWorldAccess?) = EndSpikeFeature.method_14506(world)
 }

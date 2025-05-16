@@ -8,7 +8,7 @@ fun AbstractTeam.getCollisionRule() = this.method_1203()
 /**
  * method_1198
  */
-fun AbstractTeam.decorateName(name: Text) = this.method_1198(name)
+fun AbstractTeam.decorateName(name: Text?) = this.method_1198(name)
 /**
  * method_1202
  */
@@ -36,7 +36,7 @@ fun AbstractTeam.getPlayerList() = this.method_1204()
 /**
  * method_1206
  */
-fun AbstractTeam.isEqual(team: AbstractTeam) = this.method_1206(team)
+fun AbstractTeam.isEqual(team: AbstractTeam?) = this.method_1206(team)
 /**
  * method_1205
  */

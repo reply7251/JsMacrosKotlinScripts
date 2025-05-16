@@ -24,7 +24,7 @@ var PlayerAbilities.invulnerable by alias(PlayerAbilities::field_7480)
 /**
  * method_7251
  */
-fun PlayerAbilities.writeNbt(nbt: NbtCompound) = this.method_7251(nbt)
+fun PlayerAbilities.writeNbt(nbt: NbtCompound?) = this.method_7251(nbt)
 /**
  * method_7252
  */
@@ -32,7 +32,7 @@ fun PlayerAbilities.getFlySpeed() = this.method_7252()
 /**
  * method_7249
  */
-fun PlayerAbilities.readNbt(nbt: NbtCompound) = this.method_7249(nbt)
+fun PlayerAbilities.readNbt(nbt: NbtCompound?) = this.method_7249(nbt)
 /**
  * method_7248
  */

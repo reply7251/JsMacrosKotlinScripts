@@ -13,5 +13,5 @@ object RealmsClientKt {
     /**
      * method_20989
      */
-    fun createRealmsClient(client: MinecraftClient) = RealmsClient.method_20989(client)
+    fun createRealmsClient(client: MinecraftClient?) = RealmsClient.method_20989(client)
 }

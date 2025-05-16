@@ -28,11 +28,11 @@ fun PaletteStorage.getElementBits() = this.method_34896()
 /**
  * method_21739
  */
-fun PaletteStorage.forEach(action: IntConsumer) = this.method_21739(action)
+fun PaletteStorage.forEach(action: IntConsumer?) = this.method_21739(action)
 /**
  * method_39892
  */
-fun PaletteStorage.writePaletteIndices(out: IntArray) = this.method_39892(out)
+fun PaletteStorage.writePaletteIndices(out: IntArray?) = this.method_39892(out)
 /**
  * method_15215
  */

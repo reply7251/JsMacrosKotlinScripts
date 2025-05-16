@@ -24,7 +24,7 @@ fun <T>Recipe<T>.getDisplays() where T: RecipeInput = this.method_64664()
 /**
  * method_8115
  */
-fun <T>Recipe<T>.matches(input: T, world: world_World) where T: RecipeInput = this.method_8115(input, world)
+fun <T>Recipe<T>.matches(input: T, world: world_World?) where T: RecipeInput = this.method_8115(input, world)
 /**
  * method_8118
  */
@@ -40,4 +40,4 @@ fun <T>Recipe<T>.getIngredientPlacement() where T: RecipeInput = this.method_616
 /**
  * method_8116
  */
-fun <T>Recipe<T>.craft(input: T, registries: net.minecraft.class_7225.class_7874) where T: RecipeInput = this.method_8116(input, registries)
+fun <T>Recipe<T>.craft(input: T, registries: net.minecraft.class_7225.class_7874?) where T: RecipeInput = this.method_8116(input, registries)

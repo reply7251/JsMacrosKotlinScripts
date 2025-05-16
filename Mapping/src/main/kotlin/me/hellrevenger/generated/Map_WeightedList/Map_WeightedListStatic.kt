@@ -5,5 +5,5 @@ object WeightedListKt {
     /**
      * method_35091
      */
-    fun <U>createCodec(codec: Codec<U>) = WeightedList.method_35091<U>(codec)
+    fun <U>createCodec(codec: Codec<U>?) = WeightedList.method_35091<U>(codec)
 }

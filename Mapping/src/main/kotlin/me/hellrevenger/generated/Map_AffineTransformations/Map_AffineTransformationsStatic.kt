@@ -13,9 +13,9 @@ object AffineTransformationsKt {
     /**
      * method_23220
      */
-    fun setupUvLock(transformation: AffineTransformation) = AffineTransformations.method_23220(transformation)
+    fun setupUvLock(transformation: AffineTransformation?) = AffineTransformations.method_23220(transformation)
     /**
      * method_23221
      */
-    fun uvLock(transformation: AffineTransformation, dir: Direction) = AffineTransformations.method_23221(transformation, dir)
+    fun uvLock(transformation: AffineTransformation?, dir: Direction?) = AffineTransformations.method_23221(transformation, dir)
 }

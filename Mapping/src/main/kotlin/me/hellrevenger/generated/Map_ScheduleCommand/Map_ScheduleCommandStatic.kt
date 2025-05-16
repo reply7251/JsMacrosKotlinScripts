@@ -5,5 +5,5 @@ object ScheduleCommandKt {
     /**
      * method_13567
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = ScheduleCommand.method_13567(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = ScheduleCommand.method_13567(dispatcher)
 }

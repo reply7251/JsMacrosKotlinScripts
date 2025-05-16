@@ -8,4 +8,4 @@ fun ArrowEntityRenderer.createRenderState() = this.method_62553()
 /**
  * method_62554
  */
-fun ArrowEntityRenderer.updateRenderState(arg0: ArrowEntity, arg1: ArrowEntityRenderState, arg2: Float) = this.method_62554(arg0, arg1, arg2)
+fun ArrowEntityRenderer.updateRenderState(arg0: ArrowEntity?, arg1: ArrowEntityRenderState?, arg2: Float) = this.method_62554(arg0, arg1, arg2)

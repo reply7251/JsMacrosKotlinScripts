@@ -5,7 +5,7 @@ object ScreenRectKt {
     /**
      * method_48250
      */
-    fun of(axis: NavigationAxis, sameAxisCoord: Int, otherAxisCoord: Int, sameAxisLength: Int, otherAxisLength: Int) = ScreenRect.method_48250(axis, sameAxisCoord, otherAxisCoord, sameAxisLength, otherAxisLength)
+    fun of(axis: NavigationAxis?, sameAxisCoord: Int, otherAxisCoord: Int, sameAxisLength: Int, otherAxisLength: Int) = ScreenRect.method_48250(axis, sameAxisCoord, otherAxisCoord, sameAxisLength, otherAxisLength)
     /**
      * method_48248
      */

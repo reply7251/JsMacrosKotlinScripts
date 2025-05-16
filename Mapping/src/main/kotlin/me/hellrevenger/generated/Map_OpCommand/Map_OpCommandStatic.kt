@@ -5,5 +5,5 @@ object OpCommandKt {
     /**
      * method_13464
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = OpCommand.method_13464(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = OpCommand.method_13464(dispatcher)
 }

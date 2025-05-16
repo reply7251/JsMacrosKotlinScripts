@@ -9,13 +9,13 @@ object TickKt {
     /**
      * method_39402
      */
-    fun <T>create(type: T, pos: BlockPos) = Tick.method_39402<T>(type, pos)
+    fun <T>create(type: T, pos: BlockPos?) = Tick.method_39402<T>(type, pos)
     /**
      * method_39406
      */
-    fun <T>tick(tickList: NbtList, nameToTypeFunction: function_Function<String, Optional<T>>, pos: ChunkPos) = Tick.method_39406<T>(tickList, nameToTypeFunction, pos)
+    fun <T>tick(tickList: NbtList?, nameToTypeFunction: function_Function<String, Optional<T>>?, pos: ChunkPos?) = Tick.method_39406<T>(tickList, nameToTypeFunction, pos)
     /**
      * method_40559
      */
-    fun <T>fromNbt(nbt: NbtCompound, nameToType: function_Function<String, Optional<T>>) = Tick.method_40559<T>(nbt, nameToType)
+    fun <T>fromNbt(nbt: NbtCompound?, nameToType: function_Function<String, Optional<T>>?) = Tick.method_40559<T>(nbt, nameToType)
 }

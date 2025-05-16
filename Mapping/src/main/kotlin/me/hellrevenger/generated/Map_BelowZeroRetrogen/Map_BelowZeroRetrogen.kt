@@ -16,4 +16,4 @@ fun BelowZeroRetrogen.getTargetStatus() = this.method_39319()
 /**
  * method_39898
  */
-fun BelowZeroRetrogen.fillColumnsWithAirIfMissingBedrock(chunk: ProtoChunk) = this.method_39898(chunk)
+fun BelowZeroRetrogen.fillColumnsWithAirIfMissingBedrock(chunk: ProtoChunk?) = this.method_39898(chunk)

@@ -5,5 +5,5 @@ object IntPropertyKt {
     /**
      * method_11867
      */
-    fun of(name: String, min: Int, max: Int) = IntProperty.method_11867(name, min, max)
+    fun of(name: String?, min: Int, max: Int) = IntProperty.method_11867(name, min, max)
 }

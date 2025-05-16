@@ -5,5 +5,5 @@ object TagPacketSerializerKt {
     /**
      * method_40105
      */
-    fun serializeTags(dynamicRegistryManager: CombinedDynamicRegistries<ServerDynamicRegistryType>) = TagPacketSerializer.method_40105(dynamicRegistryManager)
+    fun serializeTags(dynamicRegistryManager: CombinedDynamicRegistries<ServerDynamicRegistryType>?) = TagPacketSerializer.method_40105(dynamicRegistryManager)
 }

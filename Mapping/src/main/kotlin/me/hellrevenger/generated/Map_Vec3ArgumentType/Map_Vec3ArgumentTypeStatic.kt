@@ -13,11 +13,11 @@ object Vec3ArgumentTypeKt {
     /**
      * method_9734
      */
-    fun getPosArgument(context: CommandContext<ServerCommandSource>, name: String) = Vec3ArgumentType.method_9734(context, name)
+    fun getPosArgument(context: CommandContext<ServerCommandSource>?, name: String?) = Vec3ArgumentType.method_9734(context, name)
     /**
      * method_9736
      */
-    fun getVec3(context: CommandContext<ServerCommandSource>, name: String) = Vec3ArgumentType.method_9736(context, name)
+    fun getVec3(context: CommandContext<ServerCommandSource>?, name: String?) = Vec3ArgumentType.method_9736(context, name)
     /**
      * method_9737
      */

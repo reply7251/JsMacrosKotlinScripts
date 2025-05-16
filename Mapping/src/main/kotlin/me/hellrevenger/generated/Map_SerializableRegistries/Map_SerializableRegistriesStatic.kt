@@ -9,17 +9,17 @@ object SerializableRegistriesKt {
     /**
      * method_45953
      */
-    fun streamRegistryManagerEntries(combinedRegistries: CombinedDynamicRegistries<ServerDynamicRegistryType>) = SerializableRegistries.method_45953(combinedRegistries)
+    fun streamRegistryManagerEntries(combinedRegistries: CombinedDynamicRegistries<ServerDynamicRegistryType>?) = SerializableRegistries.method_45953(combinedRegistries)
     /**
      * method_56598
      */
-    fun forEachSyncedRegistry(nbtOps: DynamicOps<NbtElement>, registryManager: DynamicRegistryManager, knownPacks: Set<VersionedIdentifier>, callback: BiConsumer<RegistryKey<out Registry<*>>, MutableList<net.minecraft.class_7782.class_9176>>) = SerializableRegistries.method_56598(nbtOps, registryManager, knownPacks, callback)
+    fun forEachSyncedRegistry(nbtOps: DynamicOps<NbtElement>?, registryManager: DynamicRegistryManager?, knownPacks: Set<VersionedIdentifier>?, callback: BiConsumer<RegistryKey<out Registry<*>>, MutableList<net.minecraft.class_7782.class_9176>>?) = SerializableRegistries.method_56598(nbtOps, registryManager, knownPacks, callback)
     /**
      * method_47449
      */
-    fun streamDynamicEntries(combinedRegistries: CombinedDynamicRegistries<ServerDynamicRegistryType>) = SerializableRegistries.method_47449(combinedRegistries)
+    fun streamDynamicEntries(combinedRegistries: CombinedDynamicRegistries<ServerDynamicRegistryType>?) = SerializableRegistries.method_47449(combinedRegistries)
     /**
      * method_62704
      */
-    fun isSynced(key: RegistryKey<out Registry<*>>) = SerializableRegistries.method_62704(key)
+    fun isSynced(key: RegistryKey<out Registry<*>>?) = SerializableRegistries.method_62704(key)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_34807
  */
-fun RecordDumper.createDump(samplers: Set<Sampler>, deviations: Map<Sampler, MutableList<Deviation>>, result: ProfileResult) = this.method_34807(samplers, deviations, result)
+fun RecordDumper.createDump(samplers: Set<Sampler>?, deviations: Map<Sampler, MutableList<Deviation>>?, result: ProfileResult?) = this.method_34807(samplers, deviations, result)

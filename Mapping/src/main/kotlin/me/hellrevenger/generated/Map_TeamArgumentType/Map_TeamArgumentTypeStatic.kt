@@ -5,7 +5,7 @@ object TeamArgumentTypeKt {
     /**
      * method_9480
      */
-    fun getTeam(context: CommandContext<ServerCommandSource>, name: String) = TeamArgumentType.method_9480(context, name)
+    fun getTeam(context: CommandContext<ServerCommandSource>?, name: String?) = TeamArgumentType.method_9480(context, name)
     /**
      * method_9482
      */

@@ -5,5 +5,5 @@ object WardenAngerManagerKt {
     /**
      * method_43692
      */
-    fun createCodec(suspectPredicate: Predicate<Entity>) = WardenAngerManager.method_43692(suspectPredicate)
+    fun createCodec(suspectPredicate: Predicate<Entity>?) = WardenAngerManager.method_43692(suspectPredicate)
 }

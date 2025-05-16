@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_36907
  */
-fun AllowedAddressResolver.resolve(address: ServerAddress) = this.method_36907(address)
+fun AllowedAddressResolver.resolve(address: ServerAddress?) = this.method_36907(address)

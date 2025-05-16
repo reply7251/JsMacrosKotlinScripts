@@ -16,7 +16,7 @@ fun TickManager.getStepTicks() = this.method_54753()
 /**
  * method_54746
  */
-fun TickManager.shouldSkipTick(entity: Entity) = this.method_54746(entity)
+fun TickManager.shouldSkipTick(entity: Entity?) = this.method_54746(entity)
 /**
  * method_54748
  */

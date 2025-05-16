@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_34191
  */
-fun TitleS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34191(arg0)
+fun TitleS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_34191(arg0)
 /**
  * comp_2281
  */

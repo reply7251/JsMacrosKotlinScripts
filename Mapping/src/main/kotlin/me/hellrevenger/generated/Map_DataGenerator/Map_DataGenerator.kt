@@ -16,4 +16,4 @@ fun DataGenerator.createVanillaPack(shouldRun: Boolean) = this.method_46564(shou
 /**
  * method_46565
  */
-fun DataGenerator.createVanillaSubPack(shouldRun: Boolean, packName: String) = this.method_46565(shouldRun, packName)
+fun DataGenerator.createVanillaSubPack(shouldRun: Boolean, packName: String?) = this.method_46565(shouldRun, packName)

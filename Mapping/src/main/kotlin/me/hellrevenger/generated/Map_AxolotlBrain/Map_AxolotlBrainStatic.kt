@@ -9,5 +9,5 @@ object AxolotlBrainKt {
     /**
      * method_33244
      */
-    fun updateActivities(axolotl: AxolotlEntity) = AxolotlBrain.method_33244(axolotl)
+    fun updateActivities(axolotl: AxolotlEntity?) = AxolotlBrain.method_33244(axolotl)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_27975
  */
-fun ThrownItemPickedUpByEntityCriterion.trigger(player: ServerPlayerEntity, stack: ItemStack, entity: Entity) = this.method_27975(player, stack, entity)
+fun ThrownItemPickedUpByEntityCriterion.trigger(player: ServerPlayerEntity?, stack: ItemStack?, entity: Entity?) = this.method_27975(player, stack, entity)

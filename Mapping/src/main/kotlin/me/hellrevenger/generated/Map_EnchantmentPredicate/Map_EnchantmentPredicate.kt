@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_8880
  */
-fun EnchantmentPredicate.test(enchantmentsComponent: ItemEnchantmentsComponent) = this.method_8880(enchantmentsComponent)
+fun EnchantmentPredicate.test(enchantmentsComponent: ItemEnchantmentsComponent?) = this.method_8880(enchantmentsComponent)
 /**
  * comp_1749
  */

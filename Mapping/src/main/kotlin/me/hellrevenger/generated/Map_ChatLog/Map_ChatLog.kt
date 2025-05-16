@@ -16,4 +16,4 @@ fun ChatLog.getMaxIndex() = this.method_45752()
 /**
  * method_44535
  */
-fun ChatLog.add(entry: ChatLogEntry) = this.method_44535(entry)
+fun ChatLog.add(entry: ChatLogEntry?) = this.method_44535(entry)

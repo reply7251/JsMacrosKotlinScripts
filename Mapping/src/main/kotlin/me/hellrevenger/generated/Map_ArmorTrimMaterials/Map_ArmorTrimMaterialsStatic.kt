@@ -49,9 +49,9 @@ object ArmorTrimMaterialsKt {
     /**
      * method_48440
      */
-    fun get(registries: net.minecraft.class_7225.class_7874, stack: ItemStack) = ArmorTrimMaterials.method_48440(registries, stack)
+    fun get(registries: net.minecraft.class_7225.class_7874?, stack: ItemStack?) = ArmorTrimMaterials.method_48440(registries, stack)
     /**
      * method_48442
      */
-    fun bootstrap(registry: Registerable<ArmorTrimMaterial>) = ArmorTrimMaterials.method_48442(registry)
+    fun bootstrap(registry: Registerable<ArmorTrimMaterial>?) = ArmorTrimMaterials.method_48442(registry)
 }

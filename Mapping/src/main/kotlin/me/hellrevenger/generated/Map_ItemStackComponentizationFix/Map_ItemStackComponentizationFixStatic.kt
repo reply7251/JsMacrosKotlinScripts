@@ -5,5 +5,5 @@ object ItemStackComponentizationFixKt {
     /**
      * method_57236
      */
-    fun createProfileDynamic(dynamic: Dynamic<*>) = ItemStackComponentizationFix.method_57236(dynamic)
+    fun createProfileDynamic(dynamic: Dynamic<*>?) = ItemStackComponentizationFix.method_57236(dynamic)
 }

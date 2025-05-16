@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_43832
  */
-fun Decoration.apply(content: Text, params: net.minecraft.class_2556.class_7602) = this.method_43832(content, params)
+fun Decoration.apply(content: Text?, params: net.minecraft.class_2556.class_7602?) = this.method_43832(content, params)
 /**
  * comp_789
  */

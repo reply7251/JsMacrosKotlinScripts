@@ -12,8 +12,8 @@ fun <T>MutableRegistry<T>.isEmpty() = this.method_35863()
 /**
  * method_10272
  */
-fun <T>MutableRegistry<T>.add(key: RegistryKey<T>, value: T, info: RegistryEntryInfo) = this.method_10272(key, value, info)
+fun <T>MutableRegistry<T>.add(key: RegistryKey<T>?, value: T, info: RegistryEntryInfo?) = this.method_10272(key, value, info)
 /**
  * method_62681
  */
-fun <T>MutableRegistry<T>.setEntries(tag: TagKey<T>, entries: MutableList<RegistryEntry<T>>) = this.method_62681(tag, entries)
+fun <T>MutableRegistry<T>.setEntries(tag: TagKey<T>?, entries: MutableList<RegistryEntry<T>>?) = this.method_62681(tag, entries)

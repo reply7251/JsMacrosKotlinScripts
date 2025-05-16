@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12480
  */
-fun CreativeInventoryActionC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12480(arg0)
+fun CreativeInventoryActionC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12480(arg0)
 /**
  * comp_2610
  */

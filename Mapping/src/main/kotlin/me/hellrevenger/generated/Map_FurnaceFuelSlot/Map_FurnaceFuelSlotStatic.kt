@@ -5,5 +5,5 @@ object FurnaceFuelSlotKt {
     /**
      * method_7636
      */
-    fun isBucket(stack: ItemStack) = FurnaceFuelSlot.method_7636(stack)
+    fun isBucket(stack: ItemStack?) = FurnaceFuelSlot.method_7636(stack)
 }

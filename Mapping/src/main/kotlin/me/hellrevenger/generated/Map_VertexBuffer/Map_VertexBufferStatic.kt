@@ -9,5 +9,5 @@ object VertexBufferKt {
     /**
      * method_65175
      */
-    fun createAndUpload(drawMode: net.minecraft.class_293.class_5596, format: VertexFormat, callback: Consumer<VertexConsumer>) = VertexBuffer.method_65175(drawMode, format, callback)
+    fun createAndUpload(drawMode: net.minecraft.class_293.class_5596?, format: VertexFormat?, callback: Consumer<VertexConsumer>?) = VertexBuffer.method_65175(drawMode, format, callback)
 }

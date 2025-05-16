@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_57438
  */
-fun ChargedProjectilesComponent.contains(item: Item) = this.method_57438(item)
+fun ChargedProjectilesComponent.contains(item: Item?) = this.method_57438(item)
 /**
  * method_57442
  */

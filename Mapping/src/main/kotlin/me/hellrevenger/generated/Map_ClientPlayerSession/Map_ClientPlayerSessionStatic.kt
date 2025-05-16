@@ -5,5 +5,5 @@ object ClientPlayerSessionKt {
     /**
      * method_46273
      */
-    fun create(keyPair: PlayerKeyPair) = ClientPlayerSession.method_46273(keyPair)
+    fun create(keyPair: PlayerKeyPair?) = ClientPlayerSession.method_46273(keyPair)
 }

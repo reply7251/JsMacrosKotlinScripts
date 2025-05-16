@@ -5,5 +5,5 @@ object ItemNbtFixKt {
     /**
      * method_56971
      */
-    fun fixNbt(itemStackType: types_Type<*>, itemIdPredicate: Predicate<String>, nbtFixer: UnaryOperator<Dynamic<*>>) = ItemNbtFix.method_56971(itemStackType, itemIdPredicate, nbtFixer)
+    fun fixNbt(itemStackType: types_Type<*>?, itemIdPredicate: Predicate<String>?, nbtFixer: UnaryOperator<Dynamic<*>>?) = ItemNbtFix.method_56971(itemStackType, itemIdPredicate, nbtFixer)
 }

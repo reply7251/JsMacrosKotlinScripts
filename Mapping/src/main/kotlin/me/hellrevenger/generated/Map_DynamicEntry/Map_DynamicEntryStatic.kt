@@ -5,5 +5,5 @@ object DynamicEntryKt {
     /**
      * method_390
      */
-    fun builder(name: Identifier) = DynamicEntry.method_390(name)
+    fun builder(name: Identifier?) = DynamicEntry.method_390(name)
 }

@@ -5,5 +5,5 @@ object PathNodeMakerKt {
     /**
      * method_57082
      */
-    fun isFireDamaging(state: BlockState) = PathNodeMaker.method_57082(state)
+    fun isFireDamaging(state: BlockState?) = PathNodeMaker.method_57082(state)
 }

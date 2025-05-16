@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_16728
  */
-fun <T>AbstractPropertiesHandler<T>.saveProperties(path: file_Path) where T: AbstractPropertiesHandler<T> = this.method_16728(path)
+fun <T>AbstractPropertiesHandler<T>.saveProperties(path: file_Path?) where T: AbstractPropertiesHandler<T> = this.method_16728(path)

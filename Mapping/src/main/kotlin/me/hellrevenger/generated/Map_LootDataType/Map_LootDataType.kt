@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_51209
  */
-fun <T>LootDataType<T>.validate(reporter: LootTableReporter, key: RegistryKey<T>, value: T) = this.method_51209(reporter, key, value)
+fun <T>LootDataType<T>.validate(reporter: LootTableReporter?, key: RegistryKey<T>?, value: T) = this.method_51209(reporter, key, value)
 /**
  * comp_2522
  */

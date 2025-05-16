@@ -9,9 +9,9 @@ object CarvedPumpkinBlockKt {
     /**
      * method_45456
      */
-    fun updatePatternBlocks(world: world_World, patternResult: net.minecraft.class_2700.class_2702) = CarvedPumpkinBlock.method_45456(world, patternResult)
+    fun updatePatternBlocks(world: world_World?, patternResult: net.minecraft.class_2700.class_2702?) = CarvedPumpkinBlock.method_45456(world, patternResult)
     /**
      * method_45454
      */
-    fun breakPatternBlocks(world: world_World, patternResult: net.minecraft.class_2700.class_2702) = CarvedPumpkinBlock.method_45454(world, patternResult)
+    fun breakPatternBlocks(world: world_World?, patternResult: net.minecraft.class_2700.class_2702?) = CarvedPumpkinBlock.method_45454(world, patternResult)
 }

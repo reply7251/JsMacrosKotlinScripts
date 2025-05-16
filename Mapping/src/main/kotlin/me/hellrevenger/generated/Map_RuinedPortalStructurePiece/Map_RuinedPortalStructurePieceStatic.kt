@@ -5,5 +5,5 @@ object RuinedPortalStructurePieceKt {
     /**
      * method_27241
      */
-    fun getHeightmapType(verticalPlacement: net.minecraft.class_5189.class_5191) = RuinedPortalStructurePiece.method_27241(verticalPlacement)
+    fun getHeightmapType(verticalPlacement: net.minecraft.class_5189.class_5191?) = RuinedPortalStructurePiece.method_27241(verticalPlacement)
 }

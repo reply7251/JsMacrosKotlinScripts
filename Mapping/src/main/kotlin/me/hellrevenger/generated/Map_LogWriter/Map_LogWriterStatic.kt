@@ -5,5 +5,5 @@ object LogWriterKt {
     /**
      * method_47567
      */
-    fun <T>create(codec: Codec<T>, path: file_Path) = LogWriter.method_47567<T>(codec, path)
+    fun <T>create(codec: Codec<T>?, path: file_Path?) = LogWriter.method_47567<T>(codec, path)
 }

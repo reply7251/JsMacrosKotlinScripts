@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_14931
  */
-fun StructurePiece.generate(world: StructureWorldAccess, structureAccessor: StructureAccessor, chunkGenerator: ChunkGenerator, random: Random, chunkBox: BlockBox, chunkPos: ChunkPos, pivot: BlockPos) = this.method_14931(world, structureAccessor, chunkGenerator, random, chunkBox, chunkPos, pivot)
+fun StructurePiece.generate(world: StructureWorldAccess?, structureAccessor: StructureAccessor?, chunkGenerator: ChunkGenerator?, random: Random?, chunkBox: BlockBox?, chunkPos: ChunkPos?, pivot: BlockPos?) = this.method_14931(world, structureAccessor, chunkGenerator, random, chunkBox, chunkPos, pivot)
 /**
  * method_14926
  */
-fun StructurePiece.setOrientation(orientation: Direction) = this.method_14926(orientation)
+fun StructurePiece.setOrientation(orientation: Direction?) = this.method_14926(orientation)
 /**
  * method_41620
  */
@@ -20,11 +20,11 @@ fun StructurePiece.getRotation() = this.method_16888()
 /**
  * method_16654
  */
-fun StructurePiece.intersectsChunk(pos: ChunkPos, offset: Int) = this.method_16654(pos, offset)
+fun StructurePiece.intersectsChunk(pos: ChunkPos?, offset: Int) = this.method_16654(pos, offset)
 /**
  * method_14918
  */
-fun StructurePiece.fillOpenings(start: StructurePiece, holder: StructurePiecesHolder, random: Random) = this.method_14918(start, holder, random)
+fun StructurePiece.fillOpenings(start: StructurePiece?, holder: StructurePiecesHolder?, random: Random?) = this.method_14918(start, holder, random)
 /**
  * method_14923
  */
@@ -52,7 +52,7 @@ fun StructurePiece.getMirror() = this.method_35460()
 /**
  * method_14946
  */
-fun StructurePiece.toNbt(context: StructureContext) = this.method_14946(context)
+fun StructurePiece.toNbt(context: StructureContext?) = this.method_14946(context)
 /**
  * method_14934
  */

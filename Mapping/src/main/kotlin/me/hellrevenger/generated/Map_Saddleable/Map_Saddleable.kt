@@ -16,4 +16,4 @@ fun Saddleable.isSaddled() = this.method_6725()
 /**
  * method_6576
  */
-fun Saddleable.saddle(stack: ItemStack, soundCategory: SoundCategory) = this.method_6576(stack, soundCategory)
+fun Saddleable.saddle(stack: ItemStack?, soundCategory: SoundCategory?) = this.method_6576(stack, soundCategory)

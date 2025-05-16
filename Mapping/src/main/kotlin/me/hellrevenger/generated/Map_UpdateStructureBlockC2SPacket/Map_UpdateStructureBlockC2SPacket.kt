@@ -40,7 +40,7 @@ fun UpdateStructureBlockC2SPacket.getMode() = this.method_12504()
 /**
  * method_12495
  */
-fun UpdateStructureBlockC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12495(arg0)
+fun UpdateStructureBlockC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12495(arg0)
 /**
  * method_12502
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_55582
  */
-fun ResourcePackRemoveS2CPacket.apply(arg0: ClientCommonPacketListener) = this.method_55582(arg0)
+fun ResourcePackRemoveS2CPacket.apply(arg0: ClientCommonPacketListener?) = this.method_55582(arg0)
 /**
  * comp_2157
  */

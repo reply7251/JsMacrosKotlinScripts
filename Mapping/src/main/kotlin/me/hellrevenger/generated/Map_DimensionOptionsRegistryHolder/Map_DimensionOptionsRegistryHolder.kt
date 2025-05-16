@@ -8,11 +8,11 @@ fun DimensionOptionsRegistryHolder.getWorldKeys() = this.method_45526()
 /**
  * method_45522
  */
-fun DimensionOptionsRegistryHolder.with(registries: net.minecraft.class_7225.class_7874, chunkGenerator: ChunkGenerator) = this.method_45522(registries, chunkGenerator)
+fun DimensionOptionsRegistryHolder.with(registries: net.minecraft.class_7225.class_7874?, chunkGenerator: ChunkGenerator?) = this.method_45522(registries, chunkGenerator)
 /**
  * method_45514
  */
-fun DimensionOptionsRegistryHolder.getOrEmpty(key: RegistryKey<DimensionOptions>) = this.method_45514(key)
+fun DimensionOptionsRegistryHolder.getOrEmpty(key: RegistryKey<DimensionOptions>?) = this.method_45514(key)
 /**
  * method_45531
  */
@@ -24,7 +24,7 @@ fun DimensionOptionsRegistryHolder.getChunkGenerator() = this.method_45513()
 /**
  * method_45518
  */
-fun DimensionOptionsRegistryHolder.toConfig(existingRegistry: Registry<DimensionOptions>) = this.method_45518(existingRegistry)
+fun DimensionOptionsRegistryHolder.toConfig(existingRegistry: Registry<DimensionOptions>?) = this.method_45518(existingRegistry)
 /**
  * comp_1014
  */

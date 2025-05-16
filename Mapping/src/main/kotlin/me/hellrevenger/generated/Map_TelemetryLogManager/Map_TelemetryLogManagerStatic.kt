@@ -5,5 +5,5 @@ object TelemetryLogManagerKt {
     /**
      * method_47738
      */
-    fun create(directory: file_Path) = TelemetryLogManager.method_47738(directory)
+    fun create(directory: file_Path?) = TelemetryLogManager.method_47738(directory)
 }

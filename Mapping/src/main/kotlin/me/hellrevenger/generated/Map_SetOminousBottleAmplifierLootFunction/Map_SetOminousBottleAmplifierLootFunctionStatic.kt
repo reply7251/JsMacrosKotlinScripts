@@ -5,5 +5,5 @@ object SetOminousBottleAmplifierLootFunctionKt {
     /**
      * method_58737
      */
-    fun builder(amplifier: LootNumberProvider) = SetOminousBottleAmplifierLootFunction.method_58737(amplifier)
+    fun builder(amplifier: LootNumberProvider?) = SetOminousBottleAmplifierLootFunction.method_58737(amplifier)
 }

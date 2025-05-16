@@ -25,5 +25,5 @@ object CandleBlockKt {
     /**
      * method_31630
      */
-    fun canBeLit(state: BlockState) = CandleBlock.method_31630(state)
+    fun canBeLit(state: BlockState?) = CandleBlock.method_31630(state)
 }

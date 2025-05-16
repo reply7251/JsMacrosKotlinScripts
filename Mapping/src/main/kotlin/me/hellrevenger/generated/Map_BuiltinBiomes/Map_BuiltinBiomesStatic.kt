@@ -5,5 +5,5 @@ object BuiltinBiomesKt {
     /**
      * method_40363
      */
-    fun bootstrap(biomeRegisterable: Registerable<Biome>) = BuiltinBiomes.method_40363(biomeRegisterable)
+    fun bootstrap(biomeRegisterable: Registerable<Biome>?) = BuiltinBiomes.method_40363(biomeRegisterable)
 }

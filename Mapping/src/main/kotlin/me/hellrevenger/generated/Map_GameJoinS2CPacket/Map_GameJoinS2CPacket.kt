@@ -16,7 +16,7 @@ fun GameJoinS2CPacket.maxPlayers() = this.comp_97()
 /**
  * method_11567
  */
-fun GameJoinS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11567(arg0)
+fun GameJoinS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11567(arg0)
 /**
  * comp_99
  */

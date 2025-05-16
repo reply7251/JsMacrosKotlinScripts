@@ -5,5 +5,5 @@ object MutableTextKt {
     /**
      * method_43477
      */
-    fun of(content: TextContent) = MutableText.method_43477(content)
+    fun of(content: TextContent?) = MutableText.method_43477(content)
 }

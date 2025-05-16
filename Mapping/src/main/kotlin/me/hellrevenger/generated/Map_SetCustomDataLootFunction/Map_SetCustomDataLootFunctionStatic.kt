@@ -5,5 +5,5 @@ object SetCustomDataLootFunctionKt {
     /**
      * method_57654
      */
-    fun builder(nbt: NbtCompound) = SetCustomDataLootFunction.method_57654(nbt)
+    fun builder(nbt: NbtCompound?) = SetCustomDataLootFunction.method_57654(nbt)
 }

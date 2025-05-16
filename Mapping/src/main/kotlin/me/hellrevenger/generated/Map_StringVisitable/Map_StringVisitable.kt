@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_27657
  */
-fun <T>StringVisitable.visit(visitor: net.minecraft.class_5348.class_5245<T>) = this.method_27657<T>(visitor)
+fun <T>StringVisitable.visit(visitor: net.minecraft.class_5348.class_5245<T>?) = this.method_27657<T>(visitor)
 /**
  * method_27658
  */
-fun <T>StringVisitable.visit(styledVisitor: net.minecraft.class_5348.class_5246<T>, style: Style) = this.method_27658<T>(styledVisitor, style)
+fun <T>StringVisitable.visit(styledVisitor: net.minecraft.class_5348.class_5246<T>?, style: Style?) = this.method_27658<T>(styledVisitor, style)

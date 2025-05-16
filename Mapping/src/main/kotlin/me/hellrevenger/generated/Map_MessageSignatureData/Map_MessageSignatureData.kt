@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_46277
  */
-fun MessageSignatureData.pack(storage: MessageSignatureStorage) = this.method_46277(storage)
+fun MessageSignatureData.pack(storage: MessageSignatureStorage?) = this.method_46277(storage)
 /**
  * method_44843
  */
-fun MessageSignatureData.verify(verifier: SignatureVerifier, updatable: SignatureUpdatable) = this.method_44843(verifier, updatable)
+fun MessageSignatureData.verify(verifier: SignatureVerifier?, updatable: SignatureUpdatable?) = this.method_44843(verifier, updatable)
 /**
  * method_44994
  */

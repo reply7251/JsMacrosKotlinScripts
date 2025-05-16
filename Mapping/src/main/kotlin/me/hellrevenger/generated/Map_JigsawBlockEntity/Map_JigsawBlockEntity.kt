@@ -12,7 +12,7 @@ fun JigsawBlockEntity.toUpdatePacket() = this.method_38248()
 /**
  * method_16378
  */
-fun JigsawBlockEntity.setTarget(target: Identifier) = this.method_16378(target)
+fun JigsawBlockEntity.setTarget(target: Identifier?) = this.method_16378(target)
 /**
  * method_16381
  */
@@ -20,11 +20,11 @@ fun JigsawBlockEntity.getName() = this.method_16381()
 /**
  * method_26398
  */
-fun JigsawBlockEntity.setPool(pool: RegistryKey<StructurePool>) = this.method_26398(pool)
+fun JigsawBlockEntity.setPool(pool: RegistryKey<StructurePool>?) = this.method_26398(pool)
 /**
  * method_26396
  */
-fun JigsawBlockEntity.setJoint(joint: net.minecraft.class_3751.class_4991) = this.method_26396(joint)
+fun JigsawBlockEntity.setJoint(joint: net.minecraft.class_3751.class_4991?) = this.method_26396(joint)
 /**
  * method_54775
  */
@@ -40,11 +40,11 @@ fun JigsawBlockEntity.getSelectionPriority() = this.method_54778()
 /**
  * method_16379
  */
-fun JigsawBlockEntity.setName(name: Identifier) = this.method_16379(name)
+fun JigsawBlockEntity.setName(name: Identifier?) = this.method_16379(name)
 /**
  * method_16377
  */
-fun JigsawBlockEntity.setFinalState(finalState: String) = this.method_16377(finalState)
+fun JigsawBlockEntity.setFinalState(finalState: String?) = this.method_16377(finalState)
 /**
  * method_16380
  */
@@ -56,7 +56,7 @@ fun JigsawBlockEntity.getPool() = this.method_16382()
 /**
  * method_27191
  */
-fun JigsawBlockEntity.generate(world: ServerWorld, maxDepth: Int, keepJigsaws: Boolean) = this.method_27191(world, maxDepth, keepJigsaws)
+fun JigsawBlockEntity.generate(world: ServerWorld?, maxDepth: Int, keepJigsaws: Boolean) = this.method_27191(world, maxDepth, keepJigsaws)
 /**
  * method_26400
  */

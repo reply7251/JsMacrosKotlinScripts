@@ -25,15 +25,15 @@ object ComposterBlockKt {
     /**
      * method_18027
      */
-    fun playEffects(world: world_World, pos: BlockPos, fill: Boolean) = ComposterBlock.method_18027(world, pos, fill)
+    fun playEffects(world: world_World?, pos: BlockPos?, fill: Boolean) = ComposterBlock.method_18027(world, pos, fill)
     /**
      * method_26373
      */
-    fun compost(user: Entity, state: BlockState, world: ServerWorld, stack: ItemStack, pos: BlockPos) = ComposterBlock.method_26373(user, state, world, stack, pos)
+    fun compost(user: Entity?, state: BlockState?, world: ServerWorld?, stack: ItemStack?, pos: BlockPos?) = ComposterBlock.method_26373(user, state, world, stack, pos)
     /**
      * method_26374
      */
-    fun emptyFullComposter(user: Entity, state: BlockState, world: world_World, pos: BlockPos) = ComposterBlock.method_26374(user, state, world, pos)
+    fun emptyFullComposter(user: Entity?, state: BlockState?, world: world_World?, pos: BlockPos?) = ComposterBlock.method_26374(user, state, world, pos)
     /**
      * method_17758
      */

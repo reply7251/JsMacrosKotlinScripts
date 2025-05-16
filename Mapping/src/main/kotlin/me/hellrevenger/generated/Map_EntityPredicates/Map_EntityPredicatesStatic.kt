@@ -37,11 +37,11 @@ object EntityPredicatesKt {
     /**
      * method_5911
      */
-    fun canBePushedBy(entity: Entity) = EntityPredicates.method_5911(entity)
+    fun canBePushedBy(entity: Entity?) = EntityPredicates.method_5911(entity)
     /**
      * method_5913
      */
-    fun rides(entity: Entity) = EntityPredicates.method_5913(entity)
+    fun rides(entity: Entity?) = EntityPredicates.method_5913(entity)
     /**
      * method_5909
      */

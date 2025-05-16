@@ -5,5 +5,5 @@ object DeOpCommandKt {
     /**
      * method_13143
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = DeOpCommand.method_13143(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = DeOpCommand.method_13143(dispatcher)
 }

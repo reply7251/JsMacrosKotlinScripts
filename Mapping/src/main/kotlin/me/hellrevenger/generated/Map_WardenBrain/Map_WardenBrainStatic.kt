@@ -17,13 +17,13 @@ object WardenBrainKt {
     /**
      * method_42231
      */
-    fun lookAtDisturbance(warden: WardenEntity, pos: BlockPos) = WardenBrain.method_42231(warden, pos)
+    fun lookAtDisturbance(warden: WardenEntity?, pos: BlockPos?) = WardenBrain.method_42231(warden, pos)
     /**
      * method_42225
      */
-    fun resetDigCooldown(warden: LivingEntity) = WardenBrain.method_42225(warden)
+    fun resetDigCooldown(warden: LivingEntity?) = WardenBrain.method_42225(warden)
     /**
      * method_42228
      */
-    fun updateActivities(warden: WardenEntity) = WardenBrain.method_42228(warden)
+    fun updateActivities(warden: WardenEntity?) = WardenBrain.method_42228(warden)
 }

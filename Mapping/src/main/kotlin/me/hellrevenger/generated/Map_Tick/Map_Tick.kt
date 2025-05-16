@@ -8,7 +8,7 @@ fun <T>Tick<T>.createOrderedTick(time: Long, arg1: Long) = this.method_39400(tim
 /**
  * method_39404
  */
-fun <T>Tick<T>.toNbt(typeToNameFunction: function_Function<T, String>) = this.method_39404(typeToNameFunction)
+fun <T>Tick<T>.toNbt(typeToNameFunction: function_Function<T, String>?) = this.method_39404(typeToNameFunction)
 /**
  * comp_248
  */

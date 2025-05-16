@@ -12,7 +12,7 @@ fun LevelInfo.getGameRules() = this.method_27341()
 /**
  * method_28381
  */
-fun LevelInfo.withDifficulty(difficulty: Difficulty) = this.method_28381(difficulty)
+fun LevelInfo.withDifficulty(difficulty: Difficulty?) = this.method_28381(difficulty)
 /**
  * method_27340
  */
@@ -32,11 +32,11 @@ fun LevelInfo.getDataConfiguration() = this.method_29558()
 /**
  * method_29557
  */
-fun LevelInfo.withDataConfiguration(dataConfiguration: DataConfiguration) = this.method_29557(dataConfiguration)
+fun LevelInfo.withDataConfiguration(dataConfiguration: DataConfiguration?) = this.method_29557(dataConfiguration)
 /**
  * method_28382
  */
-fun LevelInfo.withGameMode(mode: GameMode) = this.method_28382(mode)
+fun LevelInfo.withGameMode(mode: GameMode?) = this.method_28382(mode)
 /**
  * method_8582
  */

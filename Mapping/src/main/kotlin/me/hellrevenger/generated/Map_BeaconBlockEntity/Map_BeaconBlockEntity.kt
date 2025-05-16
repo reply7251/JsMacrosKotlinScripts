@@ -8,7 +8,7 @@ fun BeaconBlockEntity.toUpdatePacket() = this.method_38236()
 /**
  * method_10936
  */
-fun BeaconBlockEntity.setCustomName(customName: Text) = this.method_10936(customName)
+fun BeaconBlockEntity.setCustomName(customName: Text?) = this.method_10936(customName)
 /**
  * method_10937
  */

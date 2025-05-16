@@ -37,25 +37,25 @@ object BlockArgumentParserKt {
     /**
      * method_9685
      */
-    fun stringifyBlockState(state: BlockState) = BlockArgumentParser.method_9685(state)
+    fun stringifyBlockState(state: BlockState?) = BlockArgumentParser.method_9685(state)
     /**
      * method_41955
      */
-    fun block(registryWrapper: RegistryWrapper<Block>, reader: StringReader, allowSnbt: Boolean) = BlockArgumentParser.method_41955(registryWrapper, reader, allowSnbt)
+    fun block(registryWrapper: RegistryWrapper<Block>?, reader: StringReader?, allowSnbt: Boolean) = BlockArgumentParser.method_41955(registryWrapper, reader, allowSnbt)
     /**
      * method_41960
      */
-    fun blockOrTag(registryWrapper: RegistryWrapper<Block>, reader: StringReader, allowSnbt: Boolean) = BlockArgumentParser.method_41960(registryWrapper, reader, allowSnbt)
+    fun blockOrTag(registryWrapper: RegistryWrapper<Block>?, reader: StringReader?, allowSnbt: Boolean) = BlockArgumentParser.method_41960(registryWrapper, reader, allowSnbt)
     /**
      * method_9666
      */
-    fun getSuggestions(registryWrapper: RegistryWrapper<Block>, builder: SuggestionsBuilder, allowTag: Boolean, allowSnbt: Boolean) = BlockArgumentParser.method_9666(registryWrapper, builder, allowTag, allowSnbt)
+    fun getSuggestions(registryWrapper: RegistryWrapper<Block>?, builder: SuggestionsBuilder?, allowTag: Boolean, allowSnbt: Boolean) = BlockArgumentParser.method_9666(registryWrapper, builder, allowTag, allowSnbt)
     /**
      * method_41962
      */
-    fun blockOrTag(registryWrapper: RegistryWrapper<Block>, string: String, allowSnbt: Boolean) = BlockArgumentParser.method_41962(registryWrapper, string, allowSnbt)
+    fun blockOrTag(registryWrapper: RegistryWrapper<Block>?, string: String?, allowSnbt: Boolean) = BlockArgumentParser.method_41962(registryWrapper, string, allowSnbt)
     /**
      * method_41957
      */
-    fun block(registryWrapper: RegistryWrapper<Block>, string: String, allowSnbt: Boolean) = BlockArgumentParser.method_41957(registryWrapper, string, allowSnbt)
+    fun block(registryWrapper: RegistryWrapper<Block>?, string: String?, allowSnbt: Boolean) = BlockArgumentParser.method_41957(registryWrapper, string, allowSnbt)
 }

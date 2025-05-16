@@ -5,5 +5,5 @@ object EntityConversionContextKt {
     /**
      * method_63607
      */
-    fun create(entity: MobEntity, keepEquipment: Boolean, preserveCanPickUpLoot: Boolean) = EntityConversionContext.method_63607(entity, keepEquipment, preserveCanPickUpLoot)
+    fun create(entity: MobEntity?, keepEquipment: Boolean, preserveCanPickUpLoot: Boolean) = EntityConversionContext.method_63607(entity, keepEquipment, preserveCanPickUpLoot)
 }

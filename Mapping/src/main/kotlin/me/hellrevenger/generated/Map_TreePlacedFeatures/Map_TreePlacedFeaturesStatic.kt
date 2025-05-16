@@ -129,5 +129,5 @@ object TreePlacedFeaturesKt {
     /**
      * method_46866
      */
-    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = TreePlacedFeatures.method_46866(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>?) = TreePlacedFeatures.method_46866(featureRegisterable)
 }

@@ -5,5 +5,5 @@ object AddressKt {
     /**
      * method_36899
      */
-    fun create(address: InetSocketAddress) = Address.method_36899(address)
+    fun create(address: InetSocketAddress?) = Address.method_36899(address)
 }

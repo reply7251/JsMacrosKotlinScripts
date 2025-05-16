@@ -5,5 +5,5 @@ object BannerItemKt {
     /**
      * method_7705
      */
-    fun appendBannerTooltip(stack: ItemStack, tooltip: MutableList<Text>) = BannerItem.method_7705(stack, tooltip)
+    fun appendBannerTooltip(stack: ItemStack?, tooltip: MutableList<Text>?) = BannerItem.method_7705(stack, tooltip)
 }

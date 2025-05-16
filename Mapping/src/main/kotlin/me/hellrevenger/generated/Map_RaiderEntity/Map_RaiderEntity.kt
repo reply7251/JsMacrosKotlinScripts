@@ -20,7 +20,7 @@ fun RaiderEntity.getCelebratingSound() = this.method_20033()
 /**
  * method_16476
  */
-fun RaiderEntity.setRaid(raid: Raid) = this.method_16476(raid)
+fun RaiderEntity.setRaid(raid: Raid?) = this.method_16476(raid)
 /**
  * method_20036
  */
@@ -60,4 +60,4 @@ fun RaiderEntity.canJoinRaid() = this.method_16481()
 /**
  * method_16484
  */
-fun RaiderEntity.addBonusForWave(world: ServerWorld, wave: Int, unused: Boolean) = this.method_16484(world, wave, unused)
+fun RaiderEntity.addBonusForWave(world: ServerWorld?, wave: Int, unused: Boolean) = this.method_16484(world, wave, unused)

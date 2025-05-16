@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_5432
  */
-fun Inventory.onClose(player: PlayerEntity) = this.method_5432(player)
+fun Inventory.onClose(player: PlayerEntity?) = this.method_5432(player)
 /**
  * method_5435
  */
-fun Inventory.onOpen(player: PlayerEntity) = this.method_5435(player)
+fun Inventory.onOpen(player: PlayerEntity?) = this.method_5435(player)
 /**
  * method_5431
  */
@@ -24,19 +24,19 @@ fun Inventory.isEmpty() = this.method_5442()
 /**
  * method_18861
  */
-fun Inventory.count(item: Item) = this.method_18861(item)
+fun Inventory.count(item: Item?) = this.method_18861(item)
 /**
  * method_18862
  */
-fun Inventory.containsAny(items: Set<Item>) = this.method_18862(items)
+fun Inventory.containsAny(items: Set<Item>?) = this.method_18862(items)
 /**
  * method_5443
  */
-fun Inventory.canPlayerUse(player: PlayerEntity) = this.method_5443(player)
+fun Inventory.canPlayerUse(player: PlayerEntity?) = this.method_5443(player)
 /**
  * method_43256
  */
-fun Inventory.containsAny(predicate: Predicate<ItemStack>) = this.method_43256(predicate)
+fun Inventory.containsAny(predicate: Predicate<ItemStack>?) = this.method_43256(predicate)
 /**
  * method_5439
  */
@@ -44,11 +44,11 @@ fun Inventory.size() = this.method_5439()
 /**
  * method_58350
  */
-fun Inventory.getMaxCount(stack: ItemStack) = this.method_58350(stack)
+fun Inventory.getMaxCount(stack: ItemStack?) = this.method_58350(stack)
 /**
  * method_49104
  */
-fun Inventory.canTransferTo(hopperInventory: Inventory, slot: Int, stack: ItemStack) = this.method_49104(hopperInventory, slot, stack)
+fun Inventory.canTransferTo(hopperInventory: Inventory?, slot: Int, stack: ItemStack?) = this.method_49104(hopperInventory, slot, stack)
 /**
  * method_5434
  */
@@ -60,7 +60,7 @@ fun Inventory.getMaxCountPerStack() = this.method_5444()
 /**
  * method_5437
  */
-fun Inventory.isValid(slot: Int, stack: ItemStack) = this.method_5437(slot, stack)
+fun Inventory.isValid(slot: Int, stack: ItemStack?) = this.method_5437(slot, stack)
 /**
  * method_5441
  */
@@ -68,4 +68,4 @@ fun Inventory.removeStack(slot: Int) = this.method_5441(slot)
 /**
  * method_5447
  */
-fun Inventory.setStack(slot: Int, stack: ItemStack) = this.method_5447(slot, stack)
+fun Inventory.setStack(slot: Int, stack: ItemStack?) = this.method_5447(slot, stack)

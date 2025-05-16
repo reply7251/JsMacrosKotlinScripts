@@ -29,13 +29,13 @@ object FloatRangeArgumentKt {
     /**
      * method_35404
      */
-    fun parse(reader: StringReader, allowFloats: Boolean) = FloatRangeArgument.method_35404(reader, allowFloats)
+    fun parse(reader: StringReader?, allowFloats: Boolean) = FloatRangeArgument.method_35404(reader, allowFloats)
     /**
      * method_9172
      */
-    fun parse(reader: StringReader, allowFloats: Boolean, transform: function_Function<Float, Float>) = FloatRangeArgument.method_9172(reader, allowFloats, transform)
+    fun parse(reader: StringReader?, allowFloats: Boolean, transform: function_Function<Float, Float>?) = FloatRangeArgument.method_9172(reader, allowFloats, transform)
     /**
      * method_35403
      */
-    fun fromJson(json: JsonElement) = FloatRangeArgument.method_35403(json)
+    fun fromJson(json: JsonElement?) = FloatRangeArgument.method_35403(json)
 }

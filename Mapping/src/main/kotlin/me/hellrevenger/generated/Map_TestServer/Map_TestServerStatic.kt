@@ -5,5 +5,5 @@ object TestServerKt {
     /**
      * method_40378
      */
-    fun create(thread: Thread, session: net.minecraft.class_32.class_5143, resourcePackManager: ResourcePackManager, batches: Collection<TestFunction>, pos: BlockPos) = TestServer.method_40378(thread, session, resourcePackManager, batches, pos)
+    fun create(thread: Thread?, session: net.minecraft.class_32.class_5143?, resourcePackManager: ResourcePackManager?, batches: Collection<TestFunction>?, pos: BlockPos?) = TestServer.method_40378(thread, session, resourcePackManager, batches, pos)
 }

@@ -5,5 +5,5 @@ object CopyStateLootFunctionKt {
     /**
      * method_21892
      */
-    fun builder(block: Block) = CopyStateLootFunction.method_21892(block)
+    fun builder(block: Block?) = CopyStateLootFunction.method_21892(block)
 }

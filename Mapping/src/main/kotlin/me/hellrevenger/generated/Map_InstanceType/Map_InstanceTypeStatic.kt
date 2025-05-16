@@ -13,5 +13,5 @@ object InstanceTypeKt {
     /**
      * method_37987
      */
-    fun get(server: MinecraftServer) = InstanceType.method_37987(server)
+    fun get(server: MinecraftServer?) = InstanceType.method_37987(server)
 }

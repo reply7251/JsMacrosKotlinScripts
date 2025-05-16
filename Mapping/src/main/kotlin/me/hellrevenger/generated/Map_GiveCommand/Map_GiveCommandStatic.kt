@@ -9,5 +9,5 @@ object GiveCommandKt {
     /**
      * method_13402
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, commandRegistryAccess: CommandRegistryAccess) = GiveCommand.method_13402(dispatcher, commandRegistryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, commandRegistryAccess: CommandRegistryAccess?) = GiveCommand.method_13402(dispatcher, commandRegistryAccess)
 }

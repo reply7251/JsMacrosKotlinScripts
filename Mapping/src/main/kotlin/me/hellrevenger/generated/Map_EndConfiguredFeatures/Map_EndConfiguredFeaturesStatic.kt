@@ -29,5 +29,5 @@ object EndConfiguredFeaturesKt {
     /**
      * method_46851
      */
-    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>) = EndConfiguredFeatures.method_46851(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>?) = EndConfiguredFeatures.method_46851(featureRegisterable)
 }

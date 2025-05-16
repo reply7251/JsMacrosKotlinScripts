@@ -5,5 +5,5 @@ object InGameOverlayRendererKt {
     /**
      * method_23067
      */
-    fun renderOverlays(client: MinecraftClient, matrices: MatrixStack, vertexConsumers: VertexConsumerProvider) = InGameOverlayRenderer.method_23067(client, matrices, vertexConsumers)
+    fun renderOverlays(client: MinecraftClient?, matrices: MatrixStack?, vertexConsumers: VertexConsumerProvider?) = InGameOverlayRenderer.method_23067(client, matrices, vertexConsumers)
 }

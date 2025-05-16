@@ -16,4 +16,4 @@ fun ChunkData.getBlockEntities(x: Int, z: Int) = this.method_38587(x, z)
 /**
  * method_38590
  */
-fun ChunkData.write(buf: RegistryByteBuf) = this.method_38590(buf)
+fun ChunkData.write(buf: RegistryByteBuf?) = this.method_38590(buf)

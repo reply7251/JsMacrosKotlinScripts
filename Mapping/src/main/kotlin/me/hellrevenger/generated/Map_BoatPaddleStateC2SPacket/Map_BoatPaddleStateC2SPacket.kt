@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12283
  */
-fun BoatPaddleStateC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12283(arg0)
+fun BoatPaddleStateC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12283(arg0)
 /**
  * method_12284
  */

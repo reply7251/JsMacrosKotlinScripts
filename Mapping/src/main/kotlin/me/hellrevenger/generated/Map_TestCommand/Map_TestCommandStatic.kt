@@ -5,5 +5,5 @@ object TestCommandKt {
     /**
      * method_22270
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = TestCommand.method_22270(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = TestCommand.method_22270(dispatcher)
 }

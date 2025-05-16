@@ -5,5 +5,5 @@ object TeamKt {
     /**
      * method_1142
      */
-    fun decorateName(team: AbstractTeam, name: Text) = Team.method_1142(team, name)
+    fun decorateName(team: AbstractTeam?, name: Text?) = Team.method_1142(team, name)
 }

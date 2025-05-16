@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_25745
  */
-fun When.validate(stateManager: StateManager<*, *>) = this.method_25745(stateManager)
+fun When.validate(stateManager: StateManager<*, *>?) = this.method_25745(stateManager)

@@ -5,5 +5,5 @@ object AndLootFunctionKt {
     /**
      * method_53353
      */
-    fun create(terms: MutableList<LootFunction>) = AndLootFunction.method_53353(terms)
+    fun create(terms: MutableList<LootFunction>?) = AndLootFunction.method_53353(terms)
 }

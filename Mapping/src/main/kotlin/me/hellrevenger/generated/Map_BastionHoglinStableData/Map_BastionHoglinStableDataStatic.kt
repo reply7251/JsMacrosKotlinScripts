@@ -5,5 +5,5 @@ object BastionHoglinStableDataKt {
     /**
      * method_27199
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = BastionHoglinStableData.method_27199(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = BastionHoglinStableData.method_27199(poolRegisterable)
 }

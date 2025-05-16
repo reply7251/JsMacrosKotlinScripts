@@ -5,5 +5,5 @@ object MemoryTransferTaskKt {
     /**
      * method_46914
      */
-    fun <E, T>create(runPredicate: Predicate<E>, sourceType: MemoryModuleType<out T>, targetType: MemoryModuleType<T>, expiry: UniformIntProvider) where E: LivingEntity = MemoryTransferTask.method_46914<E, T>(runPredicate, sourceType, targetType, expiry)
+    fun <E, T>create(runPredicate: Predicate<E>?, sourceType: MemoryModuleType<out T>?, targetType: MemoryModuleType<T>?, expiry: UniformIntProvider?) where E: LivingEntity = MemoryTransferTask.method_46914<E, T>(runPredicate, sourceType, targetType, expiry)
 }

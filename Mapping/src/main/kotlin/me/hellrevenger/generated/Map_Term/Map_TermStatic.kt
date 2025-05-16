@@ -5,15 +5,15 @@ object TermKt {
     /**
      * method_58332
      */
-    fun <S>symbol(symbol: Symbol<*>) = Term.method_58332<S>(symbol)
+    fun <S>symbol(symbol: Symbol<*>?) = Term.method_58332<S>(symbol)
     /**
      * method_58333
      */
-    fun <S, T>always(symbol: Symbol<T>, value: T) = Term.method_58333<S, T>(symbol, value)
+    fun <S, T>always(symbol: Symbol<T>?, value: T) = Term.method_58333<S, T>(symbol, value)
     /**
      * method_58335
      */
-    fun <S>optional(term: Term<S>) = Term.method_58335<S>(term)
+    fun <S>optional(term: Term<S>?) = Term.method_58335<S>(term)
     /**
      * method_58336
      */

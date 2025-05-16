@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_34992
  */
-fun <E>collection_Pool<E>.getOrEmpty(random: Random) where E: Weighted = this.method_34992(random)
+fun <E>collection_Pool<E>.getOrEmpty(random: Random?) where E: Weighted = this.method_34992(random)
 /**
  * method_34993
  */

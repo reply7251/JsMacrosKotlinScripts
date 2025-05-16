@@ -24,7 +24,7 @@ fun Widget.getX() = this.method_46426()
 /**
  * method_48206
  */
-fun Widget.forEachChild(consumer: Consumer<ClickableWidget>) = this.method_48206(consumer)
+fun Widget.forEachChild(consumer: Consumer<ClickableWidget>?) = this.method_48206(consumer)
 /**
  * method_46427
  */

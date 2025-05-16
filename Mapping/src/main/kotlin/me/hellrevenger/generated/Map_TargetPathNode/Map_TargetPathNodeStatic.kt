@@ -5,5 +5,5 @@ object TargetPathNodeKt {
     /**
      * method_21663
      */
-    fun fromBuffer(buffer: PacketByteBuf) = TargetPathNode.method_21663(buffer)
+    fun fromBuffer(buffer: PacketByteBuf?) = TargetPathNode.method_21663(buffer)
 }

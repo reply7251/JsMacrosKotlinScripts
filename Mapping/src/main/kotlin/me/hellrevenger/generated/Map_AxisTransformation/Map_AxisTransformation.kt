@@ -8,7 +8,7 @@ fun AxisTransformation.map(oldAxis: Int) = this.method_26417(oldAxis)
 /**
  * method_26418
  */
-fun AxisTransformation.prepend(transformation: AxisTransformation) = this.method_26418(transformation)
+fun AxisTransformation.prepend(transformation: AxisTransformation?) = this.method_26418(transformation)
 /**
  * method_26416
  */

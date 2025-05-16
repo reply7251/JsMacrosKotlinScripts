@@ -5,5 +5,5 @@ object TransmuteRecipeJsonBuilderKt {
     /**
      * method_64380
      */
-    fun create(category: RecipeCategory, input: Ingredient, material: Ingredient, result: Item) = TransmuteRecipeJsonBuilder.method_64380(category, input, material, result)
+    fun create(category: RecipeCategory?, input: Ingredient?, material: Ingredient?, result: Item?) = TransmuteRecipeJsonBuilder.method_64380(category, input, material, result)
 }

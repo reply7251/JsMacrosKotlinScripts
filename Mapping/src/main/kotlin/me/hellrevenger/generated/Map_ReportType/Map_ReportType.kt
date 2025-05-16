@@ -8,7 +8,7 @@ fun ReportType.chooseNugget() = this.method_60927()
 /**
  * method_60928
  */
-fun ReportType.addHeaderAndNugget(reportBuilder: StringBuilder, extraInfo: MutableList<String>) = this.method_60928(reportBuilder, extraInfo)
+fun ReportType.addHeaderAndNugget(reportBuilder: StringBuilder?, extraInfo: MutableList<String>?) = this.method_60928(reportBuilder, extraInfo)
 /**
  * comp_2857
  */

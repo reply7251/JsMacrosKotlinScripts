@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_51600
  */
-fun <T>GlyphContainer<T>.computeIfAbsent(codePoint: Int, ifAbsent: IntFunction<T>) = this.method_51600(codePoint, ifAbsent)
+fun <T>GlyphContainer<T>.computeIfAbsent(codePoint: Int, ifAbsent: IntFunction<T>?) = this.method_51600(codePoint, ifAbsent)
 /**
  * method_51604
  */
@@ -12,7 +12,7 @@ fun <T>GlyphContainer<T>.remove(codePoint: Int) = this.method_51604(codePoint)
 /**
  * method_51601
  */
-fun <T>GlyphContainer<T>.forEachGlyph(glyphConsumer: net.minecraft.class_8532.class_8533<T>) = this.method_51601(glyphConsumer)
+fun <T>GlyphContainer<T>.forEachGlyph(glyphConsumer: net.minecraft.class_8532.class_8533<T>?) = this.method_51601(glyphConsumer)
 /**
  * method_51603
  */

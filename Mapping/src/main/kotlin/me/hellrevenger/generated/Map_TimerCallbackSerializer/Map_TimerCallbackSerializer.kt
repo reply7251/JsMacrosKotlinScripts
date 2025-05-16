@@ -8,8 +8,8 @@ fun <C, T>TimerCallbackSerializer<C>.serialize(callback: T) where T: TimerCallba
 /**
  * method_971
  */
-fun <C>TimerCallbackSerializer<C>.registerSerializer(serializer: net.minecraft.class_234.class_235<C, *>) = this.method_971(serializer)
+fun <C>TimerCallbackSerializer<C>.registerSerializer(serializer: net.minecraft.class_234.class_235<C, *>?) = this.method_971(serializer)
 /**
  * method_972
  */
-fun <C>TimerCallbackSerializer<C>.deserialize(nbt: NbtCompound) = this.method_972(nbt)
+fun <C>TimerCallbackSerializer<C>.deserialize(nbt: NbtCompound?) = this.method_972(nbt)

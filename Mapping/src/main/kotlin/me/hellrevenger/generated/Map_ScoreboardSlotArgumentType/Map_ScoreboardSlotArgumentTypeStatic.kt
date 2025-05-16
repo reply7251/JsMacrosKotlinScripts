@@ -13,5 +13,5 @@ object ScoreboardSlotArgumentTypeKt {
     /**
      * method_9465
      */
-    fun getScoreboardSlot(context: CommandContext<ServerCommandSource>, name: String) = ScoreboardSlotArgumentType.method_9465(context, name)
+    fun getScoreboardSlot(context: CommandContext<ServerCommandSource>?, name: String?) = ScoreboardSlotArgumentType.method_9465(context, name)
 }

@@ -9,5 +9,5 @@ object IglooGeneratorKt {
     /**
      * method_14705
      */
-    fun addPieces(manager: StructureTemplateManager, pos: BlockPos, rotation: BlockRotation, holder: StructurePiecesHolder, random: Random) = IglooGenerator.method_14705(manager, pos, rotation, holder, random)
+    fun addPieces(manager: StructureTemplateManager?, pos: BlockPos?, rotation: BlockRotation?, holder: StructurePiecesHolder?, random: Random?) = IglooGenerator.method_14705(manager, pos, rotation, holder, random)
 }

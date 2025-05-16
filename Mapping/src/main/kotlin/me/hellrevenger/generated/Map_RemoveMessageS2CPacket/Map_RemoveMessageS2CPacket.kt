@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44889
  */
-fun RemoveMessageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_44889(arg0)
+fun RemoveMessageS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_44889(arg0)
 /**
  * comp_938
  */

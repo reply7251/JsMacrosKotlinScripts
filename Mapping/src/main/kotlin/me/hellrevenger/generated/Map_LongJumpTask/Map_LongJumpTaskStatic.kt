@@ -5,5 +5,5 @@ object LongJumpTaskKt {
     /**
      * method_45333
      */
-    fun <E>shouldJumpTo(entity: E, pos: BlockPos) where E: MobEntity = LongJumpTask.method_45333<E>(entity, pos)
+    fun <E>shouldJumpTo(entity: E, pos: BlockPos?) where E: MobEntity = LongJumpTask.method_45333<E>(entity, pos)
 }

@@ -96,4 +96,4 @@ var LivingEntityRenderState.ageScale by alias(LivingEntityRenderState::field_534
 /**
  * method_62613
  */
-fun LivingEntityRenderState.isInPose(pose: EntityPose) = this.method_62613(pose)
+fun LivingEntityRenderState.isInPose(pose: EntityPose?) = this.method_62613(pose)

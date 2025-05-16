@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_52714
  */
-fun GuiAtlasManager.getScaling(sprite: Sprite) = this.method_52714(sprite)
+fun GuiAtlasManager.getScaling(sprite: Sprite?) = this.method_52714(sprite)

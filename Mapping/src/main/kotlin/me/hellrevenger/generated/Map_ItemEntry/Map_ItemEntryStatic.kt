@@ -5,5 +5,5 @@ object ItemEntryKt {
     /**
      * method_411
      */
-    fun builder(drop: ItemConvertible) = ItemEntry.method_411(drop)
+    fun builder(drop: ItemConvertible?) = ItemEntry.method_411(drop)
 }

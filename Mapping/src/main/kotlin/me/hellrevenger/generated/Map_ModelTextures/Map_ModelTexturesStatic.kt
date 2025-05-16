@@ -9,5 +9,5 @@ object ModelTexturesKt {
     /**
      * method_65544
      */
-    fun fromJson(json: JsonObject, atlasTexture: Identifier) = ModelTextures.method_65544(json, atlasTexture)
+    fun fromJson(json: JsonObject?, atlasTexture: Identifier?) = ModelTextures.method_65544(json, atlasTexture)
 }

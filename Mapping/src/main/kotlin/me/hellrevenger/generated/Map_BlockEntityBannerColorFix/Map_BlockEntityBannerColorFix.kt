@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_15546
  */
-fun BlockEntityBannerColorFix.fixBannerColor(bannerDynamic: Dynamic<*>) = this.method_15546(bannerDynamic)
+fun BlockEntityBannerColorFix.fixBannerColor(bannerDynamic: Dynamic<*>?) = this.method_15546(bannerDynamic)

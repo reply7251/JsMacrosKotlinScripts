@@ -9,5 +9,5 @@ object LookingPosArgumentKt {
     /**
      * method_9711
      */
-    fun parse(reader: StringReader) = LookingPosArgument.method_9711(reader)
+    fun parse(reader: StringReader?) = LookingPosArgument.method_9711(reader)
 }

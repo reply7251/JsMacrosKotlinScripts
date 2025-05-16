@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_58757
  */
-fun ComponentChanges.withRemovedIf(removedTypePredicate: Predicate<ComponentType<*>>) = this.method_58757(removedTypePredicate)
+fun ComponentChanges.withRemovedIf(removedTypePredicate: Predicate<ComponentType<*>>?) = this.method_58757(removedTypePredicate)
 /**
  * method_57846
  */
@@ -20,7 +20,7 @@ fun ComponentChanges.toAddedRemovedPair() = this.method_58759()
 /**
  * method_57845
  */
-fun <T>ComponentChanges.get(type: ComponentType<out T>) = this.method_57845<T>(type)
+fun <T>ComponentChanges.get(type: ComponentType<out T>?) = this.method_57845<T>(type)
 /**
  * method_57847
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_55852
  */
-fun CookieResponseC2SPacket.apply(arg0: ServerCookieResponsePacketListener) = this.method_55852(arg0)
+fun CookieResponseC2SPacket.apply(arg0: ServerCookieResponsePacketListener?) = this.method_55852(arg0)
 /**
  * comp_2195
  */

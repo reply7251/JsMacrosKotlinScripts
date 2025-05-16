@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_61746
  */
-fun RedstoneWireBlock.getStrongPower(world: world_World, pos: BlockPos) = this.method_61746(world, pos)
+fun RedstoneWireBlock.getStrongPower(world: world_World?, pos: BlockPos?) = this.method_61746(world, pos)

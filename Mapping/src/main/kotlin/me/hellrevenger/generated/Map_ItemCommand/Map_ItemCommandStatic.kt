@@ -5,5 +5,5 @@ object ItemCommandKt {
     /**
      * method_32707
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, commandRegistryAccess: CommandRegistryAccess) = ItemCommand.method_32707(dispatcher, commandRegistryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, commandRegistryAccess: CommandRegistryAccess?) = ItemCommand.method_32707(dispatcher, commandRegistryAccess)
 }

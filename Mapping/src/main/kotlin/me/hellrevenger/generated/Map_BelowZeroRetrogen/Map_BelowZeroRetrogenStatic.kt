@@ -9,13 +9,13 @@ object BelowZeroRetrogenKt {
     /**
      * method_39767
      */
-    fun getBiomeSupplier(biomeSupplier: BiomeSupplier, chunk: Chunk) = BelowZeroRetrogen.method_39767(biomeSupplier, chunk)
+    fun getBiomeSupplier(biomeSupplier: BiomeSupplier?, chunk: Chunk?) = BelowZeroRetrogen.method_39767(biomeSupplier, chunk)
     /**
      * method_39326
      */
-    fun fromNbt(nbt: NbtCompound) = BelowZeroRetrogen.method_39326(nbt)
+    fun fromNbt(nbt: NbtCompound?) = BelowZeroRetrogen.method_39326(nbt)
     /**
      * method_39467
      */
-    fun replaceOldBedrock(chunk: ProtoChunk) = BelowZeroRetrogen.method_39467(chunk)
+    fun replaceOldBedrock(chunk: ProtoChunk?) = BelowZeroRetrogen.method_39467(chunk)
 }

@@ -8,7 +8,7 @@ fun LevelSummary.isImmediatelyLoadable() = this.method_56127()
 /**
  * method_251
  */
-fun LevelSummary.compareTo(arg0: LevelSummary) = this.method_251(arg0)
+fun LevelSummary.compareTo(arg0: LevelSummary?) = this.method_251(arg0)
 /**
  * method_54552
  */

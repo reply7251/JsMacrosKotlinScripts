@@ -73,7 +73,7 @@ object DyeColorKt {
     /**
      * method_7793
      */
-    fun byName(name: String, defaultColor: DyeColor) = DyeColor.method_7793(name, defaultColor)
+    fun byName(name: String?, defaultColor: DyeColor?) = DyeColor.method_7793(name, defaultColor)
     /**
      * method_7791
      */
@@ -81,5 +81,5 @@ object DyeColorKt {
     /**
      * method_65355
      */
-    fun mixColors(world: ServerWorld, first: DyeColor, second: DyeColor) = DyeColor.method_65355(world, first, second)
+    fun mixColors(world: ServerWorld?, first: DyeColor?, second: DyeColor?) = DyeColor.method_65355(world, first, second)
 }

@@ -9,13 +9,13 @@ object ScreenshotRecorderKt {
     /**
      * method_1663
      */
-    fun takeScreenshot(framebuffer: Framebuffer) = ScreenshotRecorder.method_1663(framebuffer)
+    fun takeScreenshot(framebuffer: Framebuffer?) = ScreenshotRecorder.method_1663(framebuffer)
     /**
      * method_1659
      */
-    fun saveScreenshot(gameDirectory: File, framebuffer: Framebuffer, messageReceiver: Consumer<Text>) = ScreenshotRecorder.method_1659(gameDirectory, framebuffer, messageReceiver)
+    fun saveScreenshot(gameDirectory: File?, framebuffer: Framebuffer?, messageReceiver: Consumer<Text>?) = ScreenshotRecorder.method_1659(gameDirectory, framebuffer, messageReceiver)
     /**
      * method_22690
      */
-    fun saveScreenshot(gameDirectory: File, fileName: String, framebuffer: Framebuffer, messageReceiver: Consumer<Text>) = ScreenshotRecorder.method_22690(gameDirectory, fileName, framebuffer, messageReceiver)
+    fun saveScreenshot(gameDirectory: File?, fileName: String?, framebuffer: Framebuffer?, messageReceiver: Consumer<Text>?) = ScreenshotRecorder.method_22690(gameDirectory, fileName, framebuffer, messageReceiver)
 }

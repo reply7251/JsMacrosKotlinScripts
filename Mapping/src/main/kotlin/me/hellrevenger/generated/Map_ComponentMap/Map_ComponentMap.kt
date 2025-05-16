@@ -16,23 +16,23 @@ fun ComponentMap.stream() = this.method_57833()
 /**
  * method_57832
  */
-fun ComponentMap.contains(type: ComponentType<*>) = this.method_57832(type)
+fun ComponentMap.contains(type: ComponentType<*>?) = this.method_57832(type)
 /**
  * method_57830
  */
-fun <T>ComponentMap.getOrDefault(type: ComponentType<out T>, fallback: T) = this.method_57830<T>(type, fallback)
+fun <T>ComponentMap.getOrDefault(type: ComponentType<out T>?, fallback: T) = this.method_57830<T>(type, fallback)
 /**
  * method_57834
  */
-fun <T>ComponentMap.copy(type: ComponentType<T>) = this.method_57834<T>(type)
+fun <T>ComponentMap.copy(type: ComponentType<T>?) = this.method_57834<T>(type)
 /**
  * method_57829
  */
-fun <T>ComponentMap.get(type: ComponentType<out T>) = this.method_57829<T>(type)
+fun <T>ComponentMap.get(type: ComponentType<out T>?) = this.method_57829<T>(type)
 /**
  * method_57828
  */
-fun ComponentMap.filtered(predicate: Predicate<ComponentType<*>>) = this.method_57828(predicate)
+fun ComponentMap.filtered(predicate: Predicate<ComponentType<*>>?) = this.method_57828(predicate)
 /**
  * method_57835
  */

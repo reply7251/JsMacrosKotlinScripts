@@ -5,5 +5,5 @@ object SubscriptionKt {
     /**
      * method_25085
      */
-    fun parse(json: String) = Subscription.method_25085(json)
+    fun parse(json: String?) = Subscription.method_25085(json)
 }

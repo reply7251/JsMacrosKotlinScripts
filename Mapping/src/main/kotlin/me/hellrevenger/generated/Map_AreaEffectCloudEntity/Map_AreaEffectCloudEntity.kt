@@ -8,7 +8,7 @@ var AreaEffectCloudEntity.potionContentsComponent by alias(AreaEffectCloudEntity
 /**
  * method_5608
  */
-fun AreaEffectCloudEntity.setParticleType(particle: ParticleEffect) = this.method_5608(particle)
+fun AreaEffectCloudEntity.setParticleType(particle: ParticleEffect?) = this.method_5608(particle)
 /**
  * method_35043
  */
@@ -48,7 +48,7 @@ fun AreaEffectCloudEntity.setRadiusGrowth(radiusGrowth: Float) = this.method_559
 /**
  * method_5607
  */
-fun AreaEffectCloudEntity.setOwner(owner: LivingEntity) = this.method_5607(owner)
+fun AreaEffectCloudEntity.setOwner(owner: LivingEntity?) = this.method_5607(owner)
 /**
  * method_5595
  */
@@ -60,7 +60,7 @@ fun AreaEffectCloudEntity.isWaiting() = this.method_5611()
 /**
  * method_5610
  */
-fun AreaEffectCloudEntity.addEffect(effect: StatusEffectInstance) = this.method_5610(effect)
+fun AreaEffectCloudEntity.addEffect(effect: StatusEffectInstance?) = this.method_5610(effect)
 /**
  * method_5599
  */
@@ -68,7 +68,7 @@ fun AreaEffectCloudEntity.getRadius() = this.method_5599()
 /**
  * method_57280
  */
-fun AreaEffectCloudEntity.setPotionContents(potionContentsComponent: PotionContentsComponent) = this.method_57280(potionContentsComponent)
+fun AreaEffectCloudEntity.setPotionContents(potionContentsComponent: PotionContentsComponent?) = this.method_57280(potionContentsComponent)
 /**
  * method_35046
  */

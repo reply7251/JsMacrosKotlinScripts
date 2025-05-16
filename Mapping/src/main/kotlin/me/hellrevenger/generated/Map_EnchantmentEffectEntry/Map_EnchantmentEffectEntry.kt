@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60006
  */
-fun <T>EnchantmentEffectEntry<T>.test(context: LootContext) = this.method_60006(context)
+fun <T>EnchantmentEffectEntry<T>.test(context: LootContext?) = this.method_60006(context)
 /**
  * comp_2680
  */

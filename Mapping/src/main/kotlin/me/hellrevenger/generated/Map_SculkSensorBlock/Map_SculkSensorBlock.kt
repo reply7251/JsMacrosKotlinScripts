@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_32904
  */
-fun SculkSensorBlock.setActive(sourceEntity: Entity, world: world_World, pos: BlockPos, state: BlockState, power: Int, frequency: Int) = this.method_32904(sourceEntity, world, pos, state, power, frequency)
+fun SculkSensorBlock.setActive(sourceEntity: Entity?, world: world_World?, pos: BlockPos?, state: BlockState?, power: Int, frequency: Int) = this.method_32904(sourceEntity, world, pos, state, power, frequency)
 /**
  * method_51166
  */

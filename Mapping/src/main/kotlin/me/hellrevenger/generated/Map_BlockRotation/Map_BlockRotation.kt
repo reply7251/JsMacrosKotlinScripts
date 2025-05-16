@@ -8,11 +8,11 @@ fun BlockRotation.getDirectionTransformation() = this.method_26383()
 /**
  * method_10503
  */
-fun BlockRotation.rotate(direction: Direction) = this.method_10503(direction)
+fun BlockRotation.rotate(direction: Direction?) = this.method_10503(direction)
 /**
  * method_10501
  */
-fun BlockRotation.rotate(rotation: BlockRotation) = this.method_10501(rotation)
+fun BlockRotation.rotate(rotation: BlockRotation?) = this.method_10501(rotation)
 /**
  * method_10502
  */

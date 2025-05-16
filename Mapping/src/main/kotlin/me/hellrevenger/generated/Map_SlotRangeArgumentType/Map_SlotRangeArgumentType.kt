@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_58132
  */
-fun SlotRangeArgumentType.parse(arg0: StringReader) = this.method_58132(arg0)
+fun SlotRangeArgumentType.parse(arg0: StringReader?) = this.method_58132(arg0)

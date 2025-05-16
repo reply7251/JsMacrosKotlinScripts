@@ -8,7 +8,7 @@ fun <F, Value>MemoryQuery<F, Value>.getState() where F: K1 = this.method_47254()
 /**
  * method_47253
  */
-fun <F, Value>MemoryQuery<F, Value>.toQueryResult(brain: Brain<*>, value: Optional<Value>) where F: K1 = this.method_47253(brain, value)
+fun <F, Value>MemoryQuery<F, Value>.toQueryResult(brain: Brain<*>?, value: Optional<Value>?) where F: K1 = this.method_47253(brain, value)
 /**
  * comp_1151
  */

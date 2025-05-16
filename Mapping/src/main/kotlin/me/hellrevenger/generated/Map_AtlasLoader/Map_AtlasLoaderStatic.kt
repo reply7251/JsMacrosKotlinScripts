@@ -5,5 +5,5 @@ object AtlasLoaderKt {
     /**
      * method_47668
      */
-    fun of(resourceManager: ResourceManager, id: Identifier) = AtlasLoader.method_47668(resourceManager, id)
+    fun of(resourceManager: ResourceManager?, id: Identifier?) = AtlasLoader.method_47668(resourceManager, id)
 }

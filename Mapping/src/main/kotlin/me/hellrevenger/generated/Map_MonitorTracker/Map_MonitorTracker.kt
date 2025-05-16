@@ -12,4 +12,4 @@ fun MonitorTracker.getMonitor(pointer: Long) = this.method_1680(pointer)
 /**
  * method_1681
  */
-fun MonitorTracker.getMonitor(window: Window) = this.method_1681(window)
+fun MonitorTracker.getMonitor(window: Window?) = this.method_1681(window)

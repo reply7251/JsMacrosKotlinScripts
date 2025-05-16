@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12278
  */
-fun VehicleMoveC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12278(arg0)
+fun VehicleMoveC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12278(arg0)
 /**
  * comp_3352
  */

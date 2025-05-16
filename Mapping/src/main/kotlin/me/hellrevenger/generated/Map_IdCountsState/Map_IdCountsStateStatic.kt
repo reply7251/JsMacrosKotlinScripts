@@ -13,5 +13,5 @@ object IdCountsStateKt {
     /**
      * method_32360
      */
-    fun fromNbt(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = IdCountsState.method_32360(nbt, registries)
+    fun fromNbt(nbt: NbtCompound?, registries: net.minecraft.class_7225.class_7874?) = IdCountsState.method_32360(nbt, registries)
 }

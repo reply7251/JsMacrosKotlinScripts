@@ -5,13 +5,13 @@ object TooltipKt {
     /**
      * method_47408
      */
-    fun of(content: Text, narration: Text) = Tooltip.method_47408(content, narration)
+    fun of(content: Text?, narration: Text?) = Tooltip.method_47408(content, narration)
     /**
      * method_47407
      */
-    fun of(content: Text) = Tooltip.method_47407(content)
+    fun of(content: Text?) = Tooltip.method_47407(content)
     /**
      * method_47406
      */
-    fun wrapLines(client: MinecraftClient, text: Text) = Tooltip.method_47406(client, text)
+    fun wrapLines(client: MinecraftClient?, text: Text?) = Tooltip.method_47406(client, text)
 }

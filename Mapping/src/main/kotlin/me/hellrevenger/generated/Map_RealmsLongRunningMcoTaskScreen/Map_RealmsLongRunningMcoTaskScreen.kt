@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_53797
  */
-fun RealmsLongRunningMcoTaskScreen.setTitle(title: Text) = this.method_53797(title)
+fun RealmsLongRunningMcoTaskScreen.setTitle(title: Text?) = this.method_53797(title)

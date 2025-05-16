@@ -5,5 +5,5 @@ object MultifaceGrowthFeatureKt {
     /**
      * method_33391
      */
-    fun generate(world: StructureWorldAccess, pos: BlockPos, state: BlockState, config: MultifaceGrowthFeatureConfig, random: Random, directions: MutableList<Direction>) = MultifaceGrowthFeature.method_33391(world, pos, state, config, random, directions)
+    fun generate(world: StructureWorldAccess?, pos: BlockPos?, state: BlockState?, config: MultifaceGrowthFeatureConfig?, random: Random?, directions: MutableList<Direction>?) = MultifaceGrowthFeature.method_33391(world, pos, state, config, random, directions)
 }

@@ -9,19 +9,19 @@ object BufferHelperKt {
     /**
      * method_14696
      */
-    fun getIntLE(buf: ByteArray, start: Int, limit: Int) = BufferHelper.method_14696(buf, start, limit)
+    fun getIntLE(buf: ByteArray?, start: Int, limit: Int) = BufferHelper.method_14696(buf, start, limit)
     /**
      * method_14698
      */
-    fun getIntBE(buf: ByteArray, start: Int, limit: Int) = BufferHelper.method_14698(buf, start, limit)
+    fun getIntBE(buf: ByteArray?, start: Int, limit: Int) = BufferHelper.method_14698(buf, start, limit)
     /**
      * method_14697
      */
-    fun getString(buf: ByteArray, arg1: Int, arg2: Int) = BufferHelper.method_14697(buf, arg1, arg2)
+    fun getString(buf: ByteArray?, arg1: Int, arg2: Int) = BufferHelper.method_14697(buf, arg1, arg2)
     /**
      * method_14695
      */
-    fun getIntLE(buf: ByteArray, start: Int) = BufferHelper.method_14695(buf, start)
+    fun getIntLE(buf: ByteArray?, start: Int) = BufferHelper.method_14695(buf, start)
     /**
      * method_14699
      */

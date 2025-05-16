@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_39027
  */
-fun SimulationDistanceS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_39027(arg0)
+fun SimulationDistanceS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_39027(arg0)
 /**
  * comp_170
  */

@@ -5,7 +5,7 @@ object BatEntityKt {
     /**
      * method_20661
      */
-    fun canSpawn(type: EntityType<BatEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = BatEntity.method_20661(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<BatEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = BatEntity.method_20661(type, world, spawnReason, pos, random)
     /**
      * method_26878
      */

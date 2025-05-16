@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_48251
  */
-fun ScreenRect.add(direction: NavigationDirection) = this.method_48251(direction)
+fun ScreenRect.add(direction: NavigationDirection?) = this.method_48251(direction)
 /**
  * method_49701
  */
-fun ScreenRect.intersection(other: ScreenRect) = this.method_49701(other)
+fun ScreenRect.intersection(other: ScreenRect?) = this.method_49701(other)
 /**
  * method_49621
  */
@@ -20,31 +20,31 @@ fun ScreenRect.getLeft() = this.method_49620()
 /**
  * method_48256
  */
-fun ScreenRect.getBorder(direction: NavigationDirection) = this.method_48256(direction)
+fun ScreenRect.getBorder(direction: NavigationDirection?) = this.method_48256(direction)
 /**
  * method_48249
  */
-fun ScreenRect.getLength(axis: NavigationAxis) = this.method_48249(axis)
+fun ScreenRect.getLength(axis: NavigationAxis?) = this.method_48249(axis)
 /**
  * method_48254
  */
-fun ScreenRect.getCenter(axis: NavigationAxis) = this.method_48254(axis)
+fun ScreenRect.getCenter(axis: NavigationAxis?) = this.method_48254(axis)
 /**
  * method_48255
  */
-fun ScreenRect.getBoundingCoordinate(direction: NavigationDirection) = this.method_48255(direction)
+fun ScreenRect.getBoundingCoordinate(direction: NavigationDirection?) = this.method_48255(direction)
 /**
  * method_48253
  */
-fun ScreenRect.overlaps(other: ScreenRect, axis: NavigationAxis) = this.method_48253(other, axis)
+fun ScreenRect.overlaps(other: ScreenRect?, axis: NavigationAxis?) = this.method_48253(other, axis)
 /**
  * method_48252
  */
-fun ScreenRect.overlaps(other: ScreenRect) = this.method_48252(other)
+fun ScreenRect.overlaps(other: ScreenRect?) = this.method_48252(other)
 /**
  * method_65185
  */
-fun ScreenRect.transform(positionMatrix: Matrix4f) = this.method_65185(positionMatrix)
+fun ScreenRect.transform(positionMatrix: Matrix4f?) = this.method_65185(positionMatrix)
 /**
  * method_49618
  */

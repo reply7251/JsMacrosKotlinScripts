@@ -16,4 +16,4 @@ val json_Transformation.rotation by alias(json_Transformation::field_4287)
 /**
  * method_23075
  */
-fun json_Transformation.apply(leftHanded: Boolean, matrices: MatrixStack) = this.method_23075(leftHanded, matrices)
+fun json_Transformation.apply(leftHanded: Boolean, matrices: MatrixStack?) = this.method_23075(leftHanded, matrices)

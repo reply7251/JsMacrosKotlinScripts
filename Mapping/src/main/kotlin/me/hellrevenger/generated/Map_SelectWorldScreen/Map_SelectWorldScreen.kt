@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_19940
  */
-fun SelectWorldScreen.worldSelected(levelSummary: LevelSummary) = this.method_19940(levelSummary)
+fun SelectWorldScreen.worldSelected(levelSummary: LevelSummary?) = this.method_19940(levelSummary)

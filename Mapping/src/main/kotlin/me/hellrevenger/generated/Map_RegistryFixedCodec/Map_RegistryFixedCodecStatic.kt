@@ -5,5 +5,5 @@ object RegistryFixedCodecKt {
     /**
      * method_40400
      */
-    fun <E>of(registry: RegistryKey<out Registry<E>>) = RegistryFixedCodec.method_40400<E>(registry)
+    fun <E>of(registry: RegistryKey<out Registry<E>>?) = RegistryFixedCodec.method_40400<E>(registry)
 }

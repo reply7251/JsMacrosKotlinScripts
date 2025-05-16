@@ -25,9 +25,9 @@ object BeaconBlockEntityKt {
     /**
      * method_10938
      */
-    fun playSound(world: world_World, pos: BlockPos, sound: SoundEvent) = BeaconBlockEntity.method_10938(world, pos, sound)
+    fun playSound(world: world_World?, pos: BlockPos?, sound: SoundEvent?) = BeaconBlockEntity.method_10938(world, pos, sound)
     /**
      * method_16896
      */
-    fun tick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: BeaconBlockEntity) = BeaconBlockEntity.method_16896(world, pos, state, blockEntity)
+    fun tick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: BeaconBlockEntity?) = BeaconBlockEntity.method_16896(world, pos, state, blockEntity)
 }

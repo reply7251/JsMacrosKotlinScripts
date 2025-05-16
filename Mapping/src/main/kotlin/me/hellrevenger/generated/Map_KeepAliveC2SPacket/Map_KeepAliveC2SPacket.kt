@@ -8,4 +8,4 @@ fun KeepAliveC2SPacket.getId() = this.method_12267()
 /**
  * method_12266
  */
-fun KeepAliveC2SPacket.apply(arg0: ServerCommonPacketListener) = this.method_12266(arg0)
+fun KeepAliveC2SPacket.apply(arg0: ServerCommonPacketListener?) = this.method_12266(arg0)

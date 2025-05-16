@@ -37,11 +37,11 @@ object ChunkPosKt {
     /**
      * method_19281
      */
-    fun stream(pos1: ChunkPos, pos2: ChunkPos) = ChunkPos.method_19281(pos1, pos2)
+    fun stream(pos1: ChunkPos?, pos2: ChunkPos?) = ChunkPos.method_19281(pos1, pos2)
     /**
      * method_37232
      */
-    fun toLong(pos: BlockPos) = ChunkPos.method_37232(pos)
+    fun toLong(pos: BlockPos?) = ChunkPos.method_37232(pos)
     /**
      * method_8332
      */
@@ -49,5 +49,5 @@ object ChunkPosKt {
     /**
      * method_19280
      */
-    fun stream(center: ChunkPos, radius: Int) = ChunkPos.method_19280(center, radius)
+    fun stream(center: ChunkPos?, radius: Int) = ChunkPos.method_19280(center, radius)
 }

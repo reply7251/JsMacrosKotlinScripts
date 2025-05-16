@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_56655
  */
-fun SampleSubscriptionTracker.sendPacket(packet: DebugSampleS2CPacket) = this.method_56655(packet)
+fun SampleSubscriptionTracker.sendPacket(packet: DebugSampleS2CPacket?) = this.method_56655(packet)
 /**
  * method_56656
  */
-fun SampleSubscriptionTracker.addPlayer(player: ServerPlayerEntity, type: DebugSampleType) = this.method_56656(player, type)
+fun SampleSubscriptionTracker.addPlayer(player: ServerPlayerEntity?, type: DebugSampleType?) = this.method_56656(player, type)
 /**
  * method_56657
  */
-fun SampleSubscriptionTracker.shouldPush(type: DebugSampleType) = this.method_56657(type)
+fun SampleSubscriptionTracker.shouldPush(type: DebugSampleType?) = this.method_56657(type)
 /**
  * method_56652
  */

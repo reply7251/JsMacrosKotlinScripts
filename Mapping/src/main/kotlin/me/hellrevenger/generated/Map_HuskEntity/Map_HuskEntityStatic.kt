@@ -5,5 +5,5 @@ object HuskEntityKt {
     /**
      * method_20677
      */
-    fun canSpawn(type: EntityType<HuskEntity>, world: ServerWorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = HuskEntity.method_20677(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<HuskEntity>?, world: ServerWorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = HuskEntity.method_20677(type, world, spawnReason, pos, random)
 }

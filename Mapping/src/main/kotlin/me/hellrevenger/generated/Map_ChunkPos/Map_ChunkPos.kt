@@ -16,7 +16,7 @@ fun ChunkPos.getStartPos() = this.method_8323()
 /**
  * method_24022
  */
-fun ChunkPos.getChebyshevDistance(pos: ChunkPos) = this.method_24022(pos)
+fun ChunkPos.getChebyshevDistance(pos: ChunkPos?) = this.method_24022(pos)
 /**
  * method_8324
  */
@@ -44,7 +44,7 @@ fun ChunkPos.getStartX() = this.method_8326()
 /**
  * method_52566
  */
-fun ChunkPos.getSquaredDistance(pos: ChunkPos) = this.method_52566(pos)
+fun ChunkPos.getSquaredDistance(pos: ChunkPos?) = this.method_52566(pos)
 /**
  * method_8328
  */

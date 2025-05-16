@@ -49,33 +49,33 @@ object StructureTemplateKt {
     /**
      * method_15176
      */
-    fun transformAround(point: Vec3d, mirror: BlockMirror, rotation: BlockRotation, pivot: BlockPos) = StructureTemplate.method_15176(point, mirror, rotation, pivot)
+    fun transformAround(point: Vec3d?, mirror: BlockMirror?, rotation: BlockRotation?, pivot: BlockPos?) = StructureTemplate.method_15176(point, mirror, rotation, pivot)
     /**
      * method_15168
      */
-    fun transformAround(pos: BlockPos, mirror: BlockMirror, rotation: BlockRotation, pivot: BlockPos) = StructureTemplate.method_15168(pos, mirror, rotation, pivot)
+    fun transformAround(pos: BlockPos?, mirror: BlockMirror?, rotation: BlockRotation?, pivot: BlockPos?) = StructureTemplate.method_15168(pos, mirror, rotation, pivot)
     /**
      * method_20532
      */
-    fun updateCorner(world: WorldAccess, flags: Int, set: VoxelSet, startX: Int, startY: Int, startZ: Int) = StructureTemplate.method_20532(world, flags, set, startX, startY, startZ)
+    fun updateCorner(world: WorldAccess?, flags: Int, set: VoxelSet?, startX: Int, startY: Int, startZ: Int) = StructureTemplate.method_20532(world, flags, set, startX, startY, startZ)
     /**
      * method_16446
      */
-    fun process(world: ServerWorldAccess, pos: BlockPos, pivot: BlockPos, placementData: StructurePlacementData, infos: MutableList<net.minecraft.class_3499.class_3501>) = StructureTemplate.method_16446(world, pos, pivot, placementData, infos)
+    fun process(world: ServerWorldAccess?, pos: BlockPos?, pivot: BlockPos?, placementData: StructurePlacementData?, infos: MutableList<net.minecraft.class_3499.class_3501>?) = StructureTemplate.method_16446(world, pos, pivot, placementData, infos)
     /**
      * method_15171
      */
-    fun transform(placementData: StructurePlacementData, pos: BlockPos) = StructureTemplate.method_15171(placementData, pos)
+    fun transform(placementData: StructurePlacementData?, pos: BlockPos?) = StructureTemplate.method_15171(placementData, pos)
     /**
      * method_58190
      */
-    fun updateCorner(world: WorldAccess, flags: Int, set: VoxelSet, startPos: BlockPos) = StructureTemplate.method_58190(world, flags, set, startPos)
+    fun updateCorner(world: WorldAccess?, flags: Int, set: VoxelSet?, startPos: BlockPos?) = StructureTemplate.method_58190(world, flags, set, startPos)
     /**
      * method_64823
      */
-    fun readJoint(nbt: NbtCompound, state: BlockState) = StructureTemplate.method_64823(nbt, state)
+    fun readJoint(nbt: NbtCompound?, state: BlockState?) = StructureTemplate.method_64823(nbt, state)
     /**
      * method_15162
      */
-    fun applyTransformedOffset(pos: BlockPos, mirror: BlockMirror, rotation: BlockRotation, offsetX: Int, offsetZ: Int) = StructureTemplate.method_15162(pos, mirror, rotation, offsetX, offsetZ)
+    fun applyTransformedOffset(pos: BlockPos?, mirror: BlockMirror?, rotation: BlockRotation?, offsetX: Int, offsetZ: Int) = StructureTemplate.method_15162(pos, mirror, rotation, offsetX, offsetZ)
 }

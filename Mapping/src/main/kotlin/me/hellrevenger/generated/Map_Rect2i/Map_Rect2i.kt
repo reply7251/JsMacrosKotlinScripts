@@ -20,7 +20,7 @@ fun Rect2i.setStartPos(x: Int, y: Int) = this.method_35779(x, y)
 /**
  * method_35780
  */
-fun Rect2i.intersection(rect: Rect2i) = this.method_35780(rect)
+fun Rect2i.intersection(rect: Rect2i?) = this.method_35780(rect)
 /**
  * method_3320
  */

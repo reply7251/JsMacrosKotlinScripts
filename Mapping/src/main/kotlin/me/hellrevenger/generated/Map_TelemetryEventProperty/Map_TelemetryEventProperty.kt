@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_47749
  */
-fun <T>TelemetryEventProperty<T>.addTo(map: PropertyMap, container: TelemetryPropertyContainer) = this.method_47749(map, container)
+fun <T>TelemetryEventProperty<T>.addTo(map: PropertyMap?, container: TelemetryPropertyContainer?) = this.method_47749(map, container)
 /**
  * method_47743
  */

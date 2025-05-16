@@ -9,5 +9,5 @@ object CloneCommandKt {
     /**
      * method_13089
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, commandRegistryAccess: CommandRegistryAccess) = CloneCommand.method_13089(dispatcher, commandRegistryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, commandRegistryAccess: CommandRegistryAccess?) = CloneCommand.method_13089(dispatcher, commandRegistryAccess)
 }

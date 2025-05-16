@@ -5,5 +5,5 @@ object RealmsServerPlayerListKt {
     /**
      * method_25074
      */
-    fun parse(json: String) = RealmsServerPlayerList.method_25074(json)
+    fun parse(json: String?) = RealmsServerPlayerList.method_25074(json)
 }

@@ -8,7 +8,7 @@ fun AbuseReportContext.hasDraft() = this.method_46556()
 /**
  * method_46552
  */
-fun AbuseReportContext.tryShowDraftScreen(client: MinecraftClient, parent: Screen, callback: Runnable, quit: Boolean) = this.method_46552(client, parent, callback, quit)
+fun AbuseReportContext.tryShowDraftScreen(client: MinecraftClient?, parent: Screen?, callback: Runnable?, quit: Boolean) = this.method_46552(client, parent, callback, quit)
 /**
  * method_46550
  */
@@ -16,15 +16,15 @@ fun AbuseReportContext.getSender() = this.method_46550()
 /**
  * method_46554
  */
-fun AbuseReportContext.draftPlayerUuidEquals(uuid: UUID) = this.method_46554(uuid)
+fun AbuseReportContext.draftPlayerUuidEquals(uuid: UUID?) = this.method_46554(uuid)
 /**
  * method_44598
  */
-fun AbuseReportContext.environmentEquals(environment: ReporterEnvironment) = this.method_44598(environment)
+fun AbuseReportContext.environmentEquals(environment: ReporterEnvironment?) = this.method_44598(environment)
 /**
  * method_46553
  */
-fun AbuseReportContext.setDraft(draft: AbuseReport) = this.method_46553(draft)
+fun AbuseReportContext.setDraft(draft: AbuseReport?) = this.method_46553(draft)
 /**
  * method_46555
  */

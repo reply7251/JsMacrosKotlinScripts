@@ -32,7 +32,7 @@ fun BlockBox.expand(offset: Int) = this.method_35410(offset)
 /**
  * method_14657
  */
-fun BlockBox.intersects(other: BlockBox) = this.method_14657(other)
+fun BlockBox.intersects(other: BlockBox?) = this.method_14657(other)
 /**
  * method_35416
  */
@@ -48,7 +48,7 @@ fun BlockBox.getMaxZ() = this.method_35420()
 /**
  * method_34391
  */
-fun BlockBox.forEachVertex(consumer: Consumer<BlockPos>) = this.method_34391(consumer)
+fun BlockBox.forEachVertex(consumer: Consumer<BlockPos>?) = this.method_34391(consumer)
 /**
  * method_35414
  */
@@ -60,7 +60,7 @@ fun BlockBox.offset(x: Int, y: Int, z: Int) = this.method_19311(x, y, z)
 /**
  * method_34389
  */
-fun BlockBox.encompass(pos: BlockPos) = this.method_34389(pos)
+fun BlockBox.encompass(pos: BlockPos?) = this.method_34389(pos)
 /**
  * method_59718
  */
@@ -68,11 +68,11 @@ fun BlockBox.expand(x: Int, y: Int, z: Int) = this.method_59718(x, y, z)
 /**
  * method_14662
  */
-fun BlockBox.contains(pos: Vec3i) = this.method_14662(pos)
+fun BlockBox.contains(pos: Vec3i?) = this.method_14662(pos)
 /**
  * method_29299
  */
-fun BlockBox.move(vec: Vec3i) = this.method_29299(vec)
+fun BlockBox.move(vec: Vec3i?) = this.method_29299(vec)
 /**
  * method_35417
  */
@@ -88,7 +88,7 @@ fun BlockBox.getMaxY() = this.method_35419()
 /**
  * method_35412
  */
-fun BlockBox.encompass(box: BlockBox) = this.method_35412(box)
+fun BlockBox.encompass(box: BlockBox?) = this.method_35412(box)
 /**
  * method_22874
  */

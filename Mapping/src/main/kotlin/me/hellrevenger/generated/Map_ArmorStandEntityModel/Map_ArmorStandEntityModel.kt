@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17066
  */
-fun ArmorStandEntityModel.setAngles(arg0: ArmorStandEntityRenderState) = this.method_17066(arg0)
+fun ArmorStandEntityModel.setAngles(arg0: ArmorStandEntityRenderState?) = this.method_17066(arg0)

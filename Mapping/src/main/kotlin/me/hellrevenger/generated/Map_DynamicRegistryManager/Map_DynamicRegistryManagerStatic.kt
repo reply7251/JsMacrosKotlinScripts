@@ -5,5 +5,5 @@ object DynamicRegistryManagerKt {
     /**
      * method_40302
      */
-    fun of(registries: Registry<out Registry<*>>) = DynamicRegistryManager.method_40302(registries)
+    fun of(registries: Registry<out Registry<*>>?) = DynamicRegistryManager.method_40302(registries)
 }

@@ -5,5 +5,5 @@ object RecipeToastKt {
     /**
      * method_1985
      */
-    fun show(toastManager: ToastManager, display: RecipeDisplay) = RecipeToast.method_1985(toastManager, display)
+    fun show(toastManager: ToastManager?, display: RecipeDisplay?) = RecipeToast.method_1985(toastManager, display)
 }

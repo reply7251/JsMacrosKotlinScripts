@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_45095
  */
-fun SentMessage.send(sender: ServerPlayerEntity, filterMaskEnabled: Boolean, params: net.minecraft.class_2556.class_7602) = this.method_45095(sender, filterMaskEnabled, params)
+fun SentMessage.send(sender: ServerPlayerEntity?, filterMaskEnabled: Boolean, params: net.minecraft.class_2556.class_7602?) = this.method_45095(sender, filterMaskEnabled, params)
 /**
  * comp_1081
  */

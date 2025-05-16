@@ -8,4 +8,4 @@ fun FluidDrainable.getBucketFillSound() = this.method_32351()
 /**
  * method_9700
  */
-fun FluidDrainable.tryDrainFluid(player: PlayerEntity, world: WorldAccess, pos: BlockPos, state: BlockState) = this.method_9700(player, world, pos, state)
+fun FluidDrainable.tryDrainFluid(player: PlayerEntity?, world: WorldAccess?, pos: BlockPos?, state: BlockState?) = this.method_9700(player, world, pos, state)

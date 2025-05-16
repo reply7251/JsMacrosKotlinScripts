@@ -5,5 +5,5 @@ object SmithingTrimRecipeJsonBuilderKt {
     /**
      * method_48540
      */
-    fun create(template: Ingredient, base: Ingredient, addition: Ingredient, category: RecipeCategory) = SmithingTrimRecipeJsonBuilder.method_48540(template, base, addition, category)
+    fun create(template: Ingredient?, base: Ingredient?, addition: Ingredient?, category: RecipeCategory?) = SmithingTrimRecipeJsonBuilder.method_48540(template, base, addition, category)
 }

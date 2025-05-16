@@ -5,5 +5,5 @@ object SoulFireBlockKt {
     /**
      * method_26158
      */
-    fun isSoulBase(state: BlockState) = SoulFireBlock.method_26158(state)
+    fun isSoulBase(state: BlockState?) = SoulFireBlock.method_26158(state)
 }

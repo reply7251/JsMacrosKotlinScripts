@@ -32,11 +32,11 @@ fun <E>EntryListWidget<E>.getRowWidth() where E: net.minecraft.class_350.class_3
 /**
  * method_57712
  */
-fun <E>EntryListWidget<E>.position(width: Int, layout: ThreePartsLayoutWidget) where E: net.minecraft.class_350.class_351<E> = this.method_57712(width, layout)
+fun <E>EntryListWidget<E>.position(width: Int, layout: ThreePartsLayoutWidget?) where E: net.minecraft.class_350.class_351<E> = this.method_57712(width, layout)
 /**
  * method_25314
  */
-fun <E>EntryListWidget<E>.replaceEntries(newEntries: Collection<E>) where E: net.minecraft.class_350.class_351<E> = this.method_25314(newEntries)
+fun <E>EntryListWidget<E>.replaceEntries(newEntries: Collection<E>?) where E: net.minecraft.class_350.class_351<E> = this.method_25314(newEntries)
 /**
  * method_25337
  */

@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_40220
  */
-fun <T>RegistryEntry<T>.isIn(tag: TagKey<T>) = this.method_40220(tag)
+fun <T>RegistryEntry<T>.isIn(tag: TagKey<T>?) = this.method_40220(tag)
 /**
  * method_40226
  */
-fun <T>RegistryEntry<T>.matchesId(id: Identifier) = this.method_40226(id)
+fun <T>RegistryEntry<T>.matchesId(id: Identifier?) = this.method_40226(id)
 /**
  * method_40228
  */
@@ -28,19 +28,19 @@ fun <T>RegistryEntry<T>.getIdAsString() = this.method_55840()
 /**
  * method_40224
  */
-fun <T>RegistryEntry<T>.matches(predicate: Predicate<RegistryKey<T>>) = this.method_40224(predicate)
+fun <T>RegistryEntry<T>.matches(predicate: Predicate<RegistryKey<T>>?) = this.method_40224(predicate)
 /**
  * method_55838
  */
-fun <T>RegistryEntry<T>.matches(entry: RegistryEntry<T>) = this.method_55838(entry)
+fun <T>RegistryEntry<T>.matches(entry: RegistryEntry<T>?) = this.method_55838(entry)
 /**
  * method_46745
  */
-fun <T>RegistryEntry<T>.ownerEquals(owner: RegistryEntryOwner<T>) = this.method_46745(owner)
+fun <T>RegistryEntry<T>.ownerEquals(owner: RegistryEntryOwner<T>?) = this.method_46745(owner)
 /**
  * method_40225
  */
-fun <T>RegistryEntry<T>.matchesKey(key: RegistryKey<T>) = this.method_40225(key)
+fun <T>RegistryEntry<T>.matchesKey(key: RegistryKey<T>?) = this.method_40225(key)
 /**
  * method_40227
  */

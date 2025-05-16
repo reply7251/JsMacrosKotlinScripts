@@ -9,7 +9,7 @@ object MultiNoiseUtilKt {
     /**
      * method_39164
      */
-    fun findFittestPosition(noises: MutableList<net.minecraft.class_6544.class_4762>, sampler: net.minecraft.class_6544.class_6552) = MultiNoiseUtil.method_39164(noises, sampler)
+    fun findFittestPosition(noises: MutableList<net.minecraft.class_6544.class_4762>?, sampler: net.minecraft.class_6544.class_6552?) = MultiNoiseUtil.method_39164(noises, sampler)
     /**
      * method_40443
      */
@@ -25,7 +25,7 @@ object MultiNoiseUtilKt {
     /**
      * method_38118
      */
-    fun createNoiseHypercube(temperature: net.minecraft.class_6544.class_6546, humidity: net.minecraft.class_6544.class_6546, continentalness: net.minecraft.class_6544.class_6546, erosion: net.minecraft.class_6544.class_6546, depth: net.minecraft.class_6544.class_6546, weirdness: net.minecraft.class_6544.class_6546, offset: Float) = MultiNoiseUtil.method_38118(temperature, humidity, continentalness, erosion, depth, weirdness, offset)
+    fun createNoiseHypercube(temperature: net.minecraft.class_6544.class_6546?, humidity: net.minecraft.class_6544.class_6546?, continentalness: net.minecraft.class_6544.class_6546?, erosion: net.minecraft.class_6544.class_6546?, depth: net.minecraft.class_6544.class_6546?, weirdness: net.minecraft.class_6544.class_6546?, offset: Float) = MultiNoiseUtil.method_38118(temperature, humidity, continentalness, erosion, depth, weirdness, offset)
     /**
      * method_38666
      */

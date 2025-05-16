@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8784
  */
-fun BrewedPotionCriterion.trigger(player: ServerPlayerEntity, potion: RegistryEntry<Potion>) = this.method_8784(player, potion)
+fun BrewedPotionCriterion.trigger(player: ServerPlayerEntity?, potion: RegistryEntry<Potion>?) = this.method_8784(player, potion)

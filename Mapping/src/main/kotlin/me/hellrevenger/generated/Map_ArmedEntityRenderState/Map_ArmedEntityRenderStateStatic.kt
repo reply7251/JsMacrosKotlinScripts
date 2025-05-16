@@ -5,5 +5,5 @@ object ArmedEntityRenderStateKt {
     /**
      * method_65577
      */
-    fun updateRenderState(entity: LivingEntity, state: ArmedEntityRenderState, itemModelManager: ItemModelManager) = ArmedEntityRenderState.method_65577(entity, state, itemModelManager)
+    fun updateRenderState(entity: LivingEntity?, state: ArmedEntityRenderState?, itemModelManager: ItemModelManager?) = ArmedEntityRenderState.method_65577(entity, state, itemModelManager)
 }

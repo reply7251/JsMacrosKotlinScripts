@@ -9,9 +9,9 @@ object BossBarCommandKt {
     /**
      * method_13054
      */
-    fun getBossBar(context: CommandContext<ServerCommandSource>) = BossBarCommand.method_13054(context)
+    fun getBossBar(context: CommandContext<ServerCommandSource>?) = BossBarCommand.method_13054(context)
     /**
      * method_13053
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = BossBarCommand.method_13053(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = BossBarCommand.method_13053(dispatcher, registryAccess)
 }

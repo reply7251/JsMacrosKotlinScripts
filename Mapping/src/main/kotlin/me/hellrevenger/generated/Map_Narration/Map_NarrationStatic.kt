@@ -9,13 +9,13 @@ object NarrationKt {
     /**
      * method_37042
      */
-    fun <T>text(text: Text) = Narration.method_37042(text)
+    fun <T>text(text: Text?) = Narration.method_37042(text)
     /**
      * method_37036
      */
-    fun <T>string(string: String) = Narration.method_37036(string)
+    fun <T>string(string: String?) = Narration.method_37036(string)
     /**
      * method_37037
      */
-    fun <T>texts(texts: MutableList<Text>) = Narration.method_37037(texts)
+    fun <T>texts(texts: MutableList<Text>?) = Narration.method_37037(texts)
 }

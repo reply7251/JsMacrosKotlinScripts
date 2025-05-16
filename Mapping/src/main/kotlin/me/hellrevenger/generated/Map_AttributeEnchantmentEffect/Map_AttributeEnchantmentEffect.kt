@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60228
  */
-fun AttributeEnchantmentEffect.createAttributeModifier(value: Int, suffix: StringIdentifiable) = this.method_60228(value, suffix)
+fun AttributeEnchantmentEffect.createAttributeModifier(value: Int, suffix: StringIdentifiable?) = this.method_60228(value, suffix)
 /**
  * comp_2719
  */

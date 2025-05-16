@@ -32,4 +32,4 @@ fun RealmsAcceptRejectButton.getBottom() = this.method_21115()
 /**
  * method_21111
  */
-fun RealmsAcceptRejectButton.render(context: DrawContext, x: Int, y: Int, mouseX: Int, mouseY: Int) = this.method_21111(context, x, y, mouseX, mouseY)
+fun RealmsAcceptRejectButton.render(context: DrawContext?, x: Int, y: Int, mouseX: Int, mouseY: Int) = this.method_21111(context, x, y, mouseX, mouseY)

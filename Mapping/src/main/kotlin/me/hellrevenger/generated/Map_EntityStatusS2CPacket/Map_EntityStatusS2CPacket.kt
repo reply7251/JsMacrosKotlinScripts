@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11469
  */
-fun EntityStatusS2CPacket.getEntity(world: world_World) = this.method_11469(world)
+fun EntityStatusS2CPacket.getEntity(world: world_World?) = this.method_11469(world)
 /**
  * method_11470
  */
@@ -12,4 +12,4 @@ fun EntityStatusS2CPacket.getStatus() = this.method_11470()
 /**
  * method_11471
  */
-fun EntityStatusS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11471(arg0)
+fun EntityStatusS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11471(arg0)

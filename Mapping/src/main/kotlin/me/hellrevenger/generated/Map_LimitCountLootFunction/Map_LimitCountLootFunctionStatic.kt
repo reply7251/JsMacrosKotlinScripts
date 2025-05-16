@@ -5,5 +5,5 @@ object LimitCountLootFunctionKt {
     /**
      * method_506
      */
-    fun builder(limit: BoundedIntUnaryOperator) = LimitCountLootFunction.method_506(limit)
+    fun builder(limit: BoundedIntUnaryOperator?) = LimitCountLootFunction.method_506(limit)
 }

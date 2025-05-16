@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_52272
  */
-fun EnterReconfigurationS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_52272(arg0)
+fun EnterReconfigurationS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_52272(arg0)

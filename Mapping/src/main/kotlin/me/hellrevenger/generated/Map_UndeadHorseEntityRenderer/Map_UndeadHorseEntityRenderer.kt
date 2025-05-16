@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_4145
  */
-fun UndeadHorseEntityRenderer.getTexture(arg0: LivingHorseEntityRenderState) = this.method_4145(arg0)
+fun UndeadHorseEntityRenderer.getTexture(arg0: LivingHorseEntityRenderState?) = this.method_4145(arg0)
 /**
  * method_62564
  */

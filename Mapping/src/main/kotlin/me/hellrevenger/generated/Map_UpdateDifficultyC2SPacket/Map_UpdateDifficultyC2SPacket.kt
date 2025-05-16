@@ -8,4 +8,4 @@ fun UpdateDifficultyC2SPacket.getDifficulty() = this.method_19478()
 /**
  * method_19477
  */
-fun UpdateDifficultyC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_19477(arg0)
+fun UpdateDifficultyC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_19477(arg0)

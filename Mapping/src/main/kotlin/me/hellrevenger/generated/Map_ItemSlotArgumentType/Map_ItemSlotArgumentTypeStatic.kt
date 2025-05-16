@@ -9,5 +9,5 @@ object ItemSlotArgumentTypeKt {
     /**
      * method_9469
      */
-    fun getItemSlot(context: CommandContext<ServerCommandSource>, name: String) = ItemSlotArgumentType.method_9469(context, name)
+    fun getItemSlot(context: CommandContext<ServerCommandSource>?, name: String?) = ItemSlotArgumentType.method_9469(context, name)
 }

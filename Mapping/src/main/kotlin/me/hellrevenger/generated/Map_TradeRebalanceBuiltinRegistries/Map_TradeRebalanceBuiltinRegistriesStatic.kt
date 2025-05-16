@@ -5,5 +5,5 @@ object TradeRebalanceBuiltinRegistriesKt {
     /**
      * method_60420
      */
-    fun validate(registriesFuture: CompletableFuture<net.minecraft.class_7225.class_7874>) = TradeRebalanceBuiltinRegistries.method_60420(registriesFuture)
+    fun validate(registriesFuture: CompletableFuture<net.minecraft.class_7225.class_7874>?) = TradeRebalanceBuiltinRegistries.method_60420(registriesFuture)
 }

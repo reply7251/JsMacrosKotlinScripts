@@ -12,11 +12,11 @@ fun NbtLongArray.copy() = this.method_10618()
 /**
  * method_17812
  */
-fun NbtLongArray.add(arg0: Int, arg1: NbtLong) = this.method_17812(arg0, arg1)
+fun NbtLongArray.add(arg0: Int, arg1: NbtLong?) = this.method_17812(arg0, arg1)
 /**
  * method_17810
  */
-fun NbtLongArray.method_10606(arg0: Int, arg1: NbtLong) = this.method_17810(arg0, arg1)
+fun NbtLongArray.method_10606(arg0: Int, arg1: NbtLong?) = this.method_17810(arg0, arg1)
 /**
  * method_17811
  */

@@ -9,13 +9,13 @@ object BansKt {
     /**
      * method_53556
      */
-    fun createUsernameBanScreen(username: String, onClose: Runnable) = Bans.method_53556(username, onClose)
+    fun createUsernameBanScreen(username: String?, onClose: Runnable?) = Bans.method_53556(username, onClose)
     /**
      * method_44652
      */
-    fun createBanScreen(callback: BooleanConsumer, banDetails: BanDetails) = Bans.method_44652(callback, banDetails)
+    fun createBanScreen(callback: BooleanConsumer?, banDetails: BanDetails?) = Bans.method_44652(callback, banDetails)
     /**
      * method_53554
      */
-    fun createSkinBanScreen(onClose: Runnable) = Bans.method_53554(onClose)
+    fun createSkinBanScreen(onClose: Runnable?) = Bans.method_53554(onClose)
 }

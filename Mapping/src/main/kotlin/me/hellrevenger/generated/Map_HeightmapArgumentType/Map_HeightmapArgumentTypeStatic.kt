@@ -9,5 +9,5 @@ object HeightmapArgumentTypeKt {
     /**
      * method_49544
      */
-    fun getHeightmap(context: CommandContext<ServerCommandSource>, id: String) = HeightmapArgumentType.method_49544(context, id)
+    fun getHeightmap(context: CommandContext<ServerCommandSource>?, id: String?) = HeightmapArgumentType.method_49544(context, id)
 }

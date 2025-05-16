@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11486
  */
-fun UnloadChunkS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11486(arg0)
+fun UnloadChunkS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11486(arg0)
 /**
  * comp_1726
  */

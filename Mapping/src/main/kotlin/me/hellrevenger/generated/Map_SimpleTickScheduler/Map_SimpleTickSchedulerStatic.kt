@@ -5,5 +5,5 @@ object SimpleTickSchedulerKt {
     /**
      * method_39398
      */
-    fun <T>tick(ticks: MutableList<Tick<T>>) = SimpleTickScheduler.method_39398<T>(ticks)
+    fun <T>tick(ticks: MutableList<Tick<T>>?) = SimpleTickScheduler.method_39398<T>(ticks)
 }

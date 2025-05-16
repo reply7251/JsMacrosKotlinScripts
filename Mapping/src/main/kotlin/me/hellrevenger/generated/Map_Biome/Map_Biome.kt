@@ -20,7 +20,7 @@ fun Biome.getLoopSound() = this.method_24935()
 /**
  * method_48162
  */
-fun Biome.getPrecipitation(pos: BlockPos, seaLevel: Int) = this.method_48162(pos, seaLevel)
+fun Biome.getPrecipitation(pos: BlockPos?, seaLevel: Int) = this.method_48162(pos, seaLevel)
 /**
  * method_8698
  */
@@ -32,7 +32,7 @@ fun Biome.hasPrecipitation() = this.method_48163()
 /**
  * method_8696
  */
-fun Biome.canSetSnow(world: WorldView, pos: BlockPos) = this.method_8696(world, pos)
+fun Biome.canSetSnow(world: WorldView?, pos: BlockPos?) = this.method_8696(world, pos)
 /**
  * method_24936
  */
@@ -48,7 +48,7 @@ fun Biome.getSkyColor() = this.method_8697()
 /**
  * method_39928
  */
-fun Biome.shouldGenerateLowerFrozenOceanSurface(pos: BlockPos, seaLevel: Int) = this.method_39928(pos, seaLevel)
+fun Biome.shouldGenerateLowerFrozenOceanSurface(pos: BlockPos?, seaLevel: Int) = this.method_39928(pos, seaLevel)
 /**
  * method_8711
  */
@@ -60,7 +60,7 @@ fun Biome.getEffects() = this.method_24377()
 /**
  * method_33599
  */
-fun Biome.isCold(pos: BlockPos, seaLevel: Int) = this.method_33599(pos, seaLevel)
+fun Biome.isCold(pos: BlockPos?, seaLevel: Int) = this.method_33599(pos, seaLevel)
 /**
  * method_24376
  */
@@ -76,11 +76,11 @@ fun Biome.getMusicVolume() = this.method_65133()
 /**
  * method_8685
  */
-fun Biome.canSetIce(world: WorldView, pos: BlockPos, doWaterCheck: Boolean) = this.method_8685(world, pos, doWaterCheck)
+fun Biome.canSetIce(world: WorldView?, pos: BlockPos?, doWaterCheck: Boolean) = this.method_8685(world, pos, doWaterCheck)
 /**
  * method_39927
  */
-fun Biome.doesNotSnow(pos: BlockPos, seaLevel: Int) = this.method_39927(pos, seaLevel)
+fun Biome.doesNotSnow(pos: BlockPos?, seaLevel: Int) = this.method_39927(pos, seaLevel)
 /**
  * method_8713
  */
@@ -92,7 +92,7 @@ fun Biome.getParticleConfig() = this.method_24378()
 /**
  * method_8705
  */
-fun Biome.canSetIce(world: WorldView, blockPos: BlockPos) = this.method_8705(world, blockPos)
+fun Biome.canSetIce(world: WorldView?, blockPos: BlockPos?) = this.method_8705(world, blockPos)
 /**
  * method_8687
  */

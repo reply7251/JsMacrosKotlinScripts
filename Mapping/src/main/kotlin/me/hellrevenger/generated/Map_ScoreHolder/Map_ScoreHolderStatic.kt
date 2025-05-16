@@ -5,9 +5,9 @@ object ScoreHolderKt {
     /**
      * method_55420
      */
-    fun fromProfile(gameProfile: GameProfile) = ScoreHolder.method_55420(gameProfile)
+    fun fromProfile(gameProfile: GameProfile?) = ScoreHolder.method_55420(gameProfile)
     /**
      * method_55422
      */
-    fun fromName(name: String) = ScoreHolder.method_55422(name)
+    fun fromName(name: String?) = ScoreHolder.method_55422(name)
 }

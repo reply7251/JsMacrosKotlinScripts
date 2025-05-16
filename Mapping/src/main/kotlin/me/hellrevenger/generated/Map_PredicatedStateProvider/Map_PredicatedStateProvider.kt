@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_43311
  */
-fun PredicatedStateProvider.getBlockState(world: StructureWorldAccess, random: Random, pos: BlockPos) = this.method_43311(world, random, pos)
+fun PredicatedStateProvider.getBlockState(world: StructureWorldAccess?, random: Random?, pos: BlockPos?) = this.method_43311(world, random, pos)
 /**
  * comp_725
  */

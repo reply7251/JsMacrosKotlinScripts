@@ -9,5 +9,5 @@ object PathNodeKt {
     /**
      * method_28
      */
-    fun fromBuf(buf: PacketByteBuf) = PathNode.method_28(buf)
+    fun fromBuf(buf: PacketByteBuf?) = PathNode.method_28(buf)
 }

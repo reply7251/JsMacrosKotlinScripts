@@ -5,19 +5,19 @@ object RecipeGeneratorKt {
     /**
      * method_36450
      */
-    fun getRecipeName(item: ItemConvertible) = RecipeGenerator.method_36450(item)
+    fun getRecipeName(item: ItemConvertible?) = RecipeGenerator.method_36450(item)
     /**
      * method_33714
      */
-    fun convertBetween(to: ItemConvertible, from: ItemConvertible) = RecipeGenerator.method_33714(to, from)
+    fun convertBetween(to: ItemConvertible?, from: ItemConvertible?) = RecipeGenerator.method_33714(to, from)
     /**
      * method_36451
      */
-    fun getSmeltingItemPath(item: ItemConvertible) = RecipeGenerator.method_36451(item)
+    fun getSmeltingItemPath(item: ItemConvertible?) = RecipeGenerator.method_36451(item)
     /**
      * method_32807
      */
-    fun hasItem(item: ItemConvertible) = RecipeGenerator.method_32807(item)
+    fun hasItem(item: ItemConvertible?) = RecipeGenerator.method_32807(item)
     /**
      * method_10423
      */
@@ -25,11 +25,11 @@ object RecipeGeneratorKt {
     /**
      * method_36452
      */
-    fun getBlastingItemPath(item: ItemConvertible) = RecipeGenerator.method_36452(item)
+    fun getBlastingItemPath(item: ItemConvertible?) = RecipeGenerator.method_36452(item)
     /**
      * method_33716
      */
-    fun getItemPath(item: ItemConvertible) = RecipeGenerator.method_33716(item)
+    fun getItemPath(item: ItemConvertible?) = RecipeGenerator.method_33716(item)
     /**
      * method_53499
      */
@@ -37,5 +37,5 @@ object RecipeGeneratorKt {
     /**
      * method_10422
      */
-    fun requireEnteringFluid(block: Block) = RecipeGenerator.method_10422(block)
+    fun requireEnteringFluid(block: Block?) = RecipeGenerator.method_10422(block)
 }

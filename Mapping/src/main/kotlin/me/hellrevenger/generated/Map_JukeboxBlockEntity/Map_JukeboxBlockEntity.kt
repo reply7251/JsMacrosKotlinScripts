@@ -24,4 +24,4 @@ fun JukeboxBlockEntity.dropRecord() = this.method_49213()
 /**
  * method_49210
  */
-fun JukeboxBlockEntity.setDisc(stack: ItemStack) = this.method_49210(stack)
+fun JukeboxBlockEntity.setDisc(stack: ItemStack?) = this.method_49210(stack)

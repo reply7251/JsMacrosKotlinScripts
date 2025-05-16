@@ -5,5 +5,5 @@ object KickCommandKt {
     /**
      * method_13410
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = KickCommand.method_13410(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = KickCommand.method_13410(dispatcher)
 }

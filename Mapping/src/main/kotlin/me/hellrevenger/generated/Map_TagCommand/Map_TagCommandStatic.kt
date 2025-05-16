@@ -5,5 +5,5 @@ object TagCommandKt {
     /**
      * method_13698
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = TagCommand.method_13698(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = TagCommand.method_13698(dispatcher)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_3347
  */
-fun FluidRenderer.render(world: BlockRenderView, pos: BlockPos, vertexConsumer: VertexConsumer, blockState: BlockState, fluidState: FluidState) = this.method_3347(world, pos, vertexConsumer, blockState, fluidState)
+fun FluidRenderer.render(world: BlockRenderView?, pos: BlockPos?, vertexConsumer: VertexConsumer?, blockState: BlockState?, fluidState: FluidState?) = this.method_3347(world, pos, vertexConsumer, blockState, fluidState)

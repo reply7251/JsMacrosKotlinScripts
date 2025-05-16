@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_65087
  */
-fun PickItemFromEntityC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_65087(arg0)
+fun PickItemFromEntityC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_65087(arg0)
 /**
  * comp_3329
  */

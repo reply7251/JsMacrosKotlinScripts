@@ -165,5 +165,5 @@ object TreeConfiguredFeaturesKt {
     /**
      * method_46857
      */
-    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>) = TreeConfiguredFeatures.method_46857(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>?) = TreeConfiguredFeatures.method_46857(featureRegisterable)
 }

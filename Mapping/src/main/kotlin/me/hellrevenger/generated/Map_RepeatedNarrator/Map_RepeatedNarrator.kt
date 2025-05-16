@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_25499
  */
-fun RepeatedNarrator.narrate(narratorManager: NarratorManager, text: Text) = this.method_25499(narratorManager, text)
+fun RepeatedNarrator.narrate(narratorManager: NarratorManager?, text: Text?) = this.method_25499(narratorManager, text)

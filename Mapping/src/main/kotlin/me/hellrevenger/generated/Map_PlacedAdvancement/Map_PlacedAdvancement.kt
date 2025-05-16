@@ -12,7 +12,7 @@ fun PlacedAdvancement.getRoot() = this.method_53652()
 /**
  * method_53650
  */
-fun PlacedAdvancement.addChild(advancement: PlacedAdvancement) = this.method_53650(advancement)
+fun PlacedAdvancement.addChild(advancement: PlacedAdvancement?) = this.method_53650(advancement)
 /**
  * method_53647
  */

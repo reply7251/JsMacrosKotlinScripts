@@ -12,4 +12,4 @@ fun MultiplayerServerListPinger.tick() = this.method_3000()
 /**
  * method_3003
  */
-fun MultiplayerServerListPinger.add(entry: ServerInfo, saver: Runnable, pingCallback: Runnable) = this.method_3003(entry, saver, pingCallback)
+fun MultiplayerServerListPinger.add(entry: ServerInfo?, saver: Runnable?, pingCallback: Runnable?) = this.method_3003(entry, saver, pingCallback)

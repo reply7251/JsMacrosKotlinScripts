@@ -5,9 +5,9 @@ object LocationCheckLootConditionKt {
     /**
      * method_30151
      */
-    fun builder(predicateBuilder: net.minecraft.class_2090.class_2091, pos: BlockPos) = LocationCheckLootCondition.method_30151(predicateBuilder, pos)
+    fun builder(predicateBuilder: net.minecraft.class_2090.class_2091?, pos: BlockPos?) = LocationCheckLootCondition.method_30151(predicateBuilder, pos)
     /**
      * method_884
      */
-    fun builder(predicateBuilder: net.minecraft.class_2090.class_2091) = LocationCheckLootCondition.method_884(predicateBuilder)
+    fun builder(predicateBuilder: net.minecraft.class_2090.class_2091?) = LocationCheckLootCondition.method_884(predicateBuilder)
 }

@@ -5,5 +5,5 @@ object UniformHeightProviderKt {
     /**
      * method_35396
      */
-    fun create(minOffset: YOffset, maxOffset: YOffset) = UniformHeightProvider.method_35396(minOffset, maxOffset)
+    fun create(minOffset: YOffset?, maxOffset: YOffset?) = UniformHeightProvider.method_35396(minOffset, maxOffset)
 }

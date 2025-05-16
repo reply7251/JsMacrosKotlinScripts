@@ -5,7 +5,7 @@ object GameModeArgumentTypeKt {
     /**
      * method_47385
      */
-    fun getGameMode(context: CommandContext<ServerCommandSource>, name: String) = GameModeArgumentType.method_47385(context, name)
+    fun getGameMode(context: CommandContext<ServerCommandSource>?, name: String?) = GameModeArgumentType.method_47385(context, name)
     /**
      * method_47383
      */

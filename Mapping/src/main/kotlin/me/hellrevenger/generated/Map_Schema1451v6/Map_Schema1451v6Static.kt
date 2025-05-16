@@ -9,5 +9,5 @@ object Schema1451v6Kt {
     /**
      * method_52506
      */
-    fun toDotSeparated(id: String) = Schema1451v6.method_52506(id)
+    fun toDotSeparated(id: String?) = Schema1451v6.method_52506(id)
 }

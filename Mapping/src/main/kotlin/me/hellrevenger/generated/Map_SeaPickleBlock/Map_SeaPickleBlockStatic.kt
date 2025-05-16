@@ -17,5 +17,5 @@ object SeaPickleBlockKt {
     /**
      * method_10506
      */
-    fun isDry(state: BlockState) = SeaPickleBlock.method_10506(state)
+    fun isDry(state: BlockState?) = SeaPickleBlock.method_10506(state)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_16936
  */
-fun AbstractFireballEntity.setItem(stack: ItemStack) = this.method_16936(stack)
+fun AbstractFireballEntity.setItem(stack: ItemStack?) = this.method_16936(stack)

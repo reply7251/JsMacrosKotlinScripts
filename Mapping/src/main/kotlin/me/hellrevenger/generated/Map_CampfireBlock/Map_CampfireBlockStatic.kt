@@ -21,21 +21,21 @@ object CampfireBlockKt {
     /**
      * method_23895
      */
-    fun isLitCampfireInRange(world: world_World, pos: BlockPos) = CampfireBlock.method_23895(world, pos)
+    fun isLitCampfireInRange(world: world_World?, pos: BlockPos?) = CampfireBlock.method_23895(world, pos)
     /**
      * method_30035
      */
-    fun canBeLit(state: BlockState) = CampfireBlock.method_30035(state)
+    fun canBeLit(state: BlockState?) = CampfireBlock.method_30035(state)
     /**
      * method_29288
      */
-    fun extinguish(entity: Entity, world: WorldAccess, pos: BlockPos, state: BlockState) = CampfireBlock.method_29288(entity, world, pos, state)
+    fun extinguish(entity: Entity?, world: WorldAccess?, pos: BlockPos?, state: BlockState?) = CampfireBlock.method_29288(entity, world, pos, state)
     /**
      * method_17455
      */
-    fun spawnSmokeParticle(world: world_World, pos: BlockPos, isSignal: Boolean, lotsOfSmoke: Boolean) = CampfireBlock.method_17455(world, pos, isSignal, lotsOfSmoke)
+    fun spawnSmokeParticle(world: world_World?, pos: BlockPos?, isSignal: Boolean, lotsOfSmoke: Boolean) = CampfireBlock.method_17455(world, pos, isSignal, lotsOfSmoke)
     /**
      * method_23896
      */
-    fun isLitCampfire(state: BlockState) = CampfireBlock.method_23896(state)
+    fun isLitCampfire(state: BlockState?) = CampfireBlock.method_23896(state)
 }

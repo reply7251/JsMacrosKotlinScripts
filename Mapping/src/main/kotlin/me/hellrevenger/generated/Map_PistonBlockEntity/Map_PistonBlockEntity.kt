@@ -52,4 +52,4 @@ fun PistonBlockEntity.getRenderOffsetX(tickDelta: Float) = this.method_11494(tic
 /**
  * method_11512
  */
-fun PistonBlockEntity.getCollisionShape(world: BlockView, pos: BlockPos) = this.method_11512(world, pos)
+fun PistonBlockEntity.getCollisionShape(world: BlockView?, pos: BlockPos?) = this.method_11512(world, pos)

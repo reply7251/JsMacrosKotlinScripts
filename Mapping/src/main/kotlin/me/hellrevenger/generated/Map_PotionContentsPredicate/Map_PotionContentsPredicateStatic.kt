@@ -5,5 +5,5 @@ object PotionContentsPredicateKt {
     /**
      * method_58178
      */
-    fun potionContents(potions: RegistryEntryList<Potion>) = PotionContentsPredicate.method_58178(potions)
+    fun potionContents(potions: RegistryEntryList<Potion>?) = PotionContentsPredicate.method_58178(potions)
 }

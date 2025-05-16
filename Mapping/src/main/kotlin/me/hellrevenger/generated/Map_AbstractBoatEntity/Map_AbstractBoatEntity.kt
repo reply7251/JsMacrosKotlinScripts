@@ -8,7 +8,7 @@ var AbstractBoatEntity.location by alias(AbstractBoatEntity::field_54433)
 /**
  * method_64488
  */
-fun AbstractBoatEntity.isSmallerThanBoat(entity: Entity) = this.method_64488(entity)
+fun AbstractBoatEntity.isSmallerThanBoat(entity: Entity?) = this.method_64488(entity)
 /**
  * method_64495
  */

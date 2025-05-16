@@ -5,5 +5,5 @@ object LootableInventoryKt {
     /**
      * method_54868
      */
-    fun setLootTable(world: BlockView, random: Random, pos: BlockPos, lootTableId: RegistryKey<LootTable>) = LootableInventory.method_54868(world, random, pos, lootTableId)
+    fun setLootTable(world: BlockView?, random: Random?, pos: BlockPos?, lootTableId: RegistryKey<LootTable>?) = LootableInventory.method_54868(world, random, pos, lootTableId)
 }

@@ -97,11 +97,11 @@ object ScreenTextsKt {
     /**
      * method_30619
      */
-    fun composeToggleText(text: Text, value: Boolean) = ScreenTexts.method_30619(text, value)
+    fun composeToggleText(text: Text?, value: Boolean) = ScreenTexts.method_30619(text, value)
     /**
      * method_37109
      */
-    fun joinLines(texts: Collection<out Text>) = ScreenTexts.method_37109(texts)
+    fun joinLines(texts: Collection<out Text>?) = ScreenTexts.method_37109(texts)
     /**
      * method_37111
      */
@@ -129,5 +129,5 @@ object ScreenTextsKt {
     /**
      * method_32700
      */
-    fun composeGenericOptionText(text: Text, value: Text) = ScreenTexts.method_32700(text, value)
+    fun composeGenericOptionText(text: Text?, value: Text?) = ScreenTexts.method_32700(text, value)
 }

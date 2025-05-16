@@ -9,5 +9,5 @@ object ParrotEntityModelKt {
     /**
      * method_17107
      */
-    fun getPose(parrot: ParrotEntity) = ParrotEntityModel.method_17107(parrot)
+    fun getPose(parrot: ParrotEntity?) = ParrotEntityModel.method_17107(parrot)
 }

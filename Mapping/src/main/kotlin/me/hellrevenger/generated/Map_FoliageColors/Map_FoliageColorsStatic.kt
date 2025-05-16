@@ -25,7 +25,7 @@ object FoliageColorsKt {
     /**
      * method_8340
      */
-    fun setColorMap(pixels: IntArray) = FoliageColors.method_8340(pixels)
+    fun setColorMap(pixels: IntArray?) = FoliageColors.method_8340(pixels)
     /**
      * method_8344
      */

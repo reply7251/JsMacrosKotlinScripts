@@ -5,5 +5,5 @@ object SpawnLocatingKt {
     /**
      * method_29196
      */
-    fun findServerSpawnPoint(world: ServerWorld, chunkPos: ChunkPos) = SpawnLocating.method_29196(world, chunkPos)
+    fun findServerSpawnPoint(world: ServerWorld?, chunkPos: ChunkPos?) = SpawnLocating.method_29196(world, chunkPos)
 }

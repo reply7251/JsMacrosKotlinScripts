@@ -5,9 +5,9 @@ object SymlinkWarningScreenKt {
     /**
      * method_52748
      */
-    fun world(onClose: Runnable) = SymlinkWarningScreen.method_52748(onClose)
+    fun world(onClose: Runnable?) = SymlinkWarningScreen.method_52748(onClose)
     /**
      * method_52750
      */
-    fun pack(onClose: Runnable) = SymlinkWarningScreen.method_52750(onClose)
+    fun pack(onClose: Runnable?) = SymlinkWarningScreen.method_52750(onClose)
 }

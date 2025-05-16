@@ -5,5 +5,5 @@ object ComplexRecipeJsonBuilderKt {
     /**
      * method_10476
      */
-    fun create(recipeFactory: function_Function<CraftingRecipeCategory, Recipe<*>>) = ComplexRecipeJsonBuilder.method_10476(recipeFactory)
+    fun create(recipeFactory: function_Function<CraftingRecipeCategory, Recipe<*>>?) = ComplexRecipeJsonBuilder.method_10476(recipeFactory)
 }

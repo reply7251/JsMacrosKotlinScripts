@@ -8,19 +8,19 @@ fun RandomSplitter.split(x: Int, y: Int, z: Int) = this.method_38418(x, y, z)
 /**
  * method_38995
  */
-fun RandomSplitter.split(seed: String) = this.method_38995(seed)
+fun RandomSplitter.split(seed: String?) = this.method_38995(seed)
 /**
  * method_39039
  */
-fun RandomSplitter.addDebugInfo(info: StringBuilder) = this.method_39039(info)
+fun RandomSplitter.addDebugInfo(info: StringBuilder?) = this.method_39039(info)
 /**
  * method_39000
  */
-fun RandomSplitter.split(seed: Identifier) = this.method_39000(seed)
+fun RandomSplitter.split(seed: Identifier?) = this.method_39000(seed)
 /**
  * method_38419
  */
-fun RandomSplitter.split(pos: BlockPos) = this.method_38419(pos)
+fun RandomSplitter.split(pos: BlockPos?) = this.method_38419(pos)
 /**
  * method_60628
  */

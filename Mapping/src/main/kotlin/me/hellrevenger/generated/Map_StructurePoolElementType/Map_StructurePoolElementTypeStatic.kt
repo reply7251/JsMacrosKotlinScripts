@@ -5,5 +5,5 @@ object StructurePoolElementTypeKt {
     /**
      * method_28885
      */
-    fun <P>register(id: String, codec: MapCodec<P>) where P: StructurePoolElement = StructurePoolElementType.method_28885<P>(id, codec)
+    fun <P>register(id: String?, codec: MapCodec<P>?) where P: StructurePoolElement = StructurePoolElementType.method_28885<P>(id, codec)
 }

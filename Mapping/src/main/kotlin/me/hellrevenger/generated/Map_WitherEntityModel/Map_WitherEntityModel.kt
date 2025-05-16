@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17130
  */
-fun WitherEntityModel.setAngles(arg0: WitherEntityRenderState) = this.method_17130(arg0)
+fun WitherEntityModel.setAngles(arg0: WitherEntityRenderState?) = this.method_17130(arg0)

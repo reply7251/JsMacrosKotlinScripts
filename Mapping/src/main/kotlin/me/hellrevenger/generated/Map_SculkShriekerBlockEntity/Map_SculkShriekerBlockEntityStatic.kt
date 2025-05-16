@@ -5,5 +5,5 @@ object SculkShriekerBlockEntityKt {
     /**
      * method_44018
      */
-    fun findResponsiblePlayerFromEntity(entity: Entity) = SculkShriekerBlockEntity.method_44018(entity)
+    fun findResponsiblePlayerFromEntity(entity: Entity?) = SculkShriekerBlockEntity.method_44018(entity)
 }

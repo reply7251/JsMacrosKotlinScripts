@@ -5,5 +5,5 @@ object PacifyTaskKt {
     /**
      * method_46908
      */
-    fun create(requiredMemory: MemoryModuleType<*>, duration: Int) = PacifyTask.method_46908(requiredMemory, duration)
+    fun create(requiredMemory: MemoryModuleType<*>?, duration: Int) = PacifyTask.method_46908(requiredMemory, duration)
 }

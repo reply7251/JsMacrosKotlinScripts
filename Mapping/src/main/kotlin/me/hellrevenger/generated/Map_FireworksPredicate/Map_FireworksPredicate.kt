@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_59681
  */
-fun FireworksPredicate.test(arg0: ItemStack, arg1: FireworksComponent) = this.method_59681(arg0, arg1)
+fun FireworksPredicate.test(arg0: ItemStack?, arg1: FireworksComponent?) = this.method_59681(arg0, arg1)
 /**
  * comp_2636
  */

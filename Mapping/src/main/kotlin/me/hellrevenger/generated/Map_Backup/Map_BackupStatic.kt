@@ -5,5 +5,5 @@ object BackupKt {
     /**
      * method_25033
      */
-    fun parse(node: JsonElement) = Backup.method_25033(node)
+    fun parse(node: JsonElement?) = Backup.method_25033(node)
 }

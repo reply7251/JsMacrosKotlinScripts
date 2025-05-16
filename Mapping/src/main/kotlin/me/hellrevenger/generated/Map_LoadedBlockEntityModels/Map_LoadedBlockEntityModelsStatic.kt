@@ -9,5 +9,5 @@ object LoadedBlockEntityModelsKt {
     /**
      * method_65536
      */
-    fun fromModels(models: LoadedEntityModels) = LoadedBlockEntityModels.method_65536(models)
+    fun fromModels(models: LoadedEntityModels?) = LoadedBlockEntityModels.method_65536(models)
 }

@@ -5,9 +5,9 @@ object TextRenderLayerSetKt {
     /**
      * method_51641
      */
-    fun ofIntensity(textureId: Identifier) = TextRenderLayerSet.method_51641(textureId)
+    fun ofIntensity(textureId: Identifier?) = TextRenderLayerSet.method_51641(textureId)
     /**
      * method_51643
      */
-    fun of(textureId: Identifier) = TextRenderLayerSet.method_51643(textureId)
+    fun of(textureId: Identifier?) = TextRenderLayerSet.method_51643(textureId)
 }

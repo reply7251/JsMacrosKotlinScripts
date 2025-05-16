@@ -13,5 +13,5 @@ object TurtleEntityKt {
     /**
      * method_20671
      */
-    fun canSpawn(type: EntityType<TurtleEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = TurtleEntity.method_20671(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<TurtleEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = TurtleEntity.method_20671(type, world, spawnReason, pos, random)
 }

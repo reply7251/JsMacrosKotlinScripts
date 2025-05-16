@@ -20,4 +20,4 @@ fun PlayerActionC2SPacket.getPos() = this.method_12362()
 /**
  * method_12361
  */
-fun PlayerActionC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12361(arg0)
+fun PlayerActionC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12361(arg0)

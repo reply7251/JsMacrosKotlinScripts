@@ -20,11 +20,11 @@ fun AbstractChunkHolder.getPos() = this.method_60473()
 /**
  * method_60457
  */
-fun AbstractChunkHolder.getUncheckedOrNull(requestedStatus: ChunkStatus) = this.method_60457(requestedStatus)
+fun AbstractChunkHolder.getUncheckedOrNull(requestedStatus: ChunkStatus?) = this.method_60457(requestedStatus)
 /**
  * method_60463
  */
-fun AbstractChunkHolder.getOrNull(requestedStatus: ChunkStatus) = this.method_60463(requestedStatus)
+fun AbstractChunkHolder.getOrNull(requestedStatus: ChunkStatus?) = this.method_60463(requestedStatus)
 /**
  * method_60469
  */
@@ -32,7 +32,7 @@ fun AbstractChunkHolder.decrementRefCount() = this.method_60469()
 /**
  * method_60456
  */
-fun AbstractChunkHolder.replaceWith(chunk: WrapperProtoChunk) = this.method_60456(chunk)
+fun AbstractChunkHolder.replaceWith(chunk: WrapperProtoChunk?) = this.method_60456(chunk)
 /**
  * method_17208
  */
@@ -48,7 +48,7 @@ fun AbstractChunkHolder.getLevel() = this.method_14005()
 /**
  * method_60458
  */
-fun AbstractChunkHolder.load(requestedStatus: ChunkStatus, chunkLoadingManager: ServerChunkLoadingManager) = this.method_60458(requestedStatus, chunkLoadingManager)
+fun AbstractChunkHolder.load(requestedStatus: ChunkStatus?, chunkLoadingManager: ServerChunkLoadingManager?) = this.method_60458(requestedStatus, chunkLoadingManager)
 /**
  * method_60474
  */

@@ -5,5 +5,5 @@ object SignerKt {
     /**
      * method_44179
      */
-    fun create(privateKey: PrivateKey, algorithm: String) = Signer.method_44179(privateKey, algorithm)
+    fun create(privateKey: PrivateKey?, algorithm: String?) = Signer.method_44179(privateKey, algorithm)
 }

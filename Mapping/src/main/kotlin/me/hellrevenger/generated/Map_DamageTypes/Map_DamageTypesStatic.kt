@@ -5,5 +5,5 @@ object DamageTypesKt {
     /**
      * method_48839
      */
-    fun bootstrap(damageTypeRegisterable: Registerable<DamageType>) = DamageTypes.method_48839(damageTypeRegisterable)
+    fun bootstrap(damageTypeRegisterable: Registerable<DamageType>?) = DamageTypes.method_48839(damageTypeRegisterable)
 }

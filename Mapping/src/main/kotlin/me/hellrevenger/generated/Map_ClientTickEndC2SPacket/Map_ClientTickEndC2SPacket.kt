@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_61221
  */
-fun ClientTickEndC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_61221(arg0)
+fun ClientTickEndC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_61221(arg0)

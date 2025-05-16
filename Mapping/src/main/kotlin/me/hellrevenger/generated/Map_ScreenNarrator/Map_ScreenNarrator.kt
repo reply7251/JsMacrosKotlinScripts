@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_37044
  */
-fun ScreenNarrator.buildNarrations(builderConsumer: Consumer<NarrationMessageBuilder>) = this.method_37044(builderConsumer)
+fun ScreenNarrator.buildNarrations(builderConsumer: Consumer<NarrationMessageBuilder>?) = this.method_37044(builderConsumer)
 /**
  * method_37045
  */

@@ -5,5 +5,5 @@ object ReorderingUtilKt {
     /**
      * method_30922
      */
-    fun reorder(text: StringVisitable, rightToLeft: Boolean) = ReorderingUtil.method_30922(text, rightToLeft)
+    fun reorder(text: StringVisitable?, rightToLeft: Boolean) = ReorderingUtil.method_30922(text, rightToLeft)
 }

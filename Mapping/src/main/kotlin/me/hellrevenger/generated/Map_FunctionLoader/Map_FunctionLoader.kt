@@ -8,11 +8,11 @@ fun FunctionLoader.getTags() = this.method_29458()
 /**
  * method_29459
  */
-fun FunctionLoader.getTagOrEmpty(id: Identifier) = this.method_29459(id)
+fun FunctionLoader.getTagOrEmpty(id: Identifier?) = this.method_29459(id)
 /**
  * method_29456
  */
-fun FunctionLoader.get(id: Identifier) = this.method_29456(id)
+fun FunctionLoader.get(id: Identifier?) = this.method_29456(id)
 /**
  * method_29447
  */

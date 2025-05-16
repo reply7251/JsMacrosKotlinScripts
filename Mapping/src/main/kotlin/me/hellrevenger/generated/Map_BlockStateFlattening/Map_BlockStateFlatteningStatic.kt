@@ -13,13 +13,13 @@ object BlockStateFlatteningKt {
     /**
      * method_15600
      */
-    fun lookupBlock(oldBlockName: String) = BlockStateFlattening.method_15600(oldBlockName)
+    fun lookupBlock(oldBlockName: String?) = BlockStateFlattening.method_15600(oldBlockName)
     /**
      * method_15598
      */
-    fun parseState(stateStr: String) = BlockStateFlattening.method_15598(stateStr)
+    fun parseState(stateStr: String?) = BlockStateFlattening.method_15598(stateStr)
     /**
      * method_15597
      */
-    fun lookupState(arg0: Dynamic<*>) = BlockStateFlattening.method_15597(arg0)
+    fun lookupState(arg0: Dynamic<*>?) = BlockStateFlattening.method_15597(arg0)
 }

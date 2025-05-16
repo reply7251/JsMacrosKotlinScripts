@@ -5,5 +5,5 @@ object NbtPredicateKt {
     /**
      * method_9076
      */
-    fun entityToNbt(entity: Entity) = NbtPredicate.method_9076(entity)
+    fun entityToNbt(entity: Entity?) = NbtPredicate.method_9076(entity)
 }

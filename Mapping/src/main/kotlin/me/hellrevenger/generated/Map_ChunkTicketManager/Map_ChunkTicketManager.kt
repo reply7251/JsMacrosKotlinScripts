@@ -12,15 +12,15 @@ fun ChunkTicketManager.toDumpString() = this.method_21683()
 /**
  * method_15892
  */
-fun ChunkTicketManager.update(chunkLoadingManager: ServerChunkLoadingManager) = this.method_15892(chunkLoadingManager)
+fun ChunkTicketManager.update(chunkLoadingManager: ServerChunkLoadingManager?) = this.method_15892(chunkLoadingManager)
 /**
  * method_14048
  */
-fun ChunkTicketManager.handleChunkEnter(pos: ChunkSectionPos, player: ServerPlayerEntity) = this.method_14048(pos, player)
+fun ChunkTicketManager.handleChunkEnter(pos: ChunkSectionPos?, player: ServerPlayerEntity?) = this.method_14048(pos, player)
 /**
  * method_17290
  */
-fun <T>ChunkTicketManager.addTicketWithLevel(type: ChunkTicketType<T>, pos: ChunkPos, level: Int, argument: T) = this.method_17290<T>(type, pos, level, argument)
+fun <T>ChunkTicketManager.addTicketWithLevel(type: ChunkTicketType<T>?, pos: ChunkPos?, level: Int, argument: T) = this.method_17290<T>(type, pos, level, argument)
 /**
  * method_38630
  */
@@ -36,7 +36,7 @@ fun ChunkTicketManager.shouldTick(chunkPos: Long) = this.method_20800(chunkPos)
 /**
  * method_14051
  */
-fun ChunkTicketManager.handleChunkLeave(pos: ChunkSectionPos, player: ServerPlayerEntity) = this.method_14051(pos, player)
+fun ChunkTicketManager.handleChunkLeave(pos: ChunkSectionPos?, player: ServerPlayerEntity?) = this.method_14051(pos, player)
 /**
  * method_38629
  */
@@ -48,11 +48,11 @@ fun ChunkTicketManager.shouldDelayShutdown() = this.method_39996()
 /**
  * method_17292
  */
-fun <T>ChunkTicketManager.removeTicket(type: ChunkTicketType<T>, pos: ChunkPos, radius: Int, argument: T) = this.method_17292<T>(type, pos, radius, argument)
+fun <T>ChunkTicketManager.removeTicket(type: ChunkTicketType<T>?, pos: ChunkPos?, radius: Int, argument: T) = this.method_17292<T>(type, pos, radius, argument)
 /**
  * method_20444
  */
-fun <T>ChunkTicketManager.removeTicketWithLevel(type: ChunkTicketType<T>, pos: ChunkPos, level: Int, argument: T) = this.method_20444<T>(type, pos, level, argument)
+fun <T>ChunkTicketManager.removeTicketWithLevel(type: ChunkTicketType<T>?, pos: ChunkPos?, level: Int, argument: T) = this.method_20444<T>(type, pos, level, argument)
 /**
  * method_38632
  */
@@ -68,4 +68,4 @@ fun ChunkTicketManager.removePersistentTickets() = this.method_39995()
 /**
  * method_17291
  */
-fun <T>ChunkTicketManager.addTicket(type: ChunkTicketType<T>, pos: ChunkPos, radius: Int, argument: T) = this.method_17291<T>(type, pos, radius, argument)
+fun <T>ChunkTicketManager.addTicket(type: ChunkTicketType<T>?, pos: ChunkPos?, radius: Int, argument: T) = this.method_17291<T>(type, pos, radius, argument)

@@ -24,4 +24,4 @@ fun ProfilerTiming.getColor() = this.method_15409()
 /**
  * method_15408
  */
-fun ProfilerTiming.compareTo(arg0: ProfilerTiming) = this.method_15408(arg0)
+fun ProfilerTiming.compareTo(arg0: ProfilerTiming?) = this.method_15408(arg0)

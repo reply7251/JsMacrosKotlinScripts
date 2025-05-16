@@ -5,5 +5,5 @@ object TradeOfferKt {
     /**
      * method_56110
      */
-    fun read(buf: RegistryByteBuf) = TradeOffer.method_56110(buf)
+    fun read(buf: RegistryByteBuf?) = TradeOffer.method_56110(buf)
 }

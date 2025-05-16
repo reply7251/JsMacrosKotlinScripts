@@ -29,7 +29,7 @@ object MinecraftClientKt {
     /**
      * method_1565
      */
-    fun printCrashReport(client: MinecraftClient, runDirectory: File, crashReport: CrashReport) = MinecraftClient.method_1565(client, runDirectory, crashReport)
+    fun printCrashReport(client: MinecraftClient?, runDirectory: File?, crashReport: CrashReport?) = MinecraftClient.method_1565(client, runDirectory, crashReport)
     /**
      * method_1588
      */
@@ -37,7 +37,7 @@ object MinecraftClientKt {
     /**
      * method_22681
      */
-    fun addSystemDetailsToCrashReport(client: MinecraftClient, languageManager: LanguageManager, version: String, options: GameOptions, report: CrashReport) = MinecraftClient.method_22681(client, languageManager, version, options, report)
+    fun addSystemDetailsToCrashReport(client: MinecraftClient?, languageManager: LanguageManager?, version: String?, options: GameOptions?, report: CrashReport?) = MinecraftClient.method_22681(client, languageManager, version, options, report)
     /**
      * method_1551
      */
@@ -49,7 +49,7 @@ object MinecraftClientKt {
     /**
      * method_61962
      */
-    fun saveCrashReport(runDir: File, crashReport: CrashReport) = MinecraftClient.method_61962(runDir, crashReport)
+    fun saveCrashReport(runDir: File?, crashReport: CrashReport?) = MinecraftClient.method_61962(runDir, crashReport)
     /**
      * method_54578
      */

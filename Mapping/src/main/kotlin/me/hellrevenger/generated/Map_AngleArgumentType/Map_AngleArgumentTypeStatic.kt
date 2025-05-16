@@ -17,5 +17,5 @@ object AngleArgumentTypeKt {
     /**
      * method_30660
      */
-    fun getAngle(context: CommandContext<ServerCommandSource>, name: String) = AngleArgumentType.method_30660(context, name)
+    fun getAngle(context: CommandContext<ServerCommandSource>?, name: String?) = AngleArgumentType.method_30660(context, name)
 }

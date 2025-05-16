@@ -13,5 +13,5 @@ object PistonExtensionBlockKt {
     /**
      * method_11489
      */
-    fun createBlockEntityPiston(pos: BlockPos, state: BlockState, pushedBlock: BlockState, facing: Direction, extending: Boolean, source: Boolean) = PistonExtensionBlock.method_11489(pos, state, pushedBlock, facing, extending, source)
+    fun createBlockEntityPiston(pos: BlockPos?, state: BlockState?, pushedBlock: BlockState?, facing: Direction?, extending: Boolean, source: Boolean) = PistonExtensionBlock.method_11489(pos, state, pushedBlock, facing, extending, source)
 }

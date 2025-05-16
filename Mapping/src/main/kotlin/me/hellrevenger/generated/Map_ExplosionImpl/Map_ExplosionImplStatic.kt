@@ -5,5 +5,5 @@ object ExplosionImplKt {
     /**
      * method_61731
      */
-    fun calculateReceivedDamage(pos: Vec3d, entity: Entity) = ExplosionImpl.method_61731(pos, entity)
+    fun calculateReceivedDamage(pos: Vec3d?, entity: Entity?) = ExplosionImpl.method_61731(pos, entity)
 }

@@ -5,5 +5,5 @@ object ListCommandKt {
     /**
      * method_13435
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = ListCommand.method_13435(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = ListCommand.method_13435(dispatcher)
 }

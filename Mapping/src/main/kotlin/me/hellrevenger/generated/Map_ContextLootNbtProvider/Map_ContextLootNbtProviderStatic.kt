@@ -9,5 +9,5 @@ object ContextLootNbtProviderKt {
     /**
      * method_35568
      */
-    fun fromTarget(target: net.minecraft.class_47.class_50) = ContextLootNbtProvider.method_35568(target)
+    fun fromTarget(target: net.minecraft.class_47.class_50?) = ContextLootNbtProvider.method_35568(target)
 }

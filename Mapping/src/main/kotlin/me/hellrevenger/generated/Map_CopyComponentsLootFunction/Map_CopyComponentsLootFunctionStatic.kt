@@ -5,5 +5,5 @@ object CopyComponentsLootFunctionKt {
     /**
      * method_57637
      */
-    fun builder(source: net.minecraft.class_9317.class_9319) = CopyComponentsLootFunction.method_57637(source)
+    fun builder(source: net.minecraft.class_9317.class_9319?) = CopyComponentsLootFunction.method_57637(source)
 }

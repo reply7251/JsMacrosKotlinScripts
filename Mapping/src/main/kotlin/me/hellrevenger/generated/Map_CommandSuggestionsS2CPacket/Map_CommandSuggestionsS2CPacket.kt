@@ -8,7 +8,7 @@ fun CommandSuggestionsS2CPacket.getSuggestions() = this.method_11397()
 /**
  * method_11398
  */
-fun CommandSuggestionsS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11398(arg0)
+fun CommandSuggestionsS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11398(arg0)
 /**
  * comp_2265
  */

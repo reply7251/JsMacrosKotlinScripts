@@ -5,9 +5,9 @@ object TagEntryKt {
     /**
      * method_445
      */
-    fun expandBuilder(name: TagKey<Item>) = TagEntry.method_445(name)
+    fun expandBuilder(name: TagKey<Item>?) = TagEntry.method_445(name)
     /**
      * method_35517
      */
-    fun builder(name: TagKey<Item>) = TagEntry.method_35517(name)
+    fun builder(name: TagKey<Item>?) = TagEntry.method_35517(name)
 }

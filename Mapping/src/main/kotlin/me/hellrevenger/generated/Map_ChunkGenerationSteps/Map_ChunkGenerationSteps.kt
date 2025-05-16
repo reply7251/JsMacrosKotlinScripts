@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60518
  */
-fun ChunkGenerationSteps.get(status: ChunkStatus) = this.method_60518(status)
+fun ChunkGenerationSteps.get(status: ChunkStatus?) = this.method_60518(status)
 /**
  * comp_2802
  */

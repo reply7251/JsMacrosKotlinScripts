@@ -5,5 +5,5 @@ object ClientWatchdogKt {
     /**
      * method_61936
      */
-    fun shutdownClient(runDir: File, threadId: Long) = ClientWatchdog.method_61936(runDir, threadId)
+    fun shutdownClient(runDir: File?, threadId: Long) = ClientWatchdog.method_61936(runDir, threadId)
 }

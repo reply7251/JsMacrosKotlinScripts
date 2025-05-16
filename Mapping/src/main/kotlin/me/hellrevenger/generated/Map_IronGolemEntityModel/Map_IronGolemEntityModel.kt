@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_17097
  */
-fun IronGolemEntityModel.setAngles(arg0: IronGolemEntityRenderState) = this.method_17097(arg0)
+fun IronGolemEntityModel.setAngles(arg0: IronGolemEntityRenderState?) = this.method_17097(arg0)
 /**
  * method_2809
  */

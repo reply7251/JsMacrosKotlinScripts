@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_1137
  */
-fun Team.setDisplayName(displayName: Text) = this.method_1137(displayName)
+fun Team.setDisplayName(displayName: Text?) = this.method_1137(displayName)
 /**
  * method_1143
  */
@@ -16,7 +16,7 @@ fun Team.setFriendlyFireAllowed(friendlyFire: Boolean) = this.method_1135(friend
 /**
  * method_1139
  */
-fun Team.setSuffix(suffix: Text) = this.method_1139(suffix)
+fun Team.setSuffix(suffix: Text?) = this.method_1139(suffix)
 /**
  * method_1148
  */
@@ -32,7 +32,7 @@ fun Team.getDisplayName() = this.method_1140()
 /**
  * method_1141
  */
-fun Team.setColor(color: Formatting) = this.method_1141(color)
+fun Team.setColor(color: Formatting?) = this.method_1141(color)
 /**
  * method_1144
  */
@@ -44,7 +44,7 @@ fun Team.getScoreboard() = this.method_35594()
 /**
  * method_1138
  */
-fun Team.setPrefix(prefix: Text) = this.method_1138(prefix)
+fun Team.setPrefix(prefix: Text?) = this.method_1138(prefix)
 /**
  * method_1136
  */
@@ -52,11 +52,11 @@ fun Team.getSuffix() = this.method_1136()
 /**
  * method_1149
  */
-fun Team.setNameTagVisibilityRule(nameTagVisibilityRule: net.minecraft.class_270.class_272) = this.method_1149(nameTagVisibilityRule)
+fun Team.setNameTagVisibilityRule(nameTagVisibilityRule: net.minecraft.class_270.class_272?) = this.method_1149(nameTagVisibilityRule)
 /**
  * method_1145
  */
-fun Team.setCollisionRule(collisionRule: net.minecraft.class_270.class_271) = this.method_1145(collisionRule)
+fun Team.setCollisionRule(collisionRule: net.minecraft.class_270.class_271?) = this.method_1145(collisionRule)
 /**
  * method_1146
  */
@@ -64,4 +64,4 @@ fun Team.setFriendlyFlagsBitwise(flags: Int) = this.method_1146(flags)
 /**
  * method_1133
  */
-fun Team.setDeathMessageVisibilityRule(deathMessageVisibilityRule: net.minecraft.class_270.class_272) = this.method_1133(deathMessageVisibilityRule)
+fun Team.setDeathMessageVisibilityRule(deathMessageVisibilityRule: net.minecraft.class_270.class_272?) = this.method_1133(deathMessageVisibilityRule)

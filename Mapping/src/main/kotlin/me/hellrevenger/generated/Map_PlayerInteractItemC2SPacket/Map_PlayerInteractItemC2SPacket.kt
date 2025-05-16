@@ -20,4 +20,4 @@ fun PlayerInteractItemC2SPacket.getPitch() = this.method_60587()
 /**
  * method_12550
  */
-fun PlayerInteractItemC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12550(arg0)
+fun PlayerInteractItemC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12550(arg0)

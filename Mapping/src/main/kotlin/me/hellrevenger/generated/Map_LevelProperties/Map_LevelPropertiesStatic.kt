@@ -9,5 +9,5 @@ object LevelPropertiesKt {
     /**
      * method_29029
      */
-    fun <T>readProperties(dynamic: Dynamic<T>, info: LevelInfo, specialProperty: net.minecraft.class_31.class_7729, generatorOptions: GeneratorOptions, lifecycle: Lifecycle) = LevelProperties.method_29029<T>(dynamic, info, specialProperty, generatorOptions, lifecycle)
+    fun <T>readProperties(dynamic: Dynamic<T>?, info: LevelInfo?, specialProperty: net.minecraft.class_31.class_7729?, generatorOptions: GeneratorOptions?, lifecycle: Lifecycle?) = LevelProperties.method_29029<T>(dynamic, info, specialProperty, generatorOptions, lifecycle)
 }

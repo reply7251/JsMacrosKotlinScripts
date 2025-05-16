@@ -5,5 +5,5 @@ object StopCommandKt {
     /**
      * method_13675
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = StopCommand.method_13675(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = StopCommand.method_13675(dispatcher)
 }

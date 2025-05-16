@@ -5,9 +5,9 @@ object GolemLastSeenSensorKt {
     /**
      * method_30233
      */
-    fun rememberIronGolem(entity: LivingEntity) = GolemLastSeenSensor.method_30233(entity)
+    fun rememberIronGolem(entity: LivingEntity?) = GolemLastSeenSensor.method_30233(entity)
     /**
      * method_20656
      */
-    fun senseIronGolem(entity: LivingEntity) = GolemLastSeenSensor.method_20656(entity)
+    fun senseIronGolem(entity: LivingEntity?) = GolemLastSeenSensor.method_20656(entity)
 }

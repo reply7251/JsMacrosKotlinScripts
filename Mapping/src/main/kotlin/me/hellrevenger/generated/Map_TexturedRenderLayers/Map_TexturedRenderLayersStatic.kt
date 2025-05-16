@@ -117,7 +117,7 @@ object TexturedRenderLayersKt {
     /**
      * method_65528
      */
-    fun createShulkerBoxTextureId(id: Identifier) = TexturedRenderLayers.method_65528(id)
+    fun createShulkerBoxTextureId(id: Identifier?) = TexturedRenderLayers.method_65528(id)
     /**
      * method_24067
      */
@@ -125,7 +125,7 @@ object TexturedRenderLayersKt {
     /**
      * method_65532
      */
-    fun getShulkerBoxTextureId(color: DyeColor) = TexturedRenderLayers.method_65532(color)
+    fun getShulkerBoxTextureId(color: DyeColor?) = TexturedRenderLayers.method_65532(color)
     /**
      * method_24059
      */
@@ -133,7 +133,7 @@ object TexturedRenderLayersKt {
     /**
      * method_33082
      */
-    fun getSignTextureId(signType: WoodType) = TexturedRenderLayers.method_33082(signType)
+    fun getSignTextureId(signType: WoodType?) = TexturedRenderLayers.method_33082(signType)
     /**
      * method_48480
      */
@@ -145,15 +145,15 @@ object TexturedRenderLayersKt {
     /**
      * method_65531
      */
-    fun createBedTextureId(color: DyeColor) = TexturedRenderLayers.method_65531(color)
+    fun createBedTextureId(color: DyeColor?) = TexturedRenderLayers.method_65531(color)
     /**
      * method_65527
      */
-    fun getBedTextureId(color: DyeColor) = TexturedRenderLayers.method_65527(color)
+    fun getBedTextureId(color: DyeColor?) = TexturedRenderLayers.method_65527(color)
     /**
      * method_65817
      */
-    fun createSignTextureId(id: Identifier) = TexturedRenderLayers.method_65817(id)
+    fun createSignTextureId(id: Identifier?) = TexturedRenderLayers.method_65817(id)
     /**
      * method_24072
      */
@@ -161,35 +161,35 @@ object TexturedRenderLayersKt {
     /**
      * method_45781
      */
-    fun getHangingSignTextureId(signType: WoodType) = TexturedRenderLayers.method_45781(signType)
+    fun getHangingSignTextureId(signType: WoodType?) = TexturedRenderLayers.method_45781(signType)
     /**
      * method_33081
      */
-    fun getBannerPatternTextureId(pattern: RegistryEntry<BannerPattern>) = TexturedRenderLayers.method_33081(pattern)
+    fun getBannerPatternTextureId(pattern: RegistryEntry<BannerPattern>?) = TexturedRenderLayers.method_33081(pattern)
     /**
      * method_65530
      */
-    fun createChestTextureId(id: Identifier) = TexturedRenderLayers.method_65530(id)
+    fun createChestTextureId(id: Identifier?) = TexturedRenderLayers.method_65530(id)
     /**
      * method_65526
      */
-    fun createBedTextureId(id: Identifier) = TexturedRenderLayers.method_65526(id)
+    fun createBedTextureId(id: Identifier?) = TexturedRenderLayers.method_65526(id)
     /**
      * method_24062
      */
-    fun getChestTextureId(blockEntity: BlockEntity, type: ChestType, christmas: Boolean) = TexturedRenderLayers.method_24062(blockEntity, type, christmas)
+    fun getChestTextureId(blockEntity: BlockEntity?, type: ChestType?, christmas: Boolean) = TexturedRenderLayers.method_24062(blockEntity, type, christmas)
     /**
      * method_65533
      */
-    fun createShulkerId(color: DyeColor) = TexturedRenderLayers.method_65533(color)
+    fun createShulkerId(color: DyeColor?) = TexturedRenderLayers.method_65533(color)
     /**
      * method_65818
      */
-    fun createHangingSignTextureId(id: Identifier) = TexturedRenderLayers.method_65818(id)
+    fun createHangingSignTextureId(id: Identifier?) = TexturedRenderLayers.method_65818(id)
     /**
      * method_65534
      */
-    fun createShulkerBoxTextureId(color: DyeColor) = TexturedRenderLayers.method_65534(color)
+    fun createShulkerBoxTextureId(color: DyeColor?) = TexturedRenderLayers.method_65534(color)
     /**
      * method_24073
      */
@@ -197,7 +197,7 @@ object TexturedRenderLayersKt {
     /**
      * method_65529
      */
-    fun createColorId(color: DyeColor) = TexturedRenderLayers.method_65529(color)
+    fun createColorId(color: DyeColor?) = TexturedRenderLayers.method_65529(color)
     /**
      * method_24069
      */
@@ -205,7 +205,7 @@ object TexturedRenderLayersKt {
     /**
      * method_49341
      */
-    fun getDecoratedPotPatternTextureId(potPatternKey: RegistryKey<DecoratedPotPattern>) = TexturedRenderLayers.method_49341(potPatternKey)
+    fun getDecoratedPotPatternTextureId(potPatternKey: RegistryKey<DecoratedPotPattern>?) = TexturedRenderLayers.method_49341(potPatternKey)
     /**
      * method_29382
      */
@@ -221,5 +221,5 @@ object TexturedRenderLayersKt {
     /**
      * method_33083
      */
-    fun getShieldPatternTextureId(pattern: RegistryEntry<BannerPattern>) = TexturedRenderLayers.method_33083(pattern)
+    fun getShieldPatternTextureId(pattern: RegistryEntry<BannerPattern>?) = TexturedRenderLayers.method_33083(pattern)
 }

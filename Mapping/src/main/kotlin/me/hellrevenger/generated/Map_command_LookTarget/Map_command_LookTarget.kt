@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_13772
  */
-fun command_LookTarget.look(source: ServerCommandSource, entity: Entity) = this.method_13772(source, entity)
+fun command_LookTarget.look(source: ServerCommandSource?, entity: Entity?) = this.method_13772(source, entity)

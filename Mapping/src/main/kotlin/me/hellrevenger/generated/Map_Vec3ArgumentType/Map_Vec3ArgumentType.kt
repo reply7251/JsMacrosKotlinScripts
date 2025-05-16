@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9738
  */
-fun Vec3ArgumentType.parse(arg0: StringReader) = this.method_9738(arg0)
+fun Vec3ArgumentType.parse(arg0: StringReader?) = this.method_9738(arg0)

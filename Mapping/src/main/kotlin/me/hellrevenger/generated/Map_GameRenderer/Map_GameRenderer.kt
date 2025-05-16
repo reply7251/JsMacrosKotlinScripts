@@ -8,7 +8,7 @@ val GameRenderer.firstPersonRenderer by alias(GameRenderer::field_4012)
 /**
  * method_34521
  */
-fun GameRenderer.preloadPrograms(factory: ResourceFactory) = this.method_34521(factory)
+fun GameRenderer.preloadPrograms(factory: ResourceFactory?) = this.method_34521(factory)
 /**
  * method_35772
  */
@@ -28,7 +28,7 @@ fun GameRenderer.getCamera() = this.method_19418()
 /**
  * method_3167
  */
-fun GameRenderer.onCameraEntitySet(entity: Entity) = this.method_3167(entity)
+fun GameRenderer.onCameraEntitySet(entity: Entity?) = this.method_3167(entity)
 /**
  * method_3182
  */
@@ -44,7 +44,7 @@ fun GameRenderer.getFarPlaneDistance() = this.method_32796()
 /**
  * method_3189
  */
-fun GameRenderer.showFloatingItem(floatingItem: ItemStack) = this.method_3189(floatingItem)
+fun GameRenderer.showFloatingItem(floatingItem: ItemStack?) = this.method_3189(floatingItem)
 /**
  * method_35766
  */
@@ -92,7 +92,7 @@ fun GameRenderer.setRenderHand(renderHand: Boolean) = this.method_35768(renderHa
 /**
  * method_3188
  */
-fun GameRenderer.renderWorld(renderTickCounter: RenderTickCounter) = this.method_3188(renderTickCounter)
+fun GameRenderer.renderWorld(renderTickCounter: RenderTickCounter?) = this.method_3188(renderTickCounter)
 /**
  * method_22973
  */
@@ -104,7 +104,7 @@ fun GameRenderer.getPostProcessorId() = this.method_62906()
 /**
  * method_3192
  */
-fun GameRenderer.render(tickCounter: RenderTickCounter, tick: Boolean) = this.method_3192(tickCounter, tick)
+fun GameRenderer.render(tickCounter: RenderTickCounter?, tick: Boolean) = this.method_3192(tickCounter, tick)
 /**
  * method_3190
  */

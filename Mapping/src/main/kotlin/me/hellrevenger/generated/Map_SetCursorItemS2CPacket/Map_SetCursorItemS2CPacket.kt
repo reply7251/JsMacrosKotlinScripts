@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_61216
  */
-fun SetCursorItemS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_61216(arg0)
+fun SetCursorItemS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_61216(arg0)
 /**
  * comp_2890
  */

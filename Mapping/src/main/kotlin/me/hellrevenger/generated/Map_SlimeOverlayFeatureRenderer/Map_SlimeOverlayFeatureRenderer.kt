@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_23200
  */
-fun SlimeOverlayFeatureRenderer.render(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: SlimeEntityRenderState, arg4: Float, arg5: Float) = this.method_23200(arg0, arg1, arg2, arg3, arg4, arg5)
+fun SlimeOverlayFeatureRenderer.render(arg0: MatrixStack?, arg1: VertexConsumerProvider?, arg2: Int, arg3: SlimeEntityRenderState?, arg4: Float, arg5: Float) = this.method_23200(arg0, arg1, arg2, arg3, arg4, arg5)

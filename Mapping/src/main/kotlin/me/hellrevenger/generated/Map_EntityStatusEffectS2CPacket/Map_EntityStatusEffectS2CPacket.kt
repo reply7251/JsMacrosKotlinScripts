@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11948
  */
-fun EntityStatusEffectS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11948(arg0)
+fun EntityStatusEffectS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11948(arg0)
 /**
  * method_11950
  */

@@ -5,5 +5,5 @@ object QueryResponseHandlerKt {
     /**
      * method_30737
      */
-    fun create(server: DedicatedServer) = QueryResponseHandler.method_30737(server)
+    fun create(server: DedicatedServer?) = QueryResponseHandler.method_30737(server)
 }

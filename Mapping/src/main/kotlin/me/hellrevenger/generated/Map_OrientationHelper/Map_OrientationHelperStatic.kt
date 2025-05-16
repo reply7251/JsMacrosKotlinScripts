@@ -5,9 +5,9 @@ object OrientationHelperKt {
     /**
      * method_61827
      */
-    fun withFrontNullable(orientation: WireOrientation, direction: Direction) = OrientationHelper.method_61827(orientation, direction)
+    fun withFrontNullable(orientation: WireOrientation?, direction: Direction?) = OrientationHelper.method_61827(orientation, direction)
     /**
      * method_61826
      */
-    fun getEmissionOrientation(world: world_World, up: Direction, front: Direction) = OrientationHelper.method_61826(world, up, front)
+    fun getEmissionOrientation(world: world_World?, up: Direction?, front: Direction?) = OrientationHelper.method_61826(world, up, front)
 }

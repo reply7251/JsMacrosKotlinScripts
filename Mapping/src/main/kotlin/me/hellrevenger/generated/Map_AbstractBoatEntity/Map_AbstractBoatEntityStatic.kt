@@ -9,5 +9,5 @@ object AbstractBoatEntityKt {
     /**
      * method_64486
      */
-    fun canCollide(entity: Entity, other: Entity) = AbstractBoatEntity.method_64486(entity, other)
+    fun canCollide(entity: Entity?, other: Entity?) = AbstractBoatEntity.method_64486(entity, other)
 }

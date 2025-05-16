@@ -5,5 +5,5 @@ object StructureContextKt {
     /**
      * method_38713
      */
-    fun from(world: ServerWorld) = StructureContext.method_38713(world)
+    fun from(world: ServerWorld?) = StructureContext.method_38713(world)
 }

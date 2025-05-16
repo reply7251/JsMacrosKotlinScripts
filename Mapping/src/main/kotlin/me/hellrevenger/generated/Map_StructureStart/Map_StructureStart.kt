@@ -32,7 +32,7 @@ fun StructureStart.hasChildren() = this.method_16657()
 /**
  * method_14974
  */
-fun StructureStart.place(world: StructureWorldAccess, structureAccessor: StructureAccessor, chunkGenerator: ChunkGenerator, random: Random, chunkBox: BlockBox, chunkPos: ChunkPos) = this.method_14974(world, structureAccessor, chunkGenerator, random, chunkBox, chunkPos)
+fun StructureStart.place(world: StructureWorldAccess?, structureAccessor: StructureAccessor?, chunkGenerator: ChunkGenerator?, random: Random?, chunkBox: BlockBox?, chunkPos: ChunkPos?) = this.method_14974(world, structureAccessor, chunkGenerator, random, chunkBox, chunkPos)
 /**
  * method_34000
  */
@@ -40,4 +40,4 @@ fun StructureStart.getPos() = this.method_34000()
 /**
  * method_14972
  */
-fun StructureStart.toNbt(context: StructureContext, chunkPos: ChunkPos) = this.method_14972(context, chunkPos)
+fun StructureStart.toNbt(context: StructureContext?, chunkPos: ChunkPos?) = this.method_14972(context, chunkPos)

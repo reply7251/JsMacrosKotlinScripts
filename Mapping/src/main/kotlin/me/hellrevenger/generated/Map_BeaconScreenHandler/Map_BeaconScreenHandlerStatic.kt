@@ -9,5 +9,5 @@ object BeaconScreenHandlerKt {
     /**
      * method_53173
      */
-    fun getRawIdForStatusEffect(effect: RegistryEntry<StatusEffect>) = BeaconScreenHandler.method_53173(effect)
+    fun getRawIdForStatusEffect(effect: RegistryEntry<StatusEffect>?) = BeaconScreenHandler.method_53173(effect)
 }

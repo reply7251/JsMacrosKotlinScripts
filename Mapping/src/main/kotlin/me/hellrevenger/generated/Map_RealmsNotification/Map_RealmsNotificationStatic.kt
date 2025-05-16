@@ -5,5 +5,5 @@ object RealmsNotificationKt {
     /**
      * method_49576
      */
-    fun parse(json: String) = RealmsNotification.method_49576(json)
+    fun parse(json: String?) = RealmsNotification.method_49576(json)
 }

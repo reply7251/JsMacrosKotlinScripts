@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_34141
  */
-fun EndCombatS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34141(arg0)
+fun EndCombatS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_34141(arg0)

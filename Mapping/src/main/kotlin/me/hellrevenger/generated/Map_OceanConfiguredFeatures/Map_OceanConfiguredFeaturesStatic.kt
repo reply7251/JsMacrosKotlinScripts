@@ -33,5 +33,5 @@ object OceanConfiguredFeaturesKt {
     /**
      * method_46849
      */
-    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>) = OceanConfiguredFeatures.method_46849(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>?) = OceanConfiguredFeatures.method_46849(featureRegisterable)
 }

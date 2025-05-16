@@ -5,13 +5,13 @@ object EndGatewayBlockEntityKt {
     /**
      * method_31702
      */
-    fun serverTick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: EndGatewayBlockEntity) = EndGatewayBlockEntity.method_31702(world, pos, state, blockEntity)
+    fun serverTick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: EndGatewayBlockEntity?) = EndGatewayBlockEntity.method_31702(world, pos, state, blockEntity)
     /**
      * method_31700
      */
-    fun clientTick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: EndGatewayBlockEntity) = EndGatewayBlockEntity.method_31700(world, pos, state, blockEntity)
+    fun clientTick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: EndGatewayBlockEntity?) = EndGatewayBlockEntity.method_31700(world, pos, state, blockEntity)
     /**
      * method_11411
      */
-    fun startTeleportCooldown(world: world_World, pos: BlockPos, state: BlockState, blockEntity: EndGatewayBlockEntity) = EndGatewayBlockEntity.method_11411(world, pos, state, blockEntity)
+    fun startTeleportCooldown(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: EndGatewayBlockEntity?) = EndGatewayBlockEntity.method_11411(world, pos, state, blockEntity)
 }

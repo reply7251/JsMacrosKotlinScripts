@@ -281,7 +281,7 @@ object BlockFamiliesKt {
     /**
      * method_33468
      */
-    fun register(baseBlock: Block) = BlockFamilies.method_33468(baseBlock)
+    fun register(baseBlock: Block?) = BlockFamilies.method_33468(baseBlock)
     /**
      * method_33467
      */

@@ -8,7 +8,7 @@ fun EntityDimensions.scaled(ratio: Float) = this.method_18383(ratio)
 /**
  * method_30757
  */
-fun EntityDimensions.getBoxAt(pos: Vec3d) = this.method_30757(pos)
+fun EntityDimensions.getBoxAt(pos: Vec3d?) = this.method_30757(pos)
 /**
  * method_55685
  */
@@ -16,7 +16,7 @@ fun EntityDimensions.withEyeHeight(eyeHeight: Float) = this.method_55685(eyeHeig
 /**
  * method_55684
  */
-fun EntityDimensions.withAttachments(attachments: net.minecraft.class_9066.class_9067) = this.method_55684(attachments)
+fun EntityDimensions.withAttachments(attachments: net.minecraft.class_9066.class_9067?) = this.method_55684(attachments)
 /**
  * method_19539
  */

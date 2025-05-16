@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_47637
  */
-fun TelemetryEventWidget.setScrollConsumer(scrollConsumer: DoubleConsumer) = this.method_47637(scrollConsumer)
+fun TelemetryEventWidget.setScrollConsumer(scrollConsumer: DoubleConsumer?) = this.method_47637(scrollConsumer)
 /**
  * method_47638
  */

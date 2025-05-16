@@ -5,5 +5,5 @@ object ShulkerEntityRendererKt {
     /**
      * method_37105
      */
-    fun getTexture(shulkerColor: DyeColor) = ShulkerEntityRenderer.method_37105(shulkerColor)
+    fun getTexture(shulkerColor: DyeColor?) = ShulkerEntityRenderer.method_37105(shulkerColor)
 }

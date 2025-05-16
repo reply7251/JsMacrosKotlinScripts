@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_26343
  */
-fun StriderEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_26343(arg0, arg1)
+fun StriderEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_26343(arg0, arg1)
 /**
  * method_26348
  */

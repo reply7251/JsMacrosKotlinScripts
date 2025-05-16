@@ -53,7 +53,7 @@ object WoodTypeKt {
     /**
      * method_24027
      */
-    fun register(type: WoodType) = WoodType.method_24027(type)
+    fun register(type: WoodType?) = WoodType.method_24027(type)
     /**
      * method_24026
      */

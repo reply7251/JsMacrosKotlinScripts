@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_934
  */
-fun RandomChanceLootCondition.test(arg0: LootContext) = this.method_934(arg0)
+fun RandomChanceLootCondition.test(arg0: LootContext?) = this.method_934(arg0)
 /**
  * comp_2781
  */

@@ -5,5 +5,5 @@ object EnderChestBlockEntityKt {
     /**
      * method_31689
      */
-    fun clientTick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: EnderChestBlockEntity) = EnderChestBlockEntity.method_31689(world, pos, state, blockEntity)
+    fun clientTick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: EnderChestBlockEntity?) = EnderChestBlockEntity.method_31689(world, pos, state, blockEntity)
 }

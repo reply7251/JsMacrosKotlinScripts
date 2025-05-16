@@ -20,7 +20,7 @@ fun WorldBorderInitializeS2CPacket.getSize() = this.method_34127()
 /**
  * method_34123
  */
-fun WorldBorderInitializeS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34123(arg0)
+fun WorldBorderInitializeS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_34123(arg0)
 /**
  * method_34125
  */

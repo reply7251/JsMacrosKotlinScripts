@@ -28,7 +28,7 @@ fun SpectatorMenu.getSelectedSlot() = this.method_2773()
 /**
  * method_2778
  */
-fun SpectatorMenu.selectElement(group: SpectatorMenuCommandGroup) = this.method_2778(group)
+fun SpectatorMenu.selectElement(group: SpectatorMenuCommandGroup?) = this.method_2778(group)
 /**
  * method_2771
  */

@@ -45,9 +45,9 @@ object WolfVariantsKt {
     /**
      * method_58068
      */
-    fun bootstrap(registry: Registerable<WolfVariant>) = WolfVariants.method_58068(registry)
+    fun bootstrap(registry: Registerable<WolfVariant>?) = WolfVariants.method_58068(registry)
     /**
      * method_58067
      */
-    fun fromBiome(dynamicRegistryManager: DynamicRegistryManager, biome: RegistryEntry<Biome>) = WolfVariants.method_58067(dynamicRegistryManager, biome)
+    fun fromBiome(dynamicRegistryManager: DynamicRegistryManager?, biome: RegistryEntry<Biome>?) = WolfVariants.method_58067(dynamicRegistryManager, biome)
 }

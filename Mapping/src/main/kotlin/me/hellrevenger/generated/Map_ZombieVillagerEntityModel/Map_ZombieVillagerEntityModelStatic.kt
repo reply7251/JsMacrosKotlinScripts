@@ -9,5 +9,5 @@ object ZombieVillagerEntityModelKt {
     /**
      * method_32069
      */
-    fun <S>getArmorTexturedModelData(dilation: Dilation) where S: ZombieVillagerRenderState = ZombieVillagerEntityModel.method_32069(dilation)
+    fun <S>getArmorTexturedModelData(dilation: Dilation?) where S: ZombieVillagerRenderState = ZombieVillagerEntityModel.method_32069(dilation)
 }

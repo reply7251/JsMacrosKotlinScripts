@@ -5,7 +5,7 @@ object PropertyMapKt {
     /**
      * method_47761
      */
-    fun createCodec(properties: MutableList<TelemetryEventProperty<*>>) = PropertyMap.method_47761(properties)
+    fun createCodec(properties: MutableList<TelemetryEventProperty<*>>?) = PropertyMap.method_47761(properties)
     /**
      * method_47759
      */

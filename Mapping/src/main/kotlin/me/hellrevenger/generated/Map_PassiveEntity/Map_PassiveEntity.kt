@@ -32,4 +32,4 @@ fun PassiveEntity.growUp(age: Int) = this.method_5615(age)
 /**
  * method_5613
  */
-fun PassiveEntity.createChild(world: ServerWorld, entity: PassiveEntity) = this.method_5613(world, entity)
+fun PassiveEntity.createChild(world: ServerWorld?, entity: PassiveEntity?) = this.method_5613(world, entity)

@@ -9,5 +9,5 @@ object CrashReportKt {
     /**
      * method_560
      */
-    fun create(cause: Throwable, title: String) = CrashReport.method_560(cause, title)
+    fun create(cause: Throwable?, title: String?) = CrashReport.method_560(cause, title)
 }

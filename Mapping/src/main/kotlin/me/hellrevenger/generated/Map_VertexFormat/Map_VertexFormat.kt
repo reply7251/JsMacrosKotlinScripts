@@ -8,7 +8,7 @@ fun VertexFormat.setupState() = this.method_22649()
 /**
  * method_60837
  */
-fun VertexFormat.getName(element: VertexFormatElement) = this.method_60837(element)
+fun VertexFormat.getName(element: VertexFormatElement?) = this.method_60837(element)
 /**
  * method_22651
  */
@@ -24,7 +24,7 @@ fun VertexFormat.getOffsetsByElementId() = this.method_60838()
 /**
  * method_60835
  */
-fun VertexFormat.getOffset(element: VertexFormatElement) = this.method_60835(element)
+fun VertexFormat.getOffset(element: VertexFormatElement?) = this.method_60835(element)
 /**
  * method_1362
  */
@@ -40,7 +40,7 @@ fun VertexFormat.getAttributeNames() = this.method_34445()
 /**
  * method_60836
  */
-fun VertexFormat.has(element: VertexFormatElement) = this.method_60836(element)
+fun VertexFormat.has(element: VertexFormatElement?) = this.method_60836(element)
 /**
  * method_60839
  */

@@ -12,7 +12,7 @@ fun WorldTimeUpdateS2CPacket.time() = this.comp_3219()
 /**
  * method_11872
  */
-fun WorldTimeUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11872(arg0)
+fun WorldTimeUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11872(arg0)
 /**
  * comp_3221
  */

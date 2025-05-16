@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11788
  */
-fun EntitySetHeadYawS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11788(arg0)
+fun EntitySetHeadYawS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11788(arg0)
 /**
  * method_11787
  */
@@ -12,4 +12,4 @@ fun EntitySetHeadYawS2CPacket.getHeadYaw() = this.method_11787()
 /**
  * method_11786
  */
-fun EntitySetHeadYawS2CPacket.getEntity(world: world_World) = this.method_11786(world)
+fun EntitySetHeadYawS2CPacket.getEntity(world: world_World?) = this.method_11786(world)

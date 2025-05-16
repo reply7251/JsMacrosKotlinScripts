@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_25394
  */
-fun Drawable.render(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) = this.method_25394(context, mouseX, mouseY, delta)
+fun Drawable.render(context: DrawContext?, mouseX: Int, mouseY: Int, delta: Float) = this.method_25394(context, mouseX, mouseY, delta)

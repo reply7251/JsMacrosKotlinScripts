@@ -9,9 +9,9 @@ object SpriteLoaderKt {
     /**
      * method_45837
      */
-    fun fromAtlas(atlasTexture: SpriteAtlasTexture) = SpriteLoader.method_45837(atlasTexture)
+    fun fromAtlas(atlasTexture: SpriteAtlasTexture?) = SpriteLoader.method_45837(atlasTexture)
     /**
      * method_47664
      */
-    fun loadAll(opener: SpriteOpener, sources: MutableList<function_Function<SpriteOpener, SpriteContents>>, executor: Executor) = SpriteLoader.method_47664(opener, sources, executor)
+    fun loadAll(opener: SpriteOpener?, sources: MutableList<function_Function<SpriteOpener, SpriteContents>>?, executor: Executor?) = SpriteLoader.method_47664(opener, sources, executor)
 }

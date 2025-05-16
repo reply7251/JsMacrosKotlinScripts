@@ -5,5 +5,5 @@ object ClearableKt {
     /**
      * method_16825
      */
-    fun clear(o: Object) = Clearable.method_16825(o)
+    fun clear(o: Object?) = Clearable.method_16825(o)
 }

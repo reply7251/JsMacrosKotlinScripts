@@ -5,5 +5,5 @@ object ArmorStandArmorEntityModelKt {
     /**
      * method_32686
      */
-    fun getTexturedModelData(dilation: Dilation) = ArmorStandArmorEntityModel.method_32686(dilation)
+    fun getTexturedModelData(dilation: Dilation?) = ArmorStandArmorEntityModel.method_32686(dilation)
 }

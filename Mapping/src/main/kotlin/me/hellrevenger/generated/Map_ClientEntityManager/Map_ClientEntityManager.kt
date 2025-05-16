@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_31875
  */
-fun <T>ClientEntityManager<T>.stopTicking(pos: ChunkPos) where T: EntityLike = this.method_31875(pos)
+fun <T>ClientEntityManager<T>.stopTicking(pos: ChunkPos?) where T: EntityLike = this.method_31875(pos)
 /**
  * method_31869
  */
-fun <T>ClientEntityManager<T>.startTicking(pos: ChunkPos) where T: EntityLike = this.method_31869(pos)
+fun <T>ClientEntityManager<T>.startTicking(pos: ChunkPos?) where T: EntityLike = this.method_31869(pos)
 /**
  * method_31879
  */

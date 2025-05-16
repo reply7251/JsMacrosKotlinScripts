@@ -8,11 +8,11 @@ fun CommandFunctionManager.tick() = this.method_18699()
 /**
  * method_29461
  */
-fun CommandFunctionManager.setFunctions(loader: FunctionLoader) = this.method_29461(loader)
+fun CommandFunctionManager.setFunctions(loader: FunctionLoader?) = this.method_29461(loader)
 /**
  * method_12905
  */
-fun CommandFunctionManager.getFunction(id: Identifier) = this.method_12905(id)
+fun CommandFunctionManager.getFunction(id: Identifier?) = this.method_12905(id)
 /**
  * method_12899
  */
@@ -24,11 +24,11 @@ fun CommandFunctionManager.getDispatcher() = this.method_12900()
 /**
  * method_29462
  */
-fun CommandFunctionManager.getTag(id: Identifier) = this.method_29462(id)
+fun CommandFunctionManager.getTag(id: Identifier?) = this.method_29462(id)
 /**
  * method_12904
  */
-fun CommandFunctionManager.execute(function: CommandFunction<ServerCommandSource>, source: ServerCommandSource) = this.method_12904(function, source)
+fun CommandFunctionManager.execute(function: CommandFunction<ServerCommandSource>?, source: ServerCommandSource?) = this.method_12904(function, source)
 /**
  * method_29463
  */

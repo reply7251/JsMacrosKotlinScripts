@@ -8,7 +8,7 @@ fun ChunkFilter.isWithinDistance(x: Int, z: Int) = this.method_52356(x, z)
 /**
  * method_52363
  */
-fun ChunkFilter.forEach(consumer: Consumer<ChunkPos>) = this.method_52363(consumer)
+fun ChunkFilter.forEach(consumer: Consumer<ChunkPos>?) = this.method_52363(consumer)
 /**
  * method_52359
  */
@@ -20,4 +20,4 @@ fun ChunkFilter.isWithinDistanceExcludingEdge(x: Int, z: Int) = this.method_5236
 /**
  * method_52361
  */
-fun ChunkFilter.isWithinDistance(pos: ChunkPos) = this.method_52361(pos)
+fun ChunkFilter.isWithinDistance(pos: ChunkPos?) = this.method_52361(pos)

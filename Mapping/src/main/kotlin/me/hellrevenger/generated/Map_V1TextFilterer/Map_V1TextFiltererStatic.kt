@@ -5,5 +5,5 @@ object V1TextFiltererKt {
     /**
      * method_61286
      */
-    fun load(response: String) = V1TextFilterer.method_61286(response)
+    fun load(response: String?) = V1TextFilterer.method_61286(response)
 }

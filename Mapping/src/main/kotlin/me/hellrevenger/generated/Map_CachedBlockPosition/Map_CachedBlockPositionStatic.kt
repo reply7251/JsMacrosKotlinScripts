@@ -5,5 +5,5 @@ object CachedBlockPositionKt {
     /**
      * method_11678
      */
-    fun matchesBlockState(state: Predicate<BlockState>) = CachedBlockPosition.method_11678(state)
+    fun matchesBlockState(state: Predicate<BlockState>?) = CachedBlockPosition.method_11678(state)
 }

@@ -5,13 +5,13 @@ object BlockModelsKt {
     /**
      * method_3340
      */
-    fun getModelId(state: BlockState) = BlockModels.method_3340(state)
+    fun getModelId(state: BlockState?) = BlockModels.method_3340(state)
     /**
      * method_3338
      */
-    fun propertyMapToString(map: Map<property_Property<*>, Comparable<*>>) = BlockModels.method_3338(map)
+    fun propertyMapToString(map: Map<property_Property<*>, Comparable<*>>?) = BlockModels.method_3338(map)
     /**
      * method_3336
      */
-    fun getModelId(id: Identifier, state: BlockState) = BlockModels.method_3336(id, state)
+    fun getModelId(id: Identifier?, state: BlockState?) = BlockModels.method_3336(id, state)
 }

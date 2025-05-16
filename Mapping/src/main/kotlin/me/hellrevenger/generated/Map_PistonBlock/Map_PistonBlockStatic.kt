@@ -9,5 +9,5 @@ object PistonBlockKt {
     /**
      * method_11484
      */
-    fun isMovable(state: BlockState, world: world_World, pos: BlockPos, direction: Direction, canBreak: Boolean, pistonDir: Direction) = PistonBlock.method_11484(state, world, pos, direction, canBreak, pistonDir)
+    fun isMovable(state: BlockState?, world: world_World?, pos: BlockPos?, direction: Direction?, canBreak: Boolean, pistonDir: Direction?) = PistonBlock.method_11484(state, world, pos, direction, canBreak, pistonDir)
 }

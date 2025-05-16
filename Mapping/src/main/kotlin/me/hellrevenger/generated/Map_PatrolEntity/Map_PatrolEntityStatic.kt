@@ -5,5 +5,5 @@ object PatrolEntityKt {
     /**
      * method_20739
      */
-    fun canSpawn(type: EntityType<out PatrolEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = PatrolEntity.method_20739(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<out PatrolEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = PatrolEntity.method_20739(type, world, spawnReason, pos, random)
 }

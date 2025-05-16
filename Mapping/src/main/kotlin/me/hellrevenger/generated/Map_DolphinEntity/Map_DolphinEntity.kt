@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_61468
  */
-fun DolphinEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_61468(arg0, arg1)
+fun DolphinEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_61468(arg0, arg1)
 /**
  * method_6494
  */
@@ -16,7 +16,7 @@ fun DolphinEntity.hasFish() = this.method_6487()
 /**
  * method_6493
  */
-fun DolphinEntity.setTreasurePos(treasurePos: BlockPos) = this.method_6493(treasurePos)
+fun DolphinEntity.setTreasurePos(treasurePos: BlockPos?) = this.method_6493(treasurePos)
 /**
  * method_6491
  */

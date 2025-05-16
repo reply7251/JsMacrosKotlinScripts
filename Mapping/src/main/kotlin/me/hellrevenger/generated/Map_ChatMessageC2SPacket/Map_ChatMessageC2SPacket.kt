@@ -12,7 +12,7 @@ fun ChatMessageC2SPacket.chatMessage() = this.comp_945()
 /**
  * method_12115
  */
-fun ChatMessageC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12115(arg0)
+fun ChatMessageC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12115(arg0)
 /**
  * comp_946
  */

@@ -28,7 +28,7 @@ fun ExperimentalMinecartController.hasCurrentLerpSteps() = this.method_61614()
 /**
  * method_62830
  */
-fun ExperimentalMinecartController.pushAwayFromEntities(box: Box) = this.method_62830(box)
+fun ExperimentalMinecartController.pushAwayFromEntities(box: Box?) = this.method_62830(box)
 /**
  * method_61608
  */
@@ -36,7 +36,7 @@ fun ExperimentalMinecartController.getLerpedYaw(tickDelta: Float) = this.method_
 /**
  * method_61605
  */
-fun ExperimentalMinecartController.adjustToRail(pos: BlockPos, blockState: BlockState, ignoreWeight: Boolean) = this.method_61605(pos, blockState, ignoreWeight)
+fun ExperimentalMinecartController.adjustToRail(pos: BlockPos?, blockState: BlockState?, ignoreWeight: Boolean) = this.method_61605(pos, blockState, ignoreWeight)
 /**
  * method_61610
  */
@@ -44,7 +44,7 @@ fun ExperimentalMinecartController.getLerpedPosition(tickDelta: Float) = this.me
 /**
  * method_62829
  */
-fun ExperimentalMinecartController.pickUpEntities(box: Box) = this.method_62829(box)
+fun ExperimentalMinecartController.pickUpEntities(box: Box?) = this.method_62829(box)
 /**
  * method_61607
  */

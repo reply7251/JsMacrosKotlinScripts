@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_33686
  */
-fun PhantomEntityModel.setAngles(arg0: PhantomEntityRenderState) = this.method_33686(arg0)
+fun PhantomEntityModel.setAngles(arg0: PhantomEntityRenderState?) = this.method_33686(arg0)

@@ -12,4 +12,4 @@ fun AdvancementFrame.getTitleFormat() = this.method_830()
 /**
  * method_54932
  */
-fun AdvancementFrame.getChatAnnouncementText(advancementEntry: AdvancementEntry, player: ServerPlayerEntity) = this.method_54932(advancementEntry, player)
+fun AdvancementFrame.getChatAnnouncementText(advancementEntry: AdvancementEntry?, player: ServerPlayerEntity?) = this.method_54932(advancementEntry, player)

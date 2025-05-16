@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_14452
  */
-fun PlacementModifier.getPositions(context: FeaturePlacementContext, random: Random, pos: BlockPos) = this.method_14452(context, random, pos)
+fun PlacementModifier.getPositions(context: FeaturePlacementContext?, random: Random?, pos: BlockPos?) = this.method_14452(context, random, pos)
 /**
  * method_39615
  */

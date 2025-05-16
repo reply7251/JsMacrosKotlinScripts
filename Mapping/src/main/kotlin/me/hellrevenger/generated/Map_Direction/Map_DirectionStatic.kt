@@ -33,7 +33,7 @@ object DirectionKt {
     /**
      * method_62672
      */
-    fun fromVector(x: Int, y: Int, z: Int, fallback: Direction) = Direction.method_62672(x, y, z, fallback)
+    fun fromVector(x: Int, y: Int, z: Int, fallback: Direction?) = Direction.method_62672(x, y, z, fallback)
     /**
      * method_10147
      */
@@ -41,11 +41,11 @@ object DirectionKt {
     /**
      * method_10156
      */
-    fun get(direction: net.minecraft.class_2350.class_2352, axis: net.minecraft.class_2350.class_2351) = Direction.method_10156(direction, axis)
+    fun get(direction: net.minecraft.class_2350.class_2352?, axis: net.minecraft.class_2350.class_2351?) = Direction.method_10156(direction, axis)
     /**
      * method_10169
      */
-    fun from(axis: net.minecraft.class_2350.class_2351, direction: net.minecraft.class_2350.class_2352) = Direction.method_10169(axis, direction)
+    fun from(axis: net.minecraft.class_2350.class_2351?, direction: net.minecraft.class_2350.class_2352?) = Direction.method_10169(axis, direction)
     /**
      * method_10139
      */
@@ -53,11 +53,11 @@ object DirectionKt {
     /**
      * method_32801
      */
-    fun getLookDirectionForAxis(entity: Entity, axis: net.minecraft.class_2350.class_2351) = Direction.method_32801(entity, axis)
+    fun getLookDirectionForAxis(entity: Entity?, axis: net.minecraft.class_2350.class_2351?) = Direction.method_32801(entity, axis)
     /**
      * method_58251
      */
-    fun getFacing(vec: Vec3d) = Direction.method_58251(vec)
+    fun getFacing(vec: Vec3d?) = Direction.method_58251(vec)
     /**
      * method_10143
      */
@@ -65,7 +65,7 @@ object DirectionKt {
     /**
      * method_62674
      */
-    fun fromVector(vec: Vec3i, fallback: Direction) = Direction.method_62674(vec, fallback)
+    fun fromVector(vec: Vec3i?, fallback: Direction?) = Direction.method_62674(vec, fallback)
     /**
      * method_10142
      */
@@ -77,23 +77,23 @@ object DirectionKt {
     /**
      * method_10159
      */
-    fun getEntityFacingOrder(entity: Entity) = Direction.method_10159(entity)
+    fun getEntityFacingOrder(entity: Entity?) = Direction.method_10159(entity)
     /**
      * method_23225
      */
-    fun transform(matrix: Matrix4f, direction: Direction) = Direction.method_23225(matrix, direction)
+    fun transform(matrix: Matrix4f?, direction: Direction?) = Direction.method_23225(matrix, direction)
     /**
      * method_42014
      */
-    fun shuffle(random: Random) = Direction.method_42014(random)
+    fun shuffle(random: Random?) = Direction.method_42014(random)
     /**
      * method_10168
      */
-    fun byName(name: String) = Direction.method_10168(name)
+    fun byName(name: String?) = Direction.method_10168(name)
     /**
      * method_62673
      */
-    fun getHorizontalDegreesOrThrow(direction: Direction) = Direction.method_62673(direction)
+    fun getHorizontalDegreesOrThrow(direction: Direction?) = Direction.method_62673(direction)
     /**
      * method_10150
      */
@@ -101,5 +101,5 @@ object DirectionKt {
     /**
      * method_10162
      */
-    fun random(random: Random) = Direction.method_10162(random)
+    fun random(random: Random?) = Direction.method_10162(random)
 }

@@ -21,7 +21,7 @@ object BlockStatesLoaderKt {
     /**
      * method_65718
      */
-    fun load(missingModel: UnbakedModel, resourceManager: ResourceManager, executor: Executor) = BlockStatesLoader.method_65718(missingModel, resourceManager, executor)
+    fun load(missingModel: UnbakedModel?, resourceManager: ResourceManager?, executor: Executor?) = BlockStatesLoader.method_65718(missingModel, resourceManager, executor)
     /**
      * method_62626
      */
@@ -29,5 +29,5 @@ object BlockStatesLoaderKt {
     /**
      * method_62627
      */
-    fun combine(id: Identifier, stateManager: StateManager<Block, BlockState>, definitions: MutableList<net.minecraft.class_9824.class_10094>, missingModel: UnbakedModel) = BlockStatesLoader.method_62627(id, stateManager, definitions, missingModel)
+    fun combine(id: Identifier?, stateManager: StateManager<Block, BlockState>?, definitions: MutableList<net.minecraft.class_9824.class_10094>?, missingModel: UnbakedModel?) = BlockStatesLoader.method_62627(id, stateManager, definitions, missingModel)
 }

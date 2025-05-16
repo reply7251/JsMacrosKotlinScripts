@@ -16,8 +16,8 @@ fun TestRunContext.start() = this.method_56226()
 /**
  * method_56224
  */
-fun TestRunContext.retry(state: GameTestState) = this.method_56224(state)
+fun TestRunContext.retry(state: GameTestState?) = this.method_56224(state)
 /**
  * method_56223
  */
-fun TestRunContext.addBatchListener(batchListener: BatchListener) = this.method_56223(batchListener)
+fun TestRunContext.addBatchListener(batchListener: BatchListener?) = this.method_56223(batchListener)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_36949
  */
-fun CommonPingS2CPacket.apply(arg0: ClientCommonPacketListener) = this.method_36949(arg0)
+fun CommonPingS2CPacket.apply(arg0: ClientCommonPacketListener?) = this.method_36949(arg0)
 /**
  * method_36950
  */

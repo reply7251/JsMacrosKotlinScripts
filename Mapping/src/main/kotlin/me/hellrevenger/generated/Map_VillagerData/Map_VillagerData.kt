@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_16922
  */
-fun VillagerData.withType(type: VillagerType) = this.method_16922(type)
+fun VillagerData.withType(type: VillagerType?) = this.method_16922(type)
 /**
  * method_16920
  */
@@ -20,7 +20,7 @@ fun VillagerData.getType() = this.method_16919()
 /**
  * method_16921
  */
-fun VillagerData.withProfession(profession: VillagerProfession) = this.method_16921(profession)
+fun VillagerData.withProfession(profession: VillagerProfession?) = this.method_16921(profession)
 /**
  * method_16925
  */

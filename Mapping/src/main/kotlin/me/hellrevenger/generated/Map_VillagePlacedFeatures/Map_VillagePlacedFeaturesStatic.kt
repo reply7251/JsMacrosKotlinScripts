@@ -57,5 +57,5 @@ object VillagePlacedFeaturesKt {
     /**
      * method_46868
      */
-    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = VillagePlacedFeatures.method_46868(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>?) = VillagePlacedFeatures.method_46868(featureRegisterable)
 }

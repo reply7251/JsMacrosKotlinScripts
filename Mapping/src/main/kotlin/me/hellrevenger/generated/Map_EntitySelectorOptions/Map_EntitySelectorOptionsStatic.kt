@@ -41,9 +41,9 @@ object EntitySelectorOptionsKt {
     /**
      * method_9930
      */
-    fun suggestOptions(reader: EntitySelectorReader, suggestionBuilder: SuggestionsBuilder) = EntitySelectorOptions.method_9930(reader, suggestionBuilder)
+    fun suggestOptions(reader: EntitySelectorReader?, suggestionBuilder: SuggestionsBuilder?) = EntitySelectorOptions.method_9930(reader, suggestionBuilder)
     /**
      * method_9976
      */
-    fun getHandler(reader: EntitySelectorReader, option: String, restoreCursor: Int) = EntitySelectorOptions.method_9976(reader, option, restoreCursor)
+    fun getHandler(reader: EntitySelectorReader?, option: String?, restoreCursor: Int) = EntitySelectorOptions.method_9976(reader, option, restoreCursor)
 }

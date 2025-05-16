@@ -8,4 +8,4 @@ fun Shearable.isShearable() = this.method_27072()
 /**
  * method_6636
  */
-fun Shearable.sheared(world: ServerWorld, shearedSoundCategory: SoundCategory, shears: ItemStack) = this.method_6636(world, shearedSoundCategory, shears)
+fun Shearable.sheared(world: ServerWorld?, shearedSoundCategory: SoundCategory?, shears: ItemStack?) = this.method_6636(world, shearedSoundCategory, shears)

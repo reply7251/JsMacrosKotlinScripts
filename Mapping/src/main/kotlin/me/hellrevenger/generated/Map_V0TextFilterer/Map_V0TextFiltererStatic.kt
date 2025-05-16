@@ -5,5 +5,5 @@ object V0TextFiltererKt {
     /**
      * method_33805
      */
-    fun load(config: String) = V0TextFilterer.method_33805(config)
+    fun load(config: String?) = V0TextFilterer.method_33805(config)
 }

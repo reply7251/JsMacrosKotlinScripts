@@ -13,7 +13,7 @@ object ChunkLevelsKt {
     /**
      * method_51829
      */
-    fun getLevelFromStatus(status: ChunkStatus) = ChunkLevels.method_51829(status)
+    fun getLevelFromStatus(status: ChunkStatus?) = ChunkLevels.method_51829(status)
     /**
      * method_51831
      */
@@ -29,11 +29,11 @@ object ChunkLevelsKt {
     /**
      * method_51828
      */
-    fun getLevelFromType(type: ChunkLevelType) = ChunkLevels.method_51828(type)
+    fun getLevelFromType(type: ChunkLevelType?) = ChunkLevels.method_51828(type)
     /**
      * method_60437
      */
-    fun getStatusForAdditionalLevel(additionalLevel: Int, emptyStatus: ChunkStatus) = ChunkLevels.method_60437(additionalLevel, emptyStatus)
+    fun getStatusForAdditionalLevel(additionalLevel: Int, emptyStatus: ChunkStatus?) = ChunkLevels.method_60437(additionalLevel, emptyStatus)
     /**
      * method_60438
      */

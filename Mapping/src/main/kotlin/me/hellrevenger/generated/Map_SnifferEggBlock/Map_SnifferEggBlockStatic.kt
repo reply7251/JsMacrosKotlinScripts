@@ -13,5 +13,5 @@ object SnifferEggBlockKt {
     /**
      * method_49826
      */
-    fun isAboveHatchBooster(world: BlockView, pos: BlockPos) = SnifferEggBlock.method_49826(world, pos)
+    fun isAboveHatchBooster(world: BlockView?, pos: BlockPos?) = SnifferEggBlock.method_49826(world, pos)
 }

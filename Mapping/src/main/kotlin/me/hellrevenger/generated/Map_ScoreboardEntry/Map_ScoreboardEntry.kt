@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_55386
  */
-fun ScoreboardEntry.formatted(format: NumberFormat) = this.method_55386(format)
+fun ScoreboardEntry.formatted(format: NumberFormat?) = this.method_55386(format)
 /**
  * method_55385
  */

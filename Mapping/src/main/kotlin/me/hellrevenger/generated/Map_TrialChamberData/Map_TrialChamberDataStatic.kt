@@ -17,9 +17,9 @@ object TrialChamberDataKt {
     /**
      * method_55313
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = TrialChamberData.method_55313(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = TrialChamberData.method_55313(poolRegisterable)
     /**
      * method_55312
      */
-    fun spawner(path: String) = TrialChamberData.method_55312(path)
+    fun spawner(path: String?) = TrialChamberData.method_55312(path)
 }

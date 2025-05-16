@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9466
  */
-fun ScoreboardSlotArgumentType.parse(arg0: StringReader) = this.method_9466(arg0)
+fun ScoreboardSlotArgumentType.parse(arg0: StringReader?) = this.method_9466(arg0)

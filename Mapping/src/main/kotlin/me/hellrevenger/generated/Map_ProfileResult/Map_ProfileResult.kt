@@ -12,7 +12,7 @@ fun ProfileResult.getStartTime() = this.method_16068()
 /**
  * method_16067
  */
-fun ProfileResult.getTimings(parentPath: String) = this.method_16067(parentPath)
+fun ProfileResult.getTimings(parentPath: String?) = this.method_16067(parentPath)
 /**
  * method_16070
  */
@@ -24,7 +24,7 @@ fun ProfileResult.getTimeSpan() = this.method_16071()
 /**
  * method_16069
  */
-fun ProfileResult.save(path: file_Path) = this.method_16069(path)
+fun ProfileResult.save(path: file_Path?) = this.method_16069(path)
 /**
  * method_16072
  */

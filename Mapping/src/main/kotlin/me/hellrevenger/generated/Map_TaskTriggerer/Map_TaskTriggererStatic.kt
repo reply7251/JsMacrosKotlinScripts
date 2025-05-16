@@ -5,19 +5,19 @@ object TaskTriggererKt {
     /**
      * method_47227
      */
-    fun <E, M>runIf(predicate: Predicate<E>, task: SingleTickTask<in E>) where E: LivingEntity = TaskTriggerer.method_47227<E>(predicate, task)
+    fun <E, M>runIf(predicate: Predicate<E>?, task: SingleTickTask<in E>?) where E: LivingEntity = TaskTriggerer.method_47227<E>(predicate, task)
     /**
      * method_47221
      */
-    fun <E, M>predicate(predicate: BiPredicate<ServerWorld, E>) where E: LivingEntity = TaskTriggerer.method_47221<E>(predicate)
+    fun <E, M>predicate(predicate: BiPredicate<ServerWorld, E>?) where E: LivingEntity = TaskTriggerer.method_47221<E>(predicate)
     /**
      * method_47224
      */
-    fun <E, M>task(creator: function_Function<net.minecraft.class_7898.class_7900<E>, out App<net.minecraft.class_7898.class_7902<E>, TaskRunnable<E>>>) where E: LivingEntity = TaskTriggerer.method_47224<E>(creator)
+    fun <E, M>task(creator: function_Function<net.minecraft.class_7898.class_7900<E>, out App<net.minecraft.class_7898.class_7902<E>, TaskRunnable<E>>>?) where E: LivingEntity = TaskTriggerer.method_47224<E>(creator)
     /**
      * method_47220
      */
-    fun <E, M>cast(app: App<net.minecraft.class_7898.class_7902<E>, M>) where E: LivingEntity = TaskTriggerer.method_47220<E, M>(app)
+    fun <E, M>cast(app: App<net.minecraft.class_7898.class_7902<E>, M>?) where E: LivingEntity = TaskTriggerer.method_47220<E, M>(app)
     /**
      * method_47215
      */
@@ -25,9 +25,9 @@ object TaskTriggererKt {
     /**
      * method_47225
      */
-    fun <E, M>predicate(predicate: Predicate<E>) where E: LivingEntity = TaskTriggerer.method_47225<E>(predicate)
+    fun <E, M>predicate(predicate: Predicate<E>?) where E: LivingEntity = TaskTriggerer.method_47225<E>(predicate)
     /**
      * method_47217
      */
-    fun <E, M>runIf(predicate: TaskRunnable<in E>, task: TaskRunnable<in E>) where E: LivingEntity = TaskTriggerer.method_47217<E>(predicate, task)
+    fun <E, M>runIf(predicate: TaskRunnable<in E>?, task: TaskRunnable<in E>?) where E: LivingEntity = TaskTriggerer.method_47217<E>(predicate, task)
 }

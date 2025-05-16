@@ -8,7 +8,7 @@ fun Sherds.toList() = this.method_51512()
 /**
  * method_51513
  */
-fun Sherds.toNbt(nbt: NbtCompound) = this.method_51513(nbt)
+fun Sherds.toNbt(nbt: NbtCompound?) = this.method_51513(nbt)
 /**
  * comp_1487
  */

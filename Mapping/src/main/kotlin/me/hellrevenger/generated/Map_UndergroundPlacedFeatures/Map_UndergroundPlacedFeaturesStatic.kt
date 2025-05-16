@@ -85,5 +85,5 @@ object UndergroundPlacedFeaturesKt {
     /**
      * method_46860
      */
-    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = UndergroundPlacedFeatures.method_46860(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>?) = UndergroundPlacedFeatures.method_46860(featureRegisterable)
 }

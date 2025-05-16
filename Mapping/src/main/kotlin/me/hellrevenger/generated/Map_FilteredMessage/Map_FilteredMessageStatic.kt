@@ -9,9 +9,9 @@ object FilteredMessageKt {
     /**
      * method_45060
      */
-    fun permitted(raw: String) = FilteredMessage.method_45060(raw)
+    fun permitted(raw: String?) = FilteredMessage.method_45060(raw)
     /**
      * method_45062
      */
-    fun censored(raw: String) = FilteredMessage.method_45062(raw)
+    fun censored(raw: String?) = FilteredMessage.method_45062(raw)
 }

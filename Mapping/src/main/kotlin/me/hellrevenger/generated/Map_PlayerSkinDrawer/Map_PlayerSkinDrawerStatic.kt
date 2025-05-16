@@ -37,13 +37,13 @@ object PlayerSkinDrawerKt {
     /**
      * method_44443
      */
-    fun draw(context: DrawContext, textures: SkinTextures, x: Int, y: Int, size: Int, color: Int) = PlayerSkinDrawer.method_44443(context, textures, x, y, size, color)
+    fun draw(context: DrawContext?, textures: SkinTextures?, x: Int, y: Int, size: Int, color: Int) = PlayerSkinDrawer.method_44443(context, textures, x, y, size, color)
     /**
      * method_44445
      */
-    fun draw(context: DrawContext, texture: Identifier, x: Int, y: Int, size: Int, hatVisible: Boolean, upsideDown: Boolean, color: Int) = PlayerSkinDrawer.method_44445(context, texture, x, y, size, hatVisible, upsideDown, color)
+    fun draw(context: DrawContext?, texture: Identifier?, x: Int, y: Int, size: Int, hatVisible: Boolean, upsideDown: Boolean, color: Int) = PlayerSkinDrawer.method_44445(context, texture, x, y, size, hatVisible, upsideDown, color)
     /**
      * method_52722
      */
-    fun draw(context: DrawContext, textures: SkinTextures, x: Int, y: Int, size: Int) = PlayerSkinDrawer.method_52722(context, textures, x, y, size)
+    fun draw(context: DrawContext?, textures: SkinTextures?, x: Int, y: Int, size: Int) = PlayerSkinDrawer.method_52722(context, textures, x, y, size)
 }

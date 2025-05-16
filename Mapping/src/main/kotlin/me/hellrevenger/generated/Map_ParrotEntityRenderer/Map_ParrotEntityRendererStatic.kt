@@ -5,5 +5,5 @@ object ParrotEntityRendererKt {
     /**
      * method_47906
      */
-    fun getTexture(variant: net.minecraft.class_1453.class_7989) = ParrotEntityRenderer.method_47906(variant)
+    fun getTexture(variant: net.minecraft.class_1453.class_7989?) = ParrotEntityRenderer.method_47906(variant)
 }

@@ -9,5 +9,5 @@ object JsonUnbakedModelKt {
     /**
      * method_3437
      */
-    fun deserialize(input: Reader) = JsonUnbakedModel.method_3437(input)
+    fun deserialize(input: Reader?) = JsonUnbakedModel.method_3437(input)
 }

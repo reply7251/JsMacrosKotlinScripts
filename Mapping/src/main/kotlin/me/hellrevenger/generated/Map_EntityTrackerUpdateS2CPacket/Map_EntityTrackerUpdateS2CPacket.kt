@@ -12,4 +12,4 @@ fun EntityTrackerUpdateS2CPacket.trackedValues() = this.comp_1128()
 /**
  * method_11808
  */
-fun EntityTrackerUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11808(arg0)
+fun EntityTrackerUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11808(arg0)

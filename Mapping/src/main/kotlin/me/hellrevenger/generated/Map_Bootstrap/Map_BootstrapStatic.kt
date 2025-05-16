@@ -25,9 +25,9 @@ object BootstrapKt {
     /**
      * method_12847
      */
-    fun println(str: String) = Bootstrap.method_12847(str)
+    fun println(str: String?) = Bootstrap.method_12847(str)
     /**
      * method_36235
      */
-    fun ensureBootstrapped(callerGetter: Supplier<String>) = Bootstrap.method_36235(callerGetter)
+    fun ensureBootstrapped(callerGetter: Supplier<String>?) = Bootstrap.method_36235(callerGetter)
 }

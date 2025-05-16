@@ -5,5 +5,5 @@ object SaveAllCommandKt {
     /**
      * method_13551
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = SaveAllCommand.method_13551(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = SaveAllCommand.method_13551(dispatcher)
 }

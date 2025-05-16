@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9124
  */
-fun SummonedEntityCriterion.trigger(player: ServerPlayerEntity, entity: Entity) = this.method_9124(player, entity)
+fun SummonedEntityCriterion.trigger(player: ServerPlayerEntity?, entity: Entity?) = this.method_9124(player, entity)

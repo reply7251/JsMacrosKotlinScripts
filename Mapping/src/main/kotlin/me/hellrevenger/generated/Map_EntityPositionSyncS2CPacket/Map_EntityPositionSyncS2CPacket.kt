@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_64557
  */
-fun EntityPositionSyncS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_64557(arg0)
+fun EntityPositionSyncS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_64557(arg0)
 /**
  * comp_3223
  */

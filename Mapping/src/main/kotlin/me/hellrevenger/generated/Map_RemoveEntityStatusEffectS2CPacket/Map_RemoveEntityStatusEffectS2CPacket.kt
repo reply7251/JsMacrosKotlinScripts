@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_11769
  */
-fun RemoveEntityStatusEffectS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11769(arg0)
+fun RemoveEntityStatusEffectS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11769(arg0)
 /**
  * method_11767
  */
-fun RemoveEntityStatusEffectS2CPacket.getEntity(world: world_World) = this.method_11767(world)
+fun RemoveEntityStatusEffectS2CPacket.getEntity(world: world_World?) = this.method_11767(world)
 /**
  * comp_2176
  */

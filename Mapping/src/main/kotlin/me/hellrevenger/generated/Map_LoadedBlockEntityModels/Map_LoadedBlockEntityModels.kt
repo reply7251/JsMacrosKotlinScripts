@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_65535
  */
-fun LoadedBlockEntityModels.render(block: Block, displayContext: ModelTransformationMode, matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int, overlay: Int) = this.method_65535(block, displayContext, matrices, vertexConsumers, light, overlay)
+fun LoadedBlockEntityModels.render(block: Block?, displayContext: ModelTransformationMode?, matrices: MatrixStack?, vertexConsumers: VertexConsumerProvider?, light: Int, overlay: Int) = this.method_65535(block, displayContext, matrices, vertexConsumers, light, overlay)

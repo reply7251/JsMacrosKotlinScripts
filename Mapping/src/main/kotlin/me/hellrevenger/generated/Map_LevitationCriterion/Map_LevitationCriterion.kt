@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9008
  */
-fun LevitationCriterion.trigger(player: ServerPlayerEntity, startPos: Vec3d, duration: Int) = this.method_9008(player, startPos, duration)
+fun LevitationCriterion.trigger(player: ServerPlayerEntity?, startPos: Vec3d?, duration: Int) = this.method_9008(player, startPos, duration)

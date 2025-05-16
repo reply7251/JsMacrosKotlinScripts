@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_16746
  */
-fun DedicatedServerGui.addStopTask(task: Runnable) = this.method_16746(task)
+fun DedicatedServerGui.addStopTask(task: Runnable?) = this.method_16746(task)
 /**
  * method_13974
  */
@@ -12,7 +12,7 @@ fun DedicatedServerGui.start() = this.method_13974()
 /**
  * method_13970
  */
-fun DedicatedServerGui.appendToConsole(textArea: JTextArea, scrollPane: JScrollPane, message: String) = this.method_13970(textArea, scrollPane, message)
+fun DedicatedServerGui.appendToConsole(textArea: JTextArea?, scrollPane: JScrollPane?, message: String?) = this.method_13970(textArea, scrollPane, message)
 /**
  * method_16750
  */

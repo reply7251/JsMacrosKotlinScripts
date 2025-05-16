@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_40061
  */
-fun NbtTreeNode.isTypeEqual(type: NbtType<*>, key: String) = this.method_40061(type, key)
+fun NbtTreeNode.isTypeEqual(type: NbtType<*>?, key: String?) = this.method_40061(type, key)
 /**
  * method_39881
  */
-fun NbtTreeNode.add(query: NbtScanQuery) = this.method_39881(query)
+fun NbtTreeNode.add(query: NbtScanQuery?) = this.method_39881(query)
 /**
  * comp_315
  */

@@ -5,5 +5,5 @@ object VehicleMoveS2CPacketKt {
     /**
      * method_65305
      */
-    fun fromVehicle(vehicle: Entity) = VehicleMoveS2CPacket.method_65305(vehicle)
+    fun fromVehicle(vehicle: Entity?) = VehicleMoveS2CPacket.method_65305(vehicle)
 }

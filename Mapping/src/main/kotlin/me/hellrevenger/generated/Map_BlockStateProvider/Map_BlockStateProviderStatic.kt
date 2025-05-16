@@ -5,9 +5,9 @@ object BlockStateProviderKt {
     /**
      * method_38433
      */
-    fun of(state: BlockState) = BlockStateProvider.method_38433(state)
+    fun of(state: BlockState?) = BlockStateProvider.method_38433(state)
     /**
      * method_38432
      */
-    fun of(block: Block) = BlockStateProvider.method_38432(block)
+    fun of(block: Block?) = BlockStateProvider.method_38432(block)
 }

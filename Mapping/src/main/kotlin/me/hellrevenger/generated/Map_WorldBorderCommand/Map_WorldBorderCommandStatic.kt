@@ -5,5 +5,5 @@ object WorldBorderCommandKt {
     /**
      * method_13858
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = WorldBorderCommand.method_13858(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = WorldBorderCommand.method_13858(dispatcher)
 }

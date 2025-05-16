@@ -12,7 +12,7 @@ fun LightUpdateS2CPacket.getData() = this.method_38600()
 /**
  * method_11560
  */
-fun LightUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11560(arg0)
+fun LightUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11560(arg0)
 /**
  * method_11554
  */

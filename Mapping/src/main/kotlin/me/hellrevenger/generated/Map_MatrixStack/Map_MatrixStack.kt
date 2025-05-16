@@ -8,7 +8,7 @@ fun MatrixStack.pop() = this.method_22909()
 /**
  * method_49278
  */
-fun MatrixStack.multiply(quaternion: Quaternionf, originX: Float, originY: Float, originZ: Float) = this.method_49278(quaternion, originX, originY, originZ)
+fun MatrixStack.multiply(quaternion: Quaternionf?, originX: Float, originY: Float, originZ: Float) = this.method_49278(quaternion, originX, originY, originZ)
 /**
  * method_46416
  */
@@ -36,15 +36,15 @@ fun MatrixStack.isEmpty() = this.method_22911()
 /**
  * method_22907
  */
-fun MatrixStack.multiply(quaternion: Quaternionf) = this.method_22907(quaternion)
+fun MatrixStack.multiply(quaternion: Quaternionf?) = this.method_22907(quaternion)
 /**
  * method_34425
  */
-fun MatrixStack.multiplyPositionMatrix(matrix: Matrix4f) = this.method_34425(matrix)
+fun MatrixStack.multiplyPositionMatrix(matrix: Matrix4f?) = this.method_34425(matrix)
 /**
  * method_61958
  */
-fun MatrixStack.translate(vec: Vec3d) = this.method_61958(vec)
+fun MatrixStack.translate(vec: Vec3d?) = this.method_61958(vec)
 /**
  * method_22903
  */

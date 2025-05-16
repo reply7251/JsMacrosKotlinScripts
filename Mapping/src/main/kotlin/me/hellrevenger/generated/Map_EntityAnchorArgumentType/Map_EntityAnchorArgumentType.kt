@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9292
  */
-fun EntityAnchorArgumentType.parse(arg0: StringReader) = this.method_9292(arg0)
+fun EntityAnchorArgumentType.parse(arg0: StringReader?) = this.method_9292(arg0)

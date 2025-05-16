@@ -5,5 +5,5 @@ object PlayerListS2CPacketKt {
     /**
      * method_43886
      */
-    fun entryFromPlayer(players: Collection<ServerPlayerEntity>) = PlayerListS2CPacket.method_43886(players)
+    fun entryFromPlayer(players: Collection<ServerPlayerEntity>?) = PlayerListS2CPacket.method_43886(players)
 }

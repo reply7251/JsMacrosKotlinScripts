@@ -5,5 +5,5 @@ object DatapackCommandKt {
     /**
      * method_13125
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = DatapackCommand.method_13125(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = DatapackCommand.method_13125(dispatcher)
 }

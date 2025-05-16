@@ -5,5 +5,5 @@ object DimensionTypeRegistrarKt {
     /**
      * method_42043
      */
-    fun bootstrap(dimensionTypeRegisterable: Registerable<DimensionType>) = DimensionTypeRegistrar.method_42043(dimensionTypeRegisterable)
+    fun bootstrap(dimensionTypeRegisterable: Registerable<DimensionType>?) = DimensionTypeRegistrar.method_42043(dimensionTypeRegisterable)
 }

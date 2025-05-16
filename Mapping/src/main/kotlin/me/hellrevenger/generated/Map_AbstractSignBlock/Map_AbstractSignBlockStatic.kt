@@ -9,5 +9,5 @@ object AbstractSignBlockKt {
     /**
      * method_45459
      */
-    fun getWoodType(block: Block) = AbstractSignBlock.method_45459(block)
+    fun getWoodType(block: Block?) = AbstractSignBlock.method_45459(block)
 }

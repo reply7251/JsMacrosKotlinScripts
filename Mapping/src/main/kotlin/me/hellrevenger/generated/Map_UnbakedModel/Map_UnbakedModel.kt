@@ -12,7 +12,7 @@ fun UnbakedModel.getAmbientOcclusion() = this.method_65537()
 /**
  * method_4753
  */
-fun UnbakedModel.bake(textures: ModelTextures, baker: Baker, settings: ModelBakeSettings, ambientOcclusion: Boolean, isSideLit: Boolean, transformation: ModelTransformation) = this.method_4753(textures, baker, settings, ambientOcclusion, isSideLit, transformation)
+fun UnbakedModel.bake(textures: ModelTextures?, baker: Baker?, settings: ModelBakeSettings?, ambientOcclusion: Boolean, isSideLit: Boolean, transformation: ModelTransformation?) = this.method_4753(textures, baker, settings, ambientOcclusion, isSideLit, transformation)
 /**
  * method_24298
  */

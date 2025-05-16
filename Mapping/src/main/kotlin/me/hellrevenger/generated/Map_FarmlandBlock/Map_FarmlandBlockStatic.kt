@@ -13,5 +13,5 @@ object FarmlandBlockKt {
     /**
      * method_10125
      */
-    fun setToDirt(entity: Entity, state: BlockState, world: world_World, pos: BlockPos) = FarmlandBlock.method_10125(entity, state, world, pos)
+    fun setToDirt(entity: Entity?, state: BlockState?, world: world_World?, pos: BlockPos?) = FarmlandBlock.method_10125(entity, state, world, pos)
 }

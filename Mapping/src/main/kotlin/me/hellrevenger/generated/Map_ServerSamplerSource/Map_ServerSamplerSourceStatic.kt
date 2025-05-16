@@ -9,5 +9,5 @@ object ServerSamplerSourceKt {
     /**
      * method_37202
      */
-    fun createTickTimeTracker(nanoTimeSupplier: LongSupplier) = ServerSamplerSource.method_37202(nanoTimeSupplier)
+    fun createTickTimeTracker(nanoTimeSupplier: LongSupplier?) = ServerSamplerSource.method_37202(nanoTimeSupplier)
 }

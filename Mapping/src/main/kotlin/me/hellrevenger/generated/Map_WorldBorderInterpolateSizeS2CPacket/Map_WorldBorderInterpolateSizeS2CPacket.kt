@@ -12,7 +12,7 @@ fun WorldBorderInterpolateSizeS2CPacket.getSizeLerpTarget() = this.method_34161(
 /**
  * method_34159
  */
-fun WorldBorderInterpolateSizeS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34159(arg0)
+fun WorldBorderInterpolateSizeS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_34159(arg0)
 /**
  * method_34162
  */

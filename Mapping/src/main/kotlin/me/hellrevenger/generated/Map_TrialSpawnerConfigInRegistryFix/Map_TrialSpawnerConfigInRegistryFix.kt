@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62996
  */
-fun TrialSpawnerConfigInRegistryFix.fix(nbt: Dynamic<NbtElement>) = this.method_62996(nbt)
+fun TrialSpawnerConfigInRegistryFix.fix(nbt: Dynamic<NbtElement>?) = this.method_62996(nbt)

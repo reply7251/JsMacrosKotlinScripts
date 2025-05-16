@@ -12,7 +12,7 @@ fun LightningEntity.getChanneler() = this.method_35052()
 /**
  * method_6961
  */
-fun LightningEntity.setChanneler(channeler: ServerPlayerEntity) = this.method_6961(channeler)
+fun LightningEntity.setChanneler(channeler: ServerPlayerEntity?) = this.method_6961(channeler)
 /**
  * method_37221
  */

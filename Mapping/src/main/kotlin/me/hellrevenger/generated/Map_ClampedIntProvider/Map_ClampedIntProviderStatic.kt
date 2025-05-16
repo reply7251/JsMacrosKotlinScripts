@@ -5,5 +5,5 @@ object ClampedIntProviderKt {
     /**
      * method_36255
      */
-    fun create(source: IntProvider, min: Int, max: Int) = ClampedIntProvider.method_36255(source, min, max)
+    fun create(source: IntProvider?, min: Int, max: Int) = ClampedIntProvider.method_36255(source, min, max)
 }

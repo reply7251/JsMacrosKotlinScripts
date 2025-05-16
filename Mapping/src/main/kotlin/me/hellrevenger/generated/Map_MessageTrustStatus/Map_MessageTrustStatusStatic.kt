@@ -17,5 +17,5 @@ object MessageTrustStatusKt {
     /**
      * method_44742
      */
-    fun getStatus(message: SignedMessage, decorated: Text, receptionTimestamp: Instant) = MessageTrustStatus.method_44742(message, decorated, receptionTimestamp)
+    fun getStatus(message: SignedMessage?, decorated: Text?, receptionTimestamp: Instant?) = MessageTrustStatus.method_44742(message, decorated, receptionTimestamp)
 }

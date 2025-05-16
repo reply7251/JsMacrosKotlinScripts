@@ -36,8 +36,8 @@ fun AxolotlEntity.hydrateFromPotion() = this.method_36282()
 /**
  * method_33223
  */
-fun AxolotlEntity.buffPlayer(player: PlayerEntity) = this.method_33223(player)
+fun AxolotlEntity.buffPlayer(player: PlayerEntity?) = this.method_33223(player)
 /**
  * method_33219
  */
-fun AxolotlEntity.setVariant(variant: net.minecraft.class_5762.class_5767) = this.method_33219(variant)
+fun AxolotlEntity.setVariant(variant: net.minecraft.class_5762.class_5767?) = this.method_33219(variant)

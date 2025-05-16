@@ -5,7 +5,7 @@ object SuspiciousStewIngredientKt {
     /**
      * method_47380
      */
-    fun of(item: ItemConvertible) = SuspiciousStewIngredient.method_47380(item)
+    fun of(item: ItemConvertible?) = SuspiciousStewIngredient.method_47380(item)
     /**
      * method_47379
      */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44940
  */
-fun ClientPlayNetworkHandler.acknowledge(message: SignedMessage, displayed: Boolean) = this.method_44940(message, displayed)
+fun ClientPlayNetworkHandler.acknowledge(message: SignedMessage?, displayed: Boolean) = this.method_44940(message, displayed)
 /**
  * method_2876
  */
@@ -20,7 +20,7 @@ fun ClientPlayNetworkHandler.getServerLinks() = this.method_60885()
 /**
  * method_62149
  */
-fun ClientPlayNetworkHandler.syncOptions(syncedOptions: SyncedClientOptions) = this.method_62149(syncedOptions)
+fun ClientPlayNetworkHandler.syncOptions(syncedOptions: SyncedClientOptions?) = this.method_62149(syncedOptions)
 /**
  * method_2875
  */
@@ -36,7 +36,7 @@ fun ClientPlayNetworkHandler.getRegistryManager() = this.method_29091()
 /**
  * method_45720
  */
-fun ClientPlayNetworkHandler.hasFeature(feature: FeatureSet) = this.method_45720(feature)
+fun ClientPlayNetworkHandler.hasFeature(feature: FeatureSet?) = this.method_45720(feature)
 /**
  * method_2886
  */
@@ -52,11 +52,11 @@ fun ClientPlayNetworkHandler.getAdvancementHandler() = this.method_2869()
 /**
  * method_2871
  */
-fun ClientPlayNetworkHandler.getPlayerListEntry(uuid: UUID) = this.method_2871(uuid)
+fun ClientPlayNetworkHandler.getPlayerListEntry(uuid: UUID?) = this.method_2871(uuid)
 /**
  * method_45729
  */
-fun ClientPlayNetworkHandler.sendChatMessage(content: String) = this.method_45729(content)
+fun ClientPlayNetworkHandler.sendChatMessage(content: String?) = this.method_45729(content)
 /**
  * method_31363
  */
@@ -68,7 +68,7 @@ fun ClientPlayNetworkHandler.getProfile() = this.method_2879()
 /**
  * method_45731
  */
-fun ClientPlayNetworkHandler.sendCommand(command: String) = this.method_45731(command)
+fun ClientPlayNetworkHandler.sendCommand(command: String?) = this.method_45731(command)
 /**
  * method_54134
  */
@@ -84,7 +84,7 @@ fun ClientPlayNetworkHandler.getSearchManager() = this.method_60347()
 /**
  * method_2874
  */
-fun ClientPlayNetworkHandler.getPlayerListEntry(profileName: String) = this.method_2874(profileName)
+fun ClientPlayNetworkHandler.getPlayerListEntry(profileName: String?) = this.method_2874(profileName)
 /**
  * method_29356
  */
@@ -120,7 +120,7 @@ fun ClientPlayNetworkHandler.getSessionId() = this.method_16690()
 /**
  * method_45730
  */
-fun ClientPlayNetworkHandler.sendChatCommand(command: String) = this.method_45730(command)
+fun ClientPlayNetworkHandler.sendChatCommand(command: String?) = this.method_45730(command)
 /**
  * method_62147
  */

@@ -9,5 +9,5 @@ object ArgumentSignatureDataMapKt {
     /**
      * method_44797
      */
-    fun sign(arguments: SignedArgumentList<*>, signer: net.minecraft.class_7450.class_7600) = ArgumentSignatureDataMap.method_44797(arguments, signer)
+    fun sign(arguments: SignedArgumentList<*>?, signer: net.minecraft.class_7450.class_7600?) = ArgumentSignatureDataMap.method_44797(arguments, signer)
 }

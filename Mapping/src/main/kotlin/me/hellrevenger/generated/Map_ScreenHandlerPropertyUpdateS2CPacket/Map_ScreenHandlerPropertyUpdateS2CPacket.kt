@@ -16,4 +16,4 @@ fun ScreenHandlerPropertyUpdateS2CPacket.getPropertyId() = this.method_11445()
 /**
  * method_11447
  */
-fun ScreenHandlerPropertyUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11447(arg0)
+fun ScreenHandlerPropertyUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11447(arg0)

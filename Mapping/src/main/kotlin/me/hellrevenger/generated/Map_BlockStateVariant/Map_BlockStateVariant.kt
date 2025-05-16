@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_25828
  */
-fun <T>BlockStateVariant.put(key: VariantSetting<T>, value: T) = this.method_25828<T>(key, value)
+fun <T>BlockStateVariant.put(key: VariantSetting<T>?, value: T) = this.method_25828<T>(key, value)
 /**
  * method_25830
  */

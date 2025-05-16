@@ -12,4 +12,4 @@ fun DebugSampleLog.push(value: Long, arg1: Int) = this.method_56535(value, arg1)
 /**
  * method_56650
  */
-fun DebugSampleLog.set(values: LongArray) = this.method_56650(values)
+fun DebugSampleLog.set(values: LongArray?) = this.method_56650(values)

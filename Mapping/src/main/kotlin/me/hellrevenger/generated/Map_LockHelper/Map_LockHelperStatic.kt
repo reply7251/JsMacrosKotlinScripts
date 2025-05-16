@@ -5,5 +5,5 @@ object LockHelperKt {
     /**
      * method_33564
      */
-    fun crash(message: String, thread: Thread) = LockHelper.method_33564(message, thread)
+    fun crash(message: String?, thread: Thread?) = LockHelper.method_33564(message, thread)
 }

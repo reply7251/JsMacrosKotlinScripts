@@ -9,9 +9,9 @@ object SheepEntityKt {
     /**
      * method_6632
      */
-    fun generateDefaultColor(random: Random) = SheepEntity.method_6632(random)
+    fun generateDefaultColor(random: Random?) = SheepEntity.method_6632(random)
     /**
      * method_6634
      */
-    fun getRgbColor(dyeColor: DyeColor) = SheepEntity.method_6634(dyeColor)
+    fun getRgbColor(dyeColor: DyeColor?) = SheepEntity.method_6634(dyeColor)
 }

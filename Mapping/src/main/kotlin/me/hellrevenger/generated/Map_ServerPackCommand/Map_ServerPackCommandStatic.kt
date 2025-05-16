@@ -5,5 +5,5 @@ object ServerPackCommandKt {
     /**
      * method_55474
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = ServerPackCommand.method_55474(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = ServerPackCommand.method_55474(dispatcher)
 }

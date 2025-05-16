@@ -9,9 +9,9 @@ object CollectionContainsPredicateKt {
     /**
      * method_59606
      */
-    fun <T, P>createCodec(predicateCodec: Codec<P>) where P: Predicate<T> = CollectionContainsPredicate.method_59606<T, P>(predicateCodec)
+    fun <T, P>createCodec(predicateCodec: Codec<P>?) where P: Predicate<T> = CollectionContainsPredicate.method_59606<T, P>(predicateCodec)
     /**
      * method_59607
      */
-    fun <T, P>create(predicates: MutableList<P>) where P: Predicate<T> = CollectionContainsPredicate.method_59607<T, P>(predicates)
+    fun <T, P>create(predicates: MutableList<P>?) where P: Predicate<T> = CollectionContainsPredicate.method_59607<T, P>(predicates)
 }

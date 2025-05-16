@@ -33,13 +33,13 @@ object SerializedChunkKt {
     /**
      * method_61793
      */
-    fun fromChunk(world: ServerWorld, chunk: Chunk) = SerializedChunk.method_61793(world, chunk)
+    fun fromChunk(world: ServerWorld?, chunk: Chunk?) = SerializedChunk.method_61793(world, chunk)
     /**
      * method_61794
      */
-    fun fromNbt(world: HeightLimitView, registryManager: DynamicRegistryManager, nbt: NbtCompound) = SerializedChunk.method_61794(world, registryManager, nbt)
+    fun fromNbt(world: HeightLimitView?, registryManager: DynamicRegistryManager?, nbt: NbtCompound?) = SerializedChunk.method_61794(world, registryManager, nbt)
     /**
      * method_12377
      */
-    fun getChunkType(nbt: NbtCompound) = SerializedChunk.method_12377(nbt)
+    fun getChunkType(nbt: NbtCompound?) = SerializedChunk.method_12377(nbt)
 }

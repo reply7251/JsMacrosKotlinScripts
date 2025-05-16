@@ -13,11 +13,11 @@ object CyclingButtonWidgetKt {
     /**
      * method_32606
      */
-    fun <T>builder(valueToText: function_Function<T, Text>) = CyclingButtonWidget.method_32606<T>(valueToText)
+    fun <T>builder(valueToText: function_Function<T, Text>?) = CyclingButtonWidget.method_32606<T>(valueToText)
     /**
      * method_32607
      */
-    fun <T>onOffBuilder(on: Text, off: Text) = CyclingButtonWidget.method_32607(on, off)
+    fun <T>onOffBuilder(on: Text?, off: Text?) = CyclingButtonWidget.method_32607(on, off)
     /**
      * method_32613
      */

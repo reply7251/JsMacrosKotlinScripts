@@ -5,5 +5,5 @@ object OminousItemSpawnerEntityKt {
     /**
      * method_58638
      */
-    fun create(world: world_World, stack: ItemStack) = OminousItemSpawnerEntity.method_58638(world, stack)
+    fun create(world: world_World?, stack: ItemStack?) = OminousItemSpawnerEntity.method_58638(world, stack)
 }

@@ -5,5 +5,5 @@ object ToFloatFunctionKt {
     /**
      * method_41308
      */
-    fun <C>fromFloat(delegate: Float2FloatFunction) = ToFloatFunction.method_41308(delegate)
+    fun <C>fromFloat(delegate: Float2FloatFunction?) = ToFloatFunction.method_41308(delegate)
 }

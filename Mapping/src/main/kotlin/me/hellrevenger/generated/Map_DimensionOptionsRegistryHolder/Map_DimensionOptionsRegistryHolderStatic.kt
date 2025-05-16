@@ -5,13 +5,13 @@ object DimensionOptionsRegistryHolderKt {
     /**
      * method_45520
      */
-    fun createRegistry(dimensionTypeRegistry: RegistryWrapper<DimensionType>, dimensionOptions: Map<RegistryKey<DimensionOptions>, DimensionOptions>, chunkGenerator: ChunkGenerator) = DimensionOptionsRegistryHolder.method_45520(dimensionTypeRegistry, dimensionOptions, chunkGenerator)
+    fun createRegistry(dimensionTypeRegistry: RegistryWrapper<DimensionType>?, dimensionOptions: Map<RegistryKey<DimensionOptions>, DimensionOptions>?, chunkGenerator: ChunkGenerator?) = DimensionOptionsRegistryHolder.method_45520(dimensionTypeRegistry, dimensionOptions, chunkGenerator)
     /**
      * method_45525
      */
-    fun streamAll(otherKeys: Stream<RegistryKey<DimensionOptions>>) = DimensionOptionsRegistryHolder.method_45525(otherKeys)
+    fun streamAll(otherKeys: Stream<RegistryKey<DimensionOptions>>?) = DimensionOptionsRegistryHolder.method_45525(otherKeys)
     /**
      * method_45519
      */
-    fun createRegistry(dimensionOptions: Map<RegistryKey<DimensionOptions>, DimensionOptions>, overworld: RegistryEntry<DimensionType>, chunkGenerator: ChunkGenerator) = DimensionOptionsRegistryHolder.method_45519(dimensionOptions, overworld, chunkGenerator)
+    fun createRegistry(dimensionOptions: Map<RegistryKey<DimensionOptions>, DimensionOptions>?, overworld: RegistryEntry<DimensionType>?, chunkGenerator: ChunkGenerator?) = DimensionOptionsRegistryHolder.method_45519(dimensionOptions, overworld, chunkGenerator)
 }

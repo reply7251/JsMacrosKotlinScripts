@@ -5,5 +5,5 @@ object RconListenerKt {
     /**
      * method_30738
      */
-    fun create(server: DedicatedServer) = RconListener.method_30738(server)
+    fun create(server: DedicatedServer?) = RconListener.method_30738(server)
 }

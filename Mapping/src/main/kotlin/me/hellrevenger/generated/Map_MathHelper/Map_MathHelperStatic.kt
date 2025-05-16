@@ -61,7 +61,7 @@ object MathHelperKt {
     /**
      * method_15395
      */
-    fun nextInt(random: Random, min: Int, max: Int) = MathHelper.method_15395(random, min, max)
+    fun nextInt(random: Random?, min: Int, max: Int) = MathHelper.method_15395(random, min, max)
     /**
      * method_48117
      */
@@ -69,7 +69,7 @@ object MathHelperKt {
     /**
      * method_15360
      */
-    fun binarySearch(min: Int, max: Int, predicate: IntPredicate) = MathHelper.method_15360(min, max, predicate)
+    fun binarySearch(min: Int, max: Int, predicate: IntPredicate?) = MathHelper.method_15360(min, max, predicate)
     /**
      * method_33723
      */
@@ -77,7 +77,7 @@ object MathHelperKt {
     /**
      * method_15389
      */
-    fun hashCode(vec: Vec3i) = MathHelper.method_15389(vec)
+    fun hashCode(vec: Vec3i?) = MathHelper.method_15389(vec)
     /**
      * method_24504
      */
@@ -105,7 +105,7 @@ object MathHelperKt {
     /**
      * method_53948
      */
-    fun rotateAround(axis: Vector3f, rotation: Quaternionf, result: Quaternionf) = MathHelper.method_53948(axis, rotation, result)
+    fun rotateAround(axis: Vector3f?, rotation: Quaternionf?, result: Quaternionf?) = MathHelper.method_53948(axis, rotation, result)
     /**
      * method_15367
      */
@@ -181,7 +181,7 @@ object MathHelperKt {
     /**
      * method_15343
      */
-    fun parseInt(string: String, fallback: Int) = MathHelper.method_15343(string, fallback)
+    fun parseInt(string: String?, fallback: Int) = MathHelper.method_15343(string, fallback)
     /**
      * method_15349
      */
@@ -245,7 +245,7 @@ object MathHelperKt {
     /**
      * method_32751
      */
-    fun nextBetween(random: Random, min: Int, max: Int) = MathHelper.method_32751(random, min, max)
+    fun nextBetween(random: Random?, min: Int, max: Int) = MathHelper.method_32751(random, min, max)
     /**
      * method_15354
      */
@@ -257,7 +257,7 @@ object MathHelperKt {
     /**
      * method_15366
      */
-    fun nextDouble(random: Random, min: Double, arg2: Double) = MathHelper.method_15366(random, min, arg2)
+    fun nextDouble(random: Random?, min: Double, arg2: Double) = MathHelper.method_15366(random, min, arg2)
     /**
      * method_15350
      */
@@ -265,11 +265,11 @@ object MathHelperKt {
     /**
      * method_61342
      */
-    fun lerp(delta: Double, arg1: Vec3d, start: Vec3d) = MathHelper.method_61342(delta, arg1, start)
+    fun lerp(delta: Double, arg1: Vec3d?, start: Vec3d?) = MathHelper.method_61342(delta, arg1, start)
     /**
      * method_15344
      */
-    fun nextFloat(random: Random, min: Float, max: Float) = MathHelper.method_15344(random, min, max)
+    fun nextFloat(random: Random?, min: Float, max: Float) = MathHelper.method_15344(random, min, max)
     /**
      * method_16436
      */
@@ -277,7 +277,7 @@ object MathHelperKt {
     /**
      * method_59515
      */
-    fun multiplyFraction(fraction: Fraction, multiplier: Int) = MathHelper.method_59515(fraction, multiplier)
+    fun multiplyFraction(fraction: Fraction?, multiplier: Int) = MathHelper.method_59515(fraction, multiplier)
     /**
      * method_38788
      */
@@ -321,7 +321,7 @@ object MathHelperKt {
     /**
      * method_15378
      */
-    fun randomUuid(random: Random) = MathHelper.method_15378(random)
+    fun randomUuid(random: Random?) = MathHelper.method_15378(random)
     /**
      * method_62995
      */
@@ -337,7 +337,7 @@ object MathHelperKt {
     /**
      * method_32855
      */
-    fun nextGaussian(random: Random, mean: Float, deviation: Float) = MathHelper.method_32855(random, mean, deviation)
+    fun nextGaussian(random: Random?, mean: Float, deviation: Float) = MathHelper.method_32855(random, mean, deviation)
     /**
      * method_15381
      */
@@ -373,7 +373,7 @@ object MathHelperKt {
     /**
      * method_32750
      */
-    fun nextBetween(random: Random, min: Float, max: Float) = MathHelper.method_32750(random, min, max)
+    fun nextBetween(random: Random?, min: Float, max: Float) = MathHelper.method_32750(random, min, max)
     /**
      * method_15357
      */

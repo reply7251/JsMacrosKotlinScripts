@@ -9,25 +9,25 @@ object UuidsKt {
     /**
      * method_26276
      */
-    fun toUuid(array: IntArray) = Uuids.method_26276(array)
+    fun toUuid(array: IntArray?) = Uuids.method_26276(array)
     /**
      * method_26275
      */
-    fun toIntArray(uuid: UUID) = Uuids.method_26275(uuid)
+    fun toIntArray(uuid: UUID?) = Uuids.method_26275(uuid)
     /**
      * method_43344
      */
-    fun getOfflinePlayerUuid(nickname: String) = Uuids.method_43344(nickname)
+    fun getOfflinePlayerUuid(nickname: String?) = Uuids.method_43344(nickname)
     /**
      * method_54140
      */
-    fun getOfflinePlayerProfile(nickname: String) = Uuids.method_54140(nickname)
+    fun getOfflinePlayerProfile(nickname: String?) = Uuids.method_54140(nickname)
     /**
      * method_44827
      */
-    fun toByteArray(uuid: UUID) = Uuids.method_44827(uuid)
+    fun toByteArray(uuid: UUID?) = Uuids.method_44827(uuid)
     /**
      * method_35848
      */
-    fun toUuid(dynamic: Dynamic<*>) = Uuids.method_35848(dynamic)
+    fun toUuid(dynamic: Dynamic<*>?) = Uuids.method_35848(dynamic)
 }

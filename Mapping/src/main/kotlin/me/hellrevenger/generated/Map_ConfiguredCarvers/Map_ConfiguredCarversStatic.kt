@@ -21,5 +21,5 @@ object ConfiguredCarversKt {
     /**
      * method_46843
      */
-    fun bootstrap(carverRegisterable: Registerable<ConfiguredCarver<*>>) = ConfiguredCarvers.method_46843(carverRegisterable)
+    fun bootstrap(carverRegisterable: Registerable<ConfiguredCarver<*>>?) = ConfiguredCarvers.method_46843(carverRegisterable)
 }

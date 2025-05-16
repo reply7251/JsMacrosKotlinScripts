@@ -5,5 +5,5 @@ object SetInstrumentLootFunctionKt {
     /**
      * method_43571
      */
-    fun builder(options: TagKey<Instrument>) = SetInstrumentLootFunction.method_43571(options)
+    fun builder(options: TagKey<Instrument>?) = SetInstrumentLootFunction.method_43571(options)
 }

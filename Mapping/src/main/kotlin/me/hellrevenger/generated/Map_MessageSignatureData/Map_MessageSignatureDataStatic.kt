@@ -9,9 +9,9 @@ object MessageSignatureDataKt {
     /**
      * method_44845
      */
-    fun write(buf: PacketByteBuf, signature: MessageSignatureData) = MessageSignatureData.method_44845(buf, signature)
+    fun write(buf: PacketByteBuf?, signature: MessageSignatureData?) = MessageSignatureData.method_44845(buf, signature)
     /**
      * method_46276
      */
-    fun fromBuf(buf: PacketByteBuf) = MessageSignatureData.method_46276(buf)
+    fun fromBuf(buf: PacketByteBuf?) = MessageSignatureData.method_46276(buf)
 }

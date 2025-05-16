@@ -9,9 +9,9 @@ object DyedColorComponentKt {
     /**
      * method_57471
      */
-    fun setColor(stack: ItemStack, dyes: MutableList<DyeItem>) = DyedColorComponent.method_57471(stack, dyes)
+    fun setColor(stack: ItemStack?, dyes: MutableList<DyeItem>?) = DyedColorComponent.method_57471(stack, dyes)
     /**
      * method_57470
      */
-    fun getColor(stack: ItemStack, defaultColor: Int) = DyedColorComponent.method_57470(stack, defaultColor)
+    fun getColor(stack: ItemStack?, defaultColor: Int) = DyedColorComponent.method_57470(stack, defaultColor)
 }

@@ -13,13 +13,13 @@ object LanServerPingerKt {
     /**
      * method_4819
      */
-    fun parseAnnouncementMotd(announcement: String) = LanServerPinger.method_4819(announcement)
+    fun parseAnnouncementMotd(announcement: String?) = LanServerPinger.method_4819(announcement)
     /**
      * method_4818
      */
-    fun createAnnouncement(motd: String, addressPort: String) = LanServerPinger.method_4818(motd, addressPort)
+    fun createAnnouncement(motd: String?, addressPort: String?) = LanServerPinger.method_4818(motd, addressPort)
     /**
      * method_4820
      */
-    fun parseAnnouncementAddressPort(announcement: String) = LanServerPinger.method_4820(announcement)
+    fun parseAnnouncementAddressPort(announcement: String?) = LanServerPinger.method_4820(announcement)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_20561
  */
-fun RaidCenterDebugRenderer.setRaidCenters(raidCenters: Collection<BlockPos>) = this.method_20561(raidCenters)
+fun RaidCenterDebugRenderer.setRaidCenters(raidCenters: Collection<BlockPos>?) = this.method_20561(raidCenters)

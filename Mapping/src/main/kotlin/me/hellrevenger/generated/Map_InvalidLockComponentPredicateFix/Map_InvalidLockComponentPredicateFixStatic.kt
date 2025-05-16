@@ -5,5 +5,5 @@ object InvalidLockComponentPredicateFixKt {
     /**
      * method_65337
      */
-    fun <T>validateLock(dynamic: Dynamic<T>) = InvalidLockComponentPredicateFix.method_65337<T>(dynamic)
+    fun <T>validateLock(dynamic: Dynamic<T>?) = InvalidLockComponentPredicateFix.method_65337<T>(dynamic)
 }

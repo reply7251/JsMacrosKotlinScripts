@@ -21,7 +21,7 @@ object DifficultyKt {
     /**
      * method_16691
      */
-    fun byName(name: String) = Difficulty.method_16691(name)
+    fun byName(name: String?) = Difficulty.method_16691(name)
     /**
      * method_5462
      */

@@ -8,4 +8,4 @@ fun HandSwingC2SPacket.getHand() = this.method_12512()
 /**
  * method_12511
  */
-fun HandSwingC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12511(arg0)
+fun HandSwingC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12511(arg0)

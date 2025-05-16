@@ -5,5 +5,5 @@ object OceanRuinGeneratorKt {
     /**
      * method_14827
      */
-    fun addPieces(manager: StructureTemplateManager, pos: BlockPos, rotation: BlockRotation, holder: StructurePiecesHolder, random: Random, structure: OceanRuinStructure) = OceanRuinGenerator.method_14827(manager, pos, rotation, holder, random, structure)
+    fun addPieces(manager: StructureTemplateManager?, pos: BlockPos?, rotation: BlockRotation?, holder: StructurePiecesHolder?, random: Random?, structure: OceanRuinStructure?) = OceanRuinGenerator.method_14827(manager, pos, rotation, holder, random, structure)
 }

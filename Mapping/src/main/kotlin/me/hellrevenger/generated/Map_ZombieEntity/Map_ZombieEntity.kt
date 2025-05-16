@@ -8,7 +8,7 @@ fun ZombieEntity.setCanBreakDoors(canBreakDoors: Boolean) = this.method_7201(can
 /**
  * method_63654
  */
-fun ZombieEntity.infectVillager(world: ServerWorld, villager: VillagerEntity) = this.method_63654(world, villager)
+fun ZombieEntity.infectVillager(world: ServerWorld?, villager: VillagerEntity?) = this.method_63654(world, villager)
 /**
  * method_7206
  */

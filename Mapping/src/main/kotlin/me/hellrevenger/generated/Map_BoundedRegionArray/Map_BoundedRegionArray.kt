@@ -12,4 +12,4 @@ fun <T>BoundedRegionArray<T>.get(x: Int, z: Int) = this.method_60482(x, z)
 /**
  * method_60484
  */
-fun <T>BoundedRegionArray<T>.forEach(callback: Consumer<T>) = this.method_60484(callback)
+fun <T>BoundedRegionArray<T>.forEach(callback: Consumer<T>?) = this.method_60484(callback)

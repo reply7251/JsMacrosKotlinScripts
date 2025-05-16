@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_58318
  */
-fun <S, T>ParsingRule<S, T>.parse(state: ParsingState<S>) = this.method_58318(state)
+fun <S, T>ParsingRule<S, T>.parse(state: ParsingState<S>?) = this.method_58318(state)

@@ -5,5 +5,5 @@ object FixedLootScoreProviderKt {
     /**
      * method_35572
      */
-    fun create(name: String) = FixedLootScoreProvider.method_35572(name)
+    fun create(name: String?) = FixedLootScoreProvider.method_35572(name)
 }

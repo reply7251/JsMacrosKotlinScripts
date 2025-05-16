@@ -16,7 +16,7 @@ fun ServerBossBar.clearPlayers() = this.method_14094()
 /**
  * method_14088
  */
-fun ServerBossBar.addPlayer(player: ServerPlayerEntity) = this.method_14088(player)
+fun ServerBossBar.addPlayer(player: ServerPlayerEntity?) = this.method_14088(player)
 /**
  * method_14091
  */
@@ -24,4 +24,4 @@ fun ServerBossBar.setVisible(visible: Boolean) = this.method_14091(visible)
 /**
  * method_14089
  */
-fun ServerBossBar.removePlayer(player: ServerPlayerEntity) = this.method_14089(player)
+fun ServerBossBar.removePlayer(player: ServerPlayerEntity?) = this.method_14089(player)

@@ -20,7 +20,7 @@ fun SyncedClientOptions.allowsServerListing() = this.comp_1958()
 /**
  * method_53822
  */
-fun SyncedClientOptions.write(buf: PacketByteBuf) = this.method_53822(buf)
+fun SyncedClientOptions.write(buf: PacketByteBuf?) = this.method_53822(buf)
 /**
  * comp_1955
  */

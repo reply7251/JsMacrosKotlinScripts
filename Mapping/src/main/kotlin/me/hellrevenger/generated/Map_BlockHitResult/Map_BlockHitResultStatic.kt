@@ -5,5 +5,5 @@ object BlockHitResultKt {
     /**
      * method_17778
      */
-    fun createMissed(pos: Vec3d, side: Direction, blockPos: BlockPos) = BlockHitResult.method_17778(pos, side, blockPos)
+    fun createMissed(pos: Vec3d?, side: Direction?, blockPos: BlockPos?) = BlockHitResult.method_17778(pos, side, blockPos)
 }

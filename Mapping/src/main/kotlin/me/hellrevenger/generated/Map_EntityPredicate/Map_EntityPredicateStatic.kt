@@ -5,15 +5,15 @@ object EntityPredicateKt {
     /**
      * method_53137
      */
-    fun contextPredicateFromEntityPredicate(entityPredicate: Optional<EntityPredicate>) = EntityPredicate.method_53137(entityPredicate)
+    fun contextPredicateFromEntityPredicate(entityPredicate: Optional<EntityPredicate>?) = EntityPredicate.method_53137(entityPredicate)
     /**
      * method_53134
      */
-    fun contextPredicateFromEntityPredicate(builder: net.minecraft.class_2048.class_2049) = EntityPredicate.method_53134(builder)
+    fun contextPredicateFromEntityPredicate(builder: net.minecraft.class_2048.class_2049?) = EntityPredicate.method_53134(builder)
     /**
      * method_27802
      */
-    fun createAdvancementEntityLootContext(player: ServerPlayerEntity, target: Entity) = EntityPredicate.method_27802(player, target)
+    fun createAdvancementEntityLootContext(player: ServerPlayerEntity?, target: Entity?) = EntityPredicate.method_27802(player, target)
     /**
      * method_53139
      */
@@ -21,5 +21,5 @@ object EntityPredicateKt {
     /**
      * method_51704
      */
-    fun asLootContextPredicate(predicate: EntityPredicate) = EntityPredicate.method_51704(predicate)
+    fun asLootContextPredicate(predicate: EntityPredicate?) = EntityPredicate.method_51704(predicate)
 }

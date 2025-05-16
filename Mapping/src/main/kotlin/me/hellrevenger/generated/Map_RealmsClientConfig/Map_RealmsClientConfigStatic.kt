@@ -5,7 +5,7 @@ object RealmsClientConfigKt {
     /**
      * method_21035
      */
-    fun setProxy(proxy: Proxy) = RealmsClientConfig.method_21035(proxy)
+    fun setProxy(proxy: Proxy?) = RealmsClientConfig.method_21035(proxy)
     /**
      * method_21034
      */

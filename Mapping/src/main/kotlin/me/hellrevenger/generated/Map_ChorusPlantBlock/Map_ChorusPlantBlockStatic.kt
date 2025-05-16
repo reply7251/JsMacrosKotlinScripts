@@ -5,5 +5,5 @@ object ChorusPlantBlockKt {
     /**
      * method_9759
      */
-    fun withConnectionProperties(world: BlockView, pos: BlockPos, state: BlockState) = ChorusPlantBlock.method_9759(world, pos, state)
+    fun withConnectionProperties(world: BlockView?, pos: BlockPos?, state: BlockState?) = ChorusPlantBlock.method_9759(world, pos, state)
 }

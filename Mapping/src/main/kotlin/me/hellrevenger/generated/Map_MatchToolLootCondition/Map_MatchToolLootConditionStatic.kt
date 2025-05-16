@@ -5,5 +5,5 @@ object MatchToolLootConditionKt {
     /**
      * method_945
      */
-    fun builder(predicate: net.minecraft.class_2073.class_2074) = MatchToolLootCondition.method_945(predicate)
+    fun builder(predicate: net.minecraft.class_2073.class_2074?) = MatchToolLootCondition.method_945(predicate)
 }

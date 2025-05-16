@@ -9,5 +9,5 @@ object WallMountedBlockKt {
     /**
      * method_20046
      */
-    fun canPlaceAt(world: WorldView, pos: BlockPos, direction: Direction) = WallMountedBlock.method_20046(world, pos, direction)
+    fun canPlaceAt(world: WorldView?, pos: BlockPos?, direction: Direction?) = WallMountedBlock.method_20046(world, pos, direction)
 }

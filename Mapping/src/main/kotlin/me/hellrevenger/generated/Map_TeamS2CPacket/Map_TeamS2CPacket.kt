@@ -24,4 +24,4 @@ fun TeamS2CPacket.getTeamName() = this.method_34177()
 /**
  * method_34173
  */
-fun TeamS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34173(arg0)
+fun TeamS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_34173(arg0)

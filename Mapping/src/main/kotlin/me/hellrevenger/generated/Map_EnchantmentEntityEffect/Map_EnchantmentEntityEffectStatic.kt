@@ -5,5 +5,5 @@ object EnchantmentEntityEffectKt {
     /**
      * method_60231
      */
-    fun registerAndGetDefault(registry: Registry<MapCodec<out EnchantmentEntityEffect>>) = EnchantmentEntityEffect.method_60231(registry)
+    fun registerAndGetDefault(registry: Registry<MapCodec<out EnchantmentEntityEffect>>?) = EnchantmentEntityEffect.method_60231(registry)
 }

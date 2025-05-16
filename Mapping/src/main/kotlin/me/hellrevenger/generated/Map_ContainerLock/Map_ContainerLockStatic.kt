@@ -13,5 +13,5 @@ object ContainerLockKt {
     /**
      * method_5473
      */
-    fun fromNbt(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = ContainerLock.method_5473(nbt, registries)
+    fun fromNbt(nbt: NbtCompound?, registries: net.minecraft.class_7225.class_7874?) = ContainerLock.method_5473(nbt, registries)
 }

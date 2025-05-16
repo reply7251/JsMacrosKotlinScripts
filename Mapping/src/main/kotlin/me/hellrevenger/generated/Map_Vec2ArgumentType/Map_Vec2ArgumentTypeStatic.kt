@@ -17,5 +17,5 @@ object Vec2ArgumentTypeKt {
     /**
      * method_9724
      */
-    fun getVec2(context: CommandContext<ServerCommandSource>, name: String) = Vec2ArgumentType.method_9724(context, name)
+    fun getVec2(context: CommandContext<ServerCommandSource>?, name: String?) = Vec2ArgumentType.method_9724(context, name)
 }

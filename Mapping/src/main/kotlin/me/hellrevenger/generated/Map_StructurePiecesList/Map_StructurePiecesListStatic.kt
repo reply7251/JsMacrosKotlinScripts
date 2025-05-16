@@ -5,5 +5,5 @@ object StructurePiecesListKt {
     /**
      * method_38711
      */
-    fun fromNbt(list: NbtList, context: StructureContext) = StructurePiecesList.method_38711(list, context)
+    fun fromNbt(list: NbtList?, context: StructureContext?) = StructurePiecesList.method_38711(list, context)
 }

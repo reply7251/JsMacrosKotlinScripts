@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44745
  */
-fun Text.contains(text: Text) = this.method_44745(text)
+fun Text.contains(text: Text?) = this.method_44745(text)
 /**
  * method_54160
  */
@@ -24,7 +24,7 @@ fun Text.asTruncatedString(length: Int) = this.method_10858(length)
 /**
  * method_36136
  */
-fun Text.getWithStyle(style: Style) = this.method_36136(style)
+fun Text.getWithStyle(style: Style?) = this.method_36136(style)
 /**
  * method_44746
  */

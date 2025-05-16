@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_45876
  */
-fun ModelBaker.bake(spriteGetter: net.minecraft.class_1088.class_9826) = this.method_45876(spriteGetter)
+fun ModelBaker.bake(spriteGetter: net.minecraft.class_1088.class_9826?) = this.method_45876(spriteGetter)

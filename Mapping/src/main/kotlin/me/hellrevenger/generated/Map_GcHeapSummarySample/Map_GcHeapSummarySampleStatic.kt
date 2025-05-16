@@ -5,9 +5,9 @@ object GcHeapSummarySampleKt {
     /**
      * method_38042
      */
-    fun fromEvent(event: RecordedEvent) = GcHeapSummarySample.method_38042(event)
+    fun fromEvent(event: RecordedEvent?) = GcHeapSummarySample.method_38042(event)
     /**
      * method_38040
      */
-    fun toStatistics(duration: Duration, samples: MutableList<GcHeapSummarySample>, gcDuration: Duration, count: Int) = GcHeapSummarySample.method_38040(duration, samples, gcDuration, count)
+    fun toStatistics(duration: Duration?, samples: MutableList<GcHeapSummarySample>?, gcDuration: Duration?, count: Int) = GcHeapSummarySample.method_38040(duration, samples, gcDuration, count)
 }

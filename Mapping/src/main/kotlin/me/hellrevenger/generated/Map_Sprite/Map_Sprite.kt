@@ -24,7 +24,7 @@ fun Sprite.upload() = this.method_4584()
 /**
  * method_24108
  */
-fun Sprite.getTextureSpecificVertexConsumer(consumer: VertexConsumer) = this.method_24108(consumer)
+fun Sprite.getTextureSpecificVertexConsumer(consumer: VertexConsumer?) = this.method_24108(consumer)
 /**
  * method_4570
  */

@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_64165
  */
-fun ScopedProfiler.addLabel(labelSupplier: Supplier<String>) = this.method_64165(labelSupplier)
+fun ScopedProfiler.addLabel(labelSupplier: Supplier<String>?) = this.method_64165(labelSupplier)
 /**
  * method_64164
  */
-fun ScopedProfiler.addLabel(label: String) = this.method_64164(label)
+fun ScopedProfiler.addLabel(label: String?) = this.method_64164(label)
 /**
  * method_64163
  */

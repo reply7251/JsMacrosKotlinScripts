@@ -28,4 +28,4 @@ fun EntityAttribute.getFormatting(addition: Boolean) = this.method_60494(additio
 /**
  * method_60493
  */
-fun EntityAttribute.setCategory(category: net.minecraft.class_1320.class_9764) = this.method_60493(category)
+fun EntityAttribute.setCategory(category: net.minecraft.class_1320.class_9764?) = this.method_60493(category)

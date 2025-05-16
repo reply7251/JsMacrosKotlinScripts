@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11182
  */
-fun ExperienceOrbSpawnS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11182(arg0)
+fun ExperienceOrbSpawnS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11182(arg0)
 /**
  * method_11183
  */

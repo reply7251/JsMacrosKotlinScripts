@@ -12,4 +12,4 @@ fun ItemStackArgument.getItem() = this.method_9785()
 /**
  * method_9782
  */
-fun ItemStackArgument.asString(registries: net.minecraft.class_7225.class_7874) = this.method_9782(registries)
+fun ItemStackArgument.asString(registries: net.minecraft.class_7225.class_7874?) = this.method_9782(registries)

@@ -5,7 +5,7 @@ object WitherEntityKt {
     /**
      * method_6883
      */
-    fun canDestroy(block: BlockState) = WitherEntity.method_6883(block)
+    fun canDestroy(block: BlockState?) = WitherEntity.method_6883(block)
     /**
      * method_26904
      */

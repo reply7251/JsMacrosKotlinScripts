@@ -5,5 +5,5 @@ object DedicatedServerWatchdogKt {
     /**
      * method_61256
      */
-    fun createCrashReport(message: String, threadId: Long) = DedicatedServerWatchdog.method_61256(message, threadId)
+    fun createCrashReport(message: String?, threadId: Long) = DedicatedServerWatchdog.method_61256(message, threadId)
 }

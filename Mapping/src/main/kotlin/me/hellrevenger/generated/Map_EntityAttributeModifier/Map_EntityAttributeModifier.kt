@@ -12,7 +12,7 @@ fun EntityAttributeModifier.value() = this.comp_2449()
 /**
  * method_60718
  */
-fun EntityAttributeModifier.idMatches(id: Identifier) = this.method_60718(id)
+fun EntityAttributeModifier.idMatches(id: Identifier?) = this.method_60718(id)
 /**
  * comp_2447
  */

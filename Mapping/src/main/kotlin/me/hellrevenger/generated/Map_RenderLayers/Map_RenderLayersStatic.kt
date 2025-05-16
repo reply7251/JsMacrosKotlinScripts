@@ -5,23 +5,23 @@ object RenderLayersKt {
     /**
      * method_23683
      */
-    fun getEntityBlockLayer(state: BlockState) = RenderLayers.method_23683(state)
+    fun getEntityBlockLayer(state: BlockState?) = RenderLayers.method_23683(state)
     /**
      * method_23680
      */
-    fun getFluidLayer(state: FluidState) = RenderLayers.method_23680(state)
+    fun getFluidLayer(state: FluidState?) = RenderLayers.method_23680(state)
     /**
      * method_23679
      */
-    fun getBlockLayer(state: BlockState) = RenderLayers.method_23679(state)
+    fun getBlockLayer(state: BlockState?) = RenderLayers.method_23679(state)
     /**
      * method_23678
      */
-    fun getItemLayer(stack: ItemStack) = RenderLayers.method_23678(stack)
+    fun getItemLayer(stack: ItemStack?) = RenderLayers.method_23678(stack)
     /**
      * method_29359
      */
-    fun getMovingBlockLayer(state: BlockState) = RenderLayers.method_29359(state)
+    fun getMovingBlockLayer(state: BlockState?) = RenderLayers.method_29359(state)
     /**
      * method_23682
      */

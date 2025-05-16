@@ -5,5 +5,5 @@ object EndPortalFeatureKt {
     /**
      * method_51862
      */
-    fun offsetOrigin(pos: BlockPos) = EndPortalFeature.method_51862(pos)
+    fun offsetOrigin(pos: BlockPos?) = EndPortalFeature.method_51862(pos)
 }

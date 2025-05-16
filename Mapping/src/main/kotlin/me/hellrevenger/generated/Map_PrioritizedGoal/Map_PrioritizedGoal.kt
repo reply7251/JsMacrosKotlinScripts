@@ -16,4 +16,4 @@ fun PrioritizedGoal.getPriority() = this.method_19057()
 /**
  * method_19055
  */
-fun PrioritizedGoal.canBeReplacedBy(goal: PrioritizedGoal) = this.method_19055(goal)
+fun PrioritizedGoal.canBeReplacedBy(goal: PrioritizedGoal?) = this.method_19055(goal)

@@ -12,8 +12,8 @@ val MapColor.id by alias(MapColor::field_16021)
 /**
  * method_38481
  */
-fun MapColor.getRenderColorByte(brightness: net.minecraft.class_3620.class_6594) = this.method_38481(brightness)
+fun MapColor.getRenderColorByte(brightness: net.minecraft.class_3620.class_6594?) = this.method_38481(brightness)
 /**
  * method_15820
  */
-fun MapColor.getRenderColor(brightness: net.minecraft.class_3620.class_6594) = this.method_15820(brightness)
+fun MapColor.getRenderColor(brightness: net.minecraft.class_3620.class_6594?) = this.method_15820(brightness)

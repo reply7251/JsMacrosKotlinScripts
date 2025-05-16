@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_27274
  */
-fun JigsawGeneratingC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_27274(arg0)
+fun JigsawGeneratingC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_27274(arg0)
 /**
  * method_29446
  */

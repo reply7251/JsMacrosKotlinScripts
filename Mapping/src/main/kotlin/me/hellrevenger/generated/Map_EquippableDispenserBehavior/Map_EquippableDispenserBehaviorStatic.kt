@@ -9,5 +9,5 @@ object EquippableDispenserBehaviorKt {
     /**
      * method_64106
      */
-    fun dispense(pointer: BlockPointer, stack: ItemStack) = EquippableDispenserBehavior.method_64106(pointer, stack)
+    fun dispense(pointer: BlockPointer?, stack: ItemStack?) = EquippableDispenserBehavior.method_64106(pointer, stack)
 }
