@@ -139,7 +139,8 @@ class GenMapping(val folder: File) {
     )
     val blackListDeobfMethods = setOf<String>(
         "collectEntitiesByType",
-        "asPassenger"
+        "asPassenger",
+        "getFuelItems"
         //"getGenerationSettings", "getSpawnSettings"
     )
     val blackListClasses = setOf<String>(
@@ -167,6 +168,17 @@ class GenMapping(val folder: File) {
         "field_26393" // Biome.weather
     )
 
+    val primitives = setOf(
+        "Boolean",
+        "Byte",
+        "Int",
+        "Long",
+        "Float",
+        "Double",
+        "Short",
+        "Char",
+    )
+
     fun getGenerics(type: Type, includingBounds: Boolean = false): List<String> {
         if(type is ParameterizedType) {
             return type.actualTypeArguments.map { getGenerics(it, includingBounds) }.flatten()
@@ -189,15 +201,17 @@ class GenMapping(val folder: File) {
         return generics
     }
 
-    fun getTypeNameFromParameter(param: java.lang.reflect.Parameter): String {
-        val nullPostfix = if(param.annotations.any { it.toString().endsWith("NotNull") }) "" else "?"
+    fun getTypeNameFromParameter(param: java.lang.reflect.Parameter, isVararg: Boolean = false): String {
+        val nullPostfix = if(isVararg || param.annotations.any { it.toString().endsWith("NotNull") }) "" else "?"
         if(param.parameterizedType is Class<*>) {
             val params = (param.parameterizedType as Class<*>).typeParameters
             if(params.isNotEmpty()) {
                 return getNameFromType(param.parameterizedType) + "<*>" + nullPostfix
             }
         }
-        return getNameFromType(param.parameterizedType) + nullPostfix
+        val name = getNameFromType(param.parameterizedType)
+        if(name in primitives || name == param.parameterizedType.typeName) return name
+        return name + nullPostfix
     }
 
     fun getNameFromType(type: Type): String {
@@ -496,7 +510,7 @@ class GenMapping(val folder: File) {
                 val argSize = method.parameterCount
 
                 targetBuilder.append(method.parameters.mapIndexedNotNull { index, parameter ->
-                    (to.getArgNameWithSize(index, argSize) ?: parameter.name.replace("\\$+".toRegex(), "arg")) + ": " + getTypeNameFromParameter(parameter)
+                    (to.getArgNameWithSize(index, argSize) ?: parameter.name.replace("\\$+".toRegex(), "arg")) + ": " + getTypeNameFromParameter(parameter, parameter.isVarArgs)
                 }.joinToString()).append(")").append(bounds)
 
 
