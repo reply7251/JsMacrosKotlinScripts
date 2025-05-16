@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_6483
  */
-fun CowEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6483(arg0, arg1)
+fun CowEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_6483(arg0, arg1)

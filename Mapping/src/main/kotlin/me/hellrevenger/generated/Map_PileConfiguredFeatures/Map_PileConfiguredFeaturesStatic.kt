@@ -25,5 +25,5 @@ object PileConfiguredFeaturesKt {
     /**
      * method_46856
      */
-    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>) = PileConfiguredFeatures.method_46856(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>?) = PileConfiguredFeatures.method_46856(featureRegisterable)
 }

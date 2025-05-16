@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_48967
  */
-fun <T>TagPredicate<T>.test(registryEntry: RegistryEntry<T>) = this.method_48967(registryEntry)
+fun <T>TagPredicate<T>.test(registryEntry: RegistryEntry<T>?) = this.method_48967(registryEntry)
 /**
  * comp_1837
  */

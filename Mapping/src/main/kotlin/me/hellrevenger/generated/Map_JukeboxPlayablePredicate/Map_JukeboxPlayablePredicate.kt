@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60731
  */
-fun JukeboxPlayablePredicate.test(arg0: ItemStack, arg1: JukeboxPlayableComponent) = this.method_60731(arg0, arg1)
+fun JukeboxPlayablePredicate.test(arg0: ItemStack?, arg1: JukeboxPlayableComponent?) = this.method_60731(arg0, arg1)
 /**
  * comp_2830
  */

@@ -5,5 +5,5 @@ object ReloadableRegistriesKt {
     /**
      * method_58284
      */
-    fun reload(dynamicRegistries: CombinedDynamicRegistries<ServerDynamicRegistryType>, pendingTagLoads: MutableList<net.minecraft.class_2378.class_10106<*>>, resourceManager: ResourceManager, prepareExecutor: Executor) = ReloadableRegistries.method_58284(dynamicRegistries, pendingTagLoads, resourceManager, prepareExecutor)
+    fun reload(dynamicRegistries: CombinedDynamicRegistries<ServerDynamicRegistryType>?, pendingTagLoads: MutableList<net.minecraft.class_2378.class_10106<*>>?, resourceManager: ResourceManager?, prepareExecutor: Executor?) = ReloadableRegistries.method_58284(dynamicRegistries, pendingTagLoads, resourceManager, prepareExecutor)
 }

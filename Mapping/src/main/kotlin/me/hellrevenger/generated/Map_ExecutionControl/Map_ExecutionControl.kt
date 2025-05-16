@@ -12,8 +12,8 @@ fun <T>ExecutionControl<T>.getFrame() = this.method_54893()
 /**
  * method_54402
  */
-fun <T>ExecutionControl<T>.enqueueAction(action: CommandAction<T>) = this.method_54402(action)
+fun <T>ExecutionControl<T>.enqueueAction(action: CommandAction<T>?) = this.method_54402(action)
 /**
  * method_54403
  */
-fun <T>ExecutionControl<T>.setTracer(tracer: Tracer) = this.method_54403(tracer)
+fun <T>ExecutionControl<T>.setTracer(tracer: Tracer?) = this.method_54403(tracer)

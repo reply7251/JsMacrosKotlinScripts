@@ -53,5 +53,5 @@ object DisplayEntityKt {
     /**
      * method_48845
      */
-    fun getTransformation(dataTracker: DataTracker) = DisplayEntity.method_48845(dataTracker)
+    fun getTransformation(dataTracker: DataTracker?) = DisplayEntity.method_48845(dataTracker)
 }

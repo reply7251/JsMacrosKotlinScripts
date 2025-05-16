@@ -5,5 +5,5 @@ object InvertedLootConditionKt {
     /**
      * method_889
      */
-    fun builder(term: net.minecraft.class_5341.class_210) = InvertedLootCondition.method_889(term)
+    fun builder(term: net.minecraft.class_5341.class_210?) = InvertedLootCondition.method_889(term)
 }

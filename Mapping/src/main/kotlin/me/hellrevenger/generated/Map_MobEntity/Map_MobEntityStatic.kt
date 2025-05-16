@@ -25,11 +25,11 @@ object MobEntityKt {
     /**
      * method_5948
      */
-    fun getEquipmentForSlot(equipmentSlot: EquipmentSlot, equipmentLevel: Int) = MobEntity.method_5948(equipmentSlot, equipmentLevel)
+    fun getEquipmentForSlot(equipmentSlot: EquipmentSlot?, equipmentLevel: Int) = MobEntity.method_5948(equipmentSlot, equipmentLevel)
     /**
      * method_20636
      */
-    fun canMobSpawn(type: EntityType<out MobEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = MobEntity.method_20636(type, world, spawnReason, pos, random)
+    fun canMobSpawn(type: EntityType<out MobEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = MobEntity.method_20636(type, world, spawnReason, pos, random)
     /**
      * method_26828
      */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44420
  */
-fun EditBox.replaceSelection(string: String) = this.method_44420(string)
+fun EditBox.replaceSelection(string: String?) = this.method_44420(string)
 /**
  * method_44411
  */
@@ -16,7 +16,7 @@ fun EditBox.getText() = this.method_44421()
 /**
  * method_44414
  */
-fun EditBox.setText(text: String) = this.method_44414(text)
+fun EditBox.setText(text: String?) = this.method_44414(text)
 /**
  * method_44425
  */
@@ -32,7 +32,7 @@ fun EditBox.delete(offset: Int) = this.method_44419(offset)
 /**
  * method_44413
  */
-fun EditBox.setCursorChangeListener(cursorChangeListener: Runnable) = this.method_44413(cursorChangeListener)
+fun EditBox.setCursorChangeListener(cursorChangeListener: Runnable?) = this.method_44413(cursorChangeListener)
 /**
  * method_44434
  */
@@ -52,7 +52,7 @@ fun EditBox.hasSelection() = this.method_44435()
 /**
  * method_44412
  */
-fun EditBox.moveCursor(movement: CursorMovement, amount: Int) = this.method_44412(movement, amount)
+fun EditBox.moveCursor(movement: CursorMovement?, amount: Int) = this.method_44412(movement, amount)
 /**
  * method_44428
  */
@@ -60,7 +60,7 @@ fun EditBox.handleSpecialKey(keyCode: Int) = this.method_44428(keyCode)
 /**
  * method_44415
  */
-fun EditBox.setChangeListener(changeListener: Consumer<String>) = this.method_44415(changeListener)
+fun EditBox.setChangeListener(changeListener: Consumer<String>?) = this.method_44415(changeListener)
 /**
  * method_44432
  */

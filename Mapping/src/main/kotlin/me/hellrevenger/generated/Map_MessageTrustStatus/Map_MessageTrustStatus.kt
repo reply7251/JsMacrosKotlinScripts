@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44741
  */
-fun MessageTrustStatus.createIndicator(message: SignedMessage) = this.method_44741(message)
+fun MessageTrustStatus.createIndicator(message: SignedMessage?) = this.method_44741(message)
 /**
  * method_44740
  */

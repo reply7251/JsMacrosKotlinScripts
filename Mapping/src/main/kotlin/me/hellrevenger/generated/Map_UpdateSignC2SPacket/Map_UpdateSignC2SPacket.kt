@@ -8,7 +8,7 @@ fun UpdateSignC2SPacket.isFront() = this.method_49751()
 /**
  * method_12509
  */
-fun UpdateSignC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12509(arg0)
+fun UpdateSignC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12509(arg0)
 /**
  * method_12508
  */

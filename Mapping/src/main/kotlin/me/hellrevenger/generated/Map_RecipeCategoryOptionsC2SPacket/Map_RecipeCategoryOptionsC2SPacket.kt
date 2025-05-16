@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_30304
  */
-fun RecipeCategoryOptionsC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_30304(arg0)
+fun RecipeCategoryOptionsC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_30304(arg0)
 /**
  * method_30306
  */

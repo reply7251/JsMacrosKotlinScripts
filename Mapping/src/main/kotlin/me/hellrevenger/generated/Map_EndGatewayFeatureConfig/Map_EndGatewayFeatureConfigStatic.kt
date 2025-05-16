@@ -9,5 +9,5 @@ object EndGatewayFeatureConfigKt {
     /**
      * method_18034
      */
-    fun createConfig(exitPortalPosition: BlockPos, exitsAtSpawn: Boolean) = EndGatewayFeatureConfig.method_18034(exitPortalPosition, exitsAtSpawn)
+    fun createConfig(exitPortalPosition: BlockPos?, exitsAtSpawn: Boolean) = EndGatewayFeatureConfig.method_18034(exitPortalPosition, exitsAtSpawn)
 }

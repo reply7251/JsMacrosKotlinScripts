@@ -173,5 +173,5 @@ object EnchantmentsKt {
     /**
      * method_60184
      */
-    fun bootstrap(registry: Registerable<Enchantment>) = Enchantments.method_60184(registry)
+    fun bootstrap(registry: Registerable<Enchantment>?) = Enchantments.method_60184(registry)
 }

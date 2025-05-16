@@ -5,11 +5,11 @@ object RangeKt {
     /**
      * method_37953
      */
-    fun <T>createCodec(elementCodec: Codec<T>) where T: Comparable<T> = Range.method_37953<T>(elementCodec)
+    fun <T>createCodec(elementCodec: Codec<T>?) where T: Comparable<T> = Range.method_37953<T>(elementCodec)
     /**
      * method_37954
      */
-    fun <T>createRangedCodec(codec: Codec<T>, minInclusive: T, maxInclusive: T) where T: Comparable<T> = Range.method_37954<T>(codec, minInclusive, maxInclusive)
+    fun <T>createRangedCodec(codec: Codec<T>?, minInclusive: T, maxInclusive: T) where T: Comparable<T> = Range.method_37954<T>(codec, minInclusive, maxInclusive)
     /**
      * method_37956
      */

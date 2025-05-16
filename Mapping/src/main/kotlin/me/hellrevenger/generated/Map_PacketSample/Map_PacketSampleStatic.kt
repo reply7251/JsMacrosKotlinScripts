@@ -5,5 +5,5 @@ object PacketSampleKt {
     /**
      * method_39447
      */
-    fun fromEvent(event: RecordedEvent) = PacketSample.method_39447(event)
+    fun fromEvent(event: RecordedEvent?) = PacketSample.method_39447(event)
 }

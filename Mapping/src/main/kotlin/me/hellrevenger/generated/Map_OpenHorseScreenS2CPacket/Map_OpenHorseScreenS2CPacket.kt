@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11437
  */
-fun OpenHorseScreenS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11437(arg0)
+fun OpenHorseScreenS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11437(arg0)
 /**
  * method_11432
  */

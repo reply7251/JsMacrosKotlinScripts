@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_5453
  */
-fun InventoryChangedListener.onInventoryChanged(sender: Inventory) = this.method_5453(sender)
+fun InventoryChangedListener.onInventoryChanged(sender: Inventory?) = this.method_5453(sender)

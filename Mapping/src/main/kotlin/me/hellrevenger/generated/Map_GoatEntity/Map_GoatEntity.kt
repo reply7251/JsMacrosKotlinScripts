@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_35177
  */
-fun GoatEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_35177(arg0, arg1)
+fun GoatEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_35177(arg0, arg1)
 /**
  * method_43539
  */

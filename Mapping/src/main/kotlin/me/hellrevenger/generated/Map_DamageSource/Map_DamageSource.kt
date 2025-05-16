@@ -20,11 +20,11 @@ fun DamageSource.isDirect() = this.method_60489()
 /**
  * method_49708
  */
-fun DamageSource.isOf(typeKey: RegistryKey<DamageType>) = this.method_49708(typeKey)
+fun DamageSource.isOf(typeKey: RegistryKey<DamageType>?) = this.method_49708(typeKey)
 /**
  * method_5506
  */
-fun DamageSource.getDeathMessage(killed: LivingEntity) = this.method_5506(killed)
+fun DamageSource.getDeathMessage(killed: LivingEntity?) = this.method_5506(killed)
 /**
  * method_5526
  */
@@ -48,7 +48,7 @@ fun DamageSource.getStoredPosition() = this.method_48791()
 /**
  * method_48789
  */
-fun DamageSource.isIn(tag: TagKey<DamageType>) = this.method_48789(tag)
+fun DamageSource.isIn(tag: TagKey<DamageType>?) = this.method_48789(tag)
 /**
  * method_60948
  */

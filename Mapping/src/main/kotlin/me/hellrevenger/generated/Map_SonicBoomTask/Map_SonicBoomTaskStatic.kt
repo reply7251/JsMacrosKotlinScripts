@@ -9,5 +9,5 @@ object SonicBoomTaskKt {
     /**
      * method_43264
      */
-    fun cooldown(warden: LivingEntity, cooldown: Int) = SonicBoomTask.method_43264(warden, cooldown)
+    fun cooldown(warden: LivingEntity?, cooldown: Int) = SonicBoomTask.method_43264(warden, cooldown)
 }

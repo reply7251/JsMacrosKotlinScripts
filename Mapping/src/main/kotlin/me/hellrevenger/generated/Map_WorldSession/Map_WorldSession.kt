@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_47774
  */
-fun WorldSession.setBrand(brand: String) = this.method_47774(brand)
+fun WorldSession.setBrand(brand: String?) = this.method_47774(brand)
 /**
  * method_47772
  */
-fun WorldSession.setGameMode(gameMode: GameMode, hardcore: Boolean) = this.method_47772(gameMode, hardcore)
+fun WorldSession.setGameMode(gameMode: GameMode?, hardcore: Boolean) = this.method_47772(gameMode, hardcore)
 /**
  * method_47776
  */
@@ -24,7 +24,7 @@ fun WorldSession.onLoad() = this.method_47775()
 /**
  * method_51802
  */
-fun WorldSession.onAdvancementMade(world: world_World, advancement: AdvancementEntry) = this.method_51802(world, advancement)
+fun WorldSession.onAdvancementMade(world: world_World?, advancement: AdvancementEntry?) = this.method_51802(world, advancement)
 /**
  * method_47770
  */

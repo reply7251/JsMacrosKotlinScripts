@@ -8,15 +8,15 @@ fun <T>ReadableContainer<T>.get(x: Int, y: Int, z: Int) = this.method_12321(x, y
 /**
  * method_21732
  */
-fun <T>ReadableContainer<T>.count(counter: net.minecraft.class_2841.class_4464<T>) = this.method_21732(counter)
+fun <T>ReadableContainer<T>.count(counter: net.minecraft.class_2841.class_4464<T>?) = this.method_21732(counter)
 /**
  * method_39793
  */
-fun <T>ReadableContainer<T>.forEachValue(action: Consumer<T>) = this.method_39793(action)
+fun <T>ReadableContainer<T>.forEachValue(action: Consumer<T>?) = this.method_39793(action)
 /**
  * method_12325
  */
-fun <T>ReadableContainer<T>.writePacket(buf: PacketByteBuf) = this.method_12325(buf)
+fun <T>ReadableContainer<T>.writePacket(buf: PacketByteBuf?) = this.method_12325(buf)
 /**
  * method_12327
  */
@@ -28,11 +28,11 @@ fun <T>ReadableContainer<T>.copy() = this.method_39957()
 /**
  * method_19526
  */
-fun <T>ReadableContainer<T>.hasAny(predicate: Predicate<T>) = this.method_19526(predicate)
+fun <T>ReadableContainer<T>.hasAny(predicate: Predicate<T>?) = this.method_19526(predicate)
 /**
  * method_44345
  */
-fun <T>ReadableContainer<T>.serialize(idList: IndexedIterable<T>, paletteProvider: net.minecraft.class_2841.class_6563) = this.method_44345(idList, paletteProvider)
+fun <T>ReadableContainer<T>.serialize(idList: IndexedIterable<T>?, paletteProvider: net.minecraft.class_2841.class_6563?) = this.method_44345(idList, paletteProvider)
 /**
  * method_44350
  */

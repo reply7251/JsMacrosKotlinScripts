@@ -5,5 +5,5 @@ object QuickPlayLoggerKt {
     /**
      * method_51267
      */
-    fun create(relativePath: String) = QuickPlayLogger.method_51267(relativePath)
+    fun create(relativePath: String?) = QuickPlayLogger.method_51267(relativePath)
 }

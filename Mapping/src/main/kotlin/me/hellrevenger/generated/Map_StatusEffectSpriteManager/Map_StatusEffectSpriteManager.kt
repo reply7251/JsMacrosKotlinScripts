@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_18663
  */
-fun StatusEffectSpriteManager.getSprite(effect: RegistryEntry<StatusEffect>) = this.method_18663(effect)
+fun StatusEffectSpriteManager.getSprite(effect: RegistryEntry<StatusEffect>?) = this.method_18663(effect)

@@ -29,7 +29,7 @@ object ScreenKt {
     /**
      * method_57737
      */
-    fun renderBackgroundTexture(context: DrawContext, texture: Identifier, x: Int, y: Int, u: Float, v: Float, width: Int, height: Int) = Screen.method_57737(context, texture, x, y, u, v, width, height)
+    fun renderBackgroundTexture(context: DrawContext?, texture: Identifier?, x: Int, y: Int, u: Float, v: Float, width: Int, height: Int) = Screen.method_57737(context, texture, x, y, u, v, width, height)
     /**
      * method_25442
      */
@@ -37,7 +37,7 @@ object ScreenKt {
     /**
      * method_25408
      */
-    fun getTooltipFromItem(client: MinecraftClient, stack: ItemStack) = Screen.method_25408(client, stack)
+    fun getTooltipFromItem(client: MinecraftClient?, stack: ItemStack?) = Screen.method_25408(client, stack)
     /**
      * method_25443
      */
@@ -53,7 +53,7 @@ object ScreenKt {
     /**
      * method_37061
      */
-    fun findSelectedElementData(selectables: MutableList<out Selectable>, selectable: Selectable) = Screen.method_37061(selectables, selectable)
+    fun findSelectedElementData(selectables: MutableList<out Selectable>?, selectable: Selectable?) = Screen.method_37061(selectables, selectable)
     /**
      * method_25438
      */

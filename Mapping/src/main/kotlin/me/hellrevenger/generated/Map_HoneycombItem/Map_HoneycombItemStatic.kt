@@ -13,5 +13,5 @@ object HoneycombItemKt {
     /**
      * method_34720
      */
-    fun getWaxedState(state: BlockState) = HoneycombItem.method_34720(state)
+    fun getWaxedState(state: BlockState?) = HoneycombItem.method_34720(state)
 }

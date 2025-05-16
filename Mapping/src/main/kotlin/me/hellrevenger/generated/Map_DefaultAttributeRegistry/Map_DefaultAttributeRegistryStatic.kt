@@ -5,7 +5,7 @@ object DefaultAttributeRegistryKt {
     /**
      * method_26873
      */
-    fun get(type: EntityType<out LivingEntity>) = DefaultAttributeRegistry.method_26873(type)
+    fun get(type: EntityType<out LivingEntity>?) = DefaultAttributeRegistry.method_26873(type)
     /**
      * method_26872
      */
@@ -13,5 +13,5 @@ object DefaultAttributeRegistryKt {
     /**
      * method_26875
      */
-    fun hasDefinitionFor(type: EntityType<*>) = DefaultAttributeRegistry.method_26875(type)
+    fun hasDefinitionFor(type: EntityType<*>?) = DefaultAttributeRegistry.method_26875(type)
 }

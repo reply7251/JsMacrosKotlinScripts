@@ -20,7 +20,7 @@ fun ClickableWidget.setDimensions(width: Int, height: Int) = this.method_55445(w
 /**
  * method_47402
  */
-fun ClickableWidget.setTooltipDelay(tooltipDelay: Duration) = this.method_47402(tooltipDelay)
+fun ClickableWidget.setTooltipDelay(tooltipDelay: Duration?) = this.method_47402(tooltipDelay)
 /**
  * method_25369
  */
@@ -40,7 +40,7 @@ fun ClickableWidget.setHeight(height: Int) = this.method_53533(height)
 /**
  * method_25354
  */
-fun ClickableWidget.playDownSound(soundManager: SoundManager) = this.method_25354(soundManager)
+fun ClickableWidget.playDownSound(soundManager: SoundManager?) = this.method_25354(soundManager)
 /**
  * method_49606
  */
@@ -56,7 +56,7 @@ fun ClickableWidget.setDimensionsAndPosition(width: Int, height: Int, x: Int, y:
 /**
  * method_47400
  */
-fun ClickableWidget.setTooltip(tooltip: Tooltip) = this.method_47400(tooltip)
+fun ClickableWidget.setTooltip(tooltip: Tooltip?) = this.method_47400(tooltip)
 /**
  * method_25358
  */
@@ -72,7 +72,7 @@ fun ClickableWidget.getTooltip() = this.method_51254()
 /**
  * method_25355
  */
-fun ClickableWidget.setMessage(message: Text) = this.method_25355(message)
+fun ClickableWidget.setMessage(message: Text?) = this.method_25355(message)
 /**
  * method_25367
  */

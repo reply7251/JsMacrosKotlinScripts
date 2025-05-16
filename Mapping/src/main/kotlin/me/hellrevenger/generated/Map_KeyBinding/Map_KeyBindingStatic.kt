@@ -41,15 +41,15 @@ object KeyBindingKt {
     /**
      * method_1419
      */
-    fun getLocalizedName(id: String) = KeyBinding.method_1419(id)
+    fun getLocalizedName(id: String?) = KeyBinding.method_1419(id)
     /**
      * method_1420
      */
-    fun onKeyPressed(key: net.minecraft.class_3675.class_306) = KeyBinding.method_1420(key)
+    fun onKeyPressed(key: net.minecraft.class_3675.class_306?) = KeyBinding.method_1420(key)
     /**
      * method_65807
      */
-    fun byId(id: String) = KeyBinding.method_65807(id)
+    fun byId(id: String?) = KeyBinding.method_65807(id)
     /**
      * method_1424
      */
@@ -65,5 +65,5 @@ object KeyBindingKt {
     /**
      * method_1416
      */
-    fun setKeyPressed(key: net.minecraft.class_3675.class_306, pressed: Boolean) = KeyBinding.method_1416(key, pressed)
+    fun setKeyPressed(key: net.minecraft.class_3675.class_306?, pressed: Boolean) = KeyBinding.method_1416(key, pressed)
 }

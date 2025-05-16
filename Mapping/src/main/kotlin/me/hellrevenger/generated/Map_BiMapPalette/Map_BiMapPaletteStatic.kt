@@ -5,5 +5,5 @@ object BiMapPaletteKt {
     /**
      * method_38287
      */
-    fun <T, A>create(bits: Int, idList: IndexedIterable<A>, listener: PaletteResizeListener<A>, entries: MutableList<A>) = BiMapPalette.method_38287<A>(bits, idList, listener, entries)
+    fun <T, A>create(bits: Int, idList: IndexedIterable<A>?, listener: PaletteResizeListener<A>?, entries: MutableList<A>?) = BiMapPalette.method_38287<A>(bits, idList, listener, entries)
 }

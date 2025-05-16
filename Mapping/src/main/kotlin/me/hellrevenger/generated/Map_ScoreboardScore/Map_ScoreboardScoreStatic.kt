@@ -5,5 +5,5 @@ object ScoreboardScoreKt {
     /**
      * method_55403
      */
-    fun fromNbt(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = ScoreboardScore.method_55403(nbt, registries)
+    fun fromNbt(nbt: NbtCompound?, registries: net.minecraft.class_7225.class_7874?) = ScoreboardScore.method_55403(nbt, registries)
 }

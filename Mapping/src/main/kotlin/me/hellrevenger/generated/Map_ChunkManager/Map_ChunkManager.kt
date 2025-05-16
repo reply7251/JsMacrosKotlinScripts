@@ -24,7 +24,7 @@ fun ChunkManager.getDebugString() = this.method_12122()
 /**
  * method_12124
  */
-fun ChunkManager.setChunkForced(pos: ChunkPos, forced: Boolean) = this.method_12124(pos, forced)
+fun ChunkManager.setChunkForced(pos: ChunkPos?, forced: Boolean) = this.method_12124(pos, forced)
 /**
  * method_21730
  */
@@ -36,7 +36,7 @@ fun ChunkManager.setMobSpawnOptions(spawnMonsters: Boolean) = this.method_12128(
 /**
  * method_12121
  */
-fun ChunkManager.getChunk(x: Int, z: Int, leastStatus: ChunkStatus, create: Boolean) = this.method_12121(x, z, leastStatus, create)
+fun ChunkManager.getChunk(x: Int, z: Int, leastStatus: ChunkStatus?, create: Boolean) = this.method_12121(x, z, leastStatus, create)
 /**
  * method_12123
  */
@@ -44,4 +44,4 @@ fun ChunkManager.isChunkLoaded(x: Int, z: Int) = this.method_12123(x, z)
 /**
  * method_12127
  */
-fun ChunkManager.tick(shouldKeepTicking: BooleanSupplier, tickChunks: Boolean) = this.method_12127(shouldKeepTicking, tickChunks)
+fun ChunkManager.tick(shouldKeepTicking: BooleanSupplier?, tickChunks: Boolean) = this.method_12127(shouldKeepTicking, tickChunks)

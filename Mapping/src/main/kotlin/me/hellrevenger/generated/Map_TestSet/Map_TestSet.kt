@@ -16,7 +16,7 @@ fun TestSet.getFailedRequiredTestCount() = this.method_22229()
 /**
  * method_29407
  */
-fun TestSet.addListener(onFailed: Consumer<GameTestState>) = this.method_29407(onFailed)
+fun TestSet.addListener(onFailed: Consumer<GameTestState>?) = this.method_29407(onFailed)
 /**
  * method_36104
  */
@@ -32,7 +32,7 @@ fun TestSet.getResultString() = this.method_22240()
 /**
  * method_56243
  */
-fun TestSet.remove(state: GameTestState) = this.method_56243(state)
+fun TestSet.remove(state: GameTestState?) = this.method_56243(state)
 /**
  * method_22234
  */
@@ -52,8 +52,8 @@ fun TestSet.isDone() = this.method_22239()
 /**
  * method_22230
  */
-fun TestSet.add(test: GameTestState) = this.method_22230(test)
+fun TestSet.add(test: GameTestState?) = this.method_22230(test)
 /**
  * method_22231
  */
-fun TestSet.addListener(listener: TestListener) = this.method_22231(listener)
+fun TestSet.addListener(listener: TestListener?) = this.method_22231(listener)

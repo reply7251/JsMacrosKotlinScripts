@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_3530
  */
-fun MultipartModelComponent.getPredicate(stateFactory: StateManager<Block, BlockState>) = this.method_3530(stateFactory)
+fun MultipartModelComponent.getPredicate(stateFactory: StateManager<Block, BlockState>?) = this.method_3530(stateFactory)
 /**
  * method_3529
  */

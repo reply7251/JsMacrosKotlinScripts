@@ -21,13 +21,13 @@ object ItemRendererKt {
     /**
      * method_62476
      */
-    fun renderItem(transformationMode: ModelTransformationMode, matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int, overlay: Int, tints: IntArray, model: BakedModel, layer: RenderLayer, glint: net.minecraft.class_10444.class_10445) = ItemRenderer.method_62476(transformationMode, matrices, vertexConsumers, light, overlay, tints, model, layer, glint)
+    fun renderItem(transformationMode: ModelTransformationMode?, matrices: MatrixStack?, vertexConsumers: VertexConsumerProvider?, light: Int, overlay: Int, tints: IntArray?, model: BakedModel?, layer: RenderLayer?, glint: net.minecraft.class_10444.class_10445?) = ItemRenderer.method_62476(transformationMode, matrices, vertexConsumers, light, overlay, tints, model, layer, glint)
     /**
      * method_27952
      */
-    fun getArmorGlintConsumer(provider: VertexConsumerProvider, layer: RenderLayer, glint: Boolean) = ItemRenderer.method_27952(provider, layer, glint)
+    fun getArmorGlintConsumer(provider: VertexConsumerProvider?, layer: RenderLayer?, glint: Boolean) = ItemRenderer.method_27952(provider, layer, glint)
     /**
      * method_23181
      */
-    fun getItemGlintConsumer(vertexConsumers: VertexConsumerProvider, layer: RenderLayer, solid: Boolean, glint: Boolean) = ItemRenderer.method_23181(vertexConsumers, layer, solid, glint)
+    fun getItemGlintConsumer(vertexConsumers: VertexConsumerProvider?, layer: RenderLayer?, solid: Boolean, glint: Boolean) = ItemRenderer.method_23181(vertexConsumers, layer, solid, glint)
 }

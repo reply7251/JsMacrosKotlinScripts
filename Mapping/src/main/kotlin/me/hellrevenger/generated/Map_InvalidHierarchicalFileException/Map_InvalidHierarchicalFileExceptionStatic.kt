@@ -5,5 +5,5 @@ object InvalidHierarchicalFileExceptionKt {
     /**
      * method_12856
      */
-    fun wrap(cause: Exception) = InvalidHierarchicalFileException.method_12856(cause)
+    fun wrap(cause: Exception?) = InvalidHierarchicalFileException.method_12856(cause)
 }

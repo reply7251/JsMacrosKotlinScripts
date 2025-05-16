@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11279
  */
-fun BlockBreakingProgressS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11279(arg0)
+fun BlockBreakingProgressS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11279(arg0)
 /**
  * method_11280
  */

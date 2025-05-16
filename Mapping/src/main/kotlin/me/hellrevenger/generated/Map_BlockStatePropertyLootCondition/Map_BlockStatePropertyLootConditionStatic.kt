@@ -5,5 +5,5 @@ object BlockStatePropertyLootConditionKt {
     /**
      * method_900
      */
-    fun builder(block: Block) = BlockStatePropertyLootCondition.method_900(block)
+    fun builder(block: Block?) = BlockStatePropertyLootCondition.method_900(block)
 }

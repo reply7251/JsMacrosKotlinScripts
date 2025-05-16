@@ -29,11 +29,11 @@ object ItemKt {
     /**
      * method_7880
      */
-    fun getRawId(item: Item) = Item.method_7880(item)
+    fun getRawId(item: Item?) = Item.method_7880(item)
     /**
      * method_7867
      */
-    fun fromBlock(block: Block) = Item.method_7867(block)
+    fun fromBlock(block: Block?) = Item.method_7867(block)
     /**
      * method_7875
      */

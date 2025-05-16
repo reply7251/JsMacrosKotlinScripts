@@ -16,4 +16,4 @@ fun TitleFadeS2CPacket.getFadeInTicks() = this.method_34194()
 /**
  * method_34193
  */
-fun TitleFadeS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34193(arg0)
+fun TitleFadeS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_34193(arg0)

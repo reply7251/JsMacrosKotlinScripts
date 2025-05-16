@@ -12,7 +12,7 @@ fun VehicleMoveS2CPacket.pitch() = this.comp_3349()
 /**
  * method_11672
  */
-fun VehicleMoveS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11672(arg0)
+fun VehicleMoveS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11672(arg0)
 /**
  * comp_3347
  */

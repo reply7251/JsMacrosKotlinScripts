@@ -17,5 +17,5 @@ object FenceGateBlockKt {
     /**
      * method_16703
      */
-    fun canWallConnect(state: BlockState, side: Direction) = FenceGateBlock.method_16703(state, side)
+    fun canWallConnect(state: BlockState?, side: Direction?) = FenceGateBlock.method_16703(state, side)
 }

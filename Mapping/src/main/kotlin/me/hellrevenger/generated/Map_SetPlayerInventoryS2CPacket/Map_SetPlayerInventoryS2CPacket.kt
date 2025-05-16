@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_61217
  */
-fun SetPlayerInventoryS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_61217(arg0)
+fun SetPlayerInventoryS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_61217(arg0)
 /**
  * comp_2891
  */

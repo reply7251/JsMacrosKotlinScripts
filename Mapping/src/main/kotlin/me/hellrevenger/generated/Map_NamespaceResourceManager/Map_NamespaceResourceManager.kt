@@ -8,12 +8,12 @@ val NamespaceResourceManager.type by alias(NamespaceResourceManager::field_14284
 /**
  * method_41261
  */
-fun NamespaceResourceManager.addPack(id: String, filter: Predicate<Identifier>) = this.method_41261(id, filter)
+fun NamespaceResourceManager.addPack(id: String?, filter: Predicate<Identifier>?) = this.method_41261(id, filter)
 /**
  * method_24233
  */
-fun NamespaceResourceManager.addPack(pack: ResourcePack) = this.method_24233(pack)
+fun NamespaceResourceManager.addPack(pack: ResourcePack?) = this.method_24233(pack)
 /**
  * method_41256
  */
-fun NamespaceResourceManager.addPack(pack: ResourcePack, filter: Predicate<Identifier>) = this.method_41256(pack, filter)
+fun NamespaceResourceManager.addPack(pack: ResourcePack?, filter: Predicate<Identifier>?) = this.method_41256(pack, filter)

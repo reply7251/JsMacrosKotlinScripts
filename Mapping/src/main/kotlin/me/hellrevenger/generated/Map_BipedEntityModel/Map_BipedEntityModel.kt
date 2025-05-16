@@ -32,7 +32,7 @@ val <T>BipedEntityModel<T>.rightLeg where T: BipedEntityRenderState by alias(Bip
 /**
  * method_64254
  */
-fun <T>BipedEntityModel<T>.copyTransforms(model: BipedEntityModel<T>) where T: BipedEntityRenderState = this.method_64254(model)
+fun <T>BipedEntityModel<T>.copyTransforms(model: BipedEntityModel<T>?) where T: BipedEntityRenderState = this.method_64254(model)
 /**
  * method_17087
  */

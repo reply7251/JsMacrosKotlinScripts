@@ -5,7 +5,7 @@ object IdentifierArgumentTypeKt {
     /**
      * method_9443
      */
-    fun getIdentifier(context: CommandContext<ServerCommandSource>, name: String) = IdentifierArgumentType.method_9443(context, name)
+    fun getIdentifier(context: CommandContext<ServerCommandSource>?, name: String?) = IdentifierArgumentType.method_9443(context, name)
     /**
      * method_9441
      */

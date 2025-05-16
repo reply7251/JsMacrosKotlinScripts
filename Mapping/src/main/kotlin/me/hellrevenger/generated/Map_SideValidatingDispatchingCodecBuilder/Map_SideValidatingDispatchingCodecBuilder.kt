@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_56446
  */
-fun <B, L, T>SideValidatingDispatchingCodecBuilder<B, L>.add(id: PacketType<T>, codec: PacketCodec<in B, T>) where B: ByteBuf, L: PacketListener, T: Packet<in L> = this.method_56446<T>(id, codec)
+fun <B, L, T>SideValidatingDispatchingCodecBuilder<B, L>.add(id: PacketType<T>?, codec: PacketCodec<in B, T>?) where B: ByteBuf, L: PacketListener, T: Packet<in L> = this.method_56446<T>(id, codec)
 /**
  * method_56445
  */

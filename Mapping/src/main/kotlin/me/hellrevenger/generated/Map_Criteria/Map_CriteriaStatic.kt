@@ -229,9 +229,9 @@ object CriteriaKt {
     /**
      * method_54933
      */
-    fun getDefault(registry: Registry<Criterion<*>>) = Criteria.method_54933(registry)
+    fun getDefault(registry: Registry<Criterion<*>>?) = Criteria.method_54933(registry)
     /**
      * method_767
      */
-    fun <T>register(id: String, criterion: T) where T: Criterion<*> = Criteria.method_767<T>(id, criterion)
+    fun <T>register(id: String?, criterion: T) where T: Criterion<*> = Criteria.method_767<T>(id, criterion)
 }

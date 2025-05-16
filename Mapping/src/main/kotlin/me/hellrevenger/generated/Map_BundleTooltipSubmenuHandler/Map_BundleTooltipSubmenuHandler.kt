@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_61975
  */
-fun BundleTooltipSubmenuHandler.reset(item: ItemStack, slotId: Int) = this.method_61975(item, slotId)
+fun BundleTooltipSubmenuHandler.reset(item: ItemStack?, slotId: Int) = this.method_61975(item, slotId)

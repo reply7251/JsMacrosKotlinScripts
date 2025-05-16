@@ -5,5 +5,5 @@ object EnchantmentLevelLootNumberProviderKt {
     /**
      * method_60313
      */
-    fun create(amount: EnchantmentLevelBasedValue) = EnchantmentLevelLootNumberProvider.method_60313(amount)
+    fun create(amount: EnchantmentLevelBasedValue?) = EnchantmentLevelLootNumberProvider.method_60313(amount)
 }

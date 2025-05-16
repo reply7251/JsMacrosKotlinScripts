@@ -5,9 +5,9 @@ object NamespaceResourceManagerKt {
     /**
      * method_14473
      */
-    fun getMetadataPath(id: Identifier) = NamespaceResourceManager.method_14473(id)
+    fun getMetadataPath(id: Identifier?) = NamespaceResourceManager.method_14473(id)
     /**
      * method_45297
      */
-    fun loadMetadata(supplier: InputSupplier<InputStream>) = NamespaceResourceManager.method_45297(supplier)
+    fun loadMetadata(supplier: InputSupplier<InputStream>?) = NamespaceResourceManager.method_45297(supplier)
 }

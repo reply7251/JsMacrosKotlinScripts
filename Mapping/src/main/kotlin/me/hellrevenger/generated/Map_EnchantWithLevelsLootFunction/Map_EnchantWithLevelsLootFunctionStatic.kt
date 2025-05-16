@@ -5,5 +5,5 @@ object EnchantWithLevelsLootFunctionKt {
     /**
      * method_481
      */
-    fun builder(registries: net.minecraft.class_7225.class_7874, levels: LootNumberProvider) = EnchantWithLevelsLootFunction.method_481(registries, levels)
+    fun builder(registries: net.minecraft.class_7225.class_7874?, levels: LootNumberProvider?) = EnchantWithLevelsLootFunction.method_481(registries, levels)
 }

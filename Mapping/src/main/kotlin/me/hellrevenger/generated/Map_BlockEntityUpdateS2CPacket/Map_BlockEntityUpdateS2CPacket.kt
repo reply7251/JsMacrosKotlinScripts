@@ -12,7 +12,7 @@ fun BlockEntityUpdateS2CPacket.getNbt() = this.method_11290()
 /**
  * method_11292
  */
-fun BlockEntityUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11292(arg0)
+fun BlockEntityUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11292(arg0)
 /**
  * method_11291
  */

@@ -9,9 +9,9 @@ object WallTorchBlockKt {
     /**
      * method_10841
      */
-    fun getBoundingShape(state: BlockState) = WallTorchBlock.method_10841(state)
+    fun getBoundingShape(state: BlockState?) = WallTorchBlock.method_10841(state)
     /**
      * method_56118
      */
-    fun canPlaceAt(world: WorldView, pos: BlockPos, facing: Direction) = WallTorchBlock.method_56118(world, pos, facing)
+    fun canPlaceAt(world: WorldView?, pos: BlockPos?, facing: Direction?) = WallTorchBlock.method_56118(world, pos, facing)
 }

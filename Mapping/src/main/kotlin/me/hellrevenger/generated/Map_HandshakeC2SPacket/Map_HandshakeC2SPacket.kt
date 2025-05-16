@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12575
  */
-fun HandshakeC2SPacket.apply(arg0: ServerHandshakePacketListener) = this.method_12575(arg0)
+fun HandshakeC2SPacket.apply(arg0: ServerHandshakePacketListener?) = this.method_12575(arg0)
 /**
  * comp_1564
  */

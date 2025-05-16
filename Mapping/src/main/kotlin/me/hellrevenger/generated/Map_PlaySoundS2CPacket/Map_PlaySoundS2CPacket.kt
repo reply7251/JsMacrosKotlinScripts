@@ -36,4 +36,4 @@ fun PlaySoundS2CPacket.getY() = this.method_11889()
 /**
  * method_11895
  */
-fun PlaySoundS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11895(arg0)
+fun PlaySoundS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11895(arg0)

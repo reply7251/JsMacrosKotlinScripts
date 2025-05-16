@@ -21,7 +21,7 @@ object AxolotlEntityKt {
     /**
      * method_38987
      */
-    fun canSpawn(type: EntityType<out LivingEntity>, world: ServerWorldAccess, reason: SpawnReason, pos: BlockPos, random: Random) = AxolotlEntity.method_38987(type, world, reason, pos, random)
+    fun canSpawn(type: EntityType<out LivingEntity>?, world: ServerWorldAccess?, reason: SpawnReason?, pos: BlockPos?, random: Random?) = AxolotlEntity.method_38987(type, world, reason, pos, random)
     /**
      * method_33227
      */
@@ -29,5 +29,5 @@ object AxolotlEntityKt {
     /**
      * method_35175
      */
-    fun appreciatePlayer(world: ServerWorld, axolotl: AxolotlEntity, target: LivingEntity) = AxolotlEntity.method_35175(world, axolotl, target)
+    fun appreciatePlayer(world: ServerWorld?, axolotl: AxolotlEntity?, target: LivingEntity?) = AxolotlEntity.method_35175(world, axolotl, target)
 }

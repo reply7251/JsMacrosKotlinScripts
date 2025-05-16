@@ -5,7 +5,7 @@ object RotationPropertyHelperKt {
     /**
      * method_45481
      */
-    fun fromDirection(direction: Direction) = RotationPropertyHelper.method_45481(direction)
+    fun fromDirection(direction: Direction?) = RotationPropertyHelper.method_45481(direction)
     /**
      * method_45478
      */

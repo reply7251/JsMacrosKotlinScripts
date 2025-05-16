@@ -20,7 +20,7 @@ fun PlayerAbilitiesS2CPacket.isFlying() = this.method_11698()
 /**
  * method_11697
  */
-fun PlayerAbilitiesS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11697(arg0)
+fun PlayerAbilitiesS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11697(arg0)
 /**
  * method_11691
  */

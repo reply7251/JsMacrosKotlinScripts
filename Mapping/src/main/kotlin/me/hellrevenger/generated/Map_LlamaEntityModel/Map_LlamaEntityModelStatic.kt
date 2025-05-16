@@ -9,5 +9,5 @@ object LlamaEntityModelKt {
     /**
      * method_32018
      */
-    fun getTexturedModelData(dilation: Dilation) = LlamaEntityModel.method_32018(dilation)
+    fun getTexturedModelData(dilation: Dilation?) = LlamaEntityModel.method_32018(dilation)
 }

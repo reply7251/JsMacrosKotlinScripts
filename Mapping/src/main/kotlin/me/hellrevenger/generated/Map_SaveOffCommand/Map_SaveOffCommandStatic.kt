@@ -5,5 +5,5 @@ object SaveOffCommandKt {
     /**
      * method_13556
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = SaveOffCommand.method_13556(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = SaveOffCommand.method_13556(dispatcher)
 }

@@ -5,5 +5,5 @@ object VanillaAdvancementProvidersKt {
     /**
      * method_45974
      */
-    fun createVanillaProvider(output: DataOutput, registriesFuture: CompletableFuture<net.minecraft.class_7225.class_7874>) = VanillaAdvancementProviders.method_45974(output, registriesFuture)
+    fun createVanillaProvider(output: DataOutput?, registriesFuture: CompletableFuture<net.minecraft.class_7225.class_7874>?) = VanillaAdvancementProviders.method_45974(output, registriesFuture)
 }

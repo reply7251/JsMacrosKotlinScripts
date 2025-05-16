@@ -77,5 +77,5 @@ object MiscConfiguredFeaturesKt {
     /**
      * method_46853
      */
-    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>) = MiscConfiguredFeatures.method_46853(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>?) = MiscConfiguredFeatures.method_46853(featureRegisterable)
 }

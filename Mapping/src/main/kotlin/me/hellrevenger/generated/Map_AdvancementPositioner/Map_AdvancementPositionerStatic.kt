@@ -5,5 +5,5 @@ object AdvancementPositionerKt {
     /**
      * method_852
      */
-    fun arrangeForTree(root: PlacedAdvancement) = AdvancementPositioner.method_852(root)
+    fun arrangeForTree(root: PlacedAdvancement?) = AdvancementPositioner.method_852(root)
 }

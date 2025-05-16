@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_56553
  */
-fun SpawnLocation.adjustPosition(world: WorldView, pos: BlockPos) = this.method_56553(world, pos)
+fun SpawnLocation.adjustPosition(world: WorldView?, pos: BlockPos?) = this.method_56553(world, pos)

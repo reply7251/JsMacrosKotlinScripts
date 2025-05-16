@@ -21,5 +21,5 @@ object StairsBlockKt {
     /**
      * method_10676
      */
-    fun isStairs(state: BlockState) = StairsBlock.method_10676(state)
+    fun isStairs(state: BlockState?) = StairsBlock.method_10676(state)
 }

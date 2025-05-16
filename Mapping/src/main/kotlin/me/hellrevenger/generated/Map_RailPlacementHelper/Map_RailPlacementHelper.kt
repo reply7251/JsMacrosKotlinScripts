@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_10459
  */
-fun RailPlacementHelper.updateBlockState(powered: Boolean, forceUpdate: Boolean, railShape: RailShape) = this.method_10459(powered, forceUpdate, railShape)
+fun RailPlacementHelper.updateBlockState(powered: Boolean, forceUpdate: Boolean, railShape: RailShape?) = this.method_10459(powered, forceUpdate, railShape)
 /**
  * method_10462
  */

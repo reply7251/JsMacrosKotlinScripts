@@ -16,7 +16,7 @@ fun TntEntity.getFuse() = this.method_6969()
 /**
  * method_54455
  */
-fun TntEntity.setBlockState(state: BlockState) = this.method_54455(state)
+fun TntEntity.setBlockState(state: BlockState?) = this.method_54455(state)
 /**
  * method_6970
  */

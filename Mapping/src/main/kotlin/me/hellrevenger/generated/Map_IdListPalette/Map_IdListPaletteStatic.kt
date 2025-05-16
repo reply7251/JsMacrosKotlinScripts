@@ -5,5 +5,5 @@ object IdListPaletteKt {
     /**
      * method_38286
      */
-    fun <T, A>create(bits: Int, idList: IndexedIterable<A>, listener: PaletteResizeListener<A>, arg3: MutableList<A>) = IdListPalette.method_38286<A>(bits, idList, listener, arg3)
+    fun <T, A>create(bits: Int, idList: IndexedIterable<A>?, listener: PaletteResizeListener<A>?, arg3: MutableList<A>?) = IdListPalette.method_38286<A>(bits, idList, listener, arg3)
 }

@@ -8,4 +8,4 @@ fun <C, I>Spline<C, I>.getDebugString() where I: ToFloatFunction<C> = this.metho
 /**
  * method_41187
  */
-fun <C, I>Spline<C, I>.apply(visitor: net.minecraft.class_6492.class_7073<I>) where I: ToFloatFunction<C> = this.method_41187(visitor)
+fun <C, I>Spline<C, I>.apply(visitor: net.minecraft.class_6492.class_7073<I>?) where I: ToFloatFunction<C> = this.method_41187(visitor)

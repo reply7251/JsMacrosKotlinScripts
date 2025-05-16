@@ -9,5 +9,5 @@ object ClampedNormalIntProviderKt {
     /**
      * method_39159
      */
-    fun next(random: Random, mean: Float, deviation: Float, min: Float, max: Float) = ClampedNormalIntProvider.method_39159(random, mean, deviation, min, max)
+    fun next(random: Random?, mean: Float, deviation: Float, min: Float, max: Float) = ClampedNormalIntProvider.method_39159(random, mean, deviation, min, max)
 }

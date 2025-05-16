@@ -29,5 +29,5 @@ object CubeFaceKt {
     /**
      * method_3163
      */
-    fun getFace(direction: Direction) = CubeFace.method_3163(direction)
+    fun getFace(direction: Direction?) = CubeFace.method_3163(direction)
 }

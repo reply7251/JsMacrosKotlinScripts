@@ -8,11 +8,11 @@ fun <M, S>ChunkLightProvider<M, S>.getStatus(sectionPos: Long) where M: ChunkToN
 /**
  * method_20599
  */
-fun <M, S>ChunkLightProvider<M, S>.setRetainColumn(pos: ChunkPos, retainData: Boolean) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_20599(pos, retainData)
+fun <M, S>ChunkLightProvider<M, S>.setRetainColumn(pos: ChunkPos?, retainData: Boolean) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_20599(pos, retainData)
 /**
  * method_15515
  */
-fun <M, S>ChunkLightProvider<M, S>.enqueueSectionData(sectionPos: Long, arg1: ChunkNibbleArray) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_15515(sectionPos, arg1)
+fun <M, S>ChunkLightProvider<M, S>.enqueueSectionData(sectionPos: Long, arg1: ChunkNibbleArray?) where M: ChunkToNibbleArrayMap<M>, S: LightStorage<M> = this.method_15515(sectionPos, arg1)
 /**
  * method_22875
  */

@@ -20,7 +20,7 @@ fun <T>PalettedContainer<T>.unlock() = this.method_12335()
 /**
  * method_12326
  */
-fun <T>PalettedContainer<T>.readPacket(buf: PacketByteBuf) = this.method_12326(buf)
+fun <T>PalettedContainer<T>.readPacket(buf: PacketByteBuf?) = this.method_12326(buf)
 /**
  * method_12328
  */

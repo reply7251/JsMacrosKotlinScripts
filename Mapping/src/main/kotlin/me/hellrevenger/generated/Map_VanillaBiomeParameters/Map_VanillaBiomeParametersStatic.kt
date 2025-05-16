@@ -17,5 +17,5 @@ object VanillaBiomeParametersKt {
     /**
      * method_43718
      */
-    fun inDeepDarkParameters(erosion: DensityFunction, depth: DensityFunction, pos: net.minecraft.class_6910.class_6912) = VanillaBiomeParameters.method_43718(erosion, depth, pos)
+    fun inDeepDarkParameters(erosion: DensityFunction?, depth: DensityFunction?, pos: net.minecraft.class_6910.class_6912?) = VanillaBiomeParameters.method_43718(erosion, depth, pos)
 }

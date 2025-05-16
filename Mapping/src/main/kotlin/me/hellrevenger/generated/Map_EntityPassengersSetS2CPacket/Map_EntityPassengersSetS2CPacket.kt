@@ -8,7 +8,7 @@ fun EntityPassengersSetS2CPacket.getEntityId() = this.method_11841()
 /**
  * method_11842
  */
-fun EntityPassengersSetS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11842(arg0)
+fun EntityPassengersSetS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11842(arg0)
 /**
  * method_11840
  */

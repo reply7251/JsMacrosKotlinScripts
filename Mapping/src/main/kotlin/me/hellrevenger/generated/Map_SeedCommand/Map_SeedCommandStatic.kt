@@ -5,5 +5,5 @@ object SeedCommandKt {
     /**
      * method_13616
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, dedicated: Boolean) = SeedCommand.method_13616(dispatcher, dedicated)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, dedicated: Boolean) = SeedCommand.method_13616(dispatcher, dedicated)
 }

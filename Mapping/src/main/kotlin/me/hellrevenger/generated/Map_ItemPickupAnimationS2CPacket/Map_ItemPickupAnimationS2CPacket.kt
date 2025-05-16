@@ -16,4 +16,4 @@ fun ItemPickupAnimationS2CPacket.getEntityId() = this.method_11915()
 /**
  * method_11914
  */
-fun ItemPickupAnimationS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11914(arg0)
+fun ItemPickupAnimationS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11914(arg0)

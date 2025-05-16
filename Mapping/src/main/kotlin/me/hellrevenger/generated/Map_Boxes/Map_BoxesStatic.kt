@@ -5,5 +5,5 @@ object BoxesKt {
     /**
      * method_23362
      */
-    fun stretch(box: Box, direction: Direction, length: Double) = Boxes.method_23362(box, direction, length)
+    fun stretch(box: Box?, direction: Direction?, length: Double) = Boxes.method_23362(box, direction, length)
 }

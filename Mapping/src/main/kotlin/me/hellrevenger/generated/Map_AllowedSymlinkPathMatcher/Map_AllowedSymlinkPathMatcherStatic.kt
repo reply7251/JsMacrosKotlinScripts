@@ -5,5 +5,5 @@ object AllowedSymlinkPathMatcherKt {
     /**
      * method_52247
      */
-    fun fromReader(reader: BufferedReader) = AllowedSymlinkPathMatcher.method_52247(reader)
+    fun fromReader(reader: BufferedReader?) = AllowedSymlinkPathMatcher.method_52247(reader)
 }

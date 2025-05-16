@@ -28,11 +28,11 @@ fun Element.getFocusedPath() = this.method_48218()
 /**
  * method_65515
  */
-fun Element.getBorder(direction: NavigationDirection) = this.method_65515(direction)
+fun Element.getBorder(direction: NavigationDirection?) = this.method_65515(direction)
 /**
  * method_48205
  */
-fun Element.getNavigationPath(navigation: GuiNavigation) = this.method_48205(navigation)
+fun Element.getNavigationPath(navigation: GuiNavigation?) = this.method_48205(navigation)
 /**
  * method_25405
  */

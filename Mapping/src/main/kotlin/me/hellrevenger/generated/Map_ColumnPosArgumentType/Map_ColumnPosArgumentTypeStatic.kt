@@ -13,5 +13,5 @@ object ColumnPosArgumentTypeKt {
     /**
      * method_9702
      */
-    fun getColumnPos(context: CommandContext<ServerCommandSource>, name: String) = ColumnPosArgumentType.method_9702(context, name)
+    fun getColumnPos(context: CommandContext<ServerCommandSource>?, name: String?) = ColumnPosArgumentType.method_9702(context, name)
 }

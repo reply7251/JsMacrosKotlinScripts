@@ -5,7 +5,7 @@ object BlockStateVariantKt {
     /**
      * method_25827
      */
-    fun union(first: BlockStateVariant, second: BlockStateVariant) = BlockStateVariant.method_25827(first, second)
+    fun union(first: BlockStateVariant?, second: BlockStateVariant?) = BlockStateVariant.method_25827(first, second)
     /**
      * method_25824
      */
@@ -13,5 +13,5 @@ object BlockStateVariantKt {
     /**
      * method_25829
      */
-    fun toJson(variants: MutableList<BlockStateVariant>) = BlockStateVariant.method_25829(variants)
+    fun toJson(variants: MutableList<BlockStateVariant>?) = BlockStateVariant.method_25829(variants)
 }

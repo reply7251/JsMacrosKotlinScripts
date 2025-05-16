@@ -5,5 +5,5 @@ object ChunkLoaderKt {
     /**
      * method_60426
      */
-    fun create(chunkLoadingManager: ChunkLoadingManager, targetStatus: ChunkStatus, pos: ChunkPos) = ChunkLoader.method_60426(chunkLoadingManager, targetStatus, pos)
+    fun create(chunkLoadingManager: ChunkLoadingManager?, targetStatus: ChunkStatus?, pos: ChunkPos?) = ChunkLoader.method_60426(chunkLoadingManager, targetStatus, pos)
 }

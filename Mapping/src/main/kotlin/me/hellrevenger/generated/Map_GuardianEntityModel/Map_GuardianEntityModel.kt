@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17083
  */
-fun GuardianEntityModel.setAngles(arg0: GuardianEntityRenderState) = this.method_17083(arg0)
+fun GuardianEntityModel.setAngles(arg0: GuardianEntityRenderState?) = this.method_17083(arg0)

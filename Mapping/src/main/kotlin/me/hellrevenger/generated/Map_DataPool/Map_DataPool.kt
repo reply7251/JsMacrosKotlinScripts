@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_34973
  */
-fun <E>DataPool<E>.getDataOrEmpty(random: Random) = this.method_34973(random)
+fun <E>DataPool<E>.getDataOrEmpty(random: Random?) = this.method_34973(random)

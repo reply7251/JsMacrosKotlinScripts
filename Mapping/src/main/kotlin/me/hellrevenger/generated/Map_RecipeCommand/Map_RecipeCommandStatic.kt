@@ -5,5 +5,5 @@ object RecipeCommandKt {
     /**
      * method_13517
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = RecipeCommand.method_13517(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = RecipeCommand.method_13517(dispatcher)
 }

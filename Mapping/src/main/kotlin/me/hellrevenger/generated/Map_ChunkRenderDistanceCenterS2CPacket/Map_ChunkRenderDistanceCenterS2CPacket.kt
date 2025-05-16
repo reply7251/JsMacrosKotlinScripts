@@ -12,4 +12,4 @@ fun ChunkRenderDistanceCenterS2CPacket.getChunkX() = this.method_20322()
 /**
  * method_20321
  */
-fun ChunkRenderDistanceCenterS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_20321(arg0)
+fun ChunkRenderDistanceCenterS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_20321(arg0)

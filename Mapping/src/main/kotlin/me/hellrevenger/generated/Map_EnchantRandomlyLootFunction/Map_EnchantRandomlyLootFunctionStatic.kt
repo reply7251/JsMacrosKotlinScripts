@@ -5,7 +5,7 @@ object EnchantRandomlyLootFunctionKt {
     /**
      * method_489
      */
-    fun builder(registries: net.minecraft.class_7225.class_7874) = EnchantRandomlyLootFunction.method_489(registries)
+    fun builder(registries: net.minecraft.class_7225.class_7874?) = EnchantRandomlyLootFunction.method_489(registries)
     /**
      * method_35520
      */

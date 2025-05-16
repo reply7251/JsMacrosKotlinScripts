@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_59673
  */
-fun BundleContentsPredicate.test(arg0: ItemStack, arg1: BundleContentsComponent) = this.method_59673(arg0, arg1)
+fun BundleContentsPredicate.test(arg0: ItemStack?, arg1: BundleContentsComponent?) = this.method_59673(arg0, arg1)
 /**
  * comp_2630
  */

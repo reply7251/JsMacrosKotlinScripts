@@ -12,7 +12,7 @@ fun TelemetryEventType.getId() = this.method_47720()
 /**
  * method_47722
  */
-fun <T>TelemetryEventType.hasProperty(property: TelemetryEventProperty<T>) = this.method_47722<T>(property)
+fun <T>TelemetryEventType.hasProperty(property: TelemetryEventProperty<T>?) = this.method_47722<T>(property)
 /**
  * method_47726
  */
@@ -24,7 +24,7 @@ fun TelemetryEventType.isOptional() = this.method_47729()
 /**
  * method_47721
  */
-fun TelemetryEventType.createEvent(session: TelemetrySession, properties: PropertyMap) = this.method_47721(session, properties)
+fun TelemetryEventType.createEvent(session: TelemetrySession?, properties: PropertyMap?) = this.method_47721(session, properties)
 /**
  * method_47728
  */

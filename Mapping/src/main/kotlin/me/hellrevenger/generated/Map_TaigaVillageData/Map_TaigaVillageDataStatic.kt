@@ -9,5 +9,5 @@ object TaigaVillageDataKt {
     /**
      * method_17038
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = TaigaVillageData.method_17038(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = TaigaVillageData.method_17038(poolRegisterable)
 }

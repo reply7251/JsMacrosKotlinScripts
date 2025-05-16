@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_1979
  */
-fun SpectatorHud.render(context: DrawContext) = this.method_1979(context)
+fun SpectatorHud.render(context: DrawContext?) = this.method_1979(context)
 /**
  * method_1978
  */
-fun SpectatorHud.renderSpectatorMenu(context: DrawContext) = this.method_1978(context)
+fun SpectatorHud.renderSpectatorMenu(context: DrawContext?) = this.method_1978(context)
 /**
  * method_1983
  */

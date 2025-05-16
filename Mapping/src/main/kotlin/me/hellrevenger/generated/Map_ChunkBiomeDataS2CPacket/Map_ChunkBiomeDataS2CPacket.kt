@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_49687
  */
-fun ChunkBiomeDataS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_49687(arg0)
+fun ChunkBiomeDataS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_49687(arg0)
 /**
  * comp_1313
  */

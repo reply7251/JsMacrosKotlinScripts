@@ -5,7 +5,7 @@ object RangedApproachTaskKt {
     /**
      * method_47098
      */
-    fun create(speed: function_Function<LivingEntity, Float>) = RangedApproachTask.method_47098(speed)
+    fun create(speed: function_Function<LivingEntity, Float>?) = RangedApproachTask.method_47098(speed)
     /**
      * method_47094
      */

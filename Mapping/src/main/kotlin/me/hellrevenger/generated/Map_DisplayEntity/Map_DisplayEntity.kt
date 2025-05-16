@@ -8,7 +8,7 @@ fun DisplayEntity.getGlowColorOverride() = this.method_48876()
 /**
  * method_48847
  */
-fun DisplayEntity.setBillboardMode(billboardMode: net.minecraft.class_8113.class_8114) = this.method_48847(billboardMode)
+fun DisplayEntity.setBillboardMode(billboardMode: net.minecraft.class_8113.class_8114?) = this.method_48847(billboardMode)
 /**
  * method_48875
  */
@@ -20,7 +20,7 @@ fun DisplayEntity.shouldRender() = this.method_61402()
 /**
  * method_48846
  */
-fun DisplayEntity.setBrightness(brightness: Brightness) = this.method_48846(brightness)
+fun DisplayEntity.setBrightness(brightness: Brightness?) = this.method_48846(brightness)
 /**
  * method_52528
  */
@@ -60,7 +60,7 @@ fun DisplayEntity.getBrightnessUnpacked() = this.method_48868()
 /**
  * method_48849
  */
-fun DisplayEntity.setTransformation(transformation: AffineTransformation) = this.method_48849(transformation)
+fun DisplayEntity.setTransformation(transformation: AffineTransformation?) = this.method_48849(transformation)
 /**
  * method_48864
  */

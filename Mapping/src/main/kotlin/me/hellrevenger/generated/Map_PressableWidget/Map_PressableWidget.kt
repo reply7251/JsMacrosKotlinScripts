@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_48589
  */
-fun PressableWidget.drawMessage(context: DrawContext, textRenderer: TextRenderer, color: Int) = this.method_48589(context, textRenderer, color)
+fun PressableWidget.drawMessage(context: DrawContext?, textRenderer: TextRenderer?, color: Int) = this.method_48589(context, textRenderer, color)
 /**
  * method_25306
  */

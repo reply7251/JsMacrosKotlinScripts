@@ -5,5 +5,5 @@ object FileIoSampleKt {
     /**
      * method_38034
      */
-    fun toStatistics(duration: Duration, samples: MutableList<FileIoSample>) = FileIoSample.method_38034(duration, samples)
+    fun toStatistics(duration: Duration?, samples: MutableList<FileIoSample>?) = FileIoSample.method_38034(duration, samples)
 }

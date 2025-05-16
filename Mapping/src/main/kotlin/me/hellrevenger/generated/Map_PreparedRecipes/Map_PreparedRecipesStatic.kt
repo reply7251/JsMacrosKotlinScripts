@@ -9,5 +9,5 @@ object PreparedRecipesKt {
     /**
      * method_64700
      */
-    fun of(recipes: Iterable<RecipeEntry<*>>) = PreparedRecipes.method_64700(recipes)
+    fun of(recipes: Iterable<RecipeEntry<*>>?) = PreparedRecipes.method_64700(recipes)
 }

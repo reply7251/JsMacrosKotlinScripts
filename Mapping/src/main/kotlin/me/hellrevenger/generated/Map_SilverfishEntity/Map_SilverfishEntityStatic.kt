@@ -9,5 +9,5 @@ object SilverfishEntityKt {
     /**
      * method_20684
      */
-    fun canSpawn(type: EntityType<SilverfishEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = SilverfishEntity.method_20684(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<SilverfishEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = SilverfishEntity.method_20684(type, world, spawnReason, pos, random)
 }

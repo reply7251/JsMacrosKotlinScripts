@@ -32,23 +32,23 @@ fun EntityRenderDispatcher.getHeldItemRenderer() = this.method_43336()
 /**
  * method_62424
  */
-fun <E>EntityRenderDispatcher.render(entity: E, x: Double, arg2: Double, y: Double, arg4: Float, z: MatrixStack, arg6: VertexConsumerProvider, tickDelta: Int) where E: Entity = this.method_62424<E>(entity, x, arg2, y, arg4, z, arg6, tickDelta)
+fun <E>EntityRenderDispatcher.render(entity: E, x: Double, arg2: Double, y: Double, arg4: Float, z: MatrixStack?, arg6: VertexConsumerProvider?, tickDelta: Int) where E: Entity = this.method_62424<E>(entity, x, arg2, y, arg4, z, arg6, tickDelta)
 /**
  * method_23168
  */
-fun EntityRenderDispatcher.getSquaredDistanceToCamera(entity: Entity) = this.method_23168(entity)
+fun EntityRenderDispatcher.getSquaredDistanceToCamera(entity: Entity?) = this.method_23168(entity)
 /**
  * method_24196
  */
-fun EntityRenderDispatcher.setRotation(rotation: Quaternionf) = this.method_24196(rotation)
+fun EntityRenderDispatcher.setRotation(rotation: Quaternionf?) = this.method_24196(rotation)
 /**
  * method_3950
  */
-fun <E>EntityRenderDispatcher.shouldRender(entity: E, frustum: Frustum, x: Double, arg3: Double, y: Double) where E: Entity = this.method_3950<E>(entity, frustum, x, arg3, y)
+fun <E>EntityRenderDispatcher.shouldRender(entity: E, frustum: Frustum?, x: Double, arg3: Double, y: Double) where E: Entity = this.method_3950<E>(entity, frustum, x, arg3, y)
 /**
  * method_3941
  */
-fun EntityRenderDispatcher.configure(world: world_World, camera: Camera, target: Entity) = this.method_3941(world, camera, target)
+fun EntityRenderDispatcher.configure(world: world_World?, camera: Camera?, target: Entity?) = this.method_3941(world, camera, target)
 /**
  * method_3958
  */
@@ -68,7 +68,7 @@ fun EntityRenderDispatcher.getSquaredDistanceToCamera(x: Double, arg1: Double, y
 /**
  * method_3944
  */
-fun EntityRenderDispatcher.setWorld(world: world_World) = this.method_3944(world)
+fun EntityRenderDispatcher.setWorld(world: world_World?) = this.method_3944(world)
 /**
  * method_24197
  */

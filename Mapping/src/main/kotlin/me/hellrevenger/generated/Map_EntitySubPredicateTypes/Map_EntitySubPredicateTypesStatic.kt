@@ -85,17 +85,17 @@ object EntitySubPredicateTypesKt {
     /**
      * method_58157
      */
-    fun getDefault(registry: Registry<MapCodec<out EntitySubPredicate>>) = EntitySubPredicateTypes.method_58157(registry)
+    fun getDefault(registry: Registry<MapCodec<out EntitySubPredicate>>?) = EntitySubPredicateTypes.method_58157(registry)
     /**
      * method_59667
      */
-    fun wolfVariant(wolfVariant: RegistryEntryList<WolfVariant>) = EntitySubPredicateTypes.method_59667(wolfVariant)
+    fun wolfVariant(wolfVariant: RegistryEntryList<WolfVariant>?) = EntitySubPredicateTypes.method_59667(wolfVariant)
     /**
      * method_58153
      */
-    fun catVariant(catVariant: RegistryEntry<CatVariant>) = EntitySubPredicateTypes.method_58153(catVariant)
+    fun catVariant(catVariant: RegistryEntry<CatVariant>?) = EntitySubPredicateTypes.method_58153(catVariant)
     /**
      * method_58154
      */
-    fun frogVariant(frogVariant: RegistryEntry<FrogVariant>) = EntitySubPredicateTypes.method_58154(frogVariant)
+    fun frogVariant(frogVariant: RegistryEntry<FrogVariant>?) = EntitySubPredicateTypes.method_58154(frogVariant)
 }

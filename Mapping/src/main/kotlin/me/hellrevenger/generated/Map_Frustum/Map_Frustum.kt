@@ -24,7 +24,7 @@ fun Frustum.getX() = this.method_62343()
 /**
  * method_62978
  */
-fun Frustum.intersectAab(box: BlockBox) = this.method_62978(box)
+fun Frustum.intersectAab(box: BlockBox?) = this.method_62978(box)
 /**
  * method_23088
  */
@@ -32,4 +32,4 @@ fun Frustum.setPosition(cameraX: Double, arg1: Double, cameraY: Double) = this.m
 /**
  * method_23093
  */
-fun Frustum.isVisible(box: Box) = this.method_23093(box)
+fun Frustum.isVisible(box: Box?) = this.method_23093(box)

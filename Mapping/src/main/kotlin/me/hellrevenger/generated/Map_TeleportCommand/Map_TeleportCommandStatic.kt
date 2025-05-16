@@ -5,5 +5,5 @@ object TeleportCommandKt {
     /**
      * method_13760
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = TeleportCommand.method_13760(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = TeleportCommand.method_13760(dispatcher)
 }

@@ -16,7 +16,7 @@ fun ModelTransformation.head() = this.comp_3372()
 /**
  * method_3503
  */
-fun ModelTransformation.getTransformation(renderMode: ModelTransformationMode) = this.method_3503(renderMode)
+fun ModelTransformation.getTransformation(renderMode: ModelTransformationMode?) = this.method_3503(renderMode)
 /**
  * comp_3368
  */

@@ -9,5 +9,5 @@ object OperationArgumentTypeKt {
     /**
      * method_9409
      */
-    fun getOperation(context: CommandContext<ServerCommandSource>, name: String) = OperationArgumentType.method_9409(context, name)
+    fun getOperation(context: CommandContext<ServerCommandSource>?, name: String?) = OperationArgumentType.method_9409(context, name)
 }

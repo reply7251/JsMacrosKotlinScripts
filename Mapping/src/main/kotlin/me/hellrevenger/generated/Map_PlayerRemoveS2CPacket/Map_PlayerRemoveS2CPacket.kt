@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_46325
  */
-fun PlayerRemoveS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_46325(arg0)
+fun PlayerRemoveS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_46325(arg0)
 /**
  * comp_1105
  */

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_55837
  */
-fun WolfArmorFeatureRenderer.render(arg0: MatrixStack, arg1: VertexConsumerProvider, arg2: Int, arg3: WolfEntityRenderState, arg4: Float, arg5: Float) = this.method_55837(arg0, arg1, arg2, arg3, arg4, arg5)
+fun WolfArmorFeatureRenderer.render(arg0: MatrixStack?, arg1: VertexConsumerProvider?, arg2: Int, arg3: WolfEntityRenderState?, arg4: Float, arg5: Float) = this.method_55837(arg0, arg1, arg2, arg3, arg4, arg5)

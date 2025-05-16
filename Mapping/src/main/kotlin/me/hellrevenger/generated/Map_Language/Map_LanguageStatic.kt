@@ -13,9 +13,9 @@ object LanguageKt {
     /**
      * method_29427
      */
-    fun setInstance(language: Language) = Language.method_29427(language)
+    fun setInstance(language: Language?) = Language.method_29427(language)
     /**
      * method_29425
      */
-    fun load(inputStream: InputStream, entryConsumer: BiConsumer<String, String>) = Language.method_29425(inputStream, entryConsumer)
+    fun load(inputStream: InputStream?, entryConsumer: BiConsumer<String, String>?) = Language.method_29425(inputStream, entryConsumer)
 }

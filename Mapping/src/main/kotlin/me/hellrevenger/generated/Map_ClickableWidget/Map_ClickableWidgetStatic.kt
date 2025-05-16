@@ -5,9 +5,9 @@ object ClickableWidgetKt {
     /**
      * method_32602
      */
-    fun getNarrationMessage(message: Text) = ClickableWidget.method_32602(message)
+    fun getNarrationMessage(message: Text?) = ClickableWidget.method_32602(message)
     /**
      * method_62888
      */
-    fun playClickSound(soundManager: SoundManager) = ClickableWidget.method_62888(soundManager)
+    fun playClickSound(soundManager: SoundManager?) = ClickableWidget.method_62888(soundManager)
 }

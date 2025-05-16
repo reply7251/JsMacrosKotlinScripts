@@ -5,5 +5,5 @@ object CreativeInventoryScreenKt {
     /**
      * method_2462
      */
-    fun onHotbarKeyPress(client: MinecraftClient, index: Int, restore: Boolean, save: Boolean) = CreativeInventoryScreen.method_2462(client, index, restore, save)
+    fun onHotbarKeyPress(client: MinecraftClient?, index: Int, restore: Boolean, save: Boolean) = CreativeInventoryScreen.method_2462(client, index, restore, save)
 }

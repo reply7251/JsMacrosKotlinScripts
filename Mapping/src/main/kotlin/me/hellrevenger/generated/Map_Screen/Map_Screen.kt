@@ -28,15 +28,15 @@ var Screen.width by alias(Screen::field_22789)
 /**
  * method_29638
  */
-fun Screen.onFilesDropped(paths: MutableList<file_Path>) = this.method_29638(paths)
+fun Screen.onFilesDropped(paths: MutableList<file_Path>?) = this.method_29638(paths)
 /**
  * method_25423
  */
-fun Screen.init(client: MinecraftClient, width: Int, height: Int) = this.method_25423(client, width, height)
+fun Screen.init(client: MinecraftClient?, width: Int, height: Int) = this.method_25423(client, width, height)
 /**
  * method_47413
  */
-fun Screen.renderWithTooltip(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) = this.method_47413(context, mouseX, mouseY, delta)
+fun Screen.renderWithTooltip(context: DrawContext?, mouseX: Int, mouseY: Int, delta: Float) = this.method_47413(context, mouseX, mouseY, delta)
 /**
  * method_49589
  */
@@ -44,7 +44,7 @@ fun Screen.onDisplayed() = this.method_49589()
 /**
  * method_25430
  */
-fun Screen.handleTextClick(style: Style) = this.method_25430(style)
+fun Screen.handleTextClick(style: Style?) = this.method_25430(style)
 /**
  * method_50024
  */
@@ -60,7 +60,7 @@ fun Screen.refreshNarrator(previouslyDisabled: Boolean) = this.method_61040(prev
 /**
  * method_25410
  */
-fun Screen.resize(client: MinecraftClient, width: Int, height: Int) = this.method_25410(client, width, height)
+fun Screen.resize(client: MinecraftClient?, width: Int, height: Int) = this.method_25410(client, width, height)
 /**
  * method_25426
  */
@@ -80,7 +80,7 @@ fun Screen.updateNarrator() = this.method_37071()
 /**
  * method_37066
  */
-fun Screen.remove(child: Element) = this.method_37066(child)
+fun Screen.remove(child: Element?) = this.method_37066(child)
 /**
  * method_37067
  */
@@ -108,7 +108,7 @@ fun Screen.shouldPause() = this.method_25421()
 /**
  * method_52752
  */
-fun Screen.renderInGameBackground(context: DrawContext) = this.method_52752(context)
+fun Screen.renderInGameBackground(context: DrawContext?) = this.method_52752(context)
 /**
  * method_37070
  */
@@ -140,11 +140,11 @@ fun Screen.shouldHideStatusEffectHud() = this.method_64507()
 /**
  * method_25420
  */
-fun Screen.renderBackground(context: DrawContext, mouseX: Int, mouseY: Int, delta: Float) = this.method_25420(context, mouseX, mouseY, delta)
+fun Screen.renderBackground(context: DrawContext?, mouseX: Int, mouseY: Int, delta: Float) = this.method_25420(context, mouseX, mouseY, delta)
 /**
  * method_65027
  */
-fun Screen.addCrashReportSection(report: CrashReport) = this.method_65027(report)
+fun Screen.addCrashReportSection(report: CrashReport?) = this.method_65027(report)
 /**
  * method_48267
  */

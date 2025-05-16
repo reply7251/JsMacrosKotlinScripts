@@ -9,9 +9,9 @@ object AbstractCandleBlockKt {
     /**
      * method_35245
      */
-    fun isLitCandle(state: BlockState) = AbstractCandleBlock.method_35245(state)
+    fun isLitCandle(state: BlockState?) = AbstractCandleBlock.method_35245(state)
     /**
      * method_31614
      */
-    fun extinguish(player: PlayerEntity, state: BlockState, world: WorldAccess, pos: BlockPos) = AbstractCandleBlock.method_31614(player, state, world, pos)
+    fun extinguish(player: PlayerEntity?, state: BlockState?, world: WorldAccess?, pos: BlockPos?) = AbstractCandleBlock.method_31614(player, state, world, pos)
 }

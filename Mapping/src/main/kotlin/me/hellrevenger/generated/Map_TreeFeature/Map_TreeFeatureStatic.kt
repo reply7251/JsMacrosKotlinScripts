@@ -5,9 +5,9 @@ object TreeFeatureKt {
     /**
      * method_16420
      */
-    fun isAirOrLeaves(world: TestableWorld, pos: BlockPos) = TreeFeature.method_16420(world, pos)
+    fun isAirOrLeaves(world: TestableWorld?, pos: BlockPos?) = TreeFeature.method_16420(world, pos)
     /**
      * method_27371
      */
-    fun canReplace(world: TestableWorld, pos: BlockPos) = TreeFeature.method_27371(world, pos)
+    fun canReplace(world: TestableWorld?, pos: BlockPos?) = TreeFeature.method_27371(world, pos)
 }

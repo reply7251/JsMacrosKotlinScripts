@@ -29,5 +29,5 @@ object TutorialStepKt {
     /**
      * method_4919
      */
-    fun byName(name: String) = TutorialStep.method_4919(name)
+    fun byName(name: String?) = TutorialStep.method_4919(name)
 }

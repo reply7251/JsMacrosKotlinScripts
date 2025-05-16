@@ -5,5 +5,5 @@ object AttributeCommandKt {
     /**
      * method_27735
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = AttributeCommand.method_27735(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = AttributeCommand.method_27735(dispatcher, registryAccess)
 }

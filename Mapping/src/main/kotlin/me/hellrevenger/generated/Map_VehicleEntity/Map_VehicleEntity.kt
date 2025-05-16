@@ -28,4 +28,4 @@ fun VehicleEntity.setDamageWobbleStrength(damageWobbleStrength: Float) = this.me
 /**
  * method_54298
  */
-fun VehicleEntity.killAndDropItem(world: ServerWorld, item: Item) = this.method_54298(world, item)
+fun VehicleEntity.killAndDropItem(world: ServerWorld?, item: Item?) = this.method_54298(world, item)

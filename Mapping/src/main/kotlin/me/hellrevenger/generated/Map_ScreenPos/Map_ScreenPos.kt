@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_48245
  */
-fun ScreenPos.getComponent(axis: NavigationAxis) = this.method_48245(axis)
+fun ScreenPos.getComponent(axis: NavigationAxis?) = this.method_48245(axis)
 /**
  * method_48247
  */
-fun ScreenPos.add(direction: NavigationDirection) = this.method_48247(direction)
+fun ScreenPos.add(direction: NavigationDirection?) = this.method_48247(direction)
 /**
  * comp_1193
  */

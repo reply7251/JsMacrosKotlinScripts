@@ -5,5 +5,5 @@ object ConnectedClientDataKt {
     /**
      * method_53824
      */
-    fun createDefault(profile: GameProfile, arg1: Boolean) = ConnectedClientData.method_53824(profile, arg1)
+    fun createDefault(profile: GameProfile?, arg1: Boolean) = ConnectedClientData.method_53824(profile, arg1)
 }

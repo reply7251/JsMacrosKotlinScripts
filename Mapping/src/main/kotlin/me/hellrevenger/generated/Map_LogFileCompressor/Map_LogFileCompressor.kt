@@ -8,4 +8,4 @@ fun LogFileCompressor.getAll() = this.method_47549()
 /**
  * method_47554
  */
-fun LogFileCompressor.createLogFile(date: LocalDate) = this.method_47554(date)
+fun LogFileCompressor.createLogFile(date: LocalDate?) = this.method_47554(date)

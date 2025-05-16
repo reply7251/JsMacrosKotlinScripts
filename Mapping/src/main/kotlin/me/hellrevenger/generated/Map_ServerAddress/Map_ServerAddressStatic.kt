@@ -5,9 +5,9 @@ object ServerAddressKt {
     /**
      * method_36224
      */
-    fun isValid(address: String) = ServerAddress.method_36224(address)
+    fun isValid(address: String?) = ServerAddress.method_36224(address)
     /**
      * method_2950
      */
-    fun parse(address: String) = ServerAddress.method_2950(address)
+    fun parse(address: String?) = ServerAddress.method_2950(address)
 }

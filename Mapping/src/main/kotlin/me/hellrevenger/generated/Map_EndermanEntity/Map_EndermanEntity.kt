@@ -20,7 +20,7 @@ fun EndermanEntity.isAngry() = this.method_7028()
 /**
  * method_7032
  */
-fun EndermanEntity.setCarriedBlock(state: BlockState) = this.method_7032(state)
+fun EndermanEntity.setCarriedBlock(state: BlockState?) = this.method_7032(state)
 /**
  * method_7030
  */

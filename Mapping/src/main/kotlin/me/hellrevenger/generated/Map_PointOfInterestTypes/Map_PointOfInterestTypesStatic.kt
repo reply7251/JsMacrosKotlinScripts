@@ -85,17 +85,17 @@ object PointOfInterestTypesKt {
     /**
      * method_46397
      */
-    fun isPointOfInterest(state: BlockState) = PointOfInterestTypes.method_46397(state)
+    fun isPointOfInterest(state: BlockState?) = PointOfInterestTypes.method_46397(state)
     /**
      * method_43993
      */
-    fun register(registry: Registry<PointOfInterestType>, key: RegistryKey<PointOfInterestType>, states: Set<BlockState>, ticketCount: Int, searchDistance: Int) = PointOfInterestTypes.method_43993(registry, key, states, ticketCount, searchDistance)
+    fun register(registry: Registry<PointOfInterestType>?, key: RegistryKey<PointOfInterestType>?, states: Set<BlockState>?, ticketCount: Int, searchDistance: Int) = PointOfInterestTypes.method_43993(registry, key, states, ticketCount, searchDistance)
     /**
      * method_43989
      */
-    fun getTypeForState(state: BlockState) = PointOfInterestTypes.method_43989(state)
+    fun getTypeForState(state: BlockState?) = PointOfInterestTypes.method_43989(state)
     /**
      * method_43992
      */
-    fun registerAndGetDefault(registry: Registry<PointOfInterestType>) = PointOfInterestTypes.method_43992(registry)
+    fun registerAndGetDefault(registry: Registry<PointOfInterestType>?) = PointOfInterestTypes.method_43992(registry)
 }

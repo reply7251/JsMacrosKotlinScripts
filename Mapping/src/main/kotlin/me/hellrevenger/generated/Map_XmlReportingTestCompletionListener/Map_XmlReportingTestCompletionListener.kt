@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_36101
  */
-fun XmlReportingTestCompletionListener.saveReport(file: File) = this.method_36101(file)
+fun XmlReportingTestCompletionListener.saveReport(file: File?) = this.method_36101(file)

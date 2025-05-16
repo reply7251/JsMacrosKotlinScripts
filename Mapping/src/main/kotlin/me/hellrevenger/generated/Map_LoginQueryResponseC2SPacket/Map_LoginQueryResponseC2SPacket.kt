@@ -12,4 +12,4 @@ fun LoginQueryResponseC2SPacket.queryId() = this.comp_1569()
 /**
  * method_12645
  */
-fun LoginQueryResponseC2SPacket.apply(arg0: ServerLoginPacketListener) = this.method_12645(arg0)
+fun LoginQueryResponseC2SPacket.apply(arg0: ServerLoginPacketListener?) = this.method_12645(arg0)

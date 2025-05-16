@@ -33,11 +33,11 @@ object LivingEntityKt {
     /**
      * method_63624
      */
-    fun canGlideWith(stack: ItemStack, slot: EquipmentSlot) = LivingEntity.method_63624(stack, slot)
+    fun canGlideWith(stack: ItemStack?, slot: EquipmentSlot?) = LivingEntity.method_63624(stack, slot)
     /**
      * method_31079
      */
-    fun positionInPortal(pos: Vec3d) = LivingEntity.method_31079(pos)
+    fun positionInPortal(pos: Vec3d?) = LivingEntity.method_31079(pos)
     /**
      * method_26827
      */
@@ -45,9 +45,9 @@ object LivingEntityKt {
     /**
      * method_56079
      */
-    fun getSlotForHand(hand: Hand) = LivingEntity.method_56079(hand)
+    fun getSlotForHand(hand: Hand?) = LivingEntity.method_56079(hand)
     /**
      * method_6089
      */
-    fun containsOnlyAmbientEffects(effects: Collection<StatusEffectInstance>) = LivingEntity.method_6089(effects)
+    fun containsOnlyAmbientEffects(effects: Collection<StatusEffectInstance>?) = LivingEntity.method_6089(effects)
 }

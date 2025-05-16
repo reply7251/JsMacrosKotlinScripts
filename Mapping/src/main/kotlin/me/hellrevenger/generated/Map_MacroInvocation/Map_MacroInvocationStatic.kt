@@ -5,5 +5,5 @@ object MacroInvocationKt {
     /**
      * method_54432
      */
-    fun parse(command: String, lineNumber: Int) = MacroInvocation.method_54432(command, lineNumber)
+    fun parse(command: String?, lineNumber: Int) = MacroInvocation.method_54432(command, lineNumber)
 }

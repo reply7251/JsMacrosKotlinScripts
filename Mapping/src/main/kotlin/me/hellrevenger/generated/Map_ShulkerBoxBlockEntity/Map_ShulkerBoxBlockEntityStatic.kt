@@ -9,5 +9,5 @@ object ShulkerBoxBlockEntityKt {
     /**
      * method_31694
      */
-    fun tick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: ShulkerBoxBlockEntity) = ShulkerBoxBlockEntity.method_31694(world, pos, state, blockEntity)
+    fun tick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: ShulkerBoxBlockEntity?) = ShulkerBoxBlockEntity.method_31694(world, pos, state, blockEntity)
 }

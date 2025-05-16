@@ -5,9 +5,9 @@ object PiglinBaseEntityModelKt {
     /**
      * method_62055
      */
-    fun <S>getModelData(dilation: Dilation) where S: BipedEntityRenderState = PiglinBaseEntityModel.method_62055(dilation)
+    fun <S>getModelData(dilation: Dilation?) where S: BipedEntityRenderState = PiglinBaseEntityModel.method_62055(dilation)
     /**
      * method_62056
      */
-    fun <S>getModelPartData(dilation: Dilation, playerModelData: ModelData) where S: BipedEntityRenderState = PiglinBaseEntityModel.method_62056(dilation, playerModelData)
+    fun <S>getModelPartData(dilation: Dilation?, playerModelData: ModelData?) where S: BipedEntityRenderState = PiglinBaseEntityModel.method_62056(dilation, playerModelData)
 }

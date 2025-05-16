@@ -5,5 +5,5 @@ object UpdateTickRateS2CPacketKt {
     /**
      * method_54664
      */
-    fun create(tickManager: TickManager) = UpdateTickRateS2CPacket.method_54664(tickManager)
+    fun create(tickManager: TickManager?) = UpdateTickRateS2CPacket.method_54664(tickManager)
 }

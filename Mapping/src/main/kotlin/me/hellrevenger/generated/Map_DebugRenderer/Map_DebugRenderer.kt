@@ -108,11 +108,11 @@ fun DebugRenderer.toggleShowOctree() = this.method_62979()
 /**
  * method_62351
  */
-fun DebugRenderer.renderLate(matrices: MatrixStack, vertexConsumers: net.minecraft.class_4597.class_4598, cameraX: Double, arg3: Double, cameraY: Double) = this.method_62351(matrices, vertexConsumers, cameraX, arg3, cameraY)
+fun DebugRenderer.renderLate(matrices: MatrixStack?, vertexConsumers: net.minecraft.class_4597.class_4598?, cameraX: Double, arg3: Double, cameraY: Double) = this.method_62351(matrices, vertexConsumers, cameraX, arg3, cameraY)
 /**
  * method_23099
  */
-fun DebugRenderer.render(matrices: MatrixStack, frustum: Frustum, vertexConsumers: net.minecraft.class_4597.class_4598, cameraX: Double, arg4: Double, cameraY: Double) = this.method_23099(matrices, frustum, vertexConsumers, cameraX, arg4, cameraY)
+fun DebugRenderer.render(matrices: MatrixStack?, frustum: Frustum?, vertexConsumers: net.minecraft.class_4597.class_4598?, cameraX: Double, arg4: Double, cameraY: Double) = this.method_23099(matrices, frustum, vertexConsumers, cameraX, arg4, cameraY)
 /**
  * method_20413
  */

@@ -129,33 +129,33 @@ object TelemetryEventPropertyKt {
     /**
      * method_51799
      */
-    fun <T>ofTimeMeasurement(id: String, exportKey: String) = TelemetryEventProperty.method_51799(id, exportKey)
+    fun <T>ofTimeMeasurement(id: String?, exportKey: String?) = TelemetryEventProperty.method_51799(id, exportKey)
     /**
      * method_51798
      */
-    fun <T>ofLong(id: String, exportKey: String) = TelemetryEventProperty.method_51798(id, exportKey)
+    fun <T>ofLong(id: String?, exportKey: String?) = TelemetryEventProperty.method_51798(id, exportKey)
     /**
      * method_47754
      */
-    fun <T>ofUuid(id: String, exportKey: String) = TelemetryEventProperty.method_47754(id, exportKey)
+    fun <T>ofUuid(id: String?, exportKey: String?) = TelemetryEventProperty.method_47754(id, exportKey)
     /**
      * method_47755
      */
-    fun <T>ofLongList(id: String, exportKey: String) = TelemetryEventProperty.method_47755(id, exportKey)
+    fun <T>ofLongList(id: String?, exportKey: String?) = TelemetryEventProperty.method_47755(id, exportKey)
     /**
      * method_47751
      */
-    fun <T>of(id: String, exportKey: String, codec: Codec<T>, exporter: net.minecraft.class_7969.class_7970<T>) = TelemetryEventProperty.method_47751<T>(id, exportKey, codec, exporter)
+    fun <T>of(id: String?, exportKey: String?, codec: Codec<T>?, exporter: net.minecraft.class_7969.class_7970<T>?) = TelemetryEventProperty.method_47751<T>(id, exportKey, codec, exporter)
     /**
      * method_47752
      */
-    fun <T>ofString(id: String, exportKey: String) = TelemetryEventProperty.method_47752(id, exportKey)
+    fun <T>ofString(id: String?, exportKey: String?) = TelemetryEventProperty.method_47752(id, exportKey)
     /**
      * method_47753
      */
-    fun <T>ofInteger(id: String, exportKey: String) = TelemetryEventProperty.method_47753(id, exportKey)
+    fun <T>ofInteger(id: String?, exportKey: String?) = TelemetryEventProperty.method_47753(id, exportKey)
     /**
      * method_47750
      */
-    fun <T>ofBoolean(id: String, exportKey: String) = TelemetryEventProperty.method_47750(id, exportKey)
+    fun <T>ofBoolean(id: String?, exportKey: String?) = TelemetryEventProperty.method_47750(id, exportKey)
 }

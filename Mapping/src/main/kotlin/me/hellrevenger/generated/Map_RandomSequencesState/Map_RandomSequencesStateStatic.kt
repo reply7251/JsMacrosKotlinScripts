@@ -5,7 +5,7 @@ object RandomSequencesStateKt {
     /**
      * method_51842
      */
-    fun fromNbt(seed: Long, arg1: NbtCompound) = RandomSequencesState.method_51842(seed, arg1)
+    fun fromNbt(seed: Long, arg1: NbtCompound?) = RandomSequencesState.method_51842(seed, arg1)
     /**
      * method_52511
      */

@@ -9,9 +9,9 @@ object AdvancementRequirementsKt {
     /**
      * method_53674
      */
-    fun anyOf(requirements: Collection<String>) = AdvancementRequirements.method_53674(requirements)
+    fun anyOf(requirements: Collection<String>?) = AdvancementRequirements.method_53674(requirements)
     /**
      * method_53668
      */
-    fun allOf(requirements: Collection<String>) = AdvancementRequirements.method_53668(requirements)
+    fun allOf(requirements: Collection<String>?) = AdvancementRequirements.method_53668(requirements)
 }

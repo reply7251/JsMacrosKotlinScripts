@@ -177,9 +177,9 @@ object BannerPatternsKt {
     /**
      * method_57577
      */
-    fun register(registry: Registerable<BannerPattern>, key: RegistryKey<BannerPattern>) = BannerPatterns.method_57577(registry, key)
+    fun register(registry: Registerable<BannerPattern>?, key: RegistryKey<BannerPattern>?) = BannerPatterns.method_57577(registry, key)
     /**
      * method_43721
      */
-    fun bootstrap(registry: Registerable<BannerPattern>) = BannerPatterns.method_43721(registry)
+    fun bootstrap(registry: Registerable<BannerPattern>?) = BannerPatterns.method_43721(registry)
 }

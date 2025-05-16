@@ -8,4 +8,4 @@ fun TutorialStep.getName() = this.method_4920()
 /**
  * method_4918
  */
-fun TutorialStep.createHandler(manager: TutorialManager) = this.method_4918(manager)
+fun TutorialStep.createHandler(manager: TutorialManager?) = this.method_4918(manager)

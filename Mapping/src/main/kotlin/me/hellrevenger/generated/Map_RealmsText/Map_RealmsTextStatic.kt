@@ -5,5 +5,5 @@ object RealmsTextKt {
     /**
      * method_49582
      */
-    fun fromJson(json: JsonObject) = RealmsText.method_49582(json)
+    fun fromJson(json: JsonObject?) = RealmsText.method_49582(json)
 }

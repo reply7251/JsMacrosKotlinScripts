@@ -5,5 +5,5 @@ object ShipwreckGeneratorKt {
     /**
      * method_59864
      */
-    fun addParts(structureTemplateManager: StructureTemplateManager, pos: BlockPos, rotation: BlockRotation, holder: StructurePiecesHolder, random: Random, beached: Boolean) = ShipwreckGenerator.method_59864(structureTemplateManager, pos, rotation, holder, random, beached)
+    fun addParts(structureTemplateManager: StructureTemplateManager?, pos: BlockPos?, rotation: BlockRotation?, holder: StructurePiecesHolder?, random: Random?, beached: Boolean) = ShipwreckGenerator.method_59864(structureTemplateManager, pos, rotation, holder, random, beached)
 }

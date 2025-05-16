@@ -12,7 +12,7 @@ var GpuBuffer.size by alias(GpuBuffer::field_54351)
 /**
  * method_64321
  */
-fun GpuBuffer.copyFrom(buf: ByteBuffer, offset: Int) = this.method_64321(buf, offset)
+fun GpuBuffer.copyFrom(buf: ByteBuffer?, offset: Int) = this.method_64321(buf, offset)
 /**
  * method_64318
  */

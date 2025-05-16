@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_14006
  */
-fun ChunkHolder.flushUpdates(chunk: WorldChunk) = this.method_14006(chunk)
+fun ChunkHolder.flushUpdates(chunk: WorldChunk?) = this.method_14006(chunk)
 /**
  * method_53680
  */
-fun ChunkHolder.combinePostProcessingFuture(postProcessingFuture: CompletableFuture<*>) = this.method_53680(postProcessingFuture)
+fun ChunkHolder.combinePostProcessingFuture(postProcessingFuture: CompletableFuture<*>?) = this.method_53680(postProcessingFuture)
 /**
  * method_16145
  */
@@ -16,7 +16,7 @@ fun ChunkHolder.getTickingFuture() = this.method_16145()
 /**
  * method_14002
  */
-fun ChunkHolder.markForBlockUpdate(pos: BlockPos) = this.method_14002(pos)
+fun ChunkHolder.markForBlockUpdate(pos: BlockPos?) = this.method_14002(pos)
 /**
  * method_16144
  */
@@ -36,7 +36,7 @@ fun ChunkHolder.getPostProcessingFuture() = this.method_53681()
 /**
  * method_14012
  */
-fun ChunkHolder.markForLightUpdate(lightType: LightType, y: Int) = this.method_14012(lightType, y)
+fun ChunkHolder.markForLightUpdate(lightType: LightType?, y: Int) = this.method_14012(lightType, y)
 /**
  * method_20385
  */

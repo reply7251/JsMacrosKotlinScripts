@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_914
  */
-fun EntityPropertiesLootCondition.test(arg0: LootContext) = this.method_914(arg0)
+fun EntityPropertiesLootCondition.test(arg0: LootContext?) = this.method_914(arg0)
 /**
  * comp_1880
  */

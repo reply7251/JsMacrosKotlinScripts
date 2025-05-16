@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_12697
  */
-fun ServerQueryPingPacketListener.onQueryPing(packet: QueryPingC2SPacket) = this.method_12697(packet)
+fun ServerQueryPingPacketListener.onQueryPing(packet: QueryPingC2SPacket?) = this.method_12697(packet)

@@ -5,9 +5,9 @@ object ExplosionKt {
     /**
      * method_55108
      */
-    fun createDamageSource(world: world_World, source: Entity) = Explosion.method_55108(world, source)
+    fun createDamageSource(world: world_World?, source: Entity?) = Explosion.method_55108(world, source)
     /**
      * method_55110
      */
-    fun getCausingEntity(entity: Entity) = Explosion.method_55110(entity)
+    fun getCausingEntity(entity: Entity?) = Explosion.method_55110(entity)
 }

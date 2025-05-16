@@ -5,5 +5,5 @@ object DataTrackerKt {
     /**
      * method_12791
      */
-    fun <T>registerData(entityClass: Class<out DataTracked>, dataHandler: TrackedDataHandler<T>) = DataTracker.method_12791<T>(entityClass, dataHandler)
+    fun <T>registerData(entityClass: Class<out DataTracked>?, dataHandler: TrackedDataHandler<T>?) = DataTracker.method_12791<T>(entityClass, dataHandler)
 }

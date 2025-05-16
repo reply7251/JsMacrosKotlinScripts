@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_34143
  */
-fun DeathMessageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34143(arg0)
+fun DeathMessageS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_34143(arg0)
 /**
  * comp_2275
  */

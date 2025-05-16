@@ -21,47 +21,47 @@ object IdentifierKt {
     /**
      * method_60654
      */
-    fun of(id: String) = Identifier.method_60654(id)
+    fun of(id: String?) = Identifier.method_60654(id)
     /**
      * method_60656
      */
-    fun ofVanilla(path: String) = Identifier.method_60656(path)
+    fun ofVanilla(path: String?) = Identifier.method_60656(path)
     /**
      * method_20208
      */
-    fun isPathValid(path: String) = Identifier.method_20208(path)
+    fun isPathValid(path: String?) = Identifier.method_20208(path)
     /**
      * method_58274
      */
-    fun fromCommandInputNonEmpty(reader: StringReader) = Identifier.method_58274(reader)
+    fun fromCommandInputNonEmpty(reader: StringReader?) = Identifier.method_58274(reader)
     /**
      * method_12835
      */
-    fun fromCommandInput(reader: StringReader) = Identifier.method_12835(reader)
+    fun fromCommandInput(reader: StringReader?) = Identifier.method_12835(reader)
     /**
      * method_12829
      */
-    fun tryParse(id: String) = Identifier.method_12829(id)
+    fun tryParse(id: String?) = Identifier.method_12829(id)
     /**
      * method_60655
      */
-    fun of(namespace: String, path: String) = Identifier.method_60655(namespace, path)
+    fun of(namespace: String?, path: String?) = Identifier.method_60655(namespace, path)
     /**
      * method_43902
      */
-    fun tryParse(namespace: String, path: String) = Identifier.method_43902(namespace, path)
+    fun tryParse(namespace: String?, path: String?) = Identifier.method_43902(namespace, path)
     /**
      * method_60935
      */
-    fun trySplitOn(id: String, delimiter: Char) = Identifier.method_60935(id, delimiter)
+    fun trySplitOn(id: String?, delimiter: Char) = Identifier.method_60935(id, delimiter)
     /**
      * method_20209
      */
-    fun isNamespaceValid(namespace: String) = Identifier.method_20209(namespace)
+    fun isNamespaceValid(namespace: String?) = Identifier.method_20209(namespace)
     /**
      * method_29186
      */
-    fun validate(id: String) = Identifier.method_29186(id)
+    fun validate(id: String?) = Identifier.method_29186(id)
     /**
      * method_29184
      */
@@ -73,5 +73,5 @@ object IdentifierKt {
     /**
      * method_12838
      */
-    fun splitOn(id: String, delimiter: Char) = Identifier.method_12838(id, delimiter)
+    fun splitOn(id: String?, delimiter: Char) = Identifier.method_12838(id, delimiter)
 }

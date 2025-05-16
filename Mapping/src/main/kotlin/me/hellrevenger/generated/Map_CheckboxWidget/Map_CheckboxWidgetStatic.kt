@@ -5,9 +5,9 @@ object CheckboxWidgetKt {
     /**
      * method_54787
      */
-    fun builder(text: Text, textRenderer: TextRenderer) = CheckboxWidget.method_54787(text, textRenderer)
+    fun builder(text: Text?, textRenderer: TextRenderer?) = CheckboxWidget.method_54787(text, textRenderer)
     /**
      * method_54786
      */
-    fun getCheckboxSize(textRenderer: TextRenderer) = CheckboxWidget.method_54786(textRenderer)
+    fun getCheckboxSize(textRenderer: TextRenderer?) = CheckboxWidget.method_54786(textRenderer)
 }

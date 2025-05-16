@@ -21,5 +21,5 @@ object ScaffoldingBlockKt {
     /**
      * method_16372
      */
-    fun calculateDistance(world: BlockView, pos: BlockPos) = ScaffoldingBlock.method_16372(world, pos)
+    fun calculateDistance(world: BlockView?, pos: BlockPos?) = ScaffoldingBlock.method_16372(world, pos)
 }

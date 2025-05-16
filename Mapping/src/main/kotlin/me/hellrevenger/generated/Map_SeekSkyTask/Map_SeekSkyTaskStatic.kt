@@ -5,7 +5,7 @@ object SeekSkyTaskKt {
     /**
      * method_20497
      */
-    fun isSkyVisible(world: ServerWorld, entity: LivingEntity, pos: BlockPos) = SeekSkyTask.method_20497(world, entity, pos)
+    fun isSkyVisible(world: ServerWorld?, entity: LivingEntity?, pos: BlockPos?) = SeekSkyTask.method_20497(world, entity, pos)
     /**
      * method_46995
      */

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17112
  */
-fun ParrotEntityModel.setAngles(arg0: ParrotEntityRenderState) = this.method_17112(arg0)
+fun ParrotEntityModel.setAngles(arg0: ParrotEntityRenderState?) = this.method_17112(arg0)

@@ -5,5 +5,5 @@ object LogReaderKt {
     /**
      * method_47571
      */
-    fun <T>create(codec: Codec<T>, reader: Reader) = LogReader.method_47571<T>(codec, reader)
+    fun <T>create(codec: Codec<T>?, reader: Reader?) = LogReader.method_47571<T>(codec, reader)
 }

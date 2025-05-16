@@ -5,7 +5,7 @@ object CommandFunctionArgumentTypeKt {
     /**
      * method_55590
      */
-    fun getIdentifiedFunctions(context: CommandContext<ServerCommandSource>, name: String) = CommandFunctionArgumentType.method_55590(context, name)
+    fun getIdentifiedFunctions(context: CommandContext<ServerCommandSource>?, name: String?) = CommandFunctionArgumentType.method_55590(context, name)
     /**
      * method_9760
      */
@@ -13,9 +13,9 @@ object CommandFunctionArgumentTypeKt {
     /**
      * method_9769
      */
-    fun getFunctions(context: CommandContext<ServerCommandSource>, name: String) = CommandFunctionArgumentType.method_9769(context, name)
+    fun getFunctions(context: CommandContext<ServerCommandSource>?, name: String?) = CommandFunctionArgumentType.method_9769(context, name)
     /**
      * method_9768
      */
-    fun getFunctionOrTag(context: CommandContext<ServerCommandSource>, name: String) = CommandFunctionArgumentType.method_9768(context, name)
+    fun getFunctionOrTag(context: CommandContext<ServerCommandSource>?, name: String?) = CommandFunctionArgumentType.method_9768(context, name)
 }

@@ -9,5 +9,5 @@ object ZombieEntityKt {
     /**
      * method_29936
      */
-    fun shouldBeBaby(random: Random) = ZombieEntity.method_29936(random)
+    fun shouldBeBaby(random: Random?) = ZombieEntity.method_29936(random)
 }

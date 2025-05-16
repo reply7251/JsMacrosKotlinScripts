@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12649
  */
-fun LoginHelloC2SPacket.apply(arg0: ServerLoginPacketListener) = this.method_12649(arg0)
+fun LoginHelloC2SPacket.apply(arg0: ServerLoginPacketListener?) = this.method_12649(arg0)
 /**
  * comp_765
  */

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9654
  */
-fun BlockStateArgumentType.parse(arg0: StringReader) = this.method_9654(arg0)
+fun BlockStateArgumentType.parse(arg0: StringReader?) = this.method_9654(arg0)

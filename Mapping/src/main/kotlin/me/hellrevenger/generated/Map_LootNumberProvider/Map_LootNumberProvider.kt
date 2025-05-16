@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_32454
  */
-fun LootNumberProvider.nextFloat(context: LootContext) = this.method_32454(context)
+fun LootNumberProvider.nextFloat(context: LootContext?) = this.method_32454(context)
 /**
  * method_366
  */
-fun LootNumberProvider.nextInt(context: LootContext) = this.method_366(context)
+fun LootNumberProvider.nextInt(context: LootContext?) = this.method_366(context)
 /**
  * method_365
  */

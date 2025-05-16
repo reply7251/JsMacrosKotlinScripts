@@ -16,7 +16,7 @@ fun UpdateCommandBlockC2SPacket.isConditional() = this.method_12471()
 /**
  * method_12469
  */
-fun UpdateCommandBlockC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12469(arg0)
+fun UpdateCommandBlockC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12469(arg0)
 /**
  * method_12472
  */

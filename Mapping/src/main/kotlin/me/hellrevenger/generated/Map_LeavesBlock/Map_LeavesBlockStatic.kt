@@ -21,5 +21,5 @@ object LeavesBlockKt {
     /**
      * method_49817
      */
-    fun getOptionalDistanceFromLog(state: BlockState) = LeavesBlock.method_49817(state)
+    fun getOptionalDistanceFromLog(state: BlockState?) = LeavesBlock.method_49817(state)
 }

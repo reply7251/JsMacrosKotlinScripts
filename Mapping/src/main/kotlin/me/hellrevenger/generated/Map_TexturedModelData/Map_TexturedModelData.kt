@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_62137
  */
-fun TexturedModelData.transform(transformer: ModelTransformer) = this.method_62137(transformer)
+fun TexturedModelData.transform(transformer: ModelTransformer?) = this.method_62137(transformer)
 /**
  * method_32109
  */

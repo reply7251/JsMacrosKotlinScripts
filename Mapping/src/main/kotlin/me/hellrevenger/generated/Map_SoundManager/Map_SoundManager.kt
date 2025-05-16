@@ -16,35 +16,35 @@ fun SoundManager.reloadSounds() = this.method_38566()
 /**
  * method_4870
  */
-fun SoundManager.stop(sound: SoundInstance) = this.method_4870(sound)
+fun SoundManager.stop(sound: SoundInstance?) = this.method_4870(sound)
 /**
  * method_22140
  */
-fun SoundManager.playNextTick(sound: TickableSoundInstance) = this.method_22140(sound)
+fun SoundManager.playNextTick(sound: TickableSoundInstance?) = this.method_22140(sound)
 /**
  * method_4865
  */
-fun SoundManager.updateSoundVolume(category: SoundCategory, volume: Float) = this.method_4865(category, volume)
+fun SoundManager.updateSoundVolume(category: SoundCategory?, volume: Float) = this.method_4865(category, volume)
 /**
  * method_4872
  */
-fun SoundManager.play(sound: SoundInstance, delay: Int) = this.method_4872(sound, delay)
+fun SoundManager.play(sound: SoundInstance?, delay: Int) = this.method_4872(sound, delay)
 /**
  * method_65258
  */
-fun SoundManager.setVolume(sound: SoundInstance, volume: Float) = this.method_65258(sound, volume)
+fun SoundManager.setVolume(sound: SoundInstance?, volume: Float) = this.method_65258(sound, volume)
 /**
  * method_4876
  */
-fun SoundManager.updateListenerPosition(camera: Camera) = this.method_4876(camera)
+fun SoundManager.updateListenerPosition(camera: Camera?) = this.method_4876(camera)
 /**
  * method_4878
  */
-fun SoundManager.registerListener(listener: SoundInstanceListener) = this.method_4878(listener)
+fun SoundManager.registerListener(listener: SoundInstanceListener?) = this.method_4878(listener)
 /**
  * method_4866
  */
-fun SoundManager.unregisterListener(listener: SoundInstanceListener) = this.method_4866(listener)
+fun SoundManager.unregisterListener(listener: SoundInstanceListener?) = this.method_4866(listener)
 /**
  * method_54649
  */
@@ -52,11 +52,11 @@ fun SoundManager.stopAbruptly() = this.method_54649()
 /**
  * method_4873
  */
-fun SoundManager.play(sound: SoundInstance) = this.method_4873(sound)
+fun SoundManager.play(sound: SoundInstance?) = this.method_4873(sound)
 /**
  * method_4877
  */
-fun SoundManager.isPlaying(sound: SoundInstance) = this.method_4877(sound)
+fun SoundManager.isPlaying(sound: SoundInstance?) = this.method_4877(sound)
 /**
  * method_4881
  */
@@ -64,7 +64,7 @@ fun SoundManager.stopAll() = this.method_4881()
 /**
  * method_4869
  */
-fun SoundManager.get(id: Identifier) = this.method_4869(id)
+fun SoundManager.get(id: Identifier?) = this.method_4869(id)
 /**
  * method_4864
  */
@@ -92,4 +92,4 @@ fun SoundManager.tick(paused: Boolean) = this.method_18670(paused)
 /**
  * method_4875
  */
-fun SoundManager.stopSounds(id: Identifier, soundCategory: SoundCategory) = this.method_4875(id, soundCategory)
+fun SoundManager.stopSounds(id: Identifier?, soundCategory: SoundCategory?) = this.method_4875(id, soundCategory)

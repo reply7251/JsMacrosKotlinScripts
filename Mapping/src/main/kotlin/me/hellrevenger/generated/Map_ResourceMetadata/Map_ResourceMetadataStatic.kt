@@ -5,5 +5,5 @@ object ResourceMetadataKt {
     /**
      * method_43042
      */
-    fun create(stream: InputStream) = ResourceMetadata.method_43042(stream)
+    fun create(stream: InputStream?) = ResourceMetadata.method_43042(stream)
 }

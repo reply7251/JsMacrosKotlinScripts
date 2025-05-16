@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_17704
  */
-fun CraftingRecipe.getRecipeRemainders(input: CraftingRecipeInput) = this.method_17704(input)
+fun CraftingRecipe.getRecipeRemainders(input: CraftingRecipeInput?) = this.method_17704(input)
 /**
  * method_45441
  */

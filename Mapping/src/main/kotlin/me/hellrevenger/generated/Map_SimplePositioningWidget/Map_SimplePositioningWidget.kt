@@ -24,11 +24,11 @@ fun SimplePositioningWidget.setDimensions(minWidth: Int, minHeight: Int) = this.
 /**
  * method_52732
  */
-fun <T>SimplePositioningWidget.add(widget: T, callback: Consumer<Positioner>) where T: Widget = this.method_52732<T>(widget, callback)
+fun <T>SimplePositioningWidget.add(widget: T, callback: Consumer<Positioner>?) where T: Widget = this.method_52732<T>(widget, callback)
 /**
  * method_46444
  */
-fun <T>SimplePositioningWidget.add(widget: T, positioner: Positioner) where T: Widget = this.method_46444<T>(widget, positioner)
+fun <T>SimplePositioningWidget.add(widget: T, positioner: Positioner?) where T: Widget = this.method_46444<T>(widget, positioner)
 /**
  * method_46449
  */

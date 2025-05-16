@@ -5,5 +5,5 @@ object CustomDataPredicateKt {
     /**
      * method_58162
      */
-    fun customData(value: NbtPredicate) = CustomDataPredicate.method_58162(value)
+    fun customData(value: NbtPredicate?) = CustomDataPredicate.method_58162(value)
 }

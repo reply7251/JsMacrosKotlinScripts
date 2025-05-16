@@ -25,7 +25,7 @@ object PlayerInventoryKt {
     /**
      * method_61495
      */
-    fun usableWhenFillingSlot(stack: ItemStack) = PlayerInventory.method_61495(stack)
+    fun usableWhenFillingSlot(stack: ItemStack?) = PlayerInventory.method_61495(stack)
     /**
      * method_7368
      */

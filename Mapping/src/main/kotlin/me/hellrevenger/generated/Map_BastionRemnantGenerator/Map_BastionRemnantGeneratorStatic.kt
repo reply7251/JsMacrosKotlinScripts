@@ -9,5 +9,5 @@ object BastionRemnantGeneratorKt {
     /**
      * method_27201
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = BastionRemnantGenerator.method_27201(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = BastionRemnantGenerator.method_27201(poolRegisterable)
 }

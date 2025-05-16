@@ -8,7 +8,7 @@ fun SimpleFramebufferFactory.create() = this.method_61952()
 /**
  * method_61953
  */
-fun SimpleFramebufferFactory.close(arg0: Framebuffer) = this.method_61953(arg0)
+fun SimpleFramebufferFactory.close(arg0: Framebuffer?) = this.method_61953(arg0)
 /**
  * comp_2978
  */

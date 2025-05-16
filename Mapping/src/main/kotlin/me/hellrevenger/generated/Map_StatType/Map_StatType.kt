@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_14955
  */
-fun <T>StatType<T>.getOrCreateStat(key: T, formatter: StatFormatter) = this.method_14955(key, formatter)
+fun <T>StatType<T>.getOrCreateStat(key: T, formatter: StatFormatter?) = this.method_14955(key, formatter)
 /**
  * method_14956
  */

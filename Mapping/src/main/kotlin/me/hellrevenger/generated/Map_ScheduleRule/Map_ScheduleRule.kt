@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_35215
  */
-fun ScheduleRule.add(entries: Collection<ScheduleRuleEntry>) = this.method_35215(entries)
+fun ScheduleRule.add(entries: Collection<ScheduleRuleEntry>?) = this.method_35215(entries)
 /**
  * method_19227
  */

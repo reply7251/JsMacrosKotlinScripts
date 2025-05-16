@@ -16,7 +16,7 @@ fun SoundInstance.isRelative() = this.method_4787()
 /**
  * method_4783
  */
-fun SoundInstance.getSoundSet(soundManager: SoundManager) = this.method_4783(soundManager)
+fun SoundInstance.getSoundSet(soundManager: SoundManager?) = this.method_4783(soundManager)
 /**
  * method_4776
  */

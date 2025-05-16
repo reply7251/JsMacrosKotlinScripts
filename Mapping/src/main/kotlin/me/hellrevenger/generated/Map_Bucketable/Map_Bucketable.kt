@@ -12,11 +12,11 @@ fun Bucketable.setFromBucket(fromBucket: Boolean) = this.method_6454(fromBucket)
 /**
  * method_35170
  */
-fun Bucketable.copyDataFromNbt(nbt: NbtCompound) = this.method_35170(nbt)
+fun Bucketable.copyDataFromNbt(nbt: NbtCompound?) = this.method_35170(nbt)
 /**
  * method_6455
  */
-fun Bucketable.copyDataToStack(stack: ItemStack) = this.method_6455(stack)
+fun Bucketable.copyDataToStack(stack: ItemStack?) = this.method_6455(stack)
 /**
  * method_6452
  */

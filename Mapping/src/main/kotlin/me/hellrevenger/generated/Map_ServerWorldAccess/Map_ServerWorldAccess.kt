@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_30771
  */
-fun ServerWorldAccess.spawnEntityAndPassengers(entity: Entity) = this.method_30771(entity)
+fun ServerWorldAccess.spawnEntityAndPassengers(entity: Entity?) = this.method_30771(entity)
 /**
  * method_8410
  */

@@ -13,9 +13,9 @@ object FeatureSetKt {
     /**
      * method_45399
      */
-    fun of(feature1: FeatureFlag, features: Array<FeatureFlag>) = FeatureSet.method_45399(feature1, *features)
+    fun of(feature1: FeatureFlag?, features: Array<FeatureFlag>) = FeatureSet.method_45399(feature1, *features)
     /**
      * method_45398
      */
-    fun of(feature: FeatureFlag) = FeatureSet.method_45398(feature)
+    fun of(feature: FeatureFlag?) = FeatureSet.method_45398(feature)
 }

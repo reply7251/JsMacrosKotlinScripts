@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_61986
  */
-fun PieChart.render(context: DrawContext) = this.method_61986(context)
+fun PieChart.render(context: DrawContext?) = this.method_61986(context)
 /**
  * method_61987
  */
@@ -16,4 +16,4 @@ fun PieChart.setBottomMargin(bottomMargin: Int) = this.method_61984(bottomMargin
 /**
  * method_61985
  */
-fun PieChart.setProfileResult(profileResult: ProfileResult) = this.method_61985(profileResult)
+fun PieChart.setProfileResult(profileResult: ProfileResult?) = this.method_61985(profileResult)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_46324
  */
-fun ProfilelessChatMessageS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_46324(arg0)
+fun ProfilelessChatMessageS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_46324(arg0)
 /**
  * comp_1097
  */

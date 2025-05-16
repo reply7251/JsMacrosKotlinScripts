@@ -9,5 +9,5 @@ object EnderDragonEntityRendererKt {
     /**
      * method_3917
      */
-    fun renderCrystalBeam(dx: Float, dy: Float, dz: Float, tickDelta: Float, matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int) = EnderDragonEntityRenderer.method_3917(dx, dy, dz, tickDelta, matrices, vertexConsumers, light)
+    fun renderCrystalBeam(dx: Float, dy: Float, dz: Float, tickDelta: Float, matrices: MatrixStack?, vertexConsumers: VertexConsumerProvider?, light: Int) = EnderDragonEntityRenderer.method_3917(dx, dy, dz, tickDelta, matrices, vertexConsumers, light)
 }

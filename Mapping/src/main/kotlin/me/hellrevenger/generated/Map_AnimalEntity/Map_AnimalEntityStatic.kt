@@ -5,7 +5,7 @@ object AnimalEntityKt {
     /**
      * method_20663
      */
-    fun isValidNaturalSpawn(type: EntityType<out AnimalEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = AnimalEntity.method_20663(type, world, spawnReason, pos, random)
+    fun isValidNaturalSpawn(type: EntityType<out AnimalEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = AnimalEntity.method_20663(type, world, spawnReason, pos, random)
     /**
      * method_61457
      */

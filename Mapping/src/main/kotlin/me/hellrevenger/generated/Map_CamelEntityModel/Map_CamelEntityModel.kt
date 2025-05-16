@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_45706
  */
-fun CamelEntityModel.setAngles(arg0: CamelEntityRenderState) = this.method_45706(arg0)
+fun CamelEntityModel.setAngles(arg0: CamelEntityRenderState?) = this.method_45706(arg0)

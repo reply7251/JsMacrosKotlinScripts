@@ -16,4 +16,4 @@ fun DoublePerlinNoiseSampler.getMaxValue() = this.method_40554()
 /**
  * method_39124
  */
-fun DoublePerlinNoiseSampler.addDebugInfo(info: StringBuilder) = this.method_39124(info)
+fun DoublePerlinNoiseSampler.addDebugInfo(info: StringBuilder?) = this.method_39124(info)

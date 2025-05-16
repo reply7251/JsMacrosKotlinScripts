@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_39644
  */
-fun PlacedFeature.generateUnregistered(world: StructureWorldAccess, generator: ChunkGenerator, random: Random, pos: BlockPos) = this.method_39644(world, generator, random, pos)
+fun PlacedFeature.generateUnregistered(world: StructureWorldAccess?, generator: ChunkGenerator?, random: Random?, pos: BlockPos?) = this.method_39644(world, generator, random, pos)
 /**
  * method_39650
  */
-fun PlacedFeature.generate(world: StructureWorldAccess, generator: ChunkGenerator, random: Random, pos: BlockPos) = this.method_39650(world, generator, random, pos)
+fun PlacedFeature.generate(world: StructureWorldAccess?, generator: ChunkGenerator?, random: Random?, pos: BlockPos?) = this.method_39650(world, generator, random, pos)
 /**
  * comp_334
  */

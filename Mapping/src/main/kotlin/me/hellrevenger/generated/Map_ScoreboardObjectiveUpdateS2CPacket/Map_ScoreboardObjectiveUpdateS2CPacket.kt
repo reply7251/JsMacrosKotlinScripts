@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11838
  */
-fun ScoreboardObjectiveUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11838(arg0)
+fun ScoreboardObjectiveUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11838(arg0)
 /**
  * method_11836
  */

@@ -5,5 +5,5 @@ object PlayerEntityModelKt {
     /**
      * method_32028
      */
-    fun getTexturedModelData(dilation: Dilation, slim: Boolean) = PlayerEntityModel.method_32028(dilation, slim)
+    fun getTexturedModelData(dilation: Dilation?, slim: Boolean) = PlayerEntityModel.method_32028(dilation, slim)
 }

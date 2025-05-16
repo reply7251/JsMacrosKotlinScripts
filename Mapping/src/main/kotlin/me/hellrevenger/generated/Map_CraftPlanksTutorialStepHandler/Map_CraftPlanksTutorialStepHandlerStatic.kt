@@ -5,5 +5,5 @@ object CraftPlanksTutorialStepHandlerKt {
     /**
      * method_4895
      */
-    fun hasCrafted(player: ClientPlayerEntity, tag: TagKey<Item>) = CraftPlanksTutorialStepHandler.method_4895(player, tag)
+    fun hasCrafted(player: ClientPlayerEntity?, tag: TagKey<Item>?) = CraftPlanksTutorialStepHandler.method_4895(player, tag)
 }

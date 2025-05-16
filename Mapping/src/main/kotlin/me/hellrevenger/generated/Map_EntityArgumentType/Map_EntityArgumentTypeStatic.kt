@@ -29,7 +29,7 @@ object EntityArgumentTypeKt {
     /**
      * method_9310
      */
-    fun getOptionalPlayers(context: CommandContext<ServerCommandSource>, name: String) = EntityArgumentType.method_9310(context, name)
+    fun getOptionalPlayers(context: CommandContext<ServerCommandSource>?, name: String?) = EntityArgumentType.method_9310(context, name)
     /**
      * method_9309
      */
@@ -41,7 +41,7 @@ object EntityArgumentTypeKt {
     /**
      * method_9312
      */
-    fun getPlayers(context: CommandContext<ServerCommandSource>, name: String) = EntityArgumentType.method_9312(context, name)
+    fun getPlayers(context: CommandContext<ServerCommandSource>?, name: String?) = EntityArgumentType.method_9312(context, name)
     /**
      * method_9308
      */
@@ -49,7 +49,7 @@ object EntityArgumentTypeKt {
     /**
      * method_9315
      */
-    fun getPlayer(context: CommandContext<ServerCommandSource>, name: String) = EntityArgumentType.method_9315(context, name)
+    fun getPlayer(context: CommandContext<ServerCommandSource>?, name: String?) = EntityArgumentType.method_9315(context, name)
     /**
      * method_9306
      */
@@ -57,13 +57,13 @@ object EntityArgumentTypeKt {
     /**
      * method_9313
      */
-    fun getEntity(context: CommandContext<ServerCommandSource>, name: String) = EntityArgumentType.method_9313(context, name)
+    fun getEntity(context: CommandContext<ServerCommandSource>?, name: String?) = EntityArgumentType.method_9313(context, name)
     /**
      * method_9317
      */
-    fun getEntities(context: CommandContext<ServerCommandSource>, name: String) = EntityArgumentType.method_9317(context, name)
+    fun getEntities(context: CommandContext<ServerCommandSource>?, name: String?) = EntityArgumentType.method_9317(context, name)
     /**
      * method_9307
      */
-    fun getOptionalEntities(context: CommandContext<ServerCommandSource>, name: String) = EntityArgumentType.method_9307(context, name)
+    fun getOptionalEntities(context: CommandContext<ServerCommandSource>?, name: String?) = EntityArgumentType.method_9307(context, name)
 }

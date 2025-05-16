@@ -5,9 +5,9 @@ object StructureSetKt {
     /**
      * method_41146
      */
-    fun createEntry(structure: RegistryEntry<Structure>, weight: Int) = StructureSet.method_41146(structure, weight)
+    fun createEntry(structure: RegistryEntry<Structure>?, weight: Int) = StructureSet.method_41146(structure, weight)
     /**
      * method_41145
      */
-    fun createEntry(structure: RegistryEntry<Structure>) = StructureSet.method_41145(structure)
+    fun createEntry(structure: RegistryEntry<Structure>?) = StructureSet.method_41145(structure)
 }

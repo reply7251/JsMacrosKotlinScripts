@@ -64,11 +64,11 @@ var ShaderProgram.gameTime by alias(ShaderProgram::field_29481)
 /**
  * method_65028
  */
-fun ShaderProgram.getUniformDefinition(name: String) = this.method_65028(name)
+fun ShaderProgram.getUniformDefinition(name: String?) = this.method_65028(name)
 /**
  * method_60897
  */
-fun ShaderProgram.initializeUniforms(drawMode: net.minecraft.class_293.class_5596, viewMatrix: Matrix4f, projectionMatrix: Matrix4f, window: Window) = this.method_60897(drawMode, viewMatrix, projectionMatrix, window)
+fun ShaderProgram.initializeUniforms(drawMode: net.minecraft.class_293.class_5596?, viewMatrix: Matrix4f?, projectionMatrix: Matrix4f?, window: Window?) = this.method_60897(drawMode, viewMatrix, projectionMatrix, window)
 /**
  * method_34586
  */
@@ -76,15 +76,15 @@ fun ShaderProgram.bind() = this.method_34586()
 /**
  * method_62899
  */
-fun ShaderProgram.addSamplerTexture(name: String, texture: Int) = this.method_62899(name, texture)
+fun ShaderProgram.addSamplerTexture(name: String?, texture: Int) = this.method_62899(name, texture)
 /**
  * method_62900
  */
-fun ShaderProgram.set(uniforms: MutableList<net.minecraft.class_10157.class_10159>, samplers: MutableList<net.minecraft.class_10157.class_10158>) = this.method_62900(uniforms, samplers)
+fun ShaderProgram.set(uniforms: MutableList<net.minecraft.class_10157.class_10159>?, samplers: MutableList<net.minecraft.class_10157.class_10158>?) = this.method_62900(uniforms, samplers)
 /**
  * method_62897
  */
-fun ShaderProgram.addUniform(uniform: GlUniform) = this.method_62897(uniform)
+fun ShaderProgram.addUniform(uniform: GlUniform?) = this.method_62897(uniform)
 /**
  * method_1270
  */
@@ -96,8 +96,8 @@ fun ShaderProgram.unbind() = this.method_34585()
 /**
  * method_34582
  */
-fun ShaderProgram.getUniform(name: String) = this.method_34582(name)
+fun ShaderProgram.getUniform(name: String?) = this.method_34582(name)
 /**
  * method_35785
  */
-fun ShaderProgram.getUniformOrDefault(name: String) = this.method_35785(name)
+fun ShaderProgram.getUniformOrDefault(name: String?) = this.method_35785(name)

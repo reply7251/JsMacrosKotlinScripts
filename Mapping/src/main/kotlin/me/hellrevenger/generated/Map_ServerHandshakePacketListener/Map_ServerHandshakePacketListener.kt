@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_12576
  */
-fun ServerHandshakePacketListener.onHandshake(packet: HandshakeC2SPacket) = this.method_12576(packet)
+fun ServerHandshakePacketListener.onHandshake(packet: HandshakeC2SPacket?) = this.method_12576(packet)

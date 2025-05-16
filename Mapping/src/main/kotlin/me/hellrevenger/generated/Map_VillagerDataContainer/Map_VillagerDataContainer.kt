@@ -12,8 +12,8 @@ fun VillagerDataContainer.getVariant() = this.method_47882()
 /**
  * method_47883
  */
-fun VillagerDataContainer.setVariant(arg0: VillagerType) = this.method_47883(arg0)
+fun VillagerDataContainer.setVariant(arg0: VillagerType?) = this.method_47883(arg0)
 /**
  * method_7195
  */
-fun VillagerDataContainer.setVillagerData(villagerData: VillagerData) = this.method_7195(villagerData)
+fun VillagerDataContainer.setVillagerData(villagerData: VillagerData?) = this.method_7195(villagerData)

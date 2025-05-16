@@ -253,21 +253,21 @@ object FeatureKt {
     /**
      * method_36999
      */
-    fun <FC>notInBlockTagPredicate(tag: TagKey<Block>) where FC: FeatureConfig = Feature.method_36999(tag)
+    fun <FC>notInBlockTagPredicate(tag: TagKey<Block>?) where FC: FeatureConfig = Feature.method_36999(tag)
     /**
      * method_33982
      */
-    fun <FC>testAdjacentStates(posToState: function_Function<BlockPos, BlockState>, pos: BlockPos, predicate: Predicate<BlockState>) where FC: FeatureConfig = Feature.method_33982(posToState, pos, predicate)
+    fun <FC>testAdjacentStates(posToState: function_Function<BlockPos, BlockState>?, pos: BlockPos?, predicate: Predicate<BlockState>?) where FC: FeatureConfig = Feature.method_33982(posToState, pos, predicate)
     /**
      * method_23396
      */
-    fun <FC>isSoil(state: BlockState) where FC: FeatureConfig = Feature.method_23396(state)
+    fun <FC>isSoil(state: BlockState?) where FC: FeatureConfig = Feature.method_23396(state)
     /**
      * method_33981
      */
-    fun <FC>isExposedToAir(posToState: function_Function<BlockPos, BlockState>, pos: BlockPos) where FC: FeatureConfig = Feature.method_33981(posToState, pos)
+    fun <FC>isExposedToAir(posToState: function_Function<BlockPos, BlockState>?, pos: BlockPos?) where FC: FeatureConfig = Feature.method_33981(posToState, pos)
     /**
      * method_27368
      */
-    fun <FC>isSoil(world: TestableWorld, pos: BlockPos) where FC: FeatureConfig = Feature.method_27368(world, pos)
+    fun <FC>isSoil(world: TestableWorld?, pos: BlockPos?) where FC: FeatureConfig = Feature.method_27368(world, pos)
 }

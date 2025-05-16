@@ -37,5 +37,5 @@ object ChunkGeneratorSettingsKt {
     /**
      * method_31111
      */
-    fun bootstrap(chunkGenerationSettingsRegisterable: Registerable<ChunkGeneratorSettings>) = ChunkGeneratorSettings.method_31111(chunkGenerationSettingsRegisterable)
+    fun bootstrap(chunkGenerationSettingsRegisterable: Registerable<ChunkGeneratorSettings>?) = ChunkGeneratorSettings.method_31111(chunkGenerationSettingsRegisterable)
 }

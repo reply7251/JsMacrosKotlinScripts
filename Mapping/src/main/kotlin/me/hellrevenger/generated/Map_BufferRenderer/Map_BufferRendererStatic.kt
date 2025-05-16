@@ -9,11 +9,11 @@ object BufferRendererKt {
     /**
      * method_43433
      */
-    fun drawWithGlobalProgram(buffer: BuiltBuffer) = BufferRenderer.method_43433(buffer)
+    fun drawWithGlobalProgram(buffer: BuiltBuffer?) = BufferRenderer.method_43433(buffer)
     /**
      * method_43437
      */
-    fun draw(buffer: BuiltBuffer) = BufferRenderer.method_43437(buffer)
+    fun draw(buffer: BuiltBuffer?) = BufferRenderer.method_43437(buffer)
     /**
      * method_34420
      */

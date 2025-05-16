@@ -12,4 +12,4 @@ fun BlockAttachedEntity.canStayAttached() = this.method_6888()
 /**
  * method_6889
  */
-fun BlockAttachedEntity.onBreak(world: ServerWorld, breaker: Entity) = this.method_6889(world, breaker)
+fun BlockAttachedEntity.onBreak(world: ServerWorld?, breaker: Entity?) = this.method_6889(world, breaker)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_46617
  */
-fun PlayerSessionC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_46617(arg0)
+fun PlayerSessionC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_46617(arg0)
 /**
  * comp_1129
  */

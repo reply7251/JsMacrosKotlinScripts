@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11455
  */
-fun CooldownUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11455(arg0)
+fun CooldownUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11455(arg0)
 /**
  * comp_2199
  */

@@ -16,7 +16,7 @@ fun Goal.canStart() = this.method_6264()
 /**
  * method_6265
  */
-fun Goal.setControls(controls: EnumSet<net.minecraft.class_1352.class_4134>) = this.method_6265(controls)
+fun Goal.setControls(controls: EnumSet<net.minecraft.class_1352.class_4134>?) = this.method_6265(controls)
 /**
  * method_6266
  */

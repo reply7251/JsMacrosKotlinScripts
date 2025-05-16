@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_45635
  */
-fun <T>RegistryEntryPredicateArgumentType<T>.parse(arg0: StringReader) = this.method_45635(arg0)
+fun <T>RegistryEntryPredicateArgumentType<T>.parse(arg0: StringReader?) = this.method_45635(arg0)

@@ -8,4 +8,4 @@ fun DrownedEntityRenderer.createRenderState() = this.method_62415()
 /**
  * method_4163
  */
-fun DrownedEntityRenderer.getTexture(arg0: ZombieEntityRenderState) = this.method_4163(arg0)
+fun DrownedEntityRenderer.getTexture(arg0: ZombieEntityRenderState?) = this.method_4163(arg0)

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_55817
  */
-fun ArmadilloEntityModel.setAngles(arg0: ArmadilloEntityRenderState) = this.method_55817(arg0)
+fun ArmadilloEntityModel.setAngles(arg0: ArmadilloEntityRenderState?) = this.method_55817(arg0)

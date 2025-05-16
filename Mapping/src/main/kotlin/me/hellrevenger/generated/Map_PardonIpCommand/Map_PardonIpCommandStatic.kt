@@ -5,5 +5,5 @@ object PardonIpCommandKt {
     /**
      * method_13478
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = PardonIpCommand.method_13478(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = PardonIpCommand.method_13478(dispatcher)
 }

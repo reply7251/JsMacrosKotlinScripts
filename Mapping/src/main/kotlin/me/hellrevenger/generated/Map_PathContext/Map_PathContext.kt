@@ -12,7 +12,7 @@ fun PathContext.getWorld() = this.method_57621()
 /**
  * method_57623
  */
-fun PathContext.getBlockState(pos: BlockPos) = this.method_57623(pos)
+fun PathContext.getBlockState(pos: BlockPos?) = this.method_57623(pos)
 /**
  * method_57624
  */

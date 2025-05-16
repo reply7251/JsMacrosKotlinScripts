@@ -24,7 +24,7 @@ fun Window.isFullscreen() = this.method_4498()
 /**
  * method_4505
  */
-fun Window.setFullscreenVideoMode(fullscreenVideoMode: Optional<VideoMode>) = this.method_4505(fullscreenVideoMode)
+fun Window.setFullscreenVideoMode(fullscreenVideoMode: Optional<VideoMode>?) = this.method_4505(fullscreenVideoMode)
 /**
  * method_4499
  */
@@ -44,7 +44,7 @@ fun Window.toggleFullscreen() = this.method_4500()
 /**
  * method_4474
  */
-fun Window.setPhase(phase: String) = this.method_4474(phase)
+fun Window.setPhase(phase: String?) = this.method_4474(phase)
 /**
  * method_4475
  */
@@ -56,7 +56,7 @@ fun Window.getMonitor() = this.method_20831()
 /**
  * method_4491
  */
-fun Window.setIcon(resourcePack: ResourcePack, icons: Icons) = this.method_4491(resourcePack, icons)
+fun Window.setIcon(resourcePack: ResourcePack?, icons: Icons?) = this.method_4491(resourcePack, icons)
 /**
  * method_36813
  */
@@ -72,11 +72,11 @@ fun Window.logOnGlError() = this.method_4513()
 /**
  * method_61943
  */
-fun Window.setCloseCallback(callback: Runnable) = this.method_61943(callback)
+fun Window.setCloseCallback(callback: Runnable?) = this.method_61943(callback)
 /**
  * method_24286
  */
-fun Window.setTitle(title: String) = this.method_24286(title)
+fun Window.setTitle(title: String?) = this.method_24286(title)
 /**
  * method_4482
  */
@@ -100,7 +100,7 @@ fun Window.getFramebufferHeight() = this.method_4506()
 /**
  * method_15998
  */
-fun Window.swapBuffers(capturer: TracyFrameCapturer) = this.method_15998(capturer)
+fun Window.swapBuffers(capturer: TracyFrameCapturer?) = this.method_15998(capturer)
 /**
  * method_4477
  */

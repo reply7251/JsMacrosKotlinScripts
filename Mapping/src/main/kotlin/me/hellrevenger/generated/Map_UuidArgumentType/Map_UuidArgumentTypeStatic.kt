@@ -9,7 +9,7 @@ object UuidArgumentTypeKt {
     /**
      * method_27645
      */
-    fun getUuid(context: CommandContext<ServerCommandSource>, name: String) = UuidArgumentType.method_27645(context, name)
+    fun getUuid(context: CommandContext<ServerCommandSource>?, name: String?) = UuidArgumentType.method_27645(context, name)
     /**
      * method_27643
      */

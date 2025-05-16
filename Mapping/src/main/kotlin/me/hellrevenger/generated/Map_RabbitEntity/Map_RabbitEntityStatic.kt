@@ -17,5 +17,5 @@ object RabbitEntityKt {
     /**
      * method_20669
      */
-    fun canSpawn(entity: EntityType<RabbitEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = RabbitEntity.method_20669(entity, world, spawnReason, pos, random)
+    fun canSpawn(entity: EntityType<RabbitEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = RabbitEntity.method_20669(entity, world, spawnReason, pos, random)
 }

@@ -12,4 +12,4 @@ fun BlockBufferAllocatorStorage.reset() = this.method_23501()
 /**
  * method_3154
  */
-fun BlockBufferAllocatorStorage.get(layer: RenderLayer) = this.method_3154(layer)
+fun BlockBufferAllocatorStorage.get(layer: RenderLayer?) = this.method_3154(layer)

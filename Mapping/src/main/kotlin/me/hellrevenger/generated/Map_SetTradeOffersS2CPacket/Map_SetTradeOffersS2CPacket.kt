@@ -28,4 +28,4 @@ fun SetTradeOffersS2CPacket.getOffers() = this.method_17590()
 /**
  * method_17588
  */
-fun SetTradeOffersS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_17588(arg0)
+fun SetTradeOffersS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_17588(arg0)

@@ -8,7 +8,7 @@ fun SignEditorOpenS2CPacket.getPos() = this.method_11677()
 /**
  * method_11676
  */
-fun SignEditorOpenS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11676(arg0)
+fun SignEditorOpenS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11676(arg0)
 /**
  * method_49995
  */

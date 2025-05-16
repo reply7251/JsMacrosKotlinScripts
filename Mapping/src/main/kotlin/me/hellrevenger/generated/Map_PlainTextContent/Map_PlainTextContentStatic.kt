@@ -5,5 +5,5 @@ object PlainTextContentKt {
     /**
      * method_54232
      */
-    fun of(string: String) = PlainTextContent.method_54232(string)
+    fun of(string: String?) = PlainTextContent.method_54232(string)
 }

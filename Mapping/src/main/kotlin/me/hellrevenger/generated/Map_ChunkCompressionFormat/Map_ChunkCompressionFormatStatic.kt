@@ -41,5 +41,5 @@ object ChunkCompressionFormatKt {
     /**
      * method_56568
      */
-    fun setCurrentFormat(name: String) = ChunkCompressionFormat.method_56568(name)
+    fun setCurrentFormat(name: String?) = ChunkCompressionFormat.method_56568(name)
 }

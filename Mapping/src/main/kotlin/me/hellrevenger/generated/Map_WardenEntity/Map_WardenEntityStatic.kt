@@ -5,7 +5,7 @@ object WardenEntityKt {
     /**
      * method_42204
      */
-    fun addDarknessToClosePlayers(world: ServerWorld, pos: Vec3d, entity: Entity, range: Int) = WardenEntity.method_42204(world, pos, entity, range)
+    fun addDarknessToClosePlayers(world: ServerWorld?, pos: Vec3d?, entity: Entity?, range: Int) = WardenEntity.method_42204(world, pos, entity, range)
     /**
      * method_42221
      */

@@ -5,5 +5,5 @@ object BreezeEntityRendererKt {
     /**
      * method_55830
      */
-    fun updatePartVisibility(model: BreezeEntityModel, modelParts: Array<ModelPart>) = BreezeEntityRenderer.method_55830(model, *modelParts)
+    fun updatePartVisibility(model: BreezeEntityModel?, modelParts: Array<ModelPart>) = BreezeEntityRenderer.method_55830(model, *modelParts)
 }

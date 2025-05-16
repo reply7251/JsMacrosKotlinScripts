@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_65086
  */
-fun PickItemFromBlockC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_65086(arg0)
+fun PickItemFromBlockC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_65086(arg0)
 /**
  * comp_3327
  */

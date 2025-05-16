@@ -5,7 +5,7 @@ object FeatureDebugLoggerKt {
     /**
      * method_39599
      */
-    fun incrementFeatureCount(world: ServerWorld, configuredFeature: ConfiguredFeature<*, *>, placedFeature: Optional<PlacedFeature>) = FeatureDebugLogger.method_39599(world, configuredFeature, placedFeature)
+    fun incrementFeatureCount(world: ServerWorld?, configuredFeature: ConfiguredFeature<*, *>?, placedFeature: Optional<PlacedFeature>?) = FeatureDebugLogger.method_39599(world, configuredFeature, placedFeature)
     /**
      * method_39603
      */
@@ -17,5 +17,5 @@ object FeatureDebugLoggerKt {
     /**
      * method_39598
      */
-    fun incrementTotalChunksCount(world: ServerWorld) = FeatureDebugLogger.method_39598(world)
+    fun incrementTotalChunksCount(world: ServerWorld?) = FeatureDebugLogger.method_39598(world)
 }

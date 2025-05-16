@@ -5,5 +5,5 @@ object PowderSnowBlockKt {
     /**
      * method_32355
      */
-    fun canWalkOnPowderSnow(entity: Entity) = PowderSnowBlock.method_32355(entity)
+    fun canWalkOnPowderSnow(entity: Entity?) = PowderSnowBlock.method_32355(entity)
 }

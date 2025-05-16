@@ -9,9 +9,9 @@ object TextArgumentTypeKt {
     /**
      * method_9280
      */
-    fun getTextArgument(context: CommandContext<ServerCommandSource>, name: String) = TextArgumentType.method_9280(context, name)
+    fun getTextArgument(context: CommandContext<ServerCommandSource>?, name: String?) = TextArgumentType.method_9280(context, name)
     /**
      * method_9281
      */
-    fun text(registryAccess: CommandRegistryAccess) = TextArgumentType.method_9281(registryAccess)
+    fun text(registryAccess: CommandRegistryAccess?) = TextArgumentType.method_9281(registryAccess)
 }

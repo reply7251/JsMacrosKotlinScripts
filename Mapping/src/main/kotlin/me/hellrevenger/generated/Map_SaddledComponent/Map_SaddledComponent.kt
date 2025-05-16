@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_26312
  */
-fun SaddledComponent.readNbt(nbt: NbtCompound) = this.method_26312(nbt)
+fun SaddledComponent.readNbt(nbt: NbtCompound?) = this.method_26312(nbt)
 /**
  * method_49479
  */
@@ -12,7 +12,7 @@ fun SaddledComponent.getMovementSpeedMultiplier() = this.method_49479()
 /**
  * method_26309
  */
-fun SaddledComponent.writeNbt(nbt: NbtCompound) = this.method_26309(nbt)
+fun SaddledComponent.writeNbt(nbt: NbtCompound?) = this.method_26309(nbt)
 /**
  * method_26307
  */
@@ -20,7 +20,7 @@ fun SaddledComponent.boost() = this.method_26307()
 /**
  * method_26308
  */
-fun SaddledComponent.boost(random: Random) = this.method_26308(random)
+fun SaddledComponent.boost(random: Random?) = this.method_26308(random)
 /**
  * method_49478
  */

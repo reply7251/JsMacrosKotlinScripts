@@ -5,5 +5,5 @@ object JukeboxSongsKt {
     /**
      * method_60765
      */
-    fun bootstrap(registry: Registerable<JukeboxSong>) = JukeboxSongs.method_60765(registry)
+    fun bootstrap(registry: Registerable<JukeboxSong>?) = JukeboxSongs.method_60765(registry)
 }

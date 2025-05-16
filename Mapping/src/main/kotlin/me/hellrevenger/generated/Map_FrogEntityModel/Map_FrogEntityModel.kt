@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_41907
  */
-fun FrogEntityModel.setAngles(arg0: FrogEntityRenderState) = this.method_41907(arg0)
+fun FrogEntityModel.setAngles(arg0: FrogEntityRenderState?) = this.method_41907(arg0)

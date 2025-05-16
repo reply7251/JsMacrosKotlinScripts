@@ -28,4 +28,4 @@ fun GeneratorOptions.shouldGenerateStructures() = this.method_28029()
 /**
  * method_28024
  */
-fun GeneratorOptions.withSeed(seed: OptionalLong) = this.method_28024(seed)
+fun GeneratorOptions.withSeed(seed: OptionalLong?) = this.method_28024(seed)

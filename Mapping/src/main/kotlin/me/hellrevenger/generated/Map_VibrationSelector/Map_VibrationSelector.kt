@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_45505
  */
-fun VibrationSelector.tryAccept(vibration: Vibration, tick: Long) = this.method_45505(vibration, tick)
+fun VibrationSelector.tryAccept(vibration: Vibration?, tick: Long) = this.method_45505(vibration, tick)
 /**
  * method_45502
  */

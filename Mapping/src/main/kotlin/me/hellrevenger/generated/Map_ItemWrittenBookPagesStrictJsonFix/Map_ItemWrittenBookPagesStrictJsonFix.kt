@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_5085
  */
-fun ItemWrittenBookPagesStrictJsonFix.fixBookPages(tagDynamic: Dynamic<*>) = this.method_5085(tagDynamic)
+fun ItemWrittenBookPagesStrictJsonFix.fixBookPages(tagDynamic: Dynamic<*>?) = this.method_5085(tagDynamic)

@@ -12,7 +12,7 @@ fun StonecutterScreenHandler.canCraft() = this.method_17865()
 /**
  * method_17859
  */
-fun StonecutterScreenHandler.setContentsChangedListener(contentsChangedListener: Runnable) = this.method_17859(contentsChangedListener)
+fun StonecutterScreenHandler.setContentsChangedListener(contentsChangedListener: Runnable?) = this.method_17859(contentsChangedListener)
 /**
  * method_17864
  */

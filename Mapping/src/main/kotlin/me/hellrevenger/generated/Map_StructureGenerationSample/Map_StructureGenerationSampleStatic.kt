@@ -5,5 +5,5 @@ object StructureGenerationSampleKt {
     /**
      * method_65114
      */
-    fun fromEvent(event: RecordedEvent) = StructureGenerationSample.method_65114(event)
+    fun fromEvent(event: RecordedEvent?) = StructureGenerationSample.method_65114(event)
 }

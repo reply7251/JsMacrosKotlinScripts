@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_34163
  */
-fun WorldBorderSizeChangedS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_34163(arg0)
+fun WorldBorderSizeChangedS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_34163(arg0)
 /**
  * method_34164
  */

@@ -81,9 +81,9 @@ object SpawnReasonKt {
     /**
      * method_54987
      */
-    fun isTrialSpawner(reason: SpawnReason) = SpawnReason.method_54987(reason)
+    fun isTrialSpawner(reason: SpawnReason?) = SpawnReason.method_54987(reason)
     /**
      * method_54986
      */
-    fun isAnySpawner(reason: SpawnReason) = SpawnReason.method_54986(reason)
+    fun isAnySpawner(reason: SpawnReason?) = SpawnReason.method_54986(reason)
 }

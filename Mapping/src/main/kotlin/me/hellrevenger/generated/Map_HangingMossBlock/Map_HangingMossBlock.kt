@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_64787
  */
-fun HangingMossBlock.getTipPos(world: BlockView, pos: BlockPos) = this.method_64787(world, pos)
+fun HangingMossBlock.getTipPos(world: BlockView?, pos: BlockPos?) = this.method_64787(world, pos)

@@ -13,13 +13,13 @@ object PotionContentsComponentKt {
     /**
      * method_58111
      */
-    fun mixColors(effects: Iterable<StatusEffectInstance>) = PotionContentsComponent.method_58111(effects)
+    fun mixColors(effects: Iterable<StatusEffectInstance>?) = PotionContentsComponent.method_58111(effects)
     /**
      * method_8065
      */
-    fun buildTooltip(effects: Iterable<StatusEffectInstance>, textConsumer: Consumer<Text>, durationMultiplier: Float, tickRate: Float) = PotionContentsComponent.method_8065(effects, textConsumer, durationMultiplier, tickRate)
+    fun buildTooltip(effects: Iterable<StatusEffectInstance>?, textConsumer: Consumer<Text>?, durationMultiplier: Float, tickRate: Float) = PotionContentsComponent.method_8065(effects, textConsumer, durationMultiplier, tickRate)
     /**
      * method_57400
      */
-    fun createStack(item: Item, potion: RegistryEntry<Potion>) = PotionContentsComponent.method_57400(item, potion)
+    fun createStack(item: Item?, potion: RegistryEntry<Potion>?) = PotionContentsComponent.method_57400(item, potion)
 }

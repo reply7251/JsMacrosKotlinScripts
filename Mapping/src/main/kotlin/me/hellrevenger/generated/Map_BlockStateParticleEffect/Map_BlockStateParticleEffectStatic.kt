@@ -5,9 +5,9 @@ object BlockStateParticleEffectKt {
     /**
      * method_56170
      */
-    fun createPacketCodec(type: ParticleType<BlockStateParticleEffect>) = BlockStateParticleEffect.method_56170(type)
+    fun createPacketCodec(type: ParticleType<BlockStateParticleEffect>?) = BlockStateParticleEffect.method_56170(type)
     /**
      * method_29128
      */
-    fun createCodec(type: ParticleType<BlockStateParticleEffect>) = BlockStateParticleEffect.method_29128(type)
+    fun createCodec(type: ParticleType<BlockStateParticleEffect>?) = BlockStateParticleEffect.method_29128(type)
 }

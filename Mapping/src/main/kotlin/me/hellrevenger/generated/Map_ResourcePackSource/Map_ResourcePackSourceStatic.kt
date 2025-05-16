@@ -5,5 +5,5 @@ object ResourcePackSourceKt {
     /**
      * method_45281
      */
-    fun create(sourceTextSupplier: UnaryOperator<Text>, canBeEnabledLater: Boolean) = ResourcePackSource.method_45281(sourceTextSupplier, canBeEnabledLater)
+    fun create(sourceTextSupplier: UnaryOperator<Text>?, canBeEnabledLater: Boolean) = ResourcePackSource.method_45281(sourceTextSupplier, canBeEnabledLater)
 }

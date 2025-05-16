@@ -8,7 +8,7 @@ fun Defines.toSource() = this.method_62929()
 /**
  * method_62928
  */
-fun Defines.withMerged(other: Defines) = this.method_62928(other)
+fun Defines.withMerged(other: Defines?) = this.method_62928(other)
 /**
  * method_62930
  */

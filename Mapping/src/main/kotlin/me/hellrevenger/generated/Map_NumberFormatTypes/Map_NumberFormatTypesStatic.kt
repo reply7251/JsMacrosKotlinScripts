@@ -5,5 +5,5 @@ object NumberFormatTypesKt {
     /**
      * method_55466
      */
-    fun registerAndGetDefault(registry: Registry<NumberFormatType<*>>) = NumberFormatTypes.method_55466(registry)
+    fun registerAndGetDefault(registry: Registry<NumberFormatType<*>>?) = NumberFormatTypes.method_55466(registry)
 }

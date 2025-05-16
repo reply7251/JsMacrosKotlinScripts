@@ -9,5 +9,5 @@ object GameRendererKt {
     /**
      * method_3174
      */
-    fun getNightVisionStrength(entity: LivingEntity, tickDelta: Float) = GameRenderer.method_3174(entity, tickDelta)
+    fun getNightVisionStrength(entity: LivingEntity?, tickDelta: Float) = GameRenderer.method_3174(entity, tickDelta)
 }

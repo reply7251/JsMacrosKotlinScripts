@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_49827
  */
-fun SnifferEggBlock.getHatchStage(state: BlockState) = this.method_49827(state)
+fun SnifferEggBlock.getHatchStage(state: BlockState?) = this.method_49827(state)

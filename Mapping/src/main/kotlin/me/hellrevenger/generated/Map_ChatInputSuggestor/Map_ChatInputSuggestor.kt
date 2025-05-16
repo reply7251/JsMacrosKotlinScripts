@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_44933
  */
-fun ChatInputSuggestor.tryRenderWindow(context: DrawContext, mouseX: Int, mouseY: Int) = this.method_44933(context, mouseX, mouseY)
+fun ChatInputSuggestor.tryRenderWindow(context: DrawContext?, mouseX: Int, mouseY: Int) = this.method_44933(context, mouseX, mouseY)
 /**
  * method_53869
  */
@@ -32,7 +32,7 @@ fun ChatInputSuggestor.keyPressed(keyCode: Int, scanCode: Int, modifiers: Int) =
 /**
  * method_44932
  */
-fun ChatInputSuggestor.renderMessages(context: DrawContext) = this.method_44932(context)
+fun ChatInputSuggestor.renderMessages(context: DrawContext?) = this.method_44932(context)
 /**
  * method_23934
  */
@@ -48,7 +48,7 @@ fun ChatInputSuggestor.setWindowActive(windowActive: Boolean) = this.method_2393
 /**
  * method_23923
  */
-fun ChatInputSuggestor.render(context: DrawContext, mouseX: Int, mouseY: Int) = this.method_23923(context, mouseX, mouseY)
+fun ChatInputSuggestor.render(context: DrawContext?, mouseX: Int, mouseY: Int) = this.method_23923(context, mouseX, mouseY)
 /**
  * method_23958
  */

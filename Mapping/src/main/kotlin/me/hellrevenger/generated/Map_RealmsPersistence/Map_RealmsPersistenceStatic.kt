@@ -5,7 +5,7 @@ object RealmsPersistenceKt {
     /**
      * method_21550
      */
-    fun writeFile(data: net.minecraft.class_4432.class_4433) = RealmsPersistence.method_21550(data)
+    fun writeFile(data: net.minecraft.class_4432.class_4433?) = RealmsPersistence.method_21550(data)
     /**
      * method_21549
      */

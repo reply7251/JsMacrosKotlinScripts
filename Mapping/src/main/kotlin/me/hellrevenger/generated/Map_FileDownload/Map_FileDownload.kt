@@ -16,11 +16,11 @@ fun FileDownload.isExtracting() = this.method_20964()
 /**
  * method_20955
  */
-fun FileDownload.contentLength(downloadLink: String) = this.method_20955(downloadLink)
+fun FileDownload.contentLength(downloadLink: String?) = this.method_20955(downloadLink)
 /**
  * method_22100
  */
-fun FileDownload.downloadWorld(download: WorldDownload, message: String, status: net.minecraft.class_4392.class_4393, storage: LevelStorage) = this.method_22100(download, message, status, storage)
+fun FileDownload.downloadWorld(download: WorldDownload?, message: String?, status: net.minecraft.class_4392.class_4393?, storage: LevelStorage?) = this.method_22100(download, message, status, storage)
 /**
  * method_20948
  */

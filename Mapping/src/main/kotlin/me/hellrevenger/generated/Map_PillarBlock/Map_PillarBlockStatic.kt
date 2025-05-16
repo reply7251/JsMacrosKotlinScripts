@@ -9,5 +9,5 @@ object PillarBlockKt {
     /**
      * method_36377
      */
-    fun changeRotation(state: BlockState, rotation: BlockRotation) = PillarBlock.method_36377(state, rotation)
+    fun changeRotation(state: BlockState?, rotation: BlockRotation?) = PillarBlock.method_36377(state, rotation)
 }

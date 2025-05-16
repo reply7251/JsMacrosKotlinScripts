@@ -5,5 +5,5 @@ object ParticleTextureDataKt {
     /**
      * method_18828
      */
-    fun load(json: JsonObject) = ParticleTextureData.method_18828(json)
+    fun load(json: JsonObject?) = ParticleTextureData.method_18828(json)
 }

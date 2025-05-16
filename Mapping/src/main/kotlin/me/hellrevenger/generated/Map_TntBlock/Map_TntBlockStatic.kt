@@ -9,5 +9,5 @@ object TntBlockKt {
     /**
      * method_10738
      */
-    fun primeTnt(world: world_World, pos: BlockPos) = TntBlock.method_10738(world, pos)
+    fun primeTnt(world: world_World?, pos: BlockPos?) = TntBlock.method_10738(world, pos)
 }

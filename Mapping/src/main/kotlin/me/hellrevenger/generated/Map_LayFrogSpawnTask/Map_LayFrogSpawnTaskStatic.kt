@@ -5,5 +5,5 @@ object LayFrogSpawnTaskKt {
     /**
      * method_47180
      */
-    fun create(frogSpawn: Block) = LayFrogSpawnTask.method_47180(frogSpawn)
+    fun create(frogSpawn: Block?) = LayFrogSpawnTask.method_47180(frogSpawn)
 }

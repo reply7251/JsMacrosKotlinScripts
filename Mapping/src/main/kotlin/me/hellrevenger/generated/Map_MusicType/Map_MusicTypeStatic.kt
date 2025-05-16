@@ -33,5 +33,5 @@ object MusicTypeKt {
     /**
      * method_27283
      */
-    fun createIngameMusic(sound: RegistryEntry<SoundEvent>) = MusicType.method_27283(sound)
+    fun createIngameMusic(sound: RegistryEntry<SoundEvent>?) = MusicType.method_27283(sound)
 }

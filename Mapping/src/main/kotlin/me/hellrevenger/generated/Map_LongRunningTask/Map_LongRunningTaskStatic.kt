@@ -5,5 +5,5 @@ object LongRunningTaskKt {
     /**
      * method_25289
      */
-    fun setScreen(screen: Screen) = LongRunningTask.method_25289(screen)
+    fun setScreen(screen: Screen?) = LongRunningTask.method_25289(screen)
 }

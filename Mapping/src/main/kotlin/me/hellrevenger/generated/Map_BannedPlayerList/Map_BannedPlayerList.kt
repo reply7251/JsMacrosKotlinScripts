@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_14650
  */
-fun BannedPlayerList.contains(profile: GameProfile) = this.method_14650(profile)
+fun BannedPlayerList.contains(profile: GameProfile?) = this.method_14650(profile)

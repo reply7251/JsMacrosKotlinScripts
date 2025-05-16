@@ -5,5 +5,5 @@ object FindInteractionTargetTaskKt {
     /**
      * method_47082
      */
-    fun create(type: EntityType<*>, maxDistance: Int) = FindInteractionTargetTask.method_47082(type, maxDistance)
+    fun create(type: EntityType<*>?, maxDistance: Int) = FindInteractionTargetTask.method_47082(type, maxDistance)
 }

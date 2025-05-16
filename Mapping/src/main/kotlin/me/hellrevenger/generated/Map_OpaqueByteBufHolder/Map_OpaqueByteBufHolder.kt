@@ -8,7 +8,7 @@ fun OpaqueByteBufHolder.touch() = this.method_65938()
 /**
  * method_65940
  */
-fun OpaqueByteBufHolder.touch(arg0: Object) = this.method_65940(arg0)
+fun OpaqueByteBufHolder.touch(arg0: Object?) = this.method_65940(arg0)
 /**
  * method_65936
  */

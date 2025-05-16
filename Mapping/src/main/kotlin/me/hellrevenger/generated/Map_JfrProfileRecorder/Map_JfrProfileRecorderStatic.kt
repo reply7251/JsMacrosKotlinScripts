@@ -5,5 +5,5 @@ object JfrProfileRecorderKt {
     /**
      * method_38001
      */
-    fun readProfile(path: file_Path) = JfrProfileRecorder.method_38001(path)
+    fun readProfile(path: file_Path?) = JfrProfileRecorder.method_38001(path)
 }

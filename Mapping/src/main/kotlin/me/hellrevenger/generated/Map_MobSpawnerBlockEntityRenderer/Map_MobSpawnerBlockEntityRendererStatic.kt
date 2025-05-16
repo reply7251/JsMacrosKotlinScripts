@@ -5,5 +5,5 @@ object MobSpawnerBlockEntityRendererKt {
     /**
      * method_55253
      */
-    fun render(tickDelta: Float, matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int, entity: Entity, entityRenderDispatcher: EntityRenderDispatcher, lastRotation: Double, arg7: Double) = MobSpawnerBlockEntityRenderer.method_55253(tickDelta, matrices, vertexConsumers, light, entity, entityRenderDispatcher, lastRotation, arg7)
+    fun render(tickDelta: Float, matrices: MatrixStack?, vertexConsumers: VertexConsumerProvider?, light: Int, entity: Entity?, entityRenderDispatcher: EntityRenderDispatcher?, lastRotation: Double, arg7: Double) = MobSpawnerBlockEntityRenderer.method_55253(tickDelta, matrices, vertexConsumers, light, entity, entityRenderDispatcher, lastRotation, arg7)
 }

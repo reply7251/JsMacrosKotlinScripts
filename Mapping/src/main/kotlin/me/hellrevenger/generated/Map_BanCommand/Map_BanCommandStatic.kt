@@ -5,5 +5,5 @@ object BanCommandKt {
     /**
      * method_13021
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = BanCommand.method_13021(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = BanCommand.method_13021(dispatcher)
 }

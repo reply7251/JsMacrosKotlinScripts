@@ -5,25 +5,25 @@ object TextFixesKt {
     /**
      * method_53963
      */
-    fun <T>translate(ops: DynamicOps<T>, key: String) = TextFixes.method_53963<T>(ops, key)
+    fun <T>translate(ops: DynamicOps<T>?, key: String?) = TextFixes.method_53963<T>(ops, key)
     /**
      * method_53961
      */
-    fun <T>text(ops: DynamicOps<T>, string: String) = TextFixes.method_53961<T>(ops, string)
+    fun <T>text(ops: DynamicOps<T>?, string: String?) = TextFixes.method_53961<T>(ops, string)
     /**
      * method_53958
      */
-    fun <T>fixText(dynamic: Dynamic<T>) = TextFixes.method_53958<T>(dynamic)
+    fun <T>fixText(dynamic: Dynamic<T>?) = TextFixes.method_53958<T>(dynamic)
     /**
      * method_56629
      */
-    fun text(dynamic: Dynamic<*>) = TextFixes.method_56629(dynamic)
+    fun text(dynamic: Dynamic<*>?) = TextFixes.method_56629(dynamic)
     /**
      * method_58596
      */
-    fun getTranslate(json: String) = TextFixes.method_58596(json)
+    fun getTranslate(json: String?) = TextFixes.method_58596(json)
     /**
      * method_53960
      */
-    fun <T>empty(ops: DynamicOps<T>) = TextFixes.method_53960<T>(ops)
+    fun <T>empty(ops: DynamicOps<T>?) = TextFixes.method_53960<T>(ops)
 }

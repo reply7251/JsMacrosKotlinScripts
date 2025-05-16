@@ -5,5 +5,5 @@ object WorldDownloadKt {
     /**
      * method_25095
      */
-    fun parse(json: String) = WorldDownload.method_25095(json)
+    fun parse(json: String?) = WorldDownload.method_25095(json)
 }

@@ -12,7 +12,7 @@ fun SignedMessage.isSenderMissing() = this.method_46293()
 /**
  * method_44747
  */
-fun SignedMessage.isExpiredOnServer(currentTime: Instant) = this.method_44747(currentTime)
+fun SignedMessage.isExpiredOnServer(currentTime: Instant?) = this.method_44747(currentTime)
 /**
  * method_46291
  */
@@ -40,7 +40,7 @@ fun SignedMessage.getSignedContent() = this.method_44862()
 /**
  * method_44858
  */
-fun SignedMessage.verify(verifier: SignatureVerifier) = this.method_44858(verifier)
+fun SignedMessage.verify(verifier: SignatureVerifier?) = this.method_44858(verifier)
 /**
  * method_44864
  */
@@ -52,11 +52,11 @@ fun SignedMessage.hasSignature() = this.method_46294()
 /**
  * method_44748
  */
-fun SignedMessage.isExpiredOnClient(currentTime: Instant) = this.method_44748(currentTime)
+fun SignedMessage.isExpiredOnClient(currentTime: Instant?) = this.method_44748(currentTime)
 /**
  * method_45097
  */
-fun SignedMessage.withFilterMask(filterMask: FilterMask) = this.method_45097(filterMask)
+fun SignedMessage.withFilterMask(filterMask: FilterMask?) = this.method_45097(filterMask)
 /**
  * method_46292
  */
@@ -64,11 +64,11 @@ fun SignedMessage.getSender() = this.method_46292()
 /**
  * method_45040
  */
-fun SignedMessage.canVerifyFrom(sender: UUID) = this.method_45040(sender)
+fun SignedMessage.canVerifyFrom(sender: UUID?) = this.method_45040(sender)
 /**
  * method_44863
  */
-fun SignedMessage.withUnsignedContent(unsignedContent: Text) = this.method_44863(unsignedContent)
+fun SignedMessage.withUnsignedContent(unsignedContent: Text?) = this.method_44863(unsignedContent)
 /**
  * comp_830
  */

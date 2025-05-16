@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62078
  */
-fun DonkeyEntityModel.setAngles(arg0: DonkeyEntityRenderState) = this.method_62078(arg0)
+fun DonkeyEntityModel.setAngles(arg0: DonkeyEntityRenderState?) = this.method_62078(arg0)

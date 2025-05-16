@@ -13,5 +13,5 @@ object ChorusFlowerBlockKt {
     /**
      * method_9744
      */
-    fun generate(world: WorldAccess, pos: BlockPos, random: Random, size: Int) = ChorusFlowerBlock.method_9744(world, pos, random, size)
+    fun generate(world: WorldAccess?, pos: BlockPos?, random: Random?, size: Int) = ChorusFlowerBlock.method_9744(world, pos, random, size)
 }

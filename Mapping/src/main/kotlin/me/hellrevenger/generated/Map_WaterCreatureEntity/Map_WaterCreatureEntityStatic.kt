@@ -9,5 +9,5 @@ object WaterCreatureEntityKt {
     /**
      * method_38986
      */
-    fun canSpawn(type: EntityType<out WaterCreatureEntity>, world: WorldAccess, reason: SpawnReason, pos: BlockPos, random: Random) = WaterCreatureEntity.method_38986(type, world, reason, pos, random)
+    fun canSpawn(type: EntityType<out WaterCreatureEntity>?, world: WorldAccess?, reason: SpawnReason?, pos: BlockPos?, random: Random?) = WaterCreatureEntity.method_38986(type, world, reason, pos, random)
 }

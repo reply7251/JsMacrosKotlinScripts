@@ -33,5 +33,5 @@ object CrafterBlockEntityKt {
     /**
      * method_54481
      */
-    fun tickCrafting(world: world_World, pos: BlockPos, state: BlockState, blockEntity: CrafterBlockEntity) = CrafterBlockEntity.method_54481(world, pos, state, blockEntity)
+    fun tickCrafting(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: CrafterBlockEntity?) = CrafterBlockEntity.method_54481(world, pos, state, blockEntity)
 }

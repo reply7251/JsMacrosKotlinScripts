@@ -8,8 +8,8 @@ fun TabManager.getCurrentTab() = this.method_48614()
 /**
  * method_48616
  */
-fun TabManager.setTabArea(tabArea: ScreenRect) = this.method_48616(tabArea)
+fun TabManager.setTabArea(tabArea: ScreenRect?) = this.method_48616(tabArea)
 /**
  * method_48615
  */
-fun TabManager.setCurrentTab(tab: Tab, clickSound: Boolean) = this.method_48615(tab, clickSound)
+fun TabManager.setCurrentTab(tab: Tab?, clickSound: Boolean) = this.method_48615(tab, clickSound)

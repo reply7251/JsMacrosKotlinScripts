@@ -12,11 +12,11 @@ fun <T>RegistryKey<T>.getValue() = this.method_29177()
 /**
  * method_31163
  */
-fun <T>RegistryKey<T>.isOf(registry: RegistryKey<out Registry<*>>) = this.method_31163(registry)
+fun <T>RegistryKey<T>.isOf(registry: RegistryKey<out Registry<*>>?) = this.method_31163(registry)
 /**
  * method_39752
  */
-fun <T, E>RegistryKey<T>.tryCast(registryRef: RegistryKey<out Registry<E>>) = this.method_39752<E>(registryRef)
+fun <T, E>RegistryKey<T>.tryCast(registryRef: RegistryKey<out Registry<E>>?) = this.method_39752<E>(registryRef)
 /**
  * method_58273
  */

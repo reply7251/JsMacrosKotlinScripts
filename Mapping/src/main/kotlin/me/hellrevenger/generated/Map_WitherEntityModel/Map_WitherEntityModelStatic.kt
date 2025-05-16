@@ -5,5 +5,5 @@ object WitherEntityModelKt {
     /**
      * method_32067
      */
-    fun getTexturedModelData(dilation: Dilation) = WitherEntityModel.method_32067(dilation)
+    fun getTexturedModelData(dilation: Dilation?) = WitherEntityModel.method_32067(dilation)
 }

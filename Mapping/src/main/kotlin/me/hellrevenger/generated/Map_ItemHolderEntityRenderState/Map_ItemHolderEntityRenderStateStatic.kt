@@ -5,5 +5,5 @@ object ItemHolderEntityRenderStateKt {
     /**
      * method_65579
      */
-    fun update(entity: LivingEntity, state: ItemHolderEntityRenderState, itemModelManager: ItemModelManager) = ItemHolderEntityRenderState.method_65579(entity, state, itemModelManager)
+    fun update(entity: LivingEntity?, state: ItemHolderEntityRenderState?, itemModelManager: ItemModelManager?) = ItemHolderEntityRenderState.method_65579(entity, state, itemModelManager)
 }

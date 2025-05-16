@@ -5,5 +5,5 @@ object FillPlayerHeadLootFunctionKt {
     /**
      * method_35522
      */
-    fun builder(target: net.minecraft.class_47.class_50) = FillPlayerHeadLootFunction.method_35522(target)
+    fun builder(target: net.minecraft.class_47.class_50?) = FillPlayerHeadLootFunction.method_35522(target)
 }

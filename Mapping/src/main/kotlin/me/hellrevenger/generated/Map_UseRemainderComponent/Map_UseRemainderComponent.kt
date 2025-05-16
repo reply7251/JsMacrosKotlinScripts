@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_62863
  */
-fun UseRemainderComponent.convert(stack: ItemStack, oldCount: Int, inCreative: Boolean, inserter: net.minecraft.class_10131.class_10259) = this.method_62863(stack, oldCount, inCreative, inserter)
+fun UseRemainderComponent.convert(stack: ItemStack?, oldCount: Int, inCreative: Boolean, inserter: net.minecraft.class_10131.class_10259?) = this.method_62863(stack, oldCount, inCreative, inserter)
 /**
  * comp_3093
  */

@@ -4,12 +4,12 @@ import me.hellrevenger.generated.*
 /**
  * method_56939
  */
-fun Class2IntMap.get(clazz: Class<*>) = this.method_56939(clazz)
+fun Class2IntMap.get(clazz: Class<*>?) = this.method_56939(clazz)
 /**
  * method_56941
  */
-fun Class2IntMap.put(clazz: Class<*>) = this.method_56941(clazz)
+fun Class2IntMap.put(clazz: Class<*>?) = this.method_56941(clazz)
 /**
  * method_56940
  */
-fun Class2IntMap.getNext(clazz: Class<*>) = this.method_56940(clazz)
+fun Class2IntMap.getNext(clazz: Class<*>?) = this.method_56940(clazz)

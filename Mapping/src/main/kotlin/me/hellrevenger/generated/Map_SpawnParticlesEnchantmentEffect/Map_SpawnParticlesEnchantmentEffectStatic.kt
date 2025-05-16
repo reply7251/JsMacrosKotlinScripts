@@ -9,7 +9,7 @@ object SpawnParticlesEnchantmentEffectKt {
     /**
      * method_60250
      */
-    fun fixedVelocity(base: FloatProvider) = SpawnParticlesEnchantmentEffect.method_60250(base)
+    fun fixedVelocity(base: FloatProvider?) = SpawnParticlesEnchantmentEffect.method_60250(base)
     /**
      * method_60252
      */

@@ -8,4 +8,4 @@ fun DataProvider.getName() = this.method_10321()
 /**
  * method_10319
  */
-fun DataProvider.run(writer: DataWriter) = this.method_10319(writer)
+fun DataProvider.run(writer: DataWriter?) = this.method_10319(writer)

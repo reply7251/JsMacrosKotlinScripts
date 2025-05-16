@@ -8,4 +8,4 @@ fun SpellcastingIllagerEntity.isSpellcasting() = this.method_7137()
 /**
  * method_7138
  */
-fun SpellcastingIllagerEntity.setSpell(spell: net.minecraft.class_1617.class_1618) = this.method_7138(spell)
+fun SpellcastingIllagerEntity.setSpell(spell: net.minecraft.class_1617.class_1618?) = this.method_7138(spell)

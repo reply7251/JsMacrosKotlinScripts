@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_59688
  */
-fun WritableBookContentPredicate.test(arg0: ItemStack, arg1: WritableBookContentComponent) = this.method_59688(arg0, arg1)
+fun WritableBookContentPredicate.test(arg0: ItemStack?, arg1: WritableBookContentComponent?) = this.method_59688(arg0, arg1)
 /**
  * comp_2640
  */

@@ -16,11 +16,11 @@ fun AnimatedResultButton.getCurrentId() = this.method_64881()
 /**
  * method_2640
  */
-fun AnimatedResultButton.showResultCollection(resultCollection: RecipeResultCollection, filteringCraftable: Boolean, results: RecipeBookResults, context: ContextParameterMap) = this.method_2640(resultCollection, filteringCraftable, results, context)
+fun AnimatedResultButton.showResultCollection(resultCollection: RecipeResultCollection?, filteringCraftable: Boolean, results: RecipeBookResults?, context: ContextParameterMap?) = this.method_2640(resultCollection, filteringCraftable, results, context)
 /**
  * method_2644
  */
-fun AnimatedResultButton.getTooltip(stack: ItemStack) = this.method_2644(stack)
+fun AnimatedResultButton.getTooltip(stack: ItemStack?) = this.method_2644(stack)
 /**
  * method_64882
  */

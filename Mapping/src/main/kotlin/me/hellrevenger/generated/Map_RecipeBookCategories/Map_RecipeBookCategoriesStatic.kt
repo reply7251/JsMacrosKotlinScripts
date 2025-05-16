@@ -57,5 +57,5 @@ object RecipeBookCategoriesKt {
     /**
      * method_64983
      */
-    fun registerAndGetDefault(registry: Registry<RecipeBookCategory>) = RecipeBookCategories.method_64983(registry)
+    fun registerAndGetDefault(registry: Registry<RecipeBookCategory>?) = RecipeBookCategories.method_64983(registry)
 }

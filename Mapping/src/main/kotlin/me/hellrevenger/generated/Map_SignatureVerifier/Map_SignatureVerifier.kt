@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_44177
  */
-fun SignatureVerifier.validate(signedData: ByteArray, signatureData: ByteArray) = this.method_44177(signedData, signatureData)
+fun SignatureVerifier.validate(signedData: ByteArray?, signatureData: ByteArray?) = this.method_44177(signedData, signatureData)

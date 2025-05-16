@@ -9,5 +9,5 @@ object SherdsKt {
     /**
      * method_51516
      */
-    fun fromNbt(nbt: NbtCompound) = Sherds.method_51516(nbt)
+    fun fromNbt(nbt: NbtCompound?) = Sherds.method_51516(nbt)
 }

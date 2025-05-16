@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_64516
  */
-fun AbstractBoatEntityModel.setAngles(arg0: BoatEntityRenderState) = this.method_64516(arg0)
+fun AbstractBoatEntityModel.setAngles(arg0: BoatEntityRenderState?) = this.method_64516(arg0)

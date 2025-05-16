@@ -5,5 +5,5 @@ object EntityCustomNameToTextFixKt {
     /**
      * method_15697
      */
-    fun fixCustomName(entityDynamic: Dynamic<*>) = EntityCustomNameToTextFix.method_15697(entityDynamic)
+    fun fixCustomName(entityDynamic: Dynamic<*>?) = EntityCustomNameToTextFix.method_15697(entityDynamic)
 }

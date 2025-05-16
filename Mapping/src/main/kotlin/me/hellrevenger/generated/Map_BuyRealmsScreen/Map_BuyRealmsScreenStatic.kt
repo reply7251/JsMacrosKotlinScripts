@@ -5,9 +5,9 @@ object BuyRealmsScreenKt {
     /**
      * method_52686
      */
-    fun drawTrialAvailableTexture(context: DrawContext, button: ButtonWidget) = BuyRealmsScreen.method_52686(context, button)
+    fun drawTrialAvailableTexture(context: DrawContext?, button: ButtonWidget?) = BuyRealmsScreen.method_52686(context, button)
     /**
      * method_52685
      */
-    fun refreshImages(resourceManager: ResourceManager) = BuyRealmsScreen.method_52685(resourceManager)
+    fun refreshImages(resourceManager: ResourceManager?) = BuyRealmsScreen.method_52685(resourceManager)
 }

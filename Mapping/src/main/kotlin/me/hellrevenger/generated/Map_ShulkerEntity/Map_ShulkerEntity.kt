@@ -20,7 +20,7 @@ fun ShulkerEntity.getVariant() = this.method_47881()
 /**
  * method_47880
  */
-fun ShulkerEntity.setVariant(arg0: Optional<DyeColor>) = this.method_47880(arg0)
+fun ShulkerEntity.setVariant(arg0: Optional<DyeColor>?) = this.method_47880(arg0)
 /**
  * method_7121
  */

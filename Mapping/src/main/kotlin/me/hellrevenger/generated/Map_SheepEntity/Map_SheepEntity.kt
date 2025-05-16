@@ -12,11 +12,11 @@ fun SheepEntity.getHeadAngle(delta: Float) = this.method_6641(delta)
 /**
  * method_6631
  */
-fun SheepEntity.setColor(color: DyeColor) = this.method_6631(color)
+fun SheepEntity.setColor(color: DyeColor?) = this.method_6631(color)
 /**
  * method_6640
  */
-fun SheepEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6640(arg0, arg1)
+fun SheepEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_6640(arg0, arg1)
 /**
  * method_6628
  */

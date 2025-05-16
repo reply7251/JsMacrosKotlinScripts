@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_54665
  */
-fun UpdateTickRateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_54665(arg0)
+fun UpdateTickRateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_54665(arg0)
 /**
  * comp_2015
  */

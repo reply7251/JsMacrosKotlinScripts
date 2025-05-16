@@ -5,5 +5,5 @@ object GoAroundTaskKt {
     /**
      * method_47153
      */
-    fun create(posModule: MemoryModuleType<GlobalPos>, walkSpeed: Float, maxDistance: Int) = GoAroundTask.method_47153(posModule, walkSpeed, maxDistance)
+    fun create(posModule: MemoryModuleType<GlobalPos>?, walkSpeed: Float, maxDistance: Int) = GoAroundTask.method_47153(posModule, walkSpeed, maxDistance)
 }

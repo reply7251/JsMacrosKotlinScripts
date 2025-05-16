@@ -8,7 +8,7 @@ fun GameMode.getId() = this.method_8379()
 /**
  * method_8382
  */
-fun GameMode.setAbilities(abilities: PlayerAbilities) = this.method_8382(abilities)
+fun GameMode.setAbilities(abilities: PlayerAbilities?) = this.method_8382(abilities)
 /**
  * method_8381
  */

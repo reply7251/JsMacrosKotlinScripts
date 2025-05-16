@@ -93,5 +93,5 @@ object NetherConfiguredFeaturesKt {
     /**
      * method_46854
      */
-    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>) = NetherConfiguredFeatures.method_46854(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>?) = NetherConfiguredFeatures.method_46854(featureRegisterable)
 }

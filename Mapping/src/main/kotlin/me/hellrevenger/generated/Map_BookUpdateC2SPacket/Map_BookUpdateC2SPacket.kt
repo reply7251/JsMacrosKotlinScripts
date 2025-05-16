@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12236
  */
-fun BookUpdateC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12236(arg0)
+fun BookUpdateC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12236(arg0)
 /**
  * comp_2286
  */

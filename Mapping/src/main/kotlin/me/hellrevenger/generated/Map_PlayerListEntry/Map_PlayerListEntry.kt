@@ -28,7 +28,7 @@ fun PlayerListEntry.getDisplayName() = this.method_2971()
 /**
  * method_2962
  */
-fun PlayerListEntry.setDisplayName(displayName: Text) = this.method_2962(displayName)
+fun PlayerListEntry.setDisplayName(displayName: Text?) = this.method_2962(displayName)
 /**
  * method_65195
  */

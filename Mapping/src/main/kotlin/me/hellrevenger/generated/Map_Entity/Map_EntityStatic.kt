@@ -61,5 +61,5 @@ object EntityKt {
     /**
      * method_20736
      */
-    fun adjustMovementForCollisions(entity: Entity, movement: Vec3d, entityBoundingBox: Box, world: world_World, collisions: MutableList<VoxelShape>) = Entity.method_20736(entity, movement, entityBoundingBox, world, collisions)
+    fun adjustMovementForCollisions(entity: Entity?, movement: Vec3d?, entityBoundingBox: Box?, world: world_World?, collisions: MutableList<VoxelShape>?) = Entity.method_20736(entity, movement, entityBoundingBox, world, collisions)
 }

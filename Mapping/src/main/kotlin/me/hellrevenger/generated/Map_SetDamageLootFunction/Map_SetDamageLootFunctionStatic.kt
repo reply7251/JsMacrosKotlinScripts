@@ -5,9 +5,9 @@ object SetDamageLootFunctionKt {
     /**
      * method_35542
      */
-    fun builder(durabilityRange: LootNumberProvider, add: Boolean) = SetDamageLootFunction.method_35542(durabilityRange, add)
+    fun builder(durabilityRange: LootNumberProvider?, add: Boolean) = SetDamageLootFunction.method_35542(durabilityRange, add)
     /**
      * method_633
      */
-    fun builder(durabilityRange: LootNumberProvider) = SetDamageLootFunction.method_633(durabilityRange)
+    fun builder(durabilityRange: LootNumberProvider?) = SetDamageLootFunction.method_633(durabilityRange)
 }

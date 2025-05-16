@@ -249,5 +249,5 @@ object GameEventKt {
     /**
      * method_55782
      */
-    fun registerAndGetDefault(registry: Registry<GameEvent>) = GameEvent.method_55782(registry)
+    fun registerAndGetDefault(registry: Registry<GameEvent>?) = GameEvent.method_55782(registry)
 }

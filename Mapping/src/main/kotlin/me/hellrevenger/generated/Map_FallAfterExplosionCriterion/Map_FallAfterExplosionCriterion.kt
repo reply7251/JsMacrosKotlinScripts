@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_58358
  */
-fun FallAfterExplosionCriterion.trigger(player: ServerPlayerEntity, startPosition: Vec3d, cause: Entity) = this.method_58358(player, startPosition, cause)
+fun FallAfterExplosionCriterion.trigger(player: ServerPlayerEntity?, startPosition: Vec3d?, cause: Entity?) = this.method_58358(player, startPosition, cause)

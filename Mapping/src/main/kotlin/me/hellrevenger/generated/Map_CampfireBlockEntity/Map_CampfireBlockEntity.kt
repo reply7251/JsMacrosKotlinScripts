@@ -8,7 +8,7 @@ fun CampfireBlockEntity.getItemsBeingCooked() = this.method_17505()
 /**
  * method_17503
  */
-fun CampfireBlockEntity.addItem(world: ServerWorld, entity: LivingEntity, stack: ItemStack) = this.method_17503(world, entity, stack)
+fun CampfireBlockEntity.addItem(world: ServerWorld?, entity: LivingEntity?, stack: ItemStack?) = this.method_17503(world, entity, stack)
 /**
  * method_17506
  */

@@ -44,7 +44,7 @@ fun MerchantScreenHandler.setLevelProgress(levelProgress: Int) = this.method_192
 /**
  * method_17437
  */
-fun MerchantScreenHandler.setOffers(offers: TradeOfferList) = this.method_17437(offers)
+fun MerchantScreenHandler.setOffers(offers: TradeOfferList?) = this.method_17437(offers)
 /**
  * method_17438
  */

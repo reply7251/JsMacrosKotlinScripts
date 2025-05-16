@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_60443
  */
-fun ChunkLoadingManager.createLoader(requestedStatus: ChunkStatus, pos: ChunkPos) = this.method_60443(requestedStatus, pos)
+fun ChunkLoadingManager.createLoader(requestedStatus: ChunkStatus?, pos: ChunkPos?) = this.method_60443(requestedStatus, pos)
 /**
  * method_60442
  */
-fun ChunkLoadingManager.generate(chunkHolder: AbstractChunkHolder, step: ChunkGenerationStep, chunks: BoundedRegionArray<AbstractChunkHolder>) = this.method_60442(chunkHolder, step, chunks)
+fun ChunkLoadingManager.generate(chunkHolder: AbstractChunkHolder?, step: ChunkGenerationStep?, chunks: BoundedRegionArray<AbstractChunkHolder>?) = this.method_60442(chunkHolder, step, chunks)
 /**
  * method_60450
  */
@@ -20,4 +20,4 @@ fun ChunkLoadingManager.acquire(pos: Long) = this.method_60448(pos)
 /**
  * method_60441
  */
-fun ChunkLoadingManager.release(chunkHolder: AbstractChunkHolder) = this.method_60441(chunkHolder)
+fun ChunkLoadingManager.release(chunkHolder: AbstractChunkHolder?) = this.method_60441(chunkHolder)

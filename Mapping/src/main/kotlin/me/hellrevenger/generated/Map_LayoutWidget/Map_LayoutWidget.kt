@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_48227
  */
-fun LayoutWidget.forEachElement(consumer: Consumer<Widget>) = this.method_48227(consumer)
+fun LayoutWidget.forEachElement(consumer: Consumer<Widget>?) = this.method_48227(consumer)
 /**
  * method_48222
  */

@@ -48,7 +48,7 @@ fun ServerInfo.getServerType() = this.method_55616()
 /**
  * method_44292
  */
-fun ServerInfo.copyFrom(serverInfo: ServerInfo) = this.method_44292(serverInfo)
+fun ServerInfo.copyFrom(serverInfo: ServerInfo?) = this.method_44292(serverInfo)
 /**
  * method_52811
  */
@@ -56,11 +56,11 @@ fun ServerInfo.isRealm() = this.method_52811()
 /**
  * method_2995
  */
-fun ServerInfo.setResourcePackPolicy(resourcePackPolicy: net.minecraft.class_642.class_643) = this.method_2995(resourcePackPolicy)
+fun ServerInfo.setResourcePackPolicy(resourcePackPolicy: net.minecraft.class_642.class_643?) = this.method_2995(resourcePackPolicy)
 /**
  * method_55824
  */
-fun ServerInfo.setStatus(status: net.minecraft.class_642.class_9083) = this.method_55824(status)
+fun ServerInfo.setStatus(status: net.minecraft.class_642.class_9083?) = this.method_55824(status)
 /**
  * method_2992
  */
@@ -72,11 +72,11 @@ fun ServerInfo.isLocal() = this.method_2994()
 /**
  * method_2996
  */
-fun ServerInfo.copyWithSettingsFrom(serverInfo: ServerInfo) = this.method_2996(serverInfo)
+fun ServerInfo.copyWithSettingsFrom(serverInfo: ServerInfo?) = this.method_2996(serverInfo)
 /**
  * method_49305
  */
-fun ServerInfo.setFavicon(favicon: ByteArray) = this.method_49305(favicon)
+fun ServerInfo.setFavicon(favicon: ByteArray?) = this.method_49305(favicon)
 /**
  * method_49306
  */

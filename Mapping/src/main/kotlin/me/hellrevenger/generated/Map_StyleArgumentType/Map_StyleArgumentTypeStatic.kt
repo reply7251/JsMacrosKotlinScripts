@@ -9,9 +9,9 @@ object StyleArgumentTypeKt {
     /**
      * method_55446
      */
-    fun style(registryAccess: CommandRegistryAccess) = StyleArgumentType.method_55446(registryAccess)
+    fun style(registryAccess: CommandRegistryAccess?) = StyleArgumentType.method_55446(registryAccess)
     /**
      * method_55448
      */
-    fun getStyle(context: CommandContext<ServerCommandSource>, style: String) = StyleArgumentType.method_55448(context, style)
+    fun getStyle(context: CommandContext<ServerCommandSource>?, style: String?) = StyleArgumentType.method_55448(context, style)
 }

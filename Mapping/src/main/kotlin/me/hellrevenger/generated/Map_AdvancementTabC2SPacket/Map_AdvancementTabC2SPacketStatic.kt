@@ -5,7 +5,7 @@ object AdvancementTabC2SPacketKt {
     /**
      * method_12418
      */
-    fun open(advancement: AdvancementEntry) = AdvancementTabC2SPacket.method_12418(advancement)
+    fun open(advancement: AdvancementEntry?) = AdvancementTabC2SPacket.method_12418(advancement)
     /**
      * method_12414
      */

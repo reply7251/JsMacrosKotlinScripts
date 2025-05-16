@@ -9,5 +9,5 @@ object IdentifierNormalizingSchemaKt {
     /**
      * method_5193
      */
-    fun normalize(id: String) = IdentifierNormalizingSchema.method_5193(id)
+    fun normalize(id: String?) = IdentifierNormalizingSchema.method_5193(id)
 }

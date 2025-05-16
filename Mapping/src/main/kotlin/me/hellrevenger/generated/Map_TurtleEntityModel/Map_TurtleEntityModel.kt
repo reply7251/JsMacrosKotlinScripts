@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17125
  */
-fun TurtleEntityModel.setAngles(arg0: TurtleEntityRenderState) = this.method_17125(arg0)
+fun TurtleEntityModel.setAngles(arg0: TurtleEntityRenderState?) = this.method_17125(arg0)

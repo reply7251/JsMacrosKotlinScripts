@@ -5,5 +5,5 @@ object ZipResourcePackKt {
     /**
      * method_52423
      */
-    fun getNamespace(prefix: String, entryName: String) = ZipResourcePack.method_52423(prefix, entryName)
+    fun getNamespace(prefix: String?, entryName: String?) = ZipResourcePack.method_52423(prefix, entryName)
 }

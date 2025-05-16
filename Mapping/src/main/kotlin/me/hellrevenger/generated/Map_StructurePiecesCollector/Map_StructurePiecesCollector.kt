@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_38716
  */
-fun StructurePiecesCollector.shiftInto(topY: Int, bottomY: Int, random: Random, topPenalty: Int) = this.method_38716(topY, bottomY, random, topPenalty)
+fun StructurePiecesCollector.shiftInto(topY: Int, bottomY: Int, random: Random?, topPenalty: Int) = this.method_38716(topY, bottomY, random, topPenalty)
 /**
  * method_38714
  */
@@ -16,7 +16,7 @@ fun StructurePiecesCollector.clear() = this.method_38719()
 /**
  * method_38718
  */
-fun StructurePiecesCollector.shiftInto(random: Random, baseY: Int, topY: Int) = this.method_38718(random, baseY, topY)
+fun StructurePiecesCollector.shiftInto(random: Random?, baseY: Int, topY: Int) = this.method_38718(random, baseY, topY)
 /**
  * method_38720
  */

@@ -5,5 +5,5 @@ object DedicatedServerGuiKt {
     /**
      * method_13969
      */
-    fun create(server: MinecraftDedicatedServer) = DedicatedServerGui.method_13969(server)
+    fun create(server: MinecraftDedicatedServer?) = DedicatedServerGui.method_13969(server)
 }

@@ -9,9 +9,9 @@ object TallPlantBlockKt {
     /**
      * method_10021
      */
-    fun placeAt(world: WorldAccess, state: BlockState, pos: BlockPos, flags: Int) = TallPlantBlock.method_10021(world, state, pos, flags)
+    fun placeAt(world: WorldAccess?, state: BlockState?, pos: BlockPos?, flags: Int) = TallPlantBlock.method_10021(world, state, pos, flags)
     /**
      * method_37458
      */
-    fun withWaterloggedState(world: WorldView, pos: BlockPos, state: BlockState) = TallPlantBlock.method_37458(world, pos, state)
+    fun withWaterloggedState(world: WorldView?, pos: BlockPos?, state: BlockState?) = TallPlantBlock.method_37458(world, pos, state)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_49302
  */
-fun SnifferEntityModel.setAngles(arg0: SnifferEntityRenderState) = this.method_49302(arg0)
+fun SnifferEntityModel.setAngles(arg0: SnifferEntityRenderState?) = this.method_49302(arg0)

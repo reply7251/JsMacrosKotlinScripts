@@ -5,5 +5,5 @@ object DebugMobSpawningCommandKt {
     /**
      * method_36184
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = DebugMobSpawningCommand.method_36184(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = DebugMobSpawningCommand.method_36184(dispatcher)
 }

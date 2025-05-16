@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9132
  */
-fun TameAnimalCriterion.trigger(player: ServerPlayerEntity, entity: AnimalEntity) = this.method_9132(player, entity)
+fun TameAnimalCriterion.trigger(player: ServerPlayerEntity?, entity: AnimalEntity?) = this.method_9132(player, entity)

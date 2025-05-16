@@ -16,7 +16,7 @@ fun RecipeAlternativesWidget.setVisible(visible: Boolean) = this.method_2613(vis
 /**
  * method_2617
  */
-fun RecipeAlternativesWidget.showAlternativesForResult(resultCollection: RecipeResultCollection, context: ContextParameterMap, filteringCraftable: Boolean, buttonX: Int, buttonY: Int, areaCenterX: Int, areaCenterY: Int, delta: Float) = this.method_2617(resultCollection, context, filteringCraftable, buttonX, buttonY, areaCenterX, areaCenterY, delta)
+fun RecipeAlternativesWidget.showAlternativesForResult(resultCollection: RecipeResultCollection?, context: ContextParameterMap?, filteringCraftable: Boolean, buttonX: Int, buttonY: Int, areaCenterX: Int, areaCenterY: Int, delta: Float) = this.method_2617(resultCollection, context, filteringCraftable, buttonX, buttonY, areaCenterX, areaCenterY, delta)
 /**
  * method_2615
  */

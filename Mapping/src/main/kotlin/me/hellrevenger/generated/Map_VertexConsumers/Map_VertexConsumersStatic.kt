@@ -5,11 +5,11 @@ object VertexConsumersKt {
     /**
      * method_24037
      */
-    fun union(first: VertexConsumer, second: VertexConsumer) = VertexConsumers.method_24037(first, second)
+    fun union(first: VertexConsumer?, second: VertexConsumer?) = VertexConsumers.method_24037(first, second)
     /**
      * method_35669
      */
-    fun union(first: VertexConsumer) = VertexConsumers.method_35669(first)
+    fun union(first: VertexConsumer?) = VertexConsumers.method_35669(first)
     /**
      * method_35668
      */

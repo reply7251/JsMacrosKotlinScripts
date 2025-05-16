@@ -32,7 +32,7 @@ var ChickenEntity.prevMaxWingDeviation by alias(ChickenEntity::field_6738)
 /**
  * method_6471
  */
-fun ChickenEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6471(arg0, arg1)
+fun ChickenEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_6471(arg0, arg1)
 /**
  * method_6472
  */

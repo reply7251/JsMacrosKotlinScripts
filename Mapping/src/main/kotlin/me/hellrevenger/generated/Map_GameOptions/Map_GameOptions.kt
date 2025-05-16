@@ -192,7 +192,7 @@ fun GameOptions.getSneakToggled() = this.method_42449()
 /**
  * method_1627
  */
-fun GameOptions.addResourcePackProfilesToManager(manager: ResourcePackManager) = this.method_1627(manager)
+fun GameOptions.addResourcePackProfilesToManager(manager: ResourcePackManager?) = this.method_1627(manager)
 /**
  * method_42546
  */
@@ -224,7 +224,7 @@ fun GameOptions.getNarratorHotkey() = this.method_53530()
 /**
  * method_45578
  */
-fun GameOptions.getSoundVolumeOption(category: SoundCategory) = this.method_45578(category)
+fun GameOptions.getSoundVolumeOption(category: SoundCategory?) = this.method_45578(category)
 /**
  * method_42448
  */
@@ -276,7 +276,7 @@ fun GameOptions.getChunkBuilderMode() = this.method_41798()
 /**
  * method_1635
  */
-fun GameOptions.setPlayerModelPart(part: PlayerModelPart, enabled: Boolean) = this.method_1635(part, enabled)
+fun GameOptions.setPlayerModelPart(part: PlayerModelPart?, enabled: Boolean) = this.method_1635(part, enabled)
 /**
  * method_41803
  */
@@ -336,7 +336,7 @@ fun GameOptions.getDarknessEffectScale() = this.method_42472()
 /**
  * method_49598
  */
-fun GameOptions.refreshResourcePacks(resourcePackManager: ResourcePackManager) = this.method_49598(resourcePackManager)
+fun GameOptions.refreshResourcePacks(resourcePackManager: ResourcePackManager?) = this.method_49598(resourcePackManager)
 /**
  * method_19344
  */
@@ -348,7 +348,7 @@ fun GameOptions.getMenuBackgroundBlurrinessValue() = this.method_57703()
 /**
  * method_1630
  */
-fun GameOptions.getSoundVolume(category: SoundCategory) = this.method_1630(category)
+fun GameOptions.getSoundVolume(category: SoundCategory?) = this.method_1630(category)
 /**
  * method_42495
  */
@@ -480,7 +480,7 @@ fun GameOptions.getNotificationDisplayTime() = this.method_48191()
 /**
  * method_31043
  */
-fun GameOptions.setPerspective(perspective: Perspective) = this.method_31043(perspective)
+fun GameOptions.setPerspective(perspective: Perspective?) = this.method_31043(perspective)
 /**
  * method_38521
  */
@@ -544,7 +544,7 @@ fun GameOptions.getAo() = this.method_41792()
 /**
  * method_32594
  */
-fun GameOptions.isPlayerModelPartEnabled(part: PlayerModelPart) = this.method_32594(part)
+fun GameOptions.isPlayerModelPartEnabled(part: PlayerModelPart?) = this.method_32594(part)
 /**
  * method_37294
  */

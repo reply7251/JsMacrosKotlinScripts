@@ -9,5 +9,5 @@ object TextureContentsKt {
     /**
      * method_65871
      */
-    fun load(resourceManager: ResourceManager, textureId: Identifier) = TextureContents.method_65871(resourceManager, textureId)
+    fun load(resourceManager: ResourceManager?, textureId: Identifier?) = TextureContents.method_65871(resourceManager, textureId)
 }

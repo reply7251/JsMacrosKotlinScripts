@@ -5,5 +5,5 @@ object TrialSpawnerConfigsKt {
     /**
      * method_63484
      */
-    fun bootstrap(registry: Registerable<TrialSpawnerConfig>) = TrialSpawnerConfigs.method_63484(registry)
+    fun bootstrap(registry: Registerable<TrialSpawnerConfig>?) = TrialSpawnerConfigs.method_63484(registry)
 }

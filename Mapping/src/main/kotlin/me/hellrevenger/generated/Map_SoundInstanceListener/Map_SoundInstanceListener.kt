@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_4884
  */
-fun SoundInstanceListener.onSoundPlayed(sound: SoundInstance, soundSet: WeightedSoundSet, range: Float) = this.method_4884(sound, soundSet, range)
+fun SoundInstanceListener.onSoundPlayed(sound: SoundInstance?, soundSet: WeightedSoundSet?, range: Float) = this.method_4884(sound, soundSet, range)

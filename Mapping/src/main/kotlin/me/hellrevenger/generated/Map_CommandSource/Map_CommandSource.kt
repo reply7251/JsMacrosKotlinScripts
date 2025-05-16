@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_41214
  */
-fun CommandSource.suggestIdentifiers(registry: Registry<*>, suggestedIdType: net.minecraft.class_2172.class_7078, builder: SuggestionsBuilder) = this.method_41214(registry, suggestedIdType, builder)
+fun CommandSource.suggestIdentifiers(registry: Registry<*>?, suggestedIdType: net.minecraft.class_2172.class_7078?, builder: SuggestionsBuilder?) = this.method_41214(registry, suggestedIdType, builder)
 /**
  * method_9261
  */
-fun CommandSource.getCompletions(context: CommandContext<*>) = this.method_9261(context)
+fun CommandSource.getCompletions(context: CommandContext<*>?) = this.method_9261(context)
 /**
  * method_17771
  */
@@ -32,7 +32,7 @@ fun CommandSource.getSoundIds() = this.method_9254()
 /**
  * method_41213
  */
-fun CommandSource.listIdSuggestions(registryRef: RegistryKey<out Registry<*>>, suggestedIdType: net.minecraft.class_2172.class_7078, builder: SuggestionsBuilder, context: CommandContext<*>) = this.method_41213(registryRef, suggestedIdType, builder, context)
+fun CommandSource.listIdSuggestions(registryRef: RegistryKey<out Registry<*>>?, suggestedIdType: net.minecraft.class_2172.class_7078?, builder: SuggestionsBuilder?, context: CommandContext<*>?) = this.method_41213(registryRef, suggestedIdType, builder, context)
 /**
  * method_9259
  */

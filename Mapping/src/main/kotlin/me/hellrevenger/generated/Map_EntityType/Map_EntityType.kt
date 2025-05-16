@@ -20,11 +20,11 @@ fun <T>EntityType<T>.getRegistryEntry() where T: Entity = this.method_40124()
 /**
  * method_31488
  */
-fun <T>EntityType<T>.downcast(arg0: Entity) where T: Entity = this.method_31488(arg0)
+fun <T>EntityType<T>.downcast(arg0: Entity?) where T: Entity = this.method_31488(arg0)
 /**
  * method_5899
  */
-fun <T>EntityType<T>.spawn(world: ServerWorld, afterConsumer: Consumer<T>, pos: BlockPos, reason: SpawnReason, alignPosition: Boolean, invertY: Boolean) where T: Entity = this.method_5899(world, afterConsumer, pos, reason, alignPosition, invertY)
+fun <T>EntityType<T>.spawn(world: ServerWorld?, afterConsumer: Consumer<T>?, pos: BlockPos?, reason: SpawnReason?, alignPosition: Boolean, invertY: Boolean) where T: Entity = this.method_5899(world, afterConsumer, pos, reason, alignPosition, invertY)
 /**
  * method_16351
  */
@@ -32,7 +32,7 @@ fun <T>EntityType<T>.getLootTableKey() where T: Entity = this.method_16351()
 /**
  * method_53125
  */
-fun <T>EntityType<T>.isIn(entityTypeEntryList: RegistryEntryList<EntityType<*>>) where T: Entity = this.method_53125(entityTypeEntryList)
+fun <T>EntityType<T>.isIn(entityTypeEntryList: RegistryEntryList<EntityType<*>>?) where T: Entity = this.method_53125(entityTypeEntryList)
 /**
  * method_17686
  */
@@ -48,11 +48,11 @@ fun <T>EntityType<T>.getSpawnBox(x: Double, arg1: Double, y: Double) where T: En
 /**
  * method_5894
  */
-fun <T>EntityType<T>.spawnFromItemStack(world: ServerWorld, stack: ItemStack, player: PlayerEntity, pos: BlockPos, spawnReason: SpawnReason, alignPosition: Boolean, invertY: Boolean) where T: Entity = this.method_5894(world, stack, player, pos, spawnReason, alignPosition, invertY)
+fun <T>EntityType<T>.spawnFromItemStack(world: ServerWorld?, stack: ItemStack?, player: PlayerEntity?, pos: BlockPos?, spawnReason: SpawnReason?, alignPosition: Boolean, invertY: Boolean) where T: Entity = this.method_5894(world, stack, player, pos, spawnReason, alignPosition, invertY)
 /**
  * method_5888
  */
-fun <T>EntityType<T>.create(world: ServerWorld, afterConsumer: Consumer<T>, pos: BlockPos, reason: SpawnReason, alignPosition: Boolean, invertY: Boolean) where T: Entity = this.method_5888(world, afterConsumer, pos, reason, alignPosition, invertY)
+fun <T>EntityType<T>.create(world: ServerWorld?, afterConsumer: Consumer<T>?, pos: BlockPos?, reason: SpawnReason?, alignPosition: Boolean, invertY: Boolean) where T: Entity = this.method_5888(world, afterConsumer, pos, reason, alignPosition, invertY)
 /**
  * method_65893
  */
@@ -60,7 +60,7 @@ fun <T>EntityType<T>.canPotentiallyExecuteCommands() where T: Entity = this.meth
 /**
  * method_29496
  */
-fun <T>EntityType<T>.isInvalidSpawn(state: BlockState) where T: Entity = this.method_29496(state)
+fun <T>EntityType<T>.isInvalidSpawn(state: BlockState?) where T: Entity = this.method_29496(state)
 /**
  * method_5882
  */
@@ -80,11 +80,11 @@ fun <T>EntityType<T>.getMaxTrackDistance() where T: Entity = this.method_18387()
 /**
  * method_47821
  */
-fun <T>EntityType<T>.spawn(world: ServerWorld, pos: BlockPos, reason: SpawnReason) where T: Entity = this.method_47821(world, pos, reason)
+fun <T>EntityType<T>.spawn(world: ServerWorld?, pos: BlockPos?, reason: SpawnReason?) where T: Entity = this.method_47821(world, pos, reason)
 /**
  * method_5883
  */
-fun <T>EntityType<T>.create(world: world_World, reason: SpawnReason) where T: Entity = this.method_5883(world, reason)
+fun <T>EntityType<T>.create(world: world_World?, reason: SpawnReason?) where T: Entity = this.method_5883(world, reason)
 /**
  * method_35050
  */
@@ -96,7 +96,7 @@ fun <T>EntityType<T>.isSaveable() where T: Entity = this.method_5893()
 /**
  * method_20210
  */
-fun <T>EntityType<T>.isIn(tag: TagKey<EntityType<*>>) where T: Entity = this.method_20210(tag)
+fun <T>EntityType<T>.isIn(tag: TagKey<EntityType<*>>?) where T: Entity = this.method_20210(tag)
 /**
  * method_18388
  */

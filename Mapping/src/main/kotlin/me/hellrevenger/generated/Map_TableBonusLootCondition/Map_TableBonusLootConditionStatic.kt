@@ -5,5 +5,5 @@ object TableBonusLootConditionKt {
     /**
      * method_800
      */
-    fun builder(enchantment: RegistryEntry<Enchantment>, chances: FloatArray) = TableBonusLootCondition.method_800(enchantment, *chances)
+    fun builder(enchantment: RegistryEntry<Enchantment>?, chances: FloatArray) = TableBonusLootCondition.method_800(enchantment, *chances)
 }

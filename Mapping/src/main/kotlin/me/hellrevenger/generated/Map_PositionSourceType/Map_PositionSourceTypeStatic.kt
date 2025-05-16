@@ -5,5 +5,5 @@ object PositionSourceTypeKt {
     /**
      * method_32959
      */
-    fun <T, S>register(id: String, positionSourceType: S) where T: PositionSource, S: PositionSourceType<T> = PositionSourceType.method_32959<S, T>(id, positionSourceType)
+    fun <T, S>register(id: String?, positionSourceType: S) where T: PositionSource, S: PositionSourceType<T> = PositionSourceType.method_32959<S, T>(id, positionSourceType)
 }

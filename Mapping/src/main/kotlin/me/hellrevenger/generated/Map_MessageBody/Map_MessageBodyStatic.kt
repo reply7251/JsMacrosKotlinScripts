@@ -5,5 +5,5 @@ object MessageBodyKt {
     /**
      * method_46305
      */
-    fun ofUnsigned(content: String) = MessageBody.method_46305(content)
+    fun ofUnsigned(content: String?) = MessageBody.method_46305(content)
 }

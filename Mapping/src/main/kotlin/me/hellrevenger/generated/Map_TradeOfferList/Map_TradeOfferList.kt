@@ -8,4 +8,4 @@ fun TradeOfferList.copy() = this.method_53882()
 /**
  * method_8267
  */
-fun TradeOfferList.getValidOffer(firstBuyItem: ItemStack, secondBuyItem: ItemStack, index: Int) = this.method_8267(firstBuyItem, secondBuyItem, index)
+fun TradeOfferList.getValidOffer(firstBuyItem: ItemStack?, secondBuyItem: ItemStack?, index: Int) = this.method_8267(firstBuyItem, secondBuyItem, index)

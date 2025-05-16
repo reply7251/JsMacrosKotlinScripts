@@ -5,5 +5,5 @@ object TeamMsgCommandKt {
     /**
      * method_17600
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = TeamMsgCommand.method_17600(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = TeamMsgCommand.method_17600(dispatcher)
 }

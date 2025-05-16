@@ -24,11 +24,11 @@ fun PandaEntity.isSitting() = this.method_6535()
 /**
  * method_6529
  */
-fun PandaEntity.setMainGene(gene: net.minecraft.class_1440.class_1443) = this.method_6529(gene)
+fun PandaEntity.setMainGene(gene: net.minecraft.class_1440.class_1443?) = this.method_6529(gene)
 /**
  * method_6515
  */
-fun PandaEntity.initGenes(mother: PandaEntity, father: PandaEntity) = this.method_6515(mother, father)
+fun PandaEntity.initGenes(mother: PandaEntity?, father: PandaEntity?) = this.method_6515(mother, father)
 /**
  * method_18442
  */
@@ -76,7 +76,7 @@ fun PandaEntity.isSneezing() = this.method_6545()
 /**
  * method_6547
  */
-fun PandaEntity.setHiddenGene(gene: net.minecraft.class_1440.class_1443) = this.method_6547(gene)
+fun PandaEntity.setHiddenGene(gene: net.minecraft.class_1440.class_1443?) = this.method_6547(gene)
 /**
  * method_6509
  */

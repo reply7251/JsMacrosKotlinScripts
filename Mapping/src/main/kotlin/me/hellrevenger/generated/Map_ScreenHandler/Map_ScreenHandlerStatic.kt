@@ -9,11 +9,11 @@ object ScreenHandlerKt {
     /**
      * method_7608
      */
-    fun calculateComparatorOutput(entity: BlockEntity) = ScreenHandler.method_7608(entity)
+    fun calculateComparatorOutput(entity: BlockEntity?) = ScreenHandler.method_7608(entity)
     /**
      * method_7618
      */
-    fun calculateComparatorOutput(inventory: Inventory) = ScreenHandler.method_7618(inventory)
+    fun calculateComparatorOutput(inventory: Inventory?) = ScreenHandler.method_7618(inventory)
     /**
      * method_7620
      */
@@ -25,15 +25,15 @@ object ScreenHandlerKt {
     /**
      * method_7592
      */
-    fun canInsertItemIntoSlot(slot: Slot, stack: ItemStack, allowOverflow: Boolean) = ScreenHandler.method_7592(slot, stack, allowOverflow)
+    fun canInsertItemIntoSlot(slot: Slot?, stack: ItemStack?, allowOverflow: Boolean) = ScreenHandler.method_7592(slot, stack, allowOverflow)
     /**
      * method_7600
      */
-    fun shouldQuickCraftContinue(stage: Int, player: PlayerEntity) = ScreenHandler.method_7600(stage, player)
+    fun shouldQuickCraftContinue(stage: Int, player: PlayerEntity?) = ScreenHandler.method_7600(stage, player)
     /**
      * method_7617
      */
-    fun calculateStackSize(slots: Set<Slot>, mode: Int, stack: ItemStack) = ScreenHandler.method_7617(slots, mode, stack)
+    fun calculateStackSize(slots: Set<Slot>?, mode: Int, stack: ItemStack?) = ScreenHandler.method_7617(slots, mode, stack)
     /**
      * method_7594
      */

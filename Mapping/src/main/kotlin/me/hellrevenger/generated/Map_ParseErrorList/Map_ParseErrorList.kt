@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_58305
  */
-fun <S>ParseErrorList<S>.add(cursor: Int, suggestions: Suggestable<S>, reason: Object) = this.method_58305(cursor, suggestions, reason)
+fun <S>ParseErrorList<S>.add(cursor: Int, suggestions: Suggestable<S>?, reason: Object?) = this.method_58305(cursor, suggestions, reason)
 /**
  * method_58306
  */
-fun <S>ParseErrorList<S>.add(cursor: Int, reason: Object) = this.method_58306(cursor, reason)
+fun <S>ParseErrorList<S>.add(cursor: Int, reason: Object?) = this.method_58306(cursor, reason)
 /**
  * method_58304
  */

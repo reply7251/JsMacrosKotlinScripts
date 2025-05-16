@@ -5,5 +5,5 @@ object ScreenPosKt {
     /**
      * method_48246
      */
-    fun of(axis: NavigationAxis, sameAxis: Int, otherAxis: Int) = ScreenPos.method_48246(axis, sameAxis, otherAxis)
+    fun of(axis: NavigationAxis?, sameAxis: Int, otherAxis: Int) = ScreenPos.method_48246(axis, sameAxis, otherAxis)
 }

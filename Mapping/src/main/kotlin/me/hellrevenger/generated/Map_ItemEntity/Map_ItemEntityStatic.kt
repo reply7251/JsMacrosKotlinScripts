@@ -9,11 +9,11 @@ object ItemEntityKt {
     /**
      * method_24017
      */
-    fun canMerge(stack1: ItemStack, stack2: ItemStack) = ItemEntity.method_24017(stack1, stack2)
+    fun canMerge(stack1: ItemStack?, stack2: ItemStack?) = ItemEntity.method_24017(stack1, stack2)
     /**
      * method_24018
      */
-    fun merge(stack1: ItemStack, stack2: ItemStack, maxCount: Int) = ItemEntity.method_24018(stack1, stack2, maxCount)
+    fun merge(stack1: ItemStack?, stack2: ItemStack?, maxCount: Int) = ItemEntity.method_24018(stack1, stack2, maxCount)
     /**
      * method_27314
      */

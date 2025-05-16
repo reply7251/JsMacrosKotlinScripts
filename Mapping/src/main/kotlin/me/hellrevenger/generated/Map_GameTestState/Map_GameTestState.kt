@@ -40,7 +40,7 @@ fun GameTestState.getTestFunction() = this.method_29403()
 /**
  * method_56214
  */
-fun GameTestState.setBoxMinPos(boxMinPos: BlockPos) = this.method_56214(boxMinPos)
+fun GameTestState.setBoxMinPos(boxMinPos: BlockPos?) = this.method_56214(boxMinPos)
 /**
  * method_56215
  */
@@ -64,7 +64,7 @@ fun GameTestState.isFlaky() = this.method_32241()
 /**
  * method_36060
  */
-fun GameTestState.runAtTick(tick: Long, arg1: Runnable) = this.method_36060(tick, arg1)
+fun GameTestState.runAtTick(tick: Long, arg1: Runnable?) = this.method_36060(tick, arg1)
 /**
  * method_36059
  */
@@ -100,7 +100,7 @@ fun GameTestState.isPassed() = this.method_22177()
 /**
  * method_22167
  */
-fun GameTestState.addListener(listener: TestListener) = this.method_22167(listener)
+fun GameTestState.addListener(listener: TestListener?) = this.method_22167(listener)
 /**
  * method_56209
  */
@@ -108,7 +108,7 @@ fun GameTestState.streamListeners() = this.method_56209()
 /**
  * method_22168
  */
-fun GameTestState.fail(throwable: Throwable) = this.method_22168(throwable)
+fun GameTestState.fail(throwable: Throwable?) = this.method_22168(throwable)
 /**
  * method_29402
  */
@@ -132,7 +132,7 @@ fun GameTestState.getTemplatePath() = this.method_22169()
 /**
  * method_22165
  */
-fun GameTestState.tick(context: TestRunContext) = this.method_22165(context)
+fun GameTestState.tick(context: TestRunContext?) = this.method_22165(context)
 /**
  * method_23638
  */

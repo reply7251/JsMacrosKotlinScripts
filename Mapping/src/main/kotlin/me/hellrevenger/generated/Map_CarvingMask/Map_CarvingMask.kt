@@ -12,7 +12,7 @@ fun CarvingMask.get(offsetX: Int, y: Int, offsetZ: Int) = this.method_38868(offs
 /**
  * method_39785
  */
-fun CarvingMask.setMaskPredicate(maskPredicate: net.minecraft.class_6643.class_6828) = this.method_39785(maskPredicate)
+fun CarvingMask.setMaskPredicate(maskPredicate: net.minecraft.class_6643.class_6828?) = this.method_39785(maskPredicate)
 /**
  * method_38864
  */
@@ -20,4 +20,4 @@ fun CarvingMask.getMask() = this.method_38864()
 /**
  * method_38866
  */
-fun CarvingMask.streamBlockPos(chunkPos: ChunkPos) = this.method_38866(chunkPos)
+fun CarvingMask.streamBlockPos(chunkPos: ChunkPos?) = this.method_38866(chunkPos)

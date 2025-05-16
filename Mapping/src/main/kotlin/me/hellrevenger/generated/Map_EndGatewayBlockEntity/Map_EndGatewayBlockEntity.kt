@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60787
  */
-fun EndGatewayBlockEntity.getOrCreateExitPortalPos(world: ServerWorld, pos: BlockPos) = this.method_60787(world, pos)
+fun EndGatewayBlockEntity.getOrCreateExitPortalPos(world: ServerWorld?, pos: BlockPos?) = this.method_60787(world, pos)
 /**
  * method_11412
  */
@@ -32,4 +32,4 @@ fun EndGatewayBlockEntity.toUpdatePacket() = this.method_38253()
 /**
  * method_11418
  */
-fun EndGatewayBlockEntity.setExitPortalPos(pos: BlockPos, exactTeleport: Boolean) = this.method_11418(pos, exactTeleport)
+fun EndGatewayBlockEntity.setExitPortalPos(pos: BlockPos?, exactTeleport: Boolean) = this.method_11418(pos, exactTeleport)

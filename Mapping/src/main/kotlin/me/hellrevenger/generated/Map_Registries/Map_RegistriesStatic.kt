@@ -329,7 +329,7 @@ object RegistriesKt {
     /**
      * method_62715
      */
-    fun <T>createEntryLookup(registry: Registry<T>) = Registries.method_62715<T>(registry)
+    fun <T>createEntryLookup(registry: Registry<T>?) = Registries.method_62715<T>(registry)
     /**
      * method_47476
      */

@@ -5,5 +5,5 @@ object ContextParameterKt {
     /**
      * method_64964
      */
-    fun <T>of(id: String) = ContextParameter.method_64964<T>(id)
+    fun <T>of(id: String?) = ContextParameter.method_64964<T>(id)
 }

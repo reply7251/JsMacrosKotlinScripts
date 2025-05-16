@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_54912
  */
-fun Advancement.validate(errorReporter: ErrorReporter, lookup: net.minecraft.class_7871.class_7872) = this.method_54912(errorReporter, lookup)
+fun Advancement.validate(errorReporter: ErrorReporter?, lookup: net.minecraft.class_7871.class_7872?) = this.method_54912(errorReporter, lookup)
 /**
  * method_53630
  */

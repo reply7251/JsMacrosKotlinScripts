@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_51540
  */
-fun ChunkSkyLight.refreshSurfaceY(chunk: Chunk) = this.method_51540(chunk)
+fun ChunkSkyLight.refreshSurfaceY(chunk: Chunk?) = this.method_51540(chunk)
 /**
  * method_51535
  */
@@ -16,4 +16,4 @@ fun ChunkSkyLight.getMaxSurfaceY() = this.method_51533()
 /**
  * method_51536
  */
-fun ChunkSkyLight.isSkyLightAccessible(blockView: BlockView, localX: Int, y: Int, localZ: Int) = this.method_51536(blockView, localX, y, localZ)
+fun ChunkSkyLight.isSkyLightAccessible(blockView: BlockView?, localX: Int, y: Int, localZ: Int) = this.method_51536(blockView, localX, y, localZ)

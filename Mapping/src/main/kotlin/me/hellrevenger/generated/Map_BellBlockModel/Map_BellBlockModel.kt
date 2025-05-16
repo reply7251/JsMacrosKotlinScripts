@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62063
  */
-fun BellBlockModel.update(blockEntity: BellBlockEntity, tickDelta: Float) = this.method_62063(blockEntity, tickDelta)
+fun BellBlockModel.update(blockEntity: BellBlockEntity?, tickDelta: Float) = this.method_62063(blockEntity, tickDelta)

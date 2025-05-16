@@ -17,5 +17,5 @@ object ButtonWidgetKt {
     /**
      * method_46430
      */
-    fun builder(message: Text, onPress: net.minecraft.class_4185.class_4241) = ButtonWidget.method_46430(message, onPress)
+    fun builder(message: Text?, onPress: net.minecraft.class_4185.class_4241?) = ButtonWidget.method_46430(message, onPress)
 }

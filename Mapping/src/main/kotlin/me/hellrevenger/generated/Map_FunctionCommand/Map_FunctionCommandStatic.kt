@@ -13,13 +13,13 @@ object FunctionCommandKt {
     /**
      * method_54272
      */
-    fun createFunctionCommandSource(source: ServerCommandSource) = FunctionCommand.method_54272(source)
+    fun createFunctionCommandSource(source: ServerCommandSource?) = FunctionCommand.method_54272(source)
     /**
      * method_54275
      */
-    fun <T>enqueueAction(commandFunctions: Collection<CommandFunction<T>>, args: NbtCompound, parentSource: T, functionSource: T, control: ExecutionControl<T>, resultConsumer: net.minecraft.class_3062.class_8832<T>, flags: ExecutionFlags) where T: AbstractServerCommandSource<T> = FunctionCommand.method_54275<T>(commandFunctions, args, parentSource, functionSource, control, resultConsumer, flags)
+    fun <T>enqueueAction(commandFunctions: Collection<CommandFunction<T>>?, args: NbtCompound?, parentSource: T, functionSource: T, control: ExecutionControl<T>?, resultConsumer: net.minecraft.class_3062.class_8832<T>?, flags: ExecutionFlags?) where T: AbstractServerCommandSource<T> = FunctionCommand.method_54275<T>(commandFunctions, args, parentSource, functionSource, control, resultConsumer, flags)
     /**
      * method_13380
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = FunctionCommand.method_13380(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = FunctionCommand.method_13380(dispatcher)
 }

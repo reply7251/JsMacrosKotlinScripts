@@ -20,7 +20,7 @@ fun PlaySoundFromEntityS2CPacket.getEntityId() = this.method_11883()
 /**
  * method_11884
  */
-fun PlaySoundFromEntityS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11884(arg0)
+fun PlaySoundFromEntityS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11884(arg0)
 /**
  * method_11881
  */

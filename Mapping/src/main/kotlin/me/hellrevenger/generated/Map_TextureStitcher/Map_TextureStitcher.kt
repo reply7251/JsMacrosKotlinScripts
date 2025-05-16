@@ -20,4 +20,4 @@ fun <T>TextureStitcher<T>.stitch() where T: net.minecraft.class_1055.class_7769 
 /**
  * method_4549
  */
-fun <T>TextureStitcher<T>.getStitchedSprites(consumer: net.minecraft.class_1055.class_4726<T>) where T: net.minecraft.class_1055.class_7769 = this.method_4549(consumer)
+fun <T>TextureStitcher<T>.getStitchedSprites(consumer: net.minecraft.class_1055.class_4726<T>?) where T: net.minecraft.class_1055.class_7769 = this.method_4549(consumer)

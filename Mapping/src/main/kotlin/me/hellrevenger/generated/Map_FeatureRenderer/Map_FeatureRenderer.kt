@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_4199
  */
-fun <S, M>FeatureRenderer<S, M>.render(matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int, state: S, limbAngle: Float, limbDistance: Float) where S: EntityRenderState, M: EntityModel<in S> = this.method_4199(matrices, vertexConsumers, light, state, limbAngle, limbDistance)
+fun <S, M>FeatureRenderer<S, M>.render(matrices: MatrixStack?, vertexConsumers: VertexConsumerProvider?, light: Int, state: S, limbAngle: Float, limbDistance: Float) where S: EntityRenderState, M: EntityModel<in S> = this.method_4199(matrices, vertexConsumers, light, state, limbAngle, limbDistance)
 /**
  * method_17165
  */

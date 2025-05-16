@@ -40,11 +40,11 @@ fun DebugHud.getTickNanosLog() = this.method_56577()
 /**
  * method_1846
  */
-fun DebugHud.render(context: DrawContext) = this.method_1846(context)
+fun DebugHud.render(context: DrawContext?) = this.method_1846(context)
 /**
  * method_56828
  */
-fun DebugHud.set(values: LongArray, type: DebugSampleType) = this.method_56828(values, type)
+fun DebugHud.set(values: LongArray?, type: DebugSampleType?) = this.method_56828(values, type)
 /**
  * method_53536
  */

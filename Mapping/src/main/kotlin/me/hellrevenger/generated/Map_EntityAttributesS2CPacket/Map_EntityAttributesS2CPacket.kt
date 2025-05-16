@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11936
  */
-fun EntityAttributesS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11936(arg0)
+fun EntityAttributesS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11936(arg0)
 /**
  * method_11938
  */

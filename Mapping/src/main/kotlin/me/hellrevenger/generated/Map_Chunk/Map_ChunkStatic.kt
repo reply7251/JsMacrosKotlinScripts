@@ -9,5 +9,5 @@ object ChunkKt {
     /**
      * method_12026
      */
-    fun getList(lists: Array<ShortList>, index: Int) = Chunk.method_12026(lists, index)
+    fun getList(lists: Array<ShortList>?, index: Int) = Chunk.method_12026(lists, index)
 }

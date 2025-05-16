@@ -8,7 +8,7 @@ fun <T>ChunkTicket<T>.getLevel() = this.method_14283()
 /**
  * method_14285
  */
-fun <T>ChunkTicket<T>.compareTo(arg0: ChunkTicket<*>) = this.method_14285(arg0)
+fun <T>ChunkTicket<T>.compareTo(arg0: ChunkTicket<*>?) = this.method_14285(arg0)
 /**
  * method_14281
  */

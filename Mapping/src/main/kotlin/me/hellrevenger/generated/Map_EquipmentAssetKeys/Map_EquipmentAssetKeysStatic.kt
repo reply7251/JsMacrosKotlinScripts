@@ -5,5 +5,5 @@ object EquipmentAssetKeysKt {
     /**
      * method_65368
      */
-    fun register(name: String) = EquipmentAssetKeys.method_65368(name)
+    fun register(name: String?) = EquipmentAssetKeys.method_65368(name)
 }

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_22483
  */
-fun LightPredicate.test(world: ServerWorld, pos: BlockPos) = this.method_22483(world, pos)
+fun LightPredicate.test(world: ServerWorld?, pos: BlockPos?) = this.method_22483(world, pos)
 /**
  * comp_1791
  */

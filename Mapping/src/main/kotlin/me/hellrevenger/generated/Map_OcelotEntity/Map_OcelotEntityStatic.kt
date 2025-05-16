@@ -17,7 +17,7 @@ object OcelotEntityKt {
     /**
      * method_20666
      */
-    fun canSpawn(type: EntityType<OcelotEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = OcelotEntity.method_20666(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<OcelotEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = OcelotEntity.method_20666(type, world, spawnReason, pos, random)
     /**
      * method_26887
      */

@@ -49,5 +49,5 @@ object AbuseReportReasonKt {
     /**
      * method_62164
      */
-    fun getExcludedReasonsForType(reportType: AbuseReportType) = AbuseReportReason.method_62164(reportType)
+    fun getExcludedReasonsForType(reportType: AbuseReportType?) = AbuseReportReason.method_62164(reportType)
 }

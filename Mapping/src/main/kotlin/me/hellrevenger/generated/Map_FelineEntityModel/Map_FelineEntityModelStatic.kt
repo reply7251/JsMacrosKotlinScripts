@@ -9,5 +9,5 @@ object FelineEntityModelKt {
     /**
      * method_32021
      */
-    fun <T>getModelData(dilation: Dilation) where T: FelineEntityRenderState = FelineEntityModel.method_32021(dilation)
+    fun <T>getModelData(dilation: Dilation?) where T: FelineEntityRenderState = FelineEntityModel.method_32021(dilation)
 }

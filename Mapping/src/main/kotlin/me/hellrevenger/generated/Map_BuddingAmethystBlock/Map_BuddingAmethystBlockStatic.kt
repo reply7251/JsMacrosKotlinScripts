@@ -9,5 +9,5 @@ object BuddingAmethystBlockKt {
     /**
      * method_31626
      */
-    fun canGrowIn(state: BlockState) = BuddingAmethystBlock.method_31626(state)
+    fun canGrowIn(state: BlockState?) = BuddingAmethystBlock.method_31626(state)
 }

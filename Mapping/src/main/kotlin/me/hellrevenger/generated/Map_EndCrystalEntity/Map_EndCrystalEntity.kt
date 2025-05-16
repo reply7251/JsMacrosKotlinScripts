@@ -8,7 +8,7 @@ var EndCrystalEntity.endCrystalAge by alias(EndCrystalEntity::field_7034)
 /**
  * method_6837
  */
-fun EndCrystalEntity.setBeamTarget(beamTarget: BlockPos) = this.method_6837(beamTarget)
+fun EndCrystalEntity.setBeamTarget(beamTarget: BlockPos?) = this.method_6837(beamTarget)
 /**
  * method_6838
  */

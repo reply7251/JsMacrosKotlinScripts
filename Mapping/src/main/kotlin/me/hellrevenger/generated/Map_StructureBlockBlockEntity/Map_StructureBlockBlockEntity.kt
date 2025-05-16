@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_54878
  */
-fun StructureBlockBlockEntity.loadAndPlaceStructure(world: ServerWorld) = this.method_54878(world)
+fun StructureBlockBlockEntity.loadAndPlaceStructure(world: ServerWorld?) = this.method_54878(world)
 /**
  * method_11351
  */
-fun StructureBlockBlockEntity.openScreen(player: PlayerEntity) = this.method_11351(player)
+fun StructureBlockBlockEntity.openScreen(player: PlayerEntity?) = this.method_11351(player)
 /**
  * method_11346
  */
@@ -28,7 +28,7 @@ fun StructureBlockBlockEntity.saveStructure() = this.method_11365()
 /**
  * method_11373
  */
-fun StructureBlockBlockEntity.setAuthor(entity: LivingEntity) = this.method_11373(entity)
+fun StructureBlockBlockEntity.setAuthor(entity: LivingEntity?) = this.method_11373(entity)
 /**
  * method_38252
  */
@@ -36,7 +36,7 @@ fun StructureBlockBlockEntity.toUpdatePacket() = this.method_38252()
 /**
  * method_11344
  */
-fun StructureBlockBlockEntity.setTemplateName(templateName: Identifier) = this.method_11344(templateName)
+fun StructureBlockBlockEntity.setTemplateName(templateName: Identifier?) = this.method_11344(templateName)
 /**
  * method_11362
  */
@@ -52,11 +52,11 @@ fun StructureBlockBlockEntity.getMetadata() = this.method_11358()
 /**
  * method_54874
  */
-fun StructureBlockBlockEntity.loadAndTryPlaceStructure(world: ServerWorld) = this.method_54874(world)
+fun StructureBlockBlockEntity.loadAndTryPlaceStructure(world: ServerWorld?) = this.method_54874(world)
 /**
  * method_11381
  */
-fun StructureBlockBlockEntity.setMode(mode: StructureBlockMode) = this.method_11381(mode)
+fun StructureBlockBlockEntity.setMode(mode: StructureBlockMode?) = this.method_11381(mode)
 /**
  * method_11366
  */
@@ -76,7 +76,7 @@ fun StructureBlockBlockEntity.setSeed(seed: Long) = this.method_11382(seed)
 /**
  * method_11378
  */
-fun StructureBlockBlockEntity.setOffset(offset: BlockPos) = this.method_11378(offset)
+fun StructureBlockBlockEntity.setOffset(offset: BlockPos?) = this.method_11378(offset)
 /**
  * method_11374
  */
@@ -112,15 +112,15 @@ fun StructureBlockBlockEntity.setShowAir(showAir: Boolean) = this.method_11347(s
 /**
  * method_11363
  */
-fun StructureBlockBlockEntity.setMetadata(metadata: String) = this.method_11363(metadata)
+fun StructureBlockBlockEntity.setMetadata(metadata: String?) = this.method_11363(metadata)
 /**
  * method_11343
  */
-fun StructureBlockBlockEntity.setTemplateName(templateName: String) = this.method_11343(templateName)
+fun StructureBlockBlockEntity.setTemplateName(templateName: String?) = this.method_11343(templateName)
 /**
  * method_11385
  */
-fun StructureBlockBlockEntity.setRotation(rotation: BlockRotation) = this.method_11385(rotation)
+fun StructureBlockBlockEntity.setRotation(rotation: BlockRotation?) = this.method_11385(rotation)
 /**
  * method_11345
  */
@@ -140,7 +140,7 @@ fun StructureBlockBlockEntity.setIgnoreEntities(ignoreEntities: Boolean) = this.
 /**
  * method_11377
  */
-fun StructureBlockBlockEntity.setSize(size: Vec3i) = this.method_11377(size)
+fun StructureBlockBlockEntity.setSize(size: Vec3i?) = this.method_11377(size)
 /**
  * method_11360
  */
@@ -148,7 +148,7 @@ fun StructureBlockBlockEntity.setShowBoundingBox(showBoundingBox: Boolean) = thi
 /**
  * method_11356
  */
-fun StructureBlockBlockEntity.setMirror(mirror: BlockMirror) = this.method_11356(mirror)
+fun StructureBlockBlockEntity.setMirror(mirror: BlockMirror?) = this.method_11356(mirror)
 /**
  * method_11384
  */
@@ -156,4 +156,4 @@ fun StructureBlockBlockEntity.hasStructureName() = this.method_11384()
 /**
  * method_11376
  */
-fun StructureBlockBlockEntity.loadStructure(world: ServerWorld) = this.method_11376(world)
+fun StructureBlockBlockEntity.loadStructure(world: ServerWorld?) = this.method_11376(world)

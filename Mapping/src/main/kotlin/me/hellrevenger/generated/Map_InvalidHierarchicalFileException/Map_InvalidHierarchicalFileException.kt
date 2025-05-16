@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_12854
  */
-fun InvalidHierarchicalFileException.addInvalidKey(key: String) = this.method_12854(key)
+fun InvalidHierarchicalFileException.addInvalidKey(key: String?) = this.method_12854(key)
 /**
  * method_12855
  */
-fun InvalidHierarchicalFileException.addInvalidFile(fileName: String) = this.method_12855(fileName)
+fun InvalidHierarchicalFileException.addInvalidFile(fileName: String?) = this.method_12855(fileName)

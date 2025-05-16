@@ -8,7 +8,7 @@ fun QueryBlockNbtC2SPacket.getPos() = this.method_12094()
 /**
  * method_12095
  */
-fun QueryBlockNbtC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12095(arg0)
+fun QueryBlockNbtC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12095(arg0)
 /**
  * method_12096
  */

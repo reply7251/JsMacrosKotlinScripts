@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_6722
  */
-fun RideableInventory.openInventory(player: PlayerEntity) = this.method_6722(player)
+fun RideableInventory.openInventory(player: PlayerEntity?) = this.method_6722(player)

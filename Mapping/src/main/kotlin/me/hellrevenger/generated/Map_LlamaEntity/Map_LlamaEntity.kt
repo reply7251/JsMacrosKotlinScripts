@@ -16,7 +16,7 @@ fun LlamaEntity.getStrength() = this.method_6803()
 /**
  * method_6804
  */
-fun LlamaEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6804(arg0, arg1)
+fun LlamaEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_6804(arg0, arg1)
 /**
  * method_6806
  */
@@ -32,11 +32,11 @@ fun LlamaEntity.isFollowing() = this.method_6805()
 /**
  * method_47874
  */
-fun LlamaEntity.setVariant(arg0: net.minecraft.class_1501.class_7993) = this.method_47874(arg0)
+fun LlamaEntity.setVariant(arg0: net.minecraft.class_1501.class_7993?) = this.method_47874(arg0)
 /**
  * method_6791
  */
-fun LlamaEntity.follow(llama: LlamaEntity) = this.method_6791(llama)
+fun LlamaEntity.follow(llama: LlamaEntity?) = this.method_6791(llama)
 /**
  * method_6797
  */

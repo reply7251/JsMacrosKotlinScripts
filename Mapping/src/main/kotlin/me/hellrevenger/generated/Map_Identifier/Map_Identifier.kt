@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_12833
  */
-fun Identifier.compareTo(arg0: Identifier) = this.method_12833(arg0)
+fun Identifier.compareTo(arg0: Identifier?) = this.method_12833(arg0)
 /**
  * method_45134
  */
-fun Identifier.withPath(pathFunction: UnaryOperator<String>) = this.method_45134(pathFunction)
+fun Identifier.withPath(pathFunction: UnaryOperator<String>?) = this.method_45134(pathFunction)
 /**
  * method_48331
  */
-fun Identifier.withSuffixedPath(suffix: String) = this.method_48331(suffix)
+fun Identifier.withSuffixedPath(suffix: String?) = this.method_48331(suffix)
 /**
  * method_12836
  */
@@ -24,7 +24,7 @@ fun Identifier.toShortTranslationKey() = this.method_43903()
 /**
  * method_45138
  */
-fun Identifier.withPrefixedPath(prefix: String) = this.method_45138(prefix)
+fun Identifier.withPrefixedPath(prefix: String?) = this.method_45138(prefix)
 /**
  * method_12832
  */
@@ -32,11 +32,11 @@ fun Identifier.getPath() = this.method_12832()
 /**
  * method_48747
  */
-fun Identifier.toTranslationKey(prefix: String, suffix: String) = this.method_48747(prefix, suffix)
+fun Identifier.toTranslationKey(prefix: String?, suffix: String?) = this.method_48747(prefix, suffix)
 /**
  * method_45136
  */
-fun Identifier.withPath(path: String) = this.method_45136(path)
+fun Identifier.withPath(path: String?) = this.method_45136(path)
 /**
  * method_42094
  */
@@ -44,7 +44,7 @@ fun Identifier.toTranslationKey() = this.method_42094()
 /**
  * method_42093
  */
-fun Identifier.toTranslationKey(prefix: String) = this.method_42093(prefix)
+fun Identifier.toTranslationKey(prefix: String?) = this.method_42093(prefix)
 /**
  * method_36181
  */

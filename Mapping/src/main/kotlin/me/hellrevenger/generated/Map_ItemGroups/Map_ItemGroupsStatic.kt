@@ -77,7 +77,7 @@ object ItemGroupsKt {
     /**
      * method_47330
      */
-    fun updateDisplayContext(enabledFeatures: FeatureSet, operatorEnabled: Boolean, registries: net.minecraft.class_7225.class_7874) = ItemGroups.method_47330(enabledFeatures, operatorEnabled, registries)
+    fun updateDisplayContext(enabledFeatures: FeatureSet?, operatorEnabled: Boolean, registries: net.minecraft.class_7225.class_7874?) = ItemGroups.method_47330(enabledFeatures, operatorEnabled, registries)
     /**
      * method_47328
      */
@@ -89,5 +89,5 @@ object ItemGroupsKt {
     /**
      * method_51315
      */
-    fun registerAndGetDefault(registry: Registry<ItemGroup>) = ItemGroups.method_51315(registry)
+    fun registerAndGetDefault(registry: Registry<ItemGroup>?) = ItemGroups.method_51315(registry)
 }

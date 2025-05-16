@@ -5,5 +5,5 @@ object SmallTropicalFishEntityModelKt {
     /**
      * method_32060
      */
-    fun getTexturedModelData(dilation: Dilation) = SmallTropicalFishEntityModel.method_32060(dilation)
+    fun getTexturedModelData(dilation: Dilation?) = SmallTropicalFishEntityModel.method_32060(dilation)
 }

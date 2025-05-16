@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_64198
  */
-fun DamageResistantComponent.resists(damageSource: DamageSource) = this.method_64198(damageSource)
+fun DamageResistantComponent.resists(damageSource: DamageSource?) = this.method_64198(damageSource)
 /**
  * comp_3210
  */

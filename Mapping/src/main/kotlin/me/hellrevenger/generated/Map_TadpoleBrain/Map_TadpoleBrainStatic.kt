@@ -5,5 +5,5 @@ object TadpoleBrainKt {
     /**
      * method_41401
      */
-    fun updateActivities(tadpole: TadpoleEntity) = TadpoleBrain.method_41401(tadpole)
+    fun updateActivities(tadpole: TadpoleEntity?) = TadpoleBrain.method_41401(tadpole)
 }

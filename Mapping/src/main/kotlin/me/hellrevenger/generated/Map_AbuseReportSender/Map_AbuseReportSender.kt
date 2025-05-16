@@ -8,7 +8,7 @@ fun AbuseReportSender.canSendReports() = this.method_44561()
 /**
  * method_44563
  */
-fun AbuseReportSender.send(id: UUID, type: AbuseReportType, report: report_AbuseReport) = this.method_44563(id, type, report)
+fun AbuseReportSender.send(id: UUID?, type: AbuseReportType?, report: report_AbuseReport?) = this.method_44563(id, type, report)
 /**
  * method_44564
  */

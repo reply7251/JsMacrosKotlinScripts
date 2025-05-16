@@ -9,5 +9,5 @@ object SlotRangeArgumentTypeKt {
     /**
      * method_58133
      */
-    fun getSlotRange(context: CommandContext<ServerCommandSource>, name: String) = SlotRangeArgumentType.method_58133(context, name)
+    fun getSlotRange(context: CommandContext<ServerCommandSource>?, name: String?) = SlotRangeArgumentType.method_58133(context, name)
 }

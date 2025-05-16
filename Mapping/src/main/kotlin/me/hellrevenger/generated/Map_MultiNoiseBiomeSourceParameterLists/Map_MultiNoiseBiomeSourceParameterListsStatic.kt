@@ -13,5 +13,5 @@ object MultiNoiseBiomeSourceParameterListsKt {
     /**
      * method_49522
      */
-    fun bootstrap(registry: Registerable<MultiNoiseBiomeSourceParameterList>) = MultiNoiseBiomeSourceParameterLists.method_49522(registry)
+    fun bootstrap(registry: Registerable<MultiNoiseBiomeSourceParameterList>?) = MultiNoiseBiomeSourceParameterLists.method_49522(registry)
 }

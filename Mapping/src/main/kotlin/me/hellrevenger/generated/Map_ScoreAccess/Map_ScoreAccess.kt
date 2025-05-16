@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_55412
  */
-fun ScoreAccess.setNumberFormat(numberFormat: NumberFormat) = this.method_55412(numberFormat)
+fun ScoreAccess.setNumberFormat(numberFormat: NumberFormat?) = this.method_55412(numberFormat)
 /**
  * method_55416
  */
@@ -36,7 +36,7 @@ fun ScoreAccess.unlock() = this.method_55417()
 /**
  * method_55411
  */
-fun ScoreAccess.setDisplayText(text: Text) = this.method_55411(text)
+fun ScoreAccess.setDisplayText(text: Text?) = this.method_55411(text)
 /**
  * method_55414
  */

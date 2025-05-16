@@ -5,5 +5,5 @@ object MergedComponentMapKt {
     /**
      * method_57935
      */
-    fun create(baseComponents: ComponentMap, changes: ComponentChanges) = MergedComponentMap.method_57935(baseComponents, changes)
+    fun create(baseComponents: ComponentMap?, changes: ComponentChanges?) = MergedComponentMap.method_57935(baseComponents, changes)
 }

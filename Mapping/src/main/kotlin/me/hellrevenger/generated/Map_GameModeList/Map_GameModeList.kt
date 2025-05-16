@@ -8,4 +8,4 @@ fun GameModeList.gameModes() = this.comp_2829()
 /**
  * method_60723
  */
-fun GameModeList.contains(gameMode: GameMode) = this.method_60723(gameMode)
+fun GameModeList.contains(gameMode: GameMode?) = this.method_60723(gameMode)

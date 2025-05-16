@@ -5,5 +5,5 @@ object AbstractSignBlockEntityRendererKt {
     /**
      * method_65822
      */
-    fun getTextColor(text: SignText) = AbstractSignBlockEntityRenderer.method_65822(text)
+    fun getTextColor(text: SignText?) = AbstractSignBlockEntityRenderer.method_65822(text)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62122
  */
-fun LargeTropicalFishEntityModel.setAngles(arg0: TropicalFishEntityRenderState) = this.method_62122(arg0)
+fun LargeTropicalFishEntityModel.setAngles(arg0: TropicalFishEntityRenderState?) = this.method_62122(arg0)

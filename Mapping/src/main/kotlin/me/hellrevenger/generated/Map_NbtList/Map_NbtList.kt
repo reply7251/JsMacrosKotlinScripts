@@ -28,7 +28,7 @@ fun NbtList.getLongArray(index: Int) = this.method_36112(index)
 /**
  * method_10531
  */
-fun NbtList.add(arg0: Int, arg1: NbtElement) = this.method_10531(arg0, arg1)
+fun NbtList.add(arg0: Int, arg1: NbtElement?) = this.method_10531(arg0, arg1)
 /**
  * method_10612
  */
@@ -36,7 +36,7 @@ fun NbtList.copy() = this.method_10612()
 /**
  * method_10606
  */
-fun NbtList.set(arg0: Int, arg1: NbtElement) = this.method_10606(arg0, arg1)
+fun NbtList.set(arg0: Int, arg1: NbtElement?) = this.method_10606(arg0, arg1)
 /**
  * method_10603
  */

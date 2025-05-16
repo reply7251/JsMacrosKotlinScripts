@@ -169,5 +169,5 @@ object LootFunctionTypesKt {
     /**
      * method_594
      */
-    fun join(terms: MutableList<out BiFunction<ItemStack, LootContext, ItemStack>>) = LootFunctionTypes.method_594(terms)
+    fun join(terms: MutableList<out BiFunction<ItemStack, LootContext, ItemStack>>?) = LootFunctionTypes.method_594(terms)
 }

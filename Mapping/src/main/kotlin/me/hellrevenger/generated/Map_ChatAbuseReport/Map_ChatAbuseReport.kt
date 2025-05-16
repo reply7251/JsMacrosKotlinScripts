@@ -8,4 +8,4 @@ fun ChatAbuseReport.copy() = this.method_44585()
 /**
  * method_44569
  */
-fun ChatAbuseReport.toggleMessageSelection(index: Int, limits: AbuseReportLimits) = this.method_44569(index, limits)
+fun ChatAbuseReport.toggleMessageSelection(index: Int, limits: AbuseReportLimits?) = this.method_44569(index, limits)

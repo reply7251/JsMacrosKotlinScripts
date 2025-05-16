@@ -29,7 +29,7 @@ object TelemetryEventTypeKt {
     /**
      * method_47725
      */
-    fun builder(id: String, sentEventId: String) = TelemetryEventType.method_47725(id, sentEventId)
+    fun builder(id: String?, sentEventId: String?) = TelemetryEventType.method_47725(id, sentEventId)
     /**
      * method_47732
      */

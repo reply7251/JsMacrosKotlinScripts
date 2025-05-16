@@ -5,5 +5,5 @@ object EffectCommandKt {
     /**
      * method_13229
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = EffectCommand.method_13229(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = EffectCommand.method_13229(dispatcher, registryAccess)
 }

@@ -8,11 +8,11 @@ fun ComponentPredicate.isEmpty() = this.method_57867()
 /**
  * method_57864
  */
-fun ComponentPredicate.test(holder: ComponentHolder) = this.method_57864(holder)
+fun ComponentPredicate.test(holder: ComponentHolder?) = this.method_57864(holder)
 /**
  * method_57868
  */
-fun ComponentPredicate.test(arg0: ComponentMap) = this.method_57868(arg0)
+fun ComponentPredicate.test(arg0: ComponentMap?) = this.method_57868(arg0)
 /**
  * method_57870
  */

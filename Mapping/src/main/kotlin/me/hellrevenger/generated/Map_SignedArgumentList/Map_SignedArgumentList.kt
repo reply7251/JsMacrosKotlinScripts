@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_58775
  */
-fun <S>SignedArgumentList<S>.get(name: String) = this.method_58775(name)
+fun <S>SignedArgumentList<S>.get(name: String?) = this.method_58775(name)
 /**
  * comp_974
  */

@@ -12,4 +12,4 @@ fun TabButtonWidget.isCurrentTab() = this.method_49611()
 /**
  * method_49608
  */
-fun TabButtonWidget.drawMessage(context: DrawContext, textRenderer: TextRenderer, color: Int) = this.method_49608(context, textRenderer, color)
+fun TabButtonWidget.drawMessage(context: DrawContext?, textRenderer: TextRenderer?, color: Int) = this.method_49608(context, textRenderer, color)

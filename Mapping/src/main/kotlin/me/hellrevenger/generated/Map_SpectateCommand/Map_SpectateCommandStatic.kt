@@ -5,5 +5,5 @@ object SpectateCommandKt {
     /**
      * method_23653
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = SpectateCommand.method_23653(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = SpectateCommand.method_23653(dispatcher)
 }

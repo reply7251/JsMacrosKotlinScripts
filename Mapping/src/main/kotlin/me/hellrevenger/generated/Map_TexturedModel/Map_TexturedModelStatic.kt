@@ -109,9 +109,9 @@ object TexturedModelKt {
     /**
      * method_25918
      */
-    fun makeFactory(texturesGetter: function_Function<Block, TextureMap>, model: Model) = TexturedModel.method_25918(texturesGetter, model)
+    fun makeFactory(texturesGetter: function_Function<Block, TextureMap>?, model: Model?) = TexturedModel.method_25918(texturesGetter, model)
     /**
      * method_25920
      */
-    fun getCubeAll(id: Identifier) = TexturedModel.method_25920(id)
+    fun getCubeAll(id: Identifier?) = TexturedModel.method_25920(id)
 }

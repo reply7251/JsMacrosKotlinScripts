@@ -8,7 +8,7 @@ fun LoginQueryRequestS2CPacket.queryId() = this.comp_1567()
 /**
  * method_12591
  */
-fun LoginQueryRequestS2CPacket.apply(arg0: ClientLoginPacketListener) = this.method_12591(arg0)
+fun LoginQueryRequestS2CPacket.apply(arg0: ClientLoginPacketListener?) = this.method_12591(arg0)
 /**
  * comp_1568
  */

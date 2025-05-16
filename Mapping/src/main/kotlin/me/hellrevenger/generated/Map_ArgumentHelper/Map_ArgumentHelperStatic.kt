@@ -13,7 +13,7 @@ object ArgumentHelperKt {
     /**
      * method_41990
      */
-    fun <S>toJson(dispatcher: CommandDispatcher<S>, rootNode: CommandNode<S>) = ArgumentHelper.method_41990<S>(dispatcher, rootNode)
+    fun <S>toJson(dispatcher: CommandDispatcher<S>?, rootNode: CommandNode<S>?) = ArgumentHelper.method_41990<S>(dispatcher, rootNode)
     /**
      * method_41994
      */
@@ -21,5 +21,5 @@ object ArgumentHelperKt {
     /**
      * method_41991
      */
-    fun <T>collectUsedArgumentTypes(rootNode: CommandNode<T>) = ArgumentHelper.method_41991<T>(rootNode)
+    fun <T>collectUsedArgumentTypes(rootNode: CommandNode<T>?) = ArgumentHelper.method_41991<T>(rootNode)
 }

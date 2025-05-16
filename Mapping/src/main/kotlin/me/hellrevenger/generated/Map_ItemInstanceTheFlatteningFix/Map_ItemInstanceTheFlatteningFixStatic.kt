@@ -5,5 +5,5 @@ object ItemInstanceTheFlatteningFixKt {
     /**
      * method_5042
      */
-    fun getItem(originalName: String, damage: Int) = ItemInstanceTheFlatteningFix.method_5042(originalName, damage)
+    fun getItem(originalName: String?, damage: Int) = ItemInstanceTheFlatteningFix.method_5042(originalName, damage)
 }

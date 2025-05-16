@@ -16,4 +16,4 @@ fun UpgradeData.copy() = this.method_61772()
 /**
  * method_12356
  */
-fun UpgradeData.upgrade(chunk: WorldChunk) = this.method_12356(chunk)
+fun UpgradeData.upgrade(chunk: WorldChunk?) = this.method_12356(chunk)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_59686
  */
-fun TrimPredicate.test(arg0: ItemStack, arg1: ArmorTrim) = this.method_59686(arg0, arg1)
+fun TrimPredicate.test(arg0: ItemStack?, arg1: ArmorTrim?) = this.method_59686(arg0, arg1)
 /**
  * comp_2639
  */

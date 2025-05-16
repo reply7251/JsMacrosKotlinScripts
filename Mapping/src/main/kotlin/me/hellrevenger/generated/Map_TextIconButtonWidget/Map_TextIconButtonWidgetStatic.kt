@@ -5,5 +5,5 @@ object TextIconButtonWidgetKt {
     /**
      * method_52723
      */
-    fun builder(text: Text, onPress: net.minecraft.class_4185.class_4241, hideLabel: Boolean) = TextIconButtonWidget.method_52723(text, onPress, hideLabel)
+    fun builder(text: Text?, onPress: net.minecraft.class_4185.class_4241?, hideLabel: Boolean) = TextIconButtonWidget.method_52723(text, onPress, hideLabel)
 }

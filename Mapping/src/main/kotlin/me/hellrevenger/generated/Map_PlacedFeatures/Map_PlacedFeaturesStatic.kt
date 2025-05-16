@@ -49,7 +49,7 @@ object PlacedFeaturesKt {
     /**
      * method_40365
      */
-    fun wouldSurvive(block: Block) = PlacedFeatures.method_40365(block)
+    fun wouldSurvive(block: Block?) = PlacedFeatures.method_40365(block)
     /**
      * method_40368
      */
@@ -57,15 +57,15 @@ object PlacedFeaturesKt {
     /**
      * method_40367
      */
-    fun <FC, F>createEntry(feature: F, featureConfig: FC, predicate: blockpredicate_BlockPredicate) where FC: FeatureConfig, F: Feature<FC> = PlacedFeatures.method_40367<FC, F>(feature, featureConfig, predicate)
+    fun <FC, F>createEntry(feature: F, featureConfig: FC, predicate: blockpredicate_BlockPredicate?) where FC: FeatureConfig, F: Feature<FC> = PlacedFeatures.method_40367<FC, F>(feature, featureConfig, predicate)
     /**
      * method_40369
      */
-    fun createEntry(feature: RegistryEntry<ConfiguredFeature<*, *>>, modifiers: Array<PlacementModifier>) = PlacedFeatures.method_40369(feature, *modifiers)
+    fun createEntry(feature: RegistryEntry<ConfiguredFeature<*, *>>?, modifiers: Array<PlacementModifier>) = PlacedFeatures.method_40369(feature, *modifiers)
     /**
      * method_39735
      */
-    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = PlacedFeatures.method_39735(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>?) = PlacedFeatures.method_39735(featureRegisterable)
     /**
      * method_40371
      */
@@ -73,11 +73,11 @@ object PlacedFeaturesKt {
     /**
      * method_39737
      */
-    fun register(featureRegisterable: Registerable<PlacedFeature>, key: RegistryKey<PlacedFeature>, feature: RegistryEntry<ConfiguredFeature<*, *>>, modifiers: MutableList<PlacementModifier>) = PlacedFeatures.method_39737(featureRegisterable, key, feature, modifiers)
+    fun register(featureRegisterable: Registerable<PlacedFeature>?, key: RegistryKey<PlacedFeature>?, feature: RegistryEntry<ConfiguredFeature<*, *>>?, modifiers: MutableList<PlacementModifier>?) = PlacedFeatures.method_39737(featureRegisterable, key, feature, modifiers)
     /**
      * method_40370
      */
-    fun register(featureRegisterable: Registerable<PlacedFeature>, key: RegistryKey<PlacedFeature>, feature: RegistryEntry<ConfiguredFeature<*, *>>, modifiers: Array<PlacementModifier>) = PlacedFeatures.method_40370(featureRegisterable, key, feature, *modifiers)
+    fun register(featureRegisterable: Registerable<PlacedFeature>?, key: RegistryKey<PlacedFeature>?, feature: RegistryEntry<ConfiguredFeature<*, *>>?, modifiers: Array<PlacementModifier>) = PlacedFeatures.method_40370(featureRegisterable, key, feature, *modifiers)
     /**
      * method_40366
      */
@@ -85,5 +85,5 @@ object PlacedFeaturesKt {
     /**
      * method_46865
      */
-    fun of(id: String) = PlacedFeatures.method_46865(id)
+    fun of(id: String?) = PlacedFeatures.method_46865(id)
 }

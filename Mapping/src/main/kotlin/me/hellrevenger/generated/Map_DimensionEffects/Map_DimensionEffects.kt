@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_28112
  */
-fun DimensionEffects.adjustFogColor(color: Vec3d, sunHeight: Float) = this.method_28112(color, sunHeight)
+fun DimensionEffects.adjustFogColor(color: Vec3d?, sunHeight: Float) = this.method_28112(color, sunHeight)
 /**
  * method_62184
  */

@@ -12,11 +12,11 @@ fun BossBarHud.clear() = this.method_1801()
 /**
  * method_1796
  */
-fun BossBarHud.render(context: DrawContext) = this.method_1796(context)
+fun BossBarHud.render(context: DrawContext?) = this.method_1796(context)
 /**
  * method_1795
  */
-fun BossBarHud.handlePacket(packet: BossBarS2CPacket) = this.method_1795(packet)
+fun BossBarHud.handlePacket(packet: BossBarS2CPacket?) = this.method_1795(packet)
 /**
  * method_1800
  */

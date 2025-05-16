@@ -16,7 +16,7 @@ fun LoginHelloS2CPacket.needsAuthentication() = this.method_56013()
 /**
  * method_12612
  */
-fun LoginHelloS2CPacket.apply(arg0: ClientLoginPacketListener) = this.method_12612(arg0)
+fun LoginHelloS2CPacket.apply(arg0: ClientLoginPacketListener?) = this.method_12612(arg0)
 /**
  * method_12611
  */

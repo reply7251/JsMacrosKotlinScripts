@@ -5,5 +5,5 @@ object TrackedDataHandlerKt {
     /**
      * method_56031
      */
-    fun <T>create(codec: PacketCodec<in RegistryByteBuf, T>) = TrackedDataHandler.method_56031<T>(codec)
+    fun <T>create(codec: PacketCodec<in RegistryByteBuf, T>?) = TrackedDataHandler.method_56031<T>(codec)
 }

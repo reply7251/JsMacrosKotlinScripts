@@ -21,7 +21,7 @@ object SizeUnitKt {
     /**
      * method_25028
      */
-    fun convertToUnit(bytes: Long, arg1: SizeUnit) = SizeUnit.method_25028(bytes, arg1)
+    fun convertToUnit(bytes: Long, arg1: SizeUnit?) = SizeUnit.method_25028(bytes, arg1)
     /**
      * method_25029
      */
@@ -33,5 +33,5 @@ object SizeUnitKt {
     /**
      * method_25030
      */
-    fun humanReadableSize(bytes: Long, arg1: SizeUnit) = SizeUnit.method_25030(bytes, arg1)
+    fun humanReadableSize(bytes: Long, arg1: SizeUnit?) = SizeUnit.method_25030(bytes, arg1)
 }

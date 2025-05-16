@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11285
  */
-fun LootableInventory.setLootTable(lootTable: RegistryKey<LootTable>) = this.method_11285(lootTable)
+fun LootableInventory.setLootTable(lootTable: RegistryKey<LootTable>?) = this.method_11285(lootTable)
 /**
  * method_54870
  */
@@ -16,11 +16,11 @@ fun LootableInventory.getLootTable() = this.method_54869()
 /**
  * method_54872
  */
-fun LootableInventory.writeLootTable(nbt: NbtCompound) = this.method_54872(nbt)
+fun LootableInventory.writeLootTable(nbt: NbtCompound?) = this.method_54872(nbt)
 /**
  * method_54871
  */
-fun LootableInventory.readLootTable(nbt: NbtCompound) = this.method_54871(nbt)
+fun LootableInventory.readLootTable(nbt: NbtCompound?) = this.method_54871(nbt)
 /**
  * method_11016
  */
@@ -28,7 +28,7 @@ fun LootableInventory.getPos() = this.method_11016()
 /**
  * method_54873
  */
-fun LootableInventory.generateLoot(player: PlayerEntity) = this.method_54873(player)
+fun LootableInventory.generateLoot(player: PlayerEntity?) = this.method_54873(player)
 /**
  * method_10997
  */
@@ -36,7 +36,7 @@ fun LootableInventory.getWorld() = this.method_10997()
 /**
  * method_54867
  */
-fun LootableInventory.setLootTable(lootTableId: RegistryKey<LootTable>, lootTableSeed: Long) = this.method_54867(lootTableId, lootTableSeed)
+fun LootableInventory.setLootTable(lootTableId: RegistryKey<LootTable>?, lootTableSeed: Long) = this.method_54867(lootTableId, lootTableSeed)
 /**
  * method_54866
  */

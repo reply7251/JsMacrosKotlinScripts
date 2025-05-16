@@ -9,13 +9,13 @@ object RealmsCreateWorldScreenKt {
     /**
      * method_53801
      */
-    fun newWorld(parent: Screen, slot: Int, serverData: RealmsServer, callback: Runnable) = RealmsCreateWorldScreen.method_53801(parent, slot, serverData, callback)
+    fun newWorld(parent: Screen?, slot: Int, serverData: RealmsServer?, callback: Runnable?) = RealmsCreateWorldScreen.method_53801(parent, slot, serverData, callback)
     /**
      * method_53805
      */
-    fun resetWorld(parent: Screen, serverData: RealmsServer, callback: Runnable) = RealmsCreateWorldScreen.method_53805(parent, serverData, callback)
+    fun resetWorld(parent: Screen?, serverData: RealmsServer?, callback: Runnable?) = RealmsCreateWorldScreen.method_53805(parent, serverData, callback)
     /**
      * method_53802
      */
-    fun newRealm(parent: Screen, serverData: RealmsServer, creationTask: WorldCreationTask, callback: Runnable) = RealmsCreateWorldScreen.method_53802(parent, serverData, creationTask, callback)
+    fun newRealm(parent: Screen?, serverData: RealmsServer?, creationTask: WorldCreationTask?, callback: Runnable?) = RealmsCreateWorldScreen.method_53802(parent, serverData, creationTask, callback)
 }

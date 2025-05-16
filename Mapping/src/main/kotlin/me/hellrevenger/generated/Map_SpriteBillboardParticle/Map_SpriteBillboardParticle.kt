@@ -4,8 +4,8 @@ import me.hellrevenger.generated.*
 /**
  * method_18142
  */
-fun SpriteBillboardParticle.setSpriteForAge(spriteProvider: SpriteProvider) = this.method_18142(spriteProvider)
+fun SpriteBillboardParticle.setSpriteForAge(spriteProvider: SpriteProvider?) = this.method_18142(spriteProvider)
 /**
  * method_18140
  */
-fun SpriteBillboardParticle.setSprite(spriteProvider: SpriteProvider) = this.method_18140(spriteProvider)
+fun SpriteBillboardParticle.setSprite(spriteProvider: SpriteProvider?) = this.method_18140(spriteProvider)

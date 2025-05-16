@@ -5,7 +5,7 @@ object WindowKt {
     /**
      * method_4492
      */
-    fun acceptError(consumer: BiConsumer<Int, String>) = Window.method_4492(consumer)
+    fun acceptError(consumer: BiConsumer<Int, String>?) = Window.method_4492(consumer)
     /**
      * method_60793
      */

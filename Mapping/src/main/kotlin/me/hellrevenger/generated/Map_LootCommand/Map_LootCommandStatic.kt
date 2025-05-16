@@ -9,5 +9,5 @@ object LootCommandKt {
     /**
      * method_13193
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, commandRegistryAccess: CommandRegistryAccess) = LootCommand.method_13193(dispatcher, commandRegistryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, commandRegistryAccess: CommandRegistryAccess?) = LootCommand.method_13193(dispatcher, commandRegistryAccess)
 }

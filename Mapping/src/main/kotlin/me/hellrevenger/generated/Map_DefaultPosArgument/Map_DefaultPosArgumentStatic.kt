@@ -5,11 +5,11 @@ object DefaultPosArgumentKt {
     /**
      * method_35811
      */
-    fun absolute(vec: Vec2f) = DefaultPosArgument.method_35811(vec)
+    fun absolute(vec: Vec2f?) = DefaultPosArgument.method_35811(vec)
     /**
      * method_9749
      */
-    fun parse(reader: StringReader) = DefaultPosArgument.method_9749(reader)
+    fun parse(reader: StringReader?) = DefaultPosArgument.method_9749(reader)
     /**
      * method_35810
      */
@@ -17,5 +17,5 @@ object DefaultPosArgumentKt {
     /**
      * method_9750
      */
-    fun parse(reader: StringReader, centerIntegers: Boolean) = DefaultPosArgument.method_9750(reader, centerIntegers)
+    fun parse(reader: StringReader?, centerIntegers: Boolean) = DefaultPosArgument.method_9750(reader, centerIntegers)
 }

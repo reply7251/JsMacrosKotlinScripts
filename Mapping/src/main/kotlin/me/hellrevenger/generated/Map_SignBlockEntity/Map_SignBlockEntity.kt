@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_49836
  */
-fun SignBlockEntity.tryChangeText(player: PlayerEntity, front: Boolean, messages: MutableList<FilteredMessage>) = this.method_49836(player, front, messages)
+fun SignBlockEntity.tryChangeText(player: PlayerEntity?, front: Boolean, messages: MutableList<FilteredMessage>?) = this.method_49836(player, front, messages)
 /**
  * method_49853
  */
@@ -20,7 +20,7 @@ fun SignBlockEntity.getText(front: Boolean) = this.method_49843(front)
 /**
  * method_50010
  */
-fun SignBlockEntity.canRunCommandClickEvent(front: Boolean, player: PlayerEntity) = this.method_50010(front, player)
+fun SignBlockEntity.canRunCommandClickEvent(front: Boolean, player: PlayerEntity?) = this.method_50010(front, player)
 /**
  * method_45470
  */
@@ -32,15 +32,15 @@ fun SignBlockEntity.getEditor() = this.method_11305()
 /**
  * method_49841
  */
-fun SignBlockEntity.changeText(textChanger: UnaryOperator<SignText>, front: Boolean) = this.method_49841(textChanger, front)
+fun SignBlockEntity.changeText(textChanger: UnaryOperator<SignText>?, front: Boolean) = this.method_49841(textChanger, front)
 /**
  * method_49834
  */
-fun SignBlockEntity.isPlayerFacingFront(player: PlayerEntity) = this.method_49834(player)
+fun SignBlockEntity.isPlayerFacingFront(player: PlayerEntity?) = this.method_49834(player)
 /**
  * method_50007
  */
-fun SignBlockEntity.runCommandClickEvent(player: PlayerEntity, world: world_World, pos: BlockPos, front: Boolean) = this.method_50007(player, world, pos, front)
+fun SignBlockEntity.runCommandClickEvent(player: PlayerEntity?, world: world_World?, pos: BlockPos?, front: Boolean) = this.method_50007(player, world, pos, front)
 /**
  * method_49854
  */
@@ -48,7 +48,7 @@ fun SignBlockEntity.getBackText() = this.method_49854()
 /**
  * method_49840
  */
-fun SignBlockEntity.setText(text: SignText, front: Boolean) = this.method_49840(text, front)
+fun SignBlockEntity.setText(text: SignText?, front: Boolean) = this.method_49840(text, front)
 /**
  * method_38249
  */
@@ -64,11 +64,11 @@ fun SignBlockEntity.setWaxed(waxed: Boolean) = this.method_49849(waxed)
 /**
  * method_11306
  */
-fun SignBlockEntity.setEditor(editor: UUID) = this.method_11306(editor)
+fun SignBlockEntity.setEditor(editor: UUID?) = this.method_11306(editor)
 /**
  * method_49847
  */
-fun SignBlockEntity.isPlayerTooFarToEdit(uuid: UUID) = this.method_49847(uuid)
+fun SignBlockEntity.isPlayerTooFarToEdit(uuid: UUID?) = this.method_49847(uuid)
 /**
  * method_49855
  */

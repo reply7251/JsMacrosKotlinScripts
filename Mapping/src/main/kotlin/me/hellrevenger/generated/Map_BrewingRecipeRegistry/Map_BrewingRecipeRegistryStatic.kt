@@ -9,9 +9,9 @@ object BrewingRecipeRegistryKt {
     /**
      * method_8076
      */
-    fun create(enabledFeatures: FeatureSet) = BrewingRecipeRegistry.method_8076(enabledFeatures)
+    fun create(enabledFeatures: FeatureSet?) = BrewingRecipeRegistry.method_8076(enabledFeatures)
     /**
      * method_59699
      */
-    fun registerDefaults(builder: net.minecraft.class_1845.class_9665) = BrewingRecipeRegistry.method_59699(builder)
+    fun registerDefaults(builder: net.minecraft.class_1845.class_9665?) = BrewingRecipeRegistry.method_59699(builder)
 }

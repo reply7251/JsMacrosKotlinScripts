@@ -8,7 +8,7 @@ fun RotationCalculator.getMax() = this.method_48120()
 /**
  * method_48124
  */
-fun RotationCalculator.toRotation(direction: Direction) = this.method_48124(direction)
+fun RotationCalculator.toRotation(direction: Direction?) = this.method_48124(direction)
 /**
  * method_48123
  */

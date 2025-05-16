@@ -8,7 +8,7 @@ fun WanderingTraderEntity.getDespawnDelay() = this.method_18014()
 /**
  * method_18069
  */
-fun WanderingTraderEntity.setWanderTarget(wanderTarget: BlockPos) = this.method_18069(wanderTarget)
+fun WanderingTraderEntity.setWanderTarget(wanderTarget: BlockPos?) = this.method_18069(wanderTarget)
 /**
  * method_18013
  */

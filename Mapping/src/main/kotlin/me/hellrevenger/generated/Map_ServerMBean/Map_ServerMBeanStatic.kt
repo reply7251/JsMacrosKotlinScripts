@@ -5,5 +5,5 @@ object ServerMBeanKt {
     /**
      * method_27181
      */
-    fun register(server: MinecraftServer) = ServerMBean.method_27181(server)
+    fun register(server: MinecraftServer?) = ServerMBean.method_27181(server)
 }

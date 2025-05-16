@@ -16,12 +16,12 @@ fun SpriteIdentifier.getAtlasId() = this.method_24144()
 /**
  * method_24145
  */
-fun SpriteIdentifier.getVertexConsumer(vertexConsumers: VertexConsumerProvider, layerFactory: function_Function<Identifier, RenderLayer>) = this.method_24145(vertexConsumers, layerFactory)
+fun SpriteIdentifier.getVertexConsumer(vertexConsumers: VertexConsumerProvider?, layerFactory: function_Function<Identifier, RenderLayer>?) = this.method_24145(vertexConsumers, layerFactory)
 /**
  * method_30001
  */
-fun SpriteIdentifier.getVertexConsumer(vertexConsumers: VertexConsumerProvider, layerFactory: function_Function<Identifier, RenderLayer>, solid: Boolean, glint: Boolean) = this.method_30001(vertexConsumers, layerFactory, solid, glint)
+fun SpriteIdentifier.getVertexConsumer(vertexConsumers: VertexConsumerProvider?, layerFactory: function_Function<Identifier, RenderLayer>?, solid: Boolean, glint: Boolean) = this.method_30001(vertexConsumers, layerFactory, solid, glint)
 /**
  * method_24146
  */
-fun SpriteIdentifier.getRenderLayer(layerFactory: function_Function<Identifier, RenderLayer>) = this.method_24146(layerFactory)
+fun SpriteIdentifier.getRenderLayer(layerFactory: function_Function<Identifier, RenderLayer>?) = this.method_24146(layerFactory)

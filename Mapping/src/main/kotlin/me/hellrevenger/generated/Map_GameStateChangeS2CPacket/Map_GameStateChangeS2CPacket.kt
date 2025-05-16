@@ -12,4 +12,4 @@ fun GameStateChangeS2CPacket.getValue() = this.method_11492()
 /**
  * method_11490
  */
-fun GameStateChangeS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11490(arg0)
+fun GameStateChangeS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11490(arg0)

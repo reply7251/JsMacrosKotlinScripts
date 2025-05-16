@@ -5,7 +5,7 @@ object RandomChanceLootConditionKt {
     /**
      * method_60310
      */
-    fun builder(chance: LootNumberProvider) = RandomChanceLootCondition.method_60310(chance)
+    fun builder(chance: LootNumberProvider?) = RandomChanceLootCondition.method_60310(chance)
     /**
      * method_932
      */

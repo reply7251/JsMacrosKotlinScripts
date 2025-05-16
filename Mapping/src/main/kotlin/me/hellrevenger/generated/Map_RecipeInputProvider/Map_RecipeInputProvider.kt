@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_7683
  */
-fun RecipeInputProvider.provideRecipeInputs(finder: RecipeFinder) = this.method_7683(finder)
+fun RecipeInputProvider.provideRecipeInputs(finder: RecipeFinder?) = this.method_7683(finder)

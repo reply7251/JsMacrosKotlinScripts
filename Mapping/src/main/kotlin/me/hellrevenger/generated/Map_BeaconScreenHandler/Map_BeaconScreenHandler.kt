@@ -20,4 +20,4 @@ fun BeaconScreenHandler.getSecondaryEffect() = this.method_17375()
 /**
  * method_17372
  */
-fun BeaconScreenHandler.setEffects(primary: Optional<RegistryEntry<StatusEffect>>, secondary: Optional<RegistryEntry<StatusEffect>>) = this.method_17372(primary, secondary)
+fun BeaconScreenHandler.setEffects(primary: Optional<RegistryEntry<StatusEffect>>?, secondary: Optional<RegistryEntry<StatusEffect>>?) = this.method_17372(primary, secondary)

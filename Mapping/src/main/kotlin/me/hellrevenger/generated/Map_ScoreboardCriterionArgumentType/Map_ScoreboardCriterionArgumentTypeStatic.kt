@@ -9,7 +9,7 @@ object ScoreboardCriterionArgumentTypeKt {
     /**
      * method_9402
      */
-    fun getCriterion(context: CommandContext<ServerCommandSource>, name: String) = ScoreboardCriterionArgumentType.method_9402(context, name)
+    fun getCriterion(context: CommandContext<ServerCommandSource>?, name: String?) = ScoreboardCriterionArgumentType.method_9402(context, name)
     /**
      * method_9399
      */

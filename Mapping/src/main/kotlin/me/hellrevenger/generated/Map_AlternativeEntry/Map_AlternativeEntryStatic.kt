@@ -9,5 +9,5 @@ object AlternativeEntryKt {
     /**
      * method_43734
      */
-    fun <E>builder(children: Collection<E>, toBuilderFunction: function_Function<E, net.minecraft.class_79.class_80<*>>) = AlternativeEntry.method_43734<E>(children, toBuilderFunction)
+    fun <E>builder(children: Collection<E>?, toBuilderFunction: function_Function<E, net.minecraft.class_79.class_80<*>>?) = AlternativeEntry.method_43734<E>(children, toBuilderFunction)
 }

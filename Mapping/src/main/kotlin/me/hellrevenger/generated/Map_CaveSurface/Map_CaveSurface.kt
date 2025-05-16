@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_35328
  */
-fun CaveSurface.withCeiling(ceiling: OptionalInt) = this.method_35328(ceiling)
+fun CaveSurface.withCeiling(ceiling: OptionalInt?) = this.method_35328(ceiling)
 /**
  * method_32983
  */
-fun CaveSurface.withFloor(floor: OptionalInt) = this.method_32983(floor)
+fun CaveSurface.withFloor(floor: OptionalInt?) = this.method_32983(floor)
 /**
  * method_32985
  */

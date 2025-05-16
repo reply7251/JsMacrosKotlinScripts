@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11268
  */
-fun EntityAnimationS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11268(arg0)
+fun EntityAnimationS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11268(arg0)
 /**
  * method_11269
  */

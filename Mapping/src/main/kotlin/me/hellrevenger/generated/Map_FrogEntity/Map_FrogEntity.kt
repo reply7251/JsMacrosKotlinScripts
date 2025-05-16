@@ -24,7 +24,7 @@ fun FrogEntity.getVariant() = this.method_41354()
 /**
  * method_41352
  */
-fun FrogEntity.setFrogTarget(entity: Entity) = this.method_41352(entity)
+fun FrogEntity.setFrogTarget(entity: Entity?) = this.method_41352(entity)
 /**
  * method_41360
  */
@@ -36,4 +36,4 @@ fun FrogEntity.clearFrogTarget() = this.method_41359()
 /**
  * method_41353
  */
-fun FrogEntity.setVariant(arg0: RegistryEntry<FrogVariant>) = this.method_41353(arg0)
+fun FrogEntity.setVariant(arg0: RegistryEntry<FrogVariant>?) = this.method_41353(arg0)

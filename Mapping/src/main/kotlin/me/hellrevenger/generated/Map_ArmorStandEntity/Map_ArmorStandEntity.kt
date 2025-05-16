@@ -20,11 +20,11 @@ fun ArmorStandEntity.getHeadRotation() = this.method_6921()
 /**
  * method_6909
  */
-fun ArmorStandEntity.setLeftLegRotation(angle: EulerAngle) = this.method_6909(angle)
+fun ArmorStandEntity.setLeftLegRotation(angle: EulerAngle?) = this.method_6909(angle)
 /**
  * method_6925
  */
-fun ArmorStandEntity.setRightArmRotation(angle: EulerAngle) = this.method_6925(angle)
+fun ArmorStandEntity.setRightArmRotation(angle: EulerAngle?) = this.method_6925(angle)
 /**
  * method_61489
  */
@@ -40,7 +40,7 @@ fun ArmorStandEntity.getRightLegRotation() = this.method_6900()
 /**
  * method_6926
  */
-fun ArmorStandEntity.setRightLegRotation(angle: EulerAngle) = this.method_6926(angle)
+fun ArmorStandEntity.setRightLegRotation(angle: EulerAngle?) = this.method_6926(angle)
 /**
  * method_6912
  */
@@ -48,7 +48,7 @@ fun ArmorStandEntity.isMarker() = this.method_6912()
 /**
  * method_6910
  */
-fun ArmorStandEntity.setLeftArmRotation(angle: EulerAngle) = this.method_6910(angle)
+fun ArmorStandEntity.setLeftArmRotation(angle: EulerAngle?) = this.method_6910(angle)
 /**
  * method_6903
  */
@@ -60,11 +60,11 @@ fun ArmorStandEntity.getBodyRotation() = this.method_6923()
 /**
  * method_6919
  */
-fun ArmorStandEntity.setHeadRotation(angle: EulerAngle) = this.method_6919(angle)
+fun ArmorStandEntity.setHeadRotation(angle: EulerAngle?) = this.method_6919(angle)
 /**
  * method_6927
  */
-fun ArmorStandEntity.setBodyRotation(angle: EulerAngle) = this.method_6927(angle)
+fun ArmorStandEntity.setBodyRotation(angle: EulerAngle?) = this.method_6927(angle)
 /**
  * method_6907
  */

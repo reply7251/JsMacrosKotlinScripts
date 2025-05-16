@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60304
  */
-fun EnchantmentActiveCheckLootCondition.test(arg0: LootContext) = this.method_60304(arg0)
+fun EnchantmentActiveCheckLootCondition.test(arg0: LootContext?) = this.method_60304(arg0)
 /**
  * comp_2780
  */

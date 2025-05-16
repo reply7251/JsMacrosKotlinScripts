@@ -13,5 +13,5 @@ object CamelBrainKt {
     /**
      * method_45366
      */
-    fun updateActivities(camel: CamelEntity) = CamelBrain.method_45366(camel)
+    fun updateActivities(camel: CamelEntity?) = CamelBrain.method_45366(camel)
 }

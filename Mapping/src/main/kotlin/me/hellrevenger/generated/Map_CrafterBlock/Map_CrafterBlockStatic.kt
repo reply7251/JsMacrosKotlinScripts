@@ -13,5 +13,5 @@ object CrafterBlockKt {
     /**
      * method_54475
      */
-    fun getCraftingRecipe(world: ServerWorld, input: CraftingRecipeInput) = CrafterBlock.method_54475(world, input)
+    fun getCraftingRecipe(world: ServerWorld?, input: CraftingRecipeInput?) = CrafterBlock.method_54475(world, input)
 }

@@ -13,7 +13,7 @@ object EnchantmentLevelBasedValueKt {
     /**
      * method_60193
      */
-    fun registerAndGetDefault(registry: Registry<MapCodec<out EnchantmentLevelBasedValue>>) = EnchantmentLevelBasedValue.method_60193(registry)
+    fun registerAndGetDefault(registry: Registry<MapCodec<out EnchantmentLevelBasedValue>>?) = EnchantmentLevelBasedValue.method_60193(registry)
     /**
      * method_60187
      */
@@ -21,5 +21,5 @@ object EnchantmentLevelBasedValueKt {
     /**
      * method_60987
      */
-    fun lookup(values: MutableList<Float>, fallback: EnchantmentLevelBasedValue) = EnchantmentLevelBasedValue.method_60987(values, fallback)
+    fun lookup(values: MutableList<Float>?, fallback: EnchantmentLevelBasedValue?) = EnchantmentLevelBasedValue.method_60987(values, fallback)
 }

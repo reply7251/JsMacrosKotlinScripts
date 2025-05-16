@@ -8,7 +8,7 @@ fun EnderDragonFight.tick() = this.method_12538()
 /**
  * method_12526
  */
-fun EnderDragonFight.crystalDestroyed(enderCrystal: EndCrystalEntity, source: DamageSource) = this.method_12526(enderCrystal, source)
+fun EnderDragonFight.crystalDestroyed(enderCrystal: EndCrystalEntity?, source: DamageSource?) = this.method_12526(enderCrystal, source)
 /**
  * method_51855
  */
@@ -24,11 +24,11 @@ fun EnderDragonFight.getAliveEndCrystals() = this.method_12517()
 /**
  * method_12532
  */
-fun EnderDragonFight.updateFight(dragon: EnderDragonEntity) = this.method_12532(dragon)
+fun EnderDragonFight.updateFight(dragon: EnderDragonEntity?) = this.method_12532(dragon)
 /**
  * method_12528
  */
-fun EnderDragonFight.dragonKilled(dragon: EnderDragonEntity) = this.method_12528(dragon)
+fun EnderDragonFight.dragonKilled(dragon: EnderDragonEntity?) = this.method_12528(dragon)
 /**
  * method_12524
  */

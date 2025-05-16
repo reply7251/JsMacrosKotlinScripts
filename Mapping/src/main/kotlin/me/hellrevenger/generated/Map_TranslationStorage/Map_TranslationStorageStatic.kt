@@ -5,5 +5,5 @@ object TranslationStorageKt {
     /**
      * method_4675
      */
-    fun load(resourceManager: ResourceManager, definitions: MutableList<String>, rightToLeft: Boolean) = TranslationStorage.method_4675(resourceManager, definitions, rightToLeft)
+    fun load(resourceManager: ResourceManager?, definitions: MutableList<String>?, rightToLeft: Boolean) = TranslationStorage.method_4675(resourceManager, definitions, rightToLeft)
 }

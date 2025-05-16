@@ -29,21 +29,21 @@ object WorldPresetsKt {
     /**
      * method_64225
      */
-    fun createTestOptions(registries: net.minecraft.class_7225.class_7874) = WorldPresets.method_64225(registries)
+    fun createTestOptions(registries: net.minecraft.class_7225.class_7874?) = WorldPresets.method_64225(registries)
     /**
      * method_41593
      */
-    fun bootstrap(presetRegisterable: Registerable<WorldPreset>) = WorldPresets.method_41593(presetRegisterable)
+    fun bootstrap(presetRegisterable: Registerable<WorldPreset>?) = WorldPresets.method_41593(presetRegisterable)
     /**
      * method_41594
      */
-    fun getWorldPreset(registry: DimensionOptionsRegistryHolder) = WorldPresets.method_41594(registry)
+    fun getWorldPreset(registry: DimensionOptionsRegistryHolder?) = WorldPresets.method_41594(registry)
     /**
      * method_41599
      */
-    fun getDefaultOverworldOptions(registries: net.minecraft.class_7225.class_7874) = WorldPresets.method_41599(registries)
+    fun getDefaultOverworldOptions(registries: net.minecraft.class_7225.class_7874?) = WorldPresets.method_41599(registries)
     /**
      * method_41598
      */
-    fun createDemoOptions(registries: net.minecraft.class_7225.class_7874) = WorldPresets.method_41598(registries)
+    fun createDemoOptions(registries: net.minecraft.class_7225.class_7874?) = WorldPresets.method_41598(registries)
 }

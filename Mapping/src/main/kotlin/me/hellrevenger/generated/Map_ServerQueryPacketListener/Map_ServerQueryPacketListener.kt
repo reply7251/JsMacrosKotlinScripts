@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_12698
  */
-fun ServerQueryPacketListener.onRequest(packet: QueryRequestC2SPacket) = this.method_12698(packet)
+fun ServerQueryPacketListener.onRequest(packet: QueryRequestC2SPacket?) = this.method_12698(packet)

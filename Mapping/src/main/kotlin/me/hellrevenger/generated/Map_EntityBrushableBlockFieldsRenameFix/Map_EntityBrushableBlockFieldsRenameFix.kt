@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_49763
  */
-fun EntityBrushableBlockFieldsRenameFix.renameFields(dynamic: Dynamic<*>) = this.method_49763(dynamic)
+fun EntityBrushableBlockFieldsRenameFix.renameFields(dynamic: Dynamic<*>?) = this.method_49763(dynamic)

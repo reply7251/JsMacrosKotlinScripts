@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_43490
  */
-fun TrackedPosition.getDeltaX(pos: Vec3d) = this.method_43490(pos)
+fun TrackedPosition.getDeltaX(pos: Vec3d?) = this.method_43490(pos)
 /**
  * method_43489
  */
@@ -12,15 +12,15 @@ fun TrackedPosition.withDelta(x: Long, arg1: Long, y: Long) = this.method_43489(
 /**
  * method_43491
  */
-fun TrackedPosition.getDeltaY(pos: Vec3d) = this.method_43491(pos)
+fun TrackedPosition.getDeltaY(pos: Vec3d?) = this.method_43491(pos)
 /**
  * method_43492
  */
-fun TrackedPosition.getDeltaZ(pos: Vec3d) = this.method_43492(pos)
+fun TrackedPosition.getDeltaZ(pos: Vec3d?) = this.method_43492(pos)
 /**
  * method_43493
  */
-fun TrackedPosition.subtract(pos: Vec3d) = this.method_43493(pos)
+fun TrackedPosition.subtract(pos: Vec3d?) = this.method_43493(pos)
 /**
  * method_60933
  */
@@ -28,4 +28,4 @@ fun TrackedPosition.getPos() = this.method_60933()
 /**
  * method_43494
  */
-fun TrackedPosition.setPos(pos: Vec3d) = this.method_43494(pos)
+fun TrackedPosition.setPos(pos: Vec3d?) = this.method_43494(pos)

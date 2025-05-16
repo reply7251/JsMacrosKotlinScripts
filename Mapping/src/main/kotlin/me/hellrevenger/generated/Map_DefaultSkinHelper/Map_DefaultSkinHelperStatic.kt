@@ -5,11 +5,11 @@ object DefaultSkinHelperKt {
     /**
      * method_52854
      */
-    fun getSkinTextures(profile: GameProfile) = DefaultSkinHelper.method_52854(profile)
+    fun getSkinTextures(profile: GameProfile?) = DefaultSkinHelper.method_52854(profile)
     /**
      * method_4648
      */
-    fun getSkinTextures(uuid: UUID) = DefaultSkinHelper.method_4648(uuid)
+    fun getSkinTextures(uuid: UUID?) = DefaultSkinHelper.method_4648(uuid)
     /**
      * method_4649
      */

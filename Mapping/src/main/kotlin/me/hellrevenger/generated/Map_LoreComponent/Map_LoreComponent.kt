@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_57499
  */
-fun LoreComponent.with(line: Text) = this.method_57499(line)
+fun LoreComponent.with(line: Text?) = this.method_57499(line)
 /**
  * comp_2401
  */

@@ -17,5 +17,5 @@ object ResourcePackCompatibilityKt {
     /**
      * method_14436
      */
-    fun from(range: Range<Int>, current: Int) = ResourcePackCompatibility.method_14436(range, current)
+    fun from(range: Range<Int>?, current: Int) = ResourcePackCompatibility.method_14436(range, current)
 }

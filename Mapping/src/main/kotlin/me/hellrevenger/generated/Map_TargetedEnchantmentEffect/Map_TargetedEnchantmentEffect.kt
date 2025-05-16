@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_60207
  */
-fun <T>TargetedEnchantmentEffect<T>.test(lootContext: LootContext) = this.method_60207(lootContext)
+fun <T>TargetedEnchantmentEffect<T>.test(lootContext: LootContext?) = this.method_60207(lootContext)
 /**
  * comp_2702
  */

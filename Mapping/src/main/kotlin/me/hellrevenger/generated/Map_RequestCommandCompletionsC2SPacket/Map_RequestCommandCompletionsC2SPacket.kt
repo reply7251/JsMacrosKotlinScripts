@@ -12,4 +12,4 @@ fun RequestCommandCompletionsC2SPacket.getCompletionId() = this.method_12149()
 /**
  * method_12147
  */
-fun RequestCommandCompletionsC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12147(arg0)
+fun RequestCommandCompletionsC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12147(arg0)

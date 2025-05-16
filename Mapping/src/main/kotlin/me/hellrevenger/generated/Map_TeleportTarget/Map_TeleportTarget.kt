@@ -8,15 +8,11 @@ fun TeleportTarget.pitch() = this.comp_2824()
 /**
  * method_64829
  */
-fun TeleportTarget.withPosition(position: Vec3d) = this.method_64829(position)
+fun TeleportTarget.withPosition(position: Vec3d?) = this.method_64829(position)
 /**
  * comp_2823
  */
 fun TeleportTarget.yaw() = this.comp_2823()
-/**
- * method_64828
- */
-fun TeleportTarget.asPassenger() = this.method_64828()
 /**
  * method_61823
  */

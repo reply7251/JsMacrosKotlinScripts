@@ -5,5 +5,5 @@ object LargeTropicalFishEntityModelKt {
     /**
      * method_32061
      */
-    fun getTexturedModelData(dilation: Dilation) = LargeTropicalFishEntityModel.method_32061(dilation)
+    fun getTexturedModelData(dilation: Dilation?) = LargeTropicalFishEntityModel.method_32061(dilation)
 }

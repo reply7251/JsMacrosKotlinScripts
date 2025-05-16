@@ -28,7 +28,7 @@ fun Monitor.getViewportX() = this.method_1616()
 /**
  * method_1614
  */
-fun Monitor.findClosestVideoMode(videoMode: Optional<VideoMode>) = this.method_1614(videoMode)
+fun Monitor.findClosestVideoMode(videoMode: Optional<VideoMode>?) = this.method_1614(videoMode)
 /**
  * method_1618
  */
@@ -36,4 +36,4 @@ fun Monitor.getViewportY() = this.method_1618()
 /**
  * method_1619
  */
-fun Monitor.findClosestVideoModeIndex(videoMode: VideoMode) = this.method_1619(videoMode)
+fun Monitor.findClosestVideoModeIndex(videoMode: VideoMode?) = this.method_1619(videoMode)

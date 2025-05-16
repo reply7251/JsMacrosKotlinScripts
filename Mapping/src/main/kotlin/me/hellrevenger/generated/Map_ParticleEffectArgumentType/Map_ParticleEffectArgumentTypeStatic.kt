@@ -13,13 +13,13 @@ object ParticleEffectArgumentTypeKt {
     /**
      * method_9418
      */
-    fun readParameters(reader: StringReader, registries: net.minecraft.class_7225.class_7874) = ParticleEffectArgumentType.method_9418(reader, registries)
+    fun readParameters(reader: StringReader?, registries: net.minecraft.class_7225.class_7874?) = ParticleEffectArgumentType.method_9418(reader, registries)
     /**
      * method_9417
      */
-    fun particleEffect(registryAccess: CommandRegistryAccess) = ParticleEffectArgumentType.method_9417(registryAccess)
+    fun particleEffect(registryAccess: CommandRegistryAccess?) = ParticleEffectArgumentType.method_9417(registryAccess)
     /**
      * method_9421
      */
-    fun getParticle(context: CommandContext<ServerCommandSource>, name: String) = ParticleEffectArgumentType.method_9421(context, name)
+    fun getParticle(context: CommandContext<ServerCommandSource>?, name: String?) = ParticleEffectArgumentType.method_9421(context, name)
 }

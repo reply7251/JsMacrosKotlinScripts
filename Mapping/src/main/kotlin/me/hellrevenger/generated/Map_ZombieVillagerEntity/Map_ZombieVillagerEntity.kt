@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_21649
  */
-fun ZombieVillagerEntity.setGossipData(gossipData: NbtElement) = this.method_21649(gossipData)
+fun ZombieVillagerEntity.setGossipData(gossipData: NbtElement?) = this.method_21649(gossipData)
 /**
  * method_63660
  */
@@ -12,7 +12,7 @@ fun ZombieVillagerEntity.setConversionTimer(conversionTimer: Int) = this.method_
 /**
  * method_16916
  */
-fun ZombieVillagerEntity.setOfferData(offerData: TradeOfferList) = this.method_16916(offerData)
+fun ZombieVillagerEntity.setOfferData(offerData: TradeOfferList?) = this.method_16916(offerData)
 /**
  * method_35194
  */

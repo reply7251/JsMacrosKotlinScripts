@@ -5,5 +5,5 @@ object BreezeJumpTaskKt {
     /**
      * method_58644
      */
-    fun shouldJump(world: ServerWorld, breeze: BreezeEntity) = BreezeJumpTask.method_58644(world, breeze)
+    fun shouldJump(world: ServerWorld?, breeze: BreezeEntity?) = BreezeJumpTask.method_58644(world, breeze)
 }

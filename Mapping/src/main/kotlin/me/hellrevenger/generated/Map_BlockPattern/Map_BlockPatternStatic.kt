@@ -5,5 +5,5 @@ object BlockPatternKt {
     /**
      * method_11709
      */
-    fun makeCache(world: WorldView, forceLoad: Boolean) = BlockPattern.method_11709(world, forceLoad)
+    fun makeCache(world: WorldView?, forceLoad: Boolean) = BlockPattern.method_11709(world, forceLoad)
 }

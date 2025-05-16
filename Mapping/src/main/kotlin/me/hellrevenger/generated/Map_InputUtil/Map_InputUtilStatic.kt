@@ -481,7 +481,7 @@ object InputUtilKt {
     /**
      * method_15983
      */
-    fun setMouseCallbacks(handle: Long, arg1: GLFWCursorPosCallbackI, cursorPosCallback: GLFWMouseButtonCallbackI, mouseButtonCallback: GLFWScrollCallbackI, scrollCallback: GLFWDropCallbackI) = InputUtil.method_15983(handle, arg1, cursorPosCallback, mouseButtonCallback, scrollCallback)
+    fun setMouseCallbacks(handle: Long, arg1: GLFWCursorPosCallbackI?, cursorPosCallback: GLFWMouseButtonCallbackI?, mouseButtonCallback: GLFWScrollCallbackI?, scrollCallback: GLFWDropCallbackI?) = InputUtil.method_15983(handle, arg1, cursorPosCallback, mouseButtonCallback, scrollCallback)
     /**
      * method_21736
      */
@@ -489,7 +489,7 @@ object InputUtilKt {
     /**
      * method_15981
      */
-    fun fromTranslationKey(translationKey: String) = InputUtil.method_15981(translationKey)
+    fun fromTranslationKey(translationKey: String?) = InputUtil.method_15981(translationKey)
     /**
      * method_21735
      */
@@ -497,7 +497,7 @@ object InputUtilKt {
     /**
      * method_15986
      */
-    fun setKeyboardCallbacks(handle: Long, arg1: GLFWKeyCallbackI, keyCallback: GLFWCharModsCallbackI) = InputUtil.method_15986(handle, arg1, keyCallback)
+    fun setKeyboardCallbacks(handle: Long, arg1: GLFWKeyCallbackI?, keyCallback: GLFWCharModsCallbackI?) = InputUtil.method_15986(handle, arg1, keyCallback)
     /**
      * method_15984
      */

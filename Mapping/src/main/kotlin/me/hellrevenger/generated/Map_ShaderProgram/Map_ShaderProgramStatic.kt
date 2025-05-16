@@ -5,5 +5,5 @@ object ShaderProgramKt {
     /**
      * method_62896
      */
-    fun create(vertexShader: CompiledShader, fragmentShader: CompiledShader, format: VertexFormat) = ShaderProgram.method_62896(vertexShader, fragmentShader, format)
+    fun create(vertexShader: CompiledShader?, fragmentShader: CompiledShader?, format: VertexFormat?) = ShaderProgram.method_62896(vertexShader, fragmentShader, format)
 }

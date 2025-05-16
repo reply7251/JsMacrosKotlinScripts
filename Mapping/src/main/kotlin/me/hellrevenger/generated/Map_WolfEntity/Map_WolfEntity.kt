@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_6717
  */
-fun WolfEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_6717(arg0, arg1)
+fun WolfEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_6717(arg0, arg1)
 /**
  * method_58062
  */
@@ -28,7 +28,7 @@ fun WolfEntity.getShakeProgress(tickDelta: Float) = this.method_61477(tickDelta)
 /**
  * method_58063
  */
-fun WolfEntity.setVariant(arg0: RegistryEntry<WolfVariant>) = this.method_58063(arg0)
+fun WolfEntity.setVariant(arg0: RegistryEntry<WolfVariant>?) = this.method_58063(arg0)
 /**
  * method_6714
  */

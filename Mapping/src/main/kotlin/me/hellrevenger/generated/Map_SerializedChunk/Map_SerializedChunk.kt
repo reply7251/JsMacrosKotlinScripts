@@ -8,7 +8,7 @@ fun SerializedChunk.serialize() = this.method_12410()
 /**
  * method_12395
  */
-fun SerializedChunk.convert(world: ServerWorld, poiStorage: PointOfInterestStorage, key: StorageKey, expectedPos: ChunkPos) = this.method_12395(world, poiStorage, key, expectedPos)
+fun SerializedChunk.convert(world: ServerWorld?, poiStorage: PointOfInterestStorage?, key: StorageKey?, expectedPos: ChunkPos?) = this.method_12395(world, poiStorage, key, expectedPos)
 /**
  * comp_2949
  */

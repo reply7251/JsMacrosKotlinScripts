@@ -16,11 +16,11 @@ fun InGameHud.clearTitle() = this.method_34003()
 /**
  * method_39192
  */
-fun InGameHud.renderAutosaveIndicator(context: DrawContext, tickCounter: RenderTickCounter) = this.method_39192(context, tickCounter)
+fun InGameHud.renderAutosaveIndicator(context: DrawContext?, tickCounter: RenderTickCounter?) = this.method_39192(context, tickCounter)
 /**
  * method_1732
  */
-fun InGameHud.setRecordPlayingOverlay(description: Text) = this.method_1732(description)
+fun InGameHud.setRecordPlayingOverlay(description: Text?) = this.method_1732(description)
 /**
  * method_1747
  */
@@ -40,7 +40,7 @@ fun InGameHud.setDefaultTitleFade() = this.method_1742()
 /**
  * method_1753
  */
-fun InGameHud.render(context: DrawContext, tickCounter: RenderTickCounter) = this.method_1753(context, tickCounter)
+fun InGameHud.render(context: DrawContext?, tickCounter: RenderTickCounter?) = this.method_1753(context, tickCounter)
 /**
  * method_34001
  */
@@ -48,7 +48,7 @@ fun InGameHud.setTitleTicks(fadeInTicks: Int, stayTicks: Int, fadeOutTicks: Int)
 /**
  * method_34004
  */
-fun InGameHud.setTitle(title: Text) = this.method_34004(title)
+fun InGameHud.setTitle(title: Text?) = this.method_34004(title)
 /**
  * method_1738
  */
@@ -68,11 +68,11 @@ fun InGameHud.setCanShowChatDisabledScreen(canShowChatDisabledScreen: Boolean) =
 /**
  * method_1758
  */
-fun InGameHud.setOverlayMessage(message: Text, tinted: Boolean) = this.method_1758(message, tinted)
+fun InGameHud.setOverlayMessage(message: Text?, tinted: Boolean) = this.method_1758(message, tinted)
 /**
  * method_34002
  */
-fun InGameHud.setSubtitle(subtitle: Text) = this.method_34002(subtitle)
+fun InGameHud.setSubtitle(subtitle: Text?) = this.method_34002(subtitle)
 /**
  * method_53531
  */

@@ -5,5 +5,5 @@ object IntegratedServerLoaderKt {
     /**
      * method_41892
      */
-    fun tryLoad(client: MinecraftClient, parent: CreateWorldScreen, lifecycle: Lifecycle, loader: Runnable, bypassWarnings: Boolean) = IntegratedServerLoader.method_41892(client, parent, lifecycle, loader, bypassWarnings)
+    fun tryLoad(client: MinecraftClient?, parent: CreateWorldScreen?, lifecycle: Lifecycle?, loader: Runnable?, bypassWarnings: Boolean) = IntegratedServerLoader.method_41892(client, parent, lifecycle, loader, bypassWarnings)
 }

@@ -5,5 +5,5 @@ object ComponentKt {
     /**
      * method_57945
      */
-    fun <T>of(type: ComponentType<T>, value: Object) = Component.method_57945<T>(type, value)
+    fun <T>of(type: ComponentType<T>?, value: Object?) = Component.method_57945<T>(type, value)
 }

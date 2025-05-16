@@ -5,5 +5,5 @@ object ReferenceLootFunctionKt {
     /**
      * method_51224
      */
-    fun builder(name: RegistryKey<LootFunction>) = ReferenceLootFunction.method_51224(name)
+    fun builder(name: RegistryKey<LootFunction>?) = ReferenceLootFunction.method_51224(name)
 }

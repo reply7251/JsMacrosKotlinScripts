@@ -5,7 +5,7 @@ object TestClassArgumentTypeKt {
     /**
      * method_22262
      */
-    fun getTestClass(context: CommandContext<ServerCommandSource>, name: String) = TestClassArgumentType.method_22262(context, name)
+    fun getTestClass(context: CommandContext<ServerCommandSource>?, name: String?) = TestClassArgumentType.method_22262(context, name)
     /**
      * method_22370
      */

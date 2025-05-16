@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_64201
  */
-fun DeathProtectionComponent.applyDeathEffects(stack: ItemStack, entity: LivingEntity) = this.method_64201(stack, entity)
+fun DeathProtectionComponent.applyDeathEffects(stack: ItemStack?, entity: LivingEntity?) = this.method_64201(stack, entity)
 /**
  * comp_3211
  */

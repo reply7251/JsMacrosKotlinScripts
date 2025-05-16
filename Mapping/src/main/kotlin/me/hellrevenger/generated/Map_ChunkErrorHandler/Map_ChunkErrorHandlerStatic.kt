@@ -5,5 +5,5 @@ object ChunkErrorHandlerKt {
     /**
      * method_60997
      */
-    fun createMisplacementException(actualPos: ChunkPos, expectedPos: ChunkPos) = ChunkErrorHandler.method_60997(actualPos, expectedPos)
+    fun createMisplacementException(actualPos: ChunkPos?, expectedPos: ChunkPos?) = ChunkErrorHandler.method_60997(actualPos, expectedPos)
 }

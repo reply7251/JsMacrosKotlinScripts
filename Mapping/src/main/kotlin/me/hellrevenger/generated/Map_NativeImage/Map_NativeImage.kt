@@ -8,11 +8,11 @@ fun NativeImage.copyPixelsArgb() = this.method_61942()
 /**
  * method_48462
  */
-fun NativeImage.applyToCopy(operator: IntUnaryOperator) = this.method_48462(operator)
+fun NativeImage.applyToCopy(operator: IntUnaryOperator?) = this.method_48462(operator)
 /**
  * method_47594
  */
-fun NativeImage.copyRect(image: NativeImage, x: Int, y: Int, destX: Int, destY: Int, width: Int, height: Int, flipX: Boolean, flipY: Boolean) = this.method_47594(image, x, y, destX, destY, width, height, flipX, flipY)
+fun NativeImage.copyRect(image: NativeImage?, x: Int, y: Int, destX: Int, destY: Int, width: Int, height: Int, flipX: Boolean, flipY: Boolean) = this.method_47594(image, x, y, destX, destY, width, height, flipX, flipY)
 /**
  * method_4322
  */
@@ -20,7 +20,7 @@ fun NativeImage.makePixelArray() = this.method_4322()
 /**
  * method_51596
  */
-fun NativeImage.apply(operator: IntUnaryOperator) = this.method_51596(operator)
+fun NativeImage.apply(operator: IntUnaryOperator?) = this.method_51596(operator)
 /**
  * method_4302
  */
@@ -60,7 +60,7 @@ fun NativeImage.getOpacity(x: Int, y: Int) = this.method_4311(x, y)
 /**
  * method_4300
  */
-fun NativeImage.resizeSubRectTo(x: Int, y: Int, width: Int, height: Int, targetImage: NativeImage) = this.method_4300(x, y, width, height, targetImage)
+fun NativeImage.resizeSubRectTo(x: Int, y: Int, width: Int, height: Int, targetImage: NativeImage?) = this.method_4300(x, y, width, height, targetImage)
 /**
  * method_4304
  */
@@ -80,7 +80,7 @@ fun NativeImage.getFormat() = this.method_4318()
 /**
  * method_4314
  */
-fun NativeImage.writeTo(path: file_Path) = this.method_4314(path)
+fun NativeImage.writeTo(path: file_Path?) = this.method_4314(path)
 /**
  * method_4326
  */
@@ -92,7 +92,7 @@ fun NativeImage.getColorArgb(x: Int, y: Int) = this.method_61940(x, y)
 /**
  * method_4316
  */
-fun NativeImage.makeGlyphBitmapSubpixel(face: FT_Face, glyphIndex: Int) = this.method_4316(face, glyphIndex)
+fun NativeImage.makeGlyphBitmapSubpixel(face: FT_Face?, glyphIndex: Int) = this.method_4316(face, glyphIndex)
 /**
  * method_61941
  */
@@ -100,8 +100,8 @@ fun NativeImage.setColorArgb(x: Int, y: Int, color: Int) = this.method_61941(x, 
 /**
  * method_4325
  */
-fun NativeImage.writeTo(path: File) = this.method_4325(path)
+fun NativeImage.writeTo(path: File?) = this.method_4325(path)
 /**
  * method_4317
  */
-fun NativeImage.copyFrom(image: NativeImage) = this.method_4317(image)
+fun NativeImage.copyFrom(image: NativeImage?) = this.method_4317(image)

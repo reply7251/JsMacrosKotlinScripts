@@ -12,7 +12,7 @@ fun PlayerListS2CPacket.getActions() = this.method_46327()
 /**
  * method_11721
  */
-fun PlayerListS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11721(arg0)
+fun PlayerListS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11721(arg0)
 /**
  * method_46329
  */

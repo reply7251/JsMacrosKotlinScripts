@@ -5,5 +5,5 @@ object EndCityGeneratorKt {
     /**
      * method_14679
      */
-    fun addPieces(structureTemplateManager: StructureTemplateManager, pos: BlockPos, rotation: BlockRotation, pieces: MutableList<StructurePiece>, random: Random) = EndCityGenerator.method_14679(structureTemplateManager, pos, rotation, pieces, random)
+    fun addPieces(structureTemplateManager: StructureTemplateManager?, pos: BlockPos?, rotation: BlockRotation?, pieces: MutableList<StructurePiece>?, random: Random?) = EndCityGenerator.method_14679(structureTemplateManager, pos, rotation, pieces, random)
 }

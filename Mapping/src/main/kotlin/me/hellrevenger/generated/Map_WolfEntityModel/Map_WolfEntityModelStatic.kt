@@ -9,5 +9,5 @@ object WolfEntityModelKt {
     /**
      * method_32068
      */
-    fun getTexturedModelData(dilation: Dilation) = WolfEntityModel.method_32068(dilation)
+    fun getTexturedModelData(dilation: Dilation?) = WolfEntityModel.method_32068(dilation)
 }

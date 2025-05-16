@@ -5,5 +5,5 @@ object SayCommandKt {
     /**
      * method_13562
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = SayCommand.method_13562(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = SayCommand.method_13562(dispatcher)
 }

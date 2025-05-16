@@ -8,7 +8,7 @@ fun EntityPositionS2CPacket.onGround() = this.comp_3240()
 /**
  * method_11922
  */
-fun EntityPositionS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11922(arg0)
+fun EntityPositionS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11922(arg0)
 /**
  * comp_3237
  */

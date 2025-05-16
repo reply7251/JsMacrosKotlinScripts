@@ -5,5 +5,5 @@ object CreeperEntityModelKt {
     /**
      * method_31991
      */
-    fun getTexturedModelData(dilation: Dilation) = CreeperEntityModel.method_31991(dilation)
+    fun getTexturedModelData(dilation: Dilation?) = CreeperEntityModel.method_31991(dilation)
 }

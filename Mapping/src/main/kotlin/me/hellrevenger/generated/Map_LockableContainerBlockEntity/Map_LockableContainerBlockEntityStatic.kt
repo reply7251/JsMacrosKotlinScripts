@@ -5,5 +5,5 @@ object LockableContainerBlockEntityKt {
     /**
      * method_17487
      */
-    fun checkUnlocked(player: PlayerEntity, lock: ContainerLock, containerName: Text) = LockableContainerBlockEntity.method_17487(player, lock, containerName)
+    fun checkUnlocked(player: PlayerEntity?, lock: ContainerLock?, containerName: Text?) = LockableContainerBlockEntity.method_17487(player, lock, containerName)
 }

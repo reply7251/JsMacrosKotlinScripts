@@ -5,5 +5,5 @@ object CollectionPredicateKt {
     /**
      * method_59623
      */
-    fun <T, P>createCodec(predicateCodec: Codec<P>) where P: Predicate<T> = CollectionPredicate.method_59623<T, P>(predicateCodec)
+    fun <T, P>createCodec(predicateCodec: Codec<P>?) where P: Predicate<T> = CollectionPredicate.method_59623<T, P>(predicateCodec)
 }

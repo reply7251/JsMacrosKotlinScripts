@@ -5,5 +5,5 @@ object AbstractTextFiltererKt {
     /**
      * method_61292
      */
-    fun createTextFilter(properties: ServerPropertiesHandler) = AbstractTextFilterer.method_61292(properties)
+    fun createTextFilter(properties: ServerPropertiesHandler?) = AbstractTextFilterer.method_61292(properties)
 }

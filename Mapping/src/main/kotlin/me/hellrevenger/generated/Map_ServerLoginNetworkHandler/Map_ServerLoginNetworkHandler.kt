@@ -12,4 +12,4 @@ fun ServerLoginNetworkHandler.getConnectionInfo() = this.method_14383()
 /**
  * method_14380
  */
-fun ServerLoginNetworkHandler.disconnect(reason: Text) = this.method_14380(reason)
+fun ServerLoginNetworkHandler.disconnect(reason: Text?) = this.method_14380(reason)

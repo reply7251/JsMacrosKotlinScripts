@@ -16,4 +16,4 @@ fun ExperienceBarUpdateS2CPacket.getBarProgress() = this.method_11830()
 /**
  * method_11829
  */
-fun ExperienceBarUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11829(arg0)
+fun ExperienceBarUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11829(arg0)

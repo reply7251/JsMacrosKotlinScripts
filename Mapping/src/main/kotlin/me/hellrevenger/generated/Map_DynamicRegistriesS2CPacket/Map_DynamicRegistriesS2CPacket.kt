@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_53042
  */
-fun DynamicRegistriesS2CPacket.apply(arg0: ClientConfigurationPacketListener) = this.method_53042(arg0)
+fun DynamicRegistriesS2CPacket.apply(arg0: ClientConfigurationPacketListener?) = this.method_53042(arg0)
 /**
  * comp_2258
  */

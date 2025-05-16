@@ -28,7 +28,7 @@ fun EntitySpawnS2CPacket.getX() = this.method_11175()
 /**
  * method_11178
  */
-fun EntitySpawnS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11178(arg0)
+fun EntitySpawnS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11178(arg0)
 /**
  * method_11171
  */

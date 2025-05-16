@@ -5,5 +5,5 @@ object TellRawCommandKt {
     /**
      * method_13776
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = TellRawCommand.method_13776(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = TellRawCommand.method_13776(dispatcher, registryAccess)
 }

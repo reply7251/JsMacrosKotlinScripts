@@ -321,11 +321,11 @@ object VegetationPlacedFeaturesKt {
     /**
      * method_46867
      */
-    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = VegetationPlacedFeatures.method_46867(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>?) = VegetationPlacedFeatures.method_46867(featureRegisterable)
     /**
      * method_39741
      */
-    fun treeModifiersWithWouldSurvive(modifier: PlacementModifier, block: Block) = VegetationPlacedFeatures.method_39741(modifier, block)
+    fun treeModifiersWithWouldSurvive(modifier: PlacementModifier?, block: Block?) = VegetationPlacedFeatures.method_39741(modifier, block)
     /**
      * method_39738
      */
@@ -333,5 +333,5 @@ object VegetationPlacedFeaturesKt {
     /**
      * method_39740
      */
-    fun treeModifiers(modifier: PlacementModifier) = VegetationPlacedFeatures.method_39740(modifier)
+    fun treeModifiers(modifier: PlacementModifier?) = VegetationPlacedFeatures.method_39740(modifier)
 }

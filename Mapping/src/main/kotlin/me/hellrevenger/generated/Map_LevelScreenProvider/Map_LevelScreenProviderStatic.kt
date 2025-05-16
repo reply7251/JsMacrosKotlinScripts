@@ -5,5 +5,5 @@ object LevelScreenProviderKt {
     /**
      * method_41856
      */
-    fun createModifier(config: FlatChunkGeneratorConfig) = LevelScreenProvider.method_41856(config)
+    fun createModifier(config: FlatChunkGeneratorConfig?) = LevelScreenProvider.method_41856(config)
 }

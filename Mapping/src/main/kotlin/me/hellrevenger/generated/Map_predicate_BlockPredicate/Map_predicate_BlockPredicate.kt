@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_57147
  */
-fun predicate_BlockPredicate.test(pos: CachedBlockPosition) = this.method_57147(pos)
+fun predicate_BlockPredicate.test(pos: CachedBlockPosition?) = this.method_57147(pos)
 /**
  * method_22454
  */
-fun predicate_BlockPredicate.test(world: ServerWorld, pos: BlockPos) = this.method_22454(world, pos)
+fun predicate_BlockPredicate.test(world: ServerWorld?, pos: BlockPos?) = this.method_22454(world, pos)
 /**
  * comp_1733
  */

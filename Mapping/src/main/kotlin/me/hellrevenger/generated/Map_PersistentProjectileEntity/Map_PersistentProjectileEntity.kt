@@ -20,7 +20,7 @@ fun PersistentProjectileEntity.getDamage() = this.method_7448()
 /**
  * method_7444
  */
-fun PersistentProjectileEntity.setSound(sound: SoundEvent) = this.method_7444(sound)
+fun PersistentProjectileEntity.setSound(sound: SoundEvent?) = this.method_7444(sound)
 /**
  * method_7438
  */

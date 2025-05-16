@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_45048
  */
-fun MessageVerifier.ensureVerified(message: SignedMessage) = this.method_45048(message)
+fun MessageVerifier.ensureVerified(message: SignedMessage?) = this.method_45048(message)

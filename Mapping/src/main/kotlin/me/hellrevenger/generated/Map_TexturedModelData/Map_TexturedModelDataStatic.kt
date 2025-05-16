@@ -5,5 +5,5 @@ object TexturedModelDataKt {
     /**
      * method_32110
      */
-    fun of(partData: ModelData, textureWidth: Int, textureHeight: Int) = TexturedModelData.method_32110(partData, textureWidth, textureHeight)
+    fun of(partData: ModelData?, textureWidth: Int, textureHeight: Int) = TexturedModelData.method_32110(partData, textureWidth, textureHeight)
 }

@@ -9,9 +9,9 @@ object GlUniformKt {
     /**
      * method_1299
      */
-    fun getTypeIndex(typeName: String) = GlUniform.method_1299(typeName)
+    fun getTypeIndex(typeName: String?) = GlUniform.method_1299(typeName)
     /**
      * method_22096
      */
-    fun getUniformLocation(program: Int, name: CharSequence) = GlUniform.method_22096(program, name)
+    fun getUniformLocation(program: Int, name: CharSequence?) = GlUniform.method_22096(program, name)
 }

@@ -9,5 +9,5 @@ object VersionedIdentifierKt {
     /**
      * method_56932
      */
-    fun createVanilla(path: String) = VersionedIdentifier.method_56932(path)
+    fun createVanilla(path: String?) = VersionedIdentifier.method_56932(path)
 }

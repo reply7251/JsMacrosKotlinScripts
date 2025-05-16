@@ -12,7 +12,7 @@ fun <S>ParsingState<S>.getErrors() = this.method_58310()
 /**
  * method_58312
  */
-fun <S, T>ParsingState<S>.startParsing(startSymbol: Symbol<T>) = this.method_58312<T>(startSymbol)
+fun <S, T>ParsingState<S>.startParsing(startSymbol: Symbol<T>?) = this.method_58312<T>(startSymbol)
 /**
  * method_58315
  */
@@ -24,4 +24,4 @@ fun <S>ParsingState<S>.getCursor() = this.method_58317()
 /**
  * method_58316
  */
-fun <S, T>ParsingState<S>.parse(symbol: Symbol<T>) = this.method_58316<T>(symbol)
+fun <S, T>ParsingState<S>.parse(symbol: Symbol<T>?) = this.method_58316<T>(symbol)

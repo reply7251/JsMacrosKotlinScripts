@@ -16,11 +16,11 @@ var BlockEntityRenderDispatcher.world by alias(BlockEntityRenderDispatcher::fiel
 /**
  * method_3549
  */
-fun BlockEntityRenderDispatcher.configure(world: world_World, camera: Camera, crosshairTarget: HitResult) = this.method_3549(world, camera, crosshairTarget)
+fun BlockEntityRenderDispatcher.configure(world: world_World?, camera: Camera?, crosshairTarget: HitResult?) = this.method_3549(world, camera, crosshairTarget)
 /**
  * method_3555
  */
-fun <E>BlockEntityRenderDispatcher.render(blockEntity: E, tickDelta: Float, matrices: MatrixStack, vertexConsumers: VertexConsumerProvider) where E: BlockEntity = this.method_3555<E>(blockEntity, tickDelta, matrices, vertexConsumers)
+fun <E>BlockEntityRenderDispatcher.render(blockEntity: E, tickDelta: Float, matrices: MatrixStack?, vertexConsumers: VertexConsumerProvider?) where E: BlockEntity = this.method_3555<E>(blockEntity, tickDelta, matrices, vertexConsumers)
 /**
  * method_3550
  */

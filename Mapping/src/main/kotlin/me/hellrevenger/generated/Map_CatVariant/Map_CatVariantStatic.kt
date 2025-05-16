@@ -49,5 +49,5 @@ object CatVariantKt {
     /**
      * method_46646
      */
-    fun registerAndGetDefault(registry: Registry<CatVariant>) = CatVariant.method_46646(registry)
+    fun registerAndGetDefault(registry: Registry<CatVariant>?) = CatVariant.method_46646(registry)
 }

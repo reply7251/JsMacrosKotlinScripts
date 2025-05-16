@@ -33,9 +33,9 @@ object ChunkTicketTypeKt {
     /**
      * method_20628
      */
-    fun <T>create(name: String, argumentComparator: Comparator<T>, expiryTicks: Int) = ChunkTicketType.method_20628<T>(name, argumentComparator, expiryTicks)
+    fun <T>create(name: String?, argumentComparator: Comparator<T>?, expiryTicks: Int) = ChunkTicketType.method_20628<T>(name, argumentComparator, expiryTicks)
     /**
      * method_14291
      */
-    fun <T>create(name: String, argumentComparator: Comparator<T>) = ChunkTicketType.method_14291<T>(name, argumentComparator)
+    fun <T>create(name: String?, argumentComparator: Comparator<T>?) = ChunkTicketType.method_14291<T>(name, argumentComparator)
 }

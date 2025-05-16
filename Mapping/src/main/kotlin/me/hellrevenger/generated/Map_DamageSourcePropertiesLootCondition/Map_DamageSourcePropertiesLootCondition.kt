@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_834
  */
-fun DamageSourcePropertiesLootCondition.test(arg0: LootContext) = this.method_834(arg0)
+fun DamageSourcePropertiesLootCondition.test(arg0: LootContext?) = this.method_834(arg0)
 /**
  * comp_1870
  */

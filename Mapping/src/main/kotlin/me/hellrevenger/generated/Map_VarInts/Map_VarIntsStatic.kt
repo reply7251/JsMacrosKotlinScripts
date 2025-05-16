@@ -5,7 +5,7 @@ object VarIntsKt {
     /**
      * method_53016
      */
-    fun read(buf: ByteBuf) = VarInts.method_53016(buf)
+    fun read(buf: ByteBuf?) = VarInts.method_53016(buf)
     /**
      * method_53015
      */
@@ -13,7 +13,7 @@ object VarIntsKt {
     /**
      * method_53017
      */
-    fun write(buf: ByteBuf, i: Int) = VarInts.method_53017(buf, i)
+    fun write(buf: ByteBuf?, i: Int) = VarInts.method_53017(buf, i)
     /**
      * method_53014
      */

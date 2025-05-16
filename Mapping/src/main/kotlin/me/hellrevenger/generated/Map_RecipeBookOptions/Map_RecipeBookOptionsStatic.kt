@@ -5,5 +5,5 @@ object RecipeBookOptionsKt {
     /**
      * method_30183
      */
-    fun fromNbt(nbt: NbtCompound) = RecipeBookOptions.method_30183(nbt)
+    fun fromNbt(nbt: NbtCompound?) = RecipeBookOptions.method_30183(nbt)
 }

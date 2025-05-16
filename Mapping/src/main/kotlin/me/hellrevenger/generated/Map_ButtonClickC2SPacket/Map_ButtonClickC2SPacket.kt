@@ -8,7 +8,7 @@ fun ButtonClickC2SPacket.syncId() = this.comp_2649()
 /**
  * method_12185
  */
-fun ButtonClickC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12185(arg0)
+fun ButtonClickC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12185(arg0)
 /**
  * comp_2650
  */

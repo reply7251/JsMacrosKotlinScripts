@@ -5,5 +5,5 @@ object client_data_MainKt {
     /**
      * method_65774
      */
-    fun create(dataGenerator: DataGenerator, includeClient: Boolean) = client_data_Main.method_65774(dataGenerator, includeClient)
+    fun create(dataGenerator: DataGenerator?, includeClient: Boolean) = client_data_Main.method_65774(dataGenerator, includeClient)
 }

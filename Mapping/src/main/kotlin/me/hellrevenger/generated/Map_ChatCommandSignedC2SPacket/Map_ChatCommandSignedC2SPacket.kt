@@ -8,7 +8,7 @@ fun ChatCommandSignedC2SPacket.timestamp() = this.comp_2533()
 /**
  * method_58581
  */
-fun ChatCommandSignedC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_58581(arg0)
+fun ChatCommandSignedC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_58581(arg0)
 /**
  * comp_2536
  */

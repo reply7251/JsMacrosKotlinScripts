@@ -5,5 +5,5 @@ object LevelInfoKt {
     /**
      * method_28383
      */
-    fun fromDynamic(dynamic: Dynamic<*>, dataConfiguration: DataConfiguration) = LevelInfo.method_28383(dynamic, dataConfiguration)
+    fun fromDynamic(dynamic: Dynamic<*>?, dataConfiguration: DataConfiguration?) = LevelInfo.method_28383(dynamic, dataConfiguration)
 }

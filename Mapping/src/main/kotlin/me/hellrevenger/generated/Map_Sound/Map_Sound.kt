@@ -28,7 +28,7 @@ fun Sound.getVolume() = this.method_4771()
 /**
  * method_4765
  */
-fun Sound.getSound(arg0: Random) = this.method_4765(arg0)
+fun Sound.getSound(arg0: Random?) = this.method_4765(arg0)
 /**
  * method_4770
  */

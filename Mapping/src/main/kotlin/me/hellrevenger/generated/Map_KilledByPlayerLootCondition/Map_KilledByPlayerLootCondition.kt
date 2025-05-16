@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_938
  */
-fun KilledByPlayerLootCondition.test(arg0: LootContext) = this.method_938(arg0)
+fun KilledByPlayerLootCondition.test(arg0: LootContext?) = this.method_938(arg0)

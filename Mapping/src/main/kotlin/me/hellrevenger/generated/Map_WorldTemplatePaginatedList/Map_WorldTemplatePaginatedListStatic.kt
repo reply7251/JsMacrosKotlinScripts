@@ -5,5 +5,5 @@ object WorldTemplatePaginatedListKt {
     /**
      * method_25097
      */
-    fun parse(json: String) = WorldTemplatePaginatedList.method_25097(json)
+    fun parse(json: String?) = WorldTemplatePaginatedList.method_25097(json)
 }

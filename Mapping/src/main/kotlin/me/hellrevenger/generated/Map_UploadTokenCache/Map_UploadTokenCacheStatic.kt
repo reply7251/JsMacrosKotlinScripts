@@ -9,7 +9,7 @@ object UploadTokenCacheKt {
     /**
      * method_21586
      */
-    fun put(wid: Long, arg1: String) = UploadTokenCache.method_21586(wid, arg1)
+    fun put(wid: Long, arg1: String?) = UploadTokenCache.method_21586(wid, arg1)
     /**
      * method_21585
      */

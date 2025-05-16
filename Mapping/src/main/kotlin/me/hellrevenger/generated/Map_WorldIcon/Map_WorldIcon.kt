@@ -8,7 +8,7 @@ fun WorldIcon.destroy() = this.method_52198()
 /**
  * method_52199
  */
-fun WorldIcon.load(image: NativeImage) = this.method_52199(image)
+fun WorldIcon.load(image: NativeImage?) = this.method_52199(image)
 /**
  * method_52201
  */

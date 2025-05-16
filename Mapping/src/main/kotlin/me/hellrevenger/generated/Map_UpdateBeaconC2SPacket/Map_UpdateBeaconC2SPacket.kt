@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_12434
  */
-fun UpdateBeaconC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_12434(arg0)
+fun UpdateBeaconC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_12434(arg0)
 /**
  * comp_2181
  */

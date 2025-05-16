@@ -5,9 +5,9 @@ object ThreadAllocationStatisticsSampleKt {
     /**
      * method_38057
      */
-    fun fromEvent(event: RecordedEvent) = ThreadAllocationStatisticsSample.method_38057(event)
+    fun fromEvent(event: RecordedEvent?) = ThreadAllocationStatisticsSample.method_38057(event)
     /**
      * method_38055
      */
-    fun toAllocationMap(samples: MutableList<ThreadAllocationStatisticsSample>) = ThreadAllocationStatisticsSample.method_38055(samples)
+    fun toAllocationMap(samples: MutableList<ThreadAllocationStatisticsSample>?) = ThreadAllocationStatisticsSample.method_38055(samples)
 }

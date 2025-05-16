@@ -9,5 +9,5 @@ object ContainerComponentKt {
     /**
      * method_57493
      */
-    fun fromStacks(stacks: MutableList<ItemStack>) = ContainerComponent.method_57493(stacks)
+    fun fromStacks(stacks: MutableList<ItemStack>?) = ContainerComponent.method_57493(stacks)
 }

@@ -5,5 +5,5 @@ object TutorialManagerKt {
     /**
      * method_4913
      */
-    fun keyToText(name: String) = TutorialManager.method_4913(name)
+    fun keyToText(name: String?) = TutorialManager.method_4913(name)
 }

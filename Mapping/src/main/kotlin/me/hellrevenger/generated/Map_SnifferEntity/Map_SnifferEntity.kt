@@ -40,7 +40,7 @@ fun SnifferEntity.canTryToDig() = this.method_51155()
 /**
  * method_49132
  */
-fun SnifferEntity.startState(state: net.minecraft.class_8153.class_8154) = this.method_49132(state)
+fun SnifferEntity.startState(state: net.minecraft.class_8153.class_8154?) = this.method_49132(state)
 /**
  * method_49149
  */

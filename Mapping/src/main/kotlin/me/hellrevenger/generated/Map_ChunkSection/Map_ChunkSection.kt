@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_49526
  */
-fun ChunkSection.readBiomePacket(buf: PacketByteBuf) = this.method_49526(buf)
+fun ChunkSection.readBiomePacket(buf: PacketByteBuf?) = this.method_49526(buf)
 /**
  * method_16676
  */
@@ -20,15 +20,15 @@ fun ChunkSection.getBlockStateContainer() = this.method_12265()
 /**
  * method_12256
  */
-fun ChunkSection.setBlockState(x: Int, y: Int, z: Int, state: BlockState, lock: Boolean) = this.method_12256(x, y, z, state, lock)
+fun ChunkSection.setBlockState(x: Int, y: Int, z: Int, state: BlockState?, lock: Boolean) = this.method_12256(x, y, z, state, lock)
 /**
  * method_38291
  */
-fun ChunkSection.populateBiomes(biomeSupplier: BiomeSupplier, sampler: net.minecraft.class_6544.class_6552, x: Int, y: Int, z: Int) = this.method_38291(biomeSupplier, sampler, x, y, z)
+fun ChunkSection.populateBiomes(biomeSupplier: BiomeSupplier?, sampler: net.minecraft.class_6544.class_6552?, x: Int, y: Int, z: Int) = this.method_38291(biomeSupplier, sampler, x, y, z)
 /**
  * method_16675
  */
-fun ChunkSection.setBlockState(x: Int, y: Int, z: Int, state: BlockState) = this.method_16675(x, y, z, state)
+fun ChunkSection.setBlockState(x: Int, y: Int, z: Int, state: BlockState?) = this.method_16675(x, y, z, state)
 /**
  * method_12260
  */
@@ -48,7 +48,7 @@ fun ChunkSection.copy() = this.method_61771()
 /**
  * method_12258
  */
-fun ChunkSection.readDataPacket(buf: PacketByteBuf) = this.method_12258(buf)
+fun ChunkSection.readDataPacket(buf: PacketByteBuf?) = this.method_12258(buf)
 /**
  * method_12264
  */
@@ -56,7 +56,7 @@ fun ChunkSection.hasRandomFluidTicks() = this.method_12264()
 /**
  * method_19523
  */
-fun ChunkSection.hasAny(predicate: Predicate<BlockState>) = this.method_19523(predicate)
+fun ChunkSection.hasAny(predicate: Predicate<BlockState>?) = this.method_19523(predicate)
 /**
  * method_16677
  */
@@ -72,7 +72,7 @@ fun ChunkSection.calculateCounts() = this.method_12253()
 /**
  * method_12257
  */
-fun ChunkSection.toPacket(buf: PacketByteBuf) = this.method_12257(buf)
+fun ChunkSection.toPacket(buf: PacketByteBuf?) = this.method_12257(buf)
 /**
  * method_12263
  */

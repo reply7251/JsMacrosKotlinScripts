@@ -5,9 +5,9 @@ object StonecuttingRecipeJsonBuilderKt {
     /**
      * method_17969
      */
-    fun createStonecutting(input: Ingredient, category: RecipeCategory, output: ItemConvertible, count: Int) = StonecuttingRecipeJsonBuilder.method_17969(input, category, output, count)
+    fun createStonecutting(input: Ingredient?, category: RecipeCategory?, output: ItemConvertible?, count: Int) = StonecuttingRecipeJsonBuilder.method_17969(input, category, output, count)
     /**
      * method_17968
      */
-    fun createStonecutting(input: Ingredient, category: RecipeCategory, output: ItemConvertible) = StonecuttingRecipeJsonBuilder.method_17968(input, category, output)
+    fun createStonecutting(input: Ingredient?, category: RecipeCategory?, output: ItemConvertible?) = StonecuttingRecipeJsonBuilder.method_17968(input, category, output)
 }

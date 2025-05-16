@@ -5,5 +5,5 @@ object FallingBlockKt {
     /**
      * method_10128
      */
-    fun canFallThrough(state: BlockState) = FallingBlock.method_10128(state)
+    fun canFallThrough(state: BlockState?) = FallingBlock.method_10128(state)
 }

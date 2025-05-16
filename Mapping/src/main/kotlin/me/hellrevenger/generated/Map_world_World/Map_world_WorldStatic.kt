@@ -33,5 +33,5 @@ object world_WorldKt {
     /**
      * method_25953
      */
-    fun isValid(pos: BlockPos) = world_World.method_25953(pos)
+    fun isValid(pos: BlockPos?) = world_World.method_25953(pos)
 }

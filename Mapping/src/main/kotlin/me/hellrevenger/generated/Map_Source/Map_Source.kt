@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_19643
  */
-fun Source.setStream(stream: AudioStream) = this.method_19643(stream)
+fun Source.setStream(stream: AudioStream?) = this.method_19643(stream)
 /**
  * method_19650
  */
@@ -32,7 +32,7 @@ fun Source.isPlaying() = this.method_35598()
 /**
  * method_19642
  */
-fun Source.setBuffer(sound: StaticSound) = this.method_19642(sound)
+fun Source.setBuffer(sound: StaticSound?) = this.method_19642(sound)
 /**
  * method_19645
  */
@@ -64,7 +64,7 @@ fun Source.setVolume(volume: Float) = this.method_19647(volume)
 /**
  * method_19641
  */
-fun Source.setPosition(pos: Vec3d) = this.method_19641(pos)
+fun Source.setPosition(pos: Vec3d?) = this.method_19641(pos)
 /**
  * method_19639
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_64563
  */
-fun RecipeBookRemoveS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_64563(arg0)
+fun RecipeBookRemoveS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_64563(arg0)
 /**
  * comp_3235
  */

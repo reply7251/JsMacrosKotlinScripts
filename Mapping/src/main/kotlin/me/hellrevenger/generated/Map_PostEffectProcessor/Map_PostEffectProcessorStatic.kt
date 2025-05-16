@@ -9,5 +9,5 @@ object PostEffectProcessorKt {
     /**
      * method_1256
      */
-    fun parseEffect(pipeline: PostEffectPipeline, textureManager: TextureManager, shaderLoader: ShaderLoader, availableExternalTargets: Set<Identifier>) = PostEffectProcessor.method_1256(pipeline, textureManager, shaderLoader, availableExternalTargets)
+    fun parseEffect(pipeline: PostEffectPipeline?, textureManager: TextureManager?, shaderLoader: ShaderLoader?, availableExternalTargets: Set<Identifier>?) = PostEffectProcessor.method_1256(pipeline, textureManager, shaderLoader, availableExternalTargets)
 }

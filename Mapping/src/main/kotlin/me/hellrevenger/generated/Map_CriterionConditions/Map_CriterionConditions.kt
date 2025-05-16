@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_54938
  */
-fun CriterionConditions.validate(validator: LootContextPredicateValidator) = this.method_54938(validator)
+fun CriterionConditions.validate(validator: LootContextPredicateValidator?) = this.method_54938(validator)

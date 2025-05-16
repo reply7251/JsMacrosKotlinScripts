@@ -5,5 +5,5 @@ object ForgetTaskKt {
     /**
      * method_46922
      */
-    fun <E>create(condition: Predicate<E>, memory: MemoryModuleType<*>) where E: LivingEntity = ForgetTask.method_46922<E>(condition, memory)
+    fun <E>create(condition: Predicate<E>?, memory: MemoryModuleType<*>?) where E: LivingEntity = ForgetTask.method_46922<E>(condition, memory)
 }

@@ -12,16 +12,16 @@ fun RandomSequencesState.setDefaultParameters(salt: Int, includeWorldSeed: Boole
 /**
  * method_52517
  */
-fun RandomSequencesState.reset(id: Identifier) = this.method_52517(id)
+fun RandomSequencesState.reset(id: Identifier?) = this.method_52517(id)
 /**
  * method_52513
  */
-fun RandomSequencesState.forEachSequence(consumer: BiConsumer<Identifier, RandomSequence>) = this.method_52513(consumer)
+fun RandomSequencesState.forEachSequence(consumer: BiConsumer<Identifier, RandomSequence>?) = this.method_52513(consumer)
 /**
  * method_51843
  */
-fun RandomSequencesState.getOrCreate(id: Identifier) = this.method_51843(id)
+fun RandomSequencesState.getOrCreate(id: Identifier?) = this.method_51843(id)
 /**
  * method_52512
  */
-fun RandomSequencesState.reset(id: Identifier, salt: Int, includeWorldSeed: Boolean, includeSequenceId: Boolean) = this.method_52512(id, salt, includeWorldSeed, includeSequenceId)
+fun RandomSequencesState.reset(id: Identifier?, salt: Int, includeWorldSeed: Boolean, includeSequenceId: Boolean) = this.method_52512(id, salt, includeWorldSeed, includeSequenceId)

@@ -13,21 +13,21 @@ object LevelStorageKt {
     /**
      * method_52235
      */
-    fun createSymlinkFinder(allowedSymlinksFile: file_Path) = LevelStorage.method_52235(allowedSymlinksFile)
+    fun createSymlinkFinder(allowedSymlinksFile: file_Path?) = LevelStorage.method_52235(allowedSymlinksFile)
     /**
      * method_29580
      */
-    fun parseDataPackSettings(dynamic: Dynamic<*>) = LevelStorage.method_29580(dynamic)
+    fun parseDataPackSettings(dynamic: Dynamic<*>?) = LevelStorage.method_29580(dynamic)
     /**
      * method_54523
      */
-    fun parseSaveProperties(dynamic: Dynamic<*>, dataConfiguration: DataConfiguration, dimensionsRegistry: Registry<DimensionOptions>, registries: net.minecraft.class_7225.class_7874) = LevelStorage.method_54523(dynamic, dataConfiguration, dimensionsRegistry, registries)
+    fun parseSaveProperties(dynamic: Dynamic<*>?, dataConfiguration: DataConfiguration?, dimensionsRegistry: Registry<DimensionOptions>?, registries: net.minecraft.class_7225.class_7874?) = LevelStorage.method_54523(dynamic, dataConfiguration, dimensionsRegistry, registries)
     /**
      * method_54522
      */
-    fun parseDataPacks(dynamic: Dynamic<*>, dataPackManager: ResourcePackManager, safeMode: Boolean) = LevelStorage.method_54522(dynamic, dataPackManager, safeMode)
+    fun parseDataPacks(dynamic: Dynamic<*>?, dataPackManager: ResourcePackManager?, safeMode: Boolean) = LevelStorage.method_54522(dynamic, dataPackManager, safeMode)
     /**
      * method_26999
      */
-    fun create(path: file_Path) = LevelStorage.method_26999(path)
+    fun create(path: file_Path?) = LevelStorage.method_26999(path)
 }

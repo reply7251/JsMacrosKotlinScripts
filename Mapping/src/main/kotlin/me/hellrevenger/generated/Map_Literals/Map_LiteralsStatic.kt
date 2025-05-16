@@ -9,5 +9,5 @@ object LiteralsKt {
     /**
      * method_58347
      */
-    fun string(string: String) = Literals.method_58347(string)
+    fun string(string: String?) = Literals.method_58347(string)
 }

@@ -5,5 +5,5 @@ object OptionsScreenKt {
     /**
      * method_39486
      */
-    fun createDifficultyButtonWidget(x: Int, y: Int, translationKey: String, client: MinecraftClient) = OptionsScreen.method_39486(x, y, translationKey, client)
+    fun createDifficultyButtonWidget(x: Int, y: Int, translationKey: String?, client: MinecraftClient?) = OptionsScreen.method_39486(x, y, translationKey, client)
 }

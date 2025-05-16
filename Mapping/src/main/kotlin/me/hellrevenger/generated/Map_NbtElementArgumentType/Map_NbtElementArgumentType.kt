@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9388
  */
-fun NbtElementArgumentType.parse(arg0: StringReader) = this.method_9388(arg0)
+fun NbtElementArgumentType.parse(arg0: StringReader?) = this.method_9388(arg0)

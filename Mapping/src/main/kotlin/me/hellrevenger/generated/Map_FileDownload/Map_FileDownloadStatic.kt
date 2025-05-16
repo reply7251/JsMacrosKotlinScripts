@@ -5,5 +5,5 @@ object FileDownloadKt {
     /**
      * method_20960
      */
-    fun findAvailableFolderName(folder: String) = FileDownload.method_20960(folder)
+    fun findAvailableFolderName(folder: String?) = FileDownload.method_20960(folder)
 }

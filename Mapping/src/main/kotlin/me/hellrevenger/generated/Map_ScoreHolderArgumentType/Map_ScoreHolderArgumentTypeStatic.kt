@@ -17,17 +17,17 @@ object ScoreHolderArgumentTypeKt {
     /**
      * method_9449
      */
-    fun getScoreboardScoreHolders(context: CommandContext<ServerCommandSource>, name: String) = ScoreHolderArgumentType.method_9449(context, name)
+    fun getScoreboardScoreHolders(context: CommandContext<ServerCommandSource>?, name: String?) = ScoreHolderArgumentType.method_9449(context, name)
     /**
      * method_9452
      */
-    fun getScoreHolder(context: CommandContext<ServerCommandSource>, name: String) = ScoreHolderArgumentType.method_9452(context, name)
+    fun getScoreHolder(context: CommandContext<ServerCommandSource>?, name: String?) = ScoreHolderArgumentType.method_9452(context, name)
     /**
      * method_9450
      */
-    fun getScoreHolders(context: CommandContext<ServerCommandSource>, name: String, players: Supplier<Collection<ScoreHolder>>) = ScoreHolderArgumentType.method_9450(context, name, players)
+    fun getScoreHolders(context: CommandContext<ServerCommandSource>?, name: String?, players: Supplier<Collection<ScoreHolder>>?) = ScoreHolderArgumentType.method_9450(context, name, players)
     /**
      * method_9458
      */
-    fun getScoreHolders(context: CommandContext<ServerCommandSource>, name: String) = ScoreHolderArgumentType.method_9458(context, name)
+    fun getScoreHolders(context: CommandContext<ServerCommandSource>?, name: String?) = ScoreHolderArgumentType.method_9458(context, name)
 }

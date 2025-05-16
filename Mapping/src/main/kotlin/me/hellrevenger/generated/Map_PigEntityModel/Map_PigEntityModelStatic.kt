@@ -9,5 +9,5 @@ object PigEntityModelKt {
     /**
      * method_32025
      */
-    fun getTexturedModelData(dilation: Dilation) = PigEntityModel.method_32025(dilation)
+    fun getTexturedModelData(dilation: Dilation?) = PigEntityModel.method_32025(dilation)
 }

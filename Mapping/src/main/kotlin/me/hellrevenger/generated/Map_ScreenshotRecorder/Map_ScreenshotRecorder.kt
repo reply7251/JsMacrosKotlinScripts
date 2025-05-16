@@ -12,4 +12,4 @@ fun ScreenshotRecorder.writeToStream() = this.method_35710()
 /**
  * method_35711
  */
-fun ScreenshotRecorder.getIntoBuffer(data: ByteBuffer, startWidth: Int, startHeight: Int, unitWidth: Int, unitHeight: Int) = this.method_35711(data, startWidth, startHeight, unitWidth, unitHeight)
+fun ScreenshotRecorder.getIntoBuffer(data: ByteBuffer?, startWidth: Int, startHeight: Int, unitWidth: Int, unitHeight: Int) = this.method_35711(data, startWidth, startHeight, unitWidth, unitHeight)

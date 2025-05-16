@@ -25,5 +25,5 @@ object WrittenBookContentComponentKt {
     /**
      * method_58436
      */
-    fun createPagesCodec(textCodec: Codec<Text>) = WrittenBookContentComponent.method_58436(textCodec)
+    fun createPagesCodec(textCodec: Codec<Text>?) = WrittenBookContentComponent.method_58436(textCodec)
 }

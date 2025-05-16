@@ -5,5 +5,5 @@ object EntityPositionSyncS2CPacketKt {
     /**
      * method_64558
      */
-    fun create(entity: Entity) = EntityPositionSyncS2CPacket.method_64558(entity)
+    fun create(entity: Entity?) = EntityPositionSyncS2CPacket.method_64558(entity)
 }

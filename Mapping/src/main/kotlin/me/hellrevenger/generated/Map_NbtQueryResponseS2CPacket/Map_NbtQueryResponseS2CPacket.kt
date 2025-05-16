@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11909
  */
-fun NbtQueryResponseS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11909(arg0)
+fun NbtQueryResponseS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11909(arg0)
 /**
  * method_11910
  */

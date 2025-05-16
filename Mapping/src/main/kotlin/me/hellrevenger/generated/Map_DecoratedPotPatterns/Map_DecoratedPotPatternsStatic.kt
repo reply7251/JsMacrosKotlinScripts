@@ -101,9 +101,9 @@ object DecoratedPotPatternsKt {
     /**
      * method_49207
      */
-    fun registerAndGetDefault(registry: Registry<DecoratedPotPattern>) = DecoratedPotPatterns.method_49207(registry)
+    fun registerAndGetDefault(registry: Registry<DecoratedPotPattern>?) = DecoratedPotPatterns.method_49207(registry)
     /**
      * method_49206
      */
-    fun fromSherd(sherd: Item) = DecoratedPotPatterns.method_49206(sherd)
+    fun fromSherd(sherd: Item?) = DecoratedPotPatterns.method_49206(sherd)
 }

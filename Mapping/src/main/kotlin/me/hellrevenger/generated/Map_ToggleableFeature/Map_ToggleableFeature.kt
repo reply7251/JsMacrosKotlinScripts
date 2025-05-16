@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_45382
  */
-fun ToggleableFeature.isEnabled(enabledFeatures: FeatureSet) = this.method_45382(enabledFeatures)
+fun ToggleableFeature.isEnabled(enabledFeatures: FeatureSet?) = this.method_45382(enabledFeatures)
 /**
  * method_45322
  */

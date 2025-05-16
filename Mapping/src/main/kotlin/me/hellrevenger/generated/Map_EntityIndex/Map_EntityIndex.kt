@@ -8,7 +8,7 @@ fun <T>EntityIndex<T>.add(entity: T) where T: EntityLike = this.method_31753(ent
 /**
  * method_31755
  */
-fun <T>EntityIndex<T>.get(uuid: UUID) where T: EntityLike = this.method_31755(uuid)
+fun <T>EntityIndex<T>.get(uuid: UUID?) where T: EntityLike = this.method_31755(uuid)
 /**
  * method_31756
  */
@@ -16,7 +16,7 @@ fun <T>EntityIndex<T>.size() where T: EntityLike = this.method_31756()
 /**
  * method_31754
  */
-fun <T, U>EntityIndex<T>.forEach(filter: TypeFilter<T, U>, consumer: LazyIterationConsumer<U>) where T: EntityLike, U: T = this.method_31754<U>(filter, consumer)
+fun <T, U>EntityIndex<T>.forEach(filter: TypeFilter<T, U>?, consumer: LazyIterationConsumer<U>?) where T: EntityLike, U: T = this.method_31754<U>(filter, consumer)
 /**
  * method_31757
  */

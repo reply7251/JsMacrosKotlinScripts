@@ -16,7 +16,7 @@ fun BlockEventS2CPacket.getPos() = this.method_11298()
 /**
  * method_11297
  */
-fun BlockEventS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11297(arg0)
+fun BlockEventS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11297(arg0)
 /**
  * method_11296
  */

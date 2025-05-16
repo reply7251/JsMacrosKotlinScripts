@@ -9,5 +9,5 @@ object BlockStatePredicateKt {
     /**
      * method_11758
      */
-    fun forBlock(block: Block) = BlockStatePredicate.method_11758(block)
+    fun forBlock(block: Block?) = BlockStatePredicate.method_11758(block)
 }

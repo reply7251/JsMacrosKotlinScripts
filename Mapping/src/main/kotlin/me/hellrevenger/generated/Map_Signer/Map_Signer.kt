@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_44180
  */
-fun Signer.sign(data: ByteArray) = this.method_44180(data)
+fun Signer.sign(data: ByteArray?) = this.method_44180(data)

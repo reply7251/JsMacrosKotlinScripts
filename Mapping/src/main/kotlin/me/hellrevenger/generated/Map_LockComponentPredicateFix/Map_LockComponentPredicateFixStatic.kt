@@ -9,5 +9,5 @@ object LockComponentPredicateFixKt {
     /**
      * method_64411
      */
-    fun <T>fixLock(dynamic: Dynamic<T>) = LockComponentPredicateFix.method_64411<T>(dynamic)
+    fun <T>fixLock(dynamic: Dynamic<T>?) = LockComponentPredicateFix.method_64411<T>(dynamic)
 }

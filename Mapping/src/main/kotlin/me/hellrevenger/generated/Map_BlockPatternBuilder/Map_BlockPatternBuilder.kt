@@ -8,7 +8,7 @@ fun BlockPatternBuilder.build() = this.method_11704()
 /**
  * method_11700
  */
-fun BlockPatternBuilder.where(key: Char, predicate: Predicate<CachedBlockPosition>) = this.method_11700(key, predicate)
+fun BlockPatternBuilder.where(key: Char, predicate: Predicate<CachedBlockPosition>?) = this.method_11700(key, predicate)
 /**
  * method_11702
  */

@@ -20,7 +20,7 @@ fun SchoolingFishEntity.hasOtherFishInGroup() = this.method_6467()
 /**
  * method_6461
  */
-fun SchoolingFishEntity.joinGroupOf(groupLeader: SchoolingFishEntity) = this.method_6461(groupLeader)
+fun SchoolingFishEntity.joinGroupOf(groupLeader: SchoolingFishEntity?) = this.method_6461(groupLeader)
 /**
  * method_6465
  */
@@ -32,7 +32,7 @@ fun SchoolingFishEntity.isCloseEnoughToLeader() = this.method_6464()
 /**
  * method_6468
  */
-fun SchoolingFishEntity.pullInOtherFish(fish: Stream<out SchoolingFishEntity>) = this.method_6468(fish)
+fun SchoolingFishEntity.pullInOtherFish(fish: Stream<out SchoolingFishEntity>?) = this.method_6468(fish)
 /**
  * method_6470
  */

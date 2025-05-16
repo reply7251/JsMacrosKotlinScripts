@@ -5,7 +5,7 @@ object ScoreboardObjectiveArgumentTypeKt {
     /**
      * method_9393
      */
-    fun getWritableObjective(context: CommandContext<ServerCommandSource>, name: String) = ScoreboardObjectiveArgumentType.method_9393(context, name)
+    fun getWritableObjective(context: CommandContext<ServerCommandSource>?, name: String?) = ScoreboardObjectiveArgumentType.method_9393(context, name)
     /**
      * method_9391
      */
@@ -13,5 +13,5 @@ object ScoreboardObjectiveArgumentTypeKt {
     /**
      * method_9395
      */
-    fun getObjective(context: CommandContext<ServerCommandSource>, name: String) = ScoreboardObjectiveArgumentType.method_9395(context, name)
+    fun getObjective(context: CommandContext<ServerCommandSource>?, name: String?) = ScoreboardObjectiveArgumentType.method_9395(context, name)
 }

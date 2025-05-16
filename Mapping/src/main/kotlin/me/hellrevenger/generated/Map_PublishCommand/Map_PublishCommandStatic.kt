@@ -5,7 +5,7 @@ object PublishCommandKt {
     /**
      * method_13510
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = PublishCommand.method_13510(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = PublishCommand.method_13510(dispatcher)
     /**
      * method_46869
      */

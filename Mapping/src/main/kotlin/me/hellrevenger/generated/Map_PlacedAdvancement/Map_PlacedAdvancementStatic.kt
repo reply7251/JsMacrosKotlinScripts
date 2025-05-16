@@ -5,5 +5,5 @@ object PlacedAdvancementKt {
     /**
      * method_53648
      */
-    fun findRoot(advancement: PlacedAdvancement) = PlacedAdvancement.method_53648(advancement)
+    fun findRoot(advancement: PlacedAdvancement?) = PlacedAdvancement.method_53648(advancement)
 }

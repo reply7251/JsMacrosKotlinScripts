@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_45449
  */
-fun DataConfiguration.withFeaturesAdded(features: FeatureSet) = this.method_45449(features)
+fun DataConfiguration.withFeaturesAdded(features: FeatureSet?) = this.method_45449(features)
 /**
  * comp_1011
  */

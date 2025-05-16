@@ -29,5 +29,5 @@ object AbstractFurnaceBlockEntityKt {
     /**
      * method_31651
      */
-    fun tick(world: ServerWorld, pos: BlockPos, state: BlockState, blockEntity: AbstractFurnaceBlockEntity) = AbstractFurnaceBlockEntity.method_31651(world, pos, state, blockEntity)
+    fun tick(world: ServerWorld?, pos: BlockPos?, state: BlockState?, blockEntity: AbstractFurnaceBlockEntity?) = AbstractFurnaceBlockEntity.method_31651(world, pos, state, blockEntity)
 }

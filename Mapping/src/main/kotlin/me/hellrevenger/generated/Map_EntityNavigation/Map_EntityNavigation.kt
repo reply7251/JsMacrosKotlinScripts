@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_35141
  */
-fun EntityNavigation.findPathTo(target: BlockPos, minDistance: Int, maxDistance: Int) = this.method_35141(target, minDistance, maxDistance)
+fun EntityNavigation.findPathTo(target: BlockPos?, minDistance: Int, maxDistance: Int) = this.method_35141(target, minDistance, maxDistance)
 /**
  * method_31267
  */
@@ -12,7 +12,7 @@ fun EntityNavigation.isNearPathStartPos() = this.method_31267()
 /**
  * method_6335
  */
-fun EntityNavigation.startMovingTo(entity: Entity, speed: Double) = this.method_6335(entity, speed)
+fun EntityNavigation.startMovingTo(entity: Entity?, speed: Double) = this.method_6335(entity, speed)
 /**
  * method_6337
  */
@@ -32,15 +32,15 @@ fun EntityNavigation.stop() = this.method_6340()
 /**
  * method_6348
  */
-fun EntityNavigation.findPathTo(target: BlockPos, distance: Int) = this.method_6348(target, distance)
+fun EntityNavigation.findPathTo(target: BlockPos?, distance: Int) = this.method_6348(target, distance)
 /**
  * method_6333
  */
-fun EntityNavigation.isValidPosition(pos: BlockPos) = this.method_6333(pos)
+fun EntityNavigation.isValidPosition(pos: BlockPos?) = this.method_6333(pos)
 /**
  * method_6334
  */
-fun EntityNavigation.startMovingAlong(path: Path, speed: Double) = this.method_6334(path, speed)
+fun EntityNavigation.startMovingAlong(path: Path?, speed: Double) = this.method_6334(path, speed)
 /**
  * method_6357
  */
@@ -76,7 +76,7 @@ fun EntityNavigation.getNodeMaker() = this.method_6342()
 /**
  * method_18053
  */
-fun EntityNavigation.shouldRecalculatePath(pos: BlockPos) = this.method_18053(pos)
+fun EntityNavigation.shouldRecalculatePath(pos: BlockPos?) = this.method_18053(pos)
 /**
  * method_6350
  */
@@ -100,7 +100,7 @@ fun EntityNavigation.resetRangeMultiplier() = this.method_23965()
 /**
  * method_6349
  */
-fun EntityNavigation.findPathTo(entity: Entity, distance: Int) = this.method_6349(entity, distance)
+fun EntityNavigation.findPathTo(entity: Entity?, distance: Int) = this.method_6349(entity, distance)
 /**
  * method_6356
  */
@@ -112,12 +112,12 @@ fun EntityNavigation.setMaxFollowRange(maxFollowRange: Float) = this.method_6143
 /**
  * method_21643
  */
-fun EntityNavigation.findPathToAny(positions: Stream<BlockPos>, distance: Int) = this.method_21643(positions, distance)
+fun EntityNavigation.findPathToAny(positions: Stream<BlockPos>?, distance: Int) = this.method_21643(positions, distance)
 /**
  * method_48158
  */
-fun EntityNavigation.canJumpToNext(nodeType: PathNodeType) = this.method_48158(nodeType)
+fun EntityNavigation.canJumpToNext(nodeType: PathNodeType?) = this.method_48158(nodeType)
 /**
  * method_29934
  */
-fun EntityNavigation.findPathTo(positions: Set<BlockPos>, distance: Int) = this.method_29934(positions, distance)
+fun EntityNavigation.findPathTo(positions: Set<BlockPos>?, distance: Int) = this.method_29934(positions, distance)

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_61227
  */
-fun BundleItemSelectedC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_61227(arg0)
+fun BundleItemSelectedC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_61227(arg0)
 /**
  * comp_2895
  */

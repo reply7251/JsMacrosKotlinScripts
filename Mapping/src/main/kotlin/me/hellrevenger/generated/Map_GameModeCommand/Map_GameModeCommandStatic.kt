@@ -9,5 +9,5 @@ object GameModeCommandKt {
     /**
      * method_13388
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = GameModeCommand.method_13388(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = GameModeCommand.method_13388(dispatcher)
 }

@@ -5,15 +5,15 @@ object TestFunctionsKt {
     /**
      * method_22196
      */
-    fun testClassExists(testClass: String) = TestFunctions.method_22196(testClass)
+    fun testClassExists(testClass: String?) = TestFunctions.method_22196(testClass)
     /**
      * method_22200
      */
-    fun getTestFunctionOrThrow(structurePath: String) = TestFunctions.method_22200(structurePath)
+    fun getTestFunctionOrThrow(structurePath: String?) = TestFunctions.method_22200(structurePath)
     /**
      * method_36069
      */
-    fun register(method: Method) = TestFunctions.method_36069(method)
+    fun register(method: Method?) = TestFunctions.method_36069(method)
     /**
      * method_29405
      */
@@ -21,11 +21,11 @@ object TestFunctionsKt {
     /**
      * method_29404
      */
-    fun addFailedTestFunction(testFunction: TestFunction) = TestFunctions.method_29404(testFunction)
+    fun addFailedTestFunction(testFunction: TestFunction?) = TestFunctions.method_29404(testFunction)
     /**
      * method_32244
      */
-    fun getAfterBatchConsumer(batchId: String) = TestFunctions.method_32244(batchId)
+    fun getAfterBatchConsumer(batchId: String?) = TestFunctions.method_32244(batchId)
     /**
      * method_22191
      */
@@ -37,15 +37,15 @@ object TestFunctionsKt {
     /**
      * method_22198
      */
-    fun getBeforeBatchConsumer(batchId: String) = TestFunctions.method_22198(batchId)
+    fun getBeforeBatchConsumer(batchId: String?) = TestFunctions.method_22198(batchId)
     /**
      * method_36068
      */
-    fun register(testClass: Class<*>) = TestFunctions.method_36068(testClass)
+    fun register(testClass: Class<*>?) = TestFunctions.method_36068(testClass)
     /**
      * method_22193
      */
-    fun getTestFunctions(testClass: String) = TestFunctions.method_22193(testClass)
+    fun getTestFunctions(testClass: String?) = TestFunctions.method_22193(testClass)
     /**
      * method_29406
      */
@@ -53,5 +53,5 @@ object TestFunctionsKt {
     /**
      * method_22199
      */
-    fun getTestFunction(structurePath: String) = TestFunctions.method_22199(structurePath)
+    fun getTestFunction(structurePath: String?) = TestFunctions.method_22199(structurePath)
 }

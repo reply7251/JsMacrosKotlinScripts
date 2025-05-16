@@ -8,7 +8,7 @@ fun TracyFrameCapturer.upload() = this.method_64230()
 /**
  * method_64232
  */
-fun TracyFrameCapturer.capture(framebuffer: Framebuffer) = this.method_64232(framebuffer)
+fun TracyFrameCapturer.capture(framebuffer: Framebuffer?) = this.method_64232(framebuffer)
 /**
  * method_64233
  */

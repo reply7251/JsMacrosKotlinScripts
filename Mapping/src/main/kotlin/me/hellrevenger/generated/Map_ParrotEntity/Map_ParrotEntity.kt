@@ -28,4 +28,4 @@ fun ParrotEntity.getVariant() = this.method_6584()
 /**
  * method_47848
  */
-fun ParrotEntity.setVariant(arg0: net.minecraft.class_1453.class_7989) = this.method_47848(arg0)
+fun ParrotEntity.setVariant(arg0: net.minecraft.class_1453.class_7989?) = this.method_47848(arg0)

@@ -9,5 +9,5 @@ object TestRunContextKt {
     /**
      * method_22213
      */
-    fun clearDebugMarkers(world: ServerWorld) = TestRunContext.method_22213(world)
+    fun clearDebugMarkers(world: ServerWorld?) = TestRunContext.method_22213(world)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_49712
  */
-fun DynamicTexture.save(id: Identifier, path: file_Path) = this.method_49712(id, path)
+fun DynamicTexture.save(id: Identifier?, path: file_Path?) = this.method_49712(id, path)

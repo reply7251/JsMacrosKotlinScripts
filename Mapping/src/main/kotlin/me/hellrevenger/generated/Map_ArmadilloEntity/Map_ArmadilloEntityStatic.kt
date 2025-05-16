@@ -9,5 +9,5 @@ object ArmadilloEntityKt {
     /**
      * method_56083
      */
-    fun canSpawn(entityType: EntityType<ArmadilloEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = ArmadilloEntity.method_56083(entityType, world, spawnReason, pos, random)
+    fun canSpawn(entityType: EntityType<ArmadilloEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = ArmadilloEntity.method_56083(entityType, world, spawnReason, pos, random)
 }

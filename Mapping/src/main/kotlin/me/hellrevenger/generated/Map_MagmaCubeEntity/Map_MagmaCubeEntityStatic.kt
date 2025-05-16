@@ -9,5 +9,5 @@ object MagmaCubeEntityKt {
     /**
      * method_20678
      */
-    fun canMagmaCubeSpawn(type: EntityType<MagmaCubeEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = MagmaCubeEntity.method_20678(type, world, spawnReason, pos, random)
+    fun canMagmaCubeSpawn(type: EntityType<MagmaCubeEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = MagmaCubeEntity.method_20678(type, world, spawnReason, pos, random)
 }

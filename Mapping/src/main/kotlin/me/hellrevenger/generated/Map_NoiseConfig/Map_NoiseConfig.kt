@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_41560
  */
-fun NoiseConfig.getOrCreateRandomDeriver(id: Identifier) = this.method_41560(id)
+fun NoiseConfig.getOrCreateRandomDeriver(id: Identifier?) = this.method_41560(id)
 /**
  * method_42371
  */
@@ -16,7 +16,7 @@ fun NoiseConfig.getSurfaceBuilder() = this.method_42372()
 /**
  * method_41558
  */
-fun NoiseConfig.getOrCreateSampler(noiseParametersKey: RegistryKey<net.minecraft.class_5216.class_5487>) = this.method_41558(noiseParametersKey)
+fun NoiseConfig.getOrCreateSampler(noiseParametersKey: RegistryKey<net.minecraft.class_5216.class_5487>?) = this.method_41558(noiseParametersKey)
 /**
  * method_42370
  */

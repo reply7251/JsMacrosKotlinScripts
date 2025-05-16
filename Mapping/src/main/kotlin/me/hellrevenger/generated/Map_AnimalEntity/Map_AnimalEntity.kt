@@ -12,11 +12,11 @@ fun AnimalEntity.getLovingPlayer() = this.method_6478()
 /**
  * method_6481
  */
-fun AnimalEntity.isBreedingItem(stack: ItemStack) = this.method_6481(stack)
+fun AnimalEntity.isBreedingItem(stack: ItemStack?) = this.method_6481(stack)
 /**
  * method_49794
  */
-fun AnimalEntity.breed(world: ServerWorld, other: AnimalEntity, baby: PassiveEntity) = this.method_49794(world, other, baby)
+fun AnimalEntity.breed(world: ServerWorld?, other: AnimalEntity?, baby: PassiveEntity?) = this.method_49794(world, other, baby)
 /**
  * method_6477
  */
@@ -24,7 +24,7 @@ fun AnimalEntity.resetLoveTicks() = this.method_6477()
 /**
  * method_6474
  */
-fun AnimalEntity.canBreedWith(other: AnimalEntity) = this.method_6474(other)
+fun AnimalEntity.canBreedWith(other: AnimalEntity?) = this.method_6474(other)
 /**
  * method_6482
  */
@@ -32,7 +32,7 @@ fun AnimalEntity.canEat() = this.method_6482()
 /**
  * method_6480
  */
-fun AnimalEntity.lovePlayer(player: PlayerEntity) = this.method_6480(player)
+fun AnimalEntity.lovePlayer(player: PlayerEntity?) = this.method_6480(player)
 /**
  * method_6479
  */
@@ -44,4 +44,4 @@ fun AnimalEntity.getLoveTicks() = this.method_29270()
 /**
  * method_24650
  */
-fun AnimalEntity.breed(world: ServerWorld, other: AnimalEntity) = this.method_24650(world, other)
+fun AnimalEntity.breed(world: ServerWorld?, other: AnimalEntity?) = this.method_24650(world, other)

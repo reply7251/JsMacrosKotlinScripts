@@ -5,9 +5,9 @@ object NameGeneratorKt {
     /**
      * method_36154
      */
-    fun name(entity: Entity) = NameGenerator.method_36154(entity)
+    fun name(entity: Entity?) = NameGenerator.method_36154(entity)
     /**
      * method_23267
      */
-    fun name(uuid: UUID) = NameGenerator.method_23267(uuid)
+    fun name(uuid: UUID?) = NameGenerator.method_23267(uuid)
 }

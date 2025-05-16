@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_37020
  */
-fun Narratable.appendNarrations(builder: NarrationMessageBuilder) = this.method_37020(builder)
+fun Narratable.appendNarrations(builder: NarrationMessageBuilder?) = this.method_37020(builder)

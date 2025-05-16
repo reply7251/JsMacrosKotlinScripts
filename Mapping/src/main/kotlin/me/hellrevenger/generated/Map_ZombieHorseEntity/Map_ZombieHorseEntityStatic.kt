@@ -9,5 +9,5 @@ object ZombieHorseEntityKt {
     /**
      * method_55002
      */
-    fun canSpawn(type: EntityType<out AnimalEntity>, world: WorldAccess, reason: SpawnReason, pos: BlockPos, random: Random) = ZombieHorseEntity.method_55002(type, world, reason, pos, random)
+    fun canSpawn(type: EntityType<out AnimalEntity>?, world: WorldAccess?, reason: SpawnReason?, pos: BlockPos?, random: Random?) = ZombieHorseEntity.method_55002(type, world, reason, pos, random)
 }

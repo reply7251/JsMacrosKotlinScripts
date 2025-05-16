@@ -5,5 +5,5 @@ object MultipartBlockStateSupplierKt {
     /**
      * method_25758
      */
-    fun create(block: Block) = MultipartBlockStateSupplier.method_25758(block)
+    fun create(block: Block?) = MultipartBlockStateSupplier.method_25758(block)
 }

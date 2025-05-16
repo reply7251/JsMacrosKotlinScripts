@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9490
  */
-fun TimeArgumentType.parse(arg0: StringReader) = this.method_9490(arg0)
+fun TimeArgumentType.parse(arg0: StringReader?) = this.method_9490(arg0)

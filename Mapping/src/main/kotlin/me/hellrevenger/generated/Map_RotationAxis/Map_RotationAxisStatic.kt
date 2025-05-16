@@ -5,5 +5,5 @@ object RotationAxisKt {
     /**
      * method_46356
      */
-    fun of(axis: Vector3f) = RotationAxis.method_46356(axis)
+    fun of(axis: Vector3f?) = RotationAxis.method_46356(axis)
 }

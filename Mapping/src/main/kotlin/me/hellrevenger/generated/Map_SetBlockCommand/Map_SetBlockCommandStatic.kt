@@ -5,5 +5,5 @@ object SetBlockCommandKt {
     /**
      * method_13623
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, commandRegistryAccess: CommandRegistryAccess) = SetBlockCommand.method_13623(dispatcher, commandRegistryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, commandRegistryAccess: CommandRegistryAccess?) = SetBlockCommand.method_13623(dispatcher, commandRegistryAccess)
 }

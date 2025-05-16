@@ -9,9 +9,9 @@ object TestFunctionArgumentTypeKt {
     /**
      * method_22303
      */
-    fun getFunction(context: CommandContext<ServerCommandSource>, name: String) = TestFunctionArgumentType.method_22303(context, name)
+    fun getFunction(context: CommandContext<ServerCommandSource>?, name: String?) = TestFunctionArgumentType.method_22303(context, name)
     /**
      * method_56325
      */
-    fun <S>suggestTestNames(context: CommandContext<S>, builder: SuggestionsBuilder) = TestFunctionArgumentType.method_56325<S>(context, builder)
+    fun <S>suggestTestNames(context: CommandContext<S>?, builder: SuggestionsBuilder?) = TestFunctionArgumentType.method_56325<S>(context, builder)
 }

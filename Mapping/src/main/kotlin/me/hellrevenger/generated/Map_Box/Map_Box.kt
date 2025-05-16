@@ -36,7 +36,7 @@ fun Box.getMaxPos() = this.method_61126()
 /**
  * method_997
  */
-fun Box.offset(vec: Vec3d) = this.method_997(vec)
+fun Box.offset(vec: Vec3d?) = this.method_997(vec)
 /**
  * method_1008
  */
@@ -44,11 +44,11 @@ fun Box.contains(x: Double, arg1: Double, y: Double) = this.method_1008(x, arg1,
 /**
  * method_993
  */
-fun Box.intersects(pos1: Vec3d, pos2: Vec3d) = this.method_993(pos1, pos2)
+fun Box.intersects(pos1: Vec3d?, pos2: Vec3d?) = this.method_993(pos1, pos2)
 /**
  * method_994
  */
-fun Box.intersects(box: Box) = this.method_994(box)
+fun Box.intersects(box: Box?) = this.method_994(box)
 /**
  * method_17939
  */
@@ -56,11 +56,11 @@ fun Box.getLengthX() = this.method_17939()
 /**
  * method_996
  */
-fun Box.offset(blockPos: BlockPos) = this.method_996(blockPos)
+fun Box.offset(blockPos: BlockPos?) = this.method_996(blockPos)
 /**
  * method_992
  */
-fun Box.raycast(from: Vec3d, to: Vec3d) = this.method_992(from, to)
+fun Box.raycast(from: Vec3d?, to: Vec3d?) = this.method_992(from, to)
 /**
  * method_61125
  */
@@ -68,7 +68,7 @@ fun Box.getMinPos() = this.method_61125()
 /**
  * method_18804
  */
-fun Box.stretch(scale: Vec3d) = this.method_18804(scale)
+fun Box.stretch(scale: Vec3d?) = this.method_18804(scale)
 /**
  * method_1002
  */
@@ -92,11 +92,11 @@ fun Box.withMinX(minX: Double) = this.method_35574(minX)
 /**
  * method_1001
  */
-fun Box.getMin(axis: net.minecraft.class_2350.class_2351) = this.method_1001(axis)
+fun Box.getMin(axis: net.minecraft.class_2350.class_2351?) = this.method_1001(axis)
 /**
  * method_64032
  */
-fun Box.collides(arg0: Vec3d, boundingBoxes: MutableList<Box>) = this.method_64032(arg0, boundingBoxes)
+fun Box.collides(arg0: Vec3d?, boundingBoxes: MutableList<Box>?) = this.method_64032(arg0, boundingBoxes)
 /**
  * method_1013
  */
@@ -104,11 +104,11 @@ fun Box.isNaN() = this.method_1013()
 /**
  * method_1006
  */
-fun Box.contains(pos: Vec3d) = this.method_1006(pos)
+fun Box.contains(pos: Vec3d?) = this.method_1006(pos)
 /**
  * method_991
  */
-fun Box.union(box: Box) = this.method_991(box)
+fun Box.union(box: Box?) = this.method_991(box)
 /**
  * method_17941
  */
@@ -120,15 +120,15 @@ fun Box.intersects(minX: Double, arg1: Double, minY: Double, arg3: Double, minZ:
 /**
  * method_60314
  */
-fun Box.offset(offset: Vector3f) = this.method_60314(offset)
+fun Box.offset(offset: Vector3f?) = this.method_60314(offset)
 /**
  * method_999
  */
-fun Box.intersection(box: Box) = this.method_999(box)
+fun Box.intersection(box: Box?) = this.method_999(box)
 /**
  * method_990
  */
-fun Box.getMax(axis: net.minecraft.class_2350.class_2351) = this.method_990(axis)
+fun Box.getMax(axis: net.minecraft.class_2350.class_2351?) = this.method_990(axis)
 /**
  * method_35578
  */
@@ -164,7 +164,7 @@ fun Box.getCenter() = this.method_1005()
 /**
  * method_49271
  */
-fun Box.squaredMagnitude(pos: Vec3d) = this.method_49271(pos)
+fun Box.squaredMagnitude(pos: Vec3d?) = this.method_49271(pos)
 /**
  * method_1012
  */

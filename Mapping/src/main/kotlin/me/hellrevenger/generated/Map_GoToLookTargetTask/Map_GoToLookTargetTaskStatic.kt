@@ -9,5 +9,5 @@ object GoToLookTargetTaskKt {
     /**
      * method_47109
      */
-    fun create(predicate: Predicate<LivingEntity>, speed: function_Function<LivingEntity, Float>, completionRange: Int) = GoToLookTargetTask.method_47109(predicate, speed, completionRange)
+    fun create(predicate: Predicate<LivingEntity>?, speed: function_Function<LivingEntity, Float>?, completionRange: Int) = GoToLookTargetTask.method_47109(predicate, speed, completionRange)
 }

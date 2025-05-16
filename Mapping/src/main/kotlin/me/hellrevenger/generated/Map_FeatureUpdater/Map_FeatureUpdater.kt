@@ -8,4 +8,4 @@ fun FeatureUpdater.markResolved(chunkPos: Long) = this.method_14744(chunkPos)
 /**
  * method_14735
  */
-fun FeatureUpdater.getUpdatedReferences(nbt: NbtCompound) = this.method_14735(nbt)
+fun FeatureUpdater.getUpdatedReferences(nbt: NbtCompound?) = this.method_14735(nbt)

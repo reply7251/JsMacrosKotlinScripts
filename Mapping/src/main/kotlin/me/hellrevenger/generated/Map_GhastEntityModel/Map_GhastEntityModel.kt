@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62088
  */
-fun GhastEntityModel.setAngles(arg0: GhastEntityRenderState) = this.method_62088(arg0)
+fun GhastEntityModel.setAngles(arg0: GhastEntityRenderState?) = this.method_62088(arg0)

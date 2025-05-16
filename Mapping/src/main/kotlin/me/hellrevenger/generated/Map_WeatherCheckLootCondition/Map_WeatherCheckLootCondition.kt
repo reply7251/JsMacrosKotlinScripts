@@ -8,7 +8,7 @@ fun WeatherCheckLootCondition.raining() = this.comp_1889()
 /**
  * method_957
  */
-fun WeatherCheckLootCondition.test(arg0: LootContext) = this.method_957(arg0)
+fun WeatherCheckLootCondition.test(arg0: LootContext?) = this.method_957(arg0)
 /**
  * comp_1890
  */

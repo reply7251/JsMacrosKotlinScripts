@@ -5,5 +5,5 @@ object MipmapHelperKt {
     /**
      * method_24102
      */
-    fun getMipmapLevelsImages(originals: Array<NativeImage>, mipmap: Int) = MipmapHelper.method_24102(originals, mipmap)
+    fun getMipmapLevelsImages(originals: Array<NativeImage>?, mipmap: Int) = MipmapHelper.method_24102(originals, mipmap)
 }

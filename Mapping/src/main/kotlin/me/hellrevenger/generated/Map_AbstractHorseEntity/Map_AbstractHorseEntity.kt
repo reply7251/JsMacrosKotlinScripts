@@ -12,7 +12,7 @@ fun AbstractHorseEntity.setInAir(inAir: Boolean) = this.method_6758(inAir)
 /**
  * method_6752
  */
-fun AbstractHorseEntity.bondWithPlayer(player: PlayerEntity) = this.method_6752(player)
+fun AbstractHorseEntity.bondWithPlayer(player: PlayerEntity?) = this.method_6752(player)
 /**
  * method_6702
  */
@@ -36,7 +36,7 @@ fun AbstractHorseEntity.isTame() = this.method_6727()
 /**
  * method_6732
  */
-fun AbstractHorseEntity.setOwnerUuid(ownerUuid: UUID) = this.method_6732(ownerUuid)
+fun AbstractHorseEntity.setOwnerUuid(ownerUuid: UUID?) = this.method_6732(ownerUuid)
 /**
  * method_6755
  */
@@ -60,7 +60,7 @@ fun AbstractHorseEntity.isBred() = this.method_6744()
 /**
  * method_45375
  */
-fun AbstractHorseEntity.equipHorseArmor(player: PlayerEntity, stack: ItemStack) = this.method_45375(player, stack)
+fun AbstractHorseEntity.equipHorseArmor(player: PlayerEntity?, stack: ItemStack?) = this.method_45375(player, stack)
 /**
  * method_6737
  */
@@ -96,7 +96,7 @@ fun AbstractHorseEntity.isInAir() = this.method_6763()
 /**
  * method_30009
  */
-fun AbstractHorseEntity.interactHorse(player: PlayerEntity, stack: ItemStack) = this.method_30009(player, stack)
+fun AbstractHorseEntity.interactHorse(player: PlayerEntity?, stack: ItemStack?) = this.method_30009(player, stack)
 /**
  * method_45377
  */
@@ -124,4 +124,4 @@ fun AbstractHorseEntity.updateAnger() = this.method_6748()
 /**
  * method_33338
  */
-fun AbstractHorseEntity.areInventoriesDifferent(inventory: Inventory) = this.method_33338(inventory)
+fun AbstractHorseEntity.areInventoriesDifferent(inventory: Inventory?) = this.method_33338(inventory)

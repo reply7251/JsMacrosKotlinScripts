@@ -9,5 +9,5 @@ object AllOfLootConditionKt {
     /**
      * method_53404
      */
-    fun create(terms: MutableList<LootCondition>) = AllOfLootCondition.method_53404(terms)
+    fun create(terms: MutableList<LootCondition>?) = AllOfLootCondition.method_53404(terms)
 }

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_57141
  */
-fun <T, U>RawFilteredPair<T>.resolve(resolver: function_Function<T, Optional<U>>) = this.method_57141<U>(resolver)
+fun <T, U>RawFilteredPair<T>.resolve(resolver: function_Function<T, Optional<U>>?) = this.method_57141<U>(resolver)
 /**
  * method_57140
  */
@@ -12,7 +12,7 @@ fun <T>RawFilteredPair<T>.get(shouldFilter: Boolean) = this.method_57140(shouldF
 /**
  * method_57138
  */
-fun <T, U>RawFilteredPair<T>.map(mapper: function_Function<T, U>) = this.method_57138<U>(mapper)
+fun <T, U>RawFilteredPair<T>.map(mapper: function_Function<T, U>?) = this.method_57138<U>(mapper)
 /**
  * comp_2370
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_38638
  */
-fun <T>SimulationDistanceLevelPropagator.add(type: ChunkTicketType<T>, pos: ChunkPos, level: Int, argument: T) = this.method_38638<T>(type, pos, level, argument)
+fun <T>SimulationDistanceLevelPropagator.add(type: ChunkTicketType<T>?, pos: ChunkPos?, level: Int, argument: T) = this.method_38638<T>(type, pos, level, argument)
 /**
  * method_61279
  */
@@ -16,19 +16,19 @@ fun SimulationDistanceLevelPropagator.updateLevels() = this.method_38635()
 /**
  * method_38637
  */
-fun SimulationDistanceLevelPropagator.add(pos: Long, arg1: ChunkTicket<*>) = this.method_38637(pos, arg1)
+fun SimulationDistanceLevelPropagator.add(pos: Long, arg1: ChunkTicket<*>?) = this.method_38637(pos, arg1)
 /**
  * method_38640
  */
-fun SimulationDistanceLevelPropagator.getLevel(pos: ChunkPos) = this.method_38640(pos)
+fun SimulationDistanceLevelPropagator.getLevel(pos: ChunkPos?) = this.method_38640(pos)
 /**
  * method_38642
  */
-fun <T>SimulationDistanceLevelPropagator.remove(type: ChunkTicketType<T>, pos: ChunkPos, level: Int, argument: T) = this.method_38642<T>(type, pos, level, argument)
+fun <T>SimulationDistanceLevelPropagator.remove(type: ChunkTicketType<T>?, pos: ChunkPos?, level: Int, argument: T) = this.method_38642<T>(type, pos, level, argument)
 /**
  * method_38641
  */
-fun SimulationDistanceLevelPropagator.remove(pos: Long, arg1: ChunkTicket<*>) = this.method_38641(pos, arg1)
+fun SimulationDistanceLevelPropagator.remove(pos: Long, arg1: ChunkTicket<*>?) = this.method_38641(pos, arg1)
 /**
  * method_38636
  */

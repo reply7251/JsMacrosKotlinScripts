@@ -12,4 +12,4 @@ val RandomFeatureEntry.feature by alias(RandomFeatureEntry::field_14013)
 /**
  * method_14271
  */
-fun RandomFeatureEntry.generate(world: StructureWorldAccess, chunkGenerator: ChunkGenerator, random: Random, pos: BlockPos) = this.method_14271(world, chunkGenerator, random, pos)
+fun RandomFeatureEntry.generate(world: StructureWorldAccess?, chunkGenerator: ChunkGenerator?, random: Random?, pos: BlockPos?) = this.method_14271(world, chunkGenerator, random, pos)

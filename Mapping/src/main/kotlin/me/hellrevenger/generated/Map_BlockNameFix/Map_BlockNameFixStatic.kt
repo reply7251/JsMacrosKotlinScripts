@@ -5,5 +5,5 @@ object BlockNameFixKt {
     /**
      * method_15589
      */
-    fun create(outputSchema: Schema, name: String, rename: function_Function<String, String>) = BlockNameFix.method_15589(outputSchema, name, rename)
+    fun create(outputSchema: Schema?, name: String?, rename: function_Function<String, String>?) = BlockNameFix.method_15589(outputSchema, name, rename)
 }

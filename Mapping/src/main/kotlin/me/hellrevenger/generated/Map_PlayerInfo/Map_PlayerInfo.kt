@@ -8,7 +8,7 @@ fun PlayerInfo.getName() = this.method_25042()
 /**
  * method_25043
  */
-fun PlayerInfo.setName(name: String) = this.method_25043(name)
+fun PlayerInfo.setName(name: String?) = this.method_25043(name)
 /**
  * method_25045
  */
@@ -36,7 +36,7 @@ fun PlayerInfo.setAccepted(accepted: Boolean) = this.method_25047(accepted)
 /**
  * method_25046
  */
-fun PlayerInfo.setUuid(uuid: UUID) = this.method_25046(uuid)
+fun PlayerInfo.setUuid(uuid: UUID?) = this.method_25046(uuid)
 /**
  * method_25048
  */

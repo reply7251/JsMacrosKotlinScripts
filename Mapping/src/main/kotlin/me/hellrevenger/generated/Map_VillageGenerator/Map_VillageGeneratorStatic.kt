@@ -5,5 +5,5 @@ object VillageGeneratorKt {
     /**
      * method_27221
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = VillageGenerator.method_27221(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = VillageGenerator.method_27221(poolRegisterable)
 }

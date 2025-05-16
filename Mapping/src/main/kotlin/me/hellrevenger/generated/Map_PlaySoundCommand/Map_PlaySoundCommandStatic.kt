@@ -5,5 +5,5 @@ object PlaySoundCommandKt {
     /**
      * method_13500
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = PlaySoundCommand.method_13500(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = PlaySoundCommand.method_13500(dispatcher)
 }

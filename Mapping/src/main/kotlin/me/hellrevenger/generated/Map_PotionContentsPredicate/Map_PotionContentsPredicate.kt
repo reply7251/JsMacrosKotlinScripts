@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_58177
  */
-fun PotionContentsPredicate.test(arg0: ItemStack, arg1: PotionContentsComponent) = this.method_58177(arg0, arg1)
+fun PotionContentsPredicate.test(arg0: ItemStack?, arg1: PotionContentsComponent?) = this.method_58177(arg0, arg1)
 /**
  * comp_2461
  */

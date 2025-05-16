@@ -9,5 +9,5 @@ object DimensionArgumentTypeKt {
     /**
      * method_9289
      */
-    fun getDimensionArgument(context: CommandContext<ServerCommandSource>, name: String) = DimensionArgumentType.method_9289(context, name)
+    fun getDimensionArgument(context: CommandContext<ServerCommandSource>?, name: String?) = DimensionArgumentType.method_9289(context, name)
 }

@@ -33,7 +33,7 @@ object VertexFormatElementKt {
     /**
      * method_60845
      */
-    fun register(id: Int, uvIndex: Int, type: net.minecraft.class_296.class_297, usage: net.minecraft.class_296.class_298, count: Int) = VertexFormatElement.method_60845(id, uvIndex, type, usage, count)
+    fun register(id: Int, uvIndex: Int, type: net.minecraft.class_296.class_297?, usage: net.minecraft.class_296.class_298?, count: Int) = VertexFormatElement.method_60845(id, uvIndex, type, usage, count)
     /**
      * method_60848
      */

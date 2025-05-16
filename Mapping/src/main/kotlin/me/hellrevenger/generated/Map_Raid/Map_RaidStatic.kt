@@ -17,5 +17,5 @@ object RaidKt {
     /**
      * method_61558
      */
-    fun createOminousBanner(bannerPatternLookup: RegistryEntryLookup<BannerPattern>) = Raid.method_61558(bannerPatternLookup)
+    fun createOminousBanner(bannerPatternLookup: RegistryEntryLookup<BannerPattern>?) = Raid.method_61558(bannerPatternLookup)
 }

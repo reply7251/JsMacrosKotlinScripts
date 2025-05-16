@@ -5,9 +5,9 @@ object ItemStackParticleEffectKt {
     /**
      * method_29136
      */
-    fun createCodec(type: ParticleType<ItemStackParticleEffect>) = ItemStackParticleEffect.method_29136(type)
+    fun createCodec(type: ParticleType<ItemStackParticleEffect>?) = ItemStackParticleEffect.method_29136(type)
     /**
      * method_56178
      */
-    fun createPacketCodec(type: ParticleType<ItemStackParticleEffect>) = ItemStackParticleEffect.method_56178(type)
+    fun createPacketCodec(type: ParticleType<ItemStackParticleEffect>?) = ItemStackParticleEffect.method_56178(type)
 }

@@ -5,5 +5,5 @@ object WaterAnimalEntityKt {
     /**
      * method_61455
      */
-    fun canSpawn(type: EntityType<out WaterAnimalEntity>, world: WorldAccess, reason: SpawnReason, pos: BlockPos, random: Random) = WaterAnimalEntity.method_61455(type, world, reason, pos, random)
+    fun canSpawn(type: EntityType<out WaterAnimalEntity>?, world: WorldAccess?, reason: SpawnReason?, pos: BlockPos?, random: Random?) = WaterAnimalEntity.method_61455(type, world, reason, pos, random)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_40553
  */
-fun BlockSource.apply(sampler: ChunkNoiseSampler, x: Int, y: Int, z: Int) = this.method_40553(sampler, x, y, z)
+fun BlockSource.apply(sampler: ChunkNoiseSampler?, x: Int, y: Int, z: Int) = this.method_40553(sampler, x, y, z)

@@ -8,7 +8,7 @@ fun TrialSpawnerState.playsSound() = this.method_55217()
 /**
  * method_55210
  */
-fun TrialSpawnerState.emitParticles(world: world_World, pos: BlockPos, ominous: Boolean) = this.method_55210(world, pos, ominous)
+fun TrialSpawnerState.emitParticles(world: world_World?, pos: BlockPos?, ominous: Boolean) = this.method_55210(world, pos, ominous)
 /**
  * method_55209
  */

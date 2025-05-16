@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_8980
  */
-fun KilledByArrowCriterion.trigger(player: ServerPlayerEntity, piercingKilledEntities: Collection<Entity>, weapon: ItemStack) = this.method_8980(player, piercingKilledEntities, weapon)
+fun KilledByArrowCriterion.trigger(player: ServerPlayerEntity?, piercingKilledEntities: Collection<Entity>?, weapon: ItemStack?) = this.method_8980(player, piercingKilledEntities, weapon)

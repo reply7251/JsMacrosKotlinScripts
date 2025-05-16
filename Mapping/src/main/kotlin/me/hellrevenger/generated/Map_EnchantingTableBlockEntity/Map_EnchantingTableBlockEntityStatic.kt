@@ -5,5 +5,5 @@ object EnchantingTableBlockEntityKt {
     /**
      * method_31688
      */
-    fun tick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: EnchantingTableBlockEntity) = EnchantingTableBlockEntity.method_31688(world, pos, state, blockEntity)
+    fun tick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: EnchantingTableBlockEntity?) = EnchantingTableBlockEntity.method_31688(world, pos, state, blockEntity)
 }

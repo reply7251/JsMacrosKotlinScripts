@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_41916
  */
-fun TadpoleEntityModel.setAngles(arg0: LivingEntityRenderState) = this.method_41916(arg0)
+fun TadpoleEntityModel.setAngles(arg0: LivingEntityRenderState?) = this.method_41916(arg0)

@@ -5,5 +5,5 @@ object EnchantmentLocationBasedEffectKt {
     /**
      * method_60232
      */
-    fun registerAndGetDefault(registry: Registry<MapCodec<out EnchantmentLocationBasedEffect>>) = EnchantmentLocationBasedEffect.method_60232(registry)
+    fun registerAndGetDefault(registry: Registry<MapCodec<out EnchantmentLocationBasedEffect>>?) = EnchantmentLocationBasedEffect.method_60232(registry)
 }

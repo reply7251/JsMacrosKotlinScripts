@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62114
  */
-fun ShulkerBulletEntityModel.setAngles(arg0: ShulkerBulletEntityRenderState) = this.method_62114(arg0)
+fun ShulkerBulletEntityModel.setAngles(arg0: ShulkerBulletEntityRenderState?) = this.method_62114(arg0)

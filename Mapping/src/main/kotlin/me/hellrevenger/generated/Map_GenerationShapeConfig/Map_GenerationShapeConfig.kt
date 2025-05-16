@@ -8,7 +8,7 @@ fun GenerationShapeConfig.horizontalCellBlockCount() = this.method_39546()
 /**
  * method_42368
  */
-fun GenerationShapeConfig.trimHeight(world: HeightLimitView) = this.method_42368(world)
+fun GenerationShapeConfig.trimHeight(world: HeightLimitView?) = this.method_42368(world)
 /**
  * method_39545
  */

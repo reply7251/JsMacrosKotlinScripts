@@ -12,7 +12,7 @@ fun WorldProperties.getDifficulty() = this.method_207()
 /**
  * method_151
  */
-fun WorldProperties.populateCrashReport(reportSection: CrashReportSection, world: HeightLimitView) = this.method_151(reportSection, world)
+fun WorldProperties.populateCrashReport(reportSection: CrashReportSection?, world: HeightLimitView?) = this.method_151(reportSection, world)
 /**
  * method_157
  */

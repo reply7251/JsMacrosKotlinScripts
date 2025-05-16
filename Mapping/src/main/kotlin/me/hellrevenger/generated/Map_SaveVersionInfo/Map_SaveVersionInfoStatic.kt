@@ -5,5 +5,5 @@ object SaveVersionInfoKt {
     /**
      * method_29023
      */
-    fun fromDynamic(dynamic: Dynamic<*>) = SaveVersionInfo.method_29023(dynamic)
+    fun fromDynamic(dynamic: Dynamic<*>?) = SaveVersionInfo.method_29023(dynamic)
 }

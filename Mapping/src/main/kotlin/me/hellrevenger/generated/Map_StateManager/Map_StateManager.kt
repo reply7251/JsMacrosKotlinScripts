@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11663
  */
-fun <O, S>StateManager<O, S>.getProperty(name: String) where S: State<O, S> = this.method_11663(name)
+fun <O, S>StateManager<O, S>.getProperty(name: String?) where S: State<O, S> = this.method_11663(name)
 /**
  * method_11660
  */

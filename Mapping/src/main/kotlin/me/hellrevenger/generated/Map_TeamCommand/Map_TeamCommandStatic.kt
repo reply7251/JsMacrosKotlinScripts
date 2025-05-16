@@ -5,5 +5,5 @@ object TeamCommandKt {
     /**
      * method_13736
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = TeamCommand.method_13736(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = TeamCommand.method_13736(dispatcher, registryAccess)
 }

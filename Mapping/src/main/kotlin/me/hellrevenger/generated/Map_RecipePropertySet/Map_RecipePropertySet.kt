@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_64701
  */
-fun RecipePropertySet.canUse(stack: ItemStack) = this.method_64701(stack)
+fun RecipePropertySet.canUse(stack: ItemStack?) = this.method_64701(stack)

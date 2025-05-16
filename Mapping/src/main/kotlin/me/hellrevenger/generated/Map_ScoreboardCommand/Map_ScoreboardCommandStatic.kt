@@ -5,5 +5,5 @@ object ScoreboardCommandKt {
     /**
      * method_13595
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = ScoreboardCommand.method_13595(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = ScoreboardCommand.method_13595(dispatcher, registryAccess)
 }

@@ -25,5 +25,5 @@ object EndPlacedFeaturesKt {
     /**
      * method_46861
      */
-    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = EndPlacedFeatures.method_46861(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>?) = EndPlacedFeatures.method_46861(featureRegisterable)
 }

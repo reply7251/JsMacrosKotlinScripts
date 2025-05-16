@@ -5,5 +5,5 @@ object ValueCheckLootConditionKt {
     /**
      * method_35562
      */
-    fun builder(value: LootNumberProvider, range: BoundedIntUnaryOperator) = ValueCheckLootCondition.method_35562(value, range)
+    fun builder(value: LootNumberProvider?, range: BoundedIntUnaryOperator?) = ValueCheckLootCondition.method_35562(value, range)
 }

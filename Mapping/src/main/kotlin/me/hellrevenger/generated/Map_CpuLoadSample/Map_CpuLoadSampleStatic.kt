@@ -5,5 +5,5 @@ object CpuLoadSampleKt {
     /**
      * method_38032
      */
-    fun fromEvent(event: RecordedEvent) = CpuLoadSample.method_38032(event)
+    fun fromEvent(event: RecordedEvent?) = CpuLoadSample.method_38032(event)
 }

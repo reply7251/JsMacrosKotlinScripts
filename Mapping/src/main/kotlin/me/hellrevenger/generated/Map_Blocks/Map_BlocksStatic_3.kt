@@ -289,11 +289,11 @@ object BlocksKt_3 {
     /**
      * method_63052
      */
-    fun register(key: RegistryKey<Block>, settings: net.minecraft.class_4970.class_2251) = Blocks.method_63052(key, settings)
+    fun register(key: RegistryKey<Block>?, settings: net.minecraft.class_4970.class_2251?) = Blocks.method_63052(key, settings)
     /**
      * method_63058
      */
-    fun createLeavesSettings(sounds: BlockSoundGroup) = Blocks.method_63058(sounds)
+    fun createLeavesSettings(sounds: BlockSoundGroup?) = Blocks.method_63058(sounds)
     /**
      * method_26107
      */
@@ -301,19 +301,19 @@ object BlocksKt_3 {
     /**
      * method_26122
      */
-    fun never(state: BlockState, world: BlockView, pos: BlockPos) = Blocks.method_26122(state, world, pos)
+    fun never(state: BlockState?, world: BlockView?, pos: BlockPos?) = Blocks.method_26122(state, world, pos)
     /**
      * method_63053
      */
-    fun register(key: RegistryKey<Block>, factory: function_Function<net.minecraft.class_4970.class_2251, Block>, settings: net.minecraft.class_4970.class_2251) = Blocks.method_63053(key, factory, settings)
+    fun register(key: RegistryKey<Block>?, factory: function_Function<net.minecraft.class_4970.class_2251, Block>?, settings: net.minecraft.class_4970.class_2251?) = Blocks.method_63053(key, factory, settings)
     /**
      * method_26113
      */
-    fun always(state: BlockState, world: BlockView, pos: BlockPos) = Blocks.method_26113(state, world, pos)
+    fun always(state: BlockState?, world: BlockView?, pos: BlockPos?) = Blocks.method_26113(state, world, pos)
     /**
      * method_63121
      */
-    fun createNetherStemSettings(mapColor: MapColor) = Blocks.method_63121(mapColor)
+    fun createNetherStemSettings(mapColor: MapColor?) = Blocks.method_63121(mapColor)
     /**
      * method_63176
      */
@@ -321,15 +321,15 @@ object BlocksKt_3 {
     /**
      * method_26126
      */
-    fun canSpawnOnLeaves(state: BlockState, world: BlockView, pos: BlockPos, type: EntityType<*>) = Blocks.method_26126(state, world, pos, type)
+    fun canSpawnOnLeaves(state: BlockState?, world: BlockView?, pos: BlockPos?, type: EntityType<*>?) = Blocks.method_26126(state, world, pos, type)
     /**
      * method_26114
      */
-    fun never(state: BlockState, world: BlockView, pos: BlockPos, type: EntityType<*>) = Blocks.method_26114(state, world, pos, type)
+    fun never(state: BlockState?, world: BlockView?, pos: BlockPos?, type: EntityType<*>?) = Blocks.method_26114(state, world, pos, type)
     /**
      * method_26123
      */
-    fun always(state: BlockState, world: BlockView, pos: BlockPos, type: EntityType<*>) = Blocks.method_26123(state, world, pos, type)
+    fun always(state: BlockState?, world: BlockView?, pos: BlockPos?, type: EntityType<*>?) = Blocks.method_26123(state, world, pos, type)
     /**
      * method_63117
      */
@@ -337,5 +337,5 @@ object BlocksKt_3 {
     /**
      * method_63061
      */
-    fun createLogSettings(topMapColor: MapColor, sideMapColor: MapColor, sounds: BlockSoundGroup) = Blocks.method_63061(topMapColor, sideMapColor, sounds)
+    fun createLogSettings(topMapColor: MapColor?, sideMapColor: MapColor?, sounds: BlockSoundGroup?) = Blocks.method_63061(topMapColor, sideMapColor, sounds)
 }

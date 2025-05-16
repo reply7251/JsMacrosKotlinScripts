@@ -5,5 +5,5 @@ object ItemPlacementContextKt {
     /**
      * method_16355
      */
-    fun offset(context: ItemPlacementContext, pos: BlockPos, side: Direction) = ItemPlacementContext.method_16355(context, pos, side)
+    fun offset(context: ItemPlacementContext?, pos: BlockPos?, side: Direction?) = ItemPlacementContext.method_16355(context, pos, side)
 }

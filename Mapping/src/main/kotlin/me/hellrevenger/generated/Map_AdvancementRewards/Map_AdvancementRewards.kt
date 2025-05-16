@@ -20,4 +20,4 @@ fun AdvancementRewards.function() = this.comp_2028()
 /**
  * method_748
  */
-fun AdvancementRewards.apply(player: ServerPlayerEntity) = this.method_748(player)
+fun AdvancementRewards.apply(player: ServerPlayerEntity?) = this.method_748(player)

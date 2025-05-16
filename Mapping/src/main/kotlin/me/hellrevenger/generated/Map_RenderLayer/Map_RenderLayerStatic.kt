@@ -33,7 +33,7 @@ object RenderLayerKt {
     /**
      * method_23026
      */
-    fun getEyes(texture: Identifier) = RenderLayer.method_23026(texture)
+    fun getEyes(texture: Identifier?) = RenderLayer.method_23026(texture)
     /**
      * method_51456
      */
@@ -41,7 +41,7 @@ object RenderLayerKt {
     /**
      * method_24049
      */
-    fun of(name: String, vertexFormat: VertexFormat, drawMode: net.minecraft.class_293.class_5596, expectedBufferSize: Int, hasCrumbling: Boolean, translucent: Boolean, phases: net.minecraft.class_1921.class_4688) = RenderLayer.method_24049(name, vertexFormat, drawMode, expectedBufferSize, hasCrumbling, translucent, phases)
+    fun of(name: String?, vertexFormat: VertexFormat?, drawMode: net.minecraft.class_293.class_5596?, expectedBufferSize: Int, hasCrumbling: Boolean, translucent: Boolean, phases: net.minecraft.class_1921.class_4688?) = RenderLayer.method_24049(name, vertexFormat, drawMode, expectedBufferSize, hasCrumbling, translucent, phases)
     /**
      * method_65221
      */
@@ -61,11 +61,11 @@ object RenderLayerKt {
     /**
      * method_25448
      */
-    fun getArmorCutoutNoCull(texture: Identifier) = RenderLayer.method_25448(texture)
+    fun getArmorCutoutNoCull(texture: Identifier?) = RenderLayer.method_25448(texture)
     /**
      * method_62277
      */
-    fun getGuiTextured(texture: Identifier) = RenderLayer.method_62277(texture)
+    fun getGuiTextured(texture: Identifier?) = RenderLayer.method_62277(texture)
     /**
      * method_65220
      */
@@ -73,11 +73,11 @@ object RenderLayerKt {
     /**
      * method_23570
      */
-    fun getBlockBreaking(texture: Identifier) = RenderLayer.method_23570(texture)
+    fun getBlockBreaking(texture: Identifier?) = RenderLayer.method_23570(texture)
     /**
      * method_28116
      */
-    fun getEntityCutoutNoCullZOffset(texture: Identifier) = RenderLayer.method_28116(texture)
+    fun getEntityCutoutNoCullZOffset(texture: Identifier?) = RenderLayer.method_28116(texture)
     /**
      * method_23574
      */
@@ -89,7 +89,7 @@ object RenderLayerKt {
     /**
      * method_65217
      */
-    fun getFireScreenEffect(texture: Identifier) = RenderLayer.method_65217(texture)
+    fun getFireScreenEffect(texture: Identifier?) = RenderLayer.method_65217(texture)
     /**
      * method_64914
      */
@@ -97,15 +97,15 @@ object RenderLayerKt {
     /**
      * method_23592
      */
-    fun getBeaconBeam(texture: Identifier, translucent: Boolean) = RenderLayer.method_23592(texture, translucent)
+    fun getBeaconBeam(texture: Identifier?, translucent: Boolean) = RenderLayer.method_23592(texture, translucent)
     /**
      * method_62279
      */
-    fun getVignette(texture: Identifier) = RenderLayer.method_62279(texture)
+    fun getVignette(texture: Identifier?) = RenderLayer.method_62279(texture)
     /**
      * method_23580
      */
-    fun getEntityTranslucent(texture: Identifier) = RenderLayer.method_23580(texture)
+    fun getEntityTranslucent(texture: Identifier?) = RenderLayer.method_23580(texture)
     /**
      * method_56850
      */
@@ -121,11 +121,11 @@ object RenderLayerKt {
     /**
      * method_65215
      */
-    fun getCelestial(texture: Identifier) = RenderLayer.method_65215(texture)
+    fun getCelestial(texture: Identifier?) = RenderLayer.method_65215(texture)
     /**
      * method_23287
      */
-    fun getOutline(texture: Identifier) = RenderLayer.method_23287(texture)
+    fun getOutline(texture: Identifier?) = RenderLayer.method_23287(texture)
     /**
      * method_23583
      */
@@ -149,7 +149,7 @@ object RenderLayerKt {
     /**
      * method_65216
      */
-    fun getBlockScreenEffect(texture: Identifier) = RenderLayer.method_65216(texture)
+    fun getBlockScreenEffect(texture: Identifier?) = RenderLayer.method_65216(texture)
     /**
      * method_34571
      */
@@ -161,7 +161,7 @@ object RenderLayerKt {
     /**
      * method_62276
      */
-    fun getGuiOpaqueTexturedBackground(texture: Identifier) = RenderLayer.method_62276(texture)
+    fun getGuiOpaqueTexturedBackground(texture: Identifier?) = RenderLayer.method_62276(texture)
     /**
      * method_65227
      */
@@ -169,11 +169,11 @@ object RenderLayerKt {
     /**
      * method_37345
      */
-    fun getTextPolygonOffset(texture: Identifier) = RenderLayer.method_37345(texture)
+    fun getTextPolygonOffset(texture: Identifier?) = RenderLayer.method_37345(texture)
     /**
      * method_65213
      */
-    fun getOpaqueParticle(texture: Identifier) = RenderLayer.method_65213(texture)
+    fun getOpaqueParticle(texture: Identifier?) = RenderLayer.method_65213(texture)
     /**
      * method_65219
      */
@@ -193,23 +193,23 @@ object RenderLayerKt {
     /**
      * method_42600
      */
-    fun getEntityTranslucentEmissive(texture: Identifier) = RenderLayer.method_42600(texture)
+    fun getEntityTranslucentEmissive(texture: Identifier?) = RenderLayer.method_42600(texture)
     /**
      * method_62275
      */
-    fun getGuiTexturedOverlay(texture: Identifier) = RenderLayer.method_62275(texture)
+    fun getGuiTexturedOverlay(texture: Identifier?) = RenderLayer.method_62275(texture)
     /**
      * method_65052
      */
-    fun createArmorTranslucent(texture: Identifier) = RenderLayer.method_65052(texture)
+    fun createArmorTranslucent(texture: Identifier?) = RenderLayer.method_65052(texture)
     /**
      * method_37346
      */
-    fun getTextIntensityPolygonOffset(texture: Identifier) = RenderLayer.method_37346(texture)
+    fun getTextIntensityPolygonOffset(texture: Identifier?) = RenderLayer.method_37346(texture)
     /**
      * method_65214
      */
-    fun getTranslucentParticle(texture: Identifier) = RenderLayer.method_65214(texture)
+    fun getTranslucentParticle(texture: Identifier?) = RenderLayer.method_65214(texture)
     /**
      * method_65218
      */
@@ -217,7 +217,7 @@ object RenderLayerKt {
     /**
      * method_23030
      */
-    fun getTextSeeThrough(texture: Identifier) = RenderLayer.method_23030(texture)
+    fun getTextSeeThrough(texture: Identifier?) = RenderLayer.method_23030(texture)
     /**
      * method_29380
      */
@@ -229,7 +229,7 @@ object RenderLayerKt {
     /**
      * method_65231
      */
-    fun getWeather(texture: Identifier, allMask: Boolean) = RenderLayer.method_65231(texture, allMask)
+    fun getWeather(texture: Identifier?, allMask: Boolean) = RenderLayer.method_65231(texture, allMask)
     /**
      * method_49042
      */
@@ -245,7 +245,7 @@ object RenderLayerKt {
     /**
      * method_23578
      */
-    fun getEntityCutoutNoCull(texture: Identifier) = RenderLayer.method_23578(texture)
+    fun getEntityCutoutNoCull(texture: Identifier?) = RenderLayer.method_23578(texture)
     /**
      * method_23590
      */
@@ -253,27 +253,27 @@ object RenderLayerKt {
     /**
      * method_23018
      */
-    fun getEnergySwirl(texture: Identifier, x: Float, y: Float) = RenderLayer.method_23018(texture, x, y)
+    fun getEnergySwirl(texture: Identifier?, x: Float, y: Float) = RenderLayer.method_23018(texture, x, y)
     /**
      * method_55252
      */
-    fun getEntityTranslucentEmissiveNoOutline(texture: Identifier) = RenderLayer.method_55252(texture)
+    fun getEntityTranslucentEmissiveNoOutline(texture: Identifier?) = RenderLayer.method_55252(texture)
     /**
      * method_42599
      */
-    fun getEntityTranslucentEmissive(texture: Identifier, affectsOutline: Boolean) = RenderLayer.method_42599(texture, affectsOutline)
+    fun getEntityTranslucentEmissive(texture: Identifier?, affectsOutline: Boolean) = RenderLayer.method_42599(texture, affectsOutline)
     /**
      * method_29379
      */
-    fun getItemEntityTranslucentCull(texture: Identifier) = RenderLayer.method_29379(texture)
+    fun getItemEntityTranslucentCull(texture: Identifier?) = RenderLayer.method_29379(texture)
     /**
      * method_23588
      */
-    fun getEntityNoOutline(texture: Identifier) = RenderLayer.method_23588(texture)
+    fun getEntityNoOutline(texture: Identifier?) = RenderLayer.method_23588(texture)
     /**
      * method_23576
      */
-    fun getEntityCutout(texture: Identifier) = RenderLayer.method_23576(texture)
+    fun getEntityCutout(texture: Identifier?) = RenderLayer.method_23576(texture)
     /**
      * method_51787
      */
@@ -285,11 +285,11 @@ object RenderLayerKt {
     /**
      * method_62290
      */
-    fun getEntitySolidZOffsetForward(texture: Identifier) = RenderLayer.method_62290(texture)
+    fun getEntitySolidZOffsetForward(texture: Identifier?) = RenderLayer.method_62290(texture)
     /**
      * method_24048
      */
-    fun of(name: String, vertexFormat: VertexFormat, drawMode: net.minecraft.class_293.class_5596, expectedBufferSize: Int, phaseData: net.minecraft.class_1921.class_4688) = RenderLayer.method_24048(name, vertexFormat, drawMode, expectedBufferSize, phaseData)
+    fun of(name: String?, vertexFormat: VertexFormat?, drawMode: net.minecraft.class_293.class_5596?, expectedBufferSize: Int, phaseData: net.minecraft.class_1921.class_4688?) = RenderLayer.method_24048(name, vertexFormat, drawMode, expectedBufferSize, phaseData)
     /**
      * method_51786
      */
@@ -301,23 +301,23 @@ object RenderLayerKt {
     /**
      * method_55251
      */
-    fun getBreezeWind(texture: Identifier, x: Float, y: Float) = RenderLayer.method_55251(texture, x, y)
+    fun getBreezeWind(texture: Identifier?, x: Float, y: Float) = RenderLayer.method_55251(texture, x, y)
     /**
      * method_24469
      */
-    fun getEntityShadow(texture: Identifier) = RenderLayer.method_24469(texture)
+    fun getEntityShadow(texture: Identifier?) = RenderLayer.method_24469(texture)
     /**
      * method_23586
      */
-    fun getEntityDecal(texture: Identifier) = RenderLayer.method_23586(texture)
+    fun getEntityDecal(texture: Identifier?) = RenderLayer.method_23586(texture)
     /**
      * method_36434
      */
-    fun getTextIntensity(texture: Identifier) = RenderLayer.method_36434(texture)
+    fun getTextIntensity(texture: Identifier?) = RenderLayer.method_36434(texture)
     /**
      * method_23028
      */
-    fun getText(texture: Identifier) = RenderLayer.method_23028(texture)
+    fun getText(texture: Identifier?) = RenderLayer.method_23028(texture)
     /**
      * method_51785
      */
@@ -325,7 +325,7 @@ object RenderLayerKt {
     /**
      * method_24294
      */
-    fun getEntityTranslucent(texture: Identifier, affectsOutline: Boolean) = RenderLayer.method_24294(texture, affectsOutline)
+    fun getEntityTranslucent(texture: Identifier?, affectsOutline: Boolean) = RenderLayer.method_24294(texture, affectsOutline)
     /**
      * method_56849
      */
@@ -333,15 +333,15 @@ object RenderLayerKt {
     /**
      * method_28115
      */
-    fun getEntityCutoutNoCullZOffset(texture: Identifier, affectsOutline: Boolean) = RenderLayer.method_28115(texture, affectsOutline)
+    fun getEntityCutoutNoCullZOffset(texture: Identifier?, affectsOutline: Boolean) = RenderLayer.method_28115(texture, affectsOutline)
     /**
      * method_62280
      */
-    fun getCrosshair(texture: Identifier) = RenderLayer.method_62280(texture)
+    fun getCrosshair(texture: Identifier?) = RenderLayer.method_62280(texture)
     /**
      * method_23573
      */
-    fun getEntityAlpha(texture: Identifier) = RenderLayer.method_23573(texture)
+    fun getEntityAlpha(texture: Identifier?) = RenderLayer.method_23573(texture)
     /**
      * method_23577
      */
@@ -349,11 +349,11 @@ object RenderLayerKt {
     /**
      * method_34569
      */
-    fun of(program: net.minecraft.class_4668.class_5942) = RenderLayer.method_34569(program)
+    fun of(program: net.minecraft.class_4668.class_5942?) = RenderLayer.method_34569(program)
     /**
      * method_53491
      */
-    fun createArmorDecalCutoutNoCull(texture: Identifier) = RenderLayer.method_53491(texture)
+    fun createArmorDecalCutoutNoCull(texture: Identifier?) = RenderLayer.method_53491(texture)
     /**
      * method_62284
      */
@@ -361,7 +361,7 @@ object RenderLayerKt {
     /**
      * method_36435
      */
-    fun getTextIntensitySeeThrough(texture: Identifier) = RenderLayer.method_36435(texture)
+    fun getTextIntensitySeeThrough(texture: Identifier?) = RenderLayer.method_36435(texture)
     /**
      * method_51784
      */
@@ -373,7 +373,7 @@ object RenderLayerKt {
     /**
      * method_24293
      */
-    fun getEntityCutoutNoCull(texture: Identifier, affectsOutline: Boolean) = RenderLayer.method_24293(texture, affectsOutline)
+    fun getEntityCutoutNoCull(texture: Identifier?, affectsOutline: Boolean) = RenderLayer.method_24293(texture, affectsOutline)
     /**
      * method_30676
      */
@@ -381,9 +381,9 @@ object RenderLayerKt {
     /**
      * method_23584
      */
-    fun getEntitySmoothCutout(texture: Identifier) = RenderLayer.method_23584(texture)
+    fun getEntitySmoothCutout(texture: Identifier?) = RenderLayer.method_23584(texture)
     /**
      * method_23572
      */
-    fun getEntitySolid(texture: Identifier) = RenderLayer.method_23572(texture)
+    fun getEntitySolid(texture: Identifier?) = RenderLayer.method_23572(texture)
 }

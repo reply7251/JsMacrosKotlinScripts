@@ -8,7 +8,7 @@ fun ChunkDataS2CPacket.getChunkData() = this.method_38598()
 /**
  * method_11528
  */
-fun ChunkDataS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11528(arg0)
+fun ChunkDataS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11528(arg0)
 /**
  * method_11524
  */

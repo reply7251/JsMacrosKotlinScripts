@@ -9,5 +9,5 @@ object QuickPlayKt {
     /**
      * method_51260
      */
-    fun startQuickPlay(client: MinecraftClient, quickPlay: net.minecraft.class_542.class_8495, realmsClient: RealmsClient) = QuickPlay.method_51260(client, quickPlay, realmsClient)
+    fun startQuickPlay(client: MinecraftClient?, quickPlay: net.minecraft.class_542.class_8495?, realmsClient: RealmsClient?) = QuickPlay.method_51260(client, quickPlay, realmsClient)
 }

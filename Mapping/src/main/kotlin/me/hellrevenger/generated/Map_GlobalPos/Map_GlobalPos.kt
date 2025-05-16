@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_65075
  */
-fun GlobalPos.isWithinRange(dimension: RegistryKey<world_World>, otherPos: BlockPos, maxDistance: Int) = this.method_65075(dimension, otherPos, maxDistance)
+fun GlobalPos.isWithinRange(dimension: RegistryKey<world_World>?, otherPos: BlockPos?, maxDistance: Int) = this.method_65075(dimension, otherPos, maxDistance)
 /**
  * comp_2207
  */

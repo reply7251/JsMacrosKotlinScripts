@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_825
  */
-fun AlternativeLootCondition.test(arg0: LootContext) = this.method_825(arg0)
+fun AlternativeLootCondition.test(arg0: LootContext?) = this.method_825(arg0)

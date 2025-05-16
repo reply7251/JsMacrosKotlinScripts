@@ -12,7 +12,7 @@ fun <T>realms_Request<T>.getRetryAfterHeader() where T: realms_Request<T> = this
 /**
  * method_21042
  */
-fun <T>realms_Request<T>.cookie(key: String, value: String) where T: realms_Request<T> = this.method_21042(key, value)
+fun <T>realms_Request<T>.cookie(key: String?, value: String?) where T: realms_Request<T> = this.method_21042(key, value)
 /**
  * method_21051
  */
@@ -24,4 +24,4 @@ fun <T>realms_Request<T>.responseCode() where T: realms_Request<T> = this.method
 /**
  * method_21052
  */
-fun <T>realms_Request<T>.getHeader(header: String) where T: realms_Request<T> = this.method_21052(header)
+fun <T>realms_Request<T>.getHeader(header: String?) where T: realms_Request<T> = this.method_21052(header)

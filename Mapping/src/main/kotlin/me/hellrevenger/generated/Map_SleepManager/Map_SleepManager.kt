@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_33814
  */
-fun SleepManager.update(players: MutableList<ServerPlayerEntity>) = this.method_33814(players)
+fun SleepManager.update(players: MutableList<ServerPlayerEntity>?) = this.method_33814(players)
 /**
  * method_33815
  */
@@ -24,4 +24,4 @@ fun SleepManager.getNightSkippingRequirement(percentage: Int) = this.method_3381
 /**
  * method_33813
  */
-fun SleepManager.canResetTime(percentage: Int, players: MutableList<ServerPlayerEntity>) = this.method_33813(percentage, players)
+fun SleepManager.canResetTime(percentage: Int, players: MutableList<ServerPlayerEntity>?) = this.method_33813(percentage, players)

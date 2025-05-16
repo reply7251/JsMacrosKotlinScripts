@@ -49,5 +49,5 @@ object AttributeModifierSlotKt {
     /**
      * method_59524
      */
-    fun forEquipmentSlot(slot: EquipmentSlot) = AttributeModifierSlot.method_59524(slot)
+    fun forEquipmentSlot(slot: EquipmentSlot?) = AttributeModifierSlot.method_59524(slot)
 }

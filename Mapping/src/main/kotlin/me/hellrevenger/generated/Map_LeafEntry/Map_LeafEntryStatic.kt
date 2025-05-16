@@ -13,5 +13,5 @@ object LeafEntryKt {
     /**
      * method_434
      */
-    fun builder(factory: net.minecraft.class_85.class_89) = LeafEntry.method_434(factory)
+    fun builder(factory: net.minecraft.class_85.class_89?) = LeafEntry.method_434(factory)
 }

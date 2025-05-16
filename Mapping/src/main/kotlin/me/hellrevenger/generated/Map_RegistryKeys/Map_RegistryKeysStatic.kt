@@ -465,17 +465,17 @@ object RegistryKeysKt {
     /**
      * method_60915
      */
-    fun getPath(registryRef: RegistryKey<out Registry<*>>) = RegistryKeys.method_60915(registryRef)
+    fun getPath(registryRef: RegistryKey<out Registry<*>>?) = RegistryKeys.method_60915(registryRef)
     /**
      * method_47518
      */
-    fun toDimensionKey(key: RegistryKey<world_World>) = RegistryKeys.method_47518(key)
+    fun toDimensionKey(key: RegistryKey<world_World>?) = RegistryKeys.method_47518(key)
     /**
      * method_47516
      */
-    fun toWorldKey(key: RegistryKey<DimensionOptions>) = RegistryKeys.method_47516(key)
+    fun toWorldKey(key: RegistryKey<DimensionOptions>?) = RegistryKeys.method_47516(key)
     /**
      * method_60916
      */
-    fun getTagPath(registryRef: RegistryKey<out Registry<*>>) = RegistryKeys.method_60916(registryRef)
+    fun getTagPath(registryRef: RegistryKey<out Registry<*>>?) = RegistryKeys.method_60916(registryRef)
 }

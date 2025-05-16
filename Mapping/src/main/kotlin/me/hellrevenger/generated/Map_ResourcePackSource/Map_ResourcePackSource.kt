@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_45282
  */
-fun ResourcePackSource.decorate(packDisplayName: Text) = this.method_45282(packDisplayName)
+fun ResourcePackSource.decorate(packDisplayName: Text?) = this.method_45282(packDisplayName)
 /**
  * method_45279
  */

@@ -9,5 +9,5 @@ object BasicBakedModelKt {
     /**
      * method_65762
      */
-    fun bake(elements: MutableList<ModelElement>, textures: ModelTextures, spriteGetter: SpriteGetter, settings: ModelBakeSettings, ambientOcclusion: Boolean, isSideLit: Boolean, hasDepth: Boolean, transformation: ModelTransformation) = BasicBakedModel.method_65762(elements, textures, spriteGetter, settings, ambientOcclusion, isSideLit, hasDepth, transformation)
+    fun bake(elements: MutableList<ModelElement>?, textures: ModelTextures?, spriteGetter: SpriteGetter?, settings: ModelBakeSettings?, ambientOcclusion: Boolean, isSideLit: Boolean, hasDepth: Boolean, transformation: ModelTransformation?) = BasicBakedModel.method_65762(elements, textures, spriteGetter, settings, ambientOcclusion, isSideLit, hasDepth, transformation)
 }

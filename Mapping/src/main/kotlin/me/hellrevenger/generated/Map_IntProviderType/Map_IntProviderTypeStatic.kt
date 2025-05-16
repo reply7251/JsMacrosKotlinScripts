@@ -5,5 +5,5 @@ object IntProviderTypeKt {
     /**
      * method_35014
      */
-    fun <P>register(id: String, arg1: MapCodec<P>) where P: IntProvider = IntProviderType.method_35014<P>(id, arg1)
+    fun <P>register(id: String?, arg1: MapCodec<P>?) where P: IntProvider = IntProviderType.method_35014<P>(id, arg1)
 }

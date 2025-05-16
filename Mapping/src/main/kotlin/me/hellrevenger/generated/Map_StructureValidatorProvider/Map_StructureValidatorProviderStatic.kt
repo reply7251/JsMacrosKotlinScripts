@@ -5,5 +5,5 @@ object StructureValidatorProviderKt {
     /**
      * method_32235
      */
-    fun update(name: String, nbt: NbtCompound) = StructureValidatorProvider.method_32235(name, nbt)
+    fun update(name: String?, nbt: NbtCompound?) = StructureValidatorProvider.method_32235(name, nbt)
 }

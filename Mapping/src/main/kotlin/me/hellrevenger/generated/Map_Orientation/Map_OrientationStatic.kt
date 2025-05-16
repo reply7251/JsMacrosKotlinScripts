@@ -53,5 +53,5 @@ object OrientationKt {
     /**
      * method_26425
      */
-    fun byDirections(facing: Direction, rotation: Direction) = Orientation.method_26425(facing, rotation)
+    fun byDirections(facing: Direction?, rotation: Direction?) = Orientation.method_26425(facing, rotation)
 }

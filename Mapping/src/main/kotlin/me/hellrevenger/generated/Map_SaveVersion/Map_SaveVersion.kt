@@ -12,7 +12,7 @@ fun SaveVersion.getId() = this.method_38494()
 /**
  * method_38493
  */
-fun SaveVersion.isAvailableTo(other: SaveVersion) = this.method_38493(other)
+fun SaveVersion.isAvailableTo(other: SaveVersion?) = this.method_38493(other)
 /**
  * method_38492
  */

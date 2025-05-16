@@ -13,5 +13,5 @@ object GameProfileArgumentTypeKt {
     /**
      * method_9330
      */
-    fun getProfileArgument(context: CommandContext<ServerCommandSource>, name: String) = GameProfileArgumentType.method_9330(context, name)
+    fun getProfileArgument(context: CommandContext<ServerCommandSource>?, name: String?) = GameProfileArgumentType.method_9330(context, name)
 }

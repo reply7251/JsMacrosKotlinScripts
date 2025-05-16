@@ -21,7 +21,7 @@ object ColorHelperKt {
     /**
      * method_61325
      */
-    fun getArgb(rgb: Vec3d) = ColorHelper.method_61325(rgb)
+    fun getArgb(rgb: Vec3d?) = ColorHelper.method_61325(rgb)
     /**
      * method_64963
      */

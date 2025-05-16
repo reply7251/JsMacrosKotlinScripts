@@ -9,7 +9,7 @@ object GeneratorOptionsKt {
     /**
      * method_46720
      */
-    fun parseSeed(seed: String) = GeneratorOptions.method_46720(seed)
+    fun parseSeed(seed: String?) = GeneratorOptions.method_46720(seed)
     /**
      * method_46721
      */

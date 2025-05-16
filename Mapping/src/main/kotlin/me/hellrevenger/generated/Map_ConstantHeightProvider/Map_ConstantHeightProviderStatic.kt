@@ -9,5 +9,5 @@ object ConstantHeightProviderKt {
     /**
      * method_35383
      */
-    fun create(offset: YOffset) = ConstantHeightProvider.method_35383(offset)
+    fun create(offset: YOffset?) = ConstantHeightProvider.method_35383(offset)
 }

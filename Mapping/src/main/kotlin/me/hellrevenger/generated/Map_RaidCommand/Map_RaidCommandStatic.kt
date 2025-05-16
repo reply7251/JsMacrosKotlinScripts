@@ -5,5 +5,5 @@ object RaidCommandKt {
     /**
      * method_36192
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>, registryAccess: CommandRegistryAccess) = RaidCommand.method_36192(dispatcher, registryAccess)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?, registryAccess: CommandRegistryAccess?) = RaidCommand.method_36192(dispatcher, registryAccess)
 }

@@ -17,9 +17,9 @@ object CreakingHeartBlockKt {
     /**
      * method_64784
      */
-    fun shouldBeEnabled(state: BlockState, world: WorldView, pos: BlockPos) = CreakingHeartBlock.method_64784(state, world, pos)
+    fun shouldBeEnabled(state: BlockState?, world: WorldView?, pos: BlockPos?) = CreakingHeartBlock.method_64784(state, world, pos)
     /**
      * method_65147
      */
-    fun isNightAndNatural(world: world_World) = CreakingHeartBlock.method_65147(world)
+    fun isNightAndNatural(world: world_World?) = CreakingHeartBlock.method_65147(world)
 }

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_51453
  */
-fun SplashTextRenderer.render(context: DrawContext, screenWidth: Int, textRenderer: TextRenderer, alpha: Int) = this.method_51453(context, screenWidth, textRenderer, alpha)
+fun SplashTextRenderer.render(context: DrawContext?, screenWidth: Int, textRenderer: TextRenderer?, alpha: Int) = this.method_51453(context, screenWidth, textRenderer, alpha)

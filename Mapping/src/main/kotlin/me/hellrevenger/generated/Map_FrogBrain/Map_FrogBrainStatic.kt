@@ -5,7 +5,7 @@ object FrogBrainKt {
     /**
      * method_41373
      */
-    fun updateActivities(frog: FrogEntity) = FrogBrain.method_41373(frog)
+    fun updateActivities(frog: FrogEntity?) = FrogBrain.method_41373(frog)
     /**
      * method_41366
      */

@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9107
  */
-fun RecipeUnlockedCriterion.trigger(player: ServerPlayerEntity, recipe: RecipeEntry<*>) = this.method_9107(player, recipe)
+fun RecipeUnlockedCriterion.trigger(player: ServerPlayerEntity?, recipe: RecipeEntry<*>?) = this.method_9107(player, recipe)

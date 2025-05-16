@@ -20,7 +20,7 @@ fun WorldRenderer.getEntityOutlinesFramebuffer() = this.method_22990()
 /**
  * method_32133
  */
-fun WorldRenderer.setupFrustum(pos: Vec3d, positionMatrix: Matrix4f, projectionMatrix: Matrix4f) = this.method_32133(pos, positionMatrix, projectionMatrix)
+fun WorldRenderer.setupFrustum(pos: Vec3d?, positionMatrix: Matrix4f?, projectionMatrix: Matrix4f?) = this.method_32133(pos, positionMatrix, projectionMatrix)
 /**
  * method_18146
  */
@@ -32,7 +32,7 @@ fun WorldRenderer.getChunksDebugString() = this.method_3289()
 /**
  * method_22710
  */
-fun WorldRenderer.render(allocator: ObjectAllocator, tickCounter: RenderTickCounter, renderBlockOutline: Boolean, camera: Camera, gameRenderer: GameRenderer, positionMatrix: Matrix4f, projectionMatrix: Matrix4f) = this.method_22710(allocator, tickCounter, renderBlockOutline, camera, gameRenderer, positionMatrix, projectionMatrix)
+fun WorldRenderer.render(allocator: ObjectAllocator?, tickCounter: RenderTickCounter?, renderBlockOutline: Boolean, camera: Camera?, gameRenderer: GameRenderer?, positionMatrix: Matrix4f?, projectionMatrix: Matrix4f?) = this.method_22710(allocator, tickCounter, renderBlockOutline, camera, gameRenderer, positionMatrix, projectionMatrix)
 /**
  * method_29364
  */
@@ -40,11 +40,11 @@ fun WorldRenderer.getCloudsFramebuffer() = this.method_29364()
 /**
  * method_21596
  */
-fun WorldRenderer.scheduleBlockRerenderIfNeeded(pos: BlockPos, old: BlockState, updated: BlockState) = this.method_21596(pos, old, updated)
+fun WorldRenderer.scheduleBlockRerenderIfNeeded(pos: BlockPos?, old: BlockState?, updated: BlockState?) = this.method_21596(pos, old, updated)
 /**
  * method_3244
  */
-fun WorldRenderer.setWorld(world: ClientWorld) = this.method_3244(world)
+fun WorldRenderer.setWorld(world: ClientWorld?) = this.method_3244(world)
 /**
  * method_62220
  */
@@ -60,7 +60,7 @@ fun WorldRenderer.getCapturedFrustum() = this.method_62222()
 /**
  * method_62209
  */
-fun WorldRenderer.addWeatherParticlesAndSound(camera: Camera) = this.method_62209(camera)
+fun WorldRenderer.addWeatherParticlesAndSound(camera: Camera?) = this.method_62209(camera)
 /**
  * method_34812
  */
@@ -88,11 +88,11 @@ fun WorldRenderer.getChunkBuilder() = this.method_34810()
 /**
  * method_40050
  */
-fun WorldRenderer.isRenderingReady(pos: BlockPos) = this.method_40050(pos)
+fun WorldRenderer.isRenderingReady(pos: BlockPos?) = this.method_40050(pos)
 /**
  * method_38550
  */
-fun WorldRenderer.addBuiltChunk(chunk: net.minecraft.class_846.class_851) = this.method_38550(chunk)
+fun WorldRenderer.addBuiltChunk(chunk: net.minecraft.class_846.class_851?) = this.method_38550(chunk)
 /**
  * method_3281
  */
@@ -104,11 +104,11 @@ fun WorldRenderer.getCloudRenderer() = this.method_62196()
 /**
  * method_8569
  */
-fun WorldRenderer.setBlockBreakingInfo(entityId: Int, pos: BlockPos, stage: Int) = this.method_8569(entityId, pos, stage)
+fun WorldRenderer.setBlockBreakingInfo(entityId: Int, pos: BlockPos?, stage: Int) = this.method_8569(entityId, pos, stage)
 /**
  * method_8563
  */
-fun WorldRenderer.addParticle(parameters: ParticleEffect, force: Boolean, canSpawnOnMinimal: Boolean, x: Double, arg4: Double, y: Double, arg6: Double, z: Double, arg8: Double) = this.method_8563(parameters, force, canSpawnOnMinimal, x, arg4, y, arg6, z, arg8)
+fun WorldRenderer.addParticle(parameters: ParticleEffect?, force: Boolean, canSpawnOnMinimal: Boolean, x: Double, arg4: Double, y: Double, arg6: Double, z: Double, arg8: Double) = this.method_8563(parameters, force, canSpawnOnMinimal, x, arg4, y, arg6, z, arg8)
 /**
  * method_3254
  */
@@ -120,7 +120,7 @@ fun WorldRenderer.onChunkUnload(sectionPos: Long) = this.method_62908(sectionPos
 /**
  * method_8570
  */
-fun WorldRenderer.updateBlock(world: BlockView, pos: BlockPos, oldState: BlockState, newState: BlockState, flags: Int) = this.method_8570(world, pos, oldState, newState, flags)
+fun WorldRenderer.updateBlock(world: BlockView?, pos: BlockPos?, oldState: BlockState?, newState: BlockState?, flags: Int) = this.method_8570(world, pos, oldState, newState, flags)
 /**
  * method_29360
  */
@@ -160,7 +160,7 @@ fun WorldRenderer.scheduleChunkRender(chunkX: Int, chunkY: Int, chunkZ: Int) = t
 /**
  * method_3245
  */
-fun WorldRenderer.updateNoCullingBlockEntities(removed: Collection<BlockEntity>, added: Collection<BlockEntity>) = this.method_3245(removed, added)
+fun WorldRenderer.updateNoCullingBlockEntities(removed: Collection<BlockEntity>?, added: Collection<BlockEntity>?) = this.method_3245(removed, added)
 /**
  * method_3296
  */
@@ -168,7 +168,7 @@ fun WorldRenderer.loadEntityOutlinePostProcessor() = this.method_3296()
 /**
  * method_65201
  */
-fun WorldRenderer.scheduleNeighborUpdates(chunkPos: ChunkPos) = this.method_65201(chunkPos)
+fun WorldRenderer.scheduleNeighborUpdates(chunkPos: ChunkPos?) = this.method_65201(chunkPos)
 /**
  * method_29362
  */
@@ -176,4 +176,4 @@ fun WorldRenderer.getParticlesFramebuffer() = this.method_29362()
 /**
  * method_8568
  */
-fun WorldRenderer.addParticle(parameters: ParticleEffect, force: Boolean, x: Double, arg3: Double, y: Double, arg5: Double, z: Double, arg7: Double) = this.method_8568(parameters, force, x, arg3, y, arg5, z, arg7)
+fun WorldRenderer.addParticle(parameters: ParticleEffect?, force: Boolean, x: Double, arg3: Double, y: Double, arg5: Double, z: Double, arg7: Double) = this.method_8568(parameters, force, x, arg3, y, arg5, z, arg7)

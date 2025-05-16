@@ -13,5 +13,5 @@ object JukeboxBlockEntityKt {
     /**
      * method_44370
      */
-    fun tick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: JukeboxBlockEntity) = JukeboxBlockEntity.method_44370(world, pos, state, blockEntity)
+    fun tick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: JukeboxBlockEntity?) = JukeboxBlockEntity.method_44370(world, pos, state, blockEntity)
 }

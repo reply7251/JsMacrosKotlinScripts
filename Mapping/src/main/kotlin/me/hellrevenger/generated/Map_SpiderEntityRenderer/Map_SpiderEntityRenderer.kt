@@ -8,4 +8,4 @@ fun <T>SpiderEntityRenderer<T>.createRenderState() where T: SpiderEntity = this.
 /**
  * method_62539
  */
-fun <T>SpiderEntityRenderer<T>.updateRenderState(arg0: T, arg1: LivingEntityRenderState, arg2: Float) where T: SpiderEntity = this.method_62539(arg0, arg1, arg2)
+fun <T>SpiderEntityRenderer<T>.updateRenderState(arg0: T, arg1: LivingEntityRenderState?, arg2: Float) where T: SpiderEntity = this.method_62539(arg0, arg1, arg2)

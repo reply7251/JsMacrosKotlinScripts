@@ -5,5 +5,5 @@ object HeightmapPlacementModifierKt {
     /**
      * method_39638
      */
-    fun of(heightmap: net.minecraft.class_2902.class_2903) = HeightmapPlacementModifier.method_39638(heightmap)
+    fun of(heightmap: net.minecraft.class_2902.class_2903?) = HeightmapPlacementModifier.method_39638(heightmap)
 }

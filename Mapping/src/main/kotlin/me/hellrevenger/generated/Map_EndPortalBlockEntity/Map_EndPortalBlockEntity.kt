@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_11400
  */
-fun EndPortalBlockEntity.shouldDrawSide(direction: Direction) = this.method_11400(direction)
+fun EndPortalBlockEntity.shouldDrawSide(direction: Direction?) = this.method_11400(direction)

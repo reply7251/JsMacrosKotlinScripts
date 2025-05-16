@@ -161,5 +161,5 @@ object StatusEffectsKt {
     /**
      * method_55664
      */
-    fun registerAndGetDefault(registry: Registry<StatusEffect>) = StatusEffects.method_55664(registry)
+    fun registerAndGetDefault(registry: Registry<StatusEffect>?) = StatusEffects.method_55664(registry)
 }

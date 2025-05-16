@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_19100
  */
-fun <E>Sensor<E>.tick(world: ServerWorld, entity: E) where E: LivingEntity = this.method_19100(world, entity)
+fun <E>Sensor<E>.tick(world: ServerWorld?, entity: E) where E: LivingEntity = this.method_19100(world, entity)
 /**
  * method_19099
  */

@@ -9,5 +9,5 @@ object ClampedNormalFloatProviderKt {
     /**
      * method_33903
      */
-    fun get(random: Random, mean: Float, deviation: Float, min: Float, max: Float) = ClampedNormalFloatProvider.method_33903(random, mean, deviation, min, max)
+    fun get(random: Random?, mean: Float, deviation: Float, min: Float, max: Float) = ClampedNormalFloatProvider.method_33903(random, mean, deviation, min, max)
 }

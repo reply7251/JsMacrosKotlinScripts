@@ -20,8 +20,8 @@ fun ShulkerBoxBlockEntity.getColor() = this.method_11320()
 /**
  * method_11319
  */
-fun ShulkerBoxBlockEntity.readInventoryNbt(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = this.method_11319(nbt, registries)
+fun ShulkerBoxBlockEntity.readInventoryNbt(nbt: NbtCompound?, registries: net.minecraft.class_7225.class_7874?) = this.method_11319(nbt, registries)
 /**
  * method_11314
  */
-fun ShulkerBoxBlockEntity.getBoundingBox(state: BlockState) = this.method_11314(state)
+fun ShulkerBoxBlockEntity.getBoundingBox(state: BlockState?) = this.method_11314(state)

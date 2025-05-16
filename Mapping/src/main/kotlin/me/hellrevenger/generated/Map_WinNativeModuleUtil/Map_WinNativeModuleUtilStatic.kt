@@ -5,7 +5,7 @@ object WinNativeModuleUtilKt {
     /**
      * method_37966
      */
-    fun addDetailTo(section: CrashReportSection) = WinNativeModuleUtil.method_37966(section)
+    fun addDetailTo(section: CrashReportSection?) = WinNativeModuleUtil.method_37966(section)
     /**
      * method_37961
      */

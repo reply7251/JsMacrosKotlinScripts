@@ -97,7 +97,7 @@ object FormattingKt {
     /**
      * method_539
      */
-    fun strip(string: String) = Formatting.method_539(string)
+    fun strip(string: String?) = Formatting.method_539(string)
     /**
      * method_540
      */
@@ -105,7 +105,7 @@ object FormattingKt {
     /**
      * method_533
      */
-    fun byName(name: String) = Formatting.method_533(name)
+    fun byName(name: String?) = Formatting.method_533(name)
     /**
      * method_534
      */

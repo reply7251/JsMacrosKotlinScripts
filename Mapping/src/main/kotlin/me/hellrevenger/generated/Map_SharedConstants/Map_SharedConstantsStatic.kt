@@ -101,11 +101,11 @@ object SharedConstantsKt {
     /**
      * method_37896
      */
-    fun isOutsideGenerationArea(pos: ChunkPos) = SharedConstants.method_37896(pos)
+    fun isOutsideGenerationArea(pos: ChunkPos?) = SharedConstants.method_37896(pos)
     /**
      * method_34872
      */
-    fun setGameVersion(gameVersion: GameVersion) = SharedConstants.method_34872(gameVersion)
+    fun setGameVersion(gameVersion: GameVersion?) = SharedConstants.method_34872(gameVersion)
     /**
      * method_31372
      */

@@ -9,7 +9,7 @@ object SpecialModelTypesKt {
     /**
      * method_65714
      */
-    fun buildBlockToModelTypeMap(entityModels: LoadedEntityModels) = SpecialModelTypes.method_65714(entityModels)
+    fun buildBlockToModelTypeMap(entityModels: LoadedEntityModels?) = SpecialModelTypes.method_65714(entityModels)
     /**
      * method_65712
      */

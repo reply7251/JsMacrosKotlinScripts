@@ -5,5 +5,5 @@ object ItemAssetsLoaderKt {
     /**
      * method_65929
      */
-    fun load(resourceManager: ResourceManager, executor: Executor) = ItemAssetsLoader.method_65929(resourceManager, executor)
+    fun load(resourceManager: ResourceManager?, executor: Executor?) = ItemAssetsLoader.method_65929(resourceManager, executor)
 }

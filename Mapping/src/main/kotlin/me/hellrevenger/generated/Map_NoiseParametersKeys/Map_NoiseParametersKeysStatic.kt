@@ -245,5 +245,5 @@ object NoiseParametersKeysKt {
     /**
      * method_41127
      */
-    fun createNoiseSampler(noiseParametersLookup: RegistryEntryLookup<net.minecraft.class_5216.class_5487>, splitter: RandomSplitter, key: RegistryKey<net.minecraft.class_5216.class_5487>) = NoiseParametersKeys.method_41127(noiseParametersLookup, splitter, key)
+    fun createNoiseSampler(noiseParametersLookup: RegistryEntryLookup<net.minecraft.class_5216.class_5487>?, splitter: RandomSplitter?, key: RegistryKey<net.minecraft.class_5216.class_5487>?) = NoiseParametersKeys.method_41127(noiseParametersLookup, splitter, key)
 }

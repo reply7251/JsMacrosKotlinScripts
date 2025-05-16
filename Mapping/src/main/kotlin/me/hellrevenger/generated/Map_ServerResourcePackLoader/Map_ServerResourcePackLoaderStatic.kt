@@ -5,5 +5,5 @@ object ServerResourcePackLoaderKt {
     /**
      * method_55518
      */
-    fun toHashCode(hash: String) = ServerResourcePackLoader.method_55518(hash)
+    fun toHashCode(hash: String?) = ServerResourcePackLoader.method_55518(hash)
 }

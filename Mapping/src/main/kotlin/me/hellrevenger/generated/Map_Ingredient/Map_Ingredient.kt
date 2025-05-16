@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_65798
  */
-fun Ingredient.acceptsItem(arg0: RegistryEntry<Item>) = this.method_65798(arg0)
+fun Ingredient.acceptsItem(arg0: RegistryEntry<Item>?) = this.method_65798(arg0)
 /**
  * method_8093
  */
-fun Ingredient.test(arg0: ItemStack) = this.method_8093(arg0)
+fun Ingredient.test(arg0: ItemStack?) = this.method_8093(arg0)
 /**
  * method_8105
  */

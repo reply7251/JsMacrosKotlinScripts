@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_34702
  */
-fun ExecutorSampling.add(executor: SampleableExecutor) = this.method_34702(executor)
+fun ExecutorSampling.add(executor: SampleableExecutor?) = this.method_34702(executor)
 /**
  * method_37178
  */

@@ -9,5 +9,5 @@ object AnvilBlockKt {
     /**
      * method_9346
      */
-    fun getLandingState(fallingState: BlockState) = AnvilBlock.method_9346(fallingState)
+    fun getLandingState(fallingState: BlockState?) = AnvilBlock.method_9346(fallingState)
 }

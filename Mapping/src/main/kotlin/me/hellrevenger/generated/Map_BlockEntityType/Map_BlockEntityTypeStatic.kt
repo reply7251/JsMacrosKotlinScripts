@@ -185,5 +185,5 @@ object BlockEntityTypeKt {
     /**
      * method_11033
      */
-    fun <T>getId(type: BlockEntityType<*>) where T: BlockEntity = BlockEntityType.method_11033(type)
+    fun <T>getId(type: BlockEntityType<*>?) where T: BlockEntity = BlockEntityType.method_11033(type)
 }

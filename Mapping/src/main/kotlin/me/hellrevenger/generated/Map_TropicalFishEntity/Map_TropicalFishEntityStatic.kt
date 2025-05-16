@@ -25,7 +25,7 @@ object TropicalFishEntityKt {
     /**
      * method_38985
      */
-    fun canTropicalFishSpawn(type: EntityType<TropicalFishEntity>, world: WorldAccess, reason: SpawnReason, pos: BlockPos, random: Random) = TropicalFishEntity.method_38985(type, world, reason, pos, random)
+    fun canTropicalFishSpawn(type: EntityType<TropicalFishEntity>?, world: WorldAccess?, reason: SpawnReason?, pos: BlockPos?, random: Random?) = TropicalFishEntity.method_38985(type, world, reason, pos, random)
     /**
      * method_47864
      */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_21797
  */
-fun BeeEntity.setFlowerPos(flowerPos: BlockPos) = this.method_21797(flowerPos)
+fun BeeEntity.setFlowerPos(flowerPos: BlockPos?) = this.method_21797(flowerPos)
 /**
  * method_21791
  */
@@ -12,7 +12,7 @@ fun BeeEntity.hasHivePos() = this.method_21791()
 /**
  * method_57301
  */
-fun BeeEntity.setHivePos(pos: BlockPos) = this.method_57301(pos)
+fun BeeEntity.setHivePos(pos: BlockPos?) = this.method_57301(pos)
 /**
  * method_21780
  */
@@ -24,7 +24,7 @@ fun BeeEntity.hasNectar() = this.method_21784()
 /**
  * method_21771
  */
-fun BeeEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_21771(arg0, arg1)
+fun BeeEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_21771(arg0, arg1)
 /**
  * method_21788
  */

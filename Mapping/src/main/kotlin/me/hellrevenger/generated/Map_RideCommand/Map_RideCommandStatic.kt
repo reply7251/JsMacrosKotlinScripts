@@ -5,5 +5,5 @@ object RideCommandKt {
     /**
      * method_48078
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = RideCommand.method_48078(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = RideCommand.method_48078(dispatcher)
 }

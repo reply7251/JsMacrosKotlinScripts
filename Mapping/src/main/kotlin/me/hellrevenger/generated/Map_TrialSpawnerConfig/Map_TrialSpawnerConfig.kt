@@ -16,7 +16,7 @@ fun TrialSpawnerConfig.getTotalMobs(additionalPlayers: Int) = this.method_55179(
 /**
  * method_65373
  */
-fun TrialSpawnerConfig.withSpawnPotential(entityType: EntityType<*>) = this.method_65373(entityType)
+fun TrialSpawnerConfig.withSpawnPotential(entityType: EntityType<*>?) = this.method_65373(entityType)
 /**
  * method_55181
  */

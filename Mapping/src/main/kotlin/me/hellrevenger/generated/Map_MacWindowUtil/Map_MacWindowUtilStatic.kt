@@ -9,7 +9,7 @@ object MacWindowUtilKt {
     /**
      * method_41718
      */
-    fun setApplicationIconImage(iconSupplier: InputSupplier<InputStream>) = MacWindowUtil.method_41718(iconSupplier)
+    fun setApplicationIconImage(iconSupplier: InputSupplier<InputStream>?) = MacWindowUtil.method_41718(iconSupplier)
     /**
      * method_54101
      */

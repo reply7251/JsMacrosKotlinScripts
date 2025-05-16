@@ -12,7 +12,7 @@ fun AdvancementUpdateS2CPacket.shouldClearCurrent() = this.method_11924()
 /**
  * method_11925
  */
-fun AdvancementUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11925(arg0)
+fun AdvancementUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11925(arg0)
 /**
  * method_11927
  */

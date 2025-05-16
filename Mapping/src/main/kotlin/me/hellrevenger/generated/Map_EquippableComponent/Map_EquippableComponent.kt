@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_64015
  */
-fun EquippableComponent.allows(entityType: EntityType<*>) = this.method_64015(entityType)
+fun EquippableComponent.allows(entityType: EntityType<*>?) = this.method_64015(entityType)
 /**
  * method_64018
  */
-fun EquippableComponent.equip(stack: ItemStack, player: PlayerEntity) = this.method_64018(stack, player)
+fun EquippableComponent.equip(stack: ItemStack?, player: PlayerEntity?) = this.method_64018(stack, player)
 /**
  * comp_3177
  */

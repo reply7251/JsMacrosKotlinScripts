@@ -12,4 +12,4 @@ fun TelemetryManager.getSender() = this.method_51796()
 /**
  * method_47706
  */
-fun TelemetryManager.createWorldSession(newWorld: Boolean, worldLoadTime: Duration, minigameName: String) = this.method_47706(newWorld, worldLoadTime, minigameName)
+fun TelemetryManager.createWorldSession(newWorld: Boolean, worldLoadTime: Duration?, minigameName: String?) = this.method_47706(newWorld, worldLoadTime, minigameName)

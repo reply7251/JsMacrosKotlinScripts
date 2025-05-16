@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_58340
  */
-fun <T>ArgumentParser<T>.startParsing(state: ParsingState<StringReader>) = this.method_58340(state)
+fun <T>ArgumentParser<T>.startParsing(state: ParsingState<StringReader>?) = this.method_58340(state)
 /**
  * method_58341
  */
-fun <T>ArgumentParser<T>.parse(reader: StringReader) = this.method_58341(reader)
+fun <T>ArgumentParser<T>.parse(reader: StringReader?) = this.method_58341(reader)
 /**
  * method_58342
  */
-fun <T>ArgumentParser<T>.listSuggestions(builder: SuggestionsBuilder) = this.method_58342(builder)
+fun <T>ArgumentParser<T>.listSuggestions(builder: SuggestionsBuilder?) = this.method_58342(builder)
 /**
  * comp_2485
  */

@@ -5,5 +5,5 @@ object PlayerActivitiesKt {
     /**
      * method_35687
      */
-    fun parse(json: String) = PlayerActivities.method_35687(json)
+    fun parse(json: String?) = PlayerActivities.method_35687(json)
 }

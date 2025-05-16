@@ -161,5 +161,5 @@ object TypeReferencesKt {
     /**
      * method_59518
      */
-    fun create(typeName: String) = TypeReferences.method_59518(typeName)
+    fun create(typeName: String?) = TypeReferences.method_59518(typeName)
 }

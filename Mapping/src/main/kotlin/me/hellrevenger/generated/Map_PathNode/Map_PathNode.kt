@@ -52,15 +52,15 @@ var PathNode.pathLength by alias(PathNode::field_46)
 /**
  * method_32
  */
-fun PathNode.getSquaredDistance(node: PathNode) = this.method_32(node)
+fun PathNode.getSquaredDistance(node: PathNode?) = this.method_32(node)
 /**
  * method_35494
  */
-fun PathNode.getDistance(pos: BlockPos) = this.method_35494(pos)
+fun PathNode.getDistance(pos: BlockPos?) = this.method_35494(pos)
 /**
  * method_31
  */
-fun PathNode.getDistance(node: PathNode) = this.method_31(node)
+fun PathNode.getDistance(node: PathNode?) = this.method_31(node)
 /**
  * method_22879
  */
@@ -72,11 +72,11 @@ fun PathNode.getPos() = this.method_35496()
 /**
  * method_35497
  */
-fun PathNode.getSquaredDistance(pos: BlockPos) = this.method_35497(pos)
+fun PathNode.getSquaredDistance(pos: BlockPos?) = this.method_35497(pos)
 /**
  * method_44022
  */
-fun PathNode.getHorizontalDistance(node: PathNode) = this.method_44022(node)
+fun PathNode.getHorizontalDistance(node: PathNode?) = this.method_44022(node)
 /**
  * method_26
  */
@@ -84,11 +84,11 @@ fun PathNode.copyWithNewPosition(x: Int, y: Int, z: Int) = this.method_26(x, y, 
 /**
  * method_21653
  */
-fun PathNode.getManhattanDistance(node: PathNode) = this.method_21653(node)
+fun PathNode.getManhattanDistance(node: PathNode?) = this.method_21653(node)
 /**
  * method_35495
  */
-fun PathNode.write(buf: PacketByteBuf) = this.method_35495(buf)
+fun PathNode.write(buf: PacketByteBuf?) = this.method_35495(buf)
 /**
  * method_27
  */
@@ -96,4 +96,4 @@ fun PathNode.isInHeap() = this.method_27()
 /**
  * method_21654
  */
-fun PathNode.getManhattanDistance(pos: BlockPos) = this.method_21654(pos)
+fun PathNode.getManhattanDistance(pos: BlockPos?) = this.method_21654(pos)

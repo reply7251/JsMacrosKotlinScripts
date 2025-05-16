@@ -5,9 +5,9 @@ object ServerInfoKt {
     /**
      * method_2993
      */
-    fun fromNbt(root: NbtCompound) = ServerInfo.method_2993(root)
+    fun fromNbt(root: NbtCompound?) = ServerInfo.method_2993(root)
     /**
      * method_53885
      */
-    fun validateFavicon(favicon: ByteArray) = ServerInfo.method_53885(favicon)
+    fun validateFavicon(favicon: ByteArray?) = ServerInfo.method_53885(favicon)
 }

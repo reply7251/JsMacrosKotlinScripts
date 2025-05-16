@@ -5,5 +5,5 @@ object TradeRebalanceEnchantmentProvidersKt {
     /**
      * method_60271
      */
-    fun bootstrap(registry: Registerable<EnchantmentProvider>) = TradeRebalanceEnchantmentProviders.method_60271(registry)
+    fun bootstrap(registry: Registerable<EnchantmentProvider>?) = TradeRebalanceEnchantmentProviders.method_60271(registry)
 }

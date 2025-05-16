@@ -5,9 +5,9 @@ object NoiseHelperKt {
     /**
      * method_39119
      */
-    fun appendDebugInfo(builder: StringBuilder, originX: Double, arg2: Double, originY: Double, arg4: ByteArray) = NoiseHelper.method_39119(builder, originX, arg2, originY, arg4)
+    fun appendDebugInfo(builder: StringBuilder?, originX: Double, arg2: Double, originY: Double, arg4: ByteArray?) = NoiseHelper.method_39119(builder, originX, arg2, originY, arg4)
     /**
      * method_39120
      */
-    fun appendDebugInfo(builder: StringBuilder, originX: Double, arg2: Double, originY: Double, arg4: IntArray) = NoiseHelper.method_39120(builder, originX, arg2, originY, arg4)
+    fun appendDebugInfo(builder: StringBuilder?, originX: Double, arg2: Double, originY: Double, arg4: IntArray?) = NoiseHelper.method_39120(builder, originX, arg2, originY, arg4)
 }

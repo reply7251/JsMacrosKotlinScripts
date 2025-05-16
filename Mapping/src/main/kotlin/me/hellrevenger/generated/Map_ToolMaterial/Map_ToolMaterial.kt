@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_61663
  */
-fun ToolMaterial.applyToolSettings(settings: net.minecraft.class_1792.class_1793, effectiveBlocks: TagKey<Block>, attackDamage: Float, attackSpeed: Float) = this.method_61663(settings, effectiveBlocks, attackDamage, attackSpeed)
+fun ToolMaterial.applyToolSettings(settings: net.minecraft.class_1792.class_1793?, effectiveBlocks: TagKey<Block>?, attackDamage: Float, attackSpeed: Float) = this.method_61663(settings, effectiveBlocks, attackDamage, attackSpeed)
 /**
  * method_61662
  */
-fun ToolMaterial.applySwordSettings(settings: net.minecraft.class_1792.class_1793, attackDamage: Float, attackSpeed: Float) = this.method_61662(settings, attackDamage, attackSpeed)
+fun ToolMaterial.applySwordSettings(settings: net.minecraft.class_1792.class_1793?, attackDamage: Float, attackSpeed: Float) = this.method_61662(settings, attackDamage, attackSpeed)
 /**
  * comp_2935
  */

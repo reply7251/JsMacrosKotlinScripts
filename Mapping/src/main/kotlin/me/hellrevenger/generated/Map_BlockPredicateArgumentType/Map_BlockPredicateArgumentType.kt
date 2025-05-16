@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9642
  */
-fun BlockPredicateArgumentType.parse(arg0: StringReader) = this.method_9642(arg0)
+fun BlockPredicateArgumentType.parse(arg0: StringReader?) = this.method_9642(arg0)

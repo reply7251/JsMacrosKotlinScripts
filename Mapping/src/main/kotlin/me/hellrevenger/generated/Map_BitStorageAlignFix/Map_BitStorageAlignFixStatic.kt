@@ -5,5 +5,5 @@ object BitStorageAlignFixKt {
     /**
      * method_27288
      */
-    fun resizePackedIntArray(maxValue: Int, elementBits: Int, elements: LongArray) = BitStorageAlignFix.method_27288(maxValue, elementBits, elements)
+    fun resizePackedIntArray(maxValue: Int, elementBits: Int, elements: LongArray?) = BitStorageAlignFix.method_27288(maxValue, elementBits, elements)
 }

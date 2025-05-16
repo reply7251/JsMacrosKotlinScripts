@@ -5,9 +5,9 @@ object BlockColumnFeatureConfigKt {
     /**
      * method_38908
      */
-    fun createLayer(height: IntProvider, state: BlockStateProvider) = BlockColumnFeatureConfig.method_38908(height, state)
+    fun createLayer(height: IntProvider?, state: BlockStateProvider?) = BlockColumnFeatureConfig.method_38908(height, state)
     /**
      * method_38910
      */
-    fun create(height: IntProvider, state: BlockStateProvider) = BlockColumnFeatureConfig.method_38910(height, state)
+    fun create(height: IntProvider?, state: BlockStateProvider?) = BlockColumnFeatureConfig.method_38910(height, state)
 }

@@ -5,5 +5,5 @@ object AdvancementProgressKt {
     /**
      * method_732
      */
-    fun fromPacket(buf: PacketByteBuf) = AdvancementProgress.method_732(buf)
+    fun fromPacket(buf: PacketByteBuf?) = AdvancementProgress.method_732(buf)
 }

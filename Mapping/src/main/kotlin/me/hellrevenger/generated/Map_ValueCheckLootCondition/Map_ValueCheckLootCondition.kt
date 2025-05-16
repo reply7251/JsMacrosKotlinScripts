@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_32423
  */
-fun ValueCheckLootCondition.test(arg0: LootContext) = this.method_32423(arg0)
+fun ValueCheckLootCondition.test(arg0: LootContext?) = this.method_32423(arg0)
 /**
  * comp_1887
  */

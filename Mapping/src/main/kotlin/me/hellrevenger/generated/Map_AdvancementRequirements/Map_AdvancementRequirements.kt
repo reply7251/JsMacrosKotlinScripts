@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_53670
  */
-fun AdvancementRequirements.writeRequirements(buf: PacketByteBuf) = this.method_53670(buf)
+fun AdvancementRequirements.writeRequirements(buf: PacketByteBuf?) = this.method_53670(buf)
 /**
  * method_53664
  */
@@ -12,7 +12,7 @@ fun AdvancementRequirements.getLength() = this.method_53664()
 /**
  * method_53675
  */
-fun AdvancementRequirements.countMatches(predicate: Predicate<String>) = this.method_53675(predicate)
+fun AdvancementRequirements.countMatches(predicate: Predicate<String>?) = this.method_53675(predicate)
 /**
  * method_53678
  */
@@ -20,11 +20,11 @@ fun AdvancementRequirements.getNames() = this.method_53678()
 /**
  * method_54925
  */
-fun AdvancementRequirements.validate(requirements: Set<String>) = this.method_54925(requirements)
+fun AdvancementRequirements.validate(requirements: Set<String>?) = this.method_54925(requirements)
 /**
  * method_53669
  */
-fun AdvancementRequirements.matches(predicate: Predicate<String>) = this.method_53669(predicate)
+fun AdvancementRequirements.matches(predicate: Predicate<String>?) = this.method_53669(predicate)
 /**
  * method_53677
  */

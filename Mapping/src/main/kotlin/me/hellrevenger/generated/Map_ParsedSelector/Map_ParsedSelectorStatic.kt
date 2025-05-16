@@ -5,5 +5,5 @@ object ParsedSelectorKt {
     /**
      * method_62667
      */
-    fun parse(selector: String) = ParsedSelector.method_62667(selector)
+    fun parse(selector: String?) = ParsedSelector.method_62667(selector)
 }

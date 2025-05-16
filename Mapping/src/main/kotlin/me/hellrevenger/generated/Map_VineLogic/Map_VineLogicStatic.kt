@@ -5,9 +5,9 @@ object VineLogicKt {
     /**
      * method_26381
      */
-    fun getGrowthLength(random: Random) = VineLogic.method_26381(random)
+    fun getGrowthLength(random: Random?) = VineLogic.method_26381(random)
     /**
      * method_25961
      */
-    fun isValidForWeepingStem(state: BlockState) = VineLogic.method_25961(state)
+    fun isValidForWeepingStem(state: BlockState?) = VineLogic.method_25961(state)
 }

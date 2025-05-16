@@ -8,4 +8,4 @@ fun ModelWithHat.setHatVisible(visible: Boolean) = this.method_17150(visible)
 /**
  * method_65191
  */
-fun ModelWithHat.rotateArms(stack: MatrixStack) = this.method_65191(stack)
+fun ModelWithHat.rotateArms(stack: MatrixStack?) = this.method_65191(stack)

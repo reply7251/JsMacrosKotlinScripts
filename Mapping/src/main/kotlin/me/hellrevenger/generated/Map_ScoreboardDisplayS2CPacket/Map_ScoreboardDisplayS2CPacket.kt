@@ -12,4 +12,4 @@ fun ScoreboardDisplayS2CPacket.getName() = this.method_11804()
 /**
  * method_11805
  */
-fun ScoreboardDisplayS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11805(arg0)
+fun ScoreboardDisplayS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11805(arg0)

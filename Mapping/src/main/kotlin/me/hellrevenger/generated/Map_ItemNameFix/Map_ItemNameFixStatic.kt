@@ -5,5 +5,5 @@ object ItemNameFixKt {
     /**
      * method_5019
      */
-    fun create(outputSchema: Schema, name: String, rename: function_Function<String, String>) = ItemNameFix.method_5019(outputSchema, name, rename)
+    fun create(outputSchema: Schema?, name: String?, rename: function_Function<String, String>?) = ItemNameFix.method_5019(outputSchema, name, rename)
 }

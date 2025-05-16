@@ -17,9 +17,9 @@ object DataCommandKt {
     /**
      * method_13921
      */
-    fun getNbt(path: net.minecraft.class_2203.class_2209, arg1: DataCommandObject) = DataCommand.method_13921(path, arg1)
+    fun getNbt(path: net.minecraft.class_2203.class_2209?, arg1: DataCommandObject?) = DataCommand.method_13921(path, arg1)
     /**
      * method_13905
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = DataCommand.method_13905(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = DataCommand.method_13905(dispatcher)
 }

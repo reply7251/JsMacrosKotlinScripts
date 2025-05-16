@@ -36,4 +36,4 @@ fun UpdateJigsawC2SPacket.getPool() = this.method_26435()
 /**
  * method_16392
  */
-fun UpdateJigsawC2SPacket.apply(arg0: ServerPlayPacketListener) = this.method_16392(arg0)
+fun UpdateJigsawC2SPacket.apply(arg0: ServerPlayPacketListener?) = this.method_16392(arg0)

@@ -5,5 +5,5 @@ object PathKt {
     /**
      * method_34
      */
-    fun fromBuf(buf: PacketByteBuf) = Path.method_34(buf)
+    fun fromBuf(buf: PacketByteBuf?) = Path.method_34(buf)
 }

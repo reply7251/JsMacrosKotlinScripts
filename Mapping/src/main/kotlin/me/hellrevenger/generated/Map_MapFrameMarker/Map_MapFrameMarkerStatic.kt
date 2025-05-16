@@ -5,9 +5,9 @@ object MapFrameMarkerKt {
     /**
      * method_87
      */
-    fun fromNbt(nbt: NbtCompound) = MapFrameMarker.method_87(nbt)
+    fun fromNbt(nbt: NbtCompound?) = MapFrameMarker.method_87(nbt)
     /**
      * method_81
      */
-    fun getKey(pos: BlockPos) = MapFrameMarker.method_81(pos)
+    fun getKey(pos: BlockPos?) = MapFrameMarker.method_81(pos)
 }

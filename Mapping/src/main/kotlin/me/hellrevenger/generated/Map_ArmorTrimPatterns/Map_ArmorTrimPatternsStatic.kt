@@ -77,13 +77,13 @@ object ArmorTrimPatternsKt {
     /**
      * method_48450
      */
-    fun bootstrap(registry: Registerable<ArmorTrimPattern>) = ArmorTrimPatterns.method_48450(registry)
+    fun bootstrap(registry: Registerable<ArmorTrimPattern>?) = ArmorTrimPatterns.method_48450(registry)
     /**
      * method_48451
      */
-    fun register(registry: Registerable<ArmorTrimPattern>, template: Item, key: RegistryKey<ArmorTrimPattern>) = ArmorTrimPatterns.method_48451(registry, template, key)
+    fun register(registry: Registerable<ArmorTrimPattern>?, template: Item?, key: RegistryKey<ArmorTrimPattern>?) = ArmorTrimPatterns.method_48451(registry, template, key)
     /**
      * method_48448
      */
-    fun get(registries: net.minecraft.class_7225.class_7874, stack: ItemStack) = ArmorTrimPatterns.method_48448(registries, stack)
+    fun get(registries: net.minecraft.class_7225.class_7874?, stack: ItemStack?) = ArmorTrimPatterns.method_48448(registries, stack)
 }

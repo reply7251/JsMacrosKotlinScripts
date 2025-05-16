@@ -20,11 +20,11 @@ fun <T, S>EntityRenderer<T, S>.getPositionOffset(state: S) where T: Entity, S: E
 /**
  * method_3936
  */
-fun <T, S>EntityRenderer<T, S>.render(state: S, matrices: MatrixStack, vertexConsumers: VertexConsumerProvider, light: Int) where T: Entity, S: EntityRenderState = this.method_3936(state, matrices, vertexConsumers, light)
+fun <T, S>EntityRenderer<T, S>.render(state: S, matrices: MatrixStack?, vertexConsumers: VertexConsumerProvider?, light: Int) where T: Entity, S: EntityRenderState = this.method_3936(state, matrices, vertexConsumers, light)
 /**
  * method_3933
  */
-fun <T, S>EntityRenderer<T, S>.shouldRender(entity: T, frustum: Frustum, x: Double, arg3: Double, y: Double) where T: Entity, S: EntityRenderState = this.method_3933(entity, frustum, x, arg3, y)
+fun <T, S>EntityRenderer<T, S>.shouldRender(entity: T, frustum: Frustum?, x: Double, arg3: Double, y: Double) where T: Entity, S: EntityRenderState = this.method_3933(entity, frustum, x, arg3, y)
 /**
  * method_62354
  */

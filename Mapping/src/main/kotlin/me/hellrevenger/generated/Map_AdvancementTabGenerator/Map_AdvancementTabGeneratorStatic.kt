@@ -5,5 +5,5 @@ object AdvancementTabGeneratorKt {
     /**
      * method_55578
      */
-    fun reference(id: String) = AdvancementTabGenerator.method_55578(id)
+    fun reference(id: String?) = AdvancementTabGenerator.method_55578(id)
 }

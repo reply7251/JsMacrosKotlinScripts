@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_17911
  */
-fun RegionBasedStorage.getTagAt(pos: ChunkPos) = this.method_17911(pos)
+fun RegionBasedStorage.getTagAt(pos: ChunkPos?) = this.method_17911(pos)
 /**
  * method_61005
  */
@@ -16,4 +16,4 @@ fun RegionBasedStorage.sync() = this.method_26982()
 /**
  * method_39802
  */
-fun RegionBasedStorage.scanChunk(chunkPos: ChunkPos, scanner: NbtScanner) = this.method_39802(chunkPos, scanner)
+fun RegionBasedStorage.scanChunk(chunkPos: ChunkPos?, scanner: NbtScanner?) = this.method_39802(chunkPos, scanner)

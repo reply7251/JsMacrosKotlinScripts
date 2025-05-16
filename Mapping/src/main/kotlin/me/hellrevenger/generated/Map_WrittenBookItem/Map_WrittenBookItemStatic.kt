@@ -5,5 +5,5 @@ object WrittenBookItemKt {
     /**
      * method_8054
      */
-    fun resolve(book: ItemStack, commandSource: ServerCommandSource, player: PlayerEntity) = WrittenBookItem.method_8054(book, commandSource, player)
+    fun resolve(book: ItemStack?, commandSource: ServerCommandSource?, player: PlayerEntity?) = WrittenBookItem.method_8054(book, commandSource, player)
 }

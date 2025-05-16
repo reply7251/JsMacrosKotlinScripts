@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_43749
  */
-fun ArgumentSignatureDataMap.write(buf: PacketByteBuf) = this.method_43749(buf)
+fun ArgumentSignatureDataMap.write(buf: PacketByteBuf?) = this.method_43749(buf)
 /**
  * comp_912
  */

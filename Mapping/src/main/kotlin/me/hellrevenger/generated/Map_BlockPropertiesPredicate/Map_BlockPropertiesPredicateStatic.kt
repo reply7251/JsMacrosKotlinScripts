@@ -5,5 +5,5 @@ object BlockPropertiesPredicateKt {
     /**
      * method_62334
      */
-    fun <O, S>parse(stateManager: StateManager<O, S>, string: String) where S: State<O, S> = BlockPropertiesPredicate.method_62334<O, S>(stateManager, string)
+    fun <O, S>parse(stateManager: StateManager<O, S>?, string: String?) where S: State<O, S> = BlockPropertiesPredicate.method_62334<O, S>(stateManager, string)
 }

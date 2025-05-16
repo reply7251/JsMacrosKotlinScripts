@@ -5,5 +5,5 @@ object RecipeTypeKt {
     /**
      * method_17726
      */
-    fun <T>register(id: String) where T: Recipe<*> = RecipeType.method_17726<T>(id)
+    fun <T>register(id: String?) where T: Recipe<*> = RecipeType.method_17726<T>(id)
 }

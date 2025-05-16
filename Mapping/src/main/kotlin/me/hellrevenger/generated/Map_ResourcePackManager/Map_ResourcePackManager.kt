@@ -16,7 +16,7 @@ fun ResourcePackManager.getRequestedFeatures() = this.method_45278()
 /**
  * method_49427
  */
-fun ResourcePackManager.enable(profile: String) = this.method_49427(profile)
+fun ResourcePackManager.enable(profile: String?) = this.method_49427(profile)
 /**
  * method_29211
  */
@@ -24,7 +24,7 @@ fun ResourcePackManager.createResourcePacks() = this.method_29211()
 /**
  * method_14449
  */
-fun ResourcePackManager.getProfile(id: String) = this.method_14449(id)
+fun ResourcePackManager.getProfile(id: String?) = this.method_14449(id)
 /**
  * method_29206
  */
@@ -32,7 +32,7 @@ fun ResourcePackManager.getIds() = this.method_29206()
 /**
  * method_49428
  */
-fun ResourcePackManager.disable(profile: String) = this.method_49428(profile)
+fun ResourcePackManager.disable(profile: String?) = this.method_49428(profile)
 /**
  * method_63566
  */
@@ -48,11 +48,11 @@ fun ResourcePackManager.getProfiles() = this.method_14441()
 /**
  * method_14447
  */
-fun ResourcePackManager.setEnabledProfiles(enabled: Collection<String>) = this.method_14447(enabled)
+fun ResourcePackManager.setEnabledProfiles(enabled: Collection<String>?) = this.method_14447(enabled)
 /**
  * method_29207
  */
-fun ResourcePackManager.hasProfile(id: String) = this.method_29207(id)
+fun ResourcePackManager.hasProfile(id: String?) = this.method_29207(id)
 /**
  * method_29210
  */

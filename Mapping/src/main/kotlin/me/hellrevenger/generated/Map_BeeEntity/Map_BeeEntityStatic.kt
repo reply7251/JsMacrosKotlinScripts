@@ -33,11 +33,11 @@ object BeeEntityKt {
     /**
      * method_65348
      */
-    fun isAttractive(state: BlockState) = BeeEntity.method_65348(state)
+    fun isAttractive(state: BlockState?) = BeeEntity.method_65348(state)
     /**
      * method_63007
      */
-    fun isNightOrRaining(world: world_World) = BeeEntity.method_63007(world)
+    fun isNightOrRaining(world: world_World?) = BeeEntity.method_63007(world)
     /**
      * method_26880
      */

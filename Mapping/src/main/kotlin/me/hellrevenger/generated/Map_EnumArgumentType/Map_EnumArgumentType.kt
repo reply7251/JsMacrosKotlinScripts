@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_44091
  */
-fun <T>EnumArgumentType<T>.parse(arg0: StringReader) where T: Enum<T>, T: StringIdentifiable = this.method_44091(arg0)
+fun <T>EnumArgumentType<T>.parse(arg0: StringReader?) where T: Enum<T>, T: StringIdentifiable = this.method_44091(arg0)

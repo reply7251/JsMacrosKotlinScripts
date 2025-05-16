@@ -16,7 +16,7 @@ fun BossBar.setDarkenSky(darkenSky: Boolean) = this.method_5406(darkenSky)
 /**
  * method_5413
  */
-fun BossBar.setName(name: Text) = this.method_5413(name)
+fun BossBar.setName(name: Text?) = this.method_5413(name)
 /**
  * method_5414
  */
@@ -32,7 +32,7 @@ fun BossBar.getColor() = this.method_5420()
 /**
  * method_5416
  */
-fun BossBar.setColor(color: net.minecraft.class_1259.class_1260) = this.method_5416(color)
+fun BossBar.setColor(color: net.minecraft.class_1259.class_1260?) = this.method_5416(color)
 /**
  * method_5415
  */
@@ -56,7 +56,7 @@ fun BossBar.shouldDarkenSky() = this.method_5417()
 /**
  * method_5409
  */
-fun BossBar.setStyle(style: net.minecraft.class_1259.class_1261) = this.method_5409(style)
+fun BossBar.setStyle(style: net.minecraft.class_1259.class_1261?) = this.method_5409(style)
 /**
  * method_5408
  */

@@ -5,5 +5,5 @@ object JigsawBlockScreenKt {
     /**
      * method_61042
      */
-    fun isValidId(id: String) = JigsawBlockScreen.method_61042(id)
+    fun isValidId(id: String?) = JigsawBlockScreen.method_61042(id)
 }

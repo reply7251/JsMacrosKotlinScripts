@@ -9,11 +9,11 @@ object ArgumentTypesKt {
     /**
      * method_41984
      */
-    fun has(clazz: Class<*>) = ArgumentTypes.method_41984(clazz)
+    fun has(clazz: Class<*>?) = ArgumentTypes.method_41984(clazz)
     /**
      * method_10015
      */
-    fun register(registry: Registry<ArgumentSerializer<*, *>>) = ArgumentTypes.method_10015(registry)
+    fun register(registry: Registry<ArgumentSerializer<*, *>>?) = ArgumentTypes.method_10015(registry)
     /**
      * method_41985
      */

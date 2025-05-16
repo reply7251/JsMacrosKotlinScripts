@@ -5,5 +5,5 @@ object EntityAttributeModifierKt {
     /**
      * method_26859
      */
-    fun fromNbt(nbt: NbtCompound) = EntityAttributeModifier.method_26859(nbt)
+    fun fromNbt(nbt: NbtCompound?) = EntityAttributeModifier.method_26859(nbt)
 }

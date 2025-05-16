@@ -8,7 +8,7 @@ fun ScreenHandlerSlotUpdateS2CPacket.getRevision() = this.method_37439()
 /**
  * method_11451
  */
-fun ScreenHandlerSlotUpdateS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11451(arg0)
+fun ScreenHandlerSlotUpdateS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11451(arg0)
 /**
  * method_11452
  */

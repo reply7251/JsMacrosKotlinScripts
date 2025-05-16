@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_31828
  */
-fun <T>ServerEntityManager<T>.loadEntities(entities: Stream<T>) where T: EntityLike = this.method_31828(entities)
+fun <T>ServerEntityManager<T>.loadEntities(entities: Stream<T>?) where T: EntityLike = this.method_31828(entities)
 /**
  * method_37252
  */
@@ -12,11 +12,11 @@ fun <T>ServerEntityManager<T>.isLoaded(chunkPos: Long) where T: EntityLike = thi
 /**
  * method_31826
  */
-fun <T>ServerEntityManager<T>.dump(writer: Writer) where T: EntityLike = this.method_31826(writer)
+fun <T>ServerEntityManager<T>.dump(writer: Writer?) where T: EntityLike = this.method_31826(writer)
 /**
  * method_40021
  */
-fun <T>ServerEntityManager<T>.shouldTick(pos: ChunkPos) where T: EntityLike = this.method_40021(pos)
+fun <T>ServerEntityManager<T>.shouldTick(pos: ChunkPos?) where T: EntityLike = this.method_40021(pos)
 /**
  * method_54490
  */
@@ -24,7 +24,7 @@ fun <T>ServerEntityManager<T>.getIndexSize() where T: EntityLike = this.method_5
 /**
  * method_31816
  */
-fun <T>ServerEntityManager<T>.updateTrackingStatus(chunkPos: ChunkPos, trackingStatus: EntityTrackingStatus) where T: EntityLike = this.method_31816(chunkPos, trackingStatus)
+fun <T>ServerEntityManager<T>.updateTrackingStatus(chunkPos: ChunkPos?, trackingStatus: EntityTrackingStatus?) where T: EntityLike = this.method_31816(chunkPos, trackingStatus)
 /**
  * method_31836
  */
@@ -52,16 +52,16 @@ fun <T>ServerEntityManager<T>.getDebugString() where T: EntityLike = this.method
 /**
  * method_31815
  */
-fun <T>ServerEntityManager<T>.updateTrackingStatus(chunkPos: ChunkPos, levelType: ChunkLevelType) where T: EntityLike = this.method_31815(chunkPos, levelType)
+fun <T>ServerEntityManager<T>.updateTrackingStatus(chunkPos: ChunkPos?, levelType: ChunkLevelType?) where T: EntityLike = this.method_31815(chunkPos, levelType)
 /**
  * method_31835
  */
-fun <T>ServerEntityManager<T>.addEntities(entities: Stream<T>) where T: EntityLike = this.method_31835(entities)
+fun <T>ServerEntityManager<T>.addEntities(entities: Stream<T>?) where T: EntityLike = this.method_31835(entities)
 /**
  * method_31827
  */
-fun <T>ServerEntityManager<T>.has(uuid: UUID) where T: EntityLike = this.method_31827(uuid)
+fun <T>ServerEntityManager<T>.has(uuid: UUID?) where T: EntityLike = this.method_31827(uuid)
 /**
  * method_40022
  */
-fun <T>ServerEntityManager<T>.shouldTick(pos: BlockPos) where T: EntityLike = this.method_40022(pos)
+fun <T>ServerEntityManager<T>.shouldTick(pos: BlockPos?) where T: EntityLike = this.method_40022(pos)

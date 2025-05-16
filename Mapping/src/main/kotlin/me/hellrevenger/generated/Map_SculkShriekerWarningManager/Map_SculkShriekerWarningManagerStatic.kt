@@ -9,5 +9,5 @@ object SculkShriekerWarningManagerKt {
     /**
      * method_42250
      */
-    fun warnNearbyPlayers(world: ServerWorld, pos: BlockPos, player: ServerPlayerEntity) = SculkShriekerWarningManager.method_42250(world, pos, player)
+    fun warnNearbyPlayers(world: ServerWorld?, pos: BlockPos?, player: ServerPlayerEntity?) = SculkShriekerWarningManager.method_42250(world, pos, player)
 }

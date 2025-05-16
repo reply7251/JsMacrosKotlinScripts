@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_9722
  */
-fun SwizzleArgumentType.parse(arg0: StringReader) = this.method_9722(arg0)
+fun SwizzleArgumentType.parse(arg0: StringReader?) = this.method_9722(arg0)

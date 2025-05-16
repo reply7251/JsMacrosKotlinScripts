@@ -189,5 +189,5 @@ object PotionsKt {
     /**
      * method_55763
      */
-    fun registerAndGetDefault(registry: Registry<Potion>) = Potions.method_55763(registry)
+    fun registerAndGetDefault(registry: Registry<Potion>?) = Potions.method_55763(registry)
 }

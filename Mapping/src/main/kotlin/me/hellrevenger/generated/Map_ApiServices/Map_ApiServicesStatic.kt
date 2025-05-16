@@ -5,5 +5,5 @@ object ApiServicesKt {
     /**
      * method_44143
      */
-    fun create(authenticationService: YggdrasilAuthenticationService, rootDirectory: File) = ApiServices.method_44143(authenticationService, rootDirectory)
+    fun create(authenticationService: YggdrasilAuthenticationService?, rootDirectory: File?) = ApiServices.method_44143(authenticationService, rootDirectory)
 }

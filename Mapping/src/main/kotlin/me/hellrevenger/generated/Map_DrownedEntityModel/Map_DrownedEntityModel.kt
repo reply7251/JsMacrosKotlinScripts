@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17791
  */
-fun DrownedEntityModel.setAngles(arg0: ZombieEntityRenderState) = this.method_17791(arg0)
+fun DrownedEntityModel.setAngles(arg0: ZombieEntityRenderState?) = this.method_17791(arg0)

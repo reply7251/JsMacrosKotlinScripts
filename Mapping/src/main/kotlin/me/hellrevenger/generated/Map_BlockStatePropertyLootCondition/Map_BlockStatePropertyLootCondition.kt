@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_899
  */
-fun BlockStatePropertyLootCondition.test(arg0: LootContext) = this.method_899(arg0)
+fun BlockStatePropertyLootCondition.test(arg0: LootContext?) = this.method_899(arg0)
 /**
  * comp_1876
  */

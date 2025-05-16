@@ -8,7 +8,7 @@ fun OctavePerlinNoiseSampler.getOctave(octave: Int) = this.method_16668(octave)
 /**
  * method_39130
  */
-fun OctavePerlinNoiseSampler.addDebugInfo(info: StringBuilder) = this.method_39130(info)
+fun OctavePerlinNoiseSampler.addDebugInfo(info: StringBuilder?) = this.method_39130(info)
 /**
  * method_16453
  */

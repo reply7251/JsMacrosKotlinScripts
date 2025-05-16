@@ -16,7 +16,7 @@ fun GlUniform.getFloatData() = this.method_35664()
 /**
  * method_65015
  */
-fun GlUniform.set(uniform: net.minecraft.class_10157.class_10159) = this.method_65015(uniform)
+fun GlUniform.set(uniform: net.minecraft.class_10157.class_10159?) = this.method_65015(uniform)
 /**
  * method_35661
  */
@@ -36,7 +36,7 @@ fun GlUniform.upload() = this.method_1300()
 /**
  * method_65016
  */
-fun GlUniform.set(values: MutableList<Float>, count: Int) = this.method_65016(values, count)
+fun GlUniform.set(values: MutableList<Float>?, count: Int) = this.method_65016(values, count)
 /**
  * method_1297
  */

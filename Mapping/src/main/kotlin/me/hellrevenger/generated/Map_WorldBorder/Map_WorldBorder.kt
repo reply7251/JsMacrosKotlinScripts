@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_61117
  */
-fun WorldBorder.clampFloored(pos: BlockPos) = this.method_61117(pos)
+fun WorldBorder.clampFloored(pos: BlockPos?) = this.method_61117(pos)
 /**
  * method_11952
  */
-fun WorldBorder.contains(pos: BlockPos) = this.method_11952(pos)
+fun WorldBorder.contains(pos: BlockPos?) = this.method_11952(pos)
 /**
  * method_11975
  */
@@ -16,11 +16,11 @@ fun WorldBorder.setWarningTime(warningTime: Int) = this.method_11975(warningTime
 /**
  * method_11951
  */
-fun WorldBorder.contains(chunkPos: ChunkPos) = this.method_11951(chunkPos)
+fun WorldBorder.contains(chunkPos: ChunkPos?) = this.method_11951(chunkPos)
 /**
  * method_11983
  */
-fun WorldBorder.addListener(listener: WorldBorderListener) = this.method_11983(listener)
+fun WorldBorder.addListener(listener: WorldBorderListener?) = this.method_11983(listener)
 /**
  * method_11967
  */
@@ -28,7 +28,7 @@ fun WorldBorder.setWarningBlocks(warningBlocks: Int) = this.method_11967(warning
 /**
  * method_61115
  */
-fun WorldBorder.contains(pos: Vec3d) = this.method_61115(pos)
+fun WorldBorder.contains(pos: Vec3d?) = this.method_61115(pos)
 /**
  * method_11971
  */
@@ -52,11 +52,11 @@ fun WorldBorder.contains(x: Double, arg1: Double) = this.method_35317(x, arg1)
 /**
  * method_11966
  */
-fun WorldBorder.contains(box: Box) = this.method_11966(box)
+fun WorldBorder.contains(box: Box?) = this.method_11966(box)
 /**
  * method_17905
  */
-fun WorldBorder.load(properties: net.minecraft.class_2784.class_5200) = this.method_17905(properties)
+fun WorldBorder.load(properties: net.minecraft.class_2784.class_5200?) = this.method_17905(properties)
 /**
  * method_39458
  */
@@ -100,7 +100,7 @@ fun WorldBorder.getWarningTime() = this.method_11956()
 /**
  * method_11979
  */
-fun WorldBorder.getDistanceInsideBorder(entity: Entity) = this.method_11979(entity)
+fun WorldBorder.getDistanceInsideBorder(entity: Entity?) = this.method_11979(entity)
 /**
  * method_11976
  */
@@ -112,7 +112,7 @@ fun WorldBorder.getCenterX() = this.method_11964()
 /**
  * method_61770
  */
-fun WorldBorder.clamp(pos: Vec3d) = this.method_61770(pos)
+fun WorldBorder.clamp(pos: Vec3d?) = this.method_61770(pos)
 /**
  * method_11973
  */
@@ -124,7 +124,7 @@ fun WorldBorder.clamp(x: Double, arg1: Double, y: Double) = this.method_61769(x,
 /**
  * method_35318
  */
-fun WorldBorder.removeListener(listener: WorldBorderListener) = this.method_35318(listener)
+fun WorldBorder.removeListener(listener: WorldBorderListener?) = this.method_35318(listener)
 /**
  * method_11977
  */
@@ -144,7 +144,7 @@ fun WorldBorder.tick() = this.method_11982()
 /**
  * method_39459
  */
-fun WorldBorder.canCollide(entity: Entity, box: Box) = this.method_39459(entity, box)
+fun WorldBorder.canCollide(entity: Entity?, box: Box?) = this.method_39459(entity, box)
 /**
  * method_11957
  */
@@ -160,7 +160,7 @@ fun WorldBorder.getSizeLerpTime() = this.method_11962()
 /**
  * method_61116
  */
-fun WorldBorder.clampFloored(pos: Vec3d) = this.method_61116(pos)
+fun WorldBorder.clampFloored(pos: Vec3d?) = this.method_61116(pos)
 /**
  * method_11954
  */

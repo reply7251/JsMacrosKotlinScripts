@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_8970
  */
-fun ItemPredicate.test(stack: ItemStack) = this.method_8970(stack)
+fun ItemPredicate.test(stack: ItemStack?) = this.method_8970(stack)
 /**
  * comp_1784
  */

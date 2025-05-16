@@ -20,7 +20,7 @@ fun Raid.hasStopped() = this.method_20022()
 /**
  * method_16518
  */
-fun Raid.start(player: ServerPlayerEntity) = this.method_16518(player)
+fun Raid.start(player: ServerPlayerEntity?) = this.method_16518(player)
 /**
  * method_16832
  */
@@ -32,7 +32,7 @@ fun Raid.getTotalHealth() = this.method_35212()
 /**
  * method_16491
  */
-fun Raid.setWaveCaptain(wave: Int, entity: RaiderEntity) = this.method_16491(wave, entity)
+fun Raid.setWaveCaptain(wave: Int, entity: RaiderEntity?) = this.method_16491(wave, entity)
 /**
  * method_16490
  */
@@ -52,7 +52,7 @@ fun Raid.setBadOmenLevel(badOmenLevel: Int) = this.method_35211(badOmenLevel)
 /**
  * method_16502
  */
-fun Raid.writeNbt(nbt: NbtCompound) = this.method_16502(nbt)
+fun Raid.writeNbt(nbt: NbtCompound?) = this.method_16502(nbt)
 /**
  * method_20021
  */
@@ -72,7 +72,7 @@ fun Raid.getWorld() = this.method_16831()
 /**
  * method_20017
  */
-fun Raid.addHero(entity: Entity) = this.method_20017(entity)
+fun Raid.addHero(entity: Entity?) = this.method_20017(entity)
 /**
  * method_16523
  */
@@ -88,7 +88,7 @@ fun Raid.getAllRaiders() = this.method_35213()
 /**
  * method_16510
  */
-fun Raid.removeFromWave(entity: RaiderEntity, countHealth: Boolean) = this.method_16510(entity, countHealth)
+fun Raid.removeFromWave(entity: RaiderEntity?, countHealth: Boolean) = this.method_16510(entity, countHealth)
 /**
  * method_20025
  */
@@ -100,11 +100,11 @@ fun Raid.getCaptain(wave: Int) = this.method_16496(wave)
 /**
  * method_16516
  */
-fun Raid.addRaider(wave: Int, raider: RaiderEntity, pos: BlockPos, existing: Boolean) = this.method_16516(wave, raider, pos, existing)
+fun Raid.addRaider(wave: Int, raider: RaiderEntity?, pos: BlockPos?, existing: Boolean) = this.method_16516(wave, raider, pos, existing)
 /**
  * method_16487
  */
-fun Raid.addToWave(wave: Int, entity: RaiderEntity, countHealth: Boolean) = this.method_16487(wave, entity, countHealth)
+fun Raid.addToWave(wave: Int, entity: RaiderEntity?, countHealth: Boolean) = this.method_16487(wave, entity, countHealth)
 /**
  * method_16509
  */
@@ -112,7 +112,7 @@ fun Raid.tick() = this.method_16509()
 /**
  * method_20016
  */
-fun Raid.getMaxWaves(difficulty: Difficulty) = this.method_20016(difficulty)
+fun Raid.getMaxWaves(difficulty: Difficulty?) = this.method_20016(difficulty)
 /**
  * method_20023
  */

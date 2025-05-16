@@ -12,7 +12,7 @@ fun AbstractTexture.getGlId() = this.method_4624()
 /**
  * method_65923
  */
-fun AbstractTexture.setFilter(bilinear: TriState, mipmap: Boolean) = this.method_65923(bilinear, mipmap)
+fun AbstractTexture.setFilter(bilinear: TriState?, mipmap: Boolean) = this.method_65923(bilinear, mipmap)
 /**
  * method_4527
  */

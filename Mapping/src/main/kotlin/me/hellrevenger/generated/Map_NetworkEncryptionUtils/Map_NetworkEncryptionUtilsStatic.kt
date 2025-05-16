@@ -29,35 +29,35 @@ object NetworkEncryptionUtilsKt {
     /**
      * method_15242
      */
-    fun decodeEncodedRsaPublicKey(key: ByteArray) = NetworkEncryptionUtils.method_15242(key)
+    fun decodeEncodedRsaPublicKey(key: ByteArray?) = NetworkEncryptionUtils.method_15242(key)
     /**
      * method_15240
      */
-    fun computeServerId(baseServerId: String, publicKey: PublicKey, secretKey: SecretKey) = NetworkEncryptionUtils.method_15240(baseServerId, publicKey, secretKey)
+    fun computeServerId(baseServerId: String?, publicKey: PublicKey?, secretKey: SecretKey?) = NetworkEncryptionUtils.method_15240(baseServerId, publicKey, secretKey)
     /**
      * method_43521
      */
-    fun encodeRsaPrivateKey(key: PrivateKey) = NetworkEncryptionUtils.method_43521(key)
+    fun encodeRsaPrivateKey(key: PrivateKey?) = NetworkEncryptionUtils.method_43521(key)
     /**
      * method_15235
      */
-    fun cipherFromKey(opMode: Int, key: Key) = NetworkEncryptionUtils.method_15235(opMode, key)
+    fun cipherFromKey(opMode: Int, key: Key?) = NetworkEncryptionUtils.method_15235(opMode, key)
     /**
      * method_15243
      */
-    fun decrypt(key: Key, data: ByteArray) = NetworkEncryptionUtils.method_15243(key, data)
+    fun decrypt(key: Key?, data: ByteArray?) = NetworkEncryptionUtils.method_15243(key, data)
     /**
      * method_15234
      */
-    fun decryptSecretKey(privateKey: PrivateKey, encryptedSecretKey: ByteArray) = NetworkEncryptionUtils.method_15234(privateKey, encryptedSecretKey)
+    fun decryptSecretKey(privateKey: PrivateKey?, encryptedSecretKey: ByteArray?) = NetworkEncryptionUtils.method_15234(privateKey, encryptedSecretKey)
     /**
      * method_43524
      */
-    fun decodeRsaPublicKeyPem(key: String) = NetworkEncryptionUtils.method_43524(key)
+    fun decodeRsaPublicKeyPem(key: String?) = NetworkEncryptionUtils.method_43524(key)
     /**
      * method_43522
      */
-    fun encodeRsaPublicKey(key: PublicKey) = NetworkEncryptionUtils.method_43522(key)
+    fun encodeRsaPublicKey(key: PublicKey?) = NetworkEncryptionUtils.method_43522(key)
     /**
      * method_15237
      */
@@ -65,9 +65,9 @@ object NetworkEncryptionUtilsKt {
     /**
      * method_43519
      */
-    fun decodeRsaPrivateKeyPem(key: String) = NetworkEncryptionUtils.method_43519(key)
+    fun decodeRsaPrivateKeyPem(key: String?) = NetworkEncryptionUtils.method_43519(key)
     /**
      * method_15238
      */
-    fun encrypt(key: Key, data: ByteArray) = NetworkEncryptionUtils.method_15238(key, data)
+    fun encrypt(key: Key?, data: ByteArray?) = NetworkEncryptionUtils.method_15238(key, data)
 }

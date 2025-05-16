@@ -5,5 +5,5 @@ object ResourcePackManagerKt {
     /**
      * method_59809
      */
-    fun listPacks(profiles: Collection<ResourcePackProfile>) = ResourcePackManager.method_59809(profiles)
+    fun listPacks(profiles: Collection<ResourcePackProfile>?) = ResourcePackManager.method_59809(profiles)
 }

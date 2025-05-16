@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_11467
  */
-fun DisconnectS2CPacket.apply(arg0: ClientCommonPacketListener) = this.method_11467(arg0)
+fun DisconnectS2CPacket.apply(arg0: ClientCommonPacketListener?) = this.method_11467(arg0)
 /**
  * comp_2325
  */

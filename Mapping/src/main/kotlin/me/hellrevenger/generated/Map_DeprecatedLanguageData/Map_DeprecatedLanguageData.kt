@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_62780
  */
-fun DeprecatedLanguageData.apply(map: Map<String, String>) = this.method_62780(map)
+fun DeprecatedLanguageData.apply(map: Map<String, String>?) = this.method_62780(map)
 /**
  * comp_3077
  */

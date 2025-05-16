@@ -16,4 +16,4 @@ fun EnderDragonFrameTracker.getLerpedFrame(age: Int, tickDelta: Float) = this.me
 /**
  * method_61486
  */
-fun EnderDragonFrameTracker.copyFrom(other: EnderDragonFrameTracker) = this.method_61486(other)
+fun EnderDragonFrameTracker.copyFrom(other: EnderDragonFrameTracker?) = this.method_61486(other)

@@ -12,4 +12,4 @@ fun NetherPortal.wasAlreadyValid() = this.method_10362()
 /**
  * method_10363
  */
-fun NetherPortal.createPortal(world: WorldAccess) = this.method_10363(world)
+fun NetherPortal.createPortal(world: WorldAccess?) = this.method_10363(world)

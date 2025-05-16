@@ -9,5 +9,5 @@ object BlockRotationArgumentTypeKt {
     /**
      * method_44103
      */
-    fun getBlockRotation(context: CommandContext<ServerCommandSource>, id: String) = BlockRotationArgumentType.method_44103(context, id)
+    fun getBlockRotation(context: CommandContext<ServerCommandSource>?, id: String?) = BlockRotationArgumentType.method_44103(context, id)
 }

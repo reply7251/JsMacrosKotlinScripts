@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_51768
  */
-fun ClientLoginNetworkHandler.setMinigameName(minigameName: String) = this.method_51768(minigameName)
+fun ClientLoginNetworkHandler.setMinigameName(minigameName: String?) = this.method_51768(minigameName)

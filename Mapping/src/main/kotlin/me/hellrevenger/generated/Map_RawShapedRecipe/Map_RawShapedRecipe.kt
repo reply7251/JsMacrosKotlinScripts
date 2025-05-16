@@ -16,4 +16,4 @@ fun RawShapedRecipe.getHeight() = this.method_59996()
 /**
  * method_55078
  */
-fun RawShapedRecipe.matches(input: CraftingRecipeInput) = this.method_55078(input)
+fun RawShapedRecipe.matches(input: CraftingRecipeInput?) = this.method_55078(input)

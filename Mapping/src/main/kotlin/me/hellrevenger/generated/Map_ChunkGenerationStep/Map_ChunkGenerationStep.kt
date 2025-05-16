@@ -4,11 +4,11 @@ import me.hellrevenger.generated.*
 /**
  * method_60560
  */
-fun ChunkGenerationStep.run(context: ChunkGenerationContext, arg1: BoundedRegionArray<AbstractChunkHolder>, chunk: Chunk) = this.method_60560(context, arg1, chunk)
+fun ChunkGenerationStep.run(context: ChunkGenerationContext?, arg1: BoundedRegionArray<AbstractChunkHolder>?, chunk: Chunk?) = this.method_60560(context, arg1, chunk)
 /**
  * method_60559
  */
-fun ChunkGenerationStep.getAdditionalLevel(status: ChunkStatus) = this.method_60559(status)
+fun ChunkGenerationStep.getAdditionalLevel(status: ChunkStatus?) = this.method_60559(status)
 /**
  * comp_2804
  */

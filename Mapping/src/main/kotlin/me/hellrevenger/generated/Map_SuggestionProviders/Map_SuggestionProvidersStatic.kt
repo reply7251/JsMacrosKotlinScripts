@@ -17,17 +17,17 @@ object SuggestionProvidersKt {
     /**
      * method_10024
      */
-    fun byId(id: Identifier) = SuggestionProviders.method_10024(id)
+    fun byId(id: Identifier?) = SuggestionProviders.method_10024(id)
     /**
      * method_10026
      */
-    fun getLocalProvider(provider: SuggestionProvider<CommandSource>) = SuggestionProviders.method_10026(provider)
+    fun getLocalProvider(provider: SuggestionProvider<CommandSource>?) = SuggestionProviders.method_10026(provider)
     /**
      * method_10027
      */
-    fun computeId(provider: SuggestionProvider<CommandSource>) = SuggestionProviders.method_10027(provider)
+    fun computeId(provider: SuggestionProvider<CommandSource>?) = SuggestionProviders.method_10027(provider)
     /**
      * method_10022
      */
-    fun <S>register(id: Identifier, provider: SuggestionProvider<CommandSource>) where S: CommandSource = SuggestionProviders.method_10022<S>(id, provider)
+    fun <S>register(id: Identifier?, provider: SuggestionProvider<CommandSource>?) where S: CommandSource = SuggestionProviders.method_10022<S>(id, provider)
 }

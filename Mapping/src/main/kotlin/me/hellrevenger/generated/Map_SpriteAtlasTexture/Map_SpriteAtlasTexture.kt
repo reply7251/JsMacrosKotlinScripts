@@ -12,7 +12,7 @@ fun SpriteAtlasTexture.getMaxTextureSize() = this.method_45850()
 /**
  * method_45848
  */
-fun SpriteAtlasTexture.upload(stitchResult: net.minecraft.class_7766.class_7767) = this.method_45848(stitchResult)
+fun SpriteAtlasTexture.upload(stitchResult: net.minecraft.class_7766.class_7767?) = this.method_45848(stitchResult)
 /**
  * method_4601
  */
@@ -24,4 +24,4 @@ fun SpriteAtlasTexture.tickAnimatedSprites() = this.method_4612()
 /**
  * method_4608
  */
-fun SpriteAtlasTexture.getSprite(id: Identifier) = this.method_4608(id)
+fun SpriteAtlasTexture.getSprite(id: Identifier?) = this.method_4608(id)

@@ -17,5 +17,5 @@ object SlotDisplayContextsKt {
     /**
      * method_65008
      */
-    fun createParameters(world: world_World) = SlotDisplayContexts.method_65008(world)
+    fun createParameters(world: world_World?) = SlotDisplayContexts.method_65008(world)
 }

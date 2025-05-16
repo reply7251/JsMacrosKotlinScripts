@@ -8,7 +8,7 @@ fun <T>Range<T>.contains(value: T) where T: Comparable<T> = this.method_37955(va
 /**
  * method_37952
  */
-fun <T>Range<T>.contains(other: Range<T>) where T: Comparable<T> = this.method_37952(other)
+fun <T>Range<T>.contains(other: Range<T>?) where T: Comparable<T> = this.method_37952(other)
 /**
  * comp_1
  */

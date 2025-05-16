@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_24461
  */
-fun HoglinEntityModel.setAngles(arg0: HoglinEntityRenderState) = this.method_24461(arg0)
+fun HoglinEntityModel.setAngles(arg0: HoglinEntityRenderState?) = this.method_24461(arg0)

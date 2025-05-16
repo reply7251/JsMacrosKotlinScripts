@@ -5,5 +5,5 @@ object OpsKt {
     /**
      * method_25039
      */
-    fun parse(json: String) = Ops.method_25039(json)
+    fun parse(json: String?) = Ops.method_25039(json)
 }

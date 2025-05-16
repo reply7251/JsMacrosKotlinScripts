@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_35159
  */
-fun PointOfInterestType.contains(state: BlockState) = this.method_35159(state)
+fun PointOfInterestType.contains(state: BlockState?) = this.method_35159(state)
 /**
  * comp_817
  */

@@ -32,4 +32,4 @@ fun ServerTickManager.startSprint(ticks: Int) = this.method_54677(ticks)
 /**
  * method_54674
  */
-fun ServerTickManager.sendPackets(player: ServerPlayerEntity) = this.method_54674(player)
+fun ServerTickManager.sendPackets(player: ServerPlayerEntity?) = this.method_54674(player)

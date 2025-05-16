@@ -5,5 +5,5 @@ object LeashableKt {
     /**
      * method_60965
      */
-    fun <E>tickLeash(world: ServerWorld, entity: E) where E: Entity, E: Leashable = Leashable.method_60965<E>(world, entity)
+    fun <E>tickLeash(world: ServerWorld?, entity: E) where E: Entity, E: Leashable = Leashable.method_60965<E>(world, entity)
 }

@@ -5,11 +5,11 @@ object TestFailureLoggerKt {
     /**
      * method_32245
      */
-    fun failTest(test: GameTestState) = TestFailureLogger.method_32245(test)
+    fun failTest(test: GameTestState?) = TestFailureLogger.method_32245(test)
     /**
      * method_36100
      */
-    fun setCompletionListener(listener: TestCompletionListener) = TestFailureLogger.method_36100(listener)
+    fun setCompletionListener(listener: TestCompletionListener?) = TestFailureLogger.method_36100(listener)
     /**
      * method_36099
      */
@@ -17,5 +17,5 @@ object TestFailureLoggerKt {
     /**
      * method_33319
      */
-    fun passTest(test: GameTestState) = TestFailureLogger.method_33319(test)
+    fun passTest(test: GameTestState?) = TestFailureLogger.method_33319(test)
 }

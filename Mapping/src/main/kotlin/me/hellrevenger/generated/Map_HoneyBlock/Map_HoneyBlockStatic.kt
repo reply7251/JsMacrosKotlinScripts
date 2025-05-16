@@ -5,9 +5,9 @@ object HoneyBlockKt {
     /**
      * method_24175
      */
-    fun addRegularParticles(entity: Entity) = HoneyBlock.method_24175(entity)
+    fun addRegularParticles(entity: Entity?) = HoneyBlock.method_24175(entity)
     /**
      * method_24178
      */
-    fun addRichParticles(entity: Entity) = HoneyBlock.method_24178(entity)
+    fun addRichParticles(entity: Entity?) = HoneyBlock.method_24178(entity)
 }

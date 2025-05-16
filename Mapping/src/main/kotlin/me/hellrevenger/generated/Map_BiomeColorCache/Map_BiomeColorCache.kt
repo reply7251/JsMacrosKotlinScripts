@@ -8,7 +8,7 @@ fun BiomeColorCache.reset() = this.method_23768()
 /**
  * method_23770
  */
-fun BiomeColorCache.getBiomeColor(pos: BlockPos) = this.method_23770(pos)
+fun BiomeColorCache.getBiomeColor(pos: BlockPos?) = this.method_23770(pos)
 /**
  * method_23769
  */

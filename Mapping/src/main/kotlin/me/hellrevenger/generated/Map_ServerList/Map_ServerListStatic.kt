@@ -5,5 +5,5 @@ object ServerListKt {
     /**
      * method_2986
      */
-    fun updateServerListEntry(serverInfo: ServerInfo) = ServerList.method_2986(serverInfo)
+    fun updateServerListEntry(serverInfo: ServerInfo?) = ServerList.method_2986(serverInfo)
 }

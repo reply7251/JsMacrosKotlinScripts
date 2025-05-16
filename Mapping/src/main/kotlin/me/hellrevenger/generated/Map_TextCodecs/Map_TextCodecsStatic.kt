@@ -9,5 +9,5 @@ object TextCodecsKt {
     /**
      * method_54174
      */
-    fun <T, E>dispatchingCodec(types: Array<T>, typeToCodec: function_Function<T, MapCodec<out E>>, valueToType: function_Function<E, T>, dispatchingKey: String) where T: StringIdentifiable = TextCodecs.method_54174<T, E>(types, typeToCodec, valueToType, dispatchingKey)
+    fun <T, E>dispatchingCodec(types: Array<T>?, typeToCodec: function_Function<T, MapCodec<out E>>?, valueToType: function_Function<E, T>?, dispatchingKey: String?) where T: StringIdentifiable = TextCodecs.method_54174<T, E>(types, typeToCodec, valueToType, dispatchingKey)
 }

@@ -8,8 +8,8 @@ fun SlimeEntityRenderer.createRenderState() = this.method_62532()
 /**
  * method_62531
  */
-fun SlimeEntityRenderer.updateRenderState(arg0: SlimeEntity, arg1: SlimeEntityRenderState, arg2: Float) = this.method_62531(arg0, arg1, arg2)
+fun SlimeEntityRenderer.updateRenderState(arg0: SlimeEntity?, arg1: SlimeEntityRenderState?, arg2: Float) = this.method_62531(arg0, arg1, arg2)
 /**
  * method_4116
  */
-fun SlimeEntityRenderer.getTexture(arg0: SlimeEntityRenderState) = this.method_4116(arg0)
+fun SlimeEntityRenderer.getTexture(arg0: SlimeEntityRenderState?) = this.method_4116(arg0)

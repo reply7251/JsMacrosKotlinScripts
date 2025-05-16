@@ -32,7 +32,7 @@ var Framebuffer.viewportHeight by alias(Framebuffer::field_1477)
 /**
  * method_29329
  */
-fun Framebuffer.copyDepthFrom(framebuffer: Framebuffer) = this.method_29329(framebuffer)
+fun Framebuffer.copyDepthFrom(framebuffer: Framebuffer?) = this.method_29329(framebuffer)
 /**
  * method_30277
  */

@@ -16,7 +16,7 @@ fun Uniform.set(value: Int) = this.method_35649(value)
 /**
  * method_1253
  */
-fun Uniform.set(values: FloatArray) = this.method_1253(values)
+fun Uniform.set(values: FloatArray?) = this.method_1253(values)
 /**
  * method_1249
  */
@@ -40,7 +40,7 @@ fun Uniform.set(value1: Float, value2: Float) = this.method_1255(value1, value2)
 /**
  * method_35652
  */
-fun Uniform.set(vec: Vector4f) = this.method_35652(vec)
+fun Uniform.set(vec: Vector4f?) = this.method_35652(vec)
 /**
  * method_1248
  */
@@ -56,11 +56,11 @@ fun Uniform.set(value1: Float, value2: Float, value3: Float, value4: Float, valu
 /**
  * method_39978
  */
-fun Uniform.set(values: Matrix3f) = this.method_39978(values)
+fun Uniform.set(values: Matrix3f?) = this.method_39978(values)
 /**
  * method_1250
  */
-fun Uniform.set(values: Matrix4f) = this.method_1250(values)
+fun Uniform.set(values: Matrix4f?) = this.method_1250(values)
 /**
  * method_35656
  */
@@ -68,7 +68,7 @@ fun Uniform.set(value1: Int, value2: Int, value3: Int, value4: Int) = this.metho
 /**
  * method_34413
  */
-fun Uniform.set(vector: Vector3f) = this.method_34413(vector)
+fun Uniform.set(vector: Vector3f?) = this.method_34413(vector)
 /**
  * method_35650
  */

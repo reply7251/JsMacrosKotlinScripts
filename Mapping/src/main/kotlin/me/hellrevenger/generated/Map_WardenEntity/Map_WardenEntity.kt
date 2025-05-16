@@ -36,7 +36,7 @@ fun WardenEntity.getAnger() = this.method_42222()
 /**
  * method_42212
  */
-fun WardenEntity.increaseAngerAt(entity: Entity, amount: Int, listening: Boolean) = this.method_42212(entity, amount, listening)
+fun WardenEntity.increaseAngerAt(entity: Entity?, amount: Int, listening: Boolean) = this.method_42212(entity, amount, listening)
 /**
  * method_42216
  */
@@ -44,7 +44,7 @@ fun WardenEntity.getAngerManager() = this.method_42216()
 /**
  * method_42211
  */
-fun WardenEntity.removeSuspect(entity: Entity) = this.method_42211(entity)
+fun WardenEntity.removeSuspect(entity: Entity?) = this.method_42211(entity)
 /**
  * method_42202
  */
@@ -52,7 +52,7 @@ fun WardenEntity.getHeartAlpha(tickDelta: Float) = this.method_42202(tickDelta)
 /**
  * method_42213
  */
-fun WardenEntity.increaseAngerAt(entity: Entity) = this.method_42213(entity)
+fun WardenEntity.increaseAngerAt(entity: Entity?) = this.method_42213(entity)
 /**
  * method_42214
  */
@@ -60,7 +60,7 @@ fun WardenEntity.getAngriness() = this.method_42214()
 /**
  * method_43274
  */
-fun WardenEntity.updateAttackTarget(target: LivingEntity) = this.method_43274(target)
+fun WardenEntity.updateAttackTarget(target: LivingEntity?) = this.method_43274(target)
 /**
  * method_42223
  */
@@ -68,4 +68,4 @@ fun WardenEntity.getTendrilAlpha(tickDelta: Float) = this.method_42223(tickDelta
 /**
  * method_42206
  */
-fun WardenEntity.isValidTarget(entity: Entity) = this.method_42206(entity)
+fun WardenEntity.isValidTarget(entity: Entity?) = this.method_42206(entity)

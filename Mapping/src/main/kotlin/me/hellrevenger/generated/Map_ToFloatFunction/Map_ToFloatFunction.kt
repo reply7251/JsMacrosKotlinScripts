@@ -16,4 +16,4 @@ fun <C>ToFloatFunction<C>.apply(x: C) = this.method_41296(x)
 /**
  * method_41309
  */
-fun <C, C2>ToFloatFunction<C>.compose(before: function_Function<C2, C>) = this.method_41309<C2>(before)
+fun <C, C2>ToFloatFunction<C>.compose(before: function_Function<C2, C>?) = this.method_41309<C2>(before)

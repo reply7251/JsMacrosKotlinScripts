@@ -5,5 +5,5 @@ object HeightmapKt {
     /**
      * method_16684
      */
-    fun populateHeightmaps(chunk: Chunk, types: Set<net.minecraft.class_2902.class_2903>) = Heightmap.method_16684(chunk, types)
+    fun populateHeightmaps(chunk: Chunk?, types: Set<net.minecraft.class_2902.class_2903>?) = Heightmap.method_16684(chunk, types)
 }

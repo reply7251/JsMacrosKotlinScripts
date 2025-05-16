@@ -5,5 +5,5 @@ object MapBannerMarkerKt {
     /**
      * method_73
      */
-    fun fromWorldBlock(blockView: BlockView, blockPos: BlockPos) = MapBannerMarker.method_73(blockView, blockPos)
+    fun fromWorldBlock(blockView: BlockView?, blockPos: BlockPos?) = MapBannerMarker.method_73(blockView, blockPos)
 }

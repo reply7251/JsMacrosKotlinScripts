@@ -5,5 +5,5 @@ object TransferCommandKt {
     /**
      * method_56522
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = TransferCommand.method_56522(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = TransferCommand.method_56522(dispatcher)
 }

@@ -5,5 +5,5 @@ object SetPotionLootFunctionKt {
     /**
      * method_38927
      */
-    fun builder(potion: RegistryEntry<Potion>) = SetPotionLootFunction.method_38927(potion)
+    fun builder(potion: RegistryEntry<Potion>?) = SetPotionLootFunction.method_38927(potion)
 }

@@ -13,5 +13,5 @@ object DecoratedPotBlockEntityKt {
     /**
      * method_52577
      */
-    fun getStackWith(sherds: Sherds) = DecoratedPotBlockEntity.method_52577(sherds)
+    fun getStackWith(sherds: Sherds?) = DecoratedPotBlockEntity.method_52577(sherds)
 }

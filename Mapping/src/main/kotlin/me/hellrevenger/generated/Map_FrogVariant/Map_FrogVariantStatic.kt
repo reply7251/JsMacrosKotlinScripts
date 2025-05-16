@@ -17,5 +17,5 @@ object FrogVariantKt {
     /**
      * method_58369
      */
-    fun registerAndGetDefault(registry: Registry<FrogVariant>) = FrogVariant.method_58369(registry)
+    fun registerAndGetDefault(registry: Registry<FrogVariant>?) = FrogVariant.method_58369(registry)
 }

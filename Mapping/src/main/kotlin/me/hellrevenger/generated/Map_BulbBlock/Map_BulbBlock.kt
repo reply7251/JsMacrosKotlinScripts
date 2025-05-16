@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_55373
  */
-fun BulbBlock.update(state: BlockState, world: ServerWorld, pos: BlockPos) = this.method_55373(state, world, pos)
+fun BulbBlock.update(state: BlockState?, world: ServerWorld?, pos: BlockPos?) = this.method_55373(state, world, pos)

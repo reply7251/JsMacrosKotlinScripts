@@ -16,7 +16,7 @@ fun BreezeEntityModel.getEyes() = this.method_55820()
 /**
  * method_55232
  */
-fun BreezeEntityModel.setAngles(arg0: BreezeEntityRenderState) = this.method_55232(arg0)
+fun BreezeEntityModel.setAngles(arg0: BreezeEntityRenderState?) = this.method_55232(arg0)
 /**
  * method_55819
  */

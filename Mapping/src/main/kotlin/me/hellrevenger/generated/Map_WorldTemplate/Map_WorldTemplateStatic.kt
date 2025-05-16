@@ -5,5 +5,5 @@ object WorldTemplateKt {
     /**
      * method_25096
      */
-    fun parse(node: JsonObject) = WorldTemplate.method_25096(node)
+    fun parse(node: JsonObject?) = WorldTemplate.method_25096(node)
 }

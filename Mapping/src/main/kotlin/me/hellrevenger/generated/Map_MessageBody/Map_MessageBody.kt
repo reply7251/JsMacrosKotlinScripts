@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_46304
  */
-fun MessageBody.update(updater: net.minecraft.class_7498.class_7499) = this.method_46304(updater)
+fun MessageBody.update(updater: net.minecraft.class_7498.class_7499?) = this.method_46304(updater)
 /**
  * comp_930
  */
@@ -12,7 +12,7 @@ fun MessageBody.timestamp() = this.comp_930()
 /**
  * method_46306
  */
-fun MessageBody.toSerialized(storage: MessageSignatureStorage) = this.method_46306(storage)
+fun MessageBody.toSerialized(storage: MessageSignatureStorage?) = this.method_46306(storage)
 /**
  * comp_932
  */

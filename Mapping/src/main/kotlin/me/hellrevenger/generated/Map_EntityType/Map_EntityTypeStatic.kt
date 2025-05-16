@@ -601,45 +601,45 @@ object EntityTypeKt {
     /**
      * method_48012
      */
-    fun <T>customNameCopier(chained: Consumer<T>, stack: ItemStack) where T: Entity = EntityType.method_48012<T>(chained, stack)
+    fun <T>customNameCopier(chained: Consumer<T>?, stack: ItemStack?) where T: Entity = EntityType.method_48012<T>(chained, stack)
     /**
      * method_48156
      */
-    fun <T>copier(chained: Consumer<T>, world: world_World, stack: ItemStack, player: PlayerEntity) where T: Entity = EntityType.method_48156<T>(chained, world, stack, player)
+    fun <T>copier(chained: Consumer<T>?, world: world_World?, stack: ItemStack?, player: PlayerEntity?) where T: Entity = EntityType.method_48156<T>(chained, world, stack, player)
     /**
      * method_48011
      */
-    fun <T>nbtCopier(chained: Consumer<T>, world: world_World, stack: ItemStack, player: PlayerEntity) where T: Entity = EntityType.method_48011<T>(chained, world, stack, player)
+    fun <T>nbtCopier(chained: Consumer<T>?, world: world_World?, stack: ItemStack?, player: PlayerEntity?) where T: Entity = EntityType.method_48011<T>(chained, world, stack, player)
     /**
      * method_5898
      */
-    fun <T>get(id: String) where T: Entity = EntityType.method_5898(id)
+    fun <T>get(id: String?) where T: Entity = EntityType.method_5898(id)
     /**
      * method_5892
      */
-    fun <T>getEntityFromNbt(nbt: NbtCompound, world: world_World, reason: SpawnReason) where T: Entity = EntityType.method_5892(nbt, world, reason)
+    fun <T>getEntityFromNbt(nbt: NbtCompound?, world: world_World?, reason: SpawnReason?) where T: Entity = EntityType.method_5892(nbt, world, reason)
     /**
      * method_48009
      */
-    fun <T>copier(world: world_World, stack: ItemStack, player: PlayerEntity) where T: Entity = EntityType.method_48009<T>(world, stack, player)
+    fun <T>copier(world: world_World?, stack: ItemStack?, player: PlayerEntity?) where T: Entity = EntityType.method_48009<T>(world, stack, player)
     /**
      * method_5890
      */
-    fun <T>getId(type: EntityType<*>) where T: Entity = EntityType.method_5890(type)
+    fun <T>getId(type: EntityType<*>?) where T: Entity = EntityType.method_5890(type)
     /**
      * method_31489
      */
-    fun <T>streamFromNbt(entityNbtList: MutableList<out NbtElement>, world: world_World, reason: SpawnReason) where T: Entity = EntityType.method_31489(entityNbtList, world, reason)
+    fun <T>streamFromNbt(entityNbtList: MutableList<out NbtElement>?, world: world_World?, reason: SpawnReason?) where T: Entity = EntityType.method_31489(entityNbtList, world, reason)
     /**
      * method_5881
      */
-    fun <T>loadFromEntityNbt(world: world_World, player: PlayerEntity, entity: Entity, nbt: NbtComponent) where T: Entity = EntityType.method_5881(world, player, entity, nbt)
+    fun <T>loadFromEntityNbt(world: world_World?, player: PlayerEntity?, entity: Entity?, nbt: NbtComponent?) where T: Entity = EntityType.method_5881(world, player, entity, nbt)
     /**
      * method_17842
      */
-    fun <T>loadEntityWithPassengers(nbt: NbtCompound, world: world_World, reason: SpawnReason, entityProcessor: function_Function<Entity, Entity>) where T: Entity = EntityType.method_17842(nbt, world, reason, entityProcessor)
+    fun <T>loadEntityWithPassengers(nbt: NbtCompound?, world: world_World?, reason: SpawnReason?, entityProcessor: function_Function<Entity, Entity>?) where T: Entity = EntityType.method_17842(nbt, world, reason, entityProcessor)
     /**
      * method_17684
      */
-    fun <T>fromNbt(nbt: NbtCompound) where T: Entity = EntityType.method_17684(nbt)
+    fun <T>fromNbt(nbt: NbtCompound?) where T: Entity = EntityType.method_17684(nbt)
 }

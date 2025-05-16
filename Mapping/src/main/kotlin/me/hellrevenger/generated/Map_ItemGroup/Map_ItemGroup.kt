@@ -16,7 +16,7 @@ fun ItemGroup.getType() = this.method_47312()
 /**
  * method_45412
  */
-fun ItemGroup.contains(stack: ItemStack) = this.method_45412(stack)
+fun ItemGroup.contains(stack: ItemStack?) = this.method_45412(stack)
 /**
  * method_47310
  */
@@ -60,4 +60,4 @@ fun ItemGroup.getIcon() = this.method_7747()
 /**
  * method_47306
  */
-fun ItemGroup.updateEntries(displayContext: net.minecraft.class_1761.class_8128) = this.method_47306(displayContext)
+fun ItemGroup.updateEntries(displayContext: net.minecraft.class_1761.class_8128?) = this.method_47306(displayContext)

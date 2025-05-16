@@ -5,5 +5,5 @@ object AdvancementTabKt {
     /**
      * method_2317
      */
-    fun create(client: MinecraftClient, screen: AdvancementsScreen, index: Int, root: PlacedAdvancement) = AdvancementTab.method_2317(client, screen, index, root)
+    fun create(client: MinecraftClient?, screen: AdvancementsScreen?, index: Int, root: PlacedAdvancement?) = AdvancementTab.method_2317(client, screen, index, root)
 }

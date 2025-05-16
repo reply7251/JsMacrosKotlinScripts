@@ -12,4 +12,4 @@ fun HorseEntity.getMarking() = this.method_27078()
 /**
  * method_47873
  */
-fun HorseEntity.setVariant(arg0: HorseColor) = this.method_47873(arg0)
+fun HorseEntity.setVariant(arg0: HorseColor?) = this.method_47873(arg0)

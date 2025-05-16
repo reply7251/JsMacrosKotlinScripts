@@ -5,5 +5,5 @@ object CubicSamplerKt {
     /**
      * method_24895
      */
-    fun sampleColor(pos: Vec3d, rgbFetcher: net.minecraft.class_6491.class_4859) = CubicSampler.method_24895(pos, rgbFetcher)
+    fun sampleColor(pos: Vec3d?, rgbFetcher: net.minecraft.class_6491.class_4859?) = CubicSampler.method_24895(pos, rgbFetcher)
 }

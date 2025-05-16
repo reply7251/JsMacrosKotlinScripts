@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_24803
  */
-fun PiglinEntityModel.setAngles(arg0: PiglinEntityRenderState) = this.method_24803(arg0)
+fun PiglinEntityModel.setAngles(arg0: PiglinEntityRenderState?) = this.method_24803(arg0)

@@ -20,7 +20,7 @@ fun EquipmentSlot.getOffsetEntitySlotId(offset: Int) = this.method_32320(offset)
 /**
  * method_60610
  */
-fun EquipmentSlot.split(stack: ItemStack) = this.method_60610(stack)
+fun EquipmentSlot.split(stack: ItemStack?) = this.method_60610(stack)
 /**
  * method_5925
  */

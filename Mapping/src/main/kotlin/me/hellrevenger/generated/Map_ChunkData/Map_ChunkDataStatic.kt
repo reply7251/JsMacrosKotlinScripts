@@ -5,5 +5,5 @@ object ChunkDataKt {
     /**
      * method_38591
      */
-    fun writeSections(buf: PacketByteBuf, chunk: WorldChunk) = ChunkData.method_38591(buf, chunk)
+    fun writeSections(buf: PacketByteBuf?, chunk: WorldChunk?) = ChunkData.method_38591(buf, chunk)
 }

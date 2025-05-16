@@ -9,5 +9,5 @@ object SnowyVillageDataKt {
     /**
      * method_16845
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = SnowyVillageData.method_16845(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = SnowyVillageData.method_16845(poolRegisterable)
 }

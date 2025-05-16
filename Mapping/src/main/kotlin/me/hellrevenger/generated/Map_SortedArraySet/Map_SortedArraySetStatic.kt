@@ -9,11 +9,11 @@ object SortedArraySetKt {
     /**
      * method_34960
      */
-    fun <T>create(comparator: Comparator<T>, initialCapacity: Int) = SortedArraySet.method_34960<T>(comparator, initialCapacity)
+    fun <T>create(comparator: Comparator<T>?, initialCapacity: Int) = SortedArraySet.method_34960<T>(comparator, initialCapacity)
     /**
      * method_34959
      */
-    fun <T>create(comparator: Comparator<T>) = SortedArraySet.method_34959<T>(comparator)
+    fun <T>create(comparator: Comparator<T>?) = SortedArraySet.method_34959<T>(comparator)
     /**
      * method_34958
      */

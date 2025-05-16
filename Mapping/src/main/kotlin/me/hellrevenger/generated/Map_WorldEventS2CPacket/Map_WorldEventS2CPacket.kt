@@ -20,4 +20,4 @@ fun WorldEventS2CPacket.getData() = this.method_11534()
 /**
  * method_11535
  */
-fun WorldEventS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_11535(arg0)
+fun WorldEventS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_11535(arg0)

@@ -5,7 +5,7 @@ object SchemasKt {
     /**
      * method_60487
      */
-    fun optimize(requiredTypes: Set<DSL_TypeReference>) = Schemas.method_60487(requiredTypes)
+    fun optimize(requiredTypes: Set<DSL_TypeReference>?) = Schemas.method_60487(requiredTypes)
     /**
      * method_15450
      */

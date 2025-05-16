@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_42001
  */
-fun <A>ConstantArgumentSerializer<A>.fromPacket(arg0: PacketByteBuf) where A: ArgumentType<*> = this.method_42001(arg0)
+fun <A>ConstantArgumentSerializer<A>.fromPacket(arg0: PacketByteBuf?) where A: ArgumentType<*> = this.method_42001(arg0)
 /**
  * method_42002
  */

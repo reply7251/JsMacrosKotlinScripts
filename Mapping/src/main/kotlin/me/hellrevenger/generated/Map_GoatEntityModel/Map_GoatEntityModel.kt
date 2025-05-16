@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_35741
  */
-fun GoatEntityModel.setAngles(arg0: GoatEntityRenderState) = this.method_35741(arg0)
+fun GoatEntityModel.setAngles(arg0: GoatEntityRenderState?) = this.method_35741(arg0)

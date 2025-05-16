@@ -13,9 +13,9 @@ object BeehiveBlockEntityKt {
     /**
      * method_31656
      */
-    fun serverTick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: BeehiveBlockEntity) = BeehiveBlockEntity.method_31656(world, pos, state, blockEntity)
+    fun serverTick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: BeehiveBlockEntity?) = BeehiveBlockEntity.method_31656(world, pos, state, blockEntity)
     /**
      * method_23902
      */
-    fun getHoneyLevel(state: BlockState) = BeehiveBlockEntity.method_23902(state)
+    fun getHoneyLevel(state: BlockState?) = BeehiveBlockEntity.method_23902(state)
 }

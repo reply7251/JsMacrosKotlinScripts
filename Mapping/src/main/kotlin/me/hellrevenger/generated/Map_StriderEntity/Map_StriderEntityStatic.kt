@@ -9,5 +9,5 @@ object StriderEntityKt {
     /**
      * method_26344
      */
-    fun canSpawn(type: EntityType<StriderEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = StriderEntity.method_26344(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<StriderEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = StriderEntity.method_26344(type, world, spawnReason, pos, random)
 }

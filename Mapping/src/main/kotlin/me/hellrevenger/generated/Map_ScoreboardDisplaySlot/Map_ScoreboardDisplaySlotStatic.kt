@@ -85,5 +85,5 @@ object ScoreboardDisplaySlotKt {
     /**
      * method_52622
      */
-    fun fromFormatting(formatting: Formatting) = ScoreboardDisplaySlot.method_52622(formatting)
+    fun fromFormatting(formatting: Formatting?) = ScoreboardDisplaySlot.method_52622(formatting)
 }

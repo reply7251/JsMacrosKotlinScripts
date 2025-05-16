@@ -21,17 +21,17 @@ object BlockPosArgumentTypeKt {
     /**
      * method_48298
      */
-    fun getLoadedBlockPos(context: CommandContext<ServerCommandSource>, world: ServerWorld, name: String) = BlockPosArgumentType.method_48298(context, world, name)
+    fun getLoadedBlockPos(context: CommandContext<ServerCommandSource>?, world: ServerWorld?, name: String?) = BlockPosArgumentType.method_48298(context, world, name)
     /**
      * method_9696
      */
-    fun getLoadedBlockPos(context: CommandContext<ServerCommandSource>, name: String) = BlockPosArgumentType.method_9696(context, name)
+    fun getLoadedBlockPos(context: CommandContext<ServerCommandSource>?, name: String?) = BlockPosArgumentType.method_9696(context, name)
     /**
      * method_48299
      */
-    fun getBlockPos(context: CommandContext<ServerCommandSource>, name: String) = BlockPosArgumentType.method_48299(context, name)
+    fun getBlockPos(context: CommandContext<ServerCommandSource>?, name: String?) = BlockPosArgumentType.method_48299(context, name)
     /**
      * method_9697
      */
-    fun getValidBlockPos(context: CommandContext<ServerCommandSource>, name: String) = BlockPosArgumentType.method_9697(context, name)
+    fun getValidBlockPos(context: CommandContext<ServerCommandSource>?, name: String?) = BlockPosArgumentType.method_9697(context, name)
 }

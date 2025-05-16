@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_1957
  */
-fun SubtitlesHud.render(context: DrawContext) = this.method_1957(context)
+fun SubtitlesHud.render(context: DrawContext?) = this.method_1957(context)

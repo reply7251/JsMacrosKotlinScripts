@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_64087
  */
-fun EquipmentModelLoader.get(assetKey: RegistryKey<EquipmentAsset>) = this.method_64087(assetKey)
+fun EquipmentModelLoader.get(assetKey: RegistryKey<EquipmentAsset>?) = this.method_64087(assetKey)

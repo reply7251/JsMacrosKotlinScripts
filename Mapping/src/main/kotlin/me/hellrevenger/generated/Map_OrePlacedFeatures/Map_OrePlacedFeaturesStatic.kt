@@ -165,5 +165,5 @@ object OrePlacedFeaturesKt {
     /**
      * method_46864
      */
-    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>) = OrePlacedFeatures.method_46864(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<PlacedFeature>?) = OrePlacedFeatures.method_46864(featureRegisterable)
 }

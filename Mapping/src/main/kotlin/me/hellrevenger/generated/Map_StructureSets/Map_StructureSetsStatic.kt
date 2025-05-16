@@ -5,5 +5,5 @@ object StructureSetsKt {
     /**
      * method_41182
      */
-    fun bootstrap(structureSetRegisterable: Registerable<StructureSet>) = StructureSets.method_41182(structureSetRegisterable)
+    fun bootstrap(structureSetRegisterable: Registerable<StructureSet>?) = StructureSets.method_41182(structureSetRegisterable)
 }

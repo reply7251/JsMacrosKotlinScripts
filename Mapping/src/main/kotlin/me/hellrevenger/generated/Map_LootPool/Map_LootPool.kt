@@ -24,8 +24,8 @@ val LootPool.entries by alias(LootPool::field_953)
 /**
  * method_349
  */
-fun LootPool.validate(reporter: LootTableReporter) = this.method_349(reporter)
+fun LootPool.validate(reporter: LootTableReporter?) = this.method_349(reporter)
 /**
  * method_341
  */
-fun LootPool.addGeneratedLoot(lootConsumer: Consumer<ItemStack>, context: LootContext) = this.method_341(lootConsumer, context)
+fun LootPool.addGeneratedLoot(lootConsumer: Consumer<ItemStack>?, context: LootContext?) = this.method_341(lootConsumer, context)

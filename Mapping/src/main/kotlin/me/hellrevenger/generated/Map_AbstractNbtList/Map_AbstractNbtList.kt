@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_10533
  */
-fun <T>AbstractNbtList<T>.addElement(index: Int, element: NbtElement) where T: NbtElement = this.method_10533(index, element)
+fun <T>AbstractNbtList<T>.addElement(index: Int, element: NbtElement?) where T: NbtElement = this.method_10533(index, element)
 /**
  * method_10536
  */
@@ -16,7 +16,7 @@ fun <T>AbstractNbtList<T>.add(arg0: Int, arg1: T) where T: NbtElement = this.met
 /**
  * method_10535
  */
-fun <T>AbstractNbtList<T>.setElement(index: Int, element: NbtElement) where T: NbtElement = this.method_10535(index, element)
+fun <T>AbstractNbtList<T>.setElement(index: Int, element: NbtElement?) where T: NbtElement = this.method_10535(index, element)
 /**
  * method_10606
  */

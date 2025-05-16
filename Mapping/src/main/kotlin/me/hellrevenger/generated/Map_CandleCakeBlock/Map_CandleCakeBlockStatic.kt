@@ -9,9 +9,9 @@ object CandleCakeBlockKt {
     /**
      * method_31632
      */
-    fun getCandleCakeFromCandle(candle: CandleBlock) = CandleCakeBlock.method_31632(candle)
+    fun getCandleCakeFromCandle(candle: CandleBlock?) = CandleCakeBlock.method_31632(candle)
     /**
      * method_31635
      */
-    fun canBeLit(state: BlockState) = CandleCakeBlock.method_31635(state)
+    fun canBeLit(state: BlockState?) = CandleCakeBlock.method_31635(state)
 }

@@ -5,5 +5,5 @@ object SculkCatalystBlockEntityKt {
     /**
      * method_41517
      */
-    fun tick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: SculkCatalystBlockEntity) = SculkCatalystBlockEntity.method_41517(world, pos, state, blockEntity)
+    fun tick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: SculkCatalystBlockEntity?) = SculkCatalystBlockEntity.method_41517(world, pos, state, blockEntity)
 }

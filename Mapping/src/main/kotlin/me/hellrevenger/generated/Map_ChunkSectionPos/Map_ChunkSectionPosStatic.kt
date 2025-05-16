@@ -9,7 +9,7 @@ object ChunkSectionPosKt {
     /**
      * method_18682
      */
-    fun from(pos: BlockPos) = ChunkSectionPos.method_18682(pos)
+    fun from(pos: BlockPos?) = ChunkSectionPos.method_18682(pos)
     /**
      * method_30552
      */
@@ -17,7 +17,7 @@ object ChunkSectionPosKt {
     /**
      * method_33705
      */
-    fun from(chunk: Chunk) = ChunkSectionPos.method_33705(chunk)
+    fun from(chunk: Chunk?) = ChunkSectionPos.method_33705(chunk)
     /**
      * method_18676
      */
@@ -37,7 +37,7 @@ object ChunkSectionPosKt {
     /**
      * method_39490
      */
-    fun forEachChunkSectionAround(pos: Long, arg1: LongConsumer) = ChunkSectionPos.method_39490(pos, arg1)
+    fun forEachChunkSectionAround(pos: Long, arg1: LongConsumer?) = ChunkSectionPos.method_39490(pos, arg1)
     /**
      * method_18677
      */
@@ -57,7 +57,7 @@ object ChunkSectionPosKt {
     /**
      * method_42614
      */
-    fun from(entity: EntityLike) = ChunkSectionPos.method_42614(entity)
+    fun from(entity: EntityLike?) = ChunkSectionPos.method_42614(entity)
     /**
      * method_18686
      */
@@ -65,11 +65,11 @@ object ChunkSectionPosKt {
     /**
      * method_18680
      */
-    fun from(pos: Position) = ChunkSectionPos.method_18680(pos)
+    fun from(pos: Position?) = ChunkSectionPos.method_18680(pos)
     /**
      * method_39489
      */
-    fun forEachChunkSectionAround(x: Int, y: Int, z: Int, consumer: LongConsumer) = ChunkSectionPos.method_39489(x, y, z, consumer)
+    fun forEachChunkSectionAround(x: Int, y: Int, z: Int, consumer: LongConsumer?) = ChunkSectionPos.method_39489(x, y, z, consumer)
     /**
      * method_18690
      */
@@ -85,11 +85,11 @@ object ChunkSectionPosKt {
     /**
      * method_19454
      */
-    fun packLocal(pos: BlockPos) = ChunkSectionPos.method_19454(pos)
+    fun packLocal(pos: BlockPos?) = ChunkSectionPos.method_19454(pos)
     /**
      * method_18681
      */
-    fun from(chunkPos: ChunkPos, y: Int) = ChunkSectionPos.method_18681(chunkPos, y)
+    fun from(chunkPos: ChunkPos?, y: Int) = ChunkSectionPos.method_18681(chunkPos, y)
     /**
      * method_18688
      */
@@ -97,11 +97,11 @@ object ChunkSectionPosKt {
     /**
      * method_20439
      */
-    fun stream(center: ChunkSectionPos, radius: Int) = ChunkSectionPos.method_20439(center, radius)
+    fun stream(center: ChunkSectionPos?, radius: Int) = ChunkSectionPos.method_20439(center, radius)
     /**
      * method_22446
      */
-    fun stream(center: ChunkPos, radius: Int, minY: Int, maxY: Int) = ChunkSectionPos.method_22446(center, radius, minY, maxY)
+    fun stream(center: ChunkPos?, radius: Int, minY: Int, maxY: Int) = ChunkSectionPos.method_22446(center, radius, minY, maxY)
     /**
      * method_30553
      */
@@ -109,7 +109,7 @@ object ChunkSectionPosKt {
     /**
      * method_39491
      */
-    fun forEachChunkSectionAround(pos: BlockPos, consumer: LongConsumer) = ChunkSectionPos.method_39491(pos, consumer)
+    fun forEachChunkSectionAround(pos: BlockPos?, consumer: LongConsumer?) = ChunkSectionPos.method_39491(pos, consumer)
     /**
      * method_18691
      */
@@ -121,11 +121,11 @@ object ChunkSectionPosKt {
     /**
      * method_33706
      */
-    fun toLong(pos: BlockPos) = ChunkSectionPos.method_33706(pos)
+    fun toLong(pos: BlockPos?) = ChunkSectionPos.method_33706(pos)
     /**
      * method_18679
      */
-    fun offset(packed: Long, arg1: Direction) = ChunkSectionPos.method_18679(packed, arg1)
+    fun offset(packed: Long, arg1: Direction?) = ChunkSectionPos.method_18679(packed, arg1)
     /**
      * method_20438
      */

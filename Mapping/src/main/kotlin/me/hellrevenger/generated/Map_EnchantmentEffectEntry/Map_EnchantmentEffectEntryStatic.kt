@@ -5,9 +5,9 @@ object EnchantmentEffectEntryKt {
     /**
      * method_60004
      */
-    fun <T>createCodec(effectCodec: Codec<T>, lootContextType: ContextType) = EnchantmentEffectEntry.method_60004<T>(effectCodec, lootContextType)
+    fun <T>createCodec(effectCodec: Codec<T>?, lootContextType: ContextType?) = EnchantmentEffectEntry.method_60004<T>(effectCodec, lootContextType)
     /**
      * method_60007
      */
-    fun <T>createRequirementsCodec(lootContextType: ContextType) = EnchantmentEffectEntry.method_60007(lootContextType)
+    fun <T>createRequirementsCodec(lootContextType: ContextType?) = EnchantmentEffectEntry.method_60007(lootContextType)
 }

@@ -25,11 +25,11 @@ object BlockPosKt {
     /**
      * method_58250
      */
-    fun max(a: BlockPos, b: BlockPos) = BlockPos.method_58250(a, b)
+    fun max(a: BlockPos?, b: BlockPos?) = BlockPos.method_58250(a, b)
     /**
      * method_25998
      */
-    fun streamOutwards(center: BlockPos, maxX: Int, maxY: Int, maxZ: Int) = BlockPos.method_25998(center, maxX, maxY, maxZ)
+    fun streamOutwards(center: BlockPos?, maxX: Int, maxY: Int, maxZ: Int) = BlockPos.method_25998(center, maxX, maxY, maxZ)
     /**
      * method_49637
      */
@@ -37,23 +37,23 @@ object BlockPosKt {
     /**
      * method_51686
      */
-    fun streamSouthEastSquare(pos: BlockPos) = BlockPos.method_51686(pos)
+    fun streamSouthEastSquare(pos: BlockPos?) = BlockPos.method_51686(pos)
     /**
      * method_29715
      */
-    fun stream(box: Box) = BlockPos.method_29715(box)
+    fun stream(box: Box?) = BlockPos.method_29715(box)
     /**
      * method_49638
      */
-    fun ofFloored(pos: Position) = BlockPos.method_49638(pos)
+    fun ofFloored(pos: Position?) = BlockPos.method_49638(pos)
     /**
      * method_27156
      */
-    fun iterateRandomly(random: Random, count: Int, minX: Int, minY: Int, minZ: Int, maxX: Int, maxY: Int, maxZ: Int) = BlockPos.method_27156(random, count, minX, minY, minZ, maxX, maxY, maxZ)
+    fun iterateRandomly(random: Random?, count: Int, minX: Int, minY: Int, minZ: Int, maxX: Int, maxY: Int, maxZ: Int) = BlockPos.method_27156(random, count, minX, minY, minZ, maxX, maxY, maxZ)
     /**
      * method_34848
      */
-    fun iterateRandomly(random: Random, count: Int, around: BlockPos, range: Int) = BlockPos.method_34848(random, count, around, range)
+    fun iterateRandomly(random: Random?, count: Int, around: BlockPos?, range: Int) = BlockPos.method_34848(random, count, around, range)
     /**
      * method_10091
      */
@@ -65,7 +65,7 @@ object BlockPosKt {
     /**
      * method_30512
      */
-    fun iterateInSquare(center: BlockPos, radius: Int, firstDirection: Direction, secondDirection: Direction) = BlockPos.method_30512(center, radius, firstDirection, secondDirection)
+    fun iterateInSquare(center: BlockPos?, radius: Int, firstDirection: Direction?, secondDirection: Direction?) = BlockPos.method_30512(center, radius, firstDirection, secondDirection)
     /**
      * method_10083
      */
@@ -77,15 +77,15 @@ object BlockPosKt {
     /**
      * method_62671
      */
-    fun iterate(box: Box) = BlockPos.method_62671(box)
+    fun iterate(box: Box?) = BlockPos.method_62671(box)
     /**
      * method_20437
      */
-    fun stream(start: BlockPos, end: BlockPos) = BlockPos.method_20437(start, end)
+    fun stream(start: BlockPos?, end: BlockPos?) = BlockPos.method_20437(start, end)
     /**
      * method_58249
      */
-    fun min(a: BlockPos, b: BlockPos) = BlockPos.method_58249(a, b)
+    fun min(a: BlockPos?, b: BlockPos?) = BlockPos.method_58249(a, b)
     /**
      * method_10064
      */
@@ -97,11 +97,11 @@ object BlockPosKt {
     /**
      * method_23627
      */
-    fun stream(box: BlockBox) = BlockPos.method_23627(box)
+    fun stream(box: BlockBox?) = BlockPos.method_23627(box)
     /**
      * method_25996
      */
-    fun iterateOutwards(center: BlockPos, rangeX: Int, rangeY: Int, rangeZ: Int) = BlockPos.method_25996(center, rangeX, rangeY, rangeZ)
+    fun iterateOutwards(center: BlockPos?, rangeX: Int, rangeY: Int, rangeZ: Int) = BlockPos.method_25996(center, rangeX, rangeY, rangeZ)
     /**
      * method_17962
      */
@@ -109,15 +109,15 @@ object BlockPosKt {
     /**
      * method_25997
      */
-    fun findClosest(pos: BlockPos, horizontalRange: Int, verticalRange: Int, condition: Predicate<BlockPos>) = BlockPos.method_25997(pos, horizontalRange, verticalRange, condition)
+    fun findClosest(pos: BlockPos?, horizontalRange: Int, verticalRange: Int, condition: Predicate<BlockPos>?) = BlockPos.method_25997(pos, horizontalRange, verticalRange, condition)
     /**
      * method_49925
      */
-    fun iterateRecursively(pos: BlockPos, maxDepth: Int, maxIterations: Int, nextQueuer: BiConsumer<BlockPos, Consumer<BlockPos>>, callback: function_Function<BlockPos, net.minecraft.class_2338.class_10384>) = BlockPos.method_49925(pos, maxDepth, maxIterations, nextQueuer, callback)
+    fun iterateRecursively(pos: BlockPos?, maxDepth: Int, maxIterations: Int, nextQueuer: BiConsumer<BlockPos, Consumer<BlockPos>>?, callback: function_Function<BlockPos, net.minecraft.class_2338.class_10384>?) = BlockPos.method_49925(pos, maxDepth, maxIterations, nextQueuer, callback)
     /**
      * method_10097
      */
-    fun iterate(start: BlockPos, end: BlockPos) = BlockPos.method_10097(start, end)
+    fun iterate(start: BlockPos?, end: BlockPos?) = BlockPos.method_10097(start, end)
     /**
      * method_10061
      */
@@ -125,5 +125,5 @@ object BlockPosKt {
     /**
      * method_10060
      */
-    fun offset(value: Long, arg1: Direction) = BlockPos.method_10060(value, arg1)
+    fun offset(value: Long, arg1: Direction?) = BlockPos.method_10060(value, arg1)
 }

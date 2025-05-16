@@ -12,11 +12,11 @@ fun <C>Carver<C>.getCodec() where C: CarverConfig = this.method_28616()
 /**
  * method_12702
  */
-fun <C>Carver<C>.carve(context: CarverContext, config: C, chunk: Chunk, posToBiome: function_Function<BlockPos, RegistryEntry<Biome>>, random: Random, aquiferSampler: AquiferSampler, pos: ChunkPos, mask: CarvingMask) where C: CarverConfig = this.method_12702(context, config, chunk, posToBiome, random, aquiferSampler, pos, mask)
+fun <C>Carver<C>.carve(context: CarverContext?, config: C, chunk: Chunk?, posToBiome: function_Function<BlockPos, RegistryEntry<Biome>>?, random: Random?, aquiferSampler: AquiferSampler?, pos: ChunkPos?, mask: CarvingMask?) where C: CarverConfig = this.method_12702(context, config, chunk, posToBiome, random, aquiferSampler, pos, mask)
 /**
  * method_12705
  */
-fun <C>Carver<C>.shouldCarve(config: C, random: Random) where C: CarverConfig = this.method_12705(config, random)
+fun <C>Carver<C>.shouldCarve(config: C, random: Random?) where C: CarverConfig = this.method_12705(config, random)
 /**
  * method_12710
  */

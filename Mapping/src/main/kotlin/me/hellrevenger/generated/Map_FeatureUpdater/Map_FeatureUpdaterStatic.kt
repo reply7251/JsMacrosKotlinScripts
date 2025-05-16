@@ -5,5 +5,5 @@ object FeatureUpdaterKt {
     /**
      * method_14745
      */
-    fun create(world: RegistryKey<world_World>, persistentStateManager: PersistentStateManager) = FeatureUpdater.method_14745(world, persistentStateManager)
+    fun create(world: RegistryKey<world_World>?, persistentStateManager: PersistentStateManager?) = FeatureUpdater.method_14745(world, persistentStateManager)
 }

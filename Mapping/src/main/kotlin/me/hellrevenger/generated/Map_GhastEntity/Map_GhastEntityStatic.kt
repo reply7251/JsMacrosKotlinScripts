@@ -9,5 +9,5 @@ object GhastEntityKt {
     /**
      * method_20675
      */
-    fun canSpawn(type: EntityType<GhastEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = GhastEntity.method_20675(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<GhastEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = GhastEntity.method_20675(type, world, spawnReason, pos, random)
 }

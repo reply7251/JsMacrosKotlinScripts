@@ -8,7 +8,7 @@ fun <T>CombinedDynamicRegistries<T>.getCombinedRegistryManager() = this.method_4
 /**
  * method_45929
  */
-fun <T>CombinedDynamicRegistries<T>.with(type: T, registryManagers: MutableList<net.minecraft.class_5455.class_6890>) = this.method_45929(type, registryManagers)
+fun <T>CombinedDynamicRegistries<T>.with(type: T, registryManagers: MutableList<net.minecraft.class_5455.class_6890>?) = this.method_45929(type, registryManagers)
 /**
  * method_45936
  */

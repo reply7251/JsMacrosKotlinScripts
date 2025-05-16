@@ -5,5 +5,5 @@ object GlImportProcessorKt {
     /**
      * method_62880
      */
-    fun addDefines(source: String, defines: Defines) = GlImportProcessor.method_62880(source, defines)
+    fun addDefines(source: String?, defines: Defines?) = GlImportProcessor.method_62880(source, defines)
 }

@@ -5,5 +5,5 @@ object BastionBridgeDataKt {
     /**
      * method_27198
      */
-    fun bootstrap(poolRegisterable: Registerable<StructurePool>) = BastionBridgeData.method_27198(poolRegisterable)
+    fun bootstrap(poolRegisterable: Registerable<StructurePool>?) = BastionBridgeData.method_27198(poolRegisterable)
 }

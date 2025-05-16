@@ -5,5 +5,5 @@ object ChunkBiomeDataS2CPacketKt {
     /**
      * method_49685
      */
-    fun create(chunks: MutableList<WorldChunk>) = ChunkBiomeDataS2CPacket.method_49685(chunks)
+    fun create(chunks: MutableList<WorldChunk>?) = ChunkBiomeDataS2CPacket.method_49685(chunks)
 }

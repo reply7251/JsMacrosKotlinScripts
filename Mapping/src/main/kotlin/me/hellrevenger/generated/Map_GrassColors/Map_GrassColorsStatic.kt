@@ -13,7 +13,7 @@ object GrassColorsKt {
     /**
      * method_8376
      */
-    fun setColorMap(map: IntArray) = GrassColors.method_8376(map)
+    fun setColorMap(map: IntArray?) = GrassColors.method_8376(map)
     /**
      * method_8377
      */

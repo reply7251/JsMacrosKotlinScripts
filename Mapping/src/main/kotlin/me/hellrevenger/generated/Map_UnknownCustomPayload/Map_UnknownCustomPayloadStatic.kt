@@ -5,5 +5,5 @@ object UnknownCustomPayloadKt {
     /**
      * method_56492
      */
-    fun <T>createCodec(id: Identifier, maxBytes: Int) where T: PacketByteBuf = UnknownCustomPayload.method_56492<T>(id, maxBytes)
+    fun <T>createCodec(id: Identifier?, maxBytes: Int) where T: PacketByteBuf = UnknownCustomPayload.method_56492<T>(id, maxBytes)
 }

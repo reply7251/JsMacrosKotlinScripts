@@ -16,7 +16,7 @@ fun <F, Value>MemoryQueryResult<F, Value>.getValue() where F: K1 = this.method_4
 /**
  * method_47251
  */
-fun <F, Value>MemoryQueryResult<F, Value>.remember(value: Optional<Value>) where F: K1 = this.method_47251(value)
+fun <F, Value>MemoryQueryResult<F, Value>.remember(value: Optional<Value>?) where F: K1 = this.method_47251(value)
 /**
  * method_47249
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_43402
  */
-fun PaintingEntity.setVariant(variant: RegistryEntry<PaintingVariant>) = this.method_43402(variant)
+fun PaintingEntity.setVariant(variant: RegistryEntry<PaintingVariant>?) = this.method_43402(variant)
 /**
  * method_43404
  */

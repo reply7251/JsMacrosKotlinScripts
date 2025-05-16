@@ -13,5 +13,5 @@ object MemoryKt {
     /**
      * method_28353
      */
-    fun <T>createCodec(codec: Codec<T>) = Memory.method_28353<T>(codec)
+    fun <T>createCodec(codec: Codec<T>?) = Memory.method_28353<T>(codec)
 }

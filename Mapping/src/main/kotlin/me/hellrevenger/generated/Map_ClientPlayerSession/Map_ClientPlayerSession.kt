@@ -8,7 +8,7 @@ fun ClientPlayerSession.toPublicSession() = this.method_46275()
 /**
  * method_46274
  */
-fun ClientPlayerSession.createPacker(sender: UUID) = this.method_46274(sender)
+fun ClientPlayerSession.createPacker(sender: UUID?) = this.method_46274(sender)
 /**
  * comp_1078
  */

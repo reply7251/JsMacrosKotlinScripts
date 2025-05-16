@@ -12,15 +12,15 @@ fun ServerCommonNetworkHandler.disableFlush() = this.method_53046()
 /**
  * method_14364
  */
-fun ServerCommonNetworkHandler.sendPacket(packet: Packet<*>) = this.method_14364(packet)
+fun ServerCommonNetworkHandler.sendPacket(packet: Packet<*>?) = this.method_14364(packet)
 /**
  * method_52391
  */
-fun ServerCommonNetworkHandler.send(packet: Packet<*>, callbacks: PacketCallbacks) = this.method_52391(packet, callbacks)
+fun ServerCommonNetworkHandler.send(packet: Packet<*>?, callbacks: PacketCallbacks?) = this.method_52391(packet, callbacks)
 /**
  * method_52396
  */
-fun ServerCommonNetworkHandler.disconnect(reason: Text) = this.method_52396(reason)
+fun ServerCommonNetworkHandler.disconnect(reason: Text?) = this.method_52396(reason)
 /**
  * method_53047
  */
@@ -32,4 +32,4 @@ fun ServerCommonNetworkHandler.getDebugProfile() = this.method_52404()
 /**
  * method_60673
  */
-fun ServerCommonNetworkHandler.disconnect(disconnectionInfo: DisconnectionInfo) = this.method_60673(disconnectionInfo)
+fun ServerCommonNetworkHandler.disconnect(disconnectionInfo: DisconnectionInfo?) = this.method_60673(disconnectionInfo)

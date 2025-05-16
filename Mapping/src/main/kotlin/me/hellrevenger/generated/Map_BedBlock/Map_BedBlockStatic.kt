@@ -13,21 +13,21 @@ object BedBlockKt {
     /**
      * method_24164
      */
-    fun getBedPart(state: BlockState) = BedBlock.method_24164(state)
+    fun getBedPart(state: BlockState?) = BedBlock.method_24164(state)
     /**
      * method_18476
      */
-    fun getDirection(world: BlockView, pos: BlockPos) = BedBlock.method_18476(world, pos)
+    fun getDirection(world: BlockView?, pos: BlockPos?) = BedBlock.method_18476(world, pos)
     /**
      * method_27352
      */
-    fun isBedWorking(world: world_World) = BedBlock.method_27352(world)
+    fun isBedWorking(world: world_World?) = BedBlock.method_27352(world)
     /**
      * method_24163
      */
-    fun getOppositePartDirection(state: BlockState) = BedBlock.method_24163(state)
+    fun getOppositePartDirection(state: BlockState?) = BedBlock.method_24163(state)
     /**
      * method_9484
      */
-    fun findWakeUpPosition(type: EntityType<*>, world: CollisionView, pos: BlockPos, bedDirection: Direction, spawnAngle: Float) = BedBlock.method_9484(type, world, pos, bedDirection, spawnAngle)
+    fun findWakeUpPosition(type: EntityType<*>?, world: CollisionView?, pos: BlockPos?, bedDirection: Direction?, spawnAngle: Float) = BedBlock.method_9484(type, world, pos, bedDirection, spawnAngle)
 }

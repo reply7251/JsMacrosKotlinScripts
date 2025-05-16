@@ -25,13 +25,13 @@ object DimensionTypeKt {
     /**
      * method_31109
      */
-    fun getCoordinateScaleFactor(fromDimension: DimensionType, toDimension: DimensionType) = DimensionType.method_31109(fromDimension, toDimension)
+    fun getCoordinateScaleFactor(fromDimension: DimensionType?, toDimension: DimensionType?) = DimensionType.method_31109(fromDimension, toDimension)
     /**
      * method_28521
      */
-    fun worldFromDimensionNbt(nbt: Dynamic<*>) = DimensionType.method_28521(nbt)
+    fun worldFromDimensionNbt(nbt: Dynamic<*>?) = DimensionType.method_28521(nbt)
     /**
      * method_12488
      */
-    fun getSaveDirectory(worldRef: RegistryKey<world_World>, worldDirectory: file_Path) = DimensionType.method_12488(worldRef, worldDirectory)
+    fun getSaveDirectory(worldRef: RegistryKey<world_World>?, worldDirectory: file_Path?) = DimensionType.method_12488(worldRef, worldDirectory)
 }

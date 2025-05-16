@@ -9,5 +9,5 @@ object DrownedEntityKt {
     /**
      * method_20673
      */
-    fun canSpawn(type: EntityType<DrownedEntity>, world: ServerWorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = DrownedEntity.method_20673(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<DrownedEntity>?, world: ServerWorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = DrownedEntity.method_20673(type, world, spawnReason, pos, random)
 }

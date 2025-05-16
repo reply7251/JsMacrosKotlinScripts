@@ -8,7 +8,7 @@ fun OpenScreenS2CPacket.getSyncId() = this.method_17592()
 /**
  * method_17591
  */
-fun OpenScreenS2CPacket.apply(arg0: ClientPlayPacketListener) = this.method_17591(arg0)
+fun OpenScreenS2CPacket.apply(arg0: ClientPlayPacketListener?) = this.method_17591(arg0)
 /**
  * method_17593
  */

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_946
  */
-fun MatchToolLootCondition.test(arg0: LootContext) = this.method_946(arg0)
+fun MatchToolLootCondition.test(arg0: LootContext?) = this.method_946(arg0)
 /**
  * comp_1884
  */

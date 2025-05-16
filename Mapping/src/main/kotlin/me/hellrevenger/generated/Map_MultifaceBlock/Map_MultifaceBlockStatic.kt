@@ -9,11 +9,11 @@ object MultifaceBlockKt {
     /**
      * method_33358
      */
-    fun canGrowOn(world: BlockView, direction: Direction, pos: BlockPos, state: BlockState) = MultifaceBlock.method_33358(world, direction, pos, state)
+    fun canGrowOn(world: BlockView?, direction: Direction?, pos: BlockPos?, state: BlockState?) = MultifaceBlock.method_33358(world, direction, pos, state)
     /**
      * method_33374
      */
-    fun getProperty(direction: Direction) = MultifaceBlock.method_33374(direction)
+    fun getProperty(direction: Direction?) = MultifaceBlock.method_33374(direction)
     /**
      * method_41437
      */
@@ -21,17 +21,17 @@ object MultifaceBlockKt {
     /**
      * method_33366
      */
-    fun hasDirection(state: BlockState, direction: Direction) = MultifaceBlock.method_33366(state, direction)
+    fun hasDirection(state: BlockState?, direction: Direction?) = MultifaceBlock.method_33366(state, direction)
     /**
      * method_41439
      */
-    fun directionsToFlag(directions: Collection<Direction>) = MultifaceBlock.method_41439(directions)
+    fun directionsToFlag(directions: Collection<Direction>?) = MultifaceBlock.method_41439(directions)
     /**
      * method_41440
      */
-    fun collectDirections(state: BlockState) = MultifaceBlock.method_41440(state)
+    fun collectDirections(state: BlockState?) = MultifaceBlock.method_41440(state)
     /**
      * method_65162
      */
-    fun canGrowOn(world: BlockView, pos: BlockPos, direction: Direction) = MultifaceBlock.method_65162(world, pos, direction)
+    fun canGrowOn(world: BlockView?, pos: BlockPos?, direction: Direction?) = MultifaceBlock.method_65162(world, pos, direction)
 }

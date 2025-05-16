@@ -5,5 +5,5 @@ object WalkTowardsFuzzyPosTaskKt {
     /**
      * method_46941
      */
-    fun <E>create(posModule: MemoryModuleType<BlockPos>, completionRange: Int, speed: Float) where E: MobEntity = WalkTowardsFuzzyPosTask.method_46941<E>(posModule, completionRange, speed)
+    fun <E>create(posModule: MemoryModuleType<BlockPos>?, completionRange: Int, speed: Float) where E: MobEntity = WalkTowardsFuzzyPosTask.method_46941<E>(posModule, completionRange, speed)
 }

@@ -8,12 +8,8 @@ val FuelRegistry.fuelValues by alias(FuelRegistry::field_52635)
 /**
  * method_61752
  */
-fun FuelRegistry.isFuel(item: ItemStack) = this.method_61752(item)
-/**
- * method_61751
- */
-fun FuelRegistry.getFuelItems() = this.method_61751()
+fun FuelRegistry.isFuel(item: ItemStack?) = this.method_61752(item)
 /**
  * method_61755
  */
-fun FuelRegistry.getFuelTicks(item: ItemStack) = this.method_61755(item)
+fun FuelRegistry.getFuelTicks(item: ItemStack?) = this.method_61755(item)

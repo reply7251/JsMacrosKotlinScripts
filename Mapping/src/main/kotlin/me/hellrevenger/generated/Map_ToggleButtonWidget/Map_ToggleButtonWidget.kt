@@ -8,7 +8,7 @@ fun ToggleButtonWidget.setToggled(toggled: Boolean) = this.method_1964(toggled)
 /**
  * method_1962
  */
-fun ToggleButtonWidget.setTextures(textures: ButtonTextures) = this.method_1962(textures)
+fun ToggleButtonWidget.setTextures(textures: ButtonTextures?) = this.method_1962(textures)
 /**
  * method_1965
  */

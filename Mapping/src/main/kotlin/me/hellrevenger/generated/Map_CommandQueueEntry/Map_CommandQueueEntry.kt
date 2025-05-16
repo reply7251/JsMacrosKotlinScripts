@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_54388
  */
-fun <T>CommandQueueEntry<T>.execute(context: CommandExecutionContext<T>) = this.method_54388(context)
+fun <T>CommandQueueEntry<T>.execute(context: CommandExecutionContext<T>?) = this.method_54388(context)
 /**
  * comp_1993
  */

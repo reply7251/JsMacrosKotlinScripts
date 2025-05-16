@@ -24,7 +24,7 @@ val CamelEntity.sittingAnimationState by alias(CamelEntity::field_40734)
 /**
  * method_45347
  */
-fun CamelEntity.createChild(arg0: ServerWorld, arg1: PassiveEntity) = this.method_45347(arg0, arg1)
+fun CamelEntity.createChild(arg0: ServerWorld?, arg1: PassiveEntity?) = this.method_45347(arg0, arg1)
 /**
  * method_45361
  */

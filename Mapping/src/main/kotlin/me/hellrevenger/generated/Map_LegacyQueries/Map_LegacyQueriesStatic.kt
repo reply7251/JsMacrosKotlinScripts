@@ -25,9 +25,9 @@ object LegacyQueriesKt {
     /**
      * method_52377
      */
-    fun read(buf: ByteBuf) = LegacyQueries.method_52377(buf)
+    fun read(buf: ByteBuf?) = LegacyQueries.method_52377(buf)
     /**
      * method_52378
      */
-    fun write(buf: ByteBuf, string: String) = LegacyQueries.method_52378(buf, string)
+    fun write(buf: ByteBuf?, string: String?) = LegacyQueries.method_52378(buf, string)
 }

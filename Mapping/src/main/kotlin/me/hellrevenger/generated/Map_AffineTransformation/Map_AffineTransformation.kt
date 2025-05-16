@@ -20,7 +20,7 @@ fun AffineTransformation.getMatrix() = this.method_22936()
 /**
  * method_22933
  */
-fun AffineTransformation.multiply(other: AffineTransformation) = this.method_22933(other)
+fun AffineTransformation.multiply(other: AffineTransformation?) = this.method_22933(other)
 /**
  * method_22935
  */
@@ -32,4 +32,4 @@ fun AffineTransformation.getTranslation() = this.method_35865()
 /**
  * method_35864
  */
-fun AffineTransformation.interpolate(target: AffineTransformation, factor: Float) = this.method_35864(target, factor)
+fun AffineTransformation.interpolate(target: AffineTransformation?, factor: Float) = this.method_35864(target, factor)

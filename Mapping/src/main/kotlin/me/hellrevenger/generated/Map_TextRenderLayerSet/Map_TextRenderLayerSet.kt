@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_51642
  */
-fun TextRenderLayerSet.getRenderLayer(layerType: net.minecraft.class_327.class_6415) = this.method_51642(layerType)
+fun TextRenderLayerSet.getRenderLayer(layerType: net.minecraft.class_327.class_6415?) = this.method_51642(layerType)
 /**
  * comp_1502
  */

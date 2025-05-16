@@ -5,7 +5,7 @@ object MeleeAttackTaskKt {
     /**
      * method_64622
      */
-    fun <T>create(targetPredicate: Predicate<T>, cooldown: Int) where T: MobEntity = MeleeAttackTask.method_64622<T>(targetPredicate, cooldown)
+    fun <T>create(targetPredicate: Predicate<T>?, cooldown: Int) where T: MobEntity = MeleeAttackTask.method_64622<T>(targetPredicate, cooldown)
     /**
      * method_46987
      */

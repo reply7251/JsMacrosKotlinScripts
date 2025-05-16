@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_15723
  */
-fun EntityPaintingMotiveFix.renameMotive(painting: Dynamic<*>) = this.method_15723(painting)
+fun EntityPaintingMotiveFix.renameMotive(painting: Dynamic<*>?) = this.method_15723(painting)

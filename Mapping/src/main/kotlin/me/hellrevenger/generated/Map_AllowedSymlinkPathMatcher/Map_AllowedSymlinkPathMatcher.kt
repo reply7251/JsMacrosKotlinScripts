@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_52249
  */
-fun AllowedSymlinkPathMatcher.get(fileSystem: FileSystem) = this.method_52249(fileSystem)
+fun AllowedSymlinkPathMatcher.get(fileSystem: FileSystem?) = this.method_52249(fileSystem)

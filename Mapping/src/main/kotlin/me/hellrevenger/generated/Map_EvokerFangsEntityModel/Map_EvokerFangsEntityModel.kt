@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62086
  */
-fun EvokerFangsEntityModel.setAngles(arg0: EvokerFangsEntityRenderState) = this.method_62086(arg0)
+fun EvokerFangsEntityModel.setAngles(arg0: EvokerFangsEntityRenderState?) = this.method_62086(arg0)

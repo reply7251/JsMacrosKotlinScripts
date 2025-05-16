@@ -5,9 +5,9 @@ object CraftingRecipeJsonBuilderKt {
     /**
      * method_55308
      */
-    fun toCraftingCategory(category: RecipeCategory) = CraftingRecipeJsonBuilder.method_55308(category)
+    fun toCraftingCategory(category: RecipeCategory?) = CraftingRecipeJsonBuilder.method_55308(category)
     /**
      * method_36442
      */
-    fun getItemId(item: ItemConvertible) = CraftingRecipeJsonBuilder.method_36442(item)
+    fun getItemId(item: ItemConvertible?) = CraftingRecipeJsonBuilder.method_36442(item)
 }

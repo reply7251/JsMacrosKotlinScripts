@@ -5,7 +5,7 @@ object EntityRenderersKt {
     /**
      * method_32177
      */
-    fun reloadPlayerRenderers(ctx: net.minecraft.class_5617.class_5618) = EntityRenderers.method_32177(ctx)
+    fun reloadPlayerRenderers(ctx: net.minecraft.class_5617.class_5618?) = EntityRenderers.method_32177(ctx)
     /**
      * method_32172
      */
@@ -13,5 +13,5 @@ object EntityRenderersKt {
     /**
      * method_32176
      */
-    fun reloadEntityRenderers(ctx: net.minecraft.class_5617.class_5618) = EntityRenderers.method_32176(ctx)
+    fun reloadEntityRenderers(ctx: net.minecraft.class_5617.class_5618?) = EntityRenderers.method_32176(ctx)
 }

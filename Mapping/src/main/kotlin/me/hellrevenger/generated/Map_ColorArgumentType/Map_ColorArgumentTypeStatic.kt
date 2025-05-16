@@ -9,7 +9,7 @@ object ColorArgumentTypeKt {
     /**
      * method_9277
      */
-    fun getColor(context: CommandContext<ServerCommandSource>, name: String) = ColorArgumentType.method_9277(context, name)
+    fun getColor(context: CommandContext<ServerCommandSource>?, name: String?) = ColorArgumentType.method_9277(context, name)
     /**
      * method_9276
      */

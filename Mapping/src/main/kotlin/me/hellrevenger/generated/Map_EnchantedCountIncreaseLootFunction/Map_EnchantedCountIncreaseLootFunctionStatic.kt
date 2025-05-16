@@ -9,5 +9,5 @@ object EnchantedCountIncreaseLootFunctionKt {
     /**
      * method_547
      */
-    fun builder(registries: net.minecraft.class_7225.class_7874, count: LootNumberProvider) = EnchantedCountIncreaseLootFunction.method_547(registries, count)
+    fun builder(registries: net.minecraft.class_7225.class_7874?, count: LootNumberProvider?) = EnchantedCountIncreaseLootFunction.method_547(registries, count)
 }

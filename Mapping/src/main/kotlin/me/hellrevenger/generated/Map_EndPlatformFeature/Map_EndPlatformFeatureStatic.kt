@@ -5,5 +5,5 @@ object EndPlatformFeatureKt {
     /**
      * method_61118
      */
-    fun generate(world: ServerWorldAccess, pos: BlockPos, breakBlocks: Boolean) = EndPlatformFeature.method_61118(world, pos, breakBlocks)
+    fun generate(world: ServerWorldAccess?, pos: BlockPos?, breakBlocks: Boolean) = EndPlatformFeature.method_61118(world, pos, breakBlocks)
 }

@@ -5,5 +5,5 @@ object WeatherCommandKt {
     /**
      * method_13827
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = WeatherCommand.method_13827(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = WeatherCommand.method_13827(dispatcher)
 }

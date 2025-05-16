@@ -17,5 +17,5 @@ object TeleportTargetKt {
     /**
      * method_60635
      */
-    fun missingSpawnBlock(world: ServerWorld, entity: Entity, postDimensionTransition: net.minecraft.class_5454.class_9823) = TeleportTarget.method_60635(world, entity, postDimensionTransition)
+    fun missingSpawnBlock(world: ServerWorld?, entity: Entity?, postDimensionTransition: net.minecraft.class_5454.class_9823?) = TeleportTarget.method_60635(world, entity, postDimensionTransition)
 }

@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_46318
  */
-fun MessageLink.update(updater: net.minecraft.class_7498.class_7499) = this.method_46318(updater)
+fun MessageLink.update(updater: net.minecraft.class_7498.class_7499?) = this.method_46318(updater)
 /**
  * method_46317
  */
@@ -12,7 +12,7 @@ fun MessageLink.next() = this.method_46317()
 /**
  * method_46321
  */
-fun MessageLink.linksTo(preceding: MessageLink) = this.method_46321(preceding)
+fun MessageLink.linksTo(preceding: MessageLink?) = this.method_46321(preceding)
 /**
  * comp_1096
  */

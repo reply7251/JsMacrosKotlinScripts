@@ -9,7 +9,7 @@ object WolfEntityKt {
     /**
      * method_39450
      */
-    fun canSpawn(type: EntityType<WolfEntity>, world: WorldAccess, spawnReason: SpawnReason, pos: BlockPos, random: Random) = WolfEntity.method_39450(type, world, spawnReason, pos, random)
+    fun canSpawn(type: EntityType<WolfEntity>?, world: WorldAccess?, spawnReason: SpawnReason?, pos: BlockPos?, random: Random?) = WolfEntity.method_39450(type, world, spawnReason, pos, random)
     /**
      * method_26897
      */

@@ -17,5 +17,5 @@ object TripwireHookBlockKt {
     /**
      * method_10776
      */
-    fun update(world: world_World, pos: BlockPos, state: BlockState, arg3: Boolean, arg4: Boolean, arg5: Int, arg6: BlockState) = TripwireHookBlock.method_10776(world, pos, state, arg3, arg4, arg5, arg6)
+    fun update(world: world_World?, pos: BlockPos?, state: BlockState?, arg3: Boolean, arg4: Boolean, arg5: Int, arg6: BlockState?) = TripwireHookBlock.method_10776(world, pos, state, arg3, arg4, arg5, arg6)
 }

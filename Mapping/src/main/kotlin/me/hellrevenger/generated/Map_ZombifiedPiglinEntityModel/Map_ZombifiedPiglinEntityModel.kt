@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62125
  */
-fun ZombifiedPiglinEntityModel.setAngles(arg0: ZombifiedPiglinEntityRenderState) = this.method_62125(arg0)
+fun ZombifiedPiglinEntityModel.setAngles(arg0: ZombifiedPiglinEntityRenderState?) = this.method_62125(arg0)

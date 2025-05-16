@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_57514
  */
-fun SuspiciousStewEffectsComponent.with(stewEffect: net.minecraft.class_9298.class_8751) = this.method_57514(stewEffect)
+fun SuspiciousStewEffectsComponent.with(stewEffect: net.minecraft.class_9298.class_8751?) = this.method_57514(stewEffect)
 /**
  * comp_2416
  */

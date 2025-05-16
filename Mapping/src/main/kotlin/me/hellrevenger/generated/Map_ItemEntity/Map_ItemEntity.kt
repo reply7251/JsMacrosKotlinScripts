@@ -12,7 +12,7 @@ fun ItemEntity.setNeverDespawn() = this.method_35190()
 /**
  * method_48349
  */
-fun ItemEntity.setOwner(owner: UUID) = this.method_48349(owner)
+fun ItemEntity.setOwner(owner: UUID?) = this.method_48349(owner)
 /**
  * method_6976
  */
@@ -32,7 +32,7 @@ fun ItemEntity.setToDefaultPickupDelay() = this.method_6988()
 /**
  * method_6981
  */
-fun ItemEntity.setThrower(thrower: Entity) = this.method_6981(thrower)
+fun ItemEntity.setThrower(thrower: Entity?) = this.method_6981(thrower)
 /**
  * method_6985
  */
@@ -44,7 +44,7 @@ fun ItemEntity.copy() = this.method_29271()
 /**
  * method_6979
  */
-fun ItemEntity.setStack(stack: ItemStack) = this.method_6979(stack)
+fun ItemEntity.setStack(stack: ItemStack?) = this.method_6979(stack)
 /**
  * method_6987
  */

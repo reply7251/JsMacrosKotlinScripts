@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_62119
  */
-fun SpiderEntityModel.setAngles(arg0: LivingEntityRenderState) = this.method_62119(arg0)
+fun SpiderEntityModel.setAngles(arg0: LivingEntityRenderState?) = this.method_62119(arg0)

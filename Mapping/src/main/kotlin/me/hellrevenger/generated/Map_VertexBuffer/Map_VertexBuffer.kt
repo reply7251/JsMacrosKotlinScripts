@@ -4,15 +4,15 @@ import me.hellrevenger.generated.*
 /**
  * method_1352
  */
-fun VertexBuffer.upload(data: BuiltBuffer) = this.method_1352(data)
+fun VertexBuffer.upload(data: BuiltBuffer?) = this.method_1352(data)
 /**
  * method_60829
  */
-fun VertexBuffer.uploadIndexBuffer(buf: net.minecraft.class_9799.class_9800) = this.method_60829(buf)
+fun VertexBuffer.uploadIndexBuffer(buf: net.minecraft.class_9799.class_9800?) = this.method_60829(buf)
 /**
  * method_65176
  */
-fun VertexBuffer.draw(layer: RenderLayer) = this.method_65176(layer)
+fun VertexBuffer.draw(layer: RenderLayer?) = this.method_65176(layer)
 /**
  * method_35665
  */
@@ -24,7 +24,7 @@ fun VertexBuffer.getVertexFormat() = this.method_34435()
 /**
  * method_34427
  */
-fun VertexBuffer.draw(viewMatrix: Matrix4f, projectionMatrix: Matrix4f, program: ShaderProgram) = this.method_34427(viewMatrix, projectionMatrix, program)
+fun VertexBuffer.draw(viewMatrix: Matrix4f?, projectionMatrix: Matrix4f?, program: ShaderProgram?) = this.method_34427(viewMatrix, projectionMatrix, program)
 /**
  * method_43444
  */

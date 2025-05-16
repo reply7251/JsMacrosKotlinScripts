@@ -13,5 +13,5 @@ object ForcedChunkStateKt {
     /**
      * method_32350
      */
-    fun fromNbt(nbt: NbtCompound, registries: net.minecraft.class_7225.class_7874) = ForcedChunkState.method_32350(nbt, registries)
+    fun fromNbt(nbt: NbtCompound?, registries: net.minecraft.class_7225.class_7874?) = ForcedChunkState.method_32350(nbt, registries)
 }

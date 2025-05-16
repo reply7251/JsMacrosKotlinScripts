@@ -5,5 +5,5 @@ object BanListCommandKt {
     /**
      * method_13014
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = BanListCommand.method_13014(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = BanListCommand.method_13014(dispatcher)
 }

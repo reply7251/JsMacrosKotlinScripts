@@ -5,7 +5,7 @@ object DamageUtilKt {
     /**
      * method_5496
      */
-    fun getDamageLeft(armorWearer: LivingEntity, damageAmount: Float, damageSource: DamageSource, armor: Float, armorToughness: Float) = DamageUtil.method_5496(armorWearer, damageAmount, damageSource, armor, armorToughness)
+    fun getDamageLeft(armorWearer: LivingEntity?, damageAmount: Float, damageSource: DamageSource?, armor: Float, armorToughness: Float) = DamageUtil.method_5496(armorWearer, damageAmount, damageSource, armor, armorToughness)
     /**
      * method_5497
      */

@@ -5,5 +5,5 @@ object AbstractPropertiesHandlerKt {
     /**
      * method_16727
      */
-    fun <T>loadProperties(path: file_Path) where T: AbstractPropertiesHandler<T> = AbstractPropertiesHandler.method_16727(path)
+    fun <T>loadProperties(path: file_Path?) where T: AbstractPropertiesHandler<T> = AbstractPropertiesHandler.method_16727(path)
 }

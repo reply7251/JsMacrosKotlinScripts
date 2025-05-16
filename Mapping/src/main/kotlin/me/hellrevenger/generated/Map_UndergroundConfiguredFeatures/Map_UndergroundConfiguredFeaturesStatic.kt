@@ -101,5 +101,5 @@ object UndergroundConfiguredFeaturesKt {
     /**
      * method_46850
      */
-    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>) = UndergroundConfiguredFeatures.method_46850(featureRegisterable)
+    fun bootstrap(featureRegisterable: Registerable<ConfiguredFeature<*, *>>?) = UndergroundConfiguredFeatures.method_46850(featureRegisterable)
 }

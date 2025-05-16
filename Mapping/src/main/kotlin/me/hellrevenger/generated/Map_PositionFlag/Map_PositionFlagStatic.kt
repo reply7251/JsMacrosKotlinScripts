@@ -57,7 +57,7 @@ object PositionFlagKt {
     /**
      * method_11741
      */
-    fun getBitfield(flags: Set<PositionFlag>) = PositionFlag.method_11741(flags)
+    fun getBitfield(flags: Set<PositionFlag>?) = PositionFlag.method_11741(flags)
     /**
      * method_11744
      */

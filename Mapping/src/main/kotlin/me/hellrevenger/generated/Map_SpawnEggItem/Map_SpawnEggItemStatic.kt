@@ -5,7 +5,7 @@ object SpawnEggItemKt {
     /**
      * method_8019
      */
-    fun forEntity(type: EntityType<*>) = SpawnEggItem.method_8019(type)
+    fun forEntity(type: EntityType<*>?) = SpawnEggItem.method_8019(type)
     /**
      * method_8017
      */

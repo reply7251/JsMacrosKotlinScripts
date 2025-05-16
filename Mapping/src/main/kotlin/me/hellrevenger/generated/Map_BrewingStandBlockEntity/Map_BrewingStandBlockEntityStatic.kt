@@ -21,5 +21,5 @@ object BrewingStandBlockEntityKt {
     /**
      * method_31665
      */
-    fun tick(world: world_World, pos: BlockPos, state: BlockState, blockEntity: BrewingStandBlockEntity) = BrewingStandBlockEntity.method_31665(world, pos, state, blockEntity)
+    fun tick(world: world_World?, pos: BlockPos?, state: BlockState?, blockEntity: BrewingStandBlockEntity?) = BrewingStandBlockEntity.method_31665(world, pos, state, blockEntity)
 }

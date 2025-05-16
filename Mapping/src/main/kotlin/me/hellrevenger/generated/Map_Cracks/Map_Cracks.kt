@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_57284
  */
-fun Cracks.getCrackLevel(stack: ItemStack) = this.method_57284(stack)
+fun Cracks.getCrackLevel(stack: ItemStack?) = this.method_57284(stack)
 /**
  * method_57282
  */

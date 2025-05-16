@@ -25,9 +25,9 @@ object DoorBlockKt {
     /**
      * method_24796
      */
-    fun canOpenByHand(state: BlockState) = DoorBlock.method_24796(state)
+    fun canOpenByHand(state: BlockState?) = DoorBlock.method_24796(state)
     /**
      * method_24795
      */
-    fun canOpenByHand(world: world_World, pos: BlockPos) = DoorBlock.method_24795(world, pos)
+    fun canOpenByHand(world: world_World?, pos: BlockPos?) = DoorBlock.method_24795(world, pos)
 }

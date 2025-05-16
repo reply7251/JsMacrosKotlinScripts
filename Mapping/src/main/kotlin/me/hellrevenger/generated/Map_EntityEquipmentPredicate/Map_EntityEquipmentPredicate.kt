@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_16226
  */
-fun EntityEquipmentPredicate.test(entity: Entity) = this.method_16226(entity)
+fun EntityEquipmentPredicate.test(entity: Entity?) = this.method_16226(entity)
 /**
  * comp_2620
  */

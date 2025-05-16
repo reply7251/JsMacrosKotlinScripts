@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_10916
  */
-fun NbtDataSource.get(source: ServerCommandSource) = this.method_10916(source)
+fun NbtDataSource.get(source: ServerCommandSource?) = this.method_10916(source)
 /**
  * method_54225
  */

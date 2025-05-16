@@ -5,5 +5,5 @@ object RotateCommandKt {
     /**
      * method_64569
      */
-    fun register(dispatcher: CommandDispatcher<ServerCommandSource>) = RotateCommand.method_64569(dispatcher)
+    fun register(dispatcher: CommandDispatcher<ServerCommandSource>?) = RotateCommand.method_64569(dispatcher)
 }

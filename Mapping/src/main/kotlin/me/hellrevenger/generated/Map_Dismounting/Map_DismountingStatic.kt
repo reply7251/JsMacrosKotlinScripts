@@ -5,7 +5,7 @@ object DismountingKt {
     /**
      * method_30343
      */
-    fun getCeilingHeight(pos: BlockPos, maxDistance: Int, collisionShapeGetter: function_Function<BlockPos, VoxelShape>) = Dismounting.method_30343(pos, maxDistance, collisionShapeGetter)
+    fun getCeilingHeight(pos: BlockPos?, maxDistance: Int, collisionShapeGetter: function_Function<BlockPos, VoxelShape>?) = Dismounting.method_30343(pos, maxDistance, collisionShapeGetter)
     /**
      * method_27932
      */
@@ -13,21 +13,21 @@ object DismountingKt {
     /**
      * method_30341
      */
-    fun getCollisionShape(world: BlockView, pos: BlockPos) = Dismounting.method_30341(world, pos)
+    fun getCollisionShape(world: BlockView?, pos: BlockPos?) = Dismounting.method_30341(world, pos)
     /**
      * method_30769
      */
-    fun findRespawnPos(entityType: EntityType<*>, world: CollisionView, pos: BlockPos, ignoreInvalidPos: Boolean) = Dismounting.method_30769(entityType, world, pos, ignoreInvalidPos)
+    fun findRespawnPos(entityType: EntityType<*>?, world: CollisionView?, pos: BlockPos?, ignoreInvalidPos: Boolean) = Dismounting.method_30769(entityType, world, pos, ignoreInvalidPos)
     /**
      * method_33353
      */
-    fun canPlaceEntityAt(world: CollisionView, offset: Vec3d, entity: LivingEntity, pose: EntityPose) = Dismounting.method_33353(world, offset, entity, pose)
+    fun canPlaceEntityAt(world: CollisionView?, offset: Vec3d?, entity: LivingEntity?, pose: EntityPose?) = Dismounting.method_33353(world, offset, entity, pose)
     /**
      * method_27933
      */
-    fun canPlaceEntityAt(world: CollisionView, entity: LivingEntity, targetBox: Box) = Dismounting.method_27933(world, entity, targetBox)
+    fun canPlaceEntityAt(world: CollisionView?, entity: LivingEntity?, targetBox: Box?) = Dismounting.method_27933(world, entity, targetBox)
     /**
      * method_27934
      */
-    fun getDismountOffsets(movementDirection: Direction) = Dismounting.method_27934(movementDirection)
+    fun getDismountOffsets(movementDirection: Direction?) = Dismounting.method_27934(movementDirection)
 }

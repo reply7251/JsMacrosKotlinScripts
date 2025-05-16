@@ -5,5 +5,5 @@ object LongRunningSampleStatisticsKt {
     /**
      * method_38060
      */
-    fun <T>fromSamples(samples: MutableList<T>) where T: LongRunningSample = LongRunningSampleStatistics.method_38060<T>(samples)
+    fun <T>fromSamples(samples: MutableList<T>?) where T: LongRunningSample = LongRunningSampleStatistics.method_38060<T>(samples)
 }

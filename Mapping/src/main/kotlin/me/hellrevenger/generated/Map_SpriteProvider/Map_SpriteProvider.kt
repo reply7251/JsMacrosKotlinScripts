@@ -4,7 +4,7 @@ import me.hellrevenger.generated.*
 /**
  * method_18139
  */
-fun SpriteProvider.getSprite(random: Random) = this.method_18139(random)
+fun SpriteProvider.getSprite(random: Random?) = this.method_18139(random)
 /**
  * method_18138
  */

@@ -4,27 +4,27 @@ import me.hellrevenger.generated.*
 /**
  * method_35908
  */
-fun TextureMap.copy(parent: TextureKey, child: TextureKey) = this.method_35908(parent, child)
+fun TextureMap.copy(parent: TextureKey?, child: TextureKey?) = this.method_35908(parent, child)
 /**
  * method_25868
  */
-fun TextureMap.put(key: TextureKey, id: Identifier) = this.method_25868(key, id)
+fun TextureMap.put(key: TextureKey?, id: Identifier?) = this.method_25868(key, id)
 /**
  * method_25867
  */
-fun TextureMap.getTexture(key: TextureKey) = this.method_25867(key)
+fun TextureMap.getTexture(key: TextureKey?) = this.method_25867(key)
 /**
  * method_25874
  */
-fun TextureMap.inherit(parent: TextureKey, child: TextureKey) = this.method_25874(parent, child)
+fun TextureMap.inherit(parent: TextureKey?, child: TextureKey?) = this.method_25874(parent, child)
 /**
  * method_25879
  */
-fun TextureMap.copyAndAdd(key: TextureKey, id: Identifier) = this.method_25879(key, id)
+fun TextureMap.copyAndAdd(key: TextureKey?, id: Identifier?) = this.method_25879(key, id)
 /**
  * method_35909
  */
-fun TextureMap.register(key: TextureKey, id: Identifier) = this.method_35909(key, id)
+fun TextureMap.register(key: TextureKey?, id: Identifier?) = this.method_35909(key, id)
 /**
  * method_25861
  */

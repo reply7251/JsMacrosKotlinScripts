@@ -28,7 +28,7 @@ fun PathNodeMaker.getStart() = this.method_21()
 /**
  * method_25
  */
-fun PathNodeMaker.getNodeType(context: PathContext, x: Int, y: Int, z: Int, mob: MobEntity) = this.method_25(context, x, y, z, mob)
+fun PathNodeMaker.getNodeType(context: PathContext?, x: Int, y: Int, z: Int, mob: MobEntity?) = this.method_25(context, x, y, z, mob)
 /**
  * method_24
  */
@@ -44,15 +44,15 @@ fun PathNodeMaker.canWalkOverFences() = this.method_46738()
 /**
  * method_18
  */
-fun PathNodeMaker.getSuccessors(successors: Array<PathNode>, node: PathNode) = this.method_18(successors, node)
+fun PathNodeMaker.getSuccessors(successors: Array<PathNode>?, node: PathNode?) = this.method_18(successors, node)
 /**
  * method_17
  */
-fun PathNodeMaker.getDefaultNodeType(context: PathContext, x: Int, y: Int, z: Int) = this.method_17(context, x, y, z)
+fun PathNodeMaker.getDefaultNodeType(context: PathContext?, x: Int, y: Int, z: Int) = this.method_17(context, x, y, z)
 /**
  * method_57615
  */
-fun PathNodeMaker.getDefaultNodeType(entity: MobEntity, pos: BlockPos) = this.method_57615(entity, pos)
+fun PathNodeMaker.getDefaultNodeType(entity: MobEntity?, pos: BlockPos?) = this.method_57615(entity, pos)
 /**
  * method_15
  */
@@ -60,7 +60,7 @@ fun PathNodeMaker.setCanEnterOpenDoors(canEnterOpenDoors: Boolean) = this.method
 /**
  * method_12
  */
-fun PathNodeMaker.init(cachedWorld: ChunkCache, entity: MobEntity) = this.method_12(cachedWorld, entity)
+fun PathNodeMaker.init(cachedWorld: ChunkCache?, entity: MobEntity?) = this.method_12(cachedWorld, entity)
 /**
  * method_23
  */

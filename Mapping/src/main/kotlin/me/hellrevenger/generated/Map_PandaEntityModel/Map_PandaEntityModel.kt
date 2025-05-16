@@ -4,4 +4,4 @@ import me.hellrevenger.generated.*
 /**
  * method_17103
  */
-fun PandaEntityModel.setAngles(arg0: PandaEntityRenderState) = this.method_17103(arg0)
+fun PandaEntityModel.setAngles(arg0: PandaEntityRenderState?) = this.method_17103(arg0)

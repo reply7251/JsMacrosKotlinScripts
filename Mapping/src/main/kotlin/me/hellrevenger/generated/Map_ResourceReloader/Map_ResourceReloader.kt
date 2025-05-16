@@ -8,4 +8,4 @@ fun ResourceReloader.getName() = this.method_22322()
 /**
  * method_25931
  */
-fun ResourceReloader.reload(synchronizer: net.minecraft.class_3302.class_4045, manager: ResourceManager, prepareExecutor: Executor, applyExecutor: Executor) = this.method_25931(synchronizer, manager, prepareExecutor, applyExecutor)
+fun ResourceReloader.reload(synchronizer: net.minecraft.class_3302.class_4045?, manager: ResourceManager?, prepareExecutor: Executor?, applyExecutor: Executor?) = this.method_25931(synchronizer, manager, prepareExecutor, applyExecutor)

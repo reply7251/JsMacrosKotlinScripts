@@ -21,5 +21,5 @@ object LootTableKt {
     /**
      * method_332
      */
-    fun processStacks(world: ServerWorld, consumer: Consumer<ItemStack>) = LootTable.method_332(world, consumer)
+    fun processStacks(world: ServerWorld?, consumer: Consumer<ItemStack>?) = LootTable.method_332(world, consumer)
 }

@@ -41,5 +41,5 @@ object FlatLevelGeneratorPresetsKt {
     /**
      * method_41579
      */
-    fun bootstrap(presetRegisterable: Registerable<FlatLevelGeneratorPreset>) = FlatLevelGeneratorPresets.method_41579(presetRegisterable)
+    fun bootstrap(presetRegisterable: Registerable<FlatLevelGeneratorPreset>?) = FlatLevelGeneratorPresets.method_41579(presetRegisterable)
 }
