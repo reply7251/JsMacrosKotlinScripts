@@ -64,7 +64,7 @@ fun createSimpleScript(map: Map<String, Any?>): SimpleScript? {
 
 object SimpleScriptConfiguration : ScriptCompilationConfiguration({
     jvm {
-        dependenciesFromCurrentContext();
+        dependenciesFromCurrentContext(wholeClasspath = true);
     }
 
     defaultImports(ImportJar::class)

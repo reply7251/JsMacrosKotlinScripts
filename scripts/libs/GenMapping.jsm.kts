@@ -190,13 +190,14 @@ class GenMapping(val folder: File) {
     }
 
     fun getTypeNameFromParameter(param: java.lang.reflect.Parameter): String {
+        val nullPostfix = if(param.annotations.any { it.toString().endsWith("NotNull") }) "" else "?"
         if(param.parameterizedType is Class<*>) {
             val params = (param.parameterizedType as Class<*>).typeParameters
             if(params.isNotEmpty()) {
-                return getNameFromType(param.parameterizedType) + "<*>"
+                return getNameFromType(param.parameterizedType) + "<*>" + nullPostfix
             }
         }
-        return getNameFromType(param.parameterizedType)
+        return getNameFromType(param.parameterizedType) + nullPostfix
     }
 
     fun getNameFromType(type: Type): String {
@@ -524,7 +525,7 @@ class GenMapping(val folder: File) {
         if(staticBuilder.isNotBlank()) {
             genStaticMappingKt(aliasName, staticBuilder.toString(), if(staticSplitCount == 0) -1 else ++staticSplitCount)
         }
-        if(builder.isBlank()) return ""
+        if(builder.isEmpty()) return ""
         genMappedKt(aliasName, builder.toString(), if(splitCount == 0) -1 else ++splitCount)
 
         return builder.toString()
@@ -706,6 +707,7 @@ class GenMapping(val folder: File) {
         ).forEach {
             toAlias[it] = it.replace("java.lang.", "").replace("java.util.", "")
         }
+        toAlias["java.util.SequencedSet"] = "Set"
         toAlias["java.util.List"] = "MutableList"
         toAlias["java.lang.Integer"] = "Int"
         toAlias["java.lang.Character"] = "Char"
