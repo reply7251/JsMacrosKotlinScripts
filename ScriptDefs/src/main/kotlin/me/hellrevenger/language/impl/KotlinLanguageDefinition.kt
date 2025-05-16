@@ -32,11 +32,12 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
         var K2 = CompilerSetting.isK2Enabled()
 
+        val classLoader = KotlinLanguageDefinition::class.java.classLoader
+        Thread.currentThread().contextClassLoader = classLoader
+
         val compConf = object : ScriptCompilationConfiguration({
             jvm {
-                // Extract the whole classpath from context classloader and use it as dependencies
-                dependenciesFromCurrentContext(wholeClasspath = true)
-                dependencies.append(JvmDependencyFromClassLoader { KotlinLanguageDefinition::class.java.classLoader })
+                dependenciesFromClassloader(classLoader = classLoader, wholeClasspath = true)
             }
             defaultImports(ImportJar::class)
 
