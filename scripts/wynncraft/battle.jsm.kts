@@ -1,18 +1,30 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
 @file:Suppress("MemberVisibilityCanBePrivate", "ConstPropertyName", "HasPlatformType")
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.google.gson.JsonParser
+import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Handlers
 import com.wynntils.core.components.Managers
 import com.wynntils.core.components.Models
+import com.wynntils.core.consumers.features.Feature
+import com.wynntils.core.keybinds.KeyBind
+import com.wynntils.core.notifications.event.NotificationEvent
+import com.wynntils.core.text.StyledText
+import com.wynntils.features.combat.AutoAttackFeature
 import com.wynntils.features.combat.QuickCastFeature
 import com.wynntils.handlers.bossbar.TrackedBar
 import com.wynntils.models.abilities.AbilityModel
 import com.wynntils.models.abilities.type.OphanimOrb
 import com.wynntils.models.abilities.type.ShamanMaskType
+import com.wynntils.models.character.event.CharacterUpdateEvent
 import com.wynntils.models.items.items.game.CraftedConsumableItem
 import com.wynntils.models.items.items.game.MultiHealthPotionItem
 import com.wynntils.models.items.items.game.PotionItem
 import com.wynntils.models.spells.type.SpellDirection
+import com.wynntils.models.worlds.event.WorldStateEvent
+import com.wynntils.models.worlds.type.WorldState
 import me.hellrevenger.KotlinExtension
 import me.hellrevenger.generated.Input
 import me.hellrevenger.generated.Map_ClientPlayerEntity.input
@@ -20,17 +32,22 @@ import me.hellrevenger.generated.Map_Input.movementForward
 import me.hellrevenger.generated.Map_Input.movementSideways
 import me.hellrevenger.generated.Map_Input.playerInput
 import me.hellrevenger.generated.Map_Input.tick
+import me.hellrevenger.generated.Map_KeyBinding.*
 import me.hellrevenger.generated.Map_LivingEntity.removeStatusEffectInternal
 import me.hellrevenger.generated.Map_MinecraftClient.getRenderTickCounter
 import me.hellrevenger.generated.Map_MinecraftClient.player
 import me.hellrevenger.generated.Map_PlayerInput.*
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
 import me.hellrevenger.generated.Map_StatusEffects.StatusEffectsKt
+import me.hellrevenger.generated.Map_Text.TextKt
 import me.hellrevenger.generated.PlayerInput
+import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.api.KtGlobals
 import net.minecraft.class_10185
 import net.minecraft.class_332
+import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
+import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.ScriptScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
@@ -42,6 +59,7 @@ import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventDimensionChange
 import xyz.wagyourtail.jsmacros.client.api.helper.inventory.ItemStackHelper
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FPlayer
 import xyz.wagyourtail.jsmacros.core.service.EventService
+import java.io.File
 import java.util.regex.Matcher
 import kotlin.concurrent.thread
 import kotlin.math.*
@@ -79,6 +97,7 @@ val skill1Key = keyBinds[Actions.cast1]!!
 val skill2Key = keyBinds[Actions.cast2]!!
 val skill3Key = keyBinds[Actions.cast3]!!
 val skill4Key = keyBinds[Actions.cast4]!!
+val meleeKey = keyBinds[Actions.melee]!!
 
 val d2d = Hud.createDraw2D()
 
@@ -125,18 +144,27 @@ open class BindValue<T>(key: String, var value: T, callback: (Bind) -> Unit) : B
 
     var beforeValueChange: ((Bind) -> Unit)? = null
 
+    var persist = true
+    var dirty = false
+
     override fun trigger() {
         beforeValueChange?.invoke(this)
         super.trigger()
+        dirty = true
     }
 
     fun set(newValue: T) {
         beforeValueChange?.invoke(this)
         value = newValue
         callback(this)
+        dirty = true
     }
 
     open fun modify(positive: Boolean) { }
+
+    open fun updateFromString(string: String) {
+        dirty = false
+    }
 }
 
 
@@ -148,6 +176,11 @@ open class BindBoolean(key: String, value: Boolean = false, callback: (Bind) -> 
 
     fun toString(name: String): String {
         return  "$name ${Format.formatChar}r(${Format.coloredKey(simpleName)}): " + Format.coloredBoolean(value)
+    }
+
+    override fun updateFromString(string: String) {
+        set(string.toBoolean())
+        super.updateFromString(string)
     }
 }
 
@@ -190,9 +223,19 @@ open class BindNumber<T: Number>(key: String, val configIndex: String, value: T,
     }
 }
 class BindInt(key: String, configIndex: String, value: Int, diff: Int = 1, callback: (Bind) -> Unit) :
-    BindNumber<Int>(key, configIndex, value, diff, callback)
+    BindNumber<Int>(key, configIndex, value, diff, callback) {
+    override fun updateFromString(string: String) {
+        set(string.toInt())
+        super.updateFromString(string)
+    }
+}
 class BindDouble(key: String, configIndex: String, value: Double, diff: Double = 1.0, callback: (Bind) -> Unit) :
-    BindNumber<Double>(key, configIndex, value, diff, callback)
+    BindNumber<Double>(key, configIndex, value, diff, callback){
+    override fun updateFromString(string: String) {
+        set(string.toDouble())
+        super.updateFromString(string)
+    }
+}
 
 class BindPos(key: String, value: Pos3D, callback: (Bind) -> Unit): BindValue<Pos3D>(key, value, callback) {
     override fun trigger() {
@@ -213,6 +256,7 @@ val attackCooldown = mc::class.java.getDeclaredField("field_1771")
 attackCooldown.trySetAccessible()
 
 val quickCastFeature = Managers.Feature.getFeatureInstance(QuickCastFeature::class.java)
+val autoAttackFeature = Managers.Feature.getFeatureInstance(AutoAttackFeature::class.java)
 
 fun getSpellCaster(spellOrder: String): () -> Unit {
     val m = quickCastFeature::class.java.getDeclaredMethod("cast${spellOrder}Spell")
@@ -229,15 +273,6 @@ fun getSpellInProgress() = Models.Spell.lastSpell
 fun lerp(from: Double, to: Double, delta: Float) = from + (to - from) * delta
 fun lerp(from: Float, to: Float, delta: Float) = from + (to - from) * delta
 
-class RenderGetter(val callback: () -> Unit) : RenderElement3D<RenderGetter> {
-    override fun render(p0: class_332?, p1: Float) {
-        callback()
-    }
-
-    override fun compareToSame(p0: RenderGetter?): Int {
-        return 0
-    }
-}
 class Smooth {
     var enabled = false
     var targetYaw = 0f
@@ -286,9 +321,6 @@ KtGlobals.getVariable<MutableMap<String, () -> Pair<Float, Float>>>(offsetKey)?.
     }
 }
 
-val d3d = Hud.createDraw3D()
-d3d.register()
-
 val hotBarRegex = "key.keyboard.(\\d)".toRegex()
 
 enum class Mode {
@@ -329,7 +361,7 @@ open class WynnClass: HasBind {
     var lineIndex = -1
     var modifyConfig: (Boolean) -> Unit = { }
 
-    var configPos = 150 to 50
+    var configPos = 250 to 50
 
     lateinit var targetY: BindDouble
     lateinit var height: BindInt
@@ -375,6 +407,11 @@ open class WynnClass: HasBind {
         return this
     }
 
+    fun <U, T : BindValue<U>> T.setPersist(value: Boolean = false): T {
+        this.persist = value
+        return this
+    }
+
     open fun onInitOverride() {
         enabled = BindBoolean("key.keyboard.f") {
             if(enabled.value) {
@@ -383,12 +420,12 @@ open class WynnClass: HasBind {
                 onDisable()
             }
             updateConfig()
-        }.bind()
+        }.bind().setPersist()
 
         spellCooldown = BindInt("key.keyboard.keypad.decimal", "spellCooldown", 10) { updateConfig() }
             .bind()
 
-        spamSneak = BindBoolean("key.keyboard.keypad.0") { updateConfig() }.bind()
+        spamSneak = BindBoolean("key.keyboard.keypad.0") { updateConfig() }.bind().setPersist()
 
         Bind("key.keyboard.keypad.add") {
             SharedBindData.modifyConfig(true)
@@ -406,7 +443,7 @@ open class WynnClass: HasBind {
             bind.value = if(positive) Player.player?.y ?: -1.0 else -1.0
         }
 
-        anchor = BindPos("key.keyboard.keypad.9", Pos3D.ZERO) { updateConfig() }.bind()
+        anchor = BindPos("key.keyboard.keypad.9", Pos3D.ZERO) { updateConfig() }.bind().setPersist()
         enableMelee = BindBoolean("key.keyboard.keypad.7", true) { updateConfig() }.bind()
 
         maxRepeat = BindInt("key.keyboard.keypad.8", "MaxRepeat", 1) { updateConfig() }.bind()
@@ -461,7 +498,9 @@ open class WynnClass: HasBind {
         lastSpellPacket = Time.time()
     }
 
-    open fun onDisable() { }
+    open fun onDisable() {
+        Managers.Feature.enableFeature(autoAttackFeature)
+    }
 
     open fun reset() {
         lastMelee = 0
@@ -486,13 +525,17 @@ open class WynnClass: HasBind {
     }
 
     open fun main() {
+        Managers.Feature.disableFeature(autoAttackFeature)
         reset()
         customInput = setInput()
         thread {
             while (enabled.value && World.isWorldLoaded) {
                 if(!isBlocked() && !checkManual()) {
                     val nextSpell = getSpellCooldownWithMana() - (World.time - lastSpell)
-                    if(nextSpell > 0) {
+                    if(KeyBind.pressedKeys.contains(meleeKey)) {
+                        melee()
+                        Client.waitTick()
+                    } else if(nextSpell > 0) {
                         if(Player.player?.mainHand?.isOnCooldown != true && enableMelee.value) {
                             melee()
                             Client.waitTick()
@@ -612,6 +655,7 @@ open class WynnClass: HasBind {
         d2d.removeText(crossHair)
         terminated = true
         enabled.set(false)
+        saveConfig()
     }
 
     open fun onWorldChange() {
@@ -708,7 +752,7 @@ open class WynnClass: HasBind {
         blockSwapItem = false
     }
 
-    fun checkUndoSelectHotbar(newSelect: Int) {
+    open fun checkUndoSelectHotbar(newSelect: Int) {
         blockedByHotbar = true
         val inv = Player.openInventory()
         val oldSelect = inv.selectedHotbarSlotIndex
@@ -771,6 +815,44 @@ open class WynnClass: HasBind {
     }
     
     open fun getMaxRepeatValue() = maxRepeat.value
+
+    open fun saveConfig() {
+        var dirty = json[lastCharacterId]?.get("mode") == mode.toString()
+        val map = binds.mapNotNull { (key, bind) ->
+            (bind as? BindValue<*>)?.let {
+                if(!it.persist) return@let null
+                if(it.dirty)
+                    dirty = true
+                key to it.value.toString()
+            }
+        }.toMap().toMutableMap()
+        map["mode"] = mode.toString()
+        map["quickMode"] = quickMode.toString()
+        synchronized(json) {
+            json[lastCharacterId] = map
+            if(dirty) {
+                configFile.writeText(gson.toJson(json))
+            }
+        }
+    }
+
+    open fun loadConfig() {
+        val map = json[currentCharacterId] ?: return
+        synchronized(this) {
+            map["mode"]?.let {
+                mode = Mode.valueOf(it)
+            }
+            map["quickMode"]?.let {
+                quickMode = Mode.valueOf(it)
+            }
+            map.forEach { (key, value) ->
+                (binds[key] as? BindValue<*>)?.updateFromString(value)
+            }
+            updateConfig()
+        }
+    }
+    
+    open fun onSpellCasted() {}
 }
 
 inner class Warrior() : WynnClass() {
@@ -780,6 +862,10 @@ inner class Warrior() : WynnClass() {
     lateinit var bloodPact: BindBoolean
     var interactCounter = 0
     var attackCounter = 0
+    var hotbarChanged = false
+    var chargeCounter = 0
+    var charging = false
+    var chargeCooldown = 0
 
     lateinit var meleeInterval: BindInt
     //var quick = true
@@ -796,7 +882,7 @@ inner class Warrior() : WynnClass() {
         meleeInterval = BindInt("key.keyboard.keypad.1", "MeleeInterval", 20, 3) { updateConfig() }.bind()
 
         bloodPact = BindBoolean("key.keyboard.keypad.6") { updateConfig() }.bind()
-        fly = BindBoolean("key.keyboard.keypad.4") { updateConfig() }.bind()
+        fly = BindBoolean("key.keyboard.keypad.4") { updateConfig() }.bind().setPersist()
 
         super.onInitOverride()
 
@@ -819,11 +905,14 @@ inner class Warrior() : WynnClass() {
     }
     
     override fun main() {
-        if(mode == Mode.ScreamSurf || mode == Mode.AlterSurf || mode == Mode.BashSurf) {
+        if(mode == Mode.ScreamSurf) {
             addSpell(Actions.cast2)
             addSpell(Actions.cast2)
             addSpell(Actions.cast4)
             addSpell(Actions.cast3)
+        } else if(mode == Mode.BashSurf) {
+            addSpell(Actions.cast4)
+            addSpell(Actions.cast4)
         }
         super.main()
     }
@@ -851,10 +940,6 @@ inner class Warrior() : WynnClass() {
         attackCounter = 0
     }
 
-    override fun onDisable() {
-        super.onDisable()
-    }
-
     fun isIdol() = isHoldItem("idol")
 
     fun burstCharge() = Models.Spell.lastBurstSpellName.lowercase().contains("charge") && Models.Spell.repeatedBurstSpellCount > 5
@@ -863,8 +948,8 @@ inner class Warrior() : WynnClass() {
         if(isHoldItem("elaborated ")) return
         if(isHoldItem("rhythm") || isHoldItem("catamaran")) {
             KeyBind.pressKeyBind(Actions.sneak)
-            waitSpell(Actions.cast2, 3)
-            waitSpell(Actions.cast3, 3)
+            waitSpell(Actions.cast2, 5)
+            waitSpell(Actions.cast3, 5)
             KeyBind.releaseKeyBind(Actions.sneak)
         } else if(mode == Mode.ChargeSpam && isIdol()) {
             if(World.time % 2L == 0L) {
@@ -879,7 +964,8 @@ inner class Warrior() : WynnClass() {
         } else if(mode == Mode.BashSurf || mode == Mode.ScreamSurf) {
             addSpell(Actions.cast3)
             addSpell(Actions.cast2)
-            if(World.time >= lastWarScream + 200 || mode == Mode.ScreamSurf) {
+            if(World.time >= lastWarScream + 200 || hotbarChanged || mode == Mode.ScreamSurf) {
+                hotbarChanged = false
                 addSpell(Actions.cast4)
             } else {
                 addSpell(Actions.cast1)
@@ -946,6 +1032,24 @@ inner class Warrior() : WynnClass() {
         }
     }
 
+    override fun onKey(e: EventKey) {
+        super.onKey(e)
+
+        if(e.key == skill2Key && e.action == 3) {
+            charging = true
+        }
+    }
+    
+    override fun onSpellCasted() {
+        if(charging) {
+            if(chargeCounter++ > 2) {
+                chargeCounter = 0
+                cast4()
+            }
+            charging = false
+        }
+    }
+
     override fun waitSpell(spell: String, extraTick: Int, hotbar: Int) {
         var inv = Player.openInventory()
         val oldSelect = inv.selectedHotbarSlotIndex
@@ -959,9 +1063,14 @@ inner class Warrior() : WynnClass() {
             }
         }
     }
+    
+    override fun checkUndoSelectHotbar(newSelect: Int) {
+        super.checkUndoSelectHotbar(newSelect)
+        hotbarChanged = true
+    }
 
     override fun getSpellCooldownWithMana() =
-        if(bloodPact.value)
+        if(bloodPact.value && getHealth() > 30)
             spellCooldown.value
         else
             super.getSpellCooldownWithMana()
@@ -1212,7 +1321,7 @@ inner class Mage() : WynnClass() {
         val timeSinceLastHeal = World.time - lastHeal
         val inHealPulse = abs(timeSinceLastHeal - 12) < 12 || abs(timeSinceLastHeal - 42) < 12 || abs(timeSinceLastHeal - 72) < 12
 
-        if(notHealthy && (lastAction != Actions.cast1 || (!inHealPulse && Models.Spell.repeatedSpellCount < 3)) && getMana() > 40) {
+        if(notHealthy && !inHealPulse && (lastAction != Actions.cast1 || Models.Spell.repeatedSpellCount < 3) && getMana() > 40) {
             waitSpell(Actions.cast1)
         } else if(World.time - lastMelee >= 9 && !player.mainHand.isOnCooldown) {
             melee()
@@ -1281,6 +1390,14 @@ inner class Mage() : WynnClass() {
         super.reset()
 
         lastTimeLock = 0L
+    }
+
+    override fun onKey(e: EventKey) {
+        super.onKey(e)
+
+        if(e.key == skill3Key && e.action == 3 && getArchType() == "lb") {
+            e.cancel()
+        }
     }
 }
 
@@ -1358,7 +1475,7 @@ inner class Shaman() : WynnClass() {
     lateinit var enableBlood: BindBoolean
     var assertMask = false
     val lastTotem get() = lastSpells[Actions.cast1] ?: 0L
-    val lastTimeMask get() = lastSpells[Actions.cast4] ?: 0L
+    val lastUproot get() = lastSpells[Actions.cast4] ?: 0L
     var recordedPitch = 0f
     lateinit var enableAura: BindBoolean
     lateinit var fly: BindBoolean
@@ -1370,6 +1487,7 @@ inner class Shaman() : WynnClass() {
     override var mode = Mode.TotemSpam
     val modes = arrayOf(Mode.None, Mode.TotemSpam, Mode.Acolyte, Mode.AuraSpam, Mode.PuppetBomber, Mode.Melee)
     override var quickMode = Mode.PuppetBomber
+    var lastNoTotemNotify = 0L
     
     val awakenedProgress = AbilityModel.awakenedBar.barProgress?.progress ?: 0f
 
@@ -1387,7 +1505,7 @@ inner class Shaman() : WynnClass() {
         fly = BindBoolean("key.keyboard.keypad.4") {
             updateConfig()
             flyCounter = -1
-        }.bind()
+        }.bind().setPersist()
 
         enableAura = BindBoolean("key.keyboard.keypad.3", true) {
             updateConfig()
@@ -1421,7 +1539,11 @@ inner class Shaman() : WynnClass() {
     }
 
     fun switchMask(target: ShamanMaskType, canCancel: Boolean = false) {
-        if(Models.ShamanMask.currentMaskType == target && canCancel) return
+        if(canCancel) {
+            if(Models.ShamanMask.currentMaskType == target) return
+            if(Models.ShamanMask.currentMaskType == ShamanMaskType.AWAKENED && target == ShamanMaskType.FANATIC) return
+        }
+        //if(canCancel) Chat.log("current: ${Models.ShamanMask.currentMaskType} target: $target")
         val inventory = Player.openInventory()
         val hotbar = inventory.selectedHotbarSlotIndex
         inventory.selectedHotbarSlotIndex = if(inventory.getSlot(38).name.stringStripFormatting.startsWith("Silent B")) 2 else 1
@@ -1429,15 +1551,16 @@ inner class Shaman() : WynnClass() {
         var currentIndex = maskOrder.indexOf(Models.ShamanMask.currentMaskType)
         if(Models.ShamanMask.currentMaskType == ShamanMaskType.NONE)
             currentIndex = 2
+        else if(Models.ShamanMask.currentMaskType == ShamanMaskType.AWAKENED)
+            currentIndex = 1
         val targetIndex = maskOrder.lastIndexOf(target)
         var counter = targetIndex - currentIndex
         val progress = AbilityModel.awakenedBar.barProgress?.progress ?: 0f
         if(progress >= 1f) {
             counter = 1
-        } else if(Models.ShamanMask.currentMaskType == ShamanMaskType.AWAKENED) {
-            counter = 3
         }
-        if(counter > 3) counter -= 3
+        while(counter > 3) counter -= 3
+        //Chat.log("counter: $counter")
         while (counter-- > 0) {
             waitSpell(Actions.cast4)
         }
@@ -1448,16 +1571,16 @@ inner class Shaman() : WynnClass() {
     override fun chooseAction() {
         if(fly.value) return
         val totem = Models.ShamanTotem.activeTotems.firstOrNull()
-        if(isHoldItem("abso") || mode == Mode.Acolyte) {
-            if(World.time - lastTotem > 190 && lastAction != Actions.cast1) {
+        if(mode == Mode.Acolyte) {
+            if(World.time - lastTotem > 540 || (World.time - lastTotem > 400 && Player.player!!.pitch > 45)) {
                 waitSpell(Actions.cast1)
                 waitSpell(Actions.cast1)
             }
             val shouldUproot = AbilityModel.bloodPoolBar.barProgress.value.current > 81
             val shouldAura = (100 - getHealth())
-            val tooManyUproot = lastAction == Actions.cast4
+            val tooManyUproot = lastAction == Actions.cast4 && burstAction > 1 && World.time - lastUproot < 60
             val tooManyAura = lastAction == Actions.cast3 && burstAction > 1
-            if(((getMana() > 50 && shouldAura > 20) || shouldAura > 40) && World.time - lastAura > 19 || (shouldUproot && tooManyUproot)) {
+            if(((getMana() > 50 && shouldAura > 20) || shouldAura > 40) && (World.time - lastAura > 19 && enableAura.value) || (shouldUproot && tooManyUproot)) {
                 waitSpell(Actions.cast3, 2)
             }
             if(shouldUproot || (shouldAura > 20 && tooManyAura)) {
@@ -1479,7 +1602,7 @@ inner class Shaman() : WynnClass() {
                 addSpell(Actions.cast3)
             }
         } else if(mode == Mode.TotemSpam) {
-            if(!awakened()) {
+            if(!awakened(true)) {
                 addSpell(Actions.cast4)
                 if(getMana() < 60) {
                     addSpell(Actions.cast4)
@@ -1489,18 +1612,27 @@ inner class Shaman() : WynnClass() {
                 addSpell(Actions.cast1)
             }
         } else if(mode == Mode.PuppetBomber) {
-            if(!awakened()) {
+            if(!awakened(true)) {
                 if(enableAura.value) {
                     addSpell(Actions.cast3)
                 } else {
                     addSpell(Actions.cast2)
+                }
+                if(World.time - lastUproot > 20) {
+                    switchMask(ShamanMaskType.FANATIC, true)
                 }
             }
             for(i in 1..getMaxRepeatValue()) {
                 addSpell(Actions.cast1)
             }
         } else if(mode == Mode.Melee) {
-            awakened()
+            awakened(true)
+            if(World.time - lastUproot > 20) {
+                switchMask(ShamanMaskType.HERETIC, true)
+            }
+            if(World.time % 2L == 0L) {
+                melee()
+            }
         } else if(World.time % 2L == 0L) {
             melee()
         }
@@ -1509,8 +1641,12 @@ inner class Shaman() : WynnClass() {
     fun awakened(cancelMask: Boolean = false): Boolean {
         if(!enableAwakened.value) return false
         val progress = awakenedProgress
-        if(findEffect("Awakened") != null || World.time - lastTimeMask < 15) {
+        if(findEffect("Awakened") != null || World.time - lastUproot < 15 || Models.ShamanMask.currentMaskType == ShamanMaskType.AWAKENED) {
             return false
+        }
+        if(progress >= 1) {
+            waitSpell(Actions.cast4)
+            return true
         }
         if(KeyBind.pressedKeys.contains(keyBinds[Actions.cast1])) {
             KeyBind.releaseKeyBind(Actions.cast1)
@@ -1519,23 +1655,28 @@ inner class Shaman() : WynnClass() {
             KeyBind.releaseKeyBind(Actions.cast1)
         }
         val inventory = Player.openInventory()
+        val hotbar = inventory.selectedHotbarSlotIndex
         if(progress < 1f) {
             switchMask(ShamanMaskType.FANATIC, cancelMask)
-        }
-        val hotbar = inventory.selectedHotbarSlotIndex
-        inventory.selectedHotbarSlotIndex = 1
-        Client.waitTick()
-        if(progress < 0.34f) {
-            waitSpell(Actions.cast1)
+            inventory.selectedHotbarSlotIndex = 1
             Client.waitTick()
+            if(progress < 0.34f) {
+                waitSpell(Actions.cast1)
+                Client.waitTick()
+            }
+            for(i in 0..3) {
+                if(awakenedProgress >= 1f)
+                    break
+                if(World.time - lastUproot > 20)
+                    switchMask(ShamanMaskType.FANATIC, true)
+                if(inventory.selectedHotbarSlotIndex != 1) {
+                    inventory.selectedHotbarSlotIndex = 1
+                    Client.waitTick()
+                }
+                waitSpell(Actions.cast1)
+                Client.waitTick()
+            }
         }
-        for(i in 1..4) {
-            waitSpell(Actions.cast1)
-            Client.waitTick()
-            if(awakenedProgress >= 1f)
-                break
-        }
-
         inventory.selectedHotbarSlotIndex = if(inventory.getSlot(38).name.stringStripFormatting.startsWith("Silent B")) 2 else 1
         Client.waitTick()
         waitSpell(Actions.cast4)
@@ -1556,6 +1697,7 @@ inner class Shaman() : WynnClass() {
         assertMask = false
         fly.set(false)
         counter = 0
+        lastNoTotemNotify = 0
         KeyBind.releaseKeyBind(Actions.cast1)
         KeyBind.releaseKeyBind(Actions.cast3)
     }
@@ -1600,9 +1742,9 @@ inner class Shaman() : WynnClass() {
     override fun onKey(e: EventKey) {
         super.onKey(e)
 
-        if(e.action != 1) return
+        if(e.action != 1 && e.action != 3) return
         if(!enabled.value && e.key == skill2Key) { // && (mode == Mode.PuppetBomber || mode == Mode.AuraSpam)
-            if(World.time - lastTotem > 60 && Player.player?.isSneaking != true) {
+            if(World.time - lastTotem > 60 && Player.player?.isSneaking != true || lastNoTotemNotify > lastTotem) {
                 e.cancel()
                 thread {
                     waitSpell(Actions.cast1)
@@ -1610,11 +1752,32 @@ inner class Shaman() : WynnClass() {
                 }
             }
         }
+        if(e.key == skill4Key && e.action == 3) {
+            e.cancel()
+        }
+        if(mode == Mode.Acolyte && e.action == 3 && (e.key == skill3Key || e.key == skill4Key)) {
+            e.cancel()
+        }
     }
 }
 
+
+var lastCharacterId = ""
+val hasCharacterId get() = Models.Character.hasCharacter()
+val currentCharacterId get() = Models.Character.id
+val gson = GsonBuilder().setPrettyPrinting().create()
+val configFile = File(file!!.parent, "battle.json")
+if(!configFile.exists()) {
+    configFile.createNewFile()
+    configFile.writeText("""{"-":{"":""}}""")
+}
+
+val json: MutableMap<String, Map<String, String>> = gson.fromJson(configFile.reader(), MutableMap::class.java) as MutableMap<String, Map<String, String>>
+
 var currentWynnClass: WynnClass = WynnClass()
+var lastWynnClass: WynnClass = currentWynnClass
 var currentClassString = ""
+var lastCheckClass = 0L
 
 val classes = mapOf(
     "archer" to Archer(),
@@ -1630,29 +1793,30 @@ classes.forEach {
 }
 
 fun checkClass() {
-    if(!World.isWorldLoaded) return
-    val weapon = Player.openInventory().getSlot(36)
-    weapon.lore.firstOrNull {
-        it.withoutFormatting().string.contains("Class Req:")
-    }?.let {
-        synchronized(currentClassString) {
-            val newClass = it.withoutFormatting().string.split(" ")[3].split("/")[0].lowercase()
-            if(newClass != currentClassString) {
-                currentClassString = newClass
-                currentWynnClass.enabled.set(false)
-                currentWynnClass.terminate()
-                currentWynnClass = classes[currentClassString] ?: return@let
-                currentWynnClass.restart()
-            }
-        }
+    lastWynnClass = currentWynnClass
+    val newClass = Models.Character.classType.getName().lowercase()
+
+    if(newClass != currentClassString) {
+        currentClassString = newClass
+        currentWynnClass.enabled.set(false)
+        currentWynnClass.terminate()
+        currentWynnClass = classes[currentClassString] ?: return
+        currentWynnClass.restart()
+    }
+    if(hasCharacterId && currentCharacterId != lastCharacterId) {
+        Chat.log("character id $lastCharacterId -> $currentCharacterId")
+        if(lastCharacterId.isNotEmpty())
+            lastWynnClass.saveConfig()
+        lastCharacterId = currentCharacterId
+        currentWynnClass.loadConfig()
+    } else {
+        Chat.log("character id $currentCharacterId")
     }
 }
 
 EventListener(EventKey::class.java, { e ->
     currentWynnClass.onKey(e)
 }, true)
-
-EventListener(EventArmorChange::class.java, { checkClass() }, true)
 
 fun warp180(degree: Double): Double {
     var v = (degree + 720) % 360
@@ -1730,6 +1894,7 @@ var customInput = setInput()
 
 EventListener(EventDimensionChange::class.java, {
     currentWynnClass.onWorldChange()
+    currentWynnClass.saveConfig()
 })
 
 EventListener(EventDeath::class.java, {
@@ -1745,12 +1910,45 @@ thread {
     }
 }
 
+class MyKeyBind(val keyBind: KeyBind) : Runnable {
+    val runnable: Runnable
+    val key: String = keyBinds[keyBind.keyMapping.getTranslationKey()]!!
+    var pressedTime = 0L
+
+    init {
+        runnable = getKeyBindRunnable()
+        setKeyBindRunnable(this)
+    }
+
+    fun setKeyBindRunnable(runnable: Runnable) {
+        val f = keyBind::class.java.getDeclaredField("onPress")
+        f.trySetAccessible()
+        f.set(keyBind, runnable)
+    }
+
+    fun getKeyBindRunnable(): Runnable {
+        val f = keyBind::class.java.getDeclaredField("onPress")
+        f.trySetAccessible()
+        return f.get(keyBind) as Runnable
+    }
+
+    override fun run() {
+        val action = if(Time.time() - pressedTime < 60) 3 else 1
+        pressedTime = Time.time()
+        val event = EventKey(action, key, "custom")
+        event.trigger()
+        if(!event.isCanceled)
+            runnable.run()
+    }
+}
+
+typealias WPair<A,B> = com.wynntils.utils.type.Pair<A,B>
 var lastSpellPacket = 0L
 fun setupSpellCaster() {
     val f = quickCastFeature::class.java.getDeclaredField("packetCountdown")
     f.trySetAccessible()
 
-    val packetSetter = { f.set(quickCastFeature, 2) }
+    val packetSetter = { f.set(quickCastFeature, 3) }
     thread {
         while (running) {
             var sleep = 50L
@@ -1762,14 +1960,58 @@ fun setupSpellCaster() {
                     Models.Spell.sendNextSpell()
                     packetSetter()
                     sleep += interval
+                    if(Models.Spell.isSpellQueueEmpty()) {
+                        currentWynnClass.onSpellCasted()
+                    }
                 }
             }
 
             Time.sleep(sleep)
         }
     }
+
+    val keyBindManager = Managers.KeyBind
+    val f2 = keyBindManager::class.java.getDeclaredField("keyBinds")
+    f2.trySetAccessible()
+
+    (f2.get(keyBindManager) as? Map<Feature,MutableList<WPair<KeyBind, String>>>)?.let { binds ->
+        val bindsInner = binds[quickCastFeature] ?: return@let
+        (context as? KotlinScriptContext)?.let {  context ->
+            val runnables = bindsInner.map { MyKeyBind(it.key()) }
+            context.onContextClosed {
+                runnables.forEach {
+                    it.setKeyBindRunnable(it.runnable)
+                }
+            }
+        }
+    }
 }
 setupSpellCaster()
+
+class WynnListener {
+    val shaman = StyledText.fromComponent(TextKt.translatable("feature.wynntils.chatRedirect.shaman.notification"))
+    @SubscribeEvent
+    fun worldStateChanged(event: CharacterUpdateEvent) {
+        checkClass()
+    }
+    fun onNotification(event: NotificationEvent) {
+        if(event.messageContainer.message.contains(shaman)) {
+            (currentWynnClass as? Shaman)?.let {
+                it.lastNoTotemNotify = World.time
+            }
+        }
+    }
+    @SubscribeEvent
+    fun notification(event: NotificationEvent.Edit) {
+        onNotification(event)
+    }
+    @SubscribeEvent
+    fun notification(event: NotificationEvent.Queue) {
+        onNotification(event)
+    }
+}
+val listener = WynnListener()
+WynntilsMod.registerEventListener(listener)
 
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
     running = false
@@ -1777,10 +2019,15 @@ setupSpellCaster()
     currentWynnClass.terminate()
 
     smooth.enabled = false
-    d3d.unregister()
     resetInput()
 
+    WynntilsMod.unregisterEventListener(listener)
+
     KtGlobals.getVariable<MutableMap<String, () -> Pair<Float, Float>>>(offsetKey)?.remove(smooth.hashCode().toString())
+    synchronized(json) {
+        currentWynnClass.saveConfig()
+        configFile.writeText(gson.toJson(json))
+    }
 }
 
 checkClass()
