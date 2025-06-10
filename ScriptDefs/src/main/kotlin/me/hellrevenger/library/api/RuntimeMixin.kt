@@ -28,6 +28,7 @@ import net.bytebuddy.utility.OpenedClassReader
 import net.bytebuddy.utility.RandomString
 import net.lenni0451.classtransform.TransformerManager
 import net.lenni0451.classtransform.additionalclassprovider.InstrumentationClassProvider
+import org.apache.commons.lang3.SystemUtils
 import org.objectweb.asm.Type
 import org.spongepowered.tools.agent.MixinAgent
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
@@ -37,8 +38,28 @@ import java.lang.instrument.ClassDefinition
 import java.lang.instrument.ClassFileTransformer
 import java.lang.instrument.Instrumentation
 import java.lang.reflect.Modifier
+import java.net.URL
 import java.security.ProtectionDomain
 import kotlin.jvm.internal.Intrinsics
+
+private fun getAgentPath(): File {
+    val url = MixinAgent::class.java.protectionDomain.codeSource.location
+    var path = url.toString()
+    if(path.startsWith("jar:")) {
+        val index = path.indexOf("!/");
+        path = path.substring(4, index)
+    }
+    try {
+        if(SystemUtils.IS_OS_WINDOWS && path.matches("file:[A-Za-z]:.*".toRegex())) {
+            path = "file:/" + path.substring(5);
+        }
+        return File(URL(path).toURI())
+    } catch (_: Exception) {}
+    if (path.startsWith("file:")) {
+        return File(path.substring(5))
+    }
+    throw IllegalArgumentException("Invalid URL: $url");
+}
 
 private fun tryGetInstrumentation(): Instrumentation {
     val field = MixinAgent::class.java.getDeclaredField("instrumentation")
@@ -61,8 +82,7 @@ private fun tryGetInstrumentation(): Instrumentation {
             throw  Error("jvm not found or more than 1")
         }
         val jvm = jvmPointer.value
-        var path = MixinAgent::class.java.protectionDomain.codeSource.location.path
-        if(path.startsWith("/")) path = path.substring(1)
+        val path = getAgentPath().absolutePath
 
         error = libInstrument.getFunction("Agent_OnAttach").invokeInt(arrayOf(jvm, path, null))
 
