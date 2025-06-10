@@ -16,7 +16,6 @@ import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw2D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.RenderElement
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
-import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.PlayerEntityHelper
 
 val mc get() = MinecraftClientKt.getInstance()
 
@@ -63,7 +62,7 @@ open class WorldPosWrapper(
             pitch = 1000f;
         }
 
-        val player = mc.player?.let { PlayerEntityHelper.create(it) } ?: return
+        val player = mc.cameraEntity?.let { EntityHelper.create(it) } ?: return
         val cPitch = player.pitch
         val cYaw = player.yaw
         if (cPitch != pitch || cYaw != yaw) {
