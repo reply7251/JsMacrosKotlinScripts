@@ -17,6 +17,8 @@ import com.wynntils.utils.type.ErrorOr
 import com.wynntils.utils.type.Pair
 import com.wynntils.utils.type.RangedValue
 import me.hellrevenger.library.api.RuntimeMixin
+import me.hellrevenger.library.api._getField
+import me.hellrevenger.library.api._getPrivateValue
 import me.hellrevenger.library.api.instrumentation
 import net.lenni0451.classtransform.InjectionCallback
 import net.lenni0451.classtransform.annotations.*
@@ -257,9 +259,7 @@ class MixinItemFilterService {
 }
 
 
-val statFiltersField = Reflection.getDeclaredField(Services.ItemFilter::class.java, "statFilters")
-statFiltersField.trySetAccessible()
-val statFilters = statFiltersField.get(Services.ItemFilter) as MutableList<Pair<*, *>>
+val statFilters = Services.ItemFilter._getPrivateValue<MutableList<Pair<*, *>>>("statFilters")!!
 val filterPair = Pair.of(String::class.java, WithoutStatFilterFactory())
 
 Services.ItemFilter.itemStatProviders.add(AbilityPointStatProvider)

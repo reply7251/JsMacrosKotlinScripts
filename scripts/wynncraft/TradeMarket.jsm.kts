@@ -26,6 +26,9 @@ import me.hellrevenger.generated.Map_Widget.getY
 import me.hellrevenger.generated.Map_Widget.setX
 import me.hellrevenger.generated.Map_Widget.setY
 import me.hellrevenger.language.impl.KotlinScriptContext
+import me.hellrevenger.library.api._getField
+import me.hellrevenger.library.api._getPrivateValue
+import me.hellrevenger.library.api._getUnsafeField
 import net.neoforged.bus.api.EventPriority
 import net.neoforged.bus.api.SubscribeEvent
 import sun.misc.Unsafe
@@ -108,51 +111,47 @@ fun main(): Boolean {
     val addedContainers = mutableSetOf<Container>()
     val removedContainers = mutableSetOf<Container>()
 
-    val containerTypesField = ContainerModel::class.java.getDeclaredField("containerTypes")
-    if(containerTypesField.trySetAccessible()) {
-        (containerTypesField.get(Models.Container) as? ArrayList<Container>)?.let {
-            containerReplaceMap.forEach { (t, u) ->
-                it.add(t)
-                addedContainers.add(t)
-                it.removeIf {
-                    if(u.isInstance(it) && !t::class.isInstance(it)) {
-                        removedContainers.add(it)
-                        true
-                    } else false
-                }
+    Models.Container._getPrivateValue<ArrayList<Container>>("containerTypes")?.let { containerTypes ->
+        containerReplaceMap.forEach { (t, u) ->
+            containerTypes.add(t)
+            addedContainers.add(t)
+            containerTypes.removeIf {
+                if(u.isInstance(it) && !t::class.isInstance(it)) {
+                    removedContainers.add(it)
+                    true
+                } else false
             }
-
-            (context as? KotlinScriptContext)?.onContextClosed {  _ ->
-                it.removeAll(addedContainers)
-                it.addAll(removedContainers)
-            }
-
-            success1 = true
         }
+
+        context.onContextClosed {
+            containerTypes.removeAll(addedContainers)
+            containerTypes.addAll(removedContainers)
+        }
+        success1 = true
     }
-    val unsafeField = Unsafe::class.java.getDeclaredField("theUnsafe")
-    val searchableContainerMapField = ContainerSearchFeature::class.java.getDeclaredField("searchableContainerMap")
-    if(unsafeField.trySetAccessible()) {
-        val unsafe = unsafeField.get(null) as Unsafe
-        val offset = unsafe.objectFieldOffset(searchableContainerMapField)
-        val map = unsafe.getObject(containerSearchFeature, offset) as java.util.Map<Class<out SearchableContainerProperty>, Supplier<Boolean>>
+
+    var searchableContainerMap by containerSearchFeature
+        ._getUnsafeField<Map<Class<out SearchableContainerProperty>, Supplier<Boolean>>>("searchableContainerMap")
+
+    searchableContainerMap?.let { map ->
         val newMap: HashMap<Class<out SearchableContainerProperty>, Supplier<Boolean>> = hashMapOf()
         map.forEach { t, u -> newMap[t] = u }
 
         addedContainers.forEach {
             newMap[it.javaClass as Class<out SearchableContainerProperty>] = Supplier { true }
         }
+        searchableContainerMap = newMap
 
-        unsafe.putObject(containerSearchFeature, offset, newMap)
-        (context as? KotlinScriptContext)?.onContextClosed {  _ ->
-            unsafe.putObject(containerSearchFeature, offset, map)
+        context.onContextClosed {
+            searchableContainerMap = map
         }
         success2 = true
     }
+
     val listener = WynnListener()
     WynntilsMod.registerEventListener(listener)
     Services.ItemFilter.itemStatProviders.add(RerollStatProvider)
-    (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
+    context.onContextClosed {
         WynntilsMod.unregisterEventListener(listener)
         Services.ItemFilter.itemStatProviders.remove(RerollStatProvider)
     }

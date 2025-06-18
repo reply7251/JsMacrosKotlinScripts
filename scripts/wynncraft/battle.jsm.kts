@@ -18,6 +18,7 @@ import com.wynntils.handlers.bossbar.TrackedBar
 import com.wynntils.models.abilities.AbilityModel
 import com.wynntils.models.abilities.type.OphanimOrb
 import com.wynntils.models.abilities.type.ShamanMaskType
+import com.wynntils.models.character.CharacterModel
 import com.wynntils.models.character.event.CharacterUpdateEvent
 import com.wynntils.models.items.items.game.CraftedConsumableItem
 import com.wynntils.models.items.items.game.MultiHealthPotionItem
@@ -36,6 +37,7 @@ import me.hellrevenger.generated.Map_KeyBinding.*
 import me.hellrevenger.generated.Map_LivingEntity.removeStatusEffectInternal
 import me.hellrevenger.generated.Map_MinecraftClient.getRenderTickCounter
 import me.hellrevenger.generated.Map_MinecraftClient.player
+import me.hellrevenger.generated.Map_MinecraftClient.tick
 import me.hellrevenger.generated.Map_PlayerInput.*
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
 import me.hellrevenger.generated.Map_StatusEffects.StatusEffectsKt
@@ -43,8 +45,11 @@ import me.hellrevenger.generated.Map_Text.TextKt
 import me.hellrevenger.generated.PlayerInput
 import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.api.KtGlobals
+import me.hellrevenger.library.api._getField
+import me.hellrevenger.library.api._getPrivateValue
 import net.minecraft.class_10185
 import net.minecraft.class_332
+import net.neoforged.bus.api.EventPriority
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw3D
@@ -252,8 +257,7 @@ val mc = Client.minecraft
 val interactKey =  mc.field_1690.field_1904
 val attackKey = mc.field_1690.field_1886
 
-val attackCooldown = mc::class.java.getDeclaredField("field_1771")
-attackCooldown.trySetAccessible()
+var attackCooldown by mc._getField<Int>("field_1771")
 
 val quickCastFeature = Managers.Feature.getFeatureInstance(QuickCastFeature::class.java)
 val autoAttackFeature = Managers.Feature.getFeatureInstance(AutoAttackFeature::class.java)
@@ -492,9 +496,8 @@ open class WynnClass: HasBind {
 
     open fun melee() {
         lastMelee = World.time
-        attackCooldown.set(mc, 0)
+        attackCooldown = 0
         Player.interactions()?.attack()
-        attackCooldown.set(mc, 0)
         lastSpellPacket = Time.time()
     }
 
@@ -901,7 +904,7 @@ inner class Warrior() : WynnClass() {
         nextLine().setText(fly.toString("Fly"))
         nextLine().setText(bloodPact.toString("Blood Pact"))
         nextLine().setText("upper: charge charge scream upper")
-        nextLine().setText("bash(scream): scream scream")
+        nextLine().setText("bash(scream): scream scream\ntest")
     }
     
     override fun main() {
@@ -1245,12 +1248,7 @@ inner class Assassin() : WynnClass() {
 
     override fun terminate() {
         super.terminate()
-
-        val f = Handlers.BossBar::class.java.getDeclaredField("knownBars")
-        f.trySetAccessible()
-        (f.get(Handlers.BossBar) as? MutableList<TrackedBar>)?.let {
-            it.remove(momentumBar)
-        }
+        Handlers.BossBar._getPrivateValue<MutableList<TrackedBar>>("knownBars")?.remove(momentumBar)
     }
 
     inner class MomentumBar : TrackedBar(".+?(\\d).+Momentum".toPattern()) {
@@ -1914,22 +1912,15 @@ class MyKeyBind(val keyBind: KeyBind) : Runnable {
     val runnable: Runnable
     val key: String = keyBinds[keyBind.keyMapping.getTranslationKey()]!!
     var pressedTime = 0L
+    var onPress by keyBind._getField<Runnable>("onPress")
 
     init {
-        runnable = getKeyBindRunnable()
-        setKeyBindRunnable(this)
+        runnable = onPress!!
+        onPress = this
     }
 
     fun setKeyBindRunnable(runnable: Runnable) {
-        val f = keyBind::class.java.getDeclaredField("onPress")
-        f.trySetAccessible()
-        f.set(keyBind, runnable)
-    }
-
-    fun getKeyBindRunnable(): Runnable {
-        val f = keyBind::class.java.getDeclaredField("onPress")
-        f.trySetAccessible()
-        return f.get(keyBind) as Runnable
+        onPress = runnable
     }
 
     override fun run() {
@@ -1945,10 +1936,7 @@ class MyKeyBind(val keyBind: KeyBind) : Runnable {
 typealias WPair<A,B> = com.wynntils.utils.type.Pair<A,B>
 var lastSpellPacket = 0L
 fun setupSpellCaster() {
-    val f = quickCastFeature::class.java.getDeclaredField("packetCountdown")
-    f.trySetAccessible()
-
-    val packetSetter = { f.set(quickCastFeature, 3) }
+    var packetCountdown by quickCastFeature._getField<Int>("packetCountdown")
     thread {
         while (running) {
             var sleep = 50L
@@ -1958,9 +1946,9 @@ fun setupSpellCaster() {
                 if(Time.time() >= lastSpellPacket + 50 + interval) {
                     lastSpellPacket = Time.time()
                     Models.Spell.sendNextSpell()
-                    packetSetter()
+                    packetCountdown = 3
                     sleep += interval
-                    if(Models.Spell.isSpellQueueEmpty()) {
+                    if(Models.Spell.isSpellQueueEmpty) {
                         currentWynnClass.onSpellCasted()
                     }
                 }
@@ -1971,17 +1959,12 @@ fun setupSpellCaster() {
     }
 
     val keyBindManager = Managers.KeyBind
-    val f2 = keyBindManager::class.java.getDeclaredField("keyBinds")
-    f2.trySetAccessible()
-
-    (f2.get(keyBindManager) as? Map<Feature,MutableList<WPair<KeyBind, String>>>)?.let { binds ->
+    keyBindManager._getPrivateValue<Map<Feature,MutableList<WPair<KeyBind, String>>>>("keyBinds")?.let { binds ->
         val bindsInner = binds[quickCastFeature] ?: return@let
-        (context as? KotlinScriptContext)?.let {  context ->
-            val runnables = bindsInner.map { MyKeyBind(it.key()) }
-            context.onContextClosed {
-                runnables.forEach {
-                    it.setKeyBindRunnable(it.runnable)
-                }
+        val runnables = bindsInner.map { MyKeyBind(it.key()) }
+        context.onContextClosed {
+            runnables.forEach {
+                it.onPress = it.runnable
             }
         }
     }
@@ -1990,9 +1973,25 @@ setupSpellCaster()
 
 class WynnListener {
     val shaman = StyledText.fromComponent(TextKt.translatable("feature.wynntils.chatRedirect.shaman.notification"))
+    var characterUpdated = false
+
     @SubscribeEvent
-    fun worldStateChanged(event: CharacterUpdateEvent) {
+    fun characterUpdate(event: CharacterUpdateEvent) {
         checkClass()
+        characterUpdated = true
+    }
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    fun worldStateChanged(event: WorldStateEvent) {
+        if(event.newState == WorldState.CHARACTER_SELECTION || event.oldState == WorldState.WORLD) {
+            characterUpdated = false
+        }
+        if(event.newState == WorldState.WORLD && !characterUpdated) {
+            thread {
+                Client.waitTick(60)
+                if(!characterUpdated)
+                    WynntilsMod.postEvent(event)
+            }
+        }
     }
     fun onNotification(event: NotificationEvent) {
         if(event.messageContainer.message.contains(shaman)) {
@@ -2013,7 +2012,7 @@ class WynnListener {
 val listener = WynnListener()
 WynntilsMod.registerEventListener(listener)
 
-(event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
+context.onContextClosed {
     running = false
     d2d.unregister()
     currentWynnClass.terminate()

@@ -28,7 +28,7 @@ class WynnListener {
     fun onItemToolTip(event: ItemTooltipRenderEvent.Pre) {
         val boxItem = Models.Item.asWynnItem(event.itemStack, GearBoxItem::class.java).getOrNull() ?: return
         val possibilities = Models.Gear.getPossibleGears(boxItem)
-        if(possibilities.size > 10 || possibilities.isEmpty()) return
+        if(possibilities.size > 4 || possibilities.isEmpty()) return
         if(KeyBind.pressedKeys.contains("key.keyboard.left.shift") == possibilities.size < 3) return
 
         event.isCanceled = true
