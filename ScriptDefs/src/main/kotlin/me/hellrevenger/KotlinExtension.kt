@@ -4,16 +4,14 @@ package me.hellrevenger
 import me.hellrevenger.language.impl.CompilerSetting
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
-import me.hellrevenger.library.api.FEventListener
-import me.hellrevenger.library.api.ScriptConfig
+import me.hellrevenger.library.impl.FEventListener
+import me.hellrevenger.library.impl.FRuntimeTransform
+import me.hellrevenger.library.impl.FScriptConfig
 import me.hellrevenger.library.impl.FWrapper
 import me.hellrevenger.mixins.MixinMain
-import net.minecraft.class_310
-import xyz.wagyourtail.jsmacros.client.JsMacros
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
 import xyz.wagyourtail.jsmacros.core.Core
-import xyz.wagyourtail.jsmacros.core.extensions.Extension
 import xyz.wagyourtail.jsmacros.core.extensions.LanguageExtension
 import xyz.wagyourtail.jsmacros.core.extensions.LibraryExtension
 import xyz.wagyourtail.jsmacros.core.language.BaseLanguage
@@ -81,7 +79,12 @@ class KotlinExtension: LanguageExtension, LibraryExtension {
         return languageDefinition!!
     }
 
-    override fun getLibraries() = mutableSetOf(FWrapper::class.java, FEventListener::class.java, ScriptConfig::class.java)
+    override fun getLibraries() = mutableSetOf(
+        FWrapper::class.java,
+        FEventListener::class.java,
+        FScriptConfig::class.java,
+        FRuntimeTransform::class.java,
+    )
 
     override fun wrapException(p0: Throwable?): BaseWrappedException<*>? {
         if (p0 is KotlinLanguageDefinition.KotlinCompileException) {
