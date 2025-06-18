@@ -1,8 +1,7 @@
-package me.hellrevenger.library.api
+package me.hellrevenger.library.impl
 
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
-import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.Event
 import xyz.wagyourtail.jsmacros.core.event.IEventListener
