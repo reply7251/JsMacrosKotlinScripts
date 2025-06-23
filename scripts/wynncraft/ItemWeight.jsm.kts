@@ -128,7 +128,7 @@ fun fetchWynnpool(wynnItem: GearItem): MutableList<Text>? {
         if(Time.time() - lastRequest < 3000) return null
         lastRequest = Time.time()
         try {
-            val resp = Request.get("https://weight.wynnpool.com/api/weights/item/$name").text()
+            val resp = Request.get("https://weight.wynnpool.com/api/weights/item/${name.replace(" ", "%20")}").text()
             val map = JsonObject()
             JsonParser.parseString(resp).asJsonArray.forEach {
                 it.asJsonObject.let {

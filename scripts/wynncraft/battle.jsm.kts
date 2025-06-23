@@ -67,6 +67,7 @@ import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.io.File
 import java.util.regex.Matcher
 import kotlin.concurrent.thread
+import kotlin.jvm.optionals.getOrNull
 import kotlin.math.*
 
 
@@ -672,8 +673,8 @@ open class WynnClass: HasBind {
         return Models.CharacterStats.blocksAboveGround < height.value - dy
     }
 
-    fun getMana() = Models.CharacterStats.mana.percentage
-    fun getHealth() = Models.CharacterStats.health.percentage
+    fun getMana() = Models.CharacterStats.mana.getOrNull()?.percentage ?: 0.0
+    fun getHealth() = Models.CharacterStats.health.getOrNull()?.percentage ?: 0.0
 
     fun findEffect(name: String) = Models.StatusEffect.statusEffects.find { it.name.contains(name) }
     fun isHoldItem(name: String) = Player.player?.mainHand?.name?.stringStripFormatting?.lowercase()?.contains(name)
@@ -1266,6 +1267,8 @@ inner class Mage() : WynnClass() {
     lateinit var enableIceSnake: BindBoolean
     lateinit var enableMeteor: BindBoolean
     var lastTimeLock = 0L
+    var teleportCounter = 0
+    val timeLocked get() = findEffect("Timelocked") != null
 
     val modes = arrayOf(Mode.Arcanist, Mode.LightBender, Mode.RiftWalker)
     override var mode = Mode.Arcanist
@@ -1334,7 +1337,7 @@ inner class Mage() : WynnClass() {
     fun rw() {
         val player = Player.player ?: return
         val health = getHealth()
-        val timeLocked = findEffect("Timelocked") != null
+        
         val manaFlag = getMana() > 25 || timeLocked
         val repeatFlag = Models.Spell.repeatedSpellCount < maxRepeat.value
         if(player.isSneaking && World.time - lastTimeLock > 100 && !timeLocked) {
@@ -1344,8 +1347,9 @@ inner class Mage() : WynnClass() {
             if(player.isSneaking)
                 lastTimeLock = World.time
             waitSpell(Actions.cast1)
-        } else if(enableIceSnake.value && (manaFlag || health < 80)
-            && (lastAction != Actions.cast4 || World.time - lastIceSnake > 62 || (repeatFlag && !timeLocked))) {
+        } else if((manaFlag || health < 80)
+            && ((lastAction != Actions.cast4 && !timeLocked) || World.time - lastIceSnake > 62 || (repeatFlag && !timeLocked) 
+            || (!repeatFlag && timeLocked && lastAction != Actions.cast4) )) {
             waitSpell(Actions.cast4)
         } else if(enableMeteor.value && (manaFlag || health < 80)
             && (lastAction != Actions.cast3 || (repeatFlag && timeLocked))) {
@@ -1395,6 +1399,15 @@ inner class Mage() : WynnClass() {
 
         if(e.key == skill3Key && e.action == 3 && getArchType() == "lb") {
             e.cancel()
+        }
+        if(e.key == skill2Key) {
+            if(e.action == 3) {
+                if(teleportCounter++ < 6) {
+                    e.cancel()
+                }
+            } else {
+                teleportCounter = 0
+            }
         }
     }
 }
