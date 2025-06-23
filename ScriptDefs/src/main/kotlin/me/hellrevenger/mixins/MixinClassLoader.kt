@@ -31,9 +31,9 @@ class MixinKnotClassLoader {
             val inst = field.get(null) as? Instrumentation
             if(inst != null) {
                 val classes = inst.allLoadedClasses
-                var i = 0
-                while (i < classes.size) {
-                    val clazz = classes[i++]
+                var i = classes.size
+                while (i-- > 0) {
+                    val clazz = classes[i]
                     if(clazz.name.equals(name)) {
                         cir.returnValue = clazz
                         cir.isCancelled = true
