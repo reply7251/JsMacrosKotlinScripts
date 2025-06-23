@@ -9,6 +9,7 @@ import net.lenni0451.classtransform.annotations.CInline
 import net.lenni0451.classtransform.annotations.CReplaceCallback
 import net.lenni0451.classtransform.annotations.injection.CInject
 import net.lenni0451.classtransform.utils.ASMUtils
+import net.lenni0451.classtransform.utils.tree.BasicClassProvider
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
@@ -49,17 +50,19 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
     }
 
     fun addTransformer(transformer: KClass<*>) {
-        manager?.let { manager ->
-            addTransformer(ASMUtils.fromBytes(manager.classProvider.getClass(transformer.java.name)))
-        }
+        addTransformer(ASMUtils.fromBytes(BasicClassProvider(transformer.java.classLoader).getClass(transformer.java.name)))
     }
 
     fun addTransformer(transformer: ClassNode) {
         manager?.let { manager ->
-            addAnnotation(transformer.visibleAnnotations, CReplaceCallback::class)
+            arrayOf(transformer.invisibleAnnotations, transformer.visibleAnnotations).forEach { annotations ->
+                addAnnotation(transformer.visibleAnnotations, CReplaceCallback::class)
+            }
             transformer.methods.forEach {
-                if(it.visibleAnnotations.any { it.desc.contains(getAnnotationName(CInject::class)) }) {
-                    addAnnotation(it.visibleAnnotations, CInline::class)
+                arrayOf(it.invisibleAnnotations, it.visibleAnnotations).forEach { annotations ->
+                    if(annotations?.any { it.desc.contains(getAnnotationName(CInject::class)) } == true) {
+                        addAnnotation(annotations, CInline::class)
+                    }
                 }
             }
             manager.addTransformer(transformer)
