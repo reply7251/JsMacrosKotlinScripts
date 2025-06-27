@@ -7,7 +7,7 @@ import net.lenni0451.classtransform.TransformerManager
 import net.lenni0451.classtransform.additionalclassprovider.InstrumentationClassProvider
 import net.lenni0451.classtransform.annotations.CInline
 import net.lenni0451.classtransform.annotations.CReplaceCallback
-import net.lenni0451.classtransform.annotations.injection.CInject
+import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.utils.ASMUtils
 import net.lenni0451.classtransform.utils.tree.BasicClassProvider
 import org.objectweb.asm.tree.AnnotationNode
@@ -38,15 +38,13 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
 
     private fun getAnnotationName(annotation: KClass<*>) = "L" + annotation.java.name.replace(".","/") + ";"
 
-    private fun addAnnotation(annotations: MutableList<AnnotationNode>, annotation: KClass<*>): AnnotationNode {
+    private fun addAnnotation(annotations: MutableList<AnnotationNode>, annotation: KClass<*>) {
         val annotationName = getAnnotationName(annotation)
         var node = annotations.find { it.desc == annotationName }
         if(node == null) {
             node = AnnotationNode(annotationName)
             annotations.add(node)
-            return node
         }
-        return node
     }
 
     fun addTransformer(transformer: KClass<*>) {
@@ -56,11 +54,15 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
     fun addTransformer(transformer: ClassNode) {
         manager?.let { manager ->
             arrayOf(transformer.invisibleAnnotations, transformer.visibleAnnotations).forEach { annotations ->
-                addAnnotation(transformer.visibleAnnotations, CReplaceCallback::class)
+                if(annotations?.any { it.desc == getAnnotationName(CTransformer::class) } == true) {
+                    addAnnotation(annotations, CReplaceCallback::class)
+                }
             }
             transformer.methods.forEach {
                 arrayOf(it.invisibleAnnotations, it.visibleAnnotations).forEach { annotations ->
-                    if(annotations?.any { it.desc.contains(getAnnotationName(CInject::class)) } == true) {
+                    if(annotations?.any {
+                        it.desc.startsWith("Lnet/lenni0451/classtransform/annotations/injection/C")
+                    } == true) {
                         addAnnotation(annotations, CInline::class)
                     }
                 }
