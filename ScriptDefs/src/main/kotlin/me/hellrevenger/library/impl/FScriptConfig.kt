@@ -1,4 +1,4 @@
-package me.hellrevenger.library.api
+package me.hellrevenger.library.impl
 
 import com.google.gson.GsonBuilder
 import me.hellrevenger.language.impl.IClosableContext
@@ -42,7 +42,7 @@ class ExtensionConfig(val folder: File, val fileName: String) {
 }
 
 @Library(value = "ScriptConfig", languages = [KotlinLanguageDefinition::class])
-class ScriptConfig(context: BaseScriptContext<*>) : PerExecLibrary(context) {
+class FScriptConfig(context: BaseScriptContext<*>) : PerExecLibrary(context) {
     var builder = GsonBuilder().setPrettyPrinting()
     var gson = builder.create()
     private var hasRead = false

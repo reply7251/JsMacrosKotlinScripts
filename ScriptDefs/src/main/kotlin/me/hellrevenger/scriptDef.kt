@@ -1,13 +1,10 @@
 package me.hellrevenger
 
 import me.hellrevenger.language.impl.KotlinScriptContext
-import me.hellrevenger.library.api.FEventListener
-import me.hellrevenger.library.impl.FEventCenter
-import me.hellrevenger.library.impl.FWrapper
+import me.hellrevenger.library.impl.*
 import xyz.wagyourtail.jsmacros.api.library.FJavaUtils
 import xyz.wagyourtail.jsmacros.api.library.FUtils
 import xyz.wagyourtail.jsmacros.client.api.library.impl.*
-import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.library.Library
@@ -42,13 +39,15 @@ open class SimpleScript(
     val JavaUtils: FJavaUtils,
     val Utils: FUtils,
     val World: FWorld,
-    val EventListener: FEventListener,
 
     val JavaWrapper: FWrapper,
-    val context: BaseScriptContext<*>,
+    val context: KotlinScriptContext,
     val file: File,
     val event: BaseEvent,
-    val EventCenter: FEventCenter,
+
+    val EventListener: FEventListener,
+    val ScriptConfig: FScriptConfig,
+    val RuntimeTransform: FRuntimeTransform,
 )
 
 fun createSimpleScript(map: Map<String, Any?>): SimpleScript? {
