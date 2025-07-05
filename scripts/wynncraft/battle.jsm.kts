@@ -396,6 +396,8 @@ open class WynnClass: HasBind {
     lateinit var maxRepeat: BindInt
     var nextSpells = mutableListOf<String>()
     var blockedByHotbar = false
+    
+    var lastSneak = 0L
 
     var lastSpells = spells.mapValues { (k,v) -> 0L }.toMutableMap()
 
@@ -509,6 +511,7 @@ open class WynnClass: HasBind {
     open fun reset() {
         lastMelee = 0
         lastSpell = 0
+        lastSneak = 0
         customInput?.forceForward = false
     }
 
@@ -705,6 +708,10 @@ open class WynnClass: HasBind {
 
                 enabled.set(false)
                 updateConfig()
+            }
+            
+            if(it.isSneaking) {
+                lastSneak = World.time
             }
         }
         var forward = false
@@ -988,7 +995,7 @@ inner class Warrior() : WynnClass() {
             val trumpetTime = trumpet?.let { it.displayedTime.stringWithoutFormatting.split(":")[1].split(")")[0].toInt() } ?: 0
             addSpell(Actions.cast1)
             var repeat = getMaxRepeatValue()
-            if(AbilityModel.holyPowerBar.barProgress != null && AbilityModel.holyPowerBar.barProgress.progress > 0.8 && trumpetTime > 3 && getMana() > 50) {
+            if(AbilityModel.holyPowerBar.barProgress != null && ((AbilityModel.holyPowerBar.barProgress.progress > 0.8 && trumpetTime > 3 && getMana() > 50) || World.time - lastSneak > 40)) {
                 addSpell(Actions.cast3)
                 repeat -= 1
             }
