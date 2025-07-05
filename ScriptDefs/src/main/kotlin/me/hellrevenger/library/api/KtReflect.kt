@@ -4,6 +4,7 @@ package me.hellrevenger.library.api
 
 
 import sun.misc.Unsafe
+import java.lang.invoke.MethodHandles
 import java.lang.reflect.Field
 import java.lang.reflect.Method
 import kotlin.reflect.KMutableProperty0
@@ -41,8 +42,11 @@ fun <T : Any> Any._getPrivateValue(name: String): T? {
 
 fun Any._setPrivateValue(name: String, value: Any) {
     val field = findField(this::class.java, name)
-    field.trySetAccessible()
-    return field.set(this, value)
+    if(field.trySetAccessible()) {
+        field.set(this, value)
+    } else {
+        this._setUnsafeValue(field, value)
+    }
 }
 
 fun findMethod(clazz: Class<*>, name: String, args: List<Class<*>>): Method? {
@@ -71,8 +75,12 @@ fun Any._getPrivateMethod(name: String, args: List<Class<*>>): Method? {
 
 fun <T : Any> Any._invokePrivate(name: String, args: Array<Any>, static: Boolean = false): T? {
     return this._getPrivateMethod(name, args.map { it::class.java })?.let {
-        it.trySetAccessible()
-        it.invoke(if(static) null else this, args) as? T
+        if(it.trySetAccessible()) {
+            it.invoke(if(static) null else this, args) as? T
+        } else {
+            MethodHandles.privateLookupIn(it.declaringClass, MethodHandles.lookup())
+                .unreflect(it).invokeWithArguments(args) as? T
+        }
     }
 }
 
@@ -82,8 +90,10 @@ val unsafe by lazy {
     f.get(null) as Unsafe
 }
 
-fun Any._setUnsafeValue(name: String, value: Any, static: Boolean = false) {
-    val field = findField(this::class.java, name)
+private fun Any._setUnsafeValue(name: String, value: Any, static: Boolean = false) =
+    this._setUnsafeValue(findField(this::class.java, name), value, static)
+
+private fun Any._setUnsafeValue(field: Field, value: Any, static: Boolean = false) {
     val (base,offset) = if(static)
         unsafe.staticFieldBase(field) to unsafe.staticFieldOffset(field)
     else this to unsafe.objectFieldOffset(field)
@@ -91,7 +101,10 @@ fun Any._setUnsafeValue(name: String, value: Any, static: Boolean = false) {
 }
 
 fun <T: Any> Any._getUnsafeField(name: String, static: Boolean = false): KMutableProperty0<T?> {
-    val field = findField(this::class.java, name)
+    return this._getUnsafeField(findField(this::class.java, name), static)
+}
+
+private fun <T: Any> Any._getUnsafeField(field: Field, static: Boolean = false): KMutableProperty0<T?> {
     val (base,offset) = if(static)
         unsafe.staticFieldBase(field) to unsafe.staticFieldOffset(field)
     else this to unsafe.objectFieldOffset(field)
