@@ -6,7 +6,6 @@ import xyz.wagyourtail.jsmacros.api.library.FJavaUtils
 import xyz.wagyourtail.jsmacros.api.library.FUtils
 import xyz.wagyourtail.jsmacros.client.api.library.impl.*
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.library.Library
 import xyz.wagyourtail.jsmacros.core.library.impl.*
 import java.io.File
@@ -50,23 +49,12 @@ open class SimpleScript(
     val RuntimeTransform: FRuntimeTransform,
 )
 
-fun createSimpleScript(map: Map<String, Any?>): SimpleScript? {
-    return SimpleScript::class.constructors.firstOrNull()?.let { constructor ->
-        val params = mutableListOf<Any>()
-        constructor.parameters.forEach { param ->
-            val obj = map[param.name] ?: return null
-            params.add(obj)
-        }
-        constructor.call(*params.toTypedArray())
-    }
-}
-
 object SimpleScriptConfiguration : ScriptCompilationConfiguration({
     jvm {
         dependenciesFromCurrentContext(wholeClasspath = true);
     }
 
-    defaultImports(ImportJar::class)
+    defaultImports(ImportJar::class, EventType::class)
 
     refineConfiguration {
         onAnnotations<ImportJar> { context ->
