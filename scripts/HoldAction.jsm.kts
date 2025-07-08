@@ -1,5 +1,8 @@
 @file:Suppress("HasPlatformType")
 
+import me.hellrevenger.generated.Map_GameOptions.attackKey
+import me.hellrevenger.generated.Map_GameOptions.useKey
+import me.hellrevenger.generated.Map_MinecraftClient.options
 import me.hellrevenger.generated.MinecraftClient
 import net.lenni0451.classtransform.annotations.CInline
 import net.lenni0451.classtransform.annotations.CTarget
@@ -18,8 +21,8 @@ import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import kotlin.concurrent.thread
 
 val mc = Client.minecraft
-val interactKey =  mc.field_1690.field_1904
-val attackKey = mc.field_1690.field_1886
+val interactKey = mc.options.useKey
+val attackKey = mc.options.attackKey
 
 object Globals {
     var globalInterval = 2
