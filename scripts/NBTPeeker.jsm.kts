@@ -1,16 +1,14 @@
 import me.hellrevenger.generated.*
 import me.hellrevenger.library.api.WorldPosWrapper
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientEntityEvents
 import net.minecraft.class_332
+import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.TextBuilder
-import xyz.wagyourtail.jsmacros.client.api.classes.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
-import xyz.wagyourtail.jsmacros.client.api.helpers.CommandContextHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.NBTElementHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.TextHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.entity.EntityHelper
-import xyz.wagyourtail.jsmacros.core.service.EventService
+import xyz.wagyourtail.jsmacros.client.api.helper.CommandContextHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.NBTElementHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
 import kotlin.concurrent.thread
 import kotlin.math.ceil
 
@@ -320,9 +318,9 @@ Chat.commandManager.createCommandBuilder("/peek")
     }))
     .register()
 
-(event as EventService).stopListener = JavaWrapper.methodToJava<Any, Any, Any>(fun(){
+context.onContextClosed {
     d2d.unregister()
-    EventCenter.unregisterEvent(context, ClientEntityEvents.ENTITY_UNLOAD)
     Chat.commandManager.unregisterCommand("/peek")
-} as Function0<*>)
+}
+
 Chat.toast("NBT Peeker", "enabled")

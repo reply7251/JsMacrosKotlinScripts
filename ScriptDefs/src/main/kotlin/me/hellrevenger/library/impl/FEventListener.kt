@@ -31,7 +31,7 @@ class FEventListener(val context: BaseScriptContext<*>) : PerExecLibrary(context
     }
 }
 
-sealed class EventType<T> constructor(val clazz: Class<T>) {
+sealed class EventType<T>(val clazz: Class<T>) {
     data object AirChange : EventType<EventAirChange>(EventAirChange::class.java)
     data object ArmorChange: EventType<EventArmorChange>(EventArmorChange::class.java)
     data object AttackBlock: EventType<EventAttackBlock>(EventAttackBlock::class.java)

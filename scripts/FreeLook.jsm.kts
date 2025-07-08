@@ -2,8 +2,7 @@
 import me.hellrevenger.generated.*
 import me.hellrevenger.generated.Map_MinecraftClient.gameRenderer
 import me.hellrevenger.library.api.KtGlobals
-import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
-import xyz.wagyourtail.jsmacros.core.service.EventService
+import me.hellrevenger.library.api._getField
 import kotlin.Pair
 
 
@@ -54,7 +53,7 @@ var startDPitch = 10000f
 var startYaw = 0f
 var startDYaw = 10000f
 
-EventListener(EventKey::class.java, {
+EventListener(EventType.Key, {
     if(it.key == "key.mouse.middle") {
         /*
         Player.player?.let { player ->
@@ -86,13 +85,21 @@ EventListener(EventKey::class.java, {
     }
 })
 
-val cameraField = Reflection.getDeclaredField(net.minecraft.class_757::class.java, "field_18765")
-cameraField.trySetAccessible()
-val oldCamera = cameraField.get(renderer) as Camera
-cameraField.set(renderer, camera)
+var cameraOfRenderer by renderer._getField<Camera>("field_18765")
+val oldCamera = cameraOfRenderer
+cameraOfRenderer = camera
 
-(event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
-    cameraField.set(renderer, oldCamera)
+context.onContextClosed {
+    cameraOfRenderer = oldCamera
 }
+
+//val cameraField = Reflection.getDeclaredField(net.minecraft.class_757::class.java, "field_18765")
+//cameraField.trySetAccessible()
+//val oldCamera = cameraField.get(renderer) as Camera
+//cameraField.set(renderer, camera)
+//
+//(event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
+//    cameraField.set(renderer, oldCamera)
+//}
 
 Chat.toast("Free Look", "enabled")
