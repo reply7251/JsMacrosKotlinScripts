@@ -1,9 +1,6 @@
 
 import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw3D
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventChunkLoad
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventChunkUnload
 import xyz.wagyourtail.jsmacros.client.api.helper.world.BlockStateHelper
-import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 
 val glowColors = hashMapOf<String, Int>()
@@ -75,13 +72,13 @@ fun disable() {
     }
 }
 
-EventListener(EventType.ChunkLoad, {
+EventListener(EventType.ChunkLoad) {
     onChunkLoad(it.x, it.z)
-})
+}
 
-EventListener(EventType.ChunkUnload, {
+EventListener(EventType.ChunkUnload) {
     onChunkUnload(it.x, it.z)
-})
+}
 
 Chat.commandManager.unregisterCommand("/scan")
 
