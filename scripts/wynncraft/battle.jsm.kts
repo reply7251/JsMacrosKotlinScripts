@@ -47,6 +47,7 @@ import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.api.KtGlobals
 import me.hellrevenger.library.api._getField
 import me.hellrevenger.library.api._getPrivateValue
+import me.hellrevenger.library.impl.EventType
 import net.minecraft.class_10185
 import net.minecraft.class_332
 import net.neoforged.bus.api.EventPriority
@@ -1832,7 +1833,7 @@ fun checkClass() {
     }
 }
 
-EventListener(EventKey::class.java, { e ->
+EventListener(EventType.Key, { e ->
     currentWynnClass.onKey(e)
 }, true)
 
@@ -1910,12 +1911,12 @@ fun resetInput() {
 }
 var customInput = setInput()
 
-EventListener(EventDimensionChange::class.java, {
+EventListener(EventType.DimensionChange, {
     currentWynnClass.onWorldChange()
     currentWynnClass.saveConfig()
 })
 
-EventListener(EventDeath::class.java, {
+EventListener(EventType.Death, {
     currentWynnClass.enabled.set(false)
 })
 
