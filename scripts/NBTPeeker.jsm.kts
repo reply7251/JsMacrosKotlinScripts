@@ -15,9 +15,15 @@ import kotlin.math.ceil
 
 var targetEntity: EntityHelper<*>? = null
 
-class MyText(val callback: (() -> List<TextHelper>), x: Int = 0, y: Int = 0, color: Int = 0xffffff,
-             zIndex: Int = 0, shadow: Boolean = true, scale: Double = 1.0, rotation: Float = 0f)
-    : Text("", x, y, color, zIndex, shadow, scale, rotation) {
+class MyText(
+    val callback: (() -> List<TextHelper>),
+    x: Int = 0, y: Int = 0,
+    color: Int = 0xffffff,
+    zIndex: Int = 0,
+    shadow: Boolean = true,
+    scale: Double = 1.0,
+    rotation: Float = 0f
+) : Text("", x, y, color, zIndex, shadow, scale, rotation) {
     override fun method_25394(drawContext: class_332, mouseX: Int, mouseY: Int, delta: Float) {
         val originalY = y
         callback.invoke().forEachIndexed { index, textHelper ->

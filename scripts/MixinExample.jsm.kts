@@ -15,7 +15,7 @@ class TransformTest {
     }
 }
 
-EventListener("MinecraftClient.tick.pre", { e ->
+EventListener("MinecraftClient.tick.pre", {
     Chat.actionbar("tick: " + World.time)
 })
 

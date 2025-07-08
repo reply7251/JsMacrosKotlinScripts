@@ -1,3 +1,5 @@
+@file:Suppress("HasPlatformType")
+
 import me.hellrevenger.generated.MinecraftClient
 import net.lenni0451.classtransform.annotations.CInline
 import net.lenni0451.classtransform.annotations.CTarget
@@ -12,14 +14,12 @@ import xyz.wagyourtail.jsmacros.client.api.helper.screen.ClickableWidgetHelper
 import xyz.wagyourtail.jsmacros.client.api.helper.screen.SliderWidgetHelper
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
-import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 
-val mc = Client.getMinecraft()
-val interactKey =  mc.field_1690.field_1904;
-val attackKey = mc.field_1690.field_1886;
+val mc = Client.minecraft
+val interactKey =  mc.field_1690.field_1904
+val attackKey = mc.field_1690.field_1886
 
 object Globals {
     var globalInterval = 2
@@ -110,9 +110,9 @@ JsMacros.on("HoldAction", JavaWrapper.methodToJava(fun(event: BaseEvent, _: Even
     }
 }))
 
-val _event = JsMacros.createCustomEvent("HoldAction")
-_event.putBoolean("loadFromGlobal", true)
-_event.trigger()
+val customEvent = JsMacros.createCustomEvent("HoldAction")
+customEvent.putBoolean("loadFromGlobal", true)
+customEvent.trigger()
 
 var tick = 0L
 
@@ -187,42 +187,42 @@ fun initScreen() {
         val top = screen.height / 3
 
         iscreen.labeledSlider("Global Interval", left, top,
-            (globalInterval - 1).toDouble() / 19, 19) { slider, screen ->
+            (globalInterval - 1).toDouble() / 19, 19) { slider, _ ->
             globalInterval = (slider.value * 19).toInt() + 1
             return@labeledSlider globalInterval
         }
 
-        iscreen.labeledButton("Attack Enabled", left, top + 30, attackEnabled.toString()) { btn, screen ->
+        iscreen.labeledButton("Attack Enabled", left, top + 30, attackEnabled.toString()) { btn, _ ->
             attackEnabled = !attackEnabled
             btn.setLabel(getText(attackEnabled.toString()))
 
         }
 
         iscreen.labeledSlider("Attack Interval", left, top + 60,
-            attackInterval.toDouble() / 40, 40) { slider, screen ->
+            attackInterval.toDouble() / 40, 40) { slider, _ ->
             attackInterval = (slider.value * 39).toInt()
             return@labeledSlider attackInterval
         }
 
         iscreen.labeledSlider("Attack Interval Random", left, top + 90,
-            attackIntervalRandom.toDouble() / 40, 40) { slider, screen ->
+            attackIntervalRandom.toDouble() / 40, 40) { slider, _ ->
             attackIntervalRandom = (slider.value * 40).toInt()
             return@labeledSlider attackIntervalRandom
         }
 
-        iscreen.labeledButton("Interact Enabled", left, top + 120, interactEnabled.toString()) { btn, screen ->
+        iscreen.labeledButton("Interact Enabled", left, top + 120, interactEnabled.toString()) { btn, _ ->
             interactEnabled = !interactEnabled
             btn.setLabel(getText(interactEnabled.toString()))
         }
 
         iscreen.labeledSlider("Interact Interval", left, top + 150,
-            interactInterval.toDouble() / 40, 40) { slider, screen ->
+            interactInterval.toDouble() / 40, 40) { slider, _ ->
             interactInterval = (slider.value * 40).toInt()
             return@labeledSlider interactInterval
         }
 
         iscreen.labeledSlider("Interact Interval Random", left, top + 180,
-            (interactIntervalRandom).toDouble() / 40, 40) { slider, screen ->
+            (interactIntervalRandom).toDouble() / 40, 40) { slider, _ ->
             interactIntervalRandom = (slider.value * 40).toInt()
             return@labeledSlider interactIntervalRandom
         }
@@ -232,7 +232,7 @@ fun initScreen() {
 initScreen()
 
 Chat.commandManager.createCommandBuilder("/hold")
-    .executes(JavaWrapper.methodToJava(fun(ctx: CommandContextHelper){
+    .executes(JavaWrapper.methodToJava(fun (ctx: CommandContextHelper) {
         thread {
             Client.waitTick(1)
             Hud.openScreen(screen as IScreen)
