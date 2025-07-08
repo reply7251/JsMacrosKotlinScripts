@@ -19,10 +19,25 @@ import kotlin.concurrent.thread
 
 @Library(value = "EventListener", languages = [KotlinLanguageDefinition::class])
 class FEventListener(val context: BaseScriptContext<*>) : PerExecLibrary(context) {
+    @Deprecated(
+        message = "Replaced for nicer Kotlin lambda usage",
+        replaceWith = ReplaceWith("invoke(eventType, joined, callback)")
+    )
     operator fun <T: BaseEvent> invoke(eventType: EventType<T>, callback: (T) -> Unit, joined: Boolean = false) =
         Listener(context, eventType.clazz.getAnnotation(Event::class.java).value, callback, joined)
 
+    @Deprecated(
+        message = "Replaced for nicer Kotlin lambda usage",
+        replaceWith = ReplaceWith("invoke(eventClass, joined, callback)")
+    )
     operator fun <T: BaseEvent> invoke(eventClass: Class<T>, callback: (T) -> Unit, joined: Boolean = false) =
+        Listener(context, eventClass.getAnnotation(Event::class.java).value, callback, joined)
+
+    // for nicer lambda usage
+    operator fun <T: BaseEvent> invoke(eventType: EventType<T>, joined: Boolean = false, callback: (T) -> Unit) =
+        Listener(context, eventType.clazz.getAnnotation(Event::class.java).value, callback, joined)
+
+    operator fun <T: BaseEvent> invoke(eventClass: Class<T>, joined: Boolean = false, callback: (T) -> Unit) =
         Listener(context, eventClass.getAnnotation(Event::class.java).value, callback, joined)
 
     operator fun invoke(eventName: String, callback: (EventCustom) -> Unit, joined: Boolean = false): Listener<EventCustom> {
@@ -37,7 +52,7 @@ sealed class EventType<T>(val clazz: Class<T>) {
     data object AttackBlock: EventType<EventAttackBlock>(EventAttackBlock::class.java)
     data object AttackEntity: EventType<EventAttackEntity>(EventAttackEntity::class.java)
     data object BlockUpdate: EventType<EventBlockUpdate>(EventBlockUpdate::class.java)
-    data object Bossbar: EventType<EventBossbar>(EventBossbar::class.java)
+    data object BossbarUpdate: EventType<EventBossbar>(EventBossbar::class.java)
     data object ChunkLoad: EventType<EventChunkLoad>(EventChunkLoad::class.java)
     data object ChunkUnload: EventType<EventChunkUnload>(EventChunkUnload::class.java)
     data object ContainerUpdate: EventType<EventContainerUpdate>(EventContainerUpdate::class.java)
@@ -61,7 +76,7 @@ sealed class EventType<T>(val clazz: Class<T>) {
     data object InteractEntity: EventType<EventInteractEntity>(EventInteractEntity::class.java)
     data object ItemDamage: EventType<EventItemDamage>(EventItemDamage::class.java)
     data object ItemPickup: EventType<EventItemPickup>(EventItemPickup::class.java)
-    data object RecvPacket: EventType<EventRecvPacket>(EventRecvPacket::class.java)
+    data object ReceivePacket: EventType<EventRecvPacket>(EventRecvPacket::class.java)
     data object SendPacket: EventType<EventSendPacket>(EventSendPacket::class.java)
     data object JoinServer: EventType<EventJoinServer>(EventJoinServer::class.java)
     data object Key: EventType<EventKey>(EventKey::class.java)
@@ -73,7 +88,7 @@ sealed class EventType<T>(val clazz: Class<T>) {
     data object PlayerJoin: EventType<EventPlayerJoin>(EventPlayerJoin::class.java)
     data object PlayerLeave: EventType<EventPlayerLeave>(EventPlayerLeave::class.java)
     data object QuitGame: EventType<EventQuitGame>(EventQuitGame::class.java)
-    data object RecvMessage: EventType<EventRecvMessage>(EventRecvMessage::class.java)
+    data object ReceiveMessage: EventType<EventRecvMessage>(EventRecvMessage::class.java)
     data object Riding: EventType<EventRiding>(EventRiding::class.java)
     data object ResourcePackLoaded: EventType<EventResourcePackLoaded>(EventResourcePackLoaded::class.java)
     data object SendMessage: EventType<EventSendMessage>(EventSendMessage::class.java)
