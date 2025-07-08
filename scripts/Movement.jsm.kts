@@ -10,6 +10,7 @@ import me.hellrevenger.generated.Map_PlayerInput.left
 import me.hellrevenger.generated.Map_PlayerInput.right
 import me.hellrevenger.generated.PlayerInput
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
+import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.roundToInt
 import kotlin.math.sin
@@ -26,13 +27,19 @@ class MyInput : Input() {
         val dx = -sin(targetDirection * radian) * mag
         val dz = cos(targetDirection * radian) * mag
         val vec = player.pos.toReverseVector(startPos.x + dx, player.y, startPos.z + dz)
-        var target = Math.atan2(-vec.deltaX, vec.deltaZ) / radian
+        val target = atan2(-vec.deltaX, vec.deltaZ) / radian
         val diff = (((player.yaw - target) - 22.5) / 45).roundToInt() * radian * 45
 
         movementForward = cos(diff).toFloat()
         movementSideways = sin(diff).toFloat()
 
-        this.playerInput = PlayerInput(movementForward > 0, movementForward < 0, movementSideways > 0, movementSideways < 0, false, false, false)
+        this.playerInput = PlayerInput(
+            movementForward > 0,
+            movementForward < 0,
+            movementSideways > 0,
+            movementSideways < 0,
+            false, false, false
+        )
 
         movementForward = KeyboardInput.method_40218(playerInput.forward(), playerInput.backward())
         movementSideways = KeyboardInput.method_40218(playerInput.left(), playerInput.right())

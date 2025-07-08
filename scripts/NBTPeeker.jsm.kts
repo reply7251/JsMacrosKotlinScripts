@@ -1,4 +1,6 @@
 import me.hellrevenger.generated.*
+import me.hellrevenger.generated.Map_MinecraftClient.fontManager
+import me.hellrevenger.generated.Map_MinecraftClient.textRenderer
 import me.hellrevenger.library.api.WorldPosWrapper
 import net.minecraft.class_332
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
@@ -15,9 +17,15 @@ import kotlin.math.ceil
 
 var targetEntity: EntityHelper<*>? = null
 
-class MyText(val callback: (() -> List<TextHelper>), x: Int = 0, y: Int = 0, color: Int = 0xffffff,
-             zIndex: Int = 0, shadow: Boolean = true, scale: Double = 1.0, rotation: Float = 0f)
-    : Text("", x, y, color, zIndex, shadow, scale, rotation) {
+class MyText(
+    val callback: (() -> List<TextHelper>),
+    x: Int = 0, y: Int = 0,
+    color: Int = 0xffffff,
+    zIndex: Int = 0,
+    shadow: Boolean = true,
+    scale: Double = 1.0,
+    rotation: Float = 0f
+) : Text("", x, y, color, zIndex, shadow, scale, rotation) {
     override fun method_25394(drawContext: class_332, mouseX: Int, mouseY: Int, delta: Float) {
         val originalY = y
         callback.invoke().forEachIndexed { index, textHelper ->
@@ -247,7 +255,7 @@ class MultiLine {
         updateText()
     }
 
-    fun getWidth(text: String) = Client.minecraft.field_1772.method_1727(text)
+    fun getWidth(text: String) = Client.minecraft.textRenderer.method_1727(text)
 }
 val multiLine = MultiLine()
 
