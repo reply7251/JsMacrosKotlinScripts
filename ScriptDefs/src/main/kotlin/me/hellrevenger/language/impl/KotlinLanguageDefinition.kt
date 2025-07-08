@@ -1,6 +1,7 @@
 package me.hellrevenger.language.impl
 
 import me.hellrevenger.*
+import me.hellrevenger.library.impl.EventType
 import me.hellrevenger.mixins.MixinClassLoader
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.config.ConfigManager
@@ -39,7 +40,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
             jvm {
                 dependenciesFromClassloader(classLoader = classLoader, wholeClasspath = true)
             }
-            defaultImports(ImportJar::class)
+            defaultImports(ImportJar::class, EventType::class)
 
             refineConfiguration {
                 beforeCompiling {context ->
