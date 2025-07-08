@@ -1,13 +1,15 @@
-
-
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
+import me.hellrevenger.generated.MinecraftClient
+import net.lenni0451.classtransform.annotations.CInline
+import net.lenni0451.classtransform.annotations.CTarget
+import net.lenni0451.classtransform.annotations.CTransformer
+import net.lenni0451.classtransform.annotations.injection.CInject
 import net.minecraft.class_2561
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
-import xyz.wagyourtail.jsmacros.client.api.helpers.CommandContextHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.TextHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.screen.ClickableWidgetHelper
-import xyz.wagyourtail.jsmacros.client.api.helpers.screen.SliderWidgetHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.CommandContextHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.screen.ClickableWidgetHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.screen.SliderWidgetHelper
 import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
@@ -114,9 +116,11 @@ _event.trigger()
 
 var tick = 0L
 
-val closedField = Reflection.getDeclaredField(BaseScriptContext::class.java, "closed")
-closedField.trySetAccessible()
-EventCenter.registerEvent(context, ClientTickEvents.START_CLIENT_TICK, ClientTickEvents.StartTick {
+object TickCallback {
+    var callback = {}
+}
+
+TickCallback.callback = {
     if ((tick++).toInt() % globalInterval == 0) {
         if(nextAttackTime > tick + attackIntervalRandom + attackInterval) {
             nextAttackTime = 0
@@ -134,7 +138,20 @@ EventCenter.registerEvent(context, ClientTickEvents.START_CLIENT_TICK, ClientTic
             JsMacros.createCustomEvent("HoldActionCallback").putBoolean("attack", false)
         }
     }
-})
+}
+
+@CTransformer(MinecraftClient::class)
+class TransformTest {
+    @CInline
+    @CInject(method = ["method_1574"], target = [CTarget("HEAD")])
+    fun onTest() {
+        TickCallback.callback()
+    }
+}
+
+RuntimeTransform.init()
+RuntimeTransform.addTransformer(TransformTest::class)
+RuntimeTransform.transform()
 
 val screen = Hud.createScreen("HoldActionConfig", false)
 
@@ -223,9 +240,9 @@ Chat.commandManager.createCommandBuilder("/hold")
     }))
     .register()
 
-(event as EventService).stopListener = JavaWrapper.methodToJava<Any, Any, Any>(fun(){
+context.onContextClosed {
     Chat.commandManager.unregisterCommand("/hold")
-} as Function0<*>)
+}
 
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")

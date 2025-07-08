@@ -2,7 +2,7 @@
 import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw3D
 import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventChunkLoad
 import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventChunkUnload
-import xyz.wagyourtail.jsmacros.client.api.helpers.world.BlockStateHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.world.BlockStateHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 
@@ -75,11 +75,11 @@ fun disable() {
     }
 }
 
-EventListener(EventChunkLoad::class.java, {
+EventListener(EventType.ChunkLoad, {
     onChunkLoad(it.x, it.z)
 }, true)
 
-EventListener(EventChunkUnload::class.java, {
+EventListener(EventType.ChunkUnload, {
     onChunkUnload(it.x, it.z)
 })
 
@@ -117,13 +117,7 @@ Chat.commandManager.createCommandBuilder("/scan")
         disable()
     }).register()
 
-JsMacros.assertEvent(event, "Service")
-
-val service = event as EventService
-
-service.unregisterOnStop(true)
-
-service.stopListener = JavaWrapper.methodToJava { ->
+context.onContextClosed {
     disable()
 }
 
