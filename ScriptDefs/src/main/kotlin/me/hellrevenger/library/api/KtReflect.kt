@@ -1,12 +1,13 @@
-@file:Suppress("UNCHECKED_CAST")
+@file:Suppress("UNCHECKED_CAST", "DEPRECATION")
 
 package me.hellrevenger.library.api
 
-
 import sun.misc.Unsafe
 import java.lang.invoke.MethodHandles
+import java.lang.invoke.MethodType
 import java.lang.reflect.Field
 import java.lang.reflect.Method
+import java.lang.reflect.Modifier
 import kotlin.reflect.KMutableProperty0
 
 fun findField(clazz: Class<*>, name: String): Field {
@@ -16,7 +17,7 @@ fun findField(clazz: Class<*>, name: String): Field {
         if(!clazz.superclass.equals(Object::class.java)) {
             try {
                 return findField(clazz.superclass, name)
-            } catch (e: NoSuchFieldException) {}
+            } catch (_: NoSuchFieldException) {}
         }
         throw e
     }
@@ -24,14 +25,17 @@ fun findField(clazz: Class<*>, name: String): Field {
 
 fun <T : Any> Any._getField(name: String): KMutableProperty0<T?> {
     val f = findField(this::class.java, name)
-    f.trySetAccessible()
-    val out = this
-    val fake = object {
-        var fakeField: T?
-            get() = f.get(out) as? T
-            set(value) = f.set(out, value)
+    if(f.trySetAccessible()) {
+        val out = this
+        val fake = object {
+            var fakeField: T?
+                get() = f.get(out) as? T
+                set(value) = f.set(out, value)
+        }
+        return fake::fakeField
+    } else {
+        return this._getUnsafeField(f)
     }
-    return fake::fakeField
 }
 
 fun <T : Any> Any._getPrivateValue(name: String): T? {
@@ -49,39 +53,62 @@ fun Any._setPrivateValue(name: String, value: Any) {
     }
 }
 
-fun findMethod(clazz: Class<*>, name: String, args: List<Class<*>>): Method? {
-    val methods = clazz.declaredMethods.filter { it.name == name }
-    val method = if(methods.size > 1) {
-        methods.find {  method ->
-            method.parameterTypes.withIndex().all {
-                it.value.isAssignableFrom(args[it.index])
-            }
+fun wrapType(clazz: Class<*>) =
+    if(clazz.isPrimitive)
+        MethodType.methodType(clazz).wrap().returnType()
+    else clazz
+
+fun findMethod(clazz: Class<*>, name: String, args: List<Class<*>>): Method {
+    val methods = clazz.declaredMethods.filter { it.name == name && it.parameterCount == args.size }
+    val method = methods.find {  method ->
+        method.parameterTypes.withIndex().all {
+            println("comparing ${wrapType(it.value)} vs ${wrapType(args[it.index])} => ${wrapType(it.value).isAssignableFrom(wrapType(args[it.index]))}")
+
+            wrapType(it.value).isAssignableFrom(wrapType(args[it.index]))
         }
-    } else if (methods.size == 1) {
-        methods[0]
-    } else {
-        null
     }
-    if (method == null && clazz.superclass != Object::class.java) {
-        return findMethod(clazz.superclass, name, args)
+    if(method != null) {
+        return method
     }
-    return method
+    if (clazz.superclass != Object::class.java) {
+        try {
+            return findMethod(clazz.superclass, name, args)
+        } catch (_: NoSuchFieldException) {}
+    }
+    throw NoSuchFieldException("unable to find $name in $clazz with parameter types: [${args.joinToString()}]")
 }
 
-fun Any._getPrivateMethod(name: String, args: List<Class<*>>): Method? {
+fun Any._getPrivateMethod(name: String, args: List<Class<*>>): Method {
     val clazz = this::class.java
     return findMethod(clazz, name, args)
 }
-
-fun <T : Any> Any._invokePrivate(name: String, args: Array<Any>, static: Boolean = false): T? {
-    return this._getPrivateMethod(name, args.map { it::class.java })?.let {
-        if(it.trySetAccessible()) {
-            it.invoke(if(static) null else this, args) as? T
-        } else {
-            MethodHandles.privateLookupIn(it.declaringClass, MethodHandles.lookup())
-                .unreflect(it).invokeWithArguments(args) as? T
+object MethodHandleHelper {
+    fun getMethodHandle(targetClass: Class<*>): MethodHandles.Lookup {
+        try {
+            return MethodHandles.privateLookupIn(targetClass, MethodHandles.lookup())
+        } catch (e: IllegalAccessException) {
+            val module = this::class.java.module
+            var moduleField by this::class.java._getField<Module>("module")
+            moduleField = Object::class.java.module
+            val result = MethodHandles.privateLookupIn(targetClass, MethodHandles.lookup())
+            moduleField = module
+            return result
         }
     }
+}
+
+fun <T : Any> Any._invokePrivate(method: Method, args: Array<Any>): T? {
+    val instance = if(Modifier.isStatic(method.modifiers)) null else this
+    return if(method.trySetAccessible()) {
+        method.invoke(instance, *args) as? T
+    } else {
+        MethodHandleHelper.getMethodHandle(method.declaringClass)
+            .unreflect(method).invokeWithArguments(instance, *args) as? T
+    }
+}
+
+fun <T : Any> Any._invokePrivate(name: String, args: Array<Any>): T? {
+    return this._invokePrivate(this._getPrivateMethod(name, args.map { it::class.java }), args)
 }
 
 val unsafe by lazy {
@@ -100,11 +127,12 @@ private fun Any._setUnsafeValue(field: Field, value: Any, static: Boolean = fals
     unsafe.putObject(base, offset, value)
 }
 
-fun <T: Any> Any._getUnsafeField(name: String, static: Boolean = false): KMutableProperty0<T?> {
-    return this._getUnsafeField(findField(this::class.java, name), static)
+fun <T: Any> Any._getUnsafeField(name: String): KMutableProperty0<T?> {
+    return this._getUnsafeField(findField(this::class.java, name))
 }
 
-private fun <T: Any> Any._getUnsafeField(field: Field, static: Boolean = false): KMutableProperty0<T?> {
+private fun <T: Any> Any._getUnsafeField(field: Field): KMutableProperty0<T?> {
+    val static = Modifier.isStatic(field.modifiers)
     val (base,offset) = if(static)
         unsafe.staticFieldBase(field) to unsafe.staticFieldOffset(field)
     else this to unsafe.objectFieldOffset(field)
