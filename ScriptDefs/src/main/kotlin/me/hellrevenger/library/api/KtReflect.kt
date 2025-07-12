@@ -82,6 +82,7 @@ fun Any._getPrivateMethod(name: String, args: List<Class<*>>): Method {
     val clazz = this::class.java
     return findMethod(clazz, name, args)
 }
+
 object MethodHandleHelper {
     fun getMethodHandle(targetClass: Class<*>): MethodHandles.Lookup {
         try {
