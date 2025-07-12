@@ -54,23 +54,26 @@ var startYaw = 0f
 var startDYaw = 10000f
 
 EventListener(EventType.Key) {
-    when (it.key) {
-        "key.mouse.middle" -> {
-                /*
-            Player.player?.let { player ->
-                if(it.action == 1) { // press
-                    startPitch = player.pitch
-                    startDPitch = camera.offsetPitch
-                    startYaw = player.yaw
-                    startDYaw = camera.offsetYaw
-                } else if(it.action == 0) {
-                    camera.offsetPitch = startDPitch + player.pitch - startPitch
-                    camera.offsetYaw = startDYaw + player.yaw - startYaw
-                    player.lookAt(startYaw.toDouble(), startPitch.toDouble())
-                }
+    if(it.key == "key.mouse.middle") {
+        /*
+        Player.player?.let { player ->
+            if(it.action == 1) { // press
+                startPitch = player.pitch
+                startDPitch = camera.offsetPitch
+                startYaw = player.yaw
+                startDYaw = camera.offsetYaw
+            } else if(it.action == 0) {
+                camera.offsetPitch = startDPitch + player.pitch - startPitch
+                camera.offsetYaw = startDYaw + player.yaw - startYaw
+                player.lookAt(startYaw.toDouble(), startPitch.toDouble())
             }
-            */
         }
+        */
+        return@EventListener
+    }
+    if(it.action != 0)
+        return@EventListener
+    when (it.key) {
         "key.keyboard.right.bracket" -> {
             camera.offsetPitch = 0f
             camera.offsetYaw = 0f
