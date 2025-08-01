@@ -43,9 +43,6 @@ dependencies {
     implementation("net.lenni0451.classtransform:additionalclassprovider:1.14.1")
     jsmacrosExtensionInclude("net.lenni0451.classtransform:additionalclassprovider:1.14.1")
 
-    implementation(project(":Mapping"))
-    jsmacrosExtensionInclude(project(":Mapping"))
-
     implementation("org.javassist:javassist:3.30.2-GA")
 
     implementation("com.mojang:brigadier:1.2.9")

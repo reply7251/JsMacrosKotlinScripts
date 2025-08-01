@@ -1,25 +1,19 @@
 package me.hellrevenger.library.api
 
-import me.hellrevenger.generated.*
-import me.hellrevenger.generated.Map_Camera.getPos
-import me.hellrevenger.generated.Map_DrawContext.*
-import me.hellrevenger.generated.Map_Entity.*
-import me.hellrevenger.generated.Map_GameOptions.getFov
-import me.hellrevenger.generated.Map_GameRenderer.*
-import me.hellrevenger.generated.Map_MatrixStack.*
-import me.hellrevenger.generated.Map_MinecraftClient.*
-import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
-import me.hellrevenger.generated.Map_SimpleOption.value
 import net.minecraft.class_332
 import org.joml.Vector3d
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw2D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.RenderElement
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
+import net.minecraft.class_310
+import net.minecraft.class_757
+import org.joml.Matrix4f
+import org.joml.Vector4f
 
-val mc get() = MinecraftClient::class.getInstance()
+val mc get() = class_310.method_1551()
 
-val methodFov = net.minecraft.class_757::class.java.declaredMethods.first { it.name == "method_3196" }
+val methodFov = class_757::class.java.declaredMethods.first { it.name == "method_3196" }
 open class WorldPosWrapper(
     val draw2d: Draw2D,
     var pos: Pos3D = Pos3D(0.0, 0.0, 0.0),
@@ -36,14 +30,14 @@ open class WorldPosWrapper(
         var pitch = 0f
     }
 
-    fun getDelta() = mc.getRenderTickCounter().getTickDelta(true)
+    fun getDelta() = mc.method_61966().method_60637(true)
 
     var bindEntity: EntityHelper<*>? = null
 
     var removed = false
 
     fun getFov(cam: net.minecraft.class_4184, delta: Float, a3: Boolean): Double {
-        val gameRenderer = mc.gameRenderer
+        val gameRenderer = mc.field_1773
         if(methodFov.trySetAccessible()) {
             return methodFov.invoke(gameRenderer, cam, delta, a3) as? Double ?: 70.0
         }
@@ -51,18 +45,19 @@ open class WorldPosWrapper(
     }
 
     fun updateIfNecessary() {
-        val gameRenderer = mc.gameRenderer
-        val cam = gameRenderer.getCamera()
-        camera = Pos3D(cam.getPos())
+        val gameRenderer = mc.field_1773
 
-        val fov = (mc.options.getFov().value as Int).toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
+        val cam = gameRenderer.method_19418()
+        camera = Pos3D(cam.method_19326())
+
+        val fov = (mc.field_1690.method_41808().field_37868 as Int).toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
         if (fov != lastFov) {
-            projectionMatrix = gameRenderer.getBasicProjectionMatrix(fov.toFloat())
+            projectionMatrix = gameRenderer.method_22973(fov.toFloat())
             lastFov = fov
             pitch = 1000f;
         }
 
-        val player = mc.cameraEntity?.let { EntityHelper.create(it) } ?: return
+        val player = mc.field_1719?.let { EntityHelper.create(it) } ?: return
         val cPitch = player.pitch
         val cYaw = player.yaw
         if (cPitch != pitch || cYaw != yaw) {
@@ -76,23 +71,24 @@ open class WorldPosWrapper(
     }
 
     override fun method_25394(context: class_332, p1: Int, p2: Int, delta: Float) {
-        if (mc.world == null || removed) return
+        if (mc.field_1687 == null || removed) return
         updateIfNecessary()
         val bind = bindEntity
         var tmpPos = pos.sub(camera)
         if (bind != null) {
-            if (!bind.isAlive || bind.raw.getEntityWorld() != mc.world) {
+
+            if (!bind.isAlive || bind.raw.method_37908() != mc.field_1687) {
                 removed = true
                 parent?.removeElement(this)
                 return
             }
-            tmpPos = tmpPos.add(Pos3D(bind.raw.getLerpedPos(getDelta())))
+            tmpPos = tmpPos.add(Pos3D(bind.raw.method_30950(getDelta())))
         }
 
-        val width = context.getScaledWindowWidth()
-        val height = context.getScaledWindowHeight()
+        val width = context.method_51421()
+        val height = context.method_51443()
 
-        val matrixStack = context.getMatrices()
+        val matrixStack = context.method_51448()
         val clip = Vector4f(tmpPos.x.toFloat(), tmpPos.y.toFloat(), tmpPos.z.toFloat(), 1f)
 
         clipMatrix.transform(clip)
@@ -104,10 +100,10 @@ open class WorldPosWrapper(
             -clip.z() + zIndex * 0.001
         )
 
-        matrixStack.push()
-        matrixStack.translate(clip2.x(), clip2.y(), clip2.z())
+        matrixStack.method_22903()
+        matrixStack.method_22904(clip2.x(), clip2.y(), clip2.z())
         draw2d.render(context)
-        matrixStack.pop()
+        matrixStack.method_22909()
     }
 
     open fun bind(entity: EntityHelper<*>?): WorldPosWrapper {
