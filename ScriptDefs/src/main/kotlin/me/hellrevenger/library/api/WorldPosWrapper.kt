@@ -50,7 +50,7 @@ open class WorldPosWrapper(
         val cam = gameRenderer.method_19418()
         camera = Pos3D(cam.method_19326())
 
-        val fov = (mc.field_1690.method_41808().field_37868 as Int).toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
+        val fov = (mc.field_1690.method_41808().method_41753() as Int).toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
         if (fov != lastFov) {
             projectionMatrix = gameRenderer.method_22973(fov.toFloat())
             lastFov = fov
@@ -88,7 +88,10 @@ open class WorldPosWrapper(
         val width = context.method_51421()
         val height = context.method_51443()
 
+
+
         val matrixStack = context.method_51448()
+
         val clip = Vector4f(tmpPos.x.toFloat(), tmpPos.y.toFloat(), tmpPos.z.toFloat(), 1f)
 
         clipMatrix.transform(clip)
@@ -100,10 +103,10 @@ open class WorldPosWrapper(
             -clip.z() + zIndex * 0.001
         )
 
-        matrixStack.method_22903()
-        matrixStack.method_22904(clip2.x(), clip2.y(), clip2.z())
-        draw2d.render(context)
-        matrixStack.method_22909()
+//        matrixStack.pushMatrix()
+//        matrixStack.translate(clip2.x(), clip2.y())
+//        draw2d.render(context)
+//        matrixStack.method_22909()
     }
 
     open fun bind(entity: EntityHelper<*>?): WorldPosWrapper {
