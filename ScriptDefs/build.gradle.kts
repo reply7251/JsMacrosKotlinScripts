@@ -71,7 +71,7 @@ dependencies {
 
     implementation("net.fabricmc.fabric-api:fabric-api:0.100.4+1.21")
     implementation(files("../scripts/libs/jars/jsmacros-1.21.4-2.0.0.jar"))
-    implementation(files("../scripts/libs/jars/int-jvm17-open.jar"))
+    implementation(files("../scripts/libs/jars/client-intermediary.jar"))
 
 }
 
