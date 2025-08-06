@@ -54,14 +54,14 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
         dependenciesFromCurrentContext(wholeClasspath = true);
     }
 
-    defaultImports(ImportJar::class, EventType::class)
+    defaultImports(ImportJar::class, Import::class, EventType::class)
 
     refineConfiguration {
         onAnnotations<ImportJar> { context ->
-            val annotations = context.collectedData?.get(ScriptCollectedData.collectedAnnotations)
+            val annotations = context.collectedData?.get(ScriptCollectedData.foundAnnotations)
                 ?.takeIf { it.isNotEmpty() }
                 ?: return@onAnnotations context.compilationConfiguration.asSuccess()
-            val files = annotations.mapNotNull { (it.annotation as? ImportJar)?.path }
+            val files = annotations.mapNotNull { (it as? ImportJar)?.path }
                 .flatMap { it.toList() }
                 .filter { it.endsWith(".jar") }
                 .mapNotNull {
@@ -98,3 +98,5 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
  */
 @Target(AnnotationTarget.FILE)
 annotation class ImportJar(vararg val path: String)
+@Target(AnnotationTarget.FILE)
+annotation class Import(vararg val path: String)
