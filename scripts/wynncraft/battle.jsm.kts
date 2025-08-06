@@ -1,9 +1,8 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
 @file:Suppress("MemberVisibilityCanBePrivate", "ConstPropertyName", "HasPlatformType")
-import com.google.gson.Gson
+
 import com.google.gson.GsonBuilder
-import com.google.gson.JsonParser
 import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Handlers
 import com.wynntils.core.components.Managers
@@ -33,38 +32,31 @@ import me.hellrevenger.generated.Map_Input.movementForward
 import me.hellrevenger.generated.Map_Input.movementSideways
 import me.hellrevenger.generated.Map_Input.playerInput
 import me.hellrevenger.generated.Map_Input.tick
-import me.hellrevenger.generated.Map_KeyBinding.*
+import me.hellrevenger.generated.Map_KeyBinding.getTranslationKey
 import me.hellrevenger.generated.Map_LivingEntity.removeStatusEffectInternal
 import me.hellrevenger.generated.Map_MinecraftClient.getRenderTickCounter
 import me.hellrevenger.generated.Map_MinecraftClient.player
-import me.hellrevenger.generated.Map_MinecraftClient.tick
 import me.hellrevenger.generated.Map_PlayerInput.*
 import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
 import me.hellrevenger.generated.Map_StatusEffects.StatusEffectsKt
 import me.hellrevenger.generated.Map_Text.TextKt
 import me.hellrevenger.generated.PlayerInput
-import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.api.KtGlobals
 import me.hellrevenger.library.api._getField
 import me.hellrevenger.library.api._getPrivateValue
-import me.hellrevenger.library.impl.EventType
+import net.lenni0451.classtransform.annotations.CTarget
+import net.lenni0451.classtransform.annotations.CTransformer
+import net.lenni0451.classtransform.annotations.injection.CInject
 import net.minecraft.class_10185
-import net.minecraft.class_332
 import net.neoforged.bus.api.EventPriority
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
-import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw3D
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.ScriptScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
-import xyz.wagyourtail.jsmacros.client.api.classes.render.components3d.RenderElement3D
 import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
-import xyz.wagyourtail.jsmacros.client.api.event.impl.player.EventArmorChange
-import xyz.wagyourtail.jsmacros.client.api.event.impl.player.EventDeath
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventDimensionChange
 import xyz.wagyourtail.jsmacros.client.api.helper.inventory.ItemStackHelper
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FPlayer
-import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.io.File
 import java.util.regex.Matcher
 import kotlin.concurrent.thread
@@ -1833,9 +1825,9 @@ fun checkClass() {
     }
 }
 
-EventListener(EventType.Key, { e ->
+EventListener(EventType.Key, true) { e ->
     currentWynnClass.onKey(e)
-}, true)
+}
 
 fun warp180(degree: Double): Double {
     var v = (degree + 720) % 360
@@ -1911,14 +1903,14 @@ fun resetInput() {
 }
 var customInput = setInput()
 
-EventListener(EventType.DimensionChange, {
+EventListener(EventType.DimensionChange) {
     currentWynnClass.onWorldChange()
     currentWynnClass.saveConfig()
-})
+}
 
-EventListener(EventType.Death, {
+EventListener(EventType.Death) {
     currentWynnClass.enabled.set(false)
-})
+}
 
 var running = true
 thread {
@@ -1992,21 +1984,38 @@ fun setupSpellCaster() {
 }
 setupSpellCaster()
 
+@CTransformer(CharacterModel::class)
+class MixinCharacterModel {
+    @CInject(method = ["updateCharacterId"], target = [CTarget("TAIL")])
+    fun postUpdateCharacterId() {
+        WynntilsMod.postEvent(CharacterUpdateEvent())
+    }
+}
+
 class WynnListener {
     val shaman = StyledText.fromComponent(TextKt.translatable("feature.wynntils.chatRedirect.shaman.notification"))
     var characterUpdated = false
+    var lastEvent: WorldStateEvent? = null
+    var counter = 0
 
     @SubscribeEvent
     fun characterUpdate(event: CharacterUpdateEvent) {
         checkClass()
         characterUpdated = true
+        counter = 0
     }
     @SubscribeEvent(priority = EventPriority.LOWEST)
     fun worldStateChanged(event: WorldStateEvent) {
         if(event.newState == WorldState.CHARACTER_SELECTION || event.oldState == WorldState.WORLD) {
             characterUpdated = false
         }
-        if(event.newState == WorldState.WORLD && !characterUpdated) {
+        if(event == lastEvent) {
+            counter++
+        } else {
+            counter = 0
+            lastEvent = event
+        }
+        if(event.newState == WorldState.WORLD && !characterUpdated && counter < 5) {
             thread {
                 Client.waitTick(60)
                 if(!characterUpdated)
@@ -2032,6 +2041,10 @@ class WynnListener {
 }
 val listener = WynnListener()
 WynntilsMod.registerEventListener(listener)
+
+RuntimeTransform.init()
+RuntimeTransform.addTransformer(MixinCharacterModel::class)
+RuntimeTransform.transform()
 
 context.onContextClosed {
     running = false
