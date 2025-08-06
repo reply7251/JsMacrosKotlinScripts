@@ -6,9 +6,10 @@ FSUTIL DIRTY query %SystemDrive% >NUL || (
 )
 set project=%~dp0
 set dest=%*
-
+set project=%project:"=%
+set dest=%dest:"=%
 if "%dest:~-8%" == "jsMacros" (
-	cd %dest%
+	cd "%dest%"
 	cd Macros
 	rmdir kotlin
 	mklink /D kotlin "%project%/scripts"
