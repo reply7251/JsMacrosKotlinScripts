@@ -18,16 +18,7 @@ import com.wynntils.services.itemfilter.type.ItemStatProvider
 import com.wynntils.utils.mc.TooltipUtils
 import com.wynntils.utils.render.FontRenderer
 import com.wynntils.utils.wynn.ColorScaleUtils
-import me.hellrevenger.generated.DrawContext
-import me.hellrevenger.generated.Map_DrawContext.drawTooltip
-import me.hellrevenger.generated.Map_DrawContext.getMatrices
-import me.hellrevenger.generated.Map_DrawContext.getScaledWindowHeight
-import me.hellrevenger.generated.Map_DrawContext.getScaledWindowWidth
-import me.hellrevenger.generated.Map_MatrixStack.pop
-import me.hellrevenger.generated.Map_MatrixStack.push
-import me.hellrevenger.generated.Map_MatrixStack.translate
-import me.hellrevenger.generated.Map_Text.getStyle
-import me.hellrevenger.generated.Text
+import net.minecraft.class_2561
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.client.api.helper.StyleHelper
 import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
@@ -84,22 +75,22 @@ fun coloredPercentage(value: Double) =
     ColorScaleUtils.getPercentageTextComponent(isif.colorMap, value.roundToInt() / 100f,
         isif.colorLerp.get(), isif.decimalPlaces.get())
 
-fun fetchNori(wynnItem: GearItem): MutableList<Text>? {
+fun fetchNori(wynnItem: GearItem): MutableList<class_2561>? {
     val instance = wynnItem.itemInstance.getOrNull() ?: return null
     if(!instance.hasOverallValue()) return null
     val scales = json[wynnItem.name]?.asJsonObject ?: return null
     val possibles = wynnItem.possibleValues
-    val lines = mutableListOf<Text>()
+    val lines = mutableListOf<class_2561>()
     scales.asMap().forEach { (name, scale0) ->
         val scale = scale0.asJsonObject
-        val toAdd = mutableListOf<Text>()
+        val toAdd = mutableListOf<class_2561>()
         var score = 0.0
         instance.identifications.forEach inner@ { actual ->
             val possible = possibles.firstOrNull { actual.statType == it.statType } ?: return@inner
             if(possible.range.isFixed || !possible.range.inRange(actual.value)) return@inner
             val weight = scale[actual.statType.apiName]?.asDouble ?: return@inner
             val percentage = StatCalculator.getPercentage(actual, possible)
-            val style = coloredPercentage(percentage * 100.0).getStyle() ?: return@inner
+            val style = coloredPercentage(percentage * 100.0).method_10866() ?: return@inner
             score += weight * percentage
             val colored = Chat.createTextBuilder().append("[+${(weight * percentage).roundToInt() / 100f}%]")
             colored.withStyle(StyleHelper(style))
@@ -117,11 +108,11 @@ fun fetchNori(wynnItem: GearItem): MutableList<Text>? {
     return lines
 }
 
-fun fetchWynnpool(wynnItem: GearItem): MutableList<Text>? {
+fun fetchWynnpool(wynnItem: GearItem): MutableList<class_2561>? {
     val instance = wynnItem.itemInstance.getOrNull() ?: return null
     if(!instance.hasOverallValue()) return null
     val possibles = wynnItem.possibleValues
-    val lines = mutableListOf<Text>()
+    val lines = mutableListOf<class_2561>()
 
     val name = wynnItem.name
     if(!wynnpoolJson.has(name)) {
@@ -145,7 +136,7 @@ fun fetchWynnpool(wynnItem: GearItem): MutableList<Text>? {
     wynnpoolJson[name]?.let { scales ->
         scales.asJsonObject.asMap().forEach { (name, scale0) ->
             val scale = scale0.asJsonObject
-            val toAdd = mutableListOf<Text>()
+            val toAdd = mutableListOf<class_2561>()
             var score = 0.0
             instance.identifications.forEach inner@ { actual ->
                 val possible = possibles.firstOrNull { actual.statType == it.statType } ?: return@inner
@@ -153,7 +144,7 @@ fun fetchWynnpool(wynnItem: GearItem): MutableList<Text>? {
                 var weight = (scale[actual.statType.apiName]?.asDouble?.times(100)) ?: return@inner
                 weight = (weight * 1000).roundToInt() / 1000.0
                 val percentage = StatCalculator.getPercentage(actual, possible)
-                val style = coloredPercentage(percentage * 100.0).getStyle() ?: return@inner
+                val style = coloredPercentage(percentage * 100.0).method_10866() ?: return@inner
                 score += weight * percentage
                 val colored = Chat.createTextBuilder().append("[+${(weight * percentage).roundToInt() / 100f}%]")
                 colored.withStyle(StyleHelper(style))
@@ -172,7 +163,7 @@ fun fetchWynnpool(wynnItem: GearItem): MutableList<Text>? {
     return null
 }
 
-fun fetchWeights(wynnItem: GearItem): MutableList<Text>? {
+fun fetchWeights(wynnItem: GearItem): MutableList<class_2561>? {
     val tooltips = fetchNori(wynnItem) ?: return null
     fetchWynnpool(wynnItem)?.let { tooltips.addAll(it) }
     return tooltips
@@ -206,27 +197,27 @@ class WynnListener {
 
         val context = event.guiGraphics
 
-        val offsetY = event.mouseY + height - context.getScaledWindowHeight()
+        val offsetY = event.mouseY + height - context.method_51443()
         val y = (if(offsetY > 0) event.mouseY - offsetY else event.mouseY) + 12
         fetchWeights(wynnItem)?.let {
-            val stack = context.getMatrices()
+            val stack = context.method_51448()
 
-            stack.push()
-            stack.translate(0f,0f,300f)
+            stack.method_22903()
+            stack.method_46416(0f,0f,300f)
 
             val myClientTooltip = TooltipUtils.getClientTooltipComponent(it)
             val myWidth = TooltipUtils.getTooltipWidth(myClientTooltip, font)
             val myHeight = TooltipUtils.getTooltipHeight(myClientTooltip)
-            val yOffset = y + myHeight - context.getScaledWindowHeight()
+            val yOffset = y + myHeight - context.method_51443()
             val myY = if(yOffset > 0) y - yOffset else y
-            val myX = if(event.mouseX + width + 24 + myWidth > context.getScaledWindowWidth()) {
+            val myX = if(event.mouseX + width + 24 + myWidth > context.method_51421()) {
                 event.mouseX - myWidth - 12
             } else {
                 event.mouseX + width + 12
             }
 
-            context.drawTooltip(font, it, myX, myY)
-            stack.pop()
+            context.method_51434(font, it, myX, myY)
+            stack.method_22909()
         }
     }
 }

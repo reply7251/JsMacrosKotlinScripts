@@ -26,21 +26,6 @@ import com.wynntils.models.spells.type.SpellDirection
 import com.wynntils.models.worlds.event.WorldStateEvent
 import com.wynntils.models.worlds.type.WorldState
 import me.hellrevenger.KotlinExtension
-import me.hellrevenger.generated.Input
-import me.hellrevenger.generated.Map_ClientPlayerEntity.input
-import me.hellrevenger.generated.Map_Input.movementForward
-import me.hellrevenger.generated.Map_Input.movementSideways
-import me.hellrevenger.generated.Map_Input.playerInput
-import me.hellrevenger.generated.Map_Input.tick
-import me.hellrevenger.generated.Map_KeyBinding.getTranslationKey
-import me.hellrevenger.generated.Map_LivingEntity.removeStatusEffectInternal
-import me.hellrevenger.generated.Map_MinecraftClient.getRenderTickCounter
-import me.hellrevenger.generated.Map_MinecraftClient.player
-import me.hellrevenger.generated.Map_PlayerInput.*
-import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
-import me.hellrevenger.generated.Map_StatusEffects.StatusEffectsKt
-import me.hellrevenger.generated.Map_Text.TextKt
-import me.hellrevenger.generated.PlayerInput
 import me.hellrevenger.library.api.KtGlobals
 import me.hellrevenger.library.api._getField
 import me.hellrevenger.library.api._getPrivateValue
@@ -62,6 +47,9 @@ import java.util.regex.Matcher
 import kotlin.concurrent.thread
 import kotlin.jvm.optionals.getOrNull
 import kotlin.math.*
+import net.minecraft.class_1294
+import net.minecraft.class_744
+import net.minecraft.class_2561
 
 
 if(!World.isWorldLoaded) {
@@ -311,7 +299,7 @@ KtGlobals.getVariable<MutableMap<String, () -> Pair<Float, Float>>>(offsetKey)?.
         smooth.enabled = false
         0f to 0f
     } else {
-        val delta = Client.minecraft.getRenderTickCounter().getTickDelta(true)
+        val delta = Client.minecraft.method_61966().method_60637(true)
         val yaw = lerp(smooth.targetYaw - smooth.prevYaw, 0f, 1-delta)
         val pitch = lerp(smooth.targetPitch - smooth.prevPitch, 0f, 1-delta)
 
@@ -510,8 +498,8 @@ open class WynnClass: HasBind {
 
     fun removeBlind() {
         val player = Player.player?.raw ?: return
-        player.removeStatusEffectInternal(StatusEffectsKt.BLINDNESS)
-        player.removeStatusEffectInternal(StatusEffectsKt.DARKNESS)
+        player.method_6111(class_1294.field_5919)
+        player.method_6111(class_1294.field_38092)
     }
     
     open fun checkManual(): Boolean {
@@ -1846,7 +1834,8 @@ fun lerpDegrees(from: Double, to: Double, lerp: Double, min: Double = 0.0): Doub
 }
 fun Pos3D.distanceToIgnoreY(another: Pos3D, yMulti: Double = 0.0) = toVector(another).multiply(1.0,yMulti,1.0,1.0,yMulti,1.0).magnitude
 val radian = Math.PI / 180
-class CustomInput(val parent: Input) : Input() {
+
+class CustomInput(val parent: class_744) : class_744() {
     var targetPos = Pos3D.ZERO
     var forceForward = false
     var stuckCounter = 0
@@ -1859,8 +1848,8 @@ class CustomInput(val parent: Input) : Input() {
     override fun method_3129() {
         val player = Player.player!!
         if(targetPos.equals(Pos3D.ZERO)) {
-            parent.tick()
-            playerInput = parent.playerInput
+            parent.method_3129()
+            field_54155 = parent.field_54155
         } else {
             val vec = player.pos.toReverseVector(targetPos)
             val target = atan2(-vec.deltaX, vec.deltaZ) / radian
@@ -1874,29 +1863,28 @@ class CustomInput(val parent: Input) : Input() {
             val sneak = false
             val sprint = false
 
-            playerInput = PlayerInput(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
+            field_54155 = class_10185(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
         }
         if(forceForward) {
-            playerInput = PlayerInput(forceForward, playerInput.backward(),
-                playerInput.left(), playerInput.right(), playerInput.jump() , playerInput.sneak() , playerInput.sprint())as class_10185
+            field_54155 = class_10185(forceForward, field_54155.comp_3160(),
+                field_54155.comp_3161(), field_54155.comp_3162(), field_54155.comp_3163() , field_54155.comp_3164() , field_54155.comp_3165())as class_10185
         }
-
-        movementForward = getMovement(playerInput.forward(), playerInput.backward())
-        movementSideways = getMovement(playerInput.left(), playerInput.right())
+        field_3905 = getMovement(field_54155.comp_3159(), field_54155.comp_3160())
+        field_3905 = getMovement(field_54155.comp_3161(), field_54155.comp_3162())
     }
 }
 fun setInput(): CustomInput? {
     resetInput()
-    return Client.minecraft.player?.let {
-        val result = CustomInput(it.input)
-        it.input = result
+    return Client.minecraft.field_1724?.let {
+        val result = CustomInput(it.field_3913)
+        it.field_3913 = result
         result
     }
 }
 fun resetInput() {
-    Client.minecraft.player?.let { player ->
-        (player.input as? CustomInput)?.let {
-            player.input = it.parent
+    Client.minecraft.field_1724?.let { player ->
+        (player.field_3913 as? CustomInput)?.let {
+            player.field_3913 = it.parent
             resetInput()
         }
     }
@@ -1923,7 +1911,7 @@ thread {
 
 class MyKeyBind(val keyBind: KeyBind) : Runnable {
     val runnable: Runnable
-    val key: String = keyBinds[keyBind.keyMapping.getTranslationKey()]!!
+    val key: String = keyBinds[keyBind.keyMapping.method_1431()]!!
     var pressedTime = 0L
     var onPress by keyBind._getField<Runnable>("onPress")
 
@@ -1993,7 +1981,7 @@ class MixinCharacterModel {
 }
 
 class WynnListener {
-    val shaman = StyledText.fromComponent(TextKt.translatable("feature.wynntils.chatRedirect.shaman.notification"))
+    val shaman = StyledText.fromComponent(class_2561.method_43471("feature.wynntils.chatRedirect.shaman.notification"))
     var characterUpdated = false
     var lastEvent: WorldStateEvent? = null
     var counter = 0

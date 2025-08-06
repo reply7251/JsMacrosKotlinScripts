@@ -7,11 +7,11 @@ import com.wynntils.screens.playerviewer.PlayerViewerScreen
 import xyz.wagyourtail.jsmacros.client.api.event.impl.EventKey
 import fi.dy.masa.tweakeroo.config.FeatureToggle
 import fi.dy.masa.tweakeroo.util.CameraEntity
-import me.hellrevenger.generated.Screen
 import me.hellrevenger.library.api._getField
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.PlayerEntityHelper
+import net.minecraft.class_437
 
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")
@@ -27,7 +27,7 @@ fun getPlayer() =
         null
 
 val playerView = Managers.Feature.getFeatureInstance(PlayerViewerFeature::class.java)
-var playerViewerScreen by playerView._getField<Screen>("playerViewerScreen")
+var playerViewerScreen by playerView._getField<class_437>("playerViewerScreen")
 
 EventListener(EventKey::class.java, { e ->
     if(e.action == 1 && e.key == "key.mouse.middle") {

@@ -58,10 +58,10 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
 
     refineConfiguration {
         onAnnotations<ImportJar> { context ->
-            val annotations = context.collectedData?.get(ScriptCollectedData.foundAnnotations)
+            val annotations = context.collectedData?.get(ScriptCollectedData.collectedAnnotations)
                 ?.takeIf { it.isNotEmpty() }
                 ?: return@onAnnotations context.compilationConfiguration.asSuccess()
-            val files = annotations.mapNotNull { (it as? ImportJar)?.path }
+            val files = annotations.mapNotNull { (it.annotation as? ImportJar)?.path }
                 .flatMap { it.toList() }
                 .filter { it.endsWith(".jar") }
                 .mapNotNull {

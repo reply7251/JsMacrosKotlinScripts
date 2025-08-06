@@ -2,7 +2,6 @@
 
 import com.wynntils.core.components.Models
 import com.wynntils.features.inventory.ContainerSearchFeature
-import me.hellrevenger.generated.GenericContainerScreen
 import xyz.wagyourtail.jsmacros.client.access.IInventory
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Rect

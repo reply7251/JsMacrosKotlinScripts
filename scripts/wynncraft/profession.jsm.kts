@@ -20,24 +20,6 @@ import com.wynntils.services.lootrunpaths.type.LootrunPath
 import com.wynntils.services.lootrunpaths.type.LootrunState
 import com.wynntils.utils.MathUtils
 import com.wynntils.utils.mc.type.Location
-import me.hellrevenger.generated.BlockPos
-import me.hellrevenger.generated.ChunkPos
-import me.hellrevenger.generated.Input
-import me.hellrevenger.generated.Map_BlockPos.BlockPosKt
-import me.hellrevenger.generated.Map_ChunkPos.toLong
-import me.hellrevenger.generated.Map_ClientPlayerEntity.input
-import me.hellrevenger.generated.Map_Input.movementForward
-import me.hellrevenger.generated.Map_Input.movementSideways
-import me.hellrevenger.generated.Map_Input.playerInput
-import me.hellrevenger.generated.Map_Input.tick
-import me.hellrevenger.generated.Map_MinecraftClient.getRenderTickCounter
-import me.hellrevenger.generated.Map_MinecraftClient.player
-import me.hellrevenger.generated.Map_PlayerInput.*
-import me.hellrevenger.generated.Map_Position.getX
-import me.hellrevenger.generated.Map_Position.getY
-import me.hellrevenger.generated.Map_Position.getZ
-import me.hellrevenger.generated.Map_RenderTickCounter.getTickDelta
-import me.hellrevenger.generated.Vec3d
 import net.minecraft.class_332
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
@@ -52,14 +34,18 @@ import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 import kotlin.jvm.optionals.getOrNull
 import kotlin.math.*
+import net.minecraft.class_243
+import net.minecraft.class_2338
+import net.minecraft.class_1923
+import net.minecraft.class_744
 
 val radian = Math.PI / 180
 fun Location.toBlockPosHelper() = BlockPosHelper(toBlockPos())
 fun BlockPosHelper.getCenter(): Pos3D = toPos3D().add(0.5, 0.5, 0.5)
-fun Pos3D.getRaw() = Vec3d(x, y, z)
+fun Pos3D.getRaw() = class_243(x, y, z)
 fun Pos3D.distanceTo(another: Pos3D) = toVector(another).magnitude
 fun Pos3D.distanceToIgnoreY(another: Pos3D, yMulti: Double = 0.0) = toVector(another).multiply(1.0,yMulti,1.0,1.0,yMulti,1.0).magnitude
-fun Pos3D.toBlockPos() = BlockPosHelper(BlockPosKt.ofFloored(getRaw()))
+fun Pos3D.toBlockPos() = BlockPosHelper(class_2338.method_49638(getRaw()))
 fun <T> Iterable<T>.findCloset(callback: (T) -> Double): T? {
     var nearest: T? = null
     var nearestDistance = Double.MAX_VALUE
@@ -84,11 +70,12 @@ fun addBoxAt(block: BlockPosHelper) {
     boxes[block] = box
     d3d.addBox(box)
 }
+
 fun <T> List<T>.getOffset(offset: Int) = this[(pathIndex+offset) % size]
 fun getNode(offset: Int) = getLootrunPath()?.points?.getOffset(offset)
 fun getNoteAt(pos: Pos3D) =
-    getLootrun()?.notes?.get(ChunkPos(pos.toRawBlockPos()).toLong())?.let { it.firstOrNull {
-        Pos3D(it.position.getX(), it.position.getY(), it.position.getZ()).toBlockPos() == pos.toBlockPos()
+    getLootrun()?.notes?.get(class_1923(pos.toRawBlockPos()).method_8324())?.let { it.firstOrNull {
+        Pos3D(it.position.method_10216(), it.position.method_10214(), it.position.method_10215()).toBlockPos() == pos.toBlockPos()
     } }?.let { TextHelper.wrap(it.component) }
 fun getSpellCaster(spellOrder: String): () -> Unit {
     val feat = Managers.Feature.getFeatureInstance(QuickCastFeature::class.java)
@@ -160,16 +147,16 @@ fun getLootrunPath(): LootrunPath? {
 }
 fun setInput(): MyInput? {
     resetInput()
-    return Client.minecraft.player?.let {
-        val result = MyInput(it.input)
-        it.input = result
+    return Client.minecraft.field_1724?.let {
+        val result = MyInput(it.field_3913)
+        it.field_3913 = result
         result
     }
 }
 fun resetInput() {
-    Client.minecraft.player?.let { player ->
-        (player.input as? MyInput)?.let {
-            player.input = it.parent
+    Client.minecraft.field_1724?.let { player ->
+        (player.field_3913 as? MyInput)?.let {
+            player.field_3913 = it.parent
             resetInput()
         }
     }
@@ -183,22 +170,24 @@ enum class State {
     FIND_NODE,
     HARVEST
 }
-class MyInput(val parent: Input) : Input() {
+
+class MyInput(val parent: class_744) : class_744() {
     var targetPos = Pos3D.ZERO
     fun getMovement(positive: Boolean, negative: Boolean) = if(positive == negative) 0f else if(positive) 1f else -1f
     fun roundMovement(value: Double) = if(abs(value) < 0.1) 0.0 else value / abs(value)
     override fun method_3129() {
         val player = Player.player!!
         if(targetPos.equals(Pos3D.ZERO)) {
-            parent.tick()
-            playerInput = parent.playerInput
+            parent.method_3129()
+
+            field_54155 = parent.field_54155
             val jump = World.getBlock(player.blockPos.up())?.blockStateHelper?.isLiquid == true && currentState != State.FIND_NODE
             val forward = stuckCounter > 14
             if(shouldOverrideInput() && (jump || forward)) {
                 val inp = Reflection.getClass<Any>("net.minecraft.class_10185").constructors[0]
-                    .newInstance(playerInput.forward() || forward, playerInput.backward(),
-                    playerInput.left(), playerInput.right(), playerInput.jump() || jump, playerInput.sneak() || forward, playerInput.sprint())
-                playerInput = inp as net.minecraft.class_10185
+                    .newInstance(field_54155.comp_3159() || forward, field_54155.comp_3160(),
+                        field_54155.comp_3161(), field_54155.comp_3162(), field_54155.comp_3163() || jump, field_54155.comp_3164() || forward, field_54155.comp_3165())
+                field_54155 = inp as net.minecraft.class_10185
                 stuckCounter = 0
             }
         } else {
@@ -218,11 +207,11 @@ class MyInput(val parent: Input) : Input() {
             val inp = Reflection.getClass<Any>("net.minecraft.class_10185").constructors[0]
                 .newInstance(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
 
-            playerInput = inp as net.minecraft.class_10185
+            field_54155 = inp as net.minecraft.class_10185
         }
 
-        movementForward = getMovement(playerInput.forward(), playerInput.backward())
-        movementSideways = getMovement(playerInput.left(), playerInput.right())
+        field_3905 = getMovement(field_54155.comp_3159(), field_54155.comp_3160())
+        field_3907 = getMovement(field_54155.comp_3161(), field_54155.comp_3162())
     }
 }
 fun shouldOverrideInput() = currentState != State.NONE && currentState != State.RECORDING && currentState != State.PAUSE_RECORD
@@ -283,7 +272,7 @@ class Smooth {
             return@RenderGetter
         }
 
-        val delta = Client.minecraft.getRenderTickCounter().getTickDelta(true)
+        val delta = Client.minecraft.method_61966().method_60637(true)
         if(delta > 0.01)
             player.lookAt(lerpDegrees(prevYaw, targetYaw, delta.toDouble()),
                 MathUtils.lerp(prevPitch, targetPitch, delta.toDouble()))

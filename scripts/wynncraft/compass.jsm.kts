@@ -5,9 +5,9 @@ import com.wynntils.screens.maps.PoiCreationScreen
 import com.wynntils.services.mapdata.providers.builtin.WaypointsProvider
 import com.wynntils.utils.mc.type.Location
 import com.wynntils.utils.wynn.LocationUtils
-import me.hellrevenger.generated.Map_SelectionManager.SelectionManagerKt
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.helper.world.BlockPosHelper
+import net.minecraft.class_3728
 
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")
@@ -17,7 +17,7 @@ Chat.commandManager.unregisterCommand("/compass")
 
 Chat.commandManager.createCommandBuilder("/compass")
     .literalArg("clipboard").executes(JavaWrapper.methodToJava { ctx ->
-        SelectionManagerKt.getClipboard(Client.minecraft).split("\n\r*\n*".toRegex()).forEach {
+        class_3728.method_27556(Client.minecraft).split("\n\r*\n*".toRegex()).forEach {
             LocationUtils.parseFromString(it).ifPresent {
                 MarkerModel.USER_WAYPOINTS_PROVIDER.addLocation(it, null)
             }

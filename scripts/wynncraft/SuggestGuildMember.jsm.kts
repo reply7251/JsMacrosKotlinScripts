@@ -6,27 +6,19 @@ import com.wynntils.mc.event.ScreenInitEvent
 import com.wynntils.mc.event.ScreenRenderEvent
 import com.wynntils.screens.partymanagement.PartyManagementScreen
 import com.wynntils.screens.partymanagement.widgets.SuggestionPlayerWidget
-import me.hellrevenger.generated.ButtonWidget
-import me.hellrevenger.generated.Map_ClickableWidget.visible
-import me.hellrevenger.generated.Map_ClientPlayNetworkHandler.getPlayerList
-import me.hellrevenger.generated.Map_ClientPlayerEntity.networkHandler
-import me.hellrevenger.generated.Map_InGameHud.getPlayerListHud
-import me.hellrevenger.generated.Map_MinecraftClient.inGameHud
-import me.hellrevenger.generated.Map_MinecraftClient.player
-import me.hellrevenger.generated.Map_PlayerListEntry.getProfile
-import me.hellrevenger.generated.Map_PlayerListHud.getPlayerName
-import me.hellrevenger.generated.Map_Widget.*
-import me.hellrevenger.generated.PlayerListEntry
 import me.hellrevenger.library.api.RuntimeMixin
 import net.bytebuddy.asm.Advice
 import net.bytebuddy.description.method.MethodDescription
 import net.bytebuddy.matcher.ElementMatchers
+import net.minecraft.class_339
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.math.max
 import kotlin.math.min
+import net.minecraft.class_640
+import net.minecraft.class_4185
 
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")
@@ -55,15 +47,15 @@ object MixinPartyManagementScreen {
 }
 
 val PLAYER_INFO_COMPARATOR =
-    Comparator.comparing<PlayerListEntry, String> ({ playerInfo -> playerInfo.getProfile().name }) { a, b -> a.compareTo(b, true)}
+    Comparator.comparing<class_640, String> ({ playerInfo -> playerInfo.method_2966().name }) { a, b -> a.compareTo(b, true)}
 
 fun fetchOnlineMembersFromTab(): Boolean {
-    val player = Client.minecraft.player ?: return false
-    val playerList = Client.minecraft.inGameHud.getPlayerListHud()
-    val players = player.networkHandler.getPlayerList().stream().sorted(PLAYER_INFO_COMPARATOR).limit(80).toList()
+    val player = Client.minecraft.field_1724 ?: return false
+    val playerList = Client.minecraft.field_1705.method_1750()
+    val players = player.field_3944.method_2880().stream().sorted(PLAYER_INFO_COMPARATOR).limit(80).toList()
     if(players.size < 61) return false
     val guildMembers = players.subList(61, players.size).mapNotNull {
-        TextHelper.wrap(playerList.getPlayerName(it)).stringStripFormatting.let {
+        TextHelper.wrap(playerList.method_1918(it)).stringStripFormatting.let {
             if(it.contains("]")) it.substring(it.indexOf("]") + 2) else null
         }
     }
@@ -137,10 +129,11 @@ class WynnListener {
             screen.getSuggestions().forEachIndexed { index, suggestionPlayerWidget ->
                 val newY = cellHeight * (23 + index * 3 - scrollY)
                 val visible = newY in (top + 1)..<bottom
-                suggestionPlayerWidget.setY(newY)
-                suggestionPlayerWidget.visible = visible
-                (suggestionPlayerWidget.getPrivateFieldValue("inviteButton") as? ButtonWidget)?.let {
-                    it.setY(newY)
+
+                suggestionPlayerWidget.method_46419(newY)
+                suggestionPlayerWidget.field_22764 = visible
+                (suggestionPlayerWidget.getPrivateFieldValue("inviteButton") as? class_4185)?.let {
+                    it.method_46419(newY)
                 }
             }
         }

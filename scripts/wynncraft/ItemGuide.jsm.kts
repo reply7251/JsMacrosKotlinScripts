@@ -10,18 +10,11 @@ import com.wynntils.models.items.items.game.GearItem
 import com.wynntils.utils.mc.McUtils
 import com.wynntils.utils.mc.TooltipUtils
 import com.wynntils.utils.render.FontRenderer
-import me.hellrevenger.generated.Map_DrawContext.drawTooltip
-import me.hellrevenger.generated.Map_DrawContext.getMatrices
-import me.hellrevenger.generated.Map_MatrixStack.pop
-import me.hellrevenger.generated.Map_MatrixStack.push
-import me.hellrevenger.generated.Map_MatrixStack.translate
-import me.hellrevenger.generated.Map_MinecraftClient.getWindow
-import me.hellrevenger.generated.Map_Window.getScaledWidth
-import me.hellrevenger.generated.Text
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.jvm.optionals.getOrNull
 import kotlin.math.max
+import net.minecraft.class_2561
 
 class WynnListener {
     @SubscribeEvent
@@ -35,7 +28,7 @@ class WynnListener {
 
         val pad = 12
         val font = FontRenderer.getInstance().font
-        val right = McUtils.mc().getWindow().getScaledWidth()
+        val right = McUtils.mc().method_22683().method_4486()
         var x = 0
         var y = pad * 2
         var bottom = y
@@ -46,13 +39,13 @@ class WynnListener {
         }
 
         val context = event.guiGraphics
-        val stack = event.guiGraphics.getMatrices()
-        stack.push()
-        stack.translate(0f,0f,300f)
+        val stack = event.guiGraphics.method_51448()
+        stack.method_22903()
+        stack.method_46416(0f,0f,300f)
 
         possibilities.forEach {
             val builder = Handlers.Tooltip.buildNew(GearItem(it, null as GearInstance?), true, false)
-            val tooltip = builder.getTooltipLines(Models.Character.classType) as MutableList<Text>
+            val tooltip = builder.getTooltipLines(Models.Character.classType) as MutableList<class_2561>
             val clientTooltip = TooltipUtils.getClientTooltipComponent(tooltip)
             val width = TooltipUtils.getTooltipWidth(clientTooltip, font)
             val height = TooltipUtils.getTooltipHeight(clientTooltip)
@@ -63,11 +56,11 @@ class WynnListener {
                 x = 0
             }
 
-            context.drawTooltip(font, tooltip, x, y)
+            context.method_51434(font, tooltip, x, y)
             x += width + pad
             bottom = max(bottom, y + height)
         }
-        stack.pop()
+        stack.method_22909()
     }
 }
 

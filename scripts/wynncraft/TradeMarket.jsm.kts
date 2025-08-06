@@ -20,11 +20,6 @@ import com.wynntils.screens.base.widgets.ItemSearchWidget
 import com.wynntils.screens.base.widgets.WynntilsButton
 import com.wynntils.services.itemfilter.type.ItemProviderType
 import com.wynntils.services.itemfilter.type.ItemStatProvider
-import me.hellrevenger.generated.Map_Screen.drawables
-import me.hellrevenger.generated.Map_Widget.getX
-import me.hellrevenger.generated.Map_Widget.getY
-import me.hellrevenger.generated.Map_Widget.setX
-import me.hellrevenger.generated.Map_Widget.setY
 import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.api._getField
 import me.hellrevenger.library.api._getPrivateValue
@@ -32,6 +27,7 @@ import me.hellrevenger.library.api._getUnsafeField
 import net.neoforged.bus.api.EventPriority
 import net.neoforged.bus.api.SubscribeEvent
 import sun.misc.Unsafe
+import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.core.library.impl.FReflection
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.*
@@ -39,6 +35,8 @@ import java.util.function.Supplier
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
+import net.minecraft.class_4068
+import net.minecraft.class_8021
 
 val pattern = Pattern.compile("\uDAFF\uDFE8\uE011")
 
@@ -91,11 +89,12 @@ class WynnListener {
     @SubscribeEvent(priority = EventPriority.LOW)
     fun onScreen(event: ScreenInitEvent.Pre) {
         if(Models.Container.currentContainer !is MyTradeMarketContainer) return
-        event.screen.drawables.forEach {
+        event.screen._getField<List<class_4068>>("field_33816").get()?.forEach {
             when(it) {
-                is ItemFilterUIButton -> it.setY(it.getY() - 40)
-                is ItemSearchWidget -> it.setY(it.getY() - 40)
-                is WynntilsButton -> it.setX(it.getX() + 20)
+
+                is ItemFilterUIButton -> it.method_46419(it.method_46427() - 40)
+                is ItemSearchWidget -> it.method_46419(it.method_46427() - 40)
+                is WynntilsButton -> it.method_46419(it.method_46427() + 20)
             }
         }
     }
