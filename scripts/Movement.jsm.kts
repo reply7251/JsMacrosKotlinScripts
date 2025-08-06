@@ -1,22 +1,16 @@
-import me.hellrevenger.generated.Input
-import me.hellrevenger.generated.KeyboardInput
-import me.hellrevenger.generated.Map_ClientPlayerEntity.input
-import me.hellrevenger.generated.Map_Input.movementForward
-import me.hellrevenger.generated.Map_Input.movementSideways
-import me.hellrevenger.generated.Map_Input.playerInput
-import me.hellrevenger.generated.Map_PlayerInput.backward
-import me.hellrevenger.generated.Map_PlayerInput.forward
-import me.hellrevenger.generated.Map_PlayerInput.left
-import me.hellrevenger.generated.Map_PlayerInput.right
-import me.hellrevenger.generated.PlayerInput
+
+import me.hellrevenger.library.api._invokePrivate
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
 import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.roundToInt
 import kotlin.math.sin
+import net.minecraft.class_744
+import net.minecraft.class_10185
+import net.minecraft.class_743
 
 val radian = Math.PI / 180
-class MyInput : Input() {
+class MyInput : class_744() {
     var targetDirection = 0f
     var startPos = Pos3D.ZERO
 
@@ -29,20 +23,20 @@ class MyInput : Input() {
         val vec = player.pos.toReverseVector(startPos.x + dx, player.y, startPos.z + dz)
         val target = atan2(-vec.deltaX, vec.deltaZ) / radian
         val diff = (((player.yaw - target) - 22.5) / 45).roundToInt() * radian * 45
+        player.raw.field_3913.field_54155
+        field_3905 = cos(diff).toFloat()
+        field_3907 = sin(diff).toFloat()
 
-        movementForward = cos(diff).toFloat()
-        movementSideways = sin(diff).toFloat()
-
-        this.playerInput = PlayerInput(
-            movementForward > 0,
-            movementForward < 0,
-            movementSideways > 0,
-            movementSideways < 0,
+        field_54155 = class_10185(
+            field_3905 > 0,
+            field_3905 < 0,
+            field_3907 > 0,
+            field_3907 < 0,
             false, false, false
         )
 
-        movementForward = KeyboardInput.method_40218(playerInput.forward(), playerInput.backward())
-        movementSideways = KeyboardInput.method_40218(playerInput.left(), playerInput.right())
+        field_3905 = class_743::class.java._invokePrivate("method_40218", arrayOf(field_54155.comp_3159(), field_54155.comp_3160()), true)!!
+        field_3907 = class_743::class.java._invokePrivate("method_40218", arrayOf(field_54155.comp_3161(), field_54155.comp_3162()), true)!!
     }
 }
 fun main() {
@@ -51,10 +45,10 @@ fun main() {
     myInput.targetDirection = player.yaw
     myInput.startPos = player.pos
 
-    val old = player.raw.input
-    player.raw.input = myInput
+    val old = player.raw.field_3913
+    player.raw.field_3913 = myInput
     Client.waitTick(80)
-    player.raw.input = old
+    player.raw.field_3913 = old
 }
 
 main()

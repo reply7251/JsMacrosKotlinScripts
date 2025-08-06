@@ -1,6 +1,4 @@
-import me.hellrevenger.generated.*
-import me.hellrevenger.generated.Map_MinecraftClient.fontManager
-import me.hellrevenger.generated.Map_MinecraftClient.textRenderer
+
 import me.hellrevenger.library.api.WorldPosWrapper
 import net.minecraft.class_332
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
@@ -13,6 +11,7 @@ import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
 import kotlin.concurrent.thread
 import kotlin.math.ceil
+import net.minecraft.class_2487
 
 
 var targetEntity: EntityHelper<*>? = null
@@ -82,10 +81,10 @@ class CompoundAccessor(val tag: String, next: NBTAccessor? = null) : NBTAccessor
             val compound = nbt.asCompoundHelper()
             val nbt2 = compound[tag]
             if(nbt2 == null && next == null) {
-                return NBTElementHelper.wrap(NbtCompound(mapOf(*compound.keys
+                return NBTElementHelper.wrap(class_2487::class.java.constructors.find { it.parameters.size == 1 }!!.newInstance(mapOf(*compound.keys
                     .filter { it.startsWith(tag, true) }
                     .map { it to compound[it]!!.raw }
-                    .toTypedArray())))
+                    .toTypedArray())) as class_2487)
             }
             return nbt2?.let { super.access(it) }
         }
@@ -255,7 +254,7 @@ class MultiLine {
         updateText()
     }
 
-    fun getWidth(text: String) = Client.minecraft.textRenderer.method_1727(text)
+    fun getWidth(text: String) = Client.minecraft.field_1772.method_1727(text)
 }
 val multiLine = MultiLine()
 
