@@ -43,9 +43,6 @@ dependencies {
     implementation("net.lenni0451.classtransform:additionalclassprovider:1.14.1")
     jsmacrosExtensionInclude("net.lenni0451.classtransform:additionalclassprovider:1.14.1")
 
-    implementation(project(":Mapping"))
-    jsmacrosExtensionInclude(project(":Mapping"))
-
     implementation("org.javassist:javassist:3.30.2-GA")
 
     implementation("com.mojang:brigadier:1.2.9")
@@ -74,7 +71,7 @@ dependencies {
 
     implementation("net.fabricmc.fabric-api:fabric-api:0.100.4+1.21")
     implementation(files("../scripts/libs/jars/jsmacros-1.21.4-2.0.0.jar"))
-    implementation(files("../scripts/libs/jars/int-jvm17-open.jar"))
+    implementation(files("../scripts/libs/jars/client-intermediary.jar"))
 
 }
 
