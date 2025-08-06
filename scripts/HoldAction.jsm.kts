@@ -1,9 +1,5 @@
 @file:Suppress("HasPlatformType")
 
-import me.hellrevenger.generated.Map_GameOptions.attackKey
-import me.hellrevenger.generated.Map_GameOptions.useKey
-import me.hellrevenger.generated.Map_MinecraftClient.options
-import me.hellrevenger.generated.MinecraftClient
 import net.lenni0451.classtransform.annotations.CInline
 import net.lenni0451.classtransform.annotations.CTarget
 import net.lenni0451.classtransform.annotations.CTransformer
@@ -19,10 +15,11 @@ import xyz.wagyourtail.jsmacros.core.event.BaseEvent
 import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
 import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import kotlin.concurrent.thread
+import net.minecraft.class_310
 
 val mc = Client.minecraft
-val interactKey = mc.options.useKey
-val attackKey = mc.options.attackKey
+val interactKey = mc.field_1690.field_1904
+val attackKey = mc.field_1690.field_1886
 
 object Globals {
     var globalInterval = 2
@@ -143,7 +140,7 @@ TickCallback.callback = {
     }
 }
 
-@CTransformer(MinecraftClient::class)
+@CTransformer(class_310::class)
 class TransformTest {
     @CInline
     @CInject(method = ["method_1574"], target = [CTarget("HEAD")])

@@ -50,7 +50,7 @@ open class WorldPosWrapper(
         val cam = gameRenderer.method_19418()
         camera = Pos3D(cam.method_19326())
 
-        val fov = (mc.field_1690.method_41808().field_37868 as Int).toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
+        val fov = (mc.field_1690.method_41808().method_41753() as Int).toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
         if (fov != lastFov) {
             projectionMatrix = gameRenderer.method_22973(fov.toFloat())
             lastFov = fov

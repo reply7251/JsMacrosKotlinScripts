@@ -78,8 +78,10 @@ fun findMethod(clazz: Class<*>, name: String, args: List<Class<*>>): Method {
     throw NoSuchFieldException("unable to find $name in $clazz with parameter types: [${args.joinToString()}]")
 }
 
-fun Any._getPrivateMethod(name: String, args: List<Class<*>>): Method {
-    val clazz = this::class.java
+fun Any._getPrivateMethod(name: String, args: List<Class<*>>, static: Boolean = false): Method {
+    val clazz =
+        if(static) (this as? Class<*>)?: this::class.java
+        else this::class.java
     return findMethod(clazz, name, args)
 }
 
@@ -108,8 +110,11 @@ fun <T : Any> Any._invokePrivate(method: Method, args: Array<Any>): T? {
     }
 }
 
-fun <T : Any> Any._invokePrivate(name: String, args: Array<Any>): T? {
-    return this._invokePrivate(this._getPrivateMethod(name, args.map { it::class.java }), args)
+fun <T : Any> Any._invokePrivate(name: String, args: Array<Any>, static: Boolean = false): T? {
+    return this._invokePrivate(
+        if (static)
+            this._getPrivateMethod(name, args.map { it::class.java })
+        else this._getPrivateMethod(name, args.map { it::class.java }), args)
 }
 
 val unsafe by lazy {

@@ -1,9 +1,8 @@
 
-import me.hellrevenger.generated.*
-import me.hellrevenger.generated.Map_MinecraftClient.gameRenderer
 import me.hellrevenger.library.api.KtGlobals
 import me.hellrevenger.library.api._getField
 import kotlin.Pair
+import net.minecraft.class_4184
 
 
 if(!World.isWorldLoaded) {
@@ -14,7 +13,7 @@ val offsetKey = "CameraOffset"
 
 KtGlobals.addVariable(offsetKey, mutableMapOf<String, () -> Pair<Float, Float>>())
 
-class MyCamera : Camera() {
+class MyCamera : class_4184() {
     var offsetPitch = 0f
         set(value) {
             Chat.title("", "pitch: $value, yaw: $offsetYaw", 1, 10, 1)
@@ -46,7 +45,7 @@ class MyCamera : Camera() {
 }
 
 val camera = MyCamera()
-val renderer = Client.minecraft.gameRenderer
+val renderer = Client.minecraft.field_1773
 
 var startPitch = 0f
 var startDPitch = 10000f
@@ -93,7 +92,7 @@ EventListener(EventType.Key) {
     }
 }
 
-var cameraOfRenderer by renderer._getField<Camera>("field_18765")
+var cameraOfRenderer by renderer._getField<class_4184>("field_18765")
 val oldCamera = cameraOfRenderer
 cameraOfRenderer = camera
 
