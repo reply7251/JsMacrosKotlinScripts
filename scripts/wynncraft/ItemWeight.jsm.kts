@@ -7,6 +7,7 @@ import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Managers
 import com.wynntils.core.components.Models
 import com.wynntils.core.components.Services
+import com.wynntils.features.chat.ChatItemFeature
 import com.wynntils.features.tooltips.ItemStatInfoFeature
 import com.wynntils.mc.event.ItemTooltipRenderEvent
 import com.wynntils.models.gear.type.GearTier
@@ -18,15 +19,25 @@ import com.wynntils.services.itemfilter.type.ItemStatProvider
 import com.wynntils.utils.mc.TooltipUtils
 import com.wynntils.utils.render.FontRenderer
 import com.wynntils.utils.wynn.ColorScaleUtils
+import me.hellrevenger.library.api._setPrivateValue
+import net.lenni0451.classtransform.annotations.CInline
+import net.lenni0451.classtransform.annotations.CTarget
+import net.lenni0451.classtransform.annotations.CTransformer
+import net.lenni0451.classtransform.annotations.injection.CRedirect
+import net.minecraft.class_1799
 import net.minecraft.class_2561
+import net.minecraft.class_2568
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.client.api.helper.StyleHelper
 import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.io.File
 import java.util.*
+import kotlin.concurrent.thread
 import kotlin.jvm.optionals.getOrNull
 import kotlin.math.roundToInt
+
+val FETCH_WYNNPOOL = true
 
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")
@@ -109,6 +120,7 @@ fun fetchNori(wynnItem: GearItem): MutableList<class_2561>? {
 }
 
 fun fetchWynnpool(wynnItem: GearItem): MutableList<class_2561>? {
+    if(!FETCH_WYNNPOOL) return null
     val instance = wynnItem.itemInstance.getOrNull() ?: return null
     if(!instance.hasOverallValue()) return null
     val possibles = wynnItem.possibleValues
@@ -118,19 +130,22 @@ fun fetchWynnpool(wynnItem: GearItem): MutableList<class_2561>? {
     if(!wynnpoolJson.has(name)) {
         if(Time.time() - lastRequest < 3000) return null
         lastRequest = Time.time()
-        try {
-            val resp = Request.get("https://weight.wynnpool.com/api/weights/item/${name.replace(" ", "%20")}").text()
-            val map = JsonObject()
-            JsonParser.parseString(resp).asJsonArray.forEach {
-                it.asJsonObject.let {
-                    map.add(it["weight_name"].asString, it["identifications"])
+        thread {
+            try {
+                val resp = Request.get("https://weight.wynnpool.com/api/weights/item/${name.replace(" ", "%20")}").text()
+                val map = JsonObject()
+                JsonParser.parseString(resp).asJsonArray.forEach {
+                    it.asJsonObject.let {
+                        map.add(it["weight_name"].asString, it["identifications"])
+                    }
                 }
+                wynnpoolJson.add(name, map)
+                wynnpoolFile.writeText(gson.toJson(wynnpoolJson))
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
-            wynnpoolJson.add(name, map)
-            wynnpoolFile.writeText(gson.toJson(wynnpoolJson))
-        } catch (e: Exception) {
-            e.printStackTrace()
         }
+        return null
     }
 
     wynnpoolJson[name]?.let { scales ->
@@ -143,10 +158,17 @@ fun fetchWynnpool(wynnItem: GearItem): MutableList<class_2561>? {
                 if(possible.range.isFixed || !possible.range.inRange(actual.value)) return@inner
                 var weight = (scale[actual.statType.apiName]?.asDouble?.times(100)) ?: return@inner
                 weight = (weight * 1000).roundToInt() / 1000.0
-                val percentage = StatCalculator.getPercentage(actual, possible)
+                var percentage = StatCalculator.getPercentage(actual, possible)
+                if(weight < 0) {
+                    percentage = 100 - percentage
+                }
+                var tmp = weight * percentage
+                if (weight < 0) {
+                    tmp = -tmp
+                }
                 val style = coloredPercentage(percentage * 100.0).method_10866() ?: return@inner
-                score += weight * percentage
-                val colored = Chat.createTextBuilder().append("[+${(weight * percentage).roundToInt() / 100f}%]")
+                score += tmp
+                val colored = Chat.createTextBuilder().append("[+${(tmp).roundToInt() / 100f}%]")
                 colored.withStyle(StyleHelper(style))
                 val line = Chat.createTextBuilder().append("§7${actual.statType.displayName}§r")
                     .append(" ($weight%) ")
@@ -185,6 +207,29 @@ class NoriScaleStatProvider : ItemStatProvider<Int>() {
     override fun getName() = "nori"
     override fun getDisplayName() = "Nori Scale"
 }
+
+object MixinCallback {
+    var onCreateItemPart = { itemStack: class_1799 -> class_2568.class_5249(itemStack) }
+}
+
+MixinCallback.onCreateItemPart = { itemStack ->
+    val result = class_2568.class_5249(itemStack)
+
+    result._setPrivateValue("field_24358", itemStack)
+    result
+}
+
+@CTransformer(ChatItemFeature::class)
+class MixinChatItemFeature {
+    @CRedirect(method=["createItemPart"], target = CTarget("NEW", target="net/minecraft/class_2568\$class_5249"))
+    fun transform(itemStack: class_1799): class_2568.class_5249 {
+        return MixinCallback.onCreateItemPart(itemStack)
+    }
+}
+
+RuntimeTransform.init()
+RuntimeTransform.addTransformer(MixinChatItemFeature::class)
+RuntimeTransform.transform()
 
 class WynnListener {
     @SubscribeEvent

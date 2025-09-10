@@ -31,10 +31,11 @@ fun reCheck() {
         d3d.removeTraceLine(it)
     }
     textDisplays.clear()
+    traced.clear()
 }
 fun getDisplays() =
     World.entities?.let {
-        mapOf(*it.filterIsInstance<TextDisplayEntityHelper>()
+        mapOf(*it.filterIsInstance<TextDisplayEntityHelper>().filterNot { it.raw in traced }
             .mapNotNull { it.data?.let { data -> it to data.text } }.toTypedArray())
     }
 thread {
@@ -43,10 +44,18 @@ thread {
             getDisplays()?.forEach { (entity, name) ->
                 if(nameCheck(name.stringStripFormatting) || nameCheck(name.string)) {
                     textDisplays.add(entity)
+                    traced.add(entity.raw)
                     d3d.addEntityTraceLine(entity, 0xffffff)
+                    thread {
+                        for(i in 0..4) {
+                            World.playSound("entity.experience_orb.pickup")
+                            Client.waitTick(3)
+                        }
+                    }
                 }
             }
         }
+        traced.removeIf { !it.method_5805() }
         textDisplays.removeIf { !it.isAlive }
         Client.waitTick()
     }

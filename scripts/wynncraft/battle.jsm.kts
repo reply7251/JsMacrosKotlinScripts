@@ -90,6 +90,9 @@ val d2d = Hud.createDraw2D()
 
 val offsetKey = "CameraOffset"
 
+var hidden = false
+val fakeText = d2d.textBuilder().build()
+
 object Format {
     const val formatChar = '§'
 
@@ -569,6 +572,9 @@ open class WynnClass: HasBind {
     }
 
     fun nextLine(): Text {
+        if (hidden) {
+            return fakeText
+        }
         lineIndex++
         while(lineIndex >= texts.size) {
             texts.add(d2d.addText("", configPos.first, configPos.second + texts.size * 10, 0xffffff, true))
@@ -773,6 +779,10 @@ open class WynnClass: HasBind {
                 quickMode = tmp
                 return
             }
+        }
+        if (KeyBind.pressedKeys.contains("key.keyboard.left.control")) {
+            hidden = !hidden
+            return
         }
 
         modeSelectorScreen.shouldPause = false
@@ -1147,7 +1157,7 @@ inner class Assassin() : WynnClass() {
                 }
             } else if(getMana() > 30 && World.time - lastSmoke > 100) {
                 smoke()
-            } else if(dive.value && momentumBar.barProgress?.progress?.let { it >= 1f } == true && Models.CharacterStats.blocksAboveGround > 5) {
+            } else if(dive.value && momentumBar.barProgress?.progress?.let { it >= 0.999f } == true && Models.CharacterStats.blocksAboveGround > 5) {
                 dash()
             } else if(getMana() > 50 && lastAction != Actions.cast3) {
                 multiHit()
@@ -1312,7 +1322,7 @@ inner class Mage() : WynnClass() {
 
         if(notHealthy && !inHealPulse && (lastAction != Actions.cast1 || Models.Spell.repeatedSpellCount < 3) && getMana() > 40) {
             waitSpell(Actions.cast1)
-        } else if(World.time - lastMelee >= 9 && !player.mainHand.isOnCooldown) {
+        } else if(World.time - lastMelee >= 4 && !player.mainHand.isOnCooldown) {
             melee()
             Client.waitTick(1)
         } else if(enableIceSnake.value && getMana() > 75 && (lastAction != Actions.cast4 || Models.Spell.repeatedSpellCount < maxRepeat.value) || (notHealthy && getMana() > 55)) {
@@ -1361,7 +1371,10 @@ inner class Mage() : WynnClass() {
             addSpell(Actions.cast4)
             addSpell(Actions.cast3)
             addSpell(Actions.cast3)
+            addSpell(Actions.cast3)
         }
+		addSpell(Actions.cast3)
+		addSpell(Actions.cast3)
         addSpell(Actions.cast1)
     }
 
@@ -1555,7 +1568,7 @@ inner class Shaman() : WynnClass() {
         val targetIndex = maskOrder.lastIndexOf(target)
         var counter = targetIndex - currentIndex
         val progress = AbilityModel.awakenedBar.barProgress?.progress ?: 0f
-        if(progress >= 1f) {
+        if(progress >= 0.999f) {
             counter = 1
         }
         while(counter > 3) counter -= 3
@@ -1567,32 +1580,42 @@ inner class Shaman() : WynnClass() {
         Client.waitTick()
     }
 
+    val isSneaking get() = KeyBind.pressedKeys.contains(keyBinds[Actions.sneak])
+    val blood get() = AbilityModel.bloodPoolBar.barProgress.value.current
+
     override fun chooseAction() {
         if(fly.value) return
         val totem = Models.ShamanTotem.activeTotems.firstOrNull()
         if(mode == Mode.Acolyte) {
-            if(World.time - lastTotem > 540 || (World.time - lastTotem > 400 && Player.player!!.pitch > 45)) {
+            if(World.time - lastTotem > 50 && (blood > 59 || !isSneaking) && (totem == null || Models.ShamanTotem.activeTotems.any { it.time < 2 || (it.time < 4 && (Player.player!!.pitch > 45 || isSneaking)) })) {
                 waitSpell(Actions.cast1)
-                waitSpell(Actions.cast1)
+                if(!isSneaking)
+                    waitSpell(Actions.cast1)
             }
-            val shouldUproot = AbilityModel.bloodPoolBar.barProgress.value.current > 81
+
+            val shouldUproot = if(isSneaking) blood > 109 else blood > 79
             val shouldAura = (100 - getHealth())
             val tooManyUproot = lastAction == Actions.cast4 && burstAction > 1 && World.time - lastUproot < 60
             val tooManyAura = lastAction == Actions.cast3 && burstAction > 1
             if(((getMana() > 50 && shouldAura > 20) || shouldAura > 40) && (World.time - lastAura > 19 && enableAura.value) || (shouldUproot && tooManyUproot)) {
                 waitSpell(Actions.cast3, 2)
             }
-            if(shouldUproot || (shouldAura > 20 && tooManyAura)) {
-                val release = !KeyBind.pressedKeys.contains(keyBinds[Actions.sneak])
+            if(shouldUproot && World.time - lastUproot > 19 || (shouldAura > 20 && tooManyAura)) {
+                val release = !isSneaking
                 if(shouldUproot)
                     KeyBind.pressKeyBind(Actions.sneak)
                 waitSpell(Actions.cast4, 2)
 
-                if(release)
+                if(release) {
                     KeyBind.releaseKeyBind(Actions.sneak)
-                if(shouldUproot && enableAura.value) {
-                    waitSpell(Actions.cast4, 2)
+
+                    if(shouldUproot && enableAura.value) {
+                        waitSpell(Actions.cast4, 2)
+                    }
                 }
+            }
+            if(enableMelee.value && World.time % 2L == 0L) {
+                melee()
             }
         } else if(mode == Mode.AuraSpam) {
             addSpell(Actions.cast1)
@@ -1655,7 +1678,7 @@ inner class Shaman() : WynnClass() {
         }
         val inventory = Player.openInventory()
         val hotbar = inventory.selectedHotbarSlotIndex
-        if(progress < 1f) {
+        if(progress < 0.999f) {
             switchMask(ShamanMaskType.FANATIC, cancelMask)
             inventory.selectedHotbarSlotIndex = 1
             Client.waitTick()
@@ -1664,7 +1687,7 @@ inner class Shaman() : WynnClass() {
                 Client.waitTick()
             }
             for(i in 0..3) {
-                if(awakenedProgress >= 1f)
+                if(awakenedProgress >= 0.999f)
                     break
                 if(World.time - lastUproot > 20)
                     switchMask(ShamanMaskType.FANATIC, true)
@@ -1849,7 +1872,7 @@ class CustomInput(val parent: class_744) : class_744() {
         val player = Player.player!!
         if(targetPos.equals(Pos3D.ZERO)) {
             parent.method_3129()
-            field_54155 = parent.field_54155
+            this.field_54155 = parent.field_54155
         } else {
             val vec = player.pos.toReverseVector(targetPos)
             val target = atan2(-vec.deltaX, vec.deltaZ) / radian
@@ -1863,14 +1886,14 @@ class CustomInput(val parent: class_744) : class_744() {
             val sneak = false
             val sprint = false
 
-            field_54155 = class_10185(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
+            this.field_54155 = class_10185(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
         }
         if(forceForward) {
-            field_54155 = class_10185(forceForward, field_54155.comp_3160(),
-                field_54155.comp_3161(), field_54155.comp_3162(), field_54155.comp_3163() , field_54155.comp_3164() , field_54155.comp_3165())as class_10185
+            this.field_54155 = class_10185(this.forceForward, this.field_54155.comp_3160(),
+                this.field_54155.comp_3161(), this.field_54155.comp_3162(), this.field_54155.comp_3163() , this.field_54155.comp_3164() , this.field_54155.comp_3165())as class_10185
         }
-        field_3905 = getMovement(field_54155.comp_3159(), field_54155.comp_3160())
-        field_3905 = getMovement(field_54155.comp_3161(), field_54155.comp_3162())
+        this.field_3905 = getMovement(this.field_54155.comp_3159(), this.field_54155.comp_3160())
+        this.field_3907 = getMovement(this.field_54155.comp_3161(), this.field_54155.comp_3162())
     }
 }
 fun setInput(): CustomInput? {
@@ -2051,6 +2074,7 @@ context.onContextClosed {
     }
 }
 
+WynntilsMod.postEvent(CharacterUpdateEvent())
 checkClass()
 
 Chat.toast("battle", "enabled")

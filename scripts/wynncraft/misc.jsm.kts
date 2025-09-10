@@ -7,6 +7,7 @@ import com.wynntils.models.gear.type.GearInfo
 import com.wynntils.models.items.WynnItem
 import com.wynntils.models.items.items.game.CraftedConsumableItem
 import com.wynntils.models.items.items.game.GearItem
+import com.wynntils.models.items.items.game.IngredientItem
 import com.wynntils.models.stats.builders.SkillStatBuilder
 import com.wynntils.services.itemfilter.ItemFilterService
 import com.wynntils.services.itemfilter.type.ItemProviderType
@@ -80,10 +81,18 @@ object ObtainFromStatProvider: MyGearItemStatProvider<String>("Obtain") {
         (p0 as? GearItem)?.let { gear ->
             return gear.itemInfo.metaInfo.obtainInfo.firstOrNull()?.name ?: Optional.empty()
         }
+		(p0 as? IngredientItem)?.let { ingredient ->
+            val from = Models.Ingredient.getObtainInfo(ingredient.ingredientInfo).filter { it.name.isPresent }
+            if (from.isNotEmpty()) {
+                return Optional.of(from.joinToString {it.name.get()})
+            }
+        }
         return Optional.empty()
     }
 
     override fun getAliases() = mutableListOf("from")
+	
+    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR, ItemProviderType.GEAR_INSTANCE, ItemProviderType.INGREDIENT)
 }
 
 object WithoutStatProvider: MyGearItemStatProvider<String>("Without") {

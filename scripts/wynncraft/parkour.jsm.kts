@@ -1,9 +1,4 @@
-import me.hellrevenger.generated.Map_Box.expand
-import me.hellrevenger.generated.Map_Box.stretch
-import me.hellrevenger.generated.Map_CollisionView.isSpaceEmpty
-import me.hellrevenger.generated.Map_EntityLike.getBoundingBox
-import me.hellrevenger.generated.Map_LivingEntity.jump
-import me.hellrevenger.generated.Map_MinecraftClient.world
+
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 
@@ -23,14 +18,14 @@ thread {
             if(!player.isOnGround || player.isSneaking || !enabled) {
                 return@let
             }
-            val box = player.raw.getBoundingBox()
-                .stretch(0.0, -height, 0.0)
-                .expand(-edgeDistance, 0.0, -edgeDistance)
+            val box = player.raw.method_5829()
+                .method_1012(0.0, -height, 0.0)
+                .method_1009(-edgeDistance, 0.0, -edgeDistance)
 
-            if (Client.minecraft.world?.isSpaceEmpty(player.raw, box) != true) {
+            if (Client.minecraft.field_1687?.method_8587(player.raw, box) != true) {
                 return@let
             }
-            player.raw.jump()
+            player.raw.method_6043()
         }
         Client.waitTick()
     }
