@@ -14,7 +14,10 @@ import kotlin.script.experimental.jvm.dependenciesFromCurrentContext
 import kotlin.script.experimental.jvm.jvm
 
 import kotlin.script.experimental.api.*
+import kotlin.script.experimental.host.FileBasedScriptSource
+import kotlin.script.experimental.host.FileScriptSource
 import kotlin.script.experimental.jvm.JvmDependency
+import kotlin.script.experimental.jvm.updateClasspath
 
 
 @Suppress("UNUSED")
@@ -54,30 +57,8 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
         dependenciesFromCurrentContext(wholeClasspath = true);
     }
 
-    defaultImports(ImportJar::class, Import::class, EventType::class)
+    defaultImports(ImportJar::class, Import::class, ClassPath::class, EventType::class)
 
-    refineConfiguration {
-        onAnnotations<ImportJar> { context ->
-            val annotations = context.collectedData?.get(ScriptCollectedData.collectedAnnotations)
-                ?.takeIf { it.isNotEmpty() }
-                ?: return@onAnnotations context.compilationConfiguration.asSuccess()
-            val files = annotations.mapNotNull { (it.annotation as? ImportJar)?.path }
-                .flatMap { it.toList() }
-                .filter { it.endsWith(".jar") }
-                .mapNotNull {
-                    var f = File(it)
-                    if(f.exists()) f
-                    else {
-                        f = File(context.script.locationId?.let { it1 -> File(it1).parentFile }, it)
-                        if(f.exists()) f
-                        else null
-                    }
-                }
-            context.compilationConfiguration.with {
-                dependencies.append(JvmDependency(files))
-            }.asSuccess()
-        }
-    }
     val libs = mutableMapOf(*KotlinExtension().libraries.mapNotNull {
         if(it.isAnnotationPresent(Library::class.java))
             it.getAnnotation(Library::class.java).value to KotlinType(it.kotlin)
@@ -89,6 +70,44 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
 
 
     implicitReceivers.append(KotlinType((SimpleScript::class)))
+
+    refineConfiguration {
+        onAnnotations(ImportJar::class, Import::class, ClassPath::class) { context ->
+            val annotations = context.collectedData?.get(ScriptCollectedData.collectedAnnotations)
+                ?.takeIf { it.isNotEmpty() }
+                ?: return@onAnnotations context.compilationConfiguration.asSuccess()
+
+            val scriptBaseDir = (context.script as? FileBasedScriptSource)?.file?.parentFile
+
+            val files = annotations.mapNotNull {
+                (it.annotation as? ImportJar)?.path ?: (it.annotation as? Import)?.path ?: (it.annotation as? ClassPath)?.path
+            }.flatMap { it.toList() }.mapNotNull {
+                var f = (scriptBaseDir?.resolve(it) ?: File(it)).normalize()
+                if(f.exists()) f
+                else {
+                    f = File(context.script.locationId?.let { it1 -> File(it1).parentFile }, it)
+                    if(f.exists()) f
+                    else null
+                }
+            }
+
+            val jars = files
+                .filter { it.path.endsWith(".jar") }
+            val ktses = files
+                .filter { it.path.endsWith(".kts") }
+
+            ScriptCompilationConfiguration(context.compilationConfiguration) {
+                if(jars.isNotEmpty()) {
+                    updateClasspath(jars)
+                }
+                if (ktses.isNotEmpty()) {
+                    importScripts.append(ktses.map {
+                        FileScriptSource(it)
+                    })
+                }
+            }.asSuccess()
+        }
+    }
 })
 
 /**
@@ -100,3 +119,5 @@ object SimpleScriptConfiguration : ScriptCompilationConfiguration({
 annotation class ImportJar(vararg val path: String)
 @Target(AnnotationTarget.FILE)
 annotation class Import(vararg val path: String)
+@Target(AnnotationTarget.FILE)
+annotation class ClassPath(vararg val path: String)

@@ -28,6 +28,7 @@ import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 class KotlinExtension: LanguageExtension, LibraryExtension {
     companion object {
         lateinit var runner: Core<*,*>
+        lateinit var classLoader: ClassLoader
     }
 
     private var languageDefinition: KotlinLanguageDefinition? = null
@@ -35,6 +36,7 @@ class KotlinExtension: LanguageExtension, LibraryExtension {
     override fun getExtensionName() = "kotlin"
 
     override fun init(runner: Core<*,*>) {
+        classLoader = SimpleScriptConfiguration::class.java.classLoader
         KotlinExtension.runner = runner
         CompilerSetting.init(runner)
 

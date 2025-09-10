@@ -2,6 +2,7 @@ package me.hellrevenger.library.impl
 
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
+import me.hellrevenger.language.impl.incrementalScriptSourceCounter
 import me.hellrevenger.library.api.instrumentation
 import net.lenni0451.classtransform.TransformerManager
 import net.lenni0451.classtransform.additionalclassprovider.InstrumentationClassProvider
@@ -28,6 +29,7 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
                 it.onContextClosed {
                     disposed()
                 }
+                incrementalScriptSourceCounter++
             }
         } else {
             disposed()

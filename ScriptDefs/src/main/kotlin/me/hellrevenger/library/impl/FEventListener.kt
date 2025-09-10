@@ -46,6 +46,7 @@ class FEventListener(val context: BaseScriptContext<*>) : PerExecLibrary(context
     }
 }
 
+@Suppress("unused")
 sealed class EventType<T>(val clazz: Class<T>) {
     data object AirChange : EventType<EventAirChange>(EventAirChange::class.java)
     data object ArmorChange: EventType<EventArmorChange>(EventArmorChange::class.java)
@@ -98,6 +99,10 @@ sealed class EventType<T>(val clazz: Class<T>) {
     data object StatusEffectUpdate: EventType<EventStatusEffectUpdate>(EventStatusEffectUpdate::class.java)
     data object Tick: EventType<EventTick>(EventTick::class.java)
     data object Title: EventType<EventTitle>(EventTitle::class.java)
+
+    override fun toString(): String {
+        return clazz.getAnnotation(Event::class.java)?.value ?: clazz.name
+    }
 }
 
 class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, private val eventName: String, private val callback: (T) -> Unit, private val joined: Boolean) : IEventListener {
