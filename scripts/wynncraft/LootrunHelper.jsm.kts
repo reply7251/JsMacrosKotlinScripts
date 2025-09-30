@@ -273,4 +273,5 @@ EventListener(EventOpenContainer::class.java, { event ->
     }
 })
 
-Chat.toast("lootrun helper", "enabled")
+if (World.isWorldLoaded)
+    Chat.toast("lootrun helper", "enabled")

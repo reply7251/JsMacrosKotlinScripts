@@ -31,6 +31,9 @@ fun shouldNotify(msg: String) =
 
 EventListener(EventRecvMessage::class.java, {
     it.text?.stringStripFormatting?.lowercase()?.let {
+		if(cooldown > World.time + 1000L) {
+			cooldown = 0L
+		}
         if(shouldNotify(it) && cooldown < World.time) {
 			cooldown = World.time + 200
             for(i in 0..4) {

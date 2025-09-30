@@ -69,5 +69,5 @@ WynntilsMod.registerEventListener(wynnListener)
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
     WynntilsMod.unregisterEventListener(wynnListener)
 }
-
-Chat.toast("ItemGuide", "enabled")
+if (World.isWorldLoaded)
+    Chat.toast("ItemGuide", "enabled")

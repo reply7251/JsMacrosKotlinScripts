@@ -10,7 +10,7 @@ service.unregisterOnStop(true)
 var running = true
 val whitelist = listOf("That Which", "❃", "") // "\ue02a"
 val custom = arrayListOf<String>()
-val blacklist = listOf("Req:")
+val blacklist = listOf("Req:", "Auric Foliage", " Bough")
 val traced = mutableSetOf<net.minecraft.class_1297>()
 val levelPattern = "\ue00b\ue015 ([\ue020-\ue029])".toPattern()
 val d2d = Hud.createDraw2D()

@@ -70,7 +70,7 @@ EventListener(EventType.Key) {
         */
         return@EventListener
     }
-    if(it.action != 0)
+    if(it.action != 0 || it.isCanceled)
         return@EventListener
     when (it.key) {
         "key.keyboard.right.bracket" -> {
