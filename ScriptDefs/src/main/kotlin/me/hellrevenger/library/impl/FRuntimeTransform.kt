@@ -1,8 +1,12 @@
 package me.hellrevenger.library.impl
 
+import me.hellrevenger.ctransform.SimpleFieldTarget
+import me.hellrevenger.ctransform.SimpleInvokeTarget
+import me.hellrevenger.ctransform.SimpleNewTarget
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.language.impl.incrementalScriptSourceCounter
+import me.hellrevenger.library.api.CTargetType
 import me.hellrevenger.library.api.instrumentation
 import net.lenni0451.classtransform.TransformerManager
 import net.lenni0451.classtransform.additionalclassprovider.InstrumentationClassProvider
@@ -34,7 +38,13 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
         } else {
             disposed()
         }
-        manager = TransformerManager(InstrumentationClassProvider(instrumentation))
+        manager = TransformerManager(InstrumentationClassProvider(instrumentation)).apply {
+            addInjectionTarget(CTargetType.SIMPLE_INVOKE, SimpleInvokeTarget())
+            addInjectionTarget(CTargetType.SIMPLE_NEW, SimpleNewTarget())
+            addInjectionTarget(CTargetType.SIMPLE_FIELD, SimpleFieldTarget())
+            addInjectionTarget(CTargetType.SIMPLE_GET_FIELD, SimpleFieldTarget.getField())
+            addInjectionTarget(CTargetType.SIMPLE_PUT_FIELD, SimpleFieldTarget.putField())
+        }
         transformed = false
     }
 

@@ -11,6 +11,7 @@ import me.hellrevenger.library.impl.FWrapper
 import me.hellrevenger.mixins.MixinMain
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
+import xyz.wagyourtail.jsmacros.client.api.library.impl.FWorld
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.extensions.LanguageExtension
 import xyz.wagyourtail.jsmacros.core.extensions.LibraryExtension
@@ -152,4 +153,5 @@ class KotlinExtension: LanguageExtension, LibraryExtension {
 object SharedLibraries {
     val Chat = FChat(KotlinExtension.runner)
     val Client = FClient(KotlinScriptContext(KotlinExtension.runner, null, null))
+    val World = FWorld(KotlinExtension.runner)
 }

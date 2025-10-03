@@ -8,7 +8,9 @@ import java.io.File
 import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 
 interface IClosableContext {
-    fun onContextClosed(callback: (IClosableContext) -> Unit)
+    fun onContextClosed(callback: (IClosableContext) -> Unit): (IClosableContext) -> Unit
+
+    fun cancelContextClosed(callback: (IClosableContext) -> Unit)
 }
 
 class KotlinScriptContext(runner: Core<*, *>?, event: BaseEvent?, file: File?) : BaseScriptContext<BasicJvmScriptingHost>(runner, event, file), IClosableContext {
@@ -18,11 +20,28 @@ class KotlinScriptContext(runner: Core<*, *>?, event: BaseEvent?, file: File?) :
 
     override fun isMultiThreaded(): Boolean = true
 
-    override fun onContextClosed(callback: (IClosableContext) -> Unit) {
+    override fun onContextClosed(callback: (IClosableContext) -> Unit): (IClosableContext) -> Unit {
         onContextClosedCallbacks.add(callback)
         if(!keepAliveSet) {
             keepAliveSet = true
             ServiceManager.setAutoUnregisterKeepAlive(this, true)
+        }
+        return callback
+    }
+
+    override fun cancelContextClosed(callback: (IClosableContext) -> Unit) {
+        onContextClosedCallbacks.remove(callback)
+    }
+
+    fun waitUntil(interval: Long = 50L, pred: () -> Boolean) {
+        var terminated = false
+        val callback = onContextClosed { terminated = true }
+        try {
+            while (!terminated && !pred()) {
+                Thread.sleep(interval)
+            }
+        } finally {
+            cancelContextClosed(callback)
         }
     }
 

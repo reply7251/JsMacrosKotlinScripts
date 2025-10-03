@@ -13,6 +13,7 @@ import net.bytebuddy.description.method.MethodDescription
 import net.bytebuddy.description.modifier.Visibility
 import net.bytebuddy.description.type.TypeDescription
 import net.bytebuddy.dynamic.ClassFileLocator
+import net.bytebuddy.dynamic.DynamicType
 import net.bytebuddy.dynamic.Transformer.ForField
 import net.bytebuddy.dynamic.VisibilityBridgeStrategy
 import net.bytebuddy.dynamic.loading.ClassInjector
@@ -311,11 +312,10 @@ class RuntimeMixin {
 
             initClassInjector()
 
-            var builder = ByteBuddy()
+            var builder: DynamicType.Builder<*> = ByteBuddy()
                 .with(TypeValidation.DISABLED)
                 .with(VisibilityBridgeStrategy.Default.NEVER)
                 .redefine(targetClass, ClassFileLocator.ForInstrumentation.of(instrumentation, targetClass))
-
 
             getPublic(targetClass).forEach {
                 builder = builder.field(it).transform(ForField.withModifiers(Visibility.PUBLIC))

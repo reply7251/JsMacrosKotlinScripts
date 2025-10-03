@@ -44,8 +44,8 @@ open class SimpleScript(
 
     val JavaWrapper: FWrapper,
     val context: KotlinScriptContext,
-    val file: File,
-    val event: BaseEvent,
+    val file: File?,
+    val event: BaseEvent?,
 
     val EventListener: FEventListener,
     val ScriptConfig: FScriptConfig,
