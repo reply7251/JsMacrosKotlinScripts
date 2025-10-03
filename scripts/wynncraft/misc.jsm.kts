@@ -1,6 +1,5 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
-import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Models
 import com.wynntils.core.components.Services
 import com.wynntils.models.gear.type.GearAttackSpeed
@@ -18,24 +17,10 @@ import com.wynntils.services.itemfilter.type.StatFilterFactory
 import com.wynntils.utils.type.ErrorOr
 import com.wynntils.utils.type.Pair
 import com.wynntils.utils.type.RangedValue
-import me.hellrevenger.library.api.RuntimeMixin
-import me.hellrevenger.library.api._getField
 import me.hellrevenger.library.api._getPrivateValue
-import me.hellrevenger.library.api.instrumentation
 import net.lenni0451.classtransform.InjectionCallback
 import net.lenni0451.classtransform.annotations.*
 import net.lenni0451.classtransform.annotations.injection.CInject
-import net.lenni0451.classtransform.annotations.injection.COverride
-import net.lenni0451.classtransform.annotations.injection.CRedirect
-import org.apache.logging.log4j.Level
-import org.apache.logging.log4j.core.filter.LevelMatchFilter
-import org.apache.logging.log4j.core.filter.ThresholdFilter
-import org.apache.logging.log4j.spi.ExtendedLogger
-import org.apache.logging.slf4j.Log4jLogger
-import org.apache.logging.slf4j.Log4jLoggerFactory
-import org.apache.logging.slf4j.Log4jMarkerFactory
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.*
 import kotlin.jvm.optionals.getOrNull
@@ -118,7 +103,18 @@ object WithoutStatProvider: MyGearItemStatProvider<String>("Without") {
     override fun getAliases() = mutableListOf("no")
 }
 
-inner class WithoutStatFilter(val stat: String) : StatFilter<String>() {
+object AnyEffectivenessStatProvider: MyGearItemStatProvider<Boolean>("AnyEffectiveness") {
+    override fun getValue(p0: WynnItem?): Optional<Boolean> {
+        (p0 as? IngredientItem)?.let { ingredient ->
+            return Optional.of(ingredient.ingredientInfo.positionModifiers.any { it.value != 0 })
+        }
+        return Optional.empty()
+    }
+
+    override fun getFilterTypes() = mutableListOf(ItemProviderType.INGREDIENT)
+}
+
+class WithoutStatFilter(val stat: String) : StatFilter<String>() {
     override fun matches(stats: String?): Boolean {
         stats?.let {
             val reqs = it.lowercase().split("/")
@@ -132,7 +128,7 @@ inner class WithoutStatFilter(val stat: String) : StatFilter<String>() {
     }
 }
 
-inner class WithoutStatFilterFactory : StatFilterFactory<WithoutStatFilter>() {
+class WithoutStatFilterFactory : StatFilterFactory<WithoutStatFilter>() {
     override fun create(input: String?): Optional<WithoutStatFilter> {
         if(input?.startsWith("!") == true) {
             return Optional.of(WithoutStatFilter(input.substring(1)))
@@ -282,23 +278,24 @@ class MixinItemFilterService {
 val statFilters = Services.ItemFilter._getPrivateValue<MutableList<Pair<*, *>>>("statFilters")!!
 val filterPair = Pair.of(String::class.java, WithoutStatFilterFactory())
 
-Services.ItemFilter.itemStatProviders.add(AbilityPointStatProvider)
-Services.ItemFilter.itemStatProviders.add(QuestRequestStatProvider)
-Services.ItemFilter.itemStatProviders.add(ObtainFromStatProvider)
-Services.ItemFilter.itemStatProviders.add(WithoutStatProvider)
+val providers = arrayOf(
+    AbilityPointStatProvider,
+    QuestRequestStatProvider,
+    ObtainFromStatProvider,
+    WithoutStatProvider,
+    AnyEffectivenessStatProvider
+)
+Services.ItemFilter.itemStatProviders.addAll(providers)
 statFilters.add(statFilters.size - 1, filterPair)
 
-Client.waitTick(20)
+Services.ItemFilter.itemStatProviders
 
 RuntimeTransform.init()
 RuntimeTransform.addTransformer(MixinItemFilterService::class)
 RuntimeTransform.transform()
 
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
-    Services.ItemFilter.itemStatProviders.remove(AbilityPointStatProvider)
-    Services.ItemFilter.itemStatProviders.remove(QuestRequestStatProvider)
-    Services.ItemFilter.itemStatProviders.remove(ObtainFromStatProvider)
-    Services.ItemFilter.itemStatProviders.remove(WithoutStatProvider)
+    Services.ItemFilter.itemStatProviders.removeAll(providers)
     statFilters.remove(filterPair)
 }
 

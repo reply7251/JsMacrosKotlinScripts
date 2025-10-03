@@ -4,13 +4,15 @@ import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Models
 import com.wynntils.mc.event.ScreenInitEvent
 import com.wynntils.mc.event.ScreenRenderEvent
+import com.wynntils.models.players.FriendsModel
 import com.wynntils.screens.partymanagement.PartyManagementScreen
 import com.wynntils.screens.partymanagement.widgets.SuggestionPlayerWidget
-import me.hellrevenger.library.api.RuntimeMixin
-import net.bytebuddy.asm.Advice
-import net.bytebuddy.description.method.MethodDescription
-import net.bytebuddy.matcher.ElementMatchers
-import net.minecraft.class_339
+import me.hellrevenger.library.api.CTargetType
+import me.hellrevenger.library.api.MiscExtensions.waitForEvent
+import me.hellrevenger.library.api._getPrivateValue
+import net.lenni0451.classtransform.annotations.CTarget
+import net.lenni0451.classtransform.annotations.CTransformer
+import net.lenni0451.classtransform.annotations.injection.CRedirect
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
@@ -21,28 +23,27 @@ import net.minecraft.class_640
 import net.minecraft.class_4185
 
 if(!World.isWorldLoaded) {
-    JsMacros.waitForEvent("ChunkLoad")
-}
-
-fun Any.getPrivateFieldValue(fieldName: String): Any? {
-    val f = this::class.java.getDeclaredField(fieldName)
-    f.trySetAccessible()
-    return f.get(this)
+    JsMacros.waitForEvent(EventType.ChunkLoad)
 }
 
 fun getOnlineFriendsMap() =
-    Models.Friends.getPrivateFieldValue("onlineFriends") as MutableMap<String, String>
+    Models.Friends._getPrivateValue<MutableMap<String, String>>("onlineFriends")!!
 
 object PartyManagementScreenHandler {
-    lateinit var callback: () -> Unit
+    var callback: (FriendsModel) -> Map<String, String> = { it.onlineFriends }
 }
-PartyManagementScreenHandler.callback = { fetchSuggestion() }
 
-object MixinPartyManagementScreen {
-    @Advice.OnMethodEnter
-    @JvmStatic
-    fun reloadSuggestedPlayersWidgets() {
-        PartyManagementScreenHandler.callback()
+PartyManagementScreenHandler.callback = {
+    fetchSuggestion()
+    it.onlineFriends + cachedGuildMembers.filter { !Models.Party.partyMembers.contains(it) }.map { it to "" }
+}
+
+@CTransformer(PartyManagementScreen::class)
+class MixinPartyManagementScreen {
+
+    @CRedirect(method = ["reloadSuggestedPlayersWidgets"], target = CTarget(CTargetType.SIMPLE_INVOKE, "getOnlineFriends", optional = true))
+    fun reloadSuggestedPlayersWidgets2(instance: FriendsModel): Map<String, String> {
+        return PartyManagementScreenHandler.callback(instance)
     }
 }
 
@@ -75,6 +76,7 @@ fun fetchSuggestion() {
         guild.whenComplete { info, throwable ->
             cachedGuildMembers.clear()
             cachedGuildMembers.addAll(info.guildMembers.mapNotNull { if(it.online) it.username else null })
+            lastUpdate = Time.time()
             onFetchComplete()
         }
     } else {
@@ -95,21 +97,18 @@ val cachedGuildMembers = mutableSetOf<String>()
 var lastUpdate = 0L
 var scrollY = 0
 
-var patched = false
-val matcher2 = ElementMatchers.named<MethodDescription>("reloadSuggestedPlayersWidgets")
-val mixin2 = Advice.to(MixinPartyManagementScreen::class.java).on(matcher2)
+(PartyManagementScreen.create() as PartyManagementScreen).reloadSuggestedPlayersWidgets()
+RuntimeTransform.init()
+RuntimeTransform.addTransformer(MixinPartyManagementScreen::class)
+RuntimeTransform.transform()
 
 fun PartyManagementScreen.getSuggestions() =
-    getPrivateFieldValue("suggestedPlayersWidgets") as List<SuggestionPlayerWidget>
+    _getPrivateValue<List<SuggestionPlayerWidget>>("suggestedPlayersWidgets")!!
+
 class WynnListener {
     @SubscribeEvent
     fun onScreen(event: ScreenInitEvent.Pre) {
         (event.screen as? PartyManagementScreen)?.let { screen ->
-            if(!patched) {
-                patched = true
-                RuntimeMixin.addMixin(PartyManagementScreen::class.java, mixin2)
-                RuntimeMixin.doMixin(PartyManagementScreen::class.java)
-            }
             fetchSuggestion()
             val iscreen = screen as IScreen
             iscreen.setOnScroll(JavaWrapper.methodToJava { mouse, scroll ->
@@ -132,7 +131,8 @@ class WynnListener {
 
                 suggestionPlayerWidget.method_46419(newY)
                 suggestionPlayerWidget.field_22764 = visible
-                (suggestionPlayerWidget.getPrivateFieldValue("inviteButton") as? class_4185)?.let {
+
+                suggestionPlayerWidget._getPrivateValue<class_4185>("inviteButton")?.let {
                     it.method_46419(newY)
                 }
             }
@@ -145,6 +145,4 @@ WynntilsMod.registerEventListener(wynnListener)
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
     WynntilsMod.unregisterEventListener(wynnListener)
 
-    RuntimeMixin.removeMixin(PartyManagementScreen::class.java, mixin2)
-    RuntimeMixin.doMixin(PartyManagementScreen::class.java)
 }

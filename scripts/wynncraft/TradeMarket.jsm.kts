@@ -15,6 +15,7 @@ import com.wynntils.models.containers.type.ScrollableContainerProperty
 import com.wynntils.models.containers.type.SearchableContainerProperty
 import com.wynntils.models.items.WynnItem
 import com.wynntils.models.items.items.game.GearItem
+import com.wynntils.models.trademarket.TradeMarketModel
 import com.wynntils.screens.base.widgets.ItemFilterUIButton
 import com.wynntils.screens.base.widgets.ItemSearchWidget
 import com.wynntils.screens.base.widgets.WynntilsButton
@@ -63,6 +64,8 @@ class MyTradeMarketContainer : TradeMarketContainer(), SearchableContainerProper
     override fun supportedProviderTypes(): MutableList<ItemProviderType> {
         return ItemProviderType.normalTypes()
     }
+
+    override fun getBounds() = getContainerBounds(0, 0, 4, 8)
 }
 
 class WynncraftServerContainer : LobbyContainer(), SearchableContainerProperty {
@@ -134,7 +137,7 @@ fun main(): Boolean {
 
     searchableContainerMap?.let { map ->
         val newMap: HashMap<Class<out SearchableContainerProperty>, Supplier<Boolean>> = hashMapOf()
-        map.forEach { t, u -> newMap[t] = u }
+        map.forEach { (t, u) -> newMap[t] = u }
 
         addedContainers.forEach {
             newMap[it.javaClass as Class<out SearchableContainerProperty>] = Supplier { true }
