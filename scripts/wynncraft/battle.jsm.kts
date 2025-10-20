@@ -519,7 +519,7 @@ open class WynnClass: HasBind {
     }
 
     open fun main() {
-        Managers.Feature.disableFeature(autoAttackFeature)
+        Managers.Feature.disableFeature(autoAttackFeature, true)
         reset()
         customInput = setInput()
         thread {
@@ -1134,7 +1134,6 @@ class Assassin() : WynnClass() {
     val lastDash get() = lastSpells[Actions.cast2] ?: 0L
     val lastSpin get() = lastSpells[Actions.cast1] ?: 0L
 
-    var counter = 0
     var blocking = false
     var flyAt = 0L
 
@@ -1462,6 +1461,7 @@ class Archer() : WynnClass() {
     val lastBomb get() = lastSpells[Actions.cast3] ?: 0L
     val lastEscape get() = lastSpells[Actions.cast2] ?: 0L
     lateinit var autoEscape: BindBoolean
+    var counter = 0
 
     override fun onInitOverride() {
         autoEscape = BindBoolean("key.keyboard.keypad.1") {
@@ -1493,6 +1493,11 @@ class Archer() : WynnClass() {
                     waitSpell(Actions.cast4)
                 }
             }
+        } else if(isHoldItem("spring")) {
+            if(counter++ % 3 == 0) waitSpell(Actions.cast4)
+            waitSpell(Actions.cast1)
+            for(i in 1..getMaxRepeatValue())
+                addSpell(Actions.cast3)
         } else if(isHoldItem("anthracite")) {
             if(getMana() > 80) {
                 if((World.time - lastShield >= 60 || lastAction != Actions.cast4) && shield) {
@@ -1547,7 +1552,7 @@ class Shaman() : WynnClass() {
     override var quickMode = Mode.PuppetBomber
     var lastNoTotemNotify = 0L
     
-    val awakenedProgress = AbilityModel.awakenedBar.barProgress?.progress ?: 0f
+    val awakenedProgress get() = AbilityModel.awakenedBar.barProgress?.value?.progress ?: 0.0
     var fullSummoner = false
     var lastBird = false
 
@@ -1631,8 +1636,8 @@ class Shaman() : WynnClass() {
             fullSummoner = true
         }
         if(mode == Mode.Acolyte) {
-            if(World.time - lastTotem > 50 && (blood > 59 || !isSneaking) && (totem == null || Models.ShamanTotem.activeTotems.any { it.time < 3 })) {
-                if(Models.ShamanTotem.activeTotems.any { it.time < 3}) {
+            if(World.time - lastTotem > 50 && (blood > 59 || !isSneaking) && (totem == null || Models.ShamanTotem.activeTotems.any { it.time < 3 || it.time > 15})) {
+                if(Models.ShamanTotem.activeTotems.any { it.time < 3 || it.time > 15}) {
                     force(Actions.sneak, true) {
                         waitSpell(Actions.cast1, 2)
                     }
@@ -1642,15 +1647,14 @@ class Shaman() : WynnClass() {
                 }
             }
 
-            val shouldUproot = blood > 109
+            val shouldUproot = blood > 119
             val shouldAura = (100 - getHealth())
             val tooManyUproot = lastAction == Actions.cast4 && burstAction > 1 && World.time - lastUproot < 60
             val tooManyAura = lastAction == Actions.cast3 && burstAction > 1
+            val sorrowDuration = if(isHoldItem("resonance")) 30 else 120
             if(((getMana() > 50 && shouldAura > 20) || shouldAura > 40) && (World.time - lastAura > 19 && enableAura.value) || (shouldUproot && tooManyUproot)) {
                 waitSpell(Actions.cast3, 2)
-            }
-            val sorrowDuration = if(isHoldItem("resonance")) 30 else 120
-            if(shouldUproot && World.time - lastUproot > sorrowDuration || (shouldAura > 20 && tooManyAura)) {
+            } else if(shouldUproot && World.time - lastUproot > sorrowDuration || (shouldAura > 20 && tooManyAura)) {
                 force(Actions.sneak, true) {
                     waitSpell(Actions.cast4, 1)
                 }
@@ -1736,6 +1740,7 @@ class Shaman() : WynnClass() {
         if(findEffect("Awakened") != null || World.time - lastUproot < 15 || Models.ShamanMask.currentMaskType == ShamanMaskType.AWAKENED) {
             return false
         }
+
         if(progress >= 1) {
             waitSpell(Actions.cast4)
             return true
@@ -1743,7 +1748,7 @@ class Shaman() : WynnClass() {
 
         val inventory = Player.openInventory()
         val hotbar = inventory.selectedHotbarSlotIndex
-        if(progress < 0.999f) {
+        if(progress < 0.999) {
             switchMask(ShamanMaskType.FANATIC, cancelMask)
             inventory.selectedHotbarSlotIndex = 1
             Client.waitTick()
@@ -1752,7 +1757,7 @@ class Shaman() : WynnClass() {
                 Client.waitTick()
             }
             for(i in 0..3) {
-                if(awakenedProgress >= 0.999f)
+                if(awakenedProgress >= 0.999)
                     break
                 if(World.time - lastUproot > 20)
                     switchMask(ShamanMaskType.FANATIC, true)
@@ -1798,11 +1803,12 @@ class Shaman() : WynnClass() {
         super.onTick()
 
         if(fly.value) {
-            if(World.time % 7 < 3L) {
+            val div = spellCooldown.value
+            if(World.time % div < 3L) {
                 if(flyCounter == -1) {
-                    flyCounter = 4 - (World.time / 7).toInt() % 4
+                    flyCounter = 4 - (World.time / div).toInt() % 4
                 }
-                val action = World.time / 7 + flyCounter
+                val action = World.time / div + flyCounter
                 if(action % 4 == 0L) {
                     cast1()
                 } else if(action % 4 < 3L) {
@@ -2093,7 +2099,6 @@ class WynnListener {
     fun characterUpdate(event: CharacterUpdateEvent) {
         checkClass()
         characterUpdated = true
-        counter = 0
     }
     @SubscribeEvent(priority = EventPriority.LOWEST)
     fun worldStateChanged(event: WorldStateEvent) {
@@ -2106,7 +2111,7 @@ class WynnListener {
             counter = 0
             lastEvent = event
         }
-        if(event.newState == WorldState.WORLD && !characterUpdated && counter < 5) {
+        if(event.newState == WorldState.WORLD && !characterUpdated && counter < 2) {
             thread {
                 Client.waitTick(60)
                 if(!characterUpdated) {

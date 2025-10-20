@@ -11,11 +11,13 @@ import com.wynntils.features.chat.ChatItemFeature
 import com.wynntils.features.tooltips.ItemStatInfoFeature
 import com.wynntils.mc.event.ItemTooltipRenderEvent
 import com.wynntils.models.gear.type.GearTier
+import com.wynntils.models.gear.type.ItemWeightSource
 import com.wynntils.models.items.WynnItem
 import com.wynntils.models.items.items.game.GearItem
 import com.wynntils.models.stats.StatCalculator
 import com.wynntils.services.itemfilter.type.ItemProviderType
 import com.wynntils.services.itemfilter.type.ItemStatProvider
+import com.wynntils.services.itemweight.type.ItemWeighting
 import com.wynntils.utils.mc.TooltipUtils
 import com.wynntils.utils.render.FontRenderer
 import com.wynntils.utils.wynn.ColorScaleUtils
@@ -193,10 +195,13 @@ fun fetchWeights(wynnItem: GearItem): MutableList<class_2561>? {
 
 val font = FontRenderer.getInstance().font
 
+fun getWeight(item: GearItem, source: ItemWeightSource) =
+    Services.ItemWeight.calculateWeighting(Services.ItemWeight.getItemWeighting(item.name, source)[0], item)
 
 class NoriScaleStatProvider : ItemStatProvider<Int>() {
     override fun getValue(p0: WynnItem?): Optional<Int> {
         (p0 as? GearItem)?.let { gear ->
+            return Optional.of(getWeight(gear, ItemWeightSource.NORI).toInt())
             val score = getNoriScale(gear)
             if(score >= 0) return Optional.of(score.roundToInt() / 100)
         }

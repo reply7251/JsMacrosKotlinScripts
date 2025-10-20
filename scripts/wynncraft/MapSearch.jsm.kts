@@ -14,6 +14,7 @@ import net.lenni0451.classtransform.annotations.CLocalVariable
 import net.lenni0451.classtransform.annotations.CTarget
 import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.annotations.injection.CInject
+import xyz.wagyourtail.jsmacros.core.service.EventService
 
 object MixinCallback {
     var searchWidget: SearchWidget? = null
@@ -100,6 +101,16 @@ if (!World.isWorldLoaded) {
 }
 GuildMapScreen.create()
 PointerPoi { PoiLocation(0, 0, 0) }.isVisible(1f, 1f)
+EventListener(EventType.ReceiveMessage) {
+    if(it.text?.string?.contains("Wynntils error: Screen 'MainMapScreen' has crashed in init") == true) {
+        (event as? EventService)?.let {
+            val name = it.serviceName
+            context.runner.services.stopService(name)
+            Client.waitTick(20)
+            context.runner.services.startService(name)
+        }
+    }
+}
 
 RuntimeTransform.init()
 RuntimeTransform.addTransformer(MixinAbstractMapScreen::class)

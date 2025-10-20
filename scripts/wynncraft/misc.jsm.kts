@@ -2,6 +2,8 @@
 
 import com.wynntils.core.components.Models
 import com.wynntils.core.components.Services
+import com.wynntils.models.elements.type.Element
+import com.wynntils.models.elements.type.Powder
 import com.wynntils.models.gear.type.GearAttackSpeed
 import com.wynntils.models.gear.type.GearInfo
 import com.wynntils.models.items.WynnItem
@@ -9,6 +11,7 @@ import com.wynntils.models.items.items.game.CraftedConsumableItem
 import com.wynntils.models.items.items.game.GearItem
 import com.wynntils.models.items.items.game.IngredientItem
 import com.wynntils.models.stats.builders.SkillStatBuilder
+import com.wynntils.models.stats.type.DamageType
 import com.wynntils.services.itemfilter.ItemFilterService
 import com.wynntils.services.itemfilter.type.ItemProviderType
 import com.wynntils.services.itemfilter.type.ItemStatProvider
@@ -148,40 +151,65 @@ val attackSpeeds = mapOf(
     GearAttackSpeed.SUPER_FAST to 4.3,
 )
 val elementTypes = listOf("earth", "thunder", "water", "fire", "air", "neutral")
-
-class MixedDamageStatProvider(val weaponInfo: GearInfo, damageTypeString: String) : ItemStatProvider<Int>() {
+class MixedDamageStatProvider(val weaponInfo: GearInfo, damageTypeString: String = "", powderString: String = "") : ItemStatProvider<Int>() {
     val damageType: String = damageTypes.firstOrNull { damageTypeString.contains(it, true) } ?: "spell"
     val attackSpeed = (attackSpeeds[weaponInfo.fixedStats.attackSpeed.getOrNull()] ?: 1.0)
     fun getAvg(range: RangedValue) = (range.high + range.low) / 2.0
+
+    val weaponDamage by lazy {
+        val elements = weaponInfo.fixedStats().damages.associate { pair ->
+            pair.key() to pair.value()
+        }.toMutableMap()
+        val slots = weaponInfo.powderSlots
+        weaponInfo.fixedStats().damages.find { it.key() == DamageType.NEUTRAL }?.let {
+            val neutralBaseLow = it.value().low
+            val neutralBaseHigh = it.value().high
+            var neutralLow = neutralBaseLow
+            var neutralHigh = neutralBaseHigh
+            for (i in 0..<powderString.length.coerceAtMost(slots)) {
+                if(!"ETWFA".contains(powderString[i], true)) break
+                val element = Element.valueOf(elementTypes.first { it.startsWith(powderString[i], true) }.uppercase())
+                val powder = Models.Element.getPowderTierInfo(Powder.fromElement(element), 6)
+                val convert = powder.convertedFromNeutral() / 100.0
+                val damageType = DamageType.fromElement(element)
+                val (elemLow, newNeutralLow) = convertAndFloor(neutralBaseLow, neutralLow, convert)
+                val (elemHigh, newNeutralHigh) = convertAndFloor(neutralBaseHigh, neutralHigh, convert)
+                neutralLow = newNeutralLow
+                neutralHigh = newNeutralHigh
+                val oldElem = elements[damageType] ?: RangedValue.NONE
+                elements[damageType] = RangedValue(oldElem.low + elemLow + powder.min, oldElem.high + elemHigh + powder.max)
+            }
+            elements[DamageType.NEUTRAL] = RangedValue(neutralLow, neutralHigh)
+        }
+        elements
+    }
+
+    fun convertAndFloor(neutralBase: Int, neutral: Int, pctConvert: Double): kotlin.Pair<Int, Int> {
+        val elemental = neutral.coerceAtMost((neutralBase * pctConvert).toInt())
+        val newNeutral = (neutral - elemental)
+        return elemental to newNeutral
+    }
 
     fun getDamageBonus(idName: String, idValue: Int): Double {
         val name = idName.lowercase()
         if(name.contains("damage", true) && !name.contains("critical")) {
             if(name.contains(damageType) || !damageTypes.any { name.contains(it) }) {
-                if(name.contains("elemental") && name.contains("raw")) {
-                    val elements = weaponInfo.fixedStats.damages.count { it.key().element.isPresent }
-                    return if(name.contains("raw")) {
-                        idValue.toDouble() * elements
-                    } else {
-                        weaponInfo.fixedStats.damages
-                            .map { if(it.key().element.isPresent) getAvg(it.value()) * idValue else 0.0 }
-                            .reduce { acc, i -> acc + i } * 0.01 * attackSpeed
-                    }
-                } else if(!elementTypes.any { name.contains(it) }) {
+                if(!elementTypes.any { name.contains(it) }) {
+                    if(name.contains("elemental") && weaponDamage.all { it.key.element.isPresent }) return 0.0
                     return if(name.contains("raw")) {
                         idValue.toDouble()
                     } else {
-                        weaponInfo.fixedStats.damages
-                            .map { getAvg(it.value()) }
+                        weaponDamage
+                            .map { getAvg(it.value) }
                             .reduce { acc, i -> acc + i } * idValue * 0.01 * attackSpeed
                     }
                 } else {
-                    weaponInfo.fixedStats.damages.forEach {
-                        if(name.contains(it.key().apiName.lowercase())) {
+                    weaponDamage.forEach {
+                        if(name.contains(it.key.apiName.lowercase())) {
                             return if(name.contains("raw")) {
                                 idValue.toDouble()
                             } else {
-                                getAvg(it.value()) * idValue * 0.01 * attackSpeed
+                                getAvg(it.value) * idValue * 0.01 * attackSpeed
                             }
                         }
                     }
@@ -223,12 +251,13 @@ object ItemFilterServiceHandler {
 ItemFilterServiceHandler.callback = callback@ { name, supportedProviderTypes, originalResult ->
     val split = name.split("/")
 
-    if(split.size == 3 && split[0].isEmpty()) {
+    if(split.size >= 3 && split[0].isEmpty()) {
         val startsWith = split[1].startsWith("^")
         val weaponName = split[1].replace("_", " ").let {
             if(startsWith) it.substring(1) else it
         }
-        val type = split[2].lowercase()
+        val powder = split[2]
+        val type = if(split.size > 3) split[3] else ""
         val matches = Models.Gear.allGearInfos.filter {
             it.type.isWeapon &&
                     if(startsWith) it.name.startsWith(weaponName, true)
@@ -236,7 +265,7 @@ ItemFilterServiceHandler.callback = callback@ { name, supportedProviderTypes, or
         }.toList()
         if(damageTypes.any { it.contains(type) }) {
             val result = if(matches.size == 1)
-                ErrorOr.of(MixedDamageStatProvider(matches[0], type) as ItemStatProvider<*>)
+                ErrorOr.of(MixedDamageStatProvider(matches[0], type, powder) as ItemStatProvider<*>)
             else if(matches.size < 6) {
                 ErrorOr.error("found weapons: " + matches.joinToString { it.name })
             } else {
