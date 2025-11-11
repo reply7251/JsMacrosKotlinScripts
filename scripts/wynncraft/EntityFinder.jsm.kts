@@ -1,5 +1,6 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 import com.wynntils.core.components.Models
+import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.PlayerEntityHelper
 import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.specialized.display.TextDisplayEntityHelper
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
@@ -33,6 +34,8 @@ fun reCheck() {
     textDisplays.clear()
     traced.clear()
 }
+fun getPlayers() =
+    World.entities?.filterIsInstance<PlayerEntityHelper<*>>()?.filterNot { it.raw in traced }
 fun getDisplays() =
     World.entities?.let {
         mapOf(*it.filterIsInstance<TextDisplayEntityHelper>().filterNot { it.raw in traced }
@@ -54,6 +57,12 @@ thread {
                     }
                 }
             }
+            getPlayers()?.forEach {
+                if (nameCheck(it.name.stringStripFormatting) || nameCheck(it.name.string)) {
+                    traced.add(it.raw)
+                    d3d.addEntityTraceLine(it, 0xffffff)
+                }
+            }
         }
         traced.removeIf { !it.method_5805() }
         textDisplays.removeIf { !it.isAlive }
@@ -65,6 +74,12 @@ Chat.commandManager.createCommandBuilder("/find")
     .literalArg("add").greedyStringArg("name").suggest(JavaWrapper.methodToJava { ctx, builder ->
         getDisplays()?.let{
             it.map { it.value.stringStripFormatting }.toSet().forEach {
+                if(it.contains(builder.remaining, true))
+                    builder.suggest(it)
+            }
+        }
+        getPlayers()?.let {
+            it.map { it.name.stringStripFormatting }.toSet().forEach {
                 if(it.contains(builder.remaining, true))
                     builder.suggest(it)
             }

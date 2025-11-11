@@ -196,14 +196,20 @@ fun fetchWeights(wynnItem: GearItem): MutableList<class_2561>? {
 val font = FontRenderer.getInstance().font
 
 fun getWeight(item: GearItem, source: ItemWeightSource) =
-    Services.ItemWeight.calculateWeighting(Services.ItemWeight.getItemWeighting(item.name, source)[0], item)
+    Services.ItemWeight.getItemWeighting(item.name, source).firstOrNull()?.let {
+        Services.ItemWeight.calculateWeighting(it, item)
+    }
+
 
 class NoriScaleStatProvider : ItemStatProvider<Int>() {
     override fun getValue(p0: WynnItem?): Optional<Int> {
         (p0 as? GearItem)?.let { gear ->
-            return Optional.of(getWeight(gear, ItemWeightSource.NORI).toInt())
-            val score = getNoriScale(gear)
-            if(score >= 0) return Optional.of(score.roundToInt() / 100)
+            getWeight(gear, ItemWeightSource.NORI)?.let {
+                return Optional.of(it.toInt())
+            }
+
+//            val score = getNoriScale(gear)
+//            if(score >= 0) return Optional.of(score.roundToInt() / 100)
         }
         return Optional.empty()
     }

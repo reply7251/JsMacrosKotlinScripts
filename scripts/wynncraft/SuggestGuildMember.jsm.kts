@@ -3,7 +3,6 @@
 import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Models
 import com.wynntils.mc.event.ScreenInitEvent
-import com.wynntils.mc.event.ScreenRenderEvent
 import com.wynntils.models.players.FriendsModel
 import com.wynntils.screens.partymanagement.PartyManagementScreen
 import com.wynntils.screens.partymanagement.widgets.SuggestionPlayerWidget
@@ -113,29 +112,24 @@ class WynnListener {
             val iscreen = screen as IScreen
             iscreen.setOnScroll(JavaWrapper.methodToJava { mouse, scroll ->
                 scrollY = max(min(screen.getSuggestions().size, scrollY - scroll.y.toInt() * 10), 0)
-            })
-        }
-    }
 
-    @SubscribeEvent
-    fun onRender(event: ScreenRenderEvent) {
-        (event.screen as? PartyManagementScreen)?.let { screen ->
-            val height = (screen as IScreen).height
-            val cellHeight = (height / 64)
+                val height = iscreen.height
+                val cellHeight = (height / 64)
 
-            val top = cellHeight * 22
-            val bottom = cellHeight * (23 + 36)
-            screen.getSuggestions().forEachIndexed { index, suggestionPlayerWidget ->
-                val newY = cellHeight * (23 + index * 3 - scrollY)
-                val visible = newY in (top + 1)..<bottom
+                val top = cellHeight * 22
+                val bottom = cellHeight * (23 + 36)
+                screen.getSuggestions().forEachIndexed { index, suggestionPlayerWidget ->
+                    val newY = cellHeight * (23 + index * 3 - scrollY)
+                    val visible = newY in (top + 1)..<bottom
 
-                suggestionPlayerWidget.method_46419(newY)
-                suggestionPlayerWidget.field_22764 = visible
+                    suggestionPlayerWidget.method_46419(newY)
+                    suggestionPlayerWidget.field_22764 = visible
 
-                suggestionPlayerWidget._getPrivateValue<class_4185>("inviteButton")?.let {
-                    it.method_46419(newY)
+                    suggestionPlayerWidget._getPrivateValue<class_4185>("inviteButton")?.let {
+                        it.method_46419(newY)
+                    }
                 }
-            }
+            })
         }
     }
 }

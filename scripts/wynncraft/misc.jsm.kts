@@ -1,7 +1,9 @@
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
+import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Models
 import com.wynntils.core.components.Services
+import com.wynntils.mc.event.ItemTooltipRenderEvent
 import com.wynntils.models.elements.type.Element
 import com.wynntils.models.elements.type.Powder
 import com.wynntils.models.gear.type.GearAttackSpeed
@@ -17,6 +19,7 @@ import com.wynntils.services.itemfilter.type.ItemProviderType
 import com.wynntils.services.itemfilter.type.ItemStatProvider
 import com.wynntils.services.itemfilter.type.StatFilter
 import com.wynntils.services.itemfilter.type.StatFilterFactory
+import com.wynntils.utils.mc.TooltipUtils
 import com.wynntils.utils.type.ErrorOr
 import com.wynntils.utils.type.Pair
 import com.wynntils.utils.type.RangedValue
@@ -24,6 +27,7 @@ import me.hellrevenger.library.api._getPrivateValue
 import net.lenni0451.classtransform.InjectionCallback
 import net.lenni0451.classtransform.annotations.*
 import net.lenni0451.classtransform.annotations.injection.CInject
+import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.*
 import kotlin.jvm.optionals.getOrNull
@@ -248,6 +252,8 @@ object ItemFilterServiceHandler {
     lateinit var callback: (String, List<ItemProviderType>, ErrorOr<ItemStatProvider<*>>) -> ErrorOr<ItemStatProvider<*>>
 }
 
+var lastMixedDamageStatProvider: MixedDamageStatProvider? = null
+
 ItemFilterServiceHandler.callback = callback@ { name, supportedProviderTypes, originalResult ->
     val split = name.split("/")
 
@@ -264,11 +270,14 @@ ItemFilterServiceHandler.callback = callback@ { name, supportedProviderTypes, or
                     else it.name.contains(weaponName, true)
         }.toList()
         if(damageTypes.any { it.contains(type) }) {
-            val result = if(matches.size == 1)
-                ErrorOr.of(MixedDamageStatProvider(matches[0], type, powder) as ItemStatProvider<*>)
-            else if(matches.size < 6) {
+            val result = if(matches.size == 1) {
+                lastMixedDamageStatProvider = MixedDamageStatProvider(matches[0], type, powder)
+                ErrorOr.of(lastMixedDamageStatProvider as ItemStatProvider<*>)
+            } else if(matches.size < 6) {
+                lastMixedDamageStatProvider = null
                 ErrorOr.error("found weapons: " + matches.joinToString { it.name })
             } else {
+                lastMixedDamageStatProvider = null
                 ErrorOr.error("found more than 5 weapons: ")
             }
             return@callback result
@@ -304,6 +313,27 @@ class MixinItemFilterService {
     }
 }
 
+class WynnListener {
+    @SubscribeEvent
+    fun onItemToolTip(event: ItemTooltipRenderEvent.Pre) {
+        val wynnItem = Models.Item.asWynnItem(event.itemStack, GearItem::class.java).getOrNull() ?: return
+
+//        val clientTooltip = TooltipUtils.getClientTooltipComponent(event.tooltips)
+        lastMixedDamageStatProvider?.let { provider ->
+
+            val value = provider.getValue(wynnItem)
+            if (value.isEmpty) return@let
+            val tooltips = event.tooltips.toMutableList()
+            tooltips.add(1,
+                Chat.createTextBuilder()
+                    .append(provider.weaponInfo.name)
+                    .append(": ")
+                    .append(value.get()).build().raw)
+            event.tooltips = tooltips
+        }
+    }
+}
+
 val statFilters = Services.ItemFilter._getPrivateValue<MutableList<Pair<*, *>>>("statFilters")!!
 val filterPair = Pair.of(String::class.java, WithoutStatFilterFactory())
 
@@ -323,9 +353,14 @@ RuntimeTransform.init()
 RuntimeTransform.addTransformer(MixinItemFilterService::class)
 RuntimeTransform.transform()
 
+val wynnListener = WynnListener()
+WynntilsMod.registerEventListener(wynnListener)
+
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
     Services.ItemFilter.itemStatProviders.removeAll(providers)
     statFilters.remove(filterPair)
+
+    WynntilsMod.unregisterEventListener(wynnListener)
 }
 
 
