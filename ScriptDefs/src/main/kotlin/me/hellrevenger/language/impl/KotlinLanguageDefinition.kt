@@ -1,6 +1,7 @@
 package me.hellrevenger.language.impl
 
 import me.hellrevenger.*
+import me.hellrevenger.library.api._invokePrivate
 import me.hellrevenger.library.impl.EventType
 import me.hellrevenger.mixins.MixinClassLoader
 import xyz.wagyourtail.jsmacros.core.Core
@@ -28,7 +29,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
     : BaseLanguage<BasicJvmScriptingHost, KotlinScriptContext>(extension, runner) {
     val externalClassPaths = mutableSetOf<File>()
 
-    fun internalExec(ctx: EventContainer<KotlinScriptContext>, event: BaseEvent?, callback: (BasicJvmScriptingHost, ScriptCompilationConfiguration, ScriptEvaluationConfiguration) -> Unit) {
+    fun internalExec(ctx: EventContainer<KotlinScriptContext>, event: BaseEvent?, rerun: Boolean = false, callback: (BasicJvmScriptingHost, ScriptCompilationConfiguration, ScriptEvaluationConfiguration) -> Unit) {
         val vars = mapOf(
             "event" to event,
             "file" to ctx.ctx.file,
@@ -41,24 +42,32 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
         val classLoader = KotlinExtension.classLoader
         Thread.currentThread().contextClassLoader = classLoader
+        var dependencyUpdated = false
         val compConf = (object : ScriptCompilationConfiguration(){}).with {
             jvm {
                 dependenciesFromClassloader(classLoader = classLoader, wholeClasspath = true)
             }
             defaultImports(ImportJar::class, Import::class, ClassPath::class, EventType::class)
-
             refineConfiguration {
                 onAnnotations<ClassPath> { context ->
                     val annotations = context.collectedData?.get(ScriptCollectedData.foundAnnotations)
                         ?.takeIf { it.isNotEmpty() }
                         ?: return@onAnnotations context.compilationConfiguration.asSuccess()
 
+                    val scriptBaseDir = (context.script as? FileBasedScriptSource)?.file?.parentFile
+
                     val files = annotations.mapNotNull {
-                        (it as? ClassPath)?.path
+                        (it as? ClassPath)?.path ?: run {
+                            try {
+                                it._invokePrivate<Array<String>>("path", arrayOf())
+                            } catch (e: Exception) {
+                                null
+                            }
+                        }
                     }.flatMap { it.toList() }
                         .filter { it.endsWith(".jar") }
                         .mapNotNull {
-                            var f = File(it)
+                            var f = (scriptBaseDir?.resolve(it) ?: File(it)).normalize()
                             if(f.exists()) f
                             else {
                                 f = File(context.script.locationId?.let { it1 -> File(it1).parentFile }, it)
@@ -70,6 +79,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
                         files.forEach {
                             if(externalClassPaths.add(it)) {
                                 println("new ExternalClassPath: ${it.absolutePath}")
+                                dependencyUpdated = true
                                 classLoader.addURL(URL("jar:file:${it.canonicalPath}!/"))
                             }
                         }
@@ -113,9 +123,15 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
                 .withDefaultsFrom(defaultJvmScriptingHostConfiguration)
         )
 
-        ctx.ctx.context = host
-
-        callback(ctx.ctx.context, compConf, execConf)
+        try {
+            callback(host, compConf, execConf)
+            ctx.ctx.context = host
+        } catch(e: KotlinCompileException) {
+            if (dependencyUpdated && !rerun) {
+                return internalExec(ctx, event, true, callback)
+            }
+            throw e
+        }
     }
 
     override fun exec(ctx: EventContainer<KotlinScriptContext>, p1: ScriptTrigger, event: BaseEvent) {

@@ -5,6 +5,9 @@ import com.sun.jna.NativeLibrary
 import com.sun.jna.ptr.IntByReference
 import com.sun.jna.ptr.PointerByReference
 import me.hellrevenger.SharedLibraries
+import me.hellrevenger.ctransform.SimpleFieldTarget
+import me.hellrevenger.ctransform.SimpleInvokeTarget
+import me.hellrevenger.ctransform.SimpleNewTarget
 import net.bytebuddy.ByteBuddy
 import net.bytebuddy.asm.Advice
 import net.bytebuddy.asm.AsmVisitorWrapper
@@ -368,7 +371,13 @@ class RuntimeMixin {
             }
         }
 
-        fun createTransformManager() = TransformerManager(InstrumentationClassProvider(instrumentation))
+        fun createTransformManager() = TransformerManager(InstrumentationClassProvider(instrumentation)).apply {
+            addInjectionTarget(CTargetType.SIMPLE_INVOKE, SimpleInvokeTarget())
+            addInjectionTarget(CTargetType.SIMPLE_NEW, SimpleNewTarget())
+            addInjectionTarget(CTargetType.SIMPLE_FIELD, SimpleFieldTarget())
+            addInjectionTarget(CTargetType.SIMPLE_GET_FIELD, SimpleFieldTarget.getField())
+            addInjectionTarget(CTargetType.SIMPLE_PUT_FIELD, SimpleFieldTarget.putField())
+        }
 
         fun removeTransformManager(manager: TransformerManager) {
             instrumentation.removeTransformer(manager)

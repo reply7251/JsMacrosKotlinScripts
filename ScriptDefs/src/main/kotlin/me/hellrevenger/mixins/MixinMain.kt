@@ -9,5 +9,6 @@ object MixinMain {
     fun mixins(runner: Core<*, *>) {
         RuntimeMixin.addMixin(net.minecraft.class_8113.class_8123::class.java,
             Advice.to(MixinTextDisplayEntity::class.java).on(ElementMatchers.named("method_48911")))
+        FixCustomClick.transform()
     }
 }

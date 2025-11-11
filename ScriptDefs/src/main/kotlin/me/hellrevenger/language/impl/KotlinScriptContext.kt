@@ -50,6 +50,7 @@ class KotlinScriptContext(runner: Core<*, *>?, event: BaseEvent?, file: File?) :
         onContextClosedCallbacks.forEach {
             it(this)
         }
+        ServiceManager.setAutoUnregisterKeepAlive(this, false)
     }
 
     override fun shouldKeepAlive(): Boolean {

@@ -8,6 +8,7 @@ import net.bytebuddy.description.modifier.Visibility
 import net.bytebuddy.dynamic.TypeResolutionStrategy
 import net.bytebuddy.implementation.FieldAccessor
 import net.bytebuddy.implementation.InvocationHandlerAdapter
+import net.lenni0451.classtransform.utils.tree.BasicClassProvider
 import sun.misc.Unsafe
 import java.lang.invoke.MethodHandles
 import java.lang.invoke.MethodType
@@ -17,6 +18,20 @@ import java.lang.reflect.Method
 import java.lang.reflect.Modifier
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty0
+
+fun Class<*>.getBytes(): ByteArray {
+    return BasicClassProvider(this.classLoader).getClass(this.name)
+}
+
+fun Class<*>.forceLoadTo(classLoader: ClassLoader) {
+    val bytes = this.getBytes()
+    classLoader._invokePrivate<Class<*>>("defineClass", arrayOf(
+        this.name,
+        bytes,
+        0,
+        bytes.size
+    ))
+}
 
 fun findField(clazz: Class<*>, name: String): Field {
     try {
@@ -70,7 +85,7 @@ fun findMethod(clazz: Class<*>, name: String, args: List<Class<*>>): Method {
     val methods = clazz.declaredMethods.filter { it.name == name && it.parameterCount == args.size }
     val method = methods.find {  method ->
         method.parameterTypes.withIndex().all {
-            println("comparing ${wrapType(it.value)} vs ${wrapType(args[it.index])} => ${wrapType(it.value).isAssignableFrom(wrapType(args[it.index]))}")
+            //println("comparing ${wrapType(it.value)} vs ${wrapType(args[it.index])} => ${wrapType(it.value).isAssignableFrom(wrapType(args[it.index]))}")
 
             wrapType(it.value).isAssignableFrom(wrapType(args[it.index]))
         }
@@ -175,6 +190,14 @@ private fun <T> wrapProxy(clazz: Class<T>, delegate: Any): T {
         }.intercept(InvocationHandlerAdapter.toField(handlerName))
         .make(TypeResolutionStrategy.Lazy.INSTANCE).load(clazz.classLoader).loaded.newInstance().apply {
             (this as InvocationHandlerSetter).setHandler(MyInvocationHandler(delegate))
+            this::class.java.declaredFields.forEach { field ->
+                try {
+                    val value = delegate._getPrivateValue<Any>(field.name)
+                    value?.let {
+                        this._setPrivateValue(field.name, it)
+                    }
+                }catch (e:Exception){}
+            }
         } as T
 }
 

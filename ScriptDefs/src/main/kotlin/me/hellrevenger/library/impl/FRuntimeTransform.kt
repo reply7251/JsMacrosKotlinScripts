@@ -7,6 +7,7 @@ import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.language.impl.incrementalScriptSourceCounter
 import me.hellrevenger.library.api.CTargetType
+import me.hellrevenger.library.api.getBytes
 import me.hellrevenger.library.api.instrumentation
 import net.lenni0451.classtransform.TransformerManager
 import net.lenni0451.classtransform.additionalclassprovider.InstrumentationClassProvider
@@ -14,7 +15,6 @@ import net.lenni0451.classtransform.annotations.CInline
 import net.lenni0451.classtransform.annotations.CReplaceCallback
 import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.utils.ASMUtils
-import net.lenni0451.classtransform.utils.tree.BasicClassProvider
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
@@ -38,7 +38,11 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
         } else {
             disposed()
         }
-        manager = TransformerManager(InstrumentationClassProvider(instrumentation)).apply {
+        setManager(TransformerManager(InstrumentationClassProvider(instrumentation)))
+    }
+
+    fun setManager(manager: TransformerManager) {
+        this.manager = manager.apply {
             addInjectionTarget(CTargetType.SIMPLE_INVOKE, SimpleInvokeTarget())
             addInjectionTarget(CTargetType.SIMPLE_NEW, SimpleNewTarget())
             addInjectionTarget(CTargetType.SIMPLE_FIELD, SimpleFieldTarget())
@@ -60,7 +64,7 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
     }
 
     fun addTransformer(transformer: KClass<*>) {
-        addTransformer(ASMUtils.fromBytes(BasicClassProvider(transformer.java.classLoader).getClass(transformer.java.name)))
+        addTransformer(ASMUtils.fromBytes(transformer.java.getBytes()))
     }
 
     fun addTransformer(transformer: ClassNode) {
