@@ -4,6 +4,7 @@ package me.hellrevenger
 import me.hellrevenger.language.impl.CompilerSetting
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
+import me.hellrevenger.library.api.forceLoadTo
 import me.hellrevenger.library.impl.FEventListener
 import me.hellrevenger.library.impl.FRuntimeTransform
 import me.hellrevenger.library.impl.FScriptConfig
@@ -57,6 +58,9 @@ class KotlinExtension: LanguageExtension, LibraryExtension {
             }
             throw RuntimeException("Kotlin script failed:\n        ${reports.joinToString("\n        ")}", exceptions.firstOrNull())
         }
+
+        ClassPath::class.java.forceLoadTo(ClassLoader.getSystemClassLoader())
+
         MixinMain.mixins(runner)
     }
 
