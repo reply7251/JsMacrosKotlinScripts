@@ -17,6 +17,7 @@ import com.wynntils.handlers.bossbar.TrackedBar
 import com.wynntils.models.abilities.AbilityModel
 import com.wynntils.models.abilities.type.OphanimOrb
 import com.wynntils.models.abilities.type.ShamanMaskType
+import com.wynntils.models.activities.ActivityModel
 import com.wynntils.models.character.CharacterModel
 import com.wynntils.models.character.event.CharacterUpdateEvent
 import com.wynntils.models.items.items.game.CraftedConsumableItem
@@ -27,10 +28,12 @@ import com.wynntils.models.statuseffects.type.StatusEffect
 import com.wynntils.models.worlds.event.WorldStateEvent
 import com.wynntils.models.worlds.type.WorldState
 import me.hellrevenger.KotlinExtension
+import me.hellrevenger.library.api.CTargetType
 import me.hellrevenger.library.api.KtGlobals
 import me.hellrevenger.library.api._getField
 import me.hellrevenger.library.api._getPrivateValue
 import net.lenni0451.classtransform.InjectionCallback
+import net.lenni0451.classtransform.annotations.CShadow
 import net.lenni0451.classtransform.annotations.CTarget
 import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.annotations.injection.CInject
@@ -1137,7 +1140,6 @@ class Assassin() : WynnClass() {
     var blocking = false
     var flyAt = 0L
 
-    val momentumBar = MomentumBar()
     val shadeBar = ShadeBar()
     var lastDJump = 0L
 
@@ -1218,7 +1220,7 @@ class Assassin() : WynnClass() {
                 }
             } else if(getMana() > 30 && World.time - lastSmoke > 100) {
                 smoke()
-            } else if(dive.value && momentumBar.barProgress?.progress?.let { it >= 0.999f } == true && Models.CharacterStats.blocksAboveGround > 5) {
+            } else if(dive.value && AbilityModel.momentumBar.barProgress?.progress?.let { it >= 0.999f } == true && Models.CharacterStats.blocksAboveGround > 5) {
                 dash()
             } else if(getMana() > 50 && lastAction != Actions.cast3) {
                 multiHit()
@@ -1651,7 +1653,7 @@ class Shaman() : WynnClass() {
             val shouldAura = (100 - getHealth())
             val tooManyUproot = lastAction == Actions.cast4 && burstAction > 1 && World.time - lastUproot < 60
             val tooManyAura = lastAction == Actions.cast3 && burstAction > 1
-            val sorrowDuration = if(isHoldItem("resonance")) 30 else 120
+            val sorrowDuration = if(isHoldItem("resonance")) 35 else 140
             if(((getMana() > 50 && shouldAura > 20) || shouldAura > 40) && (World.time - lastAura > 19 && enableAura.value) || (shouldUproot && tooManyUproot)) {
                 waitSpell(Actions.cast3, 2)
             } else if(shouldUproot && World.time - lastUproot > sorrowDuration || (shouldAura > 20 && tooManyAura)) {
@@ -1863,6 +1865,10 @@ object MyKeybinding {
         forces.clear()
         prevents.clear()
     }
+}
+
+object MixinCallback {
+    var cancelScan = { cachedId: String -> false }
 }
 
 var currentWynnClass: WynnClass = WynnClass()
@@ -2089,6 +2095,28 @@ class MixinKeyBinding {
     }
 }
 
+MixinCallback.cancelScan = { cachedId ->
+    if(!Models.Character.id.equals(cachedId) && (cachedId == "-" || Models.Character.id == "-")) {
+        Chat.toast("ActivityModel", "cancel a scan!")
+    }
+    cachedId == "-" || Models.Character.id == "-"
+}
+
+
+@CTransformer(ActivityModel::class)
+class MixinActivityModel {
+    @CShadow
+    private lateinit var currentProgressCharacter: String
+
+    @CInject(method=["onCharacterUpdated"], target = [CTarget(CTargetType.HEAD)], cancellable = true)
+    fun onCharacterUpdated(ic: InjectionCallback) {
+        if (MixinCallback.cancelScan(currentProgressCharacter)) {
+            ic.isCancelled = true
+        }
+    }
+}
+
+
 class WynnListener {
     val shaman = StyledText.fromComponent(class_2561.method_43471("feature.wynntils.chatRedirect.shaman.notification"))
     var characterUpdated = false
@@ -2100,6 +2128,7 @@ class WynnListener {
         checkClass()
         characterUpdated = true
     }
+
     @SubscribeEvent(priority = EventPriority.LOWEST)
     fun worldStateChanged(event: WorldStateEvent) {
         if(event.newState == WorldState.CHARACTER_SELECTION || event.oldState == WorldState.WORLD) {
@@ -2140,14 +2169,6 @@ class WynnListener {
 val listener = WynnListener()
 WynntilsMod.registerEventListener(listener)
 
-class MomentumBar : TrackedBar(".+?(\\d).+Momentum".toPattern()) {
-    override fun onUpdateName(match: Matcher?) {
-        match?.group(1)?.toInt()?.let {
-            updateValue(it, it)
-        }
-    }
-}
-
 class ShadeBar : TrackedBar(".+Mirror Image: §a(\uE040+)(§7(\uE040*))?".toPattern()) {
 
     override fun onUpdateName(match: Matcher?) {
@@ -2162,7 +2183,7 @@ class ShadeBar : TrackedBar(".+Mirror Image: §a(\uE040+)(§7(\uE040*))?".toPatt
     }
 }
 
-val bars = listOf(ShadeBar(), MomentumBar())
+val bars = listOf(ShadeBar())
 bars.forEach {
     Handlers.BossBar.registerBar(it)
 }
@@ -2170,6 +2191,7 @@ bars.forEach {
 RuntimeTransform.init()
 RuntimeTransform.addTransformer(MixinCharacterModel::class)
 RuntimeTransform.addTransformer(MixinKeyBinding::class)
+RuntimeTransform.addTransformer(MixinActivityModel::class)
 RuntimeTransform.transform()
 
 context.onContextClosed {
