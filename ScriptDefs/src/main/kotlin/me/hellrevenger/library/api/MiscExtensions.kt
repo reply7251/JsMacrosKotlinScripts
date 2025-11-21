@@ -3,6 +3,7 @@ package me.hellrevenger.library.api
 import me.hellrevenger.SharedLibraries
 import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.impl.EventType
+import xyz.wagyourtail.jsmacros.client.api.classes.TextBuilder
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.core.library.impl.FJsMacros
 
@@ -26,6 +27,9 @@ object MiscExtensions {
     fun FJsMacros.waitUntil(interval: Long = 50L, pred: () -> Boolean) {
         _getPrivateValue<KotlinScriptContext>("ctx")!!.waitUntil(interval, pred)
     }
+
+    fun TextBuilder.withClickEvent(action: TextClickAction, value: String) =
+        this.withClickEvent(action.action, value)!!
 }
 
 @Suppress("unused")
