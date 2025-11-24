@@ -1,6 +1,12 @@
 @file:ClassPath("../libs/jars/LattiCG.jar")
 @file:ImportJar("../libs/jars/wynntils-3.0.10-fabric+MC-1.21.4.jar")
 
+import com.google.gson.GsonBuilder
+import com.google.gson.JsonArray
+import com.google.gson.JsonElement
+import com.google.gson.JsonObject
+import com.google.gson.JsonSerializationContext
+import com.google.gson.JsonSerializer
 import com.seedfinding.latticg.math.component.BigMatrix
 import com.seedfinding.latticg.math.component.BigVector
 import com.seedfinding.latticg.math.lattice.enumerate.EnumerateRt
@@ -25,10 +31,85 @@ import net.minecraft.class_2568
 import java.util.stream.LongStream
 import net.minecraft.class_2583
 import net.minecraft.class_2558
+import java.lang.reflect.Type
 import java.util.Random
 import kotlin.math.abs
 import kotlin.math.ceil
 import kotlin.math.roundToInt
+
+/*
+get another random call before PZ and disso
+
+conclusion
+
+LS > MS > Reflection > MR > hpr% > hpr > ED > TD > WD > FD > AD > SD > rawSD > MD > rawMD > EDef > TDef > WDef > FDef > ADef > raw1st > raw2nd > raw3rd > raw4th
+missing:
+TD > "WS" > "1st" > "2nd" > "3rd"
+XP > LB > everything
+"exploding" > hpr%
+MR > "HEFF" > SD
+MR > "rawHealth" > hpr
+LS > "poison" > rawHealth
+"atkSpd" > rawHealth
+hpr > "rElemSD" > "sprint"
+
+apophenia / bismuthinite
+neutrino
+hurricane / shaggy boots
+
+===
+-- xpBonus > manaRegen > healingEfficiency
+XP > ED > TD > WD > FD > AD
+XP > LB > MS > Reflection > MR > HEFF > SD
+
+LS > poison > rawHealth > hpr > rawMainAttackDamage
+
+paradox
+LS > hpr% > rawMainAttackDamage > TDef
+(estimate) LS > MS > hpr% > SD > rawMainAttackDamage > EDef > TDef > FDef > ADef
+
+Sizzling shawl
+exploding > hpr% > hpr > WD > SD > rSD
+(estimate) exploding > hpr% > hpr > WD > FD > SD > rSD > TDef
+
+Agglomerate apex
+LS > MR > hpr > rElemSD > sprint
+
+1 random call here
+
+PZ
+atkSpd > rawHealth > TD > WS > 1st > 2nd > 3rd
+
+Chain rule
+hpr > ED > TD > WD > rawSD > raw2nd
+(estimate) MS > hpr > ED > TD > WD > rawSD > raw1st > raw2nd > raw3rd > raw4th
+
+1 random call here
+
+disso
+rawHealth > rawSD > mainAttackDamage > ADef
+(estimate) MR > rawHealth > rawSD > mainAttackDamage > TDef > ADef > raw3rd
+
+dragon dance
+LS > MS > hpr > rawSD > mainAttackDamage > EDef > WS
+(estimate) LS > MS > MR > hpr > SD > rawSD > mainAttackDamage > EDef > WS
+
+Laoc Alcher
+Paradox / 3 neg
+Deja Vu
+Sizzling Shawl / 3 neg
+-- above are bought
+
+Octahedron
+Lunar Spine
+
+Photon Projector 7/0
+Equalizer
+PZ
+Agglomerate Apex
+Dragon Dance / 3 neg
+
+* */
 
 object CrackGen {
     private val BASIS: BigMatrix = DeserializeRt.mat(
@@ -161,23 +242,26 @@ object CrackGen {
             .withUpperBound(23, (nextInt12.toLong() shl 17) or 0x1ffffL)
         return EnumerateRt.enumerate(BASIS, ORIGIN, builder.build(), ROOT_INV, ROOT_ORIGIN)
             .mapToLong { vec: BigVector? ->
-                (vec!!.get(0).getNumerator().toLong() * 0xdfe05bcb1365L + 0x615c0e462aa9L) and ((1L shl 48) - 1)
+                (vec!!.get(0).numerator.toLong() * 0xdfe05bcb1365L + 0x615c0e462aa9L) and ((1L shl 48) - 1)
             }
     }
 
     fun getSeeds(item1: GearItem, item2: GearItem,): LongStream {
-        val xp1 = item1.identifications.find { it.statType.apiName.contains("xp", true) }!!.value
-        val e1 = item2.identifications.find { it.statType.apiName.contains("earth", true) }!!.value
-        val t1 = item2.identifications.find { it.statType.apiName.contains("thunder", true) }!!.value
-        val w1 = item2.identifications.find { it.statType.apiName.contains("water", true) }!!.value
-        val f1 = item2.identifications.find { it.statType.apiName.contains("fire", true) }!!.value
-        val a1 = item2.identifications.find { it.statType.apiName.contains("air", true) }!!.value
-        val xp2 = item1.identifications.find { it.statType.apiName.contains("xp", true) }!!.value
-        val e2 = item2.identifications.find { it.statType.apiName.contains("earth", true) }!!.value
-        val t2 = item2.identifications.find { it.statType.apiName.contains("thunder", true) }!!.value
-        val w2 = item2.identifications.find { it.statType.apiName.contains("water", true) }!!.value
-        val f2 = item2.identifications.find { it.statType.apiName.contains("fire", true) }!!.value
-        val a2 = item2.identifications.find { it.statType.apiName.contains("air", true) }!!.value
+        fun getRoll(statType: StatType, value: Int) =
+            (value.toDouble() / item1.itemInfo.getPossibleValues(statType).baseValue() * 100).roundToInt() - 30
+        val xp1 = item1.identifications.find { it.statType.apiName.contains("xp", true) }!!.let { getRoll(it.statType, it.value) }
+        val e1 = item1.identifications.find { it.statType.apiName.contains("earth", true) }!!.let { getRoll(it.statType, it.value) }
+        val t1 = item1.identifications.find { it.statType.apiName.contains("thunder", true) }!!.let { getRoll(it.statType, it.value) }
+        val w1 = item1.identifications.find { it.statType.apiName.contains("water", true) }!!.let { getRoll(it.statType, it.value) }
+        val f1 = item1.identifications.find { it.statType.apiName.contains("fire", true) }!!.let { getRoll(it.statType, it.value) }
+        val a1 = item1.identifications.find { it.statType.apiName.contains("air", true) }!!.let { getRoll(it.statType, it.value) }
+        val xp2 = item2.identifications.find { it.statType.apiName.contains("xp", true) }!!.let { getRoll(it.statType, it.value) }
+        val e2 = item2.identifications.find { it.statType.apiName.contains("earth", true) }!!.let { getRoll(it.statType, it.value) }
+        val t2 = item2.identifications.find { it.statType.apiName.contains("thunder", true) }!!.let { getRoll(it.statType, it.value) }
+        val w2 = item2.identifications.find { it.statType.apiName.contains("water", true) }!!.let { getRoll(it.statType, it.value) }
+        val f2 = item2.identifications.find { it.statType.apiName.contains("fire", true) }!!.let { getRoll(it.statType, it.value) }
+        val a2 = item2.identifications.find { it.statType.apiName.contains("air", true) }!!.let { getRoll(it.statType, it.value) }
+
         return getSeeds(xp1 - 2, xp1 + 3, e1, t1, w1, f1, a1, xp2 - 2, xp2 + 3, e2, t2, w2, f2, a2)
     }
 }
@@ -258,22 +342,42 @@ class MyRandom(seed: Long) : Random(seed) {
     }
 }
 
-var previewCount = 10
+var previewCount = 60
 var lastItem: GearItem? = null
 var lastSeed = 0L
 
 fun getError(diff: Int, base: Int): Int {
-    return ceil(abs(diff / base.toDouble() / 1.95)).roundToInt()
+    return ceil(abs(diff / base.toDouble() / 1.9)).roundToInt()
 }
 
-data class ID(val statType: StatType, val roll: Int, val error: Int, val positive: Boolean)
-data class ID2(val statType: StatType, val roll: Int, val randomValue: Int, val index: Int)
+data class ID(val statType: String, val roll: Int, val error: Int, val positive: Boolean)
+data class ID2(val statType: String, val roll: Int, val randomValue: Int, val index: Int)
+
+data class Predict(val index: Int, val roll: Int)
+
+data class NotMatched(
+    val rolls: List<ID>,
+    val predicts: List<Predict>,
+)
+
+fun notMatched(pair: Pair<List<ID>, List<Pair<Int, Int>>>) =
+    NotMatched(pair.first, pair.second.map { Predict(it.first, it.second) })
 
 data class MatchResult(
     val known: List<ID2>,
-    val positive: Pair<List<ID>, List<Pair<Int, Int>>>,
-    val negative: Pair<List<ID>, List<Pair<Int, Int>>>
+    val positive: NotMatched,
+    val negative: NotMatched
 )
+
+var idCounter = 0
+fun checkExtra(seed: Long): Long {
+    idCounter++
+    if (idCounter == 5 || idCounter == 7) {
+        lastSeed = LCG.JAVA.nextSeed(lastSeed)
+        return LCG.JAVA.nextSeed(seed)
+    }
+    return seed
+}
 
 fun tryMatch(item: GearItem, seed: Long): MatchResult {
     val possibles = item.possibleValues
@@ -281,12 +385,17 @@ fun tryMatch(item: GearItem, seed: Long): MatchResult {
         val possible = possibles.firstOrNull { id.statType == it.statType } ?: return@mapNotNull null
         if(possible.range.isFixed || !possible.range.inRange(id.value)) return@mapNotNull null
         val lo = if(possible.baseValue > 0) 30 else 70
-        val roll = (id.value.toDouble() / possible.baseValue * 100).roundToInt() - lo
+//        val roll = (id.value.toDouble() / possible.baseValue * 100).roundToInt() - lo
+        val roll = if(possible.baseValue > 0) {
+            (id.value.toDouble() / possible.baseValue * 100).roundToInt() - lo
+        } else {
+            130 - (id.value.toDouble() / possible.baseValue * 100).roundToInt()
+        }
 
-        ID(id.statType, roll, getError(131 - lo, possible.baseValue), possible.baseValue > 0)
+        ID(id.statType.apiName, roll, getError(131 - lo, possible.baseValue), possible.baseValue > 0)
     }
 
-    return tryMatch(ids, seed)
+    return tryMatch(ids, checkExtra(seed))
 }
 
 fun tryMatch(list: List<ID>, seed: Long): MatchResult {
@@ -296,7 +405,7 @@ fun tryMatch(list: List<ID>, seed: Long): MatchResult {
         list.mapIndexed { index, _ -> index to random.nextInt(101) }
     }.toMutableList()
     val negativeIDs = MyRandom(seed).let { random ->
-        list.mapIndexed { index, _ -> index to random.nextInt(101) }
+        list.mapIndexed { index, _ -> index to 60 - random.nextInt(61) }
     }.toMutableList()
 
     val result = mutableListOf<ID2>()
@@ -324,36 +433,74 @@ fun tryMatch(list: List<ID>, seed: Long): MatchResult {
     for (i in 1..list.size) {
         lastSeed = LCG.JAVA.nextSeed(lastSeed)
     }
+    if (realNegativeIDs.isEmpty()) negativeIDs.clear()
+    if (realPositiveIDs.isEmpty()) positiveIDs.clear()
 
-    return MatchResult(result.sortedBy { it.index }, realPositiveIDs to positiveIDs, realNegativeIDs to negativeIDs)
+    return MatchResult(result.sortedBy { it.index }, notMatched(realPositiveIDs.map { it } to positiveIDs), notMatched(realNegativeIDs to negativeIDs))
 }
 
+class CollectionAdapter : JsonSerializer<Collection<*>> {
+    override fun serialize(
+        src: Collection<*>?,
+        typeOfSrc: Type?,
+        context: JsonSerializationContext
+    ): JsonElement? {
+        if(src == null || src.isEmpty()) return null
+        if(src is Map<*, *>) {
+            val obj = JsonObject()
+            src.entries.forEach { entry -> obj.add(entry.key.toString(), context.serialize(entry.value)) }
+            return obj
+        } else {
+            val array = JsonArray()
+            src.forEach { array.add(context.serialize(it)) }
+            return array
+        }
+    }
+}
+
+val gson = GsonBuilder()
+    .registerTypeHierarchyAdapter(Collection::class.java, CollectionAdapter())
+    .create()!!
+val prettyPrintedGson = gson.newBuilder().setPrettyPrinting().create()!!
 
 fun onItemClick(item: GearItem) {
     if(!item.name.contains("specialist", true)) {
         if (lastSeed == 0L) return
-
-        Chat.log(tryMatch(item, lastSeed))
+        val match = tryMatch(item, lastSeed)
+        Chat.log(Chat.createTextBuilder().append(gson.toJson(match))
+            .withShowTextHover(Chat.createTextHelperFromString("click to copy"))
+            .withClickEvent("copy_to_clipboard", prettyPrintedGson.toJson(match)).build())
 
         return
     }
+	Chat.log("item selected")
     if (lastItem != null) {
         if (lastItem.toString() == item.toString()) return
         lastSeed = 0
         CrackGen.getSeeds(lastItem!!, item).forEach { seed ->
             lastSeed = seed
-            val random = Random(seed xor 0x5DEECE66DL)
+//            val random = Random(seed xor 0x5DEECE66DL)
             for(i in 1..12) {
-                random.nextInt(101)
+//                random.nextInt(101)
                 lastSeed = LCG.JAVA.nextSeed(lastSeed)
             }
             val list = mutableListOf<Int>()
+            val list2 = mutableListOf<Int>()
+            val random = Random(lastSeed xor 0x5DEECE66DL)
             for (i in 1..previewCount) {
                 list.add(random.nextInt(101))
             }
+            val random2 = Random(lastSeed xor 0x5DEECE66DL)
+            for (i in 1..previewCount) {
+                list2.add(random2.nextInt(61))
+            }
             Chat.log("predict:")
             Chat.log(list)
+            Chat.log(list2)
         }
+		if(lastSeed == 0L) {
+			Chat.log("seed not found")
+		}
     }
 
     lastItem = item
@@ -396,16 +543,18 @@ Chat.commandManager.createCommandBuilder(cmd).intArg("counter").executes(JavaWra
 })
 
 EventListener(EventType.ClickSlot, true) {
-    it.inventory.getSlot(it.slot)?.let { itemStackHelper ->
-        val optional = Models.Item.asWynnItem(itemStackHelper.raw, GearItem::class.java)
-        if(optional.isPresent) {
-            onItemClick(optional.get())
+    if(KeyBind.pressedKeys.contains("key.keyboard.left.control")) {
+        it.cancel()
+        it.inventory.getSlot(it.slot)?.let { itemStackHelper ->
+            val optional = Models.Item.asWynnItem(itemStackHelper.raw, GearItem::class.java)
+            if(optional.isPresent) {
+                onItemClick(optional.get())
+            }
         }
     }
 }
 
 context.onContextClosed {
-
     Chat.commandManager.unregisterCommand(cmd)
 }
 

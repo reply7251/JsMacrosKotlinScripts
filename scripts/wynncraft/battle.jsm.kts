@@ -58,6 +58,7 @@ import net.minecraft.class_2561
 import net.minecraft.class_304
 import net.minecraft.class_408
 import org.jetbrains.kotlin.backend.common.pop
+import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw2D
 
 
 if(!World.isWorldLoaded) {
@@ -161,7 +162,7 @@ open class BindValue<T>(key: String, var value: T, callback: (Bind) -> Unit) : B
 }
 
 
-open class BindBoolean(key: String, value: Boolean = false, callback: (Bind) -> Unit) : BindValue<Boolean>(key, value, callback) {
+open class BindBoolean(key: String, value: Boolean = false, val renderName: String = key, callback: (Bind) -> Unit) : BindValue<Boolean>(key, value, callback) {
     override fun trigger() {
         value = !value
         super.trigger()
@@ -169,6 +170,10 @@ open class BindBoolean(key: String, value: Boolean = false, callback: (Bind) -> 
 
     fun toString(name: String): String {
         return  "$name ${Format.formatChar}r(${Format.coloredKey(simpleName)}): " + Format.coloredBoolean(value)
+    }
+
+    override fun toString(): String {
+        return toString(renderName)
     }
 
     override fun updateFromString(string: String) {
@@ -343,18 +348,46 @@ enum class Mode {
     RiftWalker
 }
 
+class MultiLineText(val d2d: Draw2D, val x: Int, val y: Int, val color: Int = 0xffffff) {
+    val texts = arrayListOf<Text>()
+    var currentText: String = ""
+
+    fun setText(text: String) {
+        val text = text.trim()
+        if (text == currentText) return
+        currentText = text
+
+        val lines = currentText.lines()
+
+        for (i in 0..<lines.size) {
+            if (i >= texts.size) {
+                texts.add(d2d.addText(lines[i], x, y + texts.size * 10, color, true))
+            } else {
+                val text = texts[i]
+                text.setText(lines[i])
+                d2d.reAddElement(text)
+            }
+        }
+        for (i in lines.size..<texts.size) {
+            texts[i].setText("")
+        }
+    }
+
+    fun appendInNewLine(text: String) {
+        setText("$currentText\n$text")
+    }
+}
+
+val multiLineText = MultiLineText(d2d, 250, 50)
+
 open class WynnClass: HasBind {
     var lastAction = ""
     var burstAction = 0
     var lastMelee = 0L
     lateinit var enabled: BindBoolean
-    val texts = arrayListOf<Text>()
+
     val binds = hashMapOf<String, Bind>()
     val crossHair = d2d.addText("", 0, 0, 0xffffff, true)
-
-    var lineIndex = -1
-
-    var configPos = 250 to 50
 
     lateinit var targetY: BindDouble
     lateinit var height: BindInt
@@ -405,7 +438,7 @@ open class WynnClass: HasBind {
     }
 
     open fun onInitOverride() {
-        enabled = BindBoolean("key.keyboard.f") {
+        enabled = BindBoolean("key.keyboard.f", renderName = "Enabled") {
             if(enabled.value) {
                 main()
             } else {
@@ -434,7 +467,7 @@ open class WynnClass: HasBind {
         }
 
         anchor = BindPos("key.keyboard.keypad.9", Pos3D.ZERO) { updateConfig() }.bind().setPersist()
-        enableMelee = BindBoolean("key.keyboard.keypad.7", true) { updateConfig() }.bind()
+        enableMelee = BindBoolean("key.keyboard.keypad.7", true, "Melee") { updateConfig() }.bind()
 
         maxRepeat = BindInt("key.keyboard.keypad.8", "MaxRepeat", 1) { updateConfig() }.bind()
     }
@@ -563,37 +596,14 @@ open class WynnClass: HasBind {
     open fun chooseAction() { }
 
     open fun updateConfig() {
-        texts.forEach { d2d.reAddElement(it) }
-        resetLineIndex()
-        nextLine().setText(enabled.toString("Enabled"))
-        nextLine().setText(spellCooldown.toString())
-        nextLine().setText("Mode (${Format.coloredKey(binds["modeSelector"]?.simpleName)}): " + mode + " <--> " + quickMode)
-        nextLine().setText(Format.coloredConfig("anchor" ) + "Anchor ${Format.formatChar}r(${Format.coloredKey(anchor.simpleName)}): " + Format.coloredBoolean(anchor.value != Pos3D.ZERO))
-        nextLine().setText(enableMelee.toString("Melee"))
-        nextLine().setText(maxRepeat.toString(getMaxRepeatValue()))
-    }
-
-    fun resetLineIndex() {
-        lineIndex = -1
-        hideLines()
-        lineIndex = -1
-    }
-
-    fun nextLine(): Text {
-        if (hidden) {
-            return fakeText
-        }
-        lineIndex++
-        while(lineIndex >= texts.size) {
-            texts.add(d2d.addText("", configPos.first, configPos.second + texts.size * 10, 0xffffff, true))
-        }
-        return texts[lineIndex]
-    }
-
-    fun hideLines() {
-        while(++lineIndex < texts.size) {
-            texts[lineIndex].setText("")
-        }
+        multiLineText.setText("""
+            $enabled
+            $spellCooldown
+            Mode (${Format.coloredKey(binds["modeSelector"]?.simpleName)}): $mode <--> $quickMode
+            ${Format.coloredConfig("anchor" )}Anchor ${Format.formatChar}r(${Format.coloredKey(anchor.simpleName)}): ${Format.coloredBoolean(anchor.value != Pos3D.ZERO)}
+            $enableMelee
+            ${maxRepeat.toString(getMaxRepeatValue())}
+        """.trimIndent())
     }
 
     fun setCrossHairText(text: String) {
@@ -657,9 +667,8 @@ open class WynnClass: HasBind {
 
     open fun terminate() {
         reset()
-        texts.forEach {
-            d2d.removeText(it)
-        }
+
+        multiLineText.setText("")
         d2d.removeText(crossHair)
         terminated = true
         enabled.set(false)
@@ -955,8 +964,8 @@ class Warrior() : WynnClass() {
 
         meleeInterval = BindInt("key.keyboard.keypad.1", "MeleeInterval", 20, 3) { updateConfig() }.bind()
 
-        bloodPact = BindBoolean("key.keyboard.keypad.6") { updateConfig() }.bind()
-        fly = BindBoolean("key.keyboard.keypad.4") { updateConfig() }.bind().setPersist()
+        bloodPact = BindBoolean("key.keyboard.keypad.6", renderName = "Blood Pact") { updateConfig() }.bind()
+        fly = BindBoolean("key.keyboard.keypad.4", renderName = "Fly") { updateConfig() }.bind().setPersist()
 
         super.onInitOverride()
 
@@ -967,15 +976,20 @@ class Warrior() : WynnClass() {
     override fun updateConfig() {
         super.updateConfig()
 
-        if(mode == Mode.ChargeSpam) {
-            nextLine().setText(targetY.toString())
-            nextLine().setText(height.toString())
+        if(mode == Mode.ChargeSpam){
+            multiLineText.appendInNewLine("""
+                $targetY
+                $height
+            """.trimIndent())
         }
-        nextLine().setText(meleeInterval.toString())
-        nextLine().setText(fly.toString("Fly"))
-        nextLine().setText(bloodPact.toString("Blood Pact"))
-        nextLine().setText("upper: charge charge scream upper")
-        nextLine().setText("bash(scream): scream scream\ntest")
+
+        multiLineText.appendInNewLine("""
+            $meleeInterval
+            $fly
+            $bloodPact
+            upper: charge charge scream upper
+            bash(scream): scream scream
+        """.trimIndent())
     }
     
     override fun main() {
@@ -1087,7 +1101,7 @@ class Warrior() : WynnClass() {
     
     override fun onSpellCasted() {
         if(charging) {
-            if(chargeCounter++ > 2) {
+            if(chargeCounter++ > 1) {
                 chargeCounter = 0
                 cast4()
             }
@@ -1145,8 +1159,8 @@ class Assassin() : WynnClass() {
 
     override fun onInitOverride() {
         height = BindInt("key.keyboard.keypad.6", "Height", 3) { updateConfig() }.bind()
-        slowFall = BindBoolean("key.keyboard.keypad.4", true) { updateConfig() }.bind()
-        dive = BindBoolean("key.keyboard.keypad.1", true) { updateConfig() }.bind()
+        slowFall = BindBoolean("key.keyboard.keypad.4", true, "Slow Fall") { updateConfig() }.bind()
+        dive = BindBoolean("key.keyboard.keypad.1", true, "Dive") { updateConfig() }.bind()
 
         super.onInitOverride()
         spellCooldown.set(12)
@@ -1161,11 +1175,13 @@ class Assassin() : WynnClass() {
 
     override fun updateConfig() {
         super.updateConfig()
-        nextLine().setText(targetY.toString())
-        nextLine().setText(height.toString())
-        nextLine().setText(slowFall.toString("Slow Fall"))
-        if(mode == Mode.Acrobat) {
-            nextLine().setText(dive.toString("Dive"))
+        multiLineText.appendInNewLine("""
+            $targetY
+            $height
+            $slowFall
+        """.trimIndent())
+        if (mode == Mode.Acrobat) {
+            multiLineText.appendInNewLine(dive.toString())
         }
     }
 
@@ -1331,10 +1347,10 @@ class Mage() : WynnClass() {
     }
 
     override fun onInitOverride() {
-        enableIceSnake = BindBoolean("key.keyboard.keypad.4", true) {
+        enableIceSnake = BindBoolean("key.keyboard.keypad.4", true, "IceSnake") {
             updateConfig()
         }.bind()
-        enableMeteor = BindBoolean("key.keyboard.keypad.1", true) {
+        enableMeteor = BindBoolean("key.keyboard.keypad.1", true, "Meteor") {
             updateConfig()
         }.bind()
 
@@ -1345,9 +1361,10 @@ class Mage() : WynnClass() {
 
     override fun updateConfig() {
         super.updateConfig()
-
-        nextLine().setText(enableIceSnake.toString("IceSnake"))
-        nextLine().setText(enableMeteor.toString("Meteor"))
+        multiLineText.appendInNewLine("""
+            $enableIceSnake
+            $enableMeteor
+        """.trimIndent())
     }
 
     override fun chooseAction() {
@@ -1466,7 +1483,7 @@ class Archer() : WynnClass() {
     var counter = 0
 
     override fun onInitOverride() {
-        autoEscape = BindBoolean("key.keyboard.keypad.1") {
+        autoEscape = BindBoolean("key.keyboard.keypad.1", renderName = "Auto Escape") {
             updateConfig()
         }.bind("escape")
 
@@ -1477,7 +1494,9 @@ class Archer() : WynnClass() {
 
     override fun updateConfig() {
         super.updateConfig()
-        nextLine().setText(autoEscape.toString("Auto Escape"))
+        multiLineText.appendInNewLine("""
+            $autoEscape
+        """.trimIndent())
     }
 
     override fun chooseAction() {
@@ -1564,16 +1583,16 @@ class Shaman() : WynnClass() {
             updateConfig()
         }.bind("mask")
 
-        enableAwakened = BindBoolean("key.keyboard.keypad.6") {
+        enableAwakened = BindBoolean("key.keyboard.keypad.6", renderName = "Awakened") {
             updateConfig()
         }.bind()
 
-        fly = BindBoolean("key.keyboard.keypad.4") {
+        fly = BindBoolean("key.keyboard.keypad.4", renderName = "Fly") {
             updateConfig()
             flyCounter = -1
         }.bind().setPersist()
 
-        enableAura = BindBoolean("key.keyboard.keypad.3", true) {
+        enableAura = BindBoolean("key.keyboard.keypad.3", true, "Aura") {
             updateConfig()
         }.bind()
 
@@ -1584,10 +1603,12 @@ class Shaman() : WynnClass() {
 
     override fun updateConfig() {
         super.updateConfig()
-        nextLine().setText("Mask (${Format.coloredKey(binds["mask"]?.simpleName)}): " + targetMask)
-        nextLine().setText(enableAwakened.toString("Awakened"))
-        nextLine().setText(fly.toString("Fly"))
-        nextLine().setText(enableAura.toString("Aura"))
+        multiLineText.appendInNewLine("""
+            Mask (${Format.coloredKey(binds["mask"]?.simpleName)}): $targetMask
+            $enableAwakened
+            $fly
+            $enableAura
+        """.trimIndent())
     }
 
     override fun getMaxRepeatValue(): Int {
@@ -1638,8 +1659,8 @@ class Shaman() : WynnClass() {
             fullSummoner = true
         }
         if(mode == Mode.Acolyte) {
-            if(World.time - lastTotem > 50 && (blood > 59 || !isSneaking) && (totem == null || Models.ShamanTotem.activeTotems.any { it.time < 3 || it.time > 15})) {
-                if(Models.ShamanTotem.activeTotems.any { it.time < 3 || it.time > 15}) {
+            if(World.time - lastTotem > 50 && (blood > 59 || !isSneaking) && (totem == null || Models.ShamanTotem.activeTotems.any { it.time !in 3..15 })) {
+                if(Models.ShamanTotem.activeTotems.any { it.time !in 3..15 }) {
                     force(Actions.sneak, true) {
                         waitSpell(Actions.cast1, 2)
                     }
@@ -1654,7 +1675,7 @@ class Shaman() : WynnClass() {
             val tooManyUproot = lastAction == Actions.cast4 && burstAction > 1 && World.time - lastUproot < 60
             val tooManyAura = lastAction == Actions.cast3 && burstAction > 1
             val sorrowDuration = if(isHoldItem("resonance")) 35 else 140
-            if(((getMana() > 50 && shouldAura > 20) || shouldAura > 40) && (World.time - lastAura > 19 && enableAura.value) || (shouldUproot && tooManyUproot)) {
+            if(((getMana() > 50 && shouldAura > 30) || shouldAura > 50) && (World.time - lastAura > 19 && enableAura.value) || (shouldUproot && tooManyUproot)) {
                 waitSpell(Actions.cast3, 2)
             } else if(shouldUproot && World.time - lastUproot > sorrowDuration || (shouldAura > 20 && tooManyAura)) {
                 force(Actions.sneak, true) {
@@ -1781,12 +1802,15 @@ class Shaman() : WynnClass() {
 
     override fun onDisable() {
         super.onDisable()
-        if(KeyBind.pressedKeys.contains(enabled.key) && AbilityModel.commanderBar.isActivated && AbilityModel.commanderBar.duration > 10) {
+        val bird = Models.Ability.hummingBirdsState && World.time - lastHaul < 100
+        val commander = AbilityModel.commanderBar.isActivated && AbilityModel.commanderBar.duration > 10
+        if(KeyBind.pressedKeys.contains(enabled.key) && (commander || bird)) {
             thread {
                 Client.waitTick(10)
 				if(!enabled.value) {
 					force(Actions.sneak, true) {
-						waitSpell(Actions.cast3)
+						if(commander) waitSpell(Actions.cast3)
+                        if(bird) waitSpell(Actions.cast2)
 					}
 				}
             }
@@ -2080,7 +2104,9 @@ class MixinCharacterModel {
 MyKeybinding.callback = { instance, original ->
     val zhis = instance as class_304
     zhis.method_1431()?.let {
-        val bind = KeyBind.keyBindings[it]
+        val bind = KeyBind.keyBindings[it] ?: return@let null
+        if(!it.startsWith("key") && KeyBind.pressedKeys.contains("key.keyboard.f3"))
+                return@let null
         (Hud.openScreen == null || (it == Actions.sneak && Hud.openScreen is class_408 && currentWynnClass.enabled.value))
                 && (MyKeybinding.forces.contains(it) || (KeyBind.pressedKeys.contains(bind) && !MyKeybinding.prevents.contains(it)))
     } ?: original

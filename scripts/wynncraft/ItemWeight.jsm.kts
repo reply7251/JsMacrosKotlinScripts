@@ -44,154 +44,9 @@ val FETCH_WYNNPOOL = true
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")
 }
-var gson = GsonBuilder().setPrettyPrinting().create()
-val noriFile = File(context.file!!.parentFile, "nori.json")
-val wynnpoolFile = File(context.file!!.parentFile, "wynnpool.json")
-val data = if(!noriFile.exists()) {
-    val text = Request.get("https://nori.fish/api/item/mythic").text()
-    noriFile.createNewFile()
-    noriFile.writeText(gson.toJson(JsonParser.parseString(text)))
-    text
-} else {
-    noriFile.readText()
-}
-if(!wynnpoolFile.exists()) {
-    wynnpoolFile.createNewFile()
-    wynnpoolFile.writeText("{}")
-}
-val json = JsonParser.parseString(data).asJsonObject.get("weights").asJsonObject
-val wynnpoolJson = JsonParser.parseString(wynnpoolFile.readText()).asJsonObject
-var lastRequest = 0L
 
-fun getNoriScale(wynnItem: GearItem): Double {
-    if(wynnItem.gearTier != GearTier.MYTHIC) return -1.0
-    val instance = wynnItem.itemInstance.getOrNull() ?: return -1.0
-    if(!instance.hasOverallValue()) return -1.0
-    val scales = json[wynnItem.name]?.asJsonObject?.get("Main")?.asJsonObject ?: return -1.0
-    var score = 0.0
-    val possibles = wynnItem.possibleValues
-    var match = false
-
-    instance.identifications.forEach { actual ->
-        val possible = possibles.firstOrNull { actual.statType == it.statType } ?: return@forEach
-        if(possible.range.isFixed || !possible.range.inRange(actual.value)) return@forEach
-        val scale = scales[actual.statType.apiName]?.asDouble ?: return@forEach
-        score += scale * StatCalculator.getPercentage(actual, possible)
-        match = true
-    }
-
-    return if(match) score else -1.0
-}
 
 val isif = Managers.Feature.getFeatureInstance(ItemStatInfoFeature::class.java)
-fun coloredPercentage(value: Double) =
-    ColorScaleUtils.getPercentageTextComponent(isif.colorMap, value.roundToInt() / 100f,
-        isif.colorLerp.get(), isif.decimalPlaces.get())
-
-fun fetchNori(wynnItem: GearItem): MutableList<class_2561>? {
-    val instance = wynnItem.itemInstance.getOrNull() ?: return null
-    if(!instance.hasOverallValue()) return null
-    val scales = json[wynnItem.name]?.asJsonObject ?: return null
-    val possibles = wynnItem.possibleValues
-    val lines = mutableListOf<class_2561>()
-    scales.asMap().forEach { (name, scale0) ->
-        val scale = scale0.asJsonObject
-        val toAdd = mutableListOf<class_2561>()
-        var score = 0.0
-        instance.identifications.forEach inner@ { actual ->
-            val possible = possibles.firstOrNull { actual.statType == it.statType } ?: return@inner
-            if(possible.range.isFixed || !possible.range.inRange(actual.value)) return@inner
-            val weight = scale[actual.statType.apiName]?.asDouble ?: return@inner
-            val percentage = StatCalculator.getPercentage(actual, possible)
-            val style = coloredPercentage(percentage * 100.0).method_10866() ?: return@inner
-            score += weight * percentage
-            val colored = Chat.createTextBuilder().append("[+${(weight * percentage).roundToInt() / 100f}%]")
-            colored.withStyle(StyleHelper(style))
-            val line = Chat.createTextBuilder().append("§7${actual.statType.displayName}§r")
-                .append(" ($weight%) ")
-                .append(colored.build())
-
-            toAdd.add(line.build().raw)
-        }
-        lines.add(Chat.createTextBuilder().append("§l$name").append(TextHelper.wrap(coloredPercentage(score))).build().raw)
-
-        lines.addAll(toAdd)
-    }
-
-    return lines
-}
-
-fun fetchWynnpool(wynnItem: GearItem): MutableList<class_2561>? {
-    if(!FETCH_WYNNPOOL) return null
-    val instance = wynnItem.itemInstance.getOrNull() ?: return null
-    if(!instance.hasOverallValue()) return null
-    val possibles = wynnItem.possibleValues
-    val lines = mutableListOf<class_2561>()
-
-    val name = wynnItem.name
-    if(!wynnpoolJson.has(name)) {
-        if(Time.time() - lastRequest < 3000) return null
-        lastRequest = Time.time()
-        thread {
-            try {
-                val resp = Request.get("https://weight.wynnpool.com/api/weights/item/${name.replace(" ", "%20")}").text()
-                val map = JsonObject()
-                JsonParser.parseString(resp).asJsonArray.forEach {
-                    it.asJsonObject.let {
-                        map.add(it["weight_name"].asString, it["identifications"])
-                    }
-                }
-                wynnpoolJson.add(name, map)
-                wynnpoolFile.writeText(gson.toJson(wynnpoolJson))
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
-        return null
-    }
-
-    wynnpoolJson[name]?.let { scales ->
-        scales.asJsonObject.asMap().forEach { (name, scale0) ->
-            val scale = scale0.asJsonObject
-            val toAdd = mutableListOf<class_2561>()
-            var score = 0.0
-            instance.identifications.forEach inner@ { actual ->
-                val possible = possibles.firstOrNull { actual.statType == it.statType } ?: return@inner
-                if(possible.range.isFixed || !possible.range.inRange(actual.value)) return@inner
-                var weight = (scale[actual.statType.apiName]?.asDouble?.times(100)) ?: return@inner
-                weight = (weight * 1000).roundToInt() / 1000.0
-                var percentage = StatCalculator.getPercentage(actual, possible)
-                if(weight < 0) {
-                    percentage = 100 - percentage
-                }
-                var tmp = weight * percentage
-                if (weight < 0) {
-                    tmp = -tmp
-                }
-                val style = coloredPercentage(percentage * 100.0).method_10866() ?: return@inner
-                score += tmp
-                val colored = Chat.createTextBuilder().append("[+${(tmp).roundToInt() / 100f}%]")
-                colored.withStyle(StyleHelper(style))
-                val line = Chat.createTextBuilder().append("§7${actual.statType.displayName}§r")
-                    .append(" ($weight%) ")
-                    .append(colored.build())
-
-                toAdd.add(line.build().raw)
-            }
-            lines.add(Chat.createTextBuilder().append("WP §l$name").append(TextHelper.wrap(coloredPercentage(score))).build().raw)
-
-            lines.addAll(toAdd)
-        }
-        return lines
-    }
-    return null
-}
-
-fun fetchWeights(wynnItem: GearItem): MutableList<class_2561>? {
-    val tooltips = fetchNori(wynnItem) ?: return null
-    fetchWynnpool(wynnItem)?.let { tooltips.addAll(it) }
-    return tooltips
-}
 
 val font = FontRenderer.getInstance().font
 
@@ -207,9 +62,6 @@ class NoriScaleStatProvider : ItemStatProvider<Int>() {
             getWeight(gear, ItemWeightSource.NORI)?.let {
                 return Optional.of(it.toInt())
             }
-
-//            val score = getNoriScale(gear)
-//            if(score >= 0) return Optional.of(score.roundToInt() / 100)
         }
         return Optional.empty()
     }
@@ -242,47 +94,8 @@ RuntimeTransform.init()
 RuntimeTransform.addTransformer(MixinChatItemFeature::class)
 RuntimeTransform.transform()
 
-class WynnListener {
-    @SubscribeEvent
-    fun onItemToolTip(event: ItemTooltipRenderEvent.Pre) {
-        val wynnItem = Models.Item.asWynnItem(event.itemStack, GearItem::class.java).getOrNull() ?: return
-
-        val clientTooltip = TooltipUtils.getClientTooltipComponent(event.tooltips)
-        val width = TooltipUtils.getTooltipWidth(clientTooltip, font)
-        val height = TooltipUtils.getTooltipHeight(clientTooltip)
-
-        val context = event.guiGraphics
-
-        val offsetY = event.mouseY + height - context.method_51443()
-        val y = (if(offsetY > 0) event.mouseY - offsetY else event.mouseY) + 12
-        fetchWeights(wynnItem)?.let {
-            val stack = context.method_51448()
-
-            stack.method_22903()
-            stack.method_46416(0f,0f,300f)
-
-            val myClientTooltip = TooltipUtils.getClientTooltipComponent(it)
-            val myWidth = TooltipUtils.getTooltipWidth(myClientTooltip, font)
-            val myHeight = TooltipUtils.getTooltipHeight(myClientTooltip)
-            val yOffset = y + myHeight - context.method_51443()
-            val myY = if(yOffset > 0) y - yOffset else y
-            val myX = if(event.mouseX + width + 24 + myWidth > context.method_51421()) {
-                event.mouseX - myWidth - 12
-            } else {
-                event.mouseX + width + 12
-            }
-
-            context.method_51434(font, it, myX, myY)
-            stack.method_22909()
-        }
-    }
-}
-
 val noriScaleStatProvider = NoriScaleStatProvider()
 Services.ItemFilter.itemStatProviders.add(noriScaleStatProvider)
-val wynnListener = WynnListener()
-WynntilsMod.registerEventListener(wynnListener)
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
-    WynntilsMod.unregisterEventListener(wynnListener)
     Services.ItemFilter.itemStatProviders.remove(noriScaleStatProvider)
 }

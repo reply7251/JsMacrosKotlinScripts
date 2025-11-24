@@ -264,16 +264,23 @@ ItemFilterServiceHandler.callback = callback@ { name, supportedProviderTypes, or
         }
         val powder = split[2]
         val type = if(split.size > 3) split[3] else ""
+        var equals: GearInfo? = null
         val matches = Models.Gear.allGearInfos.filter {
+            if(it.type.isWeapon && it.name.equals(weaponName, true))
+                equals = it
             it.type.isWeapon &&
                     if(startsWith) it.name.startsWith(weaponName, true)
                     else it.name.contains(weaponName, true)
         }.toList()
+
         if(damageTypes.any { it.contains(type) }) {
             val result = if(matches.size == 1) {
                 lastMixedDamageStatProvider = MixedDamageStatProvider(matches[0], type, powder)
                 ErrorOr.of(lastMixedDamageStatProvider as ItemStatProvider<*>)
-            } else if(matches.size < 6) {
+            } else if (equals != null) {
+                lastMixedDamageStatProvider = MixedDamageStatProvider(equals, type, powder)
+                ErrorOr.of(lastMixedDamageStatProvider as ItemStatProvider<*>)
+			} else if(matches.size < 6) {
                 lastMixedDamageStatProvider = null
                 ErrorOr.error("found weapons: " + matches.joinToString { it.name })
             } else {
