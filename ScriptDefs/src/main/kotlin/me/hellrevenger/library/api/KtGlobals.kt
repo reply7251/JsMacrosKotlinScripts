@@ -1,11 +1,15 @@
 package me.hellrevenger.library.api
 
+import java.util.concurrent.locks.Condition
+import java.util.concurrent.locks.ReentrantLock
+import kotlin.concurrent.withLock
 import kotlin.reflect.KClass
 
 object KtGlobals {
     private val callables = hashMapOf<String, Function<*>>()
     private val variables = hashMapOf<String, Any>()
-    private val locks = hashMapOf<String, Object>()
+    private val locks = hashMapOf<String, Condition>()
+    val lock = ReentrantLock()
 
     fun addCallable(name: String, callable: Function<*>) {
         callables[name] = callable
@@ -19,9 +23,10 @@ object KtGlobals {
     }
 
     fun addVariable(name: String, value: Any) {
-        synchronized(locks) {
+        lock.withLock {
             variables[name] = value
-            locks[name]?.notifyAll()
+            lock.newCondition()
+            locks[name]?.signalAll()
         }
     }
 
@@ -29,13 +34,14 @@ object KtGlobals {
     fun <T> getVariable(name: String) = variables[name] as? T
 
     fun <T> waitAndGetVariable(name: String): T {
-        synchronized(locks) {
+        lock.withLock {
             getVariable<T>(name)?.let{
                 return it
             }
             while (true) {
-                locks.getOrPut(name) { Object() }.wait()
+                locks.getOrPut(name) { lock.newCondition() }.await()
                 getVariable<T>(name)?.let{
+                    locks.remove(name)
                     return it
                 }
             }
@@ -49,11 +55,11 @@ object KtGlobals {
     }
 
     fun <T> waitAndGetWrappedVariable(name: String, type: Class<T>): T? {
-        synchronized(locks) {
+        lock.withLock {
             if (variables.containsKey(name)) {
                 return getWrappedVariable(name, type)
             }
-            locks.getOrPut(name) { Object() }.wait()
+            locks.getOrPut(name) { lock.newCondition() }.await()
             return getWrappedVariable(name, type)
         }
     }
