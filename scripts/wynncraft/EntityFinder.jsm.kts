@@ -9,7 +9,8 @@ val service = event as EventService
 service.unregisterOnStop(true)
 
 var running = true
-val whitelist = listOf("That Which", "❃", "") // "\ue02a"
+var builtin = false
+val whitelist = listOf("That Which", "❃", "", "Blue Antifloret") // "\ue02a"
 val custom = arrayListOf<String>()
 val blacklist = listOf("Req:", "Auric Foliage", " Bough")
 val traced = mutableSetOf<net.minecraft.class_1297>()
@@ -22,7 +23,7 @@ d3d.register()
 
 val textDisplays = mutableSetOf<TextDisplayEntityHelper>()
 
-fun nameCheck(name: String?) = name != null && ((whitelist.find { name.contains(it, true) } != null && blacklist.find { name.contains(it, true) } == null)
+fun nameCheck(name: String?) = name != null && ((builtin && whitelist.find { name.contains(it, true) } != null && blacklist.find { name.contains(it, true) } == null)
         || custom.find { name.contains(it, true) } != null)
 
 
@@ -105,6 +106,10 @@ Chat.commandManager.createCommandBuilder("/find")
         if(custom.remove(ctx.getArg("name"))) {
             reCheck()
         }
+    }).or().or()
+    .literalArg("toggle").executes(JavaWrapper.methodToJava { ctx ->
+        builtin = !builtin
+        reCheck()
     }).register()
 
 

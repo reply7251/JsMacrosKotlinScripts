@@ -20,6 +20,7 @@ import com.wynntils.services.lootrunpaths.type.LootrunPath
 import com.wynntils.services.lootrunpaths.type.LootrunState
 import com.wynntils.utils.MathUtils
 import com.wynntils.utils.mc.type.Location
+import me.hellrevenger.library.api.KtGlobals
 import net.minecraft.class_332
 import net.neoforged.bus.api.SubscribeEvent
 import xyz.wagyourtail.jsmacros.api.math.Pos3D
@@ -38,6 +39,7 @@ import net.minecraft.class_243
 import net.minecraft.class_2338
 import net.minecraft.class_1923
 import net.minecraft.class_744
+import net.minecraft.class_10185
 
 val radian = Math.PI / 180
 fun Location.toBlockPosHelper() = BlockPosHelper(toBlockPos())
@@ -184,10 +186,8 @@ class MyInput(val parent: class_744) : class_744() {
             val jump = World.getBlock(player.blockPos.up())?.blockStateHelper?.isLiquid == true && currentState != State.FIND_NODE
             val forward = stuckCounter > 14
             if(shouldOverrideInput() && (jump || forward)) {
-                val inp = Reflection.getClass<Any>("net.minecraft.class_10185").constructors[0]
-                    .newInstance(field_54155.comp_3159() || forward, field_54155.comp_3160(),
-                        field_54155.comp_3161(), field_54155.comp_3162(), field_54155.comp_3163() || jump, field_54155.comp_3164() || forward, field_54155.comp_3165())
-                field_54155 = inp as net.minecraft.class_10185
+                this.field_54155 = class_10185(field_54155.comp_3159() || forward, field_54155.comp_3160(),
+                    field_54155.comp_3161(), field_54155.comp_3162(), field_54155.comp_3163() || jump, field_54155.comp_3164() || forward, field_54155.comp_3165())
                 stuckCounter = 0
             }
         } else {
@@ -203,15 +203,11 @@ class MyInput(val parent: class_744) : class_744() {
             val sneak = false
             val sprint = false
 
-
-            val inp = Reflection.getClass<Any>("net.minecraft.class_10185").constructors[0]
-                .newInstance(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
-
-            field_54155 = inp as net.minecraft.class_10185
+            this.field_54155 = class_10185(forward > 0, forward < 0, side > 0, side < 0, jump, sneak, sprint)
         }
 
-        field_3905 = getMovement(field_54155.comp_3159(), field_54155.comp_3160())
-        field_3907 = getMovement(field_54155.comp_3161(), field_54155.comp_3162())
+        this.field_3905 = getMovement(field_54155.comp_3159(), field_54155.comp_3160())
+        this.field_3907 = getMovement(field_54155.comp_3161(), field_54155.comp_3162())
     }
 }
 fun shouldOverrideInput() = currentState != State.NONE && currentState != State.RECORDING && currentState != State.PAUSE_RECORD
@@ -242,40 +238,61 @@ class RenderGetter(val callback: () -> Unit) : RenderElement3D<RenderGetter> {
         return 0
     }
 }
+fun lerp(from: Double, to: Double, delta: Float) = from + (to - from) * delta
+fun lerp(from: Float, to: Float, delta: Float) = from + (to - from) * delta
 class Smooth {
     var enabled = false
-    private var targetYaw = 0.0
-    var targetPitch = 0.0
-    private var prevYaw = 0.0
-    var prevPitch = 0.0
+    var targetYaw = 0f
+    var targetPitch = 0f
+    var prevYaw = 0f
+    var prevPitch = 0f
     var tick = 0L
 
-    var dYaw = 0.0
-    var dPitch = 0.0
+    fun grim(current: Float, target: Float) = current + mouseToAngle(angleToMouse(target - current))
 
-    fun lookAt(yaw: Double, pitch: Double, lerp: Double = 1.0) {
+    fun mouseToAngle(delta: Int): Float {
+        val f = (Client.gameOptions.controlOptions.mouseSensitivity * 0.6f + 0.2f).toFloat()
+        return delta * f * f * f * 8f * 0.15f
+    }
+
+    fun angleToMouse(angle: Float) = round(angle / mouseToAngle(1)).toInt()
+
+    fun lookAt(yaw: Double, pitch: Double) = lookAt(yaw.toFloat(), pitch.toFloat())
+
+    fun lookAt(yaw: Float, pitch: Float) {
         val player = Player.player ?: return
         enabled = true
-        prevYaw = warp180(player.yaw.toDouble())
-        prevPitch = player.pitch.toDouble()
-        targetYaw = lerpDegrees(prevYaw, yaw, lerp)
-        targetPitch = MathUtils.lerp(prevPitch, pitch, lerp)
-        if(targetPitch > 80) targetPitch = 80.0
-        else if (targetPitch < -80) targetPitch = -80.0
+        prevYaw = player.yaw
+        prevPitch = player.pitch
+
+        targetYaw = grim(player.yaw, yaw)
+        targetPitch = grim(player.pitch, pitch)
+        player.lookAt(targetYaw.toDouble(), targetPitch.toDouble())
+
         tick = World.time
     }
-    val cameraUpdater = RenderGetter {
-        val player = Player.player ?: return@RenderGetter
-        if(!enabled) return@RenderGetter
-        if(abs(World.time - tick) > 1) {
-            enabled = false
-            return@RenderGetter
-        }
+}
 
+val smooth = Smooth()
+
+val offsetKey = "CameraOffset"
+KtGlobals.waitAndGetVariable<MutableMap<String, () -> Pair<Float, Float>>>(offsetKey)[smooth.hashCode().toString()] = {
+    if(!smooth.enabled || World.time > smooth.tick) {
+        smooth.enabled = false
+        0f to 0f
+    } else {
         val delta = Client.minecraft.method_61966().method_60637(true)
-        if(delta > 0.01)
-            player.lookAt(lerpDegrees(prevYaw, targetYaw, delta.toDouble()),
-                MathUtils.lerp(prevPitch, targetPitch, delta.toDouble()))
+        val yaw = lerp(smooth.prevYaw - smooth.targetYaw, 0f, delta)
+        val pitch = lerp(smooth.prevPitch - smooth.targetPitch, 0f, delta)
+
+        yaw to pitch
+    }
+}
+
+context.onContextClosed {
+    smooth.enabled = false
+    KtGlobals.getVariable<MutableMap<String, () -> Pair<Float, Float>>>(offsetKey)?.apply {
+        remove(smooth.hashCode().toString())
     }
 }
 fun getFieldValue(obj: Any, field: String): Any? {
@@ -460,7 +477,7 @@ fun record(force: Boolean = false) {
     val player = Player.player ?: return
     val root = player.vehicle ?: player
     val pos = root.pos
-    if(myRecording.points.size == 0 || pos.distanceTo(Pos3D(myRecording.points.last())) >= 0.7 || force) {
+    if(myRecording.points.isEmpty() || pos.distanceTo(Pos3D(myRecording.points.last())) >= 0.7 || force) {
         myRecording.points.add(pos.getRaw())
     }
 }
@@ -559,7 +576,7 @@ class EventListeners {
                             }
                             stuckCounter++
                         }
-                        smooth.lookAt(yaw, vec.pitch.toDouble() + (World.time % 70 - 40) * 1.5, 0.1)
+                        smooth.lookAt(yaw, vec.pitch.toDouble() + (World.time % 70 - 40) * 1.5)
                     } else {
                         stuckCounter = 0
                     }
@@ -599,8 +616,6 @@ val spells = listOf("First", "Second", "Third", "Fourth").map { getSpellCaster(i
 val availableNodes = mutableMapOf<Location, ProfessionType>()
 val d3d = Hud.createDraw3D()
 d3d.register()
-val smooth = Smooth()
-d3d.reAddElement(smooth.cameraUpdater)
 val boxes = mutableMapOf<BlockPosHelper, Box>()
 val screen = makeScreen()
 val d2d = Hud.createDraw2D()
@@ -613,11 +628,11 @@ d2d.setOnInit(JavaWrapper.methodToJava { d2d ->
 })
 d2d.register()
 
-EventListener(EventKey::class.java, {
-    if(it.key == "key.keyboard.n" && it.action == 0) {
+EventListener(EventType.Key) {
+    if (it.key == "key.keyboard.n" && it.action == 0) {
         Hud.openScreen(screen)
     }
-})
+}
 
 var myInput = setInput()
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->

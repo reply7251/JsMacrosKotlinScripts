@@ -6,38 +6,29 @@ import com.wynntils.core.components.Services
 import com.wynntils.features.inventory.ContainerSearchFeature
 import com.wynntils.mc.event.ScreenInitEvent
 import com.wynntils.models.containers.Container
-import com.wynntils.models.containers.ContainerModel
 import com.wynntils.models.containers.containers.LobbyContainer
 import com.wynntils.models.containers.containers.trademarket.TradeMarketContainer
 import com.wynntils.models.containers.type.ContainerBounds
-import com.wynntils.models.containers.type.HighlightableProfessionProperty
-import com.wynntils.models.containers.type.ScrollableContainerProperty
 import com.wynntils.models.containers.type.SearchableContainerProperty
 import com.wynntils.models.items.WynnItem
 import com.wynntils.models.items.items.game.GearItem
-import com.wynntils.models.trademarket.TradeMarketModel
 import com.wynntils.screens.base.widgets.ItemFilterUIButton
 import com.wynntils.screens.base.widgets.ItemSearchWidget
 import com.wynntils.screens.base.widgets.WynntilsButton
 import com.wynntils.services.itemfilter.type.ItemProviderType
 import com.wynntils.services.itemfilter.type.ItemStatProvider
-import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.api._getField
 import me.hellrevenger.library.api._getPrivateValue
 import me.hellrevenger.library.api._getUnsafeField
 import net.neoforged.bus.api.EventPriority
 import net.neoforged.bus.api.SubscribeEvent
-import sun.misc.Unsafe
-import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
 import xyz.wagyourtail.jsmacros.core.library.impl.FReflection
-import xyz.wagyourtail.jsmacros.core.service.EventService
 import java.util.*
 import java.util.function.Supplier
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 import net.minecraft.class_4068
-import net.minecraft.class_8021
 
 val pattern = Pattern.compile("\uDAFF\uDFE8\uE011")
 

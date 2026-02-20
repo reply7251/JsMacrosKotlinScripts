@@ -15,9 +15,13 @@ import com.seedfinding.latticg.util.DeserializeRt
 import com.seedfinding.latticg.util.LCG
 import com.wynntils.core.components.Models
 import com.wynntils.features.chat.ChatItemFeature
+import com.wynntils.models.elements.type.Element
 import com.wynntils.models.items.FakeItemStack
 import com.wynntils.models.items.WynnItem
 import com.wynntils.models.items.items.game.GearItem
+import com.wynntils.models.stats.builders.MiscStatKind
+import com.wynntils.models.stats.type.AttackType
+import com.wynntils.models.stats.type.DamageType
 import com.wynntils.models.stats.type.MiscStatType
 import com.wynntils.models.stats.type.StatType
 import me.hellrevenger.library.api.CTargetType
@@ -32,6 +36,8 @@ import java.util.stream.LongStream
 import net.minecraft.class_2583
 import net.minecraft.class_2558
 import java.lang.reflect.Type
+import java.util.Locale
+import java.util.Locale.getDefault
 import java.util.Random
 import kotlin.math.abs
 import kotlin.math.ceil
@@ -341,6 +347,58 @@ class MyRandom(seed: Long) : Random(seed) {
         initialSeed = seed
     }
 }
+
+
+
+val identificationOrder by lazy {
+    val misc1 = listOf(
+        MiscStatKind.XP_BONUS.apiName,
+        MiscStatKind.LOOT_BONUS.apiName,
+        MiscStatKind.LOOT_QUALITY.apiName,
+        MiscStatKind.GATHERING_XP.apiName,
+        MiscStatKind.GATHER_SPEED.apiName,
+        MiscStatKind.MAX_MANA_RAW.apiName,
+        MiscStatKind.LIFE_STEAL.apiName,
+        MiscStatKind.MANA_STEAL.apiName,
+        MiscStatKind.STEALING.apiName,
+        MiscStatKind.ATTACK_SPEED.apiName,
+        MiscStatKind.MAIN_ATTACK_RANGE.apiName,
+        MiscStatKind.KNOCKBACK.apiName,
+        MiscStatKind.REFLECTION.apiName,
+        MiscStatKind.THORNS.apiName,
+        MiscStatKind.EXPLODING.apiName,
+        MiscStatKind.POISON.apiName,
+        MiscStatKind.SLOW_ENEMY.apiName,
+        MiscStatKind.WEAKEN_ENEMY.apiName,
+        MiscStatKind.MANA_REGEN.apiName,
+        MiscStatKind.HEALTH.apiName,
+        MiscStatKind.HEALTH_REGEN_PERCENT.apiName,
+        MiscStatKind.HEALTH_REGEN_RAW.apiName,
+        MiscStatKind.HEALING_EFFICIENCY.apiName,
+    )
+
+    val misc2 = listOf(
+        MiscStatKind.WALK_SPEED.apiName,
+        MiscStatKind.SPRINT.apiName,
+        MiscStatKind.SPRINT_REGEN.apiName,
+        MiscStatKind.JUMP_HEIGHT.apiName,
+    )
+
+    val elements = Element.entries
+    // need to check
+    val damageElements = listOf("", "Neutral") + elements.map { it.displayName } + listOf("Elemental")
+    // need to check
+    val defenceElements = elements.map { it.displayName } + listOf("Elemental")
+    val raw = listOf("", "raw")
+    // raw
+    val damages = AttackType.entries.flatMap { type -> raw.flatMap { r -> damageElements.map { elem -> "$r$type${elem}Damage" } } }
+    val defences = defenceElements.map { "${it}Defence" }
+
+    val spellCosts = listOf("1st", "2nd", "3rd", "4th").flatMap { listOf("${it}SpellCost", "raw${it}SpellCost") }
+    (misc1 + damages + listOf("criticalDamageBonus") + defences + misc2 + spellCosts).map { it.replaceFirstChar { it.lowercase(getDefault()) } }
+}
+
+
 
 var previewCount = 60
 var lastItem: GearItem? = null

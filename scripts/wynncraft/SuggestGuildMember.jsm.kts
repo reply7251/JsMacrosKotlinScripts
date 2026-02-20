@@ -4,11 +4,15 @@ import com.wynntils.core.WynntilsMod
 import com.wynntils.core.components.Models
 import com.wynntils.mc.event.ScreenInitEvent
 import com.wynntils.models.players.FriendsModel
+import com.wynntils.screens.base.widgets.TextInputBoxWidget
 import com.wynntils.screens.partymanagement.PartyManagementScreen
 import com.wynntils.screens.partymanagement.widgets.SuggestionPlayerWidget
 import me.hellrevenger.library.api.CTargetType
 import me.hellrevenger.library.api.MiscExtensions.waitForEvent
+import me.hellrevenger.library.api._getField
 import me.hellrevenger.library.api._getPrivateValue
+import me.hellrevenger.library.api._invokePrivate
+import net.lenni0451.classtransform.annotations.CShadow
 import net.lenni0451.classtransform.annotations.CTarget
 import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.annotations.injection.CRedirect
@@ -20,6 +24,7 @@ import kotlin.math.max
 import kotlin.math.min
 import net.minecraft.class_640
 import net.minecraft.class_4185
+import kotlin.concurrent.thread
 
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent(EventType.ChunkLoad)
@@ -29,20 +34,27 @@ fun getOnlineFriendsMap() =
     Models.Friends._getPrivateValue<MutableMap<String, String>>("onlineFriends")!!
 
 object PartyManagementScreenHandler {
-    var callback: (FriendsModel) -> Map<String, String> = { it.onlineFriends }
+    var callback: (FriendsModel, TextInputBoxWidget?) -> Map<String, String> = { model, input -> model.onlineFriends }
 }
 
-PartyManagementScreenHandler.callback = {
+PartyManagementScreenHandler.callback = { model, input ->
     fetchSuggestion()
-    it.onlineFriends + cachedGuildMembers.filter { !Models.Party.partyMembers.contains(it) }.map { it to "" }
+    val names = input?.textBoxInput?.replace("[^\\w, ]+".toRegex(), "")?.split(",") ?: listOf("")
+
+    (model.onlineFriends + cachedGuildMembers.filter { !Models.Party.partyMembers.contains(it) }.map { it to "" }).filter {
+        names.any { name -> it.key.contains(name, true) }
+    }
 }
 
 @CTransformer(PartyManagementScreen::class)
 class MixinPartyManagementScreen {
+    @CShadow
+    @JvmField
+    var inviteInput: TextInputBoxWidget? = null
 
     @CRedirect(method = ["reloadSuggestedPlayersWidgets"], target = CTarget(CTargetType.SIMPLE_INVOKE, "getOnlineFriends", optional = true))
     fun reloadSuggestedPlayersWidgets2(instance: FriendsModel): Map<String, String> {
-        return PartyManagementScreenHandler.callback(instance)
+        return PartyManagementScreenHandler.callback(instance, inviteInput)
     }
 }
 
@@ -79,19 +91,19 @@ fun fetchSuggestion() {
             onFetchComplete()
         }
     } else {
-        updateSuggestion()
+//        updateSuggestion()
     }
 }
 fun onFetchComplete() {
     (Hud.openScreen as? PartyManagementScreen)?.reloadSuggestedPlayersWidgets()
 }
 
-fun updateSuggestion() {
-    val map = getOnlineFriendsMap()
-    val oldMembers = map.filterValues { it == "" }
-    map -= oldMembers.keys
-    map += cachedGuildMembers.filter { !Models.Party.partyMembers.contains(it) }.map { it to "" }
-}
+//fun updateSuggestion() {
+//    val map = getOnlineFriendsMap()
+//    val oldMembers = map.filterValues { it == "" }
+//    map -= oldMembers.keys
+//    map += cachedGuildMembers.filter { !Models.Party.partyMembers.contains(it) }.map { it to "" }
+//}
 val cachedGuildMembers = mutableSetOf<String>()
 var lastUpdate = 0L
 var scrollY = 0
@@ -130,6 +142,19 @@ class WynnListener {
                     }
                 }
             })
+            thread {
+                Client.waitTick(5)
+
+                var inviteInput by screen._getField<TextInputBoxWidget>("inviteInput")
+                inviteInput?.let {
+                    val new = TextInputBoxWidget(it.method_46426(), it.method_46427(), it.method_25368(), it.method_25364(), {
+                        screen.reloadSuggestedPlayersWidgets()
+                    }, screen, it)
+                    screen._invokePrivate<Unit>("method_37063", arrayOf(new))
+                    inviteInput = new
+                    screen._invokePrivate<Unit>("method_37066", arrayOf(it))
+                }
+            }
         }
     }
 }
@@ -138,5 +163,4 @@ val wynnListener = WynnListener()
 WynntilsMod.registerEventListener(wynnListener)
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
     WynntilsMod.unregisterEventListener(wynnListener)
-
 }

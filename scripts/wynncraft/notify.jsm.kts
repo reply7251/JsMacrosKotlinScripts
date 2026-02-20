@@ -3,15 +3,14 @@ import xyz.wagyourtail.jsmacros.client.api.event.impl.EventRecvMessage
 
 val whitelist = arrayOf(
     "graid", "notg", "tna", "nol", "tcc",
-    "shapes in the dark",
-    "otherworldly",
-    "downpour",
-    "all eyes on me",
-    "monument to loss",
+//    "otherworldly",
+//    "downpour",
+//    "all eyes on me",
+//    "monument to loss",
     "click here to join",
     "click here to ready up",
 ).map { it.toRegex() }
-val blacklists = arrayOf("notgrey", ": .+ defense is ", "changed \\d+ \\w+ on .+", "notg.+:").map { it.toRegex() }
+val blacklists = arrayOf("notgrey", ": .+ defense is ", "changed \\d+ \\w+ on .+", "notg.+:", "anol").map { it.toRegex() }
 var anni = false
 val anniRegex = "annie?\\s*\\d/\\d".toRegex()
 var cooldown = 0L

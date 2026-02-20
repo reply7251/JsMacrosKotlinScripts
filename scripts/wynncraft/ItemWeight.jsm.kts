@@ -56,10 +56,25 @@ fun getWeight(item: GearItem, source: ItemWeightSource) =
     }
 
 
-class NoriScaleStatProvider : ItemStatProvider<Int>() {
+//class NoriScaleStatProvider : ItemStatProvider<Int>() {
+//    override fun getValue(p0: WynnItem?): Optional<Int> {
+//        (p0 as? GearItem)?.let { gear ->
+//            getWeight(gear, ItemWeightSource.NORI)?.let {
+//                return Optional.of(it.toInt())
+//            }
+//        }
+//        return Optional.empty()
+//    }
+//
+//    override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR_INSTANCE)
+//    override fun getName() = "nori"
+//    override fun getDisplayName() = "Nori Scale"
+//}
+
+class ScaleStatProvider(private val name: String, private val displayName: String, val source: ItemWeightSource) : ItemStatProvider<Int>() {
     override fun getValue(p0: WynnItem?): Optional<Int> {
         (p0 as? GearItem)?.let { gear ->
-            getWeight(gear, ItemWeightSource.NORI)?.let {
+            getWeight(gear, source)?.let {
                 return Optional.of(it.toInt())
             }
         }
@@ -67,8 +82,8 @@ class NoriScaleStatProvider : ItemStatProvider<Int>() {
     }
 
     override fun getFilterTypes() = mutableListOf(ItemProviderType.GEAR_INSTANCE)
-    override fun getName() = "nori"
-    override fun getDisplayName() = "Nori Scale"
+    override fun getName() = name
+    override fun getDisplayName() = displayName
 }
 
 object MixinCallback {
@@ -94,8 +109,11 @@ RuntimeTransform.init()
 RuntimeTransform.addTransformer(MixinChatItemFeature::class)
 RuntimeTransform.transform()
 
-val noriScaleStatProvider = NoriScaleStatProvider()
+val noriScaleStatProvider = ScaleStatProvider("nori", "Nori Scale", ItemWeightSource.NORI)
+val wynnpoolScaleStatProvider = ScaleStatProvider("wynnpool", "Wynnpool Scale", ItemWeightSource.WYNNPOOL)
 Services.ItemFilter.itemStatProviders.add(noriScaleStatProvider)
+Services.ItemFilter.itemStatProviders.add(wynnpoolScaleStatProvider)
 (event as? EventService)?.stopListener = JavaWrapper.methodToJava { ->
     Services.ItemFilter.itemStatProviders.remove(noriScaleStatProvider)
+    Services.ItemFilter.itemStatProviders.remove(wynnpoolScaleStatProvider)
 }
