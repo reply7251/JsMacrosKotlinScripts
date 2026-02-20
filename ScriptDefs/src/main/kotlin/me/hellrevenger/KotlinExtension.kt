@@ -4,6 +4,7 @@ package me.hellrevenger
 import me.hellrevenger.language.impl.CompilerSetting
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
+import me.hellrevenger.library.api.forceLoadTo
 import me.hellrevenger.library.impl.FEventListener
 import me.hellrevenger.library.impl.FRuntimeTransform
 import me.hellrevenger.library.impl.FScriptConfig
@@ -11,6 +12,7 @@ import me.hellrevenger.library.impl.FWrapper
 import me.hellrevenger.mixins.MixinMain
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
 import xyz.wagyourtail.jsmacros.client.api.library.impl.FClient
+import xyz.wagyourtail.jsmacros.client.api.library.impl.FWorld
 import xyz.wagyourtail.jsmacros.core.Core
 import xyz.wagyourtail.jsmacros.core.extensions.LanguageExtension
 import xyz.wagyourtail.jsmacros.core.extensions.LibraryExtension
@@ -28,6 +30,7 @@ import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 class KotlinExtension: LanguageExtension, LibraryExtension {
     companion object {
         lateinit var runner: Core<*,*>
+        lateinit var classLoader: ClassLoader
     }
 
     private var languageDefinition: KotlinLanguageDefinition? = null
@@ -35,6 +38,7 @@ class KotlinExtension: LanguageExtension, LibraryExtension {
     override fun getExtensionName() = "kotlin"
 
     override fun init(runner: Core<*,*>) {
+        classLoader = SimpleScriptConfiguration::class.java.classLoader
         KotlinExtension.runner = runner
         CompilerSetting.init(runner)
 
@@ -54,6 +58,9 @@ class KotlinExtension: LanguageExtension, LibraryExtension {
             }
             throw RuntimeException("Kotlin script failed:\n        ${reports.joinToString("\n        ")}", exceptions.firstOrNull())
         }
+
+        ClassPath::class.java.forceLoadTo(ClassLoader.getSystemClassLoader())
+
         MixinMain.mixins(runner)
     }
 
@@ -150,4 +157,5 @@ class KotlinExtension: LanguageExtension, LibraryExtension {
 object SharedLibraries {
     val Chat = FChat(KotlinExtension.runner)
     val Client = FClient(KotlinScriptContext(KotlinExtension.runner, null, null))
+    val World = FWorld(KotlinExtension.runner)
 }

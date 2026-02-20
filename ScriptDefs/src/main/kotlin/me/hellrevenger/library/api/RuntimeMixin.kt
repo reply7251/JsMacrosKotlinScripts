@@ -5,6 +5,9 @@ import com.sun.jna.NativeLibrary
 import com.sun.jna.ptr.IntByReference
 import com.sun.jna.ptr.PointerByReference
 import me.hellrevenger.SharedLibraries
+import me.hellrevenger.ctransform.SimpleFieldTarget
+import me.hellrevenger.ctransform.SimpleInvokeTarget
+import me.hellrevenger.ctransform.SimpleNewTarget
 import net.bytebuddy.ByteBuddy
 import net.bytebuddy.asm.Advice
 import net.bytebuddy.asm.AsmVisitorWrapper
@@ -13,6 +16,7 @@ import net.bytebuddy.description.method.MethodDescription
 import net.bytebuddy.description.modifier.Visibility
 import net.bytebuddy.description.type.TypeDescription
 import net.bytebuddy.dynamic.ClassFileLocator
+import net.bytebuddy.dynamic.DynamicType
 import net.bytebuddy.dynamic.Transformer.ForField
 import net.bytebuddy.dynamic.VisibilityBridgeStrategy
 import net.bytebuddy.dynamic.loading.ClassInjector
@@ -311,11 +315,10 @@ class RuntimeMixin {
 
             initClassInjector()
 
-            var builder = ByteBuddy()
+            var builder: DynamicType.Builder<*> = ByteBuddy()
                 .with(TypeValidation.DISABLED)
                 .with(VisibilityBridgeStrategy.Default.NEVER)
                 .redefine(targetClass, ClassFileLocator.ForInstrumentation.of(instrumentation, targetClass))
-
 
             getPublic(targetClass).forEach {
                 builder = builder.field(it).transform(ForField.withModifiers(Visibility.PUBLIC))
@@ -368,7 +371,13 @@ class RuntimeMixin {
             }
         }
 
-        fun createTransformManager() = TransformerManager(InstrumentationClassProvider(instrumentation))
+        fun createTransformManager() = TransformerManager(InstrumentationClassProvider(instrumentation)).apply {
+            addInjectionTarget(CTargetType.SIMPLE_INVOKE, SimpleInvokeTarget())
+            addInjectionTarget(CTargetType.SIMPLE_NEW, SimpleNewTarget())
+            addInjectionTarget(CTargetType.SIMPLE_FIELD, SimpleFieldTarget())
+            addInjectionTarget(CTargetType.SIMPLE_GET_FIELD, SimpleFieldTarget.getField())
+            addInjectionTarget(CTargetType.SIMPLE_PUT_FIELD, SimpleFieldTarget.putField())
+        }
 
         fun removeTransformManager(manager: TransformerManager) {
             instrumentation.removeTransformer(manager)

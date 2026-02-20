@@ -82,7 +82,8 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
                 ctx.runner.profile.logError(KotlinLanguageDefinition.KotlinRuntimeException(e, ctx.file))
             } finally {
                 ctx.releaseBoundEventIfPresent(Thread.currentThread())
-                ctx.unbindThread(Thread.currentThread())
+                if(Thread.currentThread() in ctx.boundThreads)
+                    ctx.unbindThread(Thread.currentThread())
 
                 ctx.runner.profile.joinedThreadStack.remove(Thread.currentThread())
             }
@@ -90,19 +91,7 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
     }
 
     private fun call(wrapped: () -> R): R {
-        try {
-            ctx.bindThread(Thread.currentThread())
-            if (ctx.runner.profile.checkJoinedThreadStack()) {
-                ctx.runner.profile.joinedThreadStack.add(Thread.currentThread())
-            }
-            return wrapped()
-        } catch (e: Throwable) {
-            throw KotlinLanguageDefinition.KotlinRuntimeException(e, ctx.file)
-        } finally {
-            ctx.releaseBoundEventIfPresent(Thread.currentThread())
-            ctx.unbindThread(Thread.currentThread())
-            ctx.runner.profile.joinedThreadStack.remove(Thread.currentThread())
-        }
+        return call2(wrapped)
     }
 
     private fun <R> call2(wrapped: () -> R): R {
@@ -116,7 +105,8 @@ class KotlinMethodWrapper<T, U, R>(ctx: BaseScriptContext<BasicJvmScriptingHost>
             throw KotlinLanguageDefinition.KotlinRuntimeException(e, ctx.file)
         } finally {
             ctx.releaseBoundEventIfPresent(Thread.currentThread())
-            ctx.unbindThread(Thread.currentThread())
+            if(Thread.currentThread() in ctx.boundThreads)
+                ctx.unbindThread(Thread.currentThread())
             ctx.runner.profile.joinedThreadStack.remove(Thread.currentThread())
         }
     }
