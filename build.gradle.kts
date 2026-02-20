@@ -1,7 +1,7 @@
 
 
 plugins {
-    kotlin("jvm") version "2.1.21-RC"
+    kotlin("jvm") version "2.3.0"
 }
 
 group = "me.hellrevenger"
