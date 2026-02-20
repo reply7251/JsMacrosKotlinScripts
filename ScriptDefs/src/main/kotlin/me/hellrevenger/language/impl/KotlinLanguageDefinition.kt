@@ -29,6 +29,34 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
     : BaseLanguage<BasicJvmScriptingHost, KotlinScriptContext>(extension, runner) {
     val externalClassPaths = mutableSetOf<File>()
 
+
+    val compileConfiguration by lazy {
+        val fakeContext = KotlinScriptContext(runner, null, null)
+        val libs = retrieveLibs(fakeContext)
+
+        ScriptCompilationConfiguration {
+            defaultImports(ImportJar::class, Import::class, ClassPath::class, EventType::class)
+            refineConfiguration {
+                beforeCompiling { context ->
+                    context.compilationConfiguration.with {
+
+                        if(!CompilerSetting.isK2Enabled()) {
+                            compilerOptions.append("-language-version=1.9")
+                        }
+                        compilerOptions.append("-Xno-call-assertions")
+                        compilerOptions.append("-Xno-param-assertions")
+                    }.asSuccess()
+                }
+            }
+
+            providedProperties.replaceOnlyDefault(mapOf(
+                "event" to KotlinType(BaseEvent::class, isNullable = true),
+                "file" to KotlinType(File::class, isNullable = true),
+                "context" to KotlinType(KotlinScriptContext::class)
+            ) + libs.mapValues { KotlinType(it.value::class) })
+        }
+    }
+
     fun internalExec(ctx: EventContainer<KotlinScriptContext>, event: BaseEvent?, rerun: Boolean = false, callback: (BasicJvmScriptingHost, ScriptCompilationConfiguration, ScriptEvaluationConfiguration) -> Unit) {
         val vars = mapOf(
             "event" to event,
@@ -38,16 +66,13 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
         val libs = retrieveLibs(ctx.ctx)
 
-        var K2 = CompilerSetting.isK2Enabled()
-
         val classLoader = KotlinExtension.classLoader
         Thread.currentThread().contextClassLoader = classLoader
         var dependencyUpdated = false
-        val compConf = (object : ScriptCompilationConfiguration(){}).with {
+        val compConf = compileConfiguration.with {
             jvm {
                 dependenciesFromClassloader(classLoader = classLoader, wholeClasspath = true)
             }
-            defaultImports(ImportJar::class, Import::class, ClassPath::class, EventType::class)
             refineConfiguration {
                 onAnnotations<ClassPath> { context ->
                     val annotations = context.collectedData?.get(ScriptCollectedData.foundAnnotations)
@@ -80,42 +105,21 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
                             if(externalClassPaths.add(it)) {
                                 println("new ExternalClassPath: ${it.absolutePath}")
                                 dependencyUpdated = true
-                                classLoader.addURL(URL("jar:file:${it.canonicalPath}!/"))
+//                                classLoader.addURL(URI("jar:${it.toURI().toURL()}!/").toURL())
+                                classLoader.addURL(it.toURI().toURL())
                             }
                         }
                     }
                     context.compilationConfiguration.asSuccess()
                 }
-                beforeCompiling { context ->
-                    context.script.text.split("\r?\n\r?".toRegex()).forEach {
-                        if(it.startsWith("//")) {
-                            val line = it.substring(2).replace(" ", "")
-                            if(line.lowercase().startsWith("k2=")) {
-                                K2 = line.substring("k2=".length).toBoolean()
-                            }
-                        }
-                    }
-                    context.compilationConfiguration.with {
-                        if(!K2) {
-                            compilerOptions.append("-language-version=1.9")
-                        }
-                        compilerOptions.append("-Xno-call-assertions")
-                        compilerOptions.append("-Xno-param-assertions")
-                    }.asSuccess()
-                }
             }
-
-            providedProperties.replaceOnlyDefault(mapOf(
-                "event" to KotlinType(if (event == null) BaseEvent::class else event::class, isNullable = true),
-                "file" to KotlinType(File::class, isNullable = true),
-                "context" to KotlinType(KotlinScriptContext::class)
-            ) + libs.mapValues { KotlinType(it.value::class) })
         }
 
-        val execConf = object : ScriptEvaluationConfiguration({
+        val execConf = ScriptEvaluationConfiguration {
             providedProperties(vars + libs)
 //            enableScriptsInstancesSharing()
-        }) {}
+        }
+
 
 
         val host = BasicJvmScriptingHost(
@@ -130,6 +134,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
             if (dependencyUpdated && !rerun) {
                 return internalExec(ctx, event, true, callback)
             }
+            ctx.ctx.closeContext()
             throw e
         }
     }

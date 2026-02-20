@@ -15,6 +15,7 @@ import net.lenni0451.classtransform.annotations.CInline
 import net.lenni0451.classtransform.annotations.CReplaceCallback
 import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.utils.ASMUtils
+import net.lenni0451.classtransform.utils.FailStrategy
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
@@ -48,6 +49,7 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
             addInjectionTarget(CTargetType.SIMPLE_FIELD, SimpleFieldTarget())
             addInjectionTarget(CTargetType.SIMPLE_GET_FIELD, SimpleFieldTarget.getField())
             addInjectionTarget(CTargetType.SIMPLE_PUT_FIELD, SimpleFieldTarget.putField())
+            failStrategy = FailStrategy.CANCEL
         }
         transformed = false
     }

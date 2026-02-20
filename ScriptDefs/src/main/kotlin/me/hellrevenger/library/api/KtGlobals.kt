@@ -28,6 +28,20 @@ object KtGlobals {
     @Suppress("UNCHECKED_CAST")
     fun <T> getVariable(name: String) = variables[name] as? T
 
+    fun <T> waitAndGetVariable(name: String): T {
+        synchronized(locks) {
+            getVariable<T>(name)?.let{
+                return it
+            }
+            while (true) {
+                locks.getOrPut(name) { Object() }.wait()
+                getVariable<T>(name)?.let{
+                    return it
+                }
+            }
+        }
+    }
+
     fun removeVariable(name: String) {
         synchronized(locks) {
             variables.remove(name)?.also { locks.remove(name) }
