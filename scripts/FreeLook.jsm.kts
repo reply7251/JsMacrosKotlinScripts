@@ -4,14 +4,17 @@ import me.hellrevenger.library.api._getField
 import kotlin.Pair
 import net.minecraft.class_4184
 
-
 if(!World.isWorldLoaded) {
     JsMacros.waitForEvent("ChunkLoad")
 }
 
 val offsetKey = "CameraOffset"
+val pitchFixersKey = "PitchOffsetFixer"
 
-KtGlobals.addVariable(offsetKey, mutableMapOf<String, () -> Pair<Float, Float>>())
+val offsets = mutableMapOf<String, () -> Pair<Float, Float>>()
+val pitchFixers = mutableMapOf<String, Pair<Int, (Float) -> Float>>()
+KtGlobals.addVariable(offsetKey, offsets)
+KtGlobals.addVariable(pitchFixersKey, pitchFixers)
 
 class MyCamera : class_4184() {
     var offsetPitch = 0f
@@ -30,7 +33,7 @@ class MyCamera : class_4184() {
         var offsetYaw = 0f
         var offsetPitch = 0f
 
-        KtGlobals.getVariable<Map<String, () -> Pair<Float, Float>>>(offsetKey)?.values?.forEach {
+        offsets.values.forEach {
             val p = it()
             offsetYaw += p.first
             offsetPitch += p.second
@@ -40,7 +43,11 @@ class MyCamera : class_4184() {
 
     override fun method_19325(yaw: Float, pitch: Float) {
         val offset = getOffset()
-        super.method_19325(yaw + offsetYaw + offset.first, pitch + offsetPitch + offset.second)
+        var fixedPitchOffset = offsetPitch
+
+        pitchFixers.values.sortedBy { it.first }.forEach { fixedPitchOffset = it.second(fixedPitchOffset) }
+
+        super.method_19325(yaw + offsetYaw + offset.first, pitch + fixedPitchOffset + offset.second)
     }
 }
 
