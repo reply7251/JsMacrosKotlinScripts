@@ -18,9 +18,9 @@ import net.lenni0451.classtransform.utils.ASMUtils
 import net.lenni0451.classtransform.utils.FailStrategy
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
-import xyz.wagyourtail.jsmacros.core.library.Library
-import xyz.wagyourtail.jsmacros.core.library.PerExecLibrary
+import com.jsmacrosce.jsmacros.core.language.BaseScriptContext
+import com.jsmacrosce.jsmacros.core.library.Library
+import com.jsmacrosce.jsmacros.core.library.PerExecLibrary
 import kotlin.reflect.KClass
 
 @Library(value = "RuntimeTransform", languages = [KotlinLanguageDefinition::class])

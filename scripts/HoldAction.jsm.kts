@@ -5,15 +5,15 @@ import net.lenni0451.classtransform.annotations.CTarget
 import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.annotations.injection.CInject
 import net.minecraft.class_2561
-import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
-import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
-import xyz.wagyourtail.jsmacros.client.api.helper.CommandContextHelper
-import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
-import xyz.wagyourtail.jsmacros.client.api.helper.screen.ClickableWidgetHelper
-import xyz.wagyourtail.jsmacros.client.api.helper.screen.SliderWidgetHelper
-import xyz.wagyourtail.jsmacros.core.event.BaseEvent
-import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
-import xyz.wagyourtail.jsmacros.core.language.EventContainer
+import com.jsmacrosce.jsmacros.client.api.classes.render.IScreen
+import com.jsmacrosce.jsmacros.client.api.classes.render.components.Text
+import com.jsmacrosce.jsmacros.client.api.helper.CommandContextHelper
+import com.jsmacrosce.jsmacros.client.api.helper.TextHelper
+import com.jsmacrosce.jsmacros.client.api.helper.screen.ClickableWidgetHelper
+import com.jsmacrosce.jsmacros.client.api.helper.screen.SliderWidgetHelper
+import com.jsmacrosce.jsmacros.core.event.BaseEvent
+import com.jsmacrosce.jsmacros.core.event.impl.EventCustom
+import com.jsmacrosce.jsmacros.core.language.EventContainer
 import kotlin.concurrent.thread
 import net.minecraft.class_310
 

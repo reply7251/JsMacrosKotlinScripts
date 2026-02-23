@@ -70,14 +70,14 @@ dependencies {
     implementation("org.ow2.asm:asm:9.7")
 
     implementation("net.fabricmc.fabric-api:fabric-api:0.100.4+1.21")
-    implementation(files("../scripts/libs/jars/jsmacros-1.21.4-2.0.0.jar"))
+    implementation(files("../scripts/libs/jars/jsmacrosce-1.21.11-fabric-2.0.0-2.0.0.jar"))
     implementation(files("../scripts/libs/jars/client-intermediary.jar"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 
 }
 
 tasks.processResources {
-    filesMatching("jsmacros.ext.kotlin.json") {
+    filesMatching("jsmacrosce.ext.kotlin.json") {
         expand(mapOf(
             "dependencies" to jsmacrosExtensionInclude.files.joinToString(" ") { it.name }
         ))

@@ -8,9 +8,9 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback
 import net.fabricmc.fabric.api.event.Event
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
-import xyz.wagyourtail.jsmacros.core.library.Library
-import xyz.wagyourtail.jsmacros.core.library.PerExecLibrary
+import com.jsmacrosce.jsmacros.core.language.BaseScriptContext
+import com.jsmacrosce.jsmacros.core.library.Library
+import com.jsmacrosce.jsmacros.core.library.PerExecLibrary
 
 
 val events = hashMapOf<Event<*>, HashMap<BaseScriptContext<*>, Any>>()

@@ -2,12 +2,12 @@ package me.hellrevenger
 
 import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.impl.*
-import xyz.wagyourtail.jsmacros.api.library.FJavaUtils
-import xyz.wagyourtail.jsmacros.api.library.FUtils
-import xyz.wagyourtail.jsmacros.client.api.library.impl.*
-import xyz.wagyourtail.jsmacros.core.event.BaseEvent
-import xyz.wagyourtail.jsmacros.core.library.Library
-import xyz.wagyourtail.jsmacros.core.library.impl.*
+import com.jsmacrosce.jsmacros.api.library.FJavaUtils
+import com.jsmacrosce.jsmacros.api.library.FUtils
+import com.jsmacrosce.jsmacros.client.api.library.impl.*
+import com.jsmacrosce.jsmacros.core.event.BaseEvent
+import com.jsmacrosce.jsmacros.core.library.Library
+import com.jsmacrosce.jsmacros.core.library.impl.*
 import java.io.File
 import kotlin.script.experimental.annotations.KotlinScript
 import kotlin.script.experimental.jvm.dependenciesFromCurrentContext

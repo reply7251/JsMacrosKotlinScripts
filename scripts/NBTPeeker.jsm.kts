@@ -1,14 +1,14 @@
 
 import me.hellrevenger.library.api.WorldPosWrapper
 import net.minecraft.class_332
-import xyz.wagyourtail.jsmacros.api.math.Pos3D
-import xyz.wagyourtail.jsmacros.client.api.classes.TextBuilder
-import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
-import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
-import xyz.wagyourtail.jsmacros.client.api.helper.CommandContextHelper
-import xyz.wagyourtail.jsmacros.client.api.helper.NBTElementHelper
-import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
-import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
+import com.jsmacrosce.jsmacros.api.math.Pos3D
+import com.jsmacrosce.jsmacros.client.api.classes.TextBuilder
+import com.jsmacrosce.jsmacros.client.api.classes.render.IScreen
+import com.jsmacrosce.jsmacros.client.api.classes.render.components.Text
+import com.jsmacrosce.jsmacros.client.api.helper.CommandContextHelper
+import com.jsmacrosce.jsmacros.client.api.helper.NBTElementHelper
+import com.jsmacrosce.jsmacros.client.api.helper.TextHelper
+import com.jsmacrosce.jsmacros.client.api.helper.world.entity.EntityHelper
 import kotlin.concurrent.thread
 import kotlin.math.ceil
 import net.minecraft.class_2487

@@ -3,9 +3,9 @@ package me.hellrevenger.library.impl
 import com.google.gson.GsonBuilder
 import me.hellrevenger.language.impl.IClosableContext
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
-import xyz.wagyourtail.jsmacros.core.library.Library
-import xyz.wagyourtail.jsmacros.core.library.PerExecLibrary
+import com.jsmacrosce.jsmacros.core.language.BaseScriptContext
+import com.jsmacrosce.jsmacros.core.library.Library
+import com.jsmacrosce.jsmacros.core.library.PerExecLibrary
 import java.io.File
 
 class ExtensionConfig(val folder: File, val fileName: String) {

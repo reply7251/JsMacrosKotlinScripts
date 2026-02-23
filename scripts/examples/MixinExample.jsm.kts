@@ -3,8 +3,8 @@ import net.lenni0451.classtransform.annotations.CInline
 import net.lenni0451.classtransform.annotations.CTarget
 import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.annotations.injection.CInject
-import xyz.wagyourtail.jsmacros.client.JsMacrosClient
-import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
+import com.jsmacrosce.jsmacros.client.JsMacrosClient
+import com.jsmacrosce.jsmacros.core.event.impl.EventCustom
 import net.minecraft.class_310
 
 @CTransformer(class_310::class)

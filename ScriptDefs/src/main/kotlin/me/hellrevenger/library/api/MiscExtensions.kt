@@ -3,9 +3,9 @@ package me.hellrevenger.library.api
 import me.hellrevenger.SharedLibraries
 import me.hellrevenger.language.impl.KotlinScriptContext
 import me.hellrevenger.library.impl.EventType
-import xyz.wagyourtail.jsmacros.client.api.classes.TextBuilder
-import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
-import xyz.wagyourtail.jsmacros.core.library.impl.FJsMacros
+import com.jsmacrosce.jsmacros.client.api.classes.TextBuilder
+import com.jsmacrosce.jsmacros.client.api.library.impl.FChat
+import com.jsmacrosce.jsmacros.core.library.impl.FJsMacros
 
 @Suppress("unused")
 object MiscExtensions {

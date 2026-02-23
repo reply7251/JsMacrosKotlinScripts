@@ -35,8 +35,8 @@ import net.lenni0451.classtransform.additionalclassprovider.InstrumentationClass
 import org.apache.commons.lang3.SystemUtils
 import org.objectweb.asm.Type
 import org.spongepowered.tools.agent.MixinAgent
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
-import xyz.wagyourtail.jsmacros.core.language.EventContainer
+import com.jsmacrosce.jsmacros.core.language.BaseScriptContext
+import com.jsmacrosce.jsmacros.core.language.EventContainer
 import java.io.File
 import java.lang.instrument.ClassDefinition
 import java.lang.instrument.ClassFileTransformer

@@ -2,16 +2,16 @@ package me.hellrevenger.library.api
 
 import net.minecraft.class_332
 import org.joml.Vector3d
-import xyz.wagyourtail.jsmacros.api.math.Pos3D
-import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw2D
-import xyz.wagyourtail.jsmacros.client.api.classes.render.components.RenderElement
-import xyz.wagyourtail.jsmacros.client.api.helper.world.entity.EntityHelper
+import com.jsmacrosce.jsmacros.api.math.Pos3D
+import com.jsmacrosce.jsmacros.client.api.classes.render.Draw2D
+import com.jsmacrosce.jsmacros.client.api.classes.render.components.RenderElement
+import com.jsmacrosce.jsmacros.client.api.helper.world.entity.EntityHelper
 import net.minecraft.class_310
 import net.minecraft.class_757
 import org.joml.Matrix4f
 import org.joml.Vector4f
 
-val mc get() = class_310.method_1551()
+val mc get() = class_310.method_1551()!!
 
 val methodFov = class_757::class.java.declaredMethods.first { it.name == "method_3196" }
 open class WorldPosWrapper(
@@ -48,7 +48,7 @@ open class WorldPosWrapper(
         val gameRenderer = mc.field_1773
 
         val cam = gameRenderer.method_19418()
-        camera = Pos3D(cam.method_19326())
+        camera = Pos3D(cam.method_71156())
 
         val fov = (mc.field_1690.method_41808().method_41753() as Int).toDouble().coerceAtLeast(getFov(cam, getDelta(), true))
         if (fov != lastFov) {
@@ -57,7 +57,7 @@ open class WorldPosWrapper(
             pitch = 1000f;
         }
 
-        val player = mc.field_1719?.let { EntityHelper.create(it) } ?: return
+        val player = mc.field_1724?.let { EntityHelper.create(it) } ?: return
         val cPitch = player.pitch
         val cYaw = player.yaw
         if (cPitch != pitch || cYaw != yaw) {
@@ -76,8 +76,7 @@ open class WorldPosWrapper(
         val bind = bindEntity
         var tmpPos = pos.sub(camera)
         if (bind != null) {
-
-            if (!bind.isAlive || bind.raw.method_37908() != mc.field_1687) {
+            if (!bind.isAlive || bind.raw.method_73183() != mc.field_1687) {
                 removed = true
                 parent?.removeElement(this)
                 return
@@ -99,11 +98,15 @@ open class WorldPosWrapper(
             (1.0 - clip.y() / clip.w()) / 2.0 * height,
             -clip.z() + zIndex * 0.001
         )
-
-        matrixStack.method_22903()
-        matrixStack.method_22904(clip2.x(), clip2.y(), clip2.z())
+        matrixStack.pushMatrix()
+        matrixStack.translate(clip2.x().toFloat(), clip2.y().toFloat())
         draw2d.render(context)
-        matrixStack.method_22909()
+        matrixStack.popMatrix()
+
+//        matrixStack.method_22903()
+//        matrixStack.method_22904(clip2.x(), clip2.y(), clip2.z())
+//        draw2d.render(context)
+//        matrixStack.method_22909()
     }
 
     open fun bind(entity: EntityHelper<*>?): WorldPosWrapper {

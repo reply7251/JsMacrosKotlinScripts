@@ -1,9 +1,9 @@
 package me.hellrevenger.language.impl
 
-import xyz.wagyourtail.jsmacros.core.Core
-import xyz.wagyourtail.jsmacros.core.event.BaseEvent
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
-import xyz.wagyourtail.jsmacros.core.service.ServiceManager
+import com.jsmacrosce.jsmacros.core.Core
+import com.jsmacrosce.jsmacros.core.event.BaseEvent
+import com.jsmacrosce.jsmacros.core.language.BaseScriptContext
+import com.jsmacrosce.jsmacros.core.service.ServiceManager
 import java.io.File
 import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 

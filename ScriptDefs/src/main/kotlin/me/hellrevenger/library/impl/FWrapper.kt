@@ -2,13 +2,13 @@ package me.hellrevenger.library.impl
 
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
-import xyz.wagyourtail.jsmacros.core.Core
-import xyz.wagyourtail.jsmacros.core.MethodWrapper
-import xyz.wagyourtail.jsmacros.core.language.BaseLanguage
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
-import xyz.wagyourtail.jsmacros.core.library.IFWrapper
-import xyz.wagyourtail.jsmacros.core.library.Library
-import xyz.wagyourtail.jsmacros.core.library.PerExecLanguageLibrary
+import com.jsmacrosce.jsmacros.core.Core
+import com.jsmacrosce.jsmacros.core.MethodWrapper
+import com.jsmacrosce.jsmacros.core.language.BaseLanguage
+import com.jsmacrosce.jsmacros.core.language.BaseScriptContext
+import com.jsmacrosce.jsmacros.core.library.IFWrapper
+import com.jsmacrosce.jsmacros.core.library.Library
+import com.jsmacrosce.jsmacros.core.library.PerExecLanguageLibrary
 import kotlin.concurrent.thread
 import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 

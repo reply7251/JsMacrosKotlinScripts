@@ -7,7 +7,7 @@ import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.annotations.injection.CInject
 import net.lenni0451.classtransform.annotations.injection.CRedirect
 import net.minecraft.class_310
-import xyz.wagyourtail.jsmacros.client.api.library.impl.FChat
+import com.jsmacrosce.jsmacros.client.api.library.impl.FChat
 
 object MixinCallback {
     var callback = {}

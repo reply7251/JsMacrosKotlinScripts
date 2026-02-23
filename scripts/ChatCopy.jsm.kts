@@ -13,7 +13,8 @@ import org.lwjgl.glfw.GLFW
 import kotlin.math.floor
 import net.minecraft.class_303.class_7590
 import net.minecraft.class_303
-import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
+import com.jsmacrosce.jsmacros.client.api.helper.TextHelper
+import net.minecraft.class_12225
 
 if(!World.isWorldLoaded) {
     JsMacros.waitUntilWorldLoaded()
@@ -68,12 +69,14 @@ fun getMessageAt(x: Double, y: Double): class_2561? {
     val chatHud = mc.field_1705.method_1743()
     val windowHeight = mc.method_22683().method_4502()
 
-    val scale = chatHud.method_1814()
+
+
+    val scale = chatHud._invokePrivate<Double>("method_1814", arrayOf())!!
 //    val chatX = x / scale - 4
     val chatY = y / scale
 
     val chatBottomY = floor((windowHeight - 40) / scale).toInt()
-    val chatTopY = chatBottomY - chatHud.method_1810()
+    val chatTopY = chatBottomY - chatHud._invokePrivate<Int>("method_1810", arrayOf())!!
 
     if (chatY < chatTopY || chatY > chatBottomY) {
         return null

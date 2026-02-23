@@ -2,7 +2,7 @@ package me.hellrevenger.mixins
 
 import net.bytebuddy.asm.Advice
 import net.bytebuddy.implementation.bytecode.assign.Assigner
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.EventNameChange
+import com.jsmacrosce.jsmacros.client.api.event.impl.world.EventNameChange
 import net.minecraft.class_8113
 import net.minecraft.class_2561
 import net.minecraft.class_2940

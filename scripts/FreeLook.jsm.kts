@@ -1,6 +1,7 @@
 
 import me.hellrevenger.library.api.KtGlobals
 import me.hellrevenger.library.api._getField
+import net.minecraft.class_1297
 import kotlin.Pair
 import net.minecraft.class_4184
 
@@ -94,6 +95,10 @@ EventListener(EventType.Key) {
 
 var cameraOfRenderer by renderer._getField<class_4184>("field_18765")
 val oldCamera = cameraOfRenderer
+val oldFocusedEntity by oldCamera!!._getField<class_1297>("field_18711")
+var focusedEntity by camera._getField<class_1297>("field_18711")
+focusedEntity = oldFocusedEntity
+
 cameraOfRenderer = camera
 
 context.onContextClosed {

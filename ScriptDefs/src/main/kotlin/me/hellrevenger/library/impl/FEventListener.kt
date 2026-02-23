@@ -2,19 +2,19 @@ package me.hellrevenger.library.impl
 
 import me.hellrevenger.language.impl.KotlinLanguageDefinition
 import me.hellrevenger.language.impl.KotlinScriptContext
-import xyz.wagyourtail.jsmacros.client.api.event.impl.*
-import xyz.wagyourtail.jsmacros.client.api.event.impl.inventory.*
-import xyz.wagyourtail.jsmacros.client.api.event.impl.player.*
-import xyz.wagyourtail.jsmacros.client.api.event.impl.world.*
-import xyz.wagyourtail.jsmacros.core.event.BaseEvent
-import xyz.wagyourtail.jsmacros.core.event.Event
-import xyz.wagyourtail.jsmacros.core.event.IEventListener
-import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
-import xyz.wagyourtail.jsmacros.core.language.BaseScriptContext
-import xyz.wagyourtail.jsmacros.core.language.EventContainer
-import xyz.wagyourtail.jsmacros.core.library.Library
-import xyz.wagyourtail.jsmacros.core.library.PerExecLibrary
-import xyz.wagyourtail.jsmacros.core.service.EventService
+import com.jsmacrosce.jsmacros.client.api.event.impl.*
+import com.jsmacrosce.jsmacros.client.api.event.impl.inventory.*
+import com.jsmacrosce.jsmacros.client.api.event.impl.player.*
+import com.jsmacrosce.jsmacros.client.api.event.impl.world.*
+import com.jsmacrosce.jsmacros.core.event.BaseEvent
+import com.jsmacrosce.jsmacros.core.event.Event
+import com.jsmacrosce.jsmacros.core.event.IEventListener
+import com.jsmacrosce.jsmacros.core.event.impl.EventCustom
+import com.jsmacrosce.jsmacros.core.language.BaseScriptContext
+import com.jsmacrosce.jsmacros.core.language.EventContainer
+import com.jsmacrosce.jsmacros.core.library.Library
+import com.jsmacrosce.jsmacros.core.library.PerExecLibrary
+import com.jsmacrosce.jsmacros.core.service.EventService
 import kotlin.concurrent.thread
 
 @Library(value = "EventListener", languages = [KotlinLanguageDefinition::class])
@@ -109,8 +109,9 @@ class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, private val even
     init {
         context.runner.eventRegistry.addListener(eventName, this)
         context.eventListeners[this] = eventName
-
-        (context.triggeringEvent as? EventService)?.unregisterOnStop(true)
+        (context as? KotlinScriptContext)?.onContextClosed {
+            context.runner.eventRegistry.removeListener(eventName, this)
+        }
     }
 
     override fun joined() = joined
