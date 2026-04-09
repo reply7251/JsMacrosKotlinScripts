@@ -23,14 +23,18 @@ fun Class<*>.getBytes(): ByteArray {
     return BasicClassProvider(this.classLoader).getClass(this.name)
 }
 
-fun Class<*>.forceLoadTo(classLoader: ClassLoader) {
-    val bytes = this.getBytes()
+fun forceLoadTo(name: String, bytes: ByteArray, classLoader: ClassLoader) {
     classLoader._invokePrivate<Class<*>>("defineClass", arrayOf(
-        this.name,
+        name,
         bytes,
         0,
         bytes.size
     ))
+}
+
+fun Class<*>.forceLoadTo(classLoader: ClassLoader) {
+    val bytes = this.getBytes()
+    forceLoadTo(this.name, bytes, classLoader)
 }
 
 fun findField(clazz: Class<*>, name: String): Field {

@@ -14,8 +14,8 @@ if "%dest:~-8%" == "jsMacros" (
 	rmdir kotlin
 	mklink /D kotlin "%project%/scripts"
 	cd ../Extensions
-	del ScriptDefs.jar
-	mklink /H ScriptDefs.jar "%project%/ScriptDefs/build/libs/ScriptDefs.jar"
+	del KotlinScriptLoader.jar
+	mklink /H KotlinScriptLoader.jar "%project%/KotlinScriptLoader/build/libs/KotlinScriptLoader.jar"
 	echo =================
 	echo ==== success ====
 	echo =================

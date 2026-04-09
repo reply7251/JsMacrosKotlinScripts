@@ -10,7 +10,6 @@ import me.hellrevenger.library.api.CTargetType
 import me.hellrevenger.library.api.getBytes
 import me.hellrevenger.library.api.instrumentation
 import net.lenni0451.classtransform.TransformerManager
-import net.lenni0451.classtransform.additionalclassprovider.InstrumentationClassProvider
 import net.lenni0451.classtransform.annotations.CInline
 import net.lenni0451.classtransform.annotations.CReplaceCallback
 import net.lenni0451.classtransform.annotations.CTransformer
@@ -21,12 +20,15 @@ import org.objectweb.asm.tree.ClassNode
 import com.jsmacrosce.jsmacros.core.language.BaseScriptContext
 import com.jsmacrosce.jsmacros.core.library.Library
 import com.jsmacrosce.jsmacros.core.library.PerExecLibrary
+import me.hellrevenger.mixins.MixinClassLoaderCallback
+import net.lenni0451.classtransform.utils.tree.BasicClassProvider
 import kotlin.reflect.KClass
 
 @Library(value = "RuntimeTransform", languages = [KotlinLanguageDefinition::class])
 class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(context) {
     private var manager: TransformerManager? = null
     private var transformed = false
+    val forceLoadedClasses = mutableSetOf<String>()
 
     fun init() {
         if(manager == null) {
@@ -39,7 +41,7 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
         } else {
             disposed()
         }
-        setManager(TransformerManager(InstrumentationClassProvider(instrumentation)))
+        setManager(TransformerManager(BasicClassProvider()))
     }
 
     fun setManager(manager: TransformerManager) {
@@ -66,6 +68,10 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
     }
 
     fun addTransformer(transformer: KClass<*>) {
+        try {
+            val callback = transformer.java.classLoader.loadClass(transformer.java.name + "Callback")
+            forceLoad(callback)
+        } catch (e: Exception) {}
         addTransformer(ASMUtils.fromBytes(transformer.java.getBytes()))
     }
 
@@ -96,6 +102,15 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
         }
     }
 
+    fun forceLoad(clazz: KClass<*>) {
+        forceLoad(clazz.java)
+    }
+
+    fun forceLoad(clazz: Class<*>) {
+        forceLoadedClasses.add(clazz.name)
+        MixinClassLoaderCallback.forceLoadedClasses[clazz.name] = clazz
+    }
+
     fun disposed() {
         manager?.let { manager ->
             instrumentation.removeTransformer(manager)
@@ -104,6 +119,10 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
                     manager.transformedClasses.contains(it.name)
                 }.toTypedArray())
             }
+            forceLoadedClasses.forEach {
+                MixinClassLoaderCallback.forceLoadedClasses.remove(it)
+            }
+            forceLoadedClasses.clear()
         }
         transformed = false
     }

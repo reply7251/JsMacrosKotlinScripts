@@ -1,7 +1,6 @@
 package me.hellrevenger.library.impl
 
-import me.hellrevenger.language.impl.KotlinLanguageDefinition
-import me.hellrevenger.language.impl.KotlinScriptContext
+import com.jsmacrosce.jsmacros.client.JsMacrosClient
 import com.jsmacrosce.jsmacros.client.api.event.impl.*
 import com.jsmacrosce.jsmacros.client.api.event.impl.inventory.*
 import com.jsmacrosce.jsmacros.client.api.event.impl.player.*
@@ -14,7 +13,8 @@ import com.jsmacrosce.jsmacros.core.language.BaseScriptContext
 import com.jsmacrosce.jsmacros.core.language.EventContainer
 import com.jsmacrosce.jsmacros.core.library.Library
 import com.jsmacrosce.jsmacros.core.library.PerExecLibrary
-import com.jsmacrosce.jsmacros.core.service.EventService
+import me.hellrevenger.language.impl.KotlinLanguageDefinition
+import me.hellrevenger.language.impl.KotlinScriptContext
 import kotlin.concurrent.thread
 
 @Library(value = "EventListener", languages = [KotlinLanguageDefinition::class])
@@ -100,6 +100,8 @@ sealed class EventType<T>(val clazz: Class<T>) {
     data object Tick: EventType<EventTick>(EventTick::class.java)
     data object Title: EventType<EventTitle>(EventTitle::class.java)
 
+    data object GameLoad : EventType<EventGameLoad>(EventGameLoad::class.java)
+
     override fun toString(): String {
         return clazz.getAnnotation(Event::class.java)?.value ?: clazz.name
     }
@@ -143,3 +145,6 @@ class Listener<T: BaseEvent>(val context: BaseScriptContext<*>, private val even
         context.runner.eventRegistry.removeListener(eventName, this)
     }
 }
+
+@Event("GameLoad")
+object EventGameLoad : BaseEvent(JsMacrosClient.clientCore)

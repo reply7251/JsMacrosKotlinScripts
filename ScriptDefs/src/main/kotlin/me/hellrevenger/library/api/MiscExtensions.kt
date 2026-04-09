@@ -14,6 +14,12 @@ object MiscExtensions {
             this.toast(title, content)
     }
 
+    fun FJsMacros.waitUntilGameLoaded() {
+        if (!SharedLibraries.Client.minecraft.method_53466()) {
+            waitForEvent(EventType.GameLoad)
+        }
+    }
+
     fun FJsMacros.waitUntilWorldLoaded() {
         if (!SharedLibraries.World.isWorldLoaded) {
             waitForEvent(EventType.ChunkLoad)

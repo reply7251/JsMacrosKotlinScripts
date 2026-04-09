@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/KotlinScriptLoader" />
             <option value="$PROJECT_DIR$/ScriptDefs" />
           </set>
         </option>

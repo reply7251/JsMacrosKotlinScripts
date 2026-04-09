@@ -15,6 +15,7 @@ import net.minecraft.class_303.class_7590
 import net.minecraft.class_303
 import com.jsmacrosce.jsmacros.client.api.helper.TextHelper
 import net.minecraft.class_12225
+import net.minecraft.class_327
 
 if(!World.isWorldLoaded) {
     JsMacros.waitUntilWorldLoaded()
@@ -29,40 +30,34 @@ object TransformCallback {
 
 @CTransformer(class_338::class)
 class TransformChatHud {
-    @CInject(method = ["method_27146"], target = [CTarget(CTargetType.HEAD)], cancellable = true)
-    fun onClicked(mouseX: Double, mouseY: Double, cir: InjectionCallback) {
+    @CInject(method = ["method_75804"], target = [CTarget(CTargetType.HEAD)], cancellable = true)
+    fun onRender(context: class_332, textRenderer: class_327, currentTick: Int, mouseX: Int, mouseY: Int, interactable: Boolean, idk: Boolean, cir: InjectionCallback) {
         try {
-            if(TransformCallback.clicked(mouseX, mouseY)) {
-                cir.returnValue = true
+            if(interactable) {
+                TransformCallback.clicked(mouseX.toDouble(), mouseY.toDouble())
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-    @CInject(method = ["method_1805"], target = [CTarget(CTargetType.HEAD)])
-    fun onRender(context: class_332, currentTick: Int, mouseX: Int, mouseY: Int, focused: Boolean) {
-        try {
-            TransformCallback.onRender(context, currentTick, mouseX, mouseY, focused)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    @CInject(method = ["method_1816"], target = [CTarget(CTargetType.HEAD)], cancellable = true)
-    fun onGetStyle(cir: InjectionCallback) {
-        try {
-            if(TransformCallback.getStyle()) {
-                cir.returnValue = null
-            }
+            TransformCallback.onRender(context, currentTick, mouseX, mouseY, interactable)
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
 }
 
+@CTransformer(class_12225.class_12226::class)
+class TransformClickHandler {
+    @CInject(method = ["method_75777"], target = [CTarget(CTargetType.HEAD)], cancellable = true)
+    fun onGetStyle(cir: InjectionCallback) {
+        if (TransformCallback.getStyle()) {
+            cir.returnValue = null
+        }
+    }
+}
 
-fun isKeyDown(keyCode: Int) = GLFW.glfwGetKey(Client.minecraft.method_22683().method_4490(), keyCode) == 1
+fun getWindow() = Client.minecraft.method_22683().method_4490()
+fun isKeyDown(keyCode: Int) = GLFW.glfwGetKey(getWindow(), keyCode) == GLFW.GLFW_PRESS
 fun isCtrlDown() = isKeyDown(GLFW.GLFW_KEY_LEFT_CONTROL)
+fun isShiftDown() = isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT) || isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT)
+fun isMouseDown() = GLFW.glfwGetMouseButton(getWindow(), GLFW.GLFW_MOUSE_BUTTON_LEFT) == GLFW.GLFW_PRESS
 
 fun getMessageAt(x: Double, y: Double): class_2561? {
     val mc = Client.minecraft
@@ -120,24 +115,29 @@ fun getMessageAtV2(x: Double, y: Double): class_2561? {
     }
     return null
 }
-
+var lastClicked = ""
 TransformCallback.clicked = callback@ { mouseX, mouseY ->
-    if(isCtrlDown()) {
+    if(isMouseDown() && isCtrlDown()) {
         getMessageAt(mouseX, mouseY)?.let {
-            Client.minecraft.field_1774.method_1455(TextHelper.wrap(it).json)
+            val newClipboard = if (isShiftDown()) TextHelper.wrap(it).json else it.string
+            if (newClipboard != lastClicked) {
+                Client.minecraft.field_1774.method_1455(newClipboard)
+                lastClicked = newClipboard
+            }
             return@callback true
         }
     }
     false
 }
 
-TransformCallback.onRender = { context: class_332, tick: Int, mouseX: Int, mouseY: Int, focused: Boolean ->
+TransformCallback.onRender = { context: class_332, tick: Int, mouseX: Int, mouseY: Int, interactable: Boolean ->
     if(isCtrlDown()) {
         getMessageAt(mouseX.toDouble(), mouseY.toDouble())?.let {
-            val text = if(Client.minecraft.field_1774.method_1460() == TextHelper.wrap(it).json)
+            val text = if(Client.minecraft.field_1774.method_1460() == if (isShiftDown()) TextHelper.wrap(it).json else it.string)
                 "Copied to clipboard!"
-            else
-                "Click to copy"
+            else if (isShiftDown())
+                "Click to copy json"
+            else "Click to copy string"
 
             context.method_51438(Client.minecraft.field_1772, class_2561.method_43470(text), mouseX, mouseY)
         }
@@ -147,5 +147,7 @@ TransformCallback.onRender = { context: class_332, tick: Int, mouseX: Int, mouse
 TransformCallback.getStyle = ::isCtrlDown
 
 RuntimeTransform.init()
+RuntimeTransform.forceLoad(TransformCallback::class)
 RuntimeTransform.addTransformer(TransformChatHud::class)
+RuntimeTransform.addTransformer(TransformClickHandler::class)
 RuntimeTransform.transform()

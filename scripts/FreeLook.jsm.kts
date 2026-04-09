@@ -1,18 +1,21 @@
 
 import me.hellrevenger.library.api.KtGlobals
+import me.hellrevenger.library.api.MiscExtensions.waitUntilGameLoaded
 import me.hellrevenger.library.api._getField
 import net.minecraft.class_1297
 import kotlin.Pair
 import net.minecraft.class_4184
 
-if(!World.isWorldLoaded) {
-    JsMacros.waitForEvent("ChunkLoad")
-}
+
+//while(Client.minecraft.field_1773 == null) {
+//    Time.sleep(1000)
+//}
+JsMacros.waitUntilGameLoaded()
 
 val offsetKey = "CameraOffset"
 val pitchFixersKey = "PitchOffsetFixer"
 
-val offsets = mutableMapOf<String, () -> Pair<Float, Float>>()
+val offsets = mutableMapOf<String, (Float) -> Pair<Float, Float>>()
 val pitchFixers = mutableMapOf<String, Pair<Int, (Float) -> Float>>()
 KtGlobals.addVariable(offsetKey, offsets)
 KtGlobals.addVariable(pitchFixersKey, pitchFixers)
@@ -33,9 +36,10 @@ class MyCamera : class_4184() {
     fun getOffset(): Pair<Float, Float> {
         var offsetYaw = 0f
         var offsetPitch = 0f
+        val delta = method_55437()
 
         offsets.values.forEach {
-            val p = it()
+            val p = it(delta)
             offsetYaw += p.first
             offsetPitch += p.second
         }

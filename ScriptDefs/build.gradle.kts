@@ -74,6 +74,8 @@ dependencies {
     implementation(files("../scripts/libs/jars/client-intermediary.jar"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 
+    jsmacrosExtensionInclude.exclude("org.ow2.asm")
+    jsmacrosExtensionInclude.exclude("org.objectweb.asm")
 }
 
 tasks.processResources {
@@ -86,6 +88,13 @@ tasks.processResources {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.compileKotlin {
+    compilerOptions.freeCompilerArgs.addAll(
+        "-Xno-call-assertions",
+        "-Xno-param-assertions"
+    )
 }
 
 tasks.jar {
