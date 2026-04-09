@@ -141,7 +141,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
     override fun exec(ctx: EventContainer<KotlinScriptContext>, p1: ScriptTrigger, event: BaseEvent) {
         internalExec(ctx, event) { host, compConf, evalConf ->
-            val ret = host.eval(ctx.ctx.file!!.toIncrementalScriptSource(), compConf, evalConf)
+            val ret = host.eval(ctx.ctx.file!!.toScriptSource(), compConf, evalConf)
             ret.onFailure {
                 throw KotlinCompileException(it)
             }
@@ -294,16 +294,4 @@ class MyJvmGetScriptingClass(val myClassLoader: ClassLoader) : GetScriptingClass
     override fun hashCode(): Int {
         return dependencies.hashCode() + 23 * classLoader.hashCode() + 37 * baseClassLoader.hashCode()
     }
-}
-
-class NamedFileScriptSource(
-    override val name: String, file: File
-) : FileScriptSource(file)
-
-var incrementalScriptSourceCounter = 1L
-fun File.toIncrementalScriptSource(): NamedFileScriptSource {
-    val name = if(this.nameWithoutExtension.endsWith(".jsm"))
-        this.nameWithoutExtension.substringBeforeLast(".")
-    else this.name
-    return NamedFileScriptSource("${name}.${incrementalScriptSourceCounter}.jsm.kts", this)
 }
