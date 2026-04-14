@@ -13,6 +13,7 @@ import com.jsmacrosce.jsmacros.core.extensions.Extension
 import com.jsmacrosce.jsmacros.core.extensions.ExtensionClassLoader
 import com.jsmacrosce.jsmacros.core.language.BaseLanguage
 import com.jsmacrosce.jsmacros.core.language.EventContainer
+import me.hellrevenger.library.api._getPrivateMethod
 import java.io.File
 import java.net.URL
 import java.net.URLClassLoader
@@ -25,16 +26,30 @@ import kotlin.script.experimental.host.*
 import kotlin.script.experimental.jvm.*
 import kotlin.script.experimental.jvmhost.BasicJvmScriptingHost
 
-class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
+class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>)
     : BaseLanguage<BasicJvmScriptingHost, KotlinScriptContext>(extension, runner) {
     val externalClassPaths = mutableSetOf<File>()
 
+    val addUrlImpl by lazy {
+        val classLoader = KotlinExtension.classLoader
+
+        val callback: (URL) -> Unit = classLoader._getPrivateMethod("addUrlFwd", listOf(URL::class.java)).let { method ->
+            method.trySetAccessible()
+            return@let { url ->
+                method.invoke(classLoader, url)
+            }
+        }
+        callback
+    }
+
+    val dependencyUpdatedMap = mutableMapOf<File, Boolean>()
 
     val compileConfiguration by lazy {
         val fakeContext = KotlinScriptContext(runner, null, null)
         val libs = retrieveLibs(fakeContext)
 
         ScriptCompilationConfiguration {
+
             defaultImports(ImportJar::class, Import::class, ClassPath::class, EventType::class)
             refineConfiguration {
                 beforeCompiling { context ->
@@ -54,6 +69,46 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
                 "file" to KotlinType(File::class, isNullable = true),
                 "context" to KotlinType(KotlinScriptContext::class)
             ) + libs.mapValues { KotlinType(it.value::class) })
+
+            refineConfiguration {
+                onAnnotations<ClassPath> { context ->
+                    val annotations = context.collectedData?.get(ScriptCollectedData.foundAnnotations)
+                        ?.takeIf { it.isNotEmpty() }
+                        ?: return@onAnnotations context.compilationConfiguration.asSuccess()
+
+                    val file = (context.script as? FileBasedScriptSource)?.file
+                        ?: return@onAnnotations context.compilationConfiguration.asSuccess()
+                    val scriptBaseDir = file.parentFile
+
+                    val files = annotations.mapNotNull {
+                        (it as? ClassPath)?.path ?: run {
+                            try {
+                                it._invokePrivate<Array<String>>("path", arrayOf())
+                            } catch (e: Exception) {
+                                null
+                            }
+                        }
+                    }.flatMap { it.toList() }
+                        .filter { it.endsWith(".jar") }
+                        .mapNotNull {
+                            var f = scriptBaseDir.resolve(it).normalize()
+                            if(f.exists()) f
+                            else {
+                                f = File(context.script.locationId?.let { it1 -> File(it1).parentFile }, it)
+                                if(f.exists()) f
+                                else null
+                            }
+                        }
+                    files.forEach {
+                        if(externalClassPaths.add(it)) {
+                            println("new ExternalClassPath: ${it.absolutePath}")
+                            dependencyUpdatedMap[file] = true
+                            addUrlImpl(it.toURI().toURL())
+                        }
+                    }
+                    context.compilationConfiguration.asSuccess()
+                }
+            }
         }
     }
 
@@ -68,50 +123,9 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 
         val classLoader = KotlinExtension.classLoader
         Thread.currentThread().contextClassLoader = classLoader
-        var dependencyUpdated = false
         val compConf = compileConfiguration.with {
             jvm {
-                dependenciesFromClassloader(classLoader = classLoader, wholeClasspath = true)
-            }
-            refineConfiguration {
-                onAnnotations<ClassPath> { context ->
-                    val annotations = context.collectedData?.get(ScriptCollectedData.foundAnnotations)
-                        ?.takeIf { it.isNotEmpty() }
-                        ?: return@onAnnotations context.compilationConfiguration.asSuccess()
-
-                    val scriptBaseDir = (context.script as? FileBasedScriptSource)?.file?.parentFile
-
-                    val files = annotations.mapNotNull {
-                        (it as? ClassPath)?.path ?: run {
-                            try {
-                                it._invokePrivate<Array<String>>("path", arrayOf())
-                            } catch (e: Exception) {
-                                null
-                            }
-                        }
-                    }.flatMap { it.toList() }
-                        .filter { it.endsWith(".jar") }
-                        .mapNotNull {
-                            var f = (scriptBaseDir?.resolve(it) ?: File(it)).normalize()
-                            if(f.exists()) f
-                            else {
-                                f = File(context.script.locationId?.let { it1 -> File(it1).parentFile }, it)
-                                if(f.exists()) f
-                                else null
-                            }
-                        }
-                    (ctx.ctx.javaClass.classLoader as? ExtensionClassLoader)?.let { classLoader ->
-                        files.forEach {
-                            if(externalClassPaths.add(it)) {
-                                println("new ExternalClassPath: ${it.absolutePath}")
-                                dependencyUpdated = true
-//                                classLoader.addURL(URI("jar:${it.toURI().toURL()}!/").toURL())
-                                classLoader.addURL(it.toURI().toURL())
-                            }
-                        }
-                    }
-                    context.compilationConfiguration.asSuccess()
-                }
+                dependenciesFromClassloader(classLoader = KotlinExtension.classLoader, wholeClasspath = true)
             }
         }
 
@@ -120,22 +134,33 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>?)
 //            enableScriptsInstancesSharing()
         }
 
-
-
         val host = BasicJvmScriptingHost(
             ScriptingHostConfiguration()
                 .withDefaultsFrom(defaultJvmScriptingHostConfiguration)
         )
-
-        try {
-            callback(host, compConf, execConf)
-            ctx.ctx.context = host
-        } catch(e: KotlinCompileException) {
-            if (dependencyUpdated && !rerun) {
-                return internalExec(ctx, event, true, callback)
+        val file = ctx.ctx.file
+        if (file != null) {
+            dependencyUpdatedMap[file] = false
+            try {
+                callback(host, compConf, execConf)
+                ctx.ctx.context = host
+            } catch(e: KotlinCompileException) {
+                if (dependencyUpdatedMap[file] == true && !rerun) {
+                    return internalExec(ctx, event, true, callback)
+                }
+                ctx.ctx.closeContext()
+                throw e
+            } finally {
+                dependencyUpdatedMap.remove(file)
             }
-            ctx.ctx.closeContext()
-            throw e
+        } else {
+            try {
+                callback(host, compConf, execConf)
+                ctx.ctx.context = host
+            } catch(e: KotlinCompileException) {
+                ctx.ctx.closeContext()
+                throw e
+            }
         }
     }
 
@@ -294,4 +319,16 @@ class MyJvmGetScriptingClass(val myClassLoader: ClassLoader) : GetScriptingClass
     override fun hashCode(): Int {
         return dependencies.hashCode() + 23 * classLoader.hashCode() + 37 * baseClassLoader.hashCode()
     }
+}
+
+class NamedFileScriptSource(
+    override val name: String, file: File
+) : FileScriptSource(file)
+
+var incrementalScriptSourceCounter = 1L
+fun File.toIncrementalScriptSource(): NamedFileScriptSource {
+    val name = if(this.nameWithoutExtension.endsWith(".jsm"))
+        this.nameWithoutExtension.substringBeforeLast(".")
+    else this.name
+    return NamedFileScriptSource("${name}.${incrementalScriptSourceCounter}.jsm.kts", this)
 }

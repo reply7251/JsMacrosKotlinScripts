@@ -147,7 +147,6 @@ TransformCallback.onRender = { context: class_332, tick: Int, mouseX: Int, mouse
 TransformCallback.getStyle = ::isCtrlDown
 
 RuntimeTransform.init()
-RuntimeTransform.forceLoad(TransformCallback::class)
 RuntimeTransform.addTransformer(TransformChatHud::class)
 RuntimeTransform.addTransformer(TransformClickHandler::class)
 RuntimeTransform.transform()

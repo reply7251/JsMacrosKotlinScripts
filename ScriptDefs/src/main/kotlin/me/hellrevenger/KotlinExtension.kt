@@ -76,7 +76,7 @@ class KotlinExtension: LanguageExtension, LibraryExtension {
 
     override fun defaultFileExtension() = "kts"
 
-    override fun getLanguage(core: Core<*, *>?): BaseLanguage<*, *> {
+    override fun getLanguage(core: Core<*, *>): BaseLanguage<*, *> {
         if (languageDefinition == null) {
             val classLoader: ClassLoader = Thread.currentThread().contextClassLoader
             Thread.currentThread().contextClassLoader = KotlinExtension::class.java.classLoader
