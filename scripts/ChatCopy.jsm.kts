@@ -1,152 +1,125 @@
-import me.hellrevenger.library.api.CTargetType
-import me.hellrevenger.library.api.MiscExtensions.waitUntilWorldLoaded
-import me.hellrevenger.library.api._getPrivateValue
-import me.hellrevenger.library.api._invokePrivate
+
+import me.hellrevenger.jsmacroskotlinscript.script.library.api.CTargetType
 import net.lenni0451.classtransform.InjectionCallback
 import net.lenni0451.classtransform.annotations.CTarget
 import net.lenni0451.classtransform.annotations.CTransformer
 import net.lenni0451.classtransform.annotations.injection.CInject
-import net.minecraft.class_2561
-import net.minecraft.class_338
-import net.minecraft.class_332
 import org.lwjgl.glfw.GLFW
 import kotlin.math.floor
-import net.minecraft.class_303.class_7590
-import net.minecraft.class_303
-import com.jsmacrosce.jsmacros.client.api.helper.TextHelper
-import net.minecraft.class_12225
-import net.minecraft.class_327
+import me.hellrevenger.jsmacroskotlinscript.script.library.api.MiscExtensions.waitUntilWorldLoaded
+import me.hellrevenger.jsmacroskotlinscript.script.library.api._getPrivateValue
+import me.hellrevenger.jsmacroskotlinscript.script.library.api._invokePrivate
+import net.minecraft.client.Minecraft
+import net.minecraft.client.gui.ActiveTextCollector
+import net.minecraft.client.gui.Font
+import net.minecraft.client.gui.GuiGraphicsExtractor
+import net.minecraft.client.gui.components.ChatComponent
+import net.minecraft.client.gui.screens.ChatScreen
+import net.minecraft.client.multiplayer.chat.GuiMessage
+import net.minecraft.network.chat.Component
+import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
 
 if(!World.isWorldLoaded) {
     JsMacros.waitUntilWorldLoaded()
     Client.waitTick(10)
 }
 
-object TransformCallback {
-    var clicked = { _: Double, _: Double -> false }
-    var onRender = { _: class_332, _: Int, _: Int, _: Int, _: Boolean -> }
-    var getStyle = { false }
-}
-
-@CTransformer(class_338::class)
+@CTransformer(ChatComponent::class)
 class TransformChatHud {
-    @CInject(method = ["method_75804"], target = [CTarget(CTargetType.HEAD)], cancellable = true)
-    fun onRender(context: class_332, textRenderer: class_327, currentTick: Int, mouseX: Int, mouseY: Int, interactable: Boolean, idk: Boolean, cir: InjectionCallback) {
+    @CInject(method = [$$"extractRenderState(Lnet/minecraft/client/gui/GuiGraphicsExtractor;Lnet/minecraft/client/gui/Font;IIILnet/minecraft/client/gui/components/ChatComponent$DisplayMode;Z)V"], target = [CTarget(CTargetType.HEAD)], cancellable = true)
+    fun onRender(context: GuiGraphicsExtractor, textRenderer: Font, currentTick: Int, mouseX: Int, mouseY: Int, displayMod: ChatComponent.DisplayMode, interactable: Boolean, cir: InjectionCallback) {
         try {
-            if(interactable) {
-                TransformCallback.clicked(mouseX.toDouble(), mouseY.toDouble())
-            }
-            TransformCallback.onRender(context, currentTick, mouseX, mouseY, interactable)
+            clicked(mouseX.toDouble(), mouseY.toDouble())
+            onRender(context, currentTick, mouseX, mouseY, interactable)
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
 }
 
-@CTransformer(class_12225.class_12226::class)
+@CTransformer(ActiveTextCollector.ClickableStyleFinder::class)
 class TransformClickHandler {
-    @CInject(method = ["method_75777"], target = [CTarget(CTargetType.HEAD)], cancellable = true)
+    @CInject(method = ["result"], target = [CTarget(CTargetType.HEAD)], cancellable = true)
     fun onGetStyle(cir: InjectionCallback) {
-        if (TransformCallback.getStyle()) {
+        if (isCtrlDown()) {
             cir.returnValue = null
         }
     }
 }
 
-fun getWindow() = Client.minecraft.method_22683().method_4490()
+fun getWindow() = Client.minecraft.window.handle()
 fun isKeyDown(keyCode: Int) = GLFW.glfwGetKey(getWindow(), keyCode) == GLFW.GLFW_PRESS
 fun isCtrlDown() = isKeyDown(GLFW.GLFW_KEY_LEFT_CONTROL)
 fun isShiftDown() = isKeyDown(GLFW.GLFW_KEY_LEFT_SHIFT) || isKeyDown(GLFW.GLFW_KEY_RIGHT_SHIFT)
 fun isMouseDown() = GLFW.glfwGetMouseButton(getWindow(), GLFW.GLFW_MOUSE_BUTTON_LEFT) == GLFW.GLFW_PRESS
 
-fun getMessageAt(x: Double, y: Double): class_2561? {
+fun getMessageAt(x: Double, y: Double): Component? {
     val mc = Client.minecraft
-    val chatHud = mc.field_1705.method_1743()
-    val windowHeight = mc.method_22683().method_4502()
+
+    val chatHud = mc.gui.hud.chat
+    val windowHeight = mc.window.guiScaledHeight
 
 
 
-    val scale = chatHud._invokePrivate<Double>("method_1814", arrayOf())!!
+    val scale = chatHud._invokePrivate<Double>("getScale", arrayOf())!!
 //    val chatX = x / scale - 4
     val chatY = y / scale
 
     val chatBottomY = floor((windowHeight - 40) / scale).toInt()
-    val chatTopY = chatBottomY - chatHud._invokePrivate<Int>("method_1810", arrayOf())!!
+    val chatTopY = chatBottomY - chatHud._invokePrivate<Int>("getHeight", arrayOf())!!
 
     if (chatY < chatTopY || chatY > chatBottomY) {
         return null
     }
 
-    val lineHeight = chatHud._invokePrivate<Int>("method_44752", arrayOf())!!
+    val lineHeight = chatHud._invokePrivate<Int>("getLineHeight", arrayOf())!!
     val visibleLineIndex = (chatBottomY - chatY.toInt()) / lineHeight
 
-    val index = visibleLineIndex + chatHud._getPrivateValue<Int>("field_2066")!!
+    val index = visibleLineIndex + chatHud._getPrivateValue<Int>("chatScrollbarPos")!!
     var messageIndex = -1
-    val visibleMessages = chatHud._getPrivateValue<List<class_7590>>("field_2064")!!
+    val visibleMessages = chatHud._getPrivateValue<List<GuiMessage.Line>>("trimmedMessages")!!
     for (i in 0..index.coerceAtMost(visibleMessages.size-1)) {
-        if(visibleMessages[i].comp_898()) {
+        if(visibleMessages[i].endOfEntry) {
             ++messageIndex
         }
     }
-    val messages = chatHud._getPrivateValue<List<class_303>>("field_2061")!!
+    val messages = chatHud._getPrivateValue<List<GuiMessage>>("allMessages")!!
     if(messageIndex >= 0 && messageIndex < messages.size) {
-        return messages[messageIndex].comp_893()
+        return messages[messageIndex].content
     }
     return null
 }
 
-fun getMessageAtV2(x: Double, y: Double): class_2561? {
-    val mc = Client.minecraft
-    val chatHud = mc.field_1705.method_1743()
-    val lineX = chatHud._invokePrivate<Int>("method_44722", arrayOf(x))!!
-    val lineY = chatHud._invokePrivate<Int>("method_44724", arrayOf(y))!!
-    val index = chatHud._invokePrivate<Int>("method_44725", arrayOf(lineX, lineY))!!
-//    val index2 = chatHud._invokePrivate<Int>("method_45588", arrayOf(lineX, lineY))!!
-    var messageIndex = -1
-    val visibleMessages = chatHud._getPrivateValue<List<class_7590>>("field_2064")!!
-    for (i in 0..index) {
-        if(visibleMessages[i].comp_898()) {
-            ++messageIndex
-        }
-    }
-    val messages = chatHud._getPrivateValue<List<class_303>>("field_2061")!!
-    if(messageIndex >= 0 && messageIndex < messages.size) {
-        return messages[messageIndex].comp_893()
-    }
-    return null
-}
 var lastClicked = ""
-TransformCallback.clicked = callback@ { mouseX, mouseY ->
+
+fun clicked(mouseX: Double, mouseY: Double): Boolean {
     if(isMouseDown() && isCtrlDown()) {
         getMessageAt(mouseX, mouseY)?.let {
             val newClipboard = if (isShiftDown()) TextHelper.wrap(it).json else it.string
             if (newClipboard != lastClicked) {
-                Client.minecraft.field_1774.method_1455(newClipboard)
+                Client.minecraft.keyboardHandler.clipboard = newClipboard
                 lastClicked = newClipboard
             }
-            return@callback true
+            return true
         }
     }
-    false
+    return false
 }
 
-TransformCallback.onRender = { context: class_332, tick: Int, mouseX: Int, mouseY: Int, interactable: Boolean ->
+fun onRender(context: GuiGraphicsExtractor, tick: Int, mouseX: Int, mouseY: Int, interactable: Boolean) {
     if(isCtrlDown()) {
         getMessageAt(mouseX.toDouble(), mouseY.toDouble())?.let {
-            val text = if(Client.minecraft.field_1774.method_1460() == if (isShiftDown()) TextHelper.wrap(it).json else it.string)
+            val text = if(Client.minecraft.keyboardHandler.clipboard == if (isShiftDown()) TextHelper.wrap(it).json else it.string)
                 "Copied to clipboard!"
             else if (isShiftDown())
                 "Click to copy json"
             else "Click to copy string"
 
-            context.method_51438(Client.minecraft.field_1772, class_2561.method_43470(text), mouseX, mouseY)
+            context.setTooltipForNextFrame(Client.minecraft.font, Component.literal(text), mouseX, mouseY)
         }
     }
 }
 
-TransformCallback.getStyle = ::isCtrlDown
+RuntimeTransform.transformInOneStep()
 
-RuntimeTransform.init()
-RuntimeTransform.addTransformer(TransformChatHud::class)
-RuntimeTransform.addTransformer(TransformClickHandler::class)
-RuntimeTransform.transform()
+Chat.log("Chat Copy enabled")

@@ -1,10 +1,12 @@
 
-import me.hellrevenger.library.api.KtGlobals
-import me.hellrevenger.library.api.MiscExtensions.waitUntilGameLoaded
-import me.hellrevenger.library.api._getField
-import net.minecraft.class_1297
+import me.hellrevenger.jsmacroskotlinscript.script.library.api.KtGlobals
+import me.hellrevenger.jsmacroskotlinscript.script.library.api.MiscExtensions.waitUntilGameLoaded
+import me.hellrevenger.jsmacroskotlinscript.script.library.api._getField
+import net.minecraft.client.Camera
+import net.minecraft.client.Minecraft
+import net.minecraft.world.entity.Entity
+
 import kotlin.Pair
-import net.minecraft.class_4184
 
 
 //while(Client.minecraft.field_1773 == null) {
@@ -20,7 +22,7 @@ val pitchFixers = mutableMapOf<String, Pair<Int, (Float) -> Float>>()
 KtGlobals.addVariable(offsetKey, offsets)
 KtGlobals.addVariable(pitchFixersKey, pitchFixers)
 
-class MyCamera : class_4184() {
+class MyCamera : Camera() {
     var offsetPitch = 0f
         set(value) {
             Chat.title("", "pitch: $value, yaw: $offsetYaw", 1, 10, 1)
@@ -36,7 +38,7 @@ class MyCamera : class_4184() {
     fun getOffset(): Pair<Float, Float> {
         var offsetYaw = 0f
         var offsetPitch = 0f
-        val delta = method_55437()
+        val delta = Minecraft.getInstance().deltaTracker.getGameTimeDeltaPartialTick(true)
 
         offsets.values.forEach {
             val p = it(delta)
@@ -46,18 +48,18 @@ class MyCamera : class_4184() {
         return offsetYaw to offsetPitch
     }
 
-    override fun method_19325(yaw: Float, pitch: Float) {
+    override fun setRotation(yaw: Float, pitch: Float) {
         val offset = getOffset()
         var fixedPitchOffset = offsetPitch
 
         pitchFixers.values.sortedBy { it.first }.forEach { fixedPitchOffset = it.second(fixedPitchOffset) }
 
-        super.method_19325(yaw + offsetYaw + offset.first, pitch + fixedPitchOffset + offset.second)
+        super.setRotation(yaw + offsetYaw + offset.first, pitch + fixedPitchOffset + offset.second)
     }
 }
 
 val camera = MyCamera()
-val renderer = Client.minecraft.field_1773
+val mc = Minecraft.getInstance()
 
 var startPitch = 0f
 var startDPitch = 10000f
@@ -104,15 +106,18 @@ EventListener(EventType.Key) {
     }
 }
 
-var cameraOfRenderer by renderer._getField<class_4184>("field_18765")
+var cameraOfRenderer by mc.gameRenderer._getField<Camera>("mainCamera")
 val oldCamera = cameraOfRenderer
-val oldFocusedEntity by oldCamera!!._getField<class_1297>("field_18711")
-var focusedEntity by camera._getField<class_1297>("field_18711")
-focusedEntity = oldFocusedEntity
+oldCamera!!.entity()?.let { camera.setEntity(it) }
+camera.setLevel(mc.level)
+
 
 cameraOfRenderer = camera
 
 context.onContextClosed {
+    camera.entity()?.let { oldCamera!!.setEntity(it) }
+    oldCamera!!.setLevel(mc.level)
+
     cameraOfRenderer = oldCamera
 }
 

@@ -1,25 +1,21 @@
 @file:Suppress("HasPlatformType")
 
-import net.lenni0451.classtransform.annotations.CInline
-import net.lenni0451.classtransform.annotations.CTarget
-import net.lenni0451.classtransform.annotations.CTransformer
-import net.lenni0451.classtransform.annotations.injection.CInject
-import net.minecraft.class_2561
-import com.jsmacrosce.jsmacros.client.api.classes.render.IScreen
-import com.jsmacrosce.jsmacros.client.api.classes.render.components.Text
-import com.jsmacrosce.jsmacros.client.api.helper.CommandContextHelper
-import com.jsmacrosce.jsmacros.client.api.helper.TextHelper
-import com.jsmacrosce.jsmacros.client.api.helper.screen.ClickableWidgetHelper
-import com.jsmacrosce.jsmacros.client.api.helper.screen.SliderWidgetHelper
-import com.jsmacrosce.jsmacros.core.event.BaseEvent
-import com.jsmacrosce.jsmacros.core.event.impl.EventCustom
-import com.jsmacrosce.jsmacros.core.language.EventContainer
+import me.hellrevenger.jsmacroskotlinscript.script.library.api.literal
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
+import xyz.wagyourtail.jsmacros.client.api.classes.render.IScreen
+import xyz.wagyourtail.jsmacros.client.api.classes.render.components.Text
+import xyz.wagyourtail.jsmacros.client.api.helper.CommandContextHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.TextHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.screen.ClickableWidgetHelper
+import xyz.wagyourtail.jsmacros.client.api.helper.screen.SliderWidgetHelper
+import xyz.wagyourtail.jsmacros.core.event.BaseEvent
+import xyz.wagyourtail.jsmacros.core.event.impl.EventCustom
+import xyz.wagyourtail.jsmacros.core.language.EventContainer
 import kotlin.concurrent.thread
-import net.minecraft.class_310
 
 val mc = Client.minecraft
-val interactKey = mc.field_1690.field_1904
-val attackKey = mc.field_1690.field_1886
+val interactKey = mc.options.keyUse
+val attackKey = mc.options.keyAttack
 
 object Globals {
     var globalInterval = 2
@@ -30,9 +26,6 @@ object Globals {
     var interactEnabled = false
     var interactInterval = 2
     var interactIntervalRandom = 0
-
-    var nextAttackTime = 0L
-    var nextInteractTime = 0L
 }
 
 var globalInterval
@@ -83,10 +76,11 @@ var nextAttackTime = 0L
 var nextInteractTime = 0L
 
 JsMacros.createCustomEvent("HoldAction").registerEvent()
-JsMacros.on("HoldAction", JavaWrapper.methodToJava(fun(event: BaseEvent, _: EventContainer<*>){
-    if(event !is EventCustom) return
+
+JsMacros.on("HoldAction", JavaWrapper.methodToJava { event: BaseEvent, _: EventContainer<*> ->
+    if (event !is EventCustom) return@methodToJava
     with(event) {
-        if(getBoolean("loadFromGlobal") == true) {
+        if (getBoolean("loadFromGlobal") == true) {
             Globals.globalInterval = GlobalVars.getInt("globalInterval") ?: globalInterval
             Globals.attackEnabled = GlobalVars.getBoolean("attackEnabled") ?: attackEnabled
             Globals.attackInterval = GlobalVars.getInt("attackInterval") ?: attackInterval
@@ -104,11 +98,11 @@ JsMacros.on("HoldAction", JavaWrapper.methodToJava(fun(event: BaseEvent, _: Even
             interactInterval = getInt("interactInterval") ?: interactInterval
             interactIntervalRandom = getInt("interactIntervalRandom") ?: interactIntervalRandom
         }
-        if(globalInterval == 0) {
+        if (globalInterval == 0) {
             globalInterval = 1
         }
     }
-}))
+})
 
 val customEvent = JsMacros.createCustomEvent("HoldAction")
 customEvent.putBoolean("loadFromGlobal", true)
@@ -116,11 +110,7 @@ customEvent.trigger()
 
 var tick = 0L
 
-object TickCallback {
-    var callback = {}
-}
-
-TickCallback.callback = {
+EventListener.registerForScript(ClientTickEvents.START_CLIENT_TICK, ClientTickEvents.StartTick {
     if ((tick++).toInt() % globalInterval == 0) {
         if(nextAttackTime > tick + attackIntervalRandom + attackInterval) {
             nextAttackTime = 0
@@ -128,35 +118,23 @@ TickCallback.callback = {
         if(nextInteractTime > tick + interactIntervalRandom + interactInterval) {
             nextInteractTime = 0
         }
-        if (attackEnabled && attackKey.method_1434() && tick > nextAttackTime) {
+        if (attackEnabled && attackKey.isDown && tick > nextAttackTime) {
             Player.interactions()!!.attack()
             nextAttackTime = tick + attackInterval + (Math.random() * attackIntervalRandom).toLong()
             JsMacros.createCustomEvent("HoldActionCallback").putBoolean("attack", true)
-        } else if (interactEnabled && interactKey.method_1434() && tick > nextInteractTime) {
+        } else if (interactEnabled && interactKey.isDown && tick > nextInteractTime) {
             Player.interactions()?.interact()
             nextInteractTime = tick + interactInterval + (Math.random() * interactIntervalRandom).toLong()
             JsMacros.createCustomEvent("HoldActionCallback").putBoolean("attack", false)
         }
     }
-}
+})
 
-@CTransformer(class_310::class)
-class TransformTest {
-    @CInline
-    @CInject(method = ["method_1574"], target = [CTarget("HEAD")])
-    fun onTest() {
-        TickCallback.callback()
-    }
-}
-
-RuntimeTransform.init()
-RuntimeTransform.addTransformer(TransformTest::class)
-RuntimeTransform.transform()
 
 val screen = Hud.createScreen("HoldActionConfig", false)
 
 fun IScreen.labeledButton(labelText: String, x: Int, y: Int, buttonText: String,
-                          callback: (ClickableWidgetHelper<*,*>, IScreen) -> Unit): Pair<Text, ClickableWidgetHelper<*, *>> {
+                          callback: (ClickableWidgetHelper<*, *>, IScreen) -> Unit): Pair<Text, ClickableWidgetHelper<*, *>> {
     val label = this.addText(labelText, x, y + 6, 0xffffff, true)
     val button = this.addButton(x + label.width + 10, y, 60, 20, buttonText, JavaWrapper.m2j2(callback))
     return label to button
@@ -177,7 +155,7 @@ fun IScreen.labeled(labelText: String, x: Int, y: Int): Pair<Text, Int> {
     val label = this.addText(labelText, x, y + 6, 0xffffff, true)
     return label to x + label.width + 10
 }
-fun getText(text: String) = TextHelper.wrap(class_2561.method_43470(text))
+fun getText(text: String) = TextHelper.wrap(text.literal())
 
 fun initScreen() {
     val iscreen = screen as IScreen

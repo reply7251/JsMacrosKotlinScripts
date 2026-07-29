@@ -1,6 +1,6 @@
 
-import com.jsmacrosce.jsmacros.client.api.classes.render.Draw3D
-import com.jsmacrosce.jsmacros.client.api.helper.world.BlockStateHelper
+import xyz.wagyourtail.jsmacros.client.api.classes.render.Draw3D
+import xyz.wagyourtail.jsmacros.client.api.helper.world.BlockStateHelper
 import kotlin.concurrent.thread
 
 val glowColors = hashMapOf<String, Int>()

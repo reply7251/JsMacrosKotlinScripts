@@ -1,4 +1,5 @@
-import me.hellrevenger.library.api.KtGlobals
+import me.hellrevenger.jsmacroskotlinscript.script.library.api.KtGlobals
+
 
 var something: Any? = null
 

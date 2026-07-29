@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "jsmacroskotlinscript",
+  "version": "${version}",
+
+  "name": "JsMacrosKotlinScript",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "Apache-2.0",
+  "icon": "assets/jsmacroskotlinscript/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": ["me.hellrevenger.jsmacroskotlinscript.JsMacrosKotlinScript"],
+    "jsmacros": [
+      {
+        "adapter": "kotlin",
+        "value": "me.hellrevenger.jsmacroskotlinscript.KotlinExtension"
+      }
+    ]
+  },
+
+  "mixins": [
+    "jsmacroskotlinscript.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
