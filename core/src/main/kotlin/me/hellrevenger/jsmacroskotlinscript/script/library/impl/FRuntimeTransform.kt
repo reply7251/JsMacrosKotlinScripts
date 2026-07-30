@@ -21,7 +21,6 @@ import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.SimpleNewT
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.AnnotationAdder
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.AnnotationChecker
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.IRequireScriptHolderSetter
-import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.JvmStaticConverter
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.ScriptInstanceGetterGenerator
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.ScriptStaticConverter
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.ShadowChecker
@@ -109,7 +108,7 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
             addInjectionTarget(CTargetType.SIMPLE_PUT_FIELD, SimpleFieldTarget.putField())
             failStrategy = FailStrategy.CANCEL
             listOf(
-                StaticRemover(), JvmStaticConverter(), FinalRemover(), AnnotationAdder(),
+                StaticRemover(), FinalRemover(), AnnotationAdder(),
 
                 ScriptStaticConverter(this@FRuntimeTransform),
                 ScriptInstanceGetterGenerator(this@FRuntimeTransform),

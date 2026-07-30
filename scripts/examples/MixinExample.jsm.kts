@@ -69,22 +69,10 @@ fun head() {
     Chat.log("guessNameAndRoles head")
 }
 
+// static method -> static method / static field
 @ScriptStatic
 @CTransformer(NameUtil::class)
 class TransformNameUtil {
-
-    // most case just mark fields/methods with @ScriptStatic and don't use companion object
-    // also here should only contain @CShadow fields/methods
-    companion object {
-        // private to prevent getter/setter
-        @CShadow
-        private lateinit var PATTERN_WHISPER: Pattern
-
-        // sometimes you can also put here
-//        @CShadow
-//        fun getNameOrDefault(potentialName: CharSequence): String = ""
-    }
-
     // private to prevent getter/setter
     @CShadow("PATTERN_WHISPER")
     private lateinit var PATTERN_WHISPER2: Pattern
@@ -94,7 +82,7 @@ class TransformNameUtil {
 
     @CRedirect(method = ["guessNameAndRoles"], target = CTarget(CTargetType.SIMPLE_FIELD, "PATTERN_WHISPER"))
     fun onGetPattern(): Pattern {
-        Chat.log("guessNameAndRoles onGetPattern $PATTERN_WHISPER")
+        Chat.log("guessNameAndRoles onGetPattern $PATTERN_WHISPER2")
         return PATTERN_WHISPER2
     }
 
@@ -125,6 +113,8 @@ class TransformNameUtil {
     }
 }
 
+// static method -> static method / static field
+// instance method -> static method / static field
 @CTransformer(Minecraft::class)
 class MixinMinecraft {
     @CShadow

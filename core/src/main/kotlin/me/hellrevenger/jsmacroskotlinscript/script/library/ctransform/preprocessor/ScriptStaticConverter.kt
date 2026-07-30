@@ -65,25 +65,8 @@ class ScriptStaticConverter(val requireScriptHolderSetter: IRequireScriptHolderS
 
         convertStaticFieldCalls(method)
         convertStaticMethodCalls(method)
-        removeCompanionCall(method)
 
         removeThisForStaticMethod(currentClass, method)
-    }
-
-    fun removeCompanionCall(method: MethodNode) {
-        var success = true
-        while (success) {
-            success = false
-            for (inst in method.instructions) {
-                if (inst.opcode != Opcodes.GETSTATIC) continue
-                val fieldInst = inst as FieldInsnNode
-                if (fieldInst.owner == currentClass && fieldInst.name == "Companion") {
-                    method.instructions.remove(inst)
-                    success = true
-                    break
-                }
-            }
-        }
     }
 
     fun convertStaticMethodCalls(method: MethodNode) {
@@ -99,14 +82,6 @@ class ScriptStaticConverter(val requireScriptHolderSetter: IRequireScriptHolderS
                 ) {
                     inst.opcode = Opcodes.INVOKESTATIC
                     success = true
-                } else if (inst.owner == companionName && inst.opcode == Opcodes.INVOKESTATIC) {
-                    inst.owner = currentClass
-                    inst.name = inst.name.removePrefix("access$")
-                    if (inst.desc.startsWith("(L$companionName;")) {
-                        inst.desc = "(" + inst.desc.substringAfter("(L$companionName;")
-
-                        success = true
-                    }
                 }
                 if (success) {
                     val thisStack = frame.getStack(frame.stackSize - 1 - Types.argumentTypes(inst.desc).size)
