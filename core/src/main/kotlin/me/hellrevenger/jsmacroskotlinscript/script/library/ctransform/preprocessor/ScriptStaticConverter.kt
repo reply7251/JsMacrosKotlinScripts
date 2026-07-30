@@ -1,30 +1,19 @@
 package me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor
 
-import me.hellrevenger.jsmacroskotlinscript.script.library.api.ScriptHolder
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.IRequireScriptHolderSetter
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.ScriptStatic
+import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.forEach
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.generateScriptInstanceGetter
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.getAnnotationName
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.removeThisForStaticMethod
-import net.lenni0451.classtransform.annotations.injection.CModifyExpressionValue
-import net.lenni0451.classtransform.transformer.IAnnotationHandlerPreprocessor
-import net.lenni0451.classtransform.transformer.impl.CModifyExpressionValueAnnotationHandler
-import net.lenni0451.classtransform.transformer.impl.CRedirectAnnotationHandler
-import net.lenni0451.classtransform.transformer.impl.CWrapConditionAnnotationHandler
+import net.lenni0451.classtransform.utils.Types
 import org.objectweb.asm.Opcodes
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.tree.FieldInsnNode
-import org.objectweb.asm.tree.FieldNode
-import org.objectweb.asm.tree.IincInsnNode
-import org.objectweb.asm.tree.InsnList
-import org.objectweb.asm.tree.LdcInsnNode
 import org.objectweb.asm.tree.MethodInsnNode
 import org.objectweb.asm.tree.MethodNode
-import org.objectweb.asm.tree.TypeInsnNode
-import org.objectweb.asm.tree.VarInsnNode
 import java.lang.reflect.Modifier
-import kotlin.collections.iterator
 
 class ScriptStaticConverter(val requireScriptHolderSetter: IRequireScriptHolderSetter) : ForEachMethodPreprocessor() {
     companion object {
@@ -34,6 +23,7 @@ class ScriptStaticConverter(val requireScriptHolderSetter: IRequireScriptHolderS
     var currentClass = ""
     var companionName = $$"$Companion"
     val fieldsToStatic = mutableSetOf<String>()
+    val methodsToStatic = mutableSetOf<String>()
 
     override fun process(node: ClassNode) {
         currentClass = node.name
@@ -52,6 +42,11 @@ class ScriptStaticConverter(val requireScriptHolderSetter: IRequireScriptHolderS
                     fieldsToStatic.add(field.name)
                 }
             }
+            for (method in node.methods) {
+                if (processAll || method.invisibleAnnotations.hasScriptStatic()) {
+                    methodsToStatic.add(method.name + method.desc)
+                }
+            }
 
             super.process(node)
         }
@@ -59,7 +54,11 @@ class ScriptStaticConverter(val requireScriptHolderSetter: IRequireScriptHolderS
 
     override fun process(method: MethodNode) {
         if (Modifier.isStatic(method.access)) return
-        if (!processAll && !method.invisibleAnnotations.hasScriptStatic()) return
+        if (!processAll && !method.invisibleAnnotations.hasScriptStatic()) {
+            convertStaticFieldCalls(method)
+            convertStaticMethodCalls(method)
+            return
+        }
         method.access = method.access or Modifier.STATIC
 
         generateScriptInstanceGetter(method, requireScriptHolderSetter)
@@ -91,23 +90,32 @@ class ScriptStaticConverter(val requireScriptHolderSetter: IRequireScriptHolderS
         var success = true
         while (success) {
             success = false
-            for (inst in method.instructions) {
-                if (inst !is MethodInsnNode) continue
-                if (inst.owner == currentClass && (inst.opcode == Opcodes.INVOKEVIRTUAL || (inst.opcode == Opcodes.INVOKESPECIAL && inst.name != "<init>"))) {
+
+            method.forEach(currentClass) { inst, frame ->
+                if (inst !is MethodInsnNode) return@forEach true
+                if (inst.owner == currentClass
+                    && (inst.opcode == Opcodes.INVOKEVIRTUAL || (inst.opcode == Opcodes.INVOKESPECIAL && inst.name != "<init>"))
+                    && (inst.name + inst.desc) in methodsToStatic
+                ) {
                     inst.opcode = Opcodes.INVOKESTATIC
                     success = true
-                    break
-                }
-                if (inst.owner == companionName && inst.opcode == Opcodes.INVOKESTATIC) {
+                } else if (inst.owner == companionName && inst.opcode == Opcodes.INVOKESTATIC) {
                     inst.owner = currentClass
                     inst.name = inst.name.removePrefix("access$")
                     if (inst.desc.startsWith("(L$companionName;")) {
                         inst.desc = "(" + inst.desc.substringAfter("(L$companionName;")
 
                         success = true
-                        break
                     }
                 }
+                if (success) {
+                    val thisStack = frame.getStack(frame.stackSize - 1 - Types.argumentTypes(inst.desc).size)
+                    for (inst2 in thisStack.insns) {
+                        method.instructions.remove(inst2)
+                    }
+                }
+
+                !success
             }
         }
     }
@@ -116,17 +124,23 @@ class ScriptStaticConverter(val requireScriptHolderSetter: IRequireScriptHolderS
         var success = true
         while (success) {
             success = false
-            for (inst in method.instructions) {
-                if (inst is FieldInsnNode && inst.owner == currentClass) {
-                    if (inst.opcode == Opcodes.GETFIELD) {
+
+            method.forEach(currentClass) { inst, frame ->
+                if (inst is FieldInsnNode && inst.owner == currentClass && inst.name in fieldsToStatic) {
+                    val thisStack = if (inst.opcode == Opcodes.GETFIELD) {
                         inst.opcode = Opcodes.GETSTATIC
+                        frame.getStack(frame.stackSize - 1)
                     } else if (inst.opcode == Opcodes.PUTFIELD) {
                         inst.opcode = Opcodes.PUTSTATIC
-                    } else continue
+                        frame.getStack(frame.stackSize - 2)
+                    } else return@forEach true
+                    for (inst2 in thisStack.insns) {
+                        method.instructions.remove(inst2)
+                    }
                     success = true
-                    break
+                    return@forEach false
                 }
-
+                true
             }
         }
     }

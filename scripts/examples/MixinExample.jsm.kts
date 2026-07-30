@@ -11,6 +11,9 @@ import net.lenni0451.classtransform.annotations.injection.CInject
 import net.lenni0451.classtransform.annotations.injection.CModifyExpressionValue
 import net.lenni0451.classtransform.annotations.injection.CRedirect
 import net.lenni0451.classtransform.annotations.injection.CWrapCondition
+import net.minecraft.client.Minecraft
+import net.minecraft.network.PacketProcessor
+import net.minecraft.util.ModCheck
 import xyz.wagyourtail.jsmacros.client.JsMacrosClient
 import xyz.wagyourtail.jsmacros.client.config.ClientProfile
 import xyz.wagyourtail.jsmacros.client.event.EventRegistry
@@ -61,8 +64,6 @@ class MixinMacroScreen {
         Chat.log("runningBtn: $runningBtn")
     }
 }
-
-
 
 fun head() {
     Chat.log("guessNameAndRoles head")
@@ -124,8 +125,36 @@ class TransformNameUtil {
     }
 }
 
+@CTransformer(Minecraft::class)
+class MixinMinecraft {
+    @CShadow
+    @ScriptStatic
+    private lateinit var instance: Minecraft
+
+    @CShadow
+    @ScriptStatic
+    private fun checkModStatus() = Unit as ModCheck
+
+    @ScriptStatic
+    @CInject(method = ["getLauncherBrand"], target = [CTarget(CTargetType.HEAD)])
+    fun getLauncherBrand() {
+        Chat.log("getLauncherBrand: $instance")
+    }
+
+    @CInject(method = ["createWorldOpenFlows"], target = [CTarget(CTargetType.HEAD)])
+    fun createWorldOpenFlows() {
+        Chat.log("createWorldOpenFlows: $instance")
+
+        checkModStatus()
+    }
+}
+
+Minecraft.getInstance().createWorldOpenFlows()
+Minecraft.getLauncherBrand()
 Chat.log(NameUtil.guessNameAndRoles("<someone> im guessing name and roles"))
 
-RuntimeTransform.transformInOneStep(true, true)
+RuntimeTransform.transformInOneStep(true)
 
+Minecraft.getInstance().createWorldOpenFlows()
+Minecraft.getLauncherBrand()
 Chat.log(NameUtil.guessNameAndRoles("<someone> im guessing name and roles"))

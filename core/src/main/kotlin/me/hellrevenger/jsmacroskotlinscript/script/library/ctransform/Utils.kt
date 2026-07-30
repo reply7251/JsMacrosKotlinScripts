@@ -20,6 +20,10 @@ import org.objectweb.asm.tree.MethodInsnNode
 import org.objectweb.asm.tree.MethodNode
 import org.objectweb.asm.tree.TypeInsnNode
 import org.objectweb.asm.tree.VarInsnNode
+import org.objectweb.asm.tree.analysis.Analyzer
+import org.objectweb.asm.tree.analysis.Frame
+import org.objectweb.asm.tree.analysis.SourceInterpreter
+import org.objectweb.asm.tree.analysis.SourceValue
 import java.lang.annotation.RetentionPolicy
 import kotlin.reflect.KClass
 
@@ -140,6 +144,17 @@ fun generateScriptInstanceGetter(methodNode: MethodNode, requireScriptHolderSett
             requireScriptHolderSetter.setRequireScriptHolder()
             break
         }
+    }
+}
+
+fun MethodNode.forEach(owner: String, block: (AbstractInsnNode, Frame<SourceValue>) -> Boolean) {
+    val analyzer = Analyzer(SourceInterpreter())
+    analyzer.analyze(owner, this)
+    var i = -1
+    for(frame in analyzer.frames) {
+        i++
+        if (frame == null) continue
+        if(!block(instructions.get(i), frame)) break
     }
 }
 
