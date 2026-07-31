@@ -70,19 +70,15 @@ fun removeThisForStaticMethod(currentClass: String, method: MethodNode) {
             method.localVariables.remove(localVariableNode)
         }
     }
-    val toRemove = mutableListOf<AbstractInsnNode>()
     for(inst in method.instructions.iterator()) {
         if (inst is VarInsnNode) {
             inst.`var` = inst.`var` - 1
-            if (inst.`var` < 0) toRemove.add(inst)
+            if (inst.`var` < 0) throw IllegalArgumentException("$currentClass.${method.name} is accessing this")
         }
         if (inst is IincInsnNode) {
             inst.`var` = inst.`var` - 1
-            if (inst.`var` < 0) toRemove.add(inst) // i think this will never happen
+            if (inst.`var` < 0) throw IllegalArgumentException("$currentClass.${method.name} is accessing this") // i think this will never happen
         }
-    }
-    for (inst in toRemove) {
-        method.instructions.remove(inst)
     }
 }
 

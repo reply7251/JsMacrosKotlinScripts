@@ -23,12 +23,12 @@ class ShadowChecker(manager: TransformerManager) : IAnnotationHandlerPreprocesso
     override fun process(node: ClassNode) {
         node.fields.forEach { fieldNode ->
             if (fieldNode.invisibleAnnotations?.none { cAnnotations.contains(it.desc) } != false) {
-//                throw IllegalArgumentException("field ${fieldNode.name} doesn't have Cxxx annotations")
+                throw IllegalArgumentException("field '${fieldNode.name}' doesn't have Cxxx annotations")
             }
         }
         node.methods.forEach { methodNode ->
             if (methodNode.invisibleAnnotations?.none { cAnnotations.contains(it.desc) } != false) {
-//                throw IllegalArgumentException("method ${methodNode.name} doesn't have Cxxx annotations")
+                throw IllegalArgumentException("method '${methodNode.name}' doesn't have Cxxx annotations")
             }
         }
     }

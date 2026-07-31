@@ -181,6 +181,7 @@ class KotlinLanguageDefinition(extension: Extension?, runner: Core<*, *>)
 
             val retOrThrow = ret.valueOrThrow().returnValue
             if (retOrThrow is ResultValue.Error) {
+                ctx.ctx.closeContext()
                 throw KotlinRuntimeException(retOrThrow.error, ctx.ctx.file)
             }
         }
