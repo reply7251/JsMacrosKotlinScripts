@@ -1,6 +1,8 @@
 package me.hellrevenger.jsmacroskotlinscript.script.library.api
 
 object ScriptHolder {
+    val name = this::class.java.name.slash()
+
     private val scripts = mutableMapOf<String, Any>()
 
     fun put(name: String, value: Any) {
@@ -11,8 +13,12 @@ object ScriptHolder {
         put(value::class.java.name, value)
     }
 
+    fun remove(name: String) {
+        scripts.remove(name)
+    }
+
     fun remove(value: Any) {
-        scripts.remove(value::class.java.name)
+        remove(value::class.java.name)
     }
 
     @JvmStatic

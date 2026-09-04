@@ -1,4 +1,5 @@
 {
   "jsmacros.settings.languages.kotlin.classloaderpatch": "Classloader patch (required restart)",
+  "jsmacros.settings.languages.kotlin.useInvokeDynamic": "Use InvokeDynamic for CTransformer",
   "jsmacros.settings.languages.kotlin": "kotlin"
 }

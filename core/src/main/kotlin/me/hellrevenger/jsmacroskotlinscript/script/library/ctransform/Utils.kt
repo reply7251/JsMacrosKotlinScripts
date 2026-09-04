@@ -1,6 +1,7 @@
 package me.hellrevenger.jsmacroskotlinscript.script.library.ctransform
 
 import me.hellrevenger.jsmacroskotlinscript.script.library.api.ScriptHolder
+import me.hellrevenger.jsmacroskotlinscript.script.library.api.slash
 import net.lenni0451.classtransform.annotations.CShadow
 import net.lenni0451.classtransform.annotations.CSlice
 import net.lenni0451.classtransform.annotations.CTarget
@@ -101,16 +102,18 @@ fun generateScriptInstanceGetter(methodNode: MethodNode, requireScriptHolderSett
             }
             val il = InsnList()
 
-            il.add(LdcInsnNode(fieldInst.desc.substring(1, fieldInst.desc.length - 1)))
+            val scriptInstanceName = fieldInst.desc.substring(1, fieldInst.desc.length - 1)
+
+            il.add(LdcInsnNode(scriptInstanceName))
             il.add(
                 MethodInsnNode(
                     Opcodes.INVOKESTATIC,
-                    ScriptHolder::class.java.name.replace(".", "/"),
+                    ScriptHolder.name,
                     "get",
                     "(Ljava/lang/String;)Ljava/lang/Object;"
                 )
             )
-            il.add(TypeInsnNode(Opcodes.CHECKCAST, fieldInst.desc.substring(1, fieldInst.desc.length - 1)))
+            il.add(TypeInsnNode(Opcodes.CHECKCAST, scriptInstanceName))
 
             val extraRemove = if (fieldInst.next.opcode == Opcodes.GETFIELD) {
                 val fieldInst2 = fieldInst.next as FieldInsnNode
@@ -118,10 +121,7 @@ fun generateScriptInstanceGetter(methodNode: MethodNode, requireScriptHolderSett
                 il.add(
                     MethodInsnNode(
                         Opcodes.INVOKESTATIC,
-                        "me.hellrevenger.jsmacroskotlinscript.script.library.api.KtReflect".replace(
-                            ".",
-                            "/"
-                        ) + "Kt",
+                        "me.hellrevenger.jsmacroskotlinscript.script.library.api.KtReflect".slash() + "Kt",
                         "_getPrivateValue",
                         "(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"
                     )

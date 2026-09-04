@@ -209,12 +209,20 @@ class CompilerSetting {
             config = runner.config
         }
 
-        fun shouldPatchClassloader() = config?.getOptions(CompilerSetting::class.java)?.patchClassloader ?: true
+        private fun getSetting() = config?.getOptions(CompilerSetting::class.java)
+
+        fun shouldPatchClassloader() = getSetting()?.patchClassloader ?: true
+
+        fun shouldUseInvokeDynamic() = getSetting()?.useInvokeDynamic ?: true
     }
 
     @JvmField
-    @Option(translationKey = "jsmacros.settings.languages.kotlin.classloaderpatch", group = ["jsmacros.settings.languages", "jsmacros.settings.languages.kotlin"], setter = "setPatchClassloader")
+    @Option(translationKey = "jsmacros.settings.languages.kotlin.classloaderpatch", group = ["jsmacros.settings.languages", "jsmacros.settings.languages.kotlin"])
     var patchClassloader = true
+
+    @JvmField
+    @Option(translationKey = "jsmacros.settings.languages.kotlin.useInvokeDynamic", group = ["jsmacros.settings.languages", "jsmacros.settings.languages.kotlin"])
+    var useInvokeDynamic = true
 
 }
 

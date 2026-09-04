@@ -21,6 +21,7 @@ import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.SimpleNewT
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.AnnotationAdder
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.AnnotationChecker
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.IRequireScriptHolderSetter
+import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.InvokeDynamicPreprocessor
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.ScriptInstanceGetterGenerator
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.ScriptStaticConverter
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor.ShadowChecker
@@ -69,6 +70,10 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
     var anyForceLoad = false
     val forceLoadedClasses = mutableSetOf<String>()
 
+    private val invokeDynamicPreprocessor = InvokeDynamicPreprocessor()
+    private val useInvokeDynamic get() = invokeDynamicPreprocessor.owner != null
+    private var shouldUseInvokeDynamicSet = false
+
     /**
      * dump transformer bytecode
      */
@@ -78,6 +83,7 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
     /**
      * `init()` -> `addTransformer()` -> `transform()`
      */
+    context(receiver: ScriptReceiver)
     fun init(dump: Boolean = false, disableAnnotationChecker: Boolean = false) {
         if(manager == null) {
             (context as? KotlinScriptContext)?.onContextClosed {
@@ -90,7 +96,12 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
         this.dump = dump
     }
 
+    context(receiver: ScriptReceiver)
     fun setManager(manager: TransformerManager, disableAnnotationChecker: Boolean = false) {
+        if (!shouldUseInvokeDynamicSet && CompilerSetting.shouldUseInvokeDynamic()) {
+            setUseInvokeDynamic()
+        }
+
         this.manager = manager.apply {
             addInjectionTarget(
                 CTargetType.SIMPLE_INVOKE,
@@ -109,6 +120,7 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
             failStrategy = FailStrategy.CANCEL
             listOf(
                 StaticRemover(), FinalRemover(), AnnotationAdder(),
+                invokeDynamicPreprocessor,
 
                 ScriptStaticConverter(this@FRuntimeTransform),
                 ScriptInstanceGetterGenerator(this@FRuntimeTransform),
@@ -123,6 +135,16 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
 
     fun addTransformerPreprocessor(processor: IAnnotationHandlerPreprocessor) {
         manager?.addTransformerPreprocessor(processor)
+    }
+
+    context(receiver: ScriptReceiver)
+    fun setUseInvokeDynamic(enabled: Boolean = true) {
+        if (enabled) {
+            invokeDynamicPreprocessor.owner = receiver::class.java.name
+        } else {
+            invokeDynamicPreprocessor.owner = null
+        }
+        shouldUseInvokeDynamicSet = true
     }
 
     /**
@@ -219,10 +241,20 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
             if (requireScriptHolder && !CompilerSetting.shouldPatchClassloader()) {
                 throw IllegalArgumentException("some transformers require script instance while classloader patch is disabled")
             }
-            if (requireScriptHolder) {
+            if (requireScriptHolder || useInvokeDynamic) {
                 ScriptHolder.put(receiver)
                 receiver.context.onContextClosed {
                     ScriptHolder.remove(receiver)
+                }
+            }
+            if (useInvokeDynamic) {
+                receiver::class.java.declaredClasses.filter {
+                    invokeDynamicPreprocessor.requiredClasses.contains(it.name)
+                }.forEach { klass ->
+                    ScriptHolder.put(klass.name, klass)
+                    receiver.context.onContextClosed {
+                        ScriptHolder.remove(klass.name)
+                    }
                 }
             }
             transformed = true
@@ -236,6 +268,7 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
     }
 
     fun forceLoad(clazz: Class<*>) {
+        if (useInvokeDynamic) return
         if (forceLoadedClasses.add(clazz.name)) {
             MixinClassLoaderCallback.forceLoadedClasses[clazz.name] = clazz
         }
