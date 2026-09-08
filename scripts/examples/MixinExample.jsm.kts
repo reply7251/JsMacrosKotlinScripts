@@ -101,11 +101,16 @@ class TransformNameUtil {
     }
 
     @CInject(method = ["guessNameAndRoles"], target = [CTarget(CTargetType.SIMPLE_INVOKE, "add")])
+//    @CInject(method = ["guessNameAndRoles"], target = [CTarget(CTargetType.SIMPLE_INVOKE, "List.add")])
+//    @CInject(method = ["guessNameAndRoles"], target = [CTarget(CTargetType.SIMPLE_INVOKE, "java/util/List.add")])
     fun guessNameAndRolesAdd(@RemoveFinal @CShared("test") test: String) {
         Chat.log("guessNameAndRoles simpleAdd: $test")
     }
 
-    @CInject(method = ["guessNameAndRoles"], target = [CTarget(CTargetType.INVOKE, "java/util/List.add(ILjava/lang/Object;)V")])
+    @CInject(method = ["guessNameAndRoles"], target = [CTarget(CTargetType.SIMPLE_INVOKE, "add(2)")])
+//    @CInject(method = ["guessNameAndRoles"], target = [CTarget(CTargetType.SIMPLE_INVOKE, "List.add(2)")])
+//    @CInject(method = ["guessNameAndRoles"], target = [CTarget(CTargetType.SIMPLE_INVOKE, "java/util/List.add(2)")])
+//    @CInject(method = ["guessNameAndRoles"], target = [CTarget(CTargetType.INVOKE, "java/util/List.add(ILjava/lang/Object;)V")])
     fun guessNameAndRolesComplexAdd(@RemoveFinal @CShared("test") test: String) {
         var a = test
         Chat.log("guessNameAndRoles complexAdd: $test")

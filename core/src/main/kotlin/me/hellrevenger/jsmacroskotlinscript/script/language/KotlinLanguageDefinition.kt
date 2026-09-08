@@ -211,14 +211,14 @@ class CompilerSetting {
 
         private fun getSetting() = config?.getOptions(CompilerSetting::class.java)
 
-        fun shouldPatchClassloader() = getSetting()?.patchClassloader ?: true
+        fun shouldPatchClassloader() = getSetting()?.patchClassloader ?: false
 
         fun shouldUseInvokeDynamic() = getSetting()?.useInvokeDynamic ?: true
     }
 
     @JvmField
     @Option(translationKey = "jsmacros.settings.languages.kotlin.classloaderpatch", group = ["jsmacros.settings.languages", "jsmacros.settings.languages.kotlin"])
-    var patchClassloader = true
+    var patchClassloader = false
 
     @JvmField
     @Option(translationKey = "jsmacros.settings.languages.kotlin.useInvokeDynamic", group = ["jsmacros.settings.languages", "jsmacros.settings.languages.kotlin"])

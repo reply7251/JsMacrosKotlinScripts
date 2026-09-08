@@ -1,5 +1,6 @@
 package me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.preprocessor
 
+import com.google.common.collect.MapMaker
 import me.hellrevenger.jsmacroskotlinscript.JsMacrosKotlinScript
 import me.hellrevenger.jsmacroskotlinscript.script.library.api.ScriptHolder
 import me.hellrevenger.jsmacroskotlinscript.script.library.api.slash
@@ -45,7 +46,6 @@ class InvokeDynamicPreprocessor : ForEachMethodPreprocessor() {
                 if (!inst.owner.contains(owner)) continue
                 // Transformer itself (@CShadow)
                 if (inst.owner.contains(currentClass)) continue
-//                if (inst.opcode != Opcodes.INVOKEVIRTUAL) continue //  && inst.opcode != Opcodes.INVOKESPECIAL
 
                 val toRemove: MutableList<AbstractInsnNode> = mutableListOf(inst)
 
@@ -101,7 +101,6 @@ class InvokeDynamicPreprocessor : ForEachMethodPreprocessor() {
 
                 method.instructions.insertBefore(inst, invokeDynamic)
                 toRemove.forEach(method.instructions::remove)
-//                method.instructions.remove(inst)
                 success = true
             }
         }
@@ -184,8 +183,13 @@ object Bootstrap {
         false
     )
 
+    val callSites = MapMaker().weakValues().makeMap<String, CallSite>()
+
     @JvmStatic
     fun bootstrap(lookup: MethodHandles.Lookup, name: String, methodType: MethodType, owner: String, desc: String, flag: Int): CallSite {
+        val key = "$owner|$name|$desc|$flag"
+        callSites[key]?.let { return it }
+
         val instance = ScriptHolder.get(owner)!!
         val klass = if (flag > 0) instance::class.java else instance as Class<*>
 
@@ -209,11 +213,16 @@ object Bootstrap {
                 it
             }
         }.asType(methodType)
-        return ConstantCallSite(handle)
+        return ConstantCallSite(handle).apply {
+            callSites[key] = this
+        }
     }
 
     @JvmStatic
     fun bootstrapConstructor(lookup: MethodHandles.Lookup, name: String, methodType: MethodType, owner: String, desc: String): CallSite {
+        val key = owner
+        callSites[key]?.let { return it }
+
         val instance = ScriptHolder.get(owner.substringBefore("$"))!!
         val klass = ScriptHolder.get(owner)!! as Class<*>
 
@@ -229,16 +238,22 @@ object Bootstrap {
         constructor.trySetAccessible()
 
         val handle = lookup.unreflectConstructor(constructor).bindTo(instance).asType(methodType)
-        return ConstantCallSite(handle)
+        return ConstantCallSite(handle).apply {
+            callSites[key] = this
+        }
     }
 
     @JvmStatic
     fun bootstrapField(lookup: MethodHandles.Lookup, name: String, methodType: MethodType, owner: String): CallSite {
+        val key = "$owner|$name"
+        callSites[key]?.let { return it }
         val instance = ScriptHolder.get(owner)!!
         val field = instance::class.java.getDeclaredField(name)
         field.trySetAccessible()
 
         val handle = lookup.unreflectGetter(field).bindTo(instance)
-        return ConstantCallSite(handle)
+        return ConstantCallSite(handle).apply {
+            callSites[key] = this
+        }
     }
 }

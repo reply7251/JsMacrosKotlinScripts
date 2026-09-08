@@ -14,6 +14,7 @@ import me.hellrevenger.jsmacroskotlinscript.script.library.api.getBytes
 import me.hellrevenger.jsmacroskotlinscript.script.library.api.instrumentation
 import me.hellrevenger.jsmacroskotlinscript.script.library.api.literal
 import me.hellrevenger.jsmacroskotlinscript.script.library.api.sendToPlayer
+import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.DumpPostTransformer
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.KnownIllegalStateException
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.SimpleFieldTarget
 import me.hellrevenger.jsmacroskotlinscript.script.library.ctransform.SimpleInvokeTarget
@@ -31,6 +32,8 @@ import net.lenni0451.classtransform.utils.ASMUtils
 import net.lenni0451.classtransform.utils.FailStrategy
 import net.lenni0451.classtransform.utils.tree.BasicClassProvider
 import net.minecraft.network.chat.ClickEvent
+import net.minecraft.network.chat.Component
+import net.minecraft.network.chat.HoverEvent
 import net.minecraft.network.chat.Style
 import org.objectweb.asm.ClassReader
 import org.objectweb.asm.ClassVisitor
@@ -78,6 +81,8 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
      * dump transformer bytecode
      */
     private var dump = false
+    private val dumpFolder = context.file?.let { File(it.parentFile, "output") }
+    private val dumpPostTransformer = DumpPostTransformer(dumpFolder)
     var requireScriptHolder = false
 
     /**
@@ -94,6 +99,7 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
         }
         setManager(TransformerManager(BasicClassProvider()))
         this.dump = dump
+        dumpPostTransformer.enabled = dump
     }
 
     context(receiver: ScriptReceiver)
@@ -129,6 +135,8 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
 
             if (!disableAnnotationChecker)
                 addTransformerPreprocessor(AnnotationChecker(this))
+
+            addPostTransformConsumer(dumpPostTransformer)
         }
         transformed = false
     }
@@ -219,13 +227,14 @@ class FRuntimeTransform(val context: BaseScriptContext<*>) : PerExecLibrary(cont
         manager?.let { manager ->
             manager.addTransformer(transformer)
             if (dump) {
-                context.file?.let {
-                    val outputFolder = File(it.parentFile, "output")
+                dumpFolder?.let { outputFolder ->
                     outputFolder.mkdirs()
                     val outputFile = File(outputFolder, "${transformer.name}.class")
                     "dump to $outputFile".literal()
-                        .withStyle(Style.EMPTY.withClickEvent(ClickEvent.OpenFile(outputFolder)))
-                        .sendToPlayer()
+                        .withStyle(
+                            Style.EMPTY.withClickEvent(ClickEvent.OpenFile(outputFolder))
+                                .withHoverEvent(HoverEvent.ShowText(Component.literal("open folder")))
+                        ).sendToPlayer()
                     outputFile.writeBytes(ASMUtils.toBytes(transformer, manager))
                 }
             }
